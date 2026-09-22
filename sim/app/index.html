@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>O-ASIS Dual-Track | Living Thermodynamic Sandbox & Resilience MMO</title>
+  <meta name="description" content="Persistent cooperative planetary simulator and living resilience engine based on Leontief thermodynamics, dynamic usufruct, Athenian demarchy and dual-track open hardware." />
+  <link rel="icon" type="image/svg+xml" href="/one-logo.svg" />
+  <link rel="apple-touch-icon" href="/one-logo.png" />
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <div id="app-container">
+    <!-- Top HUD: Brand Logo & 4 Conserved Resource Meters -->
+    <header id="hud-header">
+      <div class="hud-left-brand-row">
+        <!-- O.N.E. Stamped Brand Badge -->
+        <div class="one-brand-badge" title="Open Networked Earth (O.N.E.)">
+          <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="one-brand-logo-img" />
+          <div class="one-brand-text">
+            <span class="one-brand-name">O.N.E.</span>
+            <span class="one-brand-sub">DUAL-TRACK</span>
+          </div>
+        </div>
+
+        <div class="hud-meters-row">
+        <!-- 1. ⚡ Energy & Heat -->
+        <div class="resource-meter" id="meter-energy" title="Conserved Energy Flow (kWh) & LiFePO4 Storage Buffer">
+          <div class="meter-title-row">
+            <span data-i18n="meterEnergyTitle">⚡ Energy / Power</span>
+            <span id="meter-energy-delta" class="delta positive">+14.2 kW</span>
+          </div>
+          <div class="meter-bar-track">
+            <div id="meter-energy-bar" class="meter-bar-fill fill-energy" style="width: 74%;"></div>
+          </div>
+          <div class="meter-stat-row">
+            <span id="meter-energy-val">280 / 380 kWh</span>
+            <span id="compute-status-pill" class="badge" data-i18n="meterMeshOk">Mesh OK</span>
+          </div>
+        </div>
+
+        <!-- 2. 💧 Potable Water & Irrigation -->
+        <div class="resource-meter" id="meter-water" title="Conserved Potable & Greywater Reservoir (Liters)">
+          <div class="meter-title-row">
+            <span data-i18n="meterWaterTitle">💧 Water / Cistern</span>
+            <span id="meter-water-delta" class="delta positive">+180 L/h</span>
+          </div>
+          <div class="meter-bar-track">
+            <div id="meter-water-bar" class="meter-bar-fill fill-water" style="width: 64%;"></div>
+          </div>
+          <div class="meter-stat-row">
+            <span id="meter-water-val">32,000 / 50,000 L</span>
+            <span class="text-dim" data-i18n="meterGreywaterLoop">65% Loop</span>
+          </div>
+        </div>
+
+        <!-- 3. 🥗 Calories & Food Sovereignty -->
+        <div class="resource-meter" id="meter-food" title="Food Reserves & Biometric Subsistence Floor (2,200 kcal/die)">
+          <div class="meter-title-row">
+            <span data-i18n="meterFoodTitle">🥗 Food / Granary</span>
+            <span id="meter-food-delta" class="delta positive">+420 kcal/h</span>
+          </div>
+          <div class="meter-bar-track">
+            <div id="meter-food-bar" class="meter-bar-fill fill-food" style="width: 60%;"></div>
+          </div>
+          <div class="meter-stat-row">
+            <span id="meter-food-val">29.1 days</span>
+            <span class="text-dim">1.8M kcal</span>
+          </div>
+        </div>
+
+        <!-- 4. ⏳ Free Time & Community Morale -->
+        <div class="resource-meter" id="meter-morale" title="Free Discretionary Hours & Social Cohesion">
+          <div class="meter-title-row">
+            <span data-i18n="meterMoraleTitle">⏳ Free Time / Morale</span>
+            <span id="meter-freehours-val">15.2h Free/day</span>
+          </div>
+          <div class="meter-bar-track">
+            <div id="meter-morale-bar" class="meter-bar-fill fill-morale" style="width: 85%;"></div>
+          </div>
+          <div class="meter-stat-row">
+            <span id="meter-morale-val">85% Morale</span>
+            <span class="text-dim" data-i18n="meterCitizens">28 Citizens</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4-Level Discrete Zoom Bar -->
+      <div class="discrete-zoom-bar">
+        <button id="btn-zoom-out" class="btn-zoom-step" title="Zoom Out to Previous Level (Pinch Out / Wheel Down)">−</button>
+        <div class="zoom-segments">
+          <button id="btn-view-world" class="zoom-segment-btn" data-level="0" title="Planetary Earth Map">🌍 World</button>
+          <button class="zoom-segment-btn" data-level="1" title="Bioregional Basin">🏞️ Region</button>
+          <button id="btn-view-village" class="zoom-segment-btn active" data-level="2" title="Settlement Village 2D">🏘️ Node</button>
+          <button class="zoom-segment-btn" data-level="3" title="Architectural Interior">🏢 Building</button>
+        </div>
+        <button id="btn-zoom-in" class="btn-zoom-step" title="Zoom In to Next Level (Pinch In / Wheel Up)">+</button>
+        <button id="btn-my-home" class="btn-toggle-view btn-home-pill hidden" title="Go to your primary usufruct dwelling">👑 <span id="home-pill-text">My Dwelling</span></button>
+      </div>
+
+      <!-- Right HUD: Alert Ticker & Legacy Threat Meter (Translations Hidden for English-Only Mode) -->
+      <div class="hud-right-stack">
+        <div class="hud-top-actions">
+          <!-- Language Selector (Hidden until game string extraction is complete) -->
+          <div class="lang-selector-box" style="display: none;">
+            <span class="lang-icon">🌐</span>
+            <select id="lang-select" class="lang-dropdown" aria-label="Select Language">
+              <option value="en">🇬🇧 English</option>
+              <option value="it">🇮🇹 Italiano</option>
+              <option value="es">🇪🇸 Español</option>
+              <option value="fr">🇫🇷 Français</option>
+              <option value="de">🇩🇪 Deutsch</option>
+              <option value="pt">🇵🇹 Português</option>
+              <option value="ru">🇷🇺 Русский</option>
+              <option value="zh">🇨🇳 中文</option>
+              <option value="ja">🇯🇵 日本語</option>
+              <option value="ko">🇰🇷 한국어</option>
+              <option value="hi">🇮🇳 हिन्दी</option>
+              <option value="ar">🇸🇦 العربية</option>
+              <option value="id">🇮🇩 Bahasa Indonesia</option>
+              <option value="tr">🇹🇷 Türkçe</option>
+            </select>
+          </div>
+
+          <div class="legacy-threat-badge">
+            <span data-i18n="legacySystemAlert">🏦 Legacy System Alert:</span>
+            <div class="threat-bar-track">
+              <div id="threat-level-bar" style="width: 15%;"></div>
+            </div>
+            <span id="threat-level-val">15%</span>
+          </div>
+        </div>
+
+        <div id="hud-alert-ticker" data-i18n="defaultTicker">🌱 O-ASIS Dual-Track initialized. Detroit Delray node operational.</div>
+      </div>
+    </header>
+
+    <!-- Main Viewport: 2D World Map & Bioclimatic Village Canvas -->
+    <main id="main-viewport">
+      <!-- 1. 2D Earth Map View (Leaflet CartoDB Dark Matter) -->
+      <div id="world-map-view" class="view-panel hidden">
+        <div id="world-leaflet-map"></div>
+        <div class="map-overlay-floating">
+          <div class="map-controls-row">
+            <button id="btn-locate-bioregion" class="btn-map-control">
+              📍 <span data-i18n="btnLocateMe">Locate My Bioregion</span>
+            </button>
+            <button id="btn-toggle-map-style" class="btn-map-control" title="Toggle Satellite / Topo">
+              <span id="map-style-icon">🛰️</span> <span id="map-style-label" data-i18n="mapSatellite">Satellite Earth</span>
+            </button>
+          </div>
+          <div id="user-location-info" class="user-location-info hidden"></div>
+        </div>
+      </div>
+
+
+      <!-- 2. Bioclimatic Settlement & Village View (60 FPS Canvas) -->
+      <div id="settlement-view" class="view-panel active">
+        <div id="settlement-header-bar" class="settlement-header-bar">
+          <button id="btn-back-to-world" class="btn-settlement-back">
+            ⬅️ <span data-i18n="btnBackToMap">Back to World Map</span>
+          </button>
+          <div class="settlement-meta-box">
+            <span id="settlement-node-name" class="settlement-node-name">Detroit Delray Commons</span>
+            <span id="settlement-climate-tag" class="settlement-climate-tag">Temperate • Hex-Loft</span>
+          </div>
+          <div class="settlement-header-actions">
+            <button id="btn-quick-claim" class="btn-claim-header">
+              🔑 <span data-i18n="btnClaimUsufruct">Claim Usufruct Dwelling</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Floating Interior Navigation Bar (Visible when inside a building/dwelling) -->
+        <div id="hud-interior-bar" class="hud-interior-bar hidden">
+          <div class="interior-breadcrumb">
+            <span class="interior-root">🏘️ Village</span>
+            <span class="interior-sep">/</span>
+            <span id="interior-room-name" class="interior-current">🏢 FabLab & Circular Workshop</span>
+          </div>
+          <div class="interior-actions">
+            <button id="btn-exit-interior" class="btn-exit-interior" title="Return to outdoors overview (ESC)">
+              ⬅️ Exit to Village <span class="key-shortcut">[ESC]</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Floating Interior Prop Tooltip Card (Positioned safely above footer) -->
+        <div id="interior-prop-tooltip" class="interior-prop-tooltip hidden" title="Click to inspect 3D WebGL model & STL blueprint">
+          <div class="prop-tooltip-header">
+            <span id="prop-tooltip-name" class="prop-tooltip-name">Component</span>
+            <span class="prop-tooltip-badge">3D MODEL</span>
+          </div>
+          <p id="prop-tooltip-desc" class="prop-tooltip-desc">High-performance bioclimatic usufruct fixture.</p>
+          <div class="prop-tooltip-hint">👆 Click to inspect 3D WebGL model & STL blueprint</div>
+        </div>
+
+        <canvas id="settlement-canvas"></canvas>
+      </div>
+
+      <!-- Floating Viewport Discrete Zoom Widget (Touch / Fast Click - Active across World, Region, Node & Building) -->
+      <div id="floating-zoom-control" class="floating-zoom-control">
+        <button id="btn-float-zoom-out" class="btn-float-step" title="Zoom Out Level">−</button>
+        <span id="floating-zoom-level-name" class="float-level-badge">🏘️ NODE</span>
+        <button id="btn-float-zoom-in" class="btn-float-step" title="Zoom In Level">+</button>
+      </div>
+
+      <!-- Tactical Hex Canvas (Preserved for compatibility) -->
+      <canvas id="hex-canvas" style="display: none;"></canvas>
+    </main>
+
+
+    <!-- Bottom Footer: Time Controls & Action Drawers -->
+    <footer id="hud-footer">
+      <div class="time-controls-box">
+        <div class="time-badge">
+          <span id="time-sun-icon">☀️</span>
+          <span id="time-clock-display">12:00</span>
+          <span id="time-day-display" class="text-dim">Day 1</span>
+        </div>
+        <div class="weather-badge" id="hud-weather-badge" title="Dynamic Atmospheric Weather & Thermodynamics">
+          <span id="weather-icon">☀️</span>
+          <span id="weather-temp-display">21°C</span>
+          <span id="weather-name-display" class="text-dim">Sunny</span>
+        </div>
+        <div class="speed-btn-group">
+          <button id="btn-speed-0" class="btn-speed" title="Pause">⏸</button>
+          <button id="btn-speed-1" class="btn-speed active" title="Normal speed (1x)">1x</button>
+          <button id="btn-speed-2" class="btn-speed" title="Fast speed (2x)">2x</button>
+          <button id="btn-speed-5" class="btn-speed" title="Hyper speed (5x)">5x</button>
+        </div>
+      </div>
+
+      <div class="actions-btn-bar">
+        <button id="btn-open-chores" class="btn-action-nav" data-i18n="navChores">📋 Chores & Maintenance</button>
+        <button id="btn-open-housing" class="btn-action-nav" data-i18n="navHousing">🏘️ Housing & Usufruct</button>
+        <button id="btn-open-tech" class="btn-action-nav" data-i18n="navTech">🤖 Robots & Dual-Track STL</button>
+        <button id="btn-open-council" class="btn-action-nav" data-i18n="navCouncil">🏛️ Sortition Council</button>
+
+        <!-- Official O.N.E. Footer Stamp -->
+        <div class="hud-footer-stamp" title="Open Networked Earth • Physical Usufruct Protocol">
+          <img src="/one-logo-white.svg" alt="O.N.E. Stamp" class="footer-stamp-icon" />
+          <span class="footer-stamp-text">O.N.E. DUAL-TRACK</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL: Node Management & Chores Drawer -->
+    <div id="modal-node-management" class="modal-overlay hidden">
+      <div class="modal-window">
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
+            <h3 id="modal-node-title" data-i18n="nodeHubTitle">Detroit Delray Commons — Operational Hub</h3>
+          </div>
+          <button id="btn-close-node-modal" class="btn-close-modal">✕</button>
+        </div>
+        <div id="node-management-content" class="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- MODAL: Athenian Sortition Dilemma & Crisis -->
+    <div id="modal-dilemma" class="modal-overlay hidden">
+      <div class="modal-window">
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
+            <h3 data-i18n="councilDeliberationBadge">Athenian Assembly Deliberation</h3>
+          </div>
+          <button id="btn-close-dilemma-modal" class="btn-close-modal">✕</button>
+        </div>
+        <div id="dilemma-content" class="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- MODAL: Dual-Track Tech Tree & Real Hardware Blueprints -->
+    <div id="modal-dualtrack" class="modal-overlay hidden">
+      <div class="modal-window">
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
+            <h3 data-i18n="dualTrackTitle">Dual-Track Open Hardware & Automation Tech Tree</h3>
+          </div>
+          <button id="btn-close-dualtrack-modal" class="btn-close-modal">✕</button>
+        </div>
+        <div id="dualtrack-content" class="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- MODAL: Bioclimatic Dwelling Inspection & Usufruct Claim -->
+    <div id="modal-dwelling" class="modal-overlay hidden">
+      <div class="modal-window modal-window-wide">
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
+            <h3 id="dwelling-modal-title">Bioclimatic Dwelling & Usufruct Rights</h3>
+          </div>
+          <button id="btn-close-dwelling-modal" class="btn-close-modal">✕</button>
+        </div>
+        <div id="dwelling-modal-content" class="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- MODAL: Constitutional Private Residence Barrier -->
+    <div id="modal-privacy-lock" class="modal-overlay hidden">
+      <div class="modal-window" style="max-width: 480px;">
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <span style="font-size: 20px;">🔒</span>
+            <h3 id="privacy-modal-title">Private Usufruct Sanctuary</h3>
+          </div>
+          <button id="btn-close-privacy-modal" class="btn-close-modal">✕</button>
+        </div>
+        <div id="privacy-modal-content" class="modal-body">
+          <div class="privacy-lock-card">
+            <div class="occupant-badge-header" style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
+              <span id="privacy-occupant-avatar" style="font-size: 36px; background: rgba(255,255,255,0.08); padding: 8px; border-radius: 50%;">🧑</span>
+              <div>
+                <h4 id="privacy-occupant-name" style="margin: 0 0 4px 0; color: #f8fafc; font-size: 16px;">Citizen</h4>
+                <span id="privacy-occupant-vocation" class="badge badge-success">Permaculturist</span>
+              </div>
+            </div>
+            <div class="constitutional-quote-box" style="background: rgba(0, 0, 0, 0.35); border-left: 3px solid var(--emerald-primary); padding: 12px; border-radius: 6px; margin-bottom: 16px;">
+              <div style="font-size: 10px; color: var(--emerald-primary); font-weight: bold; letter-spacing: 1px; margin-bottom: 4px;">📜 O.N.E. CONSTITUTION • ARTICLE 4.1</div>
+              <p style="font-size: 12px; color: #cbd5e1; margin: 0; line-height: 1.4;">"Individual usufruct dwellings and personal living spaces are strictly inviolable sanctuaries of personal autonomy. Entry without explicit invitation of the occupant is constitutionally prohibited."</p>
+            </div>
+            <div id="privacy-knock-result" class="privacy-knock-result hidden" style="margin-bottom: 14px; padding: 10px; border-radius: 8px; font-size: 13px;"></div>
+            <div class="privacy-modal-actions" style="display: flex; gap: 10px;">
+              <button id="btn-knock-door" class="btn-primary" style="flex: 1; padding: 10px;">🚪 Knock on Door</button>
+              <button id="btn-respect-privacy" class="btn-secondary" style="flex: 1; padding: 10px;">Dismiss</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Dual-Track 3D Model Inspector for Interior Props & Machinery -->
+    <div id="modal-prop-3d" class="modal-overlay hidden">
+      <div class="modal-window modal-window-prop3d">
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <span style="font-size: 20px;">🔬</span>
+            <h3 id="prop-3d-title">Dual-Track 3D Hardware Inspector</h3>
+            <span id="prop-3d-category" class="badge badge-success">OPEN HARDWARE</span>
+          </div>
+          <button id="btn-close-prop-3d" class="btn-close-modal">✕</button>
+        </div>
+        <div class="prop-3d-body">
+          <div class="prop-3d-viewport-box">
+            <div id="prop-3d-canvas-container" class="prop-3d-canvas-container"></div>
+            <div class="prop-3d-canvas-toolbar">
+              <button id="btn-prop-auto-rotate" class="btn-prop-toolbar active" title="Toggle 3D Auto-Rotation">🔄 Auto-Rotate</button>
+              <button id="btn-prop-reset-cam" class="btn-prop-toolbar" title="Reset Camera Perspective">🔍 Reset View</button>
+              <button id="btn-prop-download-stl" class="btn-prop-toolbar btn-prop-download" title="Export Watertight 3D Printable STL">📥 Download .STL Blueprint</button>
+            </div>
+            <div class="prop-3d-hint">💡 Drag to rotate 360° • Scroll / Pinch to zoom • Right-click to pan</div>
+          </div>
+          <div class="prop-3d-sidebar">
+            <div class="prop-3d-desc-box">
+              <p id="prop-3d-desc">Dual-Track open source hardware module.</p>
+            </div>
+            <div class="prop-3d-specs-section">
+              <h4>⚙️ Engineering & Thermodynamics</h4>
+              <table id="prop-3d-specs-table" class="prop-specs-table"></table>
+            </div>
+            <div class="prop-3d-yaml-section">
+              <h4>⚡ Home Assistant Telemetry (MQTT / Zigbee)</h4>
+              <pre id="prop-3d-yaml-preview" class="prop-yaml-code"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
+

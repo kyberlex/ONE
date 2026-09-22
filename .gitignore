@@ -1,0 +1,30 @@
+# Antigravity IDE & Agent Internal Protocols (NEVER PUSHED TO GITHUB)
+AGENTS.md
+AGENTS.*.md
+.agents/
+.gemini/
+brain/
+scratch/
+*.log
+
+# Operating System & Editor Artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Node / Svelte / Web build outputs
+node_modules/
+dist/
+build/
+.svelte-kit/
+.env
+.env.*
+!.env.example
+
+# Python Artifacts
+__pycache__/
+*.py[cod]
+*$py.class

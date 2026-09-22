@@ -1,0 +1,284 @@
+/**
+ * Master Simulation & State Loop Manager (Agent SIM-0)
+ * Drives discrete time progression (1 tick = 1 hour, 24 ticks = 1 day),
+ * orchestrates thermodynamics, demographics, adversary events, sortition councils,
+ * and deterministic persistence to localStorage.
+ *
+ * Author: Kyberlex <kyberlex@proton.me>
+ * License: AGPL-3.0-or-later
+ */
+
+import { ThermodynamicEngine } from './thermodynamics.js';
+import { OneNode } from './node.js';
+import { LegacyAdversaryDirector } from './adversary.js';
+import { AthenianSortitionEngine } from './sortition.js';
+import { CIVIC_DILEMMAS } from '../data/dilemmas.js';
+
+export class SimulationManager {
+  constructor(config = {}) {
+    // Temporal state
+    this.tickCount = 0;
+    this.speedMultiplier = 1; // 0 = pause, 1 = normal, 2 = fast, 5 = hyper
+    this.timerInterval = null;
+    this.baseTickDurationMs = 1000; // 1 second = 1 hour at 1x speed
+
+    // Subsystem engines
+    this.thermo = new ThermodynamicEngine(config.thermoConfig);
+    this.node = new OneNode(config.nodeConfig);
+    this.adversary = new LegacyAdversaryDirector();
+    this.sortition = new AthenianSortitionEngine();
+
+    // Event callbacks
+    this.onTickListeners = [];
+    this.onCrisisListeners = [];
+    this.onDilemmaListeners = [];
+    this.onNotificationListeners = [];
+
+    // Initialize initial Sortition Council
+    this.sortition.seatNewCouncil(this.node.citizens, this.tickCount);
+    this.node.updateLaborAndMorale();
+
+    // Restore saved simulation state if available
+    this.loadFromLocalStorage();
+  }
+
+  get currentDay() {
+    return Math.floor(this.tickCount / 24) + 1;
+  }
+
+  get currentHour() {
+    return this.tickCount % 24;
+  }
+
+  start() {
+    if (this.timerInterval) clearInterval(this.timerInterval);
+    if (this.speedMultiplier === 0) return;
+
+    const intervalMs = this.baseTickDurationMs / this.speedMultiplier;
+    this.timerInterval = setInterval(() => this.stepTick(), intervalMs);
+  }
+
+  pause() {
+    this.setSpeed(0);
+  }
+
+  setSpeed(multiplier) {
+    this.speedMultiplier = multiplier;
+    if (this.timerInterval) {
+      clearInterval(this.timerInterval);
+      this.timerInterval = null;
+    }
+    if (multiplier > 0) {
+      const intervalMs = this.baseTickDurationMs / multiplier;
+      this.timerInterval = setInterval(() => this.stepTick(), intervalMs);
+    }
+    this.notifyTick();
+  }
+
+  /**
+   * Main discrete hourly step
+   */
+  stepTick() {
+    this.tickCount++;
+    const hour = this.currentHour;
+    const day = this.currentDay;
+
+    // 1. Thermodynamic step
+    this.thermo.tick(hour, this.node.population, this.node.choreAssignments, {
+      agroResilience: this.node.agroResilience,
+      robots: this.node.robots
+    });
+
+    // 2. Node dynamic usufruct daily audit (every 24h at midnight)
+    if (hour === 0) {
+      const reclaimed = this.node.auditUsufructHousing(this.tickCount);
+      if (reclaimed.length > 0) {
+        this.emitNotification(
+          '🏘️ Usufruct Invariant Audit',
+          `${reclaimed.length} abandoned dwelling(s) returned to Civic Pool; furniture moved to Swap Shop.`
+        );
+      }
+      this.saveToLocalStorage();
+    } else if (this.tickCount % 12 === 0) {
+      this.saveToLocalStorage();
+    }
+
+    // 3. Sortition council rotation (every 30 days = 720 ticks)
+    if (this.tickCount % this.sortition.mandateDurationTicks === 0) {
+      const newCouncil = this.sortition.seatNewCouncil(this.node.citizens, this.tickCount);
+      this.emitNotification(
+        '🏛️ Athenian Demarchy Rotation',
+        `New 7-citizen council randomly drawn from the population.`
+      );
+    }
+
+    // 4. Random Civic Dilemma (approx every 3-5 days if no dilemma is active)
+    if (!this.sortition.activeDilemma && Math.random() < 0.015) {
+      const randomDilemma = CIVIC_DILEMMAS[Math.floor(Math.random() * CIVIC_DILEMMAS.length)];
+      const councilSetup = this.sortition.presentDilemma(randomDilemma);
+      this.emitDilemma(councilSetup);
+    }
+
+    // 5. Legacy Adversary AI check
+    const thermoSnap = this.thermo.getSnapshot();
+    const nodeSnap = {
+      communityMorale: this.node.communityMorale,
+      freeHours: this.node.averageFreeHoursPerDay
+    };
+    const adversaryEvent = this.adversary.tick(this.tickCount, thermoSnap, nodeSnap);
+
+    if (adversaryEvent && adversaryEvent.type === 'CRISIS_STARTED') {
+      this.emitCrisis(adversaryEvent.crisis);
+    } else if (adversaryEvent && adversaryEvent.type === 'CRISIS_RESOLVED') {
+      this.emitNotification(
+        '🛡️ Legacy Crisis Concluded',
+        adversaryEvent.crisis.name
+      );
+    }
+
+    // 6. Meteorological Disaster & Agricultural Impact Alert Check
+    if (this.thermo.weather.activeDisaster && !this.lastDisasterName) {
+      this.lastDisasterName = this.thermo.weather.activeDisaster.name;
+      const stress = this.thermo.food.activeAgroStress;
+      let extraAgroMsg = '';
+      if (stress) {
+        if (stress.savedKcalPerHour > 0) {
+          extraAgroMsg = ` Agro-Resilience active: defenses mitigated ${stress.mitigatedPct}% of crop damage (saved ${stress.savedKcalPerHour} kcal/h).`;
+        } else {
+          extraAgroMsg = ` Open permaculture fields exposed: ${stress.netLossPct}% potential harvest loss!`;
+        }
+      }
+      this.emitNotification(
+        `⚠️ ${this.thermo.weather.activeDisaster.name}!`,
+        `${this.thermo.weather.activeDisaster.desc}${extraAgroMsg}`
+      );
+    } else if (!this.thermo.weather.activeDisaster && this.lastDisasterName) {
+      this.emitNotification(
+        '🌤️ Weather Alert Cleared',
+        `The meteorological hazard has subsided. Community repair shifts active and harvest normalizes.`
+      );
+      this.lastDisasterName = null;
+    }
+
+    // 7. Broadcast tick update to UI
+    this.notifyTick();
+  }
+
+  notifyTick() {
+    const state = this.getFullState();
+    for (const listener of this.onTickListeners) {
+      try { listener(state); } catch (e) { console.error(e); }
+    }
+  }
+
+  emitCrisis(crisis) {
+    for (const listener of this.onCrisisListeners) {
+      try { listener(crisis); } catch (e) { console.error(e); }
+    }
+  }
+
+  emitDilemma(dilemmaData) {
+    for (const listener of this.onDilemmaListeners) {
+      try { listener(dilemmaData); } catch (e) { console.error(e); }
+    }
+  }
+
+  emitNotification(title, message) {
+    for (const listener of this.onNotificationListeners) {
+      try { listener({ title, message, time: this.tickCount }); } catch (e) { console.error(e); }
+    }
+  }
+
+  getFullState() {
+    return {
+      tick: this.tickCount,
+      day: this.currentDay,
+      hour: this.currentHour,
+      speed: this.speedMultiplier,
+      thermo: this.thermo.getSnapshot(),
+      node: {
+        id: this.node.id,
+        name: this.node.name,
+        population: this.node.population,
+        playerVocation: this.node.playerVocation,
+        freeHours: this.node.averageFreeHoursPerDay,
+        morale: this.node.communityMorale,
+        fiatEur: this.node.externalFiatTreasuryEur,
+        chores: this.node.choreAssignments,
+        robots: this.node.robots,
+        housingPool: this.node.housingPool,
+        furnitureShop: this.node.furnitureSwapShop
+      },
+      adversary: {
+        threatLevel: this.adversary.threatLevel,
+        activeCrisis: this.adversary.activeCrisis,
+        history: this.adversary.eventHistory
+      },
+      sortition: {
+        council: this.sortition.currentCouncil,
+        rotationCount: this.sortition.rotationCount,
+        activeDilemma: this.sortition.activeDilemma
+      }
+    };
+  }
+
+  saveToLocalStorage() {
+    try {
+      const serialized = JSON.stringify(this.getFullState());
+      localStorage.setItem('oasis_dualtrack_save', serialized);
+      return true;
+    } catch (e) {
+      console.error('Failed to save to localStorage:', e);
+      return false;
+    }
+  }
+
+  loadFromLocalStorage() {
+    try {
+      const dataStr = localStorage.getItem('oasis_dualtrack_save');
+      if (!dataStr) return false;
+      const state = JSON.parse(dataStr);
+      if (!state) return false;
+
+      this.tickCount = state.tick || 0;
+      if (state.speed !== undefined) this.speedMultiplier = state.speed;
+
+      if (state.node) {
+        if (state.node.playerVocation) {
+          this.node.setPlayerVocation(state.node.playerVocation);
+        }
+        if (state.node.chores) {
+          this.node.choreAssignments = { ...this.node.choreAssignments, ...state.node.chores };
+        }
+        if (state.node.robots) {
+          this.node.robots = { ...this.node.robots, ...state.node.robots };
+        }
+        if (state.node.morale !== undefined) {
+          this.node.communityMorale = state.node.morale;
+        }
+        if (state.node.fiatEur !== undefined) {
+          this.node.externalFiatTreasuryEur = state.node.fiatEur;
+        }
+        this.node.updateLaborAndMorale();
+      }
+
+      if (state.thermo) {
+        this.thermo.energyKwh = state.thermo.energyKwh ?? this.thermo.energyKwh;
+        this.thermo.waterLiters = state.thermo.waterLiters ?? this.thermo.waterLiters;
+        this.thermo.caloriesKcal = state.thermo.caloriesKcal ?? this.thermo.caloriesKcal;
+        this.thermo.batteryReserveKwh = state.thermo.batteryReserveKwh ?? this.thermo.batteryReserveKwh;
+        if (state.thermo.machinery) {
+          this.thermo.machinery = { ...this.thermo.machinery, ...state.thermo.machinery };
+        }
+        if (state.thermo.circularMaterials) {
+          this.thermo.circularMaterials = { ...this.thermo.circularMaterials, ...state.thermo.circularMaterials };
+        }
+      }
+
+      return true;
+    } catch (e) {
+      console.error('Failed to load from localStorage:', e);
+      return false;
+    }
+  }
+}
