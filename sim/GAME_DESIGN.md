@@ -134,9 +134,20 @@ Per comprarli dal mondo capitalista senza fare debiti bancari:
 
 ## **VI. IL SORTEGGIO CIVICO PER LE ASSEMBLEE (ATHENIAN SORTITION ENGINE)**
 
-* **Zero Politici, Zero Campagne:** Assemblee di quartiere composte da **7 o 9 cittadini estratti a sorte** dall'anagrafe del Nodo ogni 6 o 12 mesi, con *cooling-off* di 3 anni.
-* **Ruolo dell'Assemblea:** Grandi scelte etiche e allocazione del surplus energetico/alimentare, giustizia riparativa di prossimità, audit trasparente anti-borsa nera.
-* **Gameplay Stile Reigns:** Dilemmi comunitari rapidi con le schede dei consiglieri sorteggiati (con età, carattere e priorità) e votazione a maggioranza qualificata (5 su 7).
+* **Zero Politici, Zero Campagne:** Demarchia pura a sorteggio rotazionale dall'anagrafe universale dei residenti, con esclusione dei ruoli consecutivi (*cooling-off*).
+* **Allineamento Scalare ai Tier Costituzionali (Capitolo IV):**
+  - **Nodo Nascente / Comunità (Popolazione < 50):** opera tramite il **Local Mediation Panel (3 cittadini estratti a sorte)** conforme all'Art. 4.2.1. Ideale per la fondazione, la mediazione di prossimità e l'avvio del microgrid senza paralizzare il *chore roster*.
+  - **Nodo Consolidato / Quartiere (Popolazione ≥ 50):** sblocca il **Neighborhood Sortition Council (15 cittadini estratti a sorte)** conforme all'Art. 4.2.2 per la pianificazione delle infrastrutture, zonizzazione dei commons e allocazione del surplus.
+* **Invariante di Parità Dispari & Soglie Graduate (Art. 4.2 & 4.5):**
+  - Sempre numero dispari (3 o 15) per prevenire matematicamente stalli e pareggi artificiali.
+  - **Maggioranza Qualificata (60%):** richiesta per allocazioni standard, manutenzioni e scambi inter-nodo (2 su 3 nel panel; 9 su 15 nel consiglio).
+  - **Supermaggioranza Costituzionale (75%):** richiesta per asilo rifugiati, modifiche all'usufruct o diritti invarianti (3 su 3 nel panel; 12 su 15 nel consiglio).
+* **UI Deliberazione Compatta a Torta (Solarpunk SVG Donut Chart):**  
+  Invece di 15 schede/chip che occuperebbero l'intero schermo su smartphone, l'orientamento dell'assemblea è sintetizzato in un **grafico a ciambella SVG minimale (< 90px)**:
+  - Arco verde smeraldo per i favorevoli (`In Favor`), arco rosso corallo per i contrari (`Against`).
+  - Tacca dorata indicatrice della soglia costituzionale esatta (60% o 75%).
+  - Conteggio centrale e badge di stato (`RATIFIED` / `BELOW`).
+  - Cassetto a scomparsa facoltativo (*"Inspect Seated Jurors"*) per consentire a chi lo desidera di visualizzare nomi e disposizioni dei singoli giurati senza rubare spazio vitale alle carte decisionali.
 
 ---
 

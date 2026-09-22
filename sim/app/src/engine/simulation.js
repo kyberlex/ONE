@@ -13,6 +13,7 @@ import { OneNode } from './node.js';
 import { LegacyAdversaryDirector } from './adversary.js';
 import { AthenianSortitionEngine } from './sortition.js';
 import { CIVIC_DILEMMAS } from '../data/dilemmas.js';
+import { storageIDB } from './storage_idb.js';
 
 export class SimulationManager {
   constructor(config = {}) {
@@ -106,9 +107,10 @@ export class SimulationManager {
     // 3. Sortition council rotation (every 30 days = 720 ticks)
     if (this.tickCount % this.sortition.mandateDurationTicks === 0) {
       const newCouncil = this.sortition.seatNewCouncil(this.node.citizens, this.tickCount);
+      const tier = this.sortition.currentTier;
       this.emitNotification(
-        '🏛️ Athenian Demarchy Rotation',
-        `New 7-citizen council randomly drawn from the population.`
+        '🏛️ Sortition Rotation',
+        `New ${tier.councilSize}-citizen ${tier.titleDefault} seated (${tier.article}).`
       );
     }
 
@@ -224,8 +226,15 @@ export class SimulationManager {
 
   saveToLocalStorage() {
     try {
-      const serialized = JSON.stringify(this.getFullState());
+      const fullState = this.getFullState();
+      const serialized = JSON.stringify(fullState);
       localStorage.setItem('oasis_dualtrack_save', serialized);
+      // Asynchronously mirror to IndexedDB
+      if (this.node && this.node.id) {
+        storageIDB.saveNodeState(this.node.id, fullState).catch(err => {
+          console.warn('[Simulation] Failed to save to IndexedDB:', err);
+        });
+      }
       return true;
     } catch (e) {
       console.error('Failed to save to localStorage:', e);
@@ -263,15 +272,23 @@ export class SimulationManager {
       }
 
       if (state.thermo) {
-        this.thermo.energyKwh = state.thermo.energyKwh ?? this.thermo.energyKwh;
-        this.thermo.waterLiters = state.thermo.waterLiters ?? this.thermo.waterLiters;
-        this.thermo.caloriesKcal = state.thermo.caloriesKcal ?? this.thermo.caloriesKcal;
-        this.thermo.batteryReserveKwh = state.thermo.batteryReserveKwh ?? this.thermo.batteryReserveKwh;
+        if (state.thermo.energy?.currentKwh !== undefined) {
+          this.thermo.energy.batteryStoredKwh = state.thermo.energy.currentKwh;
+        }
+        if (state.thermo.water?.currentL !== undefined) {
+          this.thermo.water.cisternStoredL = state.thermo.water.currentL;
+        }
+        if (state.thermo.food?.currentKcal !== undefined) {
+          this.thermo.food.granaryStoredKcal = state.thermo.food.currentKcal;
+        }
         if (state.thermo.machinery) {
           this.thermo.machinery = { ...this.thermo.machinery, ...state.thermo.machinery };
         }
         if (state.thermo.circularMaterials) {
           this.thermo.circularMaterials = { ...this.thermo.circularMaterials, ...state.thermo.circularMaterials };
+        }
+        if (state.thermo.weather) {
+          this.thermo.weather = { ...this.thermo.weather, ...state.thermo.weather };
         }
       }
 

@@ -27,13 +27,15 @@ export class PlayerProfileManager {
   /**
    * Claims a dwelling in dynamic usufruct for the player
    */
-  static claimDwelling(nodeId, nodeName, dwelling, vocationId = 'farmer') {
+  static claimDwelling(nodeId, nodeName, dwelling, vocationId = 'farmer', appearance = null) {
+    const existing = this.getProfile();
     const profile = {
       nodeId, // e.g. 'node-detroit'
       nodeName: nodeName || 'Detroit Delray Commons',
       dwellingId: dwelling.id, // e.g. 'dwelling-2'
       dwellingNumber: dwelling.number,
       vocationId,
+      appearance: appearance || existing?.appearance || null,
       claimedAt: Date.now(),
       lastSeenAt: Date.now(),
       sabbaticalActive: true,
@@ -53,6 +55,20 @@ export class PlayerProfileManager {
     }
 
     return profile;
+  }
+
+  /**
+   * Updates player avatar appearance (gender, hairStyle, hairColor, skinTone)
+   */
+  static updateAppearance(appearance) {
+    const p = this.getProfile() || {};
+    p.appearance = { ...(p.appearance || {}), ...appearance };
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(p));
+    } catch (e) {
+      console.error('Failed to update player appearance:', e);
+    }
+    return p;
   }
 
   /**

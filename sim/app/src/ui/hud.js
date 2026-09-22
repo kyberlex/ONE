@@ -161,6 +161,13 @@ export class HudController {
       const signE = thermo.energy.netDelta >= 0 ? '+' : '';
       this.elEnergyDelta.textContent = `${signE}${thermo.energy.netDelta} kW`;
       this.elEnergyDelta.className = thermo.energy.netDelta >= 0 ? 'delta positive' : 'delta negative';
+
+      const solarStr = thermo.energy.isNight ? '☀️ 0 kW (Night)' : `☀️ ${thermo.energy.solarKw} kW`;
+      const windStr = `💨 ${thermo.energy.windKw} kW (${thermo.weather?.windSpeedKmh || 0} km/h)`;
+      const parentCard = this.elEnergyBar.closest('.hud-meter-card');
+      if (parentCard) {
+        parentCard.title = `Microgrid Flows: ${solarStr} | ${windStr} | Battery: ${thermo.energy.percent}%`;
+      }
     }
 
     // 2. 💧 Water Meter

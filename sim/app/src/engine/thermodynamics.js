@@ -9,7 +9,7 @@
 export const WEATHER_TYPES = {
   SUNNY: { id: 'SUNNY', icon: '☀️', name: 'Sunny & Clear', cloudCover: 0.05, rainfallMmPerHour: 0.0, windSpeedKmh: 14, temperatureC: 24 },
   PARTLY_CLOUDY: { id: 'PARTLY_CLOUDY', icon: '⛅', name: 'Partly Cloudy', cloudCover: 0.35, rainfallMmPerHour: 0.0, windSpeedKmh: 18, temperatureC: 21 },
-  OVERCAST: { id: 'OVERCAST', icon: '☁️', name: 'Overcast Skies', cloudCover: 0.85, rainfallMmPerHour: 0.2, windSpeedKmh: 22, temperatureC: 17 },
+  OVERCAST: { id: 'OVERCAST', icon: '☁️', name: 'Overcast Skies', cloudCover: 0.85, rainfallMmPerHour: 0.0, windSpeedKmh: 22, temperatureC: 17 },
   RAIN: { id: 'RAIN', icon: '🌧️', name: 'Gentle Rain', cloudCover: 0.95, rainfallMmPerHour: 3.8, windSpeedKmh: 28, temperatureC: 15 },
   STORMY: { id: 'STORMY', icon: '⛈️', name: 'Thunderstorm', cloudCover: 1.0, rainfallMmPerHour: 14.5, windSpeedKmh: 58, temperatureC: 13 },
   HEATWAVE: { id: 'HEATWAVE', icon: '🌡️', name: 'Extreme Heatwave', cloudCover: 0.0, rainfallMmPerHour: 0.0, windSpeedKmh: 8, temperatureC: 39 },
@@ -68,6 +68,9 @@ export class ThermodynamicEngine {
       islandMode: false,
       lastProductionKwh: 0,
       lastConsumptionKwh: 0,
+      lastSolarKw: 0,
+      lastWindKw: 0,
+      isNight: false,
       netFlowKwh: 0
     };
 
@@ -310,11 +313,14 @@ export class ThermodynamicEngine {
     // -------------------------------------------------------------
     // 1. ⚡ ENERGY STEP
     // -------------------------------------------------------------
+    const isNight = (hour < 6 || hour >= 21);
+    this.energy.isNight = isNight;
+
     const sunFactor = this.getSolarFactor(hour);
-    let solarGen = this.energy.solarCapacityKw * sunFactor;
+    let solarGen = isNight ? 0 : this.energy.solarCapacityKw * sunFactor;
     
     // Disaster penalty (e.g. Hailstorm cracked solar cells)
-    if (this.weather.activeDisaster?.solarPenalty) {
+    if (this.weather.activeDisaster?.solarPenalty && !isNight) {
       solarGen *= this.weather.activeDisaster.solarPenalty;
     }
 
@@ -328,6 +334,8 @@ export class ThermodynamicEngine {
     }
     const windGen = this.energy.windCapacityKw * windFactor;
 
+    this.energy.lastSolarKw = Math.round(solarGen * 10) / 10;
+    this.energy.lastWindKw = Math.round(windGen * 10) / 10;
     const totalEnergyGen = solarGen + windGen;
 
     // Energy consumption:
@@ -671,7 +679,10 @@ export class ThermodynamicEngine {
         capacityKwh: Math.round(this.energy.batteryCapacityKwh * this.energy.batteryHealth * ((this.machinery.batteryBank.lifecycleHealth || 100) / 100)),
         percent: Math.round((this.energy.batteryStoredKwh / (this.energy.batteryCapacityKwh * this.energy.batteryHealth)) * 100),
         netDelta: Number(this.energy.netFlowKwh.toFixed(1)),
-        isSolarActive: this.energy.lastProductionKwh > 10
+        isSolarActive: !this.energy.isNight && this.energy.lastSolarKw > 1,
+        solarKw: this.energy.lastSolarKw,
+        windKw: this.energy.lastWindKw,
+        isNight: this.energy.isNight
       },
       water: {
         currentL: Math.round(this.water.cisternStoredL),

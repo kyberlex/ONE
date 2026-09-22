@@ -11,6 +11,7 @@
 import L from 'leaflet';
 import { GLOBAL_STARTER_NODES, getClimateZoneFromLat, createCustomGlobalNode } from '../data/bioregions.js';
 import { t } from '../i18n/index.js';
+import { getNightPolygonCoordinates, isPointInNight } from './solar_terminator.js';
 
 export class WorldMapController {
   constructor(containerId, onSelectNodeCallback, onFoundNodeCallback, onDiscreteZoomGestureCallback = null) {
@@ -23,13 +24,18 @@ export class WorldMapController {
     this.markersLayer = null;
     this.meshLinksLayer = null;
     this.userLocationMarker = null;
+    this.terminatorLayer = null;
+    this.nodeMarkers = new Map();
+    this.lastHour = 12;
+    this.lastDay = 80;
 
     this.initMap();
   }
 
   showWorld() {
     if (!this.map) return;
-    this.map.flyTo([25, -10], 3, { duration: 0.8 });
+    this.map.invalidateSize();
+    this.map.setView([20, 0], 2.5, { animate: false });
   }
 
   showRegion(node) {
@@ -80,14 +86,16 @@ export class WorldMapController {
       }
     }, { passive: false });
 
-    // Center on Atlantic view initially (lat 25, lng -20, zoom 3)
+    // Center on Atlantic/Equator view initially
     this.map = L.map(this.containerId, {
-      center: [30, -10],
-      zoom: 3,
+      center: [20, 0],
+      zoom: 2.5,
       minZoom: 2,
       maxZoom: 17,
       zoomControl: false,
-      attributionControl: false
+      attributionControl: false,
+      maxBounds: [[-84, -180], [84, 180]],
+      maxBoundsViscosity: 0.8
     });
 
     // Zoom control at top-right
@@ -125,6 +133,24 @@ export class WorldMapController {
     this.referenceLayer.addTo(this.map);
     this.currentMapStyle = 'satellite';
 
+    // Dedicated pane for solar terminator night shadow between satellite tiles and markers
+    this.map.createPane('terminatorPane');
+    const termPane = this.map.getPane('terminatorPane');
+    if (termPane) {
+      termPane.style.zIndex = '350';
+      termPane.style.pointerEvents = 'none';
+    }
+
+    this.terminatorLayer = L.polygon(getNightPolygonCoordinates(12, 80), {
+      pane: 'terminatorPane',
+      fillColor: '#020617',
+      fillOpacity: 0.58,
+      color: '#38bdf8',
+      weight: 1.5,
+      opacity: 0.45,
+      interactive: false
+    }).addTo(this.map);
+
     this.markersLayer = L.layerGroup().addTo(this.map);
     this.meshLinksLayer = L.layerGroup().addTo(this.map);
 
@@ -151,6 +177,7 @@ export class WorldMapController {
 
   renderAllNodes() {
     this.markersLayer.clearLayers();
+    this.nodeMarkers.clear();
 
     for (const node of this.nodes) {
       const climate = getClimateZoneFromLat(node.lat);
@@ -231,7 +258,9 @@ export class WorldMapController {
       });
 
       this.markersLayer.addLayer(marker);
+      this.nodeMarkers.set(node.id, { marker, node });
     }
+    this.updateSolarTerminator(this.lastHour, this.lastDay);
   }
 
   renderMeshLinks() {
@@ -392,6 +421,28 @@ export class WorldMapController {
     const node = this.nodes.find(n => n.id === nodeId);
     if (node && this.map) {
       this.map.flyTo([node.lat, node.lng], 9, { duration: 2.0 });
+    }
+  }
+
+  updateSolarTerminator(hour = 12, day = 80) {
+    this.lastHour = hour;
+    this.lastDay = day;
+    if (!this.map || !this.terminatorLayer) return;
+
+    const coords = getNightPolygonCoordinates(hour, day);
+    this.terminatorLayer.setLatLngs(coords);
+
+    // Update node marker night lights
+    for (const [nodeId, item] of this.nodeMarkers.entries()) {
+      const inNight = isPointInNight(item.node.lat, item.node.lng, hour, day);
+      const el = item.marker.getElement();
+      if (el) {
+        if (inNight) {
+          el.classList.add('is-night');
+        } else {
+          el.classList.remove('is-night');
+        }
+      }
     }
   }
 

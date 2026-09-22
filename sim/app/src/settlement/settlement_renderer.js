@@ -14,7 +14,7 @@ import { CLIMATE_ZONES } from '../data/bioregions.js';
 import { COMMUNITY_VOCATIONS, getVocationById } from '../data/vocations.js';
 import { PlayerProfileManager } from '../engine/player_profile.js';
 import { t } from '../i18n/index.js';
-import { InteriorRenderer } from './interior_renderer.js';
+import { InteriorRenderer, getCitizenAppearance } from './interior_renderer.js';
 
 export class SettlementRenderer {
 
@@ -323,15 +323,17 @@ export class SettlementRenderer {
     const playerHome = this.dwellings.find(d => d.isPlayerHome);
     const startX = playerHome ? playerHome.x + 10 : 0;
     const startY = playerHome ? playerHome.y + 10 : 25;
+    const pApp = profile?.appearance || getCitizenAppearance(profile?.name || 'Player (You)');
 
     this.citizens.push({
       id: 'avatar-player',
-      name: 'Player (You)',
+      name: profile?.name || 'Player (You)',
       isPlayer: true,
       isHuman: true,
       isChild: false,
       isElder: false,
       vocation: playerVoc,
+      homeDwelling: playerHome || this.dwellings[0],
       x: startX,
       y: startY,
       targetX: startX,
@@ -339,6 +341,10 @@ export class SettlementRenderer {
       speed: 0.52,
       pauseTicks: 30,
       color: '#fbbf24',
+      gender: pApp.gender,
+      hairStyle: pApp.hairStyle,
+      hairColor: pApp.hairColor,
+      skinTone: pApp.skinTone,
       bubble: null,
       bubbleTimer: 140
     });
@@ -360,6 +366,7 @@ export class SettlementRenderer {
         isChild: false,
         isElder: false,
         vocation: voc,
+        homeDwelling: this.dwellings[(i + 1) % this.dwellings.length],
         x: (Math.random() - 0.5) * 140,
         y: (Math.random() - 0.5) * 140,
         targetX: 0,
@@ -389,6 +396,7 @@ export class SettlementRenderer {
         isElder: false,
         age: cConf.age,
         vocation: { defaultName: 'Pupil', icon: '🎒', targetLocation: 'SCHOOL' },
+        homeDwelling: this.dwellings[(i + 2) % this.dwellings.length],
         x: -120 + i * 20,
         y: 240 + (Math.random() - 0.5) * 20,
         targetX: -140,
@@ -418,6 +426,7 @@ export class SettlementRenderer {
         isChild: false,
         isElder: true,
         vocation: { ...voc, defaultName: eConf.role, icon: '🧓', targetLocation: 'ELDER_CARE' },
+        homeDwelling: this.dwellings[this.dwellings.length - 1 - (i % 3)] || this.dwellings[0],
         x: 130 + i * 15,
         y: 250 + (Math.random() - 0.5) * 15,
         targetX: 150,
@@ -441,6 +450,7 @@ export class SettlementRenderer {
         isChild: false,
         isElder: false,
         vocation: voc,
+        homeDwelling: this.dwellings[i % this.dwellings.length],
         x: (Math.random() - 0.5) * 180,
         y: (Math.random() - 0.5) * 180,
         targetX: 0,
@@ -452,6 +462,199 @@ export class SettlementRenderer {
         bubbleTimer: Math.floor(Math.random() * 200)
       });
     }
+  }
+
+  /**
+   * Deterministic 24-Hour Circadian Routine & Chore Engine (Agent SIM-0 & SIM-1)
+   * Connects physical simulation time (hour 0-23) and node chore allocations to visual citizen paths:
+   * - 22:00 - 06:00: Night Rest in private Usufruct Dwellings
+   * - 06:00 - 08:30: Morning Awakening, breakfast tea, school preparation
+   * - 08:30 - 12:30: Core Subsistence Chore Shift (Chores: Greenhouse, Solar, Filters, FabLab) & School
+   * - 12:30 - 14:00: Communal Lunch in Agora or Garden Pavilion
+   * - 14:00 - 18:00: Guaranteed Solarpunk Free Time (strolling, hobbies, garden chess, playing)
+   * - 18:00 - 20:30: Demarchic Assembly & Sortition Deliberation in Agora
+   * - 20:30 - 22:00: Evening Social, dinner, returning to homes
+   */
+  getCitizenRoutineTarget(c, hour) {
+    const school = this.infrastructures.find(inf => inf.type === 'SCHOOL');
+    const garden = this.infrastructures.find(inf => inf.type === 'GARDEN');
+    const elderSanctuary = this.infrastructures.find(inf => inf.type === 'ELDER_CARE');
+    const home = c.homeDwelling || this.dwellings[0];
+
+    // 1. NIGHT (21:00 - 06:00): Sleep in private dwellings
+    if (hour >= 21 || hour < 6) {
+      const isNightWatch = !c.isChild && !c.isElder && (c.id === this.citizens[0]?.id);
+      if (isNightWatch) {
+        return {
+          x: (Math.random() - 0.5) * 140,
+          y: (Math.random() - 0.5) * 140,
+          activity: 'night_watch',
+          activityDesc: 'Night Watch & Battery Bank Inspection 🔦',
+          pause: 220
+        };
+      }
+      return {
+        x: home.x,
+        y: home.y,
+        activity: 'sleeping',
+        activityDesc: 'Resting peacefully in private usufruct pod 😴',
+        pause: 450
+      };
+    }
+
+    // 2. MORNING (06:00 - 08:30): Wake up, breakfast, garden stroll, walk to school/work
+    if (hour >= 6 && hour < 8.5) {
+      if (c.isChild) {
+        return {
+          x: (school ? school.x : -150) + (Math.random() - 0.5) * 30,
+          y: (school ? school.y : 250) + (Math.random() - 0.5) * 20,
+          activity: 'school_prep',
+          activityDesc: 'Morning walk to the Commons School',
+          pause: 140
+        };
+      }
+      if (Math.random() < 0.55) {
+        return {
+          x: (garden ? garden.x : 0) + (Math.random() - 0.5) * 45,
+          y: (garden ? garden.y : 250) + (Math.random() - 0.5) * 30,
+          activity: 'morning_tea',
+          activityDesc: 'Enjoying morning tea by the lotus fountain',
+          pause: 150
+        };
+      }
+      return {
+        x: this.agora.x + (Math.random() - 0.5) * 35,
+        y: this.agora.y + (Math.random() - 0.5) * 35,
+        activity: 'morning_walk',
+        activityDesc: 'Greeting neighbors in the Agora',
+        pause: 120
+      };
+    }
+
+    // 3. CORE CHORE SHIFT (08:30 - 12:30): Subsistence Contribution Shift (Chores)
+    if (hour >= 8.5 && hour < 12.5) {
+      if (c.isChild) {
+        return {
+          x: (school ? school.x : -150) + (Math.random() - 0.5) * 35,
+          y: (school ? school.y : 250) + (Math.random() - 0.5) * 25,
+          activity: 'in_class',
+          activityDesc: 'Hands-on learning & bioregion science in Commons School',
+          pause: 280
+        };
+      }
+      if (c.isElder) {
+        const dests = [elderSanctuary, garden, school].filter(Boolean);
+        const target = dests[Math.floor(Math.random() * dests.length)];
+        return {
+          x: target.x + (Math.random() - 0.5) * 30,
+          y: target.y + (Math.random() - 0.5) * 25,
+          activity: 'mentoring',
+          activityDesc: 'Mentoring youth & sharing oral history',
+          pause: 240
+        };
+      }
+
+      // Adult on chore duty: head to assigned chore infrastructure!
+      const targetInf = this.getChoreInfrastructure(c);
+      return {
+        x: targetInf.x + (Math.random() - 0.5) * 35,
+        y: targetInf.y + (Math.random() - 0.5) * 30,
+        activity: 'chore_work',
+        activityDesc: `Fulfilling daily chore shift at ${targetInf.name || targetInf.type}`,
+        pause: 300
+      };
+    }
+
+    // 4. COMMUNAL LUNCH (12:30 - 14:00): Shared Meal in Agora or Garden Pavilion
+    if (hour >= 12.5 && hour < 14) {
+      if (Math.random() < 0.60) {
+        return {
+          x: this.agora.x + (Math.random() - 0.5) * 45,
+          y: this.agora.y + (Math.random() - 0.5) * 45,
+          activity: 'lunch',
+          activityDesc: 'Communal lunch & discussion in the Agora',
+          pause: 180
+        };
+      }
+      return {
+        x: (garden ? garden.x : 0) + (Math.random() - 0.5) * 40,
+        y: (garden ? garden.y : 250) + (Math.random() - 0.5) * 30,
+        activity: 'lunch',
+        activityDesc: 'Sharing fresh greenhouse harvest in the garden pergola',
+        pause: 180
+      };
+    }
+
+    // 5. FREE TIME & SELF-ACTUALIZATION (14:00 - 18:00): The 5-6 hours of daily freedom!
+    if (hour >= 14 && hour < 18) {
+      if (c.isChild) {
+        return {
+          x: (garden ? garden.x : 0) + (Math.random() - 0.5) * 60,
+          y: (garden ? garden.y : 250) + (Math.random() - 0.5) * 40,
+          activity: 'playing',
+          activityDesc: 'Playing in the Shared Garden & chasing butterflies',
+          pause: 140
+        };
+      }
+      if (c.isElder) {
+        return {
+          x: (garden ? garden.x + 35 : 35) + (Math.random() - 0.5) * 20,
+          y: (garden ? garden.y + 10 : 260) + (Math.random() - 0.5) * 15,
+          activity: 'leisure',
+          activityDesc: 'Relaxing on cedar benches in the afternoon sun',
+          pause: 220
+        };
+      }
+      // Adults in Free Time: Strolling in garden, tinkering with passion projects in FabLab, chatting in Agora, visiting homes
+      const leisureOptions = [
+        garden,
+        this.infrastructures.find(inf => inf.type === 'WORKSHOP'), // Makers tinkering with hobby CAD/3D prints!
+        this.agora,
+        home
+      ].filter(Boolean);
+      const chosen = leisureOptions[Math.floor(Math.random() * leisureOptions.length)];
+      return {
+        x: chosen.x + (Math.random() - 0.5) * 40,
+        y: chosen.y + (Math.random() - 0.5) * 40,
+        activity: 'free_time',
+        activityDesc: `Enjoying guaranteed daily Free Time (${this.sim?.node?.averageFreeHoursPerDay || '5.4'} hrs/day)`,
+        pause: 200
+      };
+    }
+
+    // 6. DEMARCHIC ASSEMBLY (18:00 - 20:30): Community Gathering in the Agora
+    if (hour >= 18 && hour < 20.5) {
+      return {
+        x: this.agora.x + (Math.random() - 0.5) * 55,
+        y: this.agora.y + (Math.random() - 0.5) * 55,
+        activity: 'assembly',
+        activityDesc: 'Deliberating in the Athenian Sortition Assembly',
+        pause: 220
+      };
+    }
+
+    // 7. EVENING SOCIAL & DINNER (20:30 - 22:00): Returning to homes, evening tea
+    return {
+      x: home.x + (Math.random() - 0.5) * 16,
+      y: home.y + (Math.random() - 0.5) * 16,
+      activity: 'evening_rest',
+      activityDesc: 'Relaxing with family & neighbors before sleep',
+      pause: 240
+    };
+  }
+
+  /**
+   * Returns the infrastructure corresponding to the citizen's chore assignment
+   */
+  getChoreInfrastructure(c) {
+    const voc = c.vocation;
+    if (voc && voc.targetLocation) {
+      const match = this.infrastructures.find(inf => inf.type === voc.targetLocation);
+      if (match) return match;
+    }
+    const domains = ['FOOD', 'ENERGY', 'WATER', 'WORKSHOP', 'ELDER_CARE'];
+    const randomType = domains[Math.floor(Math.random() * domains.length)];
+    return this.infrastructures.find(inf => inf.type === randomType) || this.agora;
   }
 
   setupResize() {
@@ -903,8 +1106,9 @@ export class SettlementRenderer {
     ctx.scale(this.camera.zoom, this.camera.zoom);
     ctx.translate(this.camera.x, this.camera.y);
 
-    const weather = this.sim?.weatherEngine?.currentWeather || null;
-    InteriorRenderer.renderInterior(ctx, w, h, this.activeInterior.scene, this.interiorTick, weather);
+    const weather = this.sim?.weatherEngine?.currentWeather || this.sim?.thermo?.weather || null;
+    const hour = this.sim ? this.sim.currentHour : 12;
+    InteriorRenderer.renderInterior(ctx, w, h, this.activeInterior.scene, this.interiorTick, weather, hour);
     ctx.restore();
   }
 
@@ -1078,7 +1282,23 @@ export class SettlementRenderer {
     const existingNames = new Set(scene.occupants.map(o => o.name));
 
     // Sample from settlement citizens who are not currently inside this interior
-    const candidates = this.citizens.filter(c => !existingNames.has(c.name));
+    let candidates = this.citizens.filter(c => !existingNames.has(c.name));
+
+    // Demographic & vocational filter by facility suitability and safety
+    if (interior.type === 'WORKSHOP' || interior.type === 'ENERGY' || interior.type === 'WATER') {
+      // High-voltage power, heavy CNC tools, and chemical analysis: adults/elders only
+      const adultCandidates = candidates.filter(c => !c.isChild);
+      if (adultCandidates.length > 0) candidates = adultCandidates;
+    } else if (interior.type === 'SCHOOL') {
+      // School: prioritize children, with occasional educator or elder mentor
+      const schoolCandidates = candidates.filter(c => c.isChild || c.isElder || c.vocation?.defaultName === 'Educator');
+      if (schoolCandidates.length > 0) candidates = schoolCandidates;
+    } else if (interior.type === 'ELDER_CARE') {
+      // Elder care: prioritize elders and caregivers, with occasional visiting children
+      const elderCandidates = candidates.filter(c => c.isElder || c.vocation?.defaultName === 'Caregiver' || c.isChild);
+      if (elderCandidates.length > 0) candidates = elderCandidates;
+    }
+
     let chosenCitizen = null;
 
     if (candidates.length > 0) {
@@ -1088,12 +1308,13 @@ export class SettlementRenderer {
       const fallbackNames = ['Silvia Marini', 'Kenji Sato', 'Amara Diallo', 'Lukas Weber', 'Nadia Petrov'];
       const unpicked = fallbackNames.filter(n => !existingNames.has(n));
       const name = unpicked.length > 0 ? unpicked[0] : `Pioneer ${scene.occupants.length + 1}`;
+      const isIndustrial = (interior.type === 'WORKSHOP' || interior.type === 'ENERGY' || interior.type === 'WATER');
       chosenCitizen = {
         name,
         isPlayer: false,
         isHuman: false,
-        isChild: Math.random() < 0.25,
-        isElder: Math.random() < 0.25,
+        isChild: isIndustrial ? false : (interior.type === 'SCHOOL' ? Math.random() < 0.70 : Math.random() < 0.20),
+        isElder: isIndustrial ? Math.random() < 0.15 : (interior.type === 'ELDER_CARE' ? Math.random() < 0.70 : Math.random() < 0.25),
         color: '#38bdf8',
         speed: 1.25,
         vocation: { defaultName: 'Resident', icon: '🌱' }
@@ -1748,10 +1969,19 @@ export class SettlementRenderer {
       this.updateInteriorSimulation(dt, simSpeed);
     }
 
-    // Keep player avatar vocation reactive to sim.node.playerVocation
+    // Keep player avatar vocation & appearance reactive to profile
     const playerAvatar = this.citizens.find(c => c.isPlayer);
-    if (playerAvatar && this.sim?.node?.playerVocation && playerAvatar.vocation?.id !== this.sim.node.playerVocation) {
-      playerAvatar.vocation = getVocationById(this.sim.node.playerVocation);
+    if (playerAvatar) {
+      if (this.sim?.node?.playerVocation && playerAvatar.vocation?.id !== this.sim.node.playerVocation) {
+        playerAvatar.vocation = getVocationById(this.sim.node.playerVocation);
+      }
+      const prof = PlayerProfileManager.getProfile();
+      if (prof?.appearance) {
+        if (prof.appearance.gender) playerAvatar.gender = prof.appearance.gender;
+        if (prof.appearance.hairStyle) playerAvatar.hairStyle = prof.appearance.hairStyle;
+        if (prof.appearance.hairColor) playerAvatar.hairColor = prof.appearance.hairColor;
+        if (prof.appearance.skinTone) playerAvatar.skinTone = prof.appearance.skinTone;
+      }
     }
 
     // Wind turbines rotation: proportional to simulation speed; subtle idle breeze when paused
@@ -1772,74 +2002,51 @@ export class SettlementRenderer {
           const dist = Math.hypot(dx, dy);
 
           if (dist < 4 * Math.max(1, simSpeed * 0.8)) {
-            // Arrived at destination, pick new destination based on role & demographic group
-            c.pauseTicks = Math.floor((Math.random() * 150 + 50) / simSpeed);
-
-            if (c.isChild) {
-              // Children frequent the Commons School, the Shared Garden, and the Agora
-              const school = this.infrastructures.find(inf => inf.type === 'SCHOOL');
-              const garden = this.infrastructures.find(inf => inf.type === 'GARDEN');
-              const childDests = [
-                { x: (school ? school.x : -150) + (Math.random() - 0.5) * 45, y: (school ? school.y : 250) + (Math.random() - 0.5) * 30 },
-                { x: (garden ? garden.x : 0) + (Math.random() - 0.5) * 55, y: (garden ? garden.y : 250) + (Math.random() - 0.5) * 30 },
-                { x: this.agora.x + (Math.random() - 0.5) * 45, y: this.agora.y + (Math.random() - 0.5) * 45 }
-              ];
-              const dest = childDests[Math.floor(Math.random() * childDests.length)];
-              c.targetX = dest.x;
-              c.targetY = dest.y;
-            } else if (c.isElder) {
-              // Elders frequent the Intergenerational Sanctuary, the Shared Garden benches, and the Agora
-              const elderSanctuary = this.infrastructures.find(inf => inf.type === 'ELDER_CARE');
-              const garden = this.infrastructures.find(inf => inf.type === 'GARDEN');
-              const elderDests = [
-                { x: (elderSanctuary ? elderSanctuary.x : 150) + (Math.random() - 0.5) * 40, y: (elderSanctuary ? elderSanctuary.y : 250) + (Math.random() - 0.5) * 30 },
-                { x: (garden ? garden.x + 36 : 36) + (Math.random() - 0.5) * 20, y: (garden ? garden.y + 10 : 260) + (Math.random() - 0.5) * 10 },
-                { x: this.agora.x + (Math.random() - 0.5) * 35, y: this.agora.y + (Math.random() - 0.5) * 35 }
-              ];
-              const dest = elderDests[Math.floor(Math.random() * elderDests.length)];
-              c.targetX = dest.x;
-              c.targetY = dest.y;
-            } else {
-              // Adult citizens go to their vocational infrastructure, dwellings, or Agora
-              const cVoc = c.vocation || COMMUNITY_VOCATIONS[0];
-              let matchingTarget = this.infrastructures.find(inf => inf.type === cVoc.targetLocation);
-              if (!matchingTarget && cVoc.targetLocation === 'AGORA') matchingTarget = this.agora;
-
-              const destinations = [
-                { x: this.agora.x + (Math.random() - 0.5) * 50, y: this.agora.y + (Math.random() - 0.5) * 50 },
-                ...(matchingTarget ? [{ x: matchingTarget.x + (Math.random() - 0.5) * 35, y: matchingTarget.y + (Math.random() - 0.5) * 35 }] : []),
-                ...this.infrastructures.map(inf => ({ x: inf.x + (Math.random() - 0.5) * 40, y: inf.y + (Math.random() - 0.5) * 40 })),
-                ...this.dwellings.slice(0, 8).map(dw => ({ x: dw.x, y: dw.y }))
-              ];
-              const dest = destinations[Math.floor(Math.random() * destinations.length)];
-              c.targetX = dest.x;
-              c.targetY = dest.y;
-            }
+            // Arrived at destination: evaluate next destination via 24h Circadian Chore & Free Time Engine!
+            const hour = this.sim ? this.sim.currentHour : 12;
+            const routine = this.getCitizenRoutineTarget(c, hour);
+            c.targetX = routine.x;
+            c.targetY = routine.y;
+            c.activity = routine.activity;
+            c.activityDesc = routine.activityDesc;
+            c.pauseTicks = Math.floor(routine.pause / simSpeed);
           } else {
             c.x += (dx / dist) * c.speed * simSpeed;
             c.y += (dy / dist) * c.speed * simSpeed;
           }
         }
 
-        // Emote speech bubbles
+        // Emote speech bubbles based on active circadian activity
         c.bubbleTimer -= simSpeed;
         if (c.bubbleTimer <= 0) {
           if (c.bubble) {
             c.bubble = null;
-            c.bubbleTimer = Math.floor((Math.random() * 300 + 100) / simSpeed);
-          } else if (Math.random() < 0.35) {
-            if (c.isChild) {
-              const childEmotes = ['🎒', '🌱', '🦋', '⚽', '🎨', '📖'];
-              c.bubble = childEmotes[Math.floor(Math.random() * childEmotes.length)];
-            } else if (c.isElder) {
-              const elderEmotes = ['🧓', '☕', '📜', '🌱', '🕊️', '❤️'];
-              c.bubble = elderEmotes[Math.floor(Math.random() * elderEmotes.length)];
+            c.bubbleTimer = Math.floor((Math.random() * 300 + 120) / simSpeed);
+          } else if (Math.random() < 0.40) {
+            if (c.activity === 'sleeping') {
+              const nightEmotes = ['😴', '🌙', '✨', '💤'];
+              c.bubble = nightEmotes[Math.floor(Math.random() * nightEmotes.length)];
+            } else if (c.activity === 'chore_work') {
+              const workEmote = c.vocation ? c.vocation.icon : '🛠️';
+              const choreEmotes = [workEmote, '⚡', '🌱', '🛠️', '💧', '💻', '⚙️'];
+              c.bubble = choreEmotes[Math.floor(Math.random() * choreEmotes.length)];
+            } else if (c.activity === 'in_class') {
+              const schoolEmotes = ['🎒', '📖', '🔬', '🎨', '📐'];
+              c.bubble = schoolEmotes[Math.floor(Math.random() * schoolEmotes.length)];
+            } else if (c.activity === 'lunch') {
+              const lunchEmotes = ['🥗', '🍲', '🍵', '🤝', '🍎'];
+              c.bubble = lunchEmotes[Math.floor(Math.random() * lunchEmotes.length)];
+            } else if (c.activity === 'free_time' || c.activity === 'playing' || c.activity === 'leisure') {
+              const freeEmotes = ['🦋', '☕', '📖', '🎨', '♟️', '🌸', '🎵', '⚽', '🌿'];
+              c.bubble = freeEmotes[Math.floor(Math.random() * freeEmotes.length)];
+            } else if (c.activity === 'assembly') {
+              const assemblyEmotes = ['🏛️', '🗳️', '📜', '🏺', '🕊️', '🤝'];
+              c.bubble = assemblyEmotes[Math.floor(Math.random() * assemblyEmotes.length)];
             } else {
-              const vocEmote = c.vocation ? c.vocation.icon : '🌱';
-              const genericEmotes = ['🌱', '⚡', '💧', '🤝', '🛠️', '🍲', '☀️', '🏡'];
-              c.bubble = Math.random() < 0.6 ? vocEmote : genericEmotes[Math.floor(Math.random() * genericEmotes.length)];
+              const genericEmotes = ['🌱', '☀️', '🏡', '🤝', '🍵'];
+              c.bubble = genericEmotes[Math.floor(Math.random() * genericEmotes.length)];
             }
-            c.bubbleTimer = 120 / simSpeed;
+            c.bubbleTimer = Math.floor(120 / simSpeed);
           }
         }
       }
@@ -1947,11 +2154,20 @@ export class SettlementRenderer {
     this.renderParticles(ctx);
 
     // 8. Render Citizens / Pioneers
+    const isNight = this.sim ? (this.sim.currentHour >= 21 || this.sim.currentHour < 6) : false;
     for (const c of this.citizens) {
-      this.renderCitizen(ctx, c);
+      if (isNight && c.activity === 'sleeping' && !c.isPlayer) {
+        // Citizens sleeping inside their dwellings are not wandering outdoors
+        continue;
+      }
+      this.renderCitizen(ctx, c, isNight);
     }
 
     ctx.restore(); // Restore camera matrix
+
+    // 8.25 Render 24-Hour Day/Night Atmospheric Ambient Pass (Dawn, Day, Dusk, Night)
+    const hour = this.sim ? this.sim.currentHour : 12;
+    this.renderAmbientDayNight(ctx, w, h, hour);
 
     // 8.5 Render Dynamic Weather Effects (Rain, Overcast shadows, Hail, Lightning, Heatwave)
     this.renderWeatherOverlay(ctx, w, h);
@@ -2094,6 +2310,29 @@ export class SettlementRenderer {
       ctx.lineTo(b.x, b.y);
       ctx.stroke();
     }
+
+    // Nighttime solarpunk bollard ground lanterns along boulevards
+    const isNight = this.sim ? (this.sim.currentHour >= 21 || this.sim.currentHour < 6) : false;
+    if (isNight) {
+      for (let angle = 0; angle < Math.PI * 2; angle += Math.PI / 8) {
+        const lx = Math.cos(angle) * 175;
+        const ly = Math.sin(angle) * 175;
+
+        const glow = ctx.createRadialGradient(lx, ly, 1, lx, ly, 16);
+        glow.addColorStop(0, 'rgba(251, 191, 36, 0.4)');
+        glow.addColorStop(0.6, 'rgba(245, 158, 11, 0.15)');
+        glow.addColorStop(1, 'rgba(245, 158, 11, 0)');
+        ctx.fillStyle = glow;
+        ctx.beginPath();
+        ctx.arc(lx, ly, 16, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = '#fef08a';
+        ctx.beginPath();
+        ctx.arc(lx, ly, 2.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
     ctx.restore();
   }
 
@@ -2124,17 +2363,40 @@ export class SettlementRenderer {
     ctx.arc(0, 0, this.agora.radius * 0.4, 0, Math.PI * 2);
     ctx.stroke();
 
-    // Central Luminous O.N.E. Emblem
-    ctx.fillStyle = '#10b981';
-    ctx.beginPath();
-    ctx.arc(0, 0, 14, 0, Math.PI * 2);
-    ctx.fill();
+    // Central Luminous O.N.E. Emblem or Night Hearth Firepit
+    const isNight = this.sim ? (this.sim.currentHour >= 21 || this.sim.currentHour < 6) : false;
+    if (isNight) {
+      const firePulse = Math.sin(Date.now() * 0.008) * 2.5;
+      const fireGrad = ctx.createRadialGradient(0, 0, 2, 0, 0, 24 + firePulse);
+      fireGrad.addColorStop(0, 'rgba(251, 146, 60, 0.85)');
+      fireGrad.addColorStop(0.5, 'rgba(245, 158, 11, 0.35)');
+      fireGrad.addColorStop(1, 'rgba(245, 158, 11, 0)');
+      ctx.fillStyle = fireGrad;
+      ctx.beginPath();
+      ctx.arc(0, 0, 24 + firePulse, 0, Math.PI * 2);
+      ctx.fill();
 
-    ctx.fillStyle = '#ffffff';
-    ctx.font = 'bold 11px system-ui, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText('O.N.E.', 0, 0);
+      ctx.fillStyle = '#fef08a';
+      ctx.beginPath();
+      ctx.arc(0, 0, 7 + firePulse * 0.4, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.font = '12px system-ui';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('🔥', 0, 0);
+    } else {
+      ctx.fillStyle = '#10b981';
+      ctx.beginPath();
+      ctx.arc(0, 0, 14, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 11px system-ui, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('O.N.E.', 0, 0);
+    }
 
     // Label tag
     ctx.fillStyle = '#e2e8f0';
@@ -2188,6 +2450,29 @@ export class SettlementRenderer {
         ctx.stroke();
       }
       ctx.restore();
+
+      // Aviation safety blinking red beacon on turbine nacelle at night
+      const isNight = this.sim ? (this.sim.currentHour >= 21 || this.sim.currentHour < 6) : false;
+      if (isNight) {
+        const beaconBlink = (Date.now() % 1600) < 350;
+        if (beaconBlink) {
+          ctx.fillStyle = '#ef4444';
+          ctx.beginPath();
+          ctx.arc(35, -5, 3.5, 0, Math.PI * 2);
+          ctx.fill();
+
+          ctx.fillStyle = 'rgba(239, 68, 68, 0.4)';
+          ctx.beginPath();
+          ctx.arc(35, -5, 8, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        // LiFePO4 battery rack telemetry LEDs
+        ctx.fillStyle = '#10b981';
+        ctx.fillRect(-b.width / 2 + 12, b.height / 2 - 14, 4, 3);
+        ctx.fillStyle = '#38bdf8';
+        ctx.fillRect(-b.width / 2 + 20, b.height / 2 - 14, 4, 3);
+      }
     } else if (b.type === 'WATER') {
       // Water Cistern Glass Tank with dynamic water level
       ctx.fillStyle = 'rgba(14, 165, 233, 0.4)';
@@ -2445,6 +2730,19 @@ export class SettlementRenderer {
       ctx.stroke();
     }
 
+    // 1.5 Nighttime warm light pool radiating on the ground around occupied home
+    const isNight = this.sim ? (this.sim.currentHour >= 21 || this.sim.currentHour < 6) : false;
+    if (isNight && isOccupied) {
+      const windowLightGrad = ctx.createRadialGradient(0, 0, d.radius * 0.3, 0, 0, d.radius + 32);
+      windowLightGrad.addColorStop(0, 'rgba(251, 191, 36, 0.45)');
+      windowLightGrad.addColorStop(0.55, 'rgba(245, 158, 11, 0.18)');
+      windowLightGrad.addColorStop(1, 'rgba(245, 158, 11, 0)');
+      ctx.fillStyle = windowLightGrad;
+      ctx.beginPath();
+      ctx.arc(0, 0, d.radius + 32, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
     // 2. Bioclimatic Architectural Render per Climate
     const key = this.climate.id;
 
@@ -2586,6 +2884,22 @@ export class SettlementRenderer {
     const label = isPlayer ? 'Your Home' : (isOccupied ? `${d.occupant.icon || ''} ${d.occupant.name.split(' ')[0]}` : 'FREE');
     ctx.fillText(label, 0, d.radius + 4);
 
+    // Nighttime slumber indicator (peaceful z Z z drifting above roof)
+    if (isNight && isOccupied) {
+      const now = Date.now();
+      const zCycle = ((now * 0.0012 + (d.x * 0.03)) % 2.5);
+      const zAlpha = Math.max(0, 1 - (zCycle / 2.5));
+      ctx.save();
+      ctx.fillStyle = `rgba(254, 240, 138, ${zAlpha * 0.9})`;
+      ctx.font = 'bold 9px system-ui, sans-serif';
+      ctx.fillText('z', 6, -d.radius - 2 - zCycle * 6);
+      if (zCycle > 0.8) {
+        ctx.font = 'bold 11px system-ui, sans-serif';
+        ctx.fillText('Z', 12, -d.radius - 8 - (zCycle - 0.8) * 8);
+      }
+      ctx.restore();
+    }
+
     ctx.restore();
   }
 
@@ -2600,12 +2914,30 @@ export class SettlementRenderer {
     ctx.restore();
   }
 
-  renderCitizen(ctx, c) {
+  renderCitizen(ctx, c, isNight = false) {
     ctx.save();
     ctx.translate(c.x, c.y);
 
     const now = Date.now();
     const pulse = Math.sin(now * 0.005) * 2;
+
+    // Nighttime hand lantern light pool on the ground
+    if (isNight) {
+      const lanternGrad = ctx.createRadialGradient(0, 2, 2, 0, 2, 34);
+      lanternGrad.addColorStop(0, 'rgba(251, 191, 36, 0.45)');
+      lanternGrad.addColorStop(0.5, 'rgba(245, 158, 11, 0.2)');
+      lanternGrad.addColorStop(1, 'rgba(245, 158, 11, 0)');
+      ctx.fillStyle = lanternGrad;
+      ctx.beginPath();
+      ctx.arc(0, 2, 34, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Hand lantern fixture
+      ctx.fillStyle = '#fbbf24';
+      ctx.beginPath();
+      ctx.arc(6, -4, 2.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
 
     // 1. Halo / Ground Rings to distinguish Player vs Human Mesh Peers vs NPCs
     if (c.isPlayer) {
@@ -2655,13 +2987,40 @@ export class SettlementRenderer {
     ctx.arc(0, c.isChild ? -3 : -4, bodyRadius, 0, Math.PI * 2);
     ctx.fill();
 
-    // 3. Head
+    // 3. Head & Hair
     const headY = c.isPlayer ? -11 : (c.isChild ? -8 : -10);
     const headRadius = c.isPlayer ? 3.5 : (c.isChild ? 2.3 : 3);
-    ctx.fillStyle = c.isPlayer ? '#fef08a' : (c.isHuman ? '#e0f2fe' : (c.isElder ? '#f1f5f9' : '#fef08a'));
+    const app = getCitizenAppearance(c);
+
+    // Skin tone with biocultural diversity
+    ctx.fillStyle = c.isPlayer ? '#fef08a' : (c.isHuman ? '#e0f2fe' : (c.isElder ? '#f1f5f9' : app.skinTone));
     ctx.beginPath();
     ctx.arc(0, headY, headRadius, 0, Math.PI * 2);
     ctx.fill();
+
+    // Hair cap & distinct hairstyles (outdoor top-down view)
+    if (!c.isPlayer && !c.isHuman) {
+      ctx.fillStyle = app.hairColor;
+      ctx.beginPath();
+      ctx.arc(0, headY - 0.4, headRadius + 0.25, Math.PI * 0.9, Math.PI * 2.1);
+      ctx.fill();
+
+      // Distinct outdoor hair silhouette for female ponytails & top buns
+      if (app.hairStyle === 'ponytail') {
+        ctx.beginPath();
+        ctx.arc(-headRadius - 1, headY + 0.5, 1.4, 0, Math.PI * 2);
+        ctx.fill();
+      } else if (app.hairStyle === 'bun' || app.hairStyle === 'chignon') {
+        ctx.beginPath();
+        ctx.arc(0, headY - headRadius - 0.9, 1.5, 0, Math.PI * 2);
+        ctx.fill();
+      } else if (app.hairStyle === 'pigtails') {
+        ctx.beginPath();
+        ctx.arc(-headRadius - 0.8, headY - 1, 1.2, 0, Math.PI * 2);
+        ctx.arc(headRadius + 0.8, headY - 1, 1.2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
 
     // Elder silver hair & wooden walking cane
     if (c.isElder) {
@@ -2760,6 +3119,79 @@ export class SettlementRenderer {
     ctx.restore();
   }
 
+  renderAmbientDayNight(ctx, w, h, hour) {
+    ctx.save();
+
+    // 1. Midnight deep indigo overlay (21:00 - 05:30)
+    if (hour >= 21 || hour < 5.5) {
+      let nightOpacity = 0.60;
+      if (hour >= 23 || hour <= 3) {
+        nightOpacity = 0.66;
+      } else if (hour >= 21 && hour < 23) {
+        nightOpacity = 0.48 + (hour - 21) * 0.09;
+      } else if (hour > 3 && hour < 5.5) {
+        nightOpacity = 0.66 - (hour - 3) * 0.12;
+      }
+
+      ctx.fillStyle = `rgba(2, 6, 23, ${nightOpacity})`;
+      ctx.fillRect(0, 0, w, h);
+
+      // 2. Twinkling stars in the celestial upper horizon
+      const now = Date.now();
+      const starCount = 45;
+      for (let i = 0; i < starCount; i++) {
+        const sx = ((i * 157.3) % w);
+        const sy = ((i * 89.7) % (h * 0.38));
+        const twinkle = (Math.sin(now * 0.0035 + i * 2) + 1) * 0.42 + 0.15;
+        ctx.fillStyle = `rgba(255, 255, 255, ${twinkle})`;
+        ctx.beginPath();
+        ctx.arc(sx, sy, 1.2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // 3. Crescent Moon with soft celestial aura (top right)
+      ctx.save();
+      const moonX = w - 85;
+      const moonY = 70;
+      const moonGrad = ctx.createRadialGradient(moonX, moonY, 6, moonX, moonY, 32);
+      moonGrad.addColorStop(0, 'rgba(254, 240, 138, 0.45)');
+      moonGrad.addColorStop(0.6, 'rgba(245, 158, 11, 0.12)');
+      moonGrad.addColorStop(1, 'rgba(245, 158, 11, 0)');
+      ctx.fillStyle = moonGrad;
+      ctx.beginPath();
+      ctx.arc(moonX, moonY, 32, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Moon body
+      ctx.fillStyle = '#fef08a';
+      ctx.beginPath();
+      ctx.arc(moonX, moonY, 13, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Shadow overlay to carve crescent
+      ctx.fillStyle = `rgba(2, 6, 23, ${nightOpacity + 0.12})`;
+      ctx.beginPath();
+      ctx.arc(moonX + 6, moonY - 3, 11, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+
+    } else if (hour >= 5.5 && hour < 8) {
+      // Golden Dawn rose-gold tint
+      const dawnProgress = (hour - 5.5) / 2.5;
+      const dawnOpacity = (1 - dawnProgress) * 0.22;
+      ctx.fillStyle = `rgba(251, 146, 60, ${dawnOpacity})`;
+      ctx.fillRect(0, 0, w, h);
+    } else if (hour >= 18.5 && hour < 21) {
+      // Golden Hour / Sunset amber-violet tint
+      const duskProgress = (hour - 18.5) / 2.5;
+      const duskOpacity = duskProgress * 0.32;
+      ctx.fillStyle = `rgba(217, 119, 6, ${duskOpacity})`;
+      ctx.fillRect(0, 0, w, h);
+    }
+
+    ctx.restore();
+  }
+
   renderWeatherOverlay(ctx, w, h) {
     const weather = this.sim?.thermo?.weather;
     if (!weather) return;
@@ -2768,19 +3200,48 @@ export class SettlementRenderer {
 
     const now = Date.now();
 
-    // 1. Rain Streaks (if rain or storm)
-    if (weather.rainfallMmPerHour > 0 || weather.type === 'RAIN' || weather.type === 'STORMY') {
-      const isStorm = weather.type === 'STORMY';
-      const count = isStorm ? 120 : 60;
-      ctx.strokeStyle = isStorm ? 'rgba(186, 230, 253, 0.7)' : 'rgba(186, 230, 253, 0.45)';
-      ctx.lineWidth = isStorm ? 1.6 : 1.0;
+    // 1. Natural Organic Rain Particles (if rain, storm, or flood)
+    const isStorm = weather.type === 'STORMY';
+    const isRain = weather.type === 'RAIN' || isStorm || weather.activeDisaster?.id === 'TORRENTIAL_FLOOD' || (weather.rainfallMmPerHour >= 1.0);
+
+    if (isRain) {
+      if (!this.weatherDrops) {
+        this.weatherDrops = Array.from({ length: 180 }, () => ({
+          x: Math.random() * (w + 200) - 100,
+          y: Math.random() * h,
+          len: 12 + Math.random() * 14,
+          speed: 15 + Math.random() * 10,
+          alpha: 0.25 + Math.random() * 0.35,
+          thickness: 0.8 + Math.random() * 0.7
+        }));
+      }
+
+      const count = isStorm ? 160 : 75;
+      const windSpeed = weather.windSpeedKmh || 18;
+      const slantX = ((windSpeed - 10) / 40) * 8;
+
+      ctx.lineCap = 'round';
       for (let i = 0; i < count; i++) {
-        const speed = isStorm ? 20 : 12;
-        const rx = ((i * 37 + now * 0.45) % (w + 100)) - 50;
-        const ry = (i * 29 + now * 0.85) % h;
+        const drop = this.weatherDrops[i];
+        drop.y += drop.speed * (isStorm ? 1.35 : 1.0);
+        drop.x += slantX;
+
+        // Wrap around smoothly across screen bounds
+        if (drop.y > h + 25) {
+          drop.y = -20 - Math.random() * 20;
+          drop.x = Math.random() * (w + 200) - 100;
+        }
+        if (drop.x < -100) drop.x = w + 50;
+        if (drop.x > w + 100) drop.x = -50;
+
+        ctx.strokeStyle = isStorm 
+          ? `rgba(186, 230, 253, ${Math.min(0.7, drop.alpha * 1.25)})` 
+          : `rgba(186, 230, 253, ${drop.alpha * 0.75})`;
+        ctx.lineWidth = drop.thickness * (isStorm ? 1.3 : 1.0);
+
         ctx.beginPath();
-        ctx.moveTo(rx, ry);
-        ctx.lineTo(rx - 8, ry + speed);
+        ctx.moveTo(drop.x, drop.y);
+        ctx.lineTo(drop.x - slantX * (drop.len / drop.speed), drop.y - drop.len);
         ctx.stroke();
       }
 
@@ -2793,12 +3254,25 @@ export class SettlementRenderer {
 
     // 2. Hail pellets (during Hailstorm)
     if (weather.activeDisaster?.id === 'HAILSTORM') {
-      ctx.fillStyle = '#ffffff';
-      for (let i = 0; i < 40; i++) {
-        const hx = (i * 47 + now * 0.3) % w;
-        const hy = (i * 31 + now * 1.2) % h;
+      if (!this.hailDrops) {
+        this.hailDrops = Array.from({ length: 50 }, () => ({
+          x: Math.random() * (w + 100) - 50,
+          y: Math.random() * h,
+          r: 1.6 + Math.random() * 1.8,
+          speed: 18 + Math.random() * 12,
+          alpha: 0.4 + Math.random() * 0.5
+        }));
+      }
+
+      for (const hp of this.hailDrops) {
+        hp.y += hp.speed;
+        if (hp.y > h + 15) {
+          hp.y = -10;
+          hp.x = Math.random() * (w + 100) - 50;
+        }
+        ctx.fillStyle = `rgba(255, 255, 255, ${hp.alpha})`;
         ctx.beginPath();
-        ctx.arc(hx, hy, 2.5, 0, Math.PI * 2);
+        ctx.arc(hp.x, hp.y, hp.r, 0, Math.PI * 2);
         ctx.fill();
       }
     }
@@ -2971,7 +3445,9 @@ export class SettlementRenderer {
           const occRole = e.occupant.roleKey ? t(e.occupant.roleKey, e.occupant.role) : e.occupant.role;
           const occIcon = e.occupant.icon || '👤';
           ctx.fillText(`Occupant: ${e.occupant.name} • ${occIcon} ${occRole}`, cx + 16, cy + 44);
-          ctx.fillText(`Labor: ${e.occupant.dailyHours}h/day (${e.occupant.multiplier || 1.0}x credit) • Sabbatical: Active`, cx + 16, cy + 62);
+          const isNight = this.sim ? (this.sim.currentHour >= 21 || this.sim.currentHour < 6) : false;
+          const statusTxt = isNight ? `😴 Resting peacefully in pod (Night cycle)` : `Labor: ${e.occupant.dailyHours}h/day (${e.occupant.multiplier || 1.0}x credit)`;
+          ctx.fillText(statusTxt, cx + 16, cy + 62);
         } else {
           ctx.fillStyle = '#38bdf8';
           ctx.fillText(`🔑 VACANT CIVIC DWELLING — Click to Claim in Usufruct`, cx + 16, cy + 44);

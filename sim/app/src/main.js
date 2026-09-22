@@ -15,6 +15,10 @@ import { PanelNodeController } from './ui/panel_node.js';
 import { PanelDilemmaController } from './ui/panel_dilemma.js';
 import { PanelDualTrackController } from './ui/panel_dualtrack.js';
 import { PanelDwellingController } from './ui/panel_dwelling.js';
+import { PanelPassportController } from './ui/panel_passport.js';
+import { storageIDB } from './engine/storage_idb.js';
+import { CitizenPassportManager } from './engine/citizen_passport.js';
+import { P2PMeshManager } from './engine/p2p_mesh.js';
 import { PlayerProfileManager } from './engine/player_profile.js';
 import { ZoomCoordinator, ZOOM_LEVELS } from './engine/zoom_coordinator.js';
 import { Prop3DViewer } from './settlement/prop_3d_viewer.js';
@@ -30,12 +34,120 @@ window.addEventListener('DOMContentLoaded', () => {
   // Active Node state
   let activeNode = { ...GLOBAL_STARTER_NODES[0] };
   let currentView = 'world'; // 'world' | 'settlement'
+  let panelPassport = null;
+
+  // 1b. Initialize Serverless P2P WebRTC Mesh
+  const p2pMesh = new P2PMeshManager(sim, delta => {
+    // Process verified remote action delta
+    if (delta.type === 'CLAIM_DWELLING') {
+      settlementRenderer.claimDwelling(delta.payload.dwellingId);
+      hud.showNotification({
+        title: '🌐 Peer Usufruct Claim',
+        message: `${delta.authorName} claimed Dwelling #${delta.payload.dwellingNumber}`
+      });
+      updateHomeUi();
+    } else if (delta.type === 'RELEASE_DWELLING') {
+      settlementRenderer.releaseDwelling(delta.payload.dwellingId);
+      hud.showNotification({
+        title: '🌐 Peer Housing Pool',
+        message: `${delta.authorName} returned Dwelling #${delta.payload.dwellingNumber} to civic pool`
+      });
+      updateHomeUi();
+    } else if (delta.type === 'CHORE_ALLOCATION') {
+      if (sim.node.choreAssignments[delta.payload.chore] !== undefined) {
+        sim.node.choreAssignments[delta.payload.chore] = delta.payload.hours;
+        sim.node.updateLaborAndMorale();
+        if (activePanel === 'chores') panelNode.render('chores');
+        hud.showNotification({
+          title: '🌐 Peer Labor Allocation',
+          message: `${delta.authorName}: ${delta.payload.chore} set to ${delta.payload.hours}h`
+        });
+      }
+    } else if (delta.type === 'MACHINERY_REPAIR') {
+      sim.thermo.repairMachinery(delta.payload.machineryKey);
+      if (activePanel === 'machinery') panelNode.render('machinery');
+      hud.showNotification({
+        title: '🌐 Peer Artisan Maintenance',
+        message: `${delta.authorName} serviced ${delta.payload.machineryKey}`
+      });
+    } else if (delta.type === 'CITIZEN_SOVEREIGN_DEPARTURE') {
+      // Free any dwelling claimed by this departing citizen
+      if (settlementRenderer && settlementRenderer.dwellings) {
+        const dwellingToRelease = settlementRenderer.dwellings.find(d => 
+          d.occupant && (d.occupant.id === delta.payload.id || d.occupant.name === delta.authorName)
+        );
+        if (dwellingToRelease) {
+          settlementRenderer.releaseDwelling(dwellingToRelease.id);
+        }
+      }
+
+      // Check if this device is paired with the same departing identity
+      storageIDB.getActiveIdentity().then(async myIdentity => {
+        if (myIdentity && (myIdentity.id === delta.payload.id || myIdentity.pubKeyHex === delta.authorPubKey)) {
+          console.log('[Main] Sovereign departure detected from paired device: auto-purging...');
+          PlayerProfileManager.releaseDwelling();
+          await storageIDB.purgeCitizenIdentity(myIdentity.id);
+          if (panelPassport) {
+            panelPassport.activeIdentity = null;
+            panelPassport.privateKeyJwk = null;
+            panelPassport.updateHudBadge();
+            panelPassport.onIdentityChanged(null);
+            panelPassport.renderCreationWizard();
+          }
+          hud.showNotification({
+            title: '🔥 Synchronized Oblivion',
+            message: 'Identity burned by an authorized device. Oblivion state synchronized.'
+          });
+        } else {
+          hud.showNotification({
+            title: '🌐 Sovereign Departure',
+            message: `${delta.authorName} exercised the right to oblivion. Usufruct dwelling released.`
+          });
+        }
+      });
+    }
+  });
 
   // 2. Initialize UI Panels
-  const panelNode = new PanelNodeController(sim);
+  const panelNode = new PanelNodeController(sim, async (actionType, payload) => {
+    const identity = await storageIDB.getActiveIdentity();
+    if (identity && identity.privateKeyJwk) {
+      const delta = await CitizenPassportManager.createSignedDelta(
+        actionType,
+        payload,
+        identity,
+        identity.privateKeyJwk,
+        sim.tickCount
+      );
+      await storageIDB.appendEvent(delta);
+      p2pMesh.broadcastDelta(delta);
+    }
+  });
+
   const panelDilemma = new PanelDilemmaController(sim);
   const panelDualTrack = new PanelDualTrackController(sim);
   const prop3dViewer = new Prop3DViewer();
+  panelPassport = new PanelPassportController(sim, identity => {
+    p2pMesh.setIdentity(identity);
+    if (identity) {
+      hud.showNotification({
+        title: '🔑 ' + (identity.name || 'Citizen'),
+        message: `Sovereign identity verified (${identity.shortFingerprint}). Actions cryptographically signed.`
+      });
+    } else {
+      hud.showNotification({
+        title: '🔥 Sovereign Oblivion',
+        message: 'Identity burned successfully. Private keys purged and dwelling released.'
+      });
+      if (settlementRenderer) {
+        const homeDwelling = settlementRenderer.dwellings.find(d => d.isPlayerHome);
+        if (homeDwelling) {
+          settlementRenderer.releaseDwelling(homeDwelling.id);
+        }
+      }
+    }
+    updateHomeUi();
+  }, p2pMesh);
 
   let activePanel = null;
 
@@ -50,6 +162,21 @@ window.addEventListener('DOMContentLoaded', () => {
       });
       updateHomeUi();
       sim.saveToLocalStorage();
+
+      // Log signed event delta in distributed DB & broadcast to P2P mesh
+      storageIDB.getActiveIdentity().then(async identity => {
+        if (identity && identity.privateKeyJwk) {
+          const delta = await CitizenPassportManager.createSignedDelta(
+            'CLAIM_DWELLING',
+            { nodeId: activeNode.id, dwellingId: claimedDwelling.id, dwellingNumber: claimedDwelling.number },
+            identity,
+            identity.privateKeyJwk,
+            sim.tickCount
+          );
+          await storageIDB.appendEvent(delta);
+          p2pMesh.broadcastDelta(delta);
+        }
+      });
     },
     releasedDwelling => {
       settlementRenderer.releaseDwelling(releasedDwelling.id);
@@ -59,6 +186,21 @@ window.addEventListener('DOMContentLoaded', () => {
       });
       updateHomeUi();
       sim.saveToLocalStorage();
+
+      // Log signed event delta in distributed DB & broadcast to P2P mesh
+      storageIDB.getActiveIdentity().then(async identity => {
+        if (identity && identity.privateKeyJwk) {
+          const delta = await CitizenPassportManager.createSignedDelta(
+            'RELEASE_DWELLING',
+            { nodeId: activeNode.id, dwellingId: releasedDwelling.id, dwellingNumber: releasedDwelling.number },
+            identity,
+            identity.privateKeyJwk,
+            sim.tickCount
+          );
+          await storageIDB.appendEvent(delta);
+          p2pMesh.broadcastDelta(delta);
+        }
+      });
     },
     dwelling => {
       zoomCoordinator.setLevel(ZOOM_LEVELS.BUILDING, dwelling);
@@ -141,17 +283,17 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         hud.showNotification({
           title: '👑 You (Player Pioneer)',
-          message: `Active vocation: ${citizen.vocation.icon} ${citizen.vocation.defaultName}. Manage your duties in the Chores panel!`
+          message: `${citizen.activityDesc || 'Active in village.'} • Vocation: ${citizen.vocation.icon} ${citizen.vocation.defaultName}.`
         });
       } else if (citizen.isHuman) {
         hud.showNotification({
           title: `🌐 ${citizen.name} (Online Peer)`,
-          message: `Real human participant connected via OpenMesh telemetry. Role: ${citizen.vocation.defaultName}.`
+          message: `${citizen.activityDesc || 'Active in village.'} • Vocation: ${citizen.vocation.defaultName}.`
         });
       } else {
         hud.showNotification({
-          title: `🤖 ${citizen.name} (Autonomous Resident)`,
-          message: `Simulated community member assigned to ${citizen.vocation.defaultName}.`
+          title: `${citizen.icon || '🤖'} ${citizen.name} (${citizen.vocation?.defaultName || 'Citizen'})`,
+          message: `${citizen.activityDesc || 'Engaged in village life.'} • Vocation: ${citizen.vocation?.icon || '🌱'} ${citizen.vocation?.defaultName || 'Resident'}.`
         });
       }
     }
@@ -176,6 +318,7 @@ window.addEventListener('DOMContentLoaded', () => {
       return zoomCoordinator.handleGestureDelta(delta);
     }
   );
+  worldMap.updateSolarTerminator(sim.currentHour, sim.currentDay);
 
   // 7. Initialize 4-Level Discrete Zoom Orchestrator (WORLD ↔ REGION ↔ NODE ↔ BUILDING)
   const zoomCoordinator = new ZoomCoordinator({
@@ -196,8 +339,11 @@ window.addEventListener('DOMContentLoaded', () => {
           settlementRenderer.exitInterior();
         }
         settlementRenderer.stop();
-        worldMap.showWorld();
-        setTimeout(() => worldMap.resize(), 50);
+        setTimeout(() => {
+          worldMap.resize();
+          worldMap.showWorld();
+          worldMap.updateSolarTerminator(sim.currentHour, sim.currentDay);
+        }, 50);
       } else if (level === ZOOM_LEVELS.REGION) {
         currentView = 'world';
         worldPanel.classList.remove('hidden');
@@ -209,8 +355,11 @@ window.addEventListener('DOMContentLoaded', () => {
           settlementRenderer.exitInterior();
         }
         settlementRenderer.stop();
-        worldMap.showRegion(activeNode);
-        setTimeout(() => worldMap.resize(), 50);
+        setTimeout(() => {
+          worldMap.resize();
+          worldMap.showRegion(activeNode);
+          worldMap.updateSolarTerminator(sim.currentHour, sim.currentDay);
+        }, 50);
       } else if (level === ZOOM_LEVELS.NODE) {
         currentView = 'settlement';
         settlementPanel.classList.remove('hidden');
@@ -439,6 +588,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // 7. Connect Simulation Events to UI
   sim.onTickListeners.push(state => {
     hud.update(state);
+    worldMap.updateSolarTerminator(state.hour, state.day);
   });
 
   sim.onNotificationListeners.push(notif => {

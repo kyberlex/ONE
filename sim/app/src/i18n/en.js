@@ -180,8 +180,16 @@ export const en = {
   yamlCopiedAlert: 'Home Assistant YAML copied to clipboard!',
 
   // Athenian Sortition Council & Dilemmas
-  councilDeliberationBadge: '🏛️ ATHENIAN SORTITION COUNCIL DELIBERATION',
-  councilStanceTitle: 'Council Stance (7 Citizens):',
+  councilDeliberationBadge: '🏛️ ATHENIAN SORTITION DELIBERATION',
+  councilLocalMediation: 'Local Mediation Panel',
+  councilNeighborhood: 'Neighborhood Sortition Council',
+  councilStanceTitle: 'Assembly Deliberation Stance',
+  thresholdLabel: 'Required Threshold',
+  votesNeeded: 'votes needed',
+  thresholdMet: 'RATIFIED',
+  thresholdPending: 'BELOW',
+  inspectJurors: 'Inspect Seated Jurors',
+  citizensLabel: 'Citizens',
   inFavor: 'in Favor',
   against: 'Against',
   btnRatifyA: 'Ratify Option A',

@@ -96,6 +96,7 @@
         </div>
         <button id="btn-zoom-in" class="btn-zoom-step" title="Zoom In to Next Level (Pinch In / Wheel Up)">+</button>
         <button id="btn-my-home" class="btn-toggle-view btn-home-pill hidden" title="Go to your primary usufruct dwelling">👑 <span id="home-pill-text">My Dwelling</span></button>
+        <button id="btn-open-passport" class="btn-toggle-view btn-passport-pill" title="Sovereign Citizen Cryptographic Passport & P2P Device Sync">🔑 <span id="passport-btn-label">Citizen Passport</span></button>
       </div>
 
       <!-- Right HUD: Alert Ticker & Legacy Threat Meter (Translations Hidden for English-Only Mode) -->
@@ -369,6 +370,21 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Sovereign Citizen Cryptographic Passport & P2P Sync -->
+    <div id="modal-passport" class="modal-overlay hidden">
+      <div class="modal-window modal-window-passport">
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
+            <h3 id="modal-passport-title">Sovereign Citizen Cryptographic Passport</h3>
+            <span class="badge badge-success">P2P DISTRIBUTED DB</span>
+          </div>
+          <button id="btn-close-passport-modal" class="btn-close-modal">✕</button>
+        </div>
+        <div id="passport-modal-content" class="modal-body"></div>
       </div>
     </div>
   </div>

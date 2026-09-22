@@ -12,8 +12,9 @@ import { t } from '../i18n/index.js';
 import { COMMUNITY_VOCATIONS, getVocationById, getVocationsByDomain } from '../data/vocations.js';
 
 export class PanelNodeController {
-  constructor(sim) {
+  constructor(sim, onActionCallback = () => {}) {
     this.sim = sim;
+    this.onAction = onActionCallback;
     this.modalEl = document.getElementById('modal-node-management');
     this.contentEl = document.getElementById('node-management-content');
     this.closeBtn = document.getElementById('btn-close-node-modal');
@@ -652,6 +653,9 @@ export class PanelNodeController {
         this.sim.node.updateLaborAndMorale();
         this.render('chores');
         this.sim.notifyTick();
+
+        // Emit for P2P mesh replication
+        this.onAction('CHORE_ALLOCATION', { chore, hours: this.sim.node.choreAssignments[chore] });
       });
     });
 
@@ -662,6 +666,9 @@ export class PanelNodeController {
         this.sim.thermo.repairMachinery(key);
         this.render('machinery');
         this.sim.notifyTick();
+
+        // Emit for P2P mesh replication
+        this.onAction('MACHINERY_REPAIR', { machineryKey: key });
       });
     });
 

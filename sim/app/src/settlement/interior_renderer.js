@@ -7,6 +7,8 @@
  * License: AGPL-3.0-or-later
  */
 
+import { PlayerProfileManager } from '../engine/player_profile.js';
+
 export class InteriorRenderer {
   /**
    * Builds prop objects and occupant avatars for a room
@@ -571,25 +573,33 @@ export class InteriorRenderer {
       });
 
       if (isPlayerHome) {
+        const prof = PlayerProfileManager.getProfile();
+        const pApp = prof?.appearance || getCitizenAppearance(prof?.name || 'Player (You)');
         occupants.push({
-          name: 'Player (You)',
+          name: prof?.name || 'Player (You)',
           role: 'Pioneer & Usufructuary',
           icon: '👑',
           x: 140, y: -60,
           isPlayer: true,
+          gender: pApp.gender,
+          hairStyle: pApp.hairStyle,
+          hairColor: pApp.hairColor,
+          skinTone: pApp.skinTone,
           activity: 'laptop',
           bubble: 'Your private sanctuary. 100% debt-free! 👑',
           color: '#fbbf24'
         });
       } else if (occupant) {
+        const isNight = sim ? (sim.currentHour >= 21 || sim.currentHour < 6) : false;
         occupants.push({
           name: occupant.name,
           role: occupant.role || 'Citizen',
-          icon: occupant.icon || '🧑',
+          icon: isNight ? '😴' : (occupant.icon || '🧑'),
           x: isGuest ? -25 : 140,
           y: isGuest ? 15 : -60,
-          activity: isGuest ? 'hosting' : 'laptop',
-          bubble: isGuest ? `Welcome in! Make yourself at home! ☕` : 'Resting in private usufruct sanctuary. 🔒',
+          activity: isNight ? 'sleeping' : (isGuest ? 'hosting' : 'laptop'),
+          isSleeping: isNight,
+          bubble: isNight ? 'Sleeping peacefully... zzz 😴' : (isGuest ? `Welcome in! Make yourself at home! ☕` : 'Resting in private usufruct sanctuary. 🔒'),
           color: '#34d399'
         });
       }
@@ -608,10 +618,12 @@ export class InteriorRenderer {
   /**
    * Main interior rendering entry point
    */
-  static renderInterior(ctx, w, h, interiorScene, tick, weather) {
+  static renderInterior(ctx, w, h, interiorScene, tick, weather, hour = 12) {
     if (!interiorScene) return;
 
     ctx.save();
+
+    const isNight = (hour >= 21 || hour < 6);
 
     // 1. Dark ambient vignette background
     const bgGrad = ctx.createRadialGradient(0, 0, 100, 0, 0, 600);
@@ -622,6 +634,23 @@ export class InteriorRenderer {
 
     const rw = interiorScene.width;
     const rh = interiorScene.height;
+
+    // 1.5 Nighttime stars and celestial glow outside the building
+    if (isNight) {
+      const now = Date.now();
+      ctx.save();
+      for (let i = 0; i < 45; i++) {
+        const sx = (((i * 183.7) % (w * 1.8)) - w * 0.9);
+        const sy = (((i * 119.3) % (h * 1.8)) - h * 0.9);
+        if (Math.abs(sx) < rw / 2 + 15 && Math.abs(sy) < rh / 2 + 15) continue;
+        const twinkle = (Math.sin(now * 0.003 + i * 2) + 1) * 0.4 + 0.2;
+        ctx.fillStyle = `rgba(255, 255, 255, ${twinkle})`;
+        ctx.beginPath();
+        ctx.arc(sx, sy, 1.2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+    }
 
     // 2. Draw Floor Surface
     ctx.save();
@@ -776,14 +805,38 @@ export class InteriorRenderer {
       ctx.fillRect(rw / 2 - 10, 67, 20, 6);
     }
 
+    // 3.8 Nighttime Solarpunk LED Sconces & Warm Fixtures
+    if (isNight) {
+      ctx.save();
+      // Warm floor ambient wash
+      ctx.fillStyle = 'rgba(251, 191, 36, 0.06)';
+      ctx.fillRect(-rw / 2 + 8, -rh / 2 + 8, rw - 16, rh - 16);
+
+      // Solarpunk wall sconces along top wall
+      for (let sx = -rw / 2 + 75; sx < rw / 2; sx += 135) {
+        ctx.fillStyle = '#f59e0b';
+        ctx.fillRect(sx - 5, -rh / 2 + 8, 10, 5);
+
+        const sconceGrad = ctx.createRadialGradient(sx, -rh / 2 + 10, 2, sx, -rh / 2 + 10, 55);
+        sconceGrad.addColorStop(0, 'rgba(251, 191, 36, 0.35)');
+        sconceGrad.addColorStop(0.6, 'rgba(245, 158, 11, 0.12)');
+        sconceGrad.addColorStop(1, 'rgba(245, 158, 11, 0)');
+        ctx.fillStyle = sconceGrad;
+        ctx.beginPath();
+        ctx.arc(sx, -rh / 2 + 10, 55, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+
     // 4. Render All Interior Props
     for (const prop of interiorScene.props) {
-      InteriorRenderer.renderProp(ctx, prop, tick);
+      InteriorRenderer.renderProp(ctx, prop, tick, isNight);
     }
 
     // 5. Render Enlarged Occupant Avatars
     for (const occ of interiorScene.occupants) {
-      InteriorRenderer.renderAvatar(ctx, occ, tick);
+      InteriorRenderer.renderAvatar(ctx, occ, tick, isNight);
     }
 
     ctx.restore();
@@ -792,7 +845,7 @@ export class InteriorRenderer {
   /**
    * Renders individual interior props with vector details
    */
-  static renderProp(ctx, prop, tick) {
+  static renderProp(ctx, prop, tick, isNight = false) {
     ctx.save();
     ctx.translate(prop.x, prop.y);
 
@@ -1112,6 +1165,58 @@ export class InteriorRenderer {
       ctx.fillStyle = '#f8fafc';
       ctx.fillRect(-prop.w / 2 + 10, -prop.h / 2 + 4, 38, 14);
       ctx.fillRect(prop.w / 2 - 48, -prop.h / 2 + 4, 38, 14);
+
+      if (isNight) {
+        // Softly tucked blanket over sleeping occupant silhouette
+        ctx.fillStyle = '#0f766e';
+        ctx.beginPath();
+        ctx.ellipse(2, 6, 26, 14, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Resting head on pillow
+        ctx.fillStyle = '#fed7aa';
+        ctx.beginPath();
+        ctx.arc(-prop.w / 2 + 25, -prop.h / 2 + 11, 7, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Slumber animation
+        const now = Date.now();
+        const zProg = ((now * 0.001) % 2.2);
+        const zAlpha = Math.max(0, 1 - (zProg / 2.2));
+        ctx.fillStyle = `rgba(254, 240, 138, ${zAlpha * 0.85})`;
+        ctx.font = 'bold 11px system-ui, sans-serif';
+        ctx.fillText('z', -prop.w / 2 + 36, -prop.h / 2 - 2 - zProg * 8);
+      }
+
+    } else if (prop.type === 'PICTURE_WINDOW') {
+      ctx.fillStyle = '#1e293b';
+      ctx.fillRect(-prop.w / 2, -prop.h / 2, prop.w, prop.h);
+      ctx.strokeStyle = '#b45309';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(-prop.w / 2, -prop.h / 2, prop.w, prop.h);
+
+      if (isNight) {
+        // Window framing dark night sky with stars outside
+        ctx.fillStyle = '#090d16';
+        ctx.fillRect(-prop.w / 2 + 3, -prop.h / 2 + 3, prop.w - 6, prop.h - 6);
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.arc(-18, -4, 1.2, 0, Math.PI * 2);
+        ctx.arc(14, 2, 1.2, 0, Math.PI * 2);
+        ctx.arc(24, -6, 0.9, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = 'rgba(254, 240, 138, 0.25)';
+        ctx.beginPath();
+        ctx.arc(0, -6, 8, 0, Math.PI * 2);
+        ctx.fill();
+      } else {
+        // Daylight solarpunk view
+        ctx.fillStyle = '#38bdf8';
+        ctx.fillRect(-prop.w / 2 + 3, -prop.h / 2 + 3, prop.w - 6, prop.h - 6);
+        ctx.fillStyle = '#10b981';
+        ctx.fillRect(-prop.w / 2 + 3, prop.h / 2 - 9, prop.w - 6, 6);
+      }
 
     } else if (prop.type === 'FOUNTAIN') {
       // Stone rim
@@ -1637,8 +1742,13 @@ export class InteriorRenderer {
 
   /**
    * Renders enlarged animated avatars inside interiors (approx 3x scale)
+   * With distinct hairstyles, hair colors, skin tones and clothing for women, men, elders, and children.
    */
-  static renderAvatar(ctx, occ, tick) {
+  static renderAvatar(ctx, occ, tick, isNight = false) {
+    if (occ.isSleeping && isNight) {
+      return; // Sleeping occupant is drawn tucked inside the bed
+    }
+
     ctx.save();
     ctx.translate(occ.x, occ.y);
 
@@ -1646,6 +1756,12 @@ export class InteriorRenderer {
     const isElder = occ.isElder;
     const scale = isChild ? 1.8 : 2.4;
     ctx.scale(scale, scale);
+
+    const appearance = getCitizenAppearance(occ);
+    const gender = occ.gender || appearance.gender;
+    const skin = occ.skinTone || appearance.skinTone;
+    const hairColor = occ.hairColor || appearance.hairColor;
+    const hairStyle = occ.hairStyle || appearance.hairStyle;
 
     // Subtle breathing / walking animation
     const isWalking = occ.isWalking;
@@ -1663,34 +1779,103 @@ export class InteriorRenderer {
     ctx.fillRect(-4, 2 + walkSwing, 3, 7);
     ctx.fillRect(1, 2 - walkSwing, 3, 7);
 
-    // 3. Body / Clothes
+    // 3. Body / Clothes (solarpunk flared tunic for women, classic straight workwear for men)
     ctx.fillStyle = occ.color || '#38bdf8';
-    ctx.fillRect(-6, -8 + breathY, 12, 11);
+    if (gender === 'F') {
+      ctx.beginPath();
+      ctx.moveTo(-6, -8 + breathY);
+      ctx.lineTo(6, -8 + breathY);
+      ctx.lineTo(7, 3 + breathY);
+      ctx.lineTo(-7, 3 + breathY);
+      ctx.closePath();
+      ctx.fill();
+    } else {
+      ctx.fillRect(-6, -8 + breathY, 12, 11);
+    }
 
     // 4. Arms with walking swing
     ctx.fillStyle = occ.color || '#38bdf8';
     ctx.fillRect(-8, -7 + breathY - walkSwing * 0.8, 2, 9);
     ctx.fillRect(6, -7 + breathY + walkSwing * 0.8, 2, 9);
 
-    // 5. Head
-    ctx.fillStyle = '#fed7aa'; // Skin tone
+    // 5. Head with biocultural skin tones
+    ctx.fillStyle = skin;
     ctx.beginPath();
     ctx.arc(0, -13 + breathY, 5.5, 0, Math.PI * 2);
     ctx.fill();
 
-    // 6. Hair
-    if (isElder) {
-      ctx.fillStyle = '#e2e8f0'; // Silver hair
-      ctx.beginPath();
-      ctx.arc(0, -15 + breathY, 6, Math.PI, Math.PI * 2);
-      ctx.fill();
-    } else if (isChild) {
-      ctx.fillStyle = '#78350f'; // Brunette messy hair
+    // 6. Hair & Facial Features
+    ctx.fillStyle = hairColor;
+
+    if (hairStyle === 'ponytail') {
+      // Base top hair arc
       ctx.beginPath();
       ctx.arc(0, -15 + breathY, 5.5, Math.PI * 0.9, Math.PI * 2.1);
       ctx.fill();
+      // Side hair tie + ponytail flowing down on left
+      ctx.beginPath();
+      ctx.arc(-5.5, -12 + breathY, 2.5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillRect(-7.5, -12 + breathY, 3, 9);
+    } else if (hairStyle === 'long') {
+      // Full head arc + two flowing side locks down the shoulders
+      ctx.beginPath();
+      ctx.arc(0, -15 + breathY, 5.6, Math.PI * 0.85, Math.PI * 2.15);
+      ctx.fill();
+      ctx.fillRect(-6.5, -14 + breathY, 2.2, 11);
+      ctx.fillRect(4.3, -14 + breathY, 2.2, 11);
+    } else if (hairStyle === 'bob') {
+      // Rounded sleek bob framing face
+      ctx.beginPath();
+      ctx.arc(0, -15 + breathY, 5.8, Math.PI * 0.8, Math.PI * 2.2);
+      ctx.fill();
+      ctx.fillRect(-6.5, -14 + breathY, 2.5, 7.5);
+      ctx.fillRect(4, -14 + breathY, 2.5, 7.5);
+    } else if (hairStyle === 'bun' || hairStyle === 'chignon') {
+      // High elegant top knot / chignon bun
+      ctx.beginPath();
+      ctx.arc(0, -15 + breathY, 5.5, Math.PI * 0.9, Math.PI * 2.1);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(0, -19.5 + breathY, 3.2, 0, Math.PI * 2);
+      ctx.fill();
+    } else if (hairStyle === 'pigtails') {
+      // Twin side buns/pigtails for girl pupils
+      ctx.beginPath();
+      ctx.arc(0, -15 + breathY, 5.2, Math.PI, Math.PI * 2);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(-6, -15 + breathY, 2.8, 0, Math.PI * 2);
+      ctx.arc(6, -15 + breathY, 2.8, 0, Math.PI * 2);
+      ctx.fill();
+    } else if (hairStyle === 'messy') {
+      // Textured spiky/wavy bangs
+      ctx.beginPath();
+      ctx.arc(0, -15 + breathY, 5.8, Math.PI * 0.85, Math.PI * 2.15);
+      ctx.fill();
+      ctx.fillRect(-2, -18.5 + breathY, 4, 3);
+    } else if (hairStyle === 'fade') {
+      // Short fade cut
+      ctx.beginPath();
+      ctx.arc(0, -15.5 + breathY, 5.2, Math.PI, Math.PI * 2);
+      ctx.fill();
+    } else if (hairStyle === 'beard') {
+      // Short hair + neat beard/jawline
+      ctx.beginPath();
+      ctx.arc(0, -15 + breathY, 5.5, Math.PI, Math.PI * 2);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(0, -10.5 + breathY, 4.2, Math.PI * 0.15, Math.PI * 0.85);
+      ctx.lineWidth = 1.8;
+      ctx.strokeStyle = hairColor;
+      ctx.stroke();
+    } else if (hairStyle === 'receding') {
+      // Elder male classic temples
+      ctx.beginPath();
+      ctx.arc(0, -14.5 + breathY, 5.8, Math.PI * 1.15, Math.PI * 1.85);
+      ctx.fill();
     } else {
-      ctx.fillStyle = '#1e293b';
+      // Classic clean crop
       ctx.beginPath();
       ctx.arc(0, -15 + breathY, 5.5, Math.PI, Math.PI * 2);
       ctx.fill();
@@ -1702,26 +1887,149 @@ export class InteriorRenderer {
       ctx.fillText('👑', -4, -20 + breathY);
     }
 
-    // 8. Speech / Thought Bubble
+    // 8. Speech / Thought Bubble (Guaranteed Centering & Responsive Box)
     if (occ.bubble) {
       ctx.save();
       ctx.scale(1 / scale, 1 / scale);
-      ctx.font = '11px sans-serif';
+      ctx.font = '11px system-ui, sans-serif';
       const textWidth = ctx.measureText(occ.bubble).width;
+      const bubbleW = textWidth + 24;
+      const bubbleH = 24;
+      const bubbleY = -62;
 
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.88)';
-      ctx.strokeStyle = '#38bdf8';
-      ctx.lineWidth = 1;
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.94)';
+      ctx.strokeStyle = occ.isPlayer ? '#fbbf24' : '#38bdf8';
+      ctx.lineWidth = 1.2;
+
+      // Rounded bubble container
       ctx.beginPath();
-      ctx.roundRect(-textWidth / 2 - 8, -60, textWidth + 16, 22, 6);
+      ctx.roundRect(-bubbleW / 2, bubbleY, bubbleW, bubbleH, 7);
       ctx.fill();
       ctx.stroke();
 
+      // Downward pointer arrow connecting bubble to avatar
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.94)';
+      ctx.beginPath();
+      ctx.moveTo(-4, bubbleY + bubbleH - 0.5);
+      ctx.lineTo(0, bubbleY + bubbleH + 4.5);
+      ctx.lineTo(4, bubbleY + bubbleH - 0.5);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // Render text strictly centered within the container
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
       ctx.fillStyle = '#f8fafc';
-      ctx.fillText(occ.bubble, -textWidth / 2, -45);
+      ctx.fillText(occ.bubble, 0, bubbleY + (bubbleH / 2));
       ctx.restore();
     }
 
     ctx.restore();
   }
+}
+
+/**
+ * Deterministically derives gender, hair style, hair color, and skin tone for a citizen
+ */
+export function getCitizenAppearance(citizen) {
+  if (citizen && typeof citizen === 'object') {
+    if (citizen.appearance) {
+      return {
+        gender: citizen.appearance.gender || 'F',
+        skinTone: citizen.appearance.skinTone || '#fbb77a',
+        hairColor: citizen.appearance.hairColor || '#1e293b',
+        hairStyle: citizen.appearance.hairStyle || 'ponytail'
+      };
+    }
+    if (citizen.gender && citizen.hairStyle) {
+      return {
+        gender: citizen.gender,
+        skinTone: citizen.skinTone || '#fbb77a',
+        hairColor: citizen.hairColor || '#1e293b',
+        hairStyle: citizen.hairStyle
+      };
+    }
+    if (citizen.isPlayer) {
+      const prof = PlayerProfileManager.getProfile();
+      if (prof?.appearance) {
+        return {
+          gender: prof.appearance.gender || 'F',
+          skinTone: prof.appearance.skinTone || '#fbb77a',
+          hairColor: prof.appearance.hairColor || '#1e293b',
+          hairStyle: prof.appearance.hairStyle || 'ponytail'
+        };
+      }
+    }
+  }
+
+  const name = typeof citizen === 'string' ? citizen : (citizen?.name || 'Citizen');
+  const isChild = Boolean(citizen?.isChild);
+  const isElder = Boolean(citizen?.isElder);
+  const isPlayer = Boolean(citizen?.isPlayer);
+
+  // Deterministic 32-bit integer hash from citizen name
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) {
+    hash = (hash << 5) - hash + name.charCodeAt(i);
+    hash |= 0;
+  }
+  const posHash = Math.abs(hash);
+
+  // Canonical Solarpunk pioneer female & male names
+  const firstName = name.trim().split(' ')[0].toLowerCase();
+  const femaleNames = new Set([
+    'maya', 'amina', 'elena', 'chloe', 'nia', 'ingrid', 'zara', 'sofia',
+    'freja', 'ananya', 'olga', 'fatima', 'lucia', 'evelyn', 'clara', 'sora',
+    'tara', 'anna', 'laura', 'giulia', 'maria', 'sara', 'alice', 'emma', 'eva'
+  ]);
+  const maleNames = new Set([
+    'dante', 'marcus', 'tariq', 'kaelen', 'siddharth', 'hiroshi', 'mateo',
+    'lucas', 'liam', 'youssef', 'giacomo', 'arthur', 'kenji', 'bao', 'dmitri',
+    'leo', 'john', 'marco'
+  ]);
+
+  let gender = 'M';
+  if (femaleNames.has(firstName)) gender = 'F';
+  else if (maleNames.has(firstName)) gender = 'M';
+  else gender = (posHash % 2 === 0) ? 'F' : 'M';
+
+  // Biocultural diversity of human skin tones
+  const skinTones = [
+    '#fed7aa', // Light peach
+    '#fcd34d', // Warm beige / sandy
+    '#fbb77a', // Golden olive
+    '#d97706', // Caramel / Tan
+    '#92400e', // Deep bronze
+    '#78350f'  // Rich espresso
+  ];
+  const skinTone = isPlayer ? '#fed7aa' : skinTones[(posHash >> 2) % skinTones.length];
+
+  // Natural hair colors
+  const hairColors = [
+    '#1e293b', // Jet Black
+    '#3b1d11', // Dark Brown
+    '#78350f', // Chestnut Brown
+    '#d97706', // Golden / Honey Blonde
+    '#9a3412', // Auburn / Copper Red
+    '#0f172a'  // Midnight Black
+  ];
+  let hairColor = hairColors[(posHash >> 4) % hairColors.length];
+  if (isElder) hairColor = (posHash % 2 === 0) ? '#e2e8f0' : '#cbd5e1';
+
+  // Varied recognizable hairstyles
+  let hairStyle = 'short';
+  if (isChild) {
+    hairStyle = gender === 'F' ? 'pigtails' : 'messy';
+  } else if (isElder) {
+    hairStyle = gender === 'F' ? 'chignon' : 'receding';
+  } else if (gender === 'F') {
+    const fStyles = ['ponytail', 'long', 'bob', 'bun'];
+    hairStyle = fStyles[(posHash >> 6) % fStyles.length];
+  } else {
+    const mStyles = ['short', 'messy', 'fade', 'beard'];
+    hairStyle = mStyles[(posHash >> 6) % mStyles.length];
+  }
+
+  return { gender, skinTone, hairColor, hairStyle };
 }

@@ -180,8 +180,16 @@ export const it = {
   yamlCopiedAlert: 'Configurazione YAML per Home Assistant copiata negli appunti!',
 
   // Athenian Sortition Council & Dilemmas
-  councilDeliberationBadge: '🏛️ DELIBERA DEL CONSIGLIO SORTEGGIATO ATENIESE',
-  councilStanceTitle: 'Orientamento del Consiglio (7 Cittadini):',
+  councilDeliberationBadge: '🏛️ DELIBERA DEMARCHICA ATENIESE',
+  councilLocalMediation: 'Pannello di Mediazione Locale',
+  councilNeighborhood: 'Consiglio di Sorteggio di Quartiere',
+  councilStanceTitle: 'Orientamento dell\'Assemblea',
+  thresholdLabel: 'Soglia Richiesta',
+  votesNeeded: 'voti necessari',
+  thresholdMet: 'RATIFICATA',
+  thresholdPending: 'IN ATTESA',
+  inspectJurors: 'Ispeziona Giurati Estratti',
+  citizensLabel: 'Cittadini',
   inFavor: 'a Favore',
   against: 'Contrari',
   btnRatifyA: 'Ratifica Opzione A',

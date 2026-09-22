@@ -62,10 +62,68 @@ export class PanelDilemmaController {
     }
   }
 
+  renderCouncilDonutSvg(tally) {
+    const total = tally.total || 1;
+    const yes = tally.yes || 0;
+    const no = tally.no || 0;
+    const radius = 38;
+    const circ = 2 * Math.PI * radius; // ~238.761
+
+    const yesLen = (yes / total) * circ;
+    const noLen = (no / total) * circ;
+
+    // Threshold indicator line on outer rim (starts at 12 o'clock, which is -90 deg)
+    const threshAngleRad = (tally.thresholdPct * 2 * Math.PI) - (Math.PI / 2);
+    const tickInnerR = 30;
+    const tickOuterR = 46;
+    const x1 = (50 + tickInnerR * Math.cos(threshAngleRad)).toFixed(1);
+    const y1 = (50 + tickInnerR * Math.sin(threshAngleRad)).toFixed(1);
+    const x2 = (50 + tickOuterR * Math.cos(threshAngleRad)).toFixed(1);
+    const y2 = (50 + tickOuterR * Math.sin(threshAngleRad)).toFixed(1);
+
+    const statusColor = tally.passed ? '#10b981' : '#f59e0b';
+    const statusText = tally.passed ? t('thresholdMet', 'RATIFIED') : t('thresholdPending', 'BELOW');
+
+    return `
+      <svg viewBox="0 0 100 100" class="council-donut-svg" aria-label="Sortition Vote Donut Chart">
+        <!-- Base Track -->
+        <circle cx="50" cy="50" r="${radius}" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="10" />
+
+        <!-- In Favor (Yes) Arc -->
+        ${yes > 0 ? `
+          <circle cx="50" cy="50" r="${radius}" fill="none" stroke="#10b981" stroke-width="10"
+            stroke-dasharray="${yesLen.toFixed(1)} ${circ.toFixed(1)}"
+            stroke-dashoffset="0"
+            transform="rotate(-90 50 50)"
+            stroke-linecap="${yes === total ? 'butt' : 'round'}" />
+        ` : ''}
+
+        <!-- Against (No) Arc -->
+        ${no > 0 ? `
+          <circle cx="50" cy="50" r="${radius}" fill="none" stroke="#ef4444" stroke-width="10"
+            stroke-dasharray="${noLen.toFixed(1)} ${circ.toFixed(1)}"
+            stroke-dashoffset="-${yesLen.toFixed(1)}"
+            transform="rotate(-90 50 50)"
+            stroke-linecap="${no === total ? 'butt' : 'round'}" />
+        ` : ''}
+
+        <!-- Threshold Indicator Notch (Golden Tick) -->
+        <line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"
+          stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round" />
+
+        <!-- Center Tally Counter -->
+        <text x="50" y="47" text-anchor="middle" class="donut-tally-num">${yes}/${total}</text>
+        <text x="50" y="59" text-anchor="middle" class="donut-tally-label" fill="${statusColor}">${statusText}</text>
+      </svg>
+    `;
+  }
+
   renderCivicDilemma(data) {
     const dilemma = data.dilemma || data;
     const council = this.sim.sortition.currentCouncil;
-    const tally = this.sim.sortition.getCouncilTally();
+    const tally = this.sim.sortition.getCouncilTally(dilemma);
+    const tier = this.sim.sortition.currentTier;
+    const tierTitle = tier.titleKey ? t(tier.titleKey, tier.titleDefault) : tier.titleDefault;
 
     const title = dilemma.titleKey ? t(dilemma.titleKey, dilemma.title) : dilemma.title;
     const summary = dilemma.summaryKey ? t(dilemma.summaryKey, dilemma.summary) : dilemma.summary;
@@ -79,7 +137,7 @@ export class PanelDilemmaController {
       <div class="dilemma-container">
         <div class="dilemma-badge">
           <img src="/one-logo-white.svg" alt="O.N.E." class="dilemma-stamp-icon" />
-          <span>${t('councilDeliberationBadge', '🏛️ ATHENIAN SORTITION COUNCIL DELIBERATION')}</span>
+          <span>${t('councilDeliberationBadge', '🏛️ ATHENIAN SORTITION DELIBERATION')}</span>
         </div>
         <h3 class="dilemma-title">${title}</h3>
         <p class="dilemma-summary">${summary}</p>
@@ -89,18 +147,43 @@ export class PanelDilemmaController {
           <p class="quote-text">${quote}</p>
         </div>
 
-        <div class="council-tally-bar">
-          <strong>${t('councilStanceTitle', 'Council Stance (7 Citizens):')}</strong>
-          <span class="text-green">${tally.yes} ${t('inFavor', 'in Favor')}</span> /
-          <span class="text-red">${tally.no} ${t('against', 'Against')}</span>
-        </div>
+        <!-- Compact Solarpunk Pie-Chart / Donut Deliberation Component -->
+        <div class="council-deliberation-visual">
+          <div class="donut-graphic-wrapper">
+            ${this.renderCouncilDonutSvg(tally)}
+          </div>
+          <div class="council-tally-details">
+            <div class="council-tier-badge">
+              <span class="tier-pill">${tierTitle}</span>
+              <span class="tier-article">${tier.article} • ${tally.total} ${t('citizensLabel', 'Citizens')}</span>
+            </div>
 
-        <div class="council-chips">
-          ${council.map(c => `
-            <span class="citizen-chip ${c.stance === 'YES' ? 'lean-yes' : 'lean-no'}">
-              ${c.name} (${c.stance})
-            </span>
-          `).join('')}
+            <div class="tally-breakdown-row">
+              <span class="tally-stat text-green">
+                <span class="tally-dot dot-green"></span>
+                ${t('inFavor', 'in Favor')}: <strong>${tally.yes}</strong> (${Math.round(tally.yesPct)}%)
+              </span>
+              <span class="tally-stat text-red">
+                <span class="tally-dot dot-red"></span>
+                ${t('against', 'Against')}: <strong>${tally.no}</strong> (${Math.round(tally.noPct)}%)
+              </span>
+            </div>
+
+            <div class="tally-threshold-row ${tally.passed ? 'threshold-met' : 'threshold-pending'}">
+              <span class="threshold-badge">${tally.passed ? '✅' : '⏳'} ${t('thresholdLabel', 'Required Threshold')}: <strong>${Math.round(tally.thresholdPct * 100)}%</strong> (${tally.requiredVotes}/${tally.total} ${t('votesNeeded', 'votes needed')})</span>
+            </div>
+
+            <details class="council-jurors-dropdown">
+              <summary>${t('inspectJurors', 'Inspect Seated Jurors')} (${tally.total})</summary>
+              <div class="jurors-mini-list">
+                ${council.map(c => `
+                  <span class="citizen-chip ${c.stance === 'YES' ? 'lean-yes' : 'lean-no'}">
+                    ${c.name} (${c.stance})
+                  </span>
+                `).join('')}
+              </div>
+            </details>
+          </div>
         </div>
 
         <div class="options-duel">
