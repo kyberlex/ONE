@@ -14,7 +14,7 @@ import { COMMUNITY_VOCATIONS, getVocationById } from '../data/vocations.js';
 
 export class OneNode {
   constructor(config = {}) {
-    this.id = config.id || 'node-delray-01';
+    this.id = config.id || 'node-detroit';
     this.name = config.name || 'Detroit Delray Commons';
     this.bioregion = config.bioregion || 'Great Lakes Basin';
     this.hexCoord = config.hexCoord || { q: 0, r: 0 };

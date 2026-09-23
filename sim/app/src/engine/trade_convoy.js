@@ -246,7 +246,7 @@ export class TradeConvoyEngine {
     thermo,
     node
   }) {
-    const origin = this.getNodeById(originNodeId);
+    const origin = this.getNodeById(originNodeId) || this.getNodeById(this.playerNodeId) || this.allNodes[0];
     const dest = this.getNodeById(destNodeId);
     const vehicle = CONVOY_VEHICLES[vehicleId];
     const commodity = COMMODITY_TYPES[commodityType];
@@ -255,7 +255,7 @@ export class TradeConvoyEngine {
       return { success: false, reason: 'Invalid convoy parameters.' };
     }
 
-    if (originNodeId === destNodeId) {
+    if (origin.id === dest.id) {
       return { success: false, reason: 'Cannot dispatch convoy to the same node.' };
     }
 

@@ -36,6 +36,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Active Node state
   let activeNode = { ...GLOBAL_STARTER_NODES[0] };
+  sim.node.id = activeNode.id;
+  if (sim.trade) {
+    sim.trade.playerNodeId = activeNode.id;
+  }
   let currentView = 'world'; // 'world' | 'settlement'
   let panelPassport = null;
   let chatEngine = null;
@@ -498,8 +502,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function enterVillage(node) {
     activeNode = node;
+    sim.node.id = node.id;
     sim.node.name = node.name;
     sim.node.population = node.population;
+    if (sim.trade) {
+      sim.trade.playerNodeId = node.id;
+    }
     settlementRenderer.setNode(node);
     updateSettlementMetaHeader();
     updateHomeUi();
