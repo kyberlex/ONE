@@ -209,10 +209,15 @@ export class HudController {
       const w = thermo.weather;
       if (w.activeDisaster) {
         this.elWeatherBadge.classList.add('disaster-alert');
-        this.elWeatherBadge.title = `⚠️ DISASTER: ${w.activeDisaster.name} (${w.activeDisaster.durationHours}h remaining)`;
-        if (this.elWeatherIcon) this.elWeatherIcon.textContent = w.activeDisaster.icon;
+        const d = w.activeDisaster;
+        const hoursLeft = d.durationHoursLeft ?? d.durationHours ?? 24;
+        let stressNote = '';
+        if (d.id === 'HEAT_DOME') stressNote = ' [PV Derating • BMS Chiller 10kW]';
+        else if (d.id === 'ATMOSPHERIC_RIVER') stressNote = ' [Solar Dunkelflaute • Silt Wear 2.8x]';
+        this.elWeatherBadge.title = `⚠️ ALERT: ${d.name} (${hoursLeft}h left)${stressNote}`;
+        if (this.elWeatherIcon) this.elWeatherIcon.textContent = d.icon;
         if (this.elWeatherTemp) this.elWeatherTemp.textContent = `${w.temperatureC}°C`;
-        if (this.elWeatherName) this.elWeatherName.textContent = w.activeDisaster.name;
+        if (this.elWeatherName) this.elWeatherName.textContent = d.name;
       } else {
         this.elWeatherBadge.classList.remove('disaster-alert');
         this.elWeatherBadge.title = `Weather: ${w.name} • Wind: ${w.windSpeedKmh} km/h • Solar: ${Math.round(w.solarMultiplier * 100)}%`;

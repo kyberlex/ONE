@@ -283,6 +283,22 @@ export const en = {
   crisis_ubi_opt2_label: 'Ignore & Hope Individual Morality Prevails',
   crisis_ubi_opt2_cost: 'Zero cost today, risk of internal division tomorrow',
 
+  crisis_surge_name: 'Peak Surge Pricing & Grid Blackout Extortion',
+  crisis_surge_desc: 'During the scorching heatwave, the regional grid operator triggers rolling brownouts and demands an extortionate €3,500 "Emergency Peaker Capacity Surcharge" to keep the transmission line open.',
+  crisis_surge_impact: 'If unresolved: battery bank drained by high chilling load and clinic coolers face brownout risk.',
+  crisis_surge_opt1_label: 'Strict Galvanic Islanding & Priority Bioclimatic Load Shedding',
+  crisis_surge_opt1_cost: 'Consumes 25 kWh battery reserve; cuts luxury loads to prioritize health & vertical farms',
+  crisis_surge_opt2_label: 'Capitulate and Pay Extortionate Grid Peaker Surcharge',
+  crisis_surge_opt2_cost: 'Costs €3,500 from hardware reserve; enriches fossil fuel monopoly',
+
+  crisis_toxic_name: 'Industrial Silt & Chemical Runoff Deluge',
+  crisis_toxic_desc: 'An upstream private chemical landfill has breached containment during the torrential atmospheric river, sending hazardous chemical sludge toward the communal water catchment!',
+  crisis_toxic_impact: 'If untreated: 50% of cistern water contaminated and reverse osmosis membranes ruined.',
+  crisis_toxic_opt1_label: 'Deploy Mycelial Filter Bunds & Divert Sludge to Silt Basins',
+  crisis_toxic_opt1_cost: 'Requires 4h collective labor, zero fiat; utilizes biochar and living soil biology',
+  crisis_toxic_opt2_label: 'Order Single-Use Commercial Carbon Cartridges',
+  crisis_toxic_opt2_cost: 'Costs €1,800 from emergency funds; reinforces supply-chain dependence',
+
   // Athenian Sortition Dilemmas (English)
   dil_refugees_title: 'Arrival of 4 Thermodynamic Refugees',
   dil_refugees_summary: 'A family whose suburban apartment lost power and water during a legacy utility shutoff has reached the commons gate seeking sanctuary.',

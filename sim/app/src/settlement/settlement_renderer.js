@@ -3200,30 +3200,31 @@ export class SettlementRenderer {
 
     const now = Date.now();
 
-    // 1. Natural Organic Rain Particles (if rain, storm, or flood)
-    const isStorm = weather.type === 'STORMY';
-    const isRain = weather.type === 'RAIN' || isStorm || weather.activeDisaster?.id === 'TORRENTIAL_FLOOD' || (weather.rainfallMmPerHour >= 1.0);
+    // 1. Natural Organic Rain Particles (if rain, storm, flood, or atmospheric river)
+    const isAtmosphericRiver = weather.activeDisaster?.id === 'ATMOSPHERIC_RIVER';
+    const isStorm = weather.type === 'STORMY' || isAtmosphericRiver;
+    const isRain = weather.type === 'RAIN' || isStorm || weather.activeDisaster?.id === 'FLASH_FLOOD' || (weather.rainfallMmPerHour >= 1.0);
 
     if (isRain) {
       if (!this.weatherDrops) {
-        this.weatherDrops = Array.from({ length: 180 }, () => ({
+        this.weatherDrops = Array.from({ length: 280 }, () => ({
           x: Math.random() * (w + 200) - 100,
           y: Math.random() * h,
-          len: 12 + Math.random() * 14,
-          speed: 15 + Math.random() * 10,
-          alpha: 0.25 + Math.random() * 0.35,
-          thickness: 0.8 + Math.random() * 0.7
+          len: 12 + Math.random() * 16,
+          speed: 16 + Math.random() * 12,
+          alpha: 0.25 + Math.random() * 0.40,
+          thickness: 0.8 + Math.random() * 0.9
         }));
       }
 
-      const count = isStorm ? 160 : 75;
+      const count = isAtmosphericRiver ? 260 : (isStorm ? 160 : 75);
       const windSpeed = weather.windSpeedKmh || 18;
-      const slantX = ((windSpeed - 10) / 40) * 8;
+      const slantX = ((windSpeed - 10) / 40) * (isAtmosphericRiver ? 11 : 8);
 
       ctx.lineCap = 'round';
       for (let i = 0; i < count; i++) {
         const drop = this.weatherDrops[i];
-        drop.y += drop.speed * (isStorm ? 1.35 : 1.0);
+        drop.y += drop.speed * (isAtmosphericRiver ? 1.55 : (isStorm ? 1.35 : 1.0));
         drop.x += slantX;
 
         // Wrap around smoothly across screen bounds
@@ -3234,10 +3235,12 @@ export class SettlementRenderer {
         if (drop.x < -100) drop.x = w + 50;
         if (drop.x > w + 100) drop.x = -50;
 
-        ctx.strokeStyle = isStorm 
-          ? `rgba(186, 230, 253, ${Math.min(0.7, drop.alpha * 1.25)})` 
-          : `rgba(186, 230, 253, ${drop.alpha * 0.75})`;
-        ctx.lineWidth = drop.thickness * (isStorm ? 1.3 : 1.0);
+        ctx.strokeStyle = isAtmosphericRiver
+          ? `rgba(186, 230, 253, ${Math.min(0.85, drop.alpha * 1.45)})`
+          : (isStorm 
+            ? `rgba(186, 230, 253, ${Math.min(0.7, drop.alpha * 1.25)})` 
+            : `rgba(186, 230, 253, ${drop.alpha * 0.75})`);
+        ctx.lineWidth = drop.thickness * (isAtmosphericRiver ? 1.6 : (isStorm ? 1.3 : 1.0));
 
         ctx.beginPath();
         ctx.moveTo(drop.x, drop.y);
@@ -3245,9 +3248,10 @@ export class SettlementRenderer {
         ctx.stroke();
       }
 
-      // Lightning flash during storm
-      if (isStorm && Math.random() < 0.012) {
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.22)';
+      // Lightning flash during storm or atmospheric river
+      const flashChance = isAtmosphericRiver ? 0.022 : (isStorm ? 0.012 : 0);
+      if (flashChance > 0 && Math.random() < flashChance) {
+        ctx.fillStyle = isAtmosphericRiver ? 'rgba(224, 242, 254, 0.28)' : 'rgba(255, 255, 255, 0.22)';
         ctx.fillRect(0, 0, w, h);
       }
     }
@@ -3277,29 +3281,54 @@ export class SettlementRenderer {
       }
     }
 
-    // 3. Ambient heatwave amber shimmer
-    if (weather.type === 'HEATWAVE') {
-      const amberPulse = (Math.sin(now * 0.003) + 1) * 0.04;
-      ctx.fillStyle = `rgba(245, 158, 11, ${0.05 + amberPulse})`;
+    // 3. Ambient heatwave / Heat Dome amber shimmer & mirage waves
+    const isHeatDome = weather.activeDisaster?.id === 'HEAT_DOME';
+    if (weather.type === 'HEATWAVE' || isHeatDome) {
+      const pulseFactor = isHeatDome ? 0.06 : 0.04;
+      const baseAlpha = isHeatDome ? 0.10 : 0.05;
+      const amberPulse = (Math.sin(now * 0.003) + 1) * pulseFactor;
+      ctx.fillStyle = isHeatDome ? `rgba(234, 88, 12, ${baseAlpha + amberPulse})` : `rgba(245, 158, 11, ${baseAlpha + amberPulse})`;
       ctx.fillRect(0, 0, w, h);
+
+      if (isHeatDome) {
+        // Mirrored thermal atmospheric oscillation ripples
+        ctx.save();
+        ctx.strokeStyle = `rgba(251, 146, 60, ${0.12 + amberPulse * 0.5})`;
+        ctx.lineWidth = 1.8;
+        for (let y = h * 0.45; y < h; y += 45) {
+          ctx.beginPath();
+          for (let x = 0; x < w; x += 25) {
+            const waveY = y + Math.sin(x * 0.018 + now * 0.0035) * 4.5;
+            if (x === 0) ctx.moveTo(x, waveY);
+            else ctx.lineTo(x, waveY);
+          }
+          ctx.stroke();
+        }
+        ctx.restore();
+      }
     }
 
     // 4. Overcast cloud shadows
     if (weather.cloudCover >= 0.7) {
-      ctx.fillStyle = `rgba(15, 23, 42, ${weather.cloudCover * 0.15})`;
+      ctx.fillStyle = `rgba(15, 23, 42, ${weather.cloudCover * (isAtmosphericRiver ? 0.28 : 0.15)})`;
       ctx.fillRect(0, 0, w, h);
     }
 
     // 5. Active Disaster Alert Banner in top-center
     if (weather.activeDisaster) {
       const d = weather.activeDisaster;
-      const bannerW = 440;
+      const bannerW = 460;
       const bannerH = 34;
       const bx = (w - bannerW) / 2;
       const by = 68;
 
-      ctx.fillStyle = 'rgba(127, 29, 29, 0.92)';
-      ctx.strokeStyle = '#ef4444';
+      const isRiver = d.id === 'ATMOSPHERIC_RIVER';
+      const isDome = d.id === 'HEAT_DOME';
+
+      ctx.fillStyle = isDome 
+        ? 'rgba(154, 52, 18, 0.94)' 
+        : (isRiver ? 'rgba(12, 74, 110, 0.94)' : 'rgba(127, 29, 29, 0.92)');
+      ctx.strokeStyle = isDome ? '#f97316' : (isRiver ? '#0284c7' : '#ef4444');
       ctx.lineWidth = 2;
       ctx.beginPath();
       ctx.roundRect(bx, by, bannerW, bannerH, 17);

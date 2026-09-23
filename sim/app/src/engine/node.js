@@ -114,6 +114,26 @@ export class OneNode {
         desc: 'Locks in topsoil moisture and reduces soil temperature by up to 8°C during extreme heatwaves.',
         mitigatesDisaster: 'DROUGHT',
         mitigationFactor: 0.70
+      },
+      evaporativeMistingShade: {
+        id: 'evaporativeMistingShade',
+        name: 'Reflective Shade Curtains & Adiabatic Misting',
+        installed: false,
+        icon: '🔥🛡️',
+        costMaterials: '3 PETG spools, 6 kg Al, 15m Cu',
+        desc: 'Reflective aluminet screens and ultrasonic adiabatic micro-nozzles reduce dome peak temperature by 12°C during Heat Domes.',
+        mitigatesDisaster: 'HEAT_DOME',
+        mitigationFactor: 0.80
+      },
+      sedimentPreFilters: {
+        id: 'sedimentPreFilters',
+        name: 'Vortex Hydrocyclone & Gravel Pre-Filters',
+        installed: false,
+        icon: '🌀',
+        costMaterials: '12 kg Al, Gravel Bed & Mesh',
+        desc: 'Pre-separates sand, silt, and heavy mud before water reaches RO pumps, shielding membranes during Atmospheric Rivers.',
+        mitigatesDisaster: 'ATMOSPHERIC_RIVER',
+        mitigationFactor: 0.65
       }
     };
 

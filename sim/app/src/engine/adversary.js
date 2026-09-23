@@ -62,6 +62,20 @@ export class LegacyAdversaryDirector {
       factors.push('Citizen morale compromised by overwork');
     }
 
+    // 6. Active Meteorological Disaster stress
+    if (thermoSnapshot.weather?.activeDisaster) {
+      const d = thermoSnapshot.weather.activeDisaster;
+      vulnerabilityScore += 25;
+      factors.push(`Severe meteorological alert active: ${d.name}`);
+      if (d.id === 'HEAT_DOME' && thermoSnapshot.energy.percent < 40) {
+        vulnerabilityScore += 20;
+        factors.push('Heat dome straining battery thermal chiller');
+      } else if (d.id === 'ATMOSPHERIC_RIVER' && thermoSnapshot.water.percent > 85) {
+        vulnerabilityScore += 15;
+        factors.push('Atmospheric river flooding cistern silt buffers');
+      }
+    }
+
     this.threatLevel = Math.min(100, Math.max(10, vulnerabilityScore));
     return {
       threatLevel: this.threatLevel,
@@ -262,11 +276,96 @@ export class LegacyAdversaryDirector {
             action: 'IGNORE_COOPTATION'
           }
         ]
+      },
+      {
+        id: 'surge_pricing_blackout',
+        nameKey: 'crisis_surge_name',
+        name: 'Peak Surge Pricing & Grid Blackout Extortion',
+        category: 'ENERGY_EXTORTION',
+        severity: 'CRITICAL',
+        durationTicksRemaining: 16,
+        descKey: 'crisis_surge_desc',
+        description:
+          'During the scorching heatwave, the regional grid operator triggers rolling brownouts and demands an extortionate €3,500 "Emergency Peaker Capacity Surcharge" to keep the transmission line open.',
+        impactKey: 'crisis_surge_impact',
+        impact: 'If unresolved: battery bank drained by high chilling load and clinic coolers face brownout risk.',
+        options: [
+          {
+            id: 'island_shedding',
+            labelKey: 'crisis_surge_opt1_label',
+            label: 'Strict Galvanic Islanding & Priority Bioclimatic Load Shedding',
+            costKey: 'crisis_surge_opt1_cost',
+            costSummary: 'Consumes 25 kWh battery reserve; cuts luxury loads to prioritize health & vertical farms',
+            batteryCostKwh: 25,
+            moraleDelta: +10,
+            threatDelta: -25,
+            action: 'ISLAND_PRIORITY_SHED'
+          },
+          {
+            id: 'pay_surge_fee',
+            labelKey: 'crisis_surge_opt2_label',
+            label: 'Capitulate and Pay Extortionate Grid Peaker Surcharge',
+            costKey: 'crisis_surge_opt2_cost',
+            costSummary: 'Costs €3,500 from hardware reserve; enriches fossil fuel monopoly',
+            fiatCost: 3500,
+            moraleDelta: -12,
+            threatDelta: +10,
+            action: 'PAY_SURGE_FEE'
+          }
+        ]
+      },
+      {
+        id: 'toxic_runoff_flood',
+        nameKey: 'crisis_toxic_name',
+        name: 'Industrial Silt & Chemical Runoff Deluge',
+        category: 'ECOLOGICAL_THREAT',
+        severity: 'HIGH',
+        durationTicksRemaining: 18,
+        descKey: 'crisis_toxic_desc',
+        description:
+          'An upstream private chemical landfill has breached containment during the torrential atmospheric river, sending hazardous chemical sludge toward the communal water catchment!',
+        impactKey: 'crisis_toxic_impact',
+        impact: 'If untreated: 50% of cistern water contaminated and reverse osmosis membranes ruined.',
+        options: [
+          {
+            id: 'mycelial_biochar_bund',
+            labelKey: 'crisis_toxic_opt1_label',
+            label: 'Deploy Mycelial Filter Bunds & Divert Sludge to Silt Basins',
+            costKey: 'crisis_toxic_opt1_cost',
+            costSummary: 'Requires 4h collective labor, zero fiat; utilizes biochar and living soil biology',
+            moraleDelta: +12,
+            threatDelta: -30,
+            action: 'DEPLOY_BIOFILTER'
+          },
+          {
+            id: 'commercial_cartridges',
+            labelKey: 'crisis_toxic_opt2_label',
+            label: 'Order Single-Use Commercial Carbon Cartridges',
+            costKey: 'crisis_toxic_opt2_cost',
+            costSummary: 'Costs €1,800 from emergency funds; reinforces supply-chain dependence',
+            fiatCost: 1800,
+            moraleDelta: -8,
+            threatDelta: -5,
+            action: 'BUY_COMMERCIAL_FILTERS'
+          }
+        ]
       }
     ];
 
-    // Pick crisis matching highest vulnerability
-    const crisis = { ...crisisPrototypes[Math.floor(Math.random() * crisisPrototypes.length)] };
+    // Select crisis: prioritize meteorological synergy if active disaster is underway
+    let candidateCrises = [...crisisPrototypes];
+    if (thermoSnapshot.weather?.activeDisaster) {
+      const disasterId = thermoSnapshot.weather.activeDisaster.id;
+      if (disasterId === 'HEAT_DOME' || disasterId === 'HEATWAVE_DROUGHT') {
+        const heatCrisis = crisisPrototypes.find(c => c.id === 'surge_pricing_blackout');
+        if (heatCrisis && Math.random() < 0.75) candidateCrises = [heatCrisis];
+      } else if (disasterId === 'ATMOSPHERIC_RIVER' || disasterId === 'FLASH_FLOOD') {
+        const riverCrisis = crisisPrototypes.find(c => c.id === 'toxic_runoff_flood');
+        if (riverCrisis && Math.random() < 0.75) candidateCrises = [riverCrisis];
+      }
+    }
+
+    const crisis = { ...candidateCrises[Math.floor(Math.random() * candidateCrises.length)] };
     crisis.spawnTick = currentTick;
     return crisis;
   }

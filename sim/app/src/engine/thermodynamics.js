@@ -19,6 +19,7 @@ export const WEATHER_TYPES = {
 export const DISASTER_TYPES = {
   HAILSTORM: {
     id: 'HAILSTORM',
+    type: 'HAIL',
     name: 'Severe Hailstorm',
     icon: '🧊',
     desc: 'Golf-ball sized hail cracks solar array glass and greenhouse polycarbonate!',
@@ -28,6 +29,7 @@ export const DISASTER_TYPES = {
   },
   FLASH_FLOOD: {
     id: 'FLASH_FLOOD',
+    type: 'FLOOD',
     name: 'Flash Flood & River Swell',
     icon: '🌊',
     desc: 'Heavy torrential runoff silts up filtration systems and fills water basins to overflow!',
@@ -37,6 +39,7 @@ export const DISASTER_TYPES = {
   },
   GALE_WIND: {
     id: 'GALE_WIND',
+    type: 'GALE',
     name: 'Gale-force Windstorm',
     icon: '🌪️',
     desc: 'Severe gusts trigger automatic turbine braking and align LoRa masts into safe mode!',
@@ -46,12 +49,40 @@ export const DISASTER_TYPES = {
   },
   HEATWAVE_DROUGHT: {
     id: 'HEATWAVE_DROUGHT',
+    type: 'DROUGHT',
     name: 'Scorching Heat & Drought',
     icon: '☀️',
     desc: 'Persistent heatwave drives water evaporation and stresses battery cooling systems!',
     durationHours: 24,
     machineryDamage: { batteryBank: 15, greenhouseHvac: 15 },
     waterDemandMultiplier: 1.6
+  },
+  HEAT_DOME: {
+    id: 'HEAT_DOME',
+    type: 'HEAT_DOME',
+    name: 'Stagnant Heat Dome',
+    icon: '🔥',
+    desc: 'Trapped high-pressure thermal ridge (44°C+) forces PV cell derating, battery chiller drain & aeroponic shock!',
+    durationHours: 36,
+    machineryDamage: { batteryBank: 20, greenhouseHvac: 25, solarInverters: 15 },
+    solarPenalty: 0.70, // 30% thermal bandgap derating
+    batteryCoolingDemandKwh: 10.0, // Active BMS chiller draw
+    waterDemandMultiplier: 2.2,
+    temperatureC: 44
+  },
+  ATMOSPHERIC_RIVER: {
+    id: 'ATMOSPHERIC_RIVER',
+    type: 'ATMOSPHERIC_RIVER',
+    name: 'Torrential Atmospheric River',
+    icon: '🌊⛈️',
+    desc: 'Continuous high-volume deluge (62mm/h) plunges solar into Dunkelflaute and clogs reverse osmosis filters with silt!',
+    durationHours: 28,
+    machineryDamage: { waterPumpsFilters: 30 },
+    solarPenalty: 0.08, // Plunges solar output to 8%
+    rainfallMmPerHour: 62.0,
+    waterSurgeL: 38000,
+    siltFilterWearMult: 2.8,
+    windSpeedKmh: 45
   }
 };
 
@@ -278,9 +309,25 @@ export class ThermodynamicEngine {
       this.weather.icon = '🌪️';
     } else if (disasterKey === 'HEATWAVE_DROUGHT') {
       this.weather.type = 'HEATWAVE';
-      this.weather.icon = '🌡️';
+      this.weather.icon = '☀️';
       this.weather.name = 'Extreme Heatwave';
       this.weather.temperatureC = 41;
+    } else if (disasterKey === 'HEAT_DOME') {
+      this.weather.type = 'HEATWAVE';
+      this.weather.icon = '🔥';
+      this.weather.name = 'Stagnant Heat Dome';
+      this.weather.temperatureC = template.temperatureC || 44;
+      this.weather.cloudCover = 0.05;
+      this.weather.rainfallMmPerHour = 0.0;
+      this.weather.windSpeedKmh = 6; // stagnant air
+    } else if (disasterKey === 'ATMOSPHERIC_RIVER') {
+      this.weather.type = 'STORMY';
+      this.weather.icon = '🌊⛈️';
+      this.weather.name = 'Atmospheric River';
+      this.weather.temperatureC = 16;
+      this.weather.cloudCover = 1.0;
+      this.weather.rainfallMmPerHour = template.rainfallMmPerHour || 62.0;
+      this.weather.windSpeedKmh = template.windSpeedKmh || 45;
     }
 
     return this.weather.activeDisaster;
@@ -295,7 +342,14 @@ export class ThermodynamicEngine {
     const normalized = (hour - 6) / 14; // 0 to 1
     const rawSun = Math.sin(normalized * Math.PI);
     const cloudPenalty = 1 - this.weather.cloudCover * 0.75;
-    return Math.max(0, rawSun * cloudPenalty);
+
+    // Photovoltaic temperature coefficient derating (-0.4% per °C above 25°C cell/ambient reference)
+    let tempDerating = 1.0;
+    if (this.weather.temperatureC > 25) {
+      tempDerating = Math.max(0.65, 1.0 - (this.weather.temperatureC - 25) * 0.004);
+    }
+
+    return Math.max(0, rawSun * cloudPenalty * tempDerating);
   }
 
   /**
@@ -359,12 +413,20 @@ export class ThermodynamicEngine {
       hvacThermalDemand = (this.weather.temperatureC - 28) * 1.1;
     }
 
+    // Battery Management System (BMS) Active Thermal Chiller during heatwaves / heat domes
+    let bmsCoolingDemand = 0;
+    if (this.weather.activeDisaster?.batteryCoolingDemandKwh) {
+      bmsCoolingDemand += this.weather.activeDisaster.batteryCoolingDemandKwh;
+    } else if (this.weather.temperatureC > 36) {
+      bmsCoolingDemand += (this.weather.temperatureC - 36) * 1.2;
+    }
+
     // Machinery wear & aging penalty:
     // Lifecycle health degrades nominal conversion efficiency
     const inverterLifecycle = (this.machinery.solarInverters.lifecycleHealth || 100) / 100;
     const inverterEfficiency = (this.machinery.solarInverters.durability < 20 ? 0.80 : 0.96) * inverterLifecycle;
     const effectiveGen = totalEnergyGen * inverterEfficiency;
-    const totalEnergyDemand = residentialDemand + greenhouseDemand + waterSystemDemand + fablabDemand + computeDemand + hvacThermalDemand;
+    const totalEnergyDemand = residentialDemand + greenhouseDemand + waterSystemDemand + fablabDemand + computeDemand + hvacThermalDemand + bmsCoolingDemand;
 
     const energyDelta = effectiveGen - totalEnergyDemand;
     this.energy.lastProductionKwh = effectiveGen;
@@ -373,7 +435,9 @@ export class ThermodynamicEngine {
 
     if (energyDelta >= 0) {
       // Surplus: charge battery bank with 92% roundtrip efficiency
-      const chargeRate = energyDelta * 0.92;
+      // Thermal safety derating: hot cells (>40°C) reduce charge rate to prevent thermal runaway
+      const thermalSafetyMult = this.weather.temperatureC > 40 ? 0.78 : 1.0;
+      const chargeRate = energyDelta * 0.92 * thermalSafetyMult;
       const batteryMaxCap = this.energy.batteryCapacityKwh * this.energy.batteryHealth * ((this.machinery.batteryBank.lifecycleHealth || 100) / 100);
       const spaceAvailable = batteryMaxCap - this.energy.batteryStoredKwh;
       this.energy.batteryStoredKwh += Math.min(chargeRate, Math.max(0, spaceAvailable));
@@ -466,7 +530,8 @@ export class ThermodynamicEngine {
     let indoorThermalMult = 1.0;
     if (this.weather.temperatureC > 33) {
       const hvacCoolingEffective = hvacDurability * hvacLifecycle;
-      indoorThermalMult = Math.max(0.45, 0.70 + (0.30 * hvacCoolingEffective));
+      const shadeProtection = agroResilience.evaporativeMistingShade?.installed ? 0.35 : 0.0;
+      indoorThermalMult = Math.max(0.40, Math.min(1.0, 0.60 + (0.30 * hvacCoolingEffective) + shadeProtection));
     }
 
     const indoorHarvest = this.food.indoorYieldKcalPerHour * indoorLaborBonus * waterMultiplier * powerMultiplier * hvacLifecycle * indoorThermalMult;
@@ -499,7 +564,7 @@ export class ThermodynamicEngine {
     const disaster = this.weather.activeDisaster;
 
     if (disaster) {
-      if (disaster.type === 'HAIL') {
+      if (disaster.type === 'HAIL' || disaster.id === 'HAILSTORM') {
         grossLossPct = 0.75;
         if (agroResilience.hailNetting?.installed) {
           mitigationPct += 0.85;
@@ -509,7 +574,7 @@ export class ThermodynamicEngine {
           mitigationPct += 0.10;
           activeMitigationNames.push('Emergency Canopy Deploy (-10%)');
         }
-      } else if (disaster.type === 'FLOOD') {
+      } else if (disaster.type === 'FLOOD' || disaster.id === 'FLASH_FLOOD') {
         grossLossPct = 0.65;
         if (agroResilience.keylineSwales?.installed) {
           mitigationPct += 0.80;
@@ -519,7 +584,7 @@ export class ThermodynamicEngine {
           mitigationPct += 0.12;
           activeMitigationNames.push('Ditch Maintenance (-12%)');
         }
-      } else if (disaster.type === 'GALE') {
+      } else if (disaster.type === 'GALE' || disaster.id === 'GALE_WIND') {
         grossLossPct = 0.55;
         if (agroResilience.agroforestryWindbreak?.installed) {
           mitigationPct += 0.75;
@@ -529,7 +594,7 @@ export class ThermodynamicEngine {
           mitigationPct += 0.10;
           activeMitigationNames.push('Rover Wind-Ties (-10%)');
         }
-      } else if (disaster.type === 'DROUGHT') {
+      } else if (disaster.type === 'DROUGHT' || disaster.id === 'HEATWAVE_DROUGHT') {
         grossLossPct = 0.60;
         if (agroResilience.permacultureMulch?.installed) {
           mitigationPct += 0.70;
@@ -538,6 +603,34 @@ export class ThermodynamicEngine {
         if (robots.esp32Valves?.count > 0) {
           mitigationPct += 0.20;
           activeMitigationNames.push('ESP32 Smart Pulse Drip (-20%)');
+        }
+      } else if (disaster.type === 'HEAT_DOME' || disaster.id === 'HEAT_DOME') {
+        grossLossPct = 0.70;
+        if (agroResilience.evaporativeMistingShade?.installed) {
+          mitigationPct += 0.80;
+          activeMitigationNames.push('Reflective Misting Shading (-80% damage)');
+        }
+        if (agroResilience.permacultureMulch?.installed) {
+          mitigationPct += 0.10;
+          activeMitigationNames.push('Biochar Deep Mulch (-10%)');
+        }
+        if (robots.esp32Valves?.count > 0) {
+          mitigationPct += 0.10;
+          activeMitigationNames.push('ESP32 Pulsed Canopy Drip (-10%)');
+        }
+      } else if (disaster.type === 'ATMOSPHERIC_RIVER' || disaster.id === 'ATMOSPHERIC_RIVER') {
+        grossLossPct = 0.70;
+        if (agroResilience.keylineSwales?.installed) {
+          mitigationPct += 0.60;
+          activeMitigationNames.push('Keyline Bioswales & Runoff Swales (-60% damage)');
+        }
+        if (agroResilience.sedimentPreFilters?.installed) {
+          mitigationPct += 0.25;
+          activeMitigationNames.push('Sediment Pre-Filters & Desilters (-25%)');
+        }
+        if (robots.farmRover?.count > 0) {
+          mitigationPct += 0.10;
+          activeMitigationNames.push('Autonomous Silt Clearing (-10%)');
         }
       }
     } else if (this.weather.type === 'COLD_SNAP') {
@@ -562,7 +655,7 @@ export class ThermodynamicEngine {
 
     if (grossLossPct > 0) {
       this.food.activeAgroStress = {
-        disasterType: disaster ? disaster.type : 'COLD_SNAP',
+        disasterType: disaster ? (disaster.type || disaster.id) : 'COLD_SNAP',
         name: disaster ? disaster.name : 'Cold Snap Frost',
         grossLossPct: Math.round(grossLossPct * 100),
         netLossPct: Math.round(netLossPct * 100),
@@ -591,9 +684,10 @@ export class ThermodynamicEngine {
     // 4. ⚙️ SECOND-LAW ENTROPY & INFRASTRUCTURE AGING STEP
     // -------------------------------------------------------------
     const baseWear = 0.025; // 0.025% per hour -> ~0.6% per day
+    const filterSiltFactor = (this.weather.activeDisaster?.siltFilterWearMult || 1.0) * (agroResilience.sedimentPreFilters?.installed ? 0.35 : 1.0);
     this.machinery.solarInverters.durability = Math.max(0, this.machinery.solarInverters.durability - baseWear * 0.8);
     this.machinery.batteryBank.durability = Math.max(0, this.machinery.batteryBank.durability - baseWear * 0.6);
-    this.machinery.waterPumpsFilters.durability = Math.max(0, this.machinery.waterPumpsFilters.durability - baseWear * 1.1);
+    this.machinery.waterPumpsFilters.durability = Math.max(0, this.machinery.waterPumpsFilters.durability - baseWear * 1.1 * filterSiltFactor);
     this.machinery.fablabCnc3D.durability = Math.max(0, this.machinery.fablabCnc3D.durability - baseWear * (0.5 + workshopLabor * 0.3));
     this.machinery.greenhouseHvac.durability = Math.max(0, this.machinery.greenhouseHvac.durability - baseWear * 0.7);
 

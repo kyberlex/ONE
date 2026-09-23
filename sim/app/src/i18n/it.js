@@ -279,6 +279,22 @@ export const it = {
   crisis_ubi_opt2_label: 'Ignora e Spera che Prevalga la Moralità Individuale',
   crisis_ubi_opt2_cost: 'Zero costi oggi, rischio di frammentazione interna domani',
 
+  crisis_surge_name: 'Estorsione di Picco Elettrico & Minaccia di Blackout',
+  crisis_surge_desc: 'Durante la morsa della cupola di calore, il gestore di rete regionale avvia distacchi a rotazione ed esige un sovrapprezzo d\'emergenza di €3.500 per mantenere l\'allaccio attivo.',
+  crisis_surge_impact: 'Se irrisolto: batterie svuotate dal carico di raffreddamento e rischio blackout per i frigoriferi del presidio medico.',
+  crisis_surge_opt1_label: 'Isolamento Galvanico Rigido a Isola & Taglio Carichi Non Essenziali',
+  crisis_surge_opt1_cost: 'Consuma 25 kWh di batterie; azzera i carichi superflui per proteggere sanità e serre verticali',
+  crisis_surge_opt2_label: 'Capitola e Paga l\'Estorsione Speculativa al Monopolio Fossile',
+  crisis_surge_opt2_cost: 'Costa €3.500 dalla riserva hardware; finanzia gli speculatori',
+
+  crisis_toxic_name: 'Sversamento Industriale di Fango e Reflui Tossici',
+  crisis_toxic_desc: 'Una discarica chimica privata a monte ha ceduto durante la bomba d\'acqua del fiume atmosferico, riversando fanghi contaminati verso il bacino di raccolta idrica del comune!',
+  crisis_toxic_impact: 'Se non trattato: 50% dell\'acqua nella cisterna contaminata e membrane a osmosi inversa distrutte dal fango.',
+  crisis_toxic_opt1_label: 'Dispiega Barriere Micorriziche con Biochar & Devia verso Bacini di Decantazione',
+  crisis_toxic_opt1_cost: 'Richiede 4 ore di lavoro collettivo, zero euro; sfrutta il biochar e la biologia del suolo vivente',
+  crisis_toxic_opt2_label: 'Acquista Cartucce Filtranti Monouso dal Mercato Industriale',
+  crisis_toxic_opt2_cost: 'Costa €1.800 dal fondo d\'emergenza; rafforza la dipendenza dalla catena commerciale',
+
   // Dilemmi Civici del Consiglio per Sorteggio (Italiano)
   dil_refugees_title: 'Arrivo di 4 Rifugiati Termodinamici',
   dil_refugees_summary: 'Una famiglia il cui alloggio ha perso elettricità e acqua per il distacco delle utenze commerciali ha raggiunto i cancelli del comune in cerca di asilo.',
