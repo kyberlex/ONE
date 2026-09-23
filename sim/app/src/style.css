@@ -4878,7 +4878,7 @@ html, body {
 /* Floating Launcher Button */
 .btn-floating-chat-launcher {
   position: fixed;
-  bottom: 24px;
+  bottom: 78px;
   right: 24px;
   background: rgba(15, 23, 42, 0.88);
   backdrop-filter: blur(16px);
@@ -4946,12 +4946,12 @@ html, body {
 /* Floating Chat Drawer Container */
 .chat-drawer-container {
   position: fixed;
-  bottom: 80px;
+  bottom: 128px;
   right: 24px;
   width: 400px;
   max-width: calc(100vw - 32px);
   height: 540px;
-  max-height: calc(100vh - 120px);
+  max-height: calc(100vh - 150px);
   z-index: 1045;
   display: flex;
   flex-direction: column;
@@ -5446,16 +5446,16 @@ html, body {
 /* Mobile Responsive */
 @media (max-width: 640px) {
   .btn-floating-chat-launcher {
-    bottom: 20px;
+    bottom: 74px;
     right: 14px;
     padding: 8px 14px;
     font-size: 12px;
   }
   .chat-drawer-container {
-    bottom: 68px;
+    bottom: 120px;
     right: 10px;
     width: calc(100vw - 20px);
-    height: calc(100vh - 120px);
+    height: calc(100vh - 135px);
   }
 }
 
