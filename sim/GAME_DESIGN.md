@@ -244,6 +244,45 @@ Scrivere un motore grafico, una mappa planetaria o un sistema di controlli touch
    * L'AI Adversarial Director di Legacy e le difese non-violente.
    * Il ponte fisico Dual-Track per sbloccare file CAD (.STL) e automazioni Home Assistant (.YAML).
 
+---
+
+## **XII. LA PSICOLOGIA DEL DIVERTIMENTO: METRICHE DI MAESTRIA, CANTIERI CIVICI & CHAT P2P**
+
+### **1. La Domanda Fondamentale: Perché Giocarci? Dov'è la Maestria?**
+Nei giochi economici tradizionali (*SimCity*, *Monopoly*, *Civilization*), il divertimento è legato all'accumulazione di capitale monetario, grattacieli e dominio sugli avversari.  
+In O.N.E. non esiste denaro interno né speculazione immobiliare ("Use it or lose it").  
+**Il divertimento risiede nel trionfo della cooperazione biofisica sull'entropia e sull'estrazione dell'Adversary**. Si misura attraverso **4 Metriche di Maestria Biofisica**:
+
+1. **L'Indice di Emancipazione dal Lavoro (Tempo Libero Sovrano):**
+   * *Livello Base:* Un nodo mal pianificato costringe i residenti a 6-8 ore di lavoro faticoso al giorno solo per non morire di fame.
+   * *Livello Maestro:* Grazie alla simbiosi tra permacultura e robotica FabLab, il tempo di corvée obbligatorio scende a **1.2 ore/giorno**. I cittadini godono di 22.8 ore di tempo libero per arte, scienza e svago.
+2. **Resilienza Invulnerabile all'Adversary (Zero Dipendenza):**
+   * Capacità del nodo di resistere a cupole di calore (44°C+), siccità e interruzioni della rete elettrica senza mai subire blackout o crolli di morale.
+3. **Punteggio di Solidarietà Federata:**
+   * Misura il contributo del nodo alla rete planetaria: convogli di soccorso inviati a insediamenti fratelli, patti di mutuo soccorso siglati e rifugiati accolti con dignità.
+4. **La Vivibilità del "Living Canvas":**
+   * Trasformare un terreno dismesso in un'opera d'arte solarpunk vivente: giardini pensili, cupole geodetiche bioclimatiche, laboratori aperti e spazi civici partecipati.
+
+---
+
+### **2. I Cantieri Civici Volontari (Gilde di Progetto Extra)**
+Oltre ai turni di sussistenza obbligatori, qualsiasi cittadino o gruppo può lanciare **Cantieri Civici Straordinari**:
+* **Proposte di Comunità:** *Osservatorio Astronomico*, *Birrificio Civico a Fermentazione Libera*, *Sauna Solare*, *Dirigibile da Esplorazione Biorregionale*.
+* **Requisiti Materiali:** Non costano valuta, ma ore di tempo libero donate volontariamente + lotti di materiali riciclati dal FabLab.
+* **Avanzamento Collettivo:** I vicini si uniscono al cantiere cliccando sulla bacheca dell'insediamento. Al completamento, l'edificio spunta fisicamente sul canvas 2D del villaggio, erogando benefici permanenti a tutta la comunità.
+
+---
+
+### **3. Comunicazione tra Giocatori: Protocollo Ibrido di Chat P2P**
+La chat tra giocatori opera interamente in **P2P cifrato end-to-end (E2EE via WebRTC DataChannel / passaporti ECDSA)** senza server centrali né profilazione:
+* **Frasi Fatte Operative (Smart Quick-Phrases):**  
+  Pulsanti one-touch contestuali per coordinamento immediato su smartphone senza dover digitare (es. *"⚡ Allarme carichi: passiamo a isolamento galvanico!"*, *"💧 Abbiamo 3.000 L di riserva da scambiare"*, *"🏛️ Chiedo una riunione di sortizione straordinaria"*).
+* **Testo Libero Firmato Crittograficamente:**  
+  Possibilità per chi vuole di digitare liberamente messaggi di testo completi nella Piazza del Villaggio o in privato col vicino (Sussurro Sovrano).
+* **Architettura Anti-Slop & Zero-Tossicità:**  
+  La chat è strettamente collegata alle azioni materiali del gioco: ogni proposta può trasformarsi con un click in un convoglio reale o in una delibera dell'assemblea.
+
+
 
 
 
