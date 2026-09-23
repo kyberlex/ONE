@@ -349,7 +349,17 @@ export const en = {
   tabTradeHistory: 'Logistics Ledger',
   noActiveConvoysTitle: 'No Active Convoys in Transit',
   noActiveConvoysDesc: 'Your settlement is not currently exchanging goods with federated sister nodes. Launch a barter trade or solidarity caravan to balance local thermodynamics!',
-  btnLaunchConvoyNow: 'Launch Convoy Now'
+  btnLaunchConvoyNow: 'Launch Convoy Now',
+
+  // P2P Village Chat & Mesh Telegram
+  chatLauncherLabel: 'Village Chat',
+  chatTitle: 'Village Commons Chat',
+  channelVillage: 'Village',
+  channelPlanetary: 'Radio Mesh',
+  channelWhisper: 'Whisper',
+  smartQuickPhrases: 'Smart Quick-Phrases',
+  chatPlaceholder: 'Type signed message to neighbors...',
+  btnAcceptCommunityAction: 'Accept & Transfer into Commons'
 };
 
 

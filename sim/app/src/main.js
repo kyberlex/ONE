@@ -17,6 +17,8 @@ import { PanelDualTrackController } from './ui/panel_dualtrack.js';
 import { PanelDwellingController } from './ui/panel_dwelling.js';
 import { PanelPassportController } from './ui/panel_passport.js';
 import { PanelConvoysController } from './ui/panel_convoys.js';
+import { PanelChatController } from './ui/panel_chat.js';
+import { ChatEngine } from './engine/chat_engine.js';
 import { storageIDB } from './engine/storage_idb.js';
 import { CitizenPassportManager } from './engine/citizen_passport.js';
 import { P2PMeshManager } from './engine/p2p_mesh.js';
@@ -36,11 +38,27 @@ window.addEventListener('DOMContentLoaded', () => {
   let activeNode = { ...GLOBAL_STARTER_NODES[0] };
   let currentView = 'world'; // 'world' | 'settlement'
   let panelPassport = null;
+  let chatEngine = null;
+  let panelChat = null;
 
   // 1b. Initialize Serverless P2P WebRTC Mesh
   const p2pMesh = new P2PMeshManager(sim, delta => {
     // Process verified remote action delta
-    if (delta.type === 'CLAIM_DWELLING') {
+    if (delta.type === 'CHAT_MESSAGE') {
+      if (chatEngine) {
+        chatEngine.addMessage(delta.payload);
+        if (panelChat) {
+          panelChat.updateUnreadBadge();
+          if (panelChat.isOpen) {
+            panelChat.render();
+            panelChat.scrollToBottom();
+          }
+        }
+        if (settlementRenderer && delta.payload.authorName) {
+          settlementRenderer.showCitizenSpeechBubble(delta.payload.authorName, delta.payload.text);
+        }
+      }
+    } else if (delta.type === 'CLAIM_DWELLING') {
       settlementRenderer.claimDwelling(delta.payload.dwellingId);
       hud.showNotification({
         title: '🌐 Peer Usufruct Claim',
@@ -247,6 +265,7 @@ window.addEventListener('DOMContentLoaded', () => {
       panelConvoys.render();
     }
     panelDilemma.render();
+    if (panelChat) panelChat.render();
     updateSettlementMetaHeader();
   });
 
@@ -305,6 +324,26 @@ window.addEventListener('DOMContentLoaded', () => {
           message: `${citizen.activityDesc || 'Engaged in village life.'} • Vocation: ${citizen.vocation?.icon || '🌱'} ${citizen.vocation?.defaultName || 'Resident'}.`
         });
       }
+    }
+  });
+
+  // 5b. Initialize P2P Village Chat & Mesh Telegram Engine
+  chatEngine = new ChatEngine(sim, msg => {
+    if (panelChat) {
+      panelChat.updateUnreadBadge();
+      if (panelChat.isOpen) {
+        panelChat.render();
+        panelChat.scrollToBottom();
+      }
+    }
+    if (settlementRenderer && msg.authorName) {
+      settlementRenderer.showCitizenSpeechBubble(msg.authorName, msg.text);
+    }
+  });
+
+  panelChat = new PanelChatController(sim, chatEngine, p2pMesh, sentMsg => {
+    if (settlementRenderer) {
+      settlementRenderer.showCitizenSpeechBubble(sentMsg.authorName || 'Player (You)', sentMsg.text);
     }
   });
 
@@ -602,6 +641,9 @@ window.addEventListener('DOMContentLoaded', () => {
     if (activePanel === 'convoys') {
       panelConvoys.render();
     }
+    if (chatEngine) {
+      chatEngine.tickAmbientChatter(state.tick, sim.thermo, sim.node);
+    }
   });
 
   sim.onNotificationListeners.push(notif => {
@@ -676,7 +718,9 @@ window.addEventListener('DOMContentLoaded', () => {
     settlementRenderer,
     worldMap,
     zoomCoordinator,
-    prop3dViewer
+    prop3dViewer,
+    chatEngine,
+    panelChat
   };
 
   console.log('✅ [O-ASIS Dual-Track] Planetary cartography & bioclimatic village engine running at 60 FPS.');

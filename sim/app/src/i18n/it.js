@@ -345,7 +345,17 @@ export const it = {
   tabTradeHistory: 'Registro Logistico',
   noActiveConvoysTitle: 'Nessun Convoglio Attivo in Transito',
   noActiveConvoysDesc: 'Il tuo insediamento non sta scambiando merci con i nodi federati fratelli. Lancia un baratto o una carovana di solidarietà per bilanciare la termodinamica locale!',
-  btnLaunchConvoyNow: 'Invia Convoglio Ora'
+  btnLaunchConvoyNow: 'Invia Convoglio Ora',
+
+  // P2P Village Chat & Mesh Telegram
+  chatLauncherLabel: 'Chat di Villaggio',
+  chatTitle: 'Chat dei Beni Comuni',
+  channelVillage: 'Villaggio',
+  channelPlanetary: 'Rete Radio',
+  channelWhisper: 'Messaggio Diretto',
+  smartQuickPhrases: 'Frasi Rapide Intelligenti',
+  chatPlaceholder: 'Scrivi un messaggio firmato ai vicini...',
+  btnAcceptCommunityAction: 'Accetta & Trasferisci nei Beni Comuni'
 };
 
 

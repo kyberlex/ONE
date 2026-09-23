@@ -60,11 +60,30 @@ export class SettlementRenderer {
     this.lastTime = performance.now();
     this.windAngle = 0;
     this.auroraOffset = 0;
+    this.speechBubbles = new Map(); // citizenName -> { text, expiresAt, createdAt }
 
     // Setup viewport & input listeners
     this.setupResize();
     this.setupInteractions();
     this.buildSettlementLayout();
+  }
+
+  showCitizenSpeechBubble(citizenName, text, durationMs = 6000) {
+    if (!citizenName || !text) return;
+    const bubbleData = {
+      text,
+      createdAt: Date.now(),
+      expiresAt: Date.now() + durationMs
+    };
+    this.speechBubbles.set(citizenName, bubbleData);
+
+    // If message is from player or matches player avatar, mirror to player avatar's name
+    const playerAvatar = this.citizens?.find(c => c.isPlayer);
+    if (playerAvatar) {
+      if (citizenName === playerAvatar.name || citizenName.includes('You') || citizenName.includes('Player')) {
+        this.speechBubbles.set(playerAvatar.name, bubbleData);
+      }
+    }
   }
 
   setNode(nodeData) {
@@ -3099,21 +3118,57 @@ export class SettlementRenderer {
       ctx.fillText('🧓 ELDER', 0, -17);
     }
 
-    // 5. Speech bubble if active
-    if (c.bubble) {
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.9)';
-      ctx.strokeStyle = c.isPlayer ? '#fbbf24' : (c.isHuman ? '#38bdf8' : (c.isChild ? '#f43f5e' : (c.isElder ? '#cbd5e1' : '#10b981')));
-      ctx.lineWidth = 1;
-      const bubbleY = c.isPlayer ? -54 : (c.isHuman ? -42 : -32);
+    // 5. Rich Solarpunk Speech Bubble (P2P Chat or activity bubble)
+    const chatBubble = this.speechBubbles.get(c.name) || 
+      (c.isPlayer ? (this.speechBubbles.get('Player (You)') || this.speechBubbles.get('You') || this.speechBubbles.get('You (Pioneer)')) : null);
+    const hasActiveChat = chatBubble && Date.now() < chatBubble.expiresAt;
+
+    if (hasActiveChat || c.bubble) {
+      const isChat = hasActiveChat;
+      const text = isChat ? chatBubble.text : c.bubble;
+      const now = Date.now();
+      const alpha = isChat ? Math.min(1.0, (chatBubble.expiresAt - now) / 500) : 1.0;
+
+      ctx.save();
+      ctx.globalAlpha = alpha;
+
+      // Truncate length for compact display
+      const maxLen = 30;
+      const displayText = text.length > maxLen ? text.slice(0, maxLen - 1) + '…' : text;
+
+      ctx.font = '500 10px system-ui, sans-serif';
+      const textWidth = ctx.measureText(displayText).width;
+      const bw = Math.max(26, textWidth + 14);
+      const bh = 20;
+      const bubbleY = c.isPlayer ? -60 : (c.isHuman ? -48 : -38);
+      const bx = -bw / 2;
+
+      // Bubble background & glowing border
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.95)';
+      ctx.strokeStyle = c.isPlayer ? '#fbbf24' : (c.isHuman ? '#38bdf8' : '#10b981');
+      ctx.lineWidth = isChat ? 1.5 : 1;
       ctx.beginPath();
-      ctx.roundRect(-11, bubbleY, 22, 16, 4);
+      ctx.roundRect(bx, bubbleY, bw, bh, 5);
       ctx.fill();
       ctx.stroke();
 
-      ctx.font = '10px system-ui';
+      // Pointer tail
+      ctx.beginPath();
+      ctx.moveTo(-3, bubbleY + bh);
+      ctx.lineTo(0, bubbleY + bh + 4);
+      ctx.lineTo(3, bubbleY + bh);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.95)';
+      ctx.fill();
+      ctx.stroke();
+
+      // Text inside
+      ctx.fillStyle = '#f8fafc';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      ctx.fillText(c.bubble, 0, bubbleY + 8);
+      ctx.fillText(displayText, 0, bubbleY + bh / 2);
+
+      ctx.restore();
     }
 
     ctx.restore();
