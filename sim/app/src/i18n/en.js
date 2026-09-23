@@ -338,7 +338,18 @@ export const en = {
   dil_mesh_optA_label: 'Erect High-Altitude LoRa Cryptographic Relay',
   dil_mesh_optA_desc: 'Boost bioregional data mesh resilience against legacy telecom censorship.',
   dil_mesh_optB_label: 'Build Solar-Biomass Civic Sauna & Bathhouse',
-  dil_mesh_optB_desc: 'Radically reduce physical fatigue and boost community morale by 15%.'
+  dil_mesh_optB_desc: 'Radically reduce physical fatigue and boost community morale by 15%.',
+
+  // Inter-Node Trade Convoys
+  navConvoys: '🚚 Trade Convoys',
+  convoysModalTitle: 'Inter-Node Barter Logistics & Trade Fleet',
+  tabActiveConvoys: 'Active Convoys',
+  tabDispatchConvoy: 'Dispatch Convoy',
+  tabTradeDirectory: 'Bioregional Directory',
+  tabTradeHistory: 'Logistics Ledger',
+  noActiveConvoysTitle: 'No Active Convoys in Transit',
+  noActiveConvoysDesc: 'Your settlement is not currently exchanging goods with federated sister nodes. Launch a barter trade or solidarity caravan to balance local thermodynamics!',
+  btnLaunchConvoyNow: 'Launch Convoy Now'
 };
 
 

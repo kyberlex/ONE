@@ -334,7 +334,18 @@ export const it = {
   dil_mesh_optA_label: 'Installa Ripetitore Crittografico LoRa in Quota',
   dil_mesh_optA_desc: 'Potenzia la resilienza della rete mesh contro la censura delle telecomunicazioni tradizionali.',
   dil_mesh_optB_label: 'Costruisci Sauna & Bagno Civico a Biomassa Solare',
-  dil_mesh_optB_desc: 'Riduci drasticamente l\'affaticamento fisico e aumenta il morale comunitario del 15%.'
+  dil_mesh_optB_desc: 'Riduci drasticamente l\'affaticamento fisico e aumenta il morale comunitario del 15%.',
+
+  // Inter-Node Trade Convoys
+  navConvoys: '🚚 Convogli Commerciali',
+  convoysModalTitle: 'Logistica di Baratto & Flotta Inter-Nodo',
+  tabActiveConvoys: 'Convogli Attivi',
+  tabDispatchConvoy: 'Invia Convoglio',
+  tabTradeDirectory: 'Annuario Biorregionale',
+  tabTradeHistory: 'Registro Logistico',
+  noActiveConvoysTitle: 'Nessun Convoglio Attivo in Transito',
+  noActiveConvoysDesc: 'Il tuo insediamento non sta scambiando merci con i nodi federati fratelli. Lancia un baratto o una carovana di solidarietà per bilanciare la termodinamica locale!',
+  btnLaunchConvoyNow: 'Invia Convoglio Ora'
 };
 
 

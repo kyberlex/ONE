@@ -109,6 +109,7 @@ export class HudController {
     // Quick action drawer buttons
     const navButtons = [
       { id: 'btn-open-chores', panel: 'chores' },
+      { id: 'btn-open-convoys', panel: 'convoys' },
       { id: 'btn-open-tech', panel: 'tech' },
       { id: 'btn-open-council', panel: 'council' },
       { id: 'btn-open-housing', panel: 'housing' }

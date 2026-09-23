@@ -234,6 +234,7 @@
 
       <div class="actions-btn-bar">
         <button id="btn-open-chores" class="btn-action-nav" data-i18n="navChores">📋 Chores & Maintenance</button>
+        <button id="btn-open-convoys" class="btn-action-nav" data-i18n="navConvoys">🚚 Trade Convoys</button>
         <button id="btn-open-housing" class="btn-action-nav" data-i18n="navHousing">🏘️ Housing & Usufruct</button>
         <button id="btn-open-tech" class="btn-action-nav" data-i18n="navTech">🤖 Robots & Dual-Track STL</button>
         <button id="btn-open-council" class="btn-action-nav" data-i18n="navCouncil">🏛️ Sortition Council</button>
@@ -370,6 +371,21 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Inter-Node Trade Convoys & Logistics Fleet -->
+    <div id="modal-convoys" class="modal-overlay hidden">
+      <div class="modal-window modal-window-wide">
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
+            <h3 data-i18n="convoysModalTitle">Inter-Node Barter Logistics & Trade Fleet</h3>
+            <span class="badge badge-success">PLANETARY MESH</span>
+          </div>
+          <button id="btn-close-convoys-modal" class="btn-close-modal">✕</button>
+        </div>
+        <div id="convoys-content" class="modal-body"></div>
       </div>
     </div>
 

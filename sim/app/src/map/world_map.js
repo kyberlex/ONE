@@ -153,6 +153,7 @@ export class WorldMapController {
 
     this.markersLayer = L.layerGroup().addTo(this.map);
     this.meshLinksLayer = L.layerGroup().addTo(this.map);
+    this.convoysLayer = L.layerGroup().addTo(this.map);
 
     this.renderAllNodes();
     this.renderMeshLinks();
@@ -284,6 +285,73 @@ export class WorldMapController {
           }
         }
       }
+    }
+  }
+
+  updateTradeConvoys(convoys, tradeEngine) {
+    if (!this.convoysLayer) return;
+    this.convoysLayer.clearLayers();
+    if (!convoys || convoys.length === 0 || !tradeEngine) return;
+
+    for (const convoy of convoys) {
+      const pos = tradeEngine.getConvoyGeoPosition(convoy);
+      if (!pos) continue;
+
+      const origin = tradeEngine.getNodeById(convoy.originNodeId);
+      const dest = tradeEngine.getNodeById(convoy.destNodeId);
+      if (!origin || !dest) continue;
+
+      // Draw highlighted animated active convoy route
+      const routeLine = L.polyline([[origin.lat, origin.lng], [dest.lat, dest.lng]], {
+        color: '#f59e0b',
+        weight: 3.5,
+        opacity: 0.85,
+        dashArray: '6, 12',
+        className: 'convoy-route-animated'
+      });
+      this.convoysLayer.addLayer(routeLine);
+
+      // Custom animated convoy vehicle icon
+      const customIcon = L.divIcon({
+        className: 'convoy-leaflet-marker',
+        html: `
+          <div class="convoy-marker-wrapper">
+            <div class="convoy-pulse-ring"></div>
+            <div class="convoy-vehicle-badge">${convoy.vehicleIcon}</div>
+            <div class="convoy-tag">${convoy.outgoingCommodity} (${Math.round((convoy.progressTicks / convoy.totalTicks) * 100)}%)</div>
+          </div>
+        `,
+        iconSize: [40, 40],
+        iconAnchor: [20, 20]
+      });
+
+      const marker = L.marker([pos.lat, pos.lng], { icon: customIcon });
+
+      const remainingHours = Math.max(1, convoy.totalTicks - convoy.progressTicks);
+      const popupHtml = `
+        <div class="convoy-map-popup">
+          <div class="convoy-popup-header">
+            <span class="convoy-vehicle-large">${convoy.vehicleIcon}</span>
+            <div>
+              <h4>${convoy.vehicleName}</h4>
+              <span class="convoy-route-badge">${convoy.originName} ➔ ${convoy.destName}</span>
+            </div>
+          </div>
+          <div class="convoy-popup-body">
+            <div><strong>Status:</strong> ${convoy.status === 'OUTBOUND' ? 'Outbound to Destination' : 'Returning with Barter Cargo'}</div>
+            <div><strong>Cargo:</strong> ${convoy.outgoingAmount.toLocaleString()} ${convoy.outgoingUnit} ${convoy.outgoingIcon}</div>
+            ${convoy.returnCargo ? `<div><strong>Reciprocal Load:</strong> ${convoy.returnCargo.amount.toLocaleString()} ${convoy.returnCargo.unit} ${convoy.returnCargo.icon}</div>` : ''}
+            <div><strong>ETA:</strong> ${remainingHours} hour(s)</div>
+          </div>
+        </div>
+      `;
+
+      marker.bindPopup(popupHtml, {
+        className: 'one-custom-leaflet-popup',
+        maxWidth: 280
+      });
+
+      this.convoysLayer.addLayer(marker);
     }
   }
 

@@ -16,6 +16,7 @@ import { PanelDilemmaController } from './ui/panel_dilemma.js';
 import { PanelDualTrackController } from './ui/panel_dualtrack.js';
 import { PanelDwellingController } from './ui/panel_dwelling.js';
 import { PanelPassportController } from './ui/panel_passport.js';
+import { PanelConvoysController } from './ui/panel_convoys.js';
 import { storageIDB } from './engine/storage_idb.js';
 import { CitizenPassportManager } from './engine/citizen_passport.js';
 import { P2PMeshManager } from './engine/p2p_mesh.js';
@@ -210,6 +211,11 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   );
 
+  // 3b. Initialize Inter-Node Trade Convoys Modal
+  const panelConvoys = new PanelConvoysController(sim, convoy => {
+    worldMap.updateTradeConvoys(sim.trade.convoys, sim.trade);
+  });
+
   // 4. Initialize HUD
   const hud = new HudController(sim, panelType => {
     activePanel = panelType;
@@ -218,6 +224,7 @@ window.addEventListener('DOMContentLoaded', () => {
     else if (panelType === 'agriculture') panelNode.open('agriculture');
     else if (panelType === 'machinery') panelNode.open('machinery');
     else if (panelType === 'tech') panelDualTrack.open();
+    else if (panelType === 'convoys') panelConvoys.open();
     else if (panelType === 'council') {
       if (sim.sortition.activeDilemma) {
         panelDilemma.openDilemma(sim.sortition.activeDilemma);
@@ -236,6 +243,8 @@ window.addEventListener('DOMContentLoaded', () => {
       panelNode.render(activePanel);
     } else if (activePanel === 'tech') {
       panelDualTrack.render();
+    } else if (activePanel === 'convoys') {
+      panelConvoys.render();
     }
     panelDilemma.render();
     updateSettlementMetaHeader();
@@ -589,6 +598,10 @@ window.addEventListener('DOMContentLoaded', () => {
   sim.onTickListeners.push(state => {
     hud.update(state);
     worldMap.updateSolarTerminator(state.hour, state.day);
+    worldMap.updateTradeConvoys(sim.trade.convoys, sim.trade);
+    if (activePanel === 'convoys') {
+      panelConvoys.render();
+    }
   });
 
   sim.onNotificationListeners.push(notif => {

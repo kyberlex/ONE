@@ -14,6 +14,7 @@ import { LegacyAdversaryDirector } from './adversary.js';
 import { AthenianSortitionEngine } from './sortition.js';
 import { CIVIC_DILEMMAS } from '../data/dilemmas.js';
 import { storageIDB } from './storage_idb.js';
+import { TradeConvoyEngine } from './trade_convoy.js';
 
 export class SimulationManager {
   constructor(config = {}) {
@@ -28,6 +29,7 @@ export class SimulationManager {
     this.node = new OneNode(config.nodeConfig);
     this.adversary = new LegacyAdversaryDirector();
     this.sortition = new AthenianSortitionEngine();
+    this.trade = new TradeConvoyEngine(this.node.id);
 
     // Event callbacks
     this.onTickListeners = [];
@@ -162,7 +164,13 @@ export class SimulationManager {
       this.lastDisasterName = null;
     }
 
-    // 7. Broadcast tick update to UI
+    // 7. Inter-Node Trade Convoys Logistics Tick
+    const tradeEvents = this.trade.tick(this.tickCount, this.thermo, this.node);
+    for (const ev of tradeEvents) {
+      this.emitNotification(ev.title, ev.message);
+    }
+
+    // 8. Broadcast tick update to UI
     this.notifyTick();
   }
 
@@ -220,7 +228,8 @@ export class SimulationManager {
         council: this.sortition.currentCouncil,
         rotationCount: this.sortition.rotationCount,
         activeDilemma: this.sortition.activeDilemma
-      }
+      },
+      trade: this.trade.serialize()
     };
   }
 
@@ -290,6 +299,10 @@ export class SimulationManager {
         if (state.thermo.weather) {
           this.thermo.weather = { ...this.thermo.weather, ...state.thermo.weather };
         }
+      }
+
+      if (state.trade) {
+        this.trade.deserialize(state.trade);
       }
 
       return true;
