@@ -153,8 +153,7 @@ Per comprarli dal mondo capitalista senza fare debiti bancari:
 
 ## **VII. IL SALTO ONTOLOGICO: "DUAL-TRACK HANDSHAKE" (DAL GIOCO ALLA REALTÀ)**
 
-1. **Sblocco Open Hardware:** Completare le tappe sblocca file CAD **.STL / .3MF** per stampanti 3D e codice **YAML per Home Assistant (Zigbee / MQTT)** per replicare la micro-rete a casa propria.
-2. **Telemetria Reale (Proof of Usufruct):** Collegare veri sensori IoT (Shelly, inverter solari) conferisce al Nodo di gioco scudi di stabilità fisica.
+1. **Sblocco Open Hardware:** Completare le tappe sblocca file CAD **.STL / .3MF** per stampanti 3D e codice **YAML per Home Assistant (Zigbee / MQTT)** per replicare la micro-rete a casa propria. All'avanzare della resilienza del villaggio nel simulatore, il giocatore riceve i progetti esecutivi verificati per l'autoproduzione materiale.
 
 ---
 
