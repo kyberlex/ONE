@@ -1,135 +1,141 @@
 # **O.N.E. SIMULATION ENGINE (`sim/README.md`)**
 ## **Computational Epistemic Verification & Node-by-Node Transition Simulator**
 
-> *"Una costituzione che richiede esseri umani perfetti è un'utopia infantile.  
-> Un'architettura di civiltà deve funzionare anche se la maggioranza degli esseri umani è egoista, limitata, tribale o preda di fanatismi.  
-> La pace sociale non richiede la perfezione morale dell'uomo, ma la perfezione ingegneristica delle regole del gioco."*  
+> *"A constitution that requires perfect human beings is a childish utopia.  
+> An architecture of civilization must function even if the majority of human beings are selfish, limited, tribal, or prey to fanaticism.  
+> Social peace does not require man's moral perfection, but the engineering perfection of the rules of the game."*  
 > — **Kyberlex & O.N.E. Assembly**
 
 ---
 
-## **I. VISIONE & SCOPO: PERCHÉ SIMULIAMO**
+## **I. VISION & PURPOSE: WHY WE SIMULATE**
 
-Il simulatore di O.N.E. non è un videogioco e non è un esercizio accademico astratto.  
-È il **banco di prova computazionale** che permette all'umanità di verificare matematicamente la fattibilità di una civiltà post-scarsità **prima di impegnare terra fisica, risorse e vite umane**.
+The O.N.E. simulator is not a video game and is not an abstract academic exercise.  
+It is the **computational proving ground** that allows humanity to mathematically verify the feasibility of a post-scarcity civilization **before committing physical land, resources, and human lives**.
 
-Questo documento preserva e codifica l'architettura completa del motore di simulazione, diviso nei suoi due strati fondamentali:
-1. **O-ASIS (O.N.E. Adversarial Stress-Test Simulation):** Simula il sistema **a regime costituzionale** (società planetaria a moneta zero, usufrutto e sorteggio).
-2. **R-ASIS (Roadmap Adversarial Stress-Test Simulation):** Simula la **transizione reale nodo per nodo (Anni 0 – 15)** a partire dal fango del capitalismo, del debito e delle leggi vigenti di oggi.
+This document preserves and codifies the complete architecture of the simulation engine, split into its two fundamental layers:
+1. **O-ASIS (O.N.E. Adversarial Stress-Test Simulation):** Simulates the system **under constitutional steady-state** (planetary zero-money, usufruct, and sortition society).
+2. **R-ASIS (Roadmap Adversarial Stress-Test Simulation):** Simulates the **real node-by-node transition (Years 0 – 15)** starting from the mud of capitalism, debt, and prevailing contemporary legal systems.
 
-> 🎮 **INTEGRAZIONE UNIFICATA DUAL-TRACK (GIOCO & SIMULATORE SCIENTIFICO):**  
-> Il simulatore scientifico e il gioco RTS web sono la **stessa identica cosa** (stesso motore termodinamico di Leontief, stessa IA avversaria Legacy, stessa demarchia).  
-> 👉 **Vedi il Master Game Design Document completo:** [`sim/GAME_DESIGN.md`](./GAME_DESIGN.md) (per la repository pubblica [`kyberlex/one-dual-track`](https://github.com/kyberlex/one-dual-track)).
+> 🔬 **TWO-TIER ARCHITECTURE: SCIENTIFIC CO-SIMULATOR (SIMONE) VS. LIVING WEB SANDBOX (O-ASIS DUAL-TRACK)**  
+> While sharing the exact same constitutional axioms, thermodynamic invariants, and demarchic governance rules, the ecosystem operates across two specialized, complementary tiers:  
+> 1. **Scientific Co-Simulation Engine (`simone/`):** A heavy, peer-reviewed discrete-event and agent-based co-simulation architecture (Julia/Python + CVXPY) detailed in [`simone/simone-specs.md`](../simone/simone-specs.md). It models real Earth observation GIS data (ERA5-Land, HydroSHEDS, SoilGrids), Darcy/Carnot biophysics (Layer 0), Weibull hardware wear and daily convex thermodynamic optimization (Layer 1), empirical psychometrics with HEXACO and Camerer $k$-depth (Layer 2), and formal demarchic state machines (Layer 3) to scientifically stress-test systemic failure thresholds and academic RFC benchmarks.  
+> 2. **Living Web Sandbox & Dual-Track MMO (`sim/`):** A client-side, interactive 60 FPS HTML5/WebGL persistent world (detailed in [`sim/GAME_DESIGN.md`](./GAME_DESIGN.md) for [`kyberlex/one-dual-track`](https://github.com/kyberlex/one-dual-track)). It enables intuitive player-driven node founding, demarchic sortition assemblies, cooperative PvE defense against the Legacy Engine, and the **Dual-Track Physical Bridge** unlocking real-world open-hardware engineering blueprints (3D printable CAD `.STL` models and Home Assistant YAML automations).
 
 ---
 
-## **II. LA MODELLAZIONE DELLA NATURA UMANA IMPERFETTA**
+## **II. MODELING IMPERFECT HUMAN NATURE**
 
-Nessun agente nella simulazione viene modellato come "altruista ideale".  
-Ogni agente umano possiede un **Vettore Psico-Dinamico e Cognitivo** calibrato su distribuzioni statistiche realistiche:
+No agent in the simulation is modeled as an "ideal altruist".  
+Every human agent possesses a **Psycho-Dynamic and Cognitive Vector** calibrated against realistic statistical distributions:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                      IL VETTORE PSICO-DINAMICO DELL'AGENTE                  │
+│                      THE AGENT'S PSYCHO-DYNAMIC VECTOR                      │
 ├──────────────────────┬───────────┬──────────────────────────────────────────┤
-│ PARAMETRO COMPORTAM. │ RANGE     │ COMPORTAMENTO SIMULATO NELL'AGENTE       │
+│ BEHAVIORAL PARAMETER │ RANGE     │ SIMULATED AGENT BEHAVIOR                 │
 ├──────────────────────┼───────────┼──────────────────────────────────────────┤
-│ `greed_index`        │ [0.0, 1.0]│ Tendenza ad accumulare, scavalcare le    │
-│                      │           │ regole, cercare lavoro nero e parassitismo│
-│ `tribal_bias`        │ [0.0, 1.0]│ Ostilità verso minoranze, razzismo,      │
-│                      │           │ omofobia, favoritismi clientelari       │
-│ `dogmatism_score`    │ [0.0, 1.0]│ Fanatismo religioso o politico, rifiuto  │
-│                      │           │ dell'evidenza empirica, culto del capo   │
-│ `cognitive_noise`    │ [0.0, 1.0]│ Razionalità limitata, decisioni impulsive│
-│                      │           │ credulità verso fake news, disattenzione │
-│ `burnout_rate`       │ [0.0, 1.0]│ Fatica emotiva, esaurimento, defezione   │
+│ `greed_index`        │ [0.0, 1.0]│ Tendency to hoard, bypass rules,         │
+│                      │           │ seek black market work and free-riding   │
+│ `tribal_bias`        │ [0.0, 1.0]│ Hostility toward minorities, racism,     │
+│                      │           │ homophobia, clientelist favoritism       │
+│ `dogmatism_score`    │ [0.0, 1.0]│ Religious or political fanaticism,       │
+│                      │           │ rejection of empirical evidence, cult of │
+│                      │           │ personality / leader worship             │
+│ `cognitive_noise`    │ [0.0, 1.0]│ Bounded rationality, impulsive decisions,│
+│                      │           │ credulity toward fake news, inattention  │
+│ `burnout_rate`       │ [0.0, 1.0]│ Emotional fatigue, exhaustion, defection │
 └──────────────────────┴───────────┴──────────────────────────────────────────┘
 ```
 
-### **Come O.N.E. neutralizza i difetti senza violenza:**
-1. **L'Avido:** I voucher energetici sono biometrici e deperibili (scadono a fine ciclo, non accumulabili). Il concetto legale di affitto o sfratto non esiste nel codice: occupare una casa vuota per affittarla è impossibile perché nessuno può essere legalmente sfrattato.
-2. **Il Razzista / Bigotto:** Il livello base di sussistenza (Tier-1: cibo, acqua, riscaldamento) è erogato direttamente dalla rete a livello biometrico. **Il consiglio di quartiere non ha la manopola per chiudere i viveri a una minoranza odiata.**
-3. **Il Demagogo Politico:** Il sorteggio statistico casuale (demarchia) impedisce la formazione di partiti e carriere politiche stabili: chiunque tenti di fare il dittatore viene sostituito per sorteggio dopo 12 mesi.
-4. **La Scarsa Intelligenza:** Gli organi decisionali sorteggiati sono affiancati da cruscotti epistemici O-ASIS intuitivi (es. barre energetiche rosse/verdi) che mostrano visivamente le conseguenze fisiche immediate di ogni delibera prima del voto.
+### **How O.N.E. neutralizes flaws without violence:**
+1. **The Greedy:** Energy vouchers are biometric and perishable (expire at cycle end, non-accumulative). The legal concept of rent or eviction does not exist in code: occupying an empty dwelling to rent it out is impossible because no one can be legally evicted.
+2. **The Racist / Bigot:** The baseline subsistence floor (Tier-1: food, water, heating) is delivered directly by the grid biometrically. **The neighborhood council has no valve or authority to cut off provisions to a despised minority.**
+3. **The Political Demagogue:** Statistical random sortition (demarchy) prevents the formation of political parties and entrenched political careers: anyone attempting to act as a dictator is replaced by sortition after 12 months.
+4. **Limited Cognitive Bandwidth:** Randomly sortitioned deliberative bodies are assisted by intuitive O-ASIS epistemic dashboards (e.g., red/green thermodynamic bars) that visually project the immediate physical consequences of every deliberation prior to voting.
 
 ---
 
-## **III. LA TRANSIZIONE NODO PER NODO (R-ASIS: ANNI 0 – 15)**
+## **III. NODE-BY-NODE TRANSITION (R-ASIS: YEARS 0 – 15)**
 
-La transizione non avviene con un decreto statale dall'alto, ma tramite **percolazione di rete a cluster biologici**:
+The transition does not occur via top-down state decree, but through **network percolation of biological clusters**:
 
 ```mermaid
 graph LR
-    subgraph Fase1 ["ANNO 0-3: IL NODO ISOLATO"]
-        N1["<b>Nodo 01 (50 persone)</b><br/>• Terra a Vincolo Perpetuo (CLT / Stiftung)<br/>• Cooperativa Operativa Interna<br/>• Resiste a Fisco, Banche e Zoning"]
+    subgraph Phase1 ["YEARS 0-3: THE ISOLATED NODE"]
+        N1["Node 01: Pioneer Seed (50 pop)<br/>• Perpetual Trust Land (CLT / Stiftung)<br/>• Internal Operational Cooperative<br/>• Resists Tax, Banking, and Zoning"]
     end
 
-    subgraph Fase2 ["ANNO 3-7: LA FEDERAZIONE LOCALE"]
-        N1 <-->|"Mutuo Credito Joule / Calorie"| N2["<b>Nodo 02 (Agro-Ecologico)</b>"]
-        N1 <-->|"Reti Mesh Radio / Dati"| N3["<b>Nodo 03 (Officina Meccanica)</b>"]
-        N2 <--> N3
+    subgraph Phase2 ["YEARS 3-7: THE LOCAL FEDERATION"]
+        N2["Node 02: Agro-Ecological Node"]
+        N3["Node 03: Machine Workshop & FabLab"]
     end
 
-    subgraph Fase3 ["ANNO 7-15: IL TIPPING POINT (15-20%)"]
-        Fed["<b>Federazione Regionale (500+ Nodi)</b><br/>• 20% della popolazione fuori dal debito bancario<br/>• Crollo del fabbisogno di moneta fiat<br/>• Sostituzione irreversibile delle istituzioni estrattive"]
+    subgraph Phase3 ["YEARS 7-15: THE TIPPING POINT (15-20%)"]
+        Fed["Regional Federation (500+ Nodes)<br/>• 20% of population freed from bank debt<br/>• Collapse of fiat money dependency<br/>• Irreversible replacement of extractive institutions"]
     end
 
-    Fase1 --> Fase2 --> Fase3
+    N1 -->|"Joule / Calorie Mutual Credit"| N2
+    N1 -->|"Mesh Radio & Data Networks"| N3
+    N2 -->|"Biomass & Feedstocks"| N3
+    N3 -->|"Tooling & Replacement Spares"| N2
+    N2 -->|"Federation Growth"| Fed
+    N3 -->|"Bioregional Scaling"| Fed
 ```
 
-1. **Il Doppio Scudo Legale Vigente:**
-   * **Scudo della Proprietà:** Terra intestata a Fondazioni non-profit a vincolo perpetuo (zero azionisti, zero dividendi, impossibile da pignorare o liquidare per legge).
-   * **Scudo del Lavoro:** Autoproduzione e consumo interno di beni comuni cooperativi (nessun salario imponibile fiat).
-2. **La Percolazione Energetica:**
-   * I nodi si collegano tra loro tramite scambi fisici diretti: calorie alimentari contro kilowattora e capacità di calcolo, senza passare per circuiti bancari commerciali.
-3. **Il Punto di Non Ritorno:**
-   * Al raggiungimento del 15-20% della forza lavoro locale all'interno dei nodi, l'economia di mercato locale perde la capacità di ricattare la popolazione con l'affitto e il debito.
+1. **The Dual Existing Legal Shield:**
+   * **Property Shield:** Land registered under non-profit perpetual trust foundations (zero shareholders, zero dividends, unseizable and unliquidatable by law).
+   * **Labor Shield:** Internal self-production and consumption of cooperative commons (zero taxable fiat wages).
+2. **Thermodynamic Percolation:**
+   * Nodes interconnect via direct physical exchanges: food calories for kilowatt-hours and compute capacity, bypassing commercial banking rails.
+3. **The Point of No Return:**
+   * Once 15–20% of the local workforce operates within the nodes, the local market economy loses the leverage to coerce the population through rent and debt.
 
 ---
 
-## **IV. ARCHITETTURA TECNICA & SERVER A COSTO ZERO (0,00 €)**
+## **IV. TECHNICAL ARCHITECTURE & ZERO-COST INFRASTRUCTURE (€0.00)**
 
-Per garantire che la simulazione sia indistruttibile, non censurabile e accessibile a chiunque senza costi per i fondatori:
+To ensure the simulation is indestructible, uncensorable, and accessible to anyone at zero cost to the founders:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                 INFRASTRUTTURA DI CALCOLO 100% GRATUITA                     │
+│                    100% FREE COMPUTATIONAL INFRASTRUCTURE                   │
 ├──────────────────────┬─────────────────────────────┬────────────────────────┤
-│ STRATO DI CALCOLO    │ PIATTAFORMA UTILIZZATA      │ COSTO OPERATIVO        │
+│ COMPUTATION LAYER    │ PLATFORM USED               │ OPERATING COST         │
 ├──────────────────────┼─────────────────────────────┼────────────────────────┤
-│ Client-Side Wasm     │ Pyodide / WebAssembly       │ 0,00 € (Gira sui PC    │
-│ (Nel browser web)    │ su Surge / GitHub Pages     │ dei visitatori)        │
-│ Cloud Dashboard      │ Hugging Face Spaces         │ 0,00 € (2 vCPU, 16 GB  │
-│ (Interattivo per tutti)│ (Gradio / Streamlit)      │ RAM gratuite)          │
-│ Heavy Monte Carlo    │ Google Colab / Kaggle       │ 0,00 € (GPU/CPU cloud  │
-│ (100.000+ agenti)    │ Jupyter Notebooks           │ gratuite)              │
-│ Background Runs      │ GitHub Actions Runners      │ 0,00 € (2.000 min/mese │
-│ (Audit notturni cron)│ (Schedulato alle 03:00)     │ inclusi)               │
+│ Client-Side Wasm     │ Pyodide / WebAssembly       │ €0.00 (Runs on         │
+│ (In the web browser) │ on Surge / GitHub Pages     │ visitors' devices)     │
+│ Cloud Dashboard      │ Hugging Face Spaces         │ €0.00 (2 vCPU, 16 GB   │
+│ (Interactive for all)│ (Gradio / Streamlit)        │ free RAM)              │
+│ Heavy Monte Carlo    │ Google Colab / Kaggle       │ €0.00 (Free cloud      │
+│ (100,000+ agents)    │ Jupyter Notebooks           │ GPU/CPU)               │
+│ Background Runs      │ GitHub Actions Runners      │ €0.00 (2,000 min/month │
+│ (Nightly cron audit) │ (Scheduled at 03:00 UTC)    │ included)              │
 └──────────────────────┴─────────────────────────────┴────────────────────────┘
 ```
 
 ---
 
-## **V. PROTOCOLLO DI IMPLEMENTAZIONE MODULARE (STEP-BY-STEP)**
+## **V. MODULAR IMPLEMENTATION PROTOCOL (STEP-BY-STEP)**
 
-Chiunque riprenda in mano questo codice (noi due o futuri nomoteti della rete) seguirà questa sequenza di cartelle e file:
+Anyone working on this codebase (the current team or future network nomothetes) will follow this sequence of folders and files:
 
-### **Step 1: Il Nucleo Matematico (`sim/core/`)**
-* `agent.py`: La classe dell'agente con il vettore psicodinamico (avidità, bias, bisogni fisiologici in joule/calorie).
-* `constitution_fsm.py`: La macchina a stati finiti dei 46 articoli (pavimento biometrico, divieto di sfratto, rotazione sorteggio).
-* `thermodynamics.py`: Le matrici di bilancio energetico (input solare, decadimento batterie, efficienza logistica).
+### **Step 1: The Mathematical Core (`sim/core/`)**
+* `agent.py`: Agent class with the psycho-dynamic vector (greed, bias, physiological needs in joules/calories).
+* `constitution_fsm.py`: Finite state machine of the 46 articles (biometric floor, anti-eviction lock, sortition rotation).
+* `thermodynamics.py`: Energy balance matrices (solar input, battery degradation, logistical efficiency).
 
-### **Step 2: Il Modello di Transizione (`sim/transition/`)**
-* `node.py`: Il singolo Seed-Node (popolazione, microgrid, scudo fondativo, contabilità di mutuo credito).
-* `network_mesh.py`: La topologia di rete complessa (scambi inter-nodo, caduta della dipendenza fiat, soglia di percolazione).
+### **Step 2: The Transition Model (`sim/transition/`)**
+* `node.py`: Individual Seed-Node (population, microgrid, foundational shield, mutual credit accounting).
+* `network_mesh.py`: Complex network topology (inter-node flows, fiat dependency collapse, percolation threshold).
 
-### **Step 3: La Visualizzazione Utente (`sim/web/` & `webapp/`)**
-* Cruscotto interattivo in HTML5/WebGL con slider temporale (Anni 0-15) e mappa vettoriale a nodi colorati.
+### **Step 3: User Visualization (`sim/web/` & `webapp/`)**
+* Interactive dashboard in HTML5/WebGL with temporal slider (Years 0–15) and colored node vector map.
 
 ---
 
-## **VI. PATTO DI PERMANENZA STORICA**
+## **VI. COVENANT OF HISTORICAL PERMANENCE**
 
-Questo file è depositato nel repository pubblico di O.N.E. e sincronizzato con la rete globale di Internet Archive.  
-Nessun algoritmo, nessun blackout politico e nessun cambio generazionale potrà cancellarlo.  
-**Il codice del nuovo mondo è stato scritto; quando l'umanità sarà pronta, saprà dove trovarlo.**
+This file is deposited in the public O.N.E. repository and synchronized with the global Internet Archive network.  
+No algorithm, political blackout, or generational turnover can erase it.  
+**The code of the new world has been written; when humanity is ready, it will know where to find it.**
