@@ -3163,12 +3163,6 @@ export class SettlementRenderer {
       ctx.font = 'bold 10px system-ui, sans-serif';
       ctx.fillText('YOU', 0, headY - 21);
     } else {
-      // Mini Vocation Icon Badge above Head
-      const vocIcon = c.vocation?.icon || (c.isChild ? '🎒' : (c.isElder ? '🧓' : '🌱'));
-      ctx.font = '10px system-ui, sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText(vocIcon, 0, headY - 8);
-
       // Name tag below
       ctx.fillStyle = isHovered ? '#38bdf8' : (c.isHuman ? '#38bdf8' : '#e2e8f0');
       ctx.font = isHovered ? 'bold 10px system-ui' : '9px system-ui';
