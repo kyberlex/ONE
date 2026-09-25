@@ -5459,5 +5459,383 @@ html, body {
   }
 }
 
+/* =========================================================
+   REIGNS-STYLE FLOATING DILEMMA CARD & MOBILE BOTTOM SHEET
+   ========================================================= */
+#modal-dilemma {
+  background: rgba(3, 8, 16, 0.45);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: opacity 0.25s ease;
+}
+
+#modal-dilemma .modal-window {
+  max-width: 640px;
+  width: 92%;
+  background: rgba(11, 23, 36, 0.96);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(16, 185, 129, 0.22);
+  border-radius: 20px;
+  overflow: hidden;
+  animation: dilemmaCardIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes dilemmaCardIn {
+  from { transform: translateY(24px) scale(0.96); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.bottom-sheet-drag-handle {
+  width: 44px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 3px;
+  margin: 0 auto 10px auto;
+  display: none;
+}
+
+/* Hide floating chat button when dilemma modal is open so choices are never obscured */
+body.has-dilemma-open .btn-floating-chat-launcher {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(25px) !important;
+}
+
+/* Option Cards Polish */
+#modal-dilemma .option-card {
+  background: rgba(15, 29, 44, 0.85);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 16px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+#modal-dilemma .option-card:hover {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+}
+
+#modal-dilemma .option-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0;
+}
+
+#modal-dilemma .option-card p {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.45;
+  margin: 0;
+}
+
+#modal-dilemma .impacts-list {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+#modal-dilemma .impacts-list span {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Bottom Sheet Drawer */
+@media (max-width: 768px) {
+  #modal-dilemma {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  #modal-dilemma .modal-window {
+    width: 100%;
+    max-width: 100%;
+    max-height: 88vh;
+    border-radius: 24px 24px 0 0;
+    margin: 0;
+    border-bottom: none;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(16, 185, 129, 0.15);
+    animation: dilemmaDrawerUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes dilemmaDrawerUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  .bottom-sheet-drag-handle {
+    display: block;
+  }
+
+  #modal-dilemma .options-duel {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  #modal-dilemma .option-card {
+    padding: 14px;
+  }
+
+  #modal-dilemma .btn-primary,
+  #modal-dilemma .btn-secondary {
+    min-height: 48px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+/* =========================================================
+   CITIZEN DOSSIER & 3D SOVEREIGN AVATAR STUDIO MODAL
+   ========================================================= */
+.modal-window-citizen {
+  max-width: 760px;
+  width: 92%;
+  background: rgba(10, 18, 28, 0.96);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 189, 248, 0.15);
+  border-radius: 20px;
+}
+
+.citizen-dossier-layout {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 18px;
+  padding: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .citizen-dossier-layout {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+.citizen-3d-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(6, 11, 19, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.citizen-3d-badge-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #38bdf8;
+}
+
+.live-3d-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulseDot 1.5s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.citizen-3d-canvas-container {
+  width: 100%;
+  height: 230px;
+  background: #070d17;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.citizen-3d-canvas-container:active {
+  cursor: grabbing;
+}
+
+.citizen-3d-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.citizen-3d-hint {
+  font-size: 10px;
+  color: #64748b;
+  text-align: center;
+}
+
+.citizen-dossier-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.citizen-dossier-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status-pill {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.status-player { background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); }
+.status-peer { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }
+.status-child { background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.4); }
+.status-elder { background: rgba(226, 232, 240, 0.15); color: #f1f5f9; border: 1px solid rgba(226, 232, 240, 0.4); }
+.status-resident { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+
+.usufruct-seal {
+  font-size: 11px;
+  color: #34d399;
+  font-weight: 600;
+}
+
+.citizen-stats-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+.stat-label {
+  color: #94a3b8;
+}
+
+.stat-value {
+  color: #f8fafc;
+}
+
+.constitutional-protection-box {
+  background: rgba(16, 185, 129, 0.06);
+  border-left: 3px solid #10b981;
+  padding: 8px 12px;
+  border-radius: 0 8px 8px 0;
+}
+
+.quote-header {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #34d399;
+  margin-bottom: 3px;
+}
+
+.constitutional-protection-box p {
+  font-size: 11.5px;
+  color: #94a3b8;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.citizen-actions-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+/* =========================================================
+   RESPONSIVE HUD FOR MOBILE & TABLET (PHONE & IPAD)
+   ========================================================= */
+@media (max-width: 768px) {
+  .hud-top-bar {
+    flex-wrap: wrap;
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .hud-meters-row {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 3px;
+    gap: 6px;
+    scrollbar-width: none;
+  }
+  .hud-meters-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .resource-meter {
+    min-width: 115px;
+    padding: 5px 9px;
+    flex-shrink: 0;
+  }
+
+  .meter-title-row {
+    font-size: 9px;
+  }
+
+  .hud-bottom-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 6px 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .time-control-box {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .actions-btn-bar {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+    gap: 6px;
+    scrollbar-width: none;
+  }
+  .actions-btn-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .btn-action-nav {
+    padding: 8px 12px;
+    font-size: 11.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .hud-footer-stamp {
+    display: none;
+  }
+}
+
 
 

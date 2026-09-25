@@ -500,16 +500,24 @@ export class SettlementRenderer {
     const elderSanctuary = this.infrastructures.find(inf => inf.type === 'ELDER_CARE');
     const home = c.homeDwelling || this.dwellings[0];
 
-    // 1. NIGHT (21:00 - 06:00): Sleep in private dwellings
+    // 1. NIGHT (21:00 - 06:00): Rest in private dwellings + active night-duty crew
     if (hour >= 21 || hour < 6) {
-      const isNightWatch = !c.isChild && !c.isElder && (c.id === this.citizens[0]?.id);
-      if (isNightWatch) {
+      const nightWatchCrew = ['avatar-player', 'avatar-human-0', 'avatar-npc-10', 'avatar-npc-12'];
+      const isNightDuty = nightWatchCrew.includes(c.id);
+      if (isNightDuty) {
+        const dests = [
+          { x: -280, y: -140, act: 'night_grid', desc: 'Checking Solar PV & Battery Inverters ⚡' },
+          { x: 0, y: 0, act: 'stargazing', desc: 'Stargazing & Demarchy Reflection at Agora 🔭' },
+          { x: 280, y: -140, act: 'night_cistern', desc: 'Inspecting Bio-Filtration Cistern 💧' },
+          { x: 0, y: 150, act: 'night_stroll', desc: 'Lantern Stroll along illuminated South Pergola 🏮' }
+        ];
+        const spot = dests[Math.abs((c.name || '').charCodeAt(0)) % dests.length];
         return {
-          x: (Math.random() - 0.5) * 140,
-          y: (Math.random() - 0.5) * 140,
-          activity: 'night_watch',
-          activityDesc: 'Night Watch & Battery Bank Inspection 🔦',
-          pause: 220
+          x: spot.x + (Math.random() - 0.5) * 35,
+          y: spot.y + (Math.random() - 0.5) * 30,
+          activity: spot.act,
+          activityDesc: spot.desc,
+          pause: 160
         };
       }
       return {
@@ -517,7 +525,7 @@ export class SettlementRenderer {
         y: home.y,
         activity: 'sleeping',
         activityDesc: 'Resting peacefully in private usufruct pod 😴',
-        pause: 450
+        pause: 350
       };
     }
 
@@ -878,8 +886,9 @@ export class SettlementRenderer {
   resetCamera() {
     this.camera.x = 0;
     this.camera.y = 0;
-    this.camera.targetZoom = 1.0;
-    this.camera.zoom = 1.0;
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    this.camera.targetZoom = isMobile ? 0.92 : 1.25;
+    this.camera.zoom = isMobile ? 0.92 : 1.25;
   }
 
   screenToWorld(screenX, screenY) {
@@ -2015,6 +2024,7 @@ export class SettlementRenderer {
       for (const c of this.citizens) {
         if (c.pauseTicks > 0) {
           c.pauseTicks -= simSpeed;
+          c.isMoving = false;
         } else {
           const dx = c.targetX - c.x;
           const dy = c.targetY - c.y;
@@ -2029,7 +2039,11 @@ export class SettlementRenderer {
             c.activity = routine.activity;
             c.activityDesc = routine.activityDesc;
             c.pauseTicks = Math.floor(routine.pause / simSpeed);
+            c.isMoving = false;
           } else {
+            c.isMoving = true;
+            c.facingX = dx >= 0 ? 1 : -1;
+            c.walkPhase = (c.walkPhase || 0) + 0.22 * c.speed * Math.max(1, simSpeed);
             c.x += (dx / dist) * c.speed * simSpeed;
             c.y += (dy / dist) * c.speed * simSpeed;
           }
@@ -2939,183 +2953,229 @@ export class SettlementRenderer {
 
     const now = Date.now();
     const pulse = Math.sin(now * 0.005) * 2;
+    const isHovered = this.hoveredEntity === c;
+
+    // Walking animation phase & bobbing
+    const isMoving = Boolean(c.isMoving);
+    const walkPhase = c.walkPhase || 0;
+    const walkBob = isMoving ? Math.abs(Math.sin(walkPhase)) * 2.2 : 0;
+    const legSwing = isMoving ? Math.sin(walkPhase) * 4.2 : 0;
+    const facing = c.facingX || 1;
 
     // Nighttime hand lantern light pool on the ground
     if (isNight) {
-      const lanternGrad = ctx.createRadialGradient(0, 2, 2, 0, 2, 34);
-      lanternGrad.addColorStop(0, 'rgba(251, 191, 36, 0.45)');
-      lanternGrad.addColorStop(0.5, 'rgba(245, 158, 11, 0.2)');
+      const lanternGrad = ctx.createRadialGradient(facing * 8, -2, 2, facing * 8, -2, 42);
+      lanternGrad.addColorStop(0, 'rgba(251, 191, 36, 0.5)');
+      lanternGrad.addColorStop(0.5, 'rgba(245, 158, 11, 0.22)');
       lanternGrad.addColorStop(1, 'rgba(245, 158, 11, 0)');
       ctx.fillStyle = lanternGrad;
       ctx.beginPath();
-      ctx.arc(0, 2, 34, 0, Math.PI * 2);
+      ctx.arc(facing * 8, -2, 42, 0, Math.PI * 2);
       ctx.fill();
 
       // Hand lantern fixture
       ctx.fillStyle = '#fbbf24';
       ctx.beginPath();
-      ctx.arc(6, -4, 2.5, 0, Math.PI * 2);
+      ctx.arc(facing * 8, -6, 3, 0, Math.PI * 2);
       ctx.fill();
     }
 
     // 1. Halo / Ground Rings to distinguish Player vs Human Mesh Peers vs NPCs
+    if (isHovered) {
+      ctx.strokeStyle = '#38bdf8';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      ctx.arc(0, 0, 16, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
     if (c.isPlayer) {
       // Local Player (YOU): Radiant Golden Beacon Ring with pulsing aura
       ctx.strokeStyle = 'rgba(251, 191, 36, 0.45)';
       ctx.lineWidth = 3.5;
       ctx.beginPath();
-      ctx.ellipse(0, 4, 15 + pulse, 7.5 + pulse * 0.5, 0, 0, Math.PI * 2);
+      ctx.ellipse(0, 4, 18 + pulse, 9 + pulse * 0.5, 0, 0, Math.PI * 2);
       ctx.stroke();
 
       ctx.strokeStyle = '#fbbf24';
       ctx.lineWidth = 2;
       ctx.beginPath();
-      ctx.ellipse(0, 4, 9.5, 4.8, 0, 0, Math.PI * 2);
+      ctx.ellipse(0, 4, 11, 5.5, 0, 0, Math.PI * 2);
       ctx.stroke();
     } else if (c.isHuman) {
       // Other Human Players: Bioluminescent Cyan Mesh Ring
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.4)';
       ctx.lineWidth = 2.5;
       ctx.beginPath();
-      ctx.ellipse(0, 4, 12 + pulse * 0.7, 6 + pulse * 0.35, 0, 0, Math.PI * 2);
+      ctx.ellipse(0, 4, 15 + pulse * 0.7, 7.5 + pulse * 0.35, 0, 0, Math.PI * 2);
       ctx.stroke();
 
       ctx.strokeStyle = '#38bdf8';
       ctx.lineWidth = 1.2;
       ctx.beginPath();
-      ctx.ellipse(0, 4, 8, 4, 0, 0, Math.PI * 2);
+      ctx.ellipse(0, 4, 10, 5, 0, 0, Math.PI * 2);
       ctx.stroke();
     } else {
       // Simulated Resident (NPC): Subtle natural shadow
       ctx.fillStyle = 'rgba(0, 0, 0, 0.35)';
       ctx.beginPath();
-      ctx.ellipse(0, 3, 5, 2.5, 0, 0, Math.PI * 2);
+      ctx.ellipse(0, 4, 7, 3.5, 0, 0, Math.PI * 2);
       ctx.fill();
     }
 
     // Child hopping animation
-    if (c.isChild) {
-      const hop = Math.abs(Math.sin(now * 0.009 + (c.x || 0))) * 3.5;
+    if (c.isChild && isMoving) {
+      const hop = Math.abs(Math.sin(now * 0.012 + (c.x || 0))) * 4;
       ctx.translate(0, -hop);
     }
 
-    // 2. Body
-    const bodyRadius = c.isPlayer ? 5.5 : (c.isChild ? 3.2 : 4.5);
-    ctx.fillStyle = c.color;
+    // 1.5 Walking Animated Shoes / Legs
+    const footColor = '#1e293b';
+    ctx.fillStyle = footColor;
     ctx.beginPath();
-    ctx.arc(0, c.isChild ? -3 : -4, bodyRadius, 0, Math.PI * 2);
+    ctx.ellipse(-3.5, 3 + legSwing, 2.5, 1.6, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.ellipse(3.5, 3 - legSwing, 2.5, 1.6, 0, 0, Math.PI * 2);
     ctx.fill();
 
-    // 3. Head & Hair
-    const headY = c.isPlayer ? -11 : (c.isChild ? -8 : -10);
-    const headRadius = c.isPlayer ? 3.5 : (c.isChild ? 2.3 : 3);
+    // 2. Body with walkBob
+    const bodyRadius = c.isPlayer ? 7.5 : (c.isChild ? 4.8 : (c.isElder ? 6.2 : 6.5));
+    const bodyY = (c.isChild ? -3 : -5) - walkBob;
+
+    ctx.fillStyle = c.color;
+    ctx.beginPath();
+    ctx.arc(0, bodyY, bodyRadius, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Body solarpunk collar / apron detail
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.25)';
+    ctx.beginPath();
+    ctx.arc(0, bodyY, bodyRadius * 0.55, 0, Math.PI);
+    ctx.fill();
+
+    // 3. Hands & Vocation Tools
+    const handX = facing * (bodyRadius + 2);
+    const handY = bodyY + 1;
+    ctx.fillStyle = '#fbb77a';
+    ctx.beginPath();
+    ctx.arc(handX, handY, 2.2, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Vocation Tool Graphic
+    const vocId = c.vocation?.id || (c.vocation?.defaultName || '').toLowerCase();
+    if (c.isElder) {
+      // Elder wooden carved staff
+      ctx.strokeStyle = '#92400e';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(handX, handY - 10);
+      ctx.lineTo(handX, handY + 6);
+      ctx.stroke();
+    } else if (c.isChild) {
+      // Child backpack
+      ctx.fillStyle = '#f43f5e';
+      ctx.fillRect(-facing * 4 - 3, bodyY - 4, 4, 7);
+    } else if (vocId.includes('farmer') || vocId.includes('agron') || vocId.includes('botan')) {
+      // Green watering can or sprig
+      ctx.fillStyle = '#22c55e';
+      ctx.beginPath();
+      ctx.arc(handX + facing * 3, handY - 2, 2.5, 0, Math.PI * 2);
+      ctx.fill();
+    } else if (vocId.includes('electric') || vocId.includes('solar') || vocId.includes('tech')) {
+      // Yellow diagnostic tool
+      ctx.fillStyle = '#fbbf24';
+      ctx.fillRect(handX - 1, handY - 4, 4, 5);
+    } else if (vocId.includes('nurse') || vocId.includes('medic') || vocId.includes('heal')) {
+      // White & red medical bag
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(handX - 1, handY - 3, 5, 4);
+      ctx.fillStyle = '#ef4444';
+      ctx.fillRect(handX + 1, handY - 2, 1.5, 2);
+    } else if (vocId.includes('smith') || vocId.includes('machin') || vocId.includes('carpenter')) {
+      // Steel wrench
+      ctx.strokeStyle = '#94a3b8';
+      ctx.lineWidth = 1.6;
+      ctx.beginPath();
+      ctx.moveTo(handX, handY - 4);
+      ctx.lineTo(handX + facing * 4, handY + 3);
+      ctx.stroke();
+    }
+
+    // 4. Head & Hair
+    const headY = (c.isPlayer ? -14 : (c.isChild ? -9 : -12)) - walkBob;
+    const headRadius = c.isPlayer ? 5.0 : (c.isChild ? 3.4 : (c.isElder ? 4.4 : 4.4));
     const app = getCitizenAppearance(c);
 
-    // Skin tone with biocultural diversity
+    // Skin tone
     ctx.fillStyle = c.isPlayer ? '#fef08a' : (c.isHuman ? '#e0f2fe' : (c.isElder ? '#f1f5f9' : app.skinTone));
     ctx.beginPath();
     ctx.arc(0, headY, headRadius, 0, Math.PI * 2);
     ctx.fill();
 
-    // Hair cap & distinct hairstyles (outdoor top-down view)
+    // Hair cap & distinct hairstyles
     if (!c.isPlayer && !c.isHuman) {
       ctx.fillStyle = app.hairColor;
       ctx.beginPath();
-      ctx.arc(0, headY - 0.4, headRadius + 0.25, Math.PI * 0.9, Math.PI * 2.1);
+      ctx.arc(0, headY - 0.5, headRadius + 0.4, Math.PI * 0.9, Math.PI * 2.1);
       ctx.fill();
 
-      // Distinct outdoor hair silhouette for female ponytails & top buns
       if (app.hairStyle === 'ponytail') {
         ctx.beginPath();
-        ctx.arc(-headRadius - 1, headY + 0.5, 1.4, 0, Math.PI * 2);
+        ctx.arc(-facing * (headRadius + 1.2), headY + 0.8, 1.8, 0, Math.PI * 2);
         ctx.fill();
       } else if (app.hairStyle === 'bun' || app.hairStyle === 'chignon') {
         ctx.beginPath();
-        ctx.arc(0, headY - headRadius - 0.9, 1.5, 0, Math.PI * 2);
+        ctx.arc(0, headY - headRadius - 1.2, 2.0, 0, Math.PI * 2);
         ctx.fill();
       } else if (app.hairStyle === 'pigtails') {
         ctx.beginPath();
-        ctx.arc(-headRadius - 0.8, headY - 1, 1.2, 0, Math.PI * 2);
-        ctx.arc(headRadius + 0.8, headY - 1, 1.2, 0, Math.PI * 2);
+        ctx.arc(-headRadius - 1.2, headY - 1, 1.5, 0, Math.PI * 2);
+        ctx.arc(headRadius + 1.2, headY - 1, 1.5, 0, Math.PI * 2);
         ctx.fill();
       }
     }
 
-    // Elder silver hair & wooden walking cane
+    // Elder silver hair
     if (c.isElder) {
       ctx.fillStyle = '#e2e8f0';
       ctx.beginPath();
       ctx.arc(0, headY - 1, headRadius + 0.6, Math.PI, Math.PI * 2);
       ctx.fill();
-
-      ctx.strokeStyle = '#d97706';
-      ctx.lineWidth = 1.4;
-      ctx.beginPath();
-      ctx.moveTo(5, -4);
-      ctx.lineTo(6, 4);
-      ctx.stroke();
     }
 
-    // 4. Over-head Badges & Nameplates
+    // 5. Over-head Badges & Nameplates
     if (c.isPlayer) {
       // Floating Crown & YOU badge
-      ctx.font = 'bold 11px system-ui, sans-serif';
+      ctx.font = 'bold 13px system-ui, sans-serif';
       ctx.textAlign = 'center';
-      ctx.fillText('👑', 0, -18);
+      ctx.fillText('👑', 0, headY - 12);
 
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.9)';
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.92)';
       ctx.strokeStyle = '#fbbf24';
       ctx.lineWidth = 1.5;
       ctx.beginPath();
-      ctx.roundRect(-18, -37, 36, 14, 4);
+      ctx.roundRect(-20, headY - 32, 40, 15, 4);
       ctx.fill();
       ctx.stroke();
 
       ctx.fillStyle = '#fbbf24';
-      ctx.font = 'bold 9px system-ui, sans-serif';
-      ctx.fillText('YOU', 0, -27);
-    } else if (c.isHuman) {
-      // Floating network peer badge for other real human participants
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.85)';
-      ctx.strokeStyle = '#38bdf8';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.roundRect(-17, -26, 34, 13, 3);
-      ctx.fill();
-      ctx.stroke();
-
-      ctx.fillStyle = '#38bdf8';
-      ctx.font = 'bold 8px system-ui, sans-serif';
+      ctx.font = 'bold 10px system-ui, sans-serif';
+      ctx.fillText('YOU', 0, headY - 21);
+    } else {
+      // Mini Vocation Icon Badge above Head
+      const vocIcon = c.vocation?.icon || (c.isChild ? '🎒' : (c.isElder ? '🧓' : '🌱'));
+      ctx.font = '10px system-ui, sans-serif';
       ctx.textAlign = 'center';
-      ctx.fillText('🌐 PEER', 0, -17);
-    } else if (c.isChild) {
-      // Child floating badge
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.85)';
-      ctx.strokeStyle = '#f43f5e';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.roundRect(-19, -24, 38, 12, 3);
-      ctx.fill();
-      ctx.stroke();
+      ctx.fillText(vocIcon, 0, headY - 8);
 
-      ctx.fillStyle = '#f43f5e';
-      ctx.font = 'bold 7.5px system-ui, sans-serif';
+      // Name tag below
+      ctx.fillStyle = isHovered ? '#38bdf8' : (c.isHuman ? '#38bdf8' : '#e2e8f0');
+      ctx.font = isHovered ? 'bold 10px system-ui' : '9px system-ui';
       ctx.textAlign = 'center';
-      ctx.fillText('🎒 PUPIL', 0, -16);
-    } else if (c.isElder) {
-      // Elder floating badge
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.85)';
-      ctx.strokeStyle = '#cbd5e1';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.roundRect(-21, -25, 42, 12, 3);
-      ctx.fill();
-      ctx.stroke();
-
-      ctx.fillStyle = '#e2e8f0';
-      ctx.font = 'bold 7.5px system-ui, sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText('🧓 ELDER', 0, -17);
+      ctx.textBaseline = 'top';
+      const shortName = (c.name || 'Citizen').split(' ')[0];
+      ctx.fillText(shortName, 0, 7);
     }
 
     // 5. Rich Solarpunk Speech Bubble (P2P Chat or activity bubble)

@@ -30,6 +30,11 @@ export class PanelDilemmaController {
         if (e.target === this.modalEl) this.close();
       });
     }
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && this.modalEl && !this.modalEl.classList.contains('hidden')) {
+        this.close();
+      }
+    });
   }
 
   openDilemma(dilemmaData) {
@@ -37,6 +42,7 @@ export class PanelDilemmaController {
     this.activeDilemmaData = dilemmaData;
     this.activeCrisisData = null;
     this.modalEl.classList.remove('hidden');
+    document.body.classList.add('has-dilemma-open');
     this.render();
   }
 
@@ -45,11 +51,13 @@ export class PanelDilemmaController {
     this.activeCrisisData = crisis;
     this.activeDilemmaData = null;
     this.modalEl.classList.remove('hidden');
+    document.body.classList.add('has-dilemma-open');
     this.render();
   }
 
   close() {
     if (this.modalEl) this.modalEl.classList.add('hidden');
+    document.body.classList.remove('has-dilemma-open');
     this.activeDilemmaData = null;
     this.activeCrisisData = null;
   }
@@ -135,6 +143,7 @@ export class PanelDilemmaController {
 
     let html = `
       <div class="dilemma-container">
+        <div class="bottom-sheet-drag-handle"></div>
         <div class="dilemma-badge">
           <img src="/one-logo-white.svg" alt="O.N.E." class="dilemma-stamp-icon" />
           <span>${t('councilDeliberationBadge', '🏛️ ATHENIAN SORTITION DELIBERATION')}</span>
@@ -251,6 +260,7 @@ export class PanelDilemmaController {
 
     let html = `
       <div class="dilemma-container crisis-alert-mode">
+        <div class="bottom-sheet-drag-handle"></div>
         <div class="crisis-badge">
           <img src="/one-logo-white.svg" alt="O.N.E." class="dilemma-stamp-icon" />
           <span>${t('systemAttackBadge', '⚠️ SYSTEM STRESS ATTACK DETECTED')}</span>

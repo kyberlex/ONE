@@ -17,6 +17,7 @@ import { PanelDualTrackController } from './ui/panel_dualtrack.js';
 import { PanelDwellingController } from './ui/panel_dwelling.js';
 import { PanelPassportController } from './ui/panel_passport.js';
 import { PanelConvoysController } from './ui/panel_convoys.js';
+import { PanelCitizenController } from './ui/panel_citizen.js';
 import { PanelChatController } from './ui/panel_chat.js';
 import { ChatEngine } from './engine/chat_engine.js';
 import { storageIDB } from './engine/storage_idb.js';
@@ -150,6 +151,18 @@ window.addEventListener('DOMContentLoaded', () => {
   const panelDilemma = new PanelDilemmaController(sim);
   const panelDualTrack = new PanelDualTrackController(sim);
   const prop3dViewer = new Prop3DViewer();
+  const panelCitizen = new PanelCitizenController(sim, {
+    onLocateDwelling: dwelling => {
+      if (settlementRenderer) {
+        settlementRenderer.camera.x = -dwelling.x;
+        settlementRenderer.camera.y = -dwelling.y;
+        settlementRenderer.camera.targetZoom = 1.6;
+      }
+    },
+    onOpenChat: () => {
+      if (panelChat) panelChat.open();
+    }
+  });
   panelPassport = new PanelPassportController(sim, identity => {
     p2pMesh.setIdentity(identity);
     if (identity) {
@@ -305,29 +318,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     },
     onSelectCitizen: citizen => {
-      if (citizen.isPlayer) {
-        const homeDwelling = settlementRenderer.dwellings.find(d => d.isPlayerHome);
-        if (homeDwelling) {
-          panelDwelling.open(homeDwelling, activeNode);
-        } else {
-          activePanel = 'chores';
-          panelNode.open('chores');
-        }
-        hud.showNotification({
-          title: '👑 You (Player Pioneer)',
-          message: `${citizen.activityDesc || 'Active in village.'} • Vocation: ${citizen.vocation.icon} ${citizen.vocation.defaultName}.`
-        });
-      } else if (citizen.isHuman) {
-        hud.showNotification({
-          title: `🌐 ${citizen.name} (Online Peer)`,
-          message: `${citizen.activityDesc || 'Active in village.'} • Vocation: ${citizen.vocation.defaultName}.`
-        });
-      } else {
-        hud.showNotification({
-          title: `${citizen.icon || '🤖'} ${citizen.name} (${citizen.vocation?.defaultName || 'Citizen'})`,
-          message: `${citizen.activityDesc || 'Engaged in village life.'} • Vocation: ${citizen.vocation?.icon || '🌱'} ${citizen.vocation?.defaultName || 'Resident'}.`
-        });
-      }
+      panelCitizen.open(citizen);
     }
   });
 
