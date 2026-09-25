@@ -30,6 +30,11 @@ export const en = {
   legacySystemAlert: '🏦 Legacy System Alert:',
   defaultTicker: '🌱 O-ASIS Dual-Track initialized. Detroit Delray node operational.',
 
+  // Mobile Orientation Guidance
+  landscapeTitle: 'LANDSCAPE MODE OPTIMIZED',
+  landscapeDesc: 'O-ASIS is designed for landscape screens. Please rotate your device to explore the planetary map and living settlement.',
+  landscapeBypass: 'Continue in portrait ➔',
+
   // Time & Controls
   dayPrefix: 'Day',
   speedPause: '⏸ Pause',

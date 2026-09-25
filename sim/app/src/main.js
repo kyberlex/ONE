@@ -251,6 +251,28 @@ window.addEventListener('DOMContentLoaded', () => {
     worldMap.updateTradeConvoys(sim.trade.convoys, sim.trade);
   });
 
+  // 3c. Mobile Landscape Orientation Guidance Handler (ITEM 2)
+  const landscapeOverlay = document.getElementById('mobile-landscape-overlay');
+  const btnDismissLandscape = document.getElementById('btn-dismiss-landscape');
+  if (btnDismissLandscape && landscapeOverlay) {
+    btnDismissLandscape.addEventListener('click', () => {
+      landscapeOverlay.classList.add('dismissed');
+      sessionStorage.setItem('dismissedLandscapeNotice', '1');
+    });
+
+    if (sessionStorage.getItem('dismissedLandscapeNotice') === '1') {
+      landscapeOverlay.classList.add('dismissed');
+    }
+
+    window.addEventListener('resize', () => {
+      // If rotated to landscape (width > height), clear dismiss state
+      if (window.innerWidth > window.innerHeight && landscapeOverlay.classList.contains('dismissed')) {
+        landscapeOverlay.classList.remove('dismissed');
+        sessionStorage.removeItem('dismissedLandscapeNotice');
+      }
+    });
+  }
+
   // 4. Initialize HUD
   const hud = new HudController(sim, panelType => {
     activePanel = panelType;

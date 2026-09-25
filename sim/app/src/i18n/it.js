@@ -30,6 +30,11 @@ export const it = {
   legacySystemAlert: '🏦 Allerta Sistema Legacy:',
   defaultTicker: '🌱 O-ASIS Dual-Track inizializzato. Nodo Detroit Delray operativo.',
 
+  // Mobile Orientation Guidance
+  landscapeTitle: 'MODALITÀ ORIZZONTALE',
+  landscapeDesc: 'O-ASIS è progettato per schermi orizzontali. Ruota il tuo dispositivo per esplorare la mappa planetaria e il villaggio.',
+  landscapeBypass: 'Continua comunque in verticale ➔',
+
   // Time & Controls
   dayPrefix: 'Giorno',
   speedPause: '⏸ Pausa',

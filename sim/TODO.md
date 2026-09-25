@@ -124,9 +124,13 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
   - *Requirement:* Remove binary gender definitions/labels (`Uomo`/`Donna` or `Male`/`Female`).
   - *Implementation:* Completely decoupled aesthetic customization from gender. Pioneers choose outfit silhouette (`Tunica Solarpunk` / `Tuta da Lavoro`) and can select ANY hairstyle (corti, coda di cavallo, lunghi, caschetto, chignon, doppio chignon, mossi, sfumati, barba solarpunk) regardless of outfit or name. Zero gender labels.
 
-- [ ] **ITEM 2: Fixed Camera & Discrete Zoom Framing (No Disorienting Free Pan/Zoom)**
+- [x] **ITEM 2: Fixed Camera & Discrete Zoom Framing (No Disorienting Free Pan/Zoom) (Completed):**
   - *Requirement:* Disable unconstrained free mouse-wheel zoom and endless position dragging.
-  - *Implementation:* Enforce discrete, centered, bounded zoom levels tailored strictly to visible interactive areas. Ensure World and Region views remain locked to fullscreen boundaries without floating in void. On mobile devices, enforce landscape orientation (with responsive layout or orientation guidance overlay).
+  - *Implementation:*
+    - **Settlement Canvas:** Disabled arbitrary position drag (`isDragging = false`); locked camera origin to `(0, 0)` with auto-centering lerp so the settlement village is always framed in the viewport.
+    - **Discrete Zoom Enforcement:** Removed continuous float-scaling from mouse wheel and touch pinch; wheel and pinch gestures strictly step through discrete levels (World, Region, Node, Building) with calibrated zoom constants.
+    - **World & Region Fullscreen Bounds:** Set Leaflet `maxBoundsViscosity: 1.0` and `worldCopyJump: false`; `showWorld()` fits earth bounds (`fitBounds`) to 100% of viewport without gray borders or void margins.
+    - **Mobile Landscape Guidance:** Added responsive `#mobile-landscape-overlay` with rotating device animation, solarpunk glassmorphism, and landscape requirement for mobile portrait screens.
 
 - [ ] **ITEM 3: Village Chat Deduplication & Readable Smooth Pacing**
   - *Requirement:* Fix duplicate message entries in the Village Chat drawer and eliminate rapid unreadable auto-scroll.
@@ -154,5 +158,8 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
   - *Requirement:* Fix text escaping card boundaries in canvas tooltips (as seen in screenshots for *Intergenerational Elder Sanctuary* and *Mia Ramos — Child Pioneer*).
   - *Implementation:* Dynamically compute multi-line text wrapping width (`wrapText`) and calculate card height and width dynamically (`Math.min(Math.max(460, w * 0.46), Math.min(w - 32, 620))`). All subtitles, descriptions, and legal rights wrap comfortably inside the card with generous padding. Text NEVER overflows boundaries.
 
-- [ ] **ITEM 9: adjust currency depending on location or use only $**
-- [ ] **ITEM 10: add working robots and machines in the simulation**
+- [ ] **ITEM 9: Currency Localization & Bioregional Economic Valuation**
+  - *Scope:* Align currency symbols ($ / € / ¥) to the active node's bioregion or provide unified `$`. Define `currencySymbol` per node and interpolate across threat cards, trade manifests, and financial defense counters.
+
+- [ ] **ITEM 10: Operational Autonomous Robots & Cybernetic Machinery (Living Canvas)**
+  - *Scope:* Bring the unlocked robotics tech-tree to life directly on the 2D canvas with animated working robots (Agro-Drones, Autonomous Rovers, FabLab Cobots) executing chores and visibly reducing compulsory human labor shifts.

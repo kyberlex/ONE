@@ -700,25 +700,14 @@ export class SettlementRenderer {
   }
 
   setupInteractions() {
-    // Mouse Pan
+    // Mouse Interaction (Free position-drag disabled; camera locked centered on visible settlement)
     this.canvas.addEventListener('mousedown', e => {
-      this.camera.isDragging = true;
-      this.camera.lastMouseX = e.clientX;
-      this.camera.lastMouseY = e.clientY;
+      this.camera.isDragging = false;
       this.mouseDownScreenPos = { x: e.clientX, y: e.clientY };
     });
 
     window.addEventListener('mousemove', e => {
-      if (this.camera.isDragging) {
-        const dx = e.clientX - this.camera.lastMouseX;
-        const dy = e.clientY - this.camera.lastMouseY;
-        this.camera.x += dx / this.camera.zoom;
-        this.camera.y += dy / this.camera.zoom;
-        this.camera.lastMouseX = e.clientX;
-        this.camera.lastMouseY = e.clientY;
-      } else {
-        this.handlePointerMove(e.clientX, e.clientY);
-      }
+      this.handlePointerMove(e.clientX, e.clientY);
     });
 
     window.addEventListener('mouseup', () => {
@@ -730,27 +719,22 @@ export class SettlementRenderer {
       this.updateInteriorPropTooltip(null);
     });
 
-    // Zoom on wheel (Discrete snapping integration)
+    // Zoom on wheel (Strictly Discrete snapping; free continuous float-zoom disabled)
     this.canvas.addEventListener('wheel', e => {
       e.preventDefault();
       if (this.onDiscreteZoomGesture) {
-        // e.deltaY < 0 is pinch-in / wheel-up (zoom in); e.deltaY > 0 is zoom out
+        // e.deltaY < 0 is pinch-in / wheel-up (zoom in toward interior); e.deltaY > 0 is zoom out toward region/world
         const delta = e.deltaY < 0 ? 35 : -35;
         const targetEntity = this.hoveredEntity || null;
-        const handled = this.onDiscreteZoomGesture(delta, targetEntity);
-        if (handled) return;
+        this.onDiscreteZoomGesture(delta, targetEntity);
       }
-      const zoomFactor = e.deltaY < 0 ? 1.15 : 0.87;
-      this.setZoom(this.camera.targetZoom * zoomFactor);
     }, { passive: false });
 
-    // Touch events for mobile/tablet
+    // Touch events for mobile/tablet (Discrete pinch snapping; unconstrained drag disabled)
     let initialPinchDistance = null;
     this.canvas.addEventListener('touchstart', e => {
       if (e.touches.length === 1) {
-        this.camera.isDragging = true;
-        this.camera.lastMouseX = e.touches[0].clientX;
-        this.camera.lastMouseY = e.touches[0].clientY;
+        this.camera.isDragging = false;
         this.mouseDownScreenPos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
       } else if (e.touches.length === 2) {
         this.camera.isDragging = false;
@@ -762,14 +746,7 @@ export class SettlementRenderer {
     }, { passive: true });
 
     this.canvas.addEventListener('touchmove', e => {
-      if (e.touches.length === 1 && this.camera.isDragging) {
-        const dx = e.touches[0].clientX - this.camera.lastMouseX;
-        const dy = e.touches[0].clientY - this.camera.lastMouseY;
-        this.camera.x += dx / this.camera.zoom;
-        this.camera.y += dy / this.camera.zoom;
-        this.camera.lastMouseX = e.touches[0].clientX;
-        this.camera.lastMouseY = e.touches[0].clientY;
-      } else if (e.touches.length === 2 && initialPinchDistance) {
+      if (e.touches.length === 2 && initialPinchDistance) {
         const currentDist = Math.hypot(
           e.touches[0].clientX - e.touches[1].clientX,
           e.touches[0].clientY - e.touches[1].clientY
@@ -777,19 +754,14 @@ export class SettlementRenderer {
         const factor = currentDist / initialPinchDistance;
 
         if (this.onDiscreteZoomGesture) {
-          if (factor > 1.18) {
+          if (factor > 1.25) {
             this.onDiscreteZoomGesture(50, this.hoveredEntity);
             initialPinchDistance = currentDist;
-            return;
-          } else if (factor < 0.82) {
+          } else if (factor < 0.75) {
             this.onDiscreteZoomGesture(-50, this.hoveredEntity);
             initialPinchDistance = currentDist;
-            return;
           }
         }
-
-        this.setZoom(this.camera.targetZoom * factor);
-        initialPinchDistance = currentDist;
       }
     }, { passive: true });
 
@@ -880,15 +852,17 @@ export class SettlementRenderer {
   }
 
   setZoom(target) {
-    this.camera.targetZoom = Math.max(0.45, Math.min(2.4, target));
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    const defaultZoom = isMobile ? 0.95 : 1.15;
+    this.camera.targetZoom = target ? Math.max(0.85, Math.min(1.35, target)) : defaultZoom;
   }
 
   resetCamera() {
     this.camera.x = 0;
     this.camera.y = 0;
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-    this.camera.targetZoom = isMobile ? 0.92 : 1.25;
-    this.camera.zoom = isMobile ? 0.92 : 1.25;
+    this.camera.targetZoom = isMobile ? 0.95 : 1.15;
+    this.camera.zoom = isMobile ? 0.95 : 1.15;
   }
 
   screenToWorld(screenX, screenY) {
@@ -922,11 +896,11 @@ export class SettlementRenderer {
             this.canvas.style.cursor = 'zoom-out';
             this.canvas.title = 'Click outside to return to Village (Node view)';
           } else {
-            this.canvas.style.cursor = this.camera.isDragging ? 'grabbing' : 'default';
+            this.canvas.style.cursor = 'default';
             this.canvas.title = '';
           }
         } else {
-          this.canvas.style.cursor = this.camera.isDragging ? 'grabbing' : 'default';
+          this.canvas.style.cursor = 'default';
           this.canvas.title = '';
         }
       }
@@ -937,7 +911,7 @@ export class SettlementRenderer {
     this.hoveredEntity = hit;
     this.hoveredInteriorProp = null;
     this.updateInteriorPropTooltip(null);
-    this.canvas.style.cursor = hit ? 'pointer' : (this.camera.isDragging ? 'grabbing' : 'grab');
+    this.canvas.style.cursor = hit ? 'pointer' : 'default';
   }
 
   findInteriorPropAt(x, y) {
@@ -1988,6 +1962,9 @@ export class SettlementRenderer {
 
     // Smooth camera zoom lerp
     this.camera.zoom += (this.camera.targetZoom - this.camera.zoom) * 0.15;
+    // Keep camera securely locked and centered on visible settlement
+    if (Math.abs(this.camera.x) > 0.01) this.camera.x += (0 - this.camera.x) * 0.2;
+    if (Math.abs(this.camera.y) > 0.01) this.camera.y += (0 - this.camera.y) * 0.2;
 
     // Simulation speed factor (0 = paused, 1 = normal, 2 = fast, 5 = hyper)
     const simSpeed = this.sim ? this.sim.speedMultiplier : 1;

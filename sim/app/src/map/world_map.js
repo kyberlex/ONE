@@ -35,7 +35,8 @@ export class WorldMapController {
   showWorld() {
     if (!this.map) return;
     this.map.invalidateSize();
-    this.map.setView([20, 0], 2.5, { animate: false });
+    // Seamless planetary fit: ensures earth tiles cover 100% of viewport without grey void
+    this.map.fitBounds([[-58, -165], [72, 165]], { animate: false, padding: [0, 0] });
   }
 
   showRegion(node) {
@@ -86,7 +87,7 @@ export class WorldMapController {
       }
     }, { passive: false });
 
-    // Center on Atlantic/Equator view initially
+    // Center on Atlantic/Equator view initially with zero-void strict bounds
     this.map = L.map(this.containerId, {
       center: [20, 0],
       zoom: 2.5,
@@ -94,8 +95,9 @@ export class WorldMapController {
       maxZoom: 17,
       zoomControl: false,
       attributionControl: false,
+      worldCopyJump: false,
       maxBounds: [[-84, -180], [84, 180]],
-      maxBoundsViscosity: 0.8
+      maxBoundsViscosity: 1.0
     });
 
     // Zoom control at top-right
