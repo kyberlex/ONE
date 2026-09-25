@@ -7,13 +7,16 @@ This document tracks pending architectural features, research frontiers, and unr
 ## **1. PENDING GOVERNANCE BRIDGES: SIM-TO-DISCUSSIONS PROTOCOL**
 
 ### **The Problem: Anti-Autocratic Ratification of Simulation Hypotheses**
+
 When players or developers discover an empirical friction in the game (e.g. `SIM-QA-01`: labor bottleneck when 15 councilors are seated in a 28-citizen node) and test a resolution, **who decides whether this becomes canon?**
 If a single player or developer modifies the Constitution or rules unilaterally, it violates the non-oligarchic foundation of O.N.E.
 
 ### **The Objective:**
+
 Build an anonymous, automated bridge to export `[SIMULATION_HYPOTHESIS]` entries from the local game client into **GitHub Discussions** ([`github.com/kyberlex/ONE/discussions`](https://github.com/kyberlex/ONE/discussions)) for public debate and sortition peer-review.
 
 ### **Architectural Options Explored (To Decide / Implement):**
+
 1. **Option A: Cloudflare Worker Privacy Relay (100% Automated & Anonymous)**
    - *Architecture:* Local client sends JSON payload to `https://worker.kyberlex.workers.dev/api/propose-hypothesis`.
    - *Security / OpSec:*
@@ -33,6 +36,7 @@ Build an anonymous, automated bridge to export `[SIMULATION_HYPOTHESIS]` entries
    - *Status:* Useful for batch curation.
 
 ### **Developer Protocol: When We Discover Gaps While Coding**
+
 1. **Friction Detection:** Whenever a mathematical bottleneck, resource deadlock, or constitutional contradiction is discovered during simulator engine coding or writing:
    - Developers/AI agents are strictly forbidden from unilaterally declaring a new permanent rule (enforced by Invariant 7 / Gate D7 in `AGENTS.md`).
 2. **Immediate Logging:** Add an entry in [`oasis/sim_resolutions_qa.md`](../oasis/sim_resolutions_qa.md) under ID `SIM-QA-XX` with `[STATUS: SIMULATION_HYPOTHESIS]`, detailing the material friction, the tested countermeasure, and the open governance question.
@@ -46,9 +50,11 @@ Build an anonymous, automated bridge to export `[SIMULATION_HYPOTHESIS]` entries
 ## **2. DISTRIBUTED DATABASE & CITIZEN IDENTITY SYNC (PC ↔ PHONE ↔ TABLET)**
 
 ### **The Vision: Local-First Multi-Device Sync without Accounts or Passwords**
+
 Enable seamless, zero-registration synchronization of simulation states and nodes across any personal device (PC, smartphone, tablet) while preserving absolute OpSec anonymity and offline resilience.
 
 ### **A. Citizen Cryptographic Passport (Zero-Registration Identity)**
+
 - **User Input:** Player enters a human-friendly avatar name (e.g. `"John"`).
 - **Cryptographic Payload:** The client bundles:  
   `Payload = AvatarName + ":" + Timestamp_ms (Date.now()) + ":" + 4_Random_Salt_Bytes`  
@@ -57,6 +63,7 @@ Enable seamless, zero-registration synchronization of simulation states and node
 - **Reversible Decryption:** When pasted or scanned on another device, decrypting the token immediately restores the citizen name (`"John"`) and founding date without asking any central server.
 
 ### **B. 2D QR Code Handshake (Zero-Typing Camera Sync)**
+
 - **Device A (e.g. PC or Phone):** Opens *"🔑 My Citizen Passport"* and renders an inline Solarpunk SVG QR Code encoding:  
   `https://<domain>/?passport=ONE:John:1774345632145:7f9a`
 - **Device B (e.g. Phone or Tablet):** Player points native phone/tablet camera at Device A's screen.
@@ -80,10 +87,12 @@ Enable seamless, zero-registration synchronization of simulation states and node
    - **Phase 4 (Long-Term Persistence & Git-as-a-State-Anchor - Planned for Post-Alpha / Genesis Block):** See Section D below.
 
 ### **D. Git-as-a-State-Anchor: Long-Term Consensus Snapshots on GitHub**
-* **Context & Timing:**
+
+- **Context & Timing:**
   - *Current Alpha Phase:* State lives in local browser `IndexedDB` and P2P WebRTC mesh. We deliberately DO NOT commit hourly snapshots to Git yet, in order to avoid polluting repository history with throwaway test commits while database schemas and gameplay mechanics are rapidly evolving.
   - *Genesis Block Activation:* Once settlement mechanics, robotics tech-trees, and thermodynamics reach stable feature-freeze, the automated GitHub snapshot anchor will be activated.
-* **Architecture & Mechanics:**
+
+- **Architecture & Mechanics:**
   - **Canonical Snapshot File:** `sim/app/public/world_snapshot.json` with strict schema versioning (`schemaVersion: 1`, `tick`, `timestamp`, `nodes`, `dwellings`, `robots`, `thermoConsensusHash`).
   - **Automated GitHub Action Cron:** `.github/workflows/world_snapshot_cron.yml` running on a periodic schedule (e.g. every 6 to 12 hours).
   - **Headless Ingestion Script:** `scripts/anchor_world_snapshot.py` acting as an ambient headless peer. It connects to the community P2P network, gathers verified ECDSA-signed action deltas, applies them deterministically, updates `world_snapshot.json`, and commits cleanly:
@@ -111,36 +120,39 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
 
 ### **Sprint Items & Operational Scope:**
 
-- [ ] **ITEM 1: Gender-Agnostic Avatar Customization (Freedom of Expression)**
-  * *Requirement:* Remove binary gender definitions/labels (`Uomo`/`Donna` or `Male`/`Female`).
-  * *Implementation:* Allow complete, unconstrained mixing of all aesthetic traits: hair length (short, medium, long, braids, ponytail, bun, afro, bald, curls), hair color, skin tones, solarpunk tunics/workwear, and accessories. Zero gender labeling.
+- [x] **ITEM 1: Gender-Agnostic Avatar Customization (Freedom of Expression) (Completed):**
+  - *Requirement:* Remove binary gender definitions/labels (`Uomo`/`Donna` or `Male`/`Female`).
+  - *Implementation:* Completely decoupled aesthetic customization from gender. Pioneers choose outfit silhouette (`Tunica Solarpunk` / `Tuta da Lavoro`) and can select ANY hairstyle (corti, coda di cavallo, lunghi, caschetto, chignon, doppio chignon, mossi, sfumati, barba solarpunk) regardless of outfit or name. Zero gender labels.
 
 - [ ] **ITEM 2: Fixed Camera & Discrete Zoom Framing (No Disorienting Free Pan/Zoom)**
-  * *Requirement:* Disable unconstrained free mouse-wheel zoom and endless position dragging.
-  * *Implementation:* Enforce discrete, centered, bounded zoom levels tailored strictly to visible interactive areas. Ensure World and Region views remain locked to fullscreen boundaries without floating in void. On mobile devices, enforce landscape orientation (with responsive layout or orientation guidance overlay).
+  - *Requirement:* Disable unconstrained free mouse-wheel zoom and endless position dragging.
+  - *Implementation:* Enforce discrete, centered, bounded zoom levels tailored strictly to visible interactive areas. Ensure World and Region views remain locked to fullscreen boundaries without floating in void. On mobile devices, enforce landscape orientation (with responsive layout or orientation guidance overlay).
 
 - [ ] **ITEM 3: Village Chat Deduplication & Readable Smooth Pacing**
-  * *Requirement:* Fix duplicate message entries in the Village Chat drawer and eliminate rapid unreadable auto-scroll.
-  * *Implementation:* Implement unique message ID deduplication cache; add gentle debounce/rate-limiting to ambient NPC chatter; guarantee autoscroll only triggers smoothly when the user is already at the bottom of the feed.
+  - *Requirement:* Fix duplicate message entries in the Village Chat drawer and eliminate rapid unreadable auto-scroll.
+  - *Implementation:* Implement unique message ID deduplication cache; add gentle debounce/rate-limiting to ambient NPC chatter; guarantee autoscroll only triggers smoothly when the user is already at the bottom of the feed.
 
 - [ ] **ITEM 4: Local Node Time & Bioregional Circadian Alignment**
-  * *Requirement:* Display the exact local node solar time (adjusted to bioregion longitude/timezone) and reflect local nightfall realistically.
-  * *Implementation:* Compute local solar hour from node coordinates, displaying local time clearly on the HUD clock; align citizen schedules to local sunrise/sunset.
+  - *Requirement:* Display the exact local node solar time (adjusted to bioregion longitude/timezone) and reflect local nightfall realistically.
+  - *Implementation:* Compute local solar hour from node coordinates, displaying local time clearly on the HUD clock; align citizen schedules to local sunrise/sunset.
 
 - [ ] **ITEM 5: Dynamic Circadian Time Warp (Fast Night, Playable Day)**
-  * *Requirement:* Dynamic clock speed: accelerate the night phase so players don't wait through inactive slumber, while slowing down daytime for rich active gameplay.
-  * *Implementation:* Automatically speed up night hours (e.g., 2 hours per real-time second) and slow down daytime hours (e.g., 0.5 to 1 hour per real-time second), maximizing active interaction when pioneers are working and deliberating.
+  - *Requirement:* Dynamic clock speed: accelerate the night phase so players don't wait through inactive slumber, while slowing down daytime for rich active gameplay.
+  - *Implementation:* Automatically speed up night hours (e.g., 2 hours per real-time second) and slow down daytime hours (e.g., 0.5 to 1 hour per real-time second), maximizing active interaction when pioneers are working and deliberating.
 
 - [ ] **ITEM 6: Nighttime Atmosphere Polish: Less Crowds, Warm Bioluminescent Lighting**
-  * *Requirement:* (a) Reduce citizens wandering at night (too many still awake); (b) Increase warm artificial lighting so the village is cozy rather than pitch-black.
-  * *Implementation:* Limit night-shift crew to 1–2 solitary watch/observatory figures; add glowing amber street lanterns along pathways, illuminated pod windows radiating gentle light pools, and warm Agora hearth lighting to eliminate harsh gloom.
+  - *Requirement:* (a) Reduce citizens wandering at night (too many still awake); (b) Increase warm artificial lighting so the village is cozy rather than pitch-black.
+  - *Implementation:* Limit night-shift crew to 1–2 solitary watch/observatory figures; add glowing amber street lanterns along pathways, illuminated pod windows radiating gentle light pools, and warm Agora hearth lighting to eliminate harsh gloom.
 
-- [ ] **ITEM 7: Plain-Language UI Sanitization (Remove Programmer Jargon)**
-  * *Requirement:* Replace programmer jargon and obscure academic terminology with accessible, inviting language for everyday players.
-  * *Implementation:* 
-    * Strip developer acronyms like `P2P dist db`, `ECDSA P-256`, `3D WebGL Studio`, `MFLOPS`.
-    * Translate difficult political jargon (e.g., replace `Athenian Sortition Deliberation` with `Citizens' Assembly` / `Assemblea dei Cittadini`; replace `Demarchy` with `Civic Lottery` / `Democrazia Diretta`).
+- [x] **ITEM 7: Plain-Language UI Sanitization (Remove Programmer Jargon) (Completed):**
+  - *Requirement:* Replace programmer jargon and obscure academic terminology with accessible, inviting language for everyday players.
+  - *Implementation:*
+    - Replaced programmer jargon (`P2P dist db` -> `OFFLINE RESILIENTE`, `ECDSA P-256` -> `Chiave Unica Dispositivo`, `3D WebGL Studio` -> `Studio del Personaggio`).
+    - Translated academic and political jargon (`Athenian Sortition Deliberation` -> `Consiglio dei Cittadini` / `Assemblea Civica`, `Demarchy` -> `Consiglio & Assemblea`, `Federated Mesh Peer` -> `Pioniere in Rete`).
 
-- [ ] **ITEM 8: Canvas Tooltip & Card Text Overflow Fix (Visual Polish)**
-  * *Requirement:* Fix text escaping card boundaries in canvas tooltips (as seen in screenshots for *Intergenerational Elder Sanctuary* and *Mia Ramos — Child Pioneer*).
-  * *Implementation:* Dynamically compute multi-line text wrapping width and adjust tooltip bounding boxes with proper padding, or enforce standard responsive CSS tooltips with `max-width` and `word-wrap: break-word`.
+- [x] **ITEM 8: Canvas Tooltip & Card Text Overflow Fix (Visual Polish) (Completed):**
+  - *Requirement:* Fix text escaping card boundaries in canvas tooltips (as seen in screenshots for *Intergenerational Elder Sanctuary* and *Mia Ramos — Child Pioneer*).
+  - *Implementation:* Dynamically compute multi-line text wrapping width (`wrapText`) and calculate card height and width dynamically (`Math.min(Math.max(460, w * 0.46), Math.min(w - 32, 620))`). All subtitles, descriptions, and legal rights wrap comfortably inside the card with generous padding. Text NEVER overflows boundaries.
+
+- [ ] **ITEM 9: adjust currency depending on location or use only $**
+- [ ] **ITEM 10: add working robots and machines in the simulation**

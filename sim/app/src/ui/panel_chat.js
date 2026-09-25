@@ -238,7 +238,7 @@ export class PanelChatController {
           <div class="msg-author-bar">
             <span class="msg-author-name">${msg.authorName}</span>
             <span class="msg-vocation-tag">${msg.authorVocation || 'Resident'}</span>
-            ${msg.verified ? '<span class="msg-verified-badge" title="Cryptographically Signed by Citizen Passport">🔒 ECDSA</span>' : ''}
+            ${msg.verified ? '<span class="msg-verified-badge" title="Firma crittografica verificata dal passaporto">🔒 Verificato</span>' : ''}
             <span class="msg-time">${timeStr}</span>
           </div>
           <div class="msg-text-content">${msg.text}</div>

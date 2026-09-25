@@ -402,7 +402,7 @@ html, body {
   height: 100vh;
   background: rgba(3, 7, 10, 0.75);
   backdrop-filter: blur(10px);
-  z-index: 100;
+  z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: center;

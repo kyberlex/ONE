@@ -146,7 +146,7 @@ export class PanelDilemmaController {
         <div class="bottom-sheet-drag-handle"></div>
         <div class="dilemma-badge">
           <img src="/one-logo-white.svg" alt="O.N.E." class="dilemma-stamp-icon" />
-          <span>${t('councilDeliberationBadge', '🏛️ ATHENIAN SORTITION DELIBERATION')}</span>
+          <span>${t('councilDeliberationBadge', '🏛️ CITIZENS\' ASSEMBLY DELIBERATION')}</span>
         </div>
         <h3 class="dilemma-title">${title}</h3>
         <p class="dilemma-summary">${summary}</p>

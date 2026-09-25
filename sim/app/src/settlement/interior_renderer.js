@@ -391,20 +391,20 @@ export class InteriorRenderer {
 
     } else if (type === 'AGORA') {
       floorType = 'stone';
-      roomTitle = '🏛️ Central Agora & Demarchy Amphitheater';
+      roomTitle = '🏛️ Agorà Centrale & Assemblea Civica';
 
       props.push({
         id: 'speaker-podium',
         type: 'PODIUM',
-        name: '🎙️ Democratic Assembly Speaker Rostrum',
-        desc: 'Open podium where any citizen or visitor can present proposals without institutional censorship.',
+        name: '🎙️ Rostro dell\'Assemblea dei Cittadini',
+        desc: 'Podio aperto dove qualsiasi cittadino o ospite può presentare proposte alla comunità.',
         x: 0, y: -20, w: 75, h: 50
       });
       props.push({
         id: 'sortition-kleroterion',
         type: 'KLEROTERION',
-        name: '🏺 Athenian Sortition Lottery Urn',
-        desc: 'Mechanical sortition machine for unbiased selection of 7 random citizens into governing juries.',
+        name: '🏺 Urna per il Sorteggio Civico',
+        desc: 'Dispositivo meccanico per l\'estrazione casuale e trasparente dei cittadini nel consiglio.',
         x: -90, y: -20, w: 45, h: 55
       });
       props.push({

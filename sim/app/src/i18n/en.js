@@ -179,16 +179,16 @@ export const en = {
   btnViewYaml: '📄 View Home Assistant YAML',
   yamlCopiedAlert: 'Home Assistant YAML copied to clipboard!',
 
-  // Athenian Sortition Council & Dilemmas
-  councilDeliberationBadge: '🏛️ ATHENIAN SORTITION DELIBERATION',
-  councilLocalMediation: 'Local Mediation Panel',
-  councilNeighborhood: 'Neighborhood Sortition Council',
+  // Citizens' Assembly & Civic Deliberations
+  councilDeliberationBadge: '🏛️ CITIZENS\' ASSEMBLY DELIBERATION',
+  councilLocalMediation: 'Civic Mediation Panel',
+  councilNeighborhood: 'Civic Neighborhood Assembly',
   councilStanceTitle: 'Assembly Deliberation Stance',
   thresholdLabel: 'Required Threshold',
   votesNeeded: 'votes needed',
   thresholdMet: 'RATIFIED',
   thresholdPending: 'BELOW',
-  inspectJurors: 'Inspect Seated Jurors',
+  inspectJurors: 'Inspect Assembly Members',
   citizensLabel: 'Citizens',
   inFavor: 'in Favor',
   against: 'Against',

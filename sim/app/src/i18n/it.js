@@ -179,22 +179,22 @@ export const it = {
   btnViewYaml: '📄 Vedi YAML per Home Assistant',
   yamlCopiedAlert: 'Configurazione YAML per Home Assistant copiata negli appunti!',
 
-  // Athenian Sortition Council & Dilemmas
-  councilDeliberationBadge: '🏛️ DELIBERA DEMARCHICA ATENIESE',
-  councilLocalMediation: 'Pannello di Mediazione Locale',
-  councilNeighborhood: 'Consiglio di Sorteggio di Quartiere',
+  // Consiglio dei Cittadini & Assemblea Civica
+  councilDeliberationBadge: '🏛️ CONSIGLIO DEI CITTADINI',
+  councilLocalMediation: 'Pannello di Mediazione Civica',
+  councilNeighborhood: 'Assemblea Civica dei Residenti',
   councilStanceTitle: 'Orientamento dell\'Assemblea',
   thresholdLabel: 'Soglia Richiesta',
   votesNeeded: 'voti necessari',
   thresholdMet: 'RATIFICATA',
   thresholdPending: 'IN ATTESA',
-  inspectJurors: 'Ispeziona Giurati Estratti',
+  inspectJurors: 'Ispeziona Membri dell\'Assemblea',
   citizensLabel: 'Cittadini',
   inFavor: 'a Favore',
   against: 'Contrari',
   btnRatifyA: 'Ratifica Opzione A',
   btnRatifyB: 'Ratifica Opzione B',
-  councilInRecess: 'Il Consiglio è in pausa. La deliberazione si avvierà al manifestarsi di un dilemma comunitario.',
+  councilInRecess: 'L\'Assemblea è in pausa. La deliberazione si avvierà al manifestarsi di un dilemma comunitario.',
 
   // Legacy Adversary Stress Events
   systemAttackBadge: '⚠️ ATTACCO DI STRESS SISTEMICO RILEVATO',

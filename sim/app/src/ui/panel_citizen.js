@@ -88,29 +88,29 @@ export class PanelCitizenController {
     const activityDesc = c.activityDesc || (c.activity ? `Engaged in ${c.activity}` : 'Active in village life');
 
     const statusBadge = c.isPlayer 
-      ? '<span class="status-pill status-player">👑 Local Player (YOU)</span>'
+      ? '<span class="status-pill status-player">👑 Tu (Giocatore Locale)</span>'
       : (c.isHuman 
-        ? '<span class="status-pill status-peer">🌐 Federated Mesh Peer</span>'
+        ? '<span class="status-pill status-peer">🌐 Pioniere in Rete (Online)</span>'
         : (c.isChild 
-          ? '<span class="status-pill status-child">🎒 Future Pioneer (Pupil)</span>'
+          ? '<span class="status-pill status-child">🎒 Giovane Pioniere (Allievo)</span>'
           : (c.isElder 
-            ? '<span class="status-pill status-elder">🧓 Community Elder & Mentor</span>'
-            : '<span class="status-pill status-resident">🤝 Autonomous Resident</span>')));
+            ? '<span class="status-pill status-elder">🧓 Saggio della Comunità & Mentore</span>'
+            : '<span class="status-pill status-resident">🤝 Residente della Comunità</span>')));
 
     const html = `
       <div class="citizen-dossier-layout">
-        <!-- Left: 3D WebGL Studio Viewport -->
+        <!-- Left: Studio del Personaggio -->
         <div class="citizen-3d-box">
           <div class="citizen-3d-badge-header">
             <span class="live-3d-dot"></span>
-            <span>3D SOVEREIGN AVATAR STUDIO</span>
+            <span>STUDIO DEL PERSONAGGIO</span>
           </div>
           <div id="citizen-3d-canvas-container" class="citizen-3d-canvas-container"></div>
           <div class="citizen-3d-controls">
-            <button id="btn-citizen-auto-rotate" class="btn-prop-toolbar active" title="Toggle 3D Rotation">🔄 Auto-Rotate</button>
-            <button id="btn-citizen-reset-cam" class="btn-prop-toolbar" title="Reset Camera">🔍 Reset View</button>
+            <button id="btn-citizen-auto-rotate" class="btn-prop-toolbar active" title="Attiva/disattiva rotazione">🔄 Rotazione</button>
+            <button id="btn-citizen-reset-cam" class="btn-prop-toolbar" title="Reimposta visuale">🔍 Reimposta</button>
           </div>
-          <div class="citizen-3d-hint">💡 Drag to rotate 360° • Scroll / Pinch to zoom</div>
+          <div class="citizen-3d-hint">💡 Trascina per ruotare • Zoom con rotella o dita</div>
         </div>
 
         <!-- Right: Dossier Details & Civic Invariants -->

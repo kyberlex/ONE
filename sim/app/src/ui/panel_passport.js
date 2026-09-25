@@ -21,24 +21,21 @@ import { t } from '../i18n/index.js';
 import { Avatar3DViewer } from './avatar_3d_viewer.js';
 import { getCitizenAppearance } from '../settlement/interior_renderer.js';
 
-const GENDER_OPTIONS = [
-  { id: 'F', label: 'Female (Solarpunk Tunic)', icon: '👩' },
-  { id: 'M', label: 'Male (Field Workwear)', icon: '👨' }
+const OUTFIT_OPTIONS = [
+  { id: 'F', label: 'Tunica Solarpunk', icon: '🌿' },
+  { id: 'M', label: 'Tuta da Lavoro', icon: '🛠️' }
 ];
 
-const FEMALE_HAIRSTYLES = [
-  { id: 'ponytail', label: 'Ponytail', icon: '💇‍♀️' },
-  { id: 'long', label: 'Long Flowing', icon: '✨' },
-  { id: 'bob', label: 'Bob Cut', icon: '💁‍♀️' },
-  { id: 'bun', label: 'High Bun', icon: '🌸' },
-  { id: 'pigtails', label: 'Twin Buns', icon: '👧' }
-];
-
-const MALE_HAIRSTYLES = [
-  { id: 'short', label: 'Classic Short', icon: '💇‍♂️' },
-  { id: 'fade', label: 'Fade Cut', icon: '⚡' },
-  { id: 'messy', label: 'Wavy Crop', icon: '🌊' },
-  { id: 'beard', label: 'Solarpunk Beard', icon: '🧔' }
+const ALL_HAIRSTYLES = [
+  { id: 'short', label: 'Corti Classici', icon: '💇' },
+  { id: 'ponytail', label: 'Coda di Cavallo', icon: '🐎' },
+  { id: 'long', label: 'Lunghi Fluenti', icon: '✨' },
+  { id: 'bob', label: 'Caschetto', icon: '💁' },
+  { id: 'bun', label: 'Chignon Alto', icon: '🌸' },
+  { id: 'pigtails', label: 'Doppio Chignon', icon: '👧' },
+  { id: 'messy', label: 'Mossi Spettinati', icon: '🌊' },
+  { id: 'fade', label: 'Sfumati Moderni', icon: '⚡' },
+  { id: 'beard', label: 'Barba Solarpunk', icon: '🧔' }
 ];
 
 const HAIR_COLORS = [
@@ -207,19 +204,17 @@ export class PanelPassportController {
 
   getCustomizerControlsHtml(avatarState, prefix = 'wiz') {
     const gender = avatarState.gender || 'F';
-    const activeHairStyle = avatarState.hairStyle || (gender === 'F' ? 'ponytail' : 'short');
+    const activeHairStyle = avatarState.hairStyle || 'short';
     const activeHairColor = avatarState.hairColor || '#1e293b';
     const activeSkinTone = avatarState.skinTone || '#fbb77a';
 
-    const genderButtonsHtml = GENDER_OPTIONS.map(g => `
-      <button type="button" class="btn-avatar-pill ${gender === g.id ? 'selected' : ''}" data-prefix="${prefix}" data-gender="${g.id}">
-        <span>${g.icon}</span> ${g.label}
+    const outfitButtonsHtml = OUTFIT_OPTIONS.map(o => `
+      <button type="button" class="btn-avatar-pill ${gender === o.id ? 'selected' : ''}" data-prefix="${prefix}" data-gender="${o.id}">
+        <span>${o.icon}</span> ${o.label}
       </button>
     `).join('');
 
-    const hairStyles = (gender === 'F') ? FEMALE_HAIRSTYLES : MALE_HAIRSTYLES;
-
-    const hairStylesHtml = hairStyles.map(h => `
+    const hairStylesHtml = ALL_HAIRSTYLES.map(h => `
       <button type="button" class="btn-avatar-pill ${activeHairStyle === h.id ? 'selected' : ''}" data-prefix="${prefix}" data-hairstyle="${h.id}">
         <span>${h.icon}</span> ${h.label}
       </button>
@@ -245,36 +240,36 @@ export class PanelPassportController {
       <div class="avatar-3d-layout">
         <div class="avatar-3d-viewport-box">
           <div class="avatar-3d-badge-header">
-            <span class="badge-3d-pill">✨ 3D STUDIO</span>
-            <span class="badge-3d-hint">🖱️ Rotate 360° • Zoom</span>
+            <span class="badge-3d-pill">✨ STUDIO PIONIERE</span>
+            <span class="badge-3d-hint">🖱️ Ruota 360° • Zoom</span>
           </div>
           <div id="${prefix}-avatar-3d-container" class="avatar-3d-canvas-container"></div>
         </div>
 
         <div class="avatar-3d-controls">
           <div class="custom-control-group">
-            <span class="custom-control-title">Silhouette & Outfit:</span>
+            <span class="custom-control-title">Abito & Silhouette:</span>
             <div class="btn-pills-row" id="${prefix}-gender-container">
-              ${genderButtonsHtml}
+              ${outfitButtonsHtml}
             </div>
           </div>
 
           <div class="custom-control-group">
-            <span class="custom-control-title">Hairstyle:</span>
+            <span class="custom-control-title">Acconciatura:</span>
             <div class="btn-pills-row" id="${prefix}-hairstyle-container">
               ${hairStylesHtml}
             </div>
           </div>
 
           <div class="custom-control-group">
-            <span class="custom-control-title">Hair Color:</span>
+            <span class="custom-control-title">Colore Capelli:</span>
             <div class="color-swatches-row" id="${prefix}-haircolor-container">
               ${hairColorsHtml}
             </div>
           </div>
 
           <div class="custom-control-group">
-            <span class="custom-control-title">Skin Tone:</span>
+            <span class="custom-control-title">Tonalità Carnagione:</span>
             <div class="color-swatches-row" id="${prefix}-skintone-container">
               ${skinTonesHtml}
             </div>
@@ -294,9 +289,7 @@ export class PanelPassportController {
     const refreshPills = () => {
       const hairContainer = rootEl.querySelector(`#${prefix}-hairstyle-container`);
       if (hairContainer) {
-        const hairStyles = (avatarState.gender === 'F') ? FEMALE_HAIRSTYLES : MALE_HAIRSTYLES;
-
-        hairContainer.innerHTML = hairStyles.map(h => `
+        hairContainer.innerHTML = ALL_HAIRSTYLES.map(h => `
           <button type="button" class="btn-avatar-pill ${avatarState.hairStyle === h.id ? 'selected' : ''}" data-prefix="${prefix}" data-hairstyle="${h.id}">
             <span>${h.icon}</span> ${h.label}
           </button>
@@ -317,7 +310,6 @@ export class PanelPassportController {
     rootEl.querySelectorAll(`button[data-prefix="${prefix}"][data-gender]`).forEach(btn => {
       btn.addEventListener('click', () => {
         avatarState.gender = btn.dataset.gender;
-        avatarState.hairStyle = avatarState.gender === 'F' ? 'ponytail' : 'short';
         rootEl.querySelectorAll(`button[data-prefix="${prefix}"][data-gender]`).forEach(b => b.classList.remove('selected'));
         btn.classList.add('selected');
         refreshPills();
@@ -385,30 +377,30 @@ export class PanelPassportController {
           <div class="wizard-emblem-ring">
             <img src="/one-logo-white.svg" alt="O.N.E. Vitruvian Logo" class="wizard-emblem-icon" />
           </div>
-          <h3>Welcome to O.N.E. • Sovereign Citizen Passport Issuance</h3>
-          <p class="wizard-subtitle">No central account. No passwords. No custodial master server. 100% client-side cryptographic key generation (ECDSA P-256).</p>
+          <h3>Benvenuto in O.N.E. • Rilascio Passaporto del Cittadino</h3>
+          <p class="wizard-subtitle">Nessun account centrale, nessuna password o server esterno. I tuoi dati restano al 100% sul tuo dispositivo.</p>
         </div>
 
         <div class="wizard-form">
           <div class="form-group">
             <label for="passport-avatar-name" style="font-weight: 700; color: #f8fafc;">
-              👤 What is your pioneer name / call-sign?
+              👤 Qual è il tuo nome / soprannome da pioniere?
             </label>
-            <input type="text" id="passport-avatar-name" class="passport-input" placeholder="e.g. Maya, Elena, Sol_Builder, Marco..." maxlength="24" value="" autofocus />
-            <span class="form-hint">Mathematically unique worldwide without requiring central registration.</span>
+            <input type="text" id="passport-avatar-name" class="passport-input" placeholder="es. Maya, Elena, Sol_Builder, Marco..." maxlength="24" value="" autofocus />
+            <span class="form-hint">Unico e salvato localmente, senza registrazione o e-mail esterne.</span>
           </div>
 
-          <!-- 3D Avatar Customizer Section -->
+          <!-- Studio Pioniere Section -->
           <div class="form-group avatar-3d-customizer-section">
             <label style="font-weight: 700; color: #f8fafc; margin-bottom: 8px; display: block;">
-              🎨 Sovereign Avatar Appearance (Real-Time 3D Studio):
+              🎨 Aspetto del Tuo Pioniere (Studio Personaggio):
             </label>
             ${this.getCustomizerControlsHtml(this.wizardAvatar, 'wiz')}
           </div>
 
           <div class="form-group">
             <label style="font-weight: 700; color: #f8fafc;">
-              🛠️ Choose your initial vocation / civic craft:
+              🛠️ Scegli la tua vocazione o mestiere iniziale:
             </label>
             <div class="vocations-grid-select">
               ${vocationsHtml}
@@ -420,21 +412,21 @@ export class PanelPassportController {
             <div class="polytech-header">
               <span class="polytech-icon">🎓</span>
               <div class="polytech-title-wrap">
-                <h4>Civic Vocational Academy & Continuous Learning</h4>
-                <span class="polytech-sub">Lifelong Skill Evolution</span>
+                <h4>Accademia Civica & Apprendimento Continuo</h4>
+                <span class="polytech-sub">Evoluzione delle Competenze</span>
               </div>
             </div>
             <p class="polytech-text">
-              Your chosen initial vocation is <strong>neither permanent nor restrictive</strong>. In O.N.E., labor is not an identity cage: you can switch crafts, learn new masteries, and advance specialties at any time by enrolling in the settlement's <strong>Polytechnic Academy</strong> in the simulation.
+              La vocazione iniziale <strong>non è vincolante né definitiva</strong>. In O.N.E. puoi cambiare mestiere, apprendere nuove abilità e formarti quando vuoi presso l'<strong>Accademia Politecnica</strong> della comunità.
             </p>
           </div>
 
           <div class="wizard-actions" style="margin-top: 10px;">
             <button id="btn-generate-passport" class="btn-primary btn-generate-keys">
-              ⚡ Generate Sovereign Keys & Issue Passport
+              ⚡ Crea Identità & Emetti Passaporto
             </button>
             <button id="btn-show-import" class="btn-secondary">
-              📥 I already have a passport (Import token from Phone/PC)
+              📥 Ho già un passaporto (Importa token da altro dispositivo)
             </button>
           </div>
         </div>
@@ -472,8 +464,7 @@ export class PanelPassportController {
           });
           const hairContainer = rootEl.querySelector(`#wiz-hairstyle-container`);
           if (hairContainer) {
-            const hairStyles = (this.wizardAvatar.gender === 'F') ? FEMALE_HAIRSTYLES : MALE_HAIRSTYLES;
-            hairContainer.innerHTML = hairStyles.map(h => `
+            hairContainer.innerHTML = ALL_HAIRSTYLES.map(h => `
               <button type="button" class="btn-avatar-pill ${this.wizardAvatar.hairStyle === h.id ? 'selected' : ''}" data-prefix="wiz" data-hairstyle="${h.id}">
                 <span>${h.icon}</span> ${h.label}
               </button>
@@ -507,7 +498,7 @@ export class PanelPassportController {
         const vocation = selectedRadio ? selectedRadio.value : 'farmer';
 
         generateBtn.disabled = true;
-        generateBtn.innerHTML = `<span>⏳ Generating ECDSA P-256 Keypair…</span>`;
+        generateBtn.innerHTML = `<span>⏳ Creazione Identità & Chiavi Locali…</span>`;
 
         try {
           const { passport, privateKeyJwk } = await CitizenPassportManager.issueSovereignPassport(name, vocation, this.wizardAvatar);
@@ -721,29 +712,29 @@ export class PanelPassportController {
 
           <div class="passport-details-grid">
             <div class="passport-detail-item">
-              <span class="detail-label">CITIZEN PASSPORT ID</span>
+              <span class="detail-label">ID PASSAPORTO CITTADINO</span>
               <span class="detail-value mono">${p.id}</span>
             </div>
             <div class="passport-detail-item">
-              <span class="detail-label">ECDSA P-256 FINGERPRINT</span>
+              <span class="detail-label">CHIAVE UNICA DISPOSITIVO</span>
               <span class="detail-value mono text-emerald">${p.shortFingerprint}</span>
             </div>
             <div class="passport-detail-item">
-              <span class="detail-label">ISSUANCE DATE</span>
+              <span class="detail-label">DATA DI EMISSIONE</span>
               <span class="detail-value">${new Date(p.timestampMs).toLocaleDateString()}</span>
             </div>
             <div class="passport-detail-item">
-              <span class="detail-label">USUFRUCT DWELLING</span>
-              <span class="detail-value">Dwelling #1 • Detroit Commons</span>
+              <span class="detail-label">ALLOGGIO IN USUFRUTTO</span>
+              <span class="detail-value">Dimora #1 • Detroit Commons</span>
             </div>
           </div>
 
           <div class="passport-token-box">
-            <span class="token-box-label">Sovereign Cryptographic Token (Reversible & Serverless):</span>
+            <span class="token-box-label">Codice Personale del Cittadino (Ripristinabile senza server):</span>
             <div class="token-copy-row">
               <input type="text" readonly class="token-copy-input" value="${p.token}" id="passport-token-val" />
-              <button id="btn-copy-token" class="btn-copy-token" title="Copy to clipboard">
-                📋 Copy
+              <button id="btn-copy-token" class="btn-copy-token" title="Copia negli appunti">
+                📋 Copia
               </button>
             </div>
           </div>
@@ -752,44 +743,44 @@ export class PanelPassportController {
         <!-- Multi-Device P2P Pairing Section -->
         <div class="p2p-sync-section">
           <div class="p2p-header">
-            <h4>📲 2D QR Code Multi-Device Handshake</h4>
+            <h4>📲 Sincronizzazione Dispositivi con QR Code</h4>
             <span class="badge badge-success">ZERO-SERVER</span>
           </div>
           <div class="p2p-pairing-body">
             <div class="p2p-qr-large">
               ${qrSvg}
               <div class="qr-instructions">
-                <strong>Point smartphone or tablet camera:</strong>
-                <span>Instant horizontal pairing. Clones this citizen profile with zero typing.</span>
+                <strong>Inquadra con la fotocamera del telefono o tablet:</strong>
+                <span>Associazione diretta e immediata: clona il profilo senza digitare codici.</span>
               </div>
             </div>
 
             <div class="p2p-mesh-status-card">
-              <h5>Distributed Database Engine (Local-First)</h5>
+              <h5>Archiviazione Locale & Sicurezza</h5>
               <div class="db-stat-row">
-                <span>Local Storage Engine:</span>
-                <strong class="text-emerald">IndexedDB (60 FPS Safe)</strong>
+                <span>Memoria Locale:</span>
+                <strong class="text-emerald">IndexedDB (60 FPS)</strong>
               </div>
               <div class="db-stat-row">
-                <span>Cryptographic Core:</span>
-                <strong>Web Crypto ECDSA P-256</strong>
+                <span>Sicurezza:</span>
+                <strong>Crittografia Locale del Dispositivo</strong>
               </div>
               <div class="db-stat-row">
-                <span>Signed Action Deltas:</span>
-                <strong id="db-event-count">${eventCount} actions recorded</strong>
+                <span>Azioni Registrate:</span>
+                <strong id="db-event-count">${eventCount} azioni registrate</strong>
               </div>
               <div class="db-stat-row">
-                <span>P2P Direct Mesh:</span>
+                <span>Connessione Diretta Rete:</span>
                 <span id="p2p-mesh-status-val" class="status-indicator-ready">
                   ${this.p2pMesh && this.p2pMesh.getStatus().peerCount > 0 
-                    ? `● Active (${this.p2pMesh.getStatus().peerCount} channel${this.p2pMesh.getStatus().peerCount > 1 ? 's' : ''} connected)` 
-                    : '● Ready (Local Tab / Wi-Fi STUN)'}
+                    ? `● Attiva (${this.p2pMesh.getStatus().peerCount} connession${this.p2pMesh.getStatus().peerCount > 1 ? 'i' : 'e'})` 
+                    : '● Pronta (Rete Locale / Wi-Fi)'}
                 </span>
               </div>
 
               <!-- Signed Event Deltas Mini Feed -->
               <div class="signed-events-feed">
-                <div class="feed-header">Recent Signed Actions:</div>
+                <div class="feed-header">Ultime azioni registrate:</div>
                 <div class="feed-list">
                   ${eventsListHtml}
                 </div>
@@ -798,16 +789,16 @@ export class PanelPassportController {
               <!-- WebRTC Air-Gapped Handshake Drawer -->
               <div class="webrtc-handshake-box">
                 <div class="webrtc-box-header">
-                  <span>📡 Air-Gapped WebRTC Tunnel</span>
+                  <span>📡 Canale Diretto Senza Server</span>
                   <button id="btn-create-webrtc-ticket" class="btn-action-small">
-                    🎫 Create Offer Ticket
+                    🎫 Crea Invito
                   </button>
                 </div>
                 <div id="webrtc-ticket-display" class="webrtc-ticket-display hidden"></div>
                 <div class="webrtc-input-row">
-                  <input type="text" id="input-webrtc-remote" class="webrtc-input" placeholder="Paste remote ONE_OFFER: or ONE_ANSWER: ticket..." />
+                  <input type="text" id="input-webrtc-remote" class="webrtc-input" placeholder="Incolla invito ONE_OFFER: o ONE_ANSWER:..." />
                   <button id="btn-accept-webrtc-remote" class="btn-action-small">
-                    🔗 Connect
+                    🔗 Connetti
                   </button>
                 </div>
                 <div id="webrtc-feedback-msg" class="webrtc-feedback hidden"></div>
@@ -815,23 +806,23 @@ export class PanelPassportController {
 
               <div class="p2p-action-btns">
                 <button id="btn-sign-test" class="btn-action-small">
-                  ✍️ Test Cryptographic Signature
+                  ✍️ Prova Firma Digitale
                 </button>
                 <button id="btn-p2p-sync-now" class="btn-action-small btn-secondary">
-                  🔄 Sync Peers Now
+                  🔄 Sincronizza Ora
                 </button>
                 <button id="btn-switch-passport" class="btn-action-small btn-secondary">
-                  🔄 Switch Avatar
+                  🔄 Cambia Pioniere
                 </button>
               </div>
 
               <!-- Danger Zone: Right to Oblivion / Sovereign Departure -->
               <div class="passport-danger-zone">
-                <button id="btn-burn-identity" class="btn-burn-identity" title="Right to Oblivion / Sovereign Departure">
-                  🔥 Burn Sovereign Identity & Depart O.N.E. (Right to Oblivion)
+                <button id="btn-burn-identity" class="btn-burn-identity" title="Diritto all'Oblio">
+                  🔥 Elimina Dati & Riparti da Zero (Diritto all'Oblio)
                 </button>
                 <span class="danger-zone-hint">
-                  Permanently destroys private cryptographic keys from this device and returns your usufruct home to the civic pool. Because O.N.E. has no central servers or databases, departure is total, immediate, and irreversible.
+                  Distrugge in modo sicuro e definitivo le chiavi locali da questo dispositivo e restituisce la dimora al bene comune.
                 </span>
               </div>
             </div>

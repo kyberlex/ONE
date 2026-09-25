@@ -106,12 +106,12 @@ export class SettlementRenderer {
     // 1. Central Solarpunk Agora
     this.agora = {
       id: 'agora',
-      name: 'Central Agora & Demarchy Amphitheater',
+      name: 'Agorà Centrale & Assemblea Civica',
       type: 'AGORA',
       x: 0,
       y: 0,
       radius: 65,
-      desc: 'Democratic assembly pavilion where the sortition lottery council meets.'
+      desc: 'Padiglione dell\'assemblea democratica dove i cittadini si riuniscono per deliberare.'
     };
 
     // 2. Core Infrastructures & Intergenerational Campus (Zoned spatial layout)
@@ -507,7 +507,7 @@ export class SettlementRenderer {
       if (isNightDuty) {
         const dests = [
           { x: -280, y: -140, act: 'night_grid', desc: 'Checking Solar PV & Battery Inverters ⚡' },
-          { x: 0, y: 0, act: 'stargazing', desc: 'Stargazing & Demarchy Reflection at Agora 🔭' },
+          { x: 0, y: 0, act: 'stargazing', desc: 'Osservazione delle Stelle & Riflessione all\'Agorà 🔭' },
           { x: 280, y: -140, act: 'night_cistern', desc: 'Inspecting Bio-Filtration Cistern 💧' },
           { x: 0, y: 150, act: 'night_stroll', desc: 'Lantern Stroll along illuminated South Pergola 🏮' }
         ];
@@ -655,7 +655,7 @@ export class SettlementRenderer {
         x: this.agora.x + (Math.random() - 0.5) * 55,
         y: this.agora.y + (Math.random() - 0.5) * 55,
         activity: 'assembly',
-        activityDesc: 'Deliberating in the Athenian Sortition Assembly',
+        activityDesc: 'Partecipazione all\'Assemblea Civica',
         pause: 220
       };
     }
@@ -2434,7 +2434,7 @@ export class SettlementRenderer {
     // Label tag
     ctx.fillStyle = '#e2e8f0';
     ctx.font = '600 11px system-ui, sans-serif';
-    ctx.fillText('🏛️ Agora & Demarchy', 0, this.agora.radius + 16);
+    ctx.fillText('🏛️ Agorà & Assemblea Civica', 0, this.agora.radius + 16);
 
     ctx.restore();
   }
@@ -3487,132 +3487,174 @@ export class SettlementRenderer {
     }
 
     // 2. Hover Inspection Card
+    // 2. Hover Inspection Card
     if (this.hoveredEntity) {
       const e = this.hoveredEntity;
       ctx.save();
 
-      // Card positioning at bottom center
-      const cardW = 380;
-      const cardH = 96;
+      // Dynamically calculate responsive card width
+      const cardW = Math.min(Math.max(460, w * 0.46), Math.min(w - 32, 620));
+      const maxTextW = cardW - 32;
+
+      let title = '';
+      let titleColor = '#38bdf8';
+      let strokeColor = '#38bdf8';
+      let subtitle = '';
+      let detail = '';
+      let hint = '';
+
+      if (e.isPlayer) {
+        title = '👑 Tu (Pioniere Locale) — Giocatore O.N.E.';
+        titleColor = '#fbbf24';
+        strokeColor = '#fbbf24';
+        const profile = PlayerProfileManager.getProfile();
+        const voc = e.vocation || COMMUNITY_VOCATIONS[0];
+        subtitle = `Vocazione: ${voc.icon} ${voc.defaultName} (${voc.multiplier}x moltiplicatore lavoro)`;
+        detail = profile 
+          ? `🏡 Alloggio Primario in Usufrutto #${profile.dwellingNumber} (Blocco Sabbatico Attivo)` 
+          : `⚠️ Nessun alloggio reclamato (Clicca su qualsiasi alloggio libero per reclamarlo in usufrutto!)`;
+      } else if (e.isHuman) {
+        title = `🌐 ${e.name} — Pioniere Connesso (In Rete)`;
+        titleColor = '#38bdf8';
+        strokeColor = '#38bdf8';
+        const voc = e.vocation || COMMUNITY_VOCATIONS[0];
+        subtitle = `Vocazione: ${voc.icon} ${voc.defaultName} • Partecipante attivo della comunità`;
+        detail = `⚡ Connessione locale attiva e verificata. Contribuisce in tempo reale.`;
+      } else if (e.isChild) {
+        title = `🎒 ${e.name} — Giovane Pioniere (Età ${e.age || 8})`;
+        titleColor = '#f43f5e';
+        strokeColor = '#f43f5e';
+        subtitle = `Scuola del Bosco & Educazione Comunitaria • 0h di Obbligo di Lavoro`;
+        detail = `Assistenza incondizionata al 100% garantita dalla Costituzione di O.N.E. (Art. 5.3 & 5.4).`;
+      } else if (e.isElder) {
+        title = `🧓 ${e.name} — Custode della Saggezza & Mentore`;
+        titleColor = '#cbd5e1';
+        strokeColor = '#cbd5e1';
+        const voc = e.vocation || {};
+        subtitle = `${voc.defaultName || 'Residente Senior'} • Spazio Intergenerazionale & Focolare`;
+        detail = `Esonero da turni gravosi; guida e forma gli apprendisti (+20% rendimento collettivo).`;
+      } else if (e.isHuman === false) {
+        title = `🤝 ${e.name} — Residente della Comunità`;
+        titleColor = '#10b981';
+        strokeColor = '#10b981';
+        const voc = e.vocation || COMMUNITY_VOCATIONS[0];
+        subtitle = `Vocazione: ${voc.icon} ${voc.defaultName} • Turnazione Civica`;
+        detail = `Cittadino attivo nel mantenimento dei flussi termodinamici di base.`;
+      } else if (e.dwellingType) {
+        strokeColor = e.isPlayerHome ? '#fbbf24' : (e.isOccupied ? '#10b981' : '#38bdf8');
+        titleColor = e.isPlayerHome ? '#fbbf24' : '#f8fafc';
+        title = e.isPlayerHome ? `👑 La Tua Dimora in Usufrutto (#${e.number})` : `🏡 Alloggio #${e.number}: ${e.dwellingType}`;
+        if (e.isOccupied) {
+          const occRole = e.occupant.roleKey ? t(e.occupant.roleKey, e.occupant.role) : e.occupant.role;
+          const occIcon = e.occupant.icon || '👤';
+          subtitle = `Occupante: ${e.occupant.name} • ${occIcon} ${occRole}`;
+          const isNight = this.sim ? (this.sim.currentHour >= 21 || this.sim.currentHour < 6) : false;
+          detail = isNight 
+            ? `😴 Riposo notturno nell'alloggio (Ciclo Notte)` 
+            : `Turno: ${e.occupant.dailyHours}h/giorno (${e.occupant.multiplier || 1.0}x credito lavoro)`;
+        } else {
+          subtitle = `🔑 ALLOGGIO CIVICO LIBERO — Clicca per Reclamarlo in Usufrutto`;
+          detail = `Alloggio gratuito garantito per nascita e partecipazione dalla Costituzione.`;
+        }
+      } else {
+        // Infrastructure / Agora Card
+        titleColor = '#38bdf8';
+        strokeColor = '#38bdf8';
+        title = e.name;
+        subtitle = e.desc || 'Struttura comune operativa.';
+        hint = 'Clicca per esaminare automazioni e flussi termodinamici.';
+      }
+
+      // Measure and wrap lines dynamically
+      ctx.font = '11px system-ui, sans-serif';
+      const subtitleLines = this.wrapText(ctx, subtitle, maxTextW);
+      const detailLines = detail ? this.wrapText(ctx, detail, maxTextW) : [];
+      const hintLines = hint ? this.wrapText(ctx, hint, maxTextW) : [];
+
+      const lineH = 16;
+      let totalH = 16; // top padding
+      totalH += 20; // title height
+      totalH += subtitleLines.length * lineH;
+      if (detailLines.length > 0) totalH += 4 + (detailLines.length * lineH);
+      if (hintLines.length > 0) totalH += 4 + (hintLines.length * lineH);
+      totalH += 12; // bottom padding
+
+      const cardH = Math.max(88, totalH);
       const cx = (w - cardW) / 2;
       const cy = h - cardH - 85; // above footer
 
+      // Draw background box
       ctx.fillStyle = 'rgba(15, 23, 42, 0.95)';
-      ctx.strokeStyle = e.isPlayer ? '#fbbf24' : (e.isHuman ? '#38bdf8' : (e.isChild ? '#f43f5e' : (e.isElder ? '#cbd5e1' : (e.isHuman === false ? '#10b981' : (e.isPlayerHome ? '#fbbf24' : (e.dwellingType ? (e.isOccupied ? '#10b981' : '#38bdf8') : '#60a5fa'))))));
+      ctx.strokeStyle = strokeColor;
       ctx.lineWidth = 2;
       ctx.beginPath();
       ctx.roundRect(cx, cy, cardW, cardH, 12);
       ctx.fill();
       ctx.stroke();
 
-      if (e.isPlayer) {
-        // Player Inspection Card
-        ctx.fillStyle = '#fbbf24';
-        ctx.font = 'bold 13px system-ui, sans-serif';
-        ctx.textAlign = 'left';
-        ctx.fillText(`👑 You (Local Player) — O.N.E. Pioneer`, cx + 16, cy + 24);
+      // Render Title
+      let currentY = cy + 22;
+      ctx.fillStyle = titleColor;
+      ctx.font = 'bold 13px system-ui, sans-serif';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'alphabetic';
+      ctx.fillText(title, cx + 16, currentY);
 
-        const profile = PlayerProfileManager.getProfile();
-        const voc = e.vocation || COMMUNITY_VOCATIONS[0];
-        ctx.fillStyle = '#e2e8f0';
-        ctx.font = '11px system-ui, sans-serif';
-        ctx.fillText(`Vocation: ${voc.icon} ${voc.defaultName} (${voc.multiplier}x labor credit)`, cx + 16, cy + 44);
+      // Render Subtitle lines
+      currentY += 18;
+      ctx.fillStyle = '#e2e8f0';
+      ctx.font = '11px system-ui, sans-serif';
+      for (const line of subtitleLines) {
+        ctx.fillText(line, cx + 16, currentY);
+        currentY += lineH;
+      }
 
-        ctx.fillStyle = profile ? '#34d399' : '#f59e0b';
-        const homeTxt = profile ? `🏡 Primary Usufruct Dwelling #${profile.dwellingNumber} (Sabbatical Lock Active)` : `⚠️ No usufruct home claimed yet (Click any vacant pod or 'Claim' header!)`;
-        ctx.fillText(homeTxt, cx + 16, cy + 62);
-      } else if (e.isHuman) {
-        // Human Peer Card
-        ctx.fillStyle = '#38bdf8';
-        ctx.font = 'bold 13px system-ui, sans-serif';
-        ctx.textAlign = 'left';
-        ctx.fillText(`🌐 ${e.name} — Human Pioneer (Online Mesh Peer)`, cx + 16, cy + 24);
-
-        const voc = e.vocation || COMMUNITY_VOCATIONS[0];
-        ctx.fillStyle = '#e2e8f0';
-        ctx.font = '11px system-ui, sans-serif';
-        ctx.fillText(`Vocation: ${voc.icon} ${voc.defaultName} • Real Connected Participant`, cx + 16, cy + 44);
-
-        ctx.fillStyle = '#34d399';
-        ctx.fillText(`⚡ Authenticated via OpenMesh cryptographic protocol. Contributing live.`, cx + 16, cy + 62);
-      } else if (e.isChild) {
-        // Child Pioneer Card
-        ctx.fillStyle = '#f43f5e';
-        ctx.font = 'bold 13px system-ui, sans-serif';
-        ctx.textAlign = 'left';
-        ctx.fillText(`🎒 ${e.name} — Child Pioneer (Age ${e.age || 8})`, cx + 16, cy + 24);
-
-        ctx.fillStyle = '#e2e8f0';
-        ctx.font = '11px system-ui, sans-serif';
-        ctx.fillText(`Forest School & Alloparenting Nursery • 0h Labor Obligation`, cx + 16, cy + 44);
-
-        ctx.fillStyle = '#34d399';
-        ctx.fillText(`Guaranteed 100% unconditional Tier 1 care under Constitutional Art. 5.3 & 5.4.`, cx + 16, cy + 62);
-      } else if (e.isElder) {
-        // Elder Mentor Card
-        ctx.fillStyle = '#cbd5e1';
-        ctx.font = 'bold 13px system-ui, sans-serif';
-        ctx.textAlign = 'left';
-        ctx.fillText(`🧓 ${e.name} — Elder Mentor & Wisdom Keeper`, cx + 16, cy + 24);
-
-        const voc = e.vocation || {};
-        ctx.fillStyle = '#e2e8f0';
-        ctx.font = '11px system-ui, sans-serif';
-        ctx.fillText(`${voc.defaultName || 'Senior Resident'} • Intergenerational Sanctuary`, cx + 16, cy + 44);
-
-        ctx.fillStyle = '#fbbf24';
-        ctx.fillText(`Exempt from compulsory shifts; mentors apprentices (+20% team boost).`, cx + 16, cy + 62);
-      } else if (e.isHuman === false) {
-        // Simulated Resident Card
-        ctx.fillStyle = '#10b981';
-        ctx.font = 'bold 13px system-ui, sans-serif';
-        ctx.textAlign = 'left';
-        ctx.fillText(`🤖 ${e.name} — Autonomous Resident (Simulated Pioneer)`, cx + 16, cy + 24);
-
-        const voc = e.vocation || COMMUNITY_VOCATIONS[0];
-        ctx.fillStyle = '#e2e8f0';
-        ctx.font = '11px system-ui, sans-serif';
-        ctx.fillText(`Vocation: ${voc.icon} ${voc.defaultName} • Civic Duty Rotation`, cx + 16, cy + 44);
-
-        ctx.fillStyle = '#94a3b8';
-        ctx.fillText(`Autonomous agent maintaining thermodynamic base flows.`, cx + 16, cy + 62);
-      } else if (e.dwellingType) {
-        // Dwelling Card
-        ctx.fillStyle = e.isPlayerHome ? '#fbbf24' : '#f8fafc';
-        ctx.font = 'bold 13px system-ui, sans-serif';
-        ctx.textAlign = 'left';
-        ctx.fillText(e.isPlayerHome ? `👑 Your Usufruct Home (#${e.number})` : `🏡 Dwelling #${e.number}: ${e.dwellingType}`, cx + 16, cy + 24);
-
-        ctx.fillStyle = '#94a3b8';
-        ctx.font = '11px system-ui, sans-serif';
-        if (e.isOccupied) {
-          const occRole = e.occupant.roleKey ? t(e.occupant.roleKey, e.occupant.role) : e.occupant.role;
-          const occIcon = e.occupant.icon || '👤';
-          ctx.fillText(`Occupant: ${e.occupant.name} • ${occIcon} ${occRole}`, cx + 16, cy + 44);
-          const isNight = this.sim ? (this.sim.currentHour >= 21 || this.sim.currentHour < 6) : false;
-          const statusTxt = isNight ? `😴 Resting peacefully in pod (Night cycle)` : `Labor: ${e.occupant.dailyHours}h/day (${e.occupant.multiplier || 1.0}x credit)`;
-          ctx.fillText(statusTxt, cx + 16, cy + 62);
-        } else {
-          ctx.fillStyle = '#38bdf8';
-          ctx.fillText(`🔑 VACANT CIVIC DWELLING — Click to Claim in Usufruct`, cx + 16, cy + 44);
-          ctx.fillStyle = '#6ee7b7';
-          ctx.fillText(`Free housing pool guaranteed by O.N.E. Constitution.`, cx + 16, cy + 62);
+      // Render Detail lines
+      if (detailLines.length > 0) {
+        currentY += 2;
+        ctx.fillStyle = e.isPlayer ? '#34d399' : (e.isChild ? '#34d399' : (e.isElder ? '#fbbf24' : (e.dwellingType && !e.isOccupied ? '#6ee7b7' : '#94a3b8')));
+        for (const line of detailLines) {
+          ctx.fillText(line, cx + 16, currentY);
+          currentY += lineH;
         }
-      } else {
-        // Infrastructure / Agora Card
-        ctx.fillStyle = '#38bdf8';
-        ctx.font = 'bold 13px system-ui, sans-serif';
-        ctx.textAlign = 'left';
-        ctx.fillText(e.name, cx + 16, cy + 24);
+      }
 
-        ctx.fillStyle = '#94a3b8';
-        ctx.font = '11px system-ui, sans-serif';
-        ctx.fillText(e.desc || 'Operational commons facility.', cx + 16, cy + 44);
+      // Render Hint lines
+      if (hintLines.length > 0) {
+        currentY += 2;
         ctx.fillStyle = '#6ee7b7';
-        ctx.fillText('Click to inspect live thermodynamic flows & automation.', cx + 16, cy + 64);
+        for (const line of hintLines) {
+          ctx.fillText(line, cx + 16, currentY);
+          currentY += lineH;
+        }
       }
 
       ctx.restore();
     }
   }
+
+  /**
+   * Helper to wrap text into lines fitting within maxWidth on canvas
+   */
+  wrapText(ctx, text, maxWidth) {
+    if (!text) return [];
+    const words = text.split(' ');
+    const lines = [];
+    let currentLine = '';
+    for (let i = 0; i < words.length; i++) {
+      const testLine = currentLine ? currentLine + ' ' + words[i] : words[i];
+      const metrics = ctx.measureText(testLine);
+      if (metrics.width > maxWidth && currentLine) {
+        lines.push(currentLine);
+        currentLine = words[i];
+      } else {
+        currentLine = testLine;
+      }
+    }
+    if (currentLine) {
+      lines.push(currentLine);
+    }
+    return lines;
+  }
 }
+

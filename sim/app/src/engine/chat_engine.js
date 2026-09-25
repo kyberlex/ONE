@@ -87,31 +87,31 @@ export const QUICK_PHRASE_CATEGORIES = {
   },
   DEMARCHY: {
     id: 'DEMARCHY',
-    name: '🏛️ Sortition & Assembly',
+    name: '🏛️ Consiglio & Assemblea',
     icon: '🏛️',
     phrases: [
       {
         id: 'council_caucus',
-        label: 'Deliberation Guidance Request',
-        text: '🏛️ As a seated sortition juror, I request citizen input on the active civic dilemma. How should we balance this?',
+        label: 'Richiesta Parere Consiglio',
+        text: '🏛️ In qualità di membro nel Consiglio dei Cittadini, chiedo il parere di tutti sul dilemma attivo!',
         actionType: null
       },
       {
         id: 'uphold_usufruct',
-        label: 'Defend Usufruct Invariant',
-        text: '📜 Reminder of Constitutional Invariant: dwellings not in active use return to the Civic Housing Pool. Zero hoarding.',
+        label: 'Difesa Invariante Usufrutto',
+        text: '📜 Promemoria: gli alloggi non occupati tornano al bene comune civico. Zero speculazione.',
         actionType: null
       },
       {
         id: 'call_mediation',
-        label: 'Request Local Mediation Panel',
-        text: '⚖️ Community friction noted. Calling for rapid subsidiarity review by the 3-citizen Local Mediation Panel.',
+        label: 'Mediazione Civica Locale',
+        text: '⚖️ Attrito rilevato nella comunità. Chiedo la verifica al Pannello di Mediazione Civica.',
         actionType: null
       },
       {
         id: 'celebrate_rotation',
-        label: 'Honor Seated Councilors',
-        text: '🌿 Gratitude to outgoing councilors for their 30-day civic service. Welcoming the newly drafted citizens!',
+        label: 'Turnazione nel Consiglio',
+        text: '🌿 Grazie ai concittadini uscenti per il loro turno civico. Diamo il benvenuto ai nuovi estratti!',
         actionType: null
       }
     ]
