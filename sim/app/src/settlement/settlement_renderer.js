@@ -500,24 +500,16 @@ export class SettlementRenderer {
     const elderSanctuary = this.infrastructures.find(inf => inf.type === 'ELDER_CARE');
     const home = c.homeDwelling || this.dwellings[0];
 
-    // 1. NIGHT (21:00 - 06:00): Rest in private dwellings + active night-duty crew
+    // 1. NIGHT (21:00 - 06:00): Rest in private dwellings + 1 solitary night-watch pioneer (ITEM 6)
     if (hour >= 21 || hour < 6) {
-      const nightWatchCrew = ['avatar-player', 'avatar-human-0', 'avatar-npc-10', 'avatar-npc-12'];
-      const isNightDuty = nightWatchCrew.includes(c.id);
+      const isNightDuty = (c.id === 'avatar-npc-10' || c.isPlayer);
       if (isNightDuty) {
-        const dests = [
-          { x: -280, y: -140, act: 'night_grid', desc: 'Checking Solar PV & Battery Inverters ⚡' },
-          { x: 0, y: 0, act: 'stargazing', desc: 'Osservazione delle Stelle & Riflessione all\'Agorà 🔭' },
-          { x: 280, y: -140, act: 'night_cistern', desc: 'Inspecting Bio-Filtration Cistern 💧' },
-          { x: 0, y: 150, act: 'night_stroll', desc: 'Lantern Stroll along illuminated South Pergola 🏮' }
-        ];
-        const spot = dests[Math.abs((c.name || '').charCodeAt(0)) % dests.length];
         return {
-          x: spot.x + (Math.random() - 0.5) * 35,
-          y: spot.y + (Math.random() - 0.5) * 30,
-          activity: spot.act,
-          activityDesc: spot.desc,
-          pause: 160
+          x: 0,
+          y: 0,
+          activity: 'stargazing',
+          activityDesc: 'Night Watch & Solitary Celestial Observation at the Agora 🔭',
+          pause: 300
         };
       }
       return {
@@ -525,7 +517,7 @@ export class SettlementRenderer {
         y: home.y,
         activity: 'sleeping',
         activityDesc: 'Resting peacefully in private usufruct pod 😴',
-        pause: 350
+        pause: 400
       };
     }
 
@@ -2009,7 +2001,7 @@ export class SettlementRenderer {
 
           if (dist < 4 * Math.max(1, simSpeed * 0.8)) {
             // Arrived at destination: evaluate next destination via 24h Circadian Chore & Free Time Engine!
-            const hour = this.sim ? this.sim.currentHour : 12;
+            const hour = this.sim ? (typeof this.sim.localHour === 'number' ? this.sim.localHour : this.sim.currentHour) : 12;
             const routine = this.getCitizenRoutineTarget(c, hour);
             c.targetX = routine.x;
             c.targetY = routine.y;
@@ -2164,10 +2156,10 @@ export class SettlementRenderer {
     this.renderParticles(ctx);
 
     // 8. Render Citizens / Pioneers
-    const isNight = this.sim ? (this.sim.currentHour >= 21 || this.sim.currentHour < 6) : false;
+    const isNight = this.sim ? (typeof this.sim.isNight === 'boolean' ? this.sim.isNight : (this.sim.localHour >= 21 || this.sim.localHour < 6)) : false;
     for (const c of this.citizens) {
-      if (isNight && c.activity === 'sleeping' && !c.isPlayer) {
-        // Citizens sleeping inside their dwellings are not wandering outdoors
+      if (isNight && c.id !== 'avatar-npc-10' && !c.isPlayer) {
+        // Citizens sleeping inside their dwellings are not wandering outdoors at night!
         continue;
       }
       this.renderCitizen(ctx, c, isNight);
@@ -2176,7 +2168,7 @@ export class SettlementRenderer {
     ctx.restore(); // Restore camera matrix
 
     // 8.25 Render 24-Hour Day/Night Atmospheric Ambient Pass (Dawn, Day, Dusk, Night)
-    const hour = this.sim ? this.sim.currentHour : 12;
+    const hour = this.sim ? (typeof this.sim.localHour === 'number' ? this.sim.localHour : this.sim.currentHour) : 12;
     this.renderAmbientDayNight(ctx, w, h, hour);
 
     // 8.5 Render Dynamic Weather Effects (Rain, Overcast shadows, Hail, Lightning, Heatwave)
@@ -2321,25 +2313,46 @@ export class SettlementRenderer {
       ctx.stroke();
     }
 
-    // Nighttime solarpunk bollard ground lanterns along boulevards
-    const isNight = this.sim ? (this.sim.currentHour >= 21 || this.sim.currentHour < 6) : false;
+    // Nighttime solarpunk bollard ground lanterns along boulevards (ITEM 6 - Warm Ambient Glow)
+    const isNight = this.sim ? (typeof this.sim.isNight === 'boolean' ? this.sim.isNight : (this.sim.localHour >= 21 || this.sim.localHour < 6)) : false;
     if (isNight) {
+      // 1. Inner circle boulevard lanterns
       for (let angle = 0; angle < Math.PI * 2; angle += Math.PI / 8) {
         const lx = Math.cos(angle) * 175;
         const ly = Math.sin(angle) * 175;
 
-        const glow = ctx.createRadialGradient(lx, ly, 1, lx, ly, 16);
-        glow.addColorStop(0, 'rgba(251, 191, 36, 0.4)');
-        glow.addColorStop(0.6, 'rgba(245, 158, 11, 0.15)');
+        const glow = ctx.createRadialGradient(lx, ly, 2, lx, ly, 32);
+        glow.addColorStop(0, 'rgba(253, 230, 138, 0.7)');
+        glow.addColorStop(0.5, 'rgba(245, 158, 11, 0.28)');
         glow.addColorStop(1, 'rgba(245, 158, 11, 0)');
         ctx.fillStyle = glow;
         ctx.beginPath();
-        ctx.arc(lx, ly, 16, 0, Math.PI * 2);
+        ctx.arc(lx, ly, 32, 0, Math.PI * 2);
         ctx.fill();
 
         ctx.fillStyle = '#fef08a';
         ctx.beginPath();
-        ctx.arc(lx, ly, 2.5, 0, Math.PI * 2);
+        ctx.arc(lx, ly, 3.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // 2. Outer boulevard lanterns
+      for (let angle = 0; angle < Math.PI * 2; angle += Math.PI / 10) {
+        const lx = Math.cos(angle) * 290;
+        const ly = Math.sin(angle) * 290;
+
+        const glow = ctx.createRadialGradient(lx, ly, 2, lx, ly, 28);
+        glow.addColorStop(0, 'rgba(253, 230, 138, 0.6)');
+        glow.addColorStop(0.5, 'rgba(245, 158, 11, 0.2)');
+        glow.addColorStop(1, 'rgba(245, 158, 11, 0)');
+        ctx.fillStyle = glow;
+        ctx.beginPath();
+        ctx.arc(lx, ly, 28, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = '#fef08a';
+        ctx.beginPath();
+        ctx.arc(lx, ly, 3, 0, Math.PI * 2);
         ctx.fill();
       }
     }
@@ -2373,25 +2386,26 @@ export class SettlementRenderer {
     ctx.arc(0, 0, this.agora.radius * 0.4, 0, Math.PI * 2);
     ctx.stroke();
 
-    // Central Luminous O.N.E. Emblem or Night Hearth Firepit
-    const isNight = this.sim ? (this.sim.currentHour >= 21 || this.sim.currentHour < 6) : false;
+    // Central Luminous O.N.E. Emblem or Night Hearth Firepit (ITEM 6)
+    const isNight = this.sim ? (typeof this.sim.isNight === 'boolean' ? this.sim.isNight : (this.sim.localHour >= 21 || this.sim.localHour < 6)) : false;
     if (isNight) {
-      const firePulse = Math.sin(Date.now() * 0.008) * 2.5;
-      const fireGrad = ctx.createRadialGradient(0, 0, 2, 0, 0, 24 + firePulse);
-      fireGrad.addColorStop(0, 'rgba(251, 146, 60, 0.85)');
-      fireGrad.addColorStop(0.5, 'rgba(245, 158, 11, 0.35)');
+      const firePulse = Math.sin(Date.now() * 0.008) * 3.5;
+      const fireGrad = ctx.createRadialGradient(0, 0, 4, 0, 0, 68 + firePulse);
+      fireGrad.addColorStop(0, 'rgba(251, 146, 60, 0.9)');
+      fireGrad.addColorStop(0.45, 'rgba(245, 158, 11, 0.45)');
+      fireGrad.addColorStop(0.8, 'rgba(217, 119, 6, 0.18)');
       fireGrad.addColorStop(1, 'rgba(245, 158, 11, 0)');
       ctx.fillStyle = fireGrad;
       ctx.beginPath();
-      ctx.arc(0, 0, 24 + firePulse, 0, Math.PI * 2);
+      ctx.arc(0, 0, 68 + firePulse, 0, Math.PI * 2);
       ctx.fill();
 
       ctx.fillStyle = '#fef08a';
       ctx.beginPath();
-      ctx.arc(0, 0, 7 + firePulse * 0.4, 0, Math.PI * 2);
+      ctx.arc(0, 0, 9 + firePulse * 0.4, 0, Math.PI * 2);
       ctx.fill();
 
-      ctx.font = '12px system-ui';
+      ctx.font = '16px system-ui';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText('🔥', 0, 0);
@@ -2740,16 +2754,16 @@ export class SettlementRenderer {
       ctx.stroke();
     }
 
-    // 1.5 Nighttime warm light pool radiating on the ground around occupied home
-    const isNight = this.sim ? (this.sim.currentHour >= 21 || this.sim.currentHour < 6) : false;
+    // 1.5 Nighttime warm light pool radiating on the ground around occupied home (ITEM 6)
+    const isNight = this.sim ? (typeof this.sim.isNight === 'boolean' ? this.sim.isNight : (this.sim.localHour >= 21 || this.sim.localHour < 6)) : false;
     if (isNight && isOccupied) {
-      const windowLightGrad = ctx.createRadialGradient(0, 0, d.radius * 0.3, 0, 0, d.radius + 32);
-      windowLightGrad.addColorStop(0, 'rgba(251, 191, 36, 0.45)');
-      windowLightGrad.addColorStop(0.55, 'rgba(245, 158, 11, 0.18)');
+      const windowLightGrad = ctx.createRadialGradient(0, 0, d.radius * 0.2, 0, 0, d.radius + 44);
+      windowLightGrad.addColorStop(0, 'rgba(253, 230, 138, 0.65)');
+      windowLightGrad.addColorStop(0.55, 'rgba(245, 158, 11, 0.30)');
       windowLightGrad.addColorStop(1, 'rgba(245, 158, 11, 0)');
       ctx.fillStyle = windowLightGrad;
       ctx.beginPath();
-      ctx.arc(0, 0, d.radius + 32, 0, Math.PI * 2);
+      ctx.arc(0, 0, d.radius + 44, 0, Math.PI * 2);
       ctx.fill();
     }
 
@@ -3208,15 +3222,15 @@ export class SettlementRenderer {
   renderAmbientDayNight(ctx, w, h, hour) {
     ctx.save();
 
-    // 1. Midnight deep indigo overlay (21:00 - 05:30)
+    // 1. Midnight deep indigo overlay (21:00 - 05:30) - Luminous Solarpunk Night (ITEM 6)
     if (hour >= 21 || hour < 5.5) {
-      let nightOpacity = 0.60;
+      let nightOpacity = 0.36;
       if (hour >= 23 || hour <= 3) {
-        nightOpacity = 0.66;
+        nightOpacity = 0.42;
       } else if (hour >= 21 && hour < 23) {
-        nightOpacity = 0.48 + (hour - 21) * 0.09;
+        nightOpacity = 0.28 + (hour - 21) * 0.07;
       } else if (hour > 3 && hour < 5.5) {
-        nightOpacity = 0.66 - (hour - 3) * 0.12;
+        nightOpacity = 0.42 - (hour - 3) * 0.08;
       }
 
       ctx.fillStyle = `rgba(2, 6, 23, ${nightOpacity})`;

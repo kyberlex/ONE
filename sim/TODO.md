@@ -132,21 +132,37 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
     - **World & Region Fullscreen Bounds:** Set Leaflet `maxBoundsViscosity: 1.0` and `worldCopyJump: false`; `showWorld()` fits earth bounds (`fitBounds`) to 100% of viewport without gray borders or void margins.
     - **Mobile Landscape Guidance:** Added responsive `#mobile-landscape-overlay` with rotating device animation, solarpunk glassmorphism, and landscape requirement for mobile portrait screens.
 
-- [ ] **ITEM 3: Village Chat Deduplication & Readable Smooth Pacing**
+- [x] **ITEM 3: Village Chat Deduplication & Readable Smooth Pacing (Completed):**
   - *Requirement:* Fix duplicate message entries in the Village Chat drawer and eliminate rapid unreadable auto-scroll.
-  - *Implementation:* Implement unique message ID deduplication cache; add gentle debounce/rate-limiting to ambient NPC chatter; guarantee autoscroll only triggers smoothly when the user is already at the bottom of the feed.
+  - *Implementation:*
+    - Added two-tier deduplication in `chat_engine.js`: exact message ID matching and content + author + 12-second window deduplication for incoming/stored messages.
+    - Sanitized `loadHistory()` parser to strip legacy duplicates from `localStorage`.
+    - Paced ambient chatter interval from 8h to 16–24h, silencing chatter during nighttime slumber except rare night-watch logs.
+    - Upgraded `panel_chat.js` and `main.js` with position-preserving smooth autoscroll (`scrollToBottom(force)`); auto-scroll only activates if the user is already reading at the bottom of the feed (<70px threshold), eliminating jumpiness.
 
-- [ ] **ITEM 4: Local Node Time & Bioregional Circadian Alignment**
+- [x] **ITEM 4: Local Node Time & Bioregional Circadian Alignment (Completed):**
   - *Requirement:* Display the exact local node solar time (adjusted to bioregion longitude/timezone) and reflect local nightfall realistically.
-  - *Implementation:* Compute local solar hour from node coordinates, displaying local time clearly on the HUD clock; align citizen schedules to local sunrise/sunset.
+  - *Implementation:*
+    - Added `timezoneOffset = Math.round(lng / 15)` and `localHour = (hour + offset) % 24` to `simulation.js`.
+    - Linked the HUD clock display in `hud.js` to show local solar time (e.g. `02:00 • Detroit (UTC-5)`) with an active sun/moon indicator tooltip.
+    - Aligned circadian schedules, canvas rendering, and day/night transitions to local solar time across all nodes worldwide.
 
-- [ ] **ITEM 5: Dynamic Circadian Time Warp (Fast Night, Playable Day)**
+- [x] **ITEM 5: Dynamic Circadian Time Warp (Fast Night, Playable Day) (Completed):**
   - *Requirement:* Dynamic clock speed: accelerate the night phase so players don't wait through inactive slumber, while slowing down daytime for rich active gameplay.
-  - *Implementation:* Automatically speed up night hours (e.g., 2 hours per real-time second) and slow down daytime hours (e.g., 0.5 to 1 hour per real-time second), maximizing active interaction when pioneers are working and deliberating.
+  - *Implementation:*
+    - Converted the simulation loop from a fixed `setInterval` to a reactive, dynamic `scheduleNextTick()` timeout scheduler.
+    - During local night (21:00–05:59): 500ms base tick interval at 1x (~2 hours/second), swiftly passing inactive slumber.
+    - During local day (06:00–20:59): 1600ms base tick interval at 1x (~0.625 hours/second), providing relaxed, thoughtful, interactive gameplay.
+    - Seamlessly scales with speed multipliers (Pause 0x, Normal 1x, Fast 2x, Hyper 5x).
 
-- [ ] **ITEM 6: Nighttime Atmosphere Polish: Less Crowds, Warm Bioluminescent Lighting**
+- [x] **ITEM 6: Nighttime Atmosphere Polish: Less Crowds, Warm Bioluminescent Lighting (Completed):**
   - *Requirement:* (a) Reduce citizens wandering at night (too many still awake); (b) Increase warm artificial lighting so the village is cozy rather than pitch-black.
-  - *Implementation:* Limit night-shift crew to 1–2 solitary watch/observatory figures; add glowing amber street lanterns along pathways, illuminated pod windows radiating gentle light pools, and warm Agora hearth lighting to eliminate harsh gloom.
+  - *Implementation:*
+    - Reduced outdoor night crowd: all citizens sleep inside their usufruct pods except 1 solitary night-watch pioneer on Agora celestial watch (`avatar-npc-10`) plus the active player avatar.
+    - Softened night ambient canvas overlay from oppressive 0.66 darkness to a luminous, crisp deep indigo (0.36–0.42).
+    - Placed glowing warm amber bollard lanterns along inner (r=175) and outer (r=290) boulevards.
+    - Expanded Agora hearth central firepit from 24px to 68px with organic pulsating ember glow and golden gradients.
+    - Expanded occupied pod window illumination with warm radiating light pools (`rgba(253, 230, 138, 0.65)`).
 
 - [x] **ITEM 7: Plain-Language UI Sanitization (Remove Programmer Jargon) (Completed):**
   - *Requirement:* Replace programmer jargon and obscure academic terminology with accessible, inviting language for everyday players.

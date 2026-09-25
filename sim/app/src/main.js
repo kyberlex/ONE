@@ -38,6 +38,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // Active Node state
   let activeNode = { ...GLOBAL_STARTER_NODES[0] };
   sim.node.id = activeNode.id;
+  sim.node.name = activeNode.name;
+  sim.node.lng = activeNode.lng;
+  sim.timezoneOffset = typeof activeNode.lng === 'number' ? Math.round(activeNode.lng / 15) : -5;
   if (sim.trade) {
     sim.trade.playerNodeId = activeNode.id;
   }
@@ -350,7 +353,7 @@ window.addEventListener('DOMContentLoaded', () => {
       panelChat.updateUnreadBadge();
       if (panelChat.isOpen) {
         panelChat.render();
-        panelChat.scrollToBottom();
+        panelChat.scrollToBottom(false);
       }
     }
     if (settlementRenderer && msg.authorName) {
@@ -517,6 +520,8 @@ window.addEventListener('DOMContentLoaded', () => {
     activeNode = node;
     sim.node.id = node.id;
     sim.node.name = node.name;
+    sim.node.lng = node.lng;
+    sim.timezoneOffset = typeof node.lng === 'number' ? Math.round(node.lng / 15) : -5;
     sim.node.population = node.population;
     if (sim.trade) {
       sim.trade.playerNodeId = node.id;

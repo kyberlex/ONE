@@ -21,8 +21,7 @@ export class SimulationManager {
     // Temporal state
     this.tickCount = 0;
     this.speedMultiplier = 1; // 0 = pause, 1 = normal, 2 = fast, 5 = hyper
-    this.timerInterval = null;
-    this.baseTickDurationMs = 1000; // 1 second = 1 hour at 1x speed
+    this.timerTimeout = null;
 
     // Subsystem engines
     this.thermo = new ThermodynamicEngine(config.thermoConfig);
@@ -30,6 +29,11 @@ export class SimulationManager {
     this.adversary = new LegacyAdversaryDirector();
     this.sortition = new AthenianSortitionEngine();
     this.trade = new TradeConvoyEngine(this.node.id);
+
+    // Bioregional local solar timezone offset (-5 for Detroit Delray)
+    this.timezoneOffset = typeof config.timezoneOffset === 'number'
+      ? config.timezoneOffset
+      : (this.node?.lng ? Math.round(this.node.lng / 15) : -5);
 
     // Event callbacks
     this.onTickListeners = [];
@@ -53,12 +57,23 @@ export class SimulationManager {
     return this.tickCount % 24;
   }
 
-  start() {
-    if (this.timerInterval) clearInterval(this.timerInterval);
-    if (this.speedMultiplier === 0) return;
+  /**
+   * Local solar hour aligned to the node's geographical longitude (ITEM 4)
+   */
+  get localHour() {
+    const offset = this.timezoneOffset ?? -5;
+    return (Math.floor(this.currentHour + offset) % 24 + 24) % 24;
+  }
 
-    const intervalMs = this.baseTickDurationMs / this.speedMultiplier;
-    this.timerInterval = setInterval(() => this.stepTick(), intervalMs);
+  /**
+   * True if current local solar hour is nocturnal (21:00 - 05:59)
+   */
+  get isNight() {
+    return this.localHour >= 21 || this.localHour < 6;
+  }
+
+  start() {
+    this.scheduleNextTick();
   }
 
   pause() {
@@ -67,15 +82,29 @@ export class SimulationManager {
 
   setSpeed(multiplier) {
     this.speedMultiplier = multiplier;
-    if (this.timerInterval) {
-      clearInterval(this.timerInterval);
-      this.timerInterval = null;
-    }
-    if (multiplier > 0) {
-      const intervalMs = this.baseTickDurationMs / multiplier;
-      this.timerInterval = setInterval(() => this.stepTick(), intervalMs);
-    }
+    this.scheduleNextTick();
     this.notifyTick();
+  }
+
+  /**
+   * Dynamic Circadian Time Warp Scheduler (ITEM 5)
+   * - Night (21:00 - 05:59): 500ms base at 1x (~2 hours per second) to swiftly pass slumber.
+   * - Day (06:00 - 20:59): 1600ms base at 1x (~0.625 hours per second) for thoughtful gameplay.
+   */
+  scheduleNextTick() {
+    if (this.timerTimeout) {
+      clearTimeout(this.timerTimeout);
+      this.timerTimeout = null;
+    }
+    if (this.speedMultiplier === 0) return;
+
+    const baseMs = this.isNight ? 500 : 1600;
+    const intervalMs = Math.max(60, Math.round(baseMs / this.speedMultiplier));
+
+    this.timerTimeout = setTimeout(() => {
+      this.stepTick();
+      this.scheduleNextTick();
+    }, intervalMs);
   }
 
   /**
@@ -204,6 +233,9 @@ export class SimulationManager {
       tick: this.tickCount,
       day: this.currentDay,
       hour: this.currentHour,
+      localHour: this.localHour,
+      isNight: this.isNight,
+      timezoneOffset: this.timezoneOffset,
       speed: this.speedMultiplier,
       thermo: this.thermo.getSnapshot(),
       node: {

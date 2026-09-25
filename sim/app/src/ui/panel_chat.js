@@ -82,7 +82,7 @@ export class PanelChatController {
     this.chatEngine.markAllAsRead();
     this.updateUnreadBadge();
     this.render();
-    this.scrollToBottom();
+    this.scrollToBottom(true);
   }
 
   close() {
@@ -103,11 +103,15 @@ export class PanelChatController {
     }
   }
 
-  scrollToBottom() {
+  scrollToBottom(force = false) {
     setTimeout(() => {
       const feed = document.getElementById('chat-message-feed');
-      if (feed) feed.scrollTop = feed.scrollHeight;
-    }, 50);
+      if (!feed) return;
+      const isNearBottom = (feed.scrollHeight - feed.scrollTop - feed.clientHeight) < 70;
+      if (force || isNearBottom) {
+        feed.scrollTo({ top: feed.scrollHeight, behavior: 'smooth' });
+      }
+    }, 40);
   }
 
   render() {
@@ -302,7 +306,7 @@ export class PanelChatController {
 
         this.quickDrawerOpen = false;
         this.render();
-        this.scrollToBottom();
+        this.scrollToBottom(true);
         this.onMessageSent(sent);
       };
     });
@@ -343,7 +347,7 @@ export class PanelChatController {
 
         input.value = '';
         this.render();
-        this.scrollToBottom();
+        this.scrollToBottom(true);
         this.onMessageSent(sent);
       };
     }

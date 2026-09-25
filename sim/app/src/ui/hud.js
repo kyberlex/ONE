@@ -196,13 +196,23 @@ export class HudController {
       this.elFreeHours.textContent = `${node.freeHours}h ${t('meterFreePerDay', 'Free/day')}`;
     }
 
-    // 5. Time & Day
+    // 5. Local Node Time & Circadian Status (ITEM 4 & 5)
     if (this.elTimeDisplay) {
-      const hh = String(state.hour).padStart(2, '0');
+      const localH = typeof state.localHour === 'number' ? state.localHour : state.hour;
+      const hh = String(localH).padStart(2, '0');
       this.elTimeDisplay.textContent = `${hh}:00`;
-      this.elDayDisplay.textContent = `${t('dayPrefix', 'Day')} ${state.day}`;
-      const isDay = state.hour >= 6 && state.hour <= 20;
+
+      const tzStr = typeof state.timezoneOffset === 'number'
+        ? (state.timezoneOffset >= 0 ? `+${state.timezoneOffset}` : `${state.timezoneOffset}`)
+        : '-5';
+      const nodeName = state.node?.name ? state.node.name.split(' ')[0] : 'Node';
+      this.elDayDisplay.textContent = `${t('dayPrefix', 'Day')} ${state.day} • ${nodeName} (UTC${tzStr})`;
+
+      const isDay = localH >= 6 && localH <= 20;
       this.elSunIcon.textContent = isDay ? '☀️' : '🌙';
+      this.elSunIcon.title = isDay
+        ? `Daytime (${hh}:00) — Active Pioneers & Playable Time (0.6h/s)`
+        : `Nighttime (${hh}:00) — Slumber & Fast Forward (2h/s)`;
     }
 
     // 5b. Dynamic Weather

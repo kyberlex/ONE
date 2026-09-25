@@ -210,21 +210,41 @@ export class ChatEngine {
   }
 
   addMessage(msg) {
+    if (!msg || !msg.text) return null;
+
+    // 1. Deduplicate by exact ID
+    if (msg.id && this.messages.some(m => m.id === msg.id)) {
+      return this.messages.find(m => m.id === msg.id);
+    }
+
+    // 2. Deduplicate by content + author + recent time window (within 12 seconds)
+    const msgText = msg.text.trim();
+    const msgAuthor = msg.authorName || 'Citizen';
+    const now = msg.timestamp || Date.now();
+    const isRecentDuplicate = this.messages.some(m => 
+      m.authorName === msgAuthor &&
+      m.text.trim() === msgText &&
+      Math.abs(now - (m.timestamp || 0)) < 12000
+    );
+    if (isRecentDuplicate) {
+      return null;
+    }
+
     const formatted = {
       id: msg.id || `msg-${Date.now().toString(36)}-${Math.floor(Math.random() * 1000)}`,
       channel: msg.channel || this.activeChannel,
-      authorName: msg.authorName || 'Citizen',
+      authorName: msgAuthor,
       authorVocation: msg.authorVocation || 'Resident',
       authorIcon: msg.authorIcon || '🧑',
       authorPubKey: msg.authorPubKey || null,
       shortFingerprint: msg.shortFingerprint || null,
       isPlayer: !!msg.isPlayer,
       isPeer: !!msg.isPeer,
-      text: msg.text || '',
+      text: msgText,
       actionType: msg.actionType || null,
       actionPayload: msg.actionPayload || null,
       actionExecuted: !!msg.actionExecuted,
-      timestamp: msg.timestamp || Date.now(),
+      timestamp: now,
       verified: msg.verified !== undefined ? msg.verified : true
     };
 
@@ -362,12 +382,18 @@ export class ChatEngine {
   }
 
   /**
-   * Periodic ambient chatter simulation based on thermodynamic state
+   * Periodic ambient chatter simulation based on thermodynamic state (ITEM 3)
    */
   tickAmbientChatter(currentTick, thermo, node) {
-    // Generate contextual resident message roughly every 6-12 simulated hours
-    if (currentTick - this.lastAmbientTick < 8) return null;
-    if (Math.random() > 0.45) return null;
+    // Generate contextual resident message roughly every 16-24 simulated hours
+    if (currentTick - this.lastAmbientTick < 16) return null;
+    if (Math.random() > 0.35) return null;
+
+    // At night (21:00 - 05:59), citizens are resting! Silence chatter except rare night-watch log
+    const isNight = this.sim ? (typeof this.sim.isNight === 'boolean' ? this.sim.isNight : (this.sim.localHour >= 21 || this.sim.localHour < 6)) : false;
+    if (isNight) {
+      if (Math.random() > 0.15) return null; // Very quiet at night
+    }
 
     this.lastAmbientTick = currentTick;
     const resident = AMBIENT_RESIDENTS[Math.floor(Math.random() * AMBIENT_RESIDENTS.length)];
@@ -375,8 +401,9 @@ export class ChatEngine {
     let actionType = null;
     let actionPayload = null;
 
-    // Trigger-based smart statements
-    if (thermo.weather.activeDisaster) {
+    if (isNight) {
+      text = '🌙 Night watch log: perimeter microgrid secure, battery cells balanced, quiet stars overhead.';
+    } else if (thermo.weather.activeDisaster) {
       const d = thermo.weather.activeDisaster;
       if (d.id === 'HEAT_DOME') {
         text = `Sun radiation is intense (${thermo.weather.temperatureC}°C)! Checking the shade nets over aeroponic sector B.`;
@@ -431,7 +458,18 @@ export class ChatEngine {
     try {
       const raw = localStorage.getItem('oasis_chat_history');
       if (raw) {
-        this.messages = JSON.parse(raw);
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed)) {
+          const seen = new Set();
+          this.messages = [];
+          for (const m of parsed) {
+            const key = m.id || `${m.authorName}-${m.text}`;
+            if (!seen.has(key)) {
+              seen.add(key);
+              this.messages.push(m);
+            }
+          }
+        }
       }
     } catch (e) {
       console.warn('[ChatEngine] Could not parse chat history', e);
