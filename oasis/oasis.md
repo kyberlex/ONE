@@ -214,3 +214,13 @@ To execute this architecture:
 3. **Audit & Patch Verification:** Run Agent PURPLE-PATCH over the resulting transcript, verifying if amendments are needed to prevent allocation stalls in Tier 3 Open Fab-Labs.
 
 4. **Public Commit & Pipeline Ingest:** Commit the prompt tree, raw run logs, and compiled patch to the open repository, streaming the chunked vectors to the initial instance of the Epistemic Oracle.
+
+---
+
+### 7. Constitutional Attack Suite (Attacks 001–007) & Deliberation Pipeline
+
+Beyond the chapter-by-chapter dialectic, O-ASIS maintains a standardized benchmark of seven mathematical attack vectors:
+* **Attack Specifications:** Detailed in [`constitutional_attack_challenges.md`](constitutional_attack_challenges.md).
+* **Living Case Law & QA:** Tracked under `[STATUS: SIMULATION_HYPOTHESIS]` in [`sim_resolutions_qa.md`](sim_resolutions_qa.md).
+* **Public Sortition Deliberation:** Pre-formatted RFC templates for community debate in [`github_discussions_rfcs.md`](github_discussions_rfcs.md) targeting [`github.com/kyberlex/ONE/discussions`](https://github.com/kyberlex/ONE/discussions).
+
