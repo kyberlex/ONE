@@ -20,13 +20,8 @@ To ensure non-autocratic, rigorous governance, every entry carries an explicit e
 | :--- | :--- | :--- | :--- | :--- |
 | **`SIM-QA-01`** | Quorum Scaling & Demarchic Viability for Emerging Nodes (< 50 Pop) | Governance / Sortition | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 4.2.1, Art. 4.2.2, Art. 4.5, Art. 5.1 |
 | **`SIM-QA-02`** | Dual-Tier Tool Boundary: Civic Tool Libraries vs. Inviolable Personal Craft Gear | Property / Usufruct Commons | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 2.2.1, Art. 2.2.3, Art. 3.2 |
-| **`SIM-QA-03`** | Sortition Anti-Capture: Deliberative Bicameralism & Secret Balloting | Governance / Anti-Capture | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 4.1, Art. 4.2.2, Art. 4.5 |
-| **`SIM-QA-04`** | Labor Resiliency: Automated Physical Contribution Accounting & Circuit-Breakers | Labor / Commons Defense | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 3.2, Art. 5.1, Art. 5.3 |
-| **`SIM-QA-05`** | Ecological Oracle Integrity: ZK-Telemetry Proofs & Citizen Ground-Truthing | Telemetry / Biophysics | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 3.1, Art. 3.4, Art. 7.2 |
-| **`SIM-QA-06`** | Anti-Speculation Inelastic Usufruct & Non-Transferable Queue Allocation | Property / Usufruct | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 2.1, Art. 2.2, Art. 2.4 |
-| **`SIM-QA-07`** | Carrying Capacity Migration: Velocity Throttling & Bioregional Equalization | Migration / Carrying Capacity | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 1.2, Art. 6.1, Art. 10.1, Art. 10.3 |
-| **`SIM-QA-08`** | Intertemporal Bioregional Trade: Thermodynamic Bancor & Demurrage | External Trade / Accounting | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 3.5, Art. 9.2, Art. 9.3 |
-| **`SIM-QA-09`** | Technocratic Defense: Adversarial Red-Team Guilds & Model Sensitivity Sliders | Epistemic Sovereignty | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 4.4, Art. 7.3, Art. 7.4 |
+| **`SIM-QA-03`** | Ecological Sensor Integrity: ZK-Telemetry Proofs & Analog Citizen Ground-Truthing | Telemetry / Biophysics | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 3.4.2, Art. 3.4.3, Art. 7.2 |
+| **`SIM-QA-04`** | Cryptographic Anti-Brokerage for High-Demand FabLab Queues | Usufruct / FabLabs | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 2.1.2, Art. 2.2.3, Art. 3.3.3 |
 
 ---
 
@@ -111,142 +106,41 @@ The node operating protocol establishes an explicit, objective boundary between 
 
 ---
 
-## **SIM-QA-03: Sortition Anti-Capture: Deliberative Bicameralism & Secret Balloting**
+## **SIM-QA-03: Ecological Sensor Integrity: ZK-Telemetry Proofs & Analog Citizen Ground-Truthing**
 
 * **Date Recorded:** 2026-09-26  
 * **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]`  
-* **Originating Context:** Stress-Test Attack 001 (Sortition Capture Analysis)  
-* **Constitutional Articles:** [`Art. 4.1`](../bible/chapters/chapter_04.md), [`Art. 4.2.2`](../bible/chapters/chapter_04.md), [`Art. 4.5`](../bible/chapters/chapter_04.md)
+* **Originating Context:** Operational Edge-Case OP-01 (Sensor Telemetry Drift & Ground-Truthing)  
+* **Constitutional Articles:** [`Art. 3.4.2`](../bible/chapters/chapter_03.md), [`Art. 3.4.3`](../bible/chapters/chapter_03.md), [`Art. 7.2`](../bible/chapters/chapter_07.md)
 
 ### **1. The Material / Empirical Friction**
-In a 15-citizen sortition assembly with 25% quarterly staggered rotation, a permanent external strategic faction need only place $k = 4$ coordinated agents (26.7%) into the assembly to obtain mathematical veto power over constitutional motions (threshold $\ge 75\% = 12$ votes). By introducing pre-drafted dossiers on Day 1, dominating opening remarks, and exploiting social conformity dynamics among uncoordinated citizens, this minority can also sway 5 swing votes to control ordinary decisions ($\ge 60\% = 9$ votes).
+While Article 3.4.3 mandates open-hardware Programmable Logic Controllers (PLCs) with bit-for-bit verifiable firmware, physical field sensors (aquifer pressure transducers, weir flow meters, soil carbon analyzers) can suffer mechanical bio-fouling or hardware calibration drift. An algorithmic anomaly detector might mistake a gradual $-0.25\sigma$ monthly drift for legitimate climatic variation, creating a discrepancy between digital telemetry and true physical carrying capacity.
 
 ### **2. The Tested Operational Countermeasure**
-1. **Separation of Drafting and Voting (Sortition Bicameralism):** The assembly that deliberates and votes on statutory motions is strictly prohibited from drafting original bill texts. Agendas and drafts are produced by independently sortitioned Agenda Juries or citizen initiative petitions.
-2. **Mandatory Secret Balloting:** Floor voting is converted to cryptographically private ballots. This eliminates social intimidation, prevents conformity cascades, and destroys the external cabal's ability to verify whether their covert members adhered to pact instructions.
-3. **Institutional Adversarial Advocate:** Every motion presented to the assembly must include an amicus-style counter-dossier prepared by an independent sortitioned Advocate General office.
+1. **Zero-Knowledge Hardware Multi-Party Telemetry:** Sensor microcontroller firmware signs raw measurements within secure hardware enclaves (TEE) before broadcasting telemetry across the local mesh.
+2. **Citizen Analog Ground-Truthing Squads:** Neighborhood Sortition Councils regularly commission lay citizen teams equipped with manual, analog tools (physical dipsticks, titration reagents, mechanical flow meters) to perform unpredictable spot-checks against digital dashboard readouts, ensuring cybernetic systems remain firmly tethered to physical reality.
 
 ### **3. Open Question for Future Ratification**
-*Should the separation between bill drafting and voting be absolute for all municipal measures, or should assemblies below 50 residents retain drafting authority with an mandatory external advocate review?*  
+*What is the optimal cadence for citizen ground-truthing squads to prevent operational fatigue while ensuring 99% detection confidence against physical sensor fouling?*  
 *(Pending community sortition review on GitHub Discussions).*
 
 ---
 
-## **SIM-QA-04: Labor Resiliency: Automated Physical Contribution Accounting & Circuit-Breakers**
+## **SIM-QA-04: Cryptographic Anti-Brokerage for High-Demand FabLab Queues**
 
 * **Date Recorded:** 2026-09-26  
 * **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]`  
-* **Originating Context:** Stress-Test Attack 002 (Free-Rider Cascade Analysis)  
-* **Constitutional Articles:** [`Art. 3.2`](../bible/chapters/chapter_03.md), [`Art. 5.1`](../bible/chapters/chapter_05.md), [`Art. 5.3`](../bible/chapters/chapter_05.md)
+* **Originating Context:** Operational Edge-Case OP-02 (Inelastic FabLab Queuing)  
+* **Constitutional Articles:** [`Art. 2.1.2`](../bible/chapters/chapter_02.md), [`Art. 2.2.3`](../bible/chapters/chapter_02.md), [`Art. 3.3.3`](../bible/chapters/chapter_03.md)
 
 ### **1. The Material / Empirical Friction**
-A graduated sanction ladder (peer notification $\to$ social review $\to$ ration curtailment $\to$ exclusion) imposes finite administrative and emotional costs ($c_m + c_s$). When free-riding exceeds $\sim 12\text{--}18\%$ of the population, the monitoring and review queues overflow ($\text{Cases} > \mu_{\text{max}}$). Enforcement latency spikes, the expected penalty plummets, and sincere cooperators withhold labor to avoid the "sucker's payoff," causing systemic collapse.
+While real estate, land, and housing are perpetually de-commodified under dynamic usufruct (Art. 2.1 and Art. 2.5), localized physical bottlenecks can occur for high-demand specialized machinery in Tier 3 Open Fab-Labs (e.g., 5-axis CNC mills, metal laser sintering, cleanroom lithography). If reservation queues are open and fungible, an informal secondary market could theoretically emerge where individuals reserve prime tool-hours speculatively and trade access to third parties in exchange for personal gifts or informal favors.
 
 ### **2. The Tested Operational Countermeasure**
-1. **Automated Physical Contribution Accounting:** Replaces discretionary interpersonal policing with objective, cryptographic check-in logs at critical infrastructure points (microgrids, hydroponic loops, water filtration).
-2. **Algorithmic Reserve Circuit-Breakers:** If community aggregate labor reserves dip below the critical threshold $\delta$, non-essential resource allocations across all tiers automatically downgrade simultaneously. This depersonalizes the consequence, removing social friction between neighbors while safeguarding life-critical minimums.
+1. **Soulbound Cryptographic Reservation Tokens:** FabLab scheduling systems utilize non-transferable, identity-bound booking tokens. A reservation slot cannot be re-assigned, transferred, or swapped.
+2. **Dynamic 15-Minute Slot Forfeiture:** If the registered custodian is not physically verified at the workstation within 15 minutes of the scheduled start time, the slot automatically forfeits to the next citizen drawn by lot from the standby queue.
 
 ### **3. Open Question for Future Ratification**
-*How should physical contribution logging accommodate neurodiverse citizens or those with intermittent invisible chronic illness without creating bureaucratic medical gatekeeping?*  
+*How should FabLab booking systems accommodate unforeseen delays (e.g., transit disruptions or urgent care duties) without allowing speculative reservation hoarding?*  
 *(Pending community sortition review on GitHub Discussions).*
 
----
-
-## **SIM-QA-05: Ecological Oracle Integrity: ZK-Telemetry Proofs & Citizen Ground-Truthing**
-
-* **Date Recorded:** 2026-09-26  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]`  
-* **Originating Context:** Stress-Test Attack 003 (Oracle Capture Analysis)  
-* **Constitutional Articles:** [`Art. 3.1`](../bible/chapters/chapter_03.md), [`Art. 3.4`](../bible/chapters/chapter_03.md), [`Art. 7.2`](../bible/chapters/chapter_07.md)
-
-### **1. The Material / Empirical Friction**
-A corrupt engineering cadre of 2–3 operators with ingestion pipeline commit privileges can inject sub-perceptual sensor drift ($\lvert \delta_t \rvert < 0.3\sigma$). Over 16 reporting epochs, the drift accumulates to $4.0\sigma$ without triggering statistical anomaly detectors. The system under-reports water or biomass reserves by up to 25%, inducing artificial panic and diverting real surpluses into unmonitored "remediation buffers."
-
-### **2. The Tested Operational Countermeasure**
-1. **Zero-Knowledge Telemetry Enclaves (ZK-Oracles):** Sensor firmware signs raw measurements within secure hardware enclaves (TEE). Ingestion pipelines are compiled to verifiable zero-knowledge circuits (zk-SNARKs), mathematically proving that aggregate figures strictly follow published, audited formulas.
-2. **Analog Citizen Ground-Truthing Squads:** Assemblies randomly commission lay citizen squads equipped with manual, analog measurement tools (physical dipsticks, titration kits, mechanical flow meters) to perform unpredictable spot-checks against digital telemetry.
-
-### **3. Open Question for Future Ratification**
-*What is the optimal cadence and compensation for citizen ground-truthing squads to prevent operational fatigue while ensuring 99% detection confidence against salami-drift attacks?*  
-*(Pending community sortition review on GitHub Discussions).*
-
----
-
-## **SIM-QA-06: Anti-Speculation Inelastic Usufruct & Non-Transferable Queue Allocation**
-
-* **Date Recorded:** 2026-09-26  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]`  
-* **Originating Context:** Stress-Test Attack 004 (Shadow Economy & Custodial Arbitrage)  
-* **Constitutional Articles:** [`Art. 2.1`](../bible/chapters/chapter_02.md), [`Art. 2.2`](../bible/chapters/chapter_02.md), [`Art. 2.4`](../bible/chapters/chapter_02.md)
-
-### **1. The Material / Empirical Friction**
-Even with currency, rent, and wage labor legally abolished, custodial holders of prime inelastic assets (waterfront lots, high-end CNC workshops) can informally delegate custody in exchange for durable high-value goods or encrypted P2P mutual-credit chits (Units of Social Regard). Accumulated chits are then used to hire queue proxies, effectively re-establishing pure economic rent and capital accumulation within 6 months.
-
-### **2. The Tested Operational Countermeasure**
-1. **Biometric Use-It-or-Lose-It Usufruct:** Custodial permits are strictly personal and non-delegable. An asset remaining idle or occupied by non-custodians beyond bounded threshold $T_{\text{idle}}$ automatically triggers revocation and returns the asset to the civic allocation pool.
-2. **Non-Transferable Cryptographic Queue Tokens:** All waiting queues for housing, workshops, or high-tier compute use zero-knowledge soulbound identity tokens. A slot cannot be reserved on behalf of a third party, eliminating queue-brokerage markets.
-
-### **3. Open Question for Future Ratification**
-*What temporal allowance should be granted for legitimate sabbaticals, research travel, or medical emergencies before an asset is flagged as idle under Use-It-or-Lose-It rules?*  
-*(Pending community sortition review on GitHub Discussions).*
-
----
-
-## **SIM-QA-07: Carrying Capacity Migration: Velocity Throttling & Bioregional Equalization**
-
-* **Date Recorded:** 2026-09-26  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]`  
-* **Originating Context:** Stress-Test Attack 005 (Migration Quadrilemma Analysis)  
-* **Constitutional Articles:** [`Art. 1.2`](../bible/chapters/chapter_01.md), [`Art. 6.1`](../bible/chapters/chapter_06.md), [`Art. 10.1`](../bible/chapters/chapter_10.md), [`Art. 10.3`](../bible/chapters/chapter_10.md)
-
-### **1. The Material / Empirical Friction**
-A fundamental mathematical incompatibility exists under mass climate shocks: Universal Freedom of Movement + Local Biophysical Carrying Capacity + Equal Access + Non-Discriminatory Governance form an empty feasible set ($\emptyset$) when incoming population exceeds sustainable bioregional yield. Without pacing, carrying capacity collapses, triggering starvation followed by reactionary, militarized border closures.
-
-### **2. The Tested Operational Countermeasure**
-1. **Decoupled Movement Rights (Velocity Throttling):** Absolute Freedom of Departure is guaranteed, but Right of Ingestion is linked to the destination bioregion's metabolic regeneration rate. When capacity approaches 90%, incoming transit is managed via transparent dynamic arrival pacing.
-2. **Bioregional Equalization Transfers:** Rather than erecting borders, host bioregions approaching capacity are constitutionally mandated to dispatch automation hardware, mobile desalinators, and technical labor cohorts to origin bioregions to rehabilitate local carrying capacity at the source.
-
-### **3. Open Question for Future Ratification**
-*How should transit priority be established during urgent climate emergencies when destination pacing queues exceed 30 days?*  
-*(Pending community sortition review on GitHub Discussions).*
-
----
-
-## **SIM-QA-08: Intertemporal Bioregional Trade: Thermodynamic Bancor & Demurrage**
-
-* **Date Recorded:** 2026-09-26  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]`  
-* **Originating Context:** Stress-Test Attack 006 (External Trade & Implicit Money Emergence)  
-* **Constitutional Articles:** [`Art. 3.5`](../bible/chapters/chapter_03.md), [`Art. 9.2`](../bible/chapters/chapter_09.md), [`Art. 9.3`](../bible/chapters/chapter_09.md)
-
-### **1. The Material / Empirical Friction**
-When two bioregions have disjoint production and consumption timelines (e.g., grain needed monthly vs. lithium needed every 3 years), bilateral barter breaks down due to lack of double coincidence of wants across time. If regions issue promissory chits (CFREs), secondary markets discount them for risk, spontaneously recreating fiat currency, secondary debt markets, and positive interest rates.
-
-### **2. The Tested Operational Countermeasure**
-1. **Thermodynamic Multilateral Clearing Union (Biophysical Bancor):** Bilateral promissory tokens are prohibited. All inter-regional trade settles through an automated multilateral clearing house denominated in objective physical units (standard kWh exergy or carbon-equivalent metrics).
-2. **Automated Demurrage:** Positive trade surpluses carry a negative holding charge (demurrage, e.g., $-1\%$ per month). This structurally penalizes mercantilist accumulation and forces surplus regions to import real physical goods from trade partners, preventing trade imbalances.
-
-### **3. Open Question for Future Ratification**
-*Should the demurrage rate on clearing union balances be fixed globally or dynamically adjusted based on global supply-chain bottlenecks?*  
-*(Pending community sortition review on GitHub Discussions).*
-
----
-
-## **SIM-QA-09: Technocratic Defense: Adversarial Red-Team Guilds & Model Sensitivity Sliders**
-
-* **Date Recorded:** 2026-09-26  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]`  
-* **Originating Context:** Stress-Test Attack 007 (Technical Priesthood & Epistemic Bottlenecks)  
-* **Constitutional Articles:** [`Art. 4.4`](../bible/chapters/chapter_04.md), [`Art. 7.3`](../bible/chapters/chapter_07.md), [`Art. 7.4`](../bible/chapters/chapter_07.md)
-
-### **1. The Material / Empirical Friction**
-Permanent systems engineers presenting complex 400-page dynamic differential models can manipulate lay sortition assemblies by tuning invisible simulation hyperparameters (e.g., grid instability thresholds). Because lay citizens serve short 90-day mandates and fear catastrophic failures, they rubber-stamp technocratic preferences 95% of the time, resulting in de facto technocracy.
-
-### **2. The Tested Operational Countermeasure**
-1. **Adversarial Red-Team Counter-Guilds:** The constitution funds and protects an autonomous Counter-Auditing Guild whose sole mandate and social standing derive from discovering hidden biases, assumptions, and parameter manipulations in infrastructure models.
-2. **Mandatory Visual Sensitivity Sliders:** No technical proposal may be submitted as a static black box. Software interfaces must provide intuitive, layperson-accessible sensitivity sliders (e.g., *"Tolerate 5% microgrid flicker $\to$ +25% housing budget"*) allowing sortition members to explore trade-off curves directly.
-3. **Mandatory Rotational Maintenance Duty:** Technocrats and systems administrators must periodically rotate into physical maintenance cohorts, preventing isolated epistemic cartels.
-
-### **3. Open Question for Future Ratification**
-*What legal protections are required to insulate the Counter-Auditing Guild from political retaliation by dominant operational groups?*  
-*(Pending community sortition review on GitHub Discussions).*

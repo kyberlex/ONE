@@ -217,10 +217,10 @@ To execute this architecture:
 
 ---
 
-### 7. Constitutional Attack Suite (Attacks 001–007) & Deliberation Pipeline
+### 7. Constitutional Immunity Audit & Operational Edge-Cases
 
-Beyond the chapter-by-chapter dialectic, O-ASIS maintains a standardized benchmark of seven mathematical attack vectors:
-* **Attack Specifications:** Detailed in [`constitutional_attack_challenges.md`](constitutional_attack_challenges.md).
+Beyond the chapter-by-chapter dialectic, O-ASIS maintains a standardized benchmark evaluating seven classic failure modes:
+* **Proof-of-Immunity & Operational QA:** Detailed in [`constitutional_attack_challenges.md`](constitutional_attack_challenges.md), verifying constitutional closure across 5 vectors and defining protocols for the 2 operational edge-cases (Sensor Ground-Truthing and FabLab Queue Tokens).
 * **Living Case Law & QA:** Tracked under `[STATUS: SIMULATION_HYPOTHESIS]` in [`sim_resolutions_qa.md`](sim_resolutions_qa.md).
 * **Public Sortition Deliberation:** Pre-formatted RFC templates for community debate in [`github_discussions_rfcs.md`](github_discussions_rfcs.md) targeting [`github.com/kyberlex/ONE/discussions`](https://github.com/kyberlex/ONE/discussions).
 

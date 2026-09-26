@@ -35,8 +35,8 @@ export class WorldMapController {
   showWorld() {
     if (!this.map) return;
     this.map.invalidateSize();
-    // Seamless planetary fit: ensures earth tiles cover 100% of viewport without grey void
-    this.map.fitBounds([[-58, -165], [72, 165]], { animate: false, padding: [0, 0] });
+    // Seamless planetary fit: clamps to single central world map with clean padding
+    this.map.fitBounds([[-60, -175], [75, 175]], { animate: false, padding: [10, 10] });
   }
 
   showRegion(node) {
@@ -96,19 +96,23 @@ export class WorldMapController {
       zoomControl: false,
       attributionControl: false,
       worldCopyJump: false,
-      maxBounds: [[-84, -180], [84, 180]],
+      maxBounds: [[-85, -180], [85, 180]],
       maxBoundsViscosity: 1.0
     });
 
     // Zoom control at top-right
     L.control.zoom({ position: 'topright' }).addTo(this.map);
 
+    const tileLayerBounds = [[-85.05112878, -180], [85.05112878, 180]];
+
     // High-Resolution Photorealistic Satellite Earth (ESRI World Imagery - Free, No Watermark, No API Key)
     this.satelliteLayer = L.tileLayer(
       'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
       {
         maxZoom: 19,
-        attribution: 'ESRI World Imagery'
+        attribution: 'ESRI World Imagery',
+        noWrap: true,
+        bounds: tileLayerBounds
       }
     );
 
@@ -117,7 +121,9 @@ export class WorldMapController {
       'https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}',
       {
         maxZoom: 10,
-        attribution: 'ESRI Physical'
+        attribution: 'ESRI Physical',
+        noWrap: true,
+        bounds: tileLayerBounds
       }
     );
 
@@ -126,7 +132,9 @@ export class WorldMapController {
       'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',
       {
         maxZoom: 19,
-        opacity: 0.6
+        opacity: 0.6,
+        noWrap: true,
+        bounds: tileLayerBounds
       }
     );
 
@@ -141,15 +149,14 @@ export class WorldMapController {
     if (termPane) {
       termPane.style.zIndex = '350';
       termPane.style.pointerEvents = 'none';
+      termPane.style.filter = 'blur(14px)';
     }
 
     this.terminatorLayer = L.polygon(getNightPolygonCoordinates(12, 80), {
       pane: 'terminatorPane',
       fillColor: '#020617',
-      fillOpacity: 0.58,
-      color: '#38bdf8',
-      weight: 1.5,
-      opacity: 0.45,
+      fillOpacity: 0.62,
+      stroke: false,
       interactive: false
     }).addTo(this.map);
 

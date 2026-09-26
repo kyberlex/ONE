@@ -201,8 +201,16 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
     - Added interactive click behavior: clicking any robot displays an edge telemetry speech bubble above its sprite and opens the FabLab Dual-Track hardware panel.
     - Connected robot fabrication directly to canvas synchronization: building an automation unit in the Dual-Track panel (`panel_dualtrack.js`) immediately spawns the new unit onto the 2D canvas and reduces human chore quotas in real time.
 
-- [ ] **ITEM 11: World Map Viewport Bounds & Soft Twilight Terminator:**
+- [x] **ITEM 11: World Map Viewport Bounds & Soft Twilight Terminator (Completed):**
   - *Requirements:*
     1. **Hide Repeated World Copies:** Prevent Leaflet from tiling/repeating the world map endlessly to the left and right. Clamp viewport to the single canonical central world map using `noWrap: true` on ESRI tile layers (`satelliteLayer`, `physicalLayer`, `referenceLayer`) and enforce strict coordinate bounds `[[-85, -180], [85, 180]]` with clean space/ocean background padding.
     2. **Soft Twilight Terminator (Blur/Gradient vs. Cyan Border):** Eliminate the solid cyan contour line (`color: '#38bdf8'`, `weight: 1.5`) bordering the night shadow on the world map. Replace it with a smooth, atmospheric twilight transition / feathered blur (`stroke: false`, CSS `filter: blur(...)` or SVG gradient mask on `terminatorPane`) so day smoothly blends into twilight and night without artificial hard vectors.
+  - *Implementation:*
+    - Added `noWrap: true` and strict `bounds: [[-85.05112878, -180], [85.05112878, 180]]` to `satelliteLayer`, `physicalLayer`, and `referenceLayer` in [`world_map.js`](app/src/map/world_map.js).
+    - Enforced `maxBounds: [[-85, -180], [85, 180]]` and `maxBoundsViscosity: 1.0` on the Leaflet instance, and calibrated `showWorld()` to fit canonical Earth coordinates `[[-60, -175], [75, 175]]` with clean space padding.
+    - Set deep cosmic space background `#020817` on `#world-leaflet-map` and `.leaflet-container` in [`style.css`](app/src/style.css).
+    - Extended solar terminator longitude bounds from `[-180, 180]` to `[-200, 200]` and `MAX_LAT` to `85.0` in [`solar_terminator.js`](app/src/map/solar_terminator.js) to prevent meridian edge-feathering seams.
+    - Removed cyan stroke border (`stroke: false`, `weight: 0`) from `terminatorLayer` in [`world_map.js`](app/src/map/world_map.js), and applied hardware-accelerated `filter: blur(14px)` on `.leaflet-terminatorPane-pane` in CSS and JS.
+    - Preserved crisp clarity on node markers, mesh transit links, and UI controls in higher panes while achieving a soft astronomical twilight roll-off between day and night.
+
 

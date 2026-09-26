@@ -1732,12 +1732,24 @@ html, body {
 }
 
 /* 2D Leaflet World Map Container */
-#world-leaflet-map {
+#world-leaflet-map,
+.leaflet-container {
   width: 100%;
   height: 100%;
   flex: 1;
-  background: #031525;
+  background-color: #020817 !important;
   z-index: 1;
+}
+
+/* Solar Terminator Atmospheric Twilight Pane (Smooth Day/Night Roll-off) */
+.leaflet-pane.leaflet-terminatorPane-pane {
+  filter: blur(14px);
+  pointer-events: none;
+  will-change: filter;
+}
+
+.leaflet-pane.leaflet-terminatorPane-pane svg {
+  overflow: visible !important;
 }
 
 /* Floating overlay tools on World Map */

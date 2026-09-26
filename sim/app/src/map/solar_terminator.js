@@ -55,16 +55,16 @@ export function isPointInNight(lat, lng, hour = 12, dayOfYear = 80) {
  * Generates Leaflet-compatible polygon vertices for the night hemisphere.
  * Returns array of [lat, lng] pairs.
  */
-export function getNightPolygonCoordinates(hour = 12, dayOfYear = 80, stepDeg = 2) {
+export function getNightPolygonCoordinates(hour = 12, dayOfYear = 80, stepDeg = 1) {
   const deltaDeg = getSolarDeclination(dayOfYear);
   const deltaRad = deltaDeg * DEG2RAD;
   const tanDelta = Math.tan(deltaRad);
   const subLngDeg = getSubsolarLongitude(hour);
 
   const points = [];
-  const MAX_LAT = 84.0; // Strictly within Web Mercator EPSG:3857 limit (85.0511)
-  const minLng = -180;
-  const maxLng = 180;
+  const MAX_LAT = 85.0; // Strictly within Web Mercator EPSG:3857 limit (85.0511)
+  const minLng = -200;  // Extend beyond +/-180 to prevent edge-feathering seams with blur
+  const maxLng = 200;
 
   // Compute latitude for each longitude along the terminator
   const terminatorPoints = [];
