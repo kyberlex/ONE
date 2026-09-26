@@ -88,29 +88,29 @@ export class PanelCitizenController {
     const activityDesc = c.activityDesc || (c.activity ? `Engaged in ${c.activity}` : 'Active in village life');
 
     const statusBadge = c.isPlayer 
-      ? '<span class="status-pill status-player">👑 Tu (Giocatore Locale)</span>'
+      ? `<span class="status-pill status-player">👑 ${t('citizen.status_player', 'You (Local Player)')}</span>`
       : (c.isHuman 
-        ? '<span class="status-pill status-peer">🌐 Pioniere in Rete (Online)</span>'
+        ? `<span class="status-pill status-peer">🌐 ${t('citizen.status_peer', 'Network Pioneer (Online)')}</span>`
         : (c.isChild 
-          ? '<span class="status-pill status-child">🎒 Giovane Pioniere (Allievo)</span>'
+          ? `<span class="status-pill status-child">🎒 ${t('citizen.status_child', 'Young Pioneer (Apprentice)')}</span>`
           : (c.isElder 
-            ? '<span class="status-pill status-elder">🧓 Saggio della Comunità & Mentore</span>'
-            : '<span class="status-pill status-resident">🤝 Residente della Comunità</span>')));
+            ? `<span class="status-pill status-elder">🧓 ${t('citizen.status_elder', 'Community Elder & Mentor')}</span>`
+            : `<span class="status-pill status-resident">🤝 ${t('citizen.status_resident', 'Community Resident')}</span>`)));
 
     const html = `
       <div class="citizen-dossier-layout">
-        <!-- Left: Studio del Personaggio -->
+        <!-- Left: Character Studio -->
         <div class="citizen-3d-box">
           <div class="citizen-3d-badge-header">
             <span class="live-3d-dot"></span>
-            <span>STUDIO DEL PERSONAGGIO</span>
+            <span>${t('citizen.character_studio', 'CHARACTER STUDIO')}</span>
           </div>
           <div id="citizen-3d-canvas-container" class="citizen-3d-canvas-container"></div>
           <div class="citizen-3d-controls">
-            <button id="btn-citizen-auto-rotate" class="btn-prop-toolbar active" title="Attiva/disattiva rotazione">🔄 Rotazione</button>
-            <button id="btn-citizen-reset-cam" class="btn-prop-toolbar" title="Reimposta visuale">🔍 Reimposta</button>
+            <button id="btn-citizen-auto-rotate" class="btn-prop-toolbar active" title="${t('citizen.rotate_toggle_tooltip', 'Toggle auto-rotation')}">${t('citizen.rotate_btn', '🔄 Rotate')}</button>
+            <button id="btn-citizen-reset-cam" class="btn-prop-toolbar" title="${t('citizen.reset_cam_tooltip', 'Reset camera view')}">${t('citizen.reset_cam_btn', '🔍 Reset')}</button>
           </div>
-          <div class="citizen-3d-hint">💡 Trascina per ruotare • Zoom con rotella o dita</div>
+          <div class="citizen-3d-hint">💡 ${t('citizen.drag_hint', 'Drag to rotate • Zoom with wheel or pinch')}</div>
         </div>
 
         <!-- Right: Dossier Details & Civic Invariants -->

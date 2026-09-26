@@ -87,31 +87,42 @@ export const QUICK_PHRASE_CATEGORIES = {
   },
   DEMARCHY: {
     id: 'DEMARCHY',
-    name: '🏛️ Consiglio & Assemblea',
+    name: '🏛️ Sortition Council & Agora',
+    nameKey: 'chat.cat_demarchy',
+    shortName: 'Council',
+    shortNameKey: 'chat.cat_demarchy_short',
     icon: '🏛️',
     phrases: [
       {
         id: 'council_caucus',
-        label: 'Richiesta Parere Consiglio',
-        text: '🏛️ In qualità di membro nel Consiglio dei Cittadini, chiedo il parere di tutti sul dilemma attivo!',
+        label: 'Council Opinion Query',
+        labelKey: 'chat.phrase_council_caucus_label',
+        text: '🏛️ As a member of the Citizen Council, I ask everyone for input on the active dilemma!',
+        textKey: 'chat.phrase_council_caucus_text',
         actionType: null
       },
       {
         id: 'uphold_usufruct',
-        label: 'Difesa Invariante Usufrutto',
-        text: '📜 Promemoria: gli alloggi non occupati tornano al bene comune civico. Zero speculazione.',
+        label: 'Defend Usufruct Invariant',
+        labelKey: 'chat.phrase_uphold_usufruct_label',
+        text: '📜 Reminder: unoccupied dwellings return to the civic commons. Zero real-estate speculation.',
+        textKey: 'chat.phrase_uphold_usufruct_text',
         actionType: null
       },
       {
         id: 'call_mediation',
-        label: 'Mediazione Civica Locale',
-        text: '⚖️ Attrito rilevato nella comunità. Chiedo la verifica al Pannello di Mediazione Civica.',
+        label: 'Civic Mediation Board',
+        labelKey: 'chat.phrase_call_mediation_label',
+        text: '⚖️ Community friction detected. Requesting review by the Civic Mediation Board.',
+        textKey: 'chat.phrase_call_mediation_text',
         actionType: null
       },
       {
         id: 'celebrate_rotation',
-        label: 'Turnazione nel Consiglio',
-        text: '🌿 Grazie ai concittadini uscenti per il loro turno civico. Diamo il benvenuto ai nuovi estratti!',
+        label: 'Council Rotation Handover',
+        labelKey: 'chat.phrase_celebrate_rotation_label',
+        text: '🌿 Thanks to outgoing citizens for their civic rotation. Welcome to the newly drawn sortition members!',
+        textKey: 'chat.phrase_celebrate_rotation_text',
         actionType: null
       }
     ]

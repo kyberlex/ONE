@@ -174,15 +174,15 @@ export class PanelChatController {
             <div class="quick-category-tabs">
               ${Object.values(QUICK_PHRASE_CATEGORIES).map(cat => `
                 <button class="btn-quick-cat ${cat.id === this.activeQuickCategory ? 'active' : ''}" data-cat-id="${cat.id}">
-                  ${cat.icon} ${cat.name.split(' ')[1] || cat.name}
+                  ${cat.icon} ${t(cat.shortNameKey, cat.shortName || cat.name.split(' ')[1] || cat.name)}
                 </button>
               `).join('')}
             </div>
 
             <div class="quick-phrase-chips-grid">
               ${activeCat.phrases.map(qp => `
-                <button class="btn-quick-phrase-chip" data-phrase-id="${qp.id}" title="${qp.text}">
-                  <span class="phrase-label">${qp.label}</span>
+                <button class="btn-quick-phrase-chip" data-phrase-id="${qp.id}" title="${t(qp.textKey, qp.text)}">
+                  <span class="phrase-label">${t(qp.labelKey, qp.label)}</span>
                   ${qp.actionType ? '<span class="action-tag">⚡ ACTION</span>' : ''}
                 </button>
               `).join('')}

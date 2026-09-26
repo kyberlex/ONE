@@ -22,20 +22,20 @@ import { Avatar3DViewer } from './avatar_3d_viewer.js';
 import { getCitizenAppearance } from '../settlement/interior_renderer.js';
 
 const OUTFIT_OPTIONS = [
-  { id: 'F', label: 'Tunica Solarpunk', icon: '🌿' },
-  { id: 'M', label: 'Tuta da Lavoro', icon: '🛠️' }
+  { id: 'F', key: 'passport.outfit_tunic', label: 'Solarpunk Tunic', icon: '🌿' },
+  { id: 'M', key: 'passport.outfit_overalls', label: 'Work Overalls', icon: '🛠️' }
 ];
 
 const ALL_HAIRSTYLES = [
-  { id: 'short', label: 'Corti Classici', icon: '💇' },
-  { id: 'ponytail', label: 'Coda di Cavallo', icon: '🐎' },
-  { id: 'long', label: 'Lunghi Fluenti', icon: '✨' },
-  { id: 'bob', label: 'Caschetto', icon: '💁' },
-  { id: 'bun', label: 'Chignon Alto', icon: '🌸' },
-  { id: 'pigtails', label: 'Doppio Chignon', icon: '👧' },
-  { id: 'messy', label: 'Mossi Spettinati', icon: '🌊' },
-  { id: 'fade', label: 'Sfumati Moderni', icon: '⚡' },
-  { id: 'beard', label: 'Barba Solarpunk', icon: '🧔' }
+  { id: 'short', key: 'passport.hair_short', label: 'Classic Short', icon: '💇' },
+  { id: 'ponytail', key: 'passport.hair_ponytail', label: 'Ponytail', icon: '🐎' },
+  { id: 'long', key: 'passport.hair_long', label: 'Long Flowing', icon: '✨' },
+  { id: 'bob', key: 'passport.hair_bob', label: 'Bob Cut', icon: '💁' },
+  { id: 'bun', key: 'passport.hair_bun', label: 'High Bun', icon: '🌸' },
+  { id: 'pigtails', key: 'passport.hair_pigtails', label: 'Double Buns', icon: '👧' },
+  { id: 'messy', key: 'passport.hair_messy', label: 'Messy Waves', icon: '🌊' },
+  { id: 'fade', key: 'passport.hair_fade', label: 'Modern Fade', icon: '⚡' },
+  { id: 'beard', key: 'passport.hair_beard', label: 'Solarpunk Beard', icon: '🧔' }
 ];
 
 const HAIR_COLORS = [
@@ -210,13 +210,13 @@ export class PanelPassportController {
 
     const outfitButtonsHtml = OUTFIT_OPTIONS.map(o => `
       <button type="button" class="btn-avatar-pill ${gender === o.id ? 'selected' : ''}" data-prefix="${prefix}" data-gender="${o.id}">
-        <span>${o.icon}</span> ${o.label}
+        <span>${o.icon}</span> ${t(o.key, o.label)}
       </button>
     `).join('');
 
     const hairStylesHtml = ALL_HAIRSTYLES.map(h => `
       <button type="button" class="btn-avatar-pill ${activeHairStyle === h.id ? 'selected' : ''}" data-prefix="${prefix}" data-hairstyle="${h.id}">
-        <span>${h.icon}</span> ${h.label}
+        <span>${h.icon}</span> ${t(h.key, h.label)}
       </button>
     `).join('');
 
@@ -240,36 +240,36 @@ export class PanelPassportController {
       <div class="avatar-3d-layout">
         <div class="avatar-3d-viewport-box">
           <div class="avatar-3d-badge-header">
-            <span class="badge-3d-pill">✨ STUDIO PIONIERE</span>
-            <span class="badge-3d-hint">🖱️ Ruota 360° • Zoom</span>
+            <span class="badge-3d-pill">✨ ${t('passport.studio_badge', 'PIONEER STUDIO')}</span>
+            <span class="badge-3d-hint">${t('passport.studio_rotate_hint', '🖱️ Rotate 360° • Zoom')}</span>
           </div>
           <div id="${prefix}-avatar-3d-container" class="avatar-3d-canvas-container"></div>
         </div>
 
         <div class="avatar-3d-controls">
           <div class="custom-control-group">
-            <span class="custom-control-title">Abito & Silhouette:</span>
+            <span class="custom-control-title">${t('passport.outfit_silhouette', 'Outfit & Silhouette:')}</span>
             <div class="btn-pills-row" id="${prefix}-gender-container">
               ${outfitButtonsHtml}
             </div>
           </div>
 
           <div class="custom-control-group">
-            <span class="custom-control-title">Acconciatura:</span>
+            <span class="custom-control-title">${t('passport.hairstyle', 'Hairstyle:')}</span>
             <div class="btn-pills-row" id="${prefix}-hairstyle-container">
               ${hairStylesHtml}
             </div>
           </div>
 
           <div class="custom-control-group">
-            <span class="custom-control-title">Colore Capelli:</span>
+            <span class="custom-control-title">${t('passport.hair_color', 'Hair Color:')}</span>
             <div class="color-swatches-row" id="${prefix}-haircolor-container">
               ${hairColorsHtml}
             </div>
           </div>
 
           <div class="custom-control-group">
-            <span class="custom-control-title">Tonalità Carnagione:</span>
+            <span class="custom-control-title">${t('passport.skin_tone', 'Skin Tone:')}</span>
             <div class="color-swatches-row" id="${prefix}-skintone-container">
               ${skinTonesHtml}
             </div>
@@ -291,7 +291,7 @@ export class PanelPassportController {
       if (hairContainer) {
         hairContainer.innerHTML = ALL_HAIRSTYLES.map(h => `
           <button type="button" class="btn-avatar-pill ${avatarState.hairStyle === h.id ? 'selected' : ''}" data-prefix="${prefix}" data-hairstyle="${h.id}">
-            <span>${h.icon}</span> ${h.label}
+            <span>${h.icon}</span> ${t(h.key, h.label)}
           </button>
         `).join('');
 
@@ -377,30 +377,30 @@ export class PanelPassportController {
           <div class="wizard-emblem-ring">
             <img src="/one-logo-white.svg" alt="O.N.E. Vitruvian Logo" class="wizard-emblem-icon" />
           </div>
-          <h3>Benvenuto in O.N.E. • Rilascio Passaporto del Cittadino</h3>
-          <p class="wizard-subtitle">Nessun account centrale, nessuna password o server esterno. I tuoi dati restano al 100% sul tuo dispositivo.</p>
+          <h3>${t('passport.wizard_title', 'Welcome to O.N.E. • Citizen Passport Issuance')}</h3>
+          <p class="wizard-subtitle">${t('passport.wizard_subtitle', 'No central account, no passwords or external servers. Your data remains 100% on your device.')}</p>
         </div>
 
         <div class="wizard-form">
           <div class="form-group">
             <label for="passport-avatar-name" style="font-weight: 700; color: #f8fafc;">
-              👤 Qual è il tuo nome / soprannome da pioniere?
+              👤 ${t('passport.prompt_name', 'What is your pioneer name / callsign?')}
             </label>
-            <input type="text" id="passport-avatar-name" class="passport-input" placeholder="es. Maya, Elena, Sol_Builder, Marco..." maxlength="24" value="" autofocus />
-            <span class="form-hint">Unico e salvato localmente, senza registrazione o e-mail esterne.</span>
+            <input type="text" id="passport-avatar-name" class="passport-input" placeholder="${t('passport.placeholder_name', 'e.g. Maya, Elena, Sol_Builder, Marco...')}" maxlength="24" value="" autofocus />
+            <span class="form-hint">${t('passport.hint_name', 'Unique and saved locally, with no registration or external emails.')}</span>
           </div>
 
-          <!-- Studio Pioniere Section -->
+          <!-- Pioneer Studio Section -->
           <div class="form-group avatar-3d-customizer-section">
             <label style="font-weight: 700; color: #f8fafc; margin-bottom: 8px; display: block;">
-              🎨 Aspetto del Tuo Pioniere (Studio Personaggio):
+              🎨 ${t('passport.appearance_label', 'Your Pioneer Appearance (Character Studio):')}
             </label>
             ${this.getCustomizerControlsHtml(this.wizardAvatar, 'wiz')}
           </div>
 
           <div class="form-group">
             <label style="font-weight: 700; color: #f8fafc;">
-              🛠️ Scegli la tua vocazione o mestiere iniziale:
+              🛠️ ${t('passport.vocation_label', 'Choose your initial vocation or trade:')}
             </label>
             <div class="vocations-grid-select">
               ${vocationsHtml}
@@ -412,21 +412,21 @@ export class PanelPassportController {
             <div class="polytech-header">
               <span class="polytech-icon">🎓</span>
               <div class="polytech-title-wrap">
-                <h4>Accademia Civica & Apprendimento Continuo</h4>
-                <span class="polytech-sub">Evoluzione delle Competenze</span>
+                <h4>${t('passport.polytech_title', 'Civic Academy & Continuous Learning')}</h4>
+                <span class="polytech-sub">${t('passport.polytech_sub', 'Skills Evolution')}</span>
               </div>
             </div>
             <p class="polytech-text">
-              La vocazione iniziale <strong>non è vincolante né definitiva</strong>. In O.N.E. puoi cambiare mestiere, apprendere nuove abilità e formarti quando vuoi presso l'<strong>Accademia Politecnica</strong> della comunità.
+              ${t('passport.polytech_desc', 'The initial vocation is <strong>not binding or permanent</strong>. In O.N.E. you can switch crafts, learn new skills, and train whenever you wish at the community <strong>Polytechnic Academy</strong>.')}
             </p>
           </div>
 
           <div class="wizard-actions" style="margin-top: 10px;">
             <button id="btn-generate-passport" class="btn-primary btn-generate-keys">
-              ⚡ Crea Identità & Emetti Passaporto
+              ⚡ ${t('passport.btn_create_identity', 'Create Identity & Issue Passport')}
             </button>
             <button id="btn-show-import" class="btn-secondary">
-              📥 Ho già un passaporto (Importa token da altro dispositivo)
+              📥 ${t('passport.btn_has_passport', 'I already have a passport (Import token from another device)')}
             </button>
           </div>
         </div>
@@ -466,7 +466,7 @@ export class PanelPassportController {
           if (hairContainer) {
             hairContainer.innerHTML = ALL_HAIRSTYLES.map(h => `
               <button type="button" class="btn-avatar-pill ${this.wizardAvatar.hairStyle === h.id ? 'selected' : ''}" data-prefix="wiz" data-hairstyle="${h.id}">
-                <span>${h.icon}</span> ${h.label}
+                <span>${h.icon}</span> ${t(h.key, h.label)}
               </button>
             `).join('');
           }
@@ -498,7 +498,7 @@ export class PanelPassportController {
         const vocation = selectedRadio ? selectedRadio.value : 'farmer';
 
         generateBtn.disabled = true;
-        generateBtn.innerHTML = `<span>⏳ Creazione Identità & Chiavi Locali…</span>`;
+        generateBtn.innerHTML = `<span>⏳ ${t('passport.generating_identity', 'Generating Identity & Local Keys…')}</span>`;
 
         try {
           const { passport, privateKeyJwk } = await CitizenPassportManager.issueSovereignPassport(name, vocation, this.wizardAvatar);
@@ -712,29 +712,29 @@ export class PanelPassportController {
 
           <div class="passport-details-grid">
             <div class="passport-detail-item">
-              <span class="detail-label">ID PASSAPORTO CITTADINO</span>
+              <span class="detail-label">${t('passport.label_citizen_id', 'CITIZEN PASSPORT ID')}</span>
               <span class="detail-value mono">${p.id}</span>
             </div>
             <div class="passport-detail-item">
-              <span class="detail-label">CHIAVE UNICA DISPOSITIVO</span>
+              <span class="detail-label">${t('passport.label_device_key', 'UNIQUE DEVICE KEY')}</span>
               <span class="detail-value mono text-emerald">${p.shortFingerprint}</span>
             </div>
             <div class="passport-detail-item">
-              <span class="detail-label">DATA DI EMISSIONE</span>
+              <span class="detail-label">${t('passport.label_issue_date', 'ISSUE DATE')}</span>
               <span class="detail-value">${new Date(p.timestampMs).toLocaleDateString()}</span>
             </div>
             <div class="passport-detail-item">
-              <span class="detail-label">ALLOGGIO IN USUFRUTTO</span>
-              <span class="detail-value">Dimora #1 • Detroit Commons</span>
+              <span class="detail-label">${t('passport.label_usufruct_pod', 'USUFRUCT DWELLING')}</span>
+              <span class="detail-value">${t('passport.val_dwelling_default', 'Pod #1 • Detroit Commons')}</span>
             </div>
           </div>
 
           <div class="passport-token-box">
-            <span class="token-box-label">Codice Personale del Cittadino (Ripristinabile senza server):</span>
+            <span class="token-box-label">${t('passport.label_token_box', 'Citizen Personal Code (Zero-server restorable):')}</span>
             <div class="token-copy-row">
               <input type="text" readonly class="token-copy-input" value="${p.token}" id="passport-token-val" />
-              <button id="btn-copy-token" class="btn-copy-token" title="Copia negli appunti">
-                📋 Copia
+              <button id="btn-copy-token" class="btn-copy-token" title="${t('passport.copy_clipboard_tooltip', 'Copy to clipboard')}">
+                📋 ${t('passport.btn_copy', 'Copy')}
               </button>
             </div>
           </div>
@@ -743,44 +743,44 @@ export class PanelPassportController {
         <!-- Multi-Device P2P Pairing Section -->
         <div class="p2p-sync-section">
           <div class="p2p-header">
-            <h4>📲 Sincronizzazione Dispositivi con QR Code</h4>
+            <h4>${t('passport.p2p_sync_title', '📲 Multi-Device QR Code Sync')}</h4>
             <span class="badge badge-success">ZERO-SERVER</span>
           </div>
           <div class="p2p-pairing-body">
             <div class="p2p-qr-large">
               ${qrSvg}
               <div class="qr-instructions">
-                <strong>Inquadra con la fotocamera del telefono o tablet:</strong>
-                <span>Associazione diretta e immediata: clona il profilo senza digitare codici.</span>
+                <strong>${t('passport.qr_scan_prompt', 'Scan with phone or tablet camera:')}</strong>
+                <span>${t('passport.qr_scan_desc', 'Direct instant pairing: clones profile without typing codes.')}</span>
               </div>
             </div>
 
             <div class="p2p-mesh-status-card">
-              <h5>Archiviazione Locale & Sicurezza</h5>
+              <h5>${t('passport.storage_security_title', 'Local Storage & Security')}</h5>
               <div class="db-stat-row">
-                <span>Memoria Locale:</span>
+                <span>${t('passport.label_storage', 'Local Storage:')}</span>
                 <strong class="text-emerald">IndexedDB (60 FPS)</strong>
               </div>
               <div class="db-stat-row">
-                <span>Sicurezza:</span>
-                <strong>Crittografia Locale del Dispositivo</strong>
+                <span>${t('passport.label_security', 'Security:')}</span>
+                <strong>${t('passport.val_security', 'Device Local Encryption')}</strong>
               </div>
               <div class="db-stat-row">
-                <span>Azioni Registrate:</span>
-                <strong id="db-event-count">${eventCount} azioni registrate</strong>
+                <span>${t('passport.label_actions', 'Logged Actions:')}</span>
+                <strong id="db-event-count">${eventCount} ${t('passport.actions_recorded', 'actions recorded')}</strong>
               </div>
               <div class="db-stat-row">
-                <span>Connessione Diretta Rete:</span>
+                <span>${t('passport.label_direct_connection', 'Direct Network Mesh:')}</span>
                 <span id="p2p-mesh-status-val" class="status-indicator-ready">
                   ${this.p2pMesh && this.p2pMesh.getStatus().peerCount > 0 
-                    ? `● Attiva (${this.p2pMesh.getStatus().peerCount} connession${this.p2pMesh.getStatus().peerCount > 1 ? 'i' : 'e'})` 
-                    : '● Pronta (Rete Locale / Wi-Fi)'}
+                    ? `● ${t('passport.status_active', 'Active')} (${this.p2pMesh.getStatus().peerCount} ${t('passport.connections', 'connections')})` 
+                    : `● ${t('passport.status_ready', 'Ready (Local Mesh / Wi-Fi)')}`}
                 </span>
               </div>
 
               <!-- Signed Event Deltas Mini Feed -->
               <div class="signed-events-feed">
-                <div class="feed-header">Ultime azioni registrate:</div>
+                <div class="feed-header">${t('passport.recent_actions', 'Recent logged actions:')}</div>
                 <div class="feed-list">
                   ${eventsListHtml}
                 </div>
@@ -789,16 +789,16 @@ export class PanelPassportController {
               <!-- WebRTC Air-Gapped Handshake Drawer -->
               <div class="webrtc-handshake-box">
                 <div class="webrtc-box-header">
-                  <span>📡 Canale Diretto Senza Server</span>
+                  <span>${t('passport.direct_channel', '📡 Zero-Server Direct Channel')}</span>
                   <button id="btn-create-webrtc-ticket" class="btn-action-small">
-                    🎫 Crea Invito
+                    🎫 ${t('passport.btn_create_ticket', 'Create Ticket')}
                   </button>
                 </div>
                 <div id="webrtc-ticket-display" class="webrtc-ticket-display hidden"></div>
                 <div class="webrtc-input-row">
-                  <input type="text" id="input-webrtc-remote" class="webrtc-input" placeholder="Incolla invito ONE_OFFER: o ONE_ANSWER:..." />
+                  <input type="text" id="input-webrtc-remote" class="webrtc-input" placeholder="${t('passport.placeholder_ticket', 'Paste invite ONE_OFFER: or ONE_ANSWER:...')}" />
                   <button id="btn-accept-webrtc-remote" class="btn-action-small">
-                    🔗 Connetti
+                    🔗 ${t('passport.btn_connect', 'Connect')}
                   </button>
                 </div>
                 <div id="webrtc-feedback-msg" class="webrtc-feedback hidden"></div>
@@ -806,23 +806,23 @@ export class PanelPassportController {
 
               <div class="p2p-action-btns">
                 <button id="btn-sign-test" class="btn-action-small">
-                  ✍️ Prova Firma Digitale
+                  ✍️ ${t('passport.btn_test_signature', 'Test Digital Signature')}
                 </button>
                 <button id="btn-p2p-sync-now" class="btn-action-small btn-secondary">
-                  🔄 Sincronizza Ora
+                  🔄 ${t('passport.btn_sync_now', 'Sync Now')}
                 </button>
                 <button id="btn-switch-passport" class="btn-action-small btn-secondary">
-                  🔄 Cambia Pioniere
+                  🔄 ${t('passport.btn_switch_pioneer', 'Switch Pioneer')}
                 </button>
               </div>
 
               <!-- Danger Zone: Right to Oblivion / Sovereign Departure -->
               <div class="passport-danger-zone">
-                <button id="btn-burn-identity" class="btn-burn-identity" title="Diritto all'Oblio">
-                  🔥 Elimina Dati & Riparti da Zero (Diritto all'Oblio)
+                <button id="btn-burn-identity" class="btn-burn-identity" title="${t('passport.tooltip_oblivion', 'Right to Oblivion')}">
+                  🔥 ${t('passport.btn_burn_identity', 'Purge Data & Reset (Right to Oblivion)')}
                 </button>
                 <span class="danger-zone-hint">
-                  Distrugge in modo sicuro e definitivo le chiavi locali da questo dispositivo e restituisce la dimora al bene comune.
+                  ${t('passport.burn_hint', 'Securely and permanently destroys local keys from this device and returns dwelling to the commons.')}
                 </span>
               </div>
             </div>

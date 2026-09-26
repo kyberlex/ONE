@@ -58,27 +58,37 @@ const dictionaries = {
 
 class I18nManager {
   constructor() {
-    // English-only mode: all translations hidden/disabled until game is finalized
+    let saved = 'en';
     try {
-      localStorage.removeItem('oasis_lang');
+      saved = localStorage.getItem('oasis_lang') || 'en';
     } catch (e) {
       // ignore
     }
-    this.currentLang = 'en';
+    this.currentLang = dictionaries[saved] ? saved : 'en';
     this.listeners = [];
   }
 
   getLanguage() {
-    return 'en';
+    return this.currentLang || 'en';
   }
 
   setLanguage(langCode) {
-    // Reserved for future release when string_ids are extracted
-    this.currentLang = 'en';
+    if (dictionaries[langCode]) {
+      this.currentLang = langCode;
+      try {
+        localStorage.setItem('oasis_lang', langCode);
+      } catch (e) {
+        // ignore
+      }
+      this.notifyListeners();
+    }
   }
 
   t(key, fallback = '') {
-    // Strictly English dictionary lookup
+    const dict = dictionaries[this.currentLang] || dictionaries.en;
+    if (dict && dict[key]) {
+      return dict[key];
+    }
     if (dictionaries.en && dictionaries.en[key]) {
       return dictionaries.en[key];
     }

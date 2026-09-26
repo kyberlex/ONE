@@ -110,12 +110,12 @@ export class SettlementRenderer {
     // 1. Central Solarpunk Agora
     this.agora = {
       id: 'agora',
-      name: 'Agorà Centrale & Assemblea Civica',
+      name: t('settlement.agora_name', 'Central Agora & Civic Assembly'),
       type: 'AGORA',
       x: 0,
       y: 0,
       radius: 65,
-      desc: 'Padiglione dell\'assemblea democratica dove i cittadini si riuniscono per deliberare.'
+      desc: t('settlement.agora_desc', 'Democratic assembly pavilion where citizens gather to deliberate.')
     };
 
     // 2. Core Infrastructures & Intergenerational Campus (Zoned spatial layout)
@@ -651,7 +651,7 @@ export class SettlementRenderer {
         x: this.agora.x + (Math.random() - 0.5) * 55,
         y: this.agora.y + (Math.random() - 0.5) * 55,
         activity: 'assembly',
-        activityDesc: 'Partecipazione all\'Assemblea Civica',
+        activityDesc: t('settlement.activity_assembly', 'Participating in the Civic Assembly'),
         pause: 220
       };
     }
@@ -2449,7 +2449,7 @@ export class SettlementRenderer {
     // Label tag
     ctx.fillStyle = '#e2e8f0';
     ctx.font = '600 11px system-ui, sans-serif';
-    ctx.fillText('🏛️ Agorà & Assemblea Civica', 0, this.agora.radius + 16);
+    ctx.fillText(t('settlement.agora_tag', '🏛️ Agora & Civic Assembly'), 0, this.agora.radius + 16);
 
     ctx.restore();
   }
@@ -3516,69 +3516,73 @@ export class SettlementRenderer {
         title = `${e.icon} ${e.name}`;
         titleColor = '#38bdf8';
         strokeColor = '#06b6d4';
-        subtitle = `🤖 Unità Cibernetica Autonoma • Dominio: ${e.domain.toUpperCase()}`;
-        detail = `⚡ Compito: ${e.taskDesc} | ⏱️ Lavoro Umano Cancellato: -${e.hoursCancelled}h/giorno`;
-        hint = `Fabbricato nel FabLab con hardware aperto e automazione Edge SCADA. Zero debito, zero lavoro forzato.`;
+        subtitle = `🤖 ${t('settlement.robot_unit', 'Autonomous Cybernetic Unit')} • ${t('settlement.domain', 'Domain')}: ${e.domain.toUpperCase()}`;
+        detail = `⚡ ${t('settlement.task', 'Task')}: ${e.taskDesc} | ⏱️ ${t('settlement.human_labor_cancelled', 'Human Labor Cancelled')}: -${e.hoursCancelled}${t('settlement.hours_per_day', 'h/day')}`;
+        hint = t('settlement.robot_hint', 'Fabricated in the FabLab with open hardware and Edge SCADA automation. Zero debt, zero forced labor.');
       } else if (e.isPlayer) {
-        title = '👑 Tu (Pioniere Locale) — Giocatore O.N.E.';
+        title = t('settlement.player_title', '👑 You (Local Pioneer) — O.N.E. Player');
         titleColor = '#fbbf24';
         strokeColor = '#fbbf24';
         const profile = PlayerProfileManager.getProfile();
         const voc = e.vocation || COMMUNITY_VOCATIONS[0];
-        subtitle = `Vocazione: ${voc.icon} ${voc.defaultName} (${voc.multiplier}x moltiplicatore lavoro)`;
+        const vocName = voc.roleKey ? t(voc.roleKey, voc.defaultName) : voc.defaultName;
+        subtitle = `${t('settlement.vocation', 'Vocation')}: ${voc.icon} ${vocName} (${voc.multiplier}x ${t('settlement.labor_multiplier', 'labor multiplier')})`;
         detail = profile 
-          ? `🏡 Alloggio Primario in Usufrutto #${profile.dwellingNumber} (Blocco Sabbatico Attivo)` 
-          : `⚠️ Nessun alloggio reclamato (Clicca su qualsiasi alloggio libero per reclamarlo in usufrutto!)`;
+          ? `🏡 ${t('settlement.primary_dwelling_active', 'Primary Usufruct Dwelling')} #${profile.dwellingNumber} (${t('settlement.sabbatical_lock_active', 'Sabbatical Lock Active')})` 
+          : `⚠️ ${t('settlement.no_dwelling_claimed', 'No dwelling claimed (Click on any vacant dwelling to claim it in usufruct!)')}`;
       } else if (e.isHuman) {
-        title = `🌐 ${e.name} — Pioniere Connesso (In Rete)`;
+        title = `🌐 ${e.name} — ${t('settlement.connected_pioneer', 'Connected Pioneer (Online)')}`;
         titleColor = '#38bdf8';
         strokeColor = '#38bdf8';
         const voc = e.vocation || COMMUNITY_VOCATIONS[0];
-        subtitle = `Vocazione: ${voc.icon} ${voc.defaultName} • Partecipante attivo della comunità`;
-        detail = `⚡ Connessione locale attiva e verificata. Contribuisce in tempo reale.`;
+        const vocName = voc.roleKey ? t(voc.roleKey, voc.defaultName) : voc.defaultName;
+        subtitle = `${t('settlement.vocation', 'Vocation')}: ${voc.icon} ${vocName} • ${t('settlement.active_participant', 'Active community participant')}`;
+        detail = t('settlement.mesh_verified', '⚡ Local mesh connection active and verified. Contributing in real-time.');
       } else if (e.isChild) {
-        title = `🎒 ${e.name} — Giovane Pioniere (Età ${e.age || 8})`;
+        title = `🎒 ${e.name} — ${t('settlement.young_pioneer', 'Young Pioneer')} (${t('settlement.age', 'Age')} ${e.age || 8})`;
         titleColor = '#f43f5e';
         strokeColor = '#f43f5e';
-        subtitle = `Scuola del Bosco & Educazione Comunitaria • 0h di Obbligo di Lavoro`;
-        detail = `Assistenza incondizionata al 100% garantita dalla Costituzione di O.N.E. (Art. 5.3 & 5.4).`;
+        subtitle = t('settlement.forest_school', 'Forest School & Community Education • 0h Labor Obligation');
+        detail = t('settlement.child_care_guaranteed', '100% unconditional care guaranteed by the O.N.E. Constitution (Art. 5.3 & 5.4).');
       } else if (e.isElder) {
-        title = `🧓 ${e.name} — Custode della Saggezza & Mentore`;
+        title = `🧓 ${e.name} — ${t('settlement.elder_title', 'Wisdom Keeper & Mentor')}`;
         titleColor = '#cbd5e1';
         strokeColor = '#cbd5e1';
         const voc = e.vocation || {};
-        subtitle = `${voc.defaultName || 'Residente Senior'} • Spazio Intergenerazionale & Focolare`;
-        detail = `Esonero da turni gravosi; guida e forma gli apprendisti (+20% rendimento collettivo).`;
+        const vocName = voc.roleKey ? t(voc.roleKey, voc.defaultName || 'Senior Resident') : (voc.defaultName || 'Senior Resident');
+        subtitle = `${vocName} • ${t('settlement.elder_subtitle', 'Intergenerational Space & Hearth')}`;
+        detail = t('settlement.elder_detail', 'Exemption from heavy chores; mentors and trains apprentices (+20% collective yield).');
       } else if (e.isHuman === false) {
-        title = `🤝 ${e.name} — Residente della Comunità`;
+        title = `🤝 ${e.name} — ${t('settlement.community_resident', 'Community Resident')}`;
         titleColor = '#10b981';
         strokeColor = '#10b981';
         const voc = e.vocation || COMMUNITY_VOCATIONS[0];
-        subtitle = `Vocazione: ${voc.icon} ${voc.defaultName} • Turnazione Civica`;
-        detail = `Cittadino attivo nel mantenimento dei flussi termodinamici di base.`;
+        const vocName = voc.roleKey ? t(voc.roleKey, voc.defaultName) : voc.defaultName;
+        subtitle = `${t('settlement.vocation', 'Vocation')}: ${voc.icon} ${vocName} • ${t('settlement.civic_rotation', 'Civic Rotation')}`;
+        detail = t('settlement.resident_detail', 'Active citizen maintaining baseline thermodynamic flows.');
       } else if (e.dwellingType) {
         strokeColor = e.isPlayerHome ? '#fbbf24' : (e.isOccupied ? '#10b981' : '#38bdf8');
         titleColor = e.isPlayerHome ? '#fbbf24' : '#f8fafc';
-        title = e.isPlayerHome ? `👑 La Tua Dimora in Usufrutto (#${e.number})` : `🏡 Alloggio #${e.number}: ${e.dwellingType}`;
+        title = e.isPlayerHome ? `👑 ${t('settlement.your_dwelling', 'Your Usufruct Dwelling')} (#${e.number})` : `🏡 ${t('settlement.dwelling_num', 'Dwelling')} #${e.number}: ${e.dwellingType}`;
         if (e.isOccupied) {
           const occRole = e.occupant.roleKey ? t(e.occupant.roleKey, e.occupant.role) : e.occupant.role;
           const occIcon = e.occupant.icon || '👤';
-          subtitle = `Occupante: ${e.occupant.name} • ${occIcon} ${occRole}`;
+          subtitle = `${t('settlement.occupant', 'Occupant')}: ${e.occupant.name} • ${occIcon} ${occRole}`;
           const isNight = this.sim ? (this.sim.currentHour >= 21 || this.sim.currentHour < 6) : false;
           detail = isNight 
-            ? `😴 Riposo notturno nell'alloggio (Ciclo Notte)` 
-            : `Turno: ${e.occupant.dailyHours}h/giorno (${e.occupant.multiplier || 1.0}x credito lavoro)`;
+            ? `😴 ${t('settlement.night_rest', 'Night rest in dwelling (Night Cycle)')}` 
+            : `${t('settlement.shift', 'Shift')}: ${e.occupant.dailyHours}${t('settlement.hours_per_day', 'h/day')} (${e.occupant.multiplier || 1.0}x ${t('settlement.labor_credit', 'labor credit')})`;
         } else {
-          subtitle = `🔑 ALLOGGIO CIVICO LIBERO — Clicca per Reclamarlo in Usufrutto`;
-          detail = `Alloggio gratuito garantito per nascita e partecipazione dalla Costituzione.`;
+          subtitle = `🔑 ${t('settlement.vacant_dwelling_title', 'VACANT CIVIC DWELLING — Click to Claim in Usufruct')}`;
+          detail = t('settlement.vacant_dwelling_detail', 'Free housing guaranteed by birth and participation under the Constitution.');
         }
       } else {
         // Infrastructure / Agora Card
         titleColor = '#38bdf8';
         strokeColor = '#38bdf8';
         title = e.name;
-        subtitle = e.desc || 'Struttura comune operativa.';
-        hint = 'Clicca per esaminare automazioni e flussi termodinamici.';
+        subtitle = e.desc || t('settlement.infra_operational', 'Operational community structure.');
+        hint = t('settlement.infra_hint', 'Click to inspect automations and thermodynamic flows.');
       }
 
       // Measure and wrap lines dynamically

@@ -8,6 +8,7 @@
  */
 
 import { PlayerProfileManager } from '../engine/player_profile.js';
+import { t } from '../i18n/index.js';
 
 export class InteriorRenderer {
   /**
@@ -391,20 +392,20 @@ export class InteriorRenderer {
 
     } else if (type === 'AGORA') {
       floorType = 'stone';
-      roomTitle = '🏛️ Agorà Centrale & Assemblea Civica';
+      roomTitle = t('interior.agora_civic_assembly', '🏛️ Central Agora & Civic Assembly');
 
       props.push({
         id: 'speaker-podium',
         type: 'PODIUM',
-        name: '🎙️ Rostro dell\'Assemblea dei Cittadini',
-        desc: 'Podio aperto dove qualsiasi cittadino o ospite può presentare proposte alla comunità.',
+        name: t('interior.podium_name', '🎙️ Citizen Assembly Rostrum'),
+        desc: t('interior.podium_desc', 'Open speaking podium where any citizen or guest may present proposals to the community.'),
         x: 0, y: -20, w: 75, h: 50
       });
       props.push({
         id: 'sortition-kleroterion',
         type: 'KLEROTERION',
-        name: '🏺 Urna per il Sorteggio Civico',
-        desc: 'Dispositivo meccanico per l\'estrazione casuale e trasparente dei cittadini nel consiglio.',
+        name: t('interior.sortition_urn_name', '🏺 Civic Sortition Kleroterion'),
+        desc: t('interior.sortition_urn_desc', 'Mechanical device for transparent random sortition of citizens into the council.'),
         x: -90, y: -20, w: 45, h: 55
       });
       props.push({
