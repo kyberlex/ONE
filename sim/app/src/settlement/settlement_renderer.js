@@ -15,6 +15,7 @@ import { COMMUNITY_VOCATIONS, getVocationById } from '../data/vocations.js';
 import { PlayerProfileManager } from '../engine/player_profile.js';
 import { t } from '../i18n/index.js';
 import { InteriorRenderer, getCitizenAppearance } from './interior_renderer.js';
+import { RobotManager } from './robot_manager.js';
 
 export class SettlementRenderer {
 
@@ -66,6 +67,9 @@ export class SettlementRenderer {
     this.setupResize();
     this.setupInteractions();
     this.buildSettlementLayout();
+
+    // Autonomous Robots & Cybernetic Machinery
+    this.robotManager = new RobotManager(this);
   }
 
   showCitizenSpeechBubble(citizenName, text, durationMs = 6000) {
@@ -798,7 +802,11 @@ export class SettlementRenderer {
       const clicked = this.findEntityAt(worldPos.x, worldPos.y);
 
       if (clicked) {
-        if (clicked.isPlayer || clicked.isHuman !== undefined) {
+        if (clicked.isRobot) {
+          this.showCitizenSpeechBubble(clicked.name, `${clicked.icon} [Telemetry] ${clicked.taskDesc} (-${clicked.hoursCancelled}h labor)`);
+          const fablab = this.infrastructures.find(i => i.type === 'FABLAB');
+          if (fablab) this.onSelectBuilding(fablab);
+        } else if (clicked.isPlayer || clicked.isHuman !== undefined) {
           this.onSelectCitizen(clicked);
         } else if (clicked.dwellingType) {
           this.onSelectDwelling(clicked);
@@ -1865,6 +1873,12 @@ export class SettlementRenderer {
       if (dist <= 16) return c;
     }
 
+    // 1.5 Check Autonomous Working Robots
+    if (this.robotManager) {
+      const robot = this.robotManager.findRobotAt(x, y);
+      if (robot) return robot;
+    }
+
     // 2. Check Dwellings
     for (const d of this.dwellings) {
       const dist = Math.hypot(x - d.x, y - d.y);
@@ -1964,6 +1978,11 @@ export class SettlementRenderer {
     // Living interior simulation (citizens entering, deliberating, and exiting)
     if (this.activeInterior) {
       this.updateInteriorSimulation(dt, simSpeed);
+    }
+
+    // Autonomous Working Robots & Cybernetic Machinery kinematics
+    if (this.robotManager) {
+      this.robotManager.update(dt, simSpeed);
     }
 
     // Keep player avatar vocation & appearance reactive to profile
@@ -2155,8 +2174,13 @@ export class SettlementRenderer {
     // 7. Render Particles (Smoke, Sparks)
     this.renderParticles(ctx);
 
-    // 8. Render Citizens / Pioneers
+    // 7.5 Render Autonomous Working Robots & Cybernetic Machinery
     const isNight = this.sim ? (typeof this.sim.isNight === 'boolean' ? this.sim.isNight : (this.sim.localHour >= 21 || this.sim.localHour < 6)) : false;
+    if (this.robotManager) {
+      this.robotManager.render(ctx, isNight);
+    }
+
+    // 8. Render Citizens / Pioneers
     for (const c of this.citizens) {
       if (isNight && c.id !== 'avatar-npc-10' && !c.isPlayer) {
         // Citizens sleeping inside their dwellings are not wandering outdoors at night!
@@ -3488,7 +3512,14 @@ export class SettlementRenderer {
       let detail = '';
       let hint = '';
 
-      if (e.isPlayer) {
+      if (e.isRobot) {
+        title = `${e.icon} ${e.name}`;
+        titleColor = '#38bdf8';
+        strokeColor = '#06b6d4';
+        subtitle = `🤖 Unità Cibernetica Autonoma • Dominio: ${e.domain.toUpperCase()}`;
+        detail = `⚡ Compito: ${e.taskDesc} | ⏱️ Lavoro Umano Cancellato: -${e.hoursCancelled}h/giorno`;
+        hint = `Fabbricato nel FabLab con hardware aperto e automazione Edge SCADA. Zero debito, zero lavoro forzato.`;
+      } else if (e.isPlayer) {
         title = '👑 Tu (Pioniere Locale) — Giocatore O.N.E.';
         titleColor = '#fbbf24';
         strokeColor = '#fbbf24';

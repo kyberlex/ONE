@@ -66,11 +66,11 @@ export class OneNode {
 
     // Automated Robots (FabLab tech tree)
     this.robots = {
-      esp32Valves: { name: 'ESP32 Smart Irrigation Valves', count: 0, hoursCancelled: 2, domain: 'agriculture' },
-      farmRover: { name: 'Autonomous Agro-Rover (Seeding/Weeding)', count: 0, hoursCancelled: 4, domain: 'agriculture' },
-      mpptOptimizer: { name: 'SCADA Microgrid Auto-Balancer', count: 0, hoursCancelled: 3, domain: 'facilities' },
-      cleaningBot: { name: 'Common House Sanitization Bot', count: 0, hoursCancelled: 2, domain: 'care' },
-      cncSorter: { name: 'FabLab Shredder & Sorter Arm', count: 0, hoursCancelled: 4, domain: 'workshop' }
+      esp32Valves: { name: 'ESP32 Smart Irrigation Valves', count: config.robots?.esp32Valves?.count ?? 1, hoursCancelled: 2, domain: 'agriculture' },
+      farmRover: { name: 'Autonomous Agro-Rover (Seeding/Weeding)', count: config.robots?.farmRover?.count ?? 1, hoursCancelled: 4, domain: 'agriculture' },
+      mpptOptimizer: { name: 'SCADA Microgrid Auto-Balancer', count: config.robots?.mpptOptimizer?.count ?? 1, hoursCancelled: 3, domain: 'facilities' },
+      cleaningBot: { name: 'Common House Sanitization Bot', count: config.robots?.cleaningBot?.count ?? 0, hoursCancelled: 2, domain: 'care' },
+      cncSorter: { name: 'FabLab Shredder & Sorter Arm', count: config.robots?.cncSorter?.count ?? 0, hoursCancelled: 4, domain: 'workshop' }
     };
 
     // Agro-Ecological Resilience Defenses (Meteorological Hazard Mitigations)

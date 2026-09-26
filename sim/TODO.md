@@ -186,6 +186,18 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
     - Updated hex map legacy debt badges to render dynamically with the active node's currency symbol.
     - Enhanced the HUD threat meter with an active emergency hardware reserve tooltip.
 
-- [ ] **ITEM 10: Operational Autonomous Robots & Cybernetic Machinery (Living Canvas)**
-  - *Scope:* Bring the unlocked robotics tech-tree to life directly on the 2D canvas with animated working robots (Agro-Drones, Autonomous Rovers, FabLab Cobots) executing chores and visibly reducing compulsory human labor shifts.
+- [x] **ITEM 10: Operational Autonomous Robots & Cybernetic Machinery (Living Canvas) (Completed):**
+  - *Requirement:* Bring the unlocked robotics tech-tree to life directly on the 2D Canvas village with animated working robots (Agro-Drones, Autonomous Rovers, SCADA Crawlers, FabLab Cobots) executing chores and visibly reducing compulsory human labor shifts.
+  - *Implementation:*
+    - Created modular [`RobotManager`](app/src/settlement/robot_manager.js) adhering to modularity constraints (Rule 6 in `PROJECT_RULES.md`).
+    - Implemented 5 distinct cybernetic autonomous robot models with vector Canvas 2D graphics, kinematics, and particle emissions:
+      1. **Autonomous Agro-Rover Mark II (`farmRover` 🚜):** 4-wheel rover with rotating spokes, headlights, oscillating laser weed scanner, and green leaf/soil particles patrolling the greenhouse crop beds (-4h compulsory human labor/day).
+      2. **Smart Aeroponic Mist Drone (`esp32Valves` 🛸):** 4-rotor quadcopter with altitude hover bobbing, blinking cyan telemetry strobe, and downward ultrasonic micro-misting aerosol spray (-2h human labor/day).
+      3. **SCADA Microgrid Auto-Balancer (`mpptOptimizer` ⚡):** Tracked crawler with caterpillar treads, 360° rotating LiDAR turret, and amber scanning beam patrolling solar panel racks (-3h human labor/day).
+      4. **Common House Sanitization Bot (`cleaningBot` 🧼):** Autonomous dome droid with UV-C purple disinfection floor glow, expressive cybernetic digital eyes `(•‿•)`, patrolling the inner circular boulevard (-2h human labor/day).
+      5. **FabLab Shredder & Sorter Cobot Arm (`cncSorter` 🦾):** Articulated 2-segment mechanical robotic arm with pneumatic claw picking scrap pellets and loading the recycling shredder with welding spark particles (-4h human labor/day).
+    - Initialized node starter counts (`node.js`) to provide immediate cybernetic life to Detroit Delray on canvas, while keeping FabLab fabrication available for scaling.
+    - Integrated raycast hover detection: hovering over any robot triggers a dashed cyan reticle and renders a responsive glassmorphic HUD card showing classification, operating domain, active task, human labor hours cancelled, and open-hardware guarantees.
+    - Added interactive click behavior: clicking any robot displays an edge telemetry speech bubble above its sprite and opens the FabLab Dual-Track hardware panel.
+    - Connected robot fabrication directly to canvas synchronization: building an automation unit in the Dual-Track panel (`panel_dualtrack.js`) immediately spawns the new unit onto the 2D canvas and reduces human chore quotas in real time.
 
