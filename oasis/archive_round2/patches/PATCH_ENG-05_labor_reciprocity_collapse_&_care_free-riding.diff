@@ -1,0 +1,72 @@
+### I. EXECUTIVE SUMMARY & VULNERABILITY AUDIT
+
+* **Classification**: `SV-3 (Moderate Operational Friction)`
+* **Vector Identified**: Caregiver Exemption Exploitation & Cross-Watershed Rotational Free-Riding via Article 5.6.
+* **Failure Mode**: Article 5.6 previously granted *ipso jure* civic rotational labor exemptions for family and community caregiving without codifying statutory dependent-to-caregiver ratios or empirical clinical impairment thresholds. Cohesive residential or kin factions were thus able to assign multiple able-bodied adults as full-time caregivers to a single dependent, immunizing the entire usufruct group from rotational infrastructure rosters. When sortition panels reviewed contested exemptions, the absence of documentary thresholds forced juries into asymmetric moral loss aversion, resulting in high false-negative exemption approvals. This created labor deficits that were systematically externalized onto adjacent watershed cohorts under Article 10.3 mutual aid protocols, generating civic resentment and localized assembly deadlocks.
+* **Resolution**: The vulnerability is closed by establishing precise, non-invasive biophysical dependency ratios (capping exemptions at a 1:1 adult-to-dependent baseline absent documented multi-person somatic requirements), binding sortition panel reviews to objective functional independence ledgers, and formalizing automatic administrative re-queueing without violating Chapter I Invariants (no carceral sanction, no eviction, no deprivation of Class-A survival baselines).
+
+---
+
+### II. ARCHITECTURAL MECHANICS & INVARIANT COMPLIANCE
+
+1. **Preservation of Somatic Non-Coercion (Chapter I, Invariant 1.2)**:  
+   Denial of an unsubstantiated caregiver exemption does not trigger physical coercion, bodily conscription, or penal servitude. Unsubstantiated claims revert automatically to the standard civic reciprocity roster. Persistent refusal triggers non-coercive Stage 1 Administrative Remediation and metabolic decoupling (throttling of discretionary fabrication quotas and regional transit permissions), leaving bodily autonomy fully inviolate.
+
+2. **Preservation of Universal Survival Baseline (Chapter I, Invariant 1.3)**:  
+   Under no circumstance does an administrative reclassification or revocation of an invalid care claim throttle or terminate indivisible Class-A lifesupport (potable water, basic metabolic caloric rationing, dwelling shelter, emergency medicine, sanitation). The remedy operates purely on civic reciprocity accounting, discretionary public commons access, and sortition eligibility.
+
+3. **Demographic Rationality & Biophysical Ledgering (Article 5.6.1.1 & 5.6.2.1)**:  
+   By fixing the statutory ratio to one full-time adult caregiver per registered dependent—unless specialized multi-person clinical protocols are validated through the Bioregional Health Commons—the systemic moral-hazard loophole is closed mathematically. Sortition panels operate as empirical arbiters of documented functional criteria rather than targets of affective rhetoric.
+
+---
+
+### III. CONSTITUTIONAL AMENDMENT (UNIFIED DIFF)
+
+```diff
+--- a/constitution/chapter_05.txt
++++ b/constitution/chapter_05.txt
+@@ -52,14 +52,32 @@
+ Article 5.6: Caregiving and Reproductive Labor Parity
+ 
+ Article 5.6.1: Any citizen actively engaged in daily family or community 
+ caregiving fulfills their civic reciprocity obligations ipso jure, 
+ receiving full exemption from rotational physical maintenance shifts.
+ 
++Article 5.6.1.1: Statutory Caregiver Ratios. Ipso jure exemptions under 
++Article 5.6.1 require verification against the Civil Health and Vital 
++Registry. Certified exemptions shall not exceed a baseline of one (1) full-time 
++adult caregiver per registered infant, elderly, or medically classified 
++dependent. Usufruct households requesting multi-caregiver allocations for a 
++single dependent must present clinical certification from the Bioregional 
++Health Commons establishing continuous, multi-person somatic intervention 
++requirements. In the absence of such certification, excess adult claims within 
++the usufruct node revert automatically to standard civic maintenance rosters.
++
+ Article 5.6.2: Mutual Aid Assemblies shall not compel labor from pregnant 
+ persons, primary infant caretakers, or those ministering to terminal or 
+ acutely incapacitated kin. Contested claims shall be arbitrated by a 
+ sortition-selected panel from adjacent communities to avoid bias.
+ 
++Article 5.6.2.1: Sortition Evidentiary Standards. Sortition panels convened 
++under Article 5.6.2 shall adjudicate contested caregiver exemptions solely 
++against standardized, non-invasive biophysical ledgers (validated clinical 
++functional independence scores, dependency registry data, and demographic 
++census). Sortition panels possess no statutory authority to grant blanket 
++exemptions exceeding the statutory ratios established in Article 5.6.1.1. Denial 
++of an unverified exemption shall not trigger somatic detention or usufruct 
++eviction, but shall initiate standard Article 5.2.2 Stage 1 civic remediation.
++
+ Article 5.6.3: Caregiver recognition applies equally across biological, 
+ intentional, and communal family structures, bounded solely by biological 
+ reality and the living care requirements of the dependent.
+```
+
+---
+
+### IV. POST-PATCH INVARIANCE VERIFICATION
+
+* **Chapter I, Invariant 1.1 (Absence of Allodial Title & Enclosure)**: **UNCOMPROMISED**. Residential usufruct remains active beneficial use; no kinship faction can privatize communal civic obligations or enclose public maintenance responsibilities.
+* **Chapter I, Invariant 1.2 (Prohibition of Carceral & Bodily Coercion)**: **UNCOMPROMISED**. Labor allocation remains decentralized and reciprocity-governed. Remediation operates exclusively via metabolic decoupling and discretionary access restrictions.
+* **Chapter I, Invariant 1.3 (Universal Inalienable Survival Baseline)**: **UNCOMPROMISED**. Physical Class-A lifesupport infrastructure remains permanently non-severable.
+* **Chapter I, Invariant 1.4 (Monetary Non-Financialization & Debt Prohibition)**: **UNCOMPROMISED**. No monetary fines, interest, or civic debt tallies are introduced; compliance is resolved strictly through metabolic throughput and civic standing.
+* **SV Tier Outcome**: The dynamic is reduced from **SV-3** to **NULL**. The kinematic loophole is sealed deterministically.

@@ -1,0 +1,87 @@
+### Architectural Audit & Amendment Formulation: Usufruct Decoupling & Non-Carceral Enforcement
+
+**Classification:** SV-2 (Critical Systemic Deadlock / Statutory Antinomy)  
+**Target Articles:** Art. 2.3.1, Art. 2.3.4, Art. 5.2.2, Art. 5.6.2, Art. 8.4.3, Art. 8.5.1  
+**Axiomatic Constraints:** Art. 1.1.3 (Possessory Usufruct Conditionality), Art. 1.2.1 (Bodily Inviolability), Art. 1.3.1 (Universal Survival Baseline), Art. 8.5.1 (Abolition of Carceral Coercion).
+
+---
+
+### I. Architectural Analysis & Root Cause Elimination
+
+The audit exposes two distinct structural vulnerabilities in the canonical text:
+
+1. **Statutory Antinomy (Art. 2.3.4 vs. Art. 5.2.2):**
+   * *The Defect:* Article 2.3.4 unconditionally promises that any occupant displaced by municipal or bioregional reallocation must receive an "equivalent or superior dwelling." Article 5.2.2, by contrast, prescribes a "downscaled baseline accommodation" as the fourth-tier administrative remedy for persistent refusal of rotational metabolic reciprocity. A bad-faith occupant can weaponize Article 2.3.4 against Article 5.2.2 to tie up commons governance in perpetual constitutional litigation.
+   * *The Correction:* Article 2.3.4 is formally restricted to *non-fault administrative and ecological reallocations* (e.g., ecological restoration, hazard mitigation, structural obsolescence). Relocations triggered by adjudicated non-reciprocity under Article 5.2.2 are explicitly carved out and governed exclusively by the graduated sanction schedule.
+
+2. **The "Squatter's Fortress" Deadlock (Art. 1.2.1 / Art. 8.5.1 vs. Art. 1.1.3 / Art. 2.3.1):**
+   * *The Defect:* Possessory usufruct is legally contingent upon infrastructural maintenance and active reciprocity (Art. 1.1.3, Art. 2.1.2). However, if an occupant whose usufruct has been revoked physically refuses to vacate a high-throughput, communal-scale asset (e.g., a multi-family microgrid node or complex agricultural homestead), the Constitution strictly prohibits somatic violence, kinetic eviction squads, and carceral arrest (Art. 1.2.1, Art. 8.5.1). Cutting off power, water, or sustenance is likewise barred as a violation of the Universal Survival Baseline (Art. 1.3.1, Art. 1.3.2). This creates a physical vector for *de facto* allodial re-privatization via refusal to move.
+   * *The Defect (Social Layer):* Relying on immediate neighbors (Art. 5.6.2) to report, audit, or enforce reciprocity collapses under intimidation, clan capture, or localized collective action exhaustion.
+   * *The Correction:*
+     * **Cross-Watershed Jury Insulation:** Auditing of contested caregiver exemptions and usufruct revocations is transferred away from immediate neighbors to a blind-drawn, cross-watershed sortition panel (Art. 5.6.2, Art. 8.4.3), fully insulating jurors from retaliatory local dynamics.
+     * **Infrastructural Metabolic Decoupling (Non-Kinetic Eviction):** Usufruct title attaches to the *communal utility and land-base*, not the physical boundary of squatted space. Where an occupant refuses relocation under a final Article 5.2.2 decree, the Bioregional Infrastructure Guild executes automated **Metabolic Decoupling**. Communal utility matrices (Tier 2/3 surplus compute, high-throughput hydroponics, industrial three-phase power, luxury water recirculators) are automatically rerouted outside the asset perimeter to incoming stewards. The recalcitrant occupant's spatial envelope is metabolically clamped to a self-contained, standalone Tier 1 Universal Survival Baseline capsule (water, atmospheric control, basic nutrition, minimal survival watts) that operates strictly at baseline consumption, while the surrounding communal facilities are safely integrated into the adjacent usufruct envelope. The community never uses kinetic force on the occupant's person; rather, the metabolic surplus of the commons simply routes around them.
+
+---
+
+### II. Formal Statutory Amendment (Unified Diff)
+
+```diff
+--- a/constitution/chapter_2_habitat_and_usufruct.md
++++ b/constitution/chapter_2_habitat_and_usufruct.md
+@@ -45,7 +45,9 @@
+ 
+ Article 2.3.1: Usufruct Invalidation and Reallocation
+-Possessory usufruct over any residential or productive space is conditioned entirely upon occupancy, direct use, and non-abandonment. When a dwelling remains unverified by sensor telemetry or community observation for ninety (90) consecutive solar cycles without prior notification of nomadic or rotational absence, the usufruct title dissolves by operation of law, and the dwelling returns to the municipal commons pool for immediate reallocation.
++Possessory usufruct over any residential or productive space is strictly conditioned upon active personal use, basic ecological stewardship, and compliance with the metabolic contribution obligations defined in Chapter V. Usufruct confers possessory occupation, never alienable, speculative, or allodial title. Where an occupant's usufruct has been terminated by an adjudicated Fourth-Stage sanction under Article 5.2.2, possessory rights to the communal asset dissolve by operation of law, subject exclusively to the metabolic decoupling provisions of Article 2.3.5.
+ 
+@@ -82,7 +84,7 @@
+ 
+ Article 2.3.4: Guarantee of Non-Disruption and Rehousing
+-No citizen, regardless of communal friction or infrastructural redesign, shall be displaced from their dwelling without being guaranteed an equivalent or superior dwelling within the same bioregional biome, matching their accessibility, familial, and somatic requirements. Relocation logistics, material transfer, and spatial adaptation shall be borne entirely by the civic allocation pool.
++No citizen subjected to non-fault administrative displacement, environmental hazard abatement, bioregional re-wilding, or infrastructural modernization shall be displaced from their dwelling without being guaranteed an equivalent or superior dwelling within the same bioregional biome, matching their accessibility, familial, and somatic requirements. Relocation logistics, material transfer, and spatial adaptation shall be borne entirely by the civic allocation pool. Displacements resulting from adjudicated reciprocity revocation under Article 5.2.2 are expressly excluded from this equivalence guarantee and are governed strictly by Article 2.3.5 and Article 5.2.2.
++
++Article 2.3.5: Operational Protocol for Metabolic Decoupling
++Where a former occupant whose usufruct has been terminated pursuant to Article 5.2.2 physically refuses voluntary transfer to their assigned Tier 1 Baseline Accommodation, neither kinetic physical violence, somatic arrest, nor carceral extraction shall be deployed. Instead, the Bioregional Infrastructure Guild shall execute an automated Metabolic Decoupling of the contested asset:
++1. Metabolic Clamping: All communal flows exceeding the Universal Survival Baseline—including industrial or surplus electrical draws, high-throughput compute, municipal workshop feeds, and communal greenhouse loops—shall be structurally isolated and redirected to the public pool or incoming usufructuaries.
++2. Baseline Encapsulation: The occupied space shall be physically and metabolically decoupled into an autonomous, self-contained Tier 1 Survival Node, guaranteeing the inviolable supply of water, caloric baseline sustenance, atmospheric regulation, and basic connectivity as mandated by Article 1.3.1.
++3. Peripheral Redevelopment: Communal production functions, auxiliary chambers, and agricultural lands surrounding the clamped node shall be reassigned to new occupants. The recalcitrant individual retains absolute bodily inviolability within their clamped baseline footprint, but is stripped of all authority, metabolic interface, and administrative control over the surrounding commons.
+--- a/constitution/chapter_5_reciprocity_and_obligations.md
++++ b/constitution/chapter_5_reciprocity_and_obligations.md
+@@ -34,7 +34,7 @@
+ 
+ Article 5.2.2: Graduated Non-Carceral Sanctions
+ Metabolic non-reciprocity shall trigger an automated, four-stage progressive rebalancing:
+ 1. Stage One: Direct civic notification, transparent peer audit, and automatic offer of labor-capability reassessment or physical/mental health care allocation.
+ 2. Stage Two: Temporary suspension of elective surplus claims (Tier 3 fab-lab queues, high-latency travel credits, advanced specialized non-baseline tooling) while survival flows remain wholly untouched.
+ 3. Stage Three: Mandatory civic engagement mediation supervised by an insulated sortition panel drawn from adjacent neighborhoods.
+-4. Stage Four: Reallocation of possessory usufruct from high-demand or high-maintenance communal dwellings to downscaled baseline accommodations, freeing complex assets for contributing stewards while permanently securing the individual's Article 1.3.1 baseline existence.
++4. Stage Four: Revocation of possessory usufruct over high-demand, high-throughput, or complex communal assets, followed by the immediate spatial assignment of an individual Tier 1 Baseline Accommodation. If physical relocation is refused, execution proceeds via the non-kinetic Metabolic Decoupling protocol defined in Article 2.3.5.
+ 
+@@ -118,7 +118,7 @@
+ 
+ Article 5.6.2: Caregiver Verification and Intimidation Safeguards
+-The verification of bona fide caregiver, maternal, paternal, or rehabilitative exemptions under Article 5.3 shall be registered via decentralized peer witness protocols within the immediate living cluster.
++The verification of bona fide caregiver, elder-care, child-rearing, or somatic disability exemptions under Article 5.3 shall be administered via decentralized sensor metrics combined with an independent Care Registry. To prevent intra-cluster intimidation, clan capture, or localized retaliation, contested caregiver declarations or allegations of non-reciprocity bad faith shall not be adjudicated by immediate neighbors, but by a blind-drawn, cross-watershed Sortition Panel convened from outside the registrant's residential micro-cluster. The decisions of this panel are nomothetically binding and insulated from local veto.
+--- a/constitution/chapter_8_justice_and_conflict_resolution.md
++++ b/constitution/chapter_8_justice_and_conflict_resolution.md
+@@ -62,7 +62,7 @@
+ 
+ Article 8.4.3: Jurisdiction Over Common Usufruct Disputes
+-Disputes regarding spatial boundaries, domestic nuisance, and usufruct overlap shall be heard by localized Assemblies of Equity consisting of seven (7) citizens chosen by sortition from the immediate block or hamlet.
++Disputes regarding domestic nuisance and boundary adjustment shall be heard by localized Assemblies of Equity consisting of seven (7) citizens chosen by sortition. However, disputes involving the revocation of usufruct titles, intentional sabotage of communal infrastructure, or the execution of Article 2.3.5 Metabolic Decoupling shall fall under the exclusive jurisdiction of the Bioregional Usufruct Tribunal, composed of fifteen (15) jurors selected by sortition across unrelated ecological wards to ensure strict structural impartiality.
+ 
+@@ -95,6 +95,7 @@
+ 
+ Article 8.5.1: Absolute Prohibition of Carceral Coercion
+ Human cages, penal servitude, solitary confinement, physical violence by administrative agents, somatic tracking shackles, and all historical apparatuses of carceral extraction are permanently abolished and prohibited within the Commonwealth of O.N.E. No institutional decree, judicial ruling, or state of emergency shall permit the detention, physical battery, or forced kinetic displacement of a human body. All public enforcement operates solely upon resource flows, civic privileges, physical perimeter redesign, metabolic clamping (Art. 2.3.5), and spatial routing, never upon the somatic integrity of the citizen.
+```
+
+---
+
+### III. Invariant Compliance Verification
+
+1. **Art. 1.1.3 (Possessory Usufruct Conditionality): Preserved.** Usufruct is reaffirmed as a conditional functional tenure linked to actual stewardship and metabolic reciprocity, barring any squatter or bad-faith actor from transforming possession into an allodial freehold.
+2. **Art. 1.2.1 & Art. 8.5.1 (Bodily Sovereignty and Anti-Carceral Invariant): Preserved.** The patch explicitly bans kinetic eviction, bailiffs, armed squads, or physical assault. The individual's body remains completely untouched.
+3. **Art. 1.3.1 (Universal Survival Baseline): Preserved.** Under Article 2.3.5, metabolic decoupling clamps the asset's utility feeds to a standalone Tier 1 Survival Baseline (water, calories, thermal stability, basic connectivity). The recalcitrant occupant is never starved, frozen, or dehydrated.
+4. **Art. 1.3.3 (Prohibition of Coercive Labor Extraction): Preserved.** The occupant is neither forced into labor nor punished with punitive penalties. They are simply denied the usufruct over *surplus, communal, high-throughput* metabolic resources that belong to the active commonwealth.
+5. **Anti-Collusion & Anti-Intimidation (Sortition Architecture): Preserved & Hardened.** Adjudication is extracted from vulnerable local clusters and placed in cross-watershed sortition panels, neutralizing neighborhood coercion while preserving non-bureaucratic, citizen-led governance.

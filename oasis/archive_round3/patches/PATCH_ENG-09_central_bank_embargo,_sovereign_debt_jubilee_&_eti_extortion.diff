@@ -1,0 +1,84 @@
+### Architectural & Jurisprudential Audit
+
+**Classification:** SV-4 (Informational Friction / External Interface Vulnerability)  
+**Target Articles:** Art. 3.5.2, Art. 8.1.4, Art. 9.3.1, Art. 9.3.3, Art. 9.4.1, Art. 9.5.2  
+**Invariant Verification:** Passes all Chapter I Invariant checks. The patch neither issues debt, creates allodial title, delegates coercive carceral force, nor compromises the somatic survival baseline.
+
+---
+
+### Architectural Explanation of the Amendment
+
+The Red Team audit identified an interface vulnerability operating at the exterior jurisdictional boundary:
+1. **The UNCLOS Art. 110 "Stateless Hull" Exploit:** By operating waterborne transport purely under internal communal usufruct without establishing a formal, internationally notified ship registry, outbound vessels technically lack nationality under Article 91 of the United Nations Convention on the Law of the Sea (UNCLOS). This exposes them to high-seas interdiction, non-flag boarding, and jurisdictional seizure by foreign naval powers without creating a formal act of war against a recognized sovereign.
+2. **Rule C *In Rem* Admiralty Arrest:** Legacy Track A commercial creditors, asserting unliquidated historical tort claims or legacy municipal debt against defunct predecessor entities, utilize Supplemental Admiralty Rule C actions in foreign ports of call to seize unflagged communal hulls and cargo as *res* under arrest.
+3. **FATF/FinCEN Trade-Based Money Laundering (TBML) Interdiction:** External counterparties engaging in physical barter (direct metabolic/material exchange) face financial de-risking, secondary banking sanctions, and criminal asset forfeiture when importing uncertified physical goods lacking traditional bank-intermediated Letters of Credit.
+
+#### The Constitutional Fix
+
+The amendment bridges this jurisdictional chasm without compromising internal nomothetic invariants:
+* **Art. 3.5.2 (Physical Mass-Energy Manifesting):** Mandates that all outbound physical transfers bear cryptographically signed somatic and thermodynamic provenance manifests, proving that the exported cargo is real-time ecological surplus free of encumbrance, chattel claim, or debt liability.
+* **Art. 8.1.4 (Demarchic Maritime Commission):** Establishes a sortition-selected Maritime Usufruct Registry that acts as the competent sovereign authority under UNCLOS Art. 91, certifying the genuine link between the sovereign watershed collectives and the flagged vessels.
+* **Art. 9.3.1 & 9.3.3 (Inter-Boundary Barter & Bilateral Escrows):** Establishes neutral, extraterritorial transfer zones and maritime anchorage waypoints where title and physical custody are exchanged *ex-ship* or *fob boundary*, insulating counterparties from secondary boycott liabilities through non-fiat, biophysically collateralized trade protocols.
+* **Art. 9.4.1 & 9.5.2 (Sovereign Flagging & Mutual Defense of Usufruct Carriage):** Formally codifies the sovereign flag of O.N.E. as a protected public usufruct registry, prohibiting foreign extraterritorial boarding, establishing legal parity with sovereign non-commercial vessels where applicable, and invoking reciprocal port denial against maritime powers executing arbitrary Rule C seizures.
+
+---
+
+### Constitutional Patch (Unified Diff)
+
+```diff
+--- a/constitution/canonical_text.one
++++ b/constitution/canonical_text.one
+@@ -352,6 +352,14 @@
+ Article 3.5.2: External Material Clearing and Thermodynamic Certification
+ All outbound material flows, whether raw physical mass or manufactured tooling, shall be accompanied by an open, verifiable thermodynamic ledger entry. 
+-External transfers shall be evaluated strictly on local caloric and raw-material surplus, ensuring no extraction degrades local metabolic baselines.
++External transfers shall be evaluated strictly on local caloric and raw-material surplus, ensuring no extraction degrades local metabolic baselines.
++Every outbound consignment shall carry an immutable Cryptographic Usufruct Provenance Certificate (CUPC) issued under the authority of the Watershed Demarchy.
++This certificate shall explicitly attest:
++  (a) That the goods constitute somatic and ecological surplus produced without debt issuance, indentured labor, or chattel lien;
++  (b) The complete physical provenance, lifecycle entropy cost, and non-liability status under legacy financial encumbrances;
++  (c) Direct ownership attribution to the metabolic commons of the originating watershed, disclaiming any corporate legal personality subject to foreign insolvency or debt-clawback proceedings.
+@@ -814,6 +822,13 @@
+ Article 8.1.4: Demarchic External Logistics and Vessel Management
+ Logistics coordination with foreign territories shall be executed through short-term delegates selected by sortition, operating under strictly bound imperatives.
+-Vessels utilized for maritime and riverine transport shall operate as mobile commons under the stewardship of allocated crews.
++Vessels utilized for maritime and riverine transport shall operate as mobile commons under the stewardship of allocated crews, inscribed within the Sovereign Usufruct Registry of O.N.E.
++The Demarchic Maritime Commission shall serve as the competent sovereign maritime authority under international law, maintaining the formal register of all flagged vessels.
++The allocation of a usufruct vessel to a crew shall constitute a genuine sovereign link within the meaning of UNCLOS Article 91, vesting the vessel with the full sovereign immunity and protection of O.N.E.
++No vessel of O.N.E. shall be alienated, hypothecated, or offered as maritime hypothec, bottomry bond, or security for foreign performance.
+@@ -931,7 +946,12 @@
+ Article 9.3.1: Physical Interface Boundaries and Port-of-Origin Transfers
+ External commercial intercourse shall occur exclusively at designated physical boundary nodes, boundary ports, and neutral free-anchorage waypoints.
+-All exchanges of goods with Track A entities shall be executed via direct physical delivery or synchronized bilateral exchange.
++All exchanges of goods with Track A entities shall be executed via direct physical delivery or synchronized bilateral physical exchange.
++Delivery terms for outbound commons produce shall be structured exclusively as Delivered at Place (DAP) or Free Carrier (FCA) at the delineated O.N.E. border interface or designated neutral maritime transfer coordinates.
++Physical custody, thermodynamic risk, and foreign customs liabilities shall transfer entirely to the external counterparty upon clearance past the physical boundary perimeter.
++No organ of O.N.E. shall maintain assets, bank balances, or subject commercial property within foreign territorial jurisdictions where they may become prey to summary *in rem* admiralty arrest or extraterritorial attachment.
+@@ -933,7 +953,13 @@
+ Article 9.3.3: Bilateral Barter Shields and Counterparty Non-Intervention
+ Agreements with external trading partners shall be conducted under direct bilateral barter protocols, eliminating reliance on Track A financial wire networks.
+-No external barter transaction shall recognize or service debts originating from legacy financial regimes.
++No external barter transaction shall recognize or service debts originating from legacy financial regimes.
++To shield external counterparties from legacy Trade-Based Money Laundering (TBML) designations, foreign asset freezes, and secondary financial boycotts:
++  (a) The External Relations Assembly is empowered to ratify bilateral barter treaties establishing sovereign clearing accounts denominated purely in physical thermodynamic units, commodities, or reciprocal access rights;
++  (b) Transfer nodes may host neutral bonded warehouse facilities operated jointly with non-aligned counterparties;
++  (c) Cargo clearing through these nodes shall be certified by joint inspection protocols, verifying somatic purity, absence of unmanifested cargo, and total disconnection from legacy banking channels, preempting illicit-finance legal triggers under foreign municipal law.
+@@ -941,6 +967,13 @@
+ Article 9.4.1: Sovereign Maritime Flag and Protection of Navigation
+ The sovereign maritime flag of O.N.E. represents the inviolable non-dominium status of its territory, waters, and registered vessels.
+-Navigation upon international waters shall conform to peaceful transit, mutual aid, and unpolluting passage.
++Navigation upon international waters shall conform to peaceful transit, mutual aid, and unpolluting passage.
++All hulls registered under the Sovereign Usufruct Registry shall fly the flag of O.N.E. and shall be defended as sovereign extensions of the watershed commons.
++Any boarding, search, or seizure of an O.N.E.-flagged vessel on the high seas under pretext of statelessness, lack of genuine link, or foreign civil debt attachment:
++  (a) Shall be formally recognized and cataloged as an act of armed piracy and sovereign maritime aggression;
++  (b) Shall trigger immediate publication of the offending state's thermodynamic and physical dependencies across all international assemblies;
++  (c) Shall be met with asymmetric, non-violent reciprocal denial of access to O.N.E. inland waterways, sovereign territorial waters, and boundary transfer facilities.
+@@ -952,6 +985,12 @@
+ Article 9.5.2: Defense Against Foreign In Rem and Extraterritorial Jurisdiction
+ The legal concepts of *in rem* admiralty arrest, judgment execution liens, foreign receivership, and extraterritorial commercial sanctions are null, void, and unenforceable within the jurisdiction of O.N.E.
+-No domestic tribunal or demarchy shall honor foreign writs seeking restitution of legacy title, corporate assets, or financial claims.
++No domestic tribunal or demarchy shall honor foreign writs seeking restitution of legacy title, corporate assets, or financial claims.
++Vessels or transport hulls wrongfully subjected to Rule C *in rem* arrest or foreign judicial auction in external ports shall not lose their usufruct dedication within O.N.E.
++Notice of continuous, unextinguished communal title shall be entered into all global admiralty registries.
++Foreign shipping concerns, port operators, or salvage claimants who purchase, detain, or facilitate the seizure of O.N.E. commons vessels shall be placed under an absolute commercial exclusion order, prohibiting their hulls, crews, and parent corporate fleets from entering or docking at any terminal, canal, or harbor under O.N.E. governance.
+```

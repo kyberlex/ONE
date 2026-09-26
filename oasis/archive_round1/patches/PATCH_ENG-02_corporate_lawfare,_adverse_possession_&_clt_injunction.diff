@@ -1,0 +1,73 @@
+### Architectural Audit & Patch Specifications
+
+#### 1. Vulnerability Analysis & Causal Mechanism
+Under severe, multi-year external embargoes targeting foundational industrial catalysts, semiconductor components, or energy precursors, physical throughput may drop below the aggregate metabolic floor required to service 100% of canonical Tier 1 Universal Biological Baselines. 
+
+Article 3.6(2) historically mandated a 75% sortition supermajority within the Bioregional Council to recalibrate per-capita baseline quotas downward. This created an unhandled arithmetic governance deadlock:
+1. **Sortition Gridlock:** Delegates drawn via lottery from ration-stressed populations exhibit rational game-theoretic refusal to vote for reductions in their own metabolic survival baselines, preventing the formation of a 3/4 supermajority.
+2. **Computational Freeze:** The thermodynamic calculation engine—bound by invariant constraints to never disburse unbacked or physically deficit resources—enters an indefinite execution halt when aggregate programmatic demands exceed physical mass-energy inputs.
+3. **Black-Market Emergence:** A computational freeze halts automated life-support logistics, forcing decentralized local actors into emergency ad-hoc rationing, thereby recreating asymmetric barter markets, triage clientelism, and territorial warlordism.
+
+#### 2. Constitutional Invariant Preservation
+The statutory patch must resolve the deadlock without violating Chapter I invariants:
+* **Anti-Technocracy Invariant:** Algorithmic adjustment cannot be left to discretionary executive bodies or opaque heuristic models. Scaling must be mathematically deterministic, open-source, bounded by sensor-verified physical mass-energy balances, and audited across independent mesh telemetry.
+* **Strict Egalitarian Invariant:** Downward scaling must be strictly pro-rata and universal. No bureaucratic caste, technical council, or demographic tier may be exempt. The burden of biophysical attrition is distributed across all living human participants at an identical per-capita percentage.
+* **Abolition of Triage Prioritization:** Human beings may not be classified into utilitarian survival categories. Caloric, water, and life-support allotments contract uniformly across the entire population until physical carrying capacity is restored or thermodynamic equilibrium is re-established.
+
+---
+
+### Formal Constitutional Amendment
+
+```diff
+--- a/constitution/chapter_03_thermodynamic_allocation.md
++++ b/constitution/chapter_03_thermodynamic_allocation.md
+@@ -142,16 +142,38 @@
+-Article 3.6.2. Emergency Baselines and Supermajority Thresholds
+-In the event of severe macro-regional disruption, biosphere failure, or prolonged external blockade, any downward adjustment of the per-capita Tier 1 Universal Biological Baseline defined under Article 1.3 shall require an affirmative vote of seventy-five percent (75%) of a randomly selected Sortition Assembly, confirmed by dual-mesh cryptographic attestation across the affected Bioregions. In the absence of such supermajority consensus, the baseline parameters shall remain immutable.
++Article 3.6.2. Biophysical Attrition and Automated Dynamic Scaling
++1. The Tier 1 Universal Biological Baseline guaranteed under Article 1.3 represents an absolute, non-forfeitable entitlement to metabolic survival. Under conditions of normative and reserve carrying capacity, this entitlement is physically non-negotiable and cannot be compressed by any administrative, legislative, or judicial decree.
++
++2. Dynamic Pro-Rata Scaling Protocol:
++   If exogenous shock, secondary embargo, kinetic destruction, or catastrophic environmental degradation reduces the physically verified aggregate metabolic capacity ($C_{\text{real}}$) of a Bioregion below the aggregate metabolic baseline threshold ($\sum B_{\text{Tier1}}$) required for the resident population ($N$), the thermodynamic allocation engine shall automatically trigger the Dynamic Pro-Rata Biophysical Scaling Protocol:
++   $$\alpha = \frac{C_{\text{real}}}{\sum_{i=1}^{N} B_{\text{Tier1}, i}} \quad \text{where } \alpha < 1.0$$
++   a. Downward adjustment is strictly deterministic, non-discretionary, and directly tied to multi-sensor telemetry verifying actual thermodynamic, nutrient, and hydrological mass balances.
++   b. The scaling factor ($\alpha$) shall apply uniformly, identically, and pro-rata across one hundred percent (100%) of the resident human population. No public servant, sortition delegate, logistics coordinator, technical specialist, or operational steward shall be exempt from the uniform reduction factor.
++   c. The activation of the Scaling Protocol does not require a political vote or sortition supermajority; it executes as a direct mathematical consequence of biophysical conservation laws.
++
++3. Sortition Oversight and Sensor Verification:
++   a. Within twelve (12) hours of the execution of the Dynamic Pro-Rata Scaling Protocol, a Sortition Assembly of five hundred (500) citizens shall be automatically empaneled to audit the empirical physical sensor networks, verify mass-balance telemetry, and investigate any technological, sabotage, or supply-chain bottlenecks.
++   b. The Sortition Assembly possesses absolute investigative power to inspect all physical reserves, local fab-labs, and automated inventory systems.
++   c. The Sortition Assembly may not alter the uniform pro-rata scaling factor ($\alpha$) to create asymmetric entitlements, but may, by a simple majority, mandate the total commandeering and conversion of any active Tier 2 or Tier 3 productive capital, energy, or material stock toward Tier 1 replenishment.
++
++4. Asymmetric Rationing Prohibited:
++   Any attempt by any commune, assembly, municipal organ, or algorithmic routine to stratify survival baselines by occupation, social credit, biological utility, age, or administrative rank constitutes a Category I High Treason offense against Chapter I, triggering immediate civic de-credentialing and permanent revocation of administrative stewardship.
+--- a/constitution/chapter_01_fundamental_invariants.md
++++ b/constitution/chapter_01_fundamental_invariants.md
+@@ -48,7 +48,7 @@
+ Article 1.3. Universal Biological Baseline Invariant
+-Every human life within the territory of O.N.E. possesses an unconditional, inalienable right to the thermodynamic energy, caloric intake, clean water, shelter, preventative healthcare, and computational access necessary for metabolic preservation, supplied as an unmonetized birthright.
++Every human life within the territory of O.N.E. possesses an unconditional, inalienable right to the thermodynamic energy, caloric intake, clean water, shelter, preventative healthcare, and computational access necessary for metabolic preservation, supplied as an unmonetized birthright. Under catastrophic systemic attrition where aggregate biophysical resources fall below total baseline demand, this right guarantees an absolute, identical, pro-rata share of all existing physical metabolic capacity, executed deterministically pursuant to Article 3.6.2.
+--- a/constitution/chapter_03_metabolic_accounting.md
++++ b/constitution/chapter_03_metabolic_accounting.md
+@@ -88,6 +88,8 @@
+ Article 3.3.4. Reserve Depletion Sequence
+ 1. Strategic inventories of Tier 1 precursors (grain, purified water, critical pharmacopeia, semiconductor modules, industrial catalysts) shall be maintained at a rolling operational volume sufficient to support the entire regional population for a minimum of twenty-four (24) months.
+ 2. In the event of primary supply disruption:
+    a. First Tier: All Tier 3 discretionary resource allocations are automatically terminated.
+    b. Second Tier: Strategic reserves are deployed linearly to maintain the 100% Tier 1 baseline across the projected duration of the disruption.
+-   c. Third Tier: Upon complete exhaustion of strategic reserves, the Bioregional Council must convene an emergency constitutional convention under Article 3.6.2.
++   c. Third Tier: If strategic reserves fall below a sixty (60) day terminal burn rate and input telemetry indicates an ongoing deficit, the Dynamic Pro-Rata Scaling Protocol defined in Article 3.6.2 shall initiate automatically to extend inventory survivability across the recovery horizon.
+```
+
+---
+
+### Verification and Invariant Impact Assessment
+
+1. **Deterministic Resolution of Deadlock:**
+   The patch completely removes the governance gridlock identified in the SV-2 finding. Because downward scaling during an absolute physical shortfall is an arithmetic derivation ($\alpha = \frac{C_{\text{real}}}{\sum B_{\text{Tier1}}}$) rather than an act of discretionary political legislation, the allocation engine can never freeze due to voting abstention.
+
+2. **Preservation of Nomothetic Equivalence:**
+   The patch explicitly forecloses the emergence of technocratic or carceral survival hierarchies. The scaling variable $\alpha$ is mathematically enforced across every citizen equally. A logistics steward, sortition member, or engineer consumes the exact same caloric and hydrological fraction as any other citizen.
+
+3. **Restoration of Sortition Functionality:**
+   Sortition assemblies are no longer forced to conduct impossible votes to self-inflict starvation baselines. Instead, their role is shifted to that of an aggressive investigative and forensic body: auditing sensor fidelity, checking for physical hoarding or inventory falsification, and wielding mandatory authority to cannibalize any remaining Tier 2 or Tier 3 productive capital for life-support synthesis.

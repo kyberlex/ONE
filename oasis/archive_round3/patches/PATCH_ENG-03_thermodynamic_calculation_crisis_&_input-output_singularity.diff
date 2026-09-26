@@ -1,0 +1,81 @@
+### AGENT PURPLE-PATCH: NOMOTHETIC AUDIT & AMENDMENT COMPILATION
+
+**FILE REFERENCE:** `CONST-AMEND-ONE-3.3.3-3.4.2-3.6.2-SV3`  
+**SECURITY CLASSIFICATION:** `SV-3 (Moderate Operational Exploit / Physical Friction)`  
+**TARGET JURISDICTION:** Constitution of O.N.E. (Physical Allocation, Fabrication Accounting, and Crisis Stabilizers)  
+**INVARIANTS VERIFIED:** Art. 1.1, Art. 1.2, Art. 1.3, Art. 1.5, Art. 2.1 (Preserved Without Deviation)
+
+---
+
+### I. ARCHITECTURAL ASSESSMENT & EXPLOIT RESOLUTION
+
+The adversarial dialectic between Red Team and Blue-Core exposed two tangible operational-physical failure modes within Chapter III:
+
+1. **Subtractive Swarf Leakage and Parametric Steganography (Arts. 3.3.3 & 3.4.2):**  
+   Article 3.4.2 currently relies on gross macroscopic mass accounting upon stock issuance and final component registration. In subtractive five-axis machining and EDM processes, high-ratio geometries (e.g., thin-walled turbine impellers or deep pockets) convert up to 70% of high-purity billet stock into chips, fines, and slurry. By intentionally varying parametric toolpaths (steganographic G-code), malicious actors generate legitimate low-mass components while siphoning reclaimed high-grade metallurgical swarf into unmetered local accumulation loops for off-ledger foundry casting.  
+   *Remediation:* Mandate real-time gravimetric closed-loop swarf, chip, and slurry reclamation at the tool interface. Fab-lab allocation tokens for high-purity alloy billets are not cleared until gross part mass plus reclaimed swarf mass equals the initial billet mass within an empirically calibrated volatile loss delta ($\Delta m \le \epsilon$). Toolpath files (G-code/STEP) are checked automatically against deterministic bounding-box material removal algorithms to prevent intentional over-roughing. In strict adherence to Art. 1.1 and Art. 1.2, discrepancies do not trigger carceral investigation, biometric tracking, or criminal sanctions; they trigger immediate machine interlock and mechanical tool disengagement, requiring physical return of the swarf fraction to the localized municipal remelter before any subsequent fab-lab usufruct slot may be queued.
+
+2. **Thermodynamic Shock via Undifferentiated Safe-Mode Clamping (Art. 3.6.2):**  
+   Under Article 3.6.2, a 300-second solver divergence initiates an instantaneous safe-mode freeze of all discretionary loads down to somatic and basic survival baselines. While functional for discrete mechanical work and residential HVAC, instantaneous cutoffs applied to continuous pyrometallurgical assets (electric arc furnaces, induction melt crucibles), continuous glass/silicon pullers (Czochralski crystal growth), and highly exothermic continuous chemical reactors induce severe thermal shock, refractory lining spalling, crystallization fouling, and catastrophic slag freezing.  
+   *Remediation:* Establish an explicit statutory sub-tier within safe-mode load shedding: **Continuous Thermal Inertia Envelopes (CTIE)**. Tier 2-A continuous-melt and chemical reaction systems are categorized not as unconstrained discretionary loads, but as critical physical capital protected under dynamic, thermodynamically modeled ramp-down profiles. The safe-mode clamp guarantees sufficient analog-metered secondary power to complete scheduled melt-tappings, purge reaction vessels, or execute controlled thermal dissipation profiles down to an inert, undamaged standby state, preventing the permanent destruction of common means of production without violating the universal somatic floor of the surrounding human community.
+
+---
+
+### II. FORMAL STATUTORY UNIFIED DIFF
+
+```diff
+--- a/constitution/chapter_3_biophysical_allocation.one
++++ b/constitution/chapter_3_biophysical_allocation.one
+@@ -84,14 +84,24 @@
+ Article 3.3.3: Computational Verification of Fabrication Requests
+ 1. Every fabrication manifest submitted to a communal fabrication facility (Tier 2 and Tier 3 Fab-Labs) shall be compiled from open-source hardware schemas verified by the Decentralized Production Registry (DPR).
+ 2. Manifest compilation includes a full thermodynamic ledger detailing embodied exergy, material stoichiometry, tool-wear depreciation, and post-use recyclability index.
+-3. Geometric files (e.g., STEP, G-code, STL) are verified for physical integrity and structural safety prior to tool authorization. Fabrication queues operate on FIFO principles modulated by the community priority matrices defined in Article 3.3.1.
++3. Geometric execution files (e.g., G-code, ISO 6983, STEP-NC) shall be parsed through open-source volumetric boundary algorithms prior to spindle or laser engagement. Toolpath simulation must verify that subtractive material removal trajectories match the nominal envelope of the verified DPR schema within certified engineering tolerances.
++4. Toolpaths exhibiting non-functional hollow-carving, artificially oversized billet offsets, or programmatic steganographic toolpath jitter calculated to generate unmetered scrap fractions are categorically rejected by the fabrication node compiler.
++5. Any manifest rejected under this Article may be appealed directly to the Municipal Technical Assembly for geometric reconciliation. In accordance with Article 1.1 and Article 1.2, no algorithmic compilation rejection shall generate criminal suspicion, carceral surveillance, or personal tracking.
+
+ Article 3.4.2: Usufructuary Material Accounting and Return Cycles
+ 1. Materials requisitioned from Commons stores remain non-allodial property of the Commons. Physical access conveys usufructuary stewardship, not title of alienation.
+ 2. Macroscopic material stock issued to users—including structural lumber, raw bar stock, sheet metal, and polymers—shall be checked out against the user’s usufruct allocation identifier.
+-3. Upon component completion, the finished mass is registered on the localized material balance sheet. Residual ends, sprues, and off-cuts exceeding one kilogram must be returned to the primary reclamation depot.
+-4. Willful failure to return macro-residuals to the Commons reclamation depots suspends subsequent Tier 3 fabrication allowances until material parity is restored.
++3. In subtractive manufacturing regimes generating particulate chips, filings, cut-offs, or wet machining slurries, communal fabrication machinery must operate with active, integrated mass-balance vacuum and chip-recovery interfaces:
++   a. Machining enclosures shall perform pre- and post-process closed-loop gravimetric weighing of the stock material, the machined component, and the collected swarf fraction.
++   b. The aggregate equation of mass conservation ($M_{\text{initial}} = M_{\text{final}} + M_{\text{swarf}} + \Delta m_{\text{process}}$, where $\Delta m_{\text{process}}$ accounts for volatilized coolant, airborne particulate filtration capture, and kerf loss within calibrated empirical envelopes) must close to within a certified margin of ninety-nine percent (99.0%).
++   c. Recovered high-purity metallurgical swarf, filings, and sprues shall be directly decanted into certified communal induction recycling canisters co-located at the machining bay.
++4. Failure of the gravimetric loop to close within the allowable tolerance boundary automatically pauses machine access permissions for that specific production cell.
++5. The usufructuary steward may resolve the disparity exclusively by:
++   a. Submitting the unrecovered swarf or defective workpiece to the bay's reclamation scale; or
++   b. Depositing equivalent-grade virgin scrap into the municipal remelter; or
++   c. Demonstrating physical measurement error before the workshop safety rotation.
++6. Under no circumstances shall material discrepancies result in somatic deprivation, monetary fines, or carceral restraint. The sole constitutional remedy is the temporary, automatic suspension of subsequent raw-stock subtractive machining requests until mass parity within the Commons pool is gravimetrically re-established.
+
+@@ -142,8 +152,20 @@
+ Article 3.6.2: Algorithmic Divergence and Safe-Mode Dialing
+ 1. If the distributed physical allocation solver fails to converge on a mathematically consistent, thermodynamics-compliant allocation matrix within three hundred (300) seconds, the physical network shall drop into Safe-Mode Operation.
+ 2. Upon safe-mode activation:
+-   a. All discretionary fabrication, non-essential heavy transport, and experimental R&D loads are instantaneously clamped to zero.
+-   b. Energy and caloric distribution systems are dialed to the Inalienable Somatic Baseline ($\alpha = 1.0$), ensuring that all human habitats, life-support grids, healthcare infrastructure, and communal food preparation centers receive uninterrupted biophysical inputs.
++   a. Discretionary fabrication, high-entropy cosmetic fabrication, and experimental prototyping loads are clamped immediately to zero.
++   b. Continuous thermal, chemical, and metallurgical processes belonging to Tier 2-A common productive infrastructure (including electric arc crucibles, glass melt furnaces, continuous chemical synthesizers, and crystallographic pullers) are shifted to their statutory **Continuous Thermal Inertia Envelopes (CTIE)**:
++      i. Continuous processes shall not be subjected to instantaneous electrical or fuel disconnection, protecting physical capital from catastrophic thermal shock, crucible fracturing, freezing of uncast slag, or run-away exothermic imbalance.
++      ii. Automated CTIE protocols shall execute a controlled, predictable ramp-down schedule, supplying minimal necessary stabilizing energy to safely decant active molten charges into emergency ingot pans, purge hazardous chemical intermediates, and gradually lower furnace temperatures according to the refractory lining's structural cooling curves.
++      iii. Thermal stabilization energy for CTIE is drawn directly from local kinetic flywheels, thermal energy stores, and dedicated Tier 2-A capacitor/battery reserves maintained pursuant to Article 3.5.2, without encroaching upon the residential life-support microgrid.
++   c. Energy, water, and caloric distribution across all communal grids are locked exclusively to the Inalienable Somatic Baseline ($\alpha = 1.0$), guaranteeing that human habitats, communal galleys, healthcare facilities, and environmental life-support systems operate without disruption or rationing.
+ 3. Safe-Mode Operation shall persist until the physical allocation solver converges or until the Citizen-Worker Sortition Council, convened under Article 4.2, manually selects a validated fallback allocation vector from the pre-computed thermodynamic reserves.
++4. At no time during Safe-Mode Operation may the sovereign baseline of any human individual be depressed below the biophysical metabolic threshold established in Article 1.3.
+```
+
+---
+
+### III. INVARIANT COMPLIANCE AND VERIFICATION ATTESTATION
+
+1. **Art. 1.1 (Anti-Carceral Axiom) & Art. 1.2 (Spatial Sanctuary / Non-Biometric Profiling):**  
+   The amendment enforces material balances through physical hardware interlocks (gravimetric scale integration and G-code parser boundary checks) rather than human surveillance, policing, criminalization, or carceral detention. If a discrepancy arises, the tool simply will not clear the next fabrication run until the physical mass balance is closed.
+
+2. **Art. 1.3 (Inalienable Somatic Baseline) & Art. 1.5 (Prohibition of Usury/Fiat Accumulation):**  
+   The introduction of the Continuous Thermal Inertia Envelope (CTIE) draws from industrial buffering infrastructure (Art. 3.5.2) and explicitly forbids encroaching upon the human metabolic and residential baseline ($\alpha = 1.0$). Material conservation cannot be bypassed through fines, monetary offsets, debt issuance, or compound interest penalties; physical restitution of the scrap metal to the remelter is the only valid path to balance reconciliation.
+
+3. **Art. 2.1 (Non-Allodial Title):**  
+   High-grade metallurgical stock remains the absolute usufructuary property of the Commons. Swarf and cutting slurries are constitutionally codified as vital components of the continuous material lifecycle, terminating the illicit privatized accumulation of production residuals.

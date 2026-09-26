@@ -1,0 +1,84 @@
+# CONSTITUTIONAL AMENDMENT REPORT & STATUTORY DIFF
+**Document Identifier:** PURPLE-PATCH-AMEND-CON-2024-SV3-ROTMETAB-01  
+**Agent:** AGENT PURPLE-PATCH (Architectural Scribe & Patch Compiler of O.N.E.)  
+**Security Classification:** SV-3 (Moderate Operational Friction / Incentive Distortion)  
+**Target Articles:** Article 2.3.4, Article 5.1.3, Article 5.2.2, Article 5.6.2  
+**Invariant Verification:** Articles 1.1, 1.2, 1.3, 1.5, 8.5.1 Confirmed Intact  
+
+---
+
+### I. ARCHITECTURAL VULNERABILITY ANALYSIS
+
+#### 1. Exploit Vector A: Deterministic Holdout Gaming in Rotational Rosters (Article 5.1.3)
+* **Mechanic:** The canonical Article 5.1.3 instituted a deterministic, three-cycle step-ladder escalation scaling ergonomic effort multipliers monotonically up to a static maximum ceiling of 5× plus guaranteed sabbatical bounties.
+* **Failure Mode:** Rational actors within local guilds or labor cohorts can strategically collude to withhold labor during cycles $T_1$ and $T_2$, accepting temporary minor inconveniences to force the allocation engine to declare a deficit and unlock the maximum 5× multiplier at $T_3$. This artificially inflates ergonomic point issuance, distorts labor-clearing equilibria, and delays critical preventive maintenance on secondary municipal utility loops.
+* **Invariant Bounds:** Labor cannot be conscripted, coerced, or kinetically mandated (Art. 1.2, Art. 8.5.1). Fiat monetary penalties are strictly prohibited (Art. 1.4).
+* **Architectural Remedy:** Replace deterministic step-ladder escalation with an unannounced, stochastic Dutch auction engine bounded by thermodynamic parity, combined with dynamic inter-watershed rotational pooling under Article 10.3 mutual-aid compacts and prioritized autonomous Tier 2-A robotic mobilization. Collusive holdout patterns reset roster schedules and summon external basin reserves rather than yielding monopoly rents.
+
+#### 2. Exploit Vector B: Demarcation Friction in Metabolic Decoupling (Articles 2.3.4 & 5.2.2)
+* **Mechanic:** Canonical Article 5.2.2 dictates Stage Four Metabolic Decoupling (reversion of a non-compliant user’s habitat hookups to Tier 1 survival baselines) without codifying the physical topology of the isolation point or clarifying boundary jurisdiction relative to Article 2.3.4 (Usufructuary Spatial Boundaries) and Article 1.2.1 (Somatic Inviolability).
+* **Failure Mode:** Non-compliant occupants can occupy or physically obstruct external access junction boxes situated near dwelling thresholds. Because technicians cannot employ kinetic force, somatic contact, or unauthorized dwelling entry, isolation procedures stall, permitting unauthorized continued drawdown of high-throughput municipal exergy buses.
+* **Invariant Bounds:** Somatic integrity is absolute; carceral restraint, physical assault, and kinetic eviction are prohibited (Art. 1.2, Art. 8.5.1). Baseline survival inputs (clean water, caloric sustenance, baseline exergy, life-support) must never be interrupted (Art. 1.3).
+* **Architectural Remedy:** Codify the *Exterior Common Vault Isolation Protocol*. Legally and physically classify all primary and secondary utility distribution trunks, switching manifolds, and Exergy Bus junctions as Planetary Commons Rights-of-Way outside the private spatial usufruct. Authorize non-kinetic physical isolation strictly upstream at the exterior manifold via automated bypass valving without requiring dwelling ingress or physical contact with the occupant.
+
+#### 3. Exploit Vector C: Biomarker and Caregiver Ratio Exploitation (Article 5.6.2)
+* **Mechanic:** Canonical Article 5.6.2 relies on local guild medical registries for dependent care validation without an automated anti-spoofing cross-check against municipal biological demographic limits.
+* **Failure Mode:** Potential localized clustering of caregiver exemptions to systematically evade rotational maintenance quotas.
+* **Architectural Remedy:** Bind caregiver exemption validity strictly to automated municipal demographic distributions ($P < \mu + 2\sigma$) and decentralized multi-signature validator pools from non-adjacent bioregional nodes, eliminating single-guild capture without infringing upon somatic bodily privacy.
+
+---
+
+### II. STATUTORY UNIFIED DIFF
+
+```diff
+--- a/constitution/chapter_02_spatial_usufruct.one
++++ b/constitution/chapter_02_spatial_usufruct.one
+@@ -88,9 +88,14 @@
+ Article 2.3.4 Demarcation of Dwelling Usufruct and Commons Infrastructure:
+-Possessory usufruct over a designated Tier 1 or Tier 2 dwelling grants an exclusive private spatial envelope to the assigned inhabitants. Common utility distribution trunks traversing residential zones remain the property of the planetary commons. Inhabitants shall not tamper with communal conduits passing through or adjacent to their assigned space.
++Possessory usufruct over a designated Tier 1 or Tier 2 dwelling grants an exclusive private spatial envelope to the assigned inhabitants, the interior perimeter of which constitutes an inviolable domestic sanctuary under Article 1.2. 
++
++All primary and secondary utility distribution conduits, exergy distribution buses, fluidic manifolds, data conduits, and metering junctions are hereby codified as Planetary Commons Rights-of-Way. The interface between private dwelling usufruct and the communal grid terminates strictly at the Exterior Common Vault located outside the private boundary enclosure. Communal utility technicians and automated maintenance automata hold unrestricted access to the Exterior Common Vault for monitoring, maintenance, and flow-rate regulation. Inhabitants shall not physically obstruct, tamper with, or enclose the Exterior Common Vault or adjacent utility rights-of-way.
+
+--- a/constitution/chapter_05_ergonomics_and_allocation.one
++++ b/constitution/chapter_05_ergonomics_and_allocation.one
+@@ -112,8 +112,13 @@
+-Article 5.1.3 Escalation Schedule: If a maintenance roster remains unfilled for consecutive cycles, the sorting engine shall incrementally scale ergonomic multipliers up to a maximum of 5x with sabbatical allotments. If unstaffed after three consecutive cycles, the node shall be throttled or decommissioned until automation is deployed.
++Article 5.1.3 Escalation Schedule & Anti-Holdout Engine: If an essential rotational maintenance roster remains unfilled, ergonomic multipliers shall not scale in a deterministic or predictable sequence. 
++
++1. The algorithmic allocation engine shall activate a stochastic, unannounced Dutch auction mechanism within bounded thermodynamic parity limits (1.1x to 3.5x base ergonomic credits), randomizing clearing intervals to prevent tactical holdout gaming.
++2. Concurrently, the engine shall trigger inter-watershed rotational pooling under the Article 10.3 Mutual Aid Protocol, opening the roster to neighboring basin communes.
++3. Should an essential roster remain unstaffed past two clearing intervals, prioritized dispatch of Tier 2-A autonomous maintenance robotics shall execute non-discretionary preventive servicing.
++4. Any documented algorithmic or cohort collusion designed to withhold rotational labor to induce maximum multiplier tiers shall trigger immediate annulment of the local escalation cycle and reassign dispatch priority to external bioregional cohorts.
+
+@@ -194,7 +199,12 @@
+-Article 5.2.2 Stage Four (Metabolic Decoupling): Revocation of possessory usufruct over high-throughput communal assets and spatial assignment to an individual Tier 1 Baseline Accommodation. Dwelling hookups are clamped strictly to autonomous baseline survival inputs.
++Article 5.2.2 Stage Four (Metabolic Decoupling Protocol): Revocation of possessory usufruct over high-throughput communal fabrication, high-draw kinetic capital, and luxury communal reserves. 
++
++1. Dwelling hookups servicing the non-compliant occupant shall be physically restricted strictly to autonomous Tier 1 baseline survival inputs (potable water, life-support exergy, baseline data ingress, and thermal regulation) as guaranteed by Article 1.3.
++2. Metabolic Decoupling shall execute exclusively at the Exterior Common Vault defined in Article 2.3.4. Communal engineering teams or automated isolation servos shall decouple high-throughput industrial and luxury exergy circuits externally along the Planetary Commons Right-of-Way.
++3. In accordance with Article 1.2.1 and Article 8.5.1, no physical entry into the private domestic sanctuary, somatic contact, kinetic eviction, or carceral restraint shall occur. The dwelling's autonomous life-support floor remains unassailable, while all surplus communal throughput is shunted to adjacent functional commons nodes.
+
+@@ -341,6 +351,11 @@
+-Article 5.6.2 Caregiver Certification: Individuals providing essential dependent, elder, or child care within a communal household may register with the municipal sorting registry to receive full ergonomic credit parity and exemption from secondary rotational labor rosters upon certification by their local guild.
++Article 5.6.2 Caregiver Certification and Demographic Ratio Verification: Individuals providing essential dependent, elder, infant, or convalescent care within a communal household shall receive full ergonomic credit parity and complete exemption from secondary rotational labor rosters.
++
++1. Certification requires multi-party verification from a rotating decentralized panel of registered healthcare practitioners, with at least one validator drawn randomly from an external, non-adjacent bioregional health cooperative.
++2. Total municipal caregiver exemptions are statistically audited against biophysical demographic dependency curves. Should aggregate caregiver claims within a single commune deviate beyond three standard deviations from verified demographic baselines ($\mu + 3\sigma$), an independent regional audit node shall execute non-invasive census verification without compromising individual medical data privacy.
+```
+
+---
+
+### III. INVARIANT COMPLIANCE VERIFICATION
+
+1. **Abolition of Kinetic Coercion (Art. 1.2 & Art. 8.5.1):**  
+   The Exterior Common Vault protocol operates entirely on the external commons side of the structural boundary. No physical ingress, bodily touching, or kinetic eviction is authorized or required. Metabolic isolation is purely thermodynamic and fluidic.
+
+2. **Absolute Survival Floor (Art. 1.3):**  
+   The isolation protocol explicitly restricts the cut-off to high-throughput exergy buses (industrial currents, high-draw fabrication feeds, municipal greywater injection). The Article 1.3 baseline life-support envelope remains permanently pressurized and wired.
+
+3. **Anti-Financialization and Zero Debt-Money (Art. 1.4 & Art. 1.5):**  
+   Holdout labor gaming is neutralized through stochastic auction limits, mutual aid pooling, and robotic dispatch—not financial fines, compound interest, or sovereign debt obligations.
+
+4. **Biophysical Realism:**  
+   The amendment eliminates rational-agent holdout attacks while maintaining the thermodynamic integrity of the local grid, preventing operational grid degradation while preserving constitutional liberties.

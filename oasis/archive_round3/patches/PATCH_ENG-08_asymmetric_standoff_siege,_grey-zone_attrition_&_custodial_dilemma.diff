@@ -1,0 +1,92 @@
+### Architectural Remediation Report: Transit Interdiction & Metabolic Deadlock
+
+**Severity Classification:** SV-2 (Critical Systemic Deadlock)  
+**Target Subsystems:** *Custodia Civilis* Demographic Capacity, Abiotic Reserve Sizing, Synthesis Monomers for Critical Water Treatment, Transit Bypass Fallback Protocols.  
+**Affected Canonical Provisions:** Articles 3.3.4, 3.5.2, 6.1.2, 8.5.1, 8.5.2, 10.4.4.
+
+---
+
+### 1. Architectural Explanation of the Fix
+
+The adversarial audit demonstrated a compounded thermodynamic failure mode during kinetic siege or exterior linear infrastructure sabotage:
+
+1. **Severance of External Conduits:** When hostile kinetic action cuts fixed-rail and maritime egress arteries outside the defensive perimeter, the *Mandatory Federal Transit Bypass* (Art. 10.4.4) deadlocks because it presumes the physical availability of contiguous rail, road, or maritime corridors to adjacent sovereign Cantons.
+2. **Metabolic Drain under Custodia Civilis:** Individuals detained under non-punitive *Custodia Civilis* (Art. 8.5.1) cannot be expelled into kinetic kill zones (violating Art. 1.3 somatic integrity), nor carcerally starved, enslaved, or executed. Consequently, they draw full Tier 1 metabolic rations (Art. 3.5.2) from the besieged Canton’s baseline reserve, accelerating the exhaustion of the 30-day abiotic buffer (Art. 6.1.2) by up to 30–45% under demographic surge conditions.
+3. **Stoichiometric Failure in High-Entropy Consumables:** Tier 2-A manufacturing assets (fab-labs) cannot synthesize thin-film composite (TFC) reverse osmosis membranes from scrap metals or bulk polymers without specific high-order precursor monomers (e.g., $m$-phenylenediamine, trimesoyl chloride, polar aprotic casting solvents). High particulate turbidity caused by combat operations clogs filtration arrays, depleting membrane stockpiles faster than basic recycling loops can replenish them.
+
+#### The Statutory Remedies:
+
+- **Precursor Caching Invariant (Art. 3.3.4 & Art. 6.1.2):** Amends baseline survival reserves to mandate that the 30-day physical reserve must include a stoichiometrically matched, pre-positioned 90-day supply of synthetic precursors for class-critical life-support consumables (reverse osmosis membranes, ion-exchange resins, medical dialysis filtration, and basic coagulants), indexed to worst-case wartime turbidity and maximum theoretical demographic loading.
+- **Closed-Loop Catalytic Fallbacks (Art. 6.1.2):** Mandates that Tier 2-A fab-labs maintain pre-compiled, deterministic pyrolytic and biochemical synthesis routes capable of generating membrane-grade aromatic diamines and acid chlorides from unrefined municipal waste and atmospheric nitrogen/carbon capture, preventing supply-chain-induced halts of the Lexicographic Viability Operator.
+- **Dynamic Demographic Reserve Re-Indexing (Art. 3.5.2):** Modifies the thermodynamic allocation equation so that any verified influx of non-combatant detainees instantly scales the mandatory abiotic reserve thresholds, triggering immediate load-shedding of non-essential Tier 3 energy sinks to fund synthesis without degrading resident baseline somatic allocations.
+- **Demilitarized Humanitarian Egress Protocol (Art. 8.5.2 & Art. 10.4.4):** When all sovereign federal conduits are severed, Art. 10.4.4 and Art. 8.5.2 are augmented with an automated *Demilitarized Humanitarian Egress* trigger. The Canton is constitutionally mandated to establish an internationally monitored, unilateral, unarmed truce corridor directly to the siege perimeter or neutral international bodies. If external besiegers refuse passage, the detainees are released into verified demilitarized perimeter zones with standard survival gear, barring carceral warehousing and shifting legal and metabolic accountability without violating somatic integrity.
+
+---
+
+### 2. Formal Constitutional Amendment (Unified Diff)
+
+```diff
+--- constitution/canonical/art_3_allocations.tex
++++ constitution/canonical/art_3_allocations.tex
+@@ -74,7 +74,9 @@
+ Art. 3.3.4. Water Purification and Abiotic Synthesis Stocks.
+ Water allocation is non-derogable and strictly prioritizes somatic hydration, clinical sanitization, and agricultural survival loops. 
+-All Communal Fab-Labs of Tier 2-A or higher shall maintain operational tooling capable of refurbishing, cleaning, and manufacturing mechanical filtration arrays and standard ion-exchange substrates from local mineral and polymer feedstocks.
++All Communal Fab-Labs of Tier 2-A or higher shall maintain operational tooling capable of refurbishing, cleaning, and manufacturing mechanical filtration arrays and standard ion-exchange substrates from local mineral and polymer feedstocks. In addition, each Commune shall maintain an inviolable, hermetically sealed stoichiometric cache of synthesis precursors—specifically including aromatic diamines, polar aprotic solvents, trimesoyl halides, and catalytic flocculants—sufficient to reconstitute high-turbidity thin-film composite membranes for a rolling ninety (90) solar day period under conditions of complete external physical isolation.
+ 
+@@ -142,6 +144,11 @@
+ Art. 3.5.2. Demographic Surge and Siege Metabolic Adjustments.
+ In the event of a documented demographic surge within a Canton—whether resulting from refugee ingress, internal displacement, or individuals held under Custodia Civilis—the Lexicographic Viability Operator shall immediately recalculate thermodynamic allocations. 
+-Tier 1 allocations for both residents and transient individuals shall be drawn from existing reserves and standard automated production queues equally, without distinction of political status.
++Tier 1 allocations for both residents and transient individuals shall be drawn from existing reserves and standard automated production queues equally, without distinction of political status.
++Upon the physical severance of more than fifty percent (50%) of external logistics corridors, the Canton's metabolic scheduler shall automatically execute a Mandatory Tier 3 Load-Shedding Directive: all energetic and computational allocations dedicated to non-vital fabrication, experimental iterations, and non-essential processing shall be diverted into continuous life-support synthesis, secondary closed-loop water reclamation, and local precursor synthesis. The intake of individuals under Custodia Civilis shall not dilute resident baseline somatic survival below the stoichiometric threshold of 2,200 kilocalories and three (3) liters of potable water per human per solar day.
+--- constitution/canonical/art_6_production_reserves.tex
++++ constitution/canonical/art_6_production_reserves.tex
+@@ -28,8 +28,10 @@
+ Art. 6.1.2. Thirty-Day Kinetic and Abiotic Reserve Thresholds.
+ Every Canton and self-governing Commune must maintain, at all times, an unencumbered, decentralized physical buffer of Tier 1 metabolic essentials, energy carriers, and water reserves calibrated to sustain its recorded population for no less than thirty (30) standard solar days.
+-Said reserves shall consist of dry food concentrates, bulk grains, potable water containers, seed stock, basic medical consumables, and spare parts for local generation nodes.
++Said reserves shall consist of dry food concentrates, bulk grains, potable water containers, seed stock, basic medical consumables, and spare parts for local generation nodes. 
++Where abiotic water security relies on advanced membrane filtration or complex catalytic synthesis, the thirty-day buffer must explicitly include high-entropy chemical precursors, solvent reserves, and replaceable membrane modules sized for triple the standard baseline turbidity rate. If external logistics are interdicted, Tier 2-A production facilities shall enforce verified closed-loop pyrolytic synthesis schedules that manufacture these monomers from domestic post-consumer polymers and ambient capture without relying on external sovereign supply chains.
+--- constitution/canonical/art_8_justice_custodia.tex
++++ constitution/canonical/art_8_justice_custodia.tex
+@@ -112,7 +112,8 @@
+ Art. 8.5.1. Conditions of Custodia Civilis.
+ Custodia Civilis is non-punitive, non-carceral protective restraint utilized exclusively to prevent physical sabotage, violence, or systemic disruption of communal life-support during civil breakdown or hostile infiltration. 
+-Detainees shall be accommodated in unfortified communal housing, provided identical Tier 1 metabolic provisions as sovereign inhabitants, and afforded uninterrupted somatic protection. At no time may a detainee be subjected to forced labor, somatic humiliation, solitary isolation, or sensory deprivation.
++Detainees shall be accommodated in unfortified communal housing, provided identical Tier 1 metabolic provisions as sovereign inhabitants, and afforded uninterrupted somatic protection. At no time may a detainee be subjected to forced labor, somatic humiliation, solitary isolation, or sensory deprivation.
++The aggregate number of individuals maintained in Custodia Civilis within an isolated or besieged Canton shall not exceed the metabolic capacity of its local reserves. If the duration of detention threatens the continuity of the Canton's thirty-day survival reserve, the Cantonal Council must invoke Art. 8.5.2 and Art. 10.4.4 egress procedures without delay.
+ 
+@@ -135,7 +136,13 @@
+ Art. 8.5.2. Mandatory Transit Bypass and Release.
+ Custodia Civilis shall terminate automatically within fourteen (14) solar days unless prolonged by unanimous judicial sortition confirmation. 
+-If the Canton is unable or unwilling to maintain protective restraint, the individual must be transferred via the Federal Transit Bypass to an adjacent sovereign Canton or permitted unimpeded departure across federal boundaries.
++If the Canton is unable or unwilling to maintain protective restraint, the individual must be transferred via the Federal Transit Bypass to an adjacent sovereign Canton or permitted unimpeded departure across federal boundaries.
++If all physical transit conduits are cut by hostile siege or kinetic interdiction, the Canton shall immediately propose a Unilateral Demilitarized Truce Egress to the besieging entity or a recognized neutral humanitarian intermediary. Under this protocol, detainees under Custodia Civilis shall be escorted unarmed to the territorial line and released. If the besieging force rejects the truce or maintains fire on egress avenues, the detainees shall be released from physical restraint into safe-perimeter demilitarized zones with individual emergency survival kits, thereby extinguishing Canton custodial liability without violating somatic non-carcerality or allowing captives to serve as metabolic weapons against the Canton's survival baseline.
+--- constitution/canonical/art_10_intercantonal_transit.tex
++++ constitution/canonical/art_10_intercantonal_transit.tex
+@@ -88,6 +88,11 @@
+ Art. 10.4.4. Mandatory Federal Transit Bypass Interdiction Protocols.
+ Where an external power, non-signatory state, or hostile entity attempts an operational encirclement or blockade of a Canton, the Federal Transit Bypass mandates that adjacent Cantons deploy mutualized transport assets to maintain logistics conduits.
+-Should physical rail, maritime, or road corridors be severed, the Canton shall register a formal state of Territorial Interdiction with the Federal Council, triggering automatic activation of emergency decentralized reserves.
++Should physical rail, maritime, or road corridors be severed, the Canton shall register a formal state of Territorial Interdiction with the Federal Council, triggering automatic activation of emergency decentralized reserves.
++In the event of total kinetic encirclement where physical transport extraction is objectively impossible:
++1. The requirement for physical evacuation via Federal Transit Bypass is suspended;
++2. The affected Canton is empowered to unilaterally establish local Demilitarized Humanitarian Corridors as defined in Art. 8.5.2;
++3. Federal supply obligations shift from rail and bulk road freight to distributed low-altitude aerial drops and decentralized micro-payload delivery targeting critical chemical precursors, catalytic nodes, and compact high-order reagents;
++4. All property, transit titles, or contracts seeking to leverage transport paralysis to enforce carceral containment or starve besieged populations are void ab initio.
+```
+
+---
+
+### 3. Invariant Verification & Mathematical Proof of Termination
+
+1. **Chapter I, Art. 1.3 (Absolute Prohibition of Carceral Coercion & Somatic Integrity):**  
+   The amendment strictly rejects indefinite confinement, starvation, or forced labor of hostile saboteurs. When demographic loading compromises the node's physical survival baseline, detainees are neither killed nor carcerally warehoused. Instead, they are channeled through an automated demilitarized truce egress or released into perimeter buffer zones equipped with survival essentials.
+2. **Chapter I, Art. 1.4 (Lexicographic Priority of Abiotic and Somatic Survival):**  
+   The mathematical viability operator does not stall when high-entropy synthetic consumables run low. The patch explicitly decouples water continuity from vulnerable, single-point global supply chains by:
+   - Requiring a dedicated 90-day stoichiometric precursor reserve ($P_{monomer} \ge 3 \times C_{baseline}$);
+   - Mandating local closed-loop pyrolytic chemical synthesis within Tier 2-A fab-labs;
+   - Enforcing immediate load-shedding of Tier 3 discretionary energy use to power metabolic synthesis during interdiction.
+3. **Determinism and Anti-Technocracy:**  
+   The protocols operate on deterministic physical triggers (severance of $>50\%$ of physical corridors, metric drop in 30-day abiotic reserves) rather than discretionary administrative decrees. This prevents bureaucratic or oligarchic usurpation during states of kinetic emergency.

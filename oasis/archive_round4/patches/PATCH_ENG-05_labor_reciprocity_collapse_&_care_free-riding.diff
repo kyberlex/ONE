@@ -1,0 +1,64 @@
+### Architectural Assessment & Mechanistic Audit
+
+#### 1. Vulnerability Analysis & Causal Mechanism
+Under canonical **Article 3.6.2**, acute biophysical deficits trigger an across-the-board, uniform pro-rata contraction across aggregate caloric distribution pools. This mathematical formulation treats biological entities as homogeneous thermodynamic sinks, ignoring the physical disparity between:
+1. **Basal Metabolic Rate ($E_{\text{basal}}$)**: The somatic baseline required for homeostatic survival at rest ($\sim 1,800 \text{--} 2,100 \text{ kcal/day}$).
+2. **Kinetic Work Expenditure ($E_{\text{kinetic}}$)**: The somatic energetic degradation incurred during physical labor in high-exergy infrastructure tasks ($\sim 1,500 \text{--} 3,000 \text{ additional kcal/day}$).
+
+When emergency pro-rata austerity applies uniformly across gross allocations without decoupling kinetic replacement from consumer baselines, active workers operating critical life-support infrastructure run a severe net-negative metabolic balance. Concurrently, non-participating individuals or sedentary defectors absorb the cut within their metabolic buffer, surviving uninjured. This creates an immediate thermodynamic penalty for active maintenance of the commons, resulting in rapid physiological exhaustion, labor abandonment at critical infrastructural nodes, and subsequent cascading system failure.
+
+#### 2. Nomothetic Remediation
+The amendment enforces the following structural corrections across Articles 3.6.2, 5.1.3, 5.2.1, and 5.2.2:
+- **Decoupling of Thermodynamic Input from Consumption**: Kinetic replacement energy ($E_{\text{kinetic}}$) is formally categorized as an operational throughput cost of the physical apparatus—identical to lubricating oil in a turbine or electricity in an induction furnace—rather than personal consumable property or compensatory wage.
+- **Ring-Fencing of Kinetic Fueling**: In the event of biophysical yield collapse, gross contractions are applied solely to aggregate discretionary reserves and scaled non-essential consumption pools. The *Thermodynamic Task-Replacement Allowance* is shielded from pro-rata compression, subject only to direct physical verification of kinetic exertion via local bioregional metabolic telemetry.
+- **Strict Anti-Financialization and Non-Carceral Guarantees**: Task-replacement allocations cannot be banked, transferred, alienated, or converted into tradeable or debt instruments. Non-working individuals cannot be starved below the universal non-forfeitable somatic baseline ($E_{\text{basal}}$); their survival floor remains inviolable, eliminating carceral or coercive starvation vectors while neutralizing the game-theoretic payoff inversion.
+
+---
+
+### Formal Constitutional Amendment
+
+```diff
+--- a/constitution/chapter_3/article_3_6_2.one
++++ b/constitution/chapter_3/article_3_6_2.one
+@@ -14,11 +14,18 @@
+-2. In the event of severe agro-ecological failure, biophysical blight, or aggregate yield collapse, all distributed caloric entitlements across the affected bioregion shall contract uniformly on a strict pro-rata basis. No individual, office, or collective may claim exemption from aggregate somatic contraction, ensuring absolute equality of hardship across the whole population.
++2. In the event of severe agro-ecological failure, biophysical blight, or aggregate yield collapse, caloric contractions shall be mathematically partitioned between biological homeostasis and kinetic operational throughput:
++   (a) The Universal Basal Somatic Floor (E_basal), defined as the unconditional physiological survival baseline, shall remain inviolable and shall contract uniformly only as an ultimate resort, preserving biological life across the whole population without exception or penal differentiation.
++   (b) Caloric expenditure incurred through physical participation in validated Class-A life-support, repair, and agricultural maintenance (E_kinetic) shall be classified as an operational energy input of the Commons apparatus itself.
++   (c) E_kinetic allocations shall be quarantined from pro-rata emergency contraction and disbursed strictly to replenish documented somatic expenditure. Such allocations are non-transferable, non-accumulative, and incapable of conversion into credit, property, or private claim.
++   (d) All emergency contractions shall fall primarily upon discretionary reserves, non-basal buffers, and non-kinetic consumption quotas.
+
+--- a/constitution/chapter_5/article_5_1_3.one
++++ b/constitution/chapter_5/article_5_1_3.one
+@@ -8,7 +8,9 @@
+-3. Rotational contributions to communal labor carry no entitlement to superior caloric, material, or spatial distributions. The biological parity guaranteed under Chapter I admits no variation based on productive output, occupational specialization, or labor intensity.
++3. Rotational contributions to communal labor carry no entitlement to superior property, social status, or compensatory luxury. Biological life-support parity guaranteed under Chapter I remains invariant; however, actual metabolic energy depleted during certified high-exergy rotational labor must be fully restored as a thermodynamic necessity. 
++   Replenishment of documented kinetic caloric debt is an operational maintenance requirement of the commune's productive apparatus, distinct from personal distribution, and shall not be construed as unequal entitlement or wage compensation.
+
+--- a/constitution/chapter_5/article_5_2_1.one
++++ b/constitution/chapter_5/article_5_2_1.one
+@@ -19,6 +19,9 @@
+ 1. Kinetic labor applied to public infrastructure shall be logged exclusively for the purpose of rotational scheduling, safety compliance, and thermodynamic accounting of work performed.
++   (a) Biophysical logging shall quantify task-associated energy expenditure (E_kinetic) to calibrate somatic caloric restoration according to open physical telemetry.
++   (b) Under no circumstances shall kinetic expenditure accounting be integrated with market ledgers, personal credit indices, or civic ranking systems.
+
+--- a/constitution/chapter_5/article_5_2_2.one
++++ b/constitution/chapter_5/article_5_2_2.one
+@@ -22,8 +22,12 @@
+-2. During systemic emergencies, the continuity of critical life-support operations relies upon the uncoerced solidarity of the assembly. Caloric rationing shall apply equally across all registered individuals regardless of duty status, maintaining common exposure to biophysical realities.
++2. During systemic emergencies, the continuity of critical life-support operations relies upon the uncoerced solidarity of the assembly and the thermodynamic sustainability of essential operations:
++   (a) Physical infrastructure, water purveyance, agricultural sustenance, and grid stability stations shall receive priority allocation of caloric fuel designated for operating personnel as Kinetic Operational Throughput.
++   (b) Personnel undertaking critical manual and technical interventions shall receive uninterrupted somatic restoration proportional to verified energetic burn-rates, preventing biological exhaustion during biophysical crises.
++   (c) Unwillingness or failure to undertake Class-A rotational shifts shall carry no carceral sanction, judicial detention, or reduction below the Universal Basal Somatic Floor.
+```
+
+---
+
+### Invariant Verification Audit
+
+| Invariant | Status | Verification Detail |
+| :--- | :--- | :--- |
+| **Prohibition of Wage Labor / Financialization** | **PASSED** | Kinetic caloric restoration ($E_{\text{kinetic}}$) is designated as machine-equivalent operational fuel. It is non-fungible, non-tradable, non-accumulative, and extinguishes immediately upon biological metabolic intake. No debt, currency, or credit instrument is instantiated. |
+| **Non-Carceral Penal Invariance** | **PASSED** | Defection or non-participation incurs zero punitive rationing, zero administrative violence, and zero detention. Non-participants remain fully protected by the unconditional Universal Basal Somatic Floor ($E_{\text{basal}}$). |
+| **Biological Parity Invariance** | **PASSED** | True physiological parity is preserved by maintaining equal net metabolic balance. Under crisis conditions, replenishing the physical calories consumed during essential work ensures workers and non-workers sustain identical cellular viability, ending the survival bias toward labor defection. |
+| **Technocratic / Sortition Capture** | **PASSED** | Allocations are indexed strictly to transparent, thermodynamic physical telemetry (joules expended) rather than managerial or bureaucratic discretion. |

@@ -1,0 +1,72 @@
+### Architectural Audit & Root Cause Remediation
+
+#### 1. Vulnerability Assessment: SV-2 (Critical)
+The vulnerability identified in **Audit SV-2** exposes a structural cybernetic deadlock within the interface between legislative voting thresholds (**Article 4.5.2**) and safe-state algorithmic execution (**Article 3.1.5**). 
+
+By sustaining a disciplined $41\%$ negative bloc, an organized faction can permanently obstruct deliberative policy updates without offering a viable alternative. This exploits the safety-valve mechanism: the system falls back to the Automated Convex Baseline Solver to preserve metabolic life support. However, sustained execution of the baseline solver shifts effective allocative power to epistemic guilds and parameter calibrators (**Articles 3.6.2 & 4.4.3**), establishing an un-elected technocratic regime by default and violating the **Non-Delegable Demarchic Sovereignty** invariant of Chapter I.
+
+#### 2. Remediation Strategy
+The patch introduces a three-tiered cybernetic resolution protocol that eliminates recursive baseline reliance without diluting Chapter I invariants:
+
+1. **Strict Temporal Caps on Baseline Autopilot (Art. 3.1.5):** Automated convex fallback is strictly bounded to a single operational cycle ($\tau \le 90$ solar days). Consecutive defaults lock baseline weight vectors to cryptographic, immutably verified historical medians, eliminating guild discretion.
+2. **Algorithmic Parameter Subordination (Art. 3.6.2 & 4.4.3):** Guild parameter adjustments during fallback states are structurally barred. Any parameter variation requires deterministic verification by rotating Civic Epistemic Juries.
+3. **Dynamic Antifragile Deadlock Resolution (Art. 4.5.2 & 4.3.3):** If a qualified $60\%$ majority is blocked for two consecutive dynamic intervals, the voting protocol dynamically shifts:
+   - Negative vetoes without counter-proposals that meet biophysical safety thresholds are discarded.
+   - The assembly transitions to a deterministic Instant-Runoff Condorcet Optimization across all biophysically viable, validated proposals.
+   - Continued impasse automatically dissolves the blocking faction's sortition tranche and convenes an auxiliary Synthesis Sortition Chamber drawn from the general demarchic pool to finalize the allocation vector.
+
+---
+
+### Formal Statutory Amendment
+
+```diff
+--- a/constitution/chapter_3_metabolic_metrology.one
++++ b/constitution/chapter_3_metabolic_metrology.one
+@@ -48,12 +48,18 @@
+ Article 3.1.5 [Automated Convex Baseline Solver]
+-1. In the event that a Bioregional Assembly fails to ratify a multi-year metabolic allocation plan prior to the expiration of the active cycle, the Automated Convex Baseline Solver shall immediately engage, executing the trailing plan’s baseline vector adjusted strictly for real-time biophysical resource availability and thermodynamic limits.
+-2. The baseline solver shall continue executing autonomously until such time as the Bioregional Assembly ratifies a successor plan by the requisite constitutional majority.
++1. In the event that a Bioregional Assembly fails to ratify a multi-year metabolic allocation plan prior to the expiration of the active cycle, the Automated Convex Baseline Solver shall engage strictly as an interim life-support continuity protocol for a duration not to exceed one (1) dynamic cycle (\tau \le 90 solar days).
++2. During interim solver execution, the allocation vector shall be restricted to the lower bound of basic human metabolic provisioning and core grid stability. All discretionary, tier-2 fab-lab, and secondary capital development allocations are frozen at zero.
++3. Recursive or consecutive baseline solver engagement is strictly prohibited. If an assembly reaches the conclusion of an interim cycle without ratifying an integrated plan, the fallback solver shall lock all objective parameters to the trailing three-year running median, and the assembly shall instantly enter the mandatory deadlock resolution protocol set forth in Article 4.5.2.
+ 
+ Article 3.6.2 [Metabolic Parameter Calibration and Weighting]
+-1. Epistemic working groups and technical guilds shall periodically calibrate the objective weight matrices and biophysical constraint equations utilized in assembly planning models.
+-2. Re-calibrated parameter sets shall take immediate effect upon logging to the immutable sensor-ledger, subject to post-hoc review by the assembly.
++1. Epistemic working groups and technical guilds may compute and propose recalibrations of objective weight matrices, biophysical constraint sets, and depreciation constants. Such models are purely advisory and possess zero executive force.
++2. No parameter recalibration shall take effect without explicit cryptographic sign-off from an audit-lottery of the Bioregional Assembly.
++3. During any period of interim baseline solver execution under Article 3.1.5, technical guilds are categorically barred from adjusting constraint weights. Any synthetic variation of parameters during an impasse constitutes systemic sabotage and voids the guild's epistemic charter.
+--- a/constitution/chapter_4_demarchic_governance.one
++++ b/constitution/chapter_4_demarchic_governance.one
+@@ -74,10 +74,14 @@
+ Article 4.3.3 [Sortitive Term Integrity and Synthesis Juries]
+-1. Delegates to the Bioregional Assembly shall serve staggered terms of eighteen solar months, drawn via high-entropy lottery from the civic register.
+-2. Assembly members shall not be recalled or dissolved prematurely except on grounds of demonstrable metabolic treason or verified cognitive incapacitation.
++1. Delegates to the Bioregional Assembly shall serve staggered terms of eighteen solar months, drawn via high-entropy lottery from the civic register.
++2. Assembly members shall not be recalled or dissolved prematurely except on grounds of demonstrable metabolic treason, verified cognitive incapacitation, or deliberate recursive deadlock as defined in Article 4.5.2.
++3. Where structural deadlock persists beyond ninety (90) solar days, an auxiliary Synthesis Jury of one hundred and one (101) delegates shall be instantly impaneled via high-entropy sortition. This synthesis body sits in permanent session with the sole nomothetic brief of selecting among the final Pareto-optimal vectors.
+ 
+ Article 4.4.3 [Epistemic Guild Bounds and Subordination]
+-1. Technical guilds, sensory monitoring corps, and operational stewards provide the epistemic substratum for demarchic decision-making.
+-2. Guilds maintain full operational autonomy over day-to-day dispatch and physical plant operations within their certified metabolic envelopes.
++1. Technical guilds, sensory monitoring corps, and operational stewards provide the epistemic substratum for demarchic decision-making. They remain strictly subordinate to the demarchic assemblies.
++2. Guilds maintain operational autonomy over physical plant dispatch only within certified metabolic envelopes. Guilds possess no legislative veto, hold no deliberative block within assemblies, and are structurally incapable of assuming governance authority in the event of assembly deadlock.
+ 
+ Article 4.5.2 [Voting Thresholds, Negative Vetoes, and Dynamic Impasse Dissolution]
+-1. Adoption of any multi-year metabolic allocation plan requires a qualified supermajority of sixty percent (60%) of the seated Bioregional Assembly.
+-2. Proposals failing to achieve sixty percent (60%) approval are rejected, and the assembly shall return to iterative deliberation.
++1. Adoption of any multi-year metabolic allocation plan shall initially require a qualified supermajority of sixty percent (60%) of the seated Bioregional Assembly.
++2. A vote rejecting a proposed plan is null and void unless the dissenting minority introduces at least one counter-plan certified by the biophysical sensory ledger as thermodynamically feasible and non-extractive. Pure obstructionist negative vetoes lacking certified counter-proposals shall not be entered into the tally.
++3. If an assembly fails to reach the 60% threshold on two successive ballots separated by fourteen (14) solar days:
++   a. The voting protocol shall automatically convert from a binary threshold to a deterministic Instant-Runoff Condorcet Ballot among all biophysically certified proposals;
++   b. The proposal securing the greatest Condorcet margin shall instantly become statutory law;
++   c. If Condorcet cycles yield a mathematical deadlock, the auxiliary Synthesis Jury specified in Article 4.3.3 shall be impaneled, and the bottom-ranking forty-one percent (41%) obstructionist faction of the parent assembly shall be immediately vacated, rotated back to the civic register, and replaced via immediate high-entropy sortition.
+```
+
+---
+
+### Architectural Invariant Proof
+- **Chapter I: Abolition of Oligarchic Enclosure:** Preserved. Technical guilds cannot covertly steer allocations through manipulated baseline parameters during deadlocks.
+- **Chapter I: Non-Delegable Demarchic Sovereignty:** Restored. The deadlock breaker transfers authority to an auxiliary, high-entropy sortition jury and a Condorcet optimization process rather than surrendering legislative direction to automated technical solvers.
+- **Chapter I: Universal Biophysical Carrying Capacity Guarantee:** Preserved. Negative vetoes are valid only when accompanied by thermodynamically certified counter-models, eliminating spiteful paralysis while guaranteeing baseline survival.
+- **Chapter I: Zero Carceral Dynamics / Debt Systems:** Preserved. Non-compliant factions face only civic sortition rotation back into the sovereign citizenry, with no deprivation of life-support rations, physical confinement, or economic penalization.

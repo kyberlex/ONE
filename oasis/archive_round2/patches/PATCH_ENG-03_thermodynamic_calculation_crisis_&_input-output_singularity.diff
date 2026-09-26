@@ -1,0 +1,74 @@
+### Architectural Audit & Root-Cause Remediation
+
+#### 1. Mathematical Failure Mode: The Commensurability Deficit
+The vulnerability manifests when aggregate physical reserves fall below the lower boundary polytope of combined Tier 1 (Metabolic Survival Baseline) and Tier 2-A (Systemic Infrastructural Upkeep). Under existing canonical provisions, the allocation engine requires a non-singular abiotic metric tensor $W$ derived from thermodynamic decay half-lives. However, because distinct elemental precursors (e.g., phosphorus, potable water, lithium, rare-earth catalysts) occupy orthogonal physical dimensions with independent physiological and infrastructural decay curves, the metric tensor cannot compute relative shadow prices under simultaneous structural deficits without an explicit, non-market conversion operator. Absent a lexicographic ordering axiom, the allocation algorithm produces undefined gradient divergences (division by zero / indeterminate state in shadow cost resolution), halting automated resource routing.
+
+#### 2. Institutional Failure Mode: The Supermajority Deadlock
+Art. 4.5.1 and Art. 3.6.2 previously mandated a 75% legislative supermajority to re-parameterize allocation weights or re-balance critical buffer reserves during emergency drawdowns. When available precursors fall below combined Tier 1/2-A thresholds, a 26% factional minority can block reserve re-parameterization to protect localized Tier 2 buffers, thereby freezing the allocation engine. This legislative paralysis cascades into uncoordinated, pro-rata brownouts, directly violating the unconditional baseline guarantee of Art. 1.3.1.
+
+#### 3. Algorithmic and Constitutional Remedy
+The patch implements a dual-layer deterministic safeguard:
+*   **The Thermodynamic Lexicographic Priority Operator ($\mathcal{L}_{\min}$):** Formulates an explicit, invariant dimensional priority vector. Metabolic survival (caloric intake, hydration, active air purification, baseline thermal homeostasis) strictly dominates infrastructural replacement cycles. In the event of non-homothetic polytope contraction, the metric tensor collapses non-metabolic dimensions sequentially according to infrastructural resilience half-lives before any Tier 1 component is compressed.
+*   **The Automated Fallback Ratchet & Sortition Escalation:** If the legislative assembly fails to resolve an emergency reserve re-parameterization within two diurnal cycles (48 hours) of a physical precursor deficit alert, the 75% voting threshold automatically ratchets downward by 5% per diurnal cycle to a floor of a simple absolute majority (50% + 1). If deadlock persists past 96 hours, authority transfers immediately to an emergency sortition panel drawn at random from directly affected frontline biome operators, operating under bounded lexicographic mandates that forbid baseline contraction.
+
+---
+
+### Formal Constitutional Amendment
+
+```diff
+--- a/constitution/chapter_1/art_1_3_2.one
++++ b/constitution/chapter_1/art_1_3_2.one
+@@ -12,9 +12,14 @@
+ 1.3.2. Baseline Invariance and Resource Priority
+-The material components of the Tier 1 Survival Baseline are non-fungible, non-alienable, and invariant. Under no circumstances of external embargo, localized supply disruption, or procedural dispute shall any human being within the commonwealth be deprived of the full biological allocation specified in Art. 1.3.1.
+-In the event of an aggregate physical deficit, municipal and regional distribution hubs shall adjust Tier 2 and Tier 3 allocations pro-rata to preserve Tier 1 inputs in full.
++The material components of the Tier 1 Survival Baseline are non-fungible, non-alienable, and invariant. Under no circumstances of external embargo, localized supply disruption, computational deadlock, or procedural dispute shall any human being within the commonwealth be deprived of the full biological allocation specified in Art. 1.3.1.
++In the event of an aggregate physical precursor deficit where available inventories are insufficient to fulfill simultaneous Tier 1 and Tier 2-A requirements, the allocation engine shall execute an invariant lexicographic projection: Tier 1 biological homeostasis strictly dominates all infrastructural, industrial, and developmental cycles. 
++Under simultaneous multi-vector deficits, dimensional commensurability across distinct precursor elements shall not be resolved through market valuation or subjective shadow pricing, but solely via the deterministic Lexicographic Viability Operator (Art. 3.1.5), which contracts Tier 2 maintenance allocations according to inverse physical resilience half-lives while preserving absolute Tier 1 metabolic flow.
+
+--- a/constitution/chapter_3/art_3_1_5.one
++++ b/constitution/chapter_3/art_3_1_5.one
+@@ -8,8 +8,13 @@
+ 3.1.5. Abiotic Metric Tensor and Dimensional Resolution
+-Allocation optimization across heterogenous resources shall be computed against the abiotic metric tensor W, whose components are derived exclusively from physical exergy destruction rates, elemental scarcity gradients, and ecological replenishment half-lives.
+-Where non-substitutable resources compete across concurrent civic demands, shadow prices shall be resolved via quadratic programming minimizing global entropy generation.
++Allocation optimization across heterogenous resources shall be computed against the abiotic metric tensor W, whose components are derived exclusively from physical exergy destruction rates, elemental scarcity gradients, and ecological replenishment half-lives.
++Where non-substitutable resources compete across concurrent civic demands, shadow prices shall be resolved via quadratic programming minimizing global entropy generation; provided, that in conditions of non-homothetic polytope contraction where aggregate constraints violate the intersection of Tier 1 and Tier 2-A requirements, the solver shall apply the Lexicographic Viability Operator:
++(a) Dimensions governing human somatic survival (water purification, baseline nutrient synthesis, critical life-support energy) are assigned infinite relative shadow weight over structural upkeep and manufacturing inventories.
++(b) Upkeep allocations to Tier 2-A infrastructure shall shed non-critical redundancy loads sequentially along the gradient of material buffer durability, without permitting the computational state space to yield an empty or indeterminate solution.
++(c) The engine is strictly prohibited from computing trade-offs between biological life-support baselines and capital infrastructure longevity.
+
+--- a/constitution/chapter_3/art_3_3_4.one
++++ b/constitution/chapter_3/art_3_3_4.one
+@@ -19,7 +19,10 @@
+ 3.3.4. Reserve Buffer Depletion and Replenishment
+-Critical elemental buffers maintained at municipal, bioregional, and continental tiers shall not be drawn down below the seventy-two-hour minimum safety margin except upon formal authorization of the relevant Bioregional Assembly.
+-Any drawdown exceeding twenty percent of baseline safety inventory requires a coordinated emergency replenishment schedule ratified under Art. 4.5.1.
++Critical elemental buffers maintained at municipal, bioregional, and continental tiers shall not be drawn down below the seventy-two-hour minimum safety margin except upon formal authorization of the relevant Bioregional Assembly or upon autonomous invocation of the Lexicographic Viability Operator to maintain Tier 1 delivery.
++Any drawdown exceeding twenty percent of baseline safety inventory requires an immediate, coordinated emergency replenishment schedule ratified under Art. 4.5.1.
++If physical inventory levels cross the critical threshold of twenty-four hours of metabolic survival reserves, buffer distribution to all Tier 2 and Tier 3 endpoints shall mechanically sever at the hardware-metering interface, directing one hundred percent of remaining flows to life support, irrespective of pending legislative appeals or inter-communal claims.
+
+--- a/constitution/chapter_3/art_3_6_2.one
++++ b/constitution/chapter_3/art_3_6_2.one
+@@ -5,9 +5,12 @@
+ 3.6.2. Algorithmic Deadlock and Emergency Routing
+-If the distributed quadratic resource router encounters a mathematical singularity, persistent divergence, or consensus network split exceeding three hundred seconds, routing algorithms shall drop to baseline safe-mode. Safe-mode executes fixed proportional dispatch according to the last validly verified epoch parameters.
+-The Assembly of Ecological Engineers shall be summoned immediately to diagnose the failure state and submit a corrected parameter set.
++If the distributed quadratic resource router encounters a mathematical singularity, persistent divergence, or consensus network split exceeding three hundred seconds, routing algorithms shall automatically activate deterministic safe-mode. Safe-mode executes invariant lexicographic dispatch: all accessible stocks of energy, water, and agricultural precursors are routed directly to Tier 1 fulfillment hubs, freezing all Tier 3 processing and deferring all non-critical Tier 2 maintenance.
++Safe-mode dispatch bypasses all subjective prioritization matrices and operates exclusively on the verified somatic census.
++Simultaneously with safe-mode activation, the Assembly of Ecological Engineers and the sortition-selected Bioregional Audit Council shall receive an unalterable telemetry report. If automated safe-mode cannot resolve physical constraints due to inventory depletion, the emergency procedures of Art. 4.5.1 take immediate effect without requirement of prior administrative petition.
+
+--- a/constitution/chapter_4/art_4_5_1.one
++++ b/constitution/chapter_4/art_4_5_1.one
+@@ -14,11 +14,16 @@
+ 4.5.1. Emergency Reserve Re-parameterization and Deadlock Ratchet
+-Decisions altering the baseline weight vectors of the abiotic metric tensor, or authorizing emergency reallocation from strategic buffer inventories exceeding thirty percent of capacity, require a seventy-five percent supermajority of the Bioregional Assembly.
+-Such votes must be preceded by open algorithmic modeling published to all constituent communes twelve hours prior to deliberation.
++Decisions altering the baseline weight vectors of the abiotic metric tensor, or authorizing emergency reallocation from strategic buffer inventories exceeding thirty percent of capacity, require a seventy-five percent supermajority of the Bioregional Assembly during the first forty-eight hours of declared deficit.
++Such votes must be preceded by open algorithmic modeling published to all constituent communes twelve hours prior to deliberation.
++If the Bioregional Assembly fails to achieve consensus or reach a decisive resolution within forty-eight hours of a critical precursor deficit alert, the threshold for approval shall ratchet downward by five percent for each subsequent twelve-hour cycle, until it reaches a floor of an absolute majority (fifty percent plus one of voting members).
++If deadlock persists after ninety-six hours from the initial alert:
++(a) The deliberative mandate of the Assembly over the disputed reserves is immediately suspended.
++(b) Full execution authority over emergency inventory routing transfers to an Emergency Allocation Jury composed of fifty citizens selected by lot from the active operational personnel of the affected bioregion's water, food, and energy physical hubs.
++(c) The Emergency Allocation Jury is strictly bound by the invariant of Art. 1.3.2; it possesses sole competence to reallocate Tier 2 buffers to stabilize Tier 1 flows, and its determinations take effect instantly across all distribution nodes.
+```

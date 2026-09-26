@@ -1,0 +1,72 @@
+### ARCHITECTURAL SYNTHESIS: SV-2 MITIGATION AMENDMENT
+
+**FILE IDENTIFIER:** `PATCH-CONST-ONE-REV-2024-SV2-HYDRAULIC-INTEGRITY`  
+**SEVERITY CLASSIFICATION:** `SV-2 (CRITICAL)`  
+**LEGAL EFFECT:** Immediate nomothetic ratification and codification into Canonical Text.  
+**TARGET CONSTITUTIONAL ARTICLES:** Art. 3.6.2, Art. 4.4.4, Art. 6.1.3, Art. 6.5.4, Art. 7.1.4.  
+
+---
+
+### I. ARCHITECTURAL EXPLANATION & ENGINEERING RATIONALE
+
+The audit confirms a systemic vulnerability in the intersection of physics, infrastructure geometry, and civic governance during galvanic/telemetric severance ("Black-Sky conditions"):
+
+1. **Non-Linear Fluid Dynamics vs. Linear Legal Fiction (Art. 3.6.2, Art. 6.1.3):**  
+   The previous canonical formulation prescribed a uniform proportional ("pro-rata") volumetric throttling during catastrophic supply deficits. Under the Darcy-Weisbach formulation, frictional head loss varies quadratically with flow velocity. Continuous proportional throttling causes the hydraulic grade line (HGL) to drop below the physical elevations of crest-line nodes, inducing vapor cavity formation, siphon fracture, and complete de-watering of high-elevation communes, while low-elevation basins maintain hydraulic head. This differential access violates the non-derogable baseline of human flourishing (Article 1.3).  
+   *Remedy:* The amendment formally abolishes continuous proportional throttling across pressurized distribution conduits. In its place, it mandates **discrete, pulsed batch-cycled head-retention dispatch**—delivering water at full operational velocity and dynamic head during synchronized operational windows—interleaved with zero-flow pressure retention, supported by passive, non-electric break-pressure balance cisterns.
+
+2. **Benthic Particulate Ingestion at Reservoir Terminals (Art. 4.4.4):**  
+   Intakes anchored at or near the reservoir invert draw high concentrations of benthic sediments, anaerobic decomposition byproducts, and mobilized heavy-particulate pathogens during extended unpowered drawdowns.  
+   *Remedy:* Mandates that all municipal Tier 1 potable intakes utilize **passively articulating, floating subsurface decanters** tethered within the limnological sweet zone (above benthic sediment layers and below surface photic algae zones), coupled with mechanical fail-safe scouring flumes operated strictly by gravity and head differentials.
+
+3. **Sortition Coordination Latency & Hydraulic Asynchrony (Art. 6.5.4, Art. 7.1.4):**  
+   During complete black-sky communications severance, autonomous three-citizen sortition panels operating with localized emergency authority can execute unsynchronized manual bypass actuations. In a shared hydraulic basin, an upstream panel opening an uncoordinated bypass immediately collapses downstream siphon loops and reservoir balance.  
+   *Remedy:* Sortition emergency discretion is bounded by physical invariant: civic override panels are prohibited from actuating bypasses outside of pre-calibrated, ephemeris-synchronized temporal distribution windows (Solar Noon / Solar Midnight cycles) and are constrained by mechanical, hydromechanically coupled interlocks that physically prevent upstream gate overrides without downstream hydrostatic counter-pressure verification.
+
+---
+
+### II. FORMAL CONSTITUTIONAL UNIFIED DIFF
+
+```diff
+--- constitution/canonical/articles_v1.0.one
++++ constitution/canonical/articles_v1.1_amended.one
+@@ -148,8 +148,15 @@
+-Art. 3.6.2. Under circumstances of aggregate hydro-caloric deficit exceeding forty percent (40%) of the seasonal baseline, distribution nodes shall enforce analog pro-rata volumetric flow reduction across all non-industrial distribution branches, maintaining uniform fractional delivery until primary reservoir recharge is authenticated.
++Art. 3.6.2. Under circumstances of aggregate hydro-caloric deficit exceeding forty percent (40%) of the seasonal baseline, continuous analog pro-rata volumetric flow reduction across pressurized conduits is strictly prohibited. Distribution nodes shall instead transition to synchronized, pulsed batch-cycled head-retention dispatch. 
++Potable volumes shall be released at full hydrodynamic operational pressure during designated, ephemeris-timed dispatch intervals, thereby preserving the integrity of the hydraulic grade line and preventing altitudinal siphon fracture across high-elevation commune branches. 
++Between dispatch intervals, networks shall remain statically charged under positive head pressure through passive break-pressure balance cisterns to prevent back-siphonage and atmospheric air entrainment.
+@@ -231,7 +238,13 @@
+-Art. 4.4.4. Municipal reservoir penstocks, conduits, and emergency draw valves shall be constructed at the lowest hydraulic invert of containment structures to ensure total volumetric evacuating capacity during catastrophic infrastructure remediation or kinetic contamination threats.
++Art. 4.4.4. Municipal reservoir penstocks, conduits, and Tier 1 potable intake assemblies shall not draw from the unmitigated benthic invert of containment structures. 
++Potable intake heads shall be constructed as passively articulating, buoyant subsurface decanters calibrated to traverse the upper-to-median limnological zone, isolated from both benthic sediment suspension and surface organic blooms. 
++Lowest hydraulic invert penstocks are reserved exclusively for gravity-actuated sediment scouring, equipped with self-clearing hydro-dynamic sediment gates that open automatically under excessive silt surcharge without requiring external electrical excitation or computational signaling.
+@@ -382,9 +395,16 @@
+-Art. 6.1.3. Water commons networks shall maintain continuous gravity-fed hydraulic gradients. In the event of primary distribution pump failure, all interconnected nodes shall switch to passive proportional release regulated by mechanical pressure-reduction valves situated at communal distribution terminals.
++Art. 6.1.3. Water commons networks shall maintain continuous gravity-fed hydraulic gradients. In the event of primary distribution power termination or telemetry collapse:
++1. Network routing shall immediately revert to passive hydraulic equilibrium governed by stepped break-pressure siphon tanks and barometric balancing towers, ensuring minimum dynamic head ($H_{min} \ge 1.5 \text{ bar}$) across all consumer nodes regardless of relative topographic elevation.
++2. Throttling of main arterial lines via simple mechanical aperture contraction is unconstitutional if the resulting velocity decrement induces cavitation or hydraulic grade line collapse at downstream nodes. All deficit flow modifications must occur via timed multi-stage cistern batching.
+@@ -449,6 +469,12 @@
+-Art. 6.5.4. During sustained communication blackout exceeding seventy-two (72) hours, local commune infrastructure wardens may manually actuate trunk-line bypass gates to divert raw or partially filtered volumes directly into settlement distribution rings to prevent absolute hydraulic desiccation.
++Art. 6.5.4. During sustained communication blackout exceeding seventy-two (72) hours, manual actuation of trunk-line bypass gates by local commune infrastructure wardens is unlawful unless physically integrated into the Bioregional Hydraulic Schedule.
++Bypass gates shall be equipped with mechanical pendulum-escapement or chronometric water-clock locks calibrated to local solar noon, restricting manual actuation to bioregionally pre-synchronized flow windows. 
++Any manual actuation outside these shared ephemeris windows that destabilizes common trunk hydraulic pressure across adjacent downstream nodes shall trigger automatic hydro-mechanical gate tripping to preserve the common thermodynamic basin.
+@@ -512,7 +538,14 @@
+-Art. 7.1.4. Autonomous three-citizen sortition panels convened during civil or environmental emergencies possess plenary authority to reconfigure localized physical infrastructure, execute valve overrides, and requisition maintenance materials within their immediate municipal boundary.
++Art. 7.1.4. Autonomous three-citizen sortition panels convened during civil or environmental emergencies possess immediate direct operational authority within their municipal boundary, subject strictly to the non-violation of contiguous bioregional lifelines:
++1. Sortition panels are physically and legally barred from executing single-node valve overrides that compromise the hydraulic grade line or dynamic pressure of downstream, contiguous communes.
++2. Where telemetric consultation with downstream sortition assemblies is impossible due to galvanic or black-sky isolation, panel decisions involving pressurized or hazardous infrastructure must default to pre-codified physical fail-safe modes (passive run-of-river preservation and chronometric pulse gates).
++3. No citizen panel may authorize the ingestion of unmonitored benthic sediment reserves or the diversion of shared baseline potable volumes to industrial, agricultural, or non-Tier-1 survival vectors.
+```
+
+---
+
+### III. INVARIANT VERIFICATION REPORT
+
+1. **Chapter I Invariant Adherence:**
+   * **Zero Financialization / No Fiat Debt (Art. 1.1, 1.2):** Retained. Mechanical cistern timing and buoyant intakes require only physical fabrications, avoiding capital markets, debt-bonded financing, or technocratic utility-pricing games.
+   * **Non-Derogable Baseline (Art. 1.3):** Guaranteed. Eliminates the physical vulnerability where high-elevation communal nodes experienced total water starvation under the Darcy-Weisbach flow dynamics of the obsolete pro-rata clause.
+   * **Thermodynamic Non-Equilibrium Invariant (Art. 1.4):** Maintained. Replaces unphysical steady-state throttle models with transient, pulse-batch fluid dynamics that conform strictly to hydrostatic head retention laws.
+   * **Anti-Carceral / Anti-Authoritarian (Art. 1.5, 1.6):** Preserved. Sortition panels remain the sovereign human deciders; their emergency authority is bounded by nomothetic physical laws (escapement interlocks and dynamic head constraints) rather than authoritarian policing or centralized bureaucratic commands.
+
+2. **Severity Resolution:**
+   * Vulnerability vector **SV-2 (CRITICAL)** is fully closed. The hydraulic grade line remains physically intact across varied topography under black-sky conditions, sediment poisoning via reservoir invert draw is structurally blocked, and localized sortition panels are mechanically barred from precipitating cascaded network collapses.
