@@ -40,6 +40,13 @@ window.addEventListener('DOMContentLoaded', () => {
   sim.node.id = activeNode.id;
   sim.node.name = activeNode.name;
   sim.node.lng = activeNode.lng;
+  sim.node.country = activeNode.country;
+  sim.node.currencySymbol = activeNode.currencySymbol || '$';
+  sim.node.currencyCode = activeNode.currencyCode || 'USD';
+  sim.node.currencyName = activeNode.currencyName || 'US Dollar';
+  if (sim.adversary) {
+    sim.adversary.currencySymbol = sim.node.currencySymbol;
+  }
   sim.timezoneOffset = typeof activeNode.lng === 'number' ? Math.round(activeNode.lng / 15) : -5;
   if (sim.trade) {
     sim.trade.playerNodeId = activeNode.id;
@@ -521,6 +528,13 @@ window.addEventListener('DOMContentLoaded', () => {
     sim.node.id = node.id;
     sim.node.name = node.name;
     sim.node.lng = node.lng;
+    sim.node.country = node.country;
+    sim.node.currencySymbol = node.currencySymbol || '$';
+    sim.node.currencyCode = node.currencyCode || 'USD';
+    sim.node.currencyName = node.currencyName || 'US Dollar';
+    if (sim.adversary) {
+      sim.adversary.currencySymbol = sim.node.currencySymbol;
+    }
     sim.timezoneOffset = typeof node.lng === 'number' ? Math.round(node.lng / 15) : -5;
     sim.node.population = node.population;
     if (sim.trade) {
@@ -722,6 +736,13 @@ window.addEventListener('DOMContentLoaded', () => {
       activeNode = savedNode;
       sim.node.name = savedNode.name;
       sim.node.population = savedNode.population;
+      sim.node.country = savedNode.country;
+      sim.node.currencySymbol = savedNode.currencySymbol || '$';
+      sim.node.currencyCode = savedNode.currencyCode || 'USD';
+      sim.node.currencyName = savedNode.currencyName || 'US Dollar';
+      if (sim.adversary) {
+        sim.adversary.currencySymbol = sim.node.currencySymbol;
+      }
       settlementRenderer.setNode(savedNode);
     }
     setTimeout(() => {

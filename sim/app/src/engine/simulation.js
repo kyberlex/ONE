@@ -156,7 +156,10 @@ export class SimulationManager {
     const thermoSnap = this.thermo.getSnapshot();
     const nodeSnap = {
       communityMorale: this.node.communityMorale,
-      freeHours: this.node.averageFreeHoursPerDay
+      freeHours: this.node.averageFreeHoursPerDay,
+      currencySymbol: this.node.currencySymbol || '$',
+      currencyCode: this.node.currencyCode || 'USD',
+      fiat: this.node.externalFiatTreasuryEur
     };
     const adversaryEvent = this.adversary.tick(this.tickCount, thermoSnap, nodeSnap);
 
@@ -246,6 +249,10 @@ export class SimulationManager {
         freeHours: this.node.averageFreeHoursPerDay,
         morale: this.node.communityMorale,
         fiatEur: this.node.externalFiatTreasuryEur,
+        fiat: this.node.externalFiatTreasuryEur,
+        currencySymbol: this.node.currencySymbol || '$',
+        currencyCode: this.node.currencyCode || 'USD',
+        currencyName: this.node.currencyName || 'US Dollar',
         chores: this.node.choreAssignments,
         robots: this.node.robots,
         housingPool: this.node.housingPool,
@@ -308,6 +315,14 @@ export class SimulationManager {
         }
         if (state.node.fiatEur !== undefined) {
           this.node.externalFiatTreasuryEur = state.node.fiatEur;
+        } else if (state.node.fiat !== undefined) {
+          this.node.externalFiatTreasuryEur = state.node.fiat;
+        }
+        if (state.node.currencySymbol) {
+          this.node.currencySymbol = state.node.currencySymbol;
+          this.node.currencyCode = state.node.currencyCode || 'USD';
+          this.node.currencyName = state.node.currencyName || 'US Dollar';
+          if (this.adversary) this.adversary.currencySymbol = this.node.currencySymbol;
         }
         this.node.updateLaborAndMorale();
       }

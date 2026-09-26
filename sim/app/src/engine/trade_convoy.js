@@ -100,6 +100,22 @@ export const COMMODITY_TYPES = {
 };
 
 /**
+ * Estimated fiat market displacement replacement rates per physical unit
+ */
+export const COMMODITY_FIAT_RATES = {
+  ENERGY: 0.22,       // ~0.22 per kWh
+  WATER: 0.04,        // ~0.04 per Liter
+  FOOD: 0.0035,       // ~0.0035 per kcal (approx $7.70 per 2,200 kcal human day)
+  MATERIALS: 5.50,    // ~5.50 per kg circular alloy / polymer
+  SPARE_PARTS: 90.00  // ~90.00 per precision CNC component kit
+};
+
+export function calculateEstimatedFiatDisplacement(commodityId, amount) {
+  const rate = COMMODITY_FIAT_RATES[commodityId] || 1.0;
+  return Math.round((Number(amount) || 0) * rate);
+}
+
+/**
  * Bioregional trade profiles defining each node's natural surplus and critical deficits
  */
 export const BIOREGIONAL_TRADE_PROFILES = {
@@ -323,6 +339,7 @@ export class TradeConvoyEngine {
       outgoingUnit: commodity.unit,
       outgoingIcon: commodity.icon,
       outgoingAmount: amount,
+      estimatedFiatDisplacement: calculateEstimatedFiatDisplacement(commodityType, amount),
       returnCargo,
       isSolidarity,
       status: 'OUTBOUND', // 'OUTBOUND' | 'EXCHANGING' | 'INBOUND' | 'COMPLETED'

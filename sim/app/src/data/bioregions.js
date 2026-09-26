@@ -81,6 +81,58 @@ export function getClimateZoneFromLat(lat) {
 }
 
 /**
+ * Bioregional currency resolver based on sovereign host territory
+ */
+export function getCurrencyForCountry(country) {
+  if (!country) return { symbol: '$', code: 'USD', name: 'US Dollar' };
+  const c = country.toLowerCase();
+  if (c.includes('ital') || c.includes('franc') || c.includes('german') || c.includes('spain') || c.includes('euro')) {
+    return { symbol: '€', code: 'EUR', name: 'Euro' };
+  }
+  if (c.includes('unit') || c.includes('state') || c.includes('usa') || c.includes('canada')) {
+    return { symbol: '$', code: 'USD', name: 'US Dollar' };
+  }
+  if (c.includes('brazil')) {
+    return { symbol: 'R$', code: 'BRL', name: 'Brazilian Real' };
+  }
+  if (c.includes('india')) {
+    return { symbol: '₹', code: 'INR', name: 'Indian Rupee' };
+  }
+  if (c.includes('niger') || c.includes('mali') || c.includes('senegal')) {
+    return { symbol: 'CFA', code: 'XOF', name: 'West African CFA Franc' };
+  }
+  if (c.includes('uk') || c.includes('britain')) {
+    return { symbol: '£', code: 'GBP', name: 'British Pound' };
+  }
+  if (c.includes('japan')) {
+    return { symbol: '¥', code: 'JPY', name: 'Japanese Yen' };
+  }
+  if (c.includes('china')) {
+    return { symbol: '¥', code: 'CNY', name: 'Chinese Yuan' };
+  }
+  return { symbol: '$', code: 'USD', name: 'US Dollar' };
+}
+
+/**
+ * Interpolates dynamic localized currency symbol across text strings
+ */
+export function interpolateCurrency(text, symbol = '$') {
+  if (!text || typeof text !== 'string') return text;
+  return text
+    .replace(/€\s?([0-9.,]+)/g, `${symbol}$1`)
+    .replace(/\$\s?([0-9.,]+)/g, `${symbol}$1`)
+    .replace(/\[CURRENCY\]\s?([0-9.,]+)/g, `${symbol}$1`);
+}
+
+/**
+ * Formats a numeric amount with the localized currency symbol
+ */
+export function formatBioregionalCurrency(amount, symbol = '$') {
+  const num = Math.round(Number(amount) || 0);
+  return `${symbol}${num.toLocaleString()}`;
+}
+
+/**
  * Pre-populated Global O.N.E. Pioneer Nodes
  */
 export const GLOBAL_STARTER_NODES = [
@@ -89,6 +141,9 @@ export const GLOBAL_STARTER_NODES = [
     name: 'Detroit Delray Commons',
     bioregion: 'Great Lakes Basin',
     country: 'United States',
+    currencySymbol: '$',
+    currencyCode: 'USD',
+    currencyName: 'US Dollar',
     lat: 42.3015,
     lng: -83.1098,
     climateKey: 'TEMPERATE',
@@ -103,6 +158,9 @@ export const GLOBAL_STARTER_NODES = [
     name: 'Val di Susa Eco-Federation',
     bioregion: 'Cottian Alps Bioregion',
     country: 'Italy',
+    currencySymbol: '€',
+    currencyCode: 'EUR',
+    currencyName: 'Euro',
     lat: 45.1328,
     lng: 7.0542,
     climateKey: 'TEMPERATE',
@@ -117,6 +175,9 @@ export const GLOBAL_STARTER_NODES = [
     name: 'Yukon-Alaska Resilient Haven',
     bioregion: 'Subarctic Boreal Shield',
     country: 'United States / Canada',
+    currencySymbol: '$',
+    currencyCode: 'USD',
+    currencyName: 'US Dollar',
     lat: 64.8378,
     lng: -147.7164,
     climateKey: 'ARCTIC',
@@ -131,6 +192,9 @@ export const GLOBAL_STARTER_NODES = [
     name: 'Sahel Solar Oasis',
     bioregion: 'Niger River Basin',
     country: 'Niger',
+    currencySymbol: 'CFA',
+    currencyCode: 'XOF',
+    currencyName: 'West African CFA Franc',
     lat: 13.5116,
     lng: 2.1254,
     climateKey: 'ARID',
@@ -145,6 +209,9 @@ export const GLOBAL_STARTER_NODES = [
     name: 'Amazonas Bioregional Basin',
     bioregion: 'Rio Negro Watershed',
     country: 'Brazil',
+    currencySymbol: 'R$',
+    currencyCode: 'BRL',
+    currencyName: 'Brazilian Real',
     lat: -3.1190,
     lng: -60.0217,
     climateKey: 'TROPICAL',
@@ -159,6 +226,9 @@ export const GLOBAL_STARTER_NODES = [
     name: 'Kerala Coastal Autonomous Commune',
     bioregion: 'Malabar Coast',
     country: 'India',
+    currencySymbol: '₹',
+    currencyCode: 'INR',
+    currencyName: 'Indian Rupee',
     lat: 9.9312,
     lng: 76.2673,
     climateKey: 'TROPICAL',
@@ -176,12 +246,16 @@ export const GLOBAL_STARTER_NODES = [
 export function createCustomGlobalNode({ name, lat, lng, country = 'Local Commons', pioneerCount = 5 }) {
   const climate = getClimateZoneFromLat(lat);
   const nodeId = `node-custom-${Date.now().toString(36)}`;
+  const cur = getCurrencyForCountry(country);
 
   return {
     id: nodeId,
     name: name || `O.N.E. Node [${lat.toFixed(2)}, ${lng.toFixed(2)}]`,
     bioregion: `${climate.name} Bioregion`,
     country,
+    currencySymbol: cur.symbol,
+    currencyCode: cur.code,
+    currencyName: cur.name,
     lat,
     lng,
     climateKey: climate.id,

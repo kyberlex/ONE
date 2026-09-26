@@ -43,6 +43,7 @@ export class HexCanvasRenderer {
     this.logoImg = new Image();
     this.logoImg.src = '/one-logo-white.svg';
     this.logoLoaded = false;
+    this.currencySymbol = '$';
     this.logoImg.onload = () => {
       this.logoLoaded = true;
     };
@@ -358,11 +359,15 @@ export class HexCanvasRenderer {
       ctx.fillText(t('legacyDebtBadge', 'DEBT ZONE'), center.x, center.y + 6);
 
       // Debt per capita badge
-      ctx.fillStyle = 'rgba(239, 68, 68, 0.25)';
-      ctx.fillRect(center.x - 32, center.y + 18, 64, 14);
-      ctx.fillStyle = '#f87171';
+      const debtSym = tile.data?.currencySymbol || this.currencySymbol || this.world?.activeNode?.currencySymbol || '$';
+      const debtVal = Math.round(tile.data?.debtPerCapita || tile.data?.debtPerCapitaEur || 60000);
+      const debtText = `${debtSym}${debtVal.toLocaleString()}/pax`;
       ctx.font = '9px monospace';
-      ctx.fillText(`€${Math.round(tile.data?.debtPerCapitaEur || 60000)}/pax`, center.x, center.y + 25);
+      const textW = Math.max(68, ctx.measureText(debtText).width + 12);
+      ctx.fillStyle = 'rgba(239, 68, 68, 0.25)';
+      ctx.fillRect(center.x - textW / 2, center.y + 18, textW, 14);
+      ctx.fillStyle = '#f87171';
+      ctx.fillText(debtText, center.x, center.y + 25);
 
     } else {
       // Wild / Unclaimed Commons (Deep Blue-Grey Slate)

@@ -10,13 +10,16 @@
  * License: AGPL-3.0-or-later
  */
 
+import { interpolateCurrency } from '../data/bioregions.js';
+
 export class LegacyAdversaryDirector {
-  constructor() {
+  constructor(config = {}) {
     this.threatLevel = 15; // [0, 100]% (System Alert & Encroachment)
     this.eventHistory = [];
     this.activeCrisis = null;
     this.crisisCooldownTicks = 48; // Minimum 2 days between major events
     this.lastCrisisTick = -999;
+    this.currencySymbol = config.currencySymbol || '$';
   }
 
   /**
@@ -88,6 +91,10 @@ export class LegacyAdversaryDirector {
    * Evaluates if a systemic attack should be triggered
    */
   tick(currentTick, thermoSnapshot, nodeSnapshot) {
+    if (nodeSnapshot?.currencySymbol) {
+      this.currencySymbol = nodeSnapshot.currencySymbol;
+    }
+
     // If a crisis is already active, advance it
     if (this.activeCrisis) {
       this.activeCrisis.durationTicksRemaining--;
@@ -365,8 +372,20 @@ export class LegacyAdversaryDirector {
       }
     }
 
-    const crisis = { ...candidateCrises[Math.floor(Math.random() * candidateCrises.length)] };
-    crisis.spawnTick = currentTick;
+    const cur = this.currencySymbol || '$';
+    const rawCrisis = candidateCrises[Math.floor(Math.random() * candidateCrises.length)];
+    const crisis = {
+      ...rawCrisis,
+      spawnTick: currentTick,
+      currencySymbol: cur,
+      description: interpolateCurrency(rawCrisis.description, cur),
+      impact: interpolateCurrency(rawCrisis.impact, cur),
+      options: rawCrisis.options.map(opt => ({
+        ...opt,
+        label: interpolateCurrency(opt.label, cur),
+        costSummary: interpolateCurrency(opt.costSummary, cur)
+      }))
+    };
     return crisis;
   }
 

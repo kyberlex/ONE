@@ -238,10 +238,15 @@ export class HudController {
       }
     }
 
-    // 6. Threat Level
+    // 6. Threat Level & Financial Defense Reserve
     if (this.elThreatBar) {
       this.elThreatBar.style.width = `${state.adversary.threatLevel}%`;
       this.elThreatVal.textContent = `${state.adversary.threatLevel}%`;
+      const curSym = state.node?.currencySymbol || '$';
+      const fiatRes = Math.round(state.node?.fiat ?? state.node?.fiatEur ?? 4200);
+      if (this.elThreatVal.parentElement) {
+        this.elThreatVal.parentElement.title = `Legacy System Stress: ${state.adversary.threatLevel}% • Emergency Hardware Reserve: ${curSym}${fiatRes.toLocaleString()}`;
+      }
     }
   }
 

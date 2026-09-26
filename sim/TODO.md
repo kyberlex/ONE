@@ -174,8 +174,18 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
   - *Requirement:* Fix text escaping card boundaries in canvas tooltips (as seen in screenshots for *Intergenerational Elder Sanctuary* and *Mia Ramos — Child Pioneer*).
   - *Implementation:* Dynamically compute multi-line text wrapping width (`wrapText`) and calculate card height and width dynamically (`Math.min(Math.max(460, w * 0.46), Math.min(w - 32, 620))`). All subtitles, descriptions, and legal rights wrap comfortably inside the card with generous padding. Text NEVER overflows boundaries.
 
-- [ ] **ITEM 9: Currency Localization & Bioregional Economic Valuation**
-  - *Scope:* Align currency symbols ($ / € / ¥) to the active node's bioregion or provide unified `$`. Define `currencySymbol` per node and interpolate across threat cards, trade manifests, and financial defense counters.
+- [x] **ITEM 9: Currency Localization & Bioregional Economic Valuation (Completed):**
+  - *Requirement:* Align currency symbols ($ / € / ¥ / R$ / ₹ / CFA) to the active node's bioregion or provide unified `$`. Define `currencySymbol` per node and interpolate across threat cards, trade manifests, and financial defense counters.
+  - *Implementation:*
+    - Added `currencySymbol`, `currencyCode`, and `currencyName` properties to all starter nodes in `bioregions.js` (Detroit Delray: `$`, Val di Susa: `€`, Yukon-Alaska: `$`, Sahel: `CFA`, Amazonas: `R$`, Kerala: `₹`).
+    - Added `getCurrencyForCountry(country)`, `interpolateCurrency(text, symbol)`, and `formatBioregionalCurrency(amount, symbol)` helpers.
+    - Synchronized currency state through `SimulationManager`, `NodeManager`, and `LegacyAdversaryDirector`.
+    - Localized Adversary crisis options, threat card descriptions, and civic dilemma text via dynamic regex currency symbol interpolation.
+    - Added a dedicated **Commons Treasury & Financial Defense** tab to the node management modal (`panel_node.js`), showing the Emergency Hardware Fund, 100% Debt-Free internal usufruct commons ($0.00 / pax), surrounding legacy extractive pressure ($78,000 / pax), and host territory currency.
+    - Augmented inter-node trade convoy manifests (`panel_convoys.js`) with an **Estimated Displaced Extractive Cost** counter, showing the fiat extraction saved by commons barter.
+    - Updated hex map legacy debt badges to render dynamically with the active node's currency symbol.
+    - Enhanced the HUD threat meter with an active emergency hardware reserve tooltip.
 
 - [ ] **ITEM 10: Operational Autonomous Robots & Cybernetic Machinery (Living Canvas)**
   - *Scope:* Bring the unlocked robotics tech-tree to life directly on the 2D canvas with animated working robots (Agro-Drones, Autonomous Rovers, FabLab Cobots) executing chores and visibly reducing compulsory human labor shifts.
+

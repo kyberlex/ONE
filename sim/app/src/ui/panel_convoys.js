@@ -7,7 +7,7 @@
  * License: AGPL-3.0-or-later
  */
 
-import { CONVOY_VEHICLES, COMMODITY_TYPES, BIOREGIONAL_TRADE_PROFILES, calculateHaversineDistanceKm } from '../engine/trade_convoy.js';
+import { CONVOY_VEHICLES, COMMODITY_TYPES, BIOREGIONAL_TRADE_PROFILES, calculateHaversineDistanceKm, calculateEstimatedFiatDisplacement } from '../engine/trade_convoy.js';
 import { t } from '../i18n/index.js';
 
 export class PanelConvoysController {
@@ -374,6 +374,10 @@ export class PanelConvoysController {
                       : `${c.returnCargo?.amount.toLocaleString()} ${c.returnCargo?.unit} ${c.returnCargo?.icon}`}
                   </span>
                 </div>
+                <div class="manifest-box">
+                  <span class="manifest-label">Displaced Extractive Cost</span>
+                  <span class="manifest-val text-green">${node.currencySymbol || '$'}${calculateEstimatedFiatDisplacement(c.outgoingCommodity, c.outgoingAmount).toLocaleString()}</span>
+                </div>
               </div>
             </div>
           `;
@@ -520,6 +524,10 @@ export class PanelConvoysController {
                     <span>Propulsion Energy Draw:</span>
                     <strong>${vehicle.energyDrawKwh} kWh battery reserve</strong>
                   </div>
+                  <div class="preview-metric-row">
+                    <span>Displaced Extractive Cost:</span>
+                    <strong class="text-green">${node.currencySymbol || '$'}${calculateEstimatedFiatDisplacement(this.selectedCommodity, this.dispatchAmount).toLocaleString()} saved in fiat purchases</strong>
+                  </div>
 
                   ${!this.isSolidarity && returnEstimate ? `
                     <div class="reciprocal-box ${returnEstimate.isBonusApplied ? 'bonus-applied' : ''}">
@@ -631,6 +639,7 @@ export class PanelConvoysController {
               <div class="hist-manifest">
                 Sent: <span class="text-yellow">${h.outgoingAmount.toLocaleString()} ${h.outgoingUnit}</span>
                 ${h.returnCargo ? ` | Received: <span class="text-green">+${h.returnCargo.amount.toLocaleString()} ${h.returnCargo.unit}</span>` : ' | Solidarity Aid'}
+                <span class="text-green font-mono"> (${node.currencySymbol || '$'}${calculateEstimatedFiatDisplacement(h.outgoingCommodity, h.outgoingAmount).toLocaleString()} displaced)</span>
               </div>
               <span class="hist-tick text-dim">Tick ${h.completedAtTick || 0}</span>
             </div>

@@ -140,7 +140,11 @@ export class OneNode {
     // Free time and community morale
     this.averageFreeHoursPerDay = 16.0;
     this.communityMorale = 85;
+    this.currencySymbol = config.currencySymbol || '$';
+    this.currencyCode = config.currencyCode || 'USD';
+    this.currencyName = config.currencyName || 'US Dollar';
     this.externalFiatTreasuryEur = config.externalFiatTreasuryEur || 4200;
+    this.externalFiatTreasury = config.externalFiatTreasury ?? this.externalFiatTreasuryEur;
 
     this.initCitizens();
     this.initHousingPool();

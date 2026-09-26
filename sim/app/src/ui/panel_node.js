@@ -57,6 +57,7 @@ export class PanelNodeController {
         <button class="tab-btn ${activeTab === 'housing' ? 'active' : ''}" data-tab="housing">${t('tabHousing', '🏘️ Usufruct Housing & Reuse')}</button>
         <button class="tab-btn ${activeTab === 'agriculture' ? 'active' : ''}" data-tab="agriculture">🥗 Agriculture & Resilience</button>
         <button class="tab-btn ${activeTab === 'machinery' ? 'active' : ''}" data-tab="machinery">${t('tabMachinery', '⚙️ Machinery & Entropy')}</button>
+        <button class="tab-btn ${activeTab === 'treasury' ? 'active' : ''}" data-tab="treasury">💰 Commons Treasury & Defense</button>
       </div>
       <div class="tab-body">
     `;
@@ -601,6 +602,66 @@ export class PanelNodeController {
                   </div>
                 </div>
               `).join('')}
+            </div>
+          </div>
+        </div>
+      `;
+    } else if (activeTab === 'treasury') {
+      const curSym = node.currencySymbol || '$';
+      const curCode = node.currencyCode || 'USD';
+      const curName = node.currencyName || 'US Dollar';
+      const fiatRes = Math.round(node.externalFiatTreasuryEur || 4200);
+
+      html += `
+        <div class="treasury-view">
+          <div class="summary-card">
+            <div class="summary-header-row">
+              <h4>💰 Bioregional Commons Treasury & Financial Defense</h4>
+              <span class="one-stamp-tag"><img src="/one-logo-white.svg" alt="O.N.E." /> O.N.E. SOVEREIGN COMMONS</span>
+            </div>
+            <p>
+              In O.N.E. the internal economy is 100% based on physical thermodynamics, dynamic usufruct, and voluntary vocations.
+              There is zero debt, zero interest, and zero rent within the commons. The <strong>Emergency Hardware & Legal Defense Fund</strong> exists strictly as an outer shield to interface with the surrounding extractive market.
+            </p>
+
+            <!-- Metrics Grid -->
+            <div class="treasury-metrics-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+              <div class="manifest-box" style="padding: 1rem; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px;">
+                <span class="manifest-label" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--emerald-primary);">Emergency Hardware Fund</span>
+                <span class="manifest-val text-green" style="font-size: 1.6rem; font-weight: bold; display: block; margin-top: 0.25rem;">${curSym}${fiatRes.toLocaleString()}</span>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Liquid fiat defense reserve</span>
+              </div>
+
+              <div class="manifest-box" style="padding: 1rem; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px;">
+                <span class="manifest-label" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: #60a5fa;">Internal Territory Debt</span>
+                <span class="manifest-val text-cyan" style="font-size: 1.6rem; font-weight: bold; display: block; margin-top: 0.25rem;">${curSym}0.00 / pax</span>
+                <span style="font-size: 0.75rem; color: #94a3b8;">100% Usufruct (Zero Mortgages)</span>
+              </div>
+
+              <div class="manifest-box" style="padding: 1rem; background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 8px;">
+                <span class="manifest-label" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: #f87171;">Surrounding Legacy Debt</span>
+                <span class="manifest-val text-red" style="font-size: 1.6rem; font-weight: bold; display: block; margin-top: 0.25rem;">${curSym}78,000 / pax</span>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Metropolitan extraction pressure</span>
+              </div>
+
+              <div class="manifest-box" style="padding: 1rem; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 8px;">
+                <span class="manifest-label" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: #fbbf24;">Host Host Currency</span>
+                <span class="manifest-val text-yellow" style="font-size: 1.6rem; font-weight: bold; display: block; margin-top: 0.25rem;">${curCode} (${curSym})</span>
+                <span style="font-size: 0.75rem; color: #94a3b8;">${curName}</span>
+              </div>
+            </div>
+
+            <!-- Strategic Defense Policies -->
+            <div class="treasury-defense-rules" style="background: rgba(15, 23, 42, 0.6); padding: 1.2rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08); margin-top: 1rem;">
+              <h5 style="margin-top: 0; color: #f1f5f9; display: flex; align-items: center; gap: 0.5rem;">
+                🛡️ Strategic Financial Defense Principles
+              </h5>
+              <ul style="margin: 0.5rem 0 0 1.2rem; padding: 0; font-size: 0.85rem; line-height: 1.6; color: #cbd5e1;">
+                <li><strong>Anti-Lawfare Shield:</strong> Repels vulture fund NPL mortgage seizures and judicial extortion notices without surrendering commons land or physical machinery.</li>
+                <li><strong>Critical Hardware Import:</strong> Enables purchasing specialized industrial components (MPPT controllers, high-precision laser optics) until regional FabLab open-toolchains are completed.</li>
+                <li><strong>Energy Peaker Defense:</strong> Buffer against legacy utility blackout extortion during severe climate disasters (Heat Domes, Atmospheric Rivers).</li>
+                <li><strong>Logistical Mutual Aid Sovereignty:</strong> Inter-node trade convoys bypass fiat financial middlemen entirely, achieving physical reciprocity via thermodynamic barter.</li>
+              </ul>
             </div>
           </div>
         </div>

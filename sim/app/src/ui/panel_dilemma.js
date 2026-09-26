@@ -9,6 +9,7 @@
  */
 
 import { t } from '../i18n/index.js';
+import { interpolateCurrency } from '../data/bioregions.js';
 
 export class PanelDilemmaController {
   constructor(sim) {
@@ -133,13 +134,14 @@ export class PanelDilemmaController {
     const tier = this.sim.sortition.currentTier;
     const tierTitle = tier.titleKey ? t(tier.titleKey, tier.titleDefault) : tier.titleDefault;
 
-    const title = dilemma.titleKey ? t(dilemma.titleKey, dilemma.title) : dilemma.title;
-    const summary = dilemma.summaryKey ? t(dilemma.summaryKey, dilemma.summary) : dilemma.summary;
-    const quote = dilemma.quoteKey ? t(dilemma.quoteKey, dilemma.quote) : dilemma.quote;
-    const optALabel = dilemma.optionA.labelKey ? t(dilemma.optionA.labelKey, dilemma.optionA.label) : dilemma.optionA.label;
-    const optADesc = dilemma.optionA.descKey ? t(dilemma.optionA.descKey, dilemma.optionA.description) : dilemma.optionA.description;
-    const optBLabel = dilemma.optionB.labelKey ? t(dilemma.optionB.labelKey, dilemma.optionB.label) : dilemma.optionB.label;
-    const optBDesc = dilemma.optionB.descKey ? t(dilemma.optionB.descKey, dilemma.optionB.description) : dilemma.optionB.description;
+    const curSym = this.sim?.node?.currencySymbol || '$';
+    const title = interpolateCurrency(dilemma.titleKey ? t(dilemma.titleKey, dilemma.title) : dilemma.title, curSym);
+    const summary = interpolateCurrency(dilemma.summaryKey ? t(dilemma.summaryKey, dilemma.summary) : dilemma.summary, curSym);
+    const quote = interpolateCurrency(dilemma.quoteKey ? t(dilemma.quoteKey, dilemma.quote) : dilemma.quote, curSym);
+    const optALabel = interpolateCurrency(dilemma.optionA.labelKey ? t(dilemma.optionA.labelKey, dilemma.optionA.label) : dilemma.optionA.label, curSym);
+    const optADesc = interpolateCurrency(dilemma.optionA.descKey ? t(dilemma.optionA.descKey, dilemma.optionA.description) : dilemma.optionA.description, curSym);
+    const optBLabel = interpolateCurrency(dilemma.optionB.labelKey ? t(dilemma.optionB.labelKey, dilemma.optionB.label) : dilemma.optionB.label, curSym);
+    const optBDesc = interpolateCurrency(dilemma.optionB.descKey ? t(dilemma.optionB.descKey, dilemma.optionB.description) : dilemma.optionB.description, curSym);
 
     let html = `
       <div class="dilemma-container">
@@ -203,6 +205,7 @@ export class PanelDilemmaController {
               ${dilemma.optionA.energyDeltaKwh ? `<span>⚡ ${dilemma.optionA.energyDeltaKwh} kWh</span>` : ''}
               ${dilemma.optionA.waterDeltaL ? `<span>💧 ${dilemma.optionA.waterDeltaL} L</span>` : ''}
               ${dilemma.optionA.foodDeltaKcal ? `<span>🥗 ${dilemma.optionA.foodDeltaKcal} kcal</span>` : ''}
+              ${dilemma.optionA.fiatDeltaEur ? `<span class="${dilemma.optionA.fiatDeltaEur > 0 ? 'text-green' : 'text-red'}">💰 ${dilemma.optionA.fiatDeltaEur > 0 ? '+' : ''}${curSym}${Math.abs(dilemma.optionA.fiatDeltaEur).toLocaleString()} Hardware Fund</span>` : ''}
               ${dilemma.optionA.moraleDelta ? `<span class="text-green">⏳ +${dilemma.optionA.moraleDelta}% ${t('meterMorale', 'Morale')}</span>` : ''}
             </div>
             <button class="btn-primary">${t('btnRatifyA', 'Ratify Option A')}</button>
@@ -215,6 +218,7 @@ export class PanelDilemmaController {
               ${dilemma.optionB.energyDeltaKwh ? `<span>⚡ ${dilemma.optionB.energyDeltaKwh} kWh</span>` : ''}
               ${dilemma.optionB.waterDeltaL ? `<span>💧 ${dilemma.optionB.waterDeltaL} L</span>` : ''}
               ${dilemma.optionB.foodDeltaKcal ? `<span>🥗 ${dilemma.optionB.foodDeltaKcal} kcal</span>` : ''}
+              ${dilemma.optionB.fiatDeltaEur ? `<span class="${dilemma.optionB.fiatDeltaEur > 0 ? 'text-green' : 'text-red'}">💰 ${dilemma.optionB.fiatDeltaEur > 0 ? '+' : ''}${curSym}${Math.abs(dilemma.optionB.fiatDeltaEur).toLocaleString()} Hardware Fund</span>` : ''}
               ${dilemma.optionB.moraleDelta ? `<span class="${dilemma.optionB.moraleDelta >= 0 ? 'text-green' : 'text-red'}">⏳ ${dilemma.optionB.moraleDelta}% ${t('meterMorale', 'Morale')}</span>` : ''}
             </div>
             <button class="btn-secondary">${t('btnRatifyB', 'Ratify Option B')}</button>
@@ -254,9 +258,10 @@ export class PanelDilemmaController {
   }
 
   renderLegacyCrisis(crisis) {
-    const name = crisis.nameKey ? t(crisis.nameKey, crisis.name) : crisis.name;
-    const desc = crisis.descKey ? t(crisis.descKey, crisis.description) : crisis.description;
-    const impact = crisis.impactKey ? t(crisis.impactKey, crisis.impact) : crisis.impact;
+    const curSym = this.sim?.node?.currencySymbol || '$';
+    const name = interpolateCurrency(crisis.nameKey ? t(crisis.nameKey, crisis.name) : crisis.name, curSym);
+    const desc = interpolateCurrency(crisis.descKey ? t(crisis.descKey, crisis.description) : crisis.description, curSym);
+    const impact = interpolateCurrency(crisis.impactKey ? t(crisis.impactKey, crisis.impact) : crisis.impact, curSym);
 
     let html = `
       <div class="dilemma-container crisis-alert-mode">
@@ -273,8 +278,8 @@ export class PanelDilemmaController {
 
         <div class="options-duel">
           ${crisis.options.map(opt => {
-            const optLabel = opt.labelKey ? t(opt.labelKey, opt.label) : opt.label;
-            const optCost = opt.costKey ? t(opt.costKey, opt.costSummary) : opt.costSummary;
+            const optLabel = interpolateCurrency(opt.labelKey ? t(opt.labelKey, opt.label) : opt.label, curSym);
+            const optCost = interpolateCurrency(opt.costKey ? t(opt.costKey, opt.costSummary) : opt.costSummary, curSym);
             return `
               <div class="option-card crisis-option" data-option-id="${opt.id}">
                 <h4>${optLabel}</h4>
