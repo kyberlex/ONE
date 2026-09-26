@@ -201,3 +201,8 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
     - Added interactive click behavior: clicking any robot displays an edge telemetry speech bubble above its sprite and opens the FabLab Dual-Track hardware panel.
     - Connected robot fabrication directly to canvas synchronization: building an automation unit in the Dual-Track panel (`panel_dualtrack.js`) immediately spawns the new unit onto the 2D canvas and reduces human chore quotas in real time.
 
+- [ ] **ITEM 11: World Map Viewport Bounds & Soft Twilight Terminator:**
+  - *Requirements:*
+    1. **Hide Repeated World Copies:** Prevent Leaflet from tiling/repeating the world map endlessly to the left and right. Clamp viewport to the single canonical central world map using `noWrap: true` on ESRI tile layers (`satelliteLayer`, `physicalLayer`, `referenceLayer`) and enforce strict coordinate bounds `[[-85, -180], [85, 180]]` with clean space/ocean background padding.
+    2. **Soft Twilight Terminator (Blur/Gradient vs. Cyan Border):** Eliminate the solid cyan contour line (`color: '#38bdf8'`, `weight: 1.5`) bordering the night shadow on the world map. Replace it with a smooth, atmospheric twilight transition / feathered blur (`stroke: false`, CSS `filter: blur(...)` or SVG gradient mask on `terminatorPane`) so day smoothly blends into twilight and night without artificial hard vectors.
+
