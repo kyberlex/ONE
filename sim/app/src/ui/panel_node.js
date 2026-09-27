@@ -1113,7 +1113,8 @@ export class PanelNodeController {
     const pushNowBtn = this.contentEl.querySelector('#btn-push-relay-now');
     const statusBox = this.contentEl.querySelector('#relay-anchor-status');
     if (pushNowBtn && this.sim.consensusAnchor) {
-      pushNowBtn.addEventListener('click', async () => {
+      pushNowBtn.addEventListener('click', async (e) => {
+        const force = !!e.shiftKey;
         pushNowBtn.disabled = true;
         const origText = pushNowBtn.textContent;
         pushNowBtn.textContent = `⏳ ${t('snapshotPushing', 'Anchoring snapshot to GitHub...')}`;
@@ -1126,7 +1127,7 @@ export class PanelNodeController {
           statusBox.classList.remove('hidden');
         }
 
-        const res = await this.sim.consensusAnchor.pushSnapshotToRelay({ isAuto: false });
+        const res = await this.sim.consensusAnchor.pushSnapshotToRelay({ isAuto: false, force });
 
         if (res.success) {
           if (statusBox) {
@@ -1141,7 +1142,9 @@ export class PanelNodeController {
             statusBox.style.background = 'rgba(239, 68, 68, 0.2)';
             statusBox.style.border = '1px solid #ef4444';
             statusBox.style.color = '#fee2e2';
-            statusBox.textContent = `⚠️ ${res.reason || res.error || 'Failed to anchor snapshot'}`;
+            statusBox.textContent = res.skipped 
+              ? `⚠️ ${res.reason} (Usa '🔄 Risincronizza' per allinearti, oppure Shift+Click per forzare).`
+              : `⚠️ ${res.reason || res.error || 'Failed to anchor snapshot'}`;
           }
           pushNowBtn.disabled = false;
           pushNowBtn.textContent = origText;

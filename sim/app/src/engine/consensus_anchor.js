@@ -12,9 +12,8 @@
  * License: AGPL-3.0-or-later
  */
 
-import { DEFAULT_FEEDBACK_RELAY_URL } from '../ui/panel_feedback.js';
-
-export const DEFAULT_SNAPSHOT_RELAY_URL = DEFAULT_FEEDBACK_RELAY_URL;
+// Official anonymous Google Apps Script consensus snapshot relay for kyberlex/ONE
+export const DEFAULT_SNAPSHOT_RELAY_URL = 'https://script.google.com/macros/s/AKfycbzyNSLiCexwy2KId-N36nyFp9s75dlf6ywR0vAbCngm0-g3tCvDh4gtrN5UDx0GFZc7/exec';
 
 export class ConsensusAnchorManager {
   constructor(sim) {
@@ -50,9 +49,7 @@ export class ConsensusAnchorManager {
   }
 
   getRelayUrl() {
-    return localStorage.getItem('oasis_snapshot_relay_url') || 
-           localStorage.getItem('oasis_feedback_relay_url') || 
-           DEFAULT_SNAPSHOT_RELAY_URL;
+    return localStorage.getItem('oasis_snapshot_relay_url') || DEFAULT_SNAPSHOT_RELAY_URL;
   }
 
   setRelayUrl(url) {
@@ -87,7 +84,7 @@ export class ConsensusAnchorManager {
    * @param {object} options
    * @returns {Promise<object>}
    */
-  async pushSnapshotToRelay({ isAuto = false } = {}) {
+  async pushSnapshotToRelay({ isAuto = false, force = false } = {}) {
     if (this.isPushing) {
       return { success: false, error: 'Push already in progress' };
     }
@@ -106,6 +103,7 @@ export class ConsensusAnchorManager {
       const payload = {
         type: 'snapshot',
         action: 'world_snapshot',
+        force: !!force,
         tick: snapshot.tick,
         day: snapshot.day,
         hash: snapshot.thermoConsensusHash,
