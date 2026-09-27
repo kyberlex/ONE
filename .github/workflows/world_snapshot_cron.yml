@@ -1,0 +1,42 @@
+name: Consensus World Snapshot Anchor
+
+on:
+  schedule:
+    # Runs every 12 hours (at 00:00 and 12:00 UTC)
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  anchor-snapshot:
+    name: Git-as-a-State-Anchor Consensus Engine
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Snapshot Verification & Headless Progression
+        run: |
+          python3 scripts/anchor_world_snapshot.py --check
+
+      - name: Commit and Push Consensus Snapshot
+        run: |
+          if [ -n "$(git status --porcelain sim/app/public/world_snapshot.json)" ]; then
+            git config user.name "kyberlex-bot"
+            git config user.email "kyberlex@proton.me"
+            STAMP=$(python3 scripts/anchor_world_snapshot.py --get-stamp)
+            git add sim/app/public/world_snapshot.json
+            git commit -m "chore(sim): consensus world snapshot [$STAMP]"
+            git push
+            echo "Successfully anchored new consensus world snapshot to repository."
+          else
+            echo "Consensus snapshot is clean and aligned with remote HEAD."
+          fi

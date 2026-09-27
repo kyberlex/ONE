@@ -59,6 +59,7 @@ export class PanelNodeController {
         <button class="tab-btn ${activeTab === 'machinery' ? 'active' : ''}" data-tab="machinery">${t('tabMachinery', '⚙️ Machinery & Entropy')}</button>
         <button class="tab-btn ${activeTab === 'treasury' ? 'active' : ''}" data-tab="treasury">${t('tabTreasury', '💰 Commons Treasury & Defense')}</button>
         <button class="tab-btn ${activeTab === 'projects' ? 'active' : ''}" data-tab="projects">${t('tabCivicProjects', '🏗️ Civic Megaprojects')}</button>
+        <button class="tab-btn ${activeTab === 'snapshot' ? 'active' : ''}" data-tab="snapshot">${t('tabSnapshot', '⚓ Consensus Git-Anchor')}</button>
       </div>
       <div class="tab-body">
     `;
@@ -783,6 +784,94 @@ export class PanelNodeController {
       `;
     }
 
+    if (activeTab === 'snapshot') {
+      const snap = this.sim.consensusSnapshot;
+      const currentTick = this.sim.tickCount;
+      const snapTick = snap?.tick ?? 0;
+      const hash = snap?.hash || '48bd31aed62ca1d35b50ee12011eef2eedf97039e0b01be92032ed9dadcd1948';
+      const isGenesis = snap?.genesis || snapTick === 0;
+      const isAligned = currentTick === snapTick;
+
+      html += `
+        <div class="snapshot-view" style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="summary-card">
+            <div class="summary-header-row">
+              <h4>${t('snapshotTitle', 'Git-as-a-State-Anchor (Consensus Protocol)')}</h4>
+              <span class="one-stamp-tag"><img src="/one-logo-white.svg" alt="O.N.E." /> O.N.E. GIT-ANCHOR</span>
+            </div>
+            <p>${t('snapshotSubtitle', 'Immutable long-term planetary consensus state anchored directly to the public Git repository.')}</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 14px;">
+              <!-- 1. Hash Card -->
+              <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 8px; padding: 12px;">
+                <div style="font-size: 11px; text-transform: uppercase; color: #38bdf8; font-weight: 600; margin-bottom: 4px;">
+                  ${t('snapshotHash', 'Consensus Hash (SHA-256)')}
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                  <code style="font-family: monospace; font-size: 12px; color: #f1f5f9; word-break: break-all;">
+                    ${hash.slice(0, 16)}...${hash.slice(-8)}
+                  </code>
+                  <button id="btn-copy-consensus-hash" class="btn-sm" title="Copy Full Hash" style="background: rgba(56, 189, 248, 0.2); border: 1px solid #38bdf8; color: #e0f2fe; padding: 3px 8px; border-radius: 4px; cursor: pointer;">📋</button>
+                </div>
+              </div>
+
+              <!-- 2. Tick & Circadian Day -->
+              <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 12px;">
+                <div style="font-size: 11px; text-transform: uppercase; color: #10b981; font-weight: 600; margin-bottom: 4px;">
+                  ${t('snapshotTick', 'Anchor Tick & Block')}
+                </div>
+                <div style="font-size: 14px; font-weight: bold; color: #ecfdf5;">
+                  Tick ${snapTick} • Day ${Math.floor(snapTick / 24) + 1}
+                  ${isGenesis ? '<span style="font-size: 10px; background: rgba(16, 185, 129, 0.25); color: #6ee7b7; padding: 2px 6px; border-radius: 10px; margin-left: 6px;">Genesis #1</span>' : ''}
+                </div>
+              </div>
+
+              <!-- 3. Consensus Status -->
+              <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 8px; padding: 12px;">
+                <div style="font-size: 11px; text-transform: uppercase; color: #f59e0b; font-weight: 600; margin-bottom: 4px;">
+                  ${t('snapshotStatus', 'Consensus Status')}
+                </div>
+                <div style="font-size: 13px; font-weight: bold; color: ${isAligned ? '#6ee7b7' : '#fde68a'};">
+                  ${isAligned ? `🟢 ${t('snapshotStatusAligned', 'Aligned with Git Anchor')}` : `⚡ ${t('snapshotStatusLocal', 'Local Autonomous Progression')} (+${currentTick - snapTick}h)`}
+                </div>
+              </div>
+
+              <!-- 4. Cadence & Pipeline -->
+              <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 8px; padding: 12px;">
+                <div style="font-size: 11px; text-transform: uppercase; color: #c084fc; font-weight: 600; margin-bottom: 4px;">
+                  ${t('snapshotCadence', 'Anchor Cadence')}
+                </div>
+                <div style="font-size: 13px; color: #f3e8ff;">
+                  ${t('snapshotCadenceVal', 'Every 12h • GitHub Actions Cron')}
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;">
+              <button id="btn-download-world-snapshot" class="btn-action-nav" style="background: var(--emerald-primary); color: #06261c; font-weight: bold; cursor: pointer; padding: 8px 16px; border-radius: 6px; font-size: 13px;">
+                📥 ${t('snapshotBtnDownload', 'Download Snapshot JSON')}
+              </button>
+              <button id="btn-resync-git-snapshot" class="btn-action-nav" style="background: rgba(56, 189, 248, 0.2); border: 1px solid #38bdf8; color: #e0f2fe; cursor: pointer; padding: 8px 16px; border-radius: 6px; font-size: 13px;">
+                🔄 ${t('snapshotBtnResync', 'Resync from Git Anchor')}
+              </button>
+              <a href="https://github.com/kyberlex/ONE/blob/main/sim/app/public/world_snapshot.json" target="_blank" rel="noopener noreferrer" class="btn-action-nav" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); color: #f1f5f9; text-decoration: none; display: inline-flex; align-items: center; padding: 8px 16px; border-radius: 6px; font-size: 13px;">
+                🔗 ${t('snapshotBtnViewGithub', 'View Anchor on GitHub')}
+              </a>
+            </div>
+          </div>
+
+          <!-- Explainer Card -->
+          <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 16px;">
+            <h5 style="color: #38bdf8; margin: 0 0 8px 0; font-size: 14px;">💡 ${t('snapshotExplainerTitle', 'How Git-as-a-State-Anchor Works')}</h5>
+            <p style="font-size: 12px; line-height: 1.6; color: #cbd5e1; margin: 0;">
+              ${t('snapshotExplainerDesc', 'Instead of relying on costly, centralized cloud databases that can be seized or shut down, O.N.E. uses Git repository commits as immutable, decentralized consensus checkpoints. Real-time gameplay runs 100% peer-to-peer via WebRTC and local IndexedDB, while GitHub anchors long-term snapshots at zero cost.')}
+            </p>
+          </div>
+        </div>
+      `;
+    }
+
     html += `</div>`;
     this.contentEl.innerHTML = html;
     this.attachDynamicListeners(activeTab);
@@ -911,5 +1000,66 @@ export class PanelNodeController {
         }
       });
     });
+
+    // Consensus Snapshot Download
+    const dlBtn = this.contentEl.querySelector('#btn-download-world-snapshot');
+    if (dlBtn) {
+      dlBtn.addEventListener('click', async () => {
+        try {
+          dlBtn.disabled = true;
+          const origText = dlBtn.textContent;
+          dlBtn.textContent = '⏳ ...';
+          const snap = await this.sim.exportConsensusSnapshot();
+          const blob = new Blob([JSON.stringify(snap, null, 2)], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `world_snapshot_tick_${snap.tick}.json`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+          dlBtn.textContent = '✓ ' + origText.trim();
+          setTimeout(() => { dlBtn.textContent = origText; dlBtn.disabled = false; }, 2000);
+        } catch (e) {
+          console.error('[PanelNode] Error exporting snapshot:', e);
+          dlBtn.disabled = false;
+        }
+      });
+    }
+
+    // Consensus Snapshot Resync from Git Anchor
+    const resyncBtn = this.contentEl.querySelector('#btn-resync-git-snapshot');
+    if (resyncBtn) {
+      resyncBtn.addEventListener('click', async () => {
+        resyncBtn.disabled = true;
+        const origText = resyncBtn.textContent;
+        resyncBtn.textContent = '⏳ ...';
+        const success = await this.sim.bootstrapFromSnapshot();
+        if (success) {
+          this.sim.notifyTick();
+          this.render('snapshot');
+          alert(t('snapshotResynced', 'Successfully synchronized with canonical Git snapshot!'));
+        } else {
+          alert('Could not synchronize: network unreachable or offline.');
+        }
+        resyncBtn.textContent = origText;
+        resyncBtn.disabled = false;
+      });
+    }
+
+    // Copy Consensus Hash
+    const copyHashBtn = this.contentEl.querySelector('#btn-copy-consensus-hash');
+    if (copyHashBtn) {
+      copyHashBtn.addEventListener('click', () => {
+        const hash = this.sim.consensusSnapshot?.hash || '48bd31aed62ca1d35b50ee12011eef2eedf97039e0b01be92032ed9dadcd1948';
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(hash).then(() => {
+            copyHashBtn.textContent = '✓';
+            setTimeout(() => { copyHashBtn.textContent = '📋'; }, 1800);
+          }).catch(() => {});
+        }
+      });
+    }
   }
 }

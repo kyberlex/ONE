@@ -104,7 +104,8 @@
         <div class="hud-top-actions">
           <button id="btn-open-passport" class="btn-toggle-view btn-passport-pill" title="Player Profile & Character" data-i18n-title="passportTooltip">🔑 <span id="passport-btn-label" data-i18n="passportBtnLabel">Character</span></button>
           <button id="btn-invite-friend" class="btn-toggle-view btn-invite-pill" title="Multiplayer Settlement Invite" data-i18n-title="inviteFriendTooltip">🔗 <span id="invite-btn-label" data-i18n="inviteFriendBtn">Invite</span></button>
-          <button id="btn-open-guide" class="btn-toggle-view btn-guide-pill" title="Interactive Onboarding Guide" data-i18n-title="guideTooltip">🧭 <span id="guide-btn-label" data-i18n="guideBtnLabel">Guide</span></button>
+          <button id="btn-open-handbook" class="btn-toggle-view btn-handbook-pill" title="Survival Rulebook & Field Manual (F1 / G)" data-i18n-title="handbookTooltip">📖 <span id="handbook-btn-label" data-i18n="handbookBtnLabel">Rulebook</span></button>
+          <button id="btn-open-guide" class="btn-toggle-view btn-guide-pill" title="Interactive Onboarding Tour" data-i18n-title="guideTooltip">🧭 <span id="guide-btn-label" data-i18n="guideBtnLabel">Tour</span></button>
           <button id="btn-open-feedback" class="btn-toggle-view btn-feedback-pill" title="Ideas & Bug Reports" data-i18n-title="feedbackTooltip">💡 <span id="feedback-btn-label" data-i18n="btnFeedback">Ideas & Bugs</span></button>
 
           <!-- Language Selector -->
@@ -443,6 +444,26 @@
           <button id="btn-close-invite-modal" class="btn-close-modal">✕</button>
         </div>
         <div id="invite-modal-content" class="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- MODAL: Survival Rulebook & Player Field Manual -->
+    <div id="modal-handbook" class="modal-overlay hidden">
+      <div class="modal-window modal-window-handbook">
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
+            <h3 id="modal-handbook-title" data-i18n="handbookModalTitle">📖 Survival Rulebook &amp; Field Manual</h3>
+            <span class="badge badge-success" data-i18n="badgeRulebookP2P">FIELD MANUAL</span>
+          </div>
+          <div class="modal-header-actions">
+            <a href="/O-ASIS_User_Handbook.pdf" target="_blank" download="O-ASIS_User_Handbook.pdf" class="btn-handbook-download-pdf" title="Download Printable Vector PDF (18 Pages)" data-i18n-title="handbookPdfDownloadTooltip">
+              📥 <span data-i18n="handbookDownloadPdfBtn">Download PDF (18 Pgs)</span>
+            </a>
+            <button id="btn-close-handbook-modal" class="btn-close-modal" title="Close (ESC)">✕</button>
+          </div>
+        </div>
+        <div id="handbook-modal-content" class="modal-body"></div>
       </div>
     </div>
   </div>

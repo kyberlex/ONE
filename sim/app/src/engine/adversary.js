@@ -18,7 +18,7 @@ export class LegacyAdversaryDirector {
     this.eventHistory = [];
     this.activeCrisis = null;
     this.crisisCooldownTicks = 48; // Minimum 2 days between major events
-    this.lastCrisisTick = -999;
+    this.lastCrisisTick = 0;
     this.currencySymbol = config.currencySymbol || '$';
   }
 
@@ -110,6 +110,11 @@ export class LegacyAdversaryDirector {
         return { type: 'CRISIS_RESOLVED', crisis: finishedCrisis };
       }
       return { type: 'CRISIS_ACTIVE', crisis: this.activeCrisis };
+    }
+
+    // Initial settlement founding grace period (first 48 ticks = 2 full days of community founding)
+    if (currentTick < 48) {
+      return null;
     }
 
     // Check cooldown

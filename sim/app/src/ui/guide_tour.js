@@ -246,6 +246,25 @@ export class GuideTourController {
     this.currentStep = Math.max(0, Math.min(initialStep, this.steps.length - 1));
     this.isActive = true;
 
+    // Close any other open modals so they don't obscure or collide with the tour
+    document.querySelectorAll('.modal-overlay').forEach(m => {
+      if (m.id !== 'onboarding-guide-overlay') {
+        m.classList.add('hidden');
+      }
+    });
+    document.body.classList.remove('has-dilemma-open');
+
+    // Auto-pause simulation clock while reading the walkthrough steps
+    if (this.sim) {
+      if (this.savedSpeed === undefined) {
+        this.savedSpeed = this.sim.speedMultiplier !== undefined ? this.sim.speedMultiplier : (this.sim.speed || 1);
+      }
+      this.sim.setSpeed(0);
+      if (this.hud && typeof this.hud.updateSpeedButtons === 'function') {
+        this.hud.updateSpeedButtons(0);
+      }
+    }
+
     if (this.overlayEl) {
       this.overlayEl.classList.remove('hidden');
     }
@@ -477,6 +496,16 @@ export class GuideTourController {
     }
     if (this.reticleEl) {
       this.reticleEl.style.display = 'none';
+    }
+
+    // Restore simulation clock speed
+    if (this.sim && this.savedSpeed !== undefined) {
+      const restoreSpeed = this.savedSpeed;
+      this.sim.setSpeed(restoreSpeed);
+      if (this.hud && typeof this.hud.updateSpeedButtons === 'function') {
+        this.hud.updateSpeedButtons(restoreSpeed);
+      }
+      this.savedSpeed = undefined;
     }
   }
 }

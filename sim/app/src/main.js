@@ -20,6 +20,7 @@ import { PanelPassportController } from './ui/panel_passport.js';
 import { PanelConvoysController } from './ui/panel_convoys.js';
 import { PanelChatController } from './ui/panel_chat.js';
 import { PanelFeedbackController } from './ui/panel_feedback.js';
+import { PanelHandbookController } from './ui/panel_handbook.js';
 import { PanelInviteController } from './ui/panel_invite.js';
 import { GuideTourController } from './ui/guide_tour.js';
 import { ChatEngine } from './engine/chat_engine.js';
@@ -73,6 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let currentView = 'world'; // 'world' | 'settlement'
   let panelPassport = null;
   let panelInvite = null;
+  let panelHandbook = null;
   let chatEngine = null;
   let panelChat = null;
   let guideTour = null;
@@ -389,6 +391,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  panelHandbook = new PanelHandbookController(sim, hud);
+
   // Re-render open modals on language change
   i18n.onLanguageChange(() => {
     if (activePanel === 'chores' || activePanel === 'housing' || activePanel === 'agriculture' || activePanel === 'machinery') {
@@ -400,6 +404,9 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     panelDilemma.render();
     panelFeedback.render();
+    if (panelHandbook && panelHandbook.isOpen()) {
+      panelHandbook.render();
+    }
     if (panelChat) {
       panelChat.render();
       if (typeof panelChat.updateLauncherText === 'function') panelChat.updateLauncherText();
@@ -890,11 +897,26 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   sim.onCrisisListeners.push(crisis => {
-    panelDilemma.openCrisis(crisis);
+    const isTourActive = Boolean(guideTour && guideTour.isActive);
+    const isHandbookOpen = Boolean(panelHandbook && panelHandbook.isOpen());
+
+    if (!isTourActive && !isHandbookOpen) {
+      panelDilemma.openCrisis(crisis);
+    } else {
+      panelDilemma.activeCrisisData = crisis;
+    }
+
+    const councilBtn = document.getElementById('btn-open-council');
+    if (councilBtn) councilBtn.classList.add('has-alert');
+
     const crisisName = crisis.nameKey ? t(crisis.nameKey, crisis.name) : crisis.name;
     hud.showNotification({
       title: '⚠️ ' + t('systemAttackBadge', 'System Stress Event'),
-      message: t('crisisActionNotice', '{name}: an urgent collective decision is needed!').replace('{name}', crisisName)
+      message: t('crisisActionNotice', '{name}: an urgent collective decision is needed!').replace('{name}', crisisName),
+      onClick: () => {
+        if (councilBtn) councilBtn.classList.remove('has-alert');
+        panelDilemma.openCrisis(crisis);
+      }
     });
   });
 
@@ -1014,7 +1036,16 @@ window.addEventListener('DOMContentLoaded', () => {
     panelChat,
     guideTour,
     panelInvite,
-    p2pMesh
+    p2pMesh,
+    panelNode,
+    panelDualTrack,
+    panelConvoys,
+    panelDilemma,
+    panelFeedback,
+    panelHandbook,
+    panelPassport,
+    panelDwelling,
+    hud
   };
 
   console.log('✅ [O-ASIS Dual-Track] Planetary cartography & bioclimatic village engine running at 60 FPS.');

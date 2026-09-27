@@ -46,6 +46,7 @@ export class PanelDilemmaController {
     this.activeCrisisData = null;
     this.activePeerReviewData = null;
     this.isCodexMode = false;
+    if (window.app?.guideTour?.isActive) return;
     this.modalEl.classList.remove('hidden');
     document.body.classList.add('has-dilemma-open');
     this.render();
@@ -57,6 +58,7 @@ export class PanelDilemmaController {
     this.activeDilemmaData = null;
     this.activePeerReviewData = null;
     this.isCodexMode = false;
+    if (window.app?.guideTour?.isActive) return;
     this.modalEl.classList.remove('hidden');
     document.body.classList.add('has-dilemma-open');
     this.render();
@@ -68,6 +70,7 @@ export class PanelDilemmaController {
     this.activeDilemmaData = null;
     this.activeCrisisData = null;
     this.isCodexMode = false;
+    if (window.app?.guideTour?.isActive) return;
     this.modalEl.classList.remove('hidden');
     document.body.classList.add('has-dilemma-open');
     this.render();
@@ -75,6 +78,7 @@ export class PanelDilemmaController {
 
   openAssemblyCodex() {
     if (!this.modalEl) return;
+    if (window.app?.guideTour?.isActive) return;
     this.isCodexMode = true;
     this.activeDilemmaData = null;
     this.activeCrisisData = null;

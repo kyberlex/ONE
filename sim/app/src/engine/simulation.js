@@ -50,8 +50,14 @@ export class SimulationManager {
     this.sortition.seatNewCouncil(this.node.citizens, this.tickCount);
     this.node.updateLaborAndMorale();
 
+    // Canonical Git Consensus Snapshot Anchor metadata
+    this.consensusSnapshot = null;
+
     // Restore saved simulation state if available
     this.loadFromLocalStorage();
+
+    // Bootstrap or align with canonical Git snapshot asynchronously
+    this.bootstrapFromSnapshot();
   }
 
   get currentDay() {
@@ -395,5 +401,180 @@ export class SimulationManager {
       console.error('Failed to load from localStorage:', e);
       return false;
     }
+  }
+
+  /**
+   * Bootstraps world state from canonical /world_snapshot.json (Git-as-a-State-Anchor)
+   * If local storage has no save, populates initial state from canonical snapshot.
+   */
+  async bootstrapFromSnapshot() {
+    try {
+      const res = await fetch('/world_snapshot.json');
+      if (!res.ok) return false;
+      const snapshot = await res.json();
+      if (!snapshot || !snapshot.nodes) return false;
+
+      this.consensusSnapshot = {
+        schemaVersion: snapshot.schemaVersion || 1,
+        network: snapshot.network || 'O-ASIS Confederated Mesh',
+        genesis: !!snapshot.genesis,
+        tick: snapshot.tick || 0,
+        day: snapshot.day || 1,
+        timestamp: snapshot.timestamp,
+        hash: snapshot.thermoConsensusHash || '',
+        nodes: snapshot.nodes
+      };
+
+      const hasLocalSave = typeof localStorage !== 'undefined' && localStorage.getItem('oasis_dualtrack_save');
+      if (!hasLocalSave) {
+        console.log(`⚓ [Simulation] Seeding world from Canonical Git-Anchor (Tick ${snapshot.tick}, Hash: ${snapshot.thermoConsensusHash?.slice(0, 10)})`);
+        this.applySnapshotData(snapshot);
+        this.saveToLocalStorage();
+      } else {
+        console.log(`⚓ [Simulation] Canonical Git-Anchor recognized: Tick ${snapshot.tick} (Hash: ${snapshot.thermoConsensusHash?.slice(0, 10)})`);
+      }
+      return true;
+    } catch (e) {
+      console.warn('[Simulation] Could not fetch canonical /world_snapshot.json (offline or unreached):', e);
+      return false;
+    }
+  }
+
+  /**
+   * Applies snapshot node data to active simulation instance
+   */
+  applySnapshotData(snapshot) {
+    if (!snapshot || !snapshot.nodes) return;
+    const targetNodeId = this.node?.id || 'node-detroit';
+    const nodeData = snapshot.nodes[targetNodeId] || snapshot.nodes['node-detroit'];
+
+    if (snapshot.tick !== undefined) {
+      this.tickCount = snapshot.tick;
+    }
+
+    if (nodeData) {
+      if (nodeData.population) this.node.population = nodeData.population;
+      if (nodeData.morale !== undefined) this.node.communityMorale = nodeData.morale;
+      if (nodeData.fiatTreasury !== undefined) this.node.externalFiatTreasuryEur = nodeData.fiatTreasury;
+      if (nodeData.currencySymbol) this.node.currencySymbol = nodeData.currencySymbol;
+      if (nodeData.currencyCode) this.node.currencyCode = nodeData.currencyCode;
+      if (nodeData.currencyName) this.node.currencyName = nodeData.currencyName;
+      if (this.adversary) this.adversary.currencySymbol = this.node.currencySymbol;
+
+      if (nodeData.chores) {
+        this.node.choreAssignments = { ...this.node.choreAssignments, ...nodeData.chores };
+      }
+      if (nodeData.robots) {
+        this.node.robots = { ...this.node.robots, ...nodeData.robots };
+      }
+      if (nodeData.thermo) {
+        const t = nodeData.thermo;
+        if (t.energy?.batteryStoredKwh !== undefined) this.thermo.energy.batteryStoredKwh = t.energy.batteryStoredKwh;
+        if (t.water?.cisternStoredL !== undefined) this.thermo.water.cisternStoredL = t.water.cisternStoredL;
+        if (t.food?.granaryStoredKcal !== undefined) this.thermo.food.granaryStoredKcal = t.food.granaryStoredKcal;
+      }
+      if (nodeData.civicProjects && this.civicProjects) {
+        for (const [pId, pData] of Object.entries(nodeData.civicProjects)) {
+          if (this.civicProjects.projects[pId]) {
+            this.civicProjects.projects[pId].progress = pData.progress || 0;
+            this.civicProjects.projects[pId].donatedHours = pData.donatedHours || 0;
+            this.civicProjects.projects[pId].completed = !!pData.completed;
+          }
+        }
+      }
+      this.node.updateLaborAndMorale();
+    }
+  }
+
+  /**
+   * Exports the current world / node state conforming to the canonical world_snapshot schema
+   * Computes SHA-256 thermoConsensusHash via crypto.subtle.
+   */
+  async exportConsensusSnapshot() {
+    const fullState = this.getFullState();
+    const targetNodeId = this.node?.id || 'node-detroit';
+
+    // Clone base starter nodes or existing snapshot nodes
+    const baseNodes = this.consensusSnapshot?.nodes ? JSON.parse(JSON.stringify(this.consensusSnapshot.nodes)) : {};
+    
+    // Inject active node state
+    baseNodes[targetNodeId] = {
+      id: targetNodeId,
+      name: this.node.name,
+      bioregion: this.node.bioregion || 'Bioregional Commons',
+      country: this.node.country || 'Autonomous usufruct territory',
+      currencySymbol: this.node.currencySymbol || '$',
+      currencyCode: this.node.currencyCode || 'USD',
+      currencyName: this.node.currencyName || 'US Dollar',
+      lat: this.node.lat || 0,
+      lng: this.node.lng || 0,
+      climateKey: this.node.climateKey || 'TEMPERATE',
+      population: this.node.population,
+      morale: this.node.communityMorale,
+      fiatTreasury: this.node.externalFiatTreasuryEur,
+      thermo: {
+        energy: {
+          batteryStoredKwh: this.thermo.energy.batteryStoredKwh,
+          batteryCapacityKwh: this.thermo.energy.batteryCapacityKwh,
+          solarGenerationKwh: this.thermo.energy.solarGenerationKwh,
+          consumptionKwh: this.thermo.energy.consumptionKwh
+        },
+        water: {
+          cisternStoredL: this.thermo.water.cisternStoredL,
+          cisternCapacityL: this.thermo.water.cisternCapacityL,
+          rainInflowL: this.thermo.water.rainInflowL,
+          consumptionL: this.thermo.water.consumptionL
+        },
+        food: {
+          granaryStoredKcal: this.thermo.food.granaryStoredKcal,
+          dailyBiometricFloorKcal: this.thermo.food.dailyBiometricFloorKcal,
+          daysRemaining: this.thermo.food.daysRemaining
+        },
+        compute: {
+          meshMflops: this.thermo.compute.meshMflops,
+          activePeers: this.thermo.compute.activePeers
+        }
+      },
+      robots: { ...this.node.robots },
+      civicProjects: this.civicProjects ? this.civicProjects.serialize().projects : {},
+      dwellings: {
+        totalPods: this.node.housingPool?.length || 32,
+        occupiedPods: this.node.citizens?.length || 28,
+        claimedPods: 1,
+        sabbaticalLocks: 0
+      },
+      chores: { ...this.node.choreAssignments }
+    };
+
+    const snapshot = {
+      schemaVersion: 1,
+      network: 'O-ASIS Confederated Mesh',
+      genesis: this.tickCount === 0,
+      tick: this.tickCount,
+      day: this.currentDay,
+      timestamp: new Date().toISOString(),
+      nodes: baseNodes,
+      caseLawPrecedents: this.peerReview ? this.peerReview.serialize().ratifiedDockets : [],
+      metadata: {
+        engineVersion: '0.1.0',
+        consensusStandard: 'Git-as-a-State-Anchor (O-ASIS Dual-Track Protocol)',
+        p2pTransport: 'WebRTC DataChannel + Nostr NIP-01 + BroadcastChannel',
+        author: 'Kyberlex <kyberlex@proton.me>',
+        license: 'AGPL-3.0-or-later'
+      }
+    };
+
+    // Deterministic SHA-256 hash calculation
+    try {
+      const canonicalStr = JSON.stringify(snapshot, Object.keys(snapshot).sort());
+      const encoder = new TextEncoder();
+      const hashBuffer = await crypto.subtle.digest('SHA-256', encoder.encode(canonicalStr));
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      snapshot.thermoConsensusHash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    } catch (e) {
+      snapshot.thermoConsensusHash = '0000000000000000000000000000000000000000000000000000000000000000';
+    }
+
+    return snapshot;
   }
 }

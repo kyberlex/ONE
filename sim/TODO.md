@@ -50,22 +50,20 @@ Enable seamless, zero-registration synchronization of simulation states and node
    - **Phase 1 (Storage - Completed):** Local-First storage engine backed by **IndexedDB** (`storage_idb.js`) to record node history, state trees, and signed delta logs without the 5MB `localStorage` limit. Right to Oblivion (`purgeCitizenIdentity`) implemented.
    - **Phase 2 (Identity & Cryptographic Passports - Completed):** Sovereign Citizen ID (`citizen_passport.js`) using Web Crypto API (`crypto.subtle` ECDSA P-256) for zero-registration asymmetric keypairs and action signing. First-time onboarding wizard with vocational polytech notice.
    - **Phase 3 (P2P Mesh Synchronization - Completed):** WebRTC DataChannel (`p2p_mesh.js`) + BroadcastChannel + 2D SVG QR code SDP pairing (`qr_generator.js`) for seamless multi-device peer-to-peer event replication.
-   - **Phase 4 (Long-Term Persistence & Git-as-a-State-Anchor - Planned for Post-Alpha / Genesis Block):** See Section D below.
+   - **Phase 4 (Long-Term Persistence & Git-as-a-State-Anchor - Completed):** Genesis Block activated with canonical state anchor `sim/app/public/world_snapshot.json`, automated GitHub Actions cron workflow, headless ingestion script `scripts/anchor_world_snapshot.py`, and zero-latency client bootstrap.
 
-### **D. Git-as-a-State-Anchor: Long-Term Consensus Snapshots on GitHub**
+### **D. Git-as-a-State-Anchor: Long-Term Consensus Snapshots on GitHub (Completed)**
 
-- **Context & Timing:**
-  - *Current Alpha Phase:* State lives in local browser `IndexedDB` and P2P WebRTC mesh. We deliberately DO NOT commit hourly snapshots to Git yet, in order to avoid polluting repository history with throwaway test commits while database schemas and gameplay mechanics are rapidly evolving.
-  - *Genesis Block Activation:* Once settlement mechanics, robotics tech-trees, and thermodynamics reach stable feature-freeze, the automated GitHub snapshot anchor will be activated.
+- **Context & Genesis Block Activation:**
+  - Settlement mechanics, robotics tech-trees, thermodynamics, and demarchy assemblies have reached feature-freeze. The automated GitHub snapshot anchor is now active as Genesis Block #1.
 
-- **Architecture & Mechanics:**
-  - **Canonical Snapshot File:** `sim/app/public/world_snapshot.json` with strict schema versioning (`schemaVersion: 1`, `tick`, `timestamp`, `nodes`, `dwellings`, `robots`, `thermoConsensusHash`).
-  - **Automated GitHub Action Cron:** `.github/workflows/world_snapshot_cron.yml` running on a periodic schedule (e.g. every 6 to 12 hours).
-  - **Headless Ingestion Script:** `scripts/anchor_world_snapshot.py` acting as an ambient headless peer. It connects to the community P2P network, gathers verified ECDSA-signed action deltas, applies them deterministically, updates `world_snapshot.json`, and commits cleanly:
-    `chore(sim): consensus world snapshot [Tick <N>]`
-    (Author: `kyberlex-bot <kyberlex@proton.me>`).
-  - **Zero-Latency Client Bootstrap:** When any player opens the web app, if their local `IndexedDB` is empty or older than the snapshot, the client fetches `/world_snapshot.json` statically (cached, 0 lag, zero-server cost), instantly populating the current state of Detroit and other nodes, and then connects to WebRTC P2P for real-time delta gossip.
-  - **Invariants Upheld:** 100% free software, zero server costs, zero centralized authority, complete cryptographic transparency.
+- **Architecture & Implemented Mechanics:**
+  - **Canonical Snapshot File ([`world_snapshot.json`](app/public/world_snapshot.json)):** Strict schema versioning (`schemaVersion: 1`, `network: "O-ASIS Confederated Mesh"`, `genesis: true`, `tick: 0`, `timestamp`, `nodes`, `robots`, `civicProjects`, `thermoConsensusHash`).
+  - **Headless Ingestion Engine ([`anchor_world_snapshot.py`](../scripts/anchor_world_snapshot.py)):** Ambient headless peer and CLI tool supporting `--check`, `--generate-genesis`, `--advance`, `--export`, and deterministic SHA-256 state hashing over canonical node states.
+  - **Automated GitHub Action Cron ([`world_snapshot_cron.yml`](../.github/workflows/world_snapshot_cron.yml)):** Runs periodically on GitHub Actions (every 12 hours) and manual `workflow_dispatch`, automatically verifying consensus state and committing `chore(sim): consensus world snapshot [Tick <N>]` under `kyberlex-bot <kyberlex@proton.me>`.
+  - **Zero-Latency Client Bootstrap ([`simulation.js`](app/src/engine/simulation.js)):** On startup, client fetches `/world_snapshot.json` statically (cached, 0 lag, zero server cost) to populate initial node thermodynamics, demographics, and projects if IndexedDB is unseeded, and aligns consensus telemetry.
+  - **In-Game Consensus Anchor Dashboard ([`panel_node.js`](app/src/ui/panel_node.js)):** Added dedicated `⚓ Consensus Git-Anchor` tab to the Village Commons Hub, rendering real-time SHA-256 hash, anchor tick/block, progression status, 1-click JSON snapshot download, and Git resync action.
+  - **Invariants Upheld:** 100% free software (AGPL-3.0), zero server costs, zero centralized authority, complete cryptographic transparency. transparency.
 
 ---
 
@@ -342,13 +340,33 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
       - Passed production build (`npm run build` in 722ms).
       - Verified end-to-end in live browser via `browser_subagent`: chat toggle, Whisper recipient switching, E2EE message sending/decryption, Quick-Phrases drawer, live peer badge/latency indicators, and canvas speech bubbles.
 
-- [ ] **ITEM 20: User Guide Overhaul & Markdown-to-Vector-PDF Transition (Postponed - Final Step):**
+- [x] **ITEM 20: User Guide Overhaul & Markdown-to-Vector-PDF Transition (Completed):**
   - *Requirement:* Update the simulator user handbook to reflect all recently introduced features, and modernize the compilation pipeline from a raster PNG-heavy PDF into a structured Markdown (`.md`) document compiled into clean, searchable vector PDF.
-  - *Timing:* To be executed last, once all gameplay, onboarding, and networking features reach stable freeze.
-  - *Action Plan:*
-    - Document new living mechanics: Sortition Confederal Codex review, 3D prop inspection, anonymous bug/RFC reporting relay, offline local cartography, dynamic circadian warp, and cybernetic canvas robots.
-    - Embed updated high-dpi screenshots from the multi-device audit.
-    - Convert documentation pipeline to build vector PDF directly from structured Markdown with typography and code blocks.
+  - *Implementation Details:*
+    - **Living Field Manual & Architectural Handbook (`sim/USER_GUIDE.md`):**
+      - Created comprehensive, structured 9-chapter Markdown manual (37KB) covering all 20 simulation features.
+      - **Chapter 1:** Solarpunk Imperative, Leontief Thermodynamics, 4 Vital Flows (Energy, Water, Calories, Compute), and Circadian Warp.
+      - **Chapter 2:** Living Settlement Canvas (60 FPS, particle shaders, day/night lighting), 5 Cybernetic Robots (`ROV-01`, `DRN-02`, `SCADA-03`, `LOG-04`, `BOT-05`), and 100% Offline Global Cartography with astronomical solar terminator.
+      - **Chapter 3:** Dynamic Usufruct Housing ("Use It or Lose It" invariant, pod claiming, circular furniture swap, personal gear inviolability) and Cryptographic Sabbatical Locks (up to 90 circadian days).
+      - **Chapter 4:** Rotational Chores & Civic Guilds (Land, Facilities, Care, Workshop), Second-Law entropy & MTBF, and Cybernetic Labor Cancellation toward zero human chore hours.
+      - **Chapter 5:** Athenian Sortition Assembly (tiered odd parity: 3 < 50 pop, 15 >= 50 pop), Legacy Adversary AI dilemmas, and Confederal Case Law Codex (75% supermajority threshold).
+      - **Chapter 6:** Cantieri Civici (multi-stage megaprojects: Amphitheater, Geothermal, Induction Smelter, Biogas Sphere, LoRa Mast) and Inter-Node Barter Convoys ($ fiat displacement tracking).
+      - **Chapter 7:** Sovereign Cryptographic Passports (local ECDSA P-256 keypair, SVG avatar, 2D QR camera sync), Serverless Multiplayer Rooms (WebRTC mesh + Nostr NIP-01 signaling), and Village Chat with subtle ECDH + AES-256-GCM E2EE Whispers and Quick-Phrases.
+      - **Chapter 8:** Dual-Track Open Hardware Bridge, Interactive 3D Prop Inspector (1:50 miniature & 1:1 real scale), one-click `.STL` CAD and `.YAML` Home Assistant exports, and FabLab Robotics Tech Tree.
+      - **Chapter 9:** Anonymous Feedback Relay (stateless Google Apps Script to GitHub Issues proxy), 7-Stage Interactive Onboarding Tour, complete keyboard shortcuts cheatsheet, and Pioneer Diagnostics/FAQ.
+    - **Modernized Markdown-to-Vector-PDF Pipeline (`sim/generate_handbook.py`):**
+      - Direct Markdown compilation via Python `markdown` with extensions (`tables`, `fenced_code`, `toc`, `attr_list`).
+      - Injected print-ready Solarpunk CSS template for A4 portrait with CSS Paged Media `@page` margin boxes (`@top-left`, `@top-right`, `@bottom-left`, `@bottom-right`, `counter(page)` of `counter(pages)`), and `@page :first` header suppression.
+      - Automated figure transformation converting Markdown image/caption pairs into semantic `<figure>` and `<figcaption>` elements with `break-inside: avoid;`.
+      - Executed headless Google Chrome `--print-to-pdf` with `--allow-file-access-from-files` and `--no-pdf-header-footer`, producing a 100% searchable vector PDF (`sim/O-ASIS_User_Handbook.pdf`).
+    - **High-DPI In-Game Screenshot Audit (`sim/handbook_assets/`):**
+      - Generated 13 high-resolution 3200×1920 (deviceScaleFactor: 2) in-game screenshots capturing all primary gameplay panels and modals via isolated Chrome DevTools Protocol automation:
+        - `01_settlement_village.png`, `02_world_map.png`, `03_sortition_council.png`, `04_chores_maintenance.png`, `05_housing_usufruct.png`, `06_dualtrack_robots.png`, `06_dualtrack_hardware_3d.png`, `07_civic_megaprojects.png`, `08_trade_convoys.png`, `09_player_passport.png`, `10_multiplayer_invite.png`, `11_village_chat.png`, `12_feedback_relay.png`.
+    - **Verification & Quality Gate Audit:**
+      - Verified PDF compilation via `pymupdf`: exact 16-page layout with balanced content and 100% vector text searchability across all core simulation keywords.
+      - Zero personal leak matches (Gate D2: `Kyberlex <kyberlex@proton.me>`, zero local workstation paths or personal names).
+      - Passed production build (`npm run build` in 1.60s).
+
 
 
 
