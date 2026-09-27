@@ -129,6 +129,9 @@ export class PanelDualTrackController {
                 <button id="btn-copy-yaml" class="btn-secondary-export" title="Copy tested Home Assistant YAML with official O.N.E. banner">
                   ${t('copyYamlBtn', '📄 Copy Home Assistant YAML')}
                 </button>
+                <a href="https://open-networked-earth.surge.sh/#roadmap" target="_blank" rel="noopener noreferrer" class="btn-secondary-export" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; color:#34d399;" title="Explore O.N.E. Open Hardware Commons & Transition Roadmap">
+                  🌐 ${t('roadmapCommonsLink', 'O.N.E. Hardware Roadmap ↗')}
+                </a>
               </div>
             </div>
 

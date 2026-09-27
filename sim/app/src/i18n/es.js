@@ -1204,5 +1204,19 @@ export const es = {
   snapshotPushSuccess: '¡Instantánea anclada exitosamente al repositorio de GitHub!',
   snapshotRelaySettings: 'Configuración del proxy de retransmisión (Google Apps Script)',
   snapshotRelayUrlDesc: 'Proxy autónomo sin servidor que ancla instantáneas al repositorio de GitHub sin exponer tokens.',
-  snapshotLastAnchor: 'Último ancla de GitHub'
+  snapshotLastAnchor: 'Último ancla de GitHub',
+  hudBrandPortal: 'PORTAL',
+  oneBrandTooltip: 'Open Networked Earth (O.N.E.) — Visita Constitución, Ficción & Visión ↗',
+  onePlatformLinkTooltip: 'Visitar la Plataforma Principal de Open Networked Earth (O.N.E.)',
+  onePlatformLinkBtn: 'Plataforma O.N.E. ↗',
+  handbookPlatformLinkTooltip: 'Explora la Plataforma Principal de Open Networked Earth (O.N.E.)',
+  handbookPlatformLinkBtn: 'Movimiento O.N.E. ↗',
+  handbookOneMovementTitle: 'El Movimiento Vivo Detrás de O-ASIS',
+  handbookOneMovementDesc: 'O-ASIS es la simulación termodinámica discreta de la civilización poslaboral Open Networked Earth (O.N.E.). Explora los 46 artículos de la Constitución Viva, descarga gratis la saga de 6 novelas de suspenso o examina la hoja de ruta de hardware abierto en open-networked-earth.surge.sh.',
+  btnReadConstitution: 'Leer Constitución v2.0 ↗',
+  btnReadThrillers: 'Ebooks de Suspenso Gratis ↗',
+  btnVisitPortal: 'Explorar Portal O.N.E. ↗',
+  readConstitutionLink: 'Constitución Viva (46 Artículos) ↗',
+  roadmapCommonsLink: 'Hoja de Ruta Hardware O.N.E. ↗',
+  guideExploreOnePlatform: 'Descubre el Movimiento O.N.E. (Constitución & Ficción) ↗'
 };

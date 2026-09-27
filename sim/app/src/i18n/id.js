@@ -1204,5 +1204,19 @@ export const id = {
   snapshotPushSuccess: 'Snapshot berhasil ditautkan ke repositori GitHub!',
   snapshotRelaySettings: 'Setelan Proksi Relai (Skrip Google Apps)',
   snapshotRelayUrlDesc: 'Proksi tanpa server otonom yang memasang snapshot ke repositori GitHub tanpa mengekspos token.',
-  snapshotLastAnchor: 'Jangkar GitHub Terakhir'
+  snapshotLastAnchor: 'Jangkar GitHub Terakhir',
+  hudBrandPortal: 'PORTAL',
+  oneBrandTooltip: 'Open Networked Earth (O.N.E.) — Kunjungi Konstitusi, Fiksi & Visi ↗',
+  onePlatformLinkTooltip: 'Kunjungi Platform Utama Open Networked Earth (O.N.E.)',
+  onePlatformLinkBtn: 'Platform O.N.E. ↗',
+  handbookPlatformLinkTooltip: 'Jelajahi Platform Utama Open Networked Earth (O.N.E.)',
+  handbookPlatformLinkBtn: 'Gerakan O.N.E. ↗',
+  handbookOneMovementTitle: 'Gerakan Nyata di Balik O-ASIS',
+  handbookOneMovementDesc: 'O-ASIS adalah simulasi termodinamika diskrit dari peradaban pasca-kerja Open Networked Earth (O.N.E.). Jelajahi 46 pasal Konstitusi Hidup, unduh saga novel thriller 6 jilid secara gratis, atau periksa peta jalan perangkat keras terbuka di open-networked-earth.surge.sh.',
+  btnReadConstitution: 'Baca Konstitusi v2.0 ↗',
+  btnReadThrillers: 'Ebook Thriller Gratis ↗',
+  btnVisitPortal: 'Jelajahi Portal O.N.E. ↗',
+  readConstitutionLink: 'Konstitusi Hidup (46 Pasal) ↗',
+  roadmapCommonsLink: 'Peta Jalan Perangkat Keras O.N.E. ↗',
+  guideExploreOnePlatform: 'Temukan Gerakan O.N.E. (Konstitusi & Novel) ↗'
 };

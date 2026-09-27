@@ -1204,5 +1204,19 @@ export const ko = {
   snapshotPushSuccess: '스냅샷이 GitHub 저장소에 성공적으로 고정되었습니다!',
   snapshotRelaySettings: '릴레이 프록시 설정(Google Apps Script)',
   snapshotRelayUrlDesc: '토큰을 노출하지 않고 GitHub 저장소에 스냅샷을 고정하는 자율 서버리스 프록시입니다.',
-  snapshotLastAnchor: '마지막 GitHub 앵커'
+  snapshotLastAnchor: '마지막 GitHub 앵커',
+  hudBrandPortal: '포털',
+  oneBrandTooltip: 'Open Networked Earth (O.N.E.) — 헌법, 소설 및 비전 방문 ↗',
+  onePlatformLinkTooltip: 'Open Networked Earth (O.N.E.) 메인 플랫폼 방문',
+  onePlatformLinkBtn: 'O.N.E. 플랫폼 ↗',
+  handbookPlatformLinkTooltip: 'Open Networked Earth (O.N.E.) 메인 플랫폼 탐색',
+  handbookPlatformLinkBtn: 'O.N.E. 운동 ↗',
+  handbookOneMovementTitle: 'O-ASIS 뒤에 있는 살아있는 운동',
+  handbookOneMovementDesc: 'O-ASIS는 탈노동 문명 Open Networked Earth(O.N.E.)의 이산 열역학 시뮬레이션입니다. 살아있는 헌법의 46개 조항을 탐색하고, 6권 분량의 스릴러 소설을 무료로 다운로드하거나 open-networked-earth.surge.sh에서 오픈 하드웨어 전환 로드맵을 확인하세요.',
+  btnReadConstitution: '헌법 v2.0 읽기 ↗',
+  btnReadThrillers: '무료 스릴러 전자책 ↗',
+  btnVisitPortal: 'O.N.E. 포털 탐색 ↗',
+  readConstitutionLink: '살아있는 헌법 (46개 조항) ↗',
+  roadmapCommonsLink: 'O.N.E. 하드웨어 로드맵 ↗',
+  guideExploreOnePlatform: 'O.N.E. 운동 알아보기 (헌법 및 스릴러) ↗'
 };

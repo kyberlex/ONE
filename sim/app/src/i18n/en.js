@@ -1204,5 +1204,19 @@ export const en = {
   snapshotPushSuccess: 'Snapshot successfully anchored to GitHub repository!',
   snapshotRelaySettings: 'Relay Proxy Settings (Google Apps Script)',
   snapshotRelayUrlDesc: 'Autonomous serverless proxy anchoring snapshots to the GitHub repository without exposing tokens.',
-  snapshotLastAnchor: 'Last GitHub Anchor'
+  snapshotLastAnchor: 'Last GitHub Anchor',
+  hudBrandPortal: 'PORTAL',
+  oneBrandTooltip: 'Open Networked Earth (O.N.E.) — Visit Constitution, Fiction & Vision ↗',
+  onePlatformLinkTooltip: 'Visit Open Networked Earth (O.N.E.) Main Platform',
+  onePlatformLinkBtn: 'O.N.E. Platform ↗',
+  handbookPlatformLinkTooltip: 'Explore the Open Networked Earth (O.N.E.) Main Platform',
+  handbookPlatformLinkBtn: 'O.N.E. Movement ↗',
+  handbookOneMovementTitle: 'The Living Movement Behind O-ASIS',
+  handbookOneMovementDesc: 'O-ASIS is the discrete thermodynamic simulation of the Open Networked Earth (O.N.E.) post-work civilization. Explore the 46 articles of the Living Constitution, download the 6-volume thriller novel saga for free, or inspect the open hardware transition roadmap at open-networked-earth.surge.sh.',
+  btnReadConstitution: 'Read Constitution v2.0 ↗',
+  btnReadThrillers: 'Free Thriller Ebooks ↗',
+  btnVisitPortal: 'Explore O.N.E. Portal ↗',
+  readConstitutionLink: 'Living Constitution (46 Articles) ↗',
+  roadmapCommonsLink: 'O.N.E. Hardware Roadmap ↗',
+  guideExploreOnePlatform: 'Discover the O.N.E. Movement (Constitution & Thrillers) ↗'
 };

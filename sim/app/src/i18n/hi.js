@@ -1204,5 +1204,19 @@ export const hi = {
   snapshotPushSuccess: 'स्नैपशॉट सफलतापूर्वक GitHub रिपॉजिटरी में एंकर हो गया!',
   snapshotRelaySettings: 'रिले प्रॉक्सी सेटिंग्स (Google Apps स्क्रिप्ट)',
   snapshotRelayUrlDesc: 'टोकन को उजागर किए बिना GitHub रिपॉजिटरी में स्वायत्त सर्वर रहित प्रॉक्सी एंकरिंग स्नैपशॉट।',
-  snapshotLastAnchor: 'अंतिम GitHub एंकर'
+  snapshotLastAnchor: 'अंतिम GitHub एंकर',
+  hudBrandPortal: 'पोर्टल',
+  oneBrandTooltip: 'Open Networked Earth (O.N.E.) — संविधान, उपन्यास और दृष्टि देखें ↗',
+  onePlatformLinkTooltip: 'Open Networked Earth (O.N.E.) मुख्य प्लेटफॉर्म पर जाएं',
+  onePlatformLinkBtn: 'O.N.E. प्लेटफॉर्म ↗',
+  handbookPlatformLinkTooltip: 'Open Networked Earth (O.N.E.) मुख्य प्लेटफॉर्म का अन्वेषण करें',
+  handbookPlatformLinkBtn: 'O.N.E. आंदोलन ↗',
+  handbookOneMovementTitle: 'O-ASIS के पीछे जीवंत आंदोलन',
+  handbookOneMovementDesc: 'O-ASIS कार्य-पश्चात सभ्यता Open Networked Earth (O.N.E.) का असतत थर्मोडायनामिक सिमुलेशन है। जीवंत संविधान के 46 अनुच्छेदों का अन्वेषण करें, 6-खंडों वाली थ्रिलर उपन्यास गाथा मुफ्त में डाउनलोड करें, या open-networked-earth.surge.sh पर ओपन हार्डवेयर रोडमैप देखें।',
+  btnReadConstitution: 'संविधान v2.0 पढ़ें ↗',
+  btnReadThrillers: 'मुफ्त थ्रिलर ई-बुक्स ↗',
+  btnVisitPortal: 'O.N.E. पोर्टल का अन्वेषण करें ↗',
+  readConstitutionLink: 'जीवंत संविधान (46 अनुच्छेद) ↗',
+  roadmapCommonsLink: 'O.N.E. हार्डवेयर रोडमैप ↗',
+  guideExploreOnePlatform: 'O.N.E. आंदोलन की खोज करें (संविधान और उपन्यास) ↗'
 };

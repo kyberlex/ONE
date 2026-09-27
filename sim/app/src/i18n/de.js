@@ -1204,5 +1204,19 @@ export const de = {
   snapshotPushSuccess: 'Snapshot erfolgreich im GitHub-Repository verankert!',
   snapshotRelaySettings: 'Relay-Proxy-Einstellungen (Google Apps Script)',
   snapshotRelayUrlDesc: 'Autonomer serverloser Proxy, der Snapshots im GitHub-Repository verankert, ohne Tokens offenzulegen.',
-  snapshotLastAnchor: 'Letzter GitHub-Anker'
+  snapshotLastAnchor: 'Letzter GitHub-Anker',
+  hudBrandPortal: 'PORTAL',
+  oneBrandTooltip: 'Open Networked Earth (O.N.E.) — Verfassung, Romane & Vision ansehen ↗',
+  onePlatformLinkTooltip: 'Hauptplattform von Open Networked Earth (O.N.E.) besuchen',
+  onePlatformLinkBtn: 'O.N.E. Plattform ↗',
+  handbookPlatformLinkTooltip: 'Die Hauptplattform von Open Networked Earth (O.N.E.) erkunden',
+  handbookPlatformLinkBtn: 'O.N.E. Bewegung ↗',
+  handbookOneMovementTitle: 'Die lebendige Bewegung hinter O-ASIS',
+  handbookOneMovementDesc: 'O-ASIS ist die diskrete thermodynamische Simulation der Post-Arbeits-Zivilisation Open Networked Earth (O.N.E.). Erkunden Sie die 46 Artikel der lebendigen Verfassung, laden Sie die 6-bändige Thriller-Saga kostenlos herunter oder prüfen Sie die Open-Hardware-Roadmap auf open-networked-earth.surge.sh.',
+  btnReadConstitution: 'Verfassung v2.0 lesen ↗',
+  btnReadThrillers: 'Kostenlose Thriller-E-Books ↗',
+  btnVisitPortal: 'O.N.E. Portal erkunden ↗',
+  readConstitutionLink: 'Lebendige Verfassung (46 Artikel) ↗',
+  roadmapCommonsLink: 'O.N.E. Hardware-Roadmap ↗',
+  guideExploreOnePlatform: 'Entdecken Sie die O.N.E. Bewegung (Verfassung & Romane) ↗'
 };

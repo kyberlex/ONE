@@ -1204,5 +1204,19 @@ export const ru = {
   snapshotPushSuccess: 'Снимок успешно привязан к репозиторию GitHub!',
   snapshotRelaySettings: 'Настройки ретрансляционного прокси (скрипт Google Apps)',
   snapshotRelayUrlDesc: 'Автономный бессерверный прокси-сервер, привязывающий снимки к репозиторию GitHub без предоставления токенов.',
-  snapshotLastAnchor: 'Последняя привязка GitHub'
+  snapshotLastAnchor: 'Последняя привязка GitHub',
+  hudBrandPortal: 'ПОРТАЛ',
+  oneBrandTooltip: 'Open Networked Earth (O.N.E.) — Конституция, романы и видение ↗',
+  onePlatformLinkTooltip: 'Посетить основную платформу Open Networked Earth (O.N.E.)',
+  onePlatformLinkBtn: 'Платформа O.N.E. ↗',
+  handbookPlatformLinkTooltip: 'Изучите основную платформу Open Networked Earth (O.N.E.)',
+  handbookPlatformLinkBtn: 'Движение O.N.E. ↗',
+  handbookOneMovementTitle: 'Живое движение, стоящее за O-ASIS',
+  handbookOneMovementDesc: 'O-ASIS — это дискретное термодинамическое моделирование посттрудовой цивилизации Open Networked Earth (O.N.E.). Ознакомьтесь с 46 статьями Живой Конституции, бесплатно скачайте 6-томную сагу триллеров или изучите дорожную карту открытого оборудования на open-networked-earth.surge.sh.',
+  btnReadConstitution: 'Читать Конституцию v2.0 ↗',
+  btnReadThrillers: 'Бесплатные триллеры в Ebook ↗',
+  btnVisitPortal: 'Изучить портал O.N.E. ↗',
+  readConstitutionLink: 'Живая Конституция (46 статей) ↗',
+  roadmapCommonsLink: 'Дорожная карта оборудования O.N.E. ↗',
+  guideExploreOnePlatform: 'Откройте для себя движение O.N.E. (Конституция и триллеры) ↗'
 };

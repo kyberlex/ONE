@@ -14,14 +14,14 @@
     <!-- Top HUD: Brand Logo & 4 Conserved Resource Meters -->
     <header id="hud-header">
       <div class="hud-left-brand-row">
-        <!-- O.N.E. Stamped Brand Badge -->
-        <div class="one-brand-badge" title="Open Networked Earth (O.N.E.)" data-i18n-title="oneBrandTooltip">
+        <!-- O.N.E. Stamped Brand Badge (Links to Main O.N.E. Platform) -->
+        <a href="https://open-networked-earth.surge.sh" target="_blank" rel="noopener noreferrer" class="one-brand-badge" title="Open Networked Earth (O.N.E.) — Visit Constitution, Fiction & Vision ↗" data-i18n-title="oneBrandTooltip">
           <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="one-brand-logo-img" />
           <div class="one-brand-text">
-            <span class="one-brand-name">O.N.E.</span>
-            <span class="one-brand-sub">DUAL-TRACK</span>
+            <span class="one-brand-name">O.N.E. ↗</span>
+            <span class="one-brand-sub" data-i18n="hudBrandPortal">PORTAL</span>
           </div>
-        </div>
+        </a>
 
         <div class="hud-meters-row">
         <!-- 1. ⚡ Energy & Heat -->
@@ -253,7 +253,12 @@
             <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
             <h3 id="modal-node-title" data-i18n="nodeHubTitle">Village Commons Hub</h3>
           </div>
-          <button id="btn-close-node-modal" class="btn-close-modal">✕</button>
+          <div class="modal-header-actions">
+            <a href="https://open-networked-earth.surge.sh" target="_blank" rel="noopener noreferrer" class="btn-handbook-platform-link" title="Visit Open Networked Earth (O.N.E.) Main Platform" data-i18n-title="onePlatformLinkTooltip">
+              🌐 <span data-i18n="onePlatformLinkBtn">O.N.E. Platform ↗</span>
+            </a>
+            <button id="btn-close-node-modal" class="btn-close-modal">✕</button>
+          </div>
         </div>
         <div id="node-management-content" class="modal-body"></div>
       </div>
@@ -457,7 +462,10 @@
             <span class="badge badge-success" data-i18n="badgeRulebookP2P">FIELD MANUAL</span>
           </div>
           <div class="modal-header-actions">
-            <a href="/O-ASIS_User_Handbook.pdf" target="_blank" download="O-ASIS_User_Handbook.pdf" class="btn-handbook-download-pdf" title="Download Printable Vector PDF (18 Pages)" data-i18n-title="handbookPdfDownloadTooltip">
+            <a href="https://open-networked-earth.surge.sh" target="_blank" rel="noopener noreferrer" class="btn-handbook-platform-link" title="Explore the Open Networked Earth (O.N.E.) Main Platform" data-i18n-title="handbookPlatformLinkTooltip">
+              🌐 <span data-i18n="handbookPlatformLinkBtn">O.N.E. Movement ↗</span>
+            </a>
+            <a href="https://github.com/kyberlex/ONE/raw/main/sim/O-ASIS_User_Handbook.pdf" target="_blank" rel="noopener noreferrer" class="btn-handbook-download-pdf" title="Download Printable Vector PDF (18 Pages)" data-i18n-title="handbookPdfDownloadTooltip">
               📥 <span data-i18n="handbookDownloadPdfBtn">Download PDF (18 Pgs)</span>
             </a>
             <button id="btn-close-handbook-modal" class="btn-close-modal" title="Close (ESC)">✕</button>

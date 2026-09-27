@@ -1204,5 +1204,19 @@ export const tr = {
   snapshotPushSuccess: 'Anlık görüntü GitHub deposuna başarıyla bağlandı!',
   snapshotRelaySettings: 'Geçiş Proxy Ayarları (Google Apps Komut Dosyası)',
   snapshotRelayUrlDesc: 'Otonom sunucusuz proxy, anlık görüntüleri belirteçleri açığa çıkarmadan GitHub deposuna sabitler.',
-  snapshotLastAnchor: 'Son GitHub Bağlantısı'
+  snapshotLastAnchor: 'Son GitHub Bağlantısı',
+  hudBrandPortal: 'PORTAL',
+  oneBrandTooltip: 'Open Networked Earth (O.N.E.) — Anayasa, Kurgu ve Vizyonu Ziyaret Edin ↗',
+  onePlatformLinkTooltip: 'Open Networked Earth (O.N.E.) Ana Platformunu Ziyaret Edin',
+  onePlatformLinkBtn: 'O.N.E. Platformu ↗',
+  handbookPlatformLinkTooltip: 'Open Networked Earth (O.N.E.) Ana Platformunu Keşfedin',
+  handbookPlatformLinkBtn: 'O.N.E. Hareketi ↗',
+  handbookOneMovementTitle: 'O-ASIS\'in Arkasındaki Yaşayan Hareket',
+  handbookOneMovementDesc: 'O-ASIS, çalışma sonrası uygarlık Open Networked Earth\'ün (O.N.E.) kesikli termodinamik simülasyonudur. Yaşayan Anayasa\'nın 46 maddesini keşfedin, 6 ciltlik gerilim romanı serisini ücretsiz indirin veya open-networked-earth.surge.sh adresinden açık donanım yol haritasını inceleyin.',
+  btnReadConstitution: 'Anayasa v2.0\'ı Oku ↗',
+  btnReadThrillers: 'Ücretsiz Gerilim E-kitapları ↗',
+  btnVisitPortal: 'O.N.E. Portalını Keşfedin ↗',
+  readConstitutionLink: 'Yaşayan Anayasa (46 Madde) ↗',
+  roadmapCommonsLink: 'O.N.E. Donanım Yol Haritası ↗',
+  guideExploreOnePlatform: 'O.N.E. Hareketini Keşfedin (Anayasa ve Romanlar) ↗'
 };

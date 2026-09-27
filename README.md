@@ -8,9 +8,10 @@
 
 <p align="center">
   <a href="https://open-networked-earth.surge.sh">🌐 Live Edge Platform</a> •
+  <a href="https://one-oasis.surge.sh">🎮 Play O-ASIS MMO (one-oasis.surge.sh)</a> •
   <a href="https://notebook.google.com/notebook/c123b58e-7e33-4565-8c1c-c5da2de98471">🧠 Interactive AI Oracle</a> •
   <a href="https://github.com/kyberlex/ONE/discussions">💬 Dialectic Forum & RFCs</a> •
-  <a href="sim/README.md">🎮 Living Web Sandbox</a> •
+  <a href="sim/README.md">📖 Simulation Architecture</a> •
   <a href="simone/simone-specs.md">🔬 Scientific Co-Simulator</a> •
   <a href="oasis/README.md">🛡️ Immunity Matrix</a> •
   <a href="CODE_OF_CONDUCT.md">📜 Code of Conduct</a> •
@@ -76,8 +77,8 @@ The complete statutory charter, comprising 10 statutory chapters and 46 Articles
 A constitution that requires perfect human beings is a childish utopia. O.N.E. operates two complementary, open-source computational engines to stress-test institutional resilience against human flaws (greed, tribalism, cognitive noise) and systemic shocks:
 
 1. **The Living Web Sandbox (`sim/`):**  
-   A client-side, interactive 60 FPS HTML5/WebGL persistent world with an axial hex-grid cartographer, Leontief thermodynamic flow tracking (kWh, Liters, Calories, Compute), Athenian sortition assemblies, and cooperative PvE defense against the Legacy Engine.  
-   👉 **Architecture:** [`sim/README.md`](sim/README.md) | **Game Design:** [`sim/GAME_DESIGN.md`](sim/GAME_DESIGN.md)
+   A client-side, interactive 60 FPS HTML5/WebGL persistent world deployed globally at **[https://one-oasis.surge.sh](https://one-oasis.surge.sh)** with an axial hex-grid cartographer, Leontief thermodynamic flow tracking (kWh, Liters, Calories, Compute), Athenian sortition assemblies, and cooperative PvE defense against the Legacy Engine.  
+   👉 **Play Online:** [https://one-oasis.surge.sh](https://one-oasis.surge.sh) | **Architecture:** [`sim/README.md`](sim/README.md) | **Game Design:** [`sim/GAME_DESIGN.md`](sim/GAME_DESIGN.md)
 
 2. **SIMONE — Scientific Co-Simulator (`simone/`):**  
    A heavy discrete-event and agent-based co-simulation architecture modeling real Earth observation GIS data (ERA5-Land, HydroSHEDS, SoilGrids), Darcy/Carnot biophysics, Weibull hardware wear, daily convex thermodynamic optimization (CVXPY), and empirical HEXACO psychometrics.  
@@ -85,9 +86,14 @@ A constitution that requires perfect human beings is a childish utopia. O.N.E. o
 
 ---
 
-## **III. Quickstart: Run the Simulation Locally**
+## **III. Quickstart: Experience the Simulation**
 
-You can run the Living Web Sandbox locally in your browser with zero backend setup:
+### **1. Play Online (Instant In-Browser)**
+Launch the live thermodynamic resilience MMO without any installation:  
+👉 **[Open O-ASIS Living Sandbox (one-oasis.surge.sh)](https://one-oasis.surge.sh)**
+
+### **2. Run Locally in Development Mode**
+You can also run the Living Web Sandbox locally in your browser:
 
 ```bash
 # Clone the repository

@@ -1204,5 +1204,19 @@ export const ja = {
   snapshotPushSuccess: 'スナップショットが GitHub リポジトリに正常に固定されました。',
   snapshotRelaySettings: 'リレープロキシ設定（Google Apps Script）',
   snapshotRelayUrlDesc: 'トークンを公開せずにスナップショットを GitHub リポジトリにアンカーする自律サーバーレス プロキシ。',
-  snapshotLastAnchor: '最後の GitHub アンカー'
+  snapshotLastAnchor: '最後の GitHub アンカー',
+  hudBrandPortal: 'ポータル',
+  oneBrandTooltip: 'Open Networked Earth (O.N.E.) — 憲法、小説、ビジョンを訪れる ↗',
+  onePlatformLinkTooltip: 'Open Networked Earth (O.N.E.) メインプラットフォームを訪問',
+  onePlatformLinkBtn: 'O.N.E. プラットフォーム ↗',
+  handbookPlatformLinkTooltip: 'Open Networked Earth (O.N.E.) メインプラットフォームを探索',
+  handbookPlatformLinkBtn: 'O.N.E. ムーブメント ↗',
+  handbookOneMovementTitle: 'O-ASIS の背後にある生きたムーブメント',
+  handbookOneMovementDesc: 'O-ASIS は、ポスト労働文明 Open Networked Earth (O.N.E.) の離散熱力学シミュレーションです。「生きた憲法」の 46 条を探索し、全 6 巻のスリラー小説を無料でダウンロードするか、open-networked-earth.surge.sh でオープンハードウェア移行ロードマップを確認してください。',
+  btnReadConstitution: '憲法 v2.0 を読む ↗',
+  btnReadThrillers: '無料のスリラー電子書籍 ↗',
+  btnVisitPortal: 'O.N.E. ポータルを探索 ↗',
+  readConstitutionLink: '生きた憲法 (46条) ↗',
+  roadmapCommonsLink: 'O.N.E. ハードウェアロードマップ ↗',
+  guideExploreOnePlatform: 'O.N.E. ムーブメントを発見する (憲法とスリラー小説) ↗'
 };

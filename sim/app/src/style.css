@@ -8097,6 +8097,107 @@ body.has-dilemma-open .btn-floating-chat-launcher {
   transform: translateY(-1px);
 }
 
+.btn-handbook-platform-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  color: #34d399;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-handbook-platform-link:hover {
+  background: rgba(16, 185, 129, 0.3);
+  color: #fff;
+  border-color: #34d399;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+  transform: translateY(-1px);
+}
+
+.handbook-callout-platform {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-top: 24px;
+  padding: 20px 24px;
+  background: radial-gradient(120% 120% at 50% 0%, rgba(6, 78, 59, 0.35) 0%, rgba(15, 23, 42, 0.85) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(16, 185, 129, 0.15);
+}
+
+.callout-platform-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.5));
+}
+
+.callout-platform-content {
+  flex: 1;
+}
+
+.callout-platform-title {
+  margin: 0 0 8px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.callout-platform-desc {
+  margin: 0 0 14px 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.callout-platform-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-callout-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.btn-callout-link:hover {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: rgba(52, 211, 153, 0.5);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-callout-highlight {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(5, 150, 105, 0.45));
+  border-color: rgba(52, 211, 153, 0.6);
+  color: #a7f3d0;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
+}
+
+.btn-callout-highlight:hover {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.6);
+}
+
 .handbook-container {
   display: flex;
   flex-direction: column;

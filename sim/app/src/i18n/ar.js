@@ -1204,5 +1204,19 @@ export const ar = {
   snapshotPushSuccess: 'تم تثبيت اللقطة بنجاح في مستودع GitHub!',
   snapshotRelaySettings: 'ترحيل إعدادات الوكيل (Google Apps Script)',
   snapshotRelayUrlDesc: 'لقطات إرساء وكيل مستقل بدون خادم إلى مستودع GitHub دون الكشف عن الرموز المميزة.',
-  snapshotLastAnchor: 'آخر مرساة جيثب'
+  snapshotLastAnchor: 'آخر مرساة جيثب',
+  hudBrandPortal: 'بوابة',
+  oneBrandTooltip: 'Open Networked Earth (O.N.E.) — زيارة الدستور والروايات والرؤية ↗',
+  onePlatformLinkTooltip: 'زيارة المنصة الرئيسية لـ Open Networked Earth (O.N.E.)',
+  onePlatformLinkBtn: 'منصة O.N.E. ↗',
+  handbookPlatformLinkTooltip: 'استكشف المنصة الرئيسية لـ Open Networked Earth (O.N.E.)',
+  handbookPlatformLinkBtn: 'حركة O.N.E. ↗',
+  handbookOneMovementTitle: 'الحركة الحية وراء O-ASIS',
+  handbookOneMovementDesc: 'O-ASIS هي المحاكاة الديناميكية الحرارية المنفصلة لحضارة ما بعد العمل Open Networked Earth (O.N.E.). استكشف 46 مادة من الدستور الحي، أو قم بتنزيل سلسلة روايات الإثارة المكونة من 6 مجلدات مجانًا، أو تفقد خارطة طريق الأجهزة المفتوحة على open-networked-earth.surge.sh.',
+  btnReadConstitution: 'قراءة الدستور الإصدار 2.0 ↗',
+  btnReadThrillers: 'كتب إلكترونية مجانية للإثارة ↗',
+  btnVisitPortal: 'استكشف بوابة O.N.E. ↗',
+  readConstitutionLink: 'الدستور الحي (46 مادة) ↗',
+  roadmapCommonsLink: 'خارطة طريق أجهزة O.N.E. ↗',
+  guideExploreOnePlatform: 'اكتشف حركة O.N.E. (الدستور وروايات الإثارة) ↗'
 };
