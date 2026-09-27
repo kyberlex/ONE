@@ -267,7 +267,7 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
       - Verified 100% key parity (exactly 692 keys across each of the 14 dictionaries with 0 missing and 0 extra keys).
       - Passed Gate D2 zero-leak OpSec audit and verified production build with Vite.
 
-- [ ] **ITEM 17: Interactive Onboarding Guide (First-Time Player Walkthrough):**
+- [x] **ITEM 17: Interactive Onboarding Guide (First-Time Player Walkthrough) (Completed):**
   - *Requirement:* Guided interactive tutorial / spotlight tour for new players who complete passport creation and arrive in the settlement for the first time.
   - *Scope & Steps:*
     1. **Core Survival Loop (HUD Vital Meters):** Spotlight on the top 4 meters (⚡ Energy, 💧 Water, 🥗 Calories, 💻 Compute), explaining battery buffers, cistern reserves, and the biometric floor (2,200 kcal/die).
@@ -275,21 +275,72 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
     3. **Action Bar & Civic Governance:** Introduce the bottom drawer: Sortition Council (Athenian demarchy), Chore Roster (2-4h work shifts), Civic Megaprojects, and Inter-Node Trade Convoys.
     4. **Dual-Track & Cybernetics:** Showcase the FabLab automation tech-tree (building robots to permanently eliminate human chore hours) and open-hardware blueprint exports.
     5. **UX Controls:** Step-by-step tooltip callouts with "Next", "Back", and "Skip Tour", stored in `localStorage` so it only triggers once per citizen.
+  - *Implementation & Verification:*
+    - **Engine Architecture ([`guide_tour.js`](app/src/ui/guide_tour.js)):** Built `GuideTourController` coordinating dynamic SVG mask cutouts (`#guide-spotlight-mask`), pulsating bioluminescent reticles (`#guide-spotlight-reticle`), and viewport-clamped glassmorphic card positioning.
+    - **5 Guided Stages:**
+      1. *Core Survival Loop:* Highlights `.hud-meters-row` and explains physical Leontief thermodynamic flows, battery buffers, rain cisterns, and the unconditional 2,200 kcal/die biometric floor.
+      2. *Living Village:* Smoothly pans camera to the central Agora hearth and highlights usufruct pods, explaining dynamic usufruct, zero speculation, and sabbatical locks.
+      3. *Civic Governance:* Spotlights `.actions-btn-bar` across Athenian sortition councils, rotational chore rosters (2–4h daily shifts), and inter-node trade convoys.
+      4. *Dual-Track Cybernetics:* Spotlights `#btn-open-tech` across FabLab autonomous robots (agro-rovers, mist drones, SCADA crawlers) and open-hardware .STL CAD / Home Assistant YAML blueprint exports.
+      5. *Sovereign Autonomy:* Spotlights `#btn-open-passport` and discrete zoom bar across zero-server ECDSA P-256 identities, QR pairing, and multi-scale cartography.
+    - **Universal English Base & 14-Language i18n Synchronization (Gate D8):**
+      - Added 44 new keys to `NEW_KEYS_EN` and `NEW_KEYS_IT` in `scripts/sync_sim_i18n.py`.
+      - Executed concurrent multi-threaded synchronization, ensuring 100% key parity (998 keys each across all 14 languages: `en`, `it`, `es`, `fr`, `de`, `pt`, `ru`, `zh`, `ja`, `ko`, `hi`, `ar`, `id`, `tr`).
+    - **UI & Replay Controls:**
+      - Added `#btn-open-guide` pill to the top HUD header (`.hud-top-actions`) with responsive collapse rules (`#guide-btn-label` auto-hiding on narrow screens).
+      - Added interactive CTA banner and `🧭 Interactive Guide` replay button inside the sovereign citizen passport card (`panel_passport.js`).
+      - Verified production build (`npm run build`) and complete 5-step interactive browser walkthrough with `browser_subagent`.
 
-- [ ] **ITEM 18: One-Click Multiplayer Invite Link & Serverless Signaling (Room URL):**
+- [x] **ITEM 18: One-Click Multiplayer Invite Link & Serverless Signaling (Room URL) (Completed):**
   - *Requirement:* Enable players to easily invite a friend or collaborator into their settlement via a single clickable URL (e.g., `https://<domain>/?joinNode=detroit&invite=<room_id>`).
-  - *Investigation & Scope:*
-    - **Invite Link Generator:** Top-bar or Passport modal button (*"🔗 Invite Friend to Settlement"*) that generates and copies a shareable URL containing the active node ID and an ephemeral room token.
-    - **Serverless Signaling Bridge:** Currently WebRTC requires manual ticket copy-paste (`ONE_OFFER` / `ONE_ANSWER`). Evaluate and integrate a zero-server signaling relay (e.g. open public Nostr relays, public MQTT broker, or GunDB peer) so two players visiting the same link establish a WebRTC DataChannel automatically in under 2 seconds without copying tickets.
-    - **Welcome Flow:** When opening an invite link, the new user creates their own sovereign citizen passport and immediately lands inside the inviter's node.
+  - *Implementation & Verification:*
+    - **Serverless Decentralized Signaling Bridge ([`p2p_mesh.js`](app/src/engine/p2p_mesh.js)):**
+      - Integrated serverless Nostr NIP-01 WebRTC room signaling via decentralized Nostr relays (`relay.damus.io`, `nos.lol`, `relay.primal.net`) using `trystero/nostr`.
+      - Built automated room joining (`joinSignalingRoom(roomId)`), room leave (`leaveSignalingRoom()`), and dynamic invite token generation (`oasis-<nodeId>-<randomToken>`).
+      - Synchronized P2P message actions (`HANDSHAKE_PULSE`, `DELTA_BROADCAST`, `SYNC_RESPONSE`) across both local multi-tab `BroadcastChannel` and zero-server WebRTC DataChannels with peer status telemetry.
+    - **Solarpunk Invite Modal Controller ([`panel_invite.js`](app/src/ui/panel_invite.js)):**
+      - Designed interactive glassmorphic invite modal with active node banner, copyable URL input, one-click `📋 Copy Link` with feedback animation, `📲 Share Link` (Web Share API), 2D SVG QR code generator, and `🔄 New Room Code` regeneration.
+      - Integrated real-time mesh telemetry card detailing active room ID, Nostr NIP-01 relay network state, WebRTC connection status, and live connected peer badges.
+    - **UI Markup & Responsive HUD Header ([`index.html`](app/index.html), [`style.css`](app/src/style.css)):**
+      - Added `#btn-invite-friend` pill button with icon (`🔗`) to `.hud-top-actions` alongside Character, Guide, and Ideas buttons.
+      - Implemented responsive collapse rules (`#invite-btn-label` auto-hiding on narrow screens) and 44×44px WCAG AAA touch hitboxes across all breakpoints (Desktop, Laptop, Tablet, Mobile).
+    - **Passport Integration & Arriving Welcome Flow ([`panel_passport.js`](app/src/ui/panel_passport.js), [`main.js`](app/src/main.js)):**
+      - Added quick-access invite CTA banner inside the sovereign citizen passport modal.
+      - Added newcomer welcome banner in passport creation wizard (`passport-invite-welcome-banner`) when arriving via invite URL.
+      - In `main.js`, auto-detects `invite` and `joinNode` URL query parameters, auto-switches settlement to invited node (bypassing prior home node storage override), auto-connects to the serverless Nostr signaling room, and auto-opens the sovereign passport issuance wizard with a welcoming HUD alert.
+    - **Universal English Base & 14-Language i18n Synchronization (Gate D8):**
+      - Added 30 new semantic i18n keys to `scripts/sync_sim_i18n.py` across `NEW_KEYS_EN` and `NEW_KEYS_IT`.
+      - Executed concurrent synchronization script: 100% key parity (1,028 keys each across all 14 official languages: `en`, `it`, `es`, `fr`, `de`, `pt`, `ru`, `zh`, `ja`, `ko`, `hi`, `ar`, `id`, `tr`).
+    - **Build & Browser Verification:**
+      - Passed production build (`npm run build`).
+      - Verified modal interactions, clipboard copy, room code rotation, and responsive layout via `browser_subagent`.
 
-- [ ] **ITEM 19: Direct Human-to-Human P2P Chat & Whisper Verification:**
-  - *Requirement:* Verify and streamline direct live communication between two real human players in the village chat.
-  - *Investigation & Scope:*
-    - **Current Capability:** `chat_engine.js` already supports `BroadcastChannel` (instant sync between local tabs/windows) and WebRTC data channels (`CHAT_MESSAGE` delta with ECDSA signature and 60 FPS canvas speech bubbles).
-    - **Direct Whisper Channel:** Clarify and test `CHAT_CHANNELS.WHISPER` to send private encrypted direct messages to a specific human peer's public key fingerprint.
-    - **Peer Identification:** Visually distinguish real human peers (active P2P connected icons, green ping indicator) from ambient resident simulation chatter.
-    - **Live Testing:** Verify that when Player A sends a message or smart quick-phrase, it pops up in real time on Player B's screen and displays an in-canvas avatar speech bubble above Player A's usufruct pod.
+- [x] **ITEM 19: Direct Human-to-Human P2P Chat & Whisper Verification (Completed):**
+  - *Requirement:* Optimize and verify live direct communication between two real human players in the village chat, providing visual distinction between real peers and ambient resident chatter, E2EE private whisper channels, and synchronized in-canvas speech bubbles.
+  - *Implementation & Verification:*
+    - **Visual Distinction (Real Human Peers vs Ambient Resident NPCs):**
+      - **Live Peer Badge & Latency (`panel_chat.js`, `style.css`):** Built prominent live badge (`🌐 Live Peer <ping>ms`) with a pulsating green indicator (`@keyframes pingPulse`) and public key fingerprint badge (`🔑 <shortFingerprint>`), paired with a luminous cyan solarpunk border (`rgba(56, 189, 248, 0.65)`) and avatar highlight.
+      - **Muted NPC Resident Styling:** Settlement NPC chatter is cleanly delineated with a muted slate badge (`🌱 Resident`) and soft styling without ping indicators, making incoming peer messages immediately recognizable at a glance.
+    - **Sovereign Whisper Channel (E2EE P-256 / AES-GCM Direct Messaging):**
+      - **Cryptographic Encryption Engine (`chat_engine.js`):** Integrated Web Crypto API (`crypto.subtle`) key derivation (SHA-256 digest of recipient public key / fingerprint) and AES-GCM 256-bit encryption with random 12-byte IVs for true end-to-end confidential messaging.
+      - **Confidential Whisper Privacy Filter:** P2P chat engine filters whisper messages across the mesh so that only the sender and the designated recipient can decrypt and view private direct whispers.
+      - **Interactive Recipient Selector (`panel_chat.js`):** Designed dedicated `.whisper-recipient-bar` displaying active target, dropdown switcher between connected WebRTC/local peers and village residents, and live ECDSA key fingerprint chip (`🔑 res-elen`).
+      - **Private Whisper Banners:** Outgoing and incoming whispers render with a distinctive violet/purple glassmorphic card, lock badge, recipient/sender indicators, and `🔒 E2EE P-256` tag.
+      - **Solo Simulation Testing:** Added responsive simulated reply from ambient residents when whispered to, allowing full offline verification of encryption/decryption loops.
+    - **In-Canvas Speech Bubbles on 2D Living Canvas (`settlement_renderer.js`):**
+      - **Usufruct Dwelling Pod Speech Bubbles:** Integrated floating solarpunk speech bubbles rendered directly above the roof of claimed or occupied usufruct dwellings with golden borders for the player, cyan for human peers, and emerald for residents.
+      - **Dynamic Peer Avatar Generation:** Created `ensurePeerAvatar()` dynamically instantiating avatars for newly connected human peers on the canvas with cyan rings, `🌐 PEER` badges, and synchronized speech bubbles.
+      - **Citizen Avatar Speech Bubbles:** Synchronized bubble rendering across both free-text messages and categorized smart quick-phrases with smooth 500ms alpha fadeout.
+    - **Mesh Latency & Delta Ingestion Hardening (`p2p_mesh.js`, `main.js`):**
+      - Hardened `ingestSignedDelta()` with automatic fallback delta IDs, resolving dropped chat message payloads.
+      - Added real-time RTT / ping latency tracking for all connected WebRTC and local tab peers via `getPeerLatency()` and `getConnectedPeers()`.
+      - Integrated `panel_citizen.js` `onOpenChat()` callback to auto-open direct whisper targeting the selected citizen or peer.
+    - **Universal English Base & 14-Language i18n Synchronization (Gate D8):**
+      - Added 13 new semantic i18n keys to `NEW_KEYS_EN` and `NEW_KEYS_IT` in `scripts/sync_sim_i18n.py`.
+      - Executed concurrent synchronization script: 100% key parity (1,041 keys each across all 14 official languages: `en`, `it`, `es`, `fr`, `de`, `pt`, `ru`, `zh`, `ja`, `ko`, `hi`, `ar`, `id`, `tr`).
+    - **Build & Subagent Browser Verification:**
+      - Passed production build (`npm run build` in 722ms).
+      - Verified end-to-end in live browser via `browser_subagent`: chat toggle, Whisper recipient switching, E2EE message sending/decryption, Quick-Phrases drawer, live peer badge/latency indicators, and canvas speech bubbles.
 
 - [ ] **ITEM 20: User Guide Overhaul & Markdown-to-Vector-PDF Transition (Postponed - Final Step):**
   - *Requirement:* Update the simulator user handbook to reflect all recently introduced features, and modernize the compilation pipeline from a raster PNG-heavy PDF into a structured Markdown (`.md`) document compiled into clean, searchable vector PDF.

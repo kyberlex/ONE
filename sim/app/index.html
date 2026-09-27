@@ -103,6 +103,8 @@
       <div class="hud-right-stack">
         <div class="hud-top-actions">
           <button id="btn-open-passport" class="btn-toggle-view btn-passport-pill" title="Player Profile & Character" data-i18n-title="passportTooltip">🔑 <span id="passport-btn-label" data-i18n="passportBtnLabel">Character</span></button>
+          <button id="btn-invite-friend" class="btn-toggle-view btn-invite-pill" title="Multiplayer Settlement Invite" data-i18n-title="inviteFriendTooltip">🔗 <span id="invite-btn-label" data-i18n="inviteFriendBtn">Invite</span></button>
+          <button id="btn-open-guide" class="btn-toggle-view btn-guide-pill" title="Interactive Onboarding Guide" data-i18n-title="guideTooltip">🧭 <span id="guide-btn-label" data-i18n="guideBtnLabel">Guide</span></button>
           <button id="btn-open-feedback" class="btn-toggle-view btn-feedback-pill" title="Ideas & Bug Reports" data-i18n-title="feedbackTooltip">💡 <span id="feedback-btn-label" data-i18n="btnFeedback">Ideas & Bugs</span></button>
 
           <!-- Language Selector -->
@@ -426,6 +428,56 @@
           <button id="btn-close-feedback-modal" class="btn-close-modal">✕</button>
         </div>
         <div id="feedback-modal-content" class="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- MODAL: Multiplayer Settlement Invite & Serverless Room URL (ITEM 18) -->
+    <div id="modal-invite" class="modal-overlay hidden">
+      <div class="modal-window modal-window-invite">
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
+            <h3 id="modal-invite-title" data-i18n="inviteModalTitle">Multiplayer Settlement Invite</h3>
+            <span class="badge badge-success" data-i18n="badgeServerlessWebrtc">SERVERLESS P2P</span>
+          </div>
+          <button id="btn-close-invite-modal" class="btn-close-modal">✕</button>
+        </div>
+        <div id="invite-modal-content" class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ONBOARDING GUIDE SPOTLIGHT OVERLAY (ITEM 17) -->
+  <div id="onboarding-guide-overlay" class="onboarding-guide-overlay hidden">
+    <svg id="guide-spotlight-svg" class="guide-spotlight-svg" width="100%" height="100%">
+      <defs>
+        <mask id="guide-spotlight-mask">
+          <rect width="100%" height="100%" fill="white" />
+          <rect id="guide-mask-cutout" x="0" y="0" width="0" height="0" rx="14" fill="black" />
+        </mask>
+      </defs>
+      <rect width="100%" height="100%" fill="rgba(2, 6, 23, 0.78)" mask="url(#guide-spotlight-mask)" />
+    </svg>
+    <div id="guide-spotlight-reticle" class="guide-spotlight-reticle"></div>
+    <div id="guide-card" class="guide-card" role="dialog" aria-modal="true" aria-labelledby="guide-card-title">
+      <div class="guide-card-header">
+        <div class="guide-badge-box">
+          <span class="guide-step-badge" id="guide-step-badge">Step 1 / 5</span>
+          <span class="guide-phase-tag" id="guide-phase-tag">Core Survival</span>
+        </div>
+        <button id="btn-guide-close" class="btn-guide-close" title="Close Tour" aria-label="Close Tour">✕</button>
+      </div>
+      <div class="guide-card-body">
+        <h3 class="guide-card-title" id="guide-card-title">...</h3>
+        <div id="guide-card-desc">...</div>
+      </div>
+      <div class="guide-card-footer">
+        <div class="guide-dots" id="guide-dots"></div>
+        <div class="guide-btn-group">
+          <button id="btn-guide-skip" class="btn-guide-secondary" data-i18n="guideBtnSkip">Skip Tour</button>
+          <button id="btn-guide-prev" class="btn-guide-secondary" data-i18n="guideBtnBack">⬅ Back</button>
+          <button id="btn-guide-next" class="btn-guide-primary" data-i18n="guideBtnNext">Next ➔</button>
+        </div>
       </div>
     </div>
   </div>

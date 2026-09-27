@@ -10,7 +10,7 @@
  * License: AGPL-3.0-or-later
  */
 
-import { CHAT_CHANNELS, QUICK_PHRASE_CATEGORIES } from '../engine/chat_engine.js';
+import { CHAT_CHANNELS, QUICK_PHRASE_CATEGORIES, AMBIENT_RESIDENTS } from '../engine/chat_engine.js';
 import { storageIDB } from '../engine/storage_idb.js';
 import { PlayerProfileManager } from '../engine/player_profile.js';
 import { t } from '../i18n/index.js';
@@ -26,6 +26,7 @@ export class PanelChatController {
     this.activeChannel = CHAT_CHANNELS.VILLAGE;
     this.activeQuickCategory = 'ALERTS';
     this.quickDrawerOpen = false;
+    this.activeWhisperRecipient = null;
 
     this.initDOM();
   }
@@ -124,12 +125,45 @@ export class PanelChatController {
     }, 40);
   }
 
+  openWhisperWith(recipientName, recipientPubKey = null, recipientFingerprint = null) {
+    this.activeChannel = CHAT_CHANNELS.WHISPER;
+    this.chatEngine.activeChannel = CHAT_CHANNELS.WHISPER;
+    this.activeWhisperRecipient = {
+      name: recipientName,
+      pubKeyHex: recipientPubKey,
+      shortFingerprint: recipientFingerprint || (recipientPubKey ? recipientPubKey.slice(0, 8) + '…' + recipientPubKey.slice(-6) : null)
+    };
+    this.open();
+    setTimeout(() => {
+      const inp = document.getElementById('chat-input-text');
+      if (inp) inp.focus();
+    }, 80);
+  }
+
   render() {
     this.updateLauncherText();
     if (!this.container) return;
 
     const messages = this.chatEngine.getFilteredMessages(this.activeChannel);
     const activeCat = QUICK_PHRASE_CATEGORIES[this.activeQuickCategory] || QUICK_PHRASE_CATEGORIES.ALERTS;
+    const connectedPeers = this.p2pMesh?.getConnectedPeers?.() || [];
+
+    // Ensure default whisper recipient if in WHISPER channel
+    if (this.activeChannel === CHAT_CHANNELS.WHISPER && !this.activeWhisperRecipient) {
+      if (connectedPeers.length > 0) {
+        this.activeWhisperRecipient = {
+          name: connectedPeers[0].name,
+          pubKeyHex: connectedPeers[0].pubKeyHex,
+          shortFingerprint: connectedPeers[0].shortFingerprint
+        };
+      } else {
+        this.activeWhisperRecipient = {
+          name: AMBIENT_RESIDENTS[0].name,
+          pubKeyHex: 'res_pubkey_elena',
+          shortFingerprint: 'res-elen'
+        };
+      }
+    }
 
     let html = `
       <div class="chat-window-glass">
@@ -163,6 +197,35 @@ export class PanelChatController {
             🔒 ${t('channelWhisper', 'Whisper')}
           </button>
         </div>
+
+        <!-- Whisper Direct Recipient Selector -->
+        ${this.activeChannel === CHAT_CHANNELS.WHISPER ? `
+          <div class="whisper-recipient-bar">
+            <span class="whisper-bar-icon">🔒</span>
+            <span class="whisper-bar-label">${t('chatWhisperRecipient', 'Recipient')}:</span>
+            <select id="select-whisper-recipient" class="whisper-recipient-select">
+              ${connectedPeers.length > 0 ? `
+                <optgroup label="${t('chatGroupLivePeers', '🌐 Live Human Peers')}">
+                  ${connectedPeers.map(p => `
+                    <option value="peer:${p.name}:${p.pubKeyHex || ''}:${p.shortFingerprint || ''}" ${this.activeWhisperRecipient?.name === p.name ? 'selected' : ''}>
+                      🌐 ${p.name} (${p.pingMs ? `${p.pingMs}ms` : 'P2P'})
+                    </option>
+                  `).join('')}
+                </optgroup>
+              ` : ''}
+              <optgroup label="${t('chatGroupResidents', '🌱 Settlement Residents')}">
+                ${AMBIENT_RESIDENTS.map(r => `
+                  <option value="res:${r.name}:res_pubkey_${r.name.toLowerCase()}:res-${r.name.toLowerCase().slice(0, 4)}" ${this.activeWhisperRecipient?.name === r.name ? 'selected' : ''}>
+                    ${r.icon} ${r.name} (${r.vocation})
+                  </option>
+                `).join('')}
+              </optgroup>
+            </select>
+            <span class="whisper-key-chip" title="${t('chatWhisperBoundKey', 'Directly bound to ECDSA public key fingerprint')}">
+              🔑 ${this.activeWhisperRecipient?.shortFingerprint || 'E2EE P-256'}
+            </span>
+          </div>
+        ` : ''}
 
         <!-- Message Feed -->
         <div id="chat-message-feed" class="chat-message-feed">
@@ -207,7 +270,7 @@ export class PanelChatController {
             type="text" 
             id="chat-input-text" 
             class="chat-input-field" 
-            placeholder="${t('chatPlaceholder', 'Type signed message to neighbors...')}" 
+            placeholder="${this.activeChannel === CHAT_CHANNELS.WHISPER ? t('chatWhisperPlaceholder', 'Type encrypted whisper (E2EE P-256)...') : t('chatPlaceholder', 'Type signed message to neighbors...')}" 
             autocomplete="off" 
           />
           <button type="submit" id="btn-send-chat" class="btn-send-chat" title="Send (Enter)">
@@ -223,6 +286,9 @@ export class PanelChatController {
 
   renderMessageCard(msg) {
     const isPlayer = msg.isPlayer;
+    const isHumanPeer = !isPlayer && (msg.isPeer || msg.isHumanPeer);
+    const isNpcResident = !isPlayer && !isHumanPeer;
+    const isWhisper = msg.channel === CHAT_CHANNELS.WHISPER;
     const timeStr = new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
     let actionCardHtml = '';
@@ -246,16 +312,67 @@ export class PanelChatController {
       `;
     }
 
+    let whisperBannerHtml = '';
+    if (isWhisper) {
+      whisperBannerHtml = `
+        <div class="msg-whisper-banner">
+          <span class="whisper-banner-lock">🔒</span>
+          <span class="whisper-banner-text">
+            ${isPlayer 
+              ? `${t('chatWhisperTo', 'Whisper to')}: <strong>${msg.recipientName || 'Neighbor'}</strong>`
+              : `${t('chatWhisperFrom', 'Private Whisper from')}: <strong>${msg.authorName}</strong>`}
+          </span>
+          ${msg.recipientFingerprint ? `<span class="whisper-banner-key">🔑 ${msg.recipientFingerprint}</span>` : ''}
+          <span class="whisper-e2ee-tag">🔒 ${t('chatWhisperE2EE', 'E2EE P-256')}</span>
+        </div>
+      `;
+    }
+
+    let authorBadgesHtml = '';
+    if (isPlayer) {
+      authorBadgesHtml = `
+        <span class="msg-author-name">${msg.authorName}</span>
+        <span class="msg-vocation-tag">${msg.authorVocation || 'Pioneer'}</span>
+      `;
+    } else if (isHumanPeer) {
+      authorBadgesHtml = `
+        <span class="msg-author-name peer-name">${msg.authorName}</span>
+        <span class="msg-peer-badge live-peer" title="${t('chatPeerLiveTooltip', 'Active real human connected via WebRTC/P2P mesh')}">
+          <span class="peer-ping-dot"></span> 🌐 ${t('chatPeerLive', 'Live Peer')} ${msg.pingMs ? `<span class="peer-ping-ms">${msg.pingMs}ms</span>` : ''}
+        </span>
+        <span class="msg-fingerprint-badge" title="${t('chatFingerprintTooltip', 'ECDSA Public Key Fingerprint')}">
+          🔑 ${msg.shortFingerprint || 'Mesh'}
+        </span>
+      `;
+    } else {
+      authorBadgesHtml = `
+        <span class="msg-author-name resident-name">${msg.authorName}</span>
+        <span class="msg-vocation-tag">${msg.authorVocation || 'Resident'}</span>
+        <span class="msg-resident-badge" title="${t('chatResidentNpcTooltip', 'Ambient settlement resident (NPC)')}">
+          🌱 ${t('chatResidentNpc', 'Resident')}
+        </span>
+      `;
+    }
+
+    if (msg.verified) {
+      authorBadgesHtml += `<span class="msg-verified-badge" title="${t('msgVerifiedTooltip', 'Cryptographic signature verified by sovereign passport')}">🔒 ${t('msgVerifiedBadge', 'Verified')}</span>`;
+    }
+
+    const rowClasses = [
+      'chat-msg-row',
+      isPlayer ? 'player-row' : (isHumanPeer ? 'peer-row human-peer' : 'peer-row npc-resident'),
+      isWhisper ? 'whisper-row' : ''
+    ].filter(Boolean).join(' ');
+
     return `
-      <div class="chat-msg-row ${isPlayer ? 'player-row' : 'peer-row'}">
-        <div class="msg-avatar-icon">${msg.authorIcon || '🧑'}</div>
+      <div class="${rowClasses}">
+        <div class="msg-avatar-icon">${msg.authorIcon || (isPlayer ? '👑' : (isHumanPeer ? '🌐' : '🧑'))}</div>
         <div class="msg-bubble-box">
           <div class="msg-author-bar">
-            <span class="msg-author-name">${msg.authorName}</span>
-            <span class="msg-vocation-tag">${msg.authorVocation || 'Resident'}</span>
-            ${msg.verified ? `<span class="msg-verified-badge" title="${t('msgVerifiedTooltip', 'Cryptographic signature verified by sovereign passport')}">${t('msgVerifiedBadge', '🔒 Verified')}</span>` : ''}
+            ${authorBadgesHtml}
             <span class="msg-time">${timeStr}</span>
           </div>
+          ${whisperBannerHtml}
           <div class="msg-text-content">${msg.text}</div>
           ${actionCardHtml}
         </div>
@@ -277,6 +394,22 @@ export class PanelChatController {
         this.scrollToBottom();
       };
     });
+
+    // Whisper recipient selector change
+    const recipientSelect = document.getElementById('select-whisper-recipient');
+    if (recipientSelect) {
+      recipientSelect.onchange = () => {
+        const val = recipientSelect.value;
+        const parts = val.split(':');
+        // format: type:name:pubKeyHex:shortFingerprint
+        this.activeWhisperRecipient = {
+          name: parts[1] || 'Resident',
+          pubKeyHex: parts[2] || null,
+          shortFingerprint: parts[3] || null
+        };
+        this.render();
+      };
+    }
 
     // Quick phrases drawer toggle
     const toggleQuick = document.getElementById('btn-toggle-quick-drawer');
@@ -312,7 +445,8 @@ export class PanelChatController {
           channel: this.activeChannel,
           quickPhrase: phrase,
           identity: authorData,
-          p2pMesh: this.p2pMesh
+          p2pMesh: this.p2pMesh,
+          recipient: this.activeWhisperRecipient
         });
 
         this.quickDrawerOpen = false;
@@ -353,7 +487,8 @@ export class PanelChatController {
           text,
           channel: this.activeChannel,
           identity: authorData,
-          p2pMesh: this.p2pMesh
+          p2pMesh: this.p2pMesh,
+          recipient: this.activeWhisperRecipient
         });
 
         input.value = '';

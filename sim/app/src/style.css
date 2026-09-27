@@ -2874,12 +2874,303 @@ html, body {
   box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
 }
 
+.btn-guide-pill {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(180, 83, 9, 0.35) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  color: #fde68a;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-guide-pill:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.35) 0%, rgba(180, 83, 9, 0.5) 100%);
+  color: #fff;
+  border-color: #f59e0b;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.4);
+}
+
+.btn-invite-pill {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(14, 116, 144, 0.35) 100%);
+  border: 1px solid rgba(6, 182, 212, 0.45);
+  color: #a5f3fc;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-invite-pill:hover {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.35) 0%, rgba(14, 116, 144, 0.5) 100%);
+  color: #fff;
+  border-color: #06b6d4;
+  box-shadow: 0 0 16px rgba(6, 182, 212, 0.4);
+}
+
 .modal-window-passport {
   max-width: 880px;
   width: 94%;
   background: radial-gradient(circle at top right, rgba(15, 23, 42, 0.98), rgba(3, 7, 18, 0.98));
   border: 1px solid rgba(52, 211, 153, 0.3);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75), 0 0 30px rgba(16, 185, 129, 0.15);
+}
+
+.modal-window-invite {
+  max-width: 680px;
+  width: 94%;
+  background: radial-gradient(circle at top right, rgba(15, 23, 42, 0.98), rgba(3, 7, 18, 0.98));
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75), 0 0 35px rgba(6, 182, 212, 0.15);
+}
+
+.invite-modal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 6px 4px;
+}
+
+.invite-node-banner {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(16, 185, 129, 0.1));
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.invite-banner-icon {
+  font-size: 28px;
+  filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.4));
+}
+
+.invite-banner-text h4 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  color: #67e8f9;
+  font-weight: 700;
+}
+
+.invite-banner-text span {
+  font-size: 12px;
+  color: #cbd5e1;
+  line-height: 1.45;
+}
+
+.invite-link-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.invite-field-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.02em;
+}
+
+.invite-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.invite-url-field {
+  flex: 1;
+  background: rgba(3, 7, 18, 0.85);
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  color: #38bdf8;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.invite-url-field:focus {
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2);
+}
+
+.btn-copied-flash {
+  background: #10b981 !important;
+  color: #022c22 !important;
+  font-weight: bold;
+}
+
+.invite-qr-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.invite-qr-box {
+  background: #020617;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.invite-qr-box svg {
+  display: block;
+}
+
+.invite-qr-info {
+  flex: 1;
+}
+
+.invite-qr-info h5 {
+  margin: 0 0 6px 0;
+  font-size: 13.5px;
+  color: #f8fafc;
+  line-height: 1.35;
+}
+
+.invite-qr-subtext {
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.invite-quick-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.invite-telemetry-card {
+  background: rgba(2, 6, 23, 0.7);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.invite-telemetry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.invite-telemetry-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.invite-telemetry-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.invite-code-pill {
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  color: #67e8f9;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11.5px;
+}
+
+.status-indicator-active {
+  color: #34d399;
+  font-weight: 600;
+}
+
+.status-indicator-waiting {
+  color: #fbbf24;
+}
+
+.invite-connected-peers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(51, 65, 85, 0.4);
+}
+
+.invite-peer-badge {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 11.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #a7f3d0;
+}
+
+.invite-peer-dot {
+  color: #10b981;
+}
+
+.invite-peer-id {
+  color: #6ee7b7;
+  opacity: 0.7;
+  font-size: 10.5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Passport Banner Card */
+.passport-invite-banner-card {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(15, 23, 42, 0.8));
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.passport-invite-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.passport-invite-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.passport-invite-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #67e8f9;
+}
+
+.passport-invite-desc {
+  font-size: 11.5px;
+  color: #94a3b8;
+  line-height: 1.35;
 }
 
 /* Passport Wizard Styles */
@@ -5257,6 +5548,186 @@ html, body {
   border-radius: 3px;
 }
 
+/* Peer vs NPC vs Player Badges */
+.msg-peer-badge.live-peer {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(34, 197, 94, 0.16);
+  border: 1px solid rgba(34, 197, 94, 0.45);
+  color: #4ade80;
+  font-weight: 700;
+  font-size: 9px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.2);
+}
+
+@keyframes pingPulse {
+  0% { transform: scale(0.85); opacity: 0.5; }
+  50% { transform: scale(1.15); opacity: 1; box-shadow: 0 0 6px #22c55e; }
+  100% { transform: scale(0.85); opacity: 0.5; }
+}
+
+.peer-ping-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: pingPulse 1.8s infinite ease-in-out;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.peer-ping-ms {
+  background: rgba(0, 0, 0, 0.4);
+  color: #86efac;
+  padding: 0 3px;
+  border-radius: 3px;
+  font-family: ui-monospace, monospace;
+  font-size: 8.5px;
+  font-weight: 600;
+}
+
+.msg-fingerprint-badge {
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #7dd3fc;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 8.5px;
+  font-family: ui-monospace, monospace;
+}
+
+.msg-resident-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(100, 116, 139, 0.2);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: #94a3b8;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 8.5px;
+}
+
+/* Distinct Card Styling for Real Human Peers */
+.chat-msg-row.peer-row.human-peer .msg-bubble-box {
+  background: rgba(8, 47, 73, 0.65);
+  border: 1.5px solid rgba(56, 189, 248, 0.65);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.22);
+}
+
+.chat-msg-row.peer-row.human-peer .msg-avatar-icon {
+  background: rgba(8, 47, 73, 0.85);
+  border: 1.5px solid #38bdf8;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.35);
+}
+
+/* Muted Styling for Ambient NPCs */
+.chat-msg-row.peer-row.npc-resident .msg-bubble-box {
+  background: rgba(30, 41, 59, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+/* Whisper Private Direct Message Styling */
+.chat-msg-row.whisper-row .msg-bubble-box {
+  background: rgba(46, 16, 101, 0.55);
+  border: 1.5px solid rgba(192, 132, 252, 0.7);
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.25);
+}
+
+.msg-whisper-banner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(88, 28, 135, 0.45);
+  border: 1px solid rgba(192, 132, 252, 0.35);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 9.5px;
+  color: #e9d5ff;
+  margin-bottom: 4px;
+}
+
+.msg-whisper-banner strong {
+  color: #f5d0fe;
+}
+
+.whisper-banner-lock {
+  font-size: 11px;
+}
+
+.whisper-banner-key {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-family: ui-monospace, monospace;
+  color: #d8b4fe;
+  font-size: 8.5px;
+}
+
+.whisper-e2ee-tag {
+  margin-left: auto;
+  font-size: 8px;
+  font-weight: 700;
+  background: rgba(168, 85, 247, 0.25);
+  color: #c084fc;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+/* Whisper Recipient Bar */
+.whisper-recipient-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.whisper-bar-icon {
+  font-size: 13px;
+}
+
+.whisper-bar-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #c084fc;
+  white-space: nowrap;
+}
+
+.whisper-recipient-select {
+  background: rgba(30, 41, 59, 0.95);
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  color: #f1f5f9;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 10.5px;
+  outline: none;
+  cursor: pointer;
+  max-width: 170px;
+}
+
+.whisper-recipient-select:focus {
+  border-color: #c084fc;
+  box-shadow: 0 0 6px rgba(192, 132, 252, 0.4);
+}
+
+.whisper-key-chip {
+  font-size: 9px;
+  font-family: ui-monospace, monospace;
+  background: rgba(88, 28, 135, 0.35);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  color: #d8b4fe;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
 .msg-time {
   margin-left: auto;
   font-size: 9px;
@@ -5895,11 +6366,15 @@ body.has-dilemma-open .btn-floating-chat-launcher {
   }
 
   #passport-btn-label,
+  #invite-btn-label,
+  #guide-btn-label,
   #feedback-btn-label {
     display: none;
   }
 
   .btn-passport-pill,
+  .btn-invite-pill,
+  .btn-guide-pill,
   .btn-feedback-pill {
     padding: 4px 8px;
     font-size: 13px;
@@ -6018,6 +6493,8 @@ body.has-dilemma-open .btn-floating-chat-launcher {
   }
 
   .btn-passport-pill,
+  .btn-invite-pill,
+  .btn-guide-pill,
   .btn-feedback-pill {
     padding: 3px 5px;
     font-size: 12px;
@@ -6143,6 +6620,8 @@ body.has-dilemma-open .btn-floating-chat-launcher {
   }
 
   .btn-passport-pill,
+  .btn-invite-pill,
+  .btn-guide-pill,
   .btn-feedback-pill {
     padding: 2px 4px;
     font-size: 10px;
@@ -6371,6 +6850,8 @@ body.has-dilemma-open .btn-floating-chat-launcher {
   }
 
   .btn-passport-pill,
+  .btn-invite-pill,
+  .btn-guide-pill,
   .btn-feedback-pill,
   .btn-home-pill {
     min-height: 38px;
@@ -7273,6 +7754,278 @@ body.has-dilemma-open .btn-floating-chat-launcher {
 @keyframes pulse-border {
   0%, 100% { border-color: rgba(251, 191, 36, 0.4); }
   50% { border-color: rgba(251, 191, 36, 0.9); }
+}
+
+/* ==========================================================================
+   INTERACTIVE ONBOARDING GUIDE & SPOTLIGHT WALKTHROUGH (ITEM 17 - Agent SIM-5)
+   ========================================================================== */
+
+.onboarding-guide-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 12000;
+  pointer-events: auto;
+  transition: opacity 0.3s ease;
+}
+
+.onboarding-guide-overlay.hidden {
+  display: none !important;
+}
+
+.guide-spotlight-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.guide-spotlight-reticle {
+  position: absolute;
+  pointer-events: none;
+  border: 2px solid #10b981;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.65), inset 0 0 15px rgba(16, 185, 129, 0.3);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: reticleGlow 2.5s infinite ease-in-out;
+  display: none;
+  z-index: 12000;
+}
+
+@keyframes reticleGlow {
+  0%, 100% {
+    border-color: #10b981;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.6), inset 0 0 12px rgba(16, 185, 129, 0.25);
+  }
+  50% {
+    border-color: #38bdf8;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.75), inset 0 0 18px rgba(56, 189, 248, 0.35);
+  }
+}
+
+.guide-card {
+  position: absolute;
+  width: min(92vw, 470px);
+  max-height: min(84vh, 580px);
+  background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.97), rgba(2, 6, 23, 0.98));
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(16, 185, 129, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 12001;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.guide-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.guide-badge-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.guide-step-badge {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(6, 95, 70, 0.5));
+  border: 1px solid rgba(52, 211, 153, 0.5);
+  color: #6ee7b7;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.guide-phase-tag {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.btn-guide-close {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-guide-close:hover {
+  background: rgba(239, 68, 68, 0.3);
+  border-color: #ef4444;
+  color: #fff;
+}
+
+.guide-card-body {
+  padding: 16px 20px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #e2e8f0;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.guide-card-title {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.guide-lead-text {
+  margin: 0 0 10px 0;
+  font-size: 12.5px;
+  color: #cbd5e1;
+}
+
+.guide-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.guide-bullet-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.guide-bullet-item span {
+  color: #e2e8f0;
+}
+
+.guide-tip-box {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: #fde68a;
+  margin-top: 10px;
+  line-height: 1.45;
+}
+
+.guide-welcome-box {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(6, 95, 70, 0.25));
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #6ee7b7;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.guide-card-footer {
+  padding: 12px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.guide-dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.guide-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.guide-dot:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.guide-dot.active {
+  background: #10b981;
+  width: 22px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.7);
+}
+
+.guide-btn-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn-guide-primary {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  border: 1px solid #34d399;
+  font-weight: 600;
+  font-size: 12.5px;
+  padding: 6px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.4);
+}
+
+.btn-guide-primary:hover {
+  background: linear-gradient(135deg, #34d399, #10b981);
+  box-shadow: 0 0 16px rgba(52, 211, 153, 0.6);
+  transform: translateY(-1px);
+}
+
+.btn-guide-primary.btn-finish {
+  background: linear-gradient(135deg, #0284c7, #026090);
+  border-color: #38bdf8;
+  box-shadow: 0 2px 10px rgba(2, 132, 199, 0.4);
+}
+
+.btn-guide-primary.btn-finish:hover {
+  background: linear-gradient(135deg, #38bdf8, #0284c7);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.6);
+}
+
+.btn-guide-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-weight: 500;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-guide-secondary:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 

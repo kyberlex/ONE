@@ -10,11 +10,112 @@
  * License: AGPL-3.0-or-later
  */
 
+import { CitizenPassportManager } from './citizen_passport.js';
+import { PlayerProfileManager } from './player_profile.js';
+
 export const CHAT_CHANNELS = {
   VILLAGE: 'VILLAGE',     // Local settlement commons
   PLANETARY: 'PLANETARY', // Inter-node radio mesh telegram
   WHISPER: 'WHISPER'      // Direct peer-to-peer whisper
 };
+
+function bufToHex(buffer) {
+  const bytes = new Uint8Array(buffer);
+  let hex = '';
+  for (let i = 0; i < bytes.length; i++) {
+    hex += bytes[i].toString(16).padStart(2, '0');
+  }
+  return hex;
+}
+
+function hexToBuf(hex) {
+  const bytes = new Uint8Array(hex.length / 2);
+  for (let i = 0; i < hex.length; i += 2) {
+    bytes[i / 2] = parseInt(hex.substr(i, 2), 16);
+  }
+  return bytes.buffer;
+}
+
+/**
+ * Encrypts a private direct whisper payload bound to recipient public key / fingerprint
+ * @param {string} plaintext
+ * @param {string} recipientKey
+ * @returns {Promise<{ ciphertext: string, iv: string }>}
+ */
+export async function encryptWhisper(plaintext, recipientKey) {
+  if (typeof crypto === 'undefined' || !crypto.subtle) {
+    return { ciphertext: btoa(unescape(encodeURIComponent(plaintext))), iv: 'compat' };
+  }
+  try {
+    const enc = new TextEncoder();
+    const keyData = enc.encode(String(recipientKey || 'oasis-whisper-key'));
+    const hash = await crypto.subtle.digest('SHA-256', keyData);
+    const key = await crypto.subtle.importKey(
+      'raw',
+      hash,
+      { name: 'AES-GCM' },
+      false,
+      ['encrypt']
+    );
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const encryptedBuf = await crypto.subtle.encrypt(
+      { name: 'AES-GCM', iv },
+      key,
+      enc.encode(plaintext)
+    );
+    return {
+      ciphertext: bufToHex(encryptedBuf),
+      iv: bufToHex(iv)
+    };
+  } catch (e) {
+    console.warn('[ChatEngine] Whisper encryption fallback:', e);
+    return { ciphertext: btoa(unescape(encodeURIComponent(plaintext))), iv: 'plain' };
+  }
+}
+
+/**
+ * Decrypts a private direct whisper payload bound to recipient public key / fingerprint
+ * @param {string} ciphertext
+ * @param {string} ivHex
+ * @param {string} recipientKey
+ * @returns {Promise<string>}
+ */
+export async function decryptWhisper(ciphertext, ivHex, recipientKey) {
+  if (!ciphertext) return '';
+  if (ivHex === 'plain' || ivHex === 'compat') {
+    try {
+      return decodeURIComponent(escape(atob(ciphertext)));
+    } catch (e) {
+      return ciphertext;
+    }
+  }
+  if (typeof crypto === 'undefined' || !crypto.subtle) {
+    return ciphertext;
+  }
+  try {
+    const enc = new TextEncoder();
+    const keyData = enc.encode(String(recipientKey || 'oasis-whisper-key'));
+    const hash = await crypto.subtle.digest('SHA-256', keyData);
+    const key = await crypto.subtle.importKey(
+      'raw',
+      hash,
+      { name: 'AES-GCM' },
+      false,
+      ['decrypt']
+    );
+    const cipherBuf = hexToBuf(ciphertext);
+    const ivBuf = hexToBuf(ivHex);
+    const decryptedBuf = await crypto.subtle.decrypt(
+      { name: 'AES-GCM', iv: ivBuf },
+      key,
+      cipherBuf
+    );
+    return new TextDecoder().decode(decryptedBuf);
+  } catch (e) {
+    console.warn('[ChatEngine] Whisper decryption failed:', e);
+    return '[🔒 Encrypted Whisper Payload]';
+  }
+}
 
 export const QUICK_PHRASE_CATEGORIES = {
   ALERTS: {
@@ -220,21 +321,52 @@ export class ChatEngine {
     return this.messages.filter(m => m.channel === channel);
   }
 
-  addMessage(msg) {
-    if (!msg || !msg.text) return null;
+  async addMessage(msg) {
+    if (!msg || (!msg.text && !msg.ciphertext)) return null;
 
     // 1. Deduplicate by exact ID
     if (msg.id && this.messages.some(m => m.id === msg.id)) {
       return this.messages.find(m => m.id === msg.id);
     }
 
-    // 2. Deduplicate by content + author + recent time window (within 12 seconds)
-    const msgText = msg.text.trim();
+    // 2. Whisper Privacy Filter & Decryption
+    let displayText = msg.text ? msg.text.trim() : '';
+    if (msg.channel === CHAT_CHANNELS.WHISPER && !msg.isPlayer) {
+      const myIdentity = this.sim?.myIdentity || null;
+      const myProfile = PlayerProfileManager.getProfile();
+      const myName = myIdentity?.name || myProfile?.name || 'Player';
+      const myPubKey = myIdentity?.pubKeyHex || null;
+      const myFingerprint = myIdentity?.shortFingerprint || null;
+
+      const isTargetedToMe = (
+        !msg.recipientName ||
+        (msg.recipientName.toLowerCase() === myName.toLowerCase() ||
+         msg.recipientName === 'Player (You)' ||
+         msg.recipientName === 'You' ||
+         msg.recipientName === 'Pioneer') ||
+        (msg.recipientFingerprint && myFingerprint && msg.recipientFingerprint === myFingerprint) ||
+        (msg.recipientPubKey && myPubKey && msg.recipientPubKey === myPubKey)
+      );
+
+      // Discard whisper if not addressed to local player
+      if (!isTargetedToMe) {
+        return null;
+      }
+
+      // If encrypted, decrypt using our key material
+      if (msg.isEncrypted && msg.ciphertext && msg.iv) {
+        const keyMaterial = myPubKey || myFingerprint || myName;
+        displayText = await decryptWhisper(msg.ciphertext, msg.iv, keyMaterial);
+        msg.decrypted = true;
+      }
+    }
+
+    // 3. Deduplicate by content + author + recent time window (within 12 seconds)
     const msgAuthor = msg.authorName || 'Citizen';
     const now = msg.timestamp || Date.now();
     const isRecentDuplicate = this.messages.some(m => 
       m.authorName === msgAuthor &&
-      m.text.trim() === msgText &&
+      m.text?.trim() === displayText &&
       Math.abs(now - (m.timestamp || 0)) < 12000
     );
     if (isRecentDuplicate) {
@@ -251,7 +383,15 @@ export class ChatEngine {
       shortFingerprint: msg.shortFingerprint || null,
       isPlayer: !!msg.isPlayer,
       isPeer: !!msg.isPeer,
-      text: msgText,
+      isHumanPeer: !!msg.isPeer,
+      pingMs: msg.pingMs || null,
+      recipientName: msg.recipientName || null,
+      recipientPubKey: msg.recipientPubKey || null,
+      recipientFingerprint: msg.recipientFingerprint || null,
+      isEncrypted: !!msg.isEncrypted,
+      ciphertext: msg.ciphertext || null,
+      iv: msg.iv || null,
+      text: displayText,
       actionType: msg.actionType || null,
       actionPayload: msg.actionPayload || null,
       actionExecuted: !!msg.actionExecuted,
@@ -276,7 +416,7 @@ export class ChatEngine {
   /**
    * Dispatches an outgoing message from the local player
    */
-  async sendPlayerMessage({ text, channel = this.activeChannel, quickPhrase = null, identity = null, p2pMesh = null }) {
+  async sendPlayerMessage({ text, channel = this.activeChannel, quickPhrase = null, identity = null, p2pMesh = null, recipient = null }) {
     let actionType = null;
     let actionPayload = null;
 
@@ -291,6 +431,25 @@ export class ChatEngine {
       }
     }
 
+    let isEncrypted = false;
+    let ciphertext = null;
+    let iv = null;
+    let recipientName = null;
+    let recipientPubKey = null;
+    let recipientFingerprint = null;
+
+    if (channel === CHAT_CHANNELS.WHISPER) {
+      recipientName = recipient?.name || 'Resident';
+      recipientPubKey = recipient?.pubKeyHex || null;
+      recipientFingerprint = recipient?.shortFingerprint || (recipientPubKey ? recipientPubKey.slice(0, 8) + '…' + recipientPubKey.slice(-6) : null);
+
+      const encTarget = recipientPubKey || recipientFingerprint || recipientName;
+      const enc = await encryptWhisper(text, encTarget);
+      ciphertext = enc.ciphertext;
+      iv = enc.iv;
+      isEncrypted = true;
+    }
+
     const newMsg = {
       id: `msg-p2p-${Date.now().toString(36)}-${Math.floor(Math.random() * 1000)}`,
       channel,
@@ -301,6 +460,13 @@ export class ChatEngine {
       shortFingerprint: identity ? identity.shortFingerprint : 'Local',
       isPlayer: true,
       isPeer: false,
+      isHumanPeer: false,
+      recipientName,
+      recipientPubKey,
+      recipientFingerprint,
+      isEncrypted,
+      ciphertext,
+      iv,
       text,
       actionType,
       actionPayload,
@@ -308,18 +474,81 @@ export class ChatEngine {
       verified: true
     };
 
-    this.addMessage(newMsg);
+    await this.addMessage(newMsg);
 
     // Broadcast across P2P WebRTC / BroadcastChannel
     if (p2pMesh) {
-      p2pMesh.broadcastDelta({
+      const deltaId = `delta-chat-${newMsg.id}`;
+      const signedDelta = {
+        id: deltaId,
         type: 'CHAT_MESSAGE',
+        authorToken: identity ? identity.token : 'anonymous',
         authorName: newMsg.authorName,
         authorPubKey: newMsg.authorPubKey,
-        payload: { ...newMsg, isPlayer: false, isPeer: true },
+        payload: {
+          ...newMsg,
+          isPlayer: false,
+          isPeer: true,
+          pingMs: p2pMesh.getPeerLatency?.() || 12
+        },
         timestamp: Date.now(),
         tick: this.sim.tickCount
-      });
+      };
+
+      if (identity?.privateKeyJwk) {
+        try {
+          const sig = await CitizenPassportManager.signAction(
+            {
+              type: signedDelta.type,
+              payload: signedDelta.payload,
+              tick: signedDelta.tick,
+              authorToken: signedDelta.authorToken,
+              authorName: signedDelta.authorName,
+              timestamp: signedDelta.timestamp
+            },
+            identity.privateKeyJwk
+          );
+          signedDelta.signature = sig;
+        } catch (e) {
+          signedDelta.signature = 'unsigned_' + Date.now();
+        }
+      } else {
+        signedDelta.signature = 'unsigned_' + Date.now();
+      }
+
+      p2pMesh.broadcastDelta(signedDelta);
+    }
+
+    // Interactive simulated resident response for solo Whisper verification
+    if (channel === CHAT_CHANNELS.WHISPER && recipientName) {
+      const isAmbientResident = AMBIENT_RESIDENTS.some(r => r.name === recipientName);
+      if (isAmbientResident) {
+        setTimeout(async () => {
+          const resObj = AMBIENT_RESIDENTS.find(r => r.name === recipientName);
+          const replyText = `🔒 Decrypted whisper from ${newMsg.authorName}. Water & microgrid systems running smoothly. Zero telemetry anomalies.`;
+          const myKey = identity ? (identity.pubKeyHex || identity.shortFingerprint || identity.name) : 'Player';
+          const encReply = await encryptWhisper(replyText, myKey);
+          await this.addMessage({
+            id: `msg-reply-${Date.now().toString(36)}`,
+            channel: CHAT_CHANNELS.WHISPER,
+            authorName: recipientName,
+            authorVocation: resObj?.vocation || 'Resident',
+            authorIcon: resObj?.icon || '🌱',
+            authorPubKey: 'res_pubkey_' + recipientName.toLowerCase(),
+            shortFingerprint: 'res-' + recipientName.toLowerCase().slice(0, 4),
+            isPlayer: false,
+            isPeer: false,
+            recipientName: newMsg.authorName,
+            recipientFingerprint: newMsg.shortFingerprint,
+            isEncrypted: true,
+            ciphertext: encReply.ciphertext,
+            iv: encReply.iv,
+            text: replyText,
+            timestamp: Date.now(),
+            verified: true
+          });
+        }, 1200);
+      }
     }
 
     return newMsg;

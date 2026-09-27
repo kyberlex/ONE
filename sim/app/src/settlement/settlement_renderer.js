@@ -92,7 +92,55 @@ export class SettlementRenderer {
       if (citizenName === playerAvatar.name || citizenName.includes('You') || citizenName.includes('Player')) {
         this.speechBubbles.set(playerAvatar.name, bubbleData);
       }
+    } else {
+      this.speechBubbles.set('Player (You)', bubbleData);
     }
+
+    // Ensure remote peer has an avatar representation on canvas
+    if (!citizenName.includes('You') && !citizenName.includes('Player')) {
+      this.ensurePeerAvatar(citizenName);
+    }
+  }
+
+  ensurePeerAvatar(peerName) {
+    if (!peerName || peerName === 'Player (You)' || peerName.includes('You')) return null;
+    if (!this.citizens) this.citizens = [];
+
+    const existing = this.citizens.find(c => c.name.toLowerCase() === peerName.toLowerCase());
+    if (existing) {
+      existing.isHuman = true;
+      existing.isPeer = true;
+      return existing;
+    }
+
+    // Find claimed dwelling or nearby open location
+    const peerDwelling = this.dwellings?.find(d => d.claimedByPeer === peerName);
+    const spawnX = peerDwelling ? peerDwelling.x + 8 : (Math.random() - 0.5) * 120;
+    const spawnY = peerDwelling ? peerDwelling.y + 8 : (Math.random() - 0.5) * 120;
+
+    const newPeer = {
+      id: `avatar-peer-${Date.now().toString(36)}-${Math.floor(Math.random() * 1000)}`,
+      name: peerName,
+      isPlayer: false,
+      isHuman: true,
+      isPeer: true,
+      isChild: false,
+      isElder: false,
+      vocation: getVocationById('electrician'),
+      homeDwelling: peerDwelling || this.dwellings?.[1] || null,
+      x: spawnX,
+      y: spawnY,
+      targetX: spawnX,
+      targetY: spawnY,
+      speed: 0.46,
+      pauseTicks: 40,
+      color: '#38bdf8',
+      bubble: null,
+      bubbleTimer: 180
+    };
+
+    this.citizens.push(newPeer);
+    return newPeer;
   }
 
   setNode(nodeData) {
@@ -1901,22 +1949,38 @@ export class SettlementRenderer {
     return null;
   }
 
-  claimDwelling(dwellingId, vocationId = 'farmer') {
+  claimDwelling(dwellingId, vocationId = 'farmer', claimantName = null, isRemotePeer = false) {
     const voc = getVocationById(vocationId);
     for (const d of this.dwellings) {
       if (d.id === dwellingId) {
         d.isOccupied = true;
-        d.isPlayerHome = true;
-        d.occupant = {
-          name: 'Player (You)',
-          vocationId: voc.id,
-          role: voc.defaultName,
-          roleKey: voc.nameKey,
-          icon: voc.icon,
-          dailyHours: 4,
-          multiplier: voc.multiplier
-        };
-        PlayerProfileManager.claimDwelling(this.node.id, this.node.name, d, voc.id);
+        if (!isRemotePeer) {
+          d.isPlayerHome = true;
+          d.claimedByPeer = null;
+          d.occupant = {
+            name: claimantName || 'Player (You)',
+            vocationId: voc.id,
+            role: voc.defaultName,
+            roleKey: voc.nameKey,
+            icon: voc.icon,
+            dailyHours: 4,
+            multiplier: voc.multiplier
+          };
+          PlayerProfileManager.claimDwelling(this.node.id, this.node.name, d, voc.id);
+        } else {
+          d.isPlayerHome = false;
+          d.claimedByPeer = claimantName || 'Remote Peer';
+          d.occupant = {
+            name: claimantName || 'Remote Peer',
+            vocationId: voc.id,
+            role: voc.defaultName,
+            roleKey: voc.nameKey,
+            icon: '🌐',
+            dailyHours: 4,
+            multiplier: voc.multiplier
+          };
+          if (claimantName) this.ensurePeerAvatar(claimantName);
+        }
         return d;
       }
     }
@@ -1931,6 +1995,7 @@ export class SettlementRenderer {
         }
         d.isOccupied = false;
         d.isPlayerHome = false;
+        d.claimedByPeer = null;
         d.occupant = null;
         return d;
       }
@@ -2950,6 +3015,61 @@ export class SettlementRenderer {
       ctx.restore();
     }
 
+    // 6. Solarpunk Floating Speech Bubble above Usufruct Dwelling
+    const occupantName = d.isPlayerHome 
+      ? (PlayerProfileManager.getProfile()?.name || 'Player (You)')
+      : (d.claimedByPeer || d.occupant?.name);
+    const dwellingBubble = occupantName ? (
+      this.speechBubbles.get(occupantName) || 
+      (d.isPlayerHome ? (this.speechBubbles.get('Player (You)') || this.speechBubbles.get('You') || this.speechBubbles.get('You (Pioneer)')) : null)
+    ) : null;
+
+    if (dwellingBubble && Date.now() < dwellingBubble.expiresAt) {
+      const dwNow = Date.now();
+      const dwAlpha = Math.min(1.0, (dwellingBubble.expiresAt - dwNow) / 500);
+      ctx.save();
+      ctx.globalAlpha = dwAlpha;
+
+      const dwRawText = dwellingBubble.text;
+      const dwText = typeof dwRawText === 'string' ? t(dwRawText, dwRawText) : dwRawText;
+      const dwMaxLen = 30;
+      const dwDisp = dwText.length > dwMaxLen ? dwText.slice(0, dwMaxLen - 1) + '…' : dwText;
+
+      ctx.font = '500 10px system-ui, sans-serif';
+      const dwTextW = ctx.measureText(dwDisp).width;
+      const dwBubbleW = Math.max(34, dwTextW + 18);
+      const dwBubbleH = 22;
+      const dwBubbleY = -d.radius - 28;
+      const dwBubbleX = -dwBubbleW / 2;
+
+      // Glow & Bubble background
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.95)';
+      ctx.strokeStyle = d.isPlayerHome ? '#fbbf24' : (d.claimedByPeer ? '#38bdf8' : '#10b981');
+      ctx.lineWidth = 1.6;
+      ctx.beginPath();
+      ctx.roundRect(dwBubbleX, dwBubbleY, dwBubbleW, dwBubbleH, 5);
+      ctx.fill();
+      ctx.stroke();
+
+      // Pointer tail towards dome roof
+      ctx.beginPath();
+      ctx.moveTo(-4, dwBubbleY + dwBubbleH);
+      ctx.lineTo(0, dwBubbleY + dwBubbleH + 5);
+      ctx.lineTo(4, dwBubbleY + dwBubbleH);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.95)';
+      ctx.fill();
+      ctx.stroke();
+
+      // Text inside bubble
+      ctx.fillStyle = '#f8fafc';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(dwDisp, 0, dwBubbleY + dwBubbleH / 2);
+
+      ctx.restore();
+    }
+
     ctx.restore();
   }
 
@@ -3179,9 +3299,32 @@ export class SettlementRenderer {
       ctx.fillStyle = '#fbbf24';
       ctx.font = 'bold 10px system-ui, sans-serif';
       ctx.fillText(t('playerTag', 'YOU'), 0, headY - 21);
-    } else {
+    } else if (c.isHuman || c.isPeer) {
+      // Floating Live Peer Badge
+      ctx.fillStyle = 'rgba(8, 47, 73, 0.92)';
+      ctx.strokeStyle = '#38bdf8';
+      ctx.lineWidth = 1.4;
+      ctx.beginPath();
+      ctx.roundRect(-24, headY - 26, 48, 14, 4);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = '#38bdf8';
+      ctx.font = 'bold 8.5px system-ui, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('🌐 PEER', 0, headY - 19);
+
       // Name tag below
-      ctx.fillStyle = isHovered ? '#38bdf8' : (c.isHuman ? '#38bdf8' : '#e2e8f0');
+      ctx.fillStyle = isHovered ? '#38bdf8' : '#7dd3fc';
+      ctx.font = isHovered ? 'bold 10px system-ui' : '9px system-ui';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'top';
+      const shortName = (c.name || 'Peer').split(' ')[0];
+      ctx.fillText(shortName, 0, 7);
+    } else {
+      // Name tag below for simulated resident
+      ctx.fillStyle = isHovered ? '#38bdf8' : '#e2e8f0';
       ctx.font = isHovered ? 'bold 10px system-ui' : '9px system-ui';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'top';

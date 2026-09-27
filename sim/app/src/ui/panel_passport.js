@@ -57,10 +57,11 @@ const SKIN_TONES = [
 ];
 
 export class PanelPassportController {
-  constructor(sim, onIdentityChangedCallback = () => {}, p2pMesh = null) {
+  constructor(sim, onIdentityChangedCallback = () => {}, p2pMesh = null, options = {}) {
     this.sim = sim;
     this.onIdentityChanged = onIdentityChangedCallback;
     this.p2pMesh = p2pMesh;
+    this.onOpenInviteModal = options.onOpenInviteModal || null;
 
     this.modalEl = document.getElementById('modal-passport');
     this.contentEl = document.getElementById('passport-modal-content');
@@ -71,6 +72,7 @@ export class PanelPassportController {
     this.activeIdentity = null;
     this.privateKeyJwk = null;
     this.isImportMode = false;
+    this.inviteContext = null;
     this.avatar3DViewer = null;
     this.cardAvatar3DViewer = null;
     this.drawerAvatar3DViewer = null;
@@ -167,7 +169,11 @@ export class PanelPassportController {
     }
   }
 
-  async open() {
+  async open(options = {}) {
+    if (options && options.inviteContext) {
+      this.inviteContext = options.inviteContext;
+    }
+
     // Refresh latest identity and event count
     this.activeIdentity = await storageIDB.getActiveIdentity();
     if (this.activeIdentity && this.activeIdentity.privateKeyJwk) {
@@ -184,6 +190,13 @@ export class PanelPassportController {
     this.destroy3DViewers();
     if (this.modalEl) {
       this.modalEl.classList.add('hidden');
+    }
+    if (window.app && window.app.guideTour && !window.app.guideTour.isCompleted() && this.activeIdentity) {
+      setTimeout(() => {
+        if (window.app && window.app.guideTour && !window.app.guideTour.isCompleted()) {
+          window.app.guideTour.start(0);
+        }
+      }, 350);
     }
   }
 
@@ -380,6 +393,16 @@ export class PanelPassportController {
           <h3>${t('passport.wizard_title', 'Welcome to O.N.E. • Citizen Passport Issuance')}</h3>
           <p class="wizard-subtitle">${t('passport.wizard_subtitle', 'No central account, no passwords or external servers. Your data remains 100% on your device.')}</p>
         </div>
+
+        ${this.inviteContext ? `
+          <div class="passport-invite-welcome-banner" style="margin-bottom: 16px; padding: 12px 14px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(14, 116, 144, 0.35)); border: 1px solid rgba(6, 182, 212, 0.45); border-radius: 12px; display: flex; align-items: center; gap: 12px;">
+            <span style="font-size: 24px;">👋</span>
+            <div style="font-size: 13px; color: #e0f2fe; line-height: 1.4;">
+              <strong style="color: #67e8f9; display: block; font-size: 13.5px; margin-bottom: 2px;">${t('inviteWelcomeTitle', 'Settlement Invitation')}</strong>
+              <span>${t('inviteWelcomeNotice', 'You have arrived in {node} via multiplayer invitation! Mint your free cryptographic identity to claim your usufruct dwelling and join the village commons.').replace('{node}', this.inviteContext.inviteNode || 'the settlement')}</span>
+            </div>
+          </div>
+        ` : ''}
 
         <div class="wizard-form">
           <div class="form-group">
@@ -786,6 +809,20 @@ export class PanelPassportController {
                 </div>
               </div>
 
+              <!-- One-Click Serverless Multiplayer Invite (ITEM 18) -->
+              <div class="passport-invite-banner-card">
+                <div class="passport-invite-banner-content">
+                  <div class="passport-invite-icon">🔗</div>
+                  <div class="passport-invite-texts">
+                    <div class="passport-invite-title">${t('passport.invite_title', 'Multiplayer Settlement Mesh')}</div>
+                    <div class="passport-invite-desc">${t('passport.invite_desc', 'Invite a friend to your village with a single clickable link via serverless WebRTC over Nostr.')}</div>
+                  </div>
+                </div>
+                <button type="button" id="btn-passport-open-invite" class="btn-primary" style="white-space: nowrap; padding: 7px 14px; font-size: 12px;">
+                  🔗 ${t('passport.btn_invite_friend', 'Invite Friend')}
+                </button>
+              </div>
+
               <!-- WebRTC Air-Gapped Handshake Drawer -->
               <div class="webrtc-handshake-box">
                 <div class="webrtc-box-header">
@@ -814,7 +851,22 @@ export class PanelPassportController {
                 <button id="btn-switch-passport" class="btn-action-small btn-secondary">
                   🔄 ${t('passport.btn_switch_pioneer', 'Switch Pioneer')}
                 </button>
+                <button type="button" id="btn-passport-replay-guide" class="btn-action-small btn-secondary" title="${t('guideTooltip', 'Interactive Onboarding Guide')}">
+                  🧭 ${t('guideBtnRestart', 'Interactive Guide')}
+                </button>
               </div>
+
+              ${!localStorage.getItem('oasis_onboarding_completed') ? `
+              <div class="passport-onboarding-cta-box" style="margin-top: 14px; padding: 12px 14px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 95, 70, 0.35)); border: 1px solid rgba(52, 211, 153, 0.45); border-radius: 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+                <div style="font-size: 12.5px; color: #e2e8f0;">
+                  <strong style="color: #6ee7b7; display: block; font-size: 13px;">🧭 ${t('guideStartWalkthrough', 'Start Onboarding Walkthrough')}</strong>
+                  <span>${t('guideCompletedMsg', 'Welcome to the commons! Explore the village or claim your dwelling.')}</span>
+                </div>
+                <button type="button" id="btn-passport-start-tour" class="btn-primary" style="padding: 6px 14px; font-size: 12.5px; white-space: nowrap;">
+                  ${t('guideBtnNext', 'Next ➔')}
+                </button>
+              </div>
+              ` : ''}
 
               <!-- Danger Zone: Right to Oblivion / Sovereign Departure -->
               <div class="passport-danger-zone">
@@ -917,6 +969,15 @@ export class PanelPassportController {
           if (saveAvatarBtn) saveAvatarBtn.textContent = '💾 Save Appearance Changes';
           closeDrawer();
         }, 600);
+      });
+    }
+
+    // Bind Multiplayer Settlement Invite Button
+    const openInviteBtn = this.contentEl.querySelector('#btn-passport-open-invite');
+    if (openInviteBtn && this.onOpenInviteModal) {
+      openInviteBtn.addEventListener('click', () => {
+        this.close();
+        this.onOpenInviteModal();
       });
     }
 
@@ -1083,6 +1144,27 @@ export class PanelPassportController {
     if (switchBtn) {
       switchBtn.addEventListener('click', () => {
         this.renderCreationWizard();
+      });
+    }
+
+    // Bind Replay Guide & Start Tour Buttons (ITEM 17)
+    const replayGuideBtn = this.contentEl.querySelector('#btn-passport-replay-guide');
+    if (replayGuideBtn) {
+      replayGuideBtn.addEventListener('click', () => {
+        this.close();
+        if (window.app && window.app.guideTour) {
+          window.app.guideTour.start(0);
+        }
+      });
+    }
+
+    const startTourBtn = this.contentEl.querySelector('#btn-passport-start-tour');
+    if (startTourBtn) {
+      startTourBtn.addEventListener('click', () => {
+        this.close();
+        if (window.app && window.app.guideTour) {
+          window.app.guideTour.start(0);
+        }
       });
     }
 

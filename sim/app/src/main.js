@@ -20,6 +20,8 @@ import { PanelPassportController } from './ui/panel_passport.js';
 import { PanelConvoysController } from './ui/panel_convoys.js';
 import { PanelChatController } from './ui/panel_chat.js';
 import { PanelFeedbackController } from './ui/panel_feedback.js';
+import { PanelInviteController } from './ui/panel_invite.js';
+import { GuideTourController } from './ui/guide_tour.js';
 import { ChatEngine } from './engine/chat_engine.js';
 import { storageIDB } from './engine/storage_idb.js';
 import { CitizenPassportManager } from './engine/citizen_passport.js';
@@ -33,11 +35,27 @@ import { i18n, t } from './i18n/index.js';
 window.addEventListener('DOMContentLoaded', () => {
   console.log('🌍 [O-ASIS Dual-Track] Initializing planetary living engine & bioclimatic settlements...');
 
+  // Check for URL invite / joinNode parameters (ITEM 18)
+  const urlParams = new URLSearchParams(window.location.search);
+  const joinNodeParam = urlParams.get('joinNode') || urlParams.get('node');
+  const inviteRoomParam = urlParams.get('invite') || urlParams.get('room');
+
   // 1. Initialize Simulation Engine
   const sim = new SimulationManager();
 
-  // Active Node state
-  let activeNode = { ...GLOBAL_STARTER_NODES[0] };
+  // Active Node state (match from URL invite if specified)
+  let initialNode = { ...GLOBAL_STARTER_NODES[0] };
+  if (joinNodeParam) {
+    const matchedNode = GLOBAL_STARTER_NODES.find(n => 
+      n.id.toLowerCase() === joinNodeParam.toLowerCase() || 
+      n.name.toLowerCase().includes(joinNodeParam.toLowerCase())
+    );
+    if (matchedNode) {
+      initialNode = { ...matchedNode };
+      console.log(`🌐 [Main] Joining settlement from URL parameter: ${matchedNode.name}`);
+    }
+  }
+  let activeNode = initialNode;
   sim.node.id = activeNode.id;
   sim.node.name = activeNode.name;
   sim.node.lng = activeNode.lng;
@@ -54,10 +72,14 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   let currentView = 'world'; // 'world' | 'settlement'
   let panelPassport = null;
+  let panelInvite = null;
   let chatEngine = null;
   let panelChat = null;
+  let guideTour = null;
 
   // 1b. Initialize Serverless P2P WebRTC Mesh
+  storageIDB.getActiveIdentity().then(id => { if (id) sim.myIdentity = id; });
+
   const p2pMesh = new P2PMeshManager(sim, delta => {
     // Process verified remote action delta
     if (delta.type === 'CHAT_MESSAGE') {
@@ -75,7 +97,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       }
     } else if (delta.type === 'CLAIM_DWELLING') {
-      settlementRenderer.claimDwelling(delta.payload.dwellingId);
+      settlementRenderer.claimDwelling(delta.payload.dwellingId, delta.payload.vocationId || 'farmer', delta.authorName, true);
       hud.showNotification({
         title: '🌐 ' + t('peerClaimedDwellingTitle', 'Dwelling Claimed'),
         message: t('peerClaimedDwellingDesc', '{author} claimed dwelling #{num}').replace('{author}', delta.authorName).replace('{num}', delta.payload.dwellingNumber)
@@ -157,7 +179,33 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // 1c. Auto-join serverless signaling room if invited
+  if (inviteRoomParam) {
+    p2pMesh.joinSignalingRoom(inviteRoomParam);
+  }
+
   // 2. Initialize UI Panels
+  panelInvite = new PanelInviteController(sim, p2pMesh, {
+    onPeerJoined: peerName => {
+      hud.showNotification({
+        title: '🤝 ' + t('peerConnectedTitle', 'Peer Connected'),
+        message: t('peerConnectedDesc', '{name} established a direct P2P link with your settlement!').replace('{name}', peerName)
+      });
+      if (chatEngine) {
+        chatEngine.addMessage({
+          id: `arrive-${Date.now()}`,
+          channel: 'VILLAGE',
+          authorToken: 'system',
+          authorName: 'Village Mesh',
+          text: t('chatPeerArrivedViaInvite', '🎉 {name} arrived in the settlement via multiplayer invite link! Welcome to the commons!').replace('{name}', peerName),
+          timestamp: Date.now(),
+          isSystem: true
+        });
+        if (panelChat && panelChat.isOpen) panelChat.render();
+      }
+    }
+  });
+
   const panelNode = new PanelNodeController(sim, async (actionType, payload) => {
     const identity = await storageIDB.getActiveIdentity();
     if (identity && identity.privateKeyJwk) {
@@ -185,17 +233,33 @@ window.addEventListener('DOMContentLoaded', () => {
         settlementRenderer.camera.targetZoom = 1.6;
       }
     },
-    onOpenChat: () => {
-      if (panelChat) panelChat.open();
+    onOpenChat: citizenName => {
+      if (panelChat) {
+        if (citizenName) {
+          panelChat.openWhisperWith(citizenName);
+        } else {
+          panelChat.open();
+        }
+      }
     }
   });
   panelPassport = new PanelPassportController(sim, identity => {
     p2pMesh.setIdentity(identity);
+    sim.myIdentity = identity;
     if (identity) {
       hud.showNotification({
         title: '🔑 ' + (identity.name || t('defaultPioneerName', 'Pioneer')),
         message: t('characterActiveReady', 'Character profile active. Ready to build resilience!')
       });
+
+      // If new player hasn't completed onboarding tour, launch walkthrough
+      if (guideTour && !guideTour.isCompleted()) {
+        setTimeout(() => {
+          if (guideTour && !guideTour.isCompleted() && (!panelPassport || !panelPassport.isOpen)) {
+            guideTour.start(0);
+          }
+        }, 600);
+      }
     } else {
       hud.showNotification({
         title: '🔥 ' + t('gameResetTitle', 'Data Cleared'),
@@ -209,7 +273,11 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
     updateHomeUi();
-  }, p2pMesh);
+  }, p2pMesh, {
+    onOpenInviteModal: () => {
+      if (panelInvite) panelInvite.open({ node: activeNode });
+    }
+  });
 
   let activePanel = null;
 
@@ -599,6 +667,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // Start with NODE level on settlement view
   zoomCoordinator.setLevel(ZOOM_LEVELS.NODE);
 
+  // Initialize Interactive Onboarding Guide (ITEM 17)
+  guideTour = new GuideTourController(sim, zoomCoordinator, settlementRenderer, hud);
+
   function updateSettlementMetaHeader() {
     const nameEl = document.getElementById('settlement-node-name');
     const tagEl = document.getElementById('settlement-climate-tag');
@@ -865,7 +936,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // 9. Check Saved Player Home & Start Simulation
   const savedProfile = PlayerProfileManager.getProfile();
-  if (savedProfile) {
+  if (savedProfile && !joinNodeParam) {
     PlayerProfileManager.touchPresence();
     const savedNode = GLOBAL_STARTER_NODES.find(n => n.id === savedProfile.nodeId || n.name === savedProfile.nodeName);
     if (savedNode) {
@@ -890,9 +961,46 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   updateHomeUi();
 
+  // 9b. Welcome Flow for Multiplayer Invitees (ITEM 18)
+  if (inviteRoomParam) {
+    storageIDB.getActiveIdentity().then(identity => {
+      const isNewPioneer = !identity || identity.id?.startsWith('cit-legacy-') || identity.pubKeyHex === 'legacy_key';
+      if (isNewPioneer) {
+        setTimeout(() => {
+          if (panelPassport) {
+            panelPassport.open({
+              inviteContext: {
+                inviteNode: activeNode.name,
+                inviteRoom: inviteRoomParam
+              }
+            });
+          }
+          hud.showNotification({
+            title: '👋 ' + t('inviteWelcomeTitle', 'Settlement Invitation'),
+            message: t('inviteWelcomeDesc', 'You arrived in {node} via multiplayer invitation! Mint your sovereign identity to join the commons.').replace('{node}', activeNode.name)
+          });
+        }, 900);
+      } else {
+        setTimeout(() => {
+          hud.showNotification({
+            title: '🌐 ' + t('inviteConnectedTitle', 'Connected to Settlement'),
+            message: t('inviteConnectedDesc', 'Joined {node} via multiplayer link. P2P room: {room}').replace('{node}', activeNode.name).replace('{room}', inviteRoomParam)
+          });
+        }, 900);
+      }
+    });
+  }
+
   sim.start();
   hud.update(sim.getFullState());
   zoomCoordinator.setLevel(ZOOM_LEVELS.NODE, null, true); // Start at NODE village level
+
+  // Check if first-time onboarding tour should start (only if not arriving via invite wizard)
+  setTimeout(() => {
+    if (!inviteRoomParam && guideTour && !guideTour.isCompleted() && (!panelPassport || !panelPassport.isOpen)) {
+      guideTour.start(0);
+    }
+  }, 1400);
 
   // Expose app context for telemetry and inspection
   window.app = {
@@ -903,7 +1011,10 @@ window.addEventListener('DOMContentLoaded', () => {
     zoomCoordinator,
     prop3dViewer,
     chatEngine,
-    panelChat
+    panelChat,
+    guideTour,
+    panelInvite,
+    p2pMesh
   };
 
   console.log('✅ [O-ASIS Dual-Track] Planetary cartography & bioclimatic village engine running at 60 FPS.');

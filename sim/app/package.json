@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "leaflet": "^1.9.4",
-    "three": "^0.186.0"
+    "three": "^0.186.0",
+    "trystero": "^0.25.4"
   }
 }
