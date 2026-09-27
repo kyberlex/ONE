@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "network": "O-ASIS Confederated Mesh",
-  "genesis": true,
-  "tick": 0,
-  "day": 1,
-  "timestamp": "2026-09-27T00:00:00Z",
+  "genesis": false,
+  "tick": 1933,
+  "day": 81,
+  "timestamp": "2026-09-27T21:57:53.035Z",
   "nodes": {
     "node-detroit": {
       "id": "node-detroit",
@@ -14,72 +14,56 @@
       "currencySymbol": "$",
       "currencyCode": "USD",
       "currencyName": "US Dollar",
-      "lat": 42.3015,
+      "lat": 0,
       "lng": -83.1098,
       "climateKey": "TEMPERATE",
       "population": 28,
-      "morale": 85,
-      "fiatTreasury": 12500,
+      "morale": 100,
+      "fiatTreasury": 4200,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 8500,
-          "batteryCapacityKwh": 10000,
-          "solarGenerationKwh": 450,
-          "consumptionKwh": 320
+          "batteryStoredKwh": 150.2935693970286,
+          "batteryCapacityKwh": 350
         },
         "water": {
-          "cisternStoredL": 32000,
-          "cisternCapacityL": 50000,
-          "rainInflowL": 620,
-          "consumptionL": 440
+          "cisternStoredL": 50000,
+          "cisternCapacityL": 50000
         },
         "food": {
-          "granaryStoredKcal": 1800000,
-          "dailyBiometricFloorKcal": 61600,
-          "daysRemaining": 29.2
+          "granaryStoredKcal": 63812.04386133333
         },
-        "compute": {
-          "meshMflops": 12000,
-          "activePeers": 12
-        }
+        "compute": {}
       },
       "robots": {
-        "farmRover": 1,
-        "esp32Valves": 1,
-        "mpptOptimizer": 1,
-        "cleaningBot": 0,
-        "cncSorter": 0
-      },
-      "civicProjects": {
-        "amphitheater": {
-          "progress": 35,
-          "donatedHours": 70,
-          "targetHours": 200,
-          "completed": false
+        "esp32Valves": {
+          "name": "ESP32 Smart Irrigation Valves",
+          "count": 1,
+          "hoursCancelled": 2,
+          "domain": "agriculture"
         },
-        "biogasDigester": {
-          "progress": 15,
-          "donatedHours": 45,
-          "targetHours": 300,
-          "completed": false
+        "farmRover": {
+          "name": "Autonomous Agro-Rover (Seeding/Weeding)",
+          "count": 1,
+          "hoursCancelled": 4,
+          "domain": "agriculture"
         },
-        "deepRainReservoir": {
-          "progress": 0,
-          "donatedHours": 0,
-          "targetHours": 400,
-          "completed": false
+        "mpptOptimizer": {
+          "name": "SCADA Microgrid Auto-Balancer",
+          "count": 1,
+          "hoursCancelled": 3,
+          "domain": "facilities"
         },
-        "solarTower": {
-          "progress": 0,
-          "donatedHours": 0,
-          "targetHours": 500,
-          "completed": false
+        "cleaningBot": {
+          "name": "Common House Sanitization Bot",
+          "count": 0,
+          "hoursCancelled": 2,
+          "domain": "care"
         },
-        "seedVault": {
-          "progress": 0,
-          "donatedHours": 0,
-          "targetHours": 350,
-          "completed": false
+        "cncSorter": {
+          "name": "FabLab Shredder & Sorter Arm",
+          "count": 0,
+          "hoursCancelled": 4,
+          "domain": "workshop"
         }
       },
       "dwellings": {
@@ -89,10 +73,10 @@
         "sabbaticalLocks": 0
       },
       "chores": {
-        "landHours": 38,
-        "facilitiesHours": 24,
-        "careHours": 18,
-        "workshopHours": 16
+        "agriculture": 3,
+        "facilities": 2,
+        "care": 2,
+        "workshop": 2
       }
     },
     "node-val-di-susa": {
@@ -100,7 +84,7 @@
       "name": "Val di Susa Eco-Federation",
       "bioregion": "Cottian Alps Bioregion",
       "country": "Italy",
-      "currencySymbol": "\u20ac",
+      "currencySymbol": "€",
       "currencyCode": "EUR",
       "currencyName": "Euro",
       "lat": 45.1328,
@@ -214,7 +198,7 @@
         "food": {
           "granaryStoredKcal": 1350000,
           "dailyBiometricFloorKcal": 39600,
-          "daysRemaining": 34.0
+          "daysRemaining": 34
         },
         "compute": {
           "meshMflops": 8000,
@@ -392,7 +376,7 @@
         "food": {
           "granaryStoredKcal": 1950000,
           "dailyBiometricFloorKcal": 57200,
-          "daysRemaining": 34.0
+          "daysRemaining": 34
         },
         "compute": {
           "meshMflops": 11000,
@@ -456,7 +440,7 @@
       "name": "Kerala Coastal Autonomous Commune",
       "bioregion": "Malabar Coast",
       "country": "India",
-      "currencySymbol": "\u20b9",
+      "currencySymbol": "₹",
       "currencyCode": "INR",
       "currencyName": "Indian Rupee",
       "lat": 9.9312,
@@ -541,28 +525,6 @@
       }
     }
   },
-  "caseLawPrecedents": [
-    {
-      "docketId": "SIM-QA-01",
-      "title": "Quorum Scaling for Emerging Nodes (< 50 Pop)",
-      "originNode": "Detroit Delray Commons",
-      "constitutionalArticle": "Art. 4.2.1",
-      "ratified": true,
-      "ratifiedTick": 0,
-      "threshold": 0.75,
-      "precedentRule": "Emerging communities (<50 citizens) hold sovereign council sortitions with 3 randomly drawn citizens in odd parity."
-    },
-    {
-      "docketId": "SIM-QA-02",
-      "title": "Dual-Tier Tool Classification: Personal Craft vs. Civic Library",
-      "originNode": "Val di Susa Eco-Federation",
-      "constitutionalArticle": "Art. 3.1 & 3.4",
-      "ratified": true,
-      "ratifiedTick": 0,
-      "threshold": 0.75,
-      "precedentRule": "Hand tools are inviolable personal property; heavy machining tools circulate through the open FabLab tool library."
-    }
-  ],
   "metadata": {
     "engineVersion": "0.1.0",
     "consensusStandard": "Git-as-a-State-Anchor (O-ASIS Dual-Track Protocol)",
@@ -570,5 +532,5 @@
     "author": "Kyberlex <kyberlex@proton.me>",
     "license": "AGPL-3.0-or-later"
   },
-  "thermoConsensusHash": "48bd31aed62ca1d35b50ee12011eef2eedf97039e0b01be92032ed9dadcd1948"
+  "thermoConsensusHash": "9334fa23f73621b476d746fe390840a668a06d5f495e1ffef6b7baab08b2e1db"
 }
