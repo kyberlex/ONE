@@ -1196,5 +1196,13 @@ export const id = {
   snapshotBtnViewGithub: 'Lihat Jangkar di GitHub',
   snapshotExplainerTitle: 'Cara Kerja Git-sebagai-State-Anchor',
   snapshotExplainerDesc: 'Daripada mengandalkan database cloud terpusat yang mahal dan dapat disita atau ditutup, O.N.E. menggunakan komitmen repositori Git sebagai pos pemeriksaan konsensus terdesentralisasi yang tidak dapat diubah. Gameplay real-time berjalan 100% peer-to-peer melalui WebRTC dan IndexedDB lokal, sementara GitHub menyimpan snapshot jangka panjang tanpa biaya.',
-  snapshotResynced: 'Berhasil disinkronkan dengan snapshot Git kanonik!'
+  snapshotResynced: 'Berhasil disinkronkan dengan snapshot Git kanonik!',
+  snapshotAutoAnchor: 'Jangkar Otomatis ke GitHub (Progres Dalam Game)',
+  snapshotAutoAnchorDesc: 'Secara otomatis memasukkan snapshot status dunia ke GitHub saat Anda bermain (setiap hari/jam sekali).',
+  snapshotBtnPushNow: 'Dorong Snapshot ke GitHub Sekarang',
+  snapshotPushing: 'Menambatkan snapshot ke GitHub...',
+  snapshotPushSuccess: 'Snapshot berhasil ditautkan ke repositori GitHub!',
+  snapshotRelaySettings: 'Setelan Proksi Relai (Skrip Google Apps)',
+  snapshotRelayUrlDesc: 'Proksi tanpa server otonom yang memasang snapshot ke repositori GitHub tanpa mengekspos token.',
+  snapshotLastAnchor: 'Jangkar GitHub Terakhir'
 };

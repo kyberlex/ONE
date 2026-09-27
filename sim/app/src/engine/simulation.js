@@ -17,6 +17,7 @@ import { storageIDB } from './storage_idb.js';
 import { TradeConvoyEngine } from './trade_convoy.js';
 import { CivicProjectsEngine } from './civic_projects.js';
 import { ConfederatedPeerReviewEngine } from './peer_review_engine.js';
+import { ConsensusAnchorManager } from './consensus_anchor.js';
 
 export class SimulationManager {
   constructor(config = {}) {
@@ -50,8 +51,9 @@ export class SimulationManager {
     this.sortition.seatNewCouncil(this.node.citizens, this.tickCount);
     this.node.updateLaborAndMorale();
 
-    // Canonical Git Consensus Snapshot Anchor metadata
+    // Canonical Git Consensus Snapshot Anchor metadata & Autonomous Relay Engine
     this.consensusSnapshot = null;
+    this.consensusAnchor = new ConsensusAnchorManager(this);
 
     // Restore saved simulation state if available
     this.loadFromLocalStorage();
@@ -144,6 +146,11 @@ export class SimulationManager {
       this.saveToLocalStorage();
     } else if (this.tickCount % 12 === 0) {
       this.saveToLocalStorage();
+    }
+
+    // 2b. Autonomous Git-Anchor Check (Auto-commit snapshot to GitHub via Apps Script relay)
+    if (this.consensusAnchor) {
+      this.consensusAnchor.checkAndAutoAnchor(this.tickCount);
     }
 
     // 3. Sortition council rotation (every 30 days = 720 ticks)

@@ -1196,5 +1196,13 @@ export const ko = {
   snapshotBtnViewGithub: 'GitHub에서 앵커 보기',
   snapshotExplainerTitle: '상태 앵커로서의 Git 작동 방식',
   snapshotExplainerDesc: 'O.N.E.는 점유하거나 폐쇄할 수 있는 값비싼 중앙 집중식 클라우드 데이터베이스에 의존하는 대신, Git 저장소 커밋을 불변의 분산 합의 체크포인트로 사용합니다. 실시간 게임플레이는 WebRTC 및 로컬 IndexedDB를 통해 100% P2P로 실행되며 GitHub는 무료로 장기 스냅샷을 고정합니다.',
-  snapshotResynced: '정식 Git 스냅샷과 성공적으로 동기화되었습니다!'
+  snapshotResynced: '정식 Git 스냅샷과 성공적으로 동기화되었습니다!',
+  snapshotAutoAnchor: 'GitHub에 자동 고정(게임 내 진행)',
+  snapshotAutoAnchorDesc: '플레이하는 동안 자동으로 세계 상태 스냅샷을 GitHub에 커밋합니다(일/시간마다 한 번씩).',
+  snapshotBtnPushNow: '지금 GitHub에 스냅샷 푸시',
+  snapshotPushing: 'GitHub에 스냅샷을 고정하는 중...',
+  snapshotPushSuccess: '스냅샷이 GitHub 저장소에 성공적으로 고정되었습니다!',
+  snapshotRelaySettings: '릴레이 프록시 설정(Google Apps Script)',
+  snapshotRelayUrlDesc: '토큰을 노출하지 않고 GitHub 저장소에 스냅샷을 고정하는 자율 서버리스 프록시입니다.',
+  snapshotLastAnchor: '마지막 GitHub 앵커'
 };

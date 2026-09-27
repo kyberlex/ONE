@@ -1196,5 +1196,13 @@ export const en = {
   snapshotBtnViewGithub: 'View Anchor on GitHub',
   snapshotExplainerTitle: 'How Git-as-a-State-Anchor Works',
   snapshotExplainerDesc: 'Instead of relying on costly, centralized cloud databases that can be seized or shut down, O.N.E. uses Git repository commits as immutable, decentralized consensus checkpoints. Real-time gameplay runs 100% peer-to-peer via WebRTC and local IndexedDB, while GitHub anchors long-term snapshots at zero cost.',
-  snapshotResynced: 'Successfully synchronized with canonical Git snapshot!'
+  snapshotResynced: 'Successfully synchronized with canonical Git snapshot!',
+  snapshotAutoAnchor: 'Auto-Anchor to GitHub (In-Game Progression)',
+  snapshotAutoAnchorDesc: 'Automatically commits world state snapshots to GitHub as you play (once every circadian day / hour).',
+  snapshotBtnPushNow: 'Push Snapshot to GitHub Now',
+  snapshotPushing: 'Anchoring snapshot to GitHub...',
+  snapshotPushSuccess: 'Snapshot successfully anchored to GitHub repository!',
+  snapshotRelaySettings: 'Relay Proxy Settings (Google Apps Script)',
+  snapshotRelayUrlDesc: 'Autonomous serverless proxy anchoring snapshots to the GitHub repository without exposing tokens.',
+  snapshotLastAnchor: 'Last GitHub Anchor'
 };

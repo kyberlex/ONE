@@ -1196,5 +1196,13 @@ export const hi = {
   snapshotBtnViewGithub: 'GitHub पर एंकर देखें',
   snapshotExplainerTitle: 'राज्य-एंकर के रूप में गिट कैसे काम करता है',
   snapshotExplainerDesc: 'महंगे, केंद्रीकृत क्लाउड डेटाबेस पर भरोसा करने के बजाय, जिन्हें जब्त या बंद किया जा सकता है, O.N.E. Git रिपॉजिटरी कमिट को अपरिवर्तनीय, विकेन्द्रीकृत सर्वसम्मति चौकियों के रूप में उपयोग करता है। रीयल-टाइम गेमप्ले WebRTC और स्थानीय IndexedDB के माध्यम से 100% पीयर-टू-पीयर चलता है, जबकि GitHub शून्य लागत पर दीर्घकालिक स्नैपशॉट एंकर करता है।',
-  snapshotResynced: 'कैनोनिकल Git स्नैपशॉट के साथ सफलतापूर्वक सिंक्रनाइज़ किया गया!'
+  snapshotResynced: 'कैनोनिकल Git स्नैपशॉट के साथ सफलतापूर्वक सिंक्रनाइज़ किया गया!',
+  snapshotAutoAnchor: 'GitHub पर ऑटो-एंकर (इन-गेम प्रगति)',
+  snapshotAutoAnchorDesc: 'जैसे ही आप खेलते हैं, स्वचालित रूप से विश्व स्थिति स्नैपशॉट को GitHub पर भेज देता है (प्रत्येक सर्कैडियन दिन/घंटे में एक बार)।',
+  snapshotBtnPushNow: 'स्नैपशॉट को अभी GitHub पर पुश करें',
+  snapshotPushing: 'GitHub पर एंकरिंग स्नैपशॉट...',
+  snapshotPushSuccess: 'स्नैपशॉट सफलतापूर्वक GitHub रिपॉजिटरी में एंकर हो गया!',
+  snapshotRelaySettings: 'रिले प्रॉक्सी सेटिंग्स (Google Apps स्क्रिप्ट)',
+  snapshotRelayUrlDesc: 'टोकन को उजागर किए बिना GitHub रिपॉजिटरी में स्वायत्त सर्वर रहित प्रॉक्सी एंकरिंग स्नैपशॉट।',
+  snapshotLastAnchor: 'अंतिम GitHub एंकर'
 };

@@ -1196,5 +1196,13 @@ export const ar = {
   snapshotBtnViewGithub: 'عرض المرساة على جيثب',
   snapshotExplainerTitle: 'كيف يعمل Git-as-a-State-Anchor',
   snapshotExplainerDesc: 'بدلاً من الاعتماد على قواعد البيانات السحابية المركزية المكلفة التي يمكن الاستيلاء عليها أو إغلاقها، تقوم O.N.E. يستخدم التزامات مستودع Git كنقاط تفتيش إجماعية لامركزية وغير قابلة للتغيير. يتم تشغيل اللعب في الوقت الفعلي بنسبة 100% من نظير إلى نظير عبر WebRTC وIndexedDB المحلي، بينما يقوم GitHub بتثبيت لقطات طويلة المدى بدون تكلفة.',
-  snapshotResynced: 'تمت المزامنة بنجاح مع لقطة Git الأساسية!'
+  snapshotResynced: 'تمت المزامنة بنجاح مع لقطة Git الأساسية!',
+  snapshotAutoAnchor: 'الارتباط التلقائي بـ GitHub (التقدم داخل اللعبة)',
+  snapshotAutoAnchorDesc: 'يُلزم تلقائيًا لقطات الحالة العالمية بـ GitHub أثناء اللعب (مرة واحدة كل يوم / ساعة يومية).',
+  snapshotBtnPushNow: 'ادفع Snapshot إلى GitHub الآن',
+  snapshotPushing: 'تثبيت اللقطة على GitHub...',
+  snapshotPushSuccess: 'تم تثبيت اللقطة بنجاح في مستودع GitHub!',
+  snapshotRelaySettings: 'ترحيل إعدادات الوكيل (Google Apps Script)',
+  snapshotRelayUrlDesc: 'لقطات إرساء وكيل مستقل بدون خادم إلى مستودع GitHub دون الكشف عن الرموز المميزة.',
+  snapshotLastAnchor: 'آخر مرساة جيثب'
 };

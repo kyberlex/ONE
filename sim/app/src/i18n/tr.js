@@ -1196,5 +1196,13 @@ export const tr = {
   snapshotBtnViewGithub: 'Anchor\'ı GitHub\'da görüntüleyin',
   snapshotExplainerTitle: 'Durum Çapası Olarak Git Nasıl Çalışır?',
   snapshotExplainerDesc: 'O.N.E., ele geçirilebilecek veya kapatılabilecek maliyetli, merkezi bulut veritabanlarına güvenmek yerine; Git deposu taahhütlerini değişmez, merkezi olmayan fikir birliği kontrol noktaları olarak kullanır. Gerçek zamanlı oyun, WebRTC ve yerel IndexedDB aracılığıyla %100 eşler arası çalışır; GitHub ise uzun vadeli anlık görüntüleri sıfır maliyetle sabitler.',
-  snapshotResynced: 'Kurallı Git anlık görüntüsüyle başarıyla senkronize edildi!'
+  snapshotResynced: 'Kurallı Git anlık görüntüsüyle başarıyla senkronize edildi!',
+  snapshotAutoAnchor: 'GitHub\'a Otomatik Bağlantı (Oyun İçi İlerleme)',
+  snapshotAutoAnchorDesc: 'Siz oynarken dünya durumunun anlık görüntülerini otomatik olarak GitHub\'a aktarır (her sirkadiyen günde/saatte bir).',
+  snapshotBtnPushNow: 'Anlık Görüntüyü Şimdi GitHub\'a Aktarın',
+  snapshotPushing: 'Anlık görüntü GitHub\'a bağlanıyor...',
+  snapshotPushSuccess: 'Anlık görüntü GitHub deposuna başarıyla bağlandı!',
+  snapshotRelaySettings: 'Geçiş Proxy Ayarları (Google Apps Komut Dosyası)',
+  snapshotRelayUrlDesc: 'Otonom sunucusuz proxy, anlık görüntüleri belirteçleri açığa çıkarmadan GitHub deposuna sabitler.',
+  snapshotLastAnchor: 'Son GitHub Bağlantısı'
 };

@@ -859,6 +859,45 @@ export class PanelNodeController {
                 🔗 ${t('snapshotBtnViewGithub', 'View Anchor on GitHub')}
               </a>
             </div>
+
+            <!-- Autonomous In-Game Cloud Sync Section -->
+            <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed rgba(255, 255, 255, 0.12);">
+              <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;">
+                <div>
+                  <label style="display: inline-flex; align-items: center; gap: 8px; cursor: pointer; color: #f1f5f9; font-weight: 600; font-size: 13px;">
+                    <input type="checkbox" id="chk-auto-anchor" ${this.sim.consensusAnchor?.enabled ? 'checked' : ''} style="width: 17px; height: 17px; accent-color: var(--emerald-primary); cursor: pointer;" />
+                    <span>${t('snapshotAutoAnchor', 'Auto-Anchor to GitHub (In-Game Progression)')}</span>
+                  </label>
+                  <span style="font-size: 11px; color: #94a3b8; display: block; margin-top: 2px;">
+                    ${t('snapshotAutoAnchorDesc', 'Automatically commits world state snapshots to GitHub as you play (once every circadian day / hour).')}
+                  </span>
+                  <div style="font-size: 11px; color: #cbd5e1; margin-top: 4px;">
+                    <span style="color: #64748b;">${t('snapshotLastAnchor', 'Last GitHub Anchor')}:</span>
+                    <strong style="color: #38bdf8; margin-left: 4px;">
+                      ${this.sim.consensusAnchor?.lastAnchoredTick >= 0 ? `Tick ${this.sim.consensusAnchor.lastAnchoredTick} (${new Date(this.sim.consensusAnchor.lastAnchoredTime).toLocaleTimeString()})` : t('snapshotNeverAnchored', 'Genesis Block #1')}
+                    </strong>
+                    ${this.sim.consensusAnchor?.lastCommitUrl ? `<a href="${this.sim.consensusAnchor.lastCommitUrl}" target="_blank" rel="noopener noreferrer" style="color: #10b981; margin-left: 8px; text-decoration: underline;">Commit ↗</a>` : ''}
+                  </div>
+                </div>
+
+                <button id="btn-push-relay-now" class="btn-action-nav" style="background: linear-gradient(135deg, #0284c7, #0369a1); color: #ffffff; font-weight: bold; cursor: pointer; padding: 8px 16px; border-radius: 6px; font-size: 12px; border: 1px solid #38bdf8;">
+                  🚀 ${t('snapshotBtnPushNow', 'Push Snapshot to GitHub Now')}
+                </button>
+              </div>
+
+              <div id="relay-anchor-status" class="hidden" style="margin-top: 10px; font-size: 12px; padding: 8px 12px; border-radius: 6px;"></div>
+
+              <details style="margin-top: 12px; background: rgba(0, 0, 0, 0.25); border-radius: 6px; padding: 8px 12px; font-size: 11px; color: #94a3b8;">
+                <summary style="cursor: pointer; color: #38bdf8; font-weight: 500;">⚙️ ${t('snapshotRelaySettings', 'Relay Proxy Settings (Google Apps Script)')}</summary>
+                <div style="margin-top: 8px; display: flex; flex-direction: column; gap: 6px;">
+                  <span>${t('snapshotRelayUrlDesc', 'Autonomous serverless proxy anchoring snapshots to the GitHub repository without exposing tokens.')}</span>
+                  <div style="display: flex; gap: 8px;">
+                    <input type="text" id="input-relay-url" value="${this.sim.consensusAnchor?.getRelayUrl() || ''}" placeholder="https://script.google.com/macros/s/.../exec" style="flex: 1; background: #0f172a; border: 1px solid #334155; color: #f8fafc; padding: 6px 10px; border-radius: 4px; font-family: monospace; font-size: 11px;" />
+                    <button id="btn-save-relay-url" class="btn-sm" style="background: #334155; color: #f8fafc; border: 1px solid #475569; padding: 6px 12px; border-radius: 4px; cursor: pointer;">Save</button>
+                  </div>
+                </div>
+              </details>
+            </div>
           </div>
 
           <!-- Explainer Card -->
@@ -1059,6 +1098,65 @@ export class PanelNodeController {
             setTimeout(() => { copyHashBtn.textContent = '📋'; }, 1800);
           }).catch(() => {});
         }
+      });
+    }
+
+    // Auto-Anchor Toggle
+    const chkAuto = this.contentEl.querySelector('#chk-auto-anchor');
+    if (chkAuto && this.sim.consensusAnchor) {
+      chkAuto.addEventListener('change', () => {
+        this.sim.consensusAnchor.setAutoAnchorEnabled(chkAuto.checked);
+      });
+    }
+
+    // Manual Push to Relay Now
+    const pushNowBtn = this.contentEl.querySelector('#btn-push-relay-now');
+    const statusBox = this.contentEl.querySelector('#relay-anchor-status');
+    if (pushNowBtn && this.sim.consensusAnchor) {
+      pushNowBtn.addEventListener('click', async () => {
+        pushNowBtn.disabled = true;
+        const origText = pushNowBtn.textContent;
+        pushNowBtn.textContent = `⏳ ${t('snapshotPushing', 'Anchoring snapshot to GitHub...')}`;
+        if (statusBox) {
+          statusBox.className = 'status-info';
+          statusBox.style.background = 'rgba(2, 132, 199, 0.2)';
+          statusBox.style.border = '1px solid #0284c7';
+          statusBox.style.color = '#e0f2fe';
+          statusBox.textContent = `📡 ${t('snapshotPushing', 'Anchoring snapshot to GitHub...')}`;
+          statusBox.classList.remove('hidden');
+        }
+
+        const res = await this.sim.consensusAnchor.pushSnapshotToRelay({ isAuto: false });
+
+        if (res.success) {
+          if (statusBox) {
+            statusBox.style.background = 'rgba(16, 185, 129, 0.2)';
+            statusBox.style.border = '1px solid #10b981';
+            statusBox.style.color = '#d1fae5';
+            statusBox.innerHTML = `✅ <strong>${t('snapshotPushSuccess', 'Snapshot successfully anchored to GitHub repository!')}</strong> (Tick ${res.tick})${res.commitUrl ? ` <a href="${res.commitUrl}" target="_blank" rel="noopener noreferrer" style="color: #6ee7b7; margin-left: 6px; text-decoration: underline;">View Commit ↗</a>` : ''}`;
+          }
+          this.render('snapshot');
+        } else {
+          if (statusBox) {
+            statusBox.style.background = 'rgba(239, 68, 68, 0.2)';
+            statusBox.style.border = '1px solid #ef4444';
+            statusBox.style.color = '#fee2e2';
+            statusBox.textContent = `⚠️ ${res.reason || res.error || 'Failed to anchor snapshot'}`;
+          }
+          pushNowBtn.disabled = false;
+          pushNowBtn.textContent = origText;
+        }
+      });
+    }
+
+    // Save Relay URL
+    const saveRelayBtn = this.contentEl.querySelector('#btn-save-relay-url');
+    const inputRelayUrl = this.contentEl.querySelector('#input-relay-url');
+    if (saveRelayBtn && inputRelayUrl && this.sim.consensusAnchor) {
+      saveRelayBtn.addEventListener('click', () => {
+        this.sim.consensusAnchor.setRelayUrl(inputRelayUrl.value.trim());
+        saveRelayBtn.textContent = '✓ Saved';
+        setTimeout(() => { saveRelayBtn.textContent = 'Save'; }, 1800);
       });
     }
   }

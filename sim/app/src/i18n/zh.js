@@ -1196,5 +1196,13 @@ export const zh = {
   snapshotBtnViewGithub: '在 GitHub 上查看锚点',
   snapshotExplainerTitle: 'Git 作为状态锚的工作原理',
   snapshotExplainerDesc: 'O.N.E. 不再依赖成本高昂、可被扣押或关闭的集中式云数据库。使用 Git 存储库提交作为不可变的、去中心化的共识检查点。实时游戏通过 WebRTC 和本地 IndexedDB 100% 点对点运行，而 GitHub 以零成本锚定长期快照。',
-  snapshotResynced: '已成功与规范 Git 快照同步！'
+  snapshotResynced: '已成功与规范 Git 快照同步！',
+  snapshotAutoAnchor: '自动锚定到 GitHub（游戏内进度）',
+  snapshotAutoAnchorDesc: '当您玩游戏时，自动将世界状态快照提交到 GitHub（每个昼夜节律日/小时一次）。',
+  snapshotBtnPushNow: '立即将快照推送到 GitHub',
+  snapshotPushing: '正在将快照锚定到 GitHub...',
+  snapshotPushSuccess: '快照已成功锚定到 GitHub 存储库！',
+  snapshotRelaySettings: '中继代理设置（Google Apps 脚本）',
+  snapshotRelayUrlDesc: '自治无服务器代理将快照锚定到 GitHub 存储库，而不暴露令牌。',
+  snapshotLastAnchor: '最后的 GitHub 锚点'
 };

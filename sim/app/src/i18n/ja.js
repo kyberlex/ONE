@@ -1196,5 +1196,13 @@ export const ja = {
   snapshotBtnViewGithub: 'GitHub のアンカーを表示',
   snapshotExplainerTitle: 'Git-as-a-State-Anchor の仕組み',
   snapshotExplainerDesc: 'O.N.E は、占有やシャットダウンの可能性がある高価な集中型クラウド データベースに依存するのではなく、 Git リポジトリのコミットを不変の分散型コンセンサス チェックポイントとして使用します。リアルタイム ゲームプレイは WebRTC とローカル IndexedDB を介して 100% ピアツーピアで実行され、GitHub はコストゼロで長期スナップショットを固定します。',
-  snapshotResynced: '正規の Git スナップショットとの同期に成功しました。'
+  snapshotResynced: '正規の Git スナップショットとの同期に成功しました。',
+  snapshotAutoAnchor: 'GitHub への自動アンカー (ゲーム内進行)',
+  snapshotAutoAnchorDesc: 'プレイ中に世界の状態のスナップショットを GitHub に自動的にコミットします (概日/時間ごとに 1 回)。',
+  snapshotBtnPushNow: '今すぐスナップショットを GitHub にプッシュする',
+  snapshotPushing: 'スナップショットを GitHub に固定しています...',
+  snapshotPushSuccess: 'スナップショットが GitHub リポジトリに正常に固定されました。',
+  snapshotRelaySettings: 'リレープロキシ設定（Google Apps Script）',
+  snapshotRelayUrlDesc: 'トークンを公開せずにスナップショットを GitHub リポジトリにアンカーする自律サーバーレス プロキシ。',
+  snapshotLastAnchor: '最後の GitHub アンカー'
 };

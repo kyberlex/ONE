@@ -1196,5 +1196,13 @@ export const fr = {
   snapshotBtnViewGithub: 'Voir l\'ancre sur GitHub',
   snapshotExplainerTitle: 'Comment fonctionne Git-as-a-State-Anchor',
   snapshotExplainerDesc: 'Au lieu de s\'appuyer sur des bases de données cloud centralisées et coûteuses qui peuvent être saisies ou fermées, O.N.E. utilise les validations du référentiel Git comme points de contrôle de consensus immuables et décentralisés. Le jeu en temps réel fonctionne 100 % peer-to-peer via WebRTC et IndexedDB local, tandis que GitHub ancre des instantanés à long terme sans frais.',
-  snapshotResynced: 'Synchronisation réussie avec l\'instantané canonique Git !'
+  snapshotResynced: 'Synchronisation réussie avec l\'instantané canonique Git !',
+  snapshotAutoAnchor: 'Ancrage automatique à GitHub (progression dans le jeu)',
+  snapshotAutoAnchorDesc: 'Envoie automatiquement des instantanés de l\'état du monde sur GitHub pendant que vous jouez (une fois par jour/heure circadien).',
+  snapshotBtnPushNow: 'Transférer l\'instantané vers GitHub maintenant',
+  snapshotPushing: 'Ancrage de l\'instantané à GitHub...',
+  snapshotPushSuccess: 'Snapshot ancré avec succès au référentiel GitHub !',
+  snapshotRelaySettings: 'Paramètres du proxy de relais (Google Apps Script)',
+  snapshotRelayUrlDesc: 'Proxy autonome sans serveur ancrant les instantanés au référentiel GitHub sans exposer les jetons.',
+  snapshotLastAnchor: 'Dernière ancre GitHub'
 };

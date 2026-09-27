@@ -1196,5 +1196,13 @@ export const it = {
   snapshotBtnViewGithub: 'Vedi Ancora su GitHub',
   snapshotExplainerTitle: 'Come Funziona Git come Ancora di Stato',
   snapshotExplainerDesc: 'Invece di affidarsi a costosi database cloud centralizzati soggetti a censure o disattivazioni, O.N.E. usa i commit del repository Git come checkpoint di consenso immutabili e decentralizzati. Il gioco in tempo reale opera al 100% peer-to-peer tramite WebRTC e IndexedDB locale a costo zero, mentre GitHub ancora gli snapshot periodici.',
-  snapshotResynced: 'Sincronizzazione completata con lo snapshot canonico di Git!'
+  snapshotResynced: 'Sincronizzazione completata con lo snapshot canonico di Git!',
+  snapshotAutoAnchor: 'Auto-Ancoraggio su GitHub (Durante il Gioco)',
+  snapshotAutoAnchorDesc: 'Salva e sincronizza automaticamente lo snapshot su GitHub mentre giochi (ogni giorno circadian / ora).',
+  snapshotBtnPushNow: 'Invia Subito Snapshot a GitHub',
+  snapshotPushing: 'Ancoraggio dello snapshot su GitHub in corso...',
+  snapshotPushSuccess: 'Snapshot ancorato con successo sul repository GitHub!',
+  snapshotRelaySettings: 'Configurazione Relay Proxy (Google Apps Script)',
+  snapshotRelayUrlDesc: 'Proxy serverless autonomo che ancora gli snapshot al repository GitHub senza esporre token privati.',
+  snapshotLastAnchor: 'Ultimo Ancoraggio GitHub'
 };
