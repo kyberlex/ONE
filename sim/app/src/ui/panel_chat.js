@@ -40,7 +40,7 @@ export class PanelChatController {
       launcher.setAttribute('title', 'P2P Village Commons Chat (E2EE)');
       launcher.innerHTML = `
         <span class="chat-launcher-icon">💬</span>
-        <span class="chat-launcher-label">${t('chatLauncherLabel', 'Village Chat')}</span>
+        <span class="chat-launcher-label" data-i18n="chatLauncherLabel">${t('chatLauncherLabel', 'Village Chat')}</span>
         <span id="chat-unread-badge" class="chat-unread-badge hidden">0</span>
       `;
       document.body.appendChild(launcher);
@@ -59,6 +59,16 @@ export class PanelChatController {
 
     this.bindEvents();
     this.render();
+  }
+
+  updateLauncherText() {
+    if (this.launcherBtn) {
+      const label = this.launcherBtn.querySelector('.chat-launcher-label');
+      if (label) {
+        label.textContent = t('chatLauncherLabel', 'Village Chat');
+      }
+      this.launcherBtn.setAttribute('title', t('chatLauncherTooltip', 'P2P Village Commons Chat (E2EE)'));
+    }
   }
 
   bindEvents() {
@@ -115,6 +125,7 @@ export class PanelChatController {
   }
 
   render() {
+    this.updateLauncherText();
     if (!this.container) return;
 
     const messages = this.chatEngine.getFilteredMessages(this.activeChannel);
@@ -136,7 +147,7 @@ export class PanelChatController {
             </div>
           </div>
           <div class="chat-header-actions">
-            <button id="btn-close-chat" class="btn-chat-icon" title="Minimize Chat">✕</button>
+            <button id="btn-close-chat" class="btn-chat-icon" title="${t('chatMinimizeTitle', 'Minimize Chat')}">✕</button>
           </div>
         </div>
 
@@ -158,7 +169,7 @@ export class PanelChatController {
           ${messages.length === 0 ? `
             <div class="chat-empty-feed">
               <span class="empty-icon">🕊️</span>
-              <p>No messages in this channel yet. Send a Smart Quick-Phrase or type below to coordinate with neighbors.</p>
+              <p>${t('chatEmptyFeed', 'No messages in this channel yet. Send a Smart Quick-Phrase or type below to coordinate with neighbors.')}</p>
             </div>
           ` : messages.map(msg => this.renderMessageCard(msg)).join('')}
         </div>
@@ -219,7 +230,7 @@ export class PanelChatController {
       actionCardHtml = `
         <div class="chat-action-card">
           <div class="action-card-header">
-            <span>⚡ Community Action Available:</span>
+            <span>${t('chatActionAvailable', '⚡ Community Action Available:')}</span>
             <strong>${msg.actionPayload?.amount ? `${msg.actionPayload.amount} ${msg.actionPayload.unit}` : ''}</strong>
           </div>
           <button class="btn-claim-action" data-msg-id="${msg.id}">
@@ -230,7 +241,7 @@ export class PanelChatController {
     } else if (msg.actionExecuted) {
       actionCardHtml = `
         <div class="chat-action-card executed">
-          <span>✓ Community transfer executed successfully.</span>
+          <span>${t('chatTransferExecuted', '✓ Community transfer executed successfully.')}</span>
         </div>
       `;
     }
@@ -242,7 +253,7 @@ export class PanelChatController {
           <div class="msg-author-bar">
             <span class="msg-author-name">${msg.authorName}</span>
             <span class="msg-vocation-tag">${msg.authorVocation || 'Resident'}</span>
-            ${msg.verified ? '<span class="msg-verified-badge" title="Firma crittografica verificata dal passaporto">🔒 Verificato</span>' : ''}
+            ${msg.verified ? `<span class="msg-verified-badge" title="${t('msgVerifiedTooltip', 'Cryptographic signature verified by sovereign passport')}">${t('msgVerifiedBadge', '🔒 Verified')}</span>` : ''}
             <span class="msg-time">${timeStr}</span>
           </div>
           <div class="msg-text-content">${msg.text}</div>

@@ -67,10 +67,10 @@ export class PanelDualTrackController {
         <!-- Dual-Track Tabs -->
         <div class="modal-tabs">
           <button class="tab-btn ${this.activeTab === 'blueprints3d' ? 'active' : ''}" data-dtab="blueprints3d">
-            📐 3D Solarpunk Blueprints (Dual-Scale & Logo Stamped)
+            ${t('blueprintArchTab', '📐 3D Solarpunk Blueprints (Dual-Scale & Logo Stamped)')}
           </button>
           <button class="tab-btn ${this.activeTab === 'techTree' ? 'active' : ''}" data-dtab="techTree">
-            🤖 FabLab Automation Robots
+            ${t('blueprintRobotsTab', '🤖 FabLab Automation Robots')}
           </button>
         </div>
 
@@ -98,16 +98,16 @@ export class PanelDualTrackController {
             <!-- Logo Stamped Badge Indicator -->
             <div class="stamped-logo-badge">
               <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="stamped-logo-icon" />
-              <span>OFFICIAL O.N.E. EMBLEM EMBOSSED ON GEOMETRY</span>
+              <span>${t('officialEmblemBadge', 'OFFICIAL O.N.E. EMBLEM EMBOSSED ON GEOMETRY')}</span>
             </div>
 
             <!-- Scale Mode Switcher Overlay -->
             <div class="scale-mode-pill-box">
               <button class="scale-toggle-btn ${this.scaleMode === 'model' ? 'active' : ''}" data-scale="model">
-                🔍 1:50 Miniature (Desktop 3D Print)
+                ${t('scaleModelDesktop', '🔍 1:50 Miniature (Desktop 3D Print)')}
               </button>
               <button class="scale-toggle-btn ${this.scaleMode === 'real' ? 'active' : ''}" data-scale="real">
-                📐 1:1 Real Scale (Engineering CAD)
+                ${t('scaleRealCAD', '📐 1:1 Real Scale (Engineering CAD)')}
               </button>
             </div>
           </div>
@@ -124,10 +124,10 @@ export class PanelDualTrackController {
               </div>
               <div class="export-actions-row">
                 <button id="btn-export-stl" class="btn-primary-export" title="Export watertight binary .STL with embossed O.N.E. logo and license header">
-                  📥 Download Watertight .STL (${this.scaleMode.toUpperCase()} • Logo Stamped)
+                  ${t('downloadStlBtn', '📥 Download Watertight .STL ({scale} • Logo Stamped)').replace('{scale}', this.scaleMode.toUpperCase())}
                 </button>
                 <button id="btn-copy-yaml" class="btn-secondary-export" title="Copy tested Home Assistant YAML with official O.N.E. banner">
-                  📄 Copy Home Assistant YAML
+                  ${t('copyYamlBtn', '📄 Copy Home Assistant YAML')}
                 </button>
               </div>
             </div>
@@ -136,19 +136,19 @@ export class PanelDualTrackController {
 
             <div class="specs-chips-grid">
               <div class="spec-chip">
-                <strong>Current Scale:</strong>
+                <strong>${t('currentScaleLabel', 'Current Scale:')}</strong>
                 <span>${this.scaleMode === 'model' ? currentArch.scaleMiniature : currentArch.scaleReal}</span>
               </div>
               <div class="spec-chip">
-                <strong>Layer Height:</strong>
+                <strong>${t('layerHeightLabel', 'Layer Height:')}</strong>
                 <span>${currentArch.printSpecs.layerHeight}</span>
               </div>
               <div class="spec-chip">
-                <strong>Infill & Material:</strong>
+                <strong>${t('infillMaterialLabel', 'Infill & Material:')}</strong>
                 <span>${currentArch.printSpecs.infill} (${currentArch.printSpecs.material})</span>
               </div>
               <div class="spec-chip">
-                <strong>Supports:</strong>
+                <strong>${t('supportsLabel', 'Supports:')}</strong>
                 <span>${currentArch.printSpecs.supports}</span>
               </div>
             </div>
@@ -189,7 +189,7 @@ export class PanelDualTrackController {
                 <div class="tech-item-header">
                   <div>
                     <h5>${item.name}</h5>
-                    <span class="one-stamp-tag" style="margin-top: 4px;"><img src="/one-logo-white.svg" alt="O.N.E." /> FABLAB OPEN BLUEPRINT</span>
+                    <span class="one-stamp-tag" style="margin-top: 4px;"><img src="/one-logo-white.svg" alt="O.N.E." /> ${t('fablabOpenBlueprint', 'FABLAB OPEN BLUEPRINT')}</span>
                   </div>
                   <span class="count-badge">${currentCount} ${t('activeRobotsBadge', 'Active')}</span>
                 </div>

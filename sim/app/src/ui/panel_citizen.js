@@ -117,45 +117,45 @@ export class PanelCitizenController {
         <div class="citizen-dossier-info">
           <div class="citizen-dossier-header-row">
             ${statusBadge}
-            <span class="usufruct-seal">🛡️ Usufruct Holder</span>
+            <span class="usufruct-seal">${t('citizenUsufructHolder', '🛡️ Usufruct Holder')}</span>
           </div>
 
           <div class="citizen-stats-card">
             <div class="stat-line">
-              <span class="stat-label">Vocation:</span>
+              <span class="stat-label">${t('citizenVocationLabel', 'Vocation:')}</span>
               <span class="stat-value">${vocIcon} <strong>${vocName}</strong></span>
             </div>
             <div class="stat-line">
-              <span class="stat-label">Social Labor:</span>
-              <span class="stat-value"><strong>${c.dailyHours || 4} hours / day</strong> (Sabbatical Safe)</span>
+              <span class="stat-label">${t('citizenSocialLaborLabel', 'Social Labor:')}</span>
+              <span class="stat-value"><strong>${c.dailyHours || 4} ${t('citizenHoursPerDay', 'hours / day')}</strong> ${t('citizenSabbaticalSafe', '(Sabbatical Safe)')}</span>
             </div>
             <div class="stat-line">
-              <span class="stat-label">Current Routine:</span>
+              <span class="stat-label">${t('citizenCurrentRoutineLabel', 'Current Routine:')}</span>
               <span class="stat-value text-green">${activityDesc}</span>
             </div>
             <div class="stat-line">
-              <span class="stat-label">Usufruct Pod:</span>
+              <span class="stat-label">${t('citizenUsufructPodLabel', 'Usufruct Pod:')}</span>
               <span class="stat-value">🏡 <strong>Pod #${homePodNum}</strong> (${homePodType})</span>
             </div>
             <div class="stat-line">
-              <span class="stat-label">Biometric Floor:</span>
-              <span class="stat-value">🥗 2,200 kcal/die • 💧 50 L/die Guaranteed</span>
+              <span class="stat-label">${t('citizenBiometricFloorLabel', 'Biometric Floor:')}</span>
+              <span class="stat-value">${t('citizenBiometricFloorDesc', '🥗 2,200 kcal/die • 💧 50 L/die Guaranteed')}</span>
             </div>
           </div>
 
           <div class="constitutional-protection-box">
-            <div class="quote-header">📜 O.N.E. CONSTITUTION • USURPATION DEFENSE</div>
-            <p>"No citizen may be evicted, priced out, or subjected to debt servitude. Basic sustenance and dwelling usufruct are unconditional birthrights."</p>
+            <div class="quote-header">${t('citizenDefenseHeader', '📜 O.N.E. CONSTITUTION • USURPATION DEFENSE')}</div>
+            <p>${t('citizenDefenseDesc', '"No citizen may be evicted, priced out, or subjected to debt servitude. Basic sustenance and dwelling usufruct are unconditional birthrights."')}</p>
           </div>
 
           <div class="citizen-actions-row">
             ${c.homeDwelling ? `
               <button id="btn-locate-citizen-pod" class="btn-secondary" style="flex: 1;">
-                🏡 Center on Pod #${homePodNum}
+                ${t('citizenCenterPodBtn', '🏡 Center on Pod #{num}').replace('{num}', homePodNum)}
               </button>
             ` : ''}
             <button id="btn-chat-with-citizen" class="btn-primary" style="flex: 1.2;">
-              💬 Message in Village Chat
+              ${t('citizenChatBtn', '💬 Message in Village Chat')}
             </button>
           </div>
         </div>

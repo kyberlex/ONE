@@ -8,6 +8,7 @@
 
 <p align="center">
   <a href="https://open-networked-earth.surge.sh">🌐 Live Edge Platform</a> •
+  <a href="https://notebook.google.com/notebook/c123b58e-7e33-4565-8c1c-c5da2de98471">🧠 Interactive AI Oracle</a> •
   <a href="https://github.com/kyberlex/ONE/discussions">💬 Dialectic Forum & RFCs</a> •
   <a href="sim/README.md">🎮 Living Web Sandbox</a> •
   <a href="simone/simone-specs.md">🔬 Scientific Co-Simulator</a> •
@@ -30,6 +31,10 @@ Artificial Intelligence and humanoid robotics are eliminating wage labor forever
    All legislative and judicial bodies rotate strictly by statistical lottery (sortition) in strict odd parity, eliminating political parties, campaign finance, and corporate lobbying.
 3. **Thermodynamic Invariants (Biocentric Equilibrium):**  
    Economic production is governed by Leontief input-output matrices and Ostrom thermodynamic carrying capacities, ensuring zero planned obsolescence and closed-loop material cycles.
+
+> 🧠 **Interactive AI Oracle (Google NotebookLM):**  
+> Pose your hardest systemic questions, test edge-case objections, or query the full canonical constitution and simulation proofs via the official [O.N.E. NotebookLM Public Knowledge Base](https://notebook.google.com/notebook/c123b58e-7e33-4565-8c1c-c5da2de98471).  
+> *(Note: A Google account is required by NotebookLM to interact with the oracle).*
 
 ---
 

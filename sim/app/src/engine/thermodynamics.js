@@ -7,21 +7,23 @@
  */
 
 export const WEATHER_TYPES = {
-  SUNNY: { id: 'SUNNY', icon: '☀️', name: 'Sunny & Clear', cloudCover: 0.05, rainfallMmPerHour: 0.0, windSpeedKmh: 14, temperatureC: 24 },
-  PARTLY_CLOUDY: { id: 'PARTLY_CLOUDY', icon: '⛅', name: 'Partly Cloudy', cloudCover: 0.35, rainfallMmPerHour: 0.0, windSpeedKmh: 18, temperatureC: 21 },
-  OVERCAST: { id: 'OVERCAST', icon: '☁️', name: 'Overcast Skies', cloudCover: 0.85, rainfallMmPerHour: 0.0, windSpeedKmh: 22, temperatureC: 17 },
-  RAIN: { id: 'RAIN', icon: '🌧️', name: 'Gentle Rain', cloudCover: 0.95, rainfallMmPerHour: 3.8, windSpeedKmh: 28, temperatureC: 15 },
-  STORMY: { id: 'STORMY', icon: '⛈️', name: 'Thunderstorm', cloudCover: 1.0, rainfallMmPerHour: 14.5, windSpeedKmh: 58, temperatureC: 13 },
-  HEATWAVE: { id: 'HEATWAVE', icon: '🌡️', name: 'Extreme Heatwave', cloudCover: 0.0, rainfallMmPerHour: 0.0, windSpeedKmh: 8, temperatureC: 39 },
-  COLD_SNAP: { id: 'COLD_SNAP', icon: '❄️', name: 'Polar Cold Snap', cloudCover: 0.45, rainfallMmPerHour: 0.0, windSpeedKmh: 34, temperatureC: 1 }
+  SUNNY: { id: 'SUNNY', nameKey: 'weather_sunny', icon: '☀️', name: 'Sunny & Clear', cloudCover: 0.05, rainfallMmPerHour: 0.0, windSpeedKmh: 14, temperatureC: 24 },
+  PARTLY_CLOUDY: { id: 'PARTLY_CLOUDY', nameKey: 'weather_partly_cloudy', icon: '⛅', name: 'Partly Cloudy', cloudCover: 0.35, rainfallMmPerHour: 0.0, windSpeedKmh: 18, temperatureC: 21 },
+  OVERCAST: { id: 'OVERCAST', nameKey: 'weather_overcast', icon: '☁️', name: 'Overcast Skies', cloudCover: 0.85, rainfallMmPerHour: 0.0, windSpeedKmh: 22, temperatureC: 17 },
+  RAIN: { id: 'RAIN', nameKey: 'weather_rain', icon: '🌧️', name: 'Gentle Rain', cloudCover: 0.95, rainfallMmPerHour: 3.8, windSpeedKmh: 28, temperatureC: 15 },
+  STORMY: { id: 'STORMY', nameKey: 'weather_stormy', icon: '⛈️', name: 'Thunderstorm', cloudCover: 1.0, rainfallMmPerHour: 14.5, windSpeedKmh: 58, temperatureC: 13 },
+  HEATWAVE: { id: 'HEATWAVE', nameKey: 'weather_heatwave', icon: '🌡️', name: 'Extreme Heatwave', cloudCover: 0.0, rainfallMmPerHour: 0.0, windSpeedKmh: 8, temperatureC: 39 },
+  COLD_SNAP: { id: 'COLD_SNAP', nameKey: 'weather_cold_snap', icon: '❄️', name: 'Polar Cold Snap', cloudCover: 0.45, rainfallMmPerHour: 0.0, windSpeedKmh: 34, temperatureC: 1 }
 };
 
 export const DISASTER_TYPES = {
   HAILSTORM: {
     id: 'HAILSTORM',
     type: 'HAIL',
+    nameKey: 'disaster_hailstorm',
     name: 'Severe Hailstorm',
     icon: '🧊',
+    descKey: 'disaster_hailstorm_desc',
     desc: 'Golf-ball sized hail cracks solar array glass and greenhouse polycarbonate!',
     durationHours: 6,
     machineryDamage: { solarInverters: 25, greenhouseHvac: 20 },
@@ -30,8 +32,10 @@ export const DISASTER_TYPES = {
   FLASH_FLOOD: {
     id: 'FLASH_FLOOD',
     type: 'FLOOD',
+    nameKey: 'disaster_flood',
     name: 'Flash Flood & River Swell',
     icon: '🌊',
+    descKey: 'disaster_flood_desc',
     desc: 'Heavy torrential runoff silts up filtration systems and fills water basins to overflow!',
     durationHours: 8,
     machineryDamage: { waterPumpsFilters: 25 },
@@ -40,8 +44,10 @@ export const DISASTER_TYPES = {
   GALE_WIND: {
     id: 'GALE_WIND',
     type: 'GALE',
+    nameKey: 'disaster_gale',
     name: 'Gale-force Windstorm',
     icon: '🌪️',
+    descKey: 'disaster_gale_desc',
     desc: 'Severe gusts trigger automatic turbine braking and align LoRa masts into safe mode!',
     durationHours: 12,
     machineryDamage: { fablabCnc3D: 10 },
@@ -50,8 +56,10 @@ export const DISASTER_TYPES = {
   HEATWAVE_DROUGHT: {
     id: 'HEATWAVE_DROUGHT',
     type: 'DROUGHT',
+    nameKey: 'disaster_drought',
     name: 'Scorching Heat & Drought',
     icon: '☀️',
+    descKey: 'disaster_drought_desc',
     desc: 'Persistent heatwave drives water evaporation and stresses battery cooling systems!',
     durationHours: 24,
     machineryDamage: { batteryBank: 15, greenhouseHvac: 15 },
@@ -60,8 +68,10 @@ export const DISASTER_TYPES = {
   HEAT_DOME: {
     id: 'HEAT_DOME',
     type: 'HEAT_DOME',
+    nameKey: 'disaster_heatdome',
     name: 'Stagnant Heat Dome',
     icon: '🔥',
+    descKey: 'disaster_heatdome_desc',
     desc: 'Trapped high-pressure thermal ridge (44°C+) forces PV cell derating, battery chiller drain & aeroponic shock!',
     durationHours: 36,
     machineryDamage: { batteryBank: 20, greenhouseHvac: 25, solarInverters: 15 },
@@ -73,8 +83,10 @@ export const DISASTER_TYPES = {
   ATMOSPHERIC_RIVER: {
     id: 'ATMOSPHERIC_RIVER',
     type: 'ATMOSPHERIC_RIVER',
+    nameKey: 'disaster_river',
     name: 'Torrential Atmospheric River',
     icon: '🌊⛈️',
+    descKey: 'disaster_river_desc',
     desc: 'Continuous high-volume deluge (62mm/h) plunges solar into Dunkelflaute and clogs reverse osmosis filters with silt!',
     durationHours: 28,
     machineryDamage: { waterPumpsFilters: 30 },
@@ -205,6 +217,7 @@ export class ThermodynamicEngine {
     // Dynamic Atmospheric & Meteorological State
     this.weather = {
       type: 'PARTLY_CLOUDY',
+      nameKey: 'weather_partly_cloudy',
       icon: '⛅',
       name: 'Partly Cloudy',
       cloudCover: 0.35,
@@ -251,6 +264,7 @@ export class ThermodynamicEngine {
 
       const wConfig = WEATHER_TYPES[nextType] || WEATHER_TYPES.PARTLY_CLOUDY;
       this.weather.type = wConfig.id;
+      this.weather.nameKey = wConfig.nameKey;
       this.weather.icon = wConfig.icon;
       this.weather.name = wConfig.name;
       this.weather.cloudCover = wConfig.cloudCover;

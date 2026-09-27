@@ -15,7 +15,7 @@
     <header id="hud-header">
       <div class="hud-left-brand-row">
         <!-- O.N.E. Stamped Brand Badge -->
-        <div class="one-brand-badge" title="Open Networked Earth (O.N.E.)">
+        <div class="one-brand-badge" title="Open Networked Earth (O.N.E.)" data-i18n-title="oneBrandTooltip">
           <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="one-brand-logo-img" />
           <div class="one-brand-text">
             <span class="one-brand-name">O.N.E.</span>
@@ -25,9 +25,9 @@
 
         <div class="hud-meters-row">
         <!-- 1. ⚡ Energy & Heat -->
-        <div class="resource-meter" id="meter-energy" title="Conserved Energy Flow (kWh) & LiFePO4 Storage Buffer">
+        <div class="resource-meter" id="meter-energy" title="Available Energy Buffer & Battery Reserve" data-i18n-title="meterEnergyTooltip">
           <div class="meter-title-row">
-            <span data-i18n="meterEnergyTitle">⚡ Energy / Power</span>
+            <span data-i18n="meterEnergyTitle">⚡ Energy</span>
             <span id="meter-energy-delta" class="delta positive">+14.2 kW</span>
           </div>
           <div class="meter-bar-track">
@@ -40,9 +40,9 @@
         </div>
 
         <!-- 2. 💧 Potable Water & Irrigation -->
-        <div class="resource-meter" id="meter-water" title="Conserved Potable & Greywater Reservoir (Liters)">
+        <div class="resource-meter" id="meter-water" title="Potable Water & Irrigation Reserves" data-i18n-title="meterWaterTooltip">
           <div class="meter-title-row">
-            <span data-i18n="meterWaterTitle">💧 Water / Cistern</span>
+            <span data-i18n="meterWaterTitle">💧 Water</span>
             <span id="meter-water-delta" class="delta positive">+180 L/h</span>
           </div>
           <div class="meter-bar-track">
@@ -55,9 +55,9 @@
         </div>
 
         <!-- 3. 🥗 Calories & Food Sovereignty -->
-        <div class="resource-meter" id="meter-food" title="Food Reserves & Biometric Subsistence Floor (2,200 kcal/die)">
+        <div class="resource-meter" id="meter-food" title="Food Calorie Stocks" data-i18n-title="meterFoodTooltip">
           <div class="meter-title-row">
-            <span data-i18n="meterFoodTitle">🥗 Food / Granary</span>
+            <span data-i18n="meterFoodTitle">🥗 Food</span>
             <span id="meter-food-delta" class="delta positive">+420 kcal/h</span>
           </div>
           <div class="meter-bar-track">
@@ -70,9 +70,9 @@
         </div>
 
         <!-- 4. ⏳ Free Time & Community Morale -->
-        <div class="resource-meter" id="meter-morale" title="Free Discretionary Hours & Social Cohesion">
+        <div class="resource-meter" id="meter-morale" title="Free Time & Community Morale" data-i18n-title="meterMoraleTooltip">
           <div class="meter-title-row">
-            <span data-i18n="meterMoraleTitle">⏳ Free Time / Morale</span>
+            <span data-i18n="meterMoraleTitle">⏳ Free Time</span>
             <span id="meter-freehours-val">15.2h Free/day</span>
           </div>
           <div class="meter-bar-track">
@@ -84,26 +84,29 @@
           </div>
         </div>
       </div>
+      </div>
 
       <!-- 4-Level Discrete Zoom Bar -->
       <div class="discrete-zoom-bar">
-        <button id="btn-zoom-out" class="btn-zoom-step" title="Zoom Out to Previous Level (Pinch Out / Wheel Down)">−</button>
+        <button id="btn-zoom-out" class="btn-zoom-step" title="Zoom Out" data-i18n-title="zoomStepOut">−</button>
         <div class="zoom-segments">
-          <button id="btn-view-world" class="zoom-segment-btn" data-level="0" title="Planetary Earth Map">🌍 World</button>
-          <button class="zoom-segment-btn" data-level="1" title="Bioregional Basin">🏞️ Region</button>
-          <button id="btn-view-village" class="zoom-segment-btn active" data-level="2" title="Settlement Village 2D">🏘️ Node</button>
-          <button class="zoom-segment-btn" data-level="3" title="Architectural Interior">🏢 Building</button>
+          <button id="btn-view-world" class="zoom-segment-btn" data-level="0" title="World Map" data-i18n-title="zoomWorldTooltip" data-i18n="zoomWorld">🌍 World</button>
+          <button class="zoom-segment-btn" data-level="1" title="Region View" data-i18n-title="zoomRegionTooltip" data-i18n="zoomRegion">🏞️ Region</button>
+          <button id="btn-view-village" class="zoom-segment-btn active" data-level="2" title="Village Commons" data-i18n-title="zoomVillageTooltip" data-i18n="zoomVillage">🏘️ Village</button>
+          <button class="zoom-segment-btn" data-level="3" title="Building Interior" data-i18n-title="zoomInteriorTooltip" data-i18n="zoomInterior">🏢 Interior</button>
         </div>
-        <button id="btn-zoom-in" class="btn-zoom-step" title="Zoom In to Next Level (Pinch In / Wheel Up)">+</button>
-        <button id="btn-my-home" class="btn-toggle-view btn-home-pill hidden" title="Go to your primary usufruct dwelling">👑 <span id="home-pill-text">My Dwelling</span></button>
-        <button id="btn-open-passport" class="btn-toggle-view btn-passport-pill" title="Passaporto del Cittadino & Sincronizzazione Dispositivi">🔑 <span id="passport-btn-label">Passaporto</span></button>
+        <button id="btn-zoom-in" class="btn-zoom-step" title="Zoom In" data-i18n-title="zoomStepIn">+</button>
+        <button id="btn-my-home" class="btn-toggle-view btn-home-pill hidden" title="Go to Your Dwelling" data-i18n-title="goToMyHome">👑 <span id="home-pill-text" data-i18n="yourHomeBadge">My Home</span></button>
       </div>
 
-      <!-- Right HUD: Alert Ticker & Legacy Threat Meter (Translations Hidden for English-Only Mode) -->
+      <!-- Right HUD: Alert Ticker & Legacy Threat Meter -->
       <div class="hud-right-stack">
         <div class="hud-top-actions">
-          <!-- Language Selector (Hidden until game string extraction is complete) -->
-          <div class="lang-selector-box" style="display: none;">
+          <button id="btn-open-passport" class="btn-toggle-view btn-passport-pill" title="Player Profile & Character" data-i18n-title="passportTooltip">🔑 <span id="passport-btn-label" data-i18n="passportBtnLabel">Character</span></button>
+          <button id="btn-open-feedback" class="btn-toggle-view btn-feedback-pill" title="Ideas & Bug Reports" data-i18n-title="feedbackTooltip">💡 <span id="feedback-btn-label" data-i18n="btnFeedback">Ideas & Bugs</span></button>
+
+          <!-- Language Selector -->
+          <div class="lang-selector-box">
             <span class="lang-icon">🌐</span>
             <select id="lang-select" class="lang-dropdown" aria-label="Select Language">
               <option value="en">🇬🇧 English</option>
@@ -146,9 +149,6 @@
             <button id="btn-locate-bioregion" class="btn-map-control">
               📍 <span data-i18n="btnLocateMe">Locate My Bioregion</span>
             </button>
-            <button id="btn-toggle-map-style" class="btn-map-control" title="Toggle Satellite / Topo">
-              <span id="map-style-icon">🛰️</span> <span id="map-style-label" data-i18n="mapSatellite">Satellite Earth</span>
-            </button>
           </div>
           <div id="user-location-info" class="user-location-info hidden"></div>
         </div>
@@ -175,36 +175,31 @@
         <!-- Floating Interior Navigation Bar (Visible when inside a building/dwelling) -->
         <div id="hud-interior-bar" class="hud-interior-bar hidden">
           <div class="interior-breadcrumb">
-            <span class="interior-root">🏘️ Village</span>
+            <span class="interior-root" data-i18n="interiorRootVillage">🏘️ Village</span>
             <span class="interior-sep">/</span>
             <span id="interior-room-name" class="interior-current">🏢 FabLab & Circular Workshop</span>
           </div>
           <div class="interior-actions">
-            <button id="btn-exit-interior" class="btn-exit-interior" title="Return to outdoors overview (ESC)">
-              ⬅️ Exit to Village <span class="key-shortcut">[ESC]</span>
+            <button id="btn-exit-interior" class="btn-exit-interior" title="Return to outdoors overview (ESC)" data-i18n-title="btnExitInteriorTooltip">
+              <span data-i18n="btnExitInterior">⬅️ Exit to Village</span> <span class="key-shortcut">[ESC]</span>
             </button>
           </div>
         </div>
 
         <!-- Floating Interior Prop Tooltip Card (Positioned safely above footer) -->
-        <div id="interior-prop-tooltip" class="interior-prop-tooltip hidden" title="Click to inspect 3D WebGL model & STL blueprint">
+        <div id="interior-prop-tooltip" class="interior-prop-tooltip hidden" title="Click to inspect 3D WebGL model & STL blueprint" data-i18n-title="propTooltipInspect">
           <div class="prop-tooltip-header">
             <span id="prop-tooltip-name" class="prop-tooltip-name">Component</span>
-            <span class="prop-tooltip-badge">3D MODEL</span>
+            <span class="prop-tooltip-badge" data-i18n="propTooltipBadge3D">3D MODEL</span>
           </div>
-          <p id="prop-tooltip-desc" class="prop-tooltip-desc">High-performance bioclimatic usufruct fixture.</p>
-          <div class="prop-tooltip-hint">👆 Click to inspect 3D WebGL model & STL blueprint</div>
+          <p id="prop-tooltip-desc" class="prop-tooltip-desc" data-i18n="propTooltipDefaultDesc">High-performance bioclimatic usufruct fixture.</p>
+          <div class="prop-tooltip-hint" data-i18n="propTooltipInspectHint">👆 Click to inspect 3D WebGL model & STL blueprint</div>
         </div>
 
         <canvas id="settlement-canvas"></canvas>
       </div>
 
-      <!-- Floating Viewport Discrete Zoom Widget (Touch / Fast Click - Active across World, Region, Node & Building) -->
-      <div id="floating-zoom-control" class="floating-zoom-control">
-        <button id="btn-float-zoom-out" class="btn-float-step" title="Zoom Out Level">−</button>
-        <span id="floating-zoom-level-name" class="float-level-badge">🏘️ NODE</span>
-        <button id="btn-float-zoom-in" class="btn-float-step" title="Zoom In Level">+</button>
-      </div>
+
 
       <!-- Tactical Hex Canvas (Preserved for compatibility) -->
       <canvas id="hex-canvas" style="display: none;"></canvas>
@@ -219,30 +214,30 @@
           <span id="time-clock-display">12:00</span>
           <span id="time-day-display" class="text-dim">Day 1</span>
         </div>
-        <div class="weather-badge" id="hud-weather-badge" title="Dynamic Atmospheric Weather & Thermodynamics">
+        <div class="weather-badge" id="hud-weather-badge" title="Dynamic Atmospheric Weather & Thermodynamics" data-i18n-title="weatherBadgeTooltip">
           <span id="weather-icon">☀️</span>
           <span id="weather-temp-display">21°C</span>
           <span id="weather-name-display" class="text-dim">Sunny</span>
         </div>
         <div class="speed-btn-group">
-          <button id="btn-speed-0" class="btn-speed" title="Pause">⏸</button>
-          <button id="btn-speed-1" class="btn-speed active" title="Normal speed (1x)">1x</button>
-          <button id="btn-speed-2" class="btn-speed" title="Fast speed (2x)">2x</button>
-          <button id="btn-speed-5" class="btn-speed" title="Hyper speed (5x)">5x</button>
+          <button id="btn-speed-0" class="btn-speed" title="Pause" data-i18n-title="speedPause">⏸</button>
+          <button id="btn-speed-1" class="btn-speed active" title="Normal speed (1x)" data-i18n-title="speed1x">1x</button>
+          <button id="btn-speed-2" class="btn-speed" title="Fast speed (2x)" data-i18n-title="speed2x">2x</button>
+          <button id="btn-speed-5" class="btn-speed" title="Hyper speed (5x)" data-i18n-title="speed5x">5x</button>
         </div>
       </div>
 
       <div class="actions-btn-bar">
-        <button id="btn-open-chores" class="btn-action-nav" data-i18n="navChores">📋 Chores & Maintenance</button>
-        <button id="btn-open-convoys" class="btn-action-nav" data-i18n="navConvoys">🚚 Trade Convoys</button>
-        <button id="btn-open-housing" class="btn-action-nav" data-i18n="navHousing">🏘️ Housing & Usufruct</button>
-        <button id="btn-open-tech" class="btn-action-nav" data-i18n="navTech">🤖 Robots & Dual-Track STL</button>
-        <button id="btn-open-council" class="btn-action-nav" data-i18n="navCouncil">🏛️ Sortition Council</button>
+        <button id="btn-open-chores" class="btn-action-nav" data-i18n="navChores">📋 Chores & Shifts</button>
+        <button id="btn-open-convoys" class="btn-action-nav" data-i18n="navConvoys">🚚 Trade & Convoys</button>
+        <button id="btn-open-housing" class="btn-action-nav" data-i18n="navHousing">🏘️ Homes & Housing</button>
+        <button id="btn-open-tech" class="btn-action-nav" data-i18n="navTech">🤖 Robots & Tech</button>
+        <button id="btn-open-council" class="btn-action-nav" data-i18n="navCouncil">🏛️ Assembly</button>
 
         <!-- Official O.N.E. Footer Stamp -->
-        <div class="hud-footer-stamp" title="Open Networked Earth • Physical Usufruct Protocol">
+        <div class="hud-footer-stamp" title="Open Networked Earth" data-i18n-title="oneBrandTooltip">
           <img src="/one-logo-white.svg" alt="O.N.E. Stamp" class="footer-stamp-icon" />
-          <span class="footer-stamp-text">O.N.E. DUAL-TRACK</span>
+          <span class="footer-stamp-text">O.N.E.</span>
         </div>
       </div>
     </footer>
@@ -253,7 +248,7 @@
         <div class="modal-header">
           <div class="modal-title-box">
             <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 id="modal-node-title" data-i18n="nodeHubTitle">Detroit Delray Commons — Operational Hub</h3>
+            <h3 id="modal-node-title" data-i18n="nodeHubTitle">Village Commons Hub</h3>
           </div>
           <button id="btn-close-node-modal" class="btn-close-modal">✕</button>
         </div>
@@ -267,7 +262,7 @@
         <div class="modal-header">
           <div class="modal-title-box">
             <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 data-i18n="councilDeliberationBadge">Assemblea dei Cittadini</h3>
+            <h3 data-i18n="councilDeliberationBadge">Citizen Assembly</h3>
           </div>
           <button id="btn-close-dilemma-modal" class="btn-close-modal">✕</button>
         </div>
@@ -281,7 +276,7 @@
         <div class="modal-header">
           <div class="modal-title-box">
             <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 data-i18n="dualTrackTitle">Dual-Track Open Hardware & Automation Tech Tree</h3>
+            <h3 data-i18n="dualTrackTitle">FabLab & Robots</h3>
           </div>
           <button id="btn-close-dualtrack-modal" class="btn-close-modal">✕</button>
         </div>
@@ -295,20 +290,22 @@
         <div class="modal-header">
           <div class="modal-title-box">
             <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 id="dwelling-modal-title">Bioclimatic Dwelling & Usufruct Rights</h3>
+            <h3 id="dwelling-modal-title" data-i18n="dwellingModalTitle">Bioclimatic Dwelling & Usufruct Rights</h3>
           </div>
           <button id="btn-close-dwelling-modal" class="btn-close-modal">✕</button>
         </div>
         <div id="dwelling-modal-content" class="modal-body"></div>
       </div>
+    </div>
+
     <!-- MODAL: Citizen Dossier & 3D Sovereign Avatar Studio -->
     <div id="modal-citizen" class="modal-overlay hidden">
       <div class="modal-window modal-window-citizen">
         <div class="modal-header">
           <div class="modal-title-box">
             <span id="citizen-modal-avatar-icon" style="font-size: 24px;">👤</span>
-            <h3 id="citizen-modal-name">Citizen Dossier</h3>
-            <span id="citizen-modal-vocation-badge" class="badge badge-success">CITIZEN</span>
+            <h3 id="citizen-modal-name" data-i18n="citizenDossierTitle">Citizen Dossier</h3>
+            <span id="citizen-modal-vocation-badge" class="badge badge-success" data-i18n="badgeCitizen">CITIZEN</span>
           </div>
           <button id="btn-close-citizen-modal" class="btn-close-modal">✕</button>
         </div>
@@ -322,7 +319,7 @@
         <div class="modal-header">
           <div class="modal-title-box">
             <span style="font-size: 20px;">🔒</span>
-            <h3 id="privacy-modal-title">Private Usufruct Sanctuary</h3>
+            <h3 id="privacy-modal-title" data-i18n="privacyModalTitle">Private Usufruct Sanctuary</h3>
           </div>
           <button id="btn-close-privacy-modal" class="btn-close-modal">✕</button>
         </div>
@@ -336,13 +333,13 @@
               </div>
             </div>
             <div class="constitutional-quote-box" style="background: rgba(0, 0, 0, 0.35); border-left: 3px solid var(--emerald-primary); padding: 12px; border-radius: 6px; margin-bottom: 16px;">
-              <div style="font-size: 10px; color: var(--emerald-primary); font-weight: bold; letter-spacing: 1px; margin-bottom: 4px;">📜 O.N.E. CONSTITUTION • ARTICLE 4.1</div>
-              <p style="font-size: 12px; color: #cbd5e1; margin: 0; line-height: 1.4;">"Individual usufruct dwellings and personal living spaces are strictly inviolable sanctuaries of personal autonomy. Entry without explicit invitation of the occupant is constitutionally prohibited."</p>
+              <div style="font-size: 10px; color: var(--emerald-primary); font-weight: bold; letter-spacing: 1px; margin-bottom: 4px;" data-i18n="privacyArticleCitation">📜 O.N.E. CONSTITUTION • ARTICLE 4.1</div>
+              <p style="font-size: 12px; color: #cbd5e1; margin: 0; line-height: 1.4;" data-i18n="privacyModalDesc">"Individual usufruct dwellings and personal living spaces are strictly inviolable sanctuaries of personal autonomy. Entry without explicit invitation of the occupant is constitutionally prohibited."</p>
             </div>
             <div id="privacy-knock-result" class="privacy-knock-result hidden" style="margin-bottom: 14px; padding: 10px; border-radius: 8px; font-size: 13px;"></div>
             <div class="privacy-modal-actions" style="display: flex; gap: 10px;">
-              <button id="btn-knock-door" class="btn-primary" style="flex: 1; padding: 10px;">🚪 Knock on Door</button>
-              <button id="btn-respect-privacy" class="btn-secondary" style="flex: 1; padding: 10px;">Dismiss</button>
+              <button id="btn-knock-door" class="btn-primary" style="flex: 1; padding: 10px;" data-i18n="btnKnockDoor">🚪 Knock on Door</button>
+              <button id="btn-respect-privacy" class="btn-secondary" style="flex: 1; padding: 10px;" data-i18n="btnRespectPrivacy">Dismiss</button>
             </div>
           </div>
         </div>
@@ -355,8 +352,8 @@
         <div class="modal-header">
           <div class="modal-title-box">
             <span style="font-size: 20px;">🔬</span>
-            <h3 id="prop-3d-title">Dual-Track 3D Hardware Inspector</h3>
-            <span id="prop-3d-category" class="badge badge-success">OPEN HARDWARE</span>
+            <h3 id="prop-3d-title" data-i18n="prop3DTitle">Dual-Track 3D Hardware Inspector</h3>
+            <span id="prop-3d-category" class="badge badge-success" data-i18n="badgeOpenHardware">OPEN HARDWARE</span>
           </div>
           <button id="btn-close-prop-3d" class="btn-close-modal">✕</button>
         </div>
@@ -364,22 +361,22 @@
           <div class="prop-3d-viewport-box">
             <div id="prop-3d-canvas-container" class="prop-3d-canvas-container"></div>
             <div class="prop-3d-canvas-toolbar">
-              <button id="btn-prop-auto-rotate" class="btn-prop-toolbar active" title="Toggle 3D Auto-Rotation">🔄 Auto-Rotate</button>
-              <button id="btn-prop-reset-cam" class="btn-prop-toolbar" title="Reset Camera Perspective">🔍 Reset View</button>
-              <button id="btn-prop-download-stl" class="btn-prop-toolbar btn-prop-download" title="Export Watertight 3D Printable STL">📥 Download .STL Blueprint</button>
+              <button id="btn-prop-auto-rotate" class="btn-prop-toolbar active" title="Toggle 3D Auto-Rotation" data-i18n-title="propAutoRotateTooltip" data-i18n="propAutoRotate">🔄 Auto-Rotate</button>
+              <button id="btn-prop-reset-cam" class="btn-prop-toolbar" title="Reset Camera Perspective" data-i18n-title="propResetCamTooltip" data-i18n="propResetCam">🔍 Reset View</button>
+              <button id="btn-prop-download-stl" class="btn-prop-toolbar btn-prop-download" title="Export Watertight 3D Printable STL" data-i18n-title="propDownloadStlTooltip" data-i18n="propDownloadStl">📥 Download .STL Blueprint</button>
             </div>
-            <div class="prop-3d-hint">💡 Drag to rotate 360° • Scroll / Pinch to zoom • Right-click to pan</div>
+            <div class="prop-3d-hint" data-i18n="prop3DHint">💡 Drag to rotate 360° • Scroll / Pinch to zoom • Right-click to pan</div>
           </div>
           <div class="prop-3d-sidebar">
             <div class="prop-3d-desc-box">
-              <p id="prop-3d-desc">Dual-Track open source hardware module.</p>
+              <p id="prop-3d-desc" data-i18n="prop3DDesc">Dual-Track open source hardware module.</p>
             </div>
             <div class="prop-3d-specs-section">
-              <h4>⚙️ Engineering & Thermodynamics</h4>
+              <h4 data-i18n="prop3DTabEngineering">⚙️ Engineering & Thermodynamics</h4>
               <table id="prop-3d-specs-table" class="prop-specs-table"></table>
             </div>
             <div class="prop-3d-yaml-section">
-              <h4>⚡ Home Assistant Telemetry (MQTT / Zigbee)</h4>
+              <h4 data-i18n="prop3DTabTelemetry">⚡ Home Assistant Telemetry (MQTT / Zigbee)</h4>
               <pre id="prop-3d-yaml-preview" class="prop-yaml-code"></pre>
             </div>
           </div>
@@ -394,7 +391,7 @@
           <div class="modal-title-box">
             <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
             <h3 data-i18n="convoysModalTitle">Inter-Node Barter Logistics & Trade Fleet</h3>
-            <span class="badge badge-success">PLANETARY MESH</span>
+            <span class="badge badge-success" data-i18n="badgePlanetaryMesh">PLANETARY MESH</span>
           </div>
           <button id="btn-close-convoys-modal" class="btn-close-modal">✕</button>
         </div>
@@ -408,12 +405,27 @@
         <div class="modal-header">
           <div class="modal-title-box">
             <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 id="modal-passport-title">Passaporto del Cittadino</h3>
-            <span class="badge badge-success">OFFLINE RESILIENTE</span>
+            <h3 id="modal-passport-title" data-i18n="passportModalTitle">Citizen Cryptographic Passport</h3>
+            <span class="badge badge-success" data-i18n="badgeOfflineResilient">OFFLINE RESILIENT</span>
           </div>
           <button id="btn-close-passport-modal" class="btn-close-modal">✕</button>
         </div>
         <div id="passport-modal-content" class="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- MODAL: In-Game Feedback & Community Reporter -->
+    <div id="modal-feedback" class="modal-overlay hidden">
+      <div class="modal-window modal-window-feedback">
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
+            <h3 id="modal-feedback-title" data-i18n="modalFeedbackTitle">💡 Community Feedback & Bug Reporter</h3>
+            <span class="badge badge-success" data-i18n="badgeZeroLogin">ZERO LOGIN</span>
+          </div>
+          <button id="btn-close-feedback-modal" class="btn-close-modal">✕</button>
+        </div>
+        <div id="feedback-modal-content" class="modal-body"></div>
       </div>
     </div>
   </div>
@@ -428,13 +440,13 @@
         </div>
         <span class="phone-rotate-arrow">🔄</span>
       </div>
-      <div class="landscape-badge">SOLARPUNK LANDSCAPE</div>
-      <h3 class="landscape-title" data-i18n="landscapeTitle">MODALITÀ ORIZZONTALE</h3>
+      <div class="landscape-badge" data-i18n="landscapeBadge">SOLARPUNK LANDSCAPE</div>
+      <h3 class="landscape-title" data-i18n="landscapeTitle">LANDSCAPE ORIENTATION</h3>
       <p class="landscape-desc" data-i18n="landscapeDesc">
-        O-ASIS è progettato per schermi orizzontali. Ruota il tuo dispositivo per esplorare la mappa planetaria e il villaggio.
+        O-ASIS is designed for widescreen landscapes. Rotate your device to explore the planetary map and village commons.
       </p>
       <button id="btn-dismiss-landscape" class="btn-dismiss-landscape" data-i18n="landscapeBypass">
-        Continua comunque in verticale ➔
+        Continue in portrait anyway ➔
       </button>
     </div>
   </div>

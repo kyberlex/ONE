@@ -2,7 +2,7 @@
  * Discrete 4-Level Zoom Orchestrator (Agent SIM-0 & SIM-2)
  * Coordinates transitions between 4 discrete view levels:
  * - LEVEL 0 (WORLD): Global planetary Earth view (Leaflet zoom 3)
- * - LEVEL 1 (REGION): Bioregional watershed view centered on active node (Leaflet zoom 9)
+ * - LEVEL 1 (REGION): Bioregional watershed view centered on active node (Leaflet zoom 7.0, ~300 km)
  * - LEVEL 2 (NODE): 2D Bioclimatic settlement village canvas (overview)
  * - LEVEL 3 (BUILDING): Architectural interior cutaway view of facility/dwelling
  *
@@ -42,26 +42,18 @@ export class ZoomCoordinator {
   }
 
   bindDom() {
-    // Zoom in buttons
+    // Zoom in buttons (Header)
     const btnZoomInHeader = document.getElementById('btn-zoom-in');
-    const btnZoomInFloat = document.getElementById('btn-float-zoom-in');
 
-    // Zoom out buttons
+    // Zoom out buttons (Header)
     const btnZoomOutHeader = document.getElementById('btn-zoom-out');
-    const btnZoomOutFloat = document.getElementById('btn-float-zoom-out');
 
     if (btnZoomInHeader) {
       btnZoomInHeader.addEventListener('click', () => this.zoomIn());
     }
-    if (btnZoomInFloat) {
-      btnZoomInFloat.addEventListener('click', () => this.zoomIn());
-    }
 
     if (btnZoomOutHeader) {
       btnZoomOutHeader.addEventListener('click', () => this.zoomOut());
-    }
-    if (btnZoomOutFloat) {
-      btnZoomOutFloat.addEventListener('click', () => this.zoomOut());
     }
 
     // Segmented level pills
@@ -153,23 +145,5 @@ export class ZoomCoordinator {
     const btnZoomInHeader = document.getElementById('btn-zoom-in');
     if (btnZoomOutHeader) btnZoomOutHeader.disabled = (this.currentLevel <= ZOOM_LEVELS.WORLD);
     if (btnZoomInHeader) btnZoomInHeader.disabled = (this.currentLevel >= ZOOM_LEVELS.BUILDING);
-
-    // 3. Update Floating Viewport Widget
-    const floatBadge = document.getElementById('floating-zoom-level-name');
-    const btnZoomOutFloat = document.getElementById('btn-float-zoom-out');
-    const btnZoomInFloat = document.getElementById('btn-float-zoom-in');
-
-    const levelIcons = {
-      0: '🌍 WORLD',
-      1: '🏞️ REGION',
-      2: '🏘️ NODE',
-      3: '🏢 BUILDING'
-    };
-
-    if (floatBadge) {
-      floatBadge.textContent = levelIcons[this.currentLevel] || 'NODE';
-    }
-    if (btnZoomOutFloat) btnZoomOutFloat.disabled = (this.currentLevel <= ZOOM_LEVELS.WORLD);
-    if (btnZoomInFloat) btnZoomInFloat.disabled = (this.currentLevel >= ZOOM_LEVELS.BUILDING);
   }
 }

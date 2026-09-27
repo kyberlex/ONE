@@ -55,9 +55,10 @@ export class PanelNodeController {
       <div class="modal-tabs">
         <button class="tab-btn ${activeTab === 'chores' ? 'active' : ''}" data-tab="chores">${t('tabChores', '📋 Chore Roster')}</button>
         <button class="tab-btn ${activeTab === 'housing' ? 'active' : ''}" data-tab="housing">${t('tabHousing', '🏘️ Usufruct Housing & Reuse')}</button>
-        <button class="tab-btn ${activeTab === 'agriculture' ? 'active' : ''}" data-tab="agriculture">🥗 Agriculture & Resilience</button>
+        <button class="tab-btn ${activeTab === 'agriculture' ? 'active' : ''}" data-tab="agriculture">${t('tabAgriculture', '🥗 Agriculture & Resilience')}</button>
         <button class="tab-btn ${activeTab === 'machinery' ? 'active' : ''}" data-tab="machinery">${t('tabMachinery', '⚙️ Machinery & Entropy')}</button>
-        <button class="tab-btn ${activeTab === 'treasury' ? 'active' : ''}" data-tab="treasury">💰 Commons Treasury & Defense</button>
+        <button class="tab-btn ${activeTab === 'treasury' ? 'active' : ''}" data-tab="treasury">${t('tabTreasury', '💰 Commons Treasury & Defense')}</button>
+        <button class="tab-btn ${activeTab === 'projects' ? 'active' : ''}" data-tab="projects">${t('tabCivicProjects', '🏗️ Civic Megaprojects')}</button>
       </div>
       <div class="tab-body">
     `;
@@ -399,7 +400,7 @@ export class PanelNodeController {
                 </div>
                 <div class="machine-actions" style="display: flex; gap: 8px;">
                   <button class="btn-sm btn-repair" data-repair-key="${key}">${t('btnArtisanRepair', '🔧 Artisan Repair')}</button>
-                  <button class="btn-sm btn-rebuild" data-rebuild-key="${key}" title="Consume 10kg Al, 3 spools PETG, 15m Cu in FabLab to restore 100% factory-fresh capacity">♻️ FabLab Full Overhaul</button>
+                  <button class="btn-sm btn-rebuild" data-rebuild-key="${key}" title="${t('rebuildFullOverhaulTooltip', 'Consume 10kg Al, 3 spools PETG, 15m Cu in FabLab to restore 100% factory-fresh capacity')}">${t('rebuildFullOverhaul', '♻️ FabLab Full Overhaul')}</button>
                 </div>
               </div>
             `).join('')}
@@ -436,7 +437,7 @@ export class PanelNodeController {
           <!-- 1. Top Summary Banner -->
           <div class="summary-card">
             <div class="summary-header-row">
-              <h4>🥗 Agro-Ecological Food Sovereignty & Resilience</h4>
+              <h4>${t('agroFoodSovereignty', '🥗 Agro-Ecological Food Sovereignty & Resilience')}</h4>
               <span class="one-stamp-tag"><img src="/one-logo-white.svg" alt="O.N.E." /> BIOCLIMATIC FOOD</span>
             </div>
             <p class="text-dim" style="font-size: 13px; margin: 4px 0 16px 0;">
@@ -480,15 +481,15 @@ export class PanelNodeController {
               </p>
               <div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px;">
                 <div style="display: flex; justify-content: space-between;">
-                  <span>Current Yield:</span>
+                  <span>${t('currentYieldLabel', 'Current Yield:')}</span>
                   <strong class="text-green">${food.lastIndoorHarvestKcal.toLocaleString()} kcal/h</strong>
                 </div>
                 <div style="display: flex; justify-content: space-between;">
-                  <span>Battery Power Status:</span>
+                  <span>${t('batteryStatusLabel', 'Battery Power Status:')}</span>
                   <span class="${snap.energy.currentKwh < 8 ? 'text-red' : 'text-green'}">${snap.energy.currentKwh} kWh (${snap.energy.percent}%)</span>
                 </div>
                 <div style="display: flex; justify-content: space-between;">
-                  <span>Greenhouse HVAC Health:</span>
+                  <span>${t('hvacHealthLabel', 'Greenhouse HVAC Health:')}</span>
                   <span>${thermo.machinery.greenhouseHvac.durability}% (Lifespan: ${thermo.machinery.greenhouseHvac.lifecycleHealth}%)</span>
                 </div>
               </div>
@@ -505,16 +506,16 @@ export class PanelNodeController {
               </p>
               <div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px;">
                 <div style="display: flex; justify-content: space-between;">
-                  <span>Current Yield:</span>
+                  <span>${t('currentYieldLabel', 'Current Yield:')}</span>
                   <strong class="${stress ? 'text-amber' : 'text-green'}">${food.lastOutdoorHarvestKcal.toLocaleString()} kcal/h</strong>
                 </div>
                 <div style="display: flex; justify-content: space-between;">
-                  <span>Atmospheric Weather:</span>
-                  <span>${weather.icon} ${weather.name} (${weather.temperatureC}°C)</span>
+                  <span>${t('weatherAtmosphereLabel', 'Atmospheric Weather:')}</span>
+                  <span>${weather.icon} ${weather.nameKey ? t(weather.nameKey, weather.name) : weather.name} (${weather.temperatureC}°C)</span>
                 </div>
                 <div style="display: flex; justify-content: space-between;">
-                  <span>Exposure Hazard:</span>
-                  <span class="${stress ? 'text-red' : 'text-green'}">${stress ? `⚠️ Active: ${stress.name}` : '✅ No Active Threat'}</span>
+                  <span>${t('hazardExposureLabel', 'Exposure Hazard:')}</span>
+                  <span class="${stress ? 'text-red' : 'text-green'}">${stress ? `⚠️ Active: ${stress.nameKey ? t(stress.nameKey, stress.name) : stress.name}` : '✅ No Active Threat'}</span>
                 </div>
               </div>
             </div>
@@ -568,7 +569,7 @@ export class PanelNodeController {
           <!-- 4. Agro-Ecological Resilience Defenses (Dual-Track Hardware) -->
           <div class="summary-card">
             <div class="summary-header-row">
-              <h4>🛡️ Open-Hardware Agro-Resilience Modules</h4>
+              <h4>${t('openHardwareResilience', '🛡️ Open-Hardware Agro-Resilience Modules')}</h4>
               <span class="badge badge-outline">Resilience Shielding</span>
             </div>
             <p class="text-dim" style="font-size: 12px; margin-bottom: 14px;">
@@ -593,10 +594,10 @@ export class PanelNodeController {
                   </div>
                   <div>
                     ${mod.installed ? `
-                      <button class="btn-sm" style="width: 100%; opacity: 0.7; cursor: default;" disabled>Active Shielding</button>
+                      <button class="btn-sm" style="width: 100%; opacity: 0.7; cursor: default;" disabled>${t('activeShielding', 'Active Shielding')}</button>
                     ` : `
                       <button class="btn-sm btn-install-agro" data-resilience-key="${mod.id}" style="width: 100%; background: var(--emerald-primary); color: #06261c; font-weight: bold; cursor: pointer;">
-                        🔨 Construct & Deploy
+                        🔨 ${t('btnDeployConstruct', 'Construct & Deploy')}
                       </button>
                     `}
                   </div>
@@ -616,12 +617,11 @@ export class PanelNodeController {
         <div class="treasury-view">
           <div class="summary-card">
             <div class="summary-header-row">
-              <h4>💰 Bioregional Commons Treasury & Financial Defense</h4>
+              <h4>${t('commonsTreasuryTitle', '💰 Bioregional Commons Treasury & Financial Defense')}</h4>
               <span class="one-stamp-tag"><img src="/one-logo-white.svg" alt="O.N.E." /> O.N.E. SOVEREIGN COMMONS</span>
             </div>
             <p>
-              In O.N.E. the internal economy is 100% based on physical thermodynamics, dynamic usufruct, and voluntary vocations.
-              There is zero debt, zero interest, and zero rent within the commons. The <strong>Emergency Hardware & Legal Defense Fund</strong> exists strictly as an outer shield to interface with the surrounding extractive market.
+              ${t('treasuryPrincipleDesc', 'There is zero debt, zero interest, and zero rent within the commons. The Emergency Hardware & Legal Defense Fund exists strictly as an outer shield to interface with the surrounding extractive market.')}
             </p>
 
             <!-- Metrics Grid -->
@@ -657,12 +657,127 @@ export class PanelNodeController {
                 🛡️ Strategic Financial Defense Principles
               </h5>
               <ul style="margin: 0.5rem 0 0 1.2rem; padding: 0; font-size: 0.85rem; line-height: 1.6; color: #cbd5e1;">
-                <li><strong>Anti-Lawfare Shield:</strong> Repels vulture fund NPL mortgage seizures and judicial extortion notices without surrendering commons land or physical machinery.</li>
-                <li><strong>Critical Hardware Import:</strong> Enables purchasing specialized industrial components (MPPT controllers, high-precision laser optics) until regional FabLab open-toolchains are completed.</li>
-                <li><strong>Energy Peaker Defense:</strong> Buffer against legacy utility blackout extortion during severe climate disasters (Heat Domes, Atmospheric Rivers).</li>
-                <li><strong>Logistical Mutual Aid Sovereignty:</strong> Inter-node trade convoys bypass fiat financial middlemen entirely, achieving physical reciprocity via thermodynamic barter.</li>
+                <li><strong>${t('antiLawfareShieldTitle', 'Anti-Lawfare Shield:')}</strong> ${t('antiLawfareShieldDesc', 'Repels vulture fund NPL mortgage seizures and judicial extortion notices without surrendering commons land or physical machinery.')}</li>
+                <li><strong>${t('criticalHardwareImportTitle', 'Critical Hardware Import:')}</strong> ${t('criticalHardwareImportDesc', 'Enables purchasing specialized industrial components (MPPT controllers, high-precision laser optics) until regional FabLab open-toolchains are completed.')}</li>
+                <li><strong>${t('energyPeakerDefenseTitle', 'Energy Peaker Defense:')}</strong> ${t('energyPeakerDefenseDesc', 'Buffer against legacy utility blackout extortion during severe climate disasters (Heat Domes, Atmospheric Rivers).')}</li>
+                <li><strong>${t('logisticalMutualAidTitle', 'Logistical Mutual Aid Sovereignty:')}</strong> ${t('logisticalMutualAidDesc', 'Inter-node trade convoys bypass fiat financial middlemen entirely, achieving physical reciprocity via thermodynamic barter.')}</li>
               </ul>
             </div>
+          </div>
+        </div>
+      `;
+    } else if (activeTab === 'projects') {
+      const civicEngine = this.sim.civicProjects;
+      const projects = civicEngine ? civicEngine.getAllProjects() : [];
+
+      html += `
+        <div class="civic-projects-view">
+          <div class="summary-card">
+            <div class="summary-header-row">
+              <h4>${t('civicProjectsTitle', 'Civic Volunteer Works & Megaprojects')}</h4>
+              <span class="one-stamp-tag"><img src="/one-logo-white.svg" alt="O.N.E." /> CHAPTER V COMMONS</span>
+            </div>
+            <p>${t('civicProjectsSubtitle', 'Beyond essential subsistence chores (Art. 5.1), citizens freely pool disposable hours and surplus materials to construct enduring civil commons.')}</p>
+            <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 8px; padding: 10px 14px; margin-top: 10px; font-size: 12px; color: #a7f3d0;">
+              ✨ ${t('civicProjectsMoraleNotice', 'Morale is high: idle citizens contribute volunteer hours during daytime hours when essential shifts are covered.')}
+            </div>
+          </div>
+
+          <div class="civic-projects-grid" style="display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 16px;">
+            ${projects.map(p => {
+              const pct = civicEngine ? civicEngine.getProgressPercentage(p) : 0;
+              const isDone = p.status === 'COMPLETED';
+              const isInProgress = p.status === 'IN_PROGRESS';
+              const pName = p.nameKey ? t(p.nameKey, p.name) : p.name;
+              const pDesc = p.descKey ? t(p.descKey, p.desc) : p.desc;
+              const pPerk = p.perkSummaryKey ? t(p.perkSummaryKey, p.perkSummary) : p.perkSummary;
+
+              let statusBadge = '';
+              if (isDone) {
+                statusBadge = `<span class="badge badge-success" style="font-size: 11px;">${t('projectStatusCompleted', 'Completed & Operational ✅')}</span>`;
+              } else if (isInProgress) {
+                statusBadge = `<span class="badge" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; font-size: 11px;">${t('projectStatusInProgress', 'Under Construction')} (${pct}%)</span>`;
+              } else {
+                statusBadge = `<span class="badge badge-outline" style="font-size: 11px;">${t('projectStatusPlanned', 'Planned')}</span>`;
+              }
+
+              return `
+                <div class="chore-card ${isDone ? 'installed-card' : ''}" style="border: 1px solid ${isDone ? 'rgba(16, 185, 129, 0.4)' : (isInProgress ? 'rgba(245, 158, 11, 0.4)' : 'rgba(255, 255, 255, 0.1)')}; background: rgba(15, 23, 42, 0.75); border-radius: 12px; padding: 16px;">
+                  <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+                    <div>
+                      <h4 style="margin: 0; font-size: 16px; color: #f8fafc; display: flex; align-items: center; gap: 8px;">
+                        <span>${p.icon}</span> <span>${pName}</span>
+                      </h4>
+                      <span style="font-size: 11px; text-transform: uppercase; color: #94a3b8; letter-spacing: 0.05em;">CATEGORY: ${p.category}</span>
+                    </div>
+                    <div>${statusBadge}</div>
+                  </div>
+
+                  <p style="font-size: 13px; color: #cbd5e1; margin: 10px 0 12px 0; line-height: 1.5;">${pDesc}</p>
+
+                  <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; padding: 8px 12px; margin-bottom: 14px; font-size: 12px; color: #6ee7b7;">
+                    <strong>🌟 ${t('operationalPerksActive', 'Operational Perks')}:</strong> ${pPerk}
+                  </div>
+
+                  <div style="margin-bottom: 14px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px;">
+                      <span style="color: #94a3b8;">${t('volunteerHoursLabel', 'Volunteer Hours')}:</span>
+                      <strong style="color: #f59e0b;">${p.contributedHours} / ${p.requiredHours} h</strong>
+                    </div>
+                    <div style="width: 100%; height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden; margin-bottom: 8px;">
+                      <div style="width: ${Math.min(100, Math.floor((p.contributedHours / p.requiredHours) * 100))}%; height: 100%; background: linear-gradient(90deg, #f59e0b, #fbbf24); border-radius: 4px;"></div>
+                    </div>
+
+                    <div style="font-size: 11px; color: #94a3b8; margin-top: 6px;">
+                      <span style="font-weight: bold; color: #cbd5e1;">${t('requiredMaterialsTitle', 'Required Materials & Energy')}:</span>
+                      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px;">
+                        ${Object.entries(p.requiredMaterials).map(([matKey, req]) => {
+                          const done = (p.contributedMaterials[matKey] || 0);
+                          const isOk = done >= req;
+                          let label = matKey;
+                          if (matKey === 'energyKwh') label = '⚡ Energy';
+                          else if (matKey === 'waterL') label = '💧 Water';
+                          else if (matKey === 'aluminumIngotsKg') label = '🔩 Aluminum';
+                          else if (matKey === 'petgFilamentSpools') label = '🧵 PETG Spools';
+                          else if (matKey === 'copperWireMeters') label = '🔌 Copper';
+                          else if (matKey === 'biocharKg') label = '🪵 Biochar';
+                          return `<span style="background: ${isOk ? 'rgba(16, 185, 129, 0.2)' : 'rgba(255, 255, 255, 0.06)'}; border: 1px solid ${isOk ? '#10b981' : 'rgba(255, 255, 255, 0.15)'}; color: ${isOk ? '#a7f3d0' : '#e2e8f0'}; padding: 2px 8px; border-radius: 4px;">${label}: ${done}/${req} ${isOk ? '✓' : ''}</span>`;
+                        }).join('')}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center; justify-content: flex-end; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 12px;">
+                    ${isDone ? `
+                      <span style="font-size: 12px; color: #34d399; font-weight: bold;">✓ ${t('projectStatusCompleted', 'Completed & Operational ✅')}</span>
+                    ` : `
+                      ${p.status === 'PLANNED' ? `
+                        <button class="btn-sm btn-start-project" data-project-id="${p.id}" style="background: var(--emerald-primary); color: #06261c; font-weight: bold; cursor: pointer; padding: 6px 14px; border-radius: 6px;">
+                          ${t('btnStartProject', '🚀 Begin Construction')}
+                        </button>
+                      ` : `
+                        <button class="btn-sm btn-volunteer-hours" data-project-id="${p.id}" data-hours="2" style="background: rgba(245, 158, 11, 0.2); border: 1px solid #f59e0b; color: #fef3c7; cursor: pointer; padding: 6px 12px; border-radius: 6px; font-size: 12px;">
+                          ${t('btnVolunteerShift2', '⏱️ Contribute 2h Shift')}
+                        </button>
+                        <button class="btn-sm btn-volunteer-hours" data-project-id="${p.id}" data-hours="4" style="background: rgba(245, 158, 11, 0.3); border: 1px solid #f59e0b; color: #fef3c7; cursor: pointer; padding: 6px 12px; border-radius: 6px; font-size: 12px;">
+                          ${t('btnVolunteerShift4', '⏱️ Contribute 4h Shift')}
+                        </button>
+                        <button class="btn-sm btn-allocate-materials" data-project-id="${p.id}" style="background: var(--emerald-primary); color: #06261c; font-weight: bold; cursor: pointer; padding: 6px 14px; border-radius: 6px; font-size: 12px;">
+                          ${t('btnAllocateMaterials', '📦 Allocate Common Surplus')}
+                        </button>
+                      `}
+                    `}
+                  </div>
+
+                  ${p.contributors && p.contributors.length > 0 ? `
+                    <div style="margin-top: 10px; font-size: 11px; color: #94a3b8; border-top: 1px dashed rgba(255, 255, 255, 0.08); padding-top: 6px;">
+                      <span>👥 ${t('contributionsLogTitle', 'Community Contributors Log')}:</span>
+                      <span style="color: #e2e8f0; margin-left: 6px;">${p.contributors.slice(0, 4).map(c => `${c.name} (${c.hours}h)`).join(', ')}</span>
+                    </div>
+                  ` : ''}
+                </div>
+              `;
+            }).join('')}
           </div>
         </div>
       `;
@@ -753,6 +868,47 @@ export class PanelNodeController {
         this.sim.thermo.recycleHardware(cat);
         this.render('machinery');
         this.sim.notifyTick();
+      });
+    });
+
+    // Civic Megaprojects Start Construction
+    this.contentEl.querySelectorAll('.btn-start-project').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.projectId;
+        if (this.sim.civicProjects) {
+          this.sim.civicProjects.startProject(id);
+          this.render('projects');
+          this.sim.notifyTick();
+        }
+      });
+    });
+
+    // Civic Megaprojects Volunteer Hours Contribution
+    this.contentEl.querySelectorAll('.btn-volunteer-hours').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.projectId;
+        const hours = parseInt(btn.dataset.hours, 10) || 2;
+        if (this.sim.civicProjects) {
+          this.sim.civicProjects.contributeHours(id, hours, 'Player (You)');
+          this.render('projects');
+          this.sim.notifyTick();
+          this.onAction('VOLUNTEER_CONTRIBUTION', { projectId: id, hours });
+        }
+      });
+    });
+
+    // Civic Megaprojects Allocate Common Materials
+    this.contentEl.querySelectorAll('.btn-allocate-materials').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.projectId;
+        if (this.sim.civicProjects) {
+          const res = this.sim.civicProjects.allocateAllAvailableMaterials(id);
+          this.render('projects');
+          this.sim.notifyTick();
+          if (res.success) {
+            this.onAction('PROJECT_MATERIAL_ALLOCATION', { projectId: id, allocated: res.allocated });
+          }
+        }
       });
     });
   }

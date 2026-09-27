@@ -22,6 +22,7 @@ export const SORTITION_TIERS = {
     titleDefault: 'Local Mediation Panel',
     articleKey: 'articleLocalMediation',
     article: 'Art. 4.2.1',
+    descriptionKey: 'councilLocalMediationDesc',
     descriptionDefault: '3-citizen panel for immediate local mediation, housing restitution, and rapid community balancing.'
   },
   NEIGHBORHOOD_COUNCIL: {
@@ -33,6 +34,7 @@ export const SORTITION_TIERS = {
     titleDefault: 'Neighborhood Sortition Council',
     articleKey: 'articleNeighborhood',
     article: 'Art. 4.2.2',
+    descriptionKey: 'councilNeighborhoodDesc',
     descriptionDefault: '15-citizen assembly for neighborhood resource allocation, utility oversight, and communal policy.'
   }
 };

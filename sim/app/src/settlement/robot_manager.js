@@ -32,10 +32,12 @@ export class RobotManager {
       desired.push({
         type: 'farmRover',
         index: i,
+        nameKey: roverCount > 1 ? null : 'robot_rover_name',
         name: roverCount > 1 ? `Agro-Rover Unit #${i + 1}` : 'Autonomous Agro-Rover Mark II',
         icon: '🚜',
         domain: 'agriculture',
         hoursCancelled: nodeRobots.farmRover.hoursCancelled || 4,
+        taskKey: 'robot_rover_task',
         taskDesc: 'Autonomous Weeding, Seeding & Aeroponic Bed Management',
         radius: 20
       });
@@ -47,10 +49,12 @@ export class RobotManager {
       desired.push({
         type: 'esp32Valves',
         index: i,
+        nameKey: droneCount > 1 ? null : 'robot_drone_name',
         name: droneCount > 1 ? `Agro-Drone Scout #${i + 1}` : 'ESP32 Smart Aeroponic Drone',
         icon: '🛸',
         domain: 'agriculture',
         hoursCancelled: nodeRobots.esp32Valves.hoursCancelled || 2,
+        taskKey: 'robot_drone_task',
         taskDesc: 'Soil Moisture Telemetry & Ultrasonic Micro-Misting',
         radius: 18
       });
@@ -62,10 +66,12 @@ export class RobotManager {
       desired.push({
         type: 'mpptOptimizer',
         index: i,
+        nameKey: scadaCount > 1 ? null : 'robot_scada_name',
         name: scadaCount > 1 ? `SCADA Balancer Bot #${i + 1}` : 'SCADA Microgrid Auto-Balancer',
         icon: '⚡',
         domain: 'facilities',
         hoursCancelled: nodeRobots.mpptOptimizer.hoursCancelled || 3,
+        taskKey: 'robot_scada_task',
         taskDesc: 'LiFePO4 Cell Telemetry & Solar Azimuth Balancer',
         radius: 18
       });
@@ -77,10 +83,12 @@ export class RobotManager {
       desired.push({
         type: 'cleaningBot',
         index: i,
+        nameKey: cleanCount > 1 ? null : 'robot_cleaner_name',
         name: cleanCount > 1 ? `Sanitization Droid #${i + 1}` : 'Common House Sanitization Bot',
         icon: '🧼',
         domain: 'care',
         hoursCancelled: nodeRobots.cleaningBot.hoursCancelled || 2,
+        taskKey: 'robot_cleaner_task',
         taskDesc: 'UV-C Surface Disinfection & Pathway Clearing',
         radius: 16
       });
@@ -92,10 +100,12 @@ export class RobotManager {
       desired.push({
         type: 'cncSorter',
         index: i,
+        nameKey: armCount > 1 ? null : 'robot_sorter_name',
         name: armCount > 1 ? `Cobot Sorter Arm #${i + 1}` : 'FabLab Shredder & Sorter Arm',
         icon: '🦾',
         domain: 'workshop',
         hoursCancelled: nodeRobots.cncSorter.hoursCancelled || 4,
+        taskKey: 'robot_sorter_task',
         taskDesc: 'Circular Metal Scrap Shredding & Spooling',
         radius: 22
       });

@@ -28,7 +28,7 @@ export class InteriorRenderer {
 
     if (type === 'WORKSHOP') {
       floorType = 'concrete';
-      roomTitle = '💻 FabLab & Circular Workshop';
+      roomTitle = interiorData.name || '💻 FabLab & Circular Workshop';
 
       // Heavy Workbench & 3D Printers (Left wall)
       props.push({
@@ -96,7 +96,7 @@ export class InteriorRenderer {
         icon: '🔧',
         x: -150, y: -15,
         activity: 'soldering',
-        bubble: 'Calibrating 0.4mm nozzle... ✨',
+        bubble: 'bubble_work_calibrating',
         color: '#38bdf8'
       });
       occupants.push({
@@ -105,13 +105,13 @@ export class InteriorRenderer {
         icon: '💻',
         x: -20, y: 65,
         activity: 'cad',
-        bubble: 'Compiling rover hub STL 🤖',
+        bubble: 'bubble_work_compiling',
         color: '#f59e0b'
       });
 
     } else if (type === 'ENERGY') {
       floorType = 'concrete';
-      roomTitle = '⚡ Solar PV & Microgrid Powerhouse';
+      roomTitle = interiorData.name || '⚡ Solar PV & Microgrid Powerhouse';
 
       props.push({
         id: 'inverter-bank',
@@ -148,13 +148,13 @@ export class InteriorRenderer {
         icon: '⚡',
         x: 0, y: 40,
         activity: 'scada',
-        bubble: 'Microgrid frequency nominal (50.02 Hz) ⚡',
+        bubble: 'bubble_energy_freq',
         color: '#10b981'
       });
 
     } else if (type === 'WATER') {
       floorType = 'tile';
-      roomTitle = '💧 Rain Catchment & Water Filtration Plant';
+      roomTitle = interiorData.name || '💧 Rain Catchment & Water Filtration Plant';
 
       props.push({
         id: 'cistern-tank',
@@ -191,13 +191,13 @@ export class InteriorRenderer {
         icon: '💧',
         x: 0, y: 50,
         activity: 'testing',
-        bubble: 'TDS at 24 ppm. Exceptional purity! 💧',
+        bubble: 'bubble_water_tds',
         color: '#06b6d4'
       });
 
     } else if (type === 'FOOD') {
       floorType = 'greenhouse';
-      roomTitle = '🥗 Aeroponic Greenhouse Dome Interior';
+      roomTitle = interiorData.name || '🥗 Aeroponic Greenhouse Dome Interior';
 
       props.push({
         id: 'aeroponic-tower-1',
@@ -241,13 +241,13 @@ export class InteriorRenderer {
         icon: '🥗',
         x: -130, y: -15,
         activity: 'harvesting',
-        bubble: 'Crisp romaine harvest is flourishing! 🥗',
+        bubble: 'bubble_food_romaine',
         color: '#22c55e'
       });
 
     } else if (type === 'SCHOOL') {
       floorType = 'wood';
-      roomTitle = '📚 Commons Forest School & Discovery Atelier';
+      roomTitle = interiorData.name || '📚 Commons Forest School & Discovery Atelier';
 
       props.push({
         id: 'blackboard',
@@ -298,7 +298,7 @@ export class InteriorRenderer {
         icon: '📚',
         x: 50, y: -110,
         activity: 'teaching',
-        bubble: 'Who can tell me how rain returns to groundwater? 🌧️',
+        bubble: 'bubble_school_rain',
         color: '#ec4899'
       });
       occupants.push({
@@ -308,7 +308,7 @@ export class InteriorRenderer {
         x: -140, y: -30,
         isChild: true,
         activity: 'drawing',
-        bubble: 'Drawing our solar panels! ☀️',
+        bubble: 'bubble_school_panels',
         color: '#facc15'
       });
       occupants.push({
@@ -318,13 +318,13 @@ export class InteriorRenderer {
         x: -110, y: 90,
         isChild: true,
         activity: 'blocks',
-        bubble: 'Building a microgrid! 🧱',
+        bubble: 'bubble_school_microgrid',
         color: '#facc15'
       });
 
     } else if (type === 'ELDER_CARE') {
       floorType = 'wood';
-      roomTitle = '🏡 Intergenerational Elder Sanctuary & Hearth';
+      roomTitle = interiorData.name || '🏡 Intergenerational Elder Sanctuary & Hearth';
 
       props.push({
         id: 'stone-hearth',
@@ -376,7 +376,7 @@ export class InteriorRenderer {
         x: -100, y: -55,
         isElder: true,
         activity: 'reading',
-        bubble: 'The mint tea is delightful today. ☕',
+        bubble: 'bubble_elder_tea',
         color: '#e2e8f0'
       });
       occupants.push({
@@ -386,7 +386,7 @@ export class InteriorRenderer {
         x: 80, y: -35,
         isElder: true,
         activity: 'chess',
-        bubble: 'Check! Your move, neighbor. ♟️',
+        bubble: 'bubble_elder_chess',
         color: '#e2e8f0'
       });
 
@@ -429,7 +429,7 @@ export class InteriorRenderer {
         icon: '🏛️',
         x: 0, y: -35,
         activity: 'speaking',
-        bubble: 'Assembly convened: consensus deliberative agenda open. 📜',
+        bubble: 'bubble_agora_agenda',
         color: '#a855f7'
       });
       occupants.push({
@@ -438,13 +438,13 @@ export class InteriorRenderer {
         icon: '🗳️',
         x: -90, y: 60,
         activity: 'listening',
-        bubble: 'Voting on the microgrid battery reserve expansion. 🗳️',
+        bubble: 'bubble_agora_microgrid_vote',
         color: '#38bdf8'
       });
 
     } else if (type === 'GARDEN') {
       floorType = 'stone';
-      roomTitle = '🌸 Shared Intergenerational Garden Pavilion';
+      roomTitle = interiorData.name || '🌸 Shared Intergenerational Garden Pavilion';
 
       props.push({
         id: 'central-fountain',
@@ -482,7 +482,7 @@ export class InteriorRenderer {
         x: -130, y: -45,
         isElder: true,
         activity: 'tea',
-        bubble: 'These peppermint leaves are exceptionally sweet. 🌿',
+        bubble: 'bubble_garden_peppermint',
         color: '#e2e8f0'
       });
       occupants.push({
@@ -492,7 +492,7 @@ export class InteriorRenderer {
         x: 40, y: -20,
         isChild: true,
         activity: 'fountain',
-        bubble: 'Look at the finches bathing! 🐦',
+        bubble: 'bubble_garden_finches',
         color: '#facc15'
       });
 
@@ -587,7 +587,7 @@ export class InteriorRenderer {
           hairColor: pApp.hairColor,
           skinTone: pApp.skinTone,
           activity: 'laptop',
-          bubble: 'Your private sanctuary. 100% debt-free! 👑',
+          bubble: 'bubble_dwelling_private',
           color: '#fbbf24'
         });
       } else if (occupant) {
@@ -600,7 +600,7 @@ export class InteriorRenderer {
           y: isGuest ? 15 : -60,
           activity: isNight ? 'sleeping' : (isGuest ? 'hosting' : 'laptop'),
           isSleeping: isNight,
-          bubble: isNight ? 'Sleeping peacefully... zzz 😴' : (isGuest ? `Welcome in! Make yourself at home! ☕` : 'Resting in private usufruct sanctuary. 🔒'),
+          bubble: isNight ? 'bubble_dwelling_sleep' : (isGuest ? 'bubble_dwelling_welcome' : 'bubble_dwelling_peace'),
           color: '#34d399'
         });
       }
@@ -754,7 +754,7 @@ export class InteriorRenderer {
     ctx.font = 'bold 9px Inter, sans-serif';
     ctx.fillStyle = '#94a3b8';
     ctx.textAlign = 'center';
-    ctx.fillText('🚪 VILLAGE PORTAL', 0, rh / 2 - 14);
+    ctx.fillText(t('interiorVillagePortal', '🚪 VILLAGE PORTAL'), 0, rh / 2 - 14);
 
     if (isAgora) {
       // West Colonnade Portico
@@ -1274,7 +1274,7 @@ export class InteriorRenderer {
       ctx.font = 'bold 9px Inter, sans-serif';
       ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
       ctx.textAlign = 'center';
-      ctx.fillText('🏛️ CONCENTRIC CITIZEN TIERS', 0, prop.h / 2 - 4);
+      ctx.fillText(t('interiorCitizenTiers', '🏛️ CONCENTRIC CITIZEN TIERS'), 0, prop.h / 2 - 4);
 
     } else if (prop.type === 'PODIUM') {
       // Demarchic Assembly Speaker Rostrum
@@ -1306,7 +1306,7 @@ export class InteriorRenderer {
       ctx.font = 'bold 8px Inter, sans-serif';
       ctx.fillStyle = '#fef08a';
       ctx.textAlign = 'center';
-      ctx.fillText('🎙️ ROSTRUM', 0, 4);
+      ctx.fillText(t('interiorRostrum', '🎙️ ROSTRUM'), 0, 4);
 
     } else if (prop.type === 'KLEROTERION') {
       // Athenian Sortition Lottery Urn
@@ -1338,7 +1338,7 @@ export class InteriorRenderer {
       ctx.font = 'bold 8px Inter, sans-serif';
       ctx.fillStyle = '#fde047';
       ctx.textAlign = 'center';
-      ctx.fillText('🏺 SORTITION', 0, prop.h / 2 - 4);
+      ctx.fillText(t('interiorSortitionUrn', '🏺 SORTITION'), 0, prop.h / 2 - 4);
 
     } else if (prop.type === 'CONSTITUTION_PLAQUE') {
       // Bronze Constitutional Wall Tablet
@@ -1356,10 +1356,10 @@ export class InteriorRenderer {
       ctx.font = 'bold 9px Inter, sans-serif';
       ctx.fillStyle = '#fef08a';
       ctx.textAlign = 'center';
-      ctx.fillText('📜 O.N.E. CONSTITUTION • AGPL-3.0', 0, -prop.h / 2 + 16);
+      ctx.fillText(t('interiorConstitutionTitle', '📜 O.N.E. CONSTITUTION • AGPL-3.0'), 0, -prop.h / 2 + 16);
       ctx.font = '8px Inter, sans-serif';
       ctx.fillStyle = '#fed7aa';
-      ctx.fillText('Dynamic Usufruct • Non-Commercial Purity • Thermodynamic Balance', 0, -prop.h / 2 + 30);
+      ctx.fillText(t('interiorConstitutionPrinciples', 'Dynamic Usufruct • Non-Commercial Purity • Thermodynamic Balance'), 0, -prop.h / 2 + 30);
 
     } else if (prop.type === 'SCADA_DESK') {
       // SCADA Telemetry Console (ENERGY)
@@ -1393,7 +1393,7 @@ export class InteriorRenderer {
       // Live readout text
       ctx.fillStyle = '#38bdf8';
       ctx.font = 'bold 8px monospace';
-      ctx.fillText('SCADA 50.02Hz • 230V AC', -prop.w / 2 + 14, prop.h / 2 - 8);
+      ctx.fillText(t('interiorScadaMonitor', 'SCADA 50.02Hz • 230V AC'), -prop.w / 2 + 14, prop.h / 2 - 8);
 
     } else if (prop.type === 'SWITCHGEAR') {
       // Galvanic Isolation Switchgear (ENERGY)
@@ -1418,7 +1418,7 @@ export class InteriorRenderer {
       ctx.font = 'bold 7px Inter, sans-serif';
       ctx.fillStyle = '#fef08a';
       ctx.textAlign = 'center';
-      ctx.fillText('⚡ ISOLATION', 0, prop.h / 2 - 6);
+      ctx.fillText(t('interiorIsolation', '⚡ ISOLATION'), 0, prop.h / 2 - 6);
 
     } else if (prop.type === 'FILTERS') {
       // Multi-layer Sand & Biochar Filter Columns (WATER)
@@ -1468,7 +1468,7 @@ export class InteriorRenderer {
       ctx.font = 'bold 8px Inter, sans-serif';
       ctx.fillStyle = '#f3e8ff';
       ctx.textAlign = 'center';
-      ctx.fillText('🟣 254nm UV-C STERILIZER', 0, prop.h / 2 - 6);
+      ctx.fillText(t('interiorUvcSterilizer', '🟣 254nm UV-C STERILIZER'), 0, prop.h / 2 - 6);
 
     } else if (prop.type === 'WATER_LAB') {
       // Water Quality Testing Desk (WATER)
@@ -1493,7 +1493,7 @@ export class InteriorRenderer {
 
       ctx.font = '8px Inter, sans-serif';
       ctx.fillStyle = '#94a3b8';
-      ctx.fillText('🔬 HYDRO-PURITY LAB', -prop.w / 2 + 14, prop.h / 2 - 8);
+      ctx.fillText(t('interiorHydroLab', '🔬 HYDRO-PURITY LAB'), -prop.w / 2 + 14, prop.h / 2 - 8);
 
     } else if (prop.type === 'GERMINATION_BED') {
       // Nursery Seedling Table with Grow LEDs (FOOD)
@@ -1555,7 +1555,7 @@ export class InteriorRenderer {
       ctx.font = 'bold 8px Inter, sans-serif';
       ctx.fillStyle = '#fef08a';
       ctx.textAlign = 'center';
-      ctx.fillText('🗄️ SEED LIBRARY', 0, prop.h / 2 - 4);
+      ctx.fillText(t('interiorSeedLibrary', '🗄️ SEED LIBRARY'), 0, prop.h / 2 - 4);
 
     } else if (prop.type === 'STUDENT_DESKS') {
       // Birch School Desks (SCHOOL)
@@ -1890,10 +1890,11 @@ export class InteriorRenderer {
 
     // 8. Speech / Thought Bubble (Guaranteed Centering & Responsive Box)
     if (occ.bubble) {
+      const bubbleText = typeof occ.bubble === 'string' ? t(occ.bubble, occ.bubble) : occ.bubble;
       ctx.save();
       ctx.scale(1 / scale, 1 / scale);
       ctx.font = '11px system-ui, sans-serif';
-      const textWidth = ctx.measureText(occ.bubble).width;
+      const textWidth = ctx.measureText(bubbleText).width;
       const bubbleW = textWidth + 24;
       const bubbleH = 24;
       const bubbleY = -62;
@@ -1922,7 +1923,7 @@ export class InteriorRenderer {
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillStyle = '#f8fafc';
-      ctx.fillText(occ.bubble, 0, bubbleY + (bubbleH / 2));
+      ctx.fillText(bubbleText, 0, bubbleY + (bubbleH / 2));
       ctx.restore();
     }
 

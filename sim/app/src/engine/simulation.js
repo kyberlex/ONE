@@ -15,6 +15,8 @@ import { AthenianSortitionEngine } from './sortition.js';
 import { CIVIC_DILEMMAS } from '../data/dilemmas.js';
 import { storageIDB } from './storage_idb.js';
 import { TradeConvoyEngine } from './trade_convoy.js';
+import { CivicProjectsEngine } from './civic_projects.js';
+import { ConfederatedPeerReviewEngine } from './peer_review_engine.js';
 
 export class SimulationManager {
   constructor(config = {}) {
@@ -29,6 +31,8 @@ export class SimulationManager {
     this.adversary = new LegacyAdversaryDirector();
     this.sortition = new AthenianSortitionEngine();
     this.trade = new TradeConvoyEngine(this.node.id);
+    this.civicProjects = new CivicProjectsEngine(this);
+    this.peerReview = new ConfederatedPeerReviewEngine(this);
 
     // Bioregional local solar timezone offset (-5 for Detroit Delray)
     this.timezoneOffset = typeof config.timezoneOffset === 'number'
@@ -39,6 +43,7 @@ export class SimulationManager {
     this.onTickListeners = [];
     this.onCrisisListeners = [];
     this.onDilemmaListeners = [];
+    this.onPeerReviewListeners = [];
     this.onNotificationListeners = [];
 
     // Initialize initial Sortition Council
@@ -145,11 +150,17 @@ export class SimulationManager {
       );
     }
 
-    // 4. Random Civic Dilemma (approx every 3-5 days if no dilemma is active)
-    if (!this.sortition.activeDilemma && Math.random() < 0.015) {
+    // 4. Random Civic Dilemma or Confederated Peer-Review Docket (with initial grace period)
+    if (this.tickCount > 72 && !this.sortition.activeDilemma && !this.peerReview.activeDocket && Math.random() < 0.008) {
       const randomDilemma = CIVIC_DILEMMAS[Math.floor(Math.random() * CIVIC_DILEMMAS.length)];
       const councilSetup = this.sortition.presentDilemma(randomDilemma);
       this.emitDilemma(councilSetup);
+    } else if (this.tickCount > 120 && !this.sortition.activeDilemma && !this.peerReview.activeDocket && (this.tickCount - this.peerReview.lastPeerReviewTick >= this.peerReview.peerReviewIntervalTicks)) {
+      const nextDocket = this.peerReview.getNextPendingDocket();
+      if (nextDocket) {
+        const reviewSetup = this.peerReview.presentDocket(nextDocket, this.sortition.currentCouncil);
+        this.emitPeerReview(reviewSetup);
+      }
     }
 
     // 5. Legacy Adversary AI check
@@ -202,6 +213,9 @@ export class SimulationManager {
       this.emitNotification(ev.title, ev.message);
     }
 
+    // 8. Civic Megaprojects Chapter V Progression
+    this.civicProjects.tick(hour, day);
+
     // 8. Broadcast tick update to UI
     this.notifyTick();
   }
@@ -219,9 +233,23 @@ export class SimulationManager {
     }
   }
 
+  onDilemma(listener) {
+    this.onDilemmaListeners.push(listener);
+  }
+
+  onPeerReview(listener) {
+    this.onPeerReviewListeners.push(listener);
+  }
+
   emitDilemma(dilemmaData) {
     for (const listener of this.onDilemmaListeners) {
       try { listener(dilemmaData); } catch (e) { console.error(e); }
+    }
+  }
+
+  emitPeerReview(data) {
+    for (const listener of this.onPeerReviewListeners) {
+      try { listener(data); } catch (e) { console.error(e); }
     }
   }
 
@@ -268,7 +296,9 @@ export class SimulationManager {
         rotationCount: this.sortition.rotationCount,
         activeDilemma: this.sortition.activeDilemma
       },
-      trade: this.trade.serialize()
+      trade: this.trade.serialize(),
+      civicProjects: this.civicProjects.serialize(),
+      peerReview: this.peerReview.serialize()
     };
   }
 
@@ -350,6 +380,14 @@ export class SimulationManager {
 
       if (state.trade) {
         this.trade.deserialize(state.trade);
+      }
+
+      if (state.civicProjects) {
+        this.civicProjects.deserialize(state.civicProjects);
+      }
+
+      if (state.peerReview) {
+        this.peerReview.deserialize(state.peerReview);
       }
 
       return true;

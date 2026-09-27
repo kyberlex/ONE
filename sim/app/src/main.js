@@ -15,10 +15,11 @@ import { PanelNodeController } from './ui/panel_node.js';
 import { PanelDilemmaController } from './ui/panel_dilemma.js';
 import { PanelDualTrackController } from './ui/panel_dualtrack.js';
 import { PanelDwellingController } from './ui/panel_dwelling.js';
+import { PanelCitizenController } from './ui/panel_citizen.js';
 import { PanelPassportController } from './ui/panel_passport.js';
 import { PanelConvoysController } from './ui/panel_convoys.js';
-import { PanelCitizenController } from './ui/panel_citizen.js';
 import { PanelChatController } from './ui/panel_chat.js';
+import { PanelFeedbackController } from './ui/panel_feedback.js';
 import { ChatEngine } from './engine/chat_engine.js';
 import { storageIDB } from './engine/storage_idb.js';
 import { CitizenPassportManager } from './engine/citizen_passport.js';
@@ -76,15 +77,15 @@ window.addEventListener('DOMContentLoaded', () => {
     } else if (delta.type === 'CLAIM_DWELLING') {
       settlementRenderer.claimDwelling(delta.payload.dwellingId);
       hud.showNotification({
-        title: '🌐 Peer Usufruct Claim',
-        message: `${delta.authorName} claimed Dwelling #${delta.payload.dwellingNumber}`
+        title: '🌐 ' + t('peerClaimedDwellingTitle', 'Dwelling Claimed'),
+        message: t('peerClaimedDwellingDesc', '{author} claimed dwelling #{num}').replace('{author}', delta.authorName).replace('{num}', delta.payload.dwellingNumber)
       });
       updateHomeUi();
     } else if (delta.type === 'RELEASE_DWELLING') {
       settlementRenderer.releaseDwelling(delta.payload.dwellingId);
       hud.showNotification({
-        title: '🌐 Peer Housing Pool',
-        message: `${delta.authorName} returned Dwelling #${delta.payload.dwellingNumber} to civic pool`
+        title: '🌐 ' + t('peerReleasedDwellingTitle', 'Dwelling Released'),
+        message: t('peerReleasedDwellingDesc', '{author} released dwelling #{num}').replace('{author}', delta.authorName).replace('{num}', delta.payload.dwellingNumber)
       });
       updateHomeUi();
     } else if (delta.type === 'CHORE_ALLOCATION') {
@@ -93,17 +94,31 @@ window.addEventListener('DOMContentLoaded', () => {
         sim.node.updateLaborAndMorale();
         if (activePanel === 'chores') panelNode.render('chores');
         hud.showNotification({
-          title: '🌐 Peer Labor Allocation',
-          message: `${delta.authorName}: ${delta.payload.chore} set to ${delta.payload.hours}h`
+          title: '🌐 ' + t('peerChoreUpdateTitle', 'Work Shifts'),
+          message: t('peerChoreUpdateDesc', '{author}: {chore} set to {hours}h').replace('{author}', delta.authorName).replace('{chore}', delta.payload.chore).replace('{hours}', delta.payload.hours)
         });
       }
     } else if (delta.type === 'MACHINERY_REPAIR') {
       sim.thermo.repairMachinery(delta.payload.machineryKey);
       if (activePanel === 'machinery') panelNode.render('machinery');
       hud.showNotification({
-        title: '🌐 Peer Artisan Maintenance',
-        message: `${delta.authorName} serviced ${delta.payload.machineryKey}`
+        title: '🌐 ' + t('peerRepairedTitle', 'Infrastructure Repaired'),
+        message: t('peerRepairedDesc', '{author} repaired {machine}').replace('{author}', delta.authorName).replace('{machine}', delta.payload.machineryKey)
       });
+    } else if (delta.type === 'VOLUNTEER_CONTRIBUTION') {
+      if (sim.civicProjects) {
+        sim.civicProjects.contributeHours(delta.payload.projectId, delta.payload.hours, delta.authorName);
+        if (activePanel === 'projects') panelNode.render('projects');
+        hud.showNotification({
+          title: '🌐 ' + t('peerDonatedTitle', 'Civic Project Contribution'),
+          message: t('peerDonatedDesc', '{author} contributed {hours}h to {project}').replace('{author}', delta.authorName).replace('{hours}', delta.payload.hours).replace('{project}', delta.payload.projectId)
+        });
+      }
+    } else if (delta.type === 'PROJECT_MATERIAL_ALLOCATION') {
+      if (sim.civicProjects) {
+        sim.civicProjects.allocateAllAvailableMaterials(delta.payload.projectId);
+        if (activePanel === 'projects') panelNode.render('projects');
+      }
     } else if (delta.type === 'CITIZEN_SOVEREIGN_DEPARTURE') {
       // Free any dwelling claimed by this departing citizen
       if (settlementRenderer && settlementRenderer.dwellings) {
@@ -129,13 +144,13 @@ window.addEventListener('DOMContentLoaded', () => {
             panelPassport.renderCreationWizard();
           }
           hud.showNotification({
-            title: '🔥 Synchronized Oblivion',
-            message: 'Identity burned by an authorized device. Oblivion state synchronized.'
+            title: '🔥 ' + t('gameResetTitle', 'Game Reset'),
+            message: t('gameResetDesc', 'Local data has been cleared. You can start fresh.')
           });
         } else {
           hud.showNotification({
-            title: '🌐 Sovereign Departure',
-            message: `${delta.authorName} exercised the right to oblivion. Usufruct dwelling released.`
+            title: '🌐 ' + t('peerDepartedTitle', 'Citizen Departed'),
+            message: t('peerDepartedDesc', '{author} left the node. Dwelling released.').replace('{author}', delta.authorName)
           });
         }
       });
@@ -160,6 +175,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const panelDilemma = new PanelDilemmaController(sim);
   const panelDualTrack = new PanelDualTrackController(sim);
+  const panelFeedback = new PanelFeedbackController(sim);
   const prop3dViewer = new Prop3DViewer();
   const panelCitizen = new PanelCitizenController(sim, {
     onLocateDwelling: dwelling => {
@@ -177,13 +193,13 @@ window.addEventListener('DOMContentLoaded', () => {
     p2pMesh.setIdentity(identity);
     if (identity) {
       hud.showNotification({
-        title: '🔑 ' + (identity.name || 'Citizen'),
-        message: `Sovereign identity verified (${identity.shortFingerprint}). Actions cryptographically signed.`
+        title: '🔑 ' + (identity.name || t('defaultPioneerName', 'Pioneer')),
+        message: t('characterActiveReady', 'Character profile active. Ready to build resilience!')
       });
     } else {
       hud.showNotification({
-        title: '🔥 Sovereign Oblivion',
-        message: 'Identity burned successfully. Private keys purged and dwelling released.'
+        title: '🔥 ' + t('gameResetTitle', 'Data Cleared'),
+        message: t('gameResetDwellingFree', 'Game cleared. Dwelling returned to civic housing pool.')
       });
       if (settlementRenderer) {
         const homeDwelling = settlementRenderer.dwellings.find(d => d.isPlayerHome);
@@ -203,8 +219,8 @@ window.addEventListener('DOMContentLoaded', () => {
     claimedDwelling => {
       settlementRenderer.claimDwelling(claimedDwelling.id);
       hud.showNotification({
-        title: '🔑 ' + t('yourHomeBadge', 'Your Primary Usufruct Home'),
-        message: `Dwelling #${claimedDwelling.number} claimed in ${activeNode.name}. Usufruct guaranteed at zero cost!`
+        title: '🔑 ' + t('yourHomeBadge', 'Your Dwelling'),
+        message: t('claimedDwellingNotice', 'Claimed dwelling #{num}. It is freely yours under usufruct!').replace('{num}', claimedDwelling.number)
       });
       updateHomeUi();
       sim.saveToLocalStorage();
@@ -228,7 +244,7 @@ window.addEventListener('DOMContentLoaded', () => {
       settlementRenderer.releaseDwelling(releasedDwelling.id);
       hud.showNotification({
         title: '🔄 ' + t('btnReleaseToPool', 'Release to Civic Pool'),
-        message: `Dwelling #${releasedDwelling.number} returned to community housing reserve pool.`
+        message: t('releasedDwellingNotice', 'Dwelling #{num} returned to community housing reserve pool.').replace('{num}', releasedDwelling.number)
       });
       updateHomeUi();
       sim.saveToLocalStorage();
@@ -293,13 +309,14 @@ window.addEventListener('DOMContentLoaded', () => {
     else if (panelType === 'tech') panelDualTrack.open();
     else if (panelType === 'convoys') panelConvoys.open();
     else if (panelType === 'council') {
+      const councilBtn = document.getElementById('btn-open-council');
+      if (councilBtn) councilBtn.classList.remove('has-alert');
       if (sim.sortition.activeDilemma) {
         panelDilemma.openDilemma(sim.sortition.activeDilemma);
+      } else if (panelDilemma.activePeerReviewData) {
+        panelDilemma.openPeerReview(panelDilemma.activePeerReviewData);
       } else {
-        hud.showNotification({
-          title: t('navCouncil', '🏛️ Sortition Council'),
-          message: t('councilInRecess', 'Assembly is in recess. Deliberation begins when a community dilemma emerges.')
-        });
+        panelDilemma.openAssemblyCodex();
       }
     }
   });
@@ -314,8 +331,23 @@ window.addEventListener('DOMContentLoaded', () => {
       panelConvoys.render();
     }
     panelDilemma.render();
-    if (panelChat) panelChat.render();
+    panelFeedback.render();
+    if (panelChat) {
+      panelChat.render();
+      if (typeof panelChat.updateLauncherText === 'function') panelChat.updateLauncherText();
+    }
+    if (panelDwelling && panelDwelling.isOpen && panelDwelling.currentDwelling) {
+      panelDwelling.render();
+    }
+    if (panelPassport && panelPassport.isOpen) {
+      panelPassport.render();
+    }
     updateSettlementMetaHeader();
+    updateHomeUi();
+    if (hud) {
+      hud.updateStaticTranslations();
+      hud.update(sim.getFullState());
+    }
   });
 
 
@@ -330,9 +362,10 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     onSelectBuilding: building => {
       zoomCoordinator.setLevel(ZOOM_LEVELS.BUILDING, building);
+      const bTitle = building.nameKey ? t(building.nameKey, building.name) : building.name;
       hud.showNotification({
-        title: building.name,
-        message: `Entered interior view. Click fixtures to inspect in 3D. Press [ESC] or [-] to zoom out.`
+        title: bTitle,
+        message: t('interiorEnteredNotice', 'Entered interior view. Click fixtures to inspect in 3D. Press [ESC] or [-] to zoom out.')
       });
     },
     onSelectInteriorProp: prop => {
@@ -351,6 +384,9 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     onSelectCitizen: citizen => {
       panelCitizen.open(citizen);
+    },
+    onSelectCivicProject: project => {
+      panelNode.open('projects');
     }
   });
 
@@ -396,6 +432,19 @@ window.addEventListener('DOMContentLoaded', () => {
   worldMap.updateSolarTerminator(sim.currentHour, sim.currentDay);
 
   // 7. Initialize 4-Level Discrete Zoom Orchestrator (WORLD ↔ REGION ↔ NODE ↔ BUILDING)
+  let viewTransitionTimeout = null;
+
+  function clearViewTransitions() {
+    if (viewTransitionTimeout) {
+      clearTimeout(viewTransitionTimeout);
+      viewTransitionTimeout = null;
+    }
+    const worldPanel = document.getElementById('world-map-view');
+    if (worldPanel) {
+      worldPanel.classList.remove('transition-dive-out', 'transition-ascend-in');
+    }
+  }
+
   const zoomCoordinator = new ZoomCoordinator({
     initialLevel: ZOOM_LEVELS.NODE,
     getActiveNode: () => activeNode,
@@ -403,45 +452,70 @@ window.addEventListener('DOMContentLoaded', () => {
       const worldPanel = document.getElementById('world-map-view');
       const settlementPanel = document.getElementById('settlement-view');
 
-      if (level === ZOOM_LEVELS.WORLD) {
-        currentView = 'world';
-        worldPanel.classList.remove('hidden');
-        worldPanel.classList.add('active');
-        settlementPanel.classList.remove('active');
-        settlementPanel.classList.add('hidden');
+      clearViewTransitions();
 
+      const isComingFromMap = (previousLevel === ZOOM_LEVELS.WORLD || previousLevel === ZOOM_LEVELS.REGION);
+      const isGoingToMap = (level === ZOOM_LEVELS.WORLD || level === ZOOM_LEVELS.REGION);
+
+      if (isGoingToMap) {
+        currentView = 'world';
         if (settlementRenderer.activeInterior) {
           settlementRenderer.exitInterior();
         }
-        settlementRenderer.stop();
-        setTimeout(() => {
-          worldMap.resize();
-          worldMap.showWorld();
-          worldMap.updateSolarTerminator(sim.currentHour, sim.currentDay);
-        }, 50);
-      } else if (level === ZOOM_LEVELS.REGION) {
-        currentView = 'world';
-        worldPanel.classList.remove('hidden');
-        worldPanel.classList.add('active');
-        settlementPanel.classList.remove('active');
-        settlementPanel.classList.add('hidden');
 
-        if (settlementRenderer.activeInterior) {
-          settlementRenderer.exitInterior();
-        }
-        settlementRenderer.stop();
-        setTimeout(() => {
+        if (!isComingFromMap) {
+          // Node -> Map transitions (Node -> Region or Node -> World chained)
+          worldPanel.classList.remove('hidden');
+          worldPanel.classList.add('active', 'transition-ascend-in');
           worldMap.resize();
-          worldMap.showRegion(activeNode);
-          worldMap.updateSolarTerminator(sim.currentHour, sim.currentDay);
-        }, 50);
+
+          if (level === ZOOM_LEVELS.REGION) {
+            // Node -> Region: Region map lands centered on the active node
+            worldMap.showRegion(activeNode, false);
+            worldMap.updateSolarTerminator(sim.currentHour, sim.currentDay);
+
+            viewTransitionTimeout = setTimeout(() => {
+              worldPanel.classList.remove('transition-ascend-in');
+              settlementPanel.classList.remove('active');
+              settlementPanel.classList.add('hidden');
+              settlementRenderer.stop();
+              worldMap.resize();
+            }, 480);
+          } else if (level === ZOOM_LEVELS.WORLD) {
+            // Node -> World: Two-stage chain!
+            // Stage 1: Ascend from Node up to Region
+            worldMap.showRegion(activeNode, false);
+            worldMap.updateSolarTerminator(sim.currentHour, sim.currentDay);
+
+            viewTransitionTimeout = setTimeout(() => {
+              worldPanel.classList.remove('transition-ascend-in');
+              settlementPanel.classList.remove('active');
+              settlementPanel.classList.add('hidden');
+              settlementRenderer.stop();
+              worldMap.resize();
+              // Stage 2: Immediately continue zooming out from Region all the way to Earth!
+              worldMap.showWorld(true);
+            }, 440);
+          }
+        } else {
+          // Map internal navigation: Region <-> World
+          worldPanel.classList.remove('hidden');
+          worldPanel.classList.add('active');
+          settlementPanel.classList.remove('active');
+          settlementPanel.classList.add('hidden');
+          settlementRenderer.stop();
+          setTimeout(() => {
+            worldMap.resize();
+            if (level === ZOOM_LEVELS.REGION) {
+              worldMap.showRegion(activeNode, true);
+            } else {
+              worldMap.showWorld(true);
+            }
+            worldMap.updateSolarTerminator(sim.currentHour, sim.currentDay);
+          }, 50);
+        }
       } else if (level === ZOOM_LEVELS.NODE) {
         currentView = 'settlement';
-        settlementPanel.classList.remove('hidden');
-        settlementPanel.classList.add('active');
-        worldPanel.classList.remove('active');
-        worldPanel.classList.add('hidden');
-
         if (settlementRenderer.activeInterior) {
           settlementRenderer.exitInterior();
         } else {
@@ -450,8 +524,52 @@ window.addEventListener('DOMContentLoaded', () => {
           const settlementHeader = document.getElementById('settlement-header-bar');
           if (settlementHeader) settlementHeader.classList.remove('hidden');
         }
-        settlementRenderer.start();
-        settlementRenderer.resize();
+
+        if (isComingFromMap) {
+          if (previousLevel === ZOOM_LEVELS.WORLD) {
+            // World -> Node: Two-stage chain!
+            // Stage 1: Camera swoops from space down to the region
+            worldMap.showRegion(activeNode, true);
+
+            viewTransitionTimeout = setTimeout(() => {
+              // Stage 2: Settlement awakens underneath, map dives in and dissolves!
+              settlementPanel.classList.remove('hidden');
+              settlementPanel.classList.add('active');
+              settlementRenderer.start();
+              settlementRenderer.resize();
+
+              worldPanel.classList.add('transition-dive-out');
+
+              viewTransitionTimeout = setTimeout(() => {
+                worldPanel.classList.remove('active', 'transition-dive-out');
+                worldPanel.classList.add('hidden');
+                settlementRenderer.resize();
+              }, 520);
+            }, 850);
+          } else {
+            // Region -> Node: Direct dive into the village
+            settlementPanel.classList.remove('hidden');
+            settlementPanel.classList.add('active');
+            settlementRenderer.start();
+            settlementRenderer.resize();
+
+            worldPanel.classList.remove('hidden');
+            worldPanel.classList.add('active', 'transition-dive-out');
+
+            viewTransitionTimeout = setTimeout(() => {
+              worldPanel.classList.remove('active', 'transition-dive-out');
+              worldPanel.classList.add('hidden');
+              settlementRenderer.resize();
+            }, 520);
+          }
+        } else {
+          settlementPanel.classList.remove('hidden');
+          settlementPanel.classList.add('active');
+          settlementRenderer.start();
+          settlementRenderer.resize();
+          worldPanel.classList.remove('active');
+          worldPanel.classList.add('hidden');
+        }
       } else if (level === ZOOM_LEVELS.BUILDING) {
         currentView = 'settlement';
         settlementPanel.classList.remove('hidden');
@@ -487,7 +605,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const climate = CLIMATE_ZONES[activeNode.climateKey] || CLIMATE_ZONES.TEMPERATE;
 
     if (nameEl) nameEl.textContent = activeNode.name;
-    if (tagEl) tagEl.textContent = `${climate.name} • ${climate.dwellingType}`;
+    if (tagEl) {
+      const climName = climate.nameKey ? t(climate.nameKey, climate.name) : climate.name;
+      const dwellType = climate.dwellingTypeKey ? t(climate.dwellingTypeKey, climate.dwellingType) : climate.dwellingType;
+      tagEl.textContent = `${climName} • ${dwellType}`;
+    }
   }
 
   function updateHomeUi() {
@@ -545,9 +667,12 @@ window.addEventListener('DOMContentLoaded', () => {
     updateHomeUi();
     zoomCoordinator.setLevel(ZOOM_LEVELS.NODE, null, true);
 
+    const dwellTypology = CLIMATE_ZONES[node.climateKey]?.dwellingTypeKey
+      ? t(CLIMATE_ZONES[node.climateKey].dwellingTypeKey, CLIMATE_ZONES[node.climateKey].dwellingType)
+      : (CLIMATE_ZONES[node.climateKey]?.dwellingType || 'Bioclimatic');
     hud.showNotification({
       title: `🏘️ ${node.name}`,
-      message: `${node.bioregion} (${node.country}). Architectural style: ${CLIMATE_ZONES[node.climateKey]?.dwellingType || 'Bioclimatic'}.`
+      message: `${node.bioregion} (${node.country}). Architectural style: ${dwellTypology}.`
     });
   }
 
@@ -594,8 +719,8 @@ window.addEventListener('DOMContentLoaded', () => {
         panelDwelling.open(vacantDwelling, activeNode);
       } else {
         hud.showNotification({
-          title: '🏘️ Civic Housing Buffer Full',
-          message: 'All dwellings in this node are currently occupied. Expand capacity or join another federated node!'
+          title: '🏘️ ' + t('civicHousingBufferFull', 'Civic Housing Buffer Full'),
+          message: t('civicHousingBufferFullDesc', 'All dwellings in this node are currently occupied. Expand capacity or join another federated node!')
         });
       }
     });
@@ -607,23 +732,6 @@ window.addEventListener('DOMContentLoaded', () => {
     interiorPropTooltip.addEventListener('click', () => {
       if (settlementRenderer.hoveredInteriorProp) {
         prop3dViewer.open(settlementRenderer.hoveredInteriorProp);
-      }
-    });
-  }
-
-  // Bind Map Style Toggle Button (Satellite / Topo)
-  const btnToggleStyle = document.getElementById('btn-toggle-map-style');
-  const mapStyleLabel = document.getElementById('map-style-label');
-  const mapStyleIcon = document.getElementById('map-style-icon');
-  if (btnToggleStyle) {
-    btnToggleStyle.addEventListener('click', () => {
-      const newStyle = worldMap.toggleMapStyle();
-      if (newStyle === 'satellite') {
-        if (mapStyleIcon) mapStyleIcon.textContent = '🛰️';
-        if (mapStyleLabel) mapStyleLabel.textContent = t('mapSatellite', 'Satellite Earth');
-      } else {
-        if (mapStyleIcon) mapStyleIcon.textContent = '⛰️';
-        if (mapStyleLabel) mapStyleLabel.textContent = t('mapPhysical', 'Physical Topo');
       }
     });
   }
@@ -640,10 +748,12 @@ window.addEventListener('DOMContentLoaded', () => {
           btnLocate.innerHTML = `📍 <span>${t('btnLocateMe', 'Locate My Bioregion')}</span>`;
           if (locInfo) {
             locInfo.classList.remove('hidden');
+            const climName = res.climate.nameKey ? t(res.climate.nameKey, res.climate.name) : res.climate.name;
+            const dwellTypology = res.climate.dwellingTypeKey ? t(res.climate.dwellingTypeKey, res.climate.dwellingType) : res.climate.dwellingType;
             locInfo.innerHTML = `
-              <div><strong>📍 Your Bioregion:</strong> ${res.climate.name}</div>
-              <div><strong>Architectural Typology:</strong> ${res.climate.dwellingType}</div>
-              <div><strong>Nearest Node:</strong> ${res.nearestNode.name} (~${res.distanceKm} km)</div>
+              <div><strong>${t('bioregionYourBioregion', '📍 Your Bioregion:')}</strong> ${climName}</div>
+              <div><strong>${t('bioregionArchTypology', 'Architectural Typology:')}</strong> ${dwellTypology}</div>
+              <div><strong>${t('bioregionNearestNode', 'Nearest Node: {node} (~{dist} km)').replace('{node}', res.nearestNode.name).replace('{dist}', res.distanceKm)}</strong></div>
               <button id="btn-quick-visit-nearest" class="btn-primary" style="margin-top: 6px; padding: 4px 8px; font-size: 11px; width: 100%;">
                 🔭 ${t('btnVisitVillage', 'Visit Nearest Haven')}
               </button>
@@ -658,15 +768,18 @@ window.addEventListener('DOMContentLoaded', () => {
           }
 
           hud.showNotification({
-            title: '📍 Bioregion Located',
-            message: `Identified ${res.climate.name}. Nearest resilient haven: ${res.nearestNode.name} (${res.distanceKm} km).`
+            title: '📍 ' + t('locateBiomeFoundTitle', 'Bioregion Identified'),
+            message: t('locateBiomeFoundDesc', 'Climate: {climate}. Nearest node: {node} ({dist} km).')
+              .replace('{climate}', res.climate.name)
+              .replace('{node}', res.nearestNode.name)
+              .replace('{dist}', res.distanceKm)
           });
         },
         err => {
           btnLocate.innerHTML = `📍 <span>${t('btnLocateMe', 'Locate My Bioregion')}</span>`;
           hud.showNotification({
-            title: '🛰️ Geolocation Notice',
-            message: 'Centered on pioneer hub. You can click anywhere on Earth to found a node!'
+            title: '🛰️ ' + t('mapWorldTitle', 'Planetary World Map'),
+            message: t('mapClickToFound', 'Click any point on the map to inspect or found a node!')
           });
         }
       );
@@ -691,18 +804,41 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   sim.onDilemmaListeners.push(dilemmaData => {
-    panelDilemma.openDilemma(dilemmaData);
+    panelDilemma.activeDilemmaData = dilemmaData;
+    const councilBtn = document.getElementById('btn-open-council');
+    if (councilBtn) councilBtn.classList.add('has-alert');
+    const title = dilemmaData.dilemma.titleKey ? t(dilemmaData.dilemma.titleKey, dilemmaData.dilemma.title) : dilemmaData.dilemma.title;
     hud.showNotification({
-      title: '🏛️ Athenian Council Summoned',
-      message: dilemmaData.dilemma.title
+      title: '🏛️ ' + t('councilDeliberationBadge', 'Citizen Assembly Deliberation'),
+      message: `${title} (${t('clickToVoteHint', 'Click to vote')})`,
+      onClick: () => {
+        if (councilBtn) councilBtn.classList.remove('has-alert');
+        panelDilemma.openDilemma(dilemmaData);
+      }
     });
   });
 
   sim.onCrisisListeners.push(crisis => {
     panelDilemma.openCrisis(crisis);
+    const crisisName = crisis.nameKey ? t(crisis.nameKey, crisis.name) : crisis.name;
     hud.showNotification({
-      title: '⚠️ SYSTEM ATTACK',
-      message: `${crisis.name}: Legacy Adversary pressure mounting!`
+      title: '⚠️ ' + t('systemAttackBadge', 'System Stress Event'),
+      message: t('crisisActionNotice', '{name}: an urgent collective decision is needed!').replace('{name}', crisisName)
+    });
+  });
+
+  sim.onPeerReview(reviewData => {
+    panelDilemma.activePeerReviewData = reviewData;
+    const councilBtn = document.getElementById('btn-open-council');
+    if (councilBtn) councilBtn.classList.add('has-alert');
+    const title = reviewData.docket.titleKey ? t(reviewData.docket.titleKey, reviewData.docket.title) : reviewData.docket.title;
+    hud.showNotification({
+      title: '🏛️ ' + t('newDocketNoticeTitle', 'Incoming Assembly Proposal'),
+      message: `${title} (${t('clickToVoteHint', 'Click to vote')})`,
+      onClick: () => {
+        if (councilBtn) councilBtn.classList.remove('has-alert');
+        panelDilemma.openPeerReview(reviewData);
+      }
     });
   });
 

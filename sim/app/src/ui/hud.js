@@ -94,6 +94,20 @@ export class HudController {
         el.textContent = translation;
       }
     });
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      const key = el.dataset.i18nTitle;
+      const translation = t(key);
+      if (translation) {
+        el.title = translation;
+      }
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.dataset.i18nPlaceholder;
+      const translation = t(key);
+      if (translation) {
+        el.placeholder = translation;
+      }
+    });
   }
 
   bindControls() {
@@ -211,8 +225,8 @@ export class HudController {
       const isDay = localH >= 6 && localH <= 20;
       this.elSunIcon.textContent = isDay ? '☀️' : '🌙';
       this.elSunIcon.title = isDay
-        ? `Daytime (${hh}:00) — Active Pioneers & Playable Time (0.6h/s)`
-        : `Nighttime (${hh}:00) — Slumber & Fast Forward (2h/s)`;
+        ? t('daytimeTooltip', `Daytime (${hh}:00) — Active Pioneers & Playable Time (0.6h/s)`).replace('{time}', `${hh}:00`)
+        : t('nighttimeTooltip', `Nighttime (${hh}:00) — Slumber & Fast Forward (2h/s)`).replace('{time}', `${hh}:00`);
     }
 
     // 5b. Dynamic Weather
@@ -221,20 +235,31 @@ export class HudController {
       if (w.activeDisaster) {
         this.elWeatherBadge.classList.add('disaster-alert');
         const d = w.activeDisaster;
+        const dName = d.nameKey ? t(d.nameKey, d.name) : d.name;
         const hoursLeft = d.durationHoursLeft ?? d.durationHours ?? 24;
         let stressNote = '';
         if (d.id === 'HEAT_DOME') stressNote = ' [PV Derating • BMS Chiller 10kW]';
         else if (d.id === 'ATMOSPHERIC_RIVER') stressNote = ' [Solar Dunkelflaute • Silt Wear 2.8x]';
-        this.elWeatherBadge.title = `⚠️ ALERT: ${d.name} (${hoursLeft}h left)${stressNote}`;
+        this.elWeatherBadge.title = `⚠️ ALERT: ${dName} (${hoursLeft}h left)${stressNote}`;
         if (this.elWeatherIcon) this.elWeatherIcon.textContent = d.icon;
         if (this.elWeatherTemp) this.elWeatherTemp.textContent = `${w.temperatureC}°C`;
-        if (this.elWeatherName) this.elWeatherName.textContent = d.name;
+        if (this.elWeatherName) this.elWeatherName.textContent = dName;
       } else {
         this.elWeatherBadge.classList.remove('disaster-alert');
-        this.elWeatherBadge.title = `Weather: ${w.name} • Wind: ${w.windSpeedKmh} km/h • Solar: ${Math.round(w.solarMultiplier * 100)}%`;
+        const weatherKeyMap = {
+          'SUNNY': 'weather_sunny',
+          'PARTLY_CLOUDY': 'weather_partly_cloudy',
+          'OVERCAST': 'weather_overcast',
+          'RAIN': 'weather_rain',
+          'STORMY': 'weather_stormy',
+          'HEATWAVE': 'weather_heatwave'
+        };
+        const k = w.nameKey || weatherKeyMap[w.type];
+        const wName = k ? t(k, w.name) : w.name;
+        this.elWeatherBadge.title = `Weather: ${wName} • Wind: ${w.windSpeedKmh} km/h • Solar: ${Math.round(w.solarMultiplier * 100)}%`;
         if (this.elWeatherIcon) this.elWeatherIcon.textContent = w.icon;
         if (this.elWeatherTemp) this.elWeatherTemp.textContent = `${w.temperatureC}°C`;
-        if (this.elWeatherName) this.elWeatherName.textContent = w.name;
+        if (this.elWeatherName) this.elWeatherName.textContent = wName;
       }
     }
 
@@ -253,6 +278,15 @@ export class HudController {
   showNotification(notif) {
     if (!this.elTicker) return;
     this.elTicker.innerHTML = `<strong>${notif.title}:</strong> ${notif.message}`;
+    if (typeof notif.onClick === 'function') {
+      this.elTicker.style.cursor = 'pointer';
+      this.elTicker.title = t('tickerClickToOpen', 'Click to open deliberation');
+      this.elTicker.onclick = notif.onClick;
+    } else {
+      this.elTicker.style.cursor = 'default';
+      this.elTicker.title = '';
+      this.elTicker.onclick = null;
+    }
     this.elTicker.classList.add('flash');
     setTimeout(() => this.elTicker.classList.remove('flash'), 1500);
   }

@@ -4,46 +4,12 @@ This document tracks pending architectural features, research frontiers, and unr
 
 ---
 
-## **1. PENDING GOVERNANCE BRIDGES: SIM-TO-DISCUSSIONS PROTOCOL**
+## **1. IN-GAME COMMUNITY FEEDBACK & PROPOSAL BRIDGE (Completed)**
 
-### **The Problem: Anti-Autocratic Ratification of Simulation Hypotheses**
-
-When players or developers discover an empirical friction in the game (e.g. `SIM-QA-01`: labor bottleneck when 15 councilors are seated in a 28-citizen node) and test a resolution, **who decides whether this becomes canon?**
-If a single player or developer modifies the Constitution or rules unilaterally, it violates the non-oligarchic foundation of O.N.E.
-
-### **The Objective:**
-
-Build an anonymous, automated bridge to export `[SIMULATION_HYPOTHESIS]` entries from the local game client into **GitHub Discussions** ([`github.com/kyberlex/ONE/discussions`](https://github.com/kyberlex/ONE/discussions)) for public debate and sortition peer-review.
-
-### **Architectural Options Explored (To Decide / Implement):**
-
-1. **Option A: Cloudflare Worker Privacy Relay (100% Automated & Anonymous)**
-   - *Architecture:* Local client sends JSON payload to `https://worker.kyberlex.workers.dev/api/propose-hypothesis`.
-   - *Security / OpSec:*
-     - Worker strips player IP, cookies, and fingerprinting headers.
-     - Worker injects private `GITHUB_TOKEN` stored as a Cloudflare Secret (token is NEVER exposed to the frontend).
-     - Worker executes GraphQL mutation `createDiscussion` on `kyberlex/ONE` or `kyberlex/one-dual-track`.
-   - *Status:* Deferred for review when ready to configure Worker GitHub secrets.
-
-2. **Option B: One-Click Pre-filled URL (Zero-Backend / Client-Side)**
-   - *Architecture:* In-game button *"Export Hypothesis to GitHub Discussions"* generates a pre-formatted URL:
-     `https://github.com/kyberlex/ONE/discussions/new?category=rfc&title=...&body=...`
-   - *Security / OpSec:* Zero tokens or secrets required. Player posts under their own GitHub pseudonym if they choose.
-   - *Status:* Candidate for quick integration.
-
-3. **Option C: CLI Batch Exporter (`scripts/publish_sim_hypothesis.py`)**
-   - *Architecture:* Python script run by Kyberlex that parses [`oasis/sim_resolutions_qa.md`](../oasis/sim_resolutions_qa.md), runs OpSec zero-leak audit, and publishes pending hypotheses via `gh` CLI.
-   - *Status:* Useful for batch curation.
-
-### **Developer Protocol: When We Discover Gaps While Coding**
-
-1. **Friction Detection:** Whenever a mathematical bottleneck, resource deadlock, or constitutional contradiction is discovered during simulator engine coding or writing:
-   - Developers/AI agents are strictly forbidden from unilaterally declaring a new permanent rule (enforced by Invariant 7 / Gate D7 in `AGENTS.md`).
-2. **Immediate Logging:** Add an entry in [`oasis/sim_resolutions_qa.md`](../oasis/sim_resolutions_qa.md) under ID `SIM-QA-XX` with `[STATUS: SIMULATION_HYPOTHESIS]`, detailing the material friction, the tested countermeasure, and the open governance question.
-3. **In-Code Annotation:** Implement the interim countermeasure in the simulator source code tagged with:
-   `// PENDING RATIFICATION: SIM-QA-XX (see oasis/sim_resolutions_qa.md)`
-4. **Community Export:** Export the hypothesis to **GitHub Discussions** (`Ideas / RFC`) using Option B (one-click pre-filled URL) or Option C (batch CLI exporter).
-5. **Ratification & Canonization:** Only after sortition review on GitHub Discussions confirms the solution, advance status to `[STATUS: COMMUNITY_SORTITION_RATIFIED]` and submit a formal amendment to the Living Constitution.
+The bridge for reporting operational bugs and proposing civic/gameplay ideas directly from the live client into GitHub has been fully implemented in `sim/` via:
+- **In-Game Solarpunk Feedback Modal ([`panel_feedback.js`](app/src/ui/panel_feedback.js)):** Dedicated topbar button (`💡 Ideas & Bugs`) with category selection, automatic node telemetry capture, and tabbed switcher.
+- **Anonymous Google Apps Script Privacy Relay ([`scripts/feedback_relay_apps_script.js`](../scripts/feedback_relay_apps_script.js)):** Zero-registration proxy that strips personal metadata and securely posts `[Bug]` and `[Idea / RFC]` issues into [`github.com/kyberlex/ONE`](https://github.com/kyberlex/ONE) using server-side Secrets.
+- **Sortition Peer-Review Codex ([`peer_review_engine.js`](app/src/engine/peer_review_engine.js)):** In-game confederal sortition assembly deliberating directly on empirical `SIM-QA-XX` dockets.
 
 ---
 
@@ -108,9 +74,47 @@ Enable seamless, zero-registration synchronization of simulation states and node
 - [x] **Dynamic Climate Disaster Events (Completed):** Atmospheric rivers and heat dome stress-tests on crop resilience, PV thermal derating, BMS chiller load, and Legacy Adversary AI synergy.
 - [x] **Inter-Node Trade Convoys (Completed):** Multi-hex barter logistics with neighboring autonomous nodes, low-carbon vehicle fleet (Rovers, Maglev Rail, Cargo Dirigibles), bioregional surplus/deficit reciprocity, and real-time Leaflet route tracking.
 - [x] **P2P Village Chat & Mesh Telegram (Completed):** Hybrid operational quick-phrases (⚡ Alerts, 🚚 Logistics & Barter, 🏛️ Sortition & Assembly, 🤝 Commons & Mutual Aid) + ECDSA-signed free chat for node neighborhood coordination, 1-click resource claiming/donating, live 60 FPS speech bubbles over canvas citizen avatars, and ambient resident chatter.
-- [ ] **Sortition Jury Peer-Review System:** In-game sortition councils that evaluate hypotheses generated by other simulated nodes.
-- [ ] **1-Click Sim-to-Discussions Hypothesis Bridge:** In-game UI button / pre-filled GitHub Discussion RFC generator to export newly discovered SIM-QA dilemmas for sortition community ratification.
-- [ ] **Civic Volunteer Projects Board (Cantieri Civici):** Player-initiated extra community megaprojects (free hours donation + shared materials + living canvas expansion).
+- [x] **Sortition Jury Peer-Review System & Confederated Assembly Codex (Completed):**
+  - *Constitutional Foundation:* Anchored in Chapter IV (Art. 4.2, 4.3, & 4.5): Athenian demarchic sortition assemblies deliberate on empirical operational and constitutional hypotheses (`SIM-QA-XX` dockets) transmitted across the confederated P2P mesh network, establishing living case law without unilateral or autocratic rule modifications.
+  - *Implementation:*
+    - **Canonical Confederated Dockets ([`peer_review_dockets.js`](app/src/data/peer_review_dockets.js)):** Bundled 4 canonical dockets derived from [`oasis/sim_resolutions_qa.md`](../oasis/sim_resolutions_qa.md):
+      1. `SIM-QA-01`: Quorum Scaling for Emerging Nodes (< 50 Pop) (Origin: Detroit Delray, Art. 4.2.1).
+      2. `SIM-QA-02`: Dual-Tier Tool Classification: Personal Craft vs. Civic Library (Origin: Val di Susa, Art. 3.1 & 3.4).
+      3. `SIM-QA-03`: Ecological Sensor Integrity & Analog Citizen Ground-Truthing (Origin: Yukon-Alaska, Art. 2.4).
+      4. `SIM-QA-04`: Soulbound FabLab Queuing vs. Priority Favor Brokerage (Origin: Sahel Biome, Art. 5.3 & 6.2).
+    - **Confederated Peer-Review Engine ([`peer_review_engine.js`](app/src/engine/peer_review_engine.js)):**
+      - Manages available, reviewed, and ratified dockets with deterministic state serialization (`localStorage`).
+      - Simulates individual citizen juror stances using psychometric leanings (tribal bias, greed, morale).
+      - Enforces the strict 75% constitutional supermajority threshold required by Art. 4.5.
+      - Applies active passive precedent perks and confederal trust score adjustments upon ratification.
+    - **Sortition Assembly Board & Deliberation UI ([`panel_dilemma.js`](app/src/ui/panel_dilemma.js)):**
+      - Upgraded the Sortition modal into a dual-mode interface:
+        1. **Athenian Assembly Codex Board:** Displays current seated jurors (drawn by lot), mandate term progress (Day X of 30), incoming confederated dockets with 1-click *"Impanel Sortition Jury"* buttons, and the active Ratified Case Law Precedents Codex.
+        2. **Confederated Peer-Review Deliberation Sheet:** Renders incoming transmission telemetry, problem context card, tested solution card, empirical telemetry banner, interactive SVG donut chart with 75% golden threshold notch, individual juror vote breakdown, and Ratify/Reject actions.
+    - **Simulation Loop & Event Flow ([`simulation.js`](app/src/engine/simulation.js) & [`main.js`](app/src/main.js)):**
+      - Periodic confederal network broadcasts (every 72–120 hours) delivering new dockets to the council.
+      - Direct footer drawer navigation (`🏛️ Sortition Council` / `🏛️ Assemblea Civica`) seamlessly opens the Assembly Codex when no acute dilemma is active.
+    - **Multilingual i18n & Solarpunk Aesthetics ([`en.js`](app/src/i18n/en.js), [`it.js`](app/src/i18n/it.js), [`style.css`](app/src/style.css)):** Universal English base stringIDs with full Italian translations and custom glassmorphic solarpunk styling.
+- [x] **In-Game Community Feedback & Anonymous Apps Script Relay (Completed):**
+  - *Architecture & Security:* Zero-registration community reporting bridge replacing complicated manual RFC bridges. Bridges player ideas and bug reports into **GitHub Issues & Discussions** (`kyberlex/ONE`) via an anonymous Google Apps Script privacy relay (`scripts/feedback_relay_apps_script.js`), keeping the private GitHub token securely inside Apps Script `ScriptProperties` with zero exposure to frontend code.
+  - *Implementation:*
+    - Created Google Apps Script relay (`scripts/feedback_relay_apps_script.js`) with `doGet` health-check and `doPost` GitHub REST API integration for `[Bug]` and `[Idea / RFC]` issues with automatic labeling (`["bug", "community-report"]` / `["idea", "enhancement", "community-rfc"]`).
+    - Added dedicated topbar button (`💡 Idee & Bug`) and glassmorphic Solarpunk modal ([`panel_feedback.js`](app/src/ui/panel_feedback.js)) with tabbed switcher between ideas and bug reports, category selection, and automatic telemetry capture (origin bioregion, node name, simulation tick, client version).
+    - Includes 1-click fallback to pre-filled GitHub Web issue creation and configurable local endpoint storage in `localStorage`.
+    - Full multilingual i18n support in `en.js` and `it.js`.
+- [x] **Civic Volunteer Projects Board (Cantieri Civici) (Completed):**
+  - *Constitutional Foundation:* Anchored directly in Chapter V (Art. 5.1 & 5.2): beyond essential rotational subsistence maintenance (2–4h/day), citizens freely pool disposable hours and surplus circular materials into enduring communal megaprojects.
+  - *Implementation:*
+    - Created modular [`CivicProjectsEngine`](app/src/engine/civic_projects.js) managing 5 Solarpunk megaprojects:
+      1. **Agora Socratic Amphitheater (`amphitheater` 🏛️):** Tiered stone hemicycle and acoustic shell (+15 community morale, +30% sortition quorum speed, +20% strike resistance).
+      2. **Closed-Loop Anaerobic Biogas Digester (`biogasDigester` 🌿):** Organic compost bioreactor (+25% greenhouse crop yield, +25 kWh night thermal buffer).
+      3. **Deep Basalt Rain Reservoir & Reed Wetland (`deepRainReservoir` 💧):** Subterranean cistern and biofilter (+8,000 L water storage, -40% heatwave evaporation loss).
+      4. **Solar Thermal Molten Salt Spire (`solarTower` ⚡):** Heliostat central receiver tower (+10,000 kWh battery storage, +20 kWh/tick night electricity generation).
+      5. **Cryo-Passive Heirloom Seed Vault (`seedVault` 🌾):** Subterranean genomic preservation bank (-75% blight vulnerability, allied biodiversity trade manifests).
+    - Added dedicated **🏗️ Civic Megaprojects** tab to the Node Management modal ([`panel_node.js`](app/src/ui/panel_node.js)), featuring real-time progress bars, 2h/4h volunteer shift donation, common surplus allocation, and live contributor rosters.
+    - Built modular 2D Canvas visualizer [`CivicProjectsRenderer`](app/src/settlement/civic_projects_renderer.js): renders realistic timber scaffolding, amber hazard beacons, and progress tags during construction, and architectural vector graphics, water ripples, and glowing cores upon completion.
+    - Connected ambient daytime volunteering by idle citizens, deterministic state serialization, and P2P mesh replication (`VOLUNTEER_CONTRIBUTION`).
+
 
 ---
 
@@ -212,5 +216,91 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
     - Extended solar terminator longitude bounds from `[-180, 180]` to `[-200, 200]` and `MAX_LAT` to `85.0` in [`solar_terminator.js`](app/src/map/solar_terminator.js) to prevent meridian edge-feathering seams.
     - Removed cyan stroke border (`stroke: false`, `weight: 0`) from `terminatorLayer` in [`world_map.js`](app/src/map/world_map.js), and applied hardware-accelerated `filter: blur(14px)` on `.leaflet-terminatorPane-pane` in CSS and JS.
     - Preserved crisp clarity on node markers, mesh transit links, and UI controls in higher panes while achieving a soft astronomical twilight roll-off between day and night.
+
+- [x] **ITEM 12: Zoom Controls Consolidation (Top Header Bar vs. Floating Bottom Bar Deduplication) (Completed):**
+  - *Requirement:* Discrete zoom controls were duplicated in two locations (top header bar and floating bottom bar). Consolidate into a single canonical control ("ne basta una").
+  - *Implementation:*
+    - Removed redundant HTML elements (`#floating-zoom-control`, `#btn-float-zoom-*`, `#floating-zoom-level-name`) from [`index.html`](app/index.html).
+    - Cleaned up event listeners and UI update bindings in [`zoom_coordinator.js`](app/src/engine/zoom_coordinator.js).
+    - Removed unused floating widget CSS rules (`.floating-zoom-control`, `.btn-float-step`, `.float-level-badge`) from [`style.css`](app/src/style.css).
+    - Preserved 100% responsiveness and direct 1-click level switching (World / Region / Node / Building) in the top header bar alongside pinch/wheel snapping.
+
+- [x] **ITEM 13: 100% Offline-First Earth Cartography & Cinematic Zoom Transitions (Completed):**
+  - *Requirement:* Completely eliminate runtime dependence on external map servers (ESRI / OpenStreetMap) for World and Region zoom views, and provide a seamless, cinematic zoom-in / fade-out transition between Region and Node view.
+  - *Implementation:*
+    - Bundled local dual-resolution WebP rasters in `public/assets/map/`:
+      1. `world_low.webp` (2048×2048, ~230 KB): Instantaneous 10ms local render for global planetary Earth view (`ZOOM_LEVELS.WORLD`).
+      2. `world_high.webp` (8192×8192, ~4.30 MB): Stitched from 1,024 Zoom 5 tiles covering the entire planet in razor-sharp definition for the regional watershed crop (`ZOOM_LEVELS.REGION`, calibrated at Zoom 7.0 / ~300 km).
+    - Removed external `physicalLayer` and `#btn-toggle-map-style`, avoiding all missing-tile watermarks and ensuring 0 KB network egress.
+    - Implemented GPU-accelerated cinematic view transitions in `style.css` and `main.js`:
+      - **Dive Transition (Region ➔ Node):** The map scales up (zoom-in) and fades out smoothly into soft bioluminescent light while the settlement village canvas expands from 0.78x to 1.0x with gentle blur settle.
+      - **Ascend Transition (Node ➔ Region):** The village canvas gently recedes and fades out while the regional map descends into crisp focus.
+
+- [x] **ITEM 14: Solar Terminator Shadow Blur Calibration (Reduce Twilight Feathering Width) (Completed):**
+  - *Requirement:* The shadow blur along the day/night solar terminator (`.leaflet-terminatorPane-pane` filter) was too wide (`blur(14px)`), causing the penumbra transition zone to appear excessively broad and washed out over large landmasses.
+  - *Implementation:*
+    - Calibrated `filter: blur(5px)` in [`style.css`](app/src/style.css) and [`world_map.js`](app/src/map/world_map.js).
+    - Retains smooth astronomical twilight roll-off without excessive spread, maintaining crisp visibility of regional coastlines, topography, and settlements near the terminator line.
+
+- [x] **ITEM 15: Cross-Device Passport QR Code & Sovereign Sync (Completed):**
+  - *Requirement:* Seamless multi-device identity replication (smartphone, laptop, desktop, tablet) using sovereign user identity without accounts, passwords, or central servers.
+  - *Implementation:*
+    - **Cryptographic Engine ([`citizen_passport.js`](app/src/engine/citizen_passport.js)):** Asymmetric WebCrypto ECDSA P-256 keypair generation, collision-immune token format (`ONE:<Name>:<Timestamp>:<Salt>:<PubKeyHex>`), and cryptographic action delta signing.
+    - **Interactive Solarpunk Studio ([`panel_passport.js`](app/src/ui/panel_passport.js)):** Sovereign onboarding wizard with 3D avatar preview, outfit silhouette selection, hairstyle and color customizers, and community vocations.
+    - **Instant QR Pairing ([`qr_generator.js`](app/src/engine/qr_generator.js)):** Inline Solarpunk SVG QR code rendering containing `?passport=ONE:...` pairing URL.
+    - **URL Importer & Storage ([`storage_idb.js`](app/src/engine/storage_idb.js)):** Client checks URL query parameters on startup, auto-adopts the imported token into IndexedDB, updates HUD badge, and cleans URL history.
+
+- [x] **ITEM 16: Multi-Device Button Visibility & Layout Audit + Universal English Base & 14-Language i18n (Completed):**
+  - *Requirement:* Audit the visibility and hitboxes of all interactive buttons in the top HUD header and bottom action drawer across common form factors (Desktop, Laptop, Tablet, Mobile portrait/landscape). Ensure that 100% of UI strings have a canonical English base and are mapped to `data-i18n` with zero hardcoded non-English strings (Gate D8).
+  - *Implementation & Verification:*
+    - **Header & Layout Calibration:** Fixed unclosed `.hud-left-brand-row` wrapper tag in `index.html` preventing proper 3-column header flex distribution. Decoupled sovereign utility buttons (`#btn-open-passport` and `#btn-open-feedback`) from the discrete zoom bar into the top-right action stack (`.hud-top-actions`), shrinking the discrete zoom bar from 716px down to 280px.
+    - **Multi-Device Responsive Breakpoints (`style.css`):**
+      - **Desktop (1920×1080):** Zero overflow (`right = 1906px <= 1920px`). Full text badges, 4 meters, and discrete zoom bar.
+      - **Laptop (1366×768):** Zero overflow (`right = 1356px <= 1366px`). Compact meters (82–98px), iconified pills (`🔑`, `💡`), auto-hidden long alert ticker and threat subtitle.
+      - **Tablet Landscape (1024×768):** Zero overflow (`right = 1018px <= 1024px`). Compact micro-meters (62–74px), compact zoom buttons (24px, 28px), streamlined footer action drawer.
+      - **Mobile Landscape (844×390):** Zero overflow (`right = 840px <= 844px`, `bottom = 267px <= 390px`). Ultra-compact HUD fitting comfortably within 844px landscape width.
+      - **Mobile Portrait (390×844):** Responsive `#mobile-landscape-overlay` rotation guidance active; if dismissed, zero document-level horizontal scroll (`scrollWidth <= clientWidth`), with smooth horizontal touch-scrolling on `.hud-meters-row` and `.actions-btn-bar`.
+    - **Touch Hitboxes (WCAG 2.5.5 Level AAA):** Enforced minimum 44×44px touch hitboxes using CSS `::after` pseudo-element extensions on all interactive buttons (`.btn-zoom-step`, `.zoom-segment-btn`, `.btn-action-nav`, `.btn-speed`, `.btn-passport-pill`, `.btn-feedback-pill`).
+    - **Universal English Base & 14-Language i18n Synchronization (Gate D8):**
+      - Audited and converted all hardcoded strings in `index.html`, `panel_dwelling.js`, `panel_citizen.js`, and `prop_3d_viewer.js` to semantic English fallbacks with `data-i18n`, `data-i18n-title`, and `t()` wrappers.
+      - Synchronized all 14 official languages (`en`, `it`, `es`, `fr`, `de`, `pt`, `ru`, `zh`, `ja`, `ko`, `hi`, `ar`, `id`, `tr`) via `scripts/sync_sim_i18n.py`.
+      - Verified 100% key parity (exactly 692 keys across each of the 14 dictionaries with 0 missing and 0 extra keys).
+      - Passed Gate D2 zero-leak OpSec audit and verified production build with Vite.
+
+- [ ] **ITEM 17: Interactive Onboarding Guide (First-Time Player Walkthrough):**
+  - *Requirement:* Guided interactive tutorial / spotlight tour for new players who complete passport creation and arrive in the settlement for the first time.
+  - *Scope & Steps:*
+    1. **Core Survival Loop (HUD Vital Meters):** Spotlight on the top 4 meters (⚡ Energy, 💧 Water, 🥗 Calories, 💻 Compute), explaining battery buffers, cistern reserves, and the biometric floor (2,200 kcal/die).
+    2. **Living Settlement Canvas:** Highlight the central Agora, usufruct pods (how to claim a dwelling), and daily rotational chores.
+    3. **Action Bar & Civic Governance:** Introduce the bottom drawer: Sortition Council (Athenian demarchy), Chore Roster (2-4h work shifts), Civic Megaprojects, and Inter-Node Trade Convoys.
+    4. **Dual-Track & Cybernetics:** Showcase the FabLab automation tech-tree (building robots to permanently eliminate human chore hours) and open-hardware blueprint exports.
+    5. **UX Controls:** Step-by-step tooltip callouts with "Next", "Back", and "Skip Tour", stored in `localStorage` so it only triggers once per citizen.
+
+- [ ] **ITEM 18: One-Click Multiplayer Invite Link & Serverless Signaling (Room URL):**
+  - *Requirement:* Enable players to easily invite a friend or collaborator into their settlement via a single clickable URL (e.g., `https://<domain>/?joinNode=detroit&invite=<room_id>`).
+  - *Investigation & Scope:*
+    - **Invite Link Generator:** Top-bar or Passport modal button (*"🔗 Invite Friend to Settlement"*) that generates and copies a shareable URL containing the active node ID and an ephemeral room token.
+    - **Serverless Signaling Bridge:** Currently WebRTC requires manual ticket copy-paste (`ONE_OFFER` / `ONE_ANSWER`). Evaluate and integrate a zero-server signaling relay (e.g. open public Nostr relays, public MQTT broker, or GunDB peer) so two players visiting the same link establish a WebRTC DataChannel automatically in under 2 seconds without copying tickets.
+    - **Welcome Flow:** When opening an invite link, the new user creates their own sovereign citizen passport and immediately lands inside the inviter's node.
+
+- [ ] **ITEM 19: Direct Human-to-Human P2P Chat & Whisper Verification:**
+  - *Requirement:* Verify and streamline direct live communication between two real human players in the village chat.
+  - *Investigation & Scope:*
+    - **Current Capability:** `chat_engine.js` already supports `BroadcastChannel` (instant sync between local tabs/windows) and WebRTC data channels (`CHAT_MESSAGE` delta with ECDSA signature and 60 FPS canvas speech bubbles).
+    - **Direct Whisper Channel:** Clarify and test `CHAT_CHANNELS.WHISPER` to send private encrypted direct messages to a specific human peer's public key fingerprint.
+    - **Peer Identification:** Visually distinguish real human peers (active P2P connected icons, green ping indicator) from ambient resident simulation chatter.
+    - **Live Testing:** Verify that when Player A sends a message or smart quick-phrase, it pops up in real time on Player B's screen and displays an in-canvas avatar speech bubble above Player A's usufruct pod.
+
+- [ ] **ITEM 20: User Guide Overhaul & Markdown-to-Vector-PDF Transition (Postponed - Final Step):**
+  - *Requirement:* Update the simulator user handbook to reflect all recently introduced features, and modernize the compilation pipeline from a raster PNG-heavy PDF into a structured Markdown (`.md`) document compiled into clean, searchable vector PDF.
+  - *Timing:* To be executed last, once all gameplay, onboarding, and networking features reach stable freeze.
+  - *Action Plan:*
+    - Document new living mechanics: Sortition Confederal Codex review, 3D prop inspection, anonymous bug/RFC reporting relay, offline local cartography, dynamic circadian warp, and cybernetic canvas robots.
+    - Embed updated high-dpi screenshots from the multi-device audit.
+    - Convert documentation pipeline to build vector PDF directly from structured Markdown with typography and code blocks.
+
+
+
+
 
 

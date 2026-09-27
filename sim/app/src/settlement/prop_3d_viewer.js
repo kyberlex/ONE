@@ -12,6 +12,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { STLExporter } from 'three/examples/jsm/exporters/STLExporter.js';
+import { t } from '../i18n/index.js';
 
 export class Prop3DViewer {
   constructor() {
@@ -661,11 +662,11 @@ export class Prop3DViewer {
     const specs = this.getPropSpecs(prop.type);
     if (specsTableEl) {
       specsTableEl.innerHTML = `
-        <tr><td>Dual-Track Blueprint:</td><td><strong style="color: var(--emerald-primary);">Verified AGPL-3.0</strong></td></tr>
-        <tr><td>Thermodynamic Flow:</td><td>${specs.thermoFlow}</td></tr>
-        <tr><td>Material Composition:</td><td>${specs.materials}</td></tr>
-        <tr><td>Fabrication Method:</td><td>${specs.fabrication}</td></tr>
-        <tr><td>CAD Resolution:</td><td>Watertight .STL / Parametric 1:1</td></tr>
+        <tr><td>${t('specDualTrackBlueprint', 'Dual-Track Blueprint:')}</td><td><strong style="color: var(--emerald-primary);">${t('specVerifiedAgpl', 'Verified AGPL-3.0')}</strong></td></tr>
+        <tr><td>${t('specThermoFlow', 'Thermodynamic Flow:')}</td><td>${specs.thermoFlow}</td></tr>
+        <tr><td>${t('specMaterialComp', 'Material Composition:')}</td><td>${specs.materials}</td></tr>
+        <tr><td>${t('specFabMethod', 'Fabrication Method:')}</td><td>${specs.fabrication}</td></tr>
+        <tr><td>${t('specCadResolution', 'CAD Resolution:')}</td><td>${t('specCadResolutionVal', 'Watertight .STL / Parametric 1:1')}</td></tr>
       `;
     }
 

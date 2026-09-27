@@ -16,6 +16,7 @@ import { PlayerProfileManager } from '../engine/player_profile.js';
 import { t } from '../i18n/index.js';
 import { InteriorRenderer, getCitizenAppearance } from './interior_renderer.js';
 import { RobotManager } from './robot_manager.js';
+import { CivicProjectsRenderer } from './civic_projects_renderer.js';
 
 export class SettlementRenderer {
 
@@ -29,6 +30,7 @@ export class SettlementRenderer {
     this.onSelectDwelling = options.onSelectDwelling || (() => {});
     this.onSelectBuilding = options.onSelectBuilding || (() => {});
     this.onSelectCitizen = options.onSelectCitizen || (() => {});
+    this.onSelectCivicProject = options.onSelectCivicProject || (() => {});
     this.onDiscreteZoomGesture = options.onDiscreteZoomGesture || null;
     this.onInteriorStateChange = options.onInteriorStateChange || null;
 
@@ -70,6 +72,9 @@ export class SettlementRenderer {
 
     // Autonomous Robots & Cybernetic Machinery
     this.robotManager = new RobotManager(this);
+
+    // Civic Megaprojects Renderer (Chapter V Cantieri Civici)
+    this.civicProjectsRenderer = new CivicProjectsRenderer(this);
   }
 
   showCitizenSpeechBubble(citizenName, text, durationMs = 6000) {
@@ -110,12 +115,14 @@ export class SettlementRenderer {
     // 1. Central Solarpunk Agora
     this.agora = {
       id: 'agora',
-      name: t('settlement.agora_name', 'Central Agora & Civic Assembly'),
+      nameKey: 'agoraName',
+      name: 'Central Agora & Civic Assembly',
       type: 'AGORA',
       x: 0,
       y: 0,
       radius: 65,
-      desc: t('settlement.agora_desc', 'Democratic assembly pavilion where citizens gather to deliberate.')
+      descKey: 'agoraDesc',
+      desc: 'Democratic assembly pavilion where citizens gather to deliberate.'
     };
 
     // 2. Core Infrastructures & Intergenerational Campus (Zoned spatial layout)
@@ -123,89 +130,113 @@ export class SettlementRenderer {
       // ⚡ Energy Quadrant (North-West)
       {
         id: 'infra-solar',
+        nameKey: 'infra_solar_name',
         name: '⚡ Solar PV & Wind Microgrid',
+        labelKey: 'infra_solar_label',
         type: 'ENERGY',
         x: -280,
         y: -140,
         width: 140,
         height: 90,
+        descKey: 'infra_solar_desc',
         desc: 'Bifacial solar arrays, vertical-axis wind turbines, and LiFePO4 battery banks.'
       },
       // 💧 Water Quadrant (North-East)
       {
         id: 'infra-water',
+        nameKey: 'infra_water_name',
         name: '💧 Rain Catchment & Cistern',
+        labelKey: 'infra_water_label',
         type: 'WATER',
         x: 280,
         y: -140,
         width: 130,
         height: 90,
+        descKey: 'infra_water_desc',
         desc: `${this.climate.waterCatchmentType}, greywater wetland reed filters, and filtration towers.`
       },
       // 📡 Telemetry Mast (Far North)
       {
         id: 'infra-mesh',
+        nameKey: 'infra_mesh_name',
         name: '📡 Bioregional Mesh Telemetry Tower',
+        labelKey: 'infra_mesh_label',
         type: 'MESH',
         x: 0,
         y: -245,
         width: 44,
         height: 70,
+        descKey: 'infra_mesh_desc',
         desc: 'Solar-powered LoRa and optical mesh node connecting to federated O.N.E. communities.'
       },
       // 💻 FabLab & Circular Workshop (Mid-West)
       {
         id: 'infra-fablab',
+        nameKey: 'infra_fablab_name',
         name: '💻 FabLab & Circular Workshop',
+        labelKey: 'infra_fablab_label',
         type: 'WORKSHOP',
         x: -290,
         y: 75,
         width: 140,
         height: 95,
+        descKey: 'infra_fablab_desc',
         desc: '3D printers, CNC mills, shredders for closed-loop filament recycling, and repair shop.'
       },
       // 🥗 Aeroponic Greenhouse & Food Commons (Mid-East)
       {
         id: 'infra-food',
+        nameKey: 'infra_food_name',
         name: '🥗 Aeroponic Greenhouse & Food Commons',
+        labelKey: 'infra_food_label',
         type: 'FOOD',
         x: 290,
         y: 75,
         width: 150,
         height: 100,
+        descKey: 'infra_food_desc',
         desc: 'Closed-loop nutrient aeroponics, mushroom fruiting chambers, and agroforestry nursery.'
       },
       // 📚 Commons School & Forest Nursery (South-West Care Campus)
       {
         id: 'infra-school',
+        nameKey: 'infra_school_name',
         name: '📚 Commons School & Forest Nursery',
+        labelKey: 'infra_school_label',
         type: 'SCHOOL',
         x: -150,
         y: 250,
         width: 130,
         height: 85,
+        descKey: 'infra_school_desc',
         desc: 'Alloparenting campus, sensory nature lab, open-air blackboards, and discovery atelier.'
       },
       // 🌸 Shared Intergenerational Garden & Pergola (South-Center Care Campus)
       {
         id: 'infra-garden',
+        nameKey: 'infra_garden_name',
         name: '🌸 Shared Intergenerational Garden',
+        labelKey: 'infra_garden_label',
         type: 'GARDEN',
         x: 0,
         y: 250,
         width: 140,
         height: 85,
+        descKey: 'infra_garden_desc',
         desc: 'Raised vegetable beds, fragrant jasmine pergola, storytelling pond, and resting benches.'
       },
       // 🏡 Intergenerational Elder Sanctuary (South-East Care Campus)
       {
         id: 'infra-elder',
+        nameKey: 'infra_elder_name',
         name: '🏡 Intergenerational Elder Sanctuary',
+        labelKey: 'infra_elder_label',
         type: 'ELDER_CARE',
         x: 150,
         y: 250,
         width: 130,
         height: 85,
+        descKey: 'infra_elder_desc',
         desc: 'Accessible single-story residences with verandas, 24/7 care monitoring, and reading patio.'
       }
     ];
@@ -802,7 +833,9 @@ export class SettlementRenderer {
       const clicked = this.findEntityAt(worldPos.x, worldPos.y);
 
       if (clicked) {
-        if (clicked.isRobot) {
+        if (clicked.type === 'CIVIC_PROJECT') {
+          this.onSelectCivicProject(clicked.project);
+        } else if (clicked.isRobot) {
           this.showCitizenSpeechBubble(clicked.name, `${clicked.icon} [Telemetry] ${clicked.taskDesc} (-${clicked.hoursCancelled}h labor)`);
           const fablab = this.infrastructures.find(i => i.type === 'FABLAB');
           if (fablab) this.onSelectBuilding(fablab);
@@ -948,11 +981,11 @@ export class SettlementRenderer {
       type = 'DWELLING';
       isPlayerHome = Boolean(entity.isPlayer || entity.isPlayerHome || (entity.occupant && entity.occupant.isPlayer));
       name = isPlayerHome
-        ? '🏡 My Usufruct Home'
-        : (entity.isOccupied ? `🏡 ${entity.occupant?.name || 'Citizen'}'s Sanctuary` : '🏡 Civic Reserve Pod');
+        ? ('🏡 ' + t('yourHomeBadge', 'My Usufruct Home'))
+        : (entity.isOccupied ? `🏡 ${entity.occupant?.name || 'Citizen'}'s Sanctuary` : ('🏡 ' + t('vacantReserveTitle', 'Civic Reserve Pod')));
     } else if (entity.type) {
       type = entity.type;
-      name = entity.name || entity.type;
+      name = entity.nameKey ? t(entity.nameKey, entity.name) : (entity.name || entity.type);
     }
 
     const interiorData = {
@@ -1082,7 +1115,7 @@ export class SettlementRenderer {
               resultEl.style.background = 'rgba(16, 185, 129, 0.2)';
               resultEl.style.border = '1px solid rgba(16, 185, 129, 0.4)';
               resultEl.style.color = '#6ee7b7';
-              resultEl.innerHTML = `<strong>✨ Invitation Accepted:</strong> "${occupant.name}: 'Welcome in, neighbor! Come have a warm herbal tea.'"`;
+              resultEl.innerHTML = `<strong>${t('doorInvitationAccepted', '✨ Invitation Accepted: "Welcome in, neighbor! Come have a warm herbal tea."')}</strong>`;
               setTimeout(() => {
                 closeModal();
                 this.enterInterior(dwelling, true);
@@ -1091,7 +1124,7 @@ export class SettlementRenderer {
               resultEl.style.background = 'rgba(239, 68, 68, 0.2)';
               resultEl.style.border = '1px solid rgba(239, 68, 68, 0.4)';
               resultEl.style.color = '#fca5a5';
-              resultEl.innerHTML = `<strong>🔒 Sanctuary Protected:</strong> "${occupant.name}: 'I am resting right now. Let us talk later at the Agora!'"`;
+              resultEl.innerHTML = `<strong>${t('doorSanctuaryProtected', '🔒 Sanctuary Protected: "I am resting right now. Let us talk later at the Agora!"')}</strong>`;
               knockBtn.textContent = '🚪 No Answer / Resting';
             }
           }
@@ -1577,113 +1610,107 @@ export class SettlementRenderer {
     if (interior.type === 'AGORA') {
       if (citizen.isChild) {
         const childGreetings = [
-          '🏺 Can I watch the sortition urn?',
-          '📖 Coming to hear the assembly!',
-          '🌿 Fresh mint for the council!',
-          '🎒 Class is over, here for agora!'
+          'bubble_agora_urn_watch',
+          'bubble_agora_hear_assembly',
+          'bubble_agora_fresh_mint',
+          'bubble_agora_class_over'
         ];
         return childGreetings[Math.floor(Math.random() * childGreetings.length)];
       }
       if (citizen.isElder) {
         const elderGreetings = [
-          '📜 May wisdom guide the assembly.',
-          '☀️ Taking a seat on the warm stone tier.',
-          '🕊️ Ready to deliberate on civic matters.',
-          '🧓 Greetings to the council of sortition.'
+          'bubble_agora_wisdom_guide',
+          'bubble_agora_warm_stone',
+          'bubble_agora_deliberate_civic',
+          'bubble_agora_greetings_council'
         ];
         return elderGreetings[Math.floor(Math.random() * elderGreetings.length)];
       }
       const adultGreetings = [
-        '🏛️ Entering the democratic assembly...',
-        '⚡ Checking in from the solar PV array!',
-        '🥗 Fresh harvest report from greenhouse!',
-        '💧 Rainwater cistern at 94% buffer.',
-        '🤝 Salve, fellow pioneers!',
-        '🗳️ Present for the sortition quorum.'
+        'bubble_agora_entering_assembly',
+        'bubble_agora_solar_checkin',
+        'bubble_agora_fresh_harvest',
+        'bubble_agora_rain_buffer',
+        'bubble_agora_salve_pioneers',
+        'bubble_agora_sortition_quorum'
       ];
       return adultGreetings[Math.floor(Math.random() * adultGreetings.length)];
     }
 
     if (interior.type === 'ENERGY') {
       return [
-        '⚡ Reporting for microgrid inverter check!',
-        '🔋 Checking LiFePO4 battery cell balance.',
-        '☀️ Peak solar generation incoming!',
-        '🔌 Verifying galvanic islanding switchgear.'
+        'bubble_energy_freq',
+        'bubble_energy_bms',
+        'bubble_energy_mppt',
+        'bubble_energy_island'
       ][Math.floor(Math.random() * 4)];
     }
 
     if (interior.type === 'WATER') {
       return [
-        '💧 Checking rainwater catchment buffers.',
-        '🧪 Testing biochar and ultrafiltration columns.',
-        '🔬 Taking a sample for the purity lab.',
-        '🌊 Cistern level looking exceptional!'
+        'bubble_water_tds',
+        'bubble_water_ultra',
+        'bubble_water_uv',
+        'bubble_water_cistern'
       ][Math.floor(Math.random() * 4)];
     }
 
     if (interior.type === 'FOOD') {
       return [
-        '🥗 Checking on the aeroponic lettuce columns.',
-        '🍓 Strawberry runners are blooming!',
-        '🌱 Starting a new seed tray in the nursery bed.',
-        '🧺 Bringing crates for the morning harvest!'
-      ][Math.floor(Math.random() * 4)];
+        'bubble_food_romaine',
+        'bubble_food_strawberries',
+        'bubble_food_yield'
+      ][Math.floor(Math.random() * 3)];
     }
 
     if (interior.type === 'WORKSHOP') {
       return [
-        '🛠️ Good day makers! Starting the 3D printer.',
-        '♻️ Dropping off scrap plastic for shredding.',
-        '💻 CAD model ready for the CNC router.',
-        '🔧 Soldering an ESP32 telemetry sensor.'
-      ][Math.floor(Math.random() * 4)];
+        'bubble_work_calibrating',
+        'bubble_work_compiling',
+        'bubble_work_petg',
+        'bubble_work_scrap',
+        'bubble_work_repair'
+      ][Math.floor(Math.random() * 5)];
     }
 
     if (interior.type === 'GARDEN') {
-      if (citizen.isChild) {
-        return Math.random() < 0.5 ? '🌸 Playing by the lotus fountain!' : '🦋 Look at all the butterflies!';
-      }
-      if (citizen.isElder) {
-        return Math.random() < 0.5 ? '🧓 Coming for a warm cup of herbal tea.' : '☀️ Beautiful sunshine in the garden.';
-      }
+      if (citizen.isChild) return 'bubble_garden_finches';
+      if (citizen.isElder) return 'bubble_garden_peppermint';
       return [
-        '🌿 Harvesting fresh rosemary and sage.',
-        '🌱 Checking the community seed swap bench.',
-        '🌸 Stopping by the lotus fountain...',
-        '🫖 Joining for afternoon garden tea.'
+        'bubble_garden_peppermint',
+        'bubble_garden_finches',
+        'bubble_garden_fountain',
+        'bubble_garden_jasmine'
       ][Math.floor(Math.random() * 4)];
     }
 
     if (interior.type === 'SCHOOL') {
       if (citizen.isChild) {
         return [
-          '🎒 Ready for morning nature class!',
-          '🎨 Today we draw the bioregion map!',
-          '🔬 Can we look at plant cells today?'
+          'bubble_school_rain',
+          'bubble_school_panels',
+          'bubble_school_microgrid'
         ][Math.floor(Math.random() * 3)];
       }
-      if (citizen.isElder) {
-        return '🧓 Here to share oral history with the pupils.';
-      }
-      return '📚 Welcome pupils! Inquiry session is open.';
+      if (citizen.isElder) return 'bubble_agora_wisdom_guide';
+      return 'bubble_school_thermo';
     }
 
     if (interior.type === 'ELDER_CARE') {
-      if (citizen.isChild) {
-        return '🌱 Came to visit and play chess!';
-      }
-      if (citizen.isElder) {
-        return '🧓 The warmth of the hearth is comforting.';
-      }
-      return '❤️ Bringing fresh herbal infusions from the garden.';
+      if (citizen.isChild) return 'bubble_elder_chess';
+      if (citizen.isElder) return 'bubble_elder_hearth';
+      return 'bubble_elder_tea';
     }
 
     if (interior.type === 'DWELLING') {
-      return Math.random() < 0.5 ? '🏡 Home sweet usufruct sanctuary!' : '☕ Time for a warm tea break.';
+      return [
+        'bubble_dwelling_private',
+        'bubble_dwelling_welcome',
+        'bubble_dwelling_peace'
+      ][Math.floor(Math.random() * 3)];
     }
 
-    return '👋 Hello there!';
+    return 'bubble_agora_salve_pioneers';
   }
 
   /**
@@ -1693,128 +1720,107 @@ export class SettlementRenderer {
     if (interior.type === 'AGORA') {
       if (occ.isChild) {
         const childThoughts = [
-          '🎒 School starts after the council 🎒',
-          '🐦 Watching the sparrows on colonnade 🐦',
-          '🎨 Drawing the marble amphitheater 🎨',
-          '🌱 Learning how sortition works! 🏺'
+          'bubble_agora_urn_watch',
+          'bubble_agora_hear_assembly',
+          'bubble_school_panels',
+          'bubble_agora_class_over'
         ];
         return childThoughts[Math.floor(Math.random() * childThoughts.length)];
       }
       if (occ.isElder) {
         const elderThoughts = [
-          '📜 Solarpunk consensus strengthens us 📜',
-          '❤️ Intergenerational care is thriving ❤️',
-          '🕊️ Peace through transparent usufruct 🕊️',
-          '☕ A balanced and respectful council ☕'
+          'bubble_agora_wisdom_guide',
+          'bubble_agora_deliberate_civic',
+          'bubble_agora_purity_held',
+          'bubble_agora_greetings_council'
         ];
         return elderThoughts[Math.floor(Math.random() * elderThoughts.length)];
       }
       const adultThoughts = [
-        '🗳️ Voting YES on microgrid expansion ⚡',
-        '⚡ Thermodynamic Leontief balance closed 💻',
-        '🏺 7-Citizen sortition jury convened 🏺',
-        '💧 Greywater filtration running at 96% 💧',
-        '🏡 Usufruct dwelling returned to pool 🏡',
-        '🛠️ Preventive maintenance confirmed 🛠️',
-        '🥗 Zero food waste, 100% circular 🥗',
-        '📜 Non-commercial purity strictly held 📜'
+        'bubble_agora_vote_yes_micro',
+        'bubble_agora_leontief_closed',
+        'bubble_agora_7_citizens',
+        'bubble_agora_greywater_96',
+        'bubble_agora_dwelling_returned',
+        'bubble_agora_maint_confirmed',
+        'bubble_agora_zero_waste',
+        'bubble_agora_purity_held'
       ];
       return adultThoughts[Math.floor(Math.random() * adultThoughts.length)];
     }
 
     if (interior.type === 'ENERGY') {
       return [
-        '⚡ Microgrid frequency steady at 50.02 Hz ⚡',
-        '🔋 LiFePO4 battery state of charge: 96% 🔋',
-        '☀️ MPPT trackers tuned to solar zenith ☀️',
-        '🛡️ Galvanic island isolation verified 🛡️',
-        '💻 SCADA telemetry synced to mesh 📡'
+        'bubble_energy_freq',
+        'bubble_energy_bms',
+        'bubble_energy_mppt',
+        'bubble_energy_island',
+        'bubble_energy_scada'
       ][Math.floor(Math.random() * 5)];
     }
 
     if (interior.type === 'WATER') {
       return [
-        '💧 Water turbidity < 0.1 NTU (pure) 💧',
-        '🧪 Ultrafiltration flow: 1,200 L/h 🧪',
-        '🟣 UV-C LED sterilization at 99.99% 🟣',
-        '🌊 Cistern reserve at 94% capacity 🌊',
-        '🌾 Greywater reed beds thriving 🌾'
-      ][Math.floor(Math.random() * 5)];
+        'bubble_water_tds',
+        'bubble_water_ultra',
+        'bubble_water_uv',
+        'bubble_water_cistern'
+      ][Math.floor(Math.random() * 4)];
     }
 
     if (interior.type === 'FOOD') {
       return [
-        '🌿 Aeroponic root mist cycling: 5s / 3m 🌿',
-        '🍓 Heirloom strawberries ripened sweet 🍓',
-        '🥗 Daily caloric yield exceeds 2,400 kcal 🥗',
-        '🌸 Photosynthetic spectrum optimized 🌸',
-        '🗄️ Bioregional seed vault categorized 🗄️'
-      ][Math.floor(Math.random() * 5)];
+        'bubble_food_romaine',
+        'bubble_food_strawberries',
+        'bubble_food_yield'
+      ][Math.floor(Math.random() * 3)];
     }
 
     if (interior.type === 'WORKSHOP') {
       return [
-        '🖨️ CoreXY printer printing PETG bracket 🖨️',
-        '♻️ 5 kg scrap plastic re-extruded to spool ♻️',
-        '⚙️ CNC mill finished beechwood cabinet ⚙️',
-        '⚡ ESP32 Zigbee telemetry node flashed ⚡',
-        '🔨 Zero-waste circular repair complete 🛠️'
+        'bubble_work_calibrating',
+        'bubble_work_compiling',
+        'bubble_work_petg',
+        'bubble_work_scrap',
+        'bubble_work_repair'
       ][Math.floor(Math.random() * 5)];
     }
 
     if (interior.type === 'GARDEN') {
-      if (occ.isChild) {
-        return Math.random() < 0.5 ? '🦋 Chasing a swallowtail butterfly! 🦋' : '⛲ Watching water ripples in fountain ⛲';
-      }
-      if (occ.isElder) {
-        return Math.random() < 0.5 ? '🧓 Peppermint and lemon balm tea 🫖' : '☀️ Soft breeze through the pergola ☀️';
-      }
       return [
-        '🌿 Rosemary, chamomile and lavender 🌿',
-        '🌱 Propagating fig and berry cuttings 🌱',
-        '⛲ Lotus fountain is so peaceful ⛲',
-        '🌸 Fragrant jasmine in full bloom 🌸'
+        'bubble_garden_peppermint',
+        'bubble_garden_finches',
+        'bubble_garden_fountain',
+        'bubble_garden_jasmine'
       ][Math.floor(Math.random() * 4)];
     }
 
     if (interior.type === 'SCHOOL') {
-      if (occ.isChild) {
-        return [
-          '🎒 Learning closed-loop thermodynamics! 💻',
-          '🎨 Painting the four bioregions 🎨',
-          '🔬 Looking at plant cells in microscope 🔬'
-        ][Math.floor(Math.random() * 3)];
-      }
-      if (occ.isElder) {
-        return '🧓 Mentoring the next generation 🕊️';
-      }
-      return '📚 Open inquiry and hands-on discovery 📚';
+      return [
+        'bubble_school_rain',
+        'bubble_school_panels',
+        'bubble_school_microgrid',
+        'bubble_school_thermo'
+      ][Math.floor(Math.random() * 4)];
     }
 
     if (interior.type === 'ELDER_CARE') {
-      if (occ.isElder) {
-        return [
-          '🔥 Warm hearth fire is soothing 🔥',
-          '📜 Sharing memories of node founding 📜',
-          '🕊️ Restful and dignified elderhood 🕊️'
-        ][Math.floor(Math.random() * 3)];
-      }
       return [
-        '❤️ Biometrics and comfort nominal ❤️',
-        '🌿 Chamomile infusion served ☕'
-      ][Math.floor(Math.random() * 2)];
+        'bubble_elder_tea',
+        'bubble_elder_chess',
+        'bubble_elder_hearth'
+      ][Math.floor(Math.random() * 3)];
     }
 
     if (interior.type === 'DWELLING') {
       return [
-        '🏡 Usufruct security: peace of mind 🏡',
-        '🍵 Herbal infusion brew steaming ☕',
-        '🌱 Bioclimatic sedum insulation intact 🌱',
-        '📚 Enjoying an evening of quiet study 📖'
-      ][Math.floor(Math.random() * 4)];
+        'bubble_dwelling_private',
+        'bubble_dwelling_peace',
+        'bubble_dwelling_welcome'
+      ][Math.floor(Math.random() * 3)];
     }
 
-    return '✨ Community thriving together ✨';
+    return 'bubble_agora_leontief_closed';
   }
 
   /**
@@ -1823,47 +1829,31 @@ export class SettlementRenderer {
   getCitizenDepartureFarewell(occ, interior) {
     if (interior.type === 'AGORA') {
       if (occ.isChild) {
-        return Math.random() < 0.5 ? '🦋 Running to the shared garden!' : '⚽ Going to play outside!';
+        return 'bubble_agora_class_over';
       }
       if (occ.isElder) {
-        return Math.random() < 0.5 ? '🧓 Strolling back to sanctuary.' : '🌿 Going to rest by the garden.';
+        return 'bubble_agora_warm_stone';
       }
       const departures = [
-        '🌱 Returning to the bioclimatic fields!',
-        '🔨 Back to the FabLab workshop!',
-        '🌬️ Heading to inspect the wind turbines.',
-        '🏡 Returning home for dinner.',
-        '💻 Resuming telemetry coding.'
+        'bubble_agora_return_fields',
+        'bubble_agora_back_fablab',
+        'bubble_agora_inspect_turbines',
+        'bubble_agora_return_dinner',
+        'bubble_agora_resume_coding'
       ];
       return departures[Math.floor(Math.random() * departures.length)];
     }
 
-    if (interior.type === 'ENERGY') {
-      return Math.random() < 0.5 ? '⚡ Microgrid inspection done, heading out!' : '🔌 Off to check rooftop solar PV!';
-    }
-    if (interior.type === 'WATER') {
-      return Math.random() < 0.5 ? '💧 Water tests passed, returning to village!' : '🌊 Heading to inspect reed beds.';
-    }
-    if (interior.type === 'FOOD') {
-      return Math.random() < 0.5 ? '🥗 Crates loaded, delivering to granary!' : '🧺 Off to cook at communal kitchen!';
-    }
-    if (interior.type === 'WORKSHOP') {
-      return Math.random() < 0.5 ? '🛠️ Part printed! Bringing it to turbine.' : '🔨 Heading to assemble new cabinet.';
-    }
-    if (interior.type === 'GARDEN') {
-      return Math.random() < 0.5 ? '🌸 That was refreshing! Back to chores.' : '🧓 Enjoyed the tea, strolling back home.';
-    }
-    if (interior.type === 'SCHOOL') {
-      return Math.random() < 0.5 ? '🎒 Class dismissed! Running to play!' : '📚 Great lesson today, see you tomorrow!';
-    }
-    if (interior.type === 'ELDER_CARE') {
-      return Math.random() < 0.5 ? '🧓 Heading for a walk in the garden.' : '❤️ Taking leave, rest well neighbors!';
-    }
-    if (interior.type === 'DWELLING') {
-      return Math.random() < 0.5 ? '👋 Heading out to the Agora assembly!' : '🌱 Off to work in aeroponic dome!';
-    }
+    if (interior.type === 'ENERGY') return 'bubble_energy_scada';
+    if (interior.type === 'WATER') return 'bubble_water_cistern';
+    if (interior.type === 'FOOD') return 'bubble_food_yield';
+    if (interior.type === 'WORKSHOP') return 'bubble_work_repair';
+    if (interior.type === 'GARDEN') return 'bubble_garden_jasmine';
+    if (interior.type === 'SCHOOL') return 'bubble_school_thermo';
+    if (interior.type === 'ELDER_CARE') return 'bubble_elder_hearth';
+    if (interior.type === 'DWELLING') return 'bubble_dwelling_peace';
 
-    return '👋 See you later, neighbors!';
+    return 'bubble_agora_return_dinner';
   }
 
   findEntityAt(x, y) {
@@ -1883,6 +1873,12 @@ export class SettlementRenderer {
     for (const d of this.dwellings) {
       const dist = Math.hypot(x - d.x, y - d.y);
       if (dist <= d.radius) return d;
+    }
+
+    // 2.5 Check Civic Megaprojects (Cantieri Civici)
+    if (this.civicProjectsRenderer) {
+      const projHit = this.civicProjectsRenderer.checkRaycast(x, y);
+      if (projHit) return projHit;
     }
 
     // Check Infrastructures
@@ -2163,6 +2159,12 @@ export class SettlementRenderer {
       this.renderInfrastructure(ctx, b);
     }
 
+    // 4.5 Render Civic Megaprojects (Chapter V Cantieri Civici)
+    const isNight = this.sim ? (typeof this.sim.isNight === 'boolean' ? this.sim.isNight : (this.sim.localHour >= 21 || this.sim.localHour < 6)) : false;
+    if (this.civicProjectsRenderer) {
+      this.civicProjectsRenderer.render(ctx, isNight, this.lastTime);
+    }
+
     // 5. Render Central Agora
     this.renderAgora(ctx);
 
@@ -2175,7 +2177,6 @@ export class SettlementRenderer {
     this.renderParticles(ctx);
 
     // 7.5 Render Autonomous Working Robots & Cybernetic Machinery
-    const isNight = this.sim ? (typeof this.sim.isNight === 'boolean' ? this.sim.isNight : (this.sim.localHour >= 21 || this.sim.localHour < 6)) : false;
     if (this.robotManager) {
       this.robotManager.render(ctx, isNight);
     }
@@ -2742,7 +2743,8 @@ export class SettlementRenderer {
     ctx.font = '600 11px system-ui, sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'top';
-    ctx.fillText(b.name.split(' ')[0] + ' ' + (b.name.split(' ')[1] || ''), 0, b.height / 2 + 5);
+    const labelText = b.labelKey ? t(b.labelKey, b.label || b.name) : (b.name.split(' ')[0] + ' ' + (b.name.split(' ')[1] || ''));
+    ctx.fillText(labelText, 0, b.height / 2 + 5);
 
     ctx.restore();
   }
@@ -2929,7 +2931,7 @@ export class SettlementRenderer {
     ctx.fillStyle = isPlayer ? '#fbbf24' : (isOccupied ? '#94a3b8' : '#38bdf8');
     ctx.font = isPlayer ? 'bold 10px system-ui' : '9px system-ui';
     ctx.textBaseline = 'top';
-    const label = isPlayer ? 'Your Home' : (isOccupied ? `${d.occupant.icon || ''} ${d.occupant.name.split(' ')[0]}` : 'FREE');
+    const label = isPlayer ? t('yourHomeBadge', 'Your Home') : (isOccupied ? `${d.occupant.icon || ''} ${d.occupant.name.split(' ')[0]}` : t('dwellingFreeBadge', 'FREE'));
     ctx.fillText(label, 0, d.radius + 4);
 
     // Nighttime slumber indicator (peaceful z Z z drifting above roof)
@@ -3176,7 +3178,7 @@ export class SettlementRenderer {
 
       ctx.fillStyle = '#fbbf24';
       ctx.font = 'bold 10px system-ui, sans-serif';
-      ctx.fillText('YOU', 0, headY - 21);
+      ctx.fillText(t('playerTag', 'YOU'), 0, headY - 21);
     } else {
       // Name tag below
       ctx.fillStyle = isHovered ? '#38bdf8' : (c.isHuman ? '#38bdf8' : '#e2e8f0');
@@ -3194,7 +3196,8 @@ export class SettlementRenderer {
 
     if (hasActiveChat || c.bubble) {
       const isChat = hasActiveChat;
-      const text = isChat ? chatBubble.text : c.bubble;
+      const rawText = isChat ? chatBubble.text : c.bubble;
+      const text = typeof rawText === 'string' ? t(rawText, rawText) : rawText;
       const now = Date.now();
       const alpha = isChat ? Math.min(1.0, (chatBubble.expiresAt - now) / 500) : 1.0;
 
@@ -3512,12 +3515,27 @@ export class SettlementRenderer {
       let detail = '';
       let hint = '';
 
-      if (e.isRobot) {
-        title = `${e.icon} ${e.name}`;
+      if (e.type === 'CIVIC_PROJECT') {
+        const p = e.project;
+        title = `${p.icon} ${p.nameKey ? t(p.nameKey, p.name) : p.name}`;
+        titleColor = '#f59e0b';
+        strokeColor = '#f59e0b';
+        const isDone = p.status === 'COMPLETED';
+        const pct = this.sim?.civicProjects?.getProgressPercentage(p) || 0;
+        subtitle = isDone 
+          ? `🏛️ ${t('settlement.project_completed', 'Completed Community Megaproject')} (Chapter V)`
+          : `🏗️ ${t('settlement.project_under_construction', 'Under Construction')} (${pct}%) • ${p.contributedHours}/${p.requiredHours}h`;
+        detail = `${p.perkSummaryKey ? t(p.perkSummaryKey, p.perkSummary) : p.perkSummary}`;
+        hint = isDone
+          ? t('settlement.project_done_hint', 'Operational collective usufruct infrastructure. Click to inspect.')
+          : t('settlement.project_progress_hint', 'Click to open the Civic Projects board and donate volunteer hours or surplus materials!');
+      } else if (e.isRobot) {
+        title = `${e.icon} ${e.nameKey ? t(e.nameKey, e.name) : e.name}`;
         titleColor = '#38bdf8';
         strokeColor = '#06b6d4';
         subtitle = `🤖 ${t('settlement.robot_unit', 'Autonomous Cybernetic Unit')} • ${t('settlement.domain', 'Domain')}: ${e.domain.toUpperCase()}`;
-        detail = `⚡ ${t('settlement.task', 'Task')}: ${e.taskDesc} | ⏱️ ${t('settlement.human_labor_cancelled', 'Human Labor Cancelled')}: -${e.hoursCancelled}${t('settlement.hours_per_day', 'h/day')}`;
+        const taskText = e.taskKey ? t(e.taskKey, e.taskDesc) : e.taskDesc;
+        detail = `⚡ ${t('settlement.task', 'Task')}: ${taskText} | ⏱️ ${t('settlement.human_labor_cancelled', 'Human Labor Cancelled')}: -${e.hoursCancelled}${t('settlement.hours_per_day', 'h/day')}`;
         hint = t('settlement.robot_hint', 'Fabricated in the FabLab with open hardware and Edge SCADA automation. Zero debt, zero forced labor.');
       } else if (e.isPlayer) {
         title = t('settlement.player_title', '👑 You (Local Pioneer) — O.N.E. Player');
@@ -3563,7 +3581,8 @@ export class SettlementRenderer {
       } else if (e.dwellingType) {
         strokeColor = e.isPlayerHome ? '#fbbf24' : (e.isOccupied ? '#10b981' : '#38bdf8');
         titleColor = e.isPlayerHome ? '#fbbf24' : '#f8fafc';
-        title = e.isPlayerHome ? `👑 ${t('settlement.your_dwelling', 'Your Usufruct Dwelling')} (#${e.number})` : `🏡 ${t('settlement.dwelling_num', 'Dwelling')} #${e.number}: ${e.dwellingType}`;
+        const dwellTypeName = this.climate.dwellingTypeKey ? t(this.climate.dwellingTypeKey, e.dwellingType) : e.dwellingType;
+        title = e.isPlayerHome ? `👑 ${t('settlement.your_dwelling', 'Your Usufruct Dwelling')} (#${e.number})` : `🏡 ${t('settlement.dwelling_num', 'Dwelling')} #${e.number}: ${dwellTypeName}`;
         if (e.isOccupied) {
           const occRole = e.occupant.roleKey ? t(e.occupant.roleKey, e.occupant.role) : e.occupant.role;
           const occIcon = e.occupant.icon || '👤';
@@ -3580,8 +3599,8 @@ export class SettlementRenderer {
         // Infrastructure / Agora Card
         titleColor = '#38bdf8';
         strokeColor = '#38bdf8';
-        title = e.name;
-        subtitle = e.desc || t('settlement.infra_operational', 'Operational community structure.');
+        title = e.nameKey ? t(e.nameKey, e.name) : e.name;
+        subtitle = e.descKey ? t(e.descKey, e.desc) : (e.desc || t('settlement.infra_operational', 'Operational community structure.'));
         hint = t('settlement.infra_hint', 'Click to inspect automations and thermodynamic flows.');
       }
 

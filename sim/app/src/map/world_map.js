@@ -32,16 +32,23 @@ export class WorldMapController {
     this.initMap();
   }
 
-  showWorld() {
+  showWorld(animate = true) {
     if (!this.map) return;
     this.map.invalidateSize();
-    // Seamless planetary fit: clamps to single central world map with clean padding
-    this.map.fitBounds([[-60, -175], [75, 175]], { animate: false, padding: [10, 10] });
+    if (animate) {
+      this.map.flyTo([20, 0], 2.5, { duration: 1.1 });
+    } else {
+      this.map.fitBounds([[-60, -175], [75, 175]], { animate: false, padding: [10, 10] });
+    }
   }
 
-  showRegion(node) {
+  showRegion(node, animate = true) {
     if (!this.map || !node) return;
-    this.map.flyTo([node.lat, node.lng], 9, { duration: 0.8 });
+    if (animate) {
+      this.map.flyTo([node.lat, node.lng], 7.0, { duration: 1.0 });
+    } else {
+      this.map.setView([node.lat, node.lng], 7.0, { animate: false });
+    }
 
     // Open popup for this node so the visit button is immediately accessible
     setTimeout(() => {
@@ -54,7 +61,7 @@ export class WorldMapController {
           }
         }
       });
-    }, 450);
+    }, animate ? 550 : 50);
   }
 
   initMap() {
@@ -105,43 +112,28 @@ export class WorldMapController {
 
     const tileLayerBounds = [[-85.05112878, -180], [85.05112878, 180]];
 
-    // High-Resolution Photorealistic Satellite Earth (ESRI World Imagery - Free, No Watermark, No API Key)
-    this.satelliteLayer = L.tileLayer(
-      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-      {
-        maxZoom: 19,
-        attribution: 'ESRI World Imagery',
-        noWrap: true,
-        bounds: tileLayerBounds
-      }
-    );
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const cleanBase = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+    const lowResUrl = `${cleanBase}/assets/map/world_low.webp`;
+    const highResUrl = `${cleanBase}/assets/map/world_high.webp`;
 
-    // High-Contrast Physical / Topographic Map (ESRI World Physical Map - Free, No Watermark)
-    this.physicalLayer = L.tileLayer(
-      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}',
-      {
-        maxZoom: 10,
-        attribution: 'ESRI Physical',
-        noWrap: true,
-        bounds: tileLayerBounds
-      }
-    );
+    // 100% Offline-First Earth Base Layer: Bundled Dual-Resolution Raster (0 KB network egress)
+    // 1. Instant local render with low-res (230 KB) in the background tilePane
+    this.earthImageLayer = L.imageOverlay(lowResUrl, tileLayerBounds, {
+      pane: 'tilePane',
+      opacity: 1.0,
+      interactive: false,
+      crossOrigin: true
+    }).addTo(this.map);
 
-    // Subtle geopolitical boundary and place labels overlay
-    this.referenceLayer = L.tileLayer(
-      'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',
-      {
-        maxZoom: 19,
-        opacity: 0.6,
-        noWrap: true,
-        bounds: tileLayerBounds
+    // 2. Seamlessly upgrade to high-res (1.1 MB) once decoded in memory
+    const highImg = new Image();
+    highImg.src = highResUrl;
+    highImg.onload = () => {
+      if (this.earthImageLayer) {
+        this.earthImageLayer.setUrl(highResUrl);
       }
-    );
-
-    // Add satellite layer by default
-    this.satelliteLayer.addTo(this.map);
-    this.referenceLayer.addTo(this.map);
-    this.currentMapStyle = 'satellite';
+    };
 
     // Dedicated pane for solar terminator night shadow between satellite tiles and markers
     this.map.createPane('terminatorPane');
@@ -149,7 +141,7 @@ export class WorldMapController {
     if (termPane) {
       termPane.style.zIndex = '350';
       termPane.style.pointerEvents = 'none';
-      termPane.style.filter = 'blur(14px)';
+      termPane.style.filter = 'blur(5px)';
     }
 
     this.terminatorLayer = L.polygon(getNightPolygonCoordinates(12, 80), {
@@ -167,21 +159,6 @@ export class WorldMapController {
     this.renderAllNodes();
     this.renderMeshLinks();
     this.bindMapEvents();
-  }
-
-  toggleMapStyle() {
-    if (this.currentMapStyle === 'satellite') {
-      this.map.removeLayer(this.satelliteLayer);
-      this.physicalLayer.addTo(this.map);
-      this.referenceLayer.bringToFront();
-      this.currentMapStyle = 'physical';
-    } else {
-      this.map.removeLayer(this.physicalLayer);
-      this.satelliteLayer.addTo(this.map);
-      this.referenceLayer.bringToFront();
-      this.currentMapStyle = 'satellite';
-    }
-    return this.currentMapStyle;
   }
 
 
@@ -222,14 +199,14 @@ export class WorldMapController {
           </div>
 
           <div class="popup-climate-pill">
-            <span>${climate.name}</span> • <strong>${climate.dwellingType}</strong>
+            <span>${climate.nameKey ? t(climate.nameKey, climate.name) : climate.name}</span> • <strong>${climate.dwellingTypeKey ? t(climate.dwellingTypeKey, climate.dwellingType) : climate.dwellingType}</strong>
           </div>
 
           <p class="popup-quote">"${node.quote}"</p>
 
           <div class="popup-stats-grid">
             <div><strong>${t('populationLabel', 'Population:')}</strong> ${node.population} pax</div>
-            <div><strong>${t('civicReserveLabel', 'Civic Reserve:')}</strong> <span class="text-green">${node.freeHousingBuffer} Free Pods</span></div>
+            <div><strong>${t('civicReserveLabel', 'Civic Reserve:')}</strong> <span class="text-green">${t('freePodsLabel', '{count} Free Pods').replace('{count}', node.freeHousingBuffer)}</span></div>
           </div>
 
           <div class="popup-actions">
@@ -347,10 +324,10 @@ export class WorldMapController {
             </div>
           </div>
           <div class="convoy-popup-body">
-            <div><strong>Status:</strong> ${convoy.status === 'OUTBOUND' ? 'Outbound to Destination' : 'Returning with Barter Cargo'}</div>
-            <div><strong>Cargo:</strong> ${convoy.outgoingAmount.toLocaleString()} ${convoy.outgoingUnit} ${convoy.outgoingIcon}</div>
-            ${convoy.returnCargo ? `<div><strong>Reciprocal Load:</strong> ${convoy.returnCargo.amount.toLocaleString()} ${convoy.returnCargo.unit} ${convoy.returnCargo.icon}</div>` : ''}
-            <div><strong>ETA:</strong> ${remainingHours} hour(s)</div>
+            <div><strong>${t('mapStatusLabel', 'Status:')}</strong> ${convoy.status === 'OUTBOUND' ? t('convoysOutboundTransit', 'Outbound to Destination') : t('convoysInboundReturn', 'Returning with Barter Cargo')}</div>
+            <div><strong>${t('mapCargoLabel', 'Cargo:')}</strong> ${convoy.outgoingAmount.toLocaleString()} ${convoy.outgoingUnit} ${convoy.outgoingIcon}</div>
+            ${convoy.returnCargo ? `<div><strong>${t('convoysExpectedReciprocal', 'Reciprocal Load')}:</strong> ${convoy.returnCargo.amount.toLocaleString()} ${convoy.returnCargo.unit} ${convoy.returnCargo.icon}</div>` : ''}
+            <div><strong>${t('mapEtaLabel', 'ETA: {hours} hour(s)').replace('{hours}', remainingHours)}</strong></div>
           </div>
         </div>
       `;
@@ -387,7 +364,7 @@ export class WorldMapController {
           </div>
           <p>${t('foundNodeDesc', 'Establish a new self-sufficient resilient haven here according to the local climate zone:')}</p>
           <div class="popup-climate-pill" style="--climate-color: ${climate.accentColor};">
-            <span>${climate.name}</span> • <strong>${climate.dwellingType}</strong>
+            <span>${climate.nameKey ? t(climate.nameKey, climate.name) : climate.name}</span> • <strong>${climate.dwellingTypeKey ? t(climate.dwellingTypeKey, climate.dwellingType) : climate.dwellingType}</strong>
           </div>
           <div class="found-form">
             <input type="text" id="input-node-name" class="input-node-name" placeholder="Name your Node (e.g. Free Haven)" value="O.N.E. Haven ${Math.floor(Math.random() * 90 + 10)}" />
@@ -445,7 +422,7 @@ export class WorldMapController {
           className: 'user-location-marker',
           html: `
             <div class="user-pulse-dot"></div>
-            <div class="user-label-pill">📍 You are here</div>
+            <div class="user-label-pill">📍 ${t('mapYouAreHere', 'You are here')}</div>
           `,
           iconSize: [30, 30],
           iconAnchor: [15, 15]
@@ -497,7 +474,7 @@ export class WorldMapController {
   flyToNode(nodeId) {
     const node = this.nodes.find(n => n.id === nodeId);
     if (node && this.map) {
-      this.map.flyTo([node.lat, node.lng], 9, { duration: 2.0 });
+      this.map.flyTo([node.lat, node.lng], 7.0, { duration: 2.0 });
     }
   }
 

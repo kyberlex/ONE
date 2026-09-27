@@ -244,9 +244,9 @@ export class PanelConvoysController {
         <div class="smart-missions-title-bar">
           <div class="title-with-badge">
             <span class="icon">⚡</span>
-            <h4>1-Click Recommended Trade Routes (Auto-Balanced)</h4>
+            <h4>${t('convoysRecommendedRoutes', '1-Click Recommended Trade Routes (Auto-Balanced)')}</h4>
           </div>
-          <p class="subtitle">Instant thermodynamic balance. Pre-calculated from your current surpluses and sister havens' critical deficits.</p>
+          <p class="subtitle">${t('convoysRecommendedSubtitle', 'Instant thermodynamic balance. Pre-calculated from your current surpluses and sister havens\' critical deficits.')}</p>
         </div>
 
         <div class="smart-missions-grid">
@@ -269,14 +269,14 @@ export class PanelConvoysController {
 
                 <div class="smart-mission-exchange">
                   <div class="smart-exchange-row">
-                    <span class="label">Outgoing Payload:</span>
+                    <span class="label">${t('convoysOutgoingPayload', 'Outgoing Payload:')}</span>
                     <span class="val-out">-${m.amount.toLocaleString()} ${outComm.unit} ${outComm.icon}</span>
                   </div>
                   <div class="smart-exchange-row">
-                    <span class="label">${m.isSolidarity ? 'Mission Impact:' : 'Expected Return:'}</span>
+                    <span class="label">${m.isSolidarity ? t('convoysMissionImpact', 'Mission Impact:') : t('convoysExpectedReturn', 'Expected Return:')}</span>
                     <span class="val-in">
                       ${m.isSolidarity 
-                        ? '❤️ +8% Morale & Alliance Pact' 
+                        ? t('convoysSolidarityPactNotice', '❤️ +8% Morale & Alliance Pact') 
                         : `+${m.returnCargo?.amount.toLocaleString()} ${m.returnCargo?.unit} ${m.returnCargo?.icon}`}
                     </span>
                   </div>
@@ -313,8 +313,8 @@ export class PanelConvoysController {
           ${this.renderSmartMissionsCards(this.sim.trade, this.sim.thermo, this.sim.node)}
 
           <div class="or-custom-divider">
-            <span>or</span>
-            <button class="btn-goto-custom">🛠️ Configure custom route & payload ➔</button>
+            <span>${t('convoysOrDivider', 'or')}</span>
+            <button class="btn-goto-custom">${t('convoysCustomRoute', '🛠️ Configure custom route & payload ➔')}</button>
           </div>
         </div>
       `;
@@ -323,9 +323,9 @@ export class PanelConvoysController {
     return `
       <div class="convoys-list">
         <div class="convoys-list-top-bar">
-          <span>🚚 <strong>${convoys.length}</strong> Convoys in Transit</span>
+          <span>🚚 <strong>${convoys.length}</strong> ${t('convoysInTransit', 'Convoys in Transit')}</span>
           <button class="btn-primary btn-quick-dispatch-more" style="font-size: 11px; padding: 6px 12px;">
-            🚀 + Dispatch Another Convoy
+            🚀 + ${t('tabDispatchConvoy', 'Dispatch Another Convoy')}
           </button>
         </div>
 
@@ -345,7 +345,7 @@ export class PanelConvoysController {
                   </span>
                 </div>
                 <span class="convoy-status-pill ${c.status.toLowerCase()}">
-                  ${isOutbound ? '🚀 OUTBOUND' : '🔄 RETURNING HOME'}
+                  ${isOutbound ? ('🚀 ' + t('convoysOutboundTransit', 'OUTBOUND')) : ('🔄 ' + t('convoysInboundReturn', 'RETURNING HOME'))}
                 </span>
               </div>
 
@@ -355,7 +355,7 @@ export class PanelConvoysController {
                   <div class="convoy-progress-fill" style="width: ${pct}%;"></div>
                 </div>
                 <div class="convoy-progress-labels">
-                  <span>${isOutbound ? 'Outbound Transit' : 'Inbound Cargo Return'}</span>
+                  <span>${isOutbound ? t('convoysOutboundTransit', 'Outbound Transit') : t('convoysInboundReturn', 'Inbound Cargo Return')}</span>
                   <span><strong>${pct}%</strong> • ETA: ${remainingHours}h</span>
                 </div>
               </div>
@@ -363,19 +363,19 @@ export class PanelConvoysController {
               <!-- Manifest Grid -->
               <div class="convoy-manifest-grid">
                 <div class="manifest-box">
-                  <span class="manifest-label">Outgoing Payload</span>
+                  <span class="manifest-label">${t('convoysOutgoingPayload', 'Outgoing Payload')}</span>
                   <span class="manifest-val text-yellow">${c.outgoingAmount.toLocaleString()} ${c.outgoingUnit} ${c.outgoingIcon}</span>
                 </div>
                 <div class="manifest-box">
-                  <span class="manifest-label">${c.isSolidarity ? 'Mission Type' : 'Expected Reciprocal Import'}</span>
+                  <span class="manifest-label">${c.isSolidarity ? t('convoysMissionType', 'Mission Type') : t('convoysExpectedReciprocal', 'Expected Reciprocal Import')}</span>
                   <span class="manifest-val ${c.isSolidarity ? 'text-green' : 'text-cyan'}">
                     ${c.isSolidarity 
-                      ? '🕊️ Pure Solidarity Mutual Aid' 
+                      ? t('convoysSolidarityMutualAidBadge', '🕊️ Pure Solidarity Mutual Aid') 
                       : `${c.returnCargo?.amount.toLocaleString()} ${c.returnCargo?.unit} ${c.returnCargo?.icon}`}
                   </span>
                 </div>
                 <div class="manifest-box">
-                  <span class="manifest-label">Displaced Extractive Cost</span>
+                  <span class="manifest-label">${t('convoysDisplacedCost', 'Displaced Extractive Cost')}</span>
                   <span class="manifest-val text-green">${node.currencySymbol || '$'}${calculateEstimatedFiatDisplacement(c.outgoingCommodity, c.outgoingAmount).toLocaleString()}</span>
                 </div>
               </div>
@@ -413,10 +413,10 @@ export class PanelConvoysController {
       <div class="dispatch-view-wrapper">
         <!-- Village Stock Summary Banner -->
         <div class="village-stocks-summary-bar">
-          <div class="stock-pill">⚡ Energy: <strong>${Math.floor(thermo.energy.batteryStoredKwh).toLocaleString()}</strong> / ${thermo.energy.batteryCapacityKwh} kWh</div>
-          <div class="stock-pill">💧 Water: <strong>${Math.floor(thermo.water.cisternStoredL).toLocaleString()}</strong> / ${thermo.water.cisternCapacityL} L</div>
-          <div class="stock-pill">🥗 Granary: <strong>${Math.floor(thermo.food.granaryStoredKcal).toLocaleString()}</strong> kcal</div>
-          <div class="stock-pill">♻️ Materials: <strong>${Math.floor((thermo.circularMaterials?.recycledAluminiumKg || 0) + (thermo.circularMaterials?.recycledPetgKg || 0))}</strong> kg</div>
+          <div class="stock-pill">${t('convoysEnergyStat', '⚡ Energy:')} <strong>${Math.floor(thermo.energy.batteryStoredKwh).toLocaleString()}</strong> / ${thermo.energy.batteryCapacityKwh} kWh</div>
+          <div class="stock-pill">${t('convoysWaterStat', '💧 Water:')} <strong>${Math.floor(thermo.water.cisternStoredL).toLocaleString()}</strong> / ${thermo.water.cisternCapacityL} L</div>
+          <div class="stock-pill">${t('convoysGranaryStat', '🥗 Granary:')} <strong>${Math.floor(thermo.food.granaryStoredKcal).toLocaleString()}</strong> kcal</div>
+          <div class="stock-pill">${t('convoysMaterialsStat', '♻️ Materials:')} <strong>${Math.floor((thermo.circularMaterials?.recycledAluminiumKg || 0) + (thermo.circularMaterials?.recycledPetgKg || 0))}</strong> kg</div>
         </div>
 
         <!-- Section 1: 1-Click Recommended Missions -->
@@ -425,8 +425,8 @@ export class PanelConvoysController {
         <!-- Section 2: Accordion for Custom Route Builder -->
         <div class="custom-route-accordion">
           <div class="btn-toggle-custom-route" id="btn-toggle-custom-route">
-            <span>🛠️ Or Build a Custom Route & Cargo (Advanced)</span>
-            <span class="custom-toggle-arrow">${this.customDrawerOpen ? '▲ Hide' : '▼ Expand'}</span>
+            <span>${t('convoysCustomBuild', '🛠️ Or Build a Custom Route & Cargo (Advanced)')}</span>
+            <span class="custom-toggle-arrow">${this.customDrawerOpen ? ('▲ ' + t('hideBtn', 'Hide')) : ('▼ ' + t('expandBtn', 'Expand'))}</span>
           </div>
 
           ${this.customDrawerOpen ? `
@@ -434,7 +434,7 @@ export class PanelConvoysController {
               <!-- Left: Destination & Vehicle -->
               <div class="dispatch-col">
                 <div class="dispatch-section">
-                  <label class="dispatch-label">1. Select Destination Commons</label>
+                  <label class="dispatch-label">${t('convoysSelectDest', '1. Select Destination Commons')}</label>
                   <div class="node-select-grid">
                     ${availableNodes.map(n => {
                       const profile = trade.getTradeProfile(n.id);
@@ -447,8 +447,8 @@ export class PanelConvoysController {
                             <span class="dist-badge">${dKm} km</span>
                           </div>
                           <div class="node-trade-tags">
-                            <span class="tag-surplus" title="Natural Surplus">Surplus: ${COMMODITY_TYPES[profile.surplus]?.icon || ''} ${profile.surplus}</span>
-                            <span class="tag-deficit" title="Critical Deficit">Needs: ${COMMODITY_TYPES[profile.deficit]?.icon || ''} ${profile.deficit}</span>
+                            <span class="tag-surplus" title="${t('convoysNaturalSurplus', 'Natural Surplus')}">${t('convoysNaturalSurplus', 'Surplus')}: ${COMMODITY_TYPES[profile.surplus]?.icon || ''} ${profile.surplus}</span>
+                            <span class="tag-deficit" title="${t('convoysCriticalDeficit', 'Critical Deficit')}">${t('convoysCriticalDeficit', 'Needs')}: ${COMMODITY_TYPES[profile.deficit]?.icon || ''} ${profile.deficit}</span>
                           </div>
                         </div>
                       `;
@@ -457,7 +457,7 @@ export class PanelConvoysController {
                 </div>
 
                 <div class="dispatch-section">
-                  <label class="dispatch-label">2. Select Transport Vehicle</label>
+                  <label class="dispatch-label">${t('convoysSelectVehicle', '2. Select Transport Vehicle')}</label>
                   <div class="vehicle-select-grid">
                     ${Object.values(CONVOY_VEHICLES).map(v => `
                       <div class="vehicle-select-card ${v.id === this.selectedVehicleId ? 'selected' : ''}" data-veh-id="${v.id}">
@@ -475,7 +475,7 @@ export class PanelConvoysController {
               <!-- Right: Cargo, Amount Presets & Reciprocal Preview -->
               <div class="dispatch-col">
                 <div class="dispatch-section">
-                  <label class="dispatch-label">3. Select Cargo & Amount</label>
+                  <label class="dispatch-label">${t('convoysSelectCargo', '3. Select Cargo & Amount')}</label>
                   <div class="commodity-pills-row">
                     ${Object.values(COMMODITY_TYPES).map(c => `
                       <button class="btn-commodity-pill ${c.id === this.selectedCommodity ? 'selected' : ''}" data-comm-id="${c.id}">
@@ -486,15 +486,15 @@ export class PanelConvoysController {
 
                   <div class="amount-slider-box">
                     <div class="slider-header-row">
-                      <span>Payload Amount:</span>
+                      <span>${t('convoysPayloadAmount', 'Payload Amount:')}</span>
                       <strong id="amount-display-val">${clampedAmount.toLocaleString()} ${commodity.unit}</strong>
                       <span class="text-dim">(Stock: ${maxAvail.toLocaleString()} ${commodity.unit})</span>
                     </div>
 
                     <div class="amount-presets-row">
-                      <button class="btn-amount-preset" data-pct="0.15">15% Safe</button>
-                      <button class="btn-amount-preset" data-pct="0.30">30% Balanced</button>
-                      <button class="btn-amount-preset" data-pct="0.50">50% Generous</button>
+                      <button class="btn-amount-preset" data-pct="0.15">${t('convoysSafePercent', '15% Safe')}</button>
+                      <button class="btn-amount-preset" data-pct="0.30">30% ${t('convoysBalanced', 'Balanced')}</button>
+                      <button class="btn-amount-preset" data-pct="0.50">50% ${t('convoysGenerous', 'Generous')}</button>
                     </div>
 
                     <input type="range" id="input-dispatch-amount" min="10" max="${Math.max(10, maxAvail)}" value="${clampedAmount}" step="${this.selectedCommodity === 'FOOD' ? 5000 : (this.selectedCommodity === 'WATER' ? 250 : 5)}" />
@@ -506,8 +506,8 @@ export class PanelConvoysController {
                       <input type="checkbox" id="check-solidarity-mode" ${this.isSolidarity ? 'checked' : ''} />
                       <span class="toggle-box-custom"></span>
                       <div>
-                        <strong>🕊️ Solidarity Mutual Aid Gift (Non-Barter)</strong>
-                        <p>Send unilateral aid without demanding reciprocal cargo. Boosts community morale (+8%) and lowers Legacy Threat level.</p>
+                        <strong>${t('convoysSolidarityGiftTitle', '🕊️ Solidarity Mutual Aid Gift (Non-Barter)')}</strong>
+                        <p>${t('convoysSolidarityGiftDesc', 'Send unilateral aid without demanding reciprocal cargo. Boosts community morale (+8%) and lowers Legacy Threat level.')}</p>
                       </div>
                     </label>
                   </div>
@@ -515,38 +515,38 @@ export class PanelConvoysController {
 
                 <!-- Reciprocal Exchange Summary Card -->
                 <div class="exchange-preview-card">
-                  <h4>🔄 Logistics & Thermodynamic Exchange Manifest</h4>
+                  <h4>${t('convoysExchangeManifestTitle', '🔄 Logistics & Thermodynamic Exchange Manifest')}</h4>
                   <div class="preview-metric-row">
-                    <span>Transit Time (One-Way):</span>
+                    <span>${t('convoysTransitTime', 'Transit Time (One-Way):')}</span>
                     <strong>${transitHours} hours (${Math.round(transitHours / 24 * 10) / 10} days)</strong>
                   </div>
                   <div class="preview-metric-row">
-                    <span>Propulsion Energy Draw:</span>
+                    <span>${t('convoysEnergyDrawLabel', 'Propulsion Energy Draw:')}</span>
                     <strong>${vehicle.energyDrawKwh} kWh battery reserve</strong>
                   </div>
                   <div class="preview-metric-row">
-                    <span>Displaced Extractive Cost:</span>
-                    <strong class="text-green">${node.currencySymbol || '$'}${calculateEstimatedFiatDisplacement(this.selectedCommodity, this.dispatchAmount).toLocaleString()} saved in fiat purchases</strong>
+                    <span>${t('convoysDisplacedCost', 'Displaced Extractive Cost:')}</span>
+                    <strong class="text-green">${node.currencySymbol || '$'}${calculateEstimatedFiatDisplacement(this.selectedCommodity, this.dispatchAmount).toLocaleString()} ${t('convoysSavedFiat', 'saved in fiat purchases')}</strong>
                   </div>
 
                   ${!this.isSolidarity && returnEstimate ? `
                     <div class="reciprocal-box ${returnEstimate.isBonusApplied ? 'bonus-applied' : ''}">
                       <div class="reciprocal-header">
-                        <span>${returnEstimate.isBonusApplied ? '⭐ +35% Bioregional Reciprocity Bonus!' : 'Standard Barter Return:'}</span>
+                        <span>${returnEstimate.isBonusApplied ? ('⭐ ' + t('convoysReciprocityBonus', '+35% Bioregional Reciprocity Bonus!')) : t('convoysStandardBarter', 'Standard Barter Return:')}</span>
                       </div>
                       <div class="reciprocal-val">
                         ${returnEstimate.icon} <strong>+${returnEstimate.amount.toLocaleString()} ${returnEstimate.unit}</strong> of ${returnEstimate.name}
                       </div>
-                      <p class="reciprocal-desc">Partner node reciprocates from their local bioregional surplus upon arrival.</p>
+                      <p class="reciprocal-desc">${t('convoysPartnerReciprocatesDesc', 'Partner node reciprocates from their local bioregional surplus upon arrival.')}</p>
                     </div>
                   ` : `
                     <div class="solidarity-active-banner">
-                      <span>🤝 Unconditional mutual aid creates lasting planetary trust and emergency mutual aid pacts.</span>
+                      <span>${t('convoysUnconditionalAidTrust', '🤝 Unconditional mutual aid creates lasting planetary trust and emergency mutual aid pacts.')}</span>
                     </div>
                   `}
 
                   <button id="btn-submit-dispatch" class="btn-primary btn-dispatch-large" ${maxAvail <= 0 ? 'disabled' : ''}>
-                    🚀 Launch Custom Convoy to ${destNode.name}
+                    🚀 ${t('convoysLaunchCustomBtn', 'Launch Custom Convoy to {node}').replace('{node}', destNode.name)}
                   </button>
                 </div>
               </div>
@@ -561,8 +561,8 @@ export class PanelConvoysController {
     return `
       <div class="trade-directory-layout">
         <div class="directory-intro">
-          <h4>🌍 Planetary Bioregional Commons Directory</h4>
-          <p>Each federated haven is shaped by its local bioregion and climate archetype. True resilience relies on complementary mutual aid rather than corporate supply chains.</p>
+          <h4>${t('convoysDirectoryTitle', '🌍 Planetary Bioregional Commons Directory')}</h4>
+          <p>${t('convoysDirectorySubtitle', 'Each federated haven is shaped by its local bioregion and climate archetype. True resilience relies on complementary mutual aid rather than corporate supply chains.')}</p>
         </div>
 
         <div class="directory-grid">
@@ -575,28 +575,28 @@ export class PanelConvoysController {
               <div class="directory-card ${isLocal ? 'local-node' : ''}">
                 <div class="directory-card-head">
                   <div>
-                    <h4>${n.name} ${isLocal ? '🏠 (Your Settlement)' : ''}</h4>
+                    <h4>${n.name} ${isLocal ? ` 🏠 (${t('yourSettlementBadge', 'Your Settlement')})` : ''}</h4>
                     <span class="bioregion-subtitle">${n.bioregion} • ${n.country}</span>
                   </div>
-                  ${hasPact ? '<span class="pact-badge">🤝 Mutual Aid Pact Active</span>' : ''}
+                  ${hasPact ? `<span class="pact-badge">🤝 ${t('convoysMutualAidActive', 'Mutual Aid Pact Active')}</span>` : ''}
                 </div>
 
                 <p class="directory-quote">"${n.quote}"</p>
 
                 <div class="directory-flows">
                   <div class="flow-pill surplus">
-                    <span>Abundant Surplus:</span>
+                    <span>${t('convoysAbundantSurplus', 'Abundant Surplus:')}</span>
                     <strong>${COMMODITY_TYPES[profile.surplus]?.icon || ''} ${COMMODITY_TYPES[profile.surplus]?.name || profile.surplus}</strong>
                   </div>
                   <div class="flow-pill deficit">
-                    <span>Critical Need:</span>
+                    <span>${t('convoysCriticalNeed', 'Critical Need:')}</span>
                     <strong>${COMMODITY_TYPES[profile.deficit]?.icon || ''} ${COMMODITY_TYPES[profile.deficit]?.name || profile.deficit}</strong>
                   </div>
                 </div>
 
                 ${!isLocal ? `
                   <button class="btn-card-dispatch" data-target-node-id="${n.id}">
-                    🚚 Plan Convoy Route
+                    🚚 ${t('convoysPlanRouteBtn', 'Plan Convoy Route')}
                   </button>
                 ` : ''}
               </div>
@@ -612,8 +612,8 @@ export class PanelConvoysController {
       return `
         <div class="convoys-empty-state">
           <div class="empty-icon">📜</div>
-          <h4>No Completed Convoys Recorded</h4>
-          <p>Convoys that return safely home will deposit their logistical manifest into this ledger.</p>
+          <h4>${t('convoysNoHistoryTitle', 'No Completed Convoys Recorded')}</h4>
+          <p>${t('convoysNoHistoryDesc', 'Convoys that return safely home will deposit their logistical manifest into this ledger.')}</p>
         </div>
       `;
     }

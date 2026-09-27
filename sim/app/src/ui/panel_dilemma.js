@@ -19,6 +19,8 @@ export class PanelDilemmaController {
     this.closeBtn = document.getElementById('btn-close-dilemma-modal');
     this.activeDilemmaData = null;
     this.activeCrisisData = null;
+    this.activePeerReviewData = null;
+    this.isCodexMode = false;
     this.bindEvents();
   }
 
@@ -42,6 +44,8 @@ export class PanelDilemmaController {
     if (!this.modalEl) return;
     this.activeDilemmaData = dilemmaData;
     this.activeCrisisData = null;
+    this.activePeerReviewData = null;
+    this.isCodexMode = false;
     this.modalEl.classList.remove('hidden');
     document.body.classList.add('has-dilemma-open');
     this.render();
@@ -51,6 +55,30 @@ export class PanelDilemmaController {
     if (!this.modalEl) return;
     this.activeCrisisData = crisis;
     this.activeDilemmaData = null;
+    this.activePeerReviewData = null;
+    this.isCodexMode = false;
+    this.modalEl.classList.remove('hidden');
+    document.body.classList.add('has-dilemma-open');
+    this.render();
+  }
+
+  openPeerReview(peerReviewData) {
+    if (!this.modalEl) return;
+    this.activePeerReviewData = peerReviewData;
+    this.activeDilemmaData = null;
+    this.activeCrisisData = null;
+    this.isCodexMode = false;
+    this.modalEl.classList.remove('hidden');
+    document.body.classList.add('has-dilemma-open');
+    this.render();
+  }
+
+  openAssemblyCodex() {
+    if (!this.modalEl) return;
+    this.isCodexMode = true;
+    this.activeDilemmaData = null;
+    this.activeCrisisData = null;
+    this.activePeerReviewData = null;
     this.modalEl.classList.remove('hidden');
     document.body.classList.add('has-dilemma-open');
     this.render();
@@ -61,10 +89,16 @@ export class PanelDilemmaController {
     document.body.classList.remove('has-dilemma-open');
     this.activeDilemmaData = null;
     this.activeCrisisData = null;
+    this.activePeerReviewData = null;
+    this.isCodexMode = false;
   }
 
   render() {
-    if (this.activeDilemmaData) {
+    if (this.activePeerReviewData) {
+      this.renderPeerReviewDocket(this.activePeerReviewData);
+    } else if (this.isCodexMode) {
+      this.renderSortitionAssemblyBoard();
+    } else if (this.activeDilemmaData) {
       this.renderCivicDilemma(this.activeDilemmaData);
     } else if (this.activeCrisisData) {
       this.renderLegacyCrisis(this.activeCrisisData);
@@ -257,6 +291,242 @@ export class PanelDilemmaController {
     this.close();
   }
 
+  renderPeerReviewDocket(data) {
+    const docket = data.docket || data;
+    const council = this.sim.sortition.currentCouncil;
+    const tally = this.sim.peerReview.getDocketTally(docket, council);
+    const tier = this.sim.sortition.currentTier;
+    const tierTitle = tier.titleKey ? t(tier.titleKey, tier.titleDefault) : tier.titleDefault;
+
+    const title = docket.titleKey ? t(docket.titleKey, docket.title) : docket.title;
+    const quote = docket.quoteKey ? t(docket.quoteKey, docket.quote) : docket.quote;
+    const problem = docket.problemKey ? t(docket.problemKey, docket.problem) : docket.problem;
+    const hypothesis = docket.hypothesisKey ? t(docket.hypothesisKey, docket.hypothesis) : docket.hypothesis;
+    const telemetry = docket.telemetryKey ? t(docket.telemetryKey, docket.telemetry) : docket.telemetry;
+
+    const optALabel = docket.optionA.labelKey ? t(docket.optionA.labelKey, docket.optionA.label) : docket.optionA.label;
+    const optADesc = docket.optionA.descKey ? t(docket.optionA.descKey, docket.optionA.description) : docket.optionA.description;
+    const optBLabel = docket.optionB.labelKey ? t(docket.optionB.labelKey, docket.optionB.label) : docket.optionB.label;
+    const optBDesc = docket.optionB.descKey ? t(docket.optionB.descKey, docket.optionB.description) : docket.optionB.description;
+
+    let html = `
+      <div class="dilemma-container peer-review-mode">
+        <div class="bottom-sheet-drag-handle"></div>
+        <div class="dilemma-badge">
+          <img src="/one-logo-white.svg" alt="O.N.E." class="dilemma-stamp-icon" />
+          <span>🏛️ ${t('councilDeliberationBadge', 'CITIZEN ASSEMBLY DELIBERATION')} • ${docket.originBioregionIcon || '🌱'} ${docket.originNodeName}</span>
+        </div>
+
+        <h3 class="dilemma-title" style="margin-top: 6px; font-size: 1.25rem;">${title}</h3>
+
+        <div class="quote-box" style="margin-top: 10px; margin-bottom: 12px; padding: 12px 14px;">
+          <span class="speaker">${docket.speaker}</span>
+          <p class="quote-text" style="font-size: 0.95rem; margin-bottom: 6px;">${quote}</p>
+          <p class="dilemma-summary" style="font-size: 0.88rem; color: #94a3b8; margin: 0; line-height: 1.4;">${problem}</p>
+        </div>
+
+        <!-- Compact Donut Deliberation Visual -->
+        <div class="council-deliberation-visual compact" style="margin-bottom: 12px; padding: 10px 14px;">
+          <div class="donut-graphic-wrapper">
+            ${this.renderCouncilDonutSvg(tally)}
+          </div>
+          <div class="council-tally-details">
+            <div class="council-tier-badge">
+              <span class="tier-pill">${tierTitle}</span>
+              <span class="tier-article">${tally.total} ${t('citizensLabel', 'Citizens')}</span>
+            </div>
+
+            <div class="tally-breakdown-row">
+              <span class="tally-stat text-green">
+                <span class="tally-dot dot-green"></span>
+                ${t('inFavor', 'in Favor')}: <strong>${tally.yes}</strong> (${Math.round(tally.yesPct)}%)
+              </span>
+              <span class="tally-stat text-red">
+                <span class="tally-dot dot-red"></span>
+                ${t('against', 'Against')}: <strong>${tally.no}</strong> (${Math.round(tally.noPct)}%)
+              </span>
+            </div>
+
+            <div class="tally-threshold-row ${tally.passed ? 'threshold-met' : 'threshold-pending'}">
+              <span class="threshold-badge">${tally.passed ? '✅' : '⏳'} ${t('thresholdLabel', 'Soglia richiesta')}: <strong>75%</strong> (${tally.requiredVotes}/${tally.total} ${t('votesNeeded', 'voti')})</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="options-duel">
+          <div class="option-card" id="btn-ratify-docket">
+            <h4>${optALabel}</h4>
+            <p>${optADesc}</p>
+            <div class="impacts-list">
+              <span class="text-green">📜 ${docket.optionA.perkKey ? t(docket.optionA.perkKey, docket.optionA.perkSummary) : docket.optionA.perkSummary}</span>
+              <span class="text-green">⏳ +${docket.optionA.moraleDelta}% ${t('meterMorale', 'Morale')}</span>
+              <span class="text-cyan">🌐 +${docket.optionA.confederalTrust} ${t('confederalTrust', 'Trust')}</span>
+            </div>
+            <button class="btn-primary">${t('btnRatifyDocket', '📜 Approve Precedent')}</button>
+          </div>
+
+          <div class="option-card" id="btn-reject-docket">
+            <h4>${optBLabel}</h4>
+            <p>${optBDesc}</p>
+            <div class="impacts-list">
+              <span class="text-dim">⚠️ ${docket.optionB.perkKey ? t(docket.optionB.perkKey, docket.optionB.perkSummary) : docket.optionB.perkSummary}</span>
+              <span class="${docket.optionB.moraleDelta >= 0 ? 'text-green' : 'text-red'}">⏳ ${docket.optionB.moraleDelta}% ${t('meterMorale', 'Morale')}</span>
+            </div>
+            <button class="btn-secondary">${t('btnRejectDocket', '🛑 Reject Precedent')}</button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    this.contentEl.innerHTML = html;
+
+    document.getElementById('btn-ratify-docket')?.addEventListener('click', () => {
+      this.executeDocketChoice('OPTION_A', docket);
+    });
+    document.getElementById('btn-reject-docket')?.addEventListener('click', () => {
+      this.executeDocketChoice('OPTION_B', docket);
+    });
+  }
+
+  executeDocketChoice(choiceKey, docket) {
+    this.sim.peerReview.resolveDocket(choiceKey, docket);
+    this.activePeerReviewData = null;
+
+    const title = docket.titleKey ? t(docket.titleKey, docket.title) : docket.title;
+    const msg = choiceKey === 'OPTION_A'
+      ? t('docketRatifiedMsg', 'Precedent ratified by the assembly!')
+      : t('docketRejectedMsg', 'Precedent rejected by the assembly.');
+    this.sim.emitNotification(t('assemblyBoardTitle', '🏛️ Citizen Assembly'), `${title}: ${msg}`);
+    this.sim.notifyTick();
+    this.close();
+  }
+
+  renderSortitionAssemblyBoard() {
+    const council = this.sim.sortition.currentCouncil;
+    const tier = this.sim.sortition.currentTier;
+    const tierTitle = tier.titleKey ? t(tier.titleKey, tier.titleDefault) : tier.titleDefault;
+    const daysSinceRot = Math.floor((this.sim.tickCount - this.sim.sortition.lastRotationTick) / 24);
+    const dayInTerm = Math.min(30, daysSinceRot + 1);
+    const hoursToNextRot = Math.max(0, this.sim.sortition.mandateDurationTicks - ((this.sim.tickCount - this.sim.sortition.lastRotationTick) % this.sim.sortition.mandateDurationTicks));
+
+    const pendingDockets = this.sim.peerReview.getAvailableDockets();
+    const ratifiedPrecedents = this.sim.peerReview.getRatifiedPrecedents();
+
+    let html = `
+      <div class="dilemma-container assembly-board-mode">
+        <div class="bottom-sheet-drag-handle"></div>
+        <div class="assembly-header-stack">
+          <div class="dilemma-badge">
+            <img src="/one-logo-white.svg" alt="O.N.E." class="dilemma-stamp-icon" />
+            <span>${t('assemblyBoardTitle', '🏛️ Athenian Sortition Council & Confederal Codex')}</span>
+          </div>
+          <h3 class="assembly-main-title">${tierTitle} (${tier.article})</h3>
+          <p class="assembly-subtitle">${t('assemblyBoardSubtitle', 'Randomly drawn citizen juries deliberating on local dilemmas and confederated peer-review dockets (Chapter IV).')}</p>
+          <div class="assembly-meta-row">
+            <span class="meta-pill">👥 ${council.length} ${t('citizensLabel', 'Citizens')}</span>
+            <span class="meta-pill">⚖️ ${tier.descriptionKey ? t(tier.descriptionKey, tier.descriptionDefault) : tier.descriptionDefault}</span>
+            <span class="meta-pill text-cyan">⏱️ ${t('mandateTermDays', 'Day {day} of 30 • Next Rotation in {hours}h').replace('{day}', dayInTerm).replace('{hours}', hoursToNextRot)}</span>
+            <span class="meta-pill text-green">🌐 ${t('confederalTrust', 'Confederal Trust')}: ${this.sim.peerReview.confederalTrust}/100</span>
+          </div>
+        </div>
+
+        <!-- 1. Seated Jurors Section -->
+        <div class="assembly-section">
+          <div class="section-sub-header">
+            <h4>${t('seatedJurorsTitle', 'Current Seated Jurors (Selected by Lot)')}</h4>
+            <span class="sub-badge">${t('mandateActiveBadge', 'Mandate Active')}</span>
+          </div>
+          <div class="seated-jurors-grid">
+            ${council.map((c, i) => `
+              <div class="juror-chip-card">
+                <div class="juror-avatar">🏛️</div>
+                <div class="juror-info">
+                  <div class="juror-name">${c.name}</div>
+                  <div class="juror-role">Juror #${i + 1} • Morale: ${c.morale ?? 75}%</div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- 2. Pending Confederated Dockets Section -->
+        <div class="assembly-section">
+          <div class="section-sub-header">
+            <h4>${t('pendingDocketsTitle', 'Confederated Peer-Review Dockets (Incoming from Network)')}</h4>
+            <span class="sub-badge">${pendingDockets.length} ${t('pendingBadge', 'Pending')}</span>
+          </div>
+          <p class="section-help-text">${t('pendingDocketsSubtitle', 'Autonomous partner nodes have tested institutional adaptations. Impanel your council to deliberate and vote on confederated precedents.')}</p>
+
+          ${pendingDockets.length === 0 ? `
+            <div class="empty-dockets-box">
+              <span>✅</span> ${t('noPendingDockets', 'All available confederated dockets have been reviewed by this council.')}
+            </div>
+          ` : `
+            <div class="dockets-preview-grid">
+              ${pendingDockets.map(docket => `
+                <div class="docket-preview-card" data-docket-id="${docket.id}">
+                  <div class="docket-card-top">
+                    <span class="docket-code-pill">${docket.code}</span>
+                    <span class="docket-origin-badge">${docket.originBioregionIcon} ${docket.originNodeName}</span>
+                    <span class="docket-articles-pill">${docket.targetArticles}</span>
+                  </div>
+                  <h4 class="docket-preview-title">${docket.titleKey ? t(docket.titleKey, docket.title) : docket.title}</h4>
+                  <p class="docket-preview-problem">${docket.problemKey ? t(docket.problemKey, docket.problem) : docket.problem}</p>
+                  <button class="btn-convene-jury" data-docket-id="${docket.id}">
+                    ${t('conveneJuryBtn', '🏛️ Impanel Sortition Jury & Deliberate')}
+                  </button>
+                </div>
+              `).join('')}
+            </div>
+          `}
+        </div>
+
+        <!-- 3. Ratified Precedents Codex Section -->
+        <div class="assembly-section">
+          <div class="section-sub-header">
+            <h4>${t('ratifiedCodexTitle', 'Ratified Case Law Precedents (Active Codex)')}</h4>
+            <span class="sub-badge text-green">${ratifiedPrecedents.length} ${t('ratifiedBadge', 'Ratified')}</span>
+          </div>
+          <p class="section-help-text">${t('ratifiedCodexSubtitle', 'Constitutional adaptations formally ratified by this assembly and active across the confederation.')}</p>
+
+          ${ratifiedPrecedents.length === 0 ? `
+            <div class="empty-dockets-box">
+              <span>📜</span> ${t('noRatifiedYet', 'No confederated precedents ratified yet. Deliberate on incoming dockets to establish case law.')}
+            </div>
+          ` : `
+            <div class="ratified-precedents-list">
+              ${ratifiedPrecedents.map(docket => `
+                <div class="ratified-precedent-card">
+                  <div class="precedent-card-header">
+                    <span class="docket-code-pill">${docket.code}</span>
+                    <span class="precedent-title">${docket.titleKey ? t(docket.titleKey, docket.title) : docket.title}</span>
+                    <span class="status-ratified-badge">${t('ratifiedStatusTag', 'RATIFIED ✅')}</span>
+                  </div>
+                  <p class="precedent-perk">⚡ <strong>${t('activePrecedentPerk', 'Active Precedent Perk:')}</strong> ${docket.optionA.perkKey ? t(docket.optionA.perkKey, docket.optionA.perkSummary) : docket.optionA.perkSummary}</p>
+                  <span class="precedent-origin-tag">${docket.originBioregionIcon} ${t('originBadge', 'Origin Node')}: ${docket.originNodeName} • ${docket.targetArticles}</span>
+                </div>
+              `).join('')}
+            </div>
+          `}
+        </div>
+      </div>
+    `;
+
+    this.contentEl.innerHTML = html;
+
+    // Attach click listeners to "Convene Jury" buttons
+    this.contentEl.querySelectorAll('.btn-convene-jury').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const docketId = btn.getAttribute('data-docket-id');
+        const docket = pendingDockets.find(d => d.id === docketId);
+        if (docket) {
+          const reviewData = this.sim.peerReview.presentDocket(docket, this.sim.sortition.currentCouncil);
+          this.openPeerReview(reviewData);
+        }
+      });
+    });
+  }
+
   renderLegacyCrisis(crisis) {
     const curSym = this.sim?.node?.currencySymbol || '$';
     const name = interpolateCurrency(crisis.nameKey ? t(crisis.nameKey, crisis.name) : crisis.name, curSym);
@@ -308,7 +578,7 @@ export class PanelDilemmaController {
           if (resolution.batteryCostKwh) this.sim.thermo.energy.batteryStoredKwh = Math.max(0, this.sim.thermo.energy.batteryStoredKwh - resolution.batteryCostKwh);
           if (resolution.moraleDelta) this.sim.node.communityMorale = Math.max(10, Math.min(100, this.sim.node.communityMorale + resolution.moraleDelta));
           const chosenLabel = resolution.chosenOption.labelKey ? t(resolution.chosenOption.labelKey, resolution.chosenOption.label) : resolution.chosenOption.label;
-          this.sim.emitNotification('🛡️ Crisis Countered', chosenLabel);
+          this.sim.emitNotification(t('crisisCounteredTitle', '🛡️ Crisis Countered'), chosenLabel);
           this.sim.notifyTick();
         }
         this.close();

@@ -91,7 +91,7 @@ export class PanelDwellingController {
           </div>
           <div class="dwelling-action-row" style="display: flex; gap: 8px;">
             <button id="btn-enter-dwelling-interior" class="btn-primary" style="flex: 1.3;">
-              🚪 Enter Interior View
+              ${t('btnEnterDwellingInterior', '🚪 Enter Interior View')}
             </button>
             <button id="btn-release-dwelling" class="btn-secondary" style="flex: 1;">
               🔄 ${t('btnReleaseToPool', 'Release to Civic Pool')}
@@ -117,7 +117,7 @@ export class PanelDwellingController {
           <p class="text-dim-small">${t('occupiedWarning', 'This dwelling is currently in use. Housing cannot be bought or evicted.')}</p>
           <div class="dwelling-action-row" style="margin-top: 12px;">
             <button id="btn-knock-dwelling" class="btn-secondary" style="width: 100%;">
-              🚪 Knock on Door (Request Invitation)
+              ${t('btnKnockRequestInvite', '🚪 Knock on Door (Request Invitation)')}
             </button>
           </div>
         </div>
@@ -129,7 +129,7 @@ export class PanelDwellingController {
           <p>${t('vacantReserveDesc', 'This dwelling is free and immediately available for usufruct. Zero rent, zero mortgage, zero debt.')}</p>
           <div class="dwelling-claim-box" style="display: flex; gap: 8px;">
             <button id="btn-enter-dwelling-interior" class="btn-secondary" style="flex: 1;">
-              🔍 Inspect Interior
+              ${t('btnInspectDwellingInterior', '🔍 Inspect Interior')}
             </button>
             <button id="btn-claim-dwelling" class="btn-primary btn-claim-glow" style="flex: 1.4;">
               🔑 ${t('btnClaimUsufruct', 'Claim Usufruct Dwelling')}
@@ -144,13 +144,13 @@ export class PanelDwellingController {
         <!-- Left: Bioclimatic Architectural Illustration & Specifications -->
         <div class="dwelling-arch-column">
           <div class="arch-header-badge" style="--accent: ${climate.accentColor};">
-            <span class="arch-climate-tag">${climate.name}</span>
-            <h4>${d.dwellingType}</h4>
+            <span class="arch-climate-tag">${climate.nameKey ? t(climate.nameKey, climate.name) : climate.name}</span>
+            <h4>${climate.dwellingTypeKey ? t(climate.dwellingTypeKey, d.dwellingType) : d.dwellingType}</h4>
           </div>
           <div class="arch-canvas-box">
             <div class="dwelling-pod-preview ${climate.id.toLowerCase()}">
               <span class="preview-icon">${d.isPlayerHome ? '👑' : (d.isOccupied ? '🏡' : '🌱')}</span>
-              <div class="preview-label">${d.dwellingType}</div>
+              <div class="preview-label">${climate.dwellingTypeKey ? t(climate.dwellingTypeKey, d.dwellingType) : d.dwellingType}</div>
               <div class="preview-unit-num">#${d.number} • ${t('usufructBadge', 'USUFRUCT')}</div>
             </div>
           </div>
@@ -158,7 +158,7 @@ export class PanelDwellingController {
           <div class="arch-specs-grid">
             <div class="spec-item">
               <span class="spec-label">🧱 ${t('buildingMaterialLabel', 'Building Material:')}</span>
-              <span class="spec-val">${climate.buildingMaterial}</span>
+              <span class="spec-val">${climate.buildingMaterialKey ? t(climate.buildingMaterialKey, climate.buildingMaterial) : climate.buildingMaterial}</span>
             </div>
             <div class="spec-item">
               <span class="spec-label">☀️ ${t('solarEfficiencyLabel', 'Solar Efficiency:')}</span>
@@ -166,7 +166,7 @@ export class PanelDwellingController {
             </div>
             <div class="spec-item">
               <span class="spec-label">💧 ${t('waterCatchmentLabel', 'Water System:')}</span>
-              <span class="spec-val">${climate.waterCatchmentType}</span>
+              <span class="spec-val">${climate.waterCatchmentTypeKey ? t(climate.waterCatchmentTypeKey, climate.waterCatchmentType) : climate.waterCatchmentType}</span>
             </div>
             <div class="spec-item">
               <span class="spec-label">🔥 ${t('heatingDemandLabel', 'Thermal Factor:')}</span>
@@ -177,7 +177,20 @@ export class PanelDwellingController {
           <div class="furniture-box">
             <h5>🛋️ ${t('circularFurnitureTitle', 'Civic Circular Furniture Included:')}</h5>
             <div class="furniture-tags">
-              ${d.furnitureSet.map(f => `<span class="tag-furniture">✓ ${f}</span>`).join(' ')}
+              ${d.furnitureSet.map(f => {
+                const map = {
+                  'Sedum Bed': 'furniture_bed',
+                  'Sedum Platform Bed': 'furniture_bed',
+                  'Local Desk': 'furniture_desk',
+                  'Local Timber Desk': 'furniture_desk',
+                  'Timber Chair': 'furniture_chair',
+                  'Ergonomic Timber Chair': 'furniture_chair',
+                  'Modular Wardrobe': 'furniture_wardrobe'
+                };
+                const k = map[f] || (typeof f === 'string' && f.startsWith('furniture_') ? f : null);
+                const label = k ? t(k, f) : f;
+                return `<span class="tag-furniture">✓ ${label}</span>`;
+              }).join(' ')}
             </div>
             <span class="text-dim-small">${t('furnitureNote', 'Provided by the local Circular Furniture Swap Shop (Circular Re-use Hub).')}</span>
           </div>
@@ -190,9 +203,9 @@ export class PanelDwellingController {
           <div class="usufruct-legal-principles">
             <h5>📜 ${t('constitutionalGuaranteesTitle', 'Constitutional Guarantees (AGPL-3.0)')}</h5>
             <ul>
-              <li><strong>Zero Speculation:</strong> Property cannot be sold, rented, or securitized.</li>
-              <li><strong>Dynamic Usufruct:</strong> As long as you dwell here, it is unconditionally yours.</li>
-              <li><strong>Sabbatical Lock:</strong> Travel anywhere on Earth for up to 180 days with locked dwelling.</li>
+              <li><strong>${t('zeroSpeculationTitle', 'Zero Speculation:')}</strong> ${t('zeroSpeculationDesc', 'Property cannot be sold, rented, or securitized.')}</li>
+              <li><strong>${t('dynamicUsufructTitle', 'Dynamic Usufruct:')}</strong> ${t('dynamicUsufructDesc', 'As long as you dwell here, it is unconditionally yours.')}</li>
+              <li><strong>${t('sabbaticalLockTitle', 'Sabbatical Lock:')}</strong> ${t('sabbaticalLockDesc', 'Travel anywhere on Earth for up to 180 days with locked dwelling.')}</li>
             </ul>
           </div>
         </div>
