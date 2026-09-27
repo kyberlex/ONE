@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>O-ASIS: Dual-Track | Living Thermodynamic Sandbox & Resilience MMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="0; url=https://one-oasis.surge.sh">
+  <link rel="canonical" href="https://one-oasis.surge.sh">
+  <meta name="description" content="Open-source browser thermodynamic survival sandbox and resilience MMO.">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #090d16;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .card {
+      background: rgba(16, 24, 39, 0.85);
+      border: 1px solid #10b981;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      max-width: 480px;
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+    }
+    h1 {
+      color: #10b981;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: #10b981;
+      color: #090d16;
+      font-weight: bold;
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #34d399;
+    }
+    .pulse {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #10b981;
+      margin-right: 6px;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+  </style>
+  <script>
+    // Instant client-side redirect
+    window.location.replace("https://one-oasis.surge.sh" + window.location.hash);
+  </script>
+</head>
+<body>
+  <div class="card">
+    <div style="margin-bottom: 1rem;"><span class="pulse"></span> <b>CONNECTING TO O-ASIS</b></div>
+    <h1>O-ASIS Dual-Track</h1>
+    <p>Living Thermodynamic Sandbox & Resilience MMO</p>
+    <p style="font-size: 0.85rem; color: #64748b;">Redirecting you directly to the live browser simulation...</p>
+    <a href="https://one-oasis.surge.sh" class="btn">🚀 Enter Simulation Immediately</a>
+  </div>
+</body>
+</html>
