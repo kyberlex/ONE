@@ -21,6 +21,10 @@ export class PanelDilemmaController {
     this.activeCrisisData = null;
     this.activePeerReviewData = null;
     this.isCodexMode = false;
+    this.pendingCrisis = null;
+    this.pendingDilemma = null;
+    this.pendingPeerReview = null;
+    this.isTemporarilyPaused = false;
     this.bindEvents();
   }
 
@@ -40,8 +44,47 @@ export class PanelDilemmaController {
     });
   }
 
+  pauseForNavGroup() {
+    if (this.modalEl && !this.modalEl.classList.contains('hidden')) {
+      this.isTemporarilyPaused = true;
+      this.modalEl.classList.add('hidden');
+      document.body.classList.remove('has-dilemma-open');
+    }
+  }
+
+  resumeFromNavGroup() {
+    if (this.isTemporarilyPaused) {
+      this.isTemporarilyPaused = false;
+      this.modalEl.classList.remove('hidden');
+      document.body.classList.add('has-dilemma-open');
+      this.render();
+    } else {
+      this.flushPending();
+    }
+  }
+
+  flushPending() {
+    if (this.pendingCrisis) {
+      const c = this.pendingCrisis;
+      this.pendingCrisis = null;
+      this.openCrisis(c);
+    } else if (this.pendingDilemma) {
+      const d = this.pendingDilemma;
+      this.pendingDilemma = null;
+      this.openDilemma(d);
+    } else if (this.pendingPeerReview) {
+      const p = this.pendingPeerReview;
+      this.pendingPeerReview = null;
+      this.openPeerReview(p);
+    }
+  }
+
   openDilemma(dilemmaData) {
     if (!this.modalEl) return;
+    if (window.isAnyNavGroupExpanded && window.isAnyNavGroupExpanded()) {
+      this.pendingDilemma = dilemmaData;
+      return;
+    }
     this.activeDilemmaData = dilemmaData;
     this.activeCrisisData = null;
     this.activePeerReviewData = null;
@@ -54,6 +97,10 @@ export class PanelDilemmaController {
 
   openCrisis(crisis) {
     if (!this.modalEl) return;
+    if (window.isAnyNavGroupExpanded && window.isAnyNavGroupExpanded()) {
+      this.pendingCrisis = crisis;
+      return;
+    }
     this.activeCrisisData = crisis;
     this.activeDilemmaData = null;
     this.activePeerReviewData = null;
@@ -66,6 +113,10 @@ export class PanelDilemmaController {
 
   openPeerReview(peerReviewData) {
     if (!this.modalEl) return;
+    if (window.isAnyNavGroupExpanded && window.isAnyNavGroupExpanded()) {
+      this.pendingPeerReview = peerReviewData;
+      return;
+    }
     this.activePeerReviewData = peerReviewData;
     this.activeDilemmaData = null;
     this.activeCrisisData = null;
@@ -95,6 +146,7 @@ export class PanelDilemmaController {
     this.activeCrisisData = null;
     this.activePeerReviewData = null;
     this.isCodexMode = false;
+    this.isTemporarilyPaused = false;
   }
 
   render() {

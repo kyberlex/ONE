@@ -1217,6 +1217,14 @@ export const en = {
   btnReadThrillers: 'Free Thriller Ebooks ↗',
   btnVisitPortal: 'Explore O.N.E. Portal ↗',
   readConstitutionLink: 'Living Constitution (46 Articles) ↗',
-  roadmapCommonsLink: 'O.N.E. Hardware Roadmap ↗',
-  guideExploreOnePlatform: 'Discover the O.N.E. Movement (Constitution & Thrillers) ↗'
+  guideExploreOnePlatform: 'Discover the O.N.E. Movement (Constitution & Thrillers) ↗',
+  btnSystemMenu: 'Menu',
+  btnSystemMenuTooltip: 'System, Character & Community Menu',
+  btnCommonsHub: 'Commons Hub',
+  btnCommonsHubTooltip: 'Open Village Operations & Commons Drawers',
+  subCouncil: 'Sortition & Direct Democracy',
+  subChores: 'Community Labor Allocation',
+  subHousing: 'Dynamic Usufruct Dwellings',
+  subTech: 'FabLab Automation & Blueprints',
+  subConvoys: 'Inter-Node Barter Mesh'
 };

@@ -22,6 +22,7 @@ import { PanelChatController } from './ui/panel_chat.js';
 import { PanelFeedbackController } from './ui/panel_feedback.js';
 import { PanelHandbookController } from './ui/panel_handbook.js';
 import { PanelInviteController } from './ui/panel_invite.js';
+import { NavGroupManager } from './ui/nav_groups.js';
 import { GuideTourController } from './ui/guide_tour.js';
 import { ChatEngine } from './engine/chat_engine.js';
 import { storageIDB } from './engine/storage_idb.js';
@@ -347,27 +348,8 @@ window.addEventListener('DOMContentLoaded', () => {
     worldMap.updateTradeConvoys(sim.trade.convoys, sim.trade);
   });
 
-  // 3c. Mobile Landscape Orientation Guidance Handler (ITEM 2)
-  const landscapeOverlay = document.getElementById('mobile-landscape-overlay');
-  const btnDismissLandscape = document.getElementById('btn-dismiss-landscape');
-  if (btnDismissLandscape && landscapeOverlay) {
-    btnDismissLandscape.addEventListener('click', () => {
-      landscapeOverlay.classList.add('dismissed');
-      sessionStorage.setItem('dismissedLandscapeNotice', '1');
-    });
-
-    if (sessionStorage.getItem('dismissedLandscapeNotice') === '1') {
-      landscapeOverlay.classList.add('dismissed');
-    }
-
-    window.addEventListener('resize', () => {
-      // If rotated to landscape (width > height), clear dismiss state
-      if (window.innerWidth > window.innerHeight && landscapeOverlay.classList.contains('dismissed')) {
-        landscapeOverlay.classList.remove('dismissed');
-        sessionStorage.removeItem('dismissedLandscapeNotice');
-      }
-    });
-  }
+  // 3c. Initialize Collapsible Nav Groups Manager
+  const navGroupManager = new NavGroupManager(panelDilemma);
 
   // 4. Initialize HUD
   const hud = new HudController(sim, panelType => {
@@ -381,6 +363,7 @@ window.addEventListener('DOMContentLoaded', () => {
     else if (panelType === 'council') {
       const councilBtn = document.getElementById('btn-open-council');
       if (councilBtn) councilBtn.classList.remove('has-alert');
+      navGroupManager.updateAlertState(false);
       if (sim.sortition.activeDilemma) {
         panelDilemma.openDilemma(sim.sortition.activeDilemma);
       } else if (panelDilemma.activePeerReviewData) {
@@ -891,6 +874,7 @@ window.addEventListener('DOMContentLoaded', () => {
       message: `${title} (${t('clickToVoteHint', 'Click to vote')})`,
       onClick: () => {
         if (councilBtn) councilBtn.classList.remove('has-alert');
+        navGroupManager.updateAlertState(false);
         panelDilemma.openDilemma(dilemmaData);
       }
     });
@@ -908,6 +892,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const councilBtn = document.getElementById('btn-open-council');
     if (councilBtn) councilBtn.classList.add('has-alert');
+    navGroupManager.updateAlertState(true);
 
     const crisisName = crisis.nameKey ? t(crisis.nameKey, crisis.name) : crisis.name;
     hud.showNotification({
@@ -915,6 +900,7 @@ window.addEventListener('DOMContentLoaded', () => {
       message: t('crisisActionNotice', '{name}: an urgent collective decision is needed!').replace('{name}', crisisName),
       onClick: () => {
         if (councilBtn) councilBtn.classList.remove('has-alert');
+        navGroupManager.updateAlertState(false);
         panelDilemma.openCrisis(crisis);
       }
     });
@@ -924,12 +910,14 @@ window.addEventListener('DOMContentLoaded', () => {
     panelDilemma.activePeerReviewData = reviewData;
     const councilBtn = document.getElementById('btn-open-council');
     if (councilBtn) councilBtn.classList.add('has-alert');
+    navGroupManager.updateAlertState(true);
     const title = reviewData.docket.titleKey ? t(reviewData.docket.titleKey, reviewData.docket.title) : reviewData.docket.title;
     hud.showNotification({
       title: '🏛️ ' + t('newDocketNoticeTitle', 'Incoming Assembly Proposal'),
       message: `${title} (${t('clickToVoteHint', 'Click to vote')})`,
       onClick: () => {
         if (councilBtn) councilBtn.classList.remove('has-alert');
+        navGroupManager.updateAlertState(false);
         panelDilemma.openPeerReview(reviewData);
       }
     });

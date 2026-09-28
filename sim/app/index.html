@@ -99,42 +99,71 @@
         <button id="btn-my-home" class="btn-toggle-view btn-home-pill hidden" title="Go to Your Dwelling" data-i18n-title="goToMyHome">👑 <span id="home-pill-text" data-i18n="yourHomeBadge">My Home</span></button>
       </div>
 
-      <!-- Right HUD: Alert Ticker & Legacy Threat Meter -->
+      <!-- Right HUD: Expandable System & Community Menu Group -->
       <div class="hud-right-stack">
-        <div class="hud-top-actions">
-          <button id="btn-open-passport" class="btn-toggle-view btn-passport-pill" title="Player Profile & Character" data-i18n-title="passportTooltip">🔑 <span id="passport-btn-label" data-i18n="passportBtnLabel">Character</span></button>
-          <button id="btn-invite-friend" class="btn-toggle-view btn-invite-pill" title="Multiplayer Settlement Invite" data-i18n-title="inviteFriendTooltip">🔗 <span id="invite-btn-label" data-i18n="inviteFriendBtn">Invite</span></button>
-          <button id="btn-open-handbook" class="btn-toggle-view btn-handbook-pill" title="Survival Rulebook & Field Manual (F1 / G)" data-i18n-title="handbookTooltip">📖 <span id="handbook-btn-label" data-i18n="handbookBtnLabel">Rulebook</span></button>
-          <button id="btn-open-guide" class="btn-toggle-view btn-guide-pill" title="Interactive Onboarding Tour" data-i18n-title="guideTooltip">🧭 <span id="guide-btn-label" data-i18n="guideBtnLabel">Tour</span></button>
-          <button id="btn-open-feedback" class="btn-toggle-view btn-feedback-pill" title="Ideas & Bug Reports" data-i18n-title="feedbackTooltip">💡 <span id="feedback-btn-label" data-i18n="btnFeedback">Ideas & Bugs</span></button>
-
-          <!-- Language Selector -->
-          <div class="lang-selector-box">
-            <span class="lang-icon">🌐</span>
-            <select id="lang-select" class="lang-dropdown" aria-label="Select Language">
-              <option value="en">🇬🇧 English</option>
-              <option value="it">🇮🇹 Italiano</option>
-              <option value="es">🇪🇸 Español</option>
-              <option value="fr">🇫🇷 Français</option>
-              <option value="de">🇩🇪 Deutsch</option>
-              <option value="pt">🇵🇹 Português</option>
-              <option value="ru">🇷🇺 Русский</option>
-              <option value="zh">🇨🇳 中文</option>
-              <option value="ja">🇯🇵 日本語</option>
-              <option value="ko">🇰🇷 한국어</option>
-              <option value="hi">🇮🇳 हिन्दी</option>
-              <option value="ar">🇸🇦 العربية</option>
-              <option value="id">🇮🇩 Bahasa Indonesia</option>
-              <option value="tr">🇹🇷 Türkçe</option>
-            </select>
-          </div>
-
-          <div class="legacy-threat-badge">
-            <span data-i18n="legacySystemAlert">🏦 Legacy System Alert:</span>
-            <div class="threat-bar-track">
-              <div id="threat-level-bar" style="width: 15%;"></div>
+        <div id="group-system-menu" class="nav-collapsible-group">
+          <button id="btn-toggle-system-menu" class="btn-group-toggle" title="Menu & System" data-i18n-title="btnSystemMenuTooltip">
+            <span class="group-toggle-icon">⚙️</span>
+            <span class="group-toggle-label" data-i18n="btnSystemMenu">Menu</span>
+            <span class="group-chevron">▾</span>
+          </button>
+          <div id="system-menu-dropdown" class="nav-group-dropdown hidden">
+            <div class="dropdown-section">
+              <button id="btn-open-passport" class="nav-group-item" title="Player Profile & Character" data-i18n-title="passportTooltip">
+                <span class="item-icon">🔑</span>
+                <span class="item-label" data-i18n="passportBtnLabel">Character</span>
+              </button>
+              <button id="btn-invite-friend" class="nav-group-item" title="Multiplayer Settlement Invite" data-i18n-title="inviteFriendTooltip">
+                <span class="item-icon">🔗</span>
+                <span class="item-label" data-i18n="inviteFriendBtn">Invite</span>
+              </button>
             </div>
-            <span id="threat-level-val">15%</span>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-section">
+              <button id="btn-open-handbook" class="nav-group-item" title="Survival Rulebook & Field Manual (F1 / G)" data-i18n-title="handbookTooltip">
+                <span class="item-icon">📖</span>
+                <span class="item-label" data-i18n="handbookBtnLabel">Rulebook</span>
+              </button>
+              <button id="btn-open-guide" class="nav-group-item" title="Interactive Onboarding Tour" data-i18n-title="guideTooltip">
+                <span class="item-icon">🧭</span>
+                <span class="item-label" data-i18n="guideBtnLabel">Tour</span>
+              </button>
+              <button id="btn-open-feedback" class="nav-group-item" title="Ideas & Bug Reports" data-i18n-title="feedbackTooltip">
+                <span class="item-icon">💡</span>
+                <span class="item-label" data-i18n="btnFeedback">Ideas & Bugs</span>
+              </button>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-section">
+              <div class="nav-group-row lang-row">
+                <span class="item-icon">🌐</span>
+                <div class="lang-selector-box">
+                  <select id="lang-select" class="lang-dropdown" aria-label="Select Language">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="it">🇮🇹 Italiano</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="de">🇩🇪 Deutsch</option>
+                    <option value="pt">🇵🇹 Português</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="ja">🇯🇵 日本語</option>
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="hi">🇮🇳 हिन्दी</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="id">🇮🇩 Bahasa Indonesia</option>
+                    <option value="tr">🇹🇷 Türkçe</option>
+                  </select>
+                </div>
+              </div>
+              <div class="nav-group-row legacy-threat-badge">
+                <span data-i18n="legacySystemAlert">🏦 Legacy Threat:</span>
+                <div class="threat-bar-track">
+                  <div id="threat-level-bar" style="width: 15%;"></div>
+                </div>
+                <span id="threat-level-val">15%</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -231,11 +260,52 @@
       </div>
 
       <div class="actions-btn-bar">
-        <button id="btn-open-chores" class="btn-action-nav" data-i18n="navChores">📋 Chores & Shifts</button>
-        <button id="btn-open-convoys" class="btn-action-nav" data-i18n="navConvoys">🚚 Trade & Convoys</button>
-        <button id="btn-open-housing" class="btn-action-nav" data-i18n="navHousing">🏘️ Homes & Housing</button>
-        <button id="btn-open-tech" class="btn-action-nav" data-i18n="navTech">🤖 Robots & Tech</button>
-        <button id="btn-open-council" class="btn-action-nav" data-i18n="navCouncil">🏛️ Assembly</button>
+        <div id="group-commons-hub" class="nav-collapsible-group bottom-group">
+          <button id="btn-toggle-commons-hub" class="btn-group-toggle btn-hub-toggle" title="Commons Hub & Operations" data-i18n-title="btnCommonsHubTooltip">
+            <span class="group-toggle-icon">🏛️</span>
+            <span class="group-toggle-label" data-i18n="btnCommonsHub">Commons Hub</span>
+            <span id="commons-hub-alert-dot" class="hub-alert-dot hidden" title="Urgent Civic Assembly Deliberation!"></span>
+            <span class="group-chevron">▴</span>
+          </button>
+          <div id="commons-hub-dropdown" class="nav-group-dropdown commons-hub-palette hidden">
+            <button id="btn-open-council" class="nav-group-item hub-item">
+              <span class="item-icon">🏛️</span>
+              <div class="item-text">
+                <span class="item-label" data-i18n="navCouncil">Assembly</span>
+                <span class="item-sub" data-i18n="subCouncil">Sortition & Direct Democracy</span>
+              </div>
+              <span id="council-alert-pill" class="hub-alert-pill hidden">!</span>
+            </button>
+            <button id="btn-open-chores" class="nav-group-item hub-item">
+              <span class="item-icon">📋</span>
+              <div class="item-text">
+                <span class="item-label" data-i18n="navChores">Chores & Shifts</span>
+                <span class="item-sub" data-i18n="subChores">Community Labor Allocation</span>
+              </div>
+            </button>
+            <button id="btn-open-housing" class="nav-group-item hub-item">
+              <span class="item-icon">🏘️</span>
+              <div class="item-text">
+                <span class="item-label" data-i18n="navHousing">Homes & Housing</span>
+                <span class="item-sub" data-i18n="subHousing">Dynamic Usufruct Dwellings</span>
+              </div>
+            </button>
+            <button id="btn-open-tech" class="nav-group-item hub-item">
+              <span class="item-icon">🤖</span>
+              <div class="item-text">
+                <span class="item-label" data-i18n="navTech">Robots & Tech</span>
+                <span class="item-sub" data-i18n="subTech">FabLab Automation & Blueprints</span>
+              </div>
+            </button>
+            <button id="btn-open-convoys" class="nav-group-item hub-item">
+              <span class="item-icon">🚚</span>
+              <div class="item-text">
+                <span class="item-label" data-i18n="navConvoys">Trade & Convoys</span>
+                <span class="item-sub" data-i18n="subConvoys">Inter-Node Barter Mesh</span>
+              </div>
+            </button>
+          </div>
+        </div>
 
         <!-- Official O.N.E. Footer Stamp -->
         <div class="hud-footer-stamp" title="Open Networked Earth" data-i18n-title="oneBrandTooltip">
@@ -508,27 +578,6 @@
           <button id="btn-guide-next" class="btn-guide-primary" data-i18n="guideBtnNext">Next ➔</button>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- Mobile Landscape Orientation Guidance Overlay -->
-  <div id="mobile-landscape-overlay" class="mobile-landscape-overlay">
-    <div class="mobile-landscape-card">
-      <div class="phone-rotate-anim">
-        <div class="phone-icon-frame">
-          <div class="phone-screen-glare"></div>
-          <div class="phone-home-pill"></div>
-        </div>
-        <span class="phone-rotate-arrow">🔄</span>
-      </div>
-      <div class="landscape-badge" data-i18n="landscapeBadge">SOLARPUNK LANDSCAPE</div>
-      <h3 class="landscape-title" data-i18n="landscapeTitle">LANDSCAPE ORIENTATION</h3>
-      <p class="landscape-desc" data-i18n="landscapeDesc">
-        O-ASIS is designed for widescreen landscapes. Rotate your device to explore the planetary map and village commons.
-      </p>
-      <button id="btn-dismiss-landscape" class="btn-dismiss-landscape" data-i18n="landscapeBypass">
-        Continue in portrait anyway ➔
-      </button>
     </div>
   </div>
 

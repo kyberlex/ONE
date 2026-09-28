@@ -1217,6 +1217,14 @@ export const it = {
   btnReadThrillers: 'Romanzi Ebook Gratuiti ↗',
   btnVisitPortal: 'Esplora il Portale O.N.E. ↗',
   readConstitutionLink: 'Costituzione Vivente (46 Articoli) ↗',
-  roadmapCommonsLink: 'Roadmap Hardware O.N.E. ↗',
-  guideExploreOnePlatform: 'Scopri il Movimento O.N.E. (Costituzione & Romanzi) ↗'
+  guideExploreOnePlatform: 'Scopri il Movimento O.N.E. (Costituzione & Romanzi) ↗',
+  btnSystemMenu: 'Menu',
+  btnSystemMenuTooltip: 'Menu Sistema, Personaggio e Comunità',
+  btnCommonsHub: 'Hub Civico',
+  btnCommonsHubTooltip: 'Apri le Operazioni del Villaggio e i Beni Comuni',
+  subCouncil: 'Sorteggio e Democrazia Diretta',
+  subChores: 'Ripartizione Lavoro Comunitario',
+  subHousing: 'Alloggi a Usufrutto Dinamico',
+  subTech: 'Automazione FabLab e Progetti',
+  subConvoys: 'Rete di Baratto Inter-Nodo'
 };
