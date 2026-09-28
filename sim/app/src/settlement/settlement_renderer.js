@@ -38,12 +38,15 @@ export class SettlementRenderer {
     this.camera = {
       x: 0,
       y: 0,
+      targetX: 0,
+      targetY: 0,
       zoom: 1.0,
       targetZoom: 1.0,
       isDragging: false,
       lastMouseX: 0,
       lastMouseY: 0
     };
+    this.highlightedBuilding = null;
 
     // Entities in village
     this.dwellings = [];
@@ -775,13 +778,27 @@ export class SettlementRenderer {
   }
 
   setupInteractions() {
-    // Mouse Interaction (Free position-drag disabled; camera locked centered on visible settlement)
+    let lastPointerX = 0;
+    let lastPointerY = 0;
+
+    // Mouse Interaction (Bounded pan allowed outdoors; locked when inside interior)
     this.canvas.addEventListener('mousedown', e => {
-      this.camera.isDragging = false;
+      this.camera.isDragging = true;
       this.mouseDownScreenPos = { x: e.clientX, y: e.clientY };
+      lastPointerX = e.clientX;
+      lastPointerY = e.clientY;
     });
 
     window.addEventListener('mousemove', e => {
+      if (this.camera.isDragging && !this.activeInterior) {
+        const dx = e.clientX - lastPointerX;
+        const dy = e.clientY - lastPointerY;
+        lastPointerX = e.clientX;
+        lastPointerY = e.clientY;
+        const maxPan = 450;
+        this.camera.targetX = Math.max(-maxPan, Math.min(maxPan, this.camera.targetX + dx / this.camera.zoom));
+        this.camera.targetY = Math.max(-maxPan, Math.min(maxPan, this.camera.targetY + dy / this.camera.zoom));
+      }
       this.handlePointerMove(e.clientX, e.clientY);
     });
 
@@ -805,12 +822,17 @@ export class SettlementRenderer {
       }
     }, { passive: false });
 
-    // Touch events for mobile/tablet (Discrete pinch snapping; unconstrained drag disabled)
+    // Touch events for mobile/tablet (Bounded swipe pan + Discrete pinch snapping)
     let initialPinchDistance = null;
+    let lastTouchX = 0;
+    let lastTouchY = 0;
+
     this.canvas.addEventListener('touchstart', e => {
       if (e.touches.length === 1) {
-        this.camera.isDragging = false;
+        this.camera.isDragging = true;
         this.mouseDownScreenPos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        lastTouchX = e.touches[0].clientX;
+        lastTouchY = e.touches[0].clientY;
       } else if (e.touches.length === 2) {
         this.camera.isDragging = false;
         initialPinchDistance = Math.hypot(
@@ -821,7 +843,15 @@ export class SettlementRenderer {
     }, { passive: true });
 
     this.canvas.addEventListener('touchmove', e => {
-      if (e.touches.length === 2 && initialPinchDistance) {
+      if (e.touches.length === 1 && this.camera.isDragging && !this.activeInterior) {
+        const dx = e.touches[0].clientX - lastTouchX;
+        const dy = e.touches[0].clientY - lastTouchY;
+        lastTouchX = e.touches[0].clientX;
+        lastTouchY = e.touches[0].clientY;
+        const maxPan = 450;
+        this.camera.targetX = Math.max(-maxPan, Math.min(maxPan, this.camera.targetX + dx / this.camera.zoom));
+        this.camera.targetY = Math.max(-maxPan, Math.min(maxPan, this.camera.targetY + dy / this.camera.zoom));
+      } else if (e.touches.length === 2 && initialPinchDistance) {
         const currentDist = Math.hypot(
           e.touches[0].clientX - e.touches[1].clientX,
           e.touches[0].clientY - e.touches[1].clientY
@@ -933,17 +963,35 @@ export class SettlementRenderer {
   }
 
   setZoom(target) {
+    const isPortrait = typeof window !== 'undefined' && window.innerHeight > window.innerWidth;
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-    const defaultZoom = isMobile ? 0.95 : 1.15;
-    this.camera.targetZoom = target ? Math.max(0.85, Math.min(1.35, target)) : defaultZoom;
+    const defaultZoom = isPortrait ? 0.65 : (isMobile ? 0.85 : 1.15);
+    this.camera.targetZoom = target ? Math.max(0.45, Math.min(1.50, target)) : defaultZoom;
   }
 
   resetCamera() {
+    this.camera.targetX = 0;
+    this.camera.targetY = 0;
     this.camera.x = 0;
     this.camera.y = 0;
+    const isPortrait = typeof window !== 'undefined' && window.innerHeight > window.innerWidth;
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-    this.camera.targetZoom = isMobile ? 0.95 : 1.15;
-    this.camera.zoom = isMobile ? 0.95 : 1.15;
+    const defaultZoom = isPortrait ? 0.65 : (isMobile ? 0.85 : 1.15);
+    this.camera.targetZoom = defaultZoom;
+    this.camera.zoom = defaultZoom;
+  }
+
+  focusOnBuilding(infraId) {
+    const b = this.infrastructures.find(inf => inf.id === infraId);
+    if (!b) return null;
+    this.camera.targetX = -b.x;
+    this.camera.targetY = -b.y;
+    this.camera.targetZoom = 1.15;
+    this.highlightedBuilding = {
+      building: b,
+      expireAt: Date.now() + 3500
+    };
+    return b;
   }
 
   screenToWorld(screenX, screenY) {
@@ -1051,12 +1099,16 @@ export class SettlementRenderer {
       this.savedOverviewCamera = {
         x: this.camera.x,
         y: this.camera.y,
+        targetX: this.camera.targetX,
+        targetY: this.camera.targetY,
         zoom: this.camera.zoom,
         targetZoom: this.camera.targetZoom
       };
     }
 
     // Reset camera focal center for interior
+    this.camera.targetX = 0;
+    this.camera.targetY = 0;
     this.camera.x = 0;
     this.camera.y = 0;
     this.camera.zoom = 1.0;
@@ -1067,7 +1119,7 @@ export class SettlementRenderer {
       scene
     };
 
-    // Update HUD breadcrumb and hide settlement header bar
+    // Update HUD breadcrumb and hide settlement header bar & facilities dock
     const hudBar = document.getElementById('hud-interior-bar');
     const hudFacility = document.getElementById('interior-room-name');
     if (hudBar && hudFacility) {
@@ -1077,6 +1129,10 @@ export class SettlementRenderer {
     const settlementHeader = document.getElementById('settlement-header-bar');
     if (settlementHeader) {
       settlementHeader.classList.add('hidden');
+    }
+    const facilitiesDock = document.getElementById('hud-facilities-dock');
+    if (facilitiesDock) {
+      facilitiesDock.classList.add('hidden');
     }
 
     if (this.options.onInteriorStateChange) {
@@ -1093,6 +1149,8 @@ export class SettlementRenderer {
     if (this.savedOverviewCamera) {
       this.camera.x = this.savedOverviewCamera.x;
       this.camera.y = this.savedOverviewCamera.y;
+      this.camera.targetX = this.savedOverviewCamera.targetX ?? this.savedOverviewCamera.x;
+      this.camera.targetY = this.savedOverviewCamera.targetY ?? this.savedOverviewCamera.y;
       this.camera.zoom = this.savedOverviewCamera.zoom;
       this.camera.targetZoom = this.savedOverviewCamera.targetZoom;
       this.savedOverviewCamera = null;
@@ -1105,6 +1163,10 @@ export class SettlementRenderer {
     const settlementHeader = document.getElementById('settlement-header-bar');
     if (settlementHeader) {
       settlementHeader.classList.remove('hidden');
+    }
+    const facilitiesDock = document.getElementById('hud-facilities-dock');
+    if (facilitiesDock) {
+      facilitiesDock.classList.remove('hidden');
     }
 
     this.canvas.style.cursor = 'grab';
@@ -2029,9 +2091,9 @@ export class SettlementRenderer {
 
     // Smooth camera zoom lerp
     this.camera.zoom += (this.camera.targetZoom - this.camera.zoom) * 0.15;
-    // Keep camera securely locked and centered on visible settlement
-    if (Math.abs(this.camera.x) > 0.01) this.camera.x += (0 - this.camera.x) * 0.2;
-    if (Math.abs(this.camera.y) > 0.01) this.camera.y += (0 - this.camera.y) * 0.2;
+    // Smooth camera pan lerp towards targetX and targetY
+    this.camera.x += (this.camera.targetX - this.camera.x) * 0.15;
+    this.camera.y += (this.camera.targetY - this.camera.y) * 0.15;
 
     // Simulation speed factor (0 = paused, 1 = normal, 2 = fast, 5 = hyper)
     const simSpeed = this.sim ? this.sim.speedMultiplier : 1;
@@ -2222,6 +2284,46 @@ export class SettlementRenderer {
     // 4. Render Infrastructures
     for (const b of this.infrastructures) {
       this.renderInfrastructure(ctx, b);
+    }
+
+    // 4.1 Render Solarpunk Targeting Pulse for Focused Facility
+    if (this.highlightedBuilding && this.highlightedBuilding.expireAt > Date.now()) {
+      const hb = this.highlightedBuilding.building;
+      const timeLeft = this.highlightedBuilding.expireAt - Date.now();
+      const progress = (3500 - timeLeft) / 3500;
+      const alpha = Math.max(0.15, Math.sin(progress * Math.PI * 4) * 0.5 + 0.5);
+      const pad = 12 + Math.sin(progress * Math.PI * 6) * 4;
+
+      ctx.save();
+      ctx.strokeStyle = `rgba(34, 197, 94, ${alpha})`;
+      ctx.lineWidth = 2.5;
+      ctx.shadowColor = 'rgba(34, 197, 94, 0.85)';
+      ctx.shadowBlur = 16;
+
+      const bx = hb.x - hb.width / 2 - pad;
+      const by = hb.y - hb.height / 2 - pad;
+      const bw = hb.width + pad * 2;
+      const bh = hb.height + pad * 2;
+
+      ctx.beginPath();
+      ctx.roundRect(bx, by, bw, bh, 14);
+      ctx.stroke();
+
+      // Corner target brackets
+      const bracketLen = 14;
+      ctx.lineWidth = 3.5;
+      ctx.beginPath();
+      // Top-Left
+      ctx.moveTo(bx, by + bracketLen); ctx.lineTo(bx, by); ctx.lineTo(bx + bracketLen, by);
+      // Top-Right
+      ctx.moveTo(bx + bw - bracketLen, by); ctx.lineTo(bx + bw, by); ctx.lineTo(bx + bw, by + bracketLen);
+      // Bottom-Left
+      ctx.moveTo(bx, by + bh - bracketLen); ctx.lineTo(bx, by + bh); ctx.lineTo(bx + bracketLen, by + bh);
+      // Bottom-Right
+      ctx.moveTo(bx + bw - bracketLen, by + bh); ctx.lineTo(bx + bw, by + bh); ctx.lineTo(bx + bw, by + bh - bracketLen);
+      ctx.stroke();
+
+      ctx.restore();
     }
 
     // 4.5 Render Civic Megaprojects (Chapter V Cantieri Civici)

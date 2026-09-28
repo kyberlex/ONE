@@ -726,6 +726,7 @@ export const ja = {
   climate_tropical_terrain: 'Rainforest Canopy',
   climate_tropical_material: 'Structural Bamboo & Interlocking Wood',
   climate_tropical_water: 'Monsoon High-Flow Flume',
+  dockFacilitiesAria: 'コミュニティ施設クイックアクセス',
   infra_solar_name: '⚡ 太陽光・風力マイクログリッド',
   infra_solar_label: '⚡ ソーラー',
   infra_solar_desc: 'Bifacial solar arrays, vertical-axis wind turbines, and LiFePO4 battery banks.',

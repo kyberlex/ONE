@@ -726,6 +726,7 @@ export const de = {
   climate_tropical_terrain: 'Regenwald-Kronendach',
   climate_tropical_material: 'Konstruktiver Bambus & Steckholz',
   climate_tropical_water: 'Monsun-Hochdurchflussrinne',
+  dockFacilitiesAria: 'Schnellzugriff Gemeinschaftsanlagen',
   infra_solar_name: '⚡ Solar-PV & Wind-Mikronetz',
   infra_solar_label: '⚡ Solar',
   infra_solar_desc: 'Bifaziale Solaranlagen, Vertikal-Windturbinen und LiFePO4-Batteriebänke.',

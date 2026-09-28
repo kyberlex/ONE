@@ -726,6 +726,7 @@ export const it = {
   climate_tropical_terrain: 'Chioma di Foresta Pluviale',
   climate_tropical_material: 'Bambù Strutturale e Legno a Incastro',
   climate_tropical_water: 'Canale di Scarico Monsonico',
+  dockFacilitiesAria: 'Barra Rapida Impianti Comuni',
   infra_solar_name: '⚡ Microrete Solare FV ed Eolica',
   infra_solar_label: '⚡ Solare',
   infra_solar_desc: 'Pannelli solari bifacciali, turbine eoliche verticali e banchi batterie LiFePO4.',

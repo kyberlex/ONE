@@ -726,6 +726,7 @@ export const id = {
   climate_tropical_terrain: 'Rainforest Canopy',
   climate_tropical_material: 'Structural Bamboo & Interlocking Wood',
   climate_tropical_water: 'Monsoon High-Flow Flume',
+  dockFacilitiesAria: 'Akses Cepat Fasilitas Komunitas',
   infra_solar_name: '⚡ Microgrid Surya PLTS & Angin',
   infra_solar_label: '⚡ Surya',
   infra_solar_desc: 'Bifacial solar arrays, vertical-axis wind turbines, and LiFePO4 battery banks.',

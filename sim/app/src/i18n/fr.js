@@ -726,6 +726,7 @@ export const fr = {
   climate_tropical_terrain: 'Canopée de Forêt Tropicale',
   climate_tropical_material: 'Bambou Structurel et Bois Emboîté',
   climate_tropical_water: 'Canal d\'Évacuation Mousson',
+  dockFacilitiesAria: 'Accès Rapide aux Installations Communes',
   infra_solar_name: '⚡ Microréseau Solaire PV et Éolien',
   infra_solar_label: '⚡ Solaire',
   infra_solar_desc: 'Panneaux bifaciaux, éoliennes à axe vertical et bancs de batteries LiFePO4.',

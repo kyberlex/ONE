@@ -726,6 +726,7 @@ export const pt = {
   climate_tropical_terrain: 'Dosel de Selva Tropical',
   climate_tropical_material: 'Bambú Estructural y Madera Machihembrada',
   climate_tropical_water: 'Canal de Alto Caudal Monzónico',
+  dockFacilitiesAria: 'Barra Rápida de Instalações Comuns',
   infra_solar_name: '⚡ Microrrede Solar FV e Eólica',
   infra_solar_label: '⚡ Solar',
   infra_solar_desc: 'Paneles solares bifaciales, aerogeneradores de eje vertical y bancos de baterías LiFePO4.',

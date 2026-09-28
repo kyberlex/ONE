@@ -726,6 +726,7 @@ export const ar = {
   climate_tropical_terrain: 'Rainforest Canopy',
   climate_tropical_material: 'Structural Bamboo & Interlocking Wood',
   climate_tropical_water: 'Monsoon High-Flow Flume',
+  dockFacilitiesAria: 'شريط الوصول السريع لمرافق المشاعات',
   infra_solar_name: '⚡ شبكة طاقة شمسية ورياح مصغرة',
   infra_solar_label: '⚡ شمسي',
   infra_solar_desc: 'Bifacial solar arrays, vertical-axis wind turbines, and LiFePO4 battery banks.',

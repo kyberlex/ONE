@@ -787,6 +787,74 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Bind Floating Facilities Quick-Access Dock (All 8 Core Commons Infrastructures)
+  const facilitiesDock = document.getElementById('hud-facilities-dock');
+  if (facilitiesDock) {
+    facilitiesDock.addEventListener('click', e => {
+      const btn = e.target.closest('.facility-dock-btn');
+      if (!btn) return;
+      const infraId = btn.dataset.infraId;
+      if (!infraId || !settlementRenderer) return;
+
+      const building = settlementRenderer.focusOnBuilding(infraId);
+      if (building) {
+        facilitiesDock.querySelectorAll('.facility-dock-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const bTitle = building.nameKey ? t(building.nameKey, building.name) : building.name;
+        const bDesc = building.descKey ? t(building.descKey, building.desc) : building.desc;
+        hud.showNotification({
+          title: bTitle,
+          message: bDesc,
+          type: 'info'
+        });
+      }
+    });
+
+    // Double-click to enter building interior directly
+    facilitiesDock.addEventListener('dblclick', e => {
+      const btn = e.target.closest('.facility-dock-btn');
+      if (!btn) return;
+      const infraId = btn.dataset.infraId;
+      if (!infraId || !settlementRenderer) return;
+      const building = settlementRenderer.infrastructures.find(inf => inf.id === infraId);
+      if (building) {
+        zoomCoordinator.setLevel(ZOOM_LEVELS.BUILDING, building);
+      }
+    });
+  }
+
+  // Connect Top 4 Resource Meters to glide to their corresponding infrastructure
+  const meterMap = [
+    { id: 'meter-energy', infraId: 'infra-solar' },
+    { id: 'meter-water', infraId: 'infra-water' },
+    { id: 'meter-food', infraId: 'infra-food' },
+    { id: 'meter-morale', infraId: 'infra-fablab' }
+  ];
+  meterMap.forEach(({ id, infraId }) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', () => {
+        if (currentView === 'village' && settlementRenderer) {
+          const b = settlementRenderer.focusOnBuilding(infraId);
+          if (b && facilitiesDock) {
+            facilitiesDock.querySelectorAll('.facility-dock-btn').forEach(btn => {
+              btn.classList.toggle('active', btn.dataset.infraId === infraId);
+            });
+            const bTitle = b.nameKey ? t(b.nameKey, b.name) : b.name;
+            const bDesc = b.descKey ? t(b.descKey, b.desc) : b.desc;
+            hud.showNotification({
+              title: bTitle,
+              message: bDesc,
+              type: 'info'
+            });
+          }
+        }
+      });
+    }
+  });
+
   // Bind Interior Prop Tooltip Click to Open 3D Inspector
   const interiorPropTooltip = document.getElementById('interior-prop-tooltip');
   if (interiorPropTooltip) {

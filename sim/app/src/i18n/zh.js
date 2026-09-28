@@ -726,6 +726,7 @@ export const zh = {
   climate_tropical_terrain: 'Rainforest Canopy',
   climate_tropical_material: 'Structural Bamboo & Interlocking Wood',
   climate_tropical_water: 'Monsoon High-Flow Flume',
+  dockFacilitiesAria: '公共设施快捷栏',
   infra_solar_name: '⚡ 光伏与风力微电网',
   infra_solar_label: '⚡ 太阳能',
   infra_solar_desc: 'Bifacial solar arrays, vertical-axis wind turbines, and LiFePO4 battery banks.',
