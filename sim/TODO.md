@@ -372,10 +372,11 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
 
 ## **5. LOW-PRIORITY CONTINGENCY BACKLOG (FROZEN / ON-DEMAND)**
 
-- [ ] **ITEM 21: itch.io 1KB Iframe Wrapper Proxy (Contingency for Frequent Builds):**
-  - *Context:* Attualmente la distribuzione su itch.io rimanda all'URL canonico o usa il pacchetto standalone.
-  - *Scope:* Se e solo se nel prossimo mese emergerà la necessità di effettuare frequenti aggiornamenti della build giocabile, creare e caricare su itch.io un micro-pacchetto zip (1 KB) contenente un `index.html` con iframe fullscreen verso `https://one-oasis.surge.sh`. In questo modo ogni deploy su Surge aggiornerà istantaneamente anche itch.io a costo manutentivo zero.
-  - *Status:* **CONGELATO / ON-DEMAND** (Priorità bassa; non spendere risorse di sviluppo sul gioco se non strettamente necessario; focalizzare l'energia sui fronti di reclutamento 4–5 steward, lead scientifici SIMONE e diffusione canonica).
+- [x] **ITEM 21: itch.io 1KB Iframe Wrapper Proxy (Zero-Maintenance Auto-Sync) [COMPLETED]:**
+  - *Context:* Precedentemente la distribuzione su itch.io richiedeva il re-upload manuale di uno zip da 8MB per ogni singolo aggiornamento.
+  - *Implementation:* Creato script generatore [`scripts/package_itch_iframe.py`](../scripts/package_itch_iframe.py) che produce [`spread/o-asis-itch-iframe.zip`](../spread/o-asis-itch-iframe.zip) (1.47 KB). Il pacchetto contiene un `index.html` responsive a tutto schermo con iframe diretto verso `https://one-oasis.surge.sh` (con permessi per fullscreen, WebRTC clipboard e QR scan).
+  - *Outcome:* Una volta caricato lo zip su itch.io una sola volta, ogni futuro deploy su Surge aggiorna istantaneamente in tempo reale anche la pagina su itch.io, riducendo a zero il costo di manutenzione.
+  - *Status:* **COMPLETATO & TESTATO (1.47 KB package pronto in `spread/o-asis-itch-iframe.zip`)**
 
 
 
