@@ -71,6 +71,9 @@ This public repository contains the complete canonical constitutional charter, c
 │   ├── constitutional_attack_challenges.md # Proof-of-Immunity matrix across 7 attack vectors
 │   ├── sim_resolutions_qa.md         # Living case-law register ([STATUS: SIMULATION_HYPOTHESIS])
 │   └── github_discussions_rfcs.md    # Deliberation RFC templates for community ratification
+├── spread/                           # MEDIA & VISUAL ASSETS
+│   ├── screenshots/                  # High-resolution simulation screenshots
+│   └── videos/                       # Animated gameplay showcases & previews
 ├── docs/                             # WEB APPLICATION MIRROR (GITHUB PAGES)
 ├── scripts/                          # PUBLIC AUTOMATION & RELAY SCRIPTS
 │   ├── anchor_world_snapshot.py      # On-chain / immutable snapshot anchor
@@ -124,6 +127,13 @@ A constitution that requires perfect human beings is a childish utopia. O.N.E. o
 
 ### **1. Play Online (Instant In-Browser)**
 Launch the live thermodynamic resilience MMO without any installation:  
+
+<p align="center">
+  <a href="https://one-oasis.surge.sh" target="_blank" rel="noopener noreferrer">
+    <img src="spread/videos/oasis_showcase_preview.gif" alt="O-ASIS Dual-Track Living Thermodynamic Sandbox" width="100%" style="max-width: 820px; border-radius: 8px; border: 1px solid #10b981;" />
+  </a>
+</p>
+
 👉 **[Open O-ASIS Living Sandbox (one-oasis.surge.sh)](https://one-oasis.surge.sh)**
 
 ### **2. Run Locally in Development Mode**
