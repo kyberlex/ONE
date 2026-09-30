@@ -44,19 +44,19 @@ export class GuideTourController {
         titleKey: 'guideStep1Title',
         tagKey: 'guideStep1Tag',
         renderContent: () => `
-          <p class="guide-lead-text">${t('guideStep1Intro', 'Every settlement in O.N.E. operates on physical Leontief thermodynamics, not speculative debt:')}</p>
+          <p class="guide-lead-text">${t('guideStep1Intro', 'Your settlement survives on 4 physical flows, not speculative debt. Keep them above zero:')}</p>
           <div class="guide-bullet-list">
             <div class="guide-bullet-item">
-              <span>${t('guideStep1FlowEnergy', '⚡ Energy (kWh): Solar PV microgrids & battery buffers keep the village completely islanded from external grid blackouts.')}</span>
+              <span>${t('guideStep1FlowEnergy', '⚡ Energy (kWh): Solar PV microgrids & battery buffers. Drops at night and in winter.')}</span>
             </div>
             <div class="guide-bullet-item">
-              <span>${t('guideStep1FlowWater', '💧 Water (Liters): Rain catchment cisterns and closed-loop greywater purification guarantee safe, abundant reserves.')}</span>
+              <span>${t('guideStep1FlowWater', '💧 Water (Liters): Rain catchment cisterns & greywater recycling for drinking and crops.')}</span>
             </div>
             <div class="guide-bullet-item">
-              <span>${t('guideStep1FlowFood', '🥗 Calories (Food): Greenhouse bio-intensive farming guarantees an unconditional 2,200 kcal/die biometric floor for every human.')}</span>
+              <span>${t('guideStep1FlowFood', '🥗 Calories (Food): Greenhouse farming guarantees an unconditional 2,200 kcal/day biometric floor.')}</span>
             </div>
             <div class="guide-bullet-item">
-              <span>${t('guideStep1FlowMorale', '⏳ Free Time & Morale: Low compulsory chore shifts maximize creative free time, community morale, and local mesh compute.')}</span>
+              <span>${t('guideStep1FlowMorale', '⏳ Free Time & Morale: Build robots in the FabLab to cancel chore shifts and maximize community morale.')}</span>
             </div>
           </div>
         `,
@@ -68,25 +68,24 @@ export class GuideTourController {
       },
       {
         id: 'living_canvas',
-        targetSelector: '#settlement-canvas',
-        isCanvasCenter: true,
+        targetSelector: '#btn-quick-claim',
         titleKey: 'guideStep2Title',
         tagKey: 'guideStep2Tag',
         renderContent: () => `
-          <p class="guide-lead-text">${t('guideStep2Intro', 'The settlement is a living, breathing solarpunk community:')}</p>
+          <p class="guide-lead-text">${t('guideStep2Intro', 'Housing in O.N.E. is an unconditional birthright—no rent, mortgages, or landlords:')}</p>
           <div class="guide-bullet-list">
             <div class="guide-bullet-item">
-              <span>${t('guideStep2PointAgora', '🏛️ Central Agora: The communal hearth where citizens gather, share meals, and deliberate around the open fire.')}</span>
+              <span>${t('guideStep2PointAgora', '🏛️ Central Agora: Communal hearth where citizens gather, share meals, and deliberate around the fire.')}</span>
             </div>
             <div class="guide-bullet-item">
-              <span>${t('guideStep2PointPods', '🏡 Usufruct Pods: Housing is an unconditional birthright. No rent, no mortgages, no landlords. Vacant pods are freely yours under dynamic usufruct.')}</span>
+              <span>${t('guideStep2PointPods', '🏡 Usufruct Pods: Vacant pods are freely yours under dynamic usufruct ("use it or lose it").')}</span>
             </div>
             <div class="guide-bullet-item">
-              <span>${t('guideStep2PointSabbatical', '🔒 Sabbatical Lock: Travel anywhere on Earth for up to 180 days with your dwelling inviolable and securely locked.')}</span>
+              <span>${t('guideStep2PointSabbatical', '🔒 Sabbatical Lock: Travel anywhere on Earth for up to 180 days with your dwelling securely locked.')}</span>
             </div>
           </div>
           <div class="guide-tip-box">
-            ${t('guideStep2Tip', "💡 Tip: Click any vacant pod on the canvas or the 'Claim Usufruct Dwelling' button above to establish your sanctuary!")}
+            ${t('guideStep2Tip', '💡 Step 1: Click any vacant pod on the canvas or click "Claim Usufruct Dwelling" above to choose your home!')}
           </div>
         `,
         onEnter: () => {
@@ -102,20 +101,20 @@ export class GuideTourController {
       },
       {
         id: 'civic_governance',
-        targetSelector: '.actions-btn-bar',
+        targetSelector: '#hud-facilities-dock',
         titleKey: 'guideStep3Title',
         tagKey: 'guideStep3Tag',
         renderContent: () => `
-          <p class="guide-lead-text">${t('guideStep3Intro', 'Governance in O.N.E. is organized through participatory demarchy without career politicians:')}</p>
+          <p class="guide-lead-text">${t('guideStep3Intro', 'The facilities along the bottom dock keep the settlement running:')}</p>
           <div class="guide-bullet-list">
             <div class="guide-bullet-item">
-              <span>${t('guideStep3PointCouncil', '🏛️ Sortition Council: Randomly drawn citizens (3 in small villages, 15 in larger nodes) deliberate on civic dilemmas and confederated precedents.')}</span>
+              <span>${t('guideStep3PointCouncil', '🏛️ Sortition Council: Randomly drawn citizen juries (3 or 15) deliberate on civic dilemmas and crisis defense.')}</span>
             </div>
             <div class="guide-bullet-item">
-              <span>${t('guideStep3PointChores', '📋 Chore Roster: Vital maintenance is distributed equally through 2–4 hour daily shifts (greenhouses, water loops, repairs, care).')}</span>
+              <span>${t('guideStep3PointChores', '📋 Chore Roster: Essential maintenance is shared through 2–4h daily shifts (water, food, repairs).')}</span>
             </div>
             <div class="guide-bullet-item">
-              <span>${t('guideStep3PointConvoys', '🚚 Trade Convoys: Dispatch zero-emission electric cargo convoys to barter physical surpluses with allied havens worldwide.')}</span>
+              <span>${t('guideStep3PointConvoys', '🚚 Trade Convoys: Dispatch zero-emission electric cargo convoys to barter physical surpluses worldwide.')}</span>
             </div>
           </div>
         `,
@@ -127,21 +126,21 @@ export class GuideTourController {
       },
       {
         id: 'dualtrack_tech',
-        targetSelector: '#btn-open-tech',
+        targetSelector: '[data-infra-id="infra-fablab"]',
         titleKey: 'guideStep4Title',
         tagKey: 'guideStep4Tag',
         renderContent: () => `
-          <p class="guide-lead-text">${t('guideStep4Intro', 'Technology in O.N.E. exists to liberate human time from compulsory drudgery:')}</p>
+          <p class="guide-lead-text">${t('guideStep4Intro', 'Technology exists to liberate human time from compulsory drudgery:')}</p>
           <div class="guide-bullet-list">
             <div class="guide-bullet-item">
-              <span>${t('guideStep4PointRobots', '🤖 Robotic Workforce: Fabricate agro-rovers, aeroponic mist drones, and SCADA crawlers to permanently cancel compulsory human chore hours.')}</span>
+              <span>${t('guideStep4PointRobots', '🤖 Robotic Workforce: Fabricate agro-rovers, mist drones, and SCADA crawlers to permanently eliminate chore hours.')}</span>
             </div>
             <div class="guide-bullet-item">
-              <span>${t('guideStep4PointDualTrack', '📐 Dual-Track Handshake: In-game achievements directly unlock verified real-world engineering CAD models (.STL) and Home Assistant Zigbee/MQTT automation packages.')}</span>
+              <span>${t('guideStep4PointDualTrack', '📐 Dual-Track Handshake: In-game milestones unlock real-world 3D printable CAD (.STL) and Home Assistant YAML packages.')}</span>
             </div>
           </div>
           <div class="guide-tip-box">
-            ${t('guideStep4Tip', '🔧 Build a robot in the FabLab to watch it patrol the village canvas in real time!')}
+            ${t('guideStep4Tip', '💡 Step 2: Open the FabLab (🤖 on the dock) to build your first robot and free citizen time!')}
           </div>
         `,
         onEnter: () => {
@@ -152,24 +151,24 @@ export class GuideTourController {
       },
       {
         id: 'sovereign_passport',
-        targetSelector: '.hud-top-actions',
+        targetSelector: '#hud-starter-objectives',
         titleKey: 'guideStep5Title',
         tagKey: 'guideStep5Tag',
         renderContent: () => `
-          <p class="guide-lead-text">${t('guideStep5Intro', 'You are now equipped with full sovereign autonomy:')}</p>
+          <p class="guide-lead-text">${t('guideStep5Intro', 'You are now ready to build and defend the settlement:')}</p>
           <div class="guide-bullet-list">
             <div class="guide-bullet-item">
-              <span>${t('guideStep5PointPassport', '🔑 Zero-Server Passport: Your identity is cryptographically signed with ECDSA P-256 keys directly on your device. No email, passwords, or central servers.')}</span>
+              <span>${t('guideStep5PointPassport', '🏦 The Corporate AI: Simulates financial extraction—launching blackout strikes and eviction audits.')}</span>
             </div>
             <div class="guide-bullet-item">
-              <span>${t('guideStep5PointSync', '📲 Instant Multi-Device Sync: Scan your QR code with your phone or tablet camera to seamlessly clone your passport.')}</span>
+              <span>${t('guideStep5PointSync', '🏛️ Democratic Defense: When alerts ring, vote in the Athenian Assembly to protect the community.')}</span>
             </div>
             <div class="guide-bullet-item">
-              <span>${t('guideStep5PointZoom', '🌍 Planetary Cartography: Use the discrete zoom bar above to transition smoothly from your dwelling to the regional watershed and global Earth map.')}</span>
+              <span>${t('guideStep5PointZoom', '🎯 Starter Objectives: Follow the 3 starter goals in the top-right widget to secure the village!')}</span>
             </div>
           </div>
           <div class="guide-welcome-box">
-            <strong>${t('guideStep5Welcome', "Welcome to O.N.E. Dual-Track! Let's build the commons together.")}</strong>
+            <strong>${t('guideStep5Welcome', "Welcome to O-ASIS! Follow your Starter Objectives to begin.")}</strong>
             <div class="guide-portal-backlink-row" style="margin-top: 12px;">
               <a href="https://open-networked-earth.surge.sh" target="_blank" rel="noopener noreferrer" class="btn-guide-portal-link" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; background: rgba(16,185,129,0.18); border: 1px solid rgba(16,185,129,0.45); border-radius: 8px; color: #34d399; font-weight: 600; font-size: 0.85rem; text-decoration: none; box-shadow: 0 2px 10px rgba(16,185,129,0.2);">
                 🌐 ${t('guideExploreOnePlatform', 'Discover the O.N.E. Movement (Constitution & Thrillers) ↗')}

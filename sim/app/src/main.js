@@ -24,6 +24,7 @@ import { PanelHandbookController } from './ui/panel_handbook.js';
 import { PanelInviteController } from './ui/panel_invite.js';
 import { NavGroupManager } from './ui/nav_groups.js';
 import { GuideTourController } from './ui/guide_tour.js';
+import { StarterObjectivesController } from './ui/starter_objectives.js';
 import { ChatEngine } from './engine/chat_engine.js';
 import { storageIDB } from './engine/storage_idb.js';
 import { CitizenPassportManager } from './engine/citizen_passport.js';
@@ -79,6 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let chatEngine = null;
   let panelChat = null;
   let guideTour = null;
+  let starterObjectives = null;
 
   // 1b. Initialize Serverless P2P WebRTC Mesh
   storageIDB.getActiveIdentity().then(id => { if (id) sim.myIdentity = id; });
@@ -357,8 +359,14 @@ window.addEventListener('DOMContentLoaded', () => {
     if (panelType === 'chores') panelNode.open('chores');
     else if (panelType === 'housing') panelNode.open('housing');
     else if (panelType === 'agriculture') panelNode.open('agriculture');
-    else if (panelType === 'machinery') panelNode.open('machinery');
-    else if (panelType === 'tech') panelDualTrack.open();
+    else if (panelType === 'machinery') {
+      panelNode.open('machinery');
+      if (starterObjectives) starterObjectives.completeObjective('inspect_grid');
+    }
+    else if (panelType === 'tech') {
+      panelDualTrack.open();
+      if (starterObjectives) starterObjectives.completeObjective('automate_fablab');
+    }
     else if (panelType === 'convoys') panelConvoys.open();
     else if (panelType === 'council') {
       const councilBtn = document.getElementById('btn-open-council');
@@ -405,6 +413,9 @@ window.addEventListener('DOMContentLoaded', () => {
     if (hud) {
       hud.updateStaticTranslations();
       hud.update(sim.getFullState());
+    }
+    if (starterObjectives) {
+      starterObjectives.render();
     }
   });
 
@@ -660,6 +671,15 @@ window.addEventListener('DOMContentLoaded', () => {
   // Initialize Interactive Onboarding Guide (ITEM 17)
   guideTour = new GuideTourController(sim, zoomCoordinator, settlementRenderer, hud);
 
+  // Initialize Interactive Starter Objectives (First Quest HUD)
+  starterObjectives = new StarterObjectivesController(sim, {
+    settlementRenderer,
+    panelDwelling,
+    panelNode,
+    panelDualTrack,
+    hud
+  });
+
   function updateSettlementMetaHeader() {
     const nameEl = document.getElementById('settlement-node-name');
     const tagEl = document.getElementById('settlement-climate-tag');
@@ -680,6 +700,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const btnQuickClaim = document.getElementById('btn-quick-claim');
 
     if (profile) {
+      if (starterObjectives) {
+        starterObjectives.completeObjective('claim_dwelling');
+      }
       if (btnHome) {
         btnHome.classList.remove('hidden');
         if (homePillText) {
@@ -803,9 +826,33 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const bTitle = building.nameKey ? t(building.nameKey, building.name) : building.name;
         const bDesc = building.descKey ? t(building.descKey, building.desc) : building.desc;
+
+        let onClickAction = null;
+        let actionPrompt = '';
+        if (infraId === 'infra-solar') {
+          actionPrompt = ' ➔ ' + t('inspectMachineryPrompt', 'Inspect Machinery');
+          onClickAction = () => {
+            panelNode.open('machinery');
+            if (starterObjectives) starterObjectives.completeObjective('inspect_grid');
+          };
+        } else if (infraId === 'infra-fablab') {
+          actionPrompt = ' ➔ ' + t('openFabLabPrompt', 'Open FabLab Studio');
+          onClickAction = () => {
+            panelDualTrack.open('techTree');
+            if (starterObjectives) starterObjectives.completeObjective('automate_fablab');
+          };
+        } else if (infraId === 'infra-food') {
+          actionPrompt = ' ➔ ' + t('openAgriPrompt', 'Open Agriculture');
+          onClickAction = () => panelNode.open('agriculture');
+        } else if (infraId === 'infra-mesh') {
+          actionPrompt = ' ➔ ' + t('openChoresPrompt', 'Open Chores');
+          onClickAction = () => panelNode.open('chores');
+        }
+
         hud.showNotification({
           title: bTitle,
-          message: bDesc,
+          message: bDesc + (actionPrompt ? ` <span style="text-decoration:underline; font-weight:bold; color:#34d399;">${actionPrompt}</span>` : ''),
+          onClick: onClickAction,
           type: 'info'
         });
       }
@@ -1091,6 +1138,7 @@ window.addEventListener('DOMContentLoaded', () => {
     chatEngine,
     panelChat,
     guideTour,
+    starterObjectives,
     panelInvite,
     p2pMesh,
     panelNode,

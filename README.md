@@ -64,6 +64,11 @@ Open Networked Earth (*Terra Connessa e Aperta*) is an open-source, non-commerci
 ├── simone/                               # SCIENTIFIC CO-SIMULATOR (SIMONE)
 │   └── simone-specs.md                   # Peer-reviewed discrete-event & GIS simulation specs
 │
+├── habitat/                              # PHYSICAL COMMONS & REGENERATIVE HABITAT
+│   ├── MHU_MODULAR_HABITAT_UNIT.md       # Modular Habitat Unit (MHU) v1.0 (Passivhaus timber core)
+│   ├── URBAN_SCALING_TRANSITION.md       # Urban scaling & bioregional retrofitting blueprint
+│   └── README.md                         # Habitat specifications & physical commons index
+│
 ├── books/                                # THE 6-VOLUME NARRATIVE SAGA
 │   ├── vol0/                             # Volume 0: Genesis of the Commons (Spitsbergen 2026)
 │   ├── vol1/                             # Volume 1: The Great Disruption (Ground Zero)

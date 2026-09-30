@@ -198,11 +198,17 @@
             <span id="settlement-climate-tag" class="settlement-climate-tag">Temperate • Hex-Loft</span>
           </div>
           <div class="settlement-header-actions">
+            <button id="btn-starter-objectives-toggle" class="btn-claim-header btn-objectives-pill hidden" title="Toggle Starter Objectives" data-i18n-title="starterObjectivesTitle">
+              🎯 <span data-i18n="starterBtnExpand">Objectives</span>
+            </button>
             <button id="btn-quick-claim" class="btn-claim-header">
               🔑 <span data-i18n="btnClaimUsufruct">Claim Usufruct Dwelling</span>
             </button>
           </div>
         </div>
+
+        <!-- Floating Starter Objectives Widget (First Quest HUD) -->
+        <div id="hud-starter-objectives" class="hud-starter-objectives" aria-live="polite"></div>
 
         <!-- Floating Facilities Quick-Access Dock (All 8 Core Commons Infrastructures) -->
         <div id="hud-facilities-dock" class="hud-facilities-dock" role="toolbar" aria-label="Settlement Facilities" data-i18n-aria="dockFacilitiesAria">

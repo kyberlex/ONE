@@ -297,6 +297,9 @@ export class PanelDualTrackController {
         mats.copperWireMeters -= item.materialCost.copperWireMeters;
 
         this.sim.node.buildRobot(id);
+        if (window.app && window.app.starterObjectives) {
+          window.app.starterObjectives.completeObjective('automate_fablab');
+        }
         this.sim.emitNotification('🤖 Automation Fabricated', `${item.name} deployed. Human chores cancelled!`);
         this.render();
         this.sim.notifyTick();
