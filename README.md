@@ -1,9 +1,39 @@
-# **O.N.E. — OPEN NETWORKED EARTH**
+<p align="center">
+  <img src="one-logo.svg" alt="Open Networked Earth (O.N.E.)" width="220" />
+</p>
 
-> **A Complete, Thermodynamically Grounded, Cybernetic Socio-Technical Architecture for Post-Scarcity Planetary Civilization.**  
-> **Canonical Portal:** [https://open-networked-earth.surge.sh](https://open-networked-earth.surge.sh) | **🎮 Play O-ASIS MMO:** [https://one-oasis.surge.sh](https://one-oasis.surge.sh) | **Interactive Oracle (NotebookLM):** [Query O.N.E. Knowledge Base](https://notebook.google.com/notebook/c123b58e-7e33-4565-8c1c-c5da2de98471) *(Google account required)* | **Discussions:** [https://github.com/kyberlex/ONE/discussions](https://github.com/kyberlex/ONE/discussions)
+# **OPEN NETWORKED EARTH (O.N.E.)**
+
+> **The Open-Source Socio-Technical Operating System for a Post-Work, Post-Monetary Planetary Civilization.**
+
+<p align="center">
+  <a href="https://open-networked-earth.surge.sh">🌐 Live Edge Platform</a> •
+  <a href="https://one-oasis.surge.sh">🎮 Play O-ASIS MMO (one-oasis.surge.sh)</a> •
+  <a href="https://notebook.google.com/notebook/c123b58e-7e33-4565-8c1c-c5da2de98471">🧠 Interactive AI Oracle</a> •
+  <a href="https://github.com/kyberlex/ONE/discussions">💬 Dialectic Forum & RFCs</a> •
+  <a href="sim/README.md">📖 Simulation Architecture</a> •
+  <a href="simone/simone-specs.md">🔬 Scientific Co-Simulator</a> •
+  <a href="habitat/README.md">🏡 Habitat Architecture</a> •
+  <a href="roadmap/roadmap.md">🗺️ Transition Roadmap</a> •
+  <a href="oasis/README.md">🛡️ Immunity Matrix</a> •
+  <a href="CODE_OF_CONDUCT.md">📜 Code of Conduct</a> •
+  <a href="CONTRIBUTING.md">🛠️ Contributing</a>
+</p>
 
 ---
+
+## **What is O.N.E.?**
+
+Artificial Intelligence and humanoid robotics are eliminating wage labor forever. Instead of descending into corporate techno-feudalism and surveillance poverty, **Open Networked Earth (O.N.E.)** turns automation into human emancipation: guaranteed survival baselines, decentralized energy and food commons, and governance by ordinary citizens chosen by statistical lottery.
+
+### **The Three Core Pillars**
+
+1. **Universal Usufruct (No Money, No Landlords):**  
+   Clean water, nutrient-dense food, ecological housing, life-saving medicine, and electrical power are unconditional birthrights, governed by physical input-output thermodynamic accounting rather than speculative financial debt.
+2. **Civic Sortition (No Career Politicians):**  
+   All legislative and judicial bodies rotate strictly by statistical lottery (sortition) in strict odd parity, eliminating political parties, campaign finance, and corporate lobbying.
+3. **Thermodynamic Invariants (Biocentric Equilibrium):**  
+   Economic production is governed by Leontief input-output matrices and Ostrom thermodynamic carrying capacities, ensuring zero planned obsolescence and closed-loop material cycles.
 
 > 🧠 **Interactive AI Oracle (Google NotebookLM):**  
 > Pose your hardest systemic questions, test edge-case objections, or query the full canonical constitution and simulation proofs via the official [O.N.E. NotebookLM Public Knowledge Base](https://notebook.google.com/notebook/c123b58e-7e33-4565-8c1c-c5da2de98471).  
@@ -11,104 +41,45 @@
 
 ---
 
-## **The Three Pillars of O.N.E.**
+## **Repository Architecture**
 
-Open Networked Earth (O.N.E.) is an open-source, non-commercial civilizational operating system designed to replace debt-fiat capitalism, corporate monopoly, and planetary depletion with a thermodynamic, sortition-based commons.
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                       THE THREE PILLARS OF O.N.E.                           │
-├──────────────────────────┬──────────────────────────┬───────────────────────┤
-│ 🏛️ 1. THE CONSTITUTION   │ 💻 2. THE SIMULATION     │ 📚 3. THE SAGA        │
-│    (Canonical Law)       │    (Epistemic Lab)       │    (Cultural Vehicle) │
-├──────────────────────────┼──────────────────────────┼───────────────────────┤
-│ • 46 Statutory Articles  │ • O-ASIS Living Sandbox  │ • 6-Volume Thriller   │
-│ • Universal Usufruct     │   (one-oasis.surge.sh)   │ • 15 Global Languages │
-│ • Biometric Joule Floor  │ • R-ASIS Transition      │ • 55-min Master Audio │
-│ • 5-Tier Sortition       │ • Dual-Track CAD/YAML    │ • 10 Viral Soundbites │
-│ • Demarchic Assemblies   │ • Client-Side P2P Engine │ • Interactive Webapp  │
-└──────────────────────────┴──────────────────────────┴───────────────────────┘
-```
-
----
-
-## **I. The Core Architecture**
-
-1. **Universal Usufruct & Property Deconstruction:**  
-   Abolition of absentee landlordism and speculative real estate. Housing, land, and water belong to the planetary biosphere; humans hold non-transferable, inalienable usufruct rights.
-2. **Thermodynamic Accounting (The Biometric Floor):**  
-   Money, debt, and fiat currencies are rendered obsolete. The economy is grounded in physical exergy accounting (joules, calories, compute, liters) with an inviolable daily subsistence floor guaranteed to every human body.
-3. **Sortition Demarchy (Strict Odd Parity):**  
-   Abolition of career politicians and electoral parties. Direct citizen governance by cryptographic lot across 5 scales—Local Mediation (3), Neighborhood (15), Bioregional (101), Continental (301), and Global Commons (1,001).
-4. **Distributed Mesh Infrastructure:**  
-   Modular solar/LFP seed-nodes, open microgrids, Black-Sky analog fallback protocols, and local community resilience against systemic blackout.
-
----
-
-## **II. Repository Structure**
+This public repository contains the complete canonical constitutional charter, computational simulation engines, habitat engineering specifications, transition blueprints, and epistemic adversarial verification suite:
 
 ```
 .
-├── bible/                                # THE CONSTITUTIONAL ENGINE
-│   ├── ONE NETWORKED EARTH (O.N.E.).md   # Canonical Master Constitution (46 statutory articles)
-│   ├── ledger.json                       # Formal state transition contract & invariants
-│   ├── ledger.md                         # 5-phase evolutionary roadmap & vector matrix
-│   └── redline.md                        # Structural layout & chapter specifications
-│
-├── sim/                                  # THE SIMULATION ENGINE
-│   ├── app/                              # Living Web Sandbox & MMO at https://one-oasis.surge.sh
-│   ├── README.md                         # Complete simulation architecture & human flaw model
-│   ├── GAME_DESIGN.md                    # Solarpunk mechanics, Leontief flows & sortition specs
-│   └── prototype_oasis_mini.py           # Executable O-ASIS mini prototype (100 imperfect agents)
-│
-├── simone/                               # SCIENTIFIC CO-SIMULATOR (SIMONE)
-│   └── simone-specs.md                   # Peer-reviewed discrete-event & GIS simulation specs
-│
-├── habitat/                              # PHYSICAL COMMONS & REGENERATIVE HABITAT
-│   ├── MHU_MODULAR_HABITAT_UNIT.md       # Modular Habitat Unit (MHU) v1.0 (Passivhaus timber core)
-│   ├── URBAN_SCALING_TRANSITION.md       # Urban scaling & bioregional retrofitting blueprint
-│   └── README.md                         # Habitat specifications & physical commons index
-│
-├── books/                                # THE 6-VOLUME NARRATIVE SAGA
-│   ├── vol0/                             # Volume 0: Genesis of the Commons (Spitsbergen 2026)
-│   ├── vol1/                             # Volume 1: The Great Disruption (Ground Zero)
-│   ├── vol2/                             # Volume 2: The Metabolic Shift
-│   ├── vol3/                             # Volume 3: The Planetary Commons
-│   ├── vol4/                             # Volume 4: The Kinetic Frontier
-│   ├── vol5/                             # Volume 5: The Resilient Horizon
-│   └── dossier.md                        # Master narrative bible & worldbuilding specifications
-│
-├── oasis/                                # O-ASIS EPISTEMIC PROTOCOL
-│   └── oasis.md                          # Multi-agent red-teaming & formal verification rules
-│
-├── roadmap/                              # THE ROADMAP & TRANSITION PROTOCOL
-│   ├── roadmap.md                        # Master strategic bootstrap & dissemination playbook
-│   └── blueprints/                       # Real-world field manuals & operational startup guides
+├── ONE NETWORKED EARTH (O.N.E.).md   # Canonical Master Constitution (46 Statutory Articles)
+├── sim/                              # LIVING WEB SANDBOX & GAME ENGINE
+│   ├── README.md                     # Transition architecture & human vector modeling
+│   ├── GAME_DESIGN.md                # Master Game Design Document (Hex grid, Leontief, Demarchy)
+│   └── app/                          # Interactive 60 FPS HTML5/WebGL living simulation
+├── simone/                           # SCIENTIFIC DISCRETE-EVENT CO-SIMULATOR
+│   └── simone-specs.md               # Biophysical GIS & psychometric co-simulation specs
+├── habitat/                          # PHYSICAL COMMONS & REGENERATIVE HABITAT
+│   ├── README.md                     # Index & physical commons specifications
+│   ├── MHU_MODULAR_HABITAT_UNIT.md   # Modular Habitat Unit (MHU) v1.0 (Passivhaus timber core)
+│   └── URBAN_SCALING_TRANSITION.md   # Urban scaling & bioregional retrofitting blueprint
+├── roadmap/                          # THE ROADMAP & TRANSITION PROTOCOL
+│   ├── roadmap.md                    # Master strategic bootstrap & dissemination playbook
+│   └── blueprints/                   # Real-world field manuals & operational startup guides
 │       ├── SEED_NODE_QUICKSTART_HANDBOOK.md
 │       ├── STAGE_0_LEGAL_INCEPTION_BLUEPRINT.md
 │       ├── STAGE_1_SURVIVAL_CORE_BLUEPRINT.md
 │       ├── STAGE_2_FABLAB_METABOLIC_BLUEPRINT.md
 │       └── STAGE_3_WATERSHED_FEDERATION_BLUEPRINT.md
-│
-├── spread/                               # MEMETIC SPREAD & MULTIMEDIA
-│   ├── STATUS.md                         # Live campaign status & operational handover
-│   ├── spread.md                         # Anti-fragile 4-phase propagation playbook
-│   ├── audio/                            # Master 55-min podcast, 10 soundbites & transcripts
-│   └── videos/                           # Extended cinematic trailers & screenbooks
-│
-├── webapp/                               # EDGE WEB APPLICATION & RED-TEAM CHALLENGE
-│   ├── index.html                        # Live portal at https://open-networked-earth.surge.sh
-│   └── assets/ebooks/                    # 135 compiled EPUB/PDF editions across 15 languages
-│
-├── scripts/                              # AUTOMATION & DEPLOYMENT TOOLING
-│   ├── deploy_sim_surge.py               # Automated Tor-routed deploy for O-ASIS (Surge CDN)
-│   ├── deploy_surge.py                   # Automated Tor-routed deploy for main webapp
-│   ├── upload_to_archive_org.py          # Internet Archive S3 mass uploader
-│   └── night_pipeline.py                 # Scheduled overnight sync daemon
-│
-├── CONTRIBUTING.md                       # Community invitation for architects, devs & nomothetes
-├── CODE_OF_CONDUCT.md                    # Inviolable non-commercial & respectful collaboration terms
-└── synoptic.md                           # Master executive summary
+├── oasis/                            # O-ASIS EPISTEMIC ADVERSARIAL STRESS-TEST ENGINE
+│   ├── README.md                     # Stress-testing & constitutional fuzzing overview
+│   ├── constitutional_attack_challenges.md # Proof-of-Immunity matrix across 7 attack vectors
+│   ├── sim_resolutions_qa.md         # Living case-law register ([STATUS: SIMULATION_HYPOTHESIS])
+│   └── github_discussions_rfcs.md    # Deliberation RFC templates for community ratification
+├── docs/                             # WEB APPLICATION MIRROR (GITHUB PAGES)
+├── scripts/                          # PUBLIC AUTOMATION & RELAY SCRIPTS
+│   ├── anchor_world_snapshot.py      # On-chain / immutable snapshot anchor
+│   ├── feedback_relay_apps_script.js # Public feedback relay bridge
+│   └── snapshot_relay_apps_script.js # World snapshot distribution daemon
+├── CONTRIBUTING.md                   # Community contribution & RFC submission guidelines
+├── CODE_OF_CONDUCT.md                # Inviolable non-commercial & respectful collaboration terms
+├── PLAY.md                           # Quickstart relay for players and newcomers
+└── one-logo.svg                      # Official planetary vector insignia
 ```
 
 ---
@@ -127,38 +98,81 @@ A fundamental operational distinction in Open Networked Earth is between **trans
 
 ---
 
+## **I. The Canonical Text**
+
+The complete statutory charter, comprising 10 statutory chapters and 46 Articles, is maintained directly in this repository:
+
+👉 **[Read the Living Constitution: `ONE NETWORKED EARTH (O.N.E.).md`](ONE%20NETWORKED%20EARTH%20%28O.N.E.%29.md)**
+
+---
+
+## **II. Computational Proving Grounds: The Two Simulators**
+
+A constitution that requires perfect human beings is a childish utopia. O.N.E. operates two complementary, open-source computational engines to stress-test institutional resilience against human flaws (greed, tribalism, cognitive noise) and systemic shocks:
+
+1. **The Living Web Sandbox (`sim/`):**  
+   A client-side, interactive 60 FPS HTML5/WebGL persistent world deployed globally at **[https://one-oasis.surge.sh](https://one-oasis.surge.sh)** with an axial hex-grid cartographer, Leontief thermodynamic flow tracking (kWh, Liters, Calories, Compute), Athenian sortition assemblies, and cooperative PvE defense against the Legacy Engine.  
+   👉 **Play Online:** [https://one-oasis.surge.sh](https://one-oasis.surge.sh) | **Architecture:** [`sim/README.md`](sim/README.md) | **Game Design:** [`sim/GAME_DESIGN.md`](sim/GAME_DESIGN.md)
+
+2. **SIMONE — Scientific Co-Simulator (`simone/`):**  
+   A heavy discrete-event and agent-based co-simulation architecture modeling real Earth observation GIS data (ERA5-Land, HydroSHEDS, SoilGrids), Darcy/Carnot biophysics, Weibull hardware wear, daily convex thermodynamic optimization (CVXPY), and empirical HEXACO psychometrics.  
+   👉 **Specifications:** [`simone/simone-specs.md`](simone/simone-specs.md)
+
+---
+
 ## **III. Quickstart: Experience the Simulation**
 
-### **1. Play the Living Web Sandbox (No Install Required)**
-Explore the live thermodynamic resilience MMO, manage physical flows (⚡ kWh, 💧 water, 🥗 calories, 💻 compute), deliberate in citizen sortition assemblies, and unlock 3D printable open-hardware blueprints:  
+### **1. Play Online (Instant In-Browser)**
+Launch the live thermodynamic resilience MMO without any installation:  
+👉 **[Open O-ASIS Living Sandbox (one-oasis.surge.sh)](https://one-oasis.surge.sh)**
 
-<p align="center">
-  <a href="https://one-oasis.surge.sh" target="_blank" rel="noopener noreferrer">
-    <img src="spread/videos/oasis_showcase_preview.gif" alt="O-ASIS Dual-Track Living Thermodynamic Sandbox" width="100%" style="max-width: 820px; border-radius: 8px; border: 1px solid #10b981;" />
-  </a>
-</p>
-
-👉 **[Launch O-ASIS MMO (one-oasis.surge.sh)](https://one-oasis.surge.sh)**
-
-### **2. Run the CLI Monte Carlo Prototype**
-To test constitutional invariants under flawed human behavior (greed, tribalism, bounded rationality) locally:
+### **2. Run Locally in Development Mode**
+You can also run the Living Web Sandbox locally in your browser:
 
 ```bash
 # Clone the repository
 git clone https://github.com/kyberlex/ONE.git
-cd ONE
+cd ONE/sim/app
 
-# Run the O-ASIS mini simulation prototype
-python3 sim/prototype_oasis_mini.py --population 100 --days 30
+# Install dependencies
+npm install
+
+# Start the local development server
+npm run dev
 ```
+
+Visit `http://localhost:5173` to explore the living thermodynamic sandbox.
 
 ---
 
-## **IV. How to Contribute**
+## **IV. Epistemic Adversarial Proving Ground (O-ASIS)**
 
-O.N.E. is a pure open-source commons. We sell no tokens, accept no corporate donations, and enforce zero paywalls.
+We do not ask for blind belief. O.N.E. has been subjected to rigorous multi-agent adversarial stress-testing simulating institutional capture, cartels, resource hoarding, sensor tampering, and supply disruptions:
 
-* **Developers & Theorists:** Join the simulation effort in [`sim/`](sim/).
-* **Thinkers & Jurists:** Propose constitutional refinements via [GitHub Discussions RFCs](https://github.com/kyberlex/ONE/discussions).
-* **Translators & Writers:** Expand the narrative canon and audit translations in [`books/`](books/).
-* **Makers & Architects:** Prototype local physical hardware and dwellings in [`habitat/`](habitat/) and bootstrap field blueprints in [`roadmap/blueprints/`](roadmap/blueprints/).
+* **Proof-of-Immunity Matrix:** Review formal mathematical defenses against 7 classic adversarial attack vectors in [`oasis/constitutional_attack_challenges.md`](oasis/constitutional_attack_challenges.md).
+* **Operational Case-Law:** Inspect tested systemic edge-cases and sortition resolutions in [`oasis/sim_resolutions_qa.md`](oasis/sim_resolutions_qa.md).
+* **Community Deliberation RFCs:** Explore formal proposals ready for sortition deliberation in [`oasis/github_discussions_rfcs.md`](oasis/github_discussions_rfcs.md).
+
+---
+
+## **V. Verification & Dialectic Tools**
+
+* **Live AI Challenge Arena:** Test your hardest objections against the 46 Canonical Articles in real-time at [open-networked-earth.surge.sh/#challenge](https://open-networked-earth.surge.sh/#challenge).
+* **Google NotebookLM Deep-Dive:** Query the multimodal knowledge base and listen to the conversational audio podcast at [NotebookLM O.N.E. Suite](https://notebooklm.google.com/notebook/8a979273-c4b6-4288-b55b-4cb75fad95a0).
+* **The Thriller Series:** Read the 15-language literary saga dramatizing the real-world friction of the transition at [open-networked-earth.surge.sh/#books](https://open-networked-earth.surge.sh/#books).
+
+---
+
+## **VI. Community Forum & Open Research Frontiers**
+
+O.N.E. is an evolving civilizational architecture. If you discover unmodeled frictions, supply-chain edge cases, or wish to propose mathematical or constitutional refinements:
+
+* Join the **[GitHub Discussions Forum](https://github.com/kyberlex/ONE/discussions)**.
+* Review formal submission guidelines in **[`CONTRIBUTING.md`](CONTRIBUTING.md)**.
+* All interactions are strictly governed by our **[`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)** (Zero commercial solicitation, zero cryptocurrency schemes, and respectful Socratic inquiry).
+
+---
+
+<p align="center">
+  <sub>Compiled by <strong>Kyberlex</strong> (<code>kyberlex@proton.me</code>). Dedicated unconditionally to the Planetary Commons under AGPL-3.0-or-later.</sub>
+</p>
