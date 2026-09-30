@@ -15,6 +15,7 @@
   <a href="simone/simone-specs.md">🔬 Scientific Co-Simulator</a> •
   <a href="habitat/README.md">🏡 Habitat Architecture</a> •
   <a href="roadmap/roadmap.md">🗺️ Transition Roadmap</a> •
+  <a href="COMPARATIVE_ANALYSIS.md">⚖️ Comparative Analysis</a> •
   <a href="oasis/README.md">🛡️ Immunity Matrix</a> •
   <a href="CODE_OF_CONDUCT.md">📜 Code of Conduct</a> •
   <a href="CONTRIBUTING.md">🛠️ Contributing</a>
@@ -48,6 +49,7 @@ This public repository contains the complete canonical constitutional charter, c
 ```
 .
 ├── ONE NETWORKED EARTH (O.N.E.).md   # Canonical Master Constitution (46 Statutory Articles)
+├── COMPARATIVE_ANALYSIS.md           # Comparative Benchmark: O.N.E. vs. 9 Alternative Models
 ├── sim/                              # LIVING WEB SANDBOX & GAME ENGINE
 │   ├── README.md                     # Transition architecture & human vector modeling
 │   ├── GAME_DESIGN.md                # Master Game Design Document (Hex grid, Leontief, Demarchy)
