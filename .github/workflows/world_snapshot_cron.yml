@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   anchor-snapshot:
+    if: github.repository == 'kyberlex/ONE'
     name: Git-as-a-State-Anchor Consensus Engine
     runs-on: ubuntu-latest
 
