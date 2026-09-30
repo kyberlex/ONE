@@ -8,29 +8,7 @@
 
 The **Modular Habitat Unit (MHU)** is the standardized residential infrastructure for Open Networked Earth (O.N.E.) seed nodes. Designed to fulfill the unconditional **Tier 1 Biological Baseline** (Article 1.3, Article 2.3), the MHU rejects both low-comfort ascetic austerity and proprietary industrial housing monopolies.
 
-```
-+---------------------------------------+
-|     REGIONAL BIOCLIMATIC ENVELOPE     |
-| (Insulated cladding / Solar shading)  |
-+---------------------------------------+
-                   |
-+---------------------------------------+
-|     STRUCTURAL CNC TIMBER CHASSIS     |
-|   (Interlocking dry-joint blocks)     |
-|                                       |
-|    +-------------------------------+  |
-|    |       THE UTILITY SPINE       |  |
-|    | - DC Microgrid Sub-Panel      |  |
-|    | - Enthalpic HRV/ERV Core      |  |
-|    | - Compact Sanitary Module     |  |
-|    +-------------------------------+  |
-+---------------------------------------+
-                   |
-+---------------------------------------+
-|     STANDARDIZED GROUND DOCKING       |
-|  (Single-point vertical interface)    |
-+---------------------------------------+
-```
+![MHU ARCHITECTURAL STACK & UTILITY SPINE](../assets/diagrams/habitat_mhu_01_envelope_chassis_utility_spine.svg)
 
 ### Core Design Invariants:
 1. **Passivhaus Thermal Envelope:** Net-zero operational energy requirement; interior comfort maintained by passive orientation, insulation, and high-efficiency heat recovery.
@@ -55,22 +33,7 @@ The MHU structure is built upon the **Open Building Principle** (separation of p
 
 The ground interface consolidates all municipal connections into a single **$800 \times 800\text{ mm}$ dry inspection chamber** positioned beneath the Utility Spine.
 
-```
-+-----------------------------------------------------------+
-|                   MHU FLOOR SUB-CHASSIS                   |
-+-----------------------------------------------------------+
-         ||               ||             ||              ||
-    (Quick-Disc)      (Push-Fit)    (Dry-Disconnect)     ||
-+-------------||-------------||--------------||-------------+
-|   DC BUS    ||  POTABLE    ||  WASTEWATER  ||   OPTICAL   |
-| 380V / 48V  ||  WATER IN   ||  OUT (DN110) ||  DATA MESH  |
-+-----------------------------------------------------------+
-                              |
-+-----------------------------------------------------------+
-|           STANDARDIZED GROUND RECEPTION CHAMBER           |
-|                 (Sub-surface frost-free)                  |
-+-----------------------------------------------------------+
-```
+![MHU FLOOR SUB-CHASSIS & UTILITY INTERFACE](../assets/diagrams/habitat_mhu_02_floor_sub_chassis_interface.svg)
 
 ### Interface Specifications:
 * **Electrical (DC Microgrid):** 
@@ -148,15 +111,7 @@ The MHU does not reinvent wheels; it integrates verified open-source hardware, b
 
 ## 7. Fabrication & Assembly Sequence
 
-```
-1. SITE LEVELING      2. CHASSIS MILLING     3. ASSEMBLY            4. DOCKING
-   No concrete.          Standard CNC.          4-5 People.            Plug & Play.
-+---------------+     +---------------+      +---------------+      +---------------+
-| Helical piles | --> | 3-Axis router |  --> | Dry-lock pegs |  --> | Push-fit DC,  |
-| screwed into  |     | cuts cassettes|      | mallet-driven |      | water, waste, |
-| sub-soil.     |     | in Fab-Lab.   |      | in 10-14 days.|      | & mesh data.  |
-+---------------+     +---------------+      +---------------+      +---------------+
-```
+![FABRICATION & ASSEMBLY SEQUENCE](../assets/diagrams/habitat_mhu_03_fabrication_assembly_sequence.svg)
 
 1. **Step 1: Ground Point Setting (Day 1–2):** Ground screws installed to bedrock or firm subsoil using a handheld hydraulic drive head. Laser-leveled; zero grading or earth-stripping required.
 2. **Step 2: Component Nesting & Routing (Off-site Fab-Lab):** Plywood and timber panels nested and cut on standard $2440 \times 1220\text{ mm}$ CNC flatbeds. Blocks pre-insulated with wood-fiber batts.

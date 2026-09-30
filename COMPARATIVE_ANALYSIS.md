@@ -126,30 +126,7 @@ Every alternative model requires either:
 
 **O.N.E. breaks this paralysis through Class-0 Invariant 7: The Dual-Track Handshake.**
 
-```mermaid
-graph LR
-    subgraph VIRTUAL_SIMULATION ["TRACK 1: THE PEDAGOGICAL SIMULATION"]
-        A1["Open-Source Sandbox Engine<br/>Canvas 2D • WebGL • Julia SIMONE"]
-        A2["Leontief Mass-Energy Balancing<br/>Physical input-output simulation"]
-        A3["Demarchic Sortition Assemblies<br/>PvE collaborative civic stress-tests"]
-    end
-
-    subgraph DUAL_TRACK_BRIDGE ["THE INVIOLABLE DUAL-TRACK HANDSHAKE"]
-        B1["Every simulated achievement directly unlocks verified,<br/>real-world physical engineering blueprints"]
-    end
-
-    subgraph PHYSICAL_COMMONS ["TRACK 2: FIELD OPEN HARDWARE"]
-        C1["3D Printable CAD Files<br/>.STL / .3MF Modular Habitat Units (MHU)"]
-        C2["Home Assistant Automations<br/>Deterministic Zigbee / MQTT YAML packages"]
-        C3["Bioregional Sensor Nodes<br/>ESPHome watershed telemetry"]
-    end
-
-    A1 --> A2 --> A3
-    A3 ==> B1
-    B1 ==> C1
-    B1 ==> C2
-    B1 ==> C3
-```
+![TRACK 1: THE PEDAGOGICAL SIMULATION](assets/diagrams/comparative_analysis_01_track_1_the_pedagogical_simulation.svg)
 
 By connecting an open-source civic simulator with 3D-printable Modular Habitat Units (MHU), Home Assistant off-grid automation packages, and ESP32 telemetry hardware, O.N.E. can be deployed **immediately** at neighborhood and bioregional scales. Communities do not wait for national laws to change; they construct resilient, non-financialized commons that out-compete and render obsolete the extractive mechanisms of the legacy financial engine.
 
@@ -166,6 +143,92 @@ To guarantee that O.N.E. never degenerates into any of the failure modes detaile
 5. **The Cooperative PvE Invariant (No Human Griefing):** Humans cooperate as fellow builders; the sole adversary is thermodynamic entropy and the extractive legacy debt engine.
 6. **The Thermodynamic Conservation & Entropy Invariant:** Matter and energy obey physical Leontief balances; zero magical assumptions; full circular component lifecycles.
 7. **The Dual-Track Handshake Invariant:** Every digital simulation breakthrough directly corresponds to tested, verified, 3D-printable open hardware and automation blueprints.
+
+---
+
+## **VIII. DEEP-DIVE: POST-MONETARY ALLOCATION BENCHMARK (O.N.E. VS. 5 NON-FIAT ALTERNATIVES)**
+
+### **1. Epistemological Foundation: Beyond Naive Scalar Technocracy**
+
+A frequent historical failure in post-monetary economics has been the attempt to replace fiat currency with a single physical scalar (e.g., the "energy accounting" and erg/kWh vouchers of 1930s *Technocracy Inc.*, or simple caloric accounting). This approach commits the identical reductionist fallacy as fiat currency: attempting to collapse the multi-dimensional, non-commutative, and ecologically bounded reality of the universe into an arbitrary scalar number.
+
+As Nicholas Georgescu-Roegen established through the Fourth Law of Bioeconomics, energy is not an isotropic fluid; matter matters, and mineral entropy cannot be reversed merely by injecting renewable kilowatt-hours.
+
+**Open Networked Earth (O.N.E.) rejects single-scalar technocracy.**  
+Under Article 3.1–3.3 of the Living Constitution ([`bible/ONE NETWORKED EARTH (O.N.E.).md`](bible/ONE%20NETWORKED%20EARTH%20(O.N.E.).md)):
+> *"Thermodynamic measurements establish physical constraints, not human social value. To prevent the reduction of human welfare to blind energetic equivalence, all resource dispatch strictly adheres to the Constitutional Hierarchy of Needs, governed by statistically stratified odd-parity sortition assemblies."*
+
+O.N.E. does not position itself against non-thermodynamic alternatives; instead, it executes an **integrated nomothetic and biophysical meta-synthesis** that reconciles logistics, commons jurisprudence, multi-vector constraints, and radical demarchy.
+
+---
+
+### **2. The 5 Non-Fiat Monetary Elimination Archetypes**
+
+1. **Labor-Time Accounting (Cockshott & Cottrell, *Towards a New Socialism*):** Uses algorithmically normalized socially necessary human labor-time as the unit of account. Input-output matrices calculate labor costs; non-transferable digital labor tokens are issued and cancelled upon redemption to prevent capital accumulation.
+2. **Flow Cybernetics & Direct Linear Optimization (Kantorovich / Stafford Beer / Cybersyn):** Treats production as pure logistics optimization without any universal unit of account. Telemetric sensor arrays direct production toward a socially defined objective function; basic goods are distributed as zero-cost public utility network flows.
+3. **Multi-Vector Systems & Multi-Criteria Analysis (Sen / Georgescu-Roegen / O'Neill):** Overcomes scalar reductionism by evaluating decisions across a multi-dimensional constraint vector (water depletion, rare elements, greenhouse gases, human capabilities, biodiversity). Prioritization occurs via democratic deliberation assisted by predictive simulations.
+4. **Commons & Library Economy (Elinor Ostrom / Marcel Mauss / Karl Polanyi):** Abolishes exclusive private ownership (*dominium*) of durable capital in favor of public tool libraries and shared access inventories. Non-standardized goods are coordinated through mutualist networks, zero-sum mutual credit, and decentralized reputation protocols.
+5. **Decaying Consumption Quotas & Civic Demurrage:** Replaces money with compartmentalized, non-convertible consumption rights (e.g., separate quotas for transit, leisure, durable goods). Unspent rights evaporate at the end of each cycle (100% demurrage), preventing intergenerational capital hoarding.
+
+---
+
+### **3. Post-Fiat Comparative Matrix**
+
+| Post-Fiat Architecture | Foundational Metric & Dispatch Mechanism | Core Theoretical Strength | Critical Systemic Vulnerability / Failure Mode | O.N.E. Synthesis & Resolution |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Labor-Time Accounting** *(Cockshott & Cottrell)* | Socially necessary labor hours; digital labor certificates destroyed upon consumption. | Eliminates usury and financial capital accumulation; anchored directly in human activity. | **Thermodynamic Blindspot:** Blind to material entropy, ecological limits, and water stress. **Automation Paradox:** Collapses as robotic labor approaches 100%. | **REJECTED.** Universal biological survival is an unconditional inalienable birthright (Tier 1); essential maintenance is de-commodified through civic rotational rosters with ergonomic multipliers (Ch. V). |
+| **2. Flow Cybernetics** *(Kantorovich / Beer / Cybersyn)* | Direct linear programming; real-time telemetry; zero-cost direct public utility flows. | Eliminates all price and voucher friction; coordinates complex logistical networks directly. | **The Leviathan / Surveillance Trap:** Requires invasive monitoring of individual consumption and central bureaucratic definition of "needs". | **ADOPTED FOR TIERS 1 & 2.** Dynamic Leontief-Kantorovich matrices; telemetric sensing is **strictly restricted to non-personal abiotic variables** (Art. 3.4; zero personal profiling). |
+| **3. Multi-Vector Systems** *(Sen / Georgescu-Roegen)* | Multi-dimensional constraint vectors (exergy, mass, H₂O, cycle times, entropy gradients). | Rejects scalar reductionism; respects qualitative heterogeneity and planetary boundary vectors. | **Allocation Paralysis:** Large Pareto frontiers risk decision gridlock when non-commensurable constraints collide without an explicit priority hierarchy. | **CANONICAL CORE OF O.N.E.** Co-calculates $(\text{kWh}, \text{kg}, \text{L}, \tau, \nabla S_m)$, resolved via the **Thermodynamic Lexicographic Viability Operator ($\mathcal{L}_{\min}$)** and sortition juries. |
+| **4. Commons & Library Economy** *(Ostrom / Polanyi / DGML)* | Shared tool pools; possessory usufruct; mutual aid and decentralized social trust networks. | Eliminates speculative property rent; maximizes equipment utilization rates; fosters social solidarity. | **Scale Limits & Social Credit Trap:** Struggles to coordinate macro-heavy industry; informal reputation protocols easily degenerate into coercive social credit tracking. | **COSTITUZIONALIZED.** Dynamic Usufruct (Ch. II), Civic Housing Pool, and Open Fab-Labs (Tier 3); **strict constitutional ban on social credit scoring or reputation currencies**. |
+| **5. Decaying Quotas / Demurrage** *(Compartmentalized Rights)* | Non-convertible sectoral quotas (transit, goods, diet) subject to periodic evaporation. | Precludes dynastic wealth accumulation and speculative cross-market arbitrage. | **Black Market Emergence & Micro-Surveillance:** Inflexible silos incentivize shadow barter currencies; tracking quotas requires per-citizen ledger surveillance. | **STRUCTURALLY REPLACED.** O.N.E. isolates capital buffers (Tier 2-A) and uses Quadratic Preference Signaling (QPS) with sortition entropy decay in Fab-Labs, eliminating personal ration books. |
+
+---
+
+### **4. Post-Fiat Nomothetic Scorecard Leaderboard**
+
+All six models are evaluated across the 5 canonical dimensions (1 to 10 points each, 50 points total):
+* **CT:** Biophysical & Thermodynamic Coherence
+* **AA:** Anti-Authoritarianism & Non-Surveillance Privacy
+* **AS:** Allocative Scalability & Logistic Robustness
+* **RM:** Resistance to Corruption & Shadow Black Markets
+* **TF:** Transition Feasibility & Prefigurative Deployability
+
+```
+RANK  POST-FIAT PARADIGM                              CT   AA   AS   RM   TF   TOTAL / 50   STATUS
+-------------------------------------------------------------------------------------------------------------------------------------
+ 1    Open Networked Earth (O.N.E. Meta-Synthesis)    10   10    9   10    9    48 / 50     🥇 Absolute Victor (Tripartite Synthesis)
+ 2    Multi-Vector Systems & Multi-Criteria (Mod. 3)   9    8    7    8    7    39 / 50     🥈 Best Epistemological Constraint Matrix
+ 3    Commons & Library Economy (Mod. 4)               7    8    7    8    8    38 / 50     🥉 Best Community Praxis & Local Prefiguration
+ 4    Flow Cybernetics & Direct LP (Mod. 2)            8    5    8    7    6    34 / 50     Superior Logistics; Extreme Surveillance Risk
+ 5    Decaying Quotas & Civic Demurrage (Mod. 5)       7    5    6    5    6    29 / 50     Allocative Rigidity; High Black-Market Risk
+ 6    Labor-Time Accounting (Mod. 1 - Cockshott)       4    7    7    6    4    28 / 50     Ecologically Blind; Fails Under Full Robotics
+```
+
+---
+
+### **5. Architectural Deconstruction: How O.N.E. Resolves the Dialectic**
+
+![1. THE INVIOLABLE CEILING (Biophysical Reality & Multi-Vector Constraints)](assets/diagrams/comparative_analysis_02_1_the_inviolable_ceiling_biophysical_reality_.svg)
+
+1. **Why Labor-Time Accounting Fails the Anthropocene:**  
+   Labor-time models presuppose that human effort is the sole legitimate fountain of value. If an automated fab-lab manufactures an open-source medical centrifuge using 10 minutes of human supervision but depletes 2 kg of unrecyclable rare-earth minerals, labor-time accounting rates the centrifuge as virtually free. O.N.E. recognizes that the ultimate bottleneck of post-capitalist society is not human muscle-time, but **biospheric exergy and elemental entropy**. Furthermore, under O.N.E.’s transitional mandate (Art. 5.1.4), robotics systematically drives necessary human labor toward zero, rendering labor-time units mathematically obsolete.
+
+2. **Curing the Cybernetic Leviathan:**  
+   Flow cybernetics (Cybersyn, Kantorovich) correctly identified that logistical coordination does not require price signals. However, historical implementations risked creating an omniscient digital state monitoring what citizens eat, wear, and think. O.N.E. establishes the **Invariant Privacy Mandate (Art. 3.4.4)**: telemetry is hardwired strictly to abiotic variables (river discharge, soil organic carbon, transformer thermal load, aquifer recharge). Personal surveillance, domestic consumption profiling, or biometric tracking is an impeachable constitutional offense.
+
+3. **Multi-Vector Solvability via the Lexicographic Viability Operator:**  
+   Multi-criteria decision models frequently paralyze when goals conflict (e.g., lithium for microgrids vs. wetland preservation). O.N.E. resolves this through its **Thermodynamic Lexicographic Viability Operator ($\mathcal{L}_{\min}$)**: vital biological survival (Tier 1) lexicographically dominates infrastructure maintenance (Tier 2) and discretionary fabrication (Tier 3), collapsing non-metabolic demands along durability gradients before quadratic optimizers execute. Non-vital trade-offs are arbitrated openly by sortition assemblies hearing adversarial expert testimony (Art. 4.4), ensuring transparent democratic legitimacy.
+
+4. **Inoculating the Commons Against Coercive "Social Credit":**  
+   Ostrom’s commons and the Library Economy excel at local resource sharing. However, modern proposals frequently suggest using "decentralized reputation networks" to allocate scarce access. O.N.E. explicitly repudiates reputation metrics: social credit systems invariably breed conformism, factional cliquishness, and informal oligarchies. In O.N.E., access to Tier 3 Open Fab-Labs requires only non-delegable in-situ presence tokens, with anti-hoarding enforced via sortition entropy decay and Copyfarleft hardware covenants—preserving personal freedom without algorithmic moralism.
+
+5. **Eliminating Currency Without Ration Cards:**  
+   Instead of distributing bureaucratic quota cards with demurrage expiration dates, O.N.E. designs anti-accumulation directly into the physics of production:
+   * Upstream capital goods (Tier 2-A: smelters, semiconductor cleanrooms) are indivisible social trust assets, insulated from consumer bidding.
+   * Discretionary fabrication operates on-demand in community Fab-Labs through quadratic preference signaling; files enter the public domain, and scrap metal returns to circular recycling loops.
+   * Housing security is guaranteed through perpetual possessory usufruct, while unmaintained dwellings return automatically to the Civic Housing Pool.
+
+By weaving physical thermodynamics, decentralized cybernetics, dynamic usufruct, and statistical demarchy into an indissoluble framework, **O.N.E. demonstrates that money (fiat or crypto) can be permanently eradicated without descending into authoritarian rationing or utopian naivety.**
 
 ---
 *Open Networked Earth (O.N.E.) — Built for physical reality, verified by thermodynamic law, governed by sortition, and accessible to all living beings.*

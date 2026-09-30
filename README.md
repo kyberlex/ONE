@@ -76,6 +76,8 @@ This public repository contains the complete canonical constitutional charter, c
 ├── spread/                           # MEDIA & VISUAL ASSETS
 │   ├── screenshots/                  # High-resolution simulation screenshots
 │   └── videos/                       # Animated gameplay showcases & previews
+├── assets/                           # ARCHITECTURAL & CONSTITUTIONAL VECTOR DIAGRAMS
+│   └── diagrams/                     # Standalone SVG schematics and visual specs
 ├── docs/                             # WEB APPLICATION MIRROR (GITHUB PAGES)
 ├── scripts/                          # PUBLIC AUTOMATION & RELAY SCRIPTS
 │   ├── anchor_world_snapshot.py      # On-chain / immutable snapshot anchor

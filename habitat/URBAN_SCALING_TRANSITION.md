@@ -10,17 +10,7 @@ The transition of Open Networked Earth (O.N.E.) from isolated, low-CapEx rural s
 
 Scaling occurs via **The Dual-Track Handshake** (Article 9.1) and **Bioregional Subsidiarity** (Article 10.1): inserting open-source, closed-loop infrastructural fabrics into existing legacy urban shells while the speculative market collapses under ecological debt and financial insolvency.
 
-```
-+-----------------------------------------------------------------------------+
-|                            THE SCALING CONTINUUM                            |
-|                                                                             |
-|  [ SEED NODES ]          ----------> [ BIOREGIONAL TOWNS ] ---------> [ METROPOLIS ] |
-|  50 - 1,000 pop                      5,000 - 50,000 pop               100,000 - 2M+  |
-|  - Micro-basin closure               - Multi-catchment federation     - Cellular     |
-|  - MHU timber fabrication            - Industrial fab-labs            - Superblocks  |
-|  - Off-grid pilot test               - Transit-oriented logistics     - Sub-grids    |
-+-----------------------------------------------------------------------------+
-```
+![THE SCALING CONTINUUM](../assets/diagrams/habitat_urban_scaling_01_the_scaling_continuum.svg)
 
 ---
 
@@ -28,18 +18,7 @@ Scaling occurs via **The Dual-Track Handshake** (Article 9.1) and **Bioregional 
 
 Existing cities are restructured without mass demolition through five open-source interventions:
 
-```
-                      LEGACY METROPOLITAN SHELL
-+-------------------------------------------------------------------+
-|                                                                   |
-|  1. SUPERBLOCKS         --> Restores unpaved soils & social space |
-|  2. ENERGIESPRONG SKIN  --> Factory-built zero-energy cladding    |
-|  3. OPEN BUILDING       --> Internal multi-story infill modularity|
-|  4. DAYLIGHTING         --> Reclaims covered rivers and aquifers  |
-|  5. SEGMENTED DC ISLANDS--> Guarantees 30-day survival autonomy   |
-|                                                                   |
-+-------------------------------------------------------------------+
-```
+![LEGACY METROPOLITAN SHELL](../assets/diagrams/habitat_urban_scaling_02_legacy_metropolitan_shell.svg)
 
 ### Pillar 1: Spatial De-paving & Superblocks (The Rueda Model)
 * **Strategy:** Reorganize road grids into $400 \times 400\text{ m}$ clusters (Superblocks).
@@ -69,15 +48,7 @@ Existing cities are restructured without mass demolition through five open-sourc
 
 Metropolises within O.N.E. transition out of the extractive linear paradigm:
 
-```
-LEGACY EXTRACTIVE METABOLISM (PITO):
-[ Global Raw Materials ] ===> [ City Consumption ] ===> [ Toxic Waste Dumps ]
-       (Product-In)                                         (Trash-Out)
-
-O.N.E. BIOREGIONAL METABOLISM (DIDO):
-[ Global Design Repositories ] ===> [ Local Fabrication Commons ] <---> [ Circular Urban Reuse ]
-  (Data-In: Code / Blueprints)      (Data-Out: Audits / Patches)          (Local Material Loops)
-```
+![URBAN CIRCULAR METABOLISM (PITO VS DIDO)](../assets/diagrams/habitat_urban_scaling_03_circular_metabolism_pito_vs_dido.svg)
 
 1. **Short-Loop Metallurgy & Repair:** Heavy machine tooling, induction forges, and industrial CNC routers are placed within municipal fab-labs to process localized scrap metals into structural framing and parts under universal repairability covenants (Article 6.3).
 2. **Organic Nutrient Return:** Municipal sanitation streams separate greywater from concentrated organic solids. Solids are diverted to anaerobic thermophilic digestors (producing biogas for backup dispatch and stabilized biochar for peri-urban agroecological zones), ending urban soil depletion.
@@ -88,20 +59,7 @@ O.N.E. BIOREGIONAL METABOLISM (DIDO):
 
 To prevent bureaucratic entrenchment and oligarchic capture, metropolises do not deploy centralized city halls, executive mayors, or party-based municipal councils (Article 4.1). Governance scales fractally through concentric demarchic assemblies in strict odd parity (Article 4.2):
 
-```
-+-------------------------------------------------------------------------+
-|                    METROPOLITAN SORTITION HIERARCHY                     |
-|                                                                         |
-|  [ Local Mediation Panels ]            --> 3 citizens, 3-month mandates |
-|  (Neighborhood disputes, housing)          (Article 4.2.1)              |
-|                                                                         |
-|  [ Neighborhood Sortition Councils ]   --> 15 citizens, 6-month mandates|
-|  (5,000 - 15,000 inhabitants)              (Article 4.2.2)              |
-|                                                                         |
-|  [ Bioregional Citizen Assembly ]      --> 101 delegates, 1-year terms  |
-|  (Watershed-wide coordination)             (Article 4.2.3)              |
-+-------------------------------------------------------------------------+
-```
+![METROPOLITAN SORTITION HIERARCHY](../assets/diagrams/habitat_urban_scaling_04_metropolitan_sortition_hierarchy.svg)
 
 * **Non-Delegable Lot Selection:** Assemblies are populated by statistically stratified random sortition across age, gender, and sub-basin geography (Article 4.3).
 * **Adversarial Epistemic Parity:** Modeling of energy balancing, water flows, and public safety is submitted to assemblies by Tripartite Epistemic Working Groups (1/3 guild scientists, 1/3 sortition citizens, 1/3 Heretic's Commons verifiers) with zero legislative or executive authority (Article 4.4).
