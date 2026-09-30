@@ -25,7 +25,7 @@ jobs:
 
       - name: Run Snapshot Verification & Headless Progression
         run: |
-          python3 scripts/anchor_world_snapshot.py --check
+          python3 scripts/anchor_world_snapshot.py --cron-step 12 --check
 
       - name: Commit and Push Consensus Snapshot
         run: |

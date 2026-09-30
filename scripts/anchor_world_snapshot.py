@@ -279,10 +279,23 @@ def compute_consensus_hash(payload_dict):
     """
     Computes deterministic SHA-256 consensus hash over canonical state.
     Excludes thermoConsensusHash field itself to ensure reproducible hashing.
+    Uses ensure_ascii=False so that UTF-8 characters match JS canonical representation.
     """
     hashable_data = {k: v for k, v in payload_dict.items() if k != "thermoConsensusHash"}
-    canonical_json = json.dumps(hashable_data, sort_keys=True, separators=(',', ':'))
+    canonical_json = json.dumps(hashable_data, sort_keys=True, separators=(',', ':'), ensure_ascii=False)
     return hashlib.sha256(canonical_json.encode('utf-8')).hexdigest()
+
+def heal_snapshot_hash(state):
+    """
+    Recomputes and heals thermoConsensusHash if mismatched or legacy.
+    Returns (healed: bool, old_hash: str, new_hash: str)
+    """
+    computed = compute_consensus_hash(state)
+    if state.get("thermoConsensusHash") != computed:
+        old_h = state.get("thermoConsensusHash", "")[:8]
+        state["thermoConsensusHash"] = computed
+        return True, old_h, computed[:8]
+    return False, None, None
 
 def create_genesis_snapshot():
     """Generates the canonical Genesis Block snapshot state object."""
@@ -326,7 +339,7 @@ def write_snapshot_file(state, file_path):
     """Writes state to JSON file with deterministic formatting."""
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
     with open(file_path, "w", encoding="utf-8") as f:
-        json.dump(state, f, indent=2, sort_keys=False)
+        json.dump(state, f, indent=2, sort_keys=False, ensure_ascii=False)
         f.write("\n")
 
 def read_snapshot_file(file_path):
@@ -378,7 +391,9 @@ def main():
     parser = argparse.ArgumentParser(description="O-ASIS Git-as-a-State-Anchor Snapshot Engine")
     parser.add_argument("--generate-genesis", action="store_true", help="Generate or reset to canonical Genesis Block snapshot")
     parser.add_argument("--check", action="store_true", help="Validate existing public world snapshot integrity")
+    parser.add_argument("--heal", action="store_true", help="Heal and recompute consensus hash if legacy or mismatched")
     parser.add_argument("--advance", type=int, default=0, help="Advance simulation by N ticks deterministically")
+    parser.add_argument("--cron-step", type=int, default=0, help="Advance simulation according to elapsed hours since last snapshot, up to max N hours")
     parser.add_argument("--get-stamp", action="store_true", help="Print commit message stamp (Tick <N> [Hash: <hash>])")
     parser.add_argument("--export", type=str, default=None, help="Export snapshot to specified path")
     args = parser.parse_args()
@@ -395,29 +410,74 @@ def main():
         print(f"  [✓] Genesis snapshot written to: {snapshot_path}")
         print(f"  [✓] Consensus Hash (SHA-256): {state['thermoConsensusHash']}")
 
-    # 2. Advance ticks if specified
-    if args.advance > 0:
+    # 2. Advance ticks or run cron step
+    if args.cron_step > 0:
+        ts_str = state.get("timestamp")
+        elapsed_hours = 0.0
+        if ts_str:
+            try:
+                snap_time = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
+                now_utc = datetime.now(timezone.utc)
+                elapsed_hours = (now_utc - snap_time).total_seconds() / 3600.0
+            except Exception as e:
+                print(f"[!] Warning parsing timestamp {ts_str}: {e}")
+                elapsed_hours = float(args.cron_step)
+        else:
+            elapsed_hours = float(args.cron_step)
+
+        if elapsed_hours >= 1.0:
+            ticks_to_advance = max(1, min(args.cron_step, int(round(elapsed_hours))))
+            print(f"[*] Cron progression: {elapsed_hours:.1f}h elapsed, advancing {ticks_to_advance} ticks...")
+            state = advance_simulation_state(state, ticks_to_advance)
+            write_snapshot_file(state, snapshot_path)
+            print(f"  [✓] State updated: Tick {state['tick']}, Day {state['day']}")
+            print(f"  [✓] New Consensus Hash: {state['thermoConsensusHash']}")
+        else:
+            print(f"[*] Snapshot is fresh ({elapsed_hours:.1f}h elapsed < 1.0h threshold). Skipping progression.")
+            healed, old_h, new_h = heal_snapshot_hash(state)
+            if healed:
+                write_snapshot_file(state, snapshot_path)
+                print(f"  [✓] Healed legacy snapshot hash: {old_h} -> {new_h}")
+
+    elif args.advance > 0:
         print(f"[*] Advancing simulation state by {args.advance} ticks...")
         state = advance_simulation_state(state, args.advance)
         write_snapshot_file(state, snapshot_path)
         print(f"  [✓] State updated: Tick {state['tick']}, Day {state['day']}")
         print(f"  [✓] New Consensus Hash: {state['thermoConsensusHash']}")
 
-    # 3. Export if requested
+    # 3. Heal hash if explicitly requested
+    if args.heal:
+        healed, old_h, new_h = heal_snapshot_hash(state)
+        if healed:
+            write_snapshot_file(state, snapshot_path)
+            print(f"[✓] Healed legacy snapshot hash: {old_h} -> {new_h}")
+        else:
+            print("[✓] Snapshot hash is already canonical.")
+
+    # 4. Export if requested
     if args.export:
         dest_path = os.path.abspath(args.export)
         write_snapshot_file(state, dest_path)
         print(f"[✓] Snapshot exported to: {dest_path}")
 
-    # 4. Get stamp for git commit messages
+    # 5. Get stamp for git commit messages
     if args.get_stamp:
         short_hash = state.get("thermoConsensusHash", "")[:8]
         tick = state.get("tick", 0)
         print(f"Tick {tick} [Hash: {short_hash}]")
         return 0
 
-    # 5. Check validation
-    if args.check or True:
+    # 6. Check validation
+    should_check = args.check or (
+        not args.generate_genesis and 
+        args.advance == 0 and 
+        args.cron_step == 0 and 
+        not args.heal and 
+        not args.export and 
+        not args.get_stamp
+    )
+    if should_check:
         valid, msg = validate_snapshot(state)
         if not valid:
             print(f"❌ Snapshot validation failed: {msg}")

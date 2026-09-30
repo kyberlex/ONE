@@ -368,10 +368,14 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
       - Verified PDF compilation via `pymupdf`: exact 16-page layout with balanced content and 100% vector text searchability across all core simulation keywords.
       - Zero personal leak matches (Gate D2: `Kyberlex <kyberlex@proton.me>`, zero local workstation paths or personal names).
       - Passed production build (`npm run build` in 1.60s).
+---
 
+## **5. LOW-PRIORITY CONTINGENCY BACKLOG (FROZEN / ON-DEMAND)**
 
-
-
+- [ ] **ITEM 21: itch.io 1KB Iframe Wrapper Proxy (Contingency for Frequent Builds):**
+  - *Context:* Attualmente la distribuzione su itch.io rimanda all'URL canonico o usa il pacchetto standalone.
+  - *Scope:* Se e solo se nel prossimo mese emergerà la necessità di effettuare frequenti aggiornamenti della build giocabile, creare e caricare su itch.io un micro-pacchetto zip (1 KB) contenente un `index.html` con iframe fullscreen verso `https://one-oasis.surge.sh`. In questo modo ogni deploy su Surge aggiornerà istantaneamente anche itch.io a costo manutentivo zero.
+  - *Status:* **CONGELATO / ON-DEMAND** (Priorità bassa; non spendere risorse di sviluppo sul gioco se non strettamente necessario; focalizzare l'energia sui fronti di reclutamento 4–5 steward, lead scientifici SIMONE e diffusione canonica).
 
 
 

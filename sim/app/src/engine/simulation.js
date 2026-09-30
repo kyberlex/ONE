@@ -571,9 +571,11 @@ export class SimulationManager {
       }
     };
 
-    // Deterministic SHA-256 hash calculation
+    // Deterministic SHA-256 hash calculation over canonical state (excluding thermoConsensusHash)
     try {
-      const canonicalStr = JSON.stringify(snapshot, Object.keys(snapshot).sort());
+      const hashable = { ...snapshot };
+      delete hashable.thermoConsensusHash;
+      const canonicalStr = canonicalizeJson(hashable);
       const encoder = new TextEncoder();
       const hashBuffer = await crypto.subtle.digest('SHA-256', encoder.encode(canonicalStr));
       const hashArray = Array.from(new Uint8Array(hashBuffer));
@@ -585,3 +587,20 @@ export class SimulationManager {
     return snapshot;
   }
 }
+
+/**
+ * Deterministic canonical JSON serializer matching Python json.dumps(obj, sort_keys=True, separators=(',', ':'), ensure_ascii=False).
+ * Recursively sorts all keys to guarantee reproducible cross-platform hashing.
+ */
+export function canonicalizeJson(obj) {
+  if (obj === null || typeof obj !== 'object') {
+    return JSON.stringify(obj);
+  }
+  if (Array.isArray(obj)) {
+    return '[' + obj.map(canonicalizeJson).join(',') + ']';
+  }
+  const sortedKeys = Object.keys(obj).sort();
+  const parts = sortedKeys.map(k => JSON.stringify(k) + ':' + canonicalizeJson(obj[k]));
+  return '{' + parts.join(',') + '}';
+}
+
