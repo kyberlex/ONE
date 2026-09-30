@@ -81,8 +81,14 @@ Open Networked Earth (*Terra Connessa e Aperta*) is an open-source, non-commerci
 ├── oasis/                                # O-ASIS EPISTEMIC PROTOCOL
 │   └── oasis.md                          # Multi-agent red-teaming & formal verification rules
 │
-├── roadmap/                              # R-ASIS ROADMAP PROTOCOL
-│   └── rasis.md                          # Node-by-node transition simulation & legal shielding
+├── roadmap/                              # THE ROADMAP & TRANSITION PROTOCOL
+│   ├── roadmap.md                        # Master strategic bootstrap & dissemination playbook
+│   └── blueprints/                       # Real-world field manuals & operational startup guides
+│       ├── SEED_NODE_QUICKSTART_HANDBOOK.md
+│       ├── STAGE_0_LEGAL_INCEPTION_BLUEPRINT.md
+│       ├── STAGE_1_SURVIVAL_CORE_BLUEPRINT.md
+│       ├── STAGE_2_FABLAB_METABOLIC_BLUEPRINT.md
+│       └── STAGE_3_WATERSHED_FEDERATION_BLUEPRINT.md
 │
 ├── spread/                               # MEMETIC SPREAD & MULTIMEDIA
 │   ├── STATUS.md                         # Live campaign status & operational handover
@@ -104,6 +110,20 @@ Open Networked Earth (*Terra Connessa e Aperta*) is an open-source, non-commerci
 ├── CODE_OF_CONDUCT.md                    # Inviolable non-commercial & respectful collaboration terms
 └── synoptic.md                           # Master executive summary
 ```
+
+---
+
+### **The Physical Dual-Track: Field Blueprints (`roadmap/blueprints/`) vs. Habitat Architecture (`habitat/`)**
+
+A fundamental operational distinction in Open Networked Earth is between **transitional bootstrap strategy** and **physical architectural construction**:
+
+| Dimensione / Dimension | [`roadmap/blueprints/`](roadmap/blueprints/) (Bootstrap Field Manuals) | [`habitat/`](habitat/) (Physical Architecture & Urbanism) |
+| :--- | :--- | :--- |
+| **Ambito / Domain** | **Transizione Operativa & Cronologia (Il *Come* e il *Quando*)**<br>Transition Strategy & Operational Timeline (The *When* & *How to Bootstrap*) | **Ingegneria Edile & Architettura Spaziale (Il *Cosa* e il *Come si Costruisce*)**<br>Building Construction & Spatial Engineering (The *What* & *How to Build*) |
+| **Domanda Chiave** | *«Come fa una comunità pioniera a insediarsi, schermarsi legalmente e rendersi autonoma nel tempo?»* | *«Come sono progettati e assemblati fisicamente gli alloggi modulari e le metropoli biorregionali?»* |
+| **Organizzazione** | **Cronologica a Stadi Evolutivi (Stage 0 ➔ Stage 3):**<br>• *Stage 0*: Mesi 0–12 (Scudo legale a due livelli, trust fondiario, elusione zoning)<br>• *Stage 1*: Anni 1–3 (Buffer calorico 180gg, cisterna 40.000L, batterie LFP 48V)<br>• *Stage 2*: Anni 3–7 (Officina Fab-Lab air-gapped, compost termofilo, fitodepurazione)<br>• *Stage 3*: Anni 7–15 (Rete mesh LoRa Reticulum, scambi di exergia non monetari) | **Spaziale e Dimensionale (Micro ➔ Macro):**<br>• *Micro-Habitat*: Modular Habitat Unit (MHU) v1.0 (Telaio CNC in legno a secco, Passivhaus, docking a terra unificato)<br>• *Macro-Habitat*: Urban Scaling & Transition (Superblocchi pedonali, cappotto prefabbricato Energiesprong, infill Habraken, daylighting fiumi) |
+| **Focus dei Contenuti** | Schermatura giuridica (Community Land Trusts, usucapione difensiva, quota lavoro non monetizzabile, autonomia black-sky 30-60gg). | Specifiche costruttive esecutive (Inviluppo Passivhaus $U < 0.12\text{ W/m}^2\text{K}$, incastri CNC WikiHouse, microreti DC 380V/48V, sorteggio demarchico metropolitano). |
+| **Toolchain** | Contratti fiduciari, matrici di rischio, checklist operative tascabili. | Open-BIM ([BlenderBIM](https://blenderbim.org)), CAD ([FreeCAD](https://www.freecad.org)), [WikiHouse](https://www.wikihouse.cc), [OpenStructures](https://openstructures.net), [OpenPLC](https://openplcproject.com). |
 
 ---
 
