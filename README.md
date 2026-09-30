@@ -13,7 +13,7 @@
 
 ## **The Three Pillars of O.N.E.**
 
-Open Networked Earth (*Terra Connessa e Aperta*) is an open-source, non-commercial civilizational operating system designed to replace debt-fiat capitalism, corporate monopoly, and planetary depletion with a thermodynamic, sortition-based commons.
+Open Networked Earth (O.N.E.) is an open-source, non-commercial civilizational operating system designed to replace debt-fiat capitalism, corporate monopoly, and planetary depletion with a thermodynamic, sortition-based commons.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -117,13 +117,13 @@ Open Networked Earth (*Terra Connessa e Aperta*) is an open-source, non-commerci
 
 A fundamental operational distinction in Open Networked Earth is between **transitional bootstrap strategy** and **physical architectural construction**:
 
-| Dimensione / Dimension | [`roadmap/blueprints/`](roadmap/blueprints/) (Bootstrap Field Manuals) | [`habitat/`](habitat/) (Physical Architecture & Urbanism) |
+| Dimension | [`roadmap/blueprints/`](roadmap/blueprints/) (Bootstrap Field Manuals) | [`habitat/`](habitat/) (Physical Architecture & Urbanism) |
 | :--- | :--- | :--- |
-| **Ambito / Domain** | **Transizione Operativa & Cronologia (Il *Come* e il *Quando*)**<br>Transition Strategy & Operational Timeline (The *When* & *How to Bootstrap*) | **Ingegneria Edile & Architettura Spaziale (Il *Cosa* e il *Come si Costruisce*)**<br>Building Construction & Spatial Engineering (The *What* & *How to Build*) |
-| **Domanda Chiave** | *«Come fa una comunità pioniera a insediarsi, schermarsi legalmente e rendersi autonoma nel tempo?»* | *«Come sono progettati e assemblati fisicamente gli alloggi modulari e le metropoli biorregionali?»* |
-| **Organizzazione** | **Cronologica a Stadi Evolutivi (Stage 0 ➔ Stage 3):**<br>• *Stage 0*: Mesi 0–12 (Scudo legale a due livelli, trust fondiario, elusione zoning)<br>• *Stage 1*: Anni 1–3 (Buffer calorico 180gg, cisterna 40.000L, batterie LFP 48V)<br>• *Stage 2*: Anni 3–7 (Officina Fab-Lab air-gapped, compost termofilo, fitodepurazione)<br>• *Stage 3*: Anni 7–15 (Rete mesh LoRa Reticulum, scambi di exergia non monetari) | **Spaziale e Dimensionale (Micro ➔ Macro):**<br>• *Micro-Habitat*: Modular Habitat Unit (MHU) v1.0 (Telaio CNC in legno a secco, Passivhaus, docking a terra unificato)<br>• *Macro-Habitat*: Urban Scaling & Transition (Superblocchi pedonali, cappotto prefabbricato Energiesprong, infill Habraken, daylighting fiumi) |
-| **Focus dei Contenuti** | Schermatura giuridica (Community Land Trusts, usucapione difensiva, quota lavoro non monetizzabile, autonomia black-sky 30-60gg). | Specifiche costruttive esecutive (Inviluppo Passivhaus $U < 0.12\text{ W/m}^2\text{K}$, incastri CNC WikiHouse, microreti DC 380V/48V, sorteggio demarchico metropolitano). |
-| **Toolchain** | Contratti fiduciari, matrici di rischio, checklist operative tascabili. | Open-BIM ([BlenderBIM](https://blenderbim.org)), CAD ([FreeCAD](https://www.freecad.org)), [WikiHouse](https://www.wikihouse.cc), [OpenStructures](https://openstructures.net), [OpenPLC](https://openplcproject.com). |
+| **Domain** | **Operational Transition & Timeline (The *When* & *How to Bootstrap*)** | **Building Construction & Spatial Engineering (The *What* & *How to Build*)** |
+| **Core Question** | *“How does a pioneer community settle, shield itself legally, and achieve autonomy over time?”* | *“How are modular dwellings and bioregional metropolises physically designed and fabricated?”* |
+| **Organization** | **Chronological by Evolutionary Stages (Stage 0 ➔ Stage 3):**<br>• *Stage 0*: Months 0–12 (Two-tier legal shield, land trust inception, zoning bypass)<br>• *Stage 1*: Years 1–3 (180-day caloric buffer, 40,000L cistern, 48V LFP battery bank)<br>• *Stage 2*: Years 3–7 (Air-gapped fab-lab, thermophilic composting, reed bed phytodepuration)<br>• *Stage 3*: Years 7–15 (Reticulum LoRa mesh network, non-monetary exergy swaps) | **Spatial & Dimensional Scaling (Micro ➔ Macro):**<br>• *Micro-Habitat*: Modular Habitat Unit (MHU) v1.0 (Dry-joint CNC timber cassette chassis, Passivhaus, unified ground docking)<br>• *Macro-Habitat*: Urban Scaling & Transition (Pedestrian Superblocks, Energiesprong prefab thermal skins, Habraken infill, river daylighting) |
+| **Content Focus** | Jurisprudential shielding (Community Land Trusts, adverse possession, non-waivable labor quotas, 30-to-60-day black-sky autonomy). | Executive engineering specifications (Passivhaus envelope $U < 0.12\text{ W/m}^2\text{K}$, WikiHouse CNC joinery, DC microgrids 380V/48V, metropolitan sortition demarchy). |
+| **Toolchains** | Trust indentures, risk matrices, waterproof pocket checklists. | Open-BIM ([BlenderBIM](https://blenderbim.org)), CAD ([FreeCAD](https://www.freecad.org)), [WikiHouse](https://www.wikihouse.cc), [OpenStructures](https://openstructures.net), [OpenPLC](https://openplcproject.com). |
 
 ---
 
@@ -161,4 +161,4 @@ O.N.E. is a pure open-source commons. We sell no tokens, accept no corporate don
 * **Developers & Theorists:** Join the simulation effort in [`sim/`](sim/).
 * **Thinkers & Jurists:** Propose constitutional refinements via [GitHub Discussions RFCs](https://github.com/kyberlex/ONE/discussions).
 * **Translators & Writers:** Expand the narrative canon and audit translations in [`books/`](books/).
-* **Makers:** Prototype local hardware seed-nodes outlined in [`roadmap/rasis.md`](roadmap/rasis.md).
+* **Makers & Architects:** Prototype local physical hardware and dwellings in [`habitat/`](habitat/) and bootstrap field blueprints in [`roadmap/blueprints/`](roadmap/blueprints/).
