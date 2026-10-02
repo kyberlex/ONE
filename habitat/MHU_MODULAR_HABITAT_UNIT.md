@@ -130,7 +130,7 @@ To eliminate the "experimental structure" roadblock that prevents municipal perm
 * **Structural Load Transfer:** Once aligned, joints are secured with certified structural wood screws (ETA-11/0190, e.g., Spax / Heco-Topix $8.0 \times 160\text{ mm}$) and hot-dip galvanized M12 Grade 8.8 through-bolts with oversized square plate washers (EN 14592).
 * **Characteristic Load Verification (Eurocode 5, EN 1995-1-1):**
   * Characteristic lateral load capacity per shear node:
-    $$F_{v,Rk} = \min \left\{ f_{h,1,k} t_1 d, \ 1.15 \sqrt{2 M_{y,Rk} f_{h,1,k} d} + \frac{F_{ax,Rk}}{4} \right\}$$
+    $$F_{v,Rk} = \min \left[ f_{h,1,k} t_1 d, \ 1.15 \sqrt{2 M_{y,Rk} f_{h,1,k} d} + \frac{F_{ax,Rk}}{4} \right]$$
   * Calculations pre-formatted in open-source Python (`scipy.spatial` / FreeCAD FEM workbench) and packaged as standardized calculation sheets for municipal building control authorities.
 
 ---
