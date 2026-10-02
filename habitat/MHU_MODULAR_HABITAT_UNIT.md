@@ -11,7 +11,7 @@
 
 ## 1. Executive Summary & Forensic Autopsy of Legacy Digital Timber
 
-The **Modular Habitat Unit (MHU)** is the foundational residential and infrastructure node of Open Networked Earth (O.N.E.) Seed-Nodes. Designed to fulfill the unconditional **Tier 1 Biological Baseline** (Article 1.3, Article 2.3), the MHU rejects both speculative financialized housing monopolies and the structural, hygrothermal, and economic bottlenecks that historically stalled early open-source architecture experiments (such as WikiHouse v1–v4).
+The **Modular Habitat Unit (MHU)** is the foundational residential and infrastructure node of Open Networked Earth (O.N.E.) Seed-Nodes. Designed to fulfill the unconditional **Tier 1 Biological Baseline** (Article 1.3, Article 2.3), the MHU rejects both speculative financialized housing monopolies and the structural, hygrothermal, and economic bottlenecks that historically stalled early open-source architecture experiments (such as [WikiHouse](https://www.wikihouse.cc) v1–v4).
 
 Rather than adopting full-envelope CNC plywood cassettes blindly, the MHU establishes an **Open Hybrid Chassis**: standardizing dimensional structural timber ($C24$) for linear spans, confining CNC machining to precision nodal gusset plates, and decoupling the building envelope from a dedicated $50\text{ mm}$ installation service cavity (*cavedio tecnico*).
 
@@ -87,7 +87,7 @@ The MHU structure operates upon the **Open Building Principle** (separation of p
 * **Tolerances:** CNC toolpaths generated with 0.25 mm clearance tolerance for slip-fit interlocking assembly without binding during high-humidity site conditions.
 
 ### 2.2 Dimensional Grid & Interoperability
-* Adheres to the **OpenStructures (OS) 600 mm modular sub-grid**:
+* Adheres to the **[OpenStructures (OS)](https://openstructures.net) 600 mm modular sub-grid**:
   * Structural post spacing: center-to-center $600\text{ mm}$.
   * Floor and ceiling joist bay spans: $1200\text{ mm}$ and $2400\text{ mm}$ multiples matching standard sheet goods.
   * Clear ceiling height: $2500\text{ mm}$ finished interior; $2850\text{ mm}$ structural rough opening.
@@ -201,7 +201,7 @@ Calculated for a canonical **$54\text{ m}^2$ Net Living Area Seed-Node Dwelling*
 
 ### 7.1 Level 1: Structural Timber Skeleton & Fasteners
 
-| Subsystem Component | WikiHouse Skylark (Cassettes) | O.N.E. MHU (Hybrid Open Chassis) | Delta & Engineering Notes |
+| Subsystem Component | [WikiHouse Skylark](https://www.wikihouse.cc/product) (Cassettes) | O.N.E. MHU (Hybrid Open Chassis) | Delta & Engineering Notes |
 | :--- | :--- | :--- | :--- |
 | **Structural Plywood (18mm EN 636-3 WBP)** | 230 sheets @ €85 = **€19,550** | 45 sheets (Nodes & gussets only) @ €85 = **€3,825** | **-80.4% Plywood** (-€15,725) |
 | **Dimensional Timber (C24 Kiln-Dried Spruce)** | Minimal splines (~€800) | $8.5\text{ m}^3$ ($45\times195$ / $45\times145\text{ mm}$) @ €550/$\text{m}^3$ = **€4,675** | Standardized local lumber shift |
@@ -293,7 +293,7 @@ When scaling vertically, the ground screw foundations and roof weatherproofing a
 | **3-Storeys (Max Structural Height)** | $162\text{ m}^2$ ($6 \times 9\text{ m} \times 3$) | €228,000 | **€176,000** | **€1,086 / $\text{m}^2$** (-19.3%) |
 
 > **Key Nomothetic Conclusion:**  
-> By transitioning from pure CNC plywood cassettes to the MHU Hybrid Open Chassis, an urban 3-storey communal seed-node ($162\text{ m}^2$ living space) drops to **€1,086/$\text{m}^2$ in self-build materials and certified equipment**, saving **€52,000** per building compared to historical WikiHouse methods.
+> By transitioning from pure CNC plywood cassettes to the MHU Hybrid Open Chassis, an urban 3-storey communal seed-node ($162\text{ m}^2$ living space) drops to **€1,086/$\text{m}^2$ in self-build materials and certified equipment**, saving **€52,000** per building compared to historical [WikiHouse](https://www.wikihouse.cc) methods.
 
 ---
 
@@ -301,10 +301,10 @@ When scaling vertically, the ground screw foundations and roof weatherproofing a
 
 The MHU rejects proprietary CAD ecosystems (Revit, Archicad, Rhino/Grasshopper) in strict adherence to Class-0 Non-Commercial Purity:
 
-1. **Geometry & CNC Toolpath Generation:** Authored natively in **FreeCAD (v0.21+)** using the *BIM Workbench* and *Path/CAM Workbench*.
-2. **Open-BIM Data Layer:** Native **IFC4 (Industry Foundation Classes)** authoring via **BlenderBIM (OSArch ecosystem)**. Every element tagged with standard IfcMaterial, IfcMechanicalFastener, and IfcThermalProperties.
+1. **Geometry & CNC Toolpath Generation:** Authored natively in **[FreeCAD](https://www.freecad.org)** (v0.21+) using the *BIM Workbench* and *Path/CAM Workbench*.
+2. **Open-BIM Data Layer:** Native **IFC4 (Industry Foundation Classes)** authoring via **[BlenderBIM](https://blenderbim.org)** ([OSArch](https://osarch.org) ecosystem). Every element tagged with standard IfcMaterial, IfcMechanicalFastener, and IfcThermalProperties.
 3. **Thermal Simulation:** Verified via **OpenFOAM** and **WUFI Open** for hygrothermal dynamic boundary simulation.
-4. **Automation & Telemetry Control:** Logic implemented via **OpenPLC** firmware complying with IEC 61131-3, running on deterministic ESP32/Raspberry Pi industrial carrier boards with local Home Assistant integration.
+4. **Automation & Telemetry Control:** Logic implemented via **[OpenPLC](https://openplcproject.com)** firmware complying with IEC 61131-3, running on deterministic ESP32/Raspberry Pi industrial carrier boards with local [Home Assistant](https://www.home-assistant.io) integration.
 
 ---
 
@@ -328,6 +328,28 @@ This specification is published as an open **Request for Comments (RFC)** to the
 * [ ] **RFC Milestone 2:** BlenderBIM IFC4 canonical Seed-Node template distribution.
 * [ ] **RFC Milestone 3:** Physical 1:1 scale nodal destruction test (tensile and shear testing under calibrated hydraulic press) documenting failure modes under Eurocode 5.
 * [ ] **RFC Milestone 4:** Dual-Track simulation integration: compiling MHU thermal and exergy models into the SIMONE Julia solver and O-ASIS sandbox.
+
+---
+
+## 11. Open Standards & Technical References
+
+The MHU engineering specification directly benchmarks, utilizes, and interfaces with the following open-source building systems, digital fabrication standards, and open-hardware ecosystems:
+
+* **WikiHouse Project & Skylark Building System:**
+  * *Official Portal:* [https://www.wikihouse.cc](https://www.wikihouse.cc)
+  * *Building System & Blocks:* [https://www.wikihouse.cc/product](https://www.wikihouse.cc/product) | [WikiHouse Blocks Library](https://www.wikihouse.cc/blocks)
+  * *Technical Guides & Manuals:* [https://www.wikihouse.cc/guides](https://www.wikihouse.cc/guides)
+  * *Open-Source Hardware & Code Repository:* [https://github.com/wikihouseproject](https://github.com/wikihouseproject)
+  * *Community & Technical Discussion Forum:* [https://community.wikihouse.cc](https://community.wikihouse.cc)
+* **OpenStructures (OS):**
+  * *Modular Sub-Grid Standard (600 mm):* [https://openstructures.net](https://openstructures.net)
+* **OSArch / Open-Source Architecture Community:**
+  * *AEC Open Toolchain Platform:* [https://osarch.org](https://osarch.org)
+  * *BlenderBIM (IfcOpenShell):* [https://blenderbim.org](https://blenderbim.org)
+* **Digital Fabrication & Automation Toolchains:**
+  * *FreeCAD:* [https://www.freecad.org](https://www.freecad.org)
+  * *OpenPLC Project:* [https://openplcproject.com](https://openplcproject.com)
+  * *Home Assistant & ESPHome:* [https://www.home-assistant.io](https://www.home-assistant.io) | [https://esphome.io](https://esphome.io)
 
 ---
 *Open Networked Earth — Ground truth over proprietary speculation.*

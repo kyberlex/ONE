@@ -4,6 +4,77 @@ This document tracks pending architectural features, research frontiers, and unr
 
 ---
 
+## **🔥 0. HIGH PRIORITY (PRE-LAUNCH OCT 13): ONBOARDING OVERHAUL, IN-GAME SURVIVAL ADVISOR & PROGRESSIVE DISCLOSURE**
+
+### **Context & Forensic Problem Statement (The Player Friction Trap)**
+Direct playtester feedback (e.g. `Pepisohn` on `r/incremental_games`, `WarningRegular` via Reddit PMs) has highlighted a fatal UX barrier:
+* **The Cognitive Overload Trap:** Players land on `https://one-oasis.surge.sh` and are instantly confronted with the "cockpit of a space shuttle" — 4 Leontief biophysical flows, battery day/night degradation, food calorie drain (-1,192 kcal/h perceived as unpayable debt), machine wear-and-tear, Legacy AI strikes, and sortition juries are all active at second 0.
+* **The Doctrine Barrier:** Gamers do NOT read the 1,000-page Constitution or the novels before playing. If the game expects players to understand post-labor usufruct and Leontief matrices *in advance*, 95% of players bounce in under 60 seconds thinking the game is broken or unfairly punishing.
+* **The Core Invariant:** A great game **teaches the philosophy through play**, peeling complexity like an onion (Progressive Disclosure) rather than dropping an encyclopedia on the player's head.
+
+---
+
+### **A. Architectural Blueprint for the Overhaul**
+
+#### **1. 🧭 The In-Game Survival Advisor ("District Companion / Maya")**
+* **Component:** `sim/app/src/ui/survival_advisor.js` + floating HUD widget in `index.html`.
+* **Behavior:** A non-intrusive, reactive Solarpunk advisor card (bottom-right corner) translating continuous thermodynamic ODEs into plain, urgent human language in real time:
+  * 🔴 **Critical Alert (Power):** *"⚠️ Sunset in 2 minutes. Your battery buffer will only last 2.3 hours tonight! Tap here to load-shed the heavy workshops."*
+  * 🟡 **Warning (Food):** *"💡 Calorie buffer dropping: 10 citizens require 22,000 kcal/day (2,200 kcal floor). The Granary has 4 days of reserves. Assign a bot to the Hydroponics Tower to restore positive yield."*
+  * 🔵 **Civic / Legacy Threat:** *"🏛️ Legacy Engine has triggered a debt audit! Sortition assembly convened. Click to review the civic docket and vote."*
+  * 🟢 **Optimal Equilibrium:** *"✅ District in thermodynamic balance: Energy surplus is charging batteries and FabLab spare parts."*
+* **Interactive 1-Click "Action Assist":** Every advisor warning includes a pulsing button that pans the canvas camera directly to the relevant building/module and highlights it with a radiant golden ring.
+
+#### **2. 🪜 Progressive Disclosure & The 5-Step Guided Prologue**
+* **Component:** `sim/app/src/engine/onboarding_prologue.js` (Gated progression state machine).
+* **Concept:** Lock advanced tabs and modules behind initial survival milestones so the player masters one physical flow at a time:
+  * **Stage 1 — The Solar Spark (Energy):** Player starts with just the Solar PV Array and the Battery Bank. Goal: Store 100 kWh before nightfall. Introduces the day/night solar curve.
+  * **Stage 2 — The Living Spring (Hydrology):** Deep well pump unlocks. Goal: Fill the 5,000 L potable cistern and route greywater to filtration.
+  * **Stage 3 — Caloric Sovereignty (Food):** Vertical Hydroponics Tower unlocks. Explains the biometric 2,200 kcal/day human floor and the Granary buffer (stock vs. flow). Goal: Reach +500 kcal/h surplus.
+  * **Stage 4 — Cybernetic Relief (Labor Cancellation):** First bot (`BOT-01` or `ROV-01`) deployed. Player assigns it to maintenance, watching human chore hours drop from 8h to 4h.
+  * **Stage 5 — The Extractive Shock & First Assembly (Demarchy):** Legacy AI adversary cuts off the commercial power grid. An Athenian Sortition Council is drawn by cryptographic lottery. Player experiences their first 75% supermajority vote on community self-reliance.
+  * *After Stage 5:* Full sandbox mode unlocked with celebratory milestone badge.
+
+#### **3. 🎮 Difficulty & Playstyle Selector (Startup Modal)**
+* **Component:** `sim/app/src/ui/panel_difficulty.js`.
+* **Modal Trigger:** Displayed automatically on fresh browser sessions (unseeded IndexedDB), with toggle in settings:
+  1. 🟢 **Pioneer / Guided Mode (Recommended for First-Time Players):**
+     * Caloric and battery depletion rates softened by 30% for the first 3 circadian days.
+     * The Survival Advisor is active with step-by-step guidance.
+     * Safety net: Battery and Food buffers do not cause catastrophic blackouts on Day 1.
+  2. 🔴 **Thermodynamic Hardcore (O.N.E. Canonical Simulation):**
+     * Exact biophysical Leontief conservation laws, full Second-Law entropy, immediate Legacy AI strikes.
+
+#### **4. 🏷️ Humanized Tooltips & Granary Buffer Clarification**
+* **Component:** `sim/app/src/ui/hud_meters.js` + `style.css`.
+* **Fixing the "Negative Calorie Debt" Confusion:**
+  * When food production is below consumption, do NOT show a terrifying `-1,192 kcal/h` red alert that looks like monetary debt.
+  * Display: `🥗 Food: 1.8M kcal in Granary (29 Days of Safe Buffer)`. Subtitle: `Harvest in progress (-4% daily burn until next crop)`.
+  * Tooltip explains: *"Human bodies require 2,200 kcal/day. Your granary holds enough food to feed everyone for 29 days even if no crops grow today."*
+
+---
+
+### **B. Technical File Modification Checklist**
+
+- [ ] **1. Create Survival Advisor UI:** `sim/app/src/ui/survival_advisor.js` (Reactive event listener subscribing to `simulation.js` thermodynamics).
+- [ ] **2. Implement Prologue State Machine:** `sim/app/src/engine/onboarding_prologue.js` (Tracks stage `0..5`, unlocks UI elements progressively, persists to IndexedDB).
+- [ ] **3. Implement Difficulty Selector Modal:** `sim/app/src/ui/panel_difficulty.js` (Stores mode in `localStorage` / IndexedDB).
+- [ ] **4. Canvas Interactive Highlights:** Update `sim/app/src/settlement/settlement_renderer.js` to draw pulsing target reticles over buildings when guided by the Advisor.
+- [ ] **5. Update HUD Resource Meters:** Refactor `sim/app/src/ui/hud_meters.js` to show Granary Days Remaining instead of confusing negative debt flows.
+- [ ] **6. Multi-Language i18n Sync (Gate D8):** Add advisor phrases and tutorial steps to `scripts/sync_sim_i18n.py` and run synchronization across all 14 official languages.
+- [ ] **7. Verification:** Test end-to-end via headless Chrome & `npm run build` to ensure 60 FPS performance without regression.
+
+---
+
+### **C. Post-Completion Operational Checklist**
+
+Once code and simulation behaviors are fully implemented and verified:
+- [ ] **Update User Guide(s):** Update `sim/USER_GUIDE.md` with the new 5-step guided prologue, Survival Advisor, and difficulty selector; recompile the vector PDF manual via `python3 sim/generate_handbook.py` (`sim/O-ASIS_User_Handbook.pdf`).
+- [ ] **Redeploy Simulator:** Run `python3 scripts/deploy_sim_surge.py` to publish the updated build to `https://one-oasis.surge.sh` (and the itch.io iframe), and synchronize GitHub Pages (`https://kyberlex.github.io/ONE`).
+- [ ] **Community Follow-Up & Announcement Campaign:** Reply to user `Pepisohn` on `r/incremental_games` with the onboarding changelog, launch the direct link on `r/WebGames`, and publish the Devlog on `itch.io`.
+
+---
+
 ## **1. IN-GAME COMMUNITY FEEDBACK & PROPOSAL BRIDGE (Completed)**
 
 The bridge for reporting operational bugs and proposing civic/gameplay ideas directly from the live client into GitHub has been fully implemented in `sim/` via:
