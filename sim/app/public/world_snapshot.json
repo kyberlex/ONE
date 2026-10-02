@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "network": "O-ASIS Confederated Mesh",
   "genesis": false,
-  "tick": 63011,
-  "day": 2626,
-  "timestamp": "2026-10-02T00:47:59.457Z",
+  "tick": 63637,
+  "day": 2652,
+  "timestamp": "2026-10-02T01:03:05.624Z",
   "nodes": {
     "node-detroit": {
       "id": "node-detroit",
@@ -22,7 +22,7 @@
       "fiatTreasury": 3250,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 2.9031603486088793,
+          "batteryStoredKwh": 0,
           "batteryCapacityKwh": 350
         },
         "water": {
@@ -532,5 +532,5 @@
     "author": "Kyberlex <kyberlex@proton.me>",
     "license": "AGPL-3.0-or-later"
   },
-  "thermoConsensusHash": "cd5aa73511f4d5d4121a0169efe2693bc5834a310cfd75ce3c2026603a6fe8ec"
+  "thermoConsensusHash": "b393a7e85558a3876d129112b8b934752c691e4d833416661180d3519a133bd4"
 }
