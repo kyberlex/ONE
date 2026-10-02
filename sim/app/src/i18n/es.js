@@ -1247,5 +1247,20 @@ export const es = {
   inspectMachineryPrompt: 'Inspeccionar maquinaria',
   openFabLabPrompt: 'Abrir estudio FabLab',
   openAgriPrompt: 'Agricultura abierta',
-  openChoresPrompt: 'Tareas abiertas'
+  openChoresPrompt: 'Tareas abiertas',
+  phase1Badge: 'Fase 1: Fundación',
+  phase2Badge: 'Fase 2: Autonomía de los bienes comunes',
+  phase2ObjectivesTitle: 'Fase 2: Autonomía Termodinámica',
+  phase2ObjectivesSub: 'Equilibrar los flujos, especializar la mano de obra y evitar la entropía',
+  starterObj4Title: '4. Especializa tu vocación',
+  starterObj4Desc: 'Abra la lista de tareas ([C]) y elija una vocación de gremio (por ejemplo, Agroecólogo) para obtener crédito social doble y bonificaciones de rendimiento sistémico.',
+  starterObj4Btn: 'Elige Vocación ➔',
+  starterObj5Title: '5. Mantenimiento de Maquinaria',
+  starterObj5Desc: 'Inspeccione Machinery & Entropy para dar servicio a bombas de agua e inversores solares antes de que el desgaste provoque apagones.',
+  starterObj5Btn: 'Maquinaria de servicio ➔',
+  starterObj6Title: '6. Rutas comerciales regionales',
+  starterObj6Desc: 'Abre el mapa global ([M]) o los convoyes comerciales para descubrir econodos hermanos y enviar rutas de trueque.',
+  starterObj6Btn: 'Explorar el comercio ➔',
+  starterAllDoneTitlePhase2: '🏆¡Maestro de los Comunes!',
+  starterAllDoneDescPhase2: '¡Todos los sistemas fundamentales equilibrados! Libere el trabajo ciudadano a través de la robótica FabLab, construya megaproyectos cívicos y resista la IA heredada.'
 };

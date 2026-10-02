@@ -1247,5 +1247,20 @@ export const zh = {
   inspectMachineryPrompt: '检查机械',
   openFabLabPrompt: '打开 FabLab 工作室',
   openAgriPrompt: '开放农业',
-  openChoresPrompt: '开放杂务'
+  openChoresPrompt: '开放杂务',
+  phase1Badge: '第一阶段：基础',
+  phase2Badge: '第二阶段：公地自治',
+  phase2ObjectivesTitle: '第二阶段：热力学自治',
+  phase2ObjectivesSub: '平衡流动、专业化劳动力、防止熵增',
+  starterObj4Title: '4. 专业化你的职业',
+  starterObj4Desc: '打开家务名册（[C]）并选择一个公会职业（例如农业生态学家）以获得 2 倍社会信用和系统收益奖金。',
+  starterObj4Btn: '选择职业 ➔',
+  starterObj5Title: '5. 机械维护',
+  starterObj5Desc: '在磨损导致停电之前检查机械和熵以维修水泵和太阳能逆变器。',
+  starterObj5Btn: '服务机械 ➔',
+  starterObj6Title: '6. 区域贸易路线',
+  starterObj6Desc: '打开全球地图（[M]）或贸易车队来发现姐妹生态节点并调度易货路线。',
+  starterObj6Btn: '探索贸易 ➔',
+  starterAllDoneTitlePhase2: '🏆 下议院大师！',
+  starterAllDoneDescPhase2: '所有基本系统均平衡！通过 FabLab 机器人释放公民劳动力，建设公​​民大型项目，并抵制传统人工智能。'
 };

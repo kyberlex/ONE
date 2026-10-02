@@ -1247,5 +1247,20 @@ export const ko = {
   inspectMachineryPrompt: '기계 검사',
   openFabLabPrompt: '팹랩 스튜디오 열기',
   openAgriPrompt: '개방형 농업',
-  openChoresPrompt: '열린 집안일'
+  openChoresPrompt: '열린 집안일',
+  phase1Badge: '1단계: 기초',
+  phase2Badge: '2단계: 커먼즈 자율성',
+  phase2ObjectivesTitle: '2단계: 열역학적 자율성',
+  phase2ObjectivesSub: '흐름의 균형을 맞추고 노동을 전문화하며 엔트로피를 방지합니다.',
+  starterObj4Title: '4. 당신의 직업을 전문화하라',
+  starterObj4Desc: 'Chore Roster([C])를 열고 길드 직업(예: 농업 생태학자)을 선택하여 2배의 사회적 신용 및 체계적 수확량 보너스를 받으세요.',
+  starterObj4Btn: '직업 선택 ➔',
+  starterObj5Title: '5. 기계 유지보수',
+  starterObj5Desc: '마모로 인해 정전이 발생하기 전에 기계 및 엔트로피를 검사하여 워터 펌프 및 태양광 인버터를 정비하십시오.',
+  starterObj5Btn: '서비스 기계 ➔',
+  starterObj6Title: '6. 지역 무역로',
+  starterObj6Desc: '세계 지도([M]) 또는 무역 호송대를 열어 자매 에코 노드를 발견하고 물물교환 경로를 파견하세요.',
+  starterObj6Btn: '무역 탐색 ➔',
+  starterAllDoneTitlePhase2: '🏆 커먼즈의 주인!',
+  starterAllDoneDescPhase2: '모든 기본 시스템이 균형을 이루고 있습니다! FabLab 로봇공학을 통해 시민 노동을 자유롭게 하고, 시민 메가프로젝트를 구축하고, 레거시 AI에 저항하세요.'
 };

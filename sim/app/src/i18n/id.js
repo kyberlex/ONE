@@ -1247,5 +1247,20 @@ export const id = {
   inspectMachineryPrompt: 'Periksa Mesin',
   openFabLabPrompt: 'Buka FabLab Studio',
   openAgriPrompt: 'Pertanian Terbuka',
-  openChoresPrompt: 'Buka Tugas'
+  openChoresPrompt: 'Buka Tugas',
+  phase1Badge: 'Fase 1: Fondasi',
+  phase2Badge: 'Fase 2: Otonomi Bersama',
+  phase2ObjectivesTitle: 'Fase 2: Otonomi Termodinamika',
+  phase2ObjectivesSub: 'Menyeimbangkan arus, mengkhususkan tenaga kerja, dan mencegah entropi',
+  starterObj4Title: '4. Spesialisasi Panggilan Anda',
+  starterObj4Desc: 'Buka Daftar Tugas ([C]) dan pilih panggilan guild (mis. Agro-Ekologi) untuk mendapatkan 2x kredit sosial dan bonus hasil sistemik.',
+  starterObj4Btn: 'Pilih Panggilan ➔',
+  starterObj5Title: '5. Perawatan Mesin',
+  starterObj5Desc: 'Periksa Mesin & Entropi untuk memperbaiki pompa air dan inverter surya sebelum keausan menyebabkan pemadaman listrik.',
+  starterObj5Btn: 'Mesin Servis ➔',
+  starterObj6Title: '6. Jalur Perdagangan Daerah',
+  starterObj6Desc: 'Buka Peta Global ([M]) atau Konvoi Dagang untuk menemukan simpul lingkungan terdekat dan mengirimkan rute barter.',
+  starterObj6Btn: 'Jelajahi Perdagangan ➔',
+  starterAllDoneTitlePhase2: '🏆 Penguasa Bersama!',
+  starterAllDoneDescPhase2: 'Semua sistem fundamental seimbang! Bebaskan tenaga kerja warga negara melalui robotika FabLab, bangun Civic Megaprojects, dan lawan Legacy AI.'
 };

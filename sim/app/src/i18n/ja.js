@@ -1247,5 +1247,20 @@ export const ja = {
   inspectMachineryPrompt: '機械の検査',
   openFabLabPrompt: 'ファブラボスタジオを開く',
   openAgriPrompt: 'オープンアグリカルチャー',
-  openChoresPrompt: 'オープン雑用'
+  openChoresPrompt: 'オープン雑用',
+  phase1Badge: 'フェーズ 1: 基礎',
+  phase2Badge: 'フェーズ 2: コモンズの自治',
+  phase2ObjectivesTitle: 'フェーズ 2: 熱力学的自律性',
+  phase2ObjectivesSub: '流れのバランスをとり、労働を専門化し、エントロピーを防ぐ',
+  starterObj4Title: '4. 自分の職業を専門化する',
+  starterObj4Desc: '雑用名簿 ([C]) を開き、ギルドの職業 (農業生態学者など) を選択すると、2 倍の社会信用と体系的な収量ボーナスが得られます。',
+  starterObj4Btn: '職業を選択 ➔',
+  starterObj5Title: '5. 機械のメンテナンス',
+  starterObj5Desc: '磨耗して停電が発生する前に、機械とエントロピーを検査して、ウォーターポンプと太陽光発電インバーターを整備します。',
+  starterObj5Btn: 'サービス機械 ➔',
+  starterObj6Title: '6. 地域貿易ルート',
+  starterObj6Desc: '世界地図 ([M]) を開くか、輸送船団を貿易して、姉妹エコノードを発見し、物々交換ルートを派遣します。',
+  starterObj6Btn: '貿易を探索する ➔',
+  starterAllDoneTitlePhase2: '🏆コモンズのマスター!',
+  starterAllDoneDescPhase2: 'すべての基本システムのバランスが取れています。 FabLab ロボット工学によって市民の労働力を解放し、市民メガプロジェクトを構築し、レガシー AI に抵抗します。'
 };

@@ -463,9 +463,15 @@ export class PanelNodeController {
               </div>
               <div class="kpi-box">
                 <span class="kpi-label">Net Caloric Flow</span>
-                <span class="kpi-val ${food.netDelta >= 0 ? 'text-green' : 'text-red'}">${food.netDelta >= 0 ? '+' : ''}${food.netDelta.toLocaleString()} kcal/h</span>
-                <span class="kpi-sub">${food.netDelta >= 0 ? 'Granary Accumulating' : 'Cushioning Deficit'}</span>
+                <span class="kpi-val ${food.netDelta >= 0 ? 'text-green' : (food.daysRemaining > 5 ? 'text-amber' : 'text-red')}">${food.netDelta >= 0 ? '+' : ''}${food.netDelta.toLocaleString()} kcal/h</span>
+                <span class="kpi-sub">${food.netDelta >= 0 ? 'Granary Accumulating' : (food.daysRemaining > 5 ? `Cushioned by Granary (${food.daysRemaining}d reserve)` : '⚠️ Granary Depleting!')}</span>
               </div>
+            </div>
+
+            <!-- Circadian stock vs flow explainer -->
+            <div class="circadian-hint-banner" style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 8px; padding: 10px 14px; margin-top: 14px; font-size: 12px; color: #bae6fd; display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 16px;">ℹ️</span>
+              <span><strong>Biophysical Stock vs. Flow:</strong> Solar crop yields naturally dip at night and during overcast hours, causing an oscillating hourly deficit against the biological baseline of 30 citizens (~2,750 kcal/h). The community granary acts as a ~45-day cushion. To increase baseline harvest: assign citizens to the Land Guild in Chores, choose the <em>Agro-Ecologist</em> vocation (2x bonus), keep greenhouse HVAC serviced, or deploy Farm Rovers in the FabLab.</span>
             </div>
           </div>
 
@@ -574,7 +580,7 @@ export class PanelNodeController {
               <span class="badge badge-outline">Resilience Shielding</span>
             </div>
             <p class="text-dim" style="font-size: 12px; margin-bottom: 14px;">
-              Manufactured using FabLab circular materials, local earthworks, and biological agroforestry. Once installed, these physical modules automatically dampen the kinetic shock and moisture stresses of extreme weather.
+              Manufactured using FabLab circular materials, local earthworks, and biological agroforestry. Once installed, these physical modules automatically dampen the kinetic shock and moisture stresses of extreme weather. <em>Note: These modules are passive disaster shields (mitigating loss during hailstorms, flash floods, or heat domes); they do not generate artificial baseline calories on calm days.</em>
             </p>
 
             <div class="resilience-modules-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">

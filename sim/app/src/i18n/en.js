@@ -1247,5 +1247,20 @@ export const en = {
   inspectMachineryPrompt: 'Inspect Machinery',
   openFabLabPrompt: 'Open FabLab Studio',
   openAgriPrompt: 'Open Agriculture',
-  openChoresPrompt: 'Open Chores'
+  openChoresPrompt: 'Open Chores',
+  phase1Badge: 'Phase 1: Foundation',
+  phase2Badge: 'Phase 2: Commons Autonomy',
+  phase2ObjectivesTitle: 'Phase 2: Thermodynamic Autonomy',
+  phase2ObjectivesSub: 'Balance flows, specialize labor, and prevent entropy',
+  starterObj4Title: '4. Specialize Your Vocation',
+  starterObj4Desc: 'Open Chore Roster ([C]) and pick a guild vocation (e.g. Agro-Ecologist) for 2x social credit and systemic yield bonuses.',
+  starterObj4Btn: 'Choose Vocation ➔',
+  starterObj5Title: '5. Machinery Maintenance',
+  starterObj5Desc: 'Inspect Machinery & Entropy to service water pumps and solar inverters before wear causes blackouts.',
+  starterObj5Btn: 'Service Machinery ➔',
+  starterObj6Title: '6. Regional Trade Routes',
+  starterObj6Desc: 'Open the Global Map ([M]) or Trade Convoys to discover sister eco-nodes and dispatch barter routes.',
+  starterObj6Btn: 'Explore Trade ➔',
+  starterAllDoneTitlePhase2: '🏆 Master of the Commons!',
+  starterAllDoneDescPhase2: 'All fundamental systems balanced! Free citizen labor via FabLab robotics, build Civic Megaprojects, and resist the Legacy AI.'
 };

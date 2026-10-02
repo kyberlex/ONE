@@ -1247,5 +1247,20 @@ export const de = {
   inspectMachineryPrompt: 'Maschinen prüfen',
   openFabLabPrompt: 'Öffnen Sie FabLab Studio',
   openAgriPrompt: 'Offene Landwirtschaft',
-  openChoresPrompt: 'Offene Aufgaben'
+  openChoresPrompt: 'Offene Aufgaben',
+  phase1Badge: 'Phase 1: Gründung',
+  phase2Badge: 'Phase 2: Commons-Autonomie',
+  phase2ObjectivesTitle: 'Phase 2: Thermodynamische Autonomie',
+  phase2ObjectivesSub: 'Ströme ausgleichen, Arbeitskräfte spezialisieren und Entropie verhindern',
+  starterObj4Title: '4. Spezialisieren Sie Ihren Beruf',
+  starterObj4Desc: 'Öffnen Sie die Aufgabenliste ([C]) und wählen Sie einen Gildenberuf (z. B. Agrarökologe) aus, um doppelte Sozialpunkte und systemische Ertragsboni zu erhalten.',
+  starterObj4Btn: 'Wählen Sie Beruf ➔',
+  starterObj5Title: '5. Maschinenwartung',
+  starterObj5Desc: 'Überprüfen Sie Maschinen und Entropie, um Wasserpumpen und Solarwechselrichter zu warten, bevor Verschleiß zu Stromausfällen führt.',
+  starterObj5Btn: 'Servicemaschinen ➔',
+  starterObj6Title: '6. Regionale Handelsrouten',
+  starterObj6Desc: 'Öffnen Sie die Weltkarte ([M]) oder Handelskonvois, um Schwester-Ökoknoten zu entdecken und Tauschrouten zu versenden.',
+  starterObj6Btn: 'Entdecken Sie den Handel ➔',
+  starterAllDoneTitlePhase2: '🏆 Herr der Commons!',
+  starterAllDoneDescPhase2: 'Alle Grundsysteme im Gleichgewicht! Befreien Sie Bürgerarbeit durch FabLab-Robotik, bauen Sie bürgerliche Megaprojekte und widerstehen Sie der Legacy-KI.'
 };

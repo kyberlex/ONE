@@ -356,18 +356,27 @@ window.addEventListener('DOMContentLoaded', () => {
   // 4. Initialize HUD
   const hud = new HudController(sim, panelType => {
     activePanel = panelType;
-    if (panelType === 'chores') panelNode.open('chores');
+    if (panelType === 'chores') {
+      panelNode.open('chores');
+      if (starterObjectives) starterObjectives.completeObjective('choose_vocation');
+    }
     else if (panelType === 'housing') panelNode.open('housing');
     else if (panelType === 'agriculture') panelNode.open('agriculture');
     else if (panelType === 'machinery') {
       panelNode.open('machinery');
-      if (starterObjectives) starterObjectives.completeObjective('inspect_grid');
+      if (starterObjectives) {
+        starterObjectives.completeObjective('inspect_grid');
+        starterObjectives.completeObjective('preventive_maintenance');
+      }
     }
     else if (panelType === 'tech') {
       panelDualTrack.open();
       if (starterObjectives) starterObjectives.completeObjective('automate_fablab');
     }
-    else if (panelType === 'convoys') panelConvoys.open();
+    else if (panelType === 'convoys') {
+      panelConvoys.open();
+      if (starterObjectives) starterObjectives.completeObjective('explore_trade');
+    }
     else if (panelType === 'council') {
       const councilBtn = document.getElementById('btn-open-council');
       if (councilBtn) councilBtn.classList.remove('has-alert');
@@ -677,6 +686,9 @@ window.addEventListener('DOMContentLoaded', () => {
     panelDwelling,
     panelNode,
     panelDualTrack,
+    panelConvoys,
+    worldMap,
+    zoomCoordinator,
     hud
   });
 

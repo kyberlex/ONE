@@ -1247,5 +1247,20 @@ export const tr = {
   inspectMachineryPrompt: 'Makineleri İnceleyin',
   openFabLabPrompt: 'FabLab Studio\'yu açın',
   openAgriPrompt: 'Açık Tarım',
-  openChoresPrompt: 'Açık Ev İşleri'
+  openChoresPrompt: 'Açık Ev İşleri',
+  phase1Badge: 'Aşama 1: Temel',
+  phase2Badge: 'Aşama 2: Müşterek Özerklik',
+  phase2ObjectivesTitle: 'Aşama 2: Termodinamik Özerklik',
+  phase2ObjectivesSub: 'Akışları dengeleyin, emeği uzmanlaştırın ve entropiyi önleyin',
+  starterObj4Title: '4. Mesleğinizi Uzmanlaştırın',
+  starterObj4Desc: 'Görev Listesini ([C]) açın ve 2 kat sosyal kredi ve sistemik getiri bonusları için bir lonca mesleği (örn. Tarımsal Ekolojist) seçin.',
+  starterObj4Btn: 'Mesleği Seçin ➔',
+  starterObj5Title: '5. Makine Bakımı',
+  starterObj5Desc: 'Aşınma elektrik kesintilerine yol açmadan önce su pompalarına ve güneş enerjili invertörlere bakım yapmak için Makine ve Entropi\'yi inceleyin.',
+  starterObj5Btn: 'Servis Makinaları ➔',
+  starterObj6Title: '6. Bölgesel Ticaret Yolları',
+  starterObj6Desc: 'Kardeş eko-düğümleri keşfetmek ve takas rotalarını göndermek için Dünya Haritasını ([M]) veya Ticaret Konvoylarını açın.',
+  starterObj6Btn: 'Ticareti Keşfedin ➔',
+  starterAllDoneTitlePhase2: '🏆 Avam Kamarası Efendisi!',
+  starterAllDoneDescPhase2: 'Tüm temel sistemler dengeli! FabLab robot teknolojisi aracılığıyla vatandaşların emeğini özgürleştirin, Sivil Mega Projeler inşa edin ve Eski Yapay Zeka\'ya direnin.'
 };

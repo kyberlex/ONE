@@ -1247,5 +1247,20 @@ export const fr = {
   inspectMachineryPrompt: 'Inspecter les machines',
   openFabLabPrompt: 'Ouvrir le FabLab Studio',
   openAgriPrompt: 'Agriculture ouverte',
-  openChoresPrompt: 'Tâches ouvertes'
+  openChoresPrompt: 'Tâches ouvertes',
+  phase1Badge: 'Phase 1 : Fondation',
+  phase2Badge: 'Phase 2 : Autonomie des communs',
+  phase2ObjectivesTitle: 'Phase 2 : Autonomie thermodynamique',
+  phase2ObjectivesSub: 'Équilibrer les flux, spécialiser le travail et prévenir l\'entropie',
+  starterObj4Title: '4. Spécialisez votre vocation',
+  starterObj4Desc: 'Ouvrez la liste des tâches ([C]) et choisissez une vocation de guilde (par exemple agro-écologiste) pour 2x le crédit social et les bonus de rendement systémique.',
+  starterObj4Btn: 'Choisissez Vocation ➔',
+  starterObj5Title: '5. Entretien des machines',
+  starterObj5Desc: 'Inspectez les machines et l\'entropie pour entretenir les pompes à eau et les onduleurs solaires avant que l\'usure ne provoque des pannes.',
+  starterObj5Btn: 'Machines de service ➔',
+  starterObj6Title: '6. Routes commerciales régionales',
+  starterObj6Desc: 'Ouvrez la carte globale ([M]) ou les convois commerciaux pour découvrir des éco-nœuds frères et expédier des itinéraires de troc.',
+  starterObj6Btn: 'Explorez le commerce ➔',
+  starterAllDoneTitlePhase2: '🏆 Maître des Communs !',
+  starterAllDoneDescPhase2: 'Tous les systèmes fondamentaux équilibrés ! Libérez le travail des citoyens via la robotique FabLab, construisez des mégaprojets civiques et résistez à l\'IA héritée.'
 };

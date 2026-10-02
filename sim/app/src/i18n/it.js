@@ -1247,5 +1247,20 @@ export const it = {
   inspectMachineryPrompt: 'Ispeziona Macchinari',
   openFabLabPrompt: 'Apri Studio FabLab',
   openAgriPrompt: 'Apri Agricoltura',
-  openChoresPrompt: 'Apri Turni di Lavoro'
+  openChoresPrompt: 'Apri Turni di Lavoro',
+  phase1Badge: 'Fase 1: Fondazione',
+  phase2Badge: 'Fase 2: Autonomia dei Comuni',
+  phase2ObjectivesTitle: 'Fase 2: Autonomia Termodinamica',
+  phase2ObjectivesSub: 'Equilibrare i flussi, specializzare il lavoro e prevenire l’entropia',
+  starterObj4Title: '4. Specializza la tua vocazione',
+  starterObj4Desc: 'Apri l\'elenco dei lavori domestici ([C]) e scegli una vocazione di gilda (ad esempio Agro-ecologista) per raddoppiare il credito sociale e i bonus di rendimento sistemico.',
+  starterObj4Btn: 'Scegli Vocazione ➔',
+  starterObj5Title: '5. Manutenzione dei macchinari',
+  starterObj5Desc: 'Ispeziona macchinari ed entropia per la manutenzione delle pompe dell\'acqua e degli inverter solari prima che l\'usura causi blackout.',
+  starterObj5Btn: 'Macchinari di servizio ➔',
+  starterObj6Title: '6. Rotte commerciali regionali',
+  starterObj6Desc: 'Apri la mappa globale ([M]) o i convogli commerciali per scoprire gli econodi gemelli e inviare rotte di baratto.',
+  starterObj6Btn: 'Esplora il commercio ➔',
+  starterAllDoneTitlePhase2: '🏆 Maestro dei Comuni!',
+  starterAllDoneDescPhase2: 'Tutti i sistemi fondamentali sono bilanciati! Libera manodopera dei cittadini tramite la robotica FabLab, costruisci megaprogetti civici e resisti all\'intelligenza artificiale legacy.'
 };
