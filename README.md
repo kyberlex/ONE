@@ -15,6 +15,7 @@
   <a href="simone/simone-specs.md">🔬 Scientific Co-Simulator</a> •
   <a href="habitat/README.md">🏡 Habitat Architecture</a> •
   <a href="roadmap/roadmap.md">🗺️ Transition Roadmap</a> •
+  <a href="foundation/README.md">🏛️ Foundation & Legal Statutes</a> •
   <a href="COMPARATIVE_ANALYSIS.md">⚖️ Comparative Analysis</a> •
   <a href="oasis/README.md">🛡️ Immunity Matrix</a> •
   <a href="CODE_OF_CONDUCT.md">📜 Code of Conduct</a> •
@@ -68,6 +69,10 @@ This public repository contains the complete canonical constitutional charter, c
 │       ├── STAGE_1_SURVIVAL_CORE_BLUEPRINT.md
 │       ├── STAGE_2_FABLAB_METABOLIC_BLUEPRINT.md
 │       └── STAGE_3_WATERSHED_FEDERATION_BLUEPRINT.md
+├── foundation/                       # INSTITUTIONAL LEGAL SHIELD & STATUTES
+│   ├── README.md                     # Institutional & legal framework index
+│   ├── statutes_foundation_one.md    # Foundation ONE Statutes & Swiss-German Notarial Deed
+│   └── legal_framework.md            # Master legal & operational blueprint
 ├── oasis/                            # O-ASIS EPISTEMIC ADVERSARIAL STRESS-TEST ENGINE
 │   ├── README.md                     # Stress-testing & constitutional fuzzing overview
 │   ├── constitutional_attack_challenges.md # Proof-of-Immunity matrix across 7 attack vectors
@@ -159,7 +164,18 @@ Visit `http://localhost:5173` to explore the living thermodynamic sandbox.
 
 ---
 
-## **IV. Epistemic Adversarial Proving Ground (O-ASIS)**
+## **IV. The Institutional Legal Shield: Foundation ONE (`foundation/`)**
+
+To interface with the legacy financial and statutory system without corrupting the post-monetary commons, O.N.E. operates a **Two-Tier Defensive Legal Shield** grounded in Swiss civil law (ZGB Art. 80–89bis):
+* **Entity A: Foundation ONE (*Stiftung*):** The "ownerless sovereign vault" holding inalienable land titles and canonical IP, bound by a perpetual asset lock (*Vermögensbindung*), odd-number board parity (3 to 7 trustees), pro bono governance (*Ehrenamtlichkeit*), and an exclusive monopoly on legacy commercial derivative licensing (e.g. streaming options, industrial dual-licensing).
+* **Entity B: The Operational Sister Body (Swiss *Verein* / Local Co-ops):** The democratic membership entity managing day-to-day community chores, education, and mutual aid under revocable usufruct charters.
+* **Temporary Legal Exoskeleton:** The Foundation is explicitly temporary; under ZGB Art. 88, it dissolves upon planetary unification, devolving all assets directly to the Global Usufruct Commons Confederation.
+
+👉 **Official Statutes & Notarial Deed:** [`foundation/statutes_foundation_one.md`](foundation/statutes_foundation_one.md) | **Legal Blueprint:** [`foundation/legal_framework.md`](foundation/legal_framework.md) | **Overview:** [`foundation/README.md`](foundation/README.md)
+
+---
+
+## **V. Epistemic Adversarial Proving Ground (O-ASIS)**
 
 We do not ask for blind belief. O.N.E. has been subjected to rigorous multi-agent adversarial stress-testing simulating institutional capture, cartels, resource hoarding, sensor tampering, and supply disruptions:
 
@@ -169,7 +185,7 @@ We do not ask for blind belief. O.N.E. has been subjected to rigorous multi-agen
 
 ---
 
-## **V. Verification & Dialectic Tools**
+## **VI. Verification & Dialectic Tools**
 
 * **Live AI Challenge Arena:** Test your hardest objections against the 46 Canonical Articles in real-time at [open-networked-earth.surge.sh/#challenge](https://open-networked-earth.surge.sh/#challenge).
 * **Google NotebookLM Deep-Dive:** Query the multimodal knowledge base and listen to the conversational audio podcast at [NotebookLM O.N.E. Suite](https://notebooklm.google.com/notebook/8a979273-c4b6-4288-b55b-4cb75fad95a0).
@@ -177,7 +193,7 @@ We do not ask for blind belief. O.N.E. has been subjected to rigorous multi-agen
 
 ---
 
-## **VI. Community Forum & Open Research Frontiers**
+## **VII. Community Forum & Open Research Frontiers**
 
 O.N.E. is an evolving civilizational architecture. If you discover unmodeled frictions, supply-chain edge cases, or wish to propose mathematical or constitutional refinements:
 
