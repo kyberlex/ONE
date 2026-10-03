@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "network": "O-ASIS Confederated Mesh",
   "genesis": false,
-  "tick": 163657,
-  "day": 6820,
-  "timestamp": "2026-10-03T17:45:18.287Z",
+  "tick": 164268,
+  "day": 6845,
+  "timestamp": "2026-10-03T18:00:21.331Z",
   "nodes": {
     "node-detroit": {
       "id": "node-detroit",
@@ -26,7 +26,7 @@
           "batteryCapacityKwh": 350
         },
         "water": {
-          "cisternStoredL": 50000,
+          "cisternStoredL": 47134.800000000076,
           "cisternCapacityL": 50000
         },
         "food": {
@@ -532,5 +532,5 @@
     "author": "Kyberlex <kyberlex@proton.me>",
     "license": "AGPL-3.0-or-later"
   },
-  "thermoConsensusHash": "3c0cafb68c348f4465fc74018774b5d439b53c31c7aad50a8c55f85999ddaa25"
+  "thermoConsensusHash": "e4826e4bf3c484e78d38599a5b03bdeb8221f0519c66143e135be225315d476f"
 }
