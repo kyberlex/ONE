@@ -260,9 +260,23 @@ export class WorldMapModal {
                 </div>
               ` : ''}
 
-              <div style="font-size: 11.5px; color: #cbd5e1; margin-bottom: 8px; line-height: 1.4;">
-                <strong>Commons Specialization:</strong> ${n.specialty}
+              <div style="font-size: 11.5px; color: #cbd5e1; margin-bottom: 6px; line-height: 1.4;">
+                <strong>Commons Specialization:</strong> <span style="color: #38bdf8;">${n.specialty}</span>
               </div>
+
+              ${Array.isArray(n.exports) && n.exports.length > 0 ? `
+                <div style="margin-bottom: 5px; font-size: 10.5px; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 4px; padding: 4px 8px; line-height: 1.3;">
+                  <strong style="color: #34d399;">📦 Exports:</strong>
+                  <span style="color: #cbd5e1;">${n.exports.map(e => e.name || e).join(' • ')}</span>
+                </div>
+              ` : ''}
+
+              ${Array.isArray(n.demands) && n.demands.length > 0 ? `
+                <div style="margin-bottom: 8px; font-size: 10.5px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 4px; padding: 4px 8px; line-height: 1.3;">
+                  <strong style="color: #fbbf24;">🤝 Demands:</strong>
+                  <span style="color: #cbd5e1;">${n.demands.map(d => d.name || d).join(' • ')}</span>
+                </div>
+              ` : ''}
 
               <div style="display: flex; justify-content: space-between; font-size: 11px; color: #94a3b8; margin-bottom: 12px;">
                 <span>Signal: <strong style="color: #34d399;">${n.signal}</strong></span>
@@ -611,6 +625,9 @@ export class WorldMapModal {
       node_02: '🧬',
       monte_sole: '⛰️',
       val_di_cecina: '♨️',
+      campi_flegrei: '🌋',
+      alburni: '🌲',
+      barbagia: '🐑',
       serra_estrela: '🏔️',
       detroit_delray: '🏭',
       rojava: '🌾'
@@ -656,18 +673,97 @@ export class WorldMapModal {
     } else if (nodeId === 'val_di_cecina') {
       return [
         {
-          id: 'spirulina',
-          name: 'Spirulina Superfood Flakes',
-          icon: '🧪',
-          benefit: '+4,500 kcal Food',
-          desc: 'Geothermally warmed cyanobacteria packed with complete amino acids.'
+          id: 'steam_ancient_grains',
+          name: 'Geothermal Steam-Dried Ancient Grains',
+          icon: '🌾',
+          benefit: '+12,000 kcal Food',
+          desc: 'High-protein emmer and spelt grains dried using clean geothermal heat exchangers.'
         },
         {
-          id: 'schematic_geothermal',
-          name: 'Geothermal Heat Exchanger Blueprint',
-          icon: '📜',
-          benefit: 'Zero Winter Heating Deficit',
-          desc: 'Closed-loop titanium coaxial ground-source heat pump schematic.'
+          id: 'borate_salts',
+          name: 'Natural Borate Mineral Flux',
+          icon: '🧂',
+          benefit: '+25% Solar Foundry Speed',
+          desc: 'Geothermal mineral flux for metallurgy, glass hardening, and ceramic glaze.'
+        },
+        {
+          id: 'heavy_copper_cable',
+          name: 'Heavy Inductive Copper Cable',
+          icon: '⚡',
+          benefit: '+15 kWh Microgrid Capacity',
+          desc: 'High-current microgrid transmission busbars annealed with geothermal heat.'
+        }
+      ];
+    } else if (nodeId === 'campi_flegrei') {
+      return [
+        {
+          id: 'pozzolana_binder',
+          name: 'Roman Pozzolana Cement Binder',
+          icon: '🧱',
+          benefit: '+5,000 L Water Storage',
+          desc: 'Hydraulic volcanic ash binder creating self-healing waterproof cistern mortar.'
+        },
+        {
+          id: 'refractory_glass_tubes',
+          name: 'Refractory Borosilicate Vacuum Tubes',
+          icon: '🧪',
+          benefit: 'Zero Winter Solar Loss',
+          desc: 'High thermal-shock borosilicate evacuated solar thermal collectors.'
+        },
+        {
+          id: 'volcanic_zeolite_filters',
+          name: 'Volcanic Zeolite Filter Media',
+          icon: '🪨',
+          benefit: '+20% Greywater Purification',
+          desc: 'Natural molecular sieves absorbing ammonium and heavy ions in reed beds.'
+        }
+      ];
+    } else if (nodeId === 'alburni') {
+      return [
+        {
+          id: 'structural_chestnut_beams',
+          name: 'Structural Chestnut Beams',
+          icon: '🪵',
+          benefit: '-1.0h MHU Labor Cost',
+          desc: 'Naturally rot-resistant slow-grown timber framing beams from sustainable coppice.'
+        },
+        {
+          id: 'spring_water_bladders',
+          name: 'Karst Spring Water Bladders',
+          icon: '💧',
+          benefit: '+2,500 L Potable Water',
+          desc: 'Food-grade 200L bladders of pristine mineral water from karst massif springs.'
+        },
+        {
+          id: 'olive_oil',
+          name: 'Centuries-Old Olive Grove Oil',
+          icon: '🫒',
+          benefit: '+5,000 kcal Caloric Reserves',
+          desc: 'Cold-pressed extra-virgin olive oil providing long-shelf-life culinary lipids.'
+        }
+      ];
+    } else if (nodeId === 'barbagia') {
+      return [
+        {
+          id: 'wool_insulation_mats',
+          name: 'Compressed Bio-Insulation Wool Mats',
+          icon: '🐑',
+          benefit: '+15% Habitat Thermal Retention',
+          desc: 'High-density natural sheep wool acoustic and thermal insulation panels for MHUs.'
+        },
+        {
+          id: 'goat_cheese',
+          name: 'Aged Mountain Goat Cheese',
+          icon: '🧀',
+          benefit: '+6,000 kcal Dense Food',
+          desc: 'Multi-year cellar-cured hard cheese rich in proteins and bio-minerals.'
+        },
+        {
+          id: 'heirloom_legume_seeds',
+          name: 'Drought-Hardy Legume Seeds',
+          icon: '🌱',
+          benefit: '+20% Permaculture Bed Yield',
+          desc: 'Landrace grass peas and highland chickpeas that fix atmospheric nitrogen.'
         }
       ];
     } else if (nodeId === 'serra_estrela') {

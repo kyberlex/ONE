@@ -105,18 +105,22 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
   - Added interactive fleet status metrics (docked count, payload capacity, 48V LFP SOC%) and direct operational actions (recharge swappable packs, commission vehicles) in `building_inspector.js`.
 
 ### **2.2 Regional Partner Nodes & Bioregional Specializations**
-- [ ] **Val di Cecina (Geothermal & Agritech):**
+- [x] **Val di Cecina (Geothermal & Agritech):**
   - Exports: Geothermal steam-dried ancient grains, borate salts, heavy copper cable.
   - Demands: Microcontrollers, precision CNC milled brackets, medicinal herbs.
-- [ ] **Campi Flegrei (Volcanic Silica & Glassworks):**
+- [x] **Campi Flegrei (Volcanic Silica & Glassworks):**
   - Exports: Pozzolana cement binder, refractory glass tubes, volcanic zeolite filters.
   - Demands: Fresh calories, preserved vegetables, battery storage racks.
-- [ ] **Alburni (Karst Hydrology & Timber Commons):**
+- [x] **Alburni (Karst Hydrology & Timber Commons):**
   - Exports: Structural chestnut beams, spring water bladders, olive oil.
   - Demands: Solar inverters, water pump solenoids, educational mesh tablets.
-- [ ] **Barbagia (Highland Agroforestry & Wool Composites):**
+- [x] **Barbagia (Highland Agroforestry & Wool Composites):**
   - Exports: Compressed bio-insulation wool mats, goat cheese, heirloom legume seeds.
   - Demands: 3D printing filament, bio-sensors, water purification membranes.
+- [x] **Bioregional Portfolio Architecture & Mesh UI (`state.js` & `world_map_modal.js`):**
+  - Exported canonical `REGIONAL_PARTNER_NODES` portfolio registry with granular export/demand arrays, categories, and descriptions.
+  - Integrated into `this.data.sisterNodes` (both in constructor and `load()` migration) with `getSisterNodes()`, `getPartnerNode()`, and `getRegionalNodePortfolio()`.
+  - Added dedicated node icons (`🌋`, `🌲`, `🐑`, `♨️`), interactive green/amber export & demand badges, and customized regional trade import catalogues in `world_map_modal.js`.
 
 ### **2.3 Logistics Engine & State Model (`state.js`)**
 - [ ] Add `convoys: []` collection to `gameState.data`:

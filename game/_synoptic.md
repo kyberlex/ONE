@@ -159,7 +159,16 @@ The foundational engine (`main.js`, `state.js`, `settlement_canvas.js`, `hud.js`
   - Automatic commissioning: building `Electric Cargo Trike Depot` auto-commissions `Solar Cargo Trike Alpha`; building `Autonomous Courier Vertiport` auto-commissions `SkyLink VTOL Courier Alpha`.
   - Rich interactive inspection suites in `building_inspector.js`: real-time fleet readiness, freight payload capacity, 48V LFP SOC%, range telemetry, solar microgrid top-off recharging, and vehicle assembly/commissioning actions.
 
+* **Completed (Epic 2.2 — Regional Partner Nodes & Bioregional Specializations):**
+  - Canonical partner node specifications registered and exported via `REGIONAL_PARTNER_NODES` in `state.js`:
+    * **Val di Cecina (Geothermal & Agritech):** Exports geothermal steam-dried ancient grains (+12,000 kcal), natural borate mineral flux (+25% foundry speed), heavy copper busbars (+15 kWh microgrid capacity); demands microcontrollers, CNC milled brackets, medicinal herbs.
+    * **Campi Flegrei (Volcanic Silica & Glassworks):** Exports Roman pozzolana cement binder (+5,000 L cistern waterproofing), refractory borosilicate vacuum tubes (zero winter solar loss), volcanic zeolite filter media (+20% greywater purification); demands fresh calories, preserved vegetables, battery storage racks.
+    * **Alburni (Karst Hydrology & Timber Commons):** Exports structural chestnut beams (-1.0h MHU framing labor), karst spring water bladders (+2,500 L potable water), centuries-old olive oil (+5,000 kcal); demands solar inverters, water pump solenoids, educational mesh tablets.
+    * **Barbagia (Highland Agroforestry & Wool Composites):** Exports compressed bio-insulation wool mats (+15% habitat thermal retention), aged mountain goat cheese (+6,000 kcal), heirloom legume seeds (+20% permaculture yield); demands 3D printing filament, bio-sensors, water purification membranes.
+  - State management methods: `getSisterNodes()`, `getPartnerNode(nodeId)`, and `getRegionalNodePortfolio(nodeId)` providing standardized access for convoy manifest validation.
+  - Interactive Reticulum cartography in `world_map_modal.js`: dedicated regional node cards with distinct icons (`🌋`, `🌲`, `🐑`, `♨️`), distance, signal, affinity, styled green/amber badges for exports & demands, and customized trade import catalogues.
+
 The remaining civilizational expansion tasks are catalogued in [`game/TODO.md`](TODO.md) across three macro pillars:
-1. **Epic 2:** Inter-Node Logistics, Trade & Regional Convoys (Regional Partner Nodes, Bioregional Specializations, Convoy Manifests, Logistics Desk Modal).
+1. **Epic 2:** Inter-Node Logistics, Trade & Regional Convoys (Convoy State Model, Manifest Calculations, Logistics Desk Modal).
 2. **Epic 3:** Four-Season Climate Engine, Evapotranspiration, and Extreme Weather Protocols.
 3. **Epic 4:** Long-Horizon Progression, Civic Megaprojects, and Municipal Sortition Demarchy.

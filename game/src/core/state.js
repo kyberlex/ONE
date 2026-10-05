@@ -37,6 +37,96 @@ export const VEHICLE_SPECS = {
   }
 };
 
+/**
+ * Canonical Regional Partner Nodes & Bioregional Specializations (Epic 2.2)
+ */
+export const REGIONAL_PARTNER_NODES = {
+  val_di_cecina: {
+    id: 'val_di_cecina',
+    name: 'Val di Cecina Geothermal Node',
+    region: 'Tuscan Metalliferous Hills (Italy)',
+    specialty: 'Geothermal & Agritech',
+    distanceKm: 380,
+    signal: '95% (Mesh Backbone)',
+    affinity: 90,
+    tradeHistoryCount: 0,
+    icon: '♨️',
+    exports: [
+      { id: 'steam_ancient_grains', name: 'Geothermal Steam-Dried Ancient Grains', category: 'food', unitValue: 12000, desc: 'High-protein emmer and spelt grains dried using clean geothermal heat exchangers.' },
+      { id: 'borate_salts', name: 'Borate Salts', category: 'materials', desc: 'Natural geothermal mineral flux for metallurgy and glass hardening.' },
+      { id: 'heavy_copper_cable', name: 'Heavy Copper Cable', category: 'materials', desc: 'Induction-annealed copper busbars and high-current microgrid cabling.' }
+    ],
+    demands: [
+      { id: 'microcontrollers', name: 'Microcontrollers', category: 'electronics', desc: 'ESP32 and RISC-V compute nodes for automated geothermal valve telemetry.' },
+      { id: 'cnc_milled_brackets', name: 'Precision CNC Milled Brackets', category: 'tooling', desc: '5-axis milled high-tolerance brackets for superheated steam turbines.' },
+      { id: 'medicinal_herbs', name: 'Medicinal Herbs', category: 'botanicals', desc: 'Permaculture apothecary extracts, yarrow, and soothing feverfew.' }
+    ]
+  },
+  campi_flegrei: {
+    id: 'campi_flegrei',
+    name: 'Campi Flegrei Silica Works',
+    region: 'Phlegraean Fields, Tyrrhenian Coast (Italy)',
+    specialty: 'Volcanic Silica & Glassworks',
+    distanceKm: 440,
+    signal: '91% (Coastal LoRa Relay)',
+    affinity: 85,
+    tradeHistoryCount: 0,
+    icon: '🌋',
+    exports: [
+      { id: 'pozzolana_binder', name: 'Pozzolana Cement Binder', category: 'materials', desc: 'Roman-formula hydraulic volcanic ash binder for waterproof zero-carbon cistern mortar.' },
+      { id: 'refractory_glass_tubes', name: 'Refractory Glass Tubes', category: 'materials', desc: 'Thermal shock resistant borosilicate vacuum tubes for solar collectors.' },
+      { id: 'volcanic_zeolite_filters', name: 'Volcanic Zeolite Filters', category: 'hydrology', desc: 'High surface-area microporous minerals for greywater and heavy metal purification.' }
+    ],
+    demands: [
+      { id: 'fresh_calories', name: 'Fresh Calories', category: 'food', desc: 'High-density seasonal greens, legumes, and fresh caloric supplies.' },
+      { id: 'preserved_vegetables', name: 'Preserved Vegetables', category: 'food', desc: 'Fermented krauts, lacto-pickled roots, and dehydrated tomato pastes.' },
+      { id: 'battery_storage_racks', name: 'Battery Storage Racks', category: 'energy', desc: 'Modular 48V stationary battery frame mounts with busbar interconnects.' }
+    ]
+  },
+  alburni: {
+    id: 'alburni',
+    name: 'Alburni Karst Commons',
+    region: 'Cilento & Alburni Karst Massif (Italy)',
+    specialty: 'Karst Hydrology & Timber Commons',
+    distanceKm: 520,
+    signal: '89% (Mountain Ridge LOS)',
+    affinity: 90,
+    tradeHistoryCount: 0,
+    icon: '🌲',
+    exports: [
+      { id: 'structural_chestnut_beams', name: 'Structural Chestnut Beams', category: 'materials', desc: 'Naturally rot-resistant sustainable timber beams for MHU framing.' },
+      { id: 'spring_water_bladders', name: 'Spring Water Bladders', category: 'hydrology', desc: 'Food-grade 200L bladders of mineral-rich high-karst spring water.' },
+      { id: 'olive_oil', name: 'Centuries-Old Olive Oil', category: 'food', desc: 'Cold-pressed extra-virgin olive oil rich in caloric and medicinal value.' }
+    ],
+    demands: [
+      { id: 'solar_inverters', name: 'Solar Inverters', category: 'energy', desc: 'High-efficiency pure sine wave MPPT micro-inverters.' },
+      { id: 'pump_solenoids', name: 'Water Pump Solenoids', category: 'hydrology', desc: '12V/24V high-reliability solenoids for deep karst siphon networks.' },
+      { id: 'mesh_tablets', name: 'Educational Mesh Tablets', category: 'electronics', desc: 'Solar-powered e-paper Reticulum mesh terminals for youth forestry apprentices.' }
+    ]
+  },
+  barbagia: {
+    id: 'barbagia',
+    name: 'Barbagia Agroforestry Node',
+    region: 'Gennargentu Highland Commons, Sardinia (Italy)',
+    specialty: 'Highland Agroforestry & Wool Composites',
+    distanceKm: 610,
+    signal: '86% (Tyrrhenian Island Gateway)',
+    affinity: 85,
+    tradeHistoryCount: 0,
+    icon: '🐑',
+    exports: [
+      { id: 'wool_insulation_mats', name: 'Compressed Bio-Insulation Wool Mats', category: 'materials', desc: 'Natural sheep wool acoustic and thermal insulation panels for eco-dwellings.' },
+      { id: 'goat_cheese', name: 'Aged Mountain Goat Cheese', category: 'food', desc: 'Dense protein and mineral rich hard cheese with multi-year cellar shelf life.' },
+      { id: 'heirloom_legume_seeds', name: 'Heirloom Legume Seeds', category: 'agriculture', desc: 'Drought-hardy mountain fava, chickpea, and grass pea landraces.' }
+    ],
+    demands: [
+      { id: '3d_filament', name: '3D Printing Filament', category: 'materials', desc: 'Recycled PETG and PLA spools for repairing pastoral machinery and tools.' },
+      { id: 'bio_sensors', name: 'Bio-Sensors', category: 'electronics', desc: 'Soil microbial respiration and rangeland moisture telemetry probes.' },
+      { id: 'water_membranes', name: 'Water Purification Membranes', category: 'hydrology', desc: 'Nanofiltration hollow-fiber cartridges for remote pastoral springs.' }
+    ]
+  }
+};
+
 export class GameState {
   constructor() {
     this.listeners = new Map();
@@ -282,18 +372,10 @@ export class GameState {
           signal: '98% (LoRa Repeater Chain)',
           specialty: 'Solar Stirling Concentrators & Chestnut Flour',
           affinity: 100,
-          tradeHistoryCount: 0
+          tradeHistoryCount: 0,
+          icon: '⛰️'
         },
-        val_di_cecina: {
-          id: 'val_di_cecina',
-          name: 'Val di Cecina Geothermal Node',
-          region: 'Tuscan Metalliferous Hills (Italy)',
-          distanceKm: 380,
-          signal: '95% (Mesh Backbone)',
-          specialty: 'Superheated Steam Exchangers & Algae Bioreactors',
-          affinity: 90,
-          tradeHistoryCount: 0
-        },
+        ...JSON.parse(JSON.stringify(REGIONAL_PARTNER_NODES)),
         serra_estrela: {
           id: 'serra_estrela',
           name: 'Serra da Estrela Mountain Node',
@@ -302,7 +384,8 @@ export class GameState {
           signal: '88% (Mesh Gateway)',
           specialty: 'Micro-Hydro Pelton Wheels & Lanital Wool Insulation',
           affinity: 85,
-          tradeHistoryCount: 0
+          tradeHistoryCount: 0,
+          icon: '🏔️'
         },
         detroit_delray: {
           id: 'detroit_delray',
@@ -312,7 +395,8 @@ export class GameState {
           signal: '92% (LoRa via Satellite Gateway)',
           specialty: 'Heavy 5-Axis Gantry Milling & Cast Iron Metallurgy',
           affinity: 80,
-          tradeHistoryCount: 0
+          tradeHistoryCount: 0,
+          icon: '🏭'
         },
         rojava: {
           id: 'rojava',
@@ -322,7 +406,8 @@ export class GameState {
           signal: '90% (Decentralized Mesh Repeater)',
           specialty: 'Heritage Emmer Grains & Demarchic Agora Sortition',
           affinity: 85,
-          tradeHistoryCount: 0
+          tradeHistoryCount: 0,
+          icon: '🌾'
         }
       },
 
@@ -1802,6 +1887,35 @@ export class GameState {
     return { ok: true, totalChargedKwh };
   }
 
+  // =========================================================================
+  // REGIONAL PARTNER NODES & BIOREGIONAL SPECIALIZATIONS (EPIC 2.2)
+  // =========================================================================
+
+  getSisterNodes() {
+    return this.data.sisterNodes || {};
+  }
+
+  getPartnerNode(nodeId) {
+    if (!nodeId) return null;
+    return this.data.sisterNodes?.[nodeId] || REGIONAL_PARTNER_NODES[nodeId] || null;
+  }
+
+  getRegionalNodePortfolio(nodeId) {
+    const node = this.getPartnerNode(nodeId);
+    if (!node) return null;
+    return {
+      id: node.id,
+      name: node.name,
+      specialty: node.specialty,
+      region: node.region,
+      distanceKm: node.distanceKm,
+      signal: node.signal,
+      affinity: node.affinity || 100,
+      exports: node.exports || [],
+      demands: node.demands || []
+    };
+  }
+
   getWeatherForDay(day) {
     // Scheduled Climate Crisis Days (Matrix 3: 48h Advance Triage & Resilience)
     if (day === 5) return { tempC: -3, sky: 'Polar Cold Snap Frost', icon: '❄️', rainfallMm: 0, solarIrradiance: 0.70, windSpeedKmh: 28, cloudCover: 0.30, isCrisis: true, disasterId: 'cold_snap' };
@@ -2529,58 +2643,67 @@ export class GameState {
           if (!Array.isArray(this.data.convoys)) this.data.convoys = [];
           if (!Array.isArray(this.data.sabbaticals)) this.data.sabbaticals = [];
           if (!Array.isArray(this.data.unlockedSchematics)) this.data.unlockedSchematics = [];
-          if (!this.data.sisterNodes || !this.data.sisterNodes.monte_sole) {
-            this.data.sisterNodes = {
-              monte_sole: {
-                id: 'monte_sole',
-                name: 'Monte Sole Permaculture Hub',
-                region: 'Northern Apennines (Italy)',
-                distanceKm: 320,
-                signal: '98% (LoRa Repeater Chain)',
-                specialty: 'Solar Stirling Concentrators & Chestnut Flour',
-                affinity: 100,
-                tradeHistoryCount: 0
-              },
-              val_di_cecina: {
-                id: 'val_di_cecina',
-                name: 'Val di Cecina Geothermal Node',
-                region: 'Tuscan Metalliferous Hills (Italy)',
-                distanceKm: 380,
-                signal: '95% (Mesh Backbone)',
-                specialty: 'Superheated Steam Exchangers & Algae Bioreactors',
-                affinity: 90,
-                tradeHistoryCount: 0
-              },
-              serra_estrela: {
-                id: 'serra_estrela',
-                name: 'Serra da Estrela Mountain Node',
-                region: 'Central Massif (Portugal)',
-                distanceKm: 1740,
-                signal: '88% (Mesh Gateway)',
-                specialty: 'Micro-Hydro Pelton Wheels & Lanital Wool Insulation',
-                affinity: 85,
-                tradeHistoryCount: 0
-              },
-              detroit_delray: {
-                id: 'detroit_delray',
-                name: 'Detroit Delray Anchor Node',
-                region: 'Rust Belt Great Lakes (USA)',
-                distanceKm: 6850,
-                signal: '92% (LoRa via Satellite Gateway)',
-                specialty: 'Heavy 5-Axis Gantry Milling & Cast Iron Metallurgy',
-                affinity: 80,
-                tradeHistoryCount: 0
-              },
-              rojava: {
-                id: 'rojava',
-                name: 'Rojava Agroecological Node',
-                region: 'Fertile Crescent (Syria)',
-                distanceKm: 2840,
-                signal: '90% (Decentralized Mesh Repeater)',
-                specialty: 'Heritage Emmer Grains & Demarchic Agora Sortition',
-                affinity: 85,
-                tradeHistoryCount: 0
-              }
+          if (!this.data.sisterNodes) this.data.sisterNodes = {};
+          if (!this.data.sisterNodes.monte_sole) {
+            this.data.sisterNodes.monte_sole = {
+              id: 'monte_sole',
+              name: 'Monte Sole Permaculture Hub',
+              region: 'Northern Apennines (Italy)',
+              distanceKm: 320,
+              signal: '98% (LoRa Repeater Chain)',
+              specialty: 'Solar Stirling Concentrators & Chestnut Flour',
+              affinity: 100,
+              tradeHistoryCount: 0,
+              icon: '⛰️'
+            };
+          }
+          for (const [key, partnerDef] of Object.entries(REGIONAL_PARTNER_NODES)) {
+            if (!this.data.sisterNodes[key]) {
+              this.data.sisterNodes[key] = JSON.parse(JSON.stringify(partnerDef));
+            } else {
+              this.data.sisterNodes[key].exports = JSON.parse(JSON.stringify(partnerDef.exports));
+              this.data.sisterNodes[key].demands = JSON.parse(JSON.stringify(partnerDef.demands));
+              this.data.sisterNodes[key].specialty = partnerDef.specialty;
+              this.data.sisterNodes[key].icon = partnerDef.icon;
+            }
+          }
+          if (!this.data.sisterNodes.serra_estrela) {
+            this.data.sisterNodes.serra_estrela = {
+              id: 'serra_estrela',
+              name: 'Serra da Estrela Mountain Node',
+              region: 'Central Massif (Portugal)',
+              distanceKm: 1740,
+              signal: '88% (Mesh Gateway)',
+              specialty: 'Micro-Hydro Pelton Wheels & Lanital Wool Insulation',
+              affinity: 85,
+              tradeHistoryCount: 0,
+              icon: '🏔️'
+            };
+          }
+          if (!this.data.sisterNodes.detroit_delray) {
+            this.data.sisterNodes.detroit_delray = {
+              id: 'detroit_delray',
+              name: 'Detroit Delray Anchor Node',
+              region: 'Rust Belt Great Lakes (USA)',
+              distanceKm: 6850,
+              signal: '92% (LoRa via Satellite Gateway)',
+              specialty: 'Heavy 5-Axis Gantry Milling & Cast Iron Metallurgy',
+              affinity: 80,
+              tradeHistoryCount: 0,
+              icon: '🏭'
+            };
+          }
+          if (!this.data.sisterNodes.rojava) {
+            this.data.sisterNodes.rojava = {
+              id: 'rojava',
+              name: 'Rojava Agroecological Node',
+              region: 'Fertile Crescent (Syria)',
+              distanceKm: 2840,
+              signal: '90% (Decentralized Mesh Repeater)',
+              specialty: 'Heritage Emmer Grains & Demarchic Agora Sortition',
+              affinity: 85,
+              tradeHistoryCount: 0,
+              icon: '🌾'
             };
           }
 

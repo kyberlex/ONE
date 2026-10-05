@@ -84,10 +84,11 @@ game/
 ---
 
 #### **`game/src/core/state.js`**
-* **File Path:** `game/src/core/state.js` (2,226 lines, 93.3 KB)
-* **Role & Responsibility:** Central reactive single source of truth. Manages all game data, thermodynamic balances (kWh, L, kcal, waste), demographic rosters, chore labor pool, building catalogue, district spatial zoning, diurnal cycle, daily simulation tick (`restUntilTomorrow`), emergency contingency actions, and IndexedDB/localStorage persistence.
+* **File Path:** `game/src/core/state.js` (2,780 lines, 119.5 KB)
+* **Role & Responsibility:** Central reactive single source of truth. Manages all game data, thermodynamic balances (kWh, L, kcal, waste), demographic rosters, chore labor pool, building catalogue, district spatial zoning, diurnal cycle, daily simulation tick (`restUntilTomorrow`), emergency contingency actions, zero-emission logistics fleet, regional partner node federation, and IndexedDB/localStorage persistence.
 * **Exports:**
   - `VEHICLE_SPECS` (Canonical vehicle specifications for `cargo_trike` [250 kg freight box, 60 km range, 1.5 kWh/100km, 48V LFP] and `vtol_drone` [25 kg payload, 45 km radius, 0.8 kWh/sortie])
+  - `REGIONAL_PARTNER_NODES` (Canonical regional partner node portfolio registry: Val di Cecina, Campi Flegrei, Alburni, Barbagia with granular exports & demands)
   - `GameState` (Class)
   - `gameState` (Default Singleton Instance)
 * **Key State Properties (`this.data`):**
@@ -103,6 +104,7 @@ game/
   - `objective`: Active primary objective card tracking goals and unlocks.
   - `fleet`: Zero-emission logistics fleet array (`cargo_trike` and `vtol_drone` instances with battery SOC%, health%, payload capacity, and status).
   - `convoys`: In-transit regional trade convoys (cargo trikes & VTOL drones).
+  - `sisterNodes`: Federation network nodes (Sister Node 02, Monte Sole, Val di Cecina, Campi Flegrei, Alburni, Barbagia, Serra da Estrela, Detroit Delray, Rojava) enriched with bioregional specializations, export/demand portfolios, and affinities.
   - `milestones`: Set of completed civilizational milestones.
 * **Key Methods:**
   - `on(event, cb)`, `emit(event, payload)`: Custom event emitter for reactive UI updates.
@@ -118,6 +120,9 @@ game/
   - `chargeVehicle(vehicleId, kwhLimit)`: Draws stored microgrid energy to recharge vehicle batteries to 100% SOC.
   - `serviceVehicle(vehicleId)`: Restores damaged vehicle health to 100% and resets status to docked.
   - `rechargeFleet(maxTotalKwh)`: Recharges all docked fleet vehicles from available solar microgrid energy.
+  - `getSisterNodes()`: Returns all active Reticulum federation sister nodes.
+  - `getPartnerNode(nodeId)`: Returns specific partner node by ID, cross-referencing `REGIONAL_PARTNER_NODES`.
+  - `getRegionalNodePortfolio(nodeId)`: Returns structured portfolio of bioregional exports and demands for trade manifest configuration.
   - `getClearingRadius()`: Calculates dynamic carrying capacity clearing radius scaling through Stage 1 (340px Seed Campsite), Stage 2 (520px Ecovillage), and Stage 3 (750px–900px Full Dunbar Cell).
   - `checkClearingExpansion()`: Detects milestone clearing thresholds and emits `clearing_expanded` event.
   - `recalculateLaborBudget()`: Recalculates chore pool based on automated chores and population.
@@ -315,11 +320,12 @@ game/
 ---
 
 #### **`game/src/ui/world_map_modal.js`**
-* **File Path:** `game/src/ui/world_map_modal.js` (866 lines, 45.1 KB)
+* **File Path:** `game/src/ui/world_map_modal.js` (945 lines, 48.6 KB)
 * **Role & Responsibility:** Full-screen regional cartography and Reticulum mesh modal. Features:
   - Dunbar Horizon & Cellular Mitosis Hub card tracking the 50-MHU carrying capacity threshold with progress bar and Founding Expedition dispatch button.
   - Sister Node 02 (Cellular Mitosis Child) topology card displaying 12 km greenway distance, HVDC microgrid bus status, and line-of-sight Reticulum radio link.
-  - Vehicle dispatch console (cargo trikes & autonomous VTOL drones), inter-node trade manifest builder, and Art. 4.2 pioneer sabbatical exchange desk.
+  - Regional Partner Node Directory: interactive topology cards for Val di Cecina, Campi Flegrei, Alburni, and Barbagia displaying dedicated icons (`🌋`, `🌲`, `🐑`, `♨️`), distance, signal, affinity, and styled green/amber badges for bioregional exports and demands.
+  - Vehicle dispatch console (cargo trikes & autonomous VTOL drones), inter-node trade manifest builder with customized regional import catalogues, and Art. 4.2 pioneer sabbatical exchange desk.
 * **Exports:**
   - `WorldMapModal` (Class)
 
