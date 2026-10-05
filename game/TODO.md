@@ -30,7 +30,7 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
     - **Stop 3 (Stage 3 / Sovereign Superblock - e.g. Detroit Delray):** 148 Residents (~50 MHUs), Central Agora (ex-camper site), Cargo Trike Depot, 100% Solar & Zero Debt ($0).
   - **Interactive Synoptic Module Inspection:**
     - Player can click featured modules on each stop (e.g. Solar Array, FabLab, Agora) to reveal 1-sentence micro-tooltips explaining *why* they are placed there and their thermodynamic yield.
-- [ ] **Automatic Local Geolocation with Complete Global Freedom:**
+- [x] **Automatic Local Geolocation with Complete Global Freedom:**
   - Seamlessly transitions from the Global Tour by auto-centering the map on the player's real-world browser location (via `navigator.geolocation` / IP fallback).
   - Drops a default beacon (`<LocalTown>-ONE`) and computes local solar irradiance, annual precipitation, and top 3 regional urban hubs.
   - **100% Sandbox Agency:** Player can keep their home watershed OR click anywhere on Earth to plant their seed beacon (or select established candidate beacons: Andes, Alps, Galicia, Sahel).

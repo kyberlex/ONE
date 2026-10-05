@@ -122,7 +122,9 @@ The settlement expands radially across 5 distinct bioclimatic functional distric
 The foundational engine (`main.js`, `state.js`, `settlement_canvas.js`, `hud.js`, `sound_fx.js`, `world_map.js`) is robust, fully operational, and compiles with zero errors on Vite (`http://localhost:5174/`).
 
 **Active Progress Highlights:**
-* **Completed (Epic 1.1):** The 3-Stop Civilizational Preview Tour in `embarkation.js` and `world_map.js` seamlessly guides new players across Yukon Haven (Stage 1 Seed Camp, $50k debt), Monte Sole (Stage 2 Ecovillage, $15k debt), and Detroit Delray (Stage 3 Sovereign Superblock, $0 debt) with interactive synoptic module inspection tooltips explaining thermodynamic yields.
+* **Completed (Epic 1.1 — Reconnaissance Tour & Automatic Siting):**
+  - The 3-Stop Civilizational Preview Tour in `embarkation.js` and `world_map.js` seamlessly guides new players across Yukon Haven (Stage 1 Seed Camp, $50k debt), Monte Sole (Stage 2 Ecovillage, $15k debt), and Detroit Delray (Stage 3 Sovereign Superblock, $0 debt) with interactive synoptic module inspection tooltips explaining thermodynamic yields.
+  - Automatic Local Geolocation seamlessly centers the map on the player's real-world browser watershed, calculates localized solar irradiance (kWh/m²/yr) and precipitation (mm/yr), renders top 3 regional urban hubs, offers 6 established Candidate Corridors (Alps, Andes, Galicia, Sahel, Amazon, Kerala), and provides a silent privacy-first Mediterranean fallback without alert dialogs.
 
 The remaining civilizational expansion tasks are catalogued in [`game/TODO.md`](TODO.md) across four macro pillars:
 1. **Epic 1:** Bioclimatic Zoning Guidelines, Soft Proximity Feedback, and Dynamic Clearing Expansion.

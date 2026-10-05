@@ -231,11 +231,11 @@ game/
 ---
 
 #### **`game/src/ui/embarkation.js`**
-* **File Path:** `game/src/ui/embarkation.js` (785 lines, 32.5 KB)
+* **File Path:** `game/src/ui/embarkation.js` (870 lines, 35.8 KB)
 * **Role & Responsibility:** Milestone 1 Onboarding & Embarkation Desk. Features a 3-Stage guided onboarding flow:
   1. Stage 1 (Name, Craft & Look): Founder passport selection, 3D avatar customizer drawer.
   2. Stage 2 (3-Stop Civilizational Preview Tour): Animated planetary reconnaissance tour flying camera across Yukon Haven (Seed Node), Monte Sole (Ecovillage), and Detroit Delray (Sovereign Superblock) with interactive synoptic module inspection.
-  3. Stage 3 (Seed Siting): Browser GPS nearby auto-siting and free planetary placement on Leaflet map.
+  3. Stage 3 (Seed Siting): Automatic local browser geolocation with privacy-first Mediterranean corridor fallback, established Candidate Corridors quick-selection bar (Alps, Andes, Galicia, Sahel, Amazon, Kerala), rich environmental telemetry (solar irradiance yield factor, annual precipitation, top 3 regional urban hubs), and free planetary placement on Leaflet map.
 * **Imports:**
   - `L` from `leaflet`
   - `gameState` from `../core/state.js`
@@ -245,7 +245,9 @@ game/
   - `createAvatarCustomizer` from `./avatar_customizer.js`
 * **Exports:**
   - `CIVILIZATIONAL_TOUR_STOPS` (Array of tour stop definitions, metrics & module metadata)
-  - `EmbarkationDesk` (Class with `renderTourConsole()`, `flyToTourStop()`, `goToStep()`, `startCinematicZoomAndEmbark()`)
+  - `CANDIDATE_CORRIDORS` (Array of established bioregional candidate hubs: Alps, Andes, Galicia, Sahel, Amazon, Kerala)
+  - `computeBioregionalEnvironmentalFactors(lat)` (Calculates solar irradiance factor, annual kWh/m²/yr, and annual precipitation mm/yr)
+  - `EmbarkationDesk` (Class with `renderTourConsole()`, `flyToTourStop()`, `autoGeolocateOnEntrance()`, `goToStep()`, `startCinematicZoomAndEmbark()`)
 
 ---
 

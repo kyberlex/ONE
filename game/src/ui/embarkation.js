@@ -159,6 +159,48 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
   }
 ];
 
+/**
+ * Established Bioregional Candidate Corridors (Epic 1.1)
+ */
+export const CANDIDATE_CORRIDORS = [
+  { id: 'alps', name: '🏔️ Alps (Val di Susa)', lat: 45.1328, lng: 7.0542, country: 'Italy', seedName: 'Susa-ONE' },
+  { id: 'andes', name: '🌄 Andes (Sacred Valley)', lat: -13.3100, lng: -72.0300, country: 'Peru', seedName: 'Cusco-ONE' },
+  { id: 'galicia', name: '🌲 Galicia (Atlantic)', lat: 42.8782, lng: -8.5448, country: 'Spain', seedName: 'Galicia-ONE' },
+  { id: 'sahel', name: '🏜️ Sahel (Niger Oasis)', lat: 13.5116, lng: 2.1254, country: 'Niger', seedName: 'Sahel-ONE' },
+  { id: 'amazon', name: '🌿 Amazon (Canopy)', lat: -3.1190, lng: -60.0217, country: 'Brazil', seedName: 'Amazonas-ONE' },
+  { id: 'kerala', name: '🌊 Kerala (Monsoon)', lat: 9.9312, lng: 76.2673, country: 'India', seedName: 'Kerala-ONE' }
+];
+
+/**
+ * Computes estimated solar irradiance factor and annual rainfall based on latitude and climate zone
+ */
+export function computeBioregionalEnvironmentalFactors(lat) {
+  const absLat = Math.abs(lat);
+  let solarFactor = 1.0;
+  let annualKwhPerM2 = 1450;
+  let annualRainfallMm = 820;
+
+  if (absLat >= 56) {
+    solarFactor = 0.65;
+    annualKwhPerM2 = 980;
+    annualRainfallMm = 340;
+  } else if (absLat >= 28 && absLat < 56) {
+    solarFactor = 1.0;
+    annualKwhPerM2 = 1450;
+    annualRainfallMm = 820;
+  } else if (absLat >= 14 && absLat < 28) {
+    solarFactor = 1.45;
+    annualKwhPerM2 = 2150;
+    annualRainfallMm = 210;
+  } else {
+    solarFactor = 1.15;
+    annualKwhPerM2 = 1720;
+    annualRainfallMm = 1950;
+  }
+
+  return { solarFactor, annualKwhPerM2, annualRainfallMm };
+}
+
 export class EmbarkationDesk {
   constructor(containerEl, onEmbarkCallback = () => {}) {
     this.container = containerEl;
@@ -178,6 +220,7 @@ export class EmbarkationDesk {
     };
     this.avatarCustomizer = null;
     this.hasManuallyCustomized = false;
+    this.hasAutoGeolocated = false;
     
     // Tour state
     this.currentTourStopIndex = 0;
@@ -363,12 +406,24 @@ export class EmbarkationDesk {
                   <span>🌍 Place Your Seed Node</span>
                 </div>
                 <p class="location-subtitle">
-                  Tap <strong>"Nearby"</strong> to use your browser location, or <strong>pick freely on the map</strong>.
+                  Auto-centering on your home watershed. Tap <strong>"Nearby"</strong> for browser GPS, pick a <strong>Candidate Corridor</strong>, or <strong>click anywhere freely</strong>.
                 </p>
               </div>
               <div class="seed-name-box">
                 <span style="font-family: var(--font-mono); font-size: 13px; color: var(--emerald);">🌱</span>
                 <input type="text" id="seed-name-input" class="seed-name-input" value="${this.seedName}" maxlength="32" placeholder="Name your seed...">
+              </div>
+            </div>
+
+            <!-- Candidate Corridors Quick-Select Bar -->
+            <div class="candidate-beacons-row">
+              <span class="candidate-beacons-label">🌿 Candidate Corridors:</span>
+              <div class="candidate-beacons-chips">
+                ${CANDIDATE_CORRIDORS.map(c => `
+                  <button type="button" class="btn-candidate-chip" data-corridor-id="${c.id}">
+                    ${c.name}
+                  </button>
+                `).join('')}
               </div>
             </div>
 
@@ -388,7 +443,7 @@ export class EmbarkationDesk {
               </div>
             </div>
 
-            <!-- Bioregional Telemetry Bar -->
+            <!-- Bioregional Telemetry Bar (Rich Environmental Calculations) -->
             <div class="bioregion-telemetry-bar">
               <div class="telemetry-badges-row">
                 <div class="telemetry-badge badge-coords" id="telemetry-coords">
@@ -397,11 +452,17 @@ export class EmbarkationDesk {
                 <div class="telemetry-badge badge-climate" id="telemetry-climate">
                   🌿 Bioregion: Calculating...
                 </div>
-                <div class="telemetry-badge badge-beacon" id="telemetry-beacon">
-                  🌟 Nearest Anchor: Calculating...
+                <div class="telemetry-badge badge-solar" id="telemetry-solar">
+                  ☀️ Solar: 1.00x (1,450 kWh/m²/yr)
+                </div>
+                <div class="telemetry-badge badge-rain" id="telemetry-rain">
+                  🌧️ Rain: ~820 mm/yr
+                </div>
+                <div class="telemetry-badge badge-hubs" id="telemetry-hubs">
+                  🏙️ Hubs: Calculating regional network...
                 </div>
               </div>
-              <span class="telemetry-hint" id="telemetry-hint">Tap "Nearby" for browser GPS, or click anywhere on the map to plant your beacon!</span>
+              <span class="telemetry-hint" id="telemetry-hint">Auto-centering on your home watershed. Click anywhere on Earth to plant your seed!</span>
             </div>
           </div>
 
@@ -523,6 +584,38 @@ export class EmbarkationDesk {
         this.startCinematicZoomAndEmbark();
       });
     }
+
+    // Candidate Corridors Quick-Select (Epic 1.1)
+    this.container.querySelectorAll('.btn-candidate-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const corridorId = btn.dataset.corridorId;
+        const corridor = CANDIDATE_CORRIDORS.find(c => c.id === corridorId);
+        if (corridor) {
+          this.container.querySelectorAll('.btn-candidate-chip').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          this.currentLat = corridor.lat;
+          this.currentLng = corridor.lng;
+          this.seedName = corridor.seedName;
+          const seedInput = this.container.querySelector('#seed-name-input');
+          if (seedInput) seedInput.value = this.seedName;
+
+          const hintEl = this.container.querySelector('#telemetry-hint');
+          if (hintEl) {
+            hintEl.textContent = `🌿 Selected candidate corridor: "${corridor.name}". Telemetry & regional hubs updated!`;
+            hintEl.style.color = '#10b981';
+          }
+
+          if (this.worldMap && this.worldMap.map) {
+            this.worldMap.map.flyTo([corridor.lat, corridor.lng], 7.0, { duration: 1.2 });
+            this.worldMap.resolveLocation(corridor.lat, corridor.lng, true).then(res => {
+              this.majorCities = res?.majorCities || [];
+              this.updateTelemetry({ lat: corridor.lat, lng: corridor.lng, name: this.seedName }, this.majorCities);
+            });
+          }
+        }
+      });
+    });
   }
 
   renderTourConsole() {
@@ -777,7 +870,61 @@ export class EmbarkationDesk {
             false
           );
         }
+        // Auto-geolocation with privacy-first Mediterranean fallback (Epic 1.1)
+        this.autoGeolocateOnEntrance();
       }, 80);
+    }
+  }
+
+  autoGeolocateOnEntrance() {
+    if (this.hasAutoGeolocated) return;
+    this.hasAutoGeolocated = true;
+
+    const hintEl = this.container.querySelector('#telemetry-hint');
+    if (hintEl) {
+      hintEl.textContent = '📍 Auto-centering on your home watershed (Privacy-first fallback to Mediterranean)...';
+      hintEl.style.color = '#38bdf8';
+    }
+
+    if (this.worldMap) {
+      this.worldMap.locateUser(
+        (data) => {
+          this.currentLat = data.lat;
+          this.currentLng = data.lng;
+          this.seedName = data.nodeName;
+          this.majorCities = data.majorCities || [];
+
+          const seedNode = createCustomGlobalNode({
+            name: this.seedName,
+            lat: data.lat,
+            lng: data.lng
+          });
+          this.selectedSeedNode = seedNode;
+
+          const seedInput = this.container.querySelector('#seed-name-input');
+          if (seedInput) seedInput.value = this.seedName;
+
+          this.updateTelemetry(seedNode, this.majorCities);
+          if (hintEl) {
+            hintEl.textContent = `✅ Located near ${data.rawTown || 'town'}! Auto-sited as "${this.seedName}". Click anywhere to adjust.`;
+            hintEl.style.color = '#10b981';
+          }
+        },
+        (fallbackData) => {
+          // Privacy-First Fallback: Smooth default without popups or alerts
+          if (hintEl) {
+            hintEl.textContent = `📍 Privacy mode active: Centered on Mediterranean candidate corridor [${this.currentLat.toFixed(2)}°, ${this.currentLng.toFixed(2)}°]. Pick anywhere freely!`;
+            hintEl.style.color = '#10b981';
+          }
+          if (fallbackData && fallbackData.nodeName) {
+            this.currentLat = fallbackData.lat;
+            this.currentLng = fallbackData.lng;
+            this.seedName = fallbackData.nodeName;
+            this.majorCities = fallbackData.majorCities || [];
+            this.updateTelemetry({ lat: fallbackData.lat, lng: fallbackData.lng, name: this.seedName }, this.majorCities);
+          }
+        }
+      );
     }
   }
 
@@ -937,7 +1084,9 @@ export class EmbarkationDesk {
   updateTelemetry(node = null, majorCities = null) {
     const coordsEl = this.container.querySelector('#telemetry-coords');
     const climateEl = this.container.querySelector('#telemetry-climate');
-    const beaconEl = this.container.querySelector('#telemetry-beacon');
+    const solarEl = this.container.querySelector('#telemetry-solar');
+    const rainEl = this.container.querySelector('#telemetry-rain');
+    const hubsEl = this.container.querySelector('#telemetry-hubs');
 
     const lat = node ? node.lat : this.currentLat;
     const lng = node ? node.lng : this.currentLng;
@@ -952,21 +1101,21 @@ export class EmbarkationDesk {
       climateEl.textContent = `🌿 ${climate.name} (${climate.dwellingType})`;
     }
 
-    let minKm = Infinity;
-    let nearest = null;
-    GLOBAL_STARTER_NODES.forEach(b => {
-      const d = haversineKm(lat, lng, b.lat, b.lng);
-      if (d < minKm && d > 1) {
-        minKm = d;
-        nearest = b;
-      }
-    });
+    const env = computeBioregionalEnvironmentalFactors(lat);
+    if (solarEl) {
+      solarEl.textContent = `☀️ Solar: ${env.solarFactor.toFixed(2)}x (${env.annualKwhPerM2.toLocaleString()} kWh/m²/yr)`;
+    }
+    if (rainEl) {
+      rainEl.textContent = `🌧️ Rain: ~${env.annualRainfallMm.toLocaleString()} mm/yr`;
+    }
 
-    if (beaconEl) {
-      if (nearest) {
-        beaconEl.textContent = `🌟 Nearest Anchor: ${nearest.name.split(' ')[0]} (${minKm.toLocaleString()} km)`;
+    if (hubsEl) {
+      const cities = (majorCities && majorCities.length > 0) ? majorCities : (this.majorCities || []);
+      if (cities.length > 0) {
+        const top3 = cities.slice(0, 3).map(c => `${c.name} (${c.distanceKm} km)`).join(', ');
+        hubsEl.textContent = `🏙️ Hubs: ${top3}`;
       } else {
-        beaconEl.textContent = `🌟 Anchor Hub`;
+        hubsEl.textContent = `🏙️ Hubs: Calculating regional network...`;
       }
     }
   }
