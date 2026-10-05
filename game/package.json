@@ -1,0 +1,22 @@
+{
+  "name": "one-game",
+  "version": "0.1.0",
+  "description": "Open Networked Earth: The Living Longitudinal Commons Game",
+  "private": true,
+  "type": "module",
+  "author": "Kyberlex <kyberlex@proton.me>",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "three": "^0.186.1",
+    "trystero": "^0.25.4"
+  }
+}

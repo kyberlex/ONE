@@ -11,8 +11,6 @@
 
 ---
 
----
-
 # **CHAPTER I: THE PREAMBLE & THE INVARIANT BILL OF RIGHTS**
 
 ### **Preamble**
@@ -43,15 +41,14 @@ We, the living inhabitants of the Earth, recognizing that our existence is inext
    * Comprehensive primary, preventative, and emergency healthcare;
    * Foundational energy allotments for domestic heating, cooling, and cooking;
    * Unrestricted access to the open repository of knowledge, culture, and basic tools.
-   Under simultaneous multi-vector resource deficits, biological survival allocations are invariant and non-derogable, governed by the Thermodynamic Lexicographic Viability Operator (Art. 3.1.5).
-3. Physical survival shall never be leveraged by any assembly or collective as an instrument of behavioral conditioning, labor extraction, or social punishment.
+3. Physical survival shall never be leveraged by any assembly, institution, or collective as an instrument of behavioral conditioning, labor extraction, or social punishment.
 
 ---
 
 ### **Article 1.4 — Invariant Civil Liberties and Epistemic Freedom**
 1. Every individual and association possesses unconditional freedom of thought, conscience, speech, peaceful assembly, voluntary association, and cultural expression.
 2. No civic council, assembly, or digital infrastructure may censor peaceful dissent, suppress contrarian inquiry, or mandate orthodox belief.
-3. To preserve evolutionary adaptability, seven percent (7%) of all fabrication facilities, compute, and laboratories are reserved as a Heretic’s Commons for speculative research without peer gatekeeping. Access is allocated via rotational sortition requiring in-situ physical actuation and non-transferable cryptographic tokens. Where multi-stage synthesis requires continuous biological incubation or annealing, deterministic Process Continuity Locks prevent premature slot termination without human proxy trading. Consumed high-entropy reagents schedule equivalent regenerative feedstock inputs. Under Execution-Equals-Publication, physical actuation commits generative instructions to public repositories under Copyfarleft covenants. Outbound physical transfers require mass-balanced provenance certificates verified by telemetry. Research into synthetic self-replicating lethal pathogens, mass neurological agents, or radiological weapons is categorically barred. Synthesis hardware incorporates hardwired cryptographic firmware interlocks permanently inhibiting physical transcription of verified pathogen sequences. Disabling these interlocks constitutes a crime against biospheric continuity.
+3. To preserve evolutionary adaptability and prevent epistemic stagnation, an inviolable margin of seven percent (7%) of all common fabrication facilities, computational bandwidth, and research laboratories shall remain permanently reserved as a Heretic’s Commons for speculative, non-consensus research without peer gatekeeping. Where application requests exceed available capacity, access is allocated strictly via transparent rotational time sortition among applicants without ideological screening. This reserve carries an inviolable biosecurity boundary: research into synthetic self-replicating lethal pathogens, mass neurological agents, or radiological weapons is categorically barred from the commons. To enforce this boundary without human ideological surveillance or algorithmic thought-policing, all biological synthesis hardware (DNA/RNA printers) across all commons must incorporate hard-coded, bit-for-bit auditable cryptographic firmware interlocks that permanently inhibit the physical transcription of verified pathogen sequences cataloged in the public invariant biocrossing registry. Any attempt to physically disable or bypass these hardware interlocks constitutes a structural crime against biospheric continuity.
 
 ---
 
@@ -74,20 +71,21 @@ We, the living inhabitants of the Earth, recognizing that our existence is inext
 
 ---
 
----
-
 # **CHAPTER II: PROPERTY DECONSTRUCTION & THE JURISPRUDENCE OF USUFRUCT**
 
 ### **Article 2.1 — Abolition of Absentee Title and the Deconstruction of Dominium**
 1. The legacy legal doctrine of absolute private ownership (*dominium*)—the unilateral right to exploit, hoard, neglect, or destroy finite earthly assets—is permanently abolished across Open Networked Earth (O.N.E.).
 2. Title to land, water bodies, agricultural belts, natural biomes, and industrial manufacturing machinery exists exclusively as usufruct: a conditional right of active beneficial utility, continuous presence, and ecological stewardship.
-3. Title divorced from active occupancy and social utility is legally non-existent. Any tract of land, residential dwelling, or productive facility left abandoned or held for passive speculation returns immediately to the jurisdiction of the local commons. Foreign writs of execution, private equity mortgages, and investor-state arbitral awards (e.g., from the International Centre for Settlement of Investment Disputes [ICSID]) asserted against domestic usufruct holdings are null, void, and unenforceable ab initio under lex loci rei sitae.
+3. Title divorced from active occupancy and social utility is legally non-existent. Any tract of land, residential dwelling, or productive facility left abandoned or held for passive speculation returns immediately to the jurisdiction of the local commons.
 
 ---
 
 ### **Article 2.2 — The Tripartite Classification of Goods and Commons**
 To secure inviolable personal liberty while prohibiting monopolistic exploitation, all material assets are categorized into three mutually exclusive juridical classes:
 1. **Inviolable Personal Possessions:** Personal attire, domestic furnishings, artistic works, intimate items, private tools of craft, and personal computational interfaces. These remain under the absolute, permanent sovereignty of the individual and can never be expropriated, collectivized, or reassigned by any civic assembly.
+   * *Dual-Tier Tool Classification (Personal Craft vs. Civic Library):* To prevent both the privatization of communal infrastructure and the violation of artisan autonomy, productive tooling is structured into two operational tiers:
+     - *Tier 1 (Personal Craft Gear):* Precision artisanal implements, dedicated vocational trade tools, creative instruments, and individualized workstations actively utilized in personal mastery. These are inviolably personal and cannot be requisitioned or borrowed without explicit bilateral consent. Multiple redundant units of general utility tooling cannot claim Tier 1 immunity to practice private enclosure.
+     - *Tier 2 (Civic Tool Libraries):* Intermittent, high-durability infrastructure maintenance equipment (rotary masonry drills, telescoping ladders, drain augers, soil aerators, pressure washers) held in common usufruct within neighborhood tool libraries. Checkout operates under time-bounded mesh tokens; voluntary tool deposits are maintained and refurbished at 100% community expense, granting the depositor priority booking. Negligent damage is restored through guided maintenance chore hours under the local tool guild, turning repair into pedagogical skill-building.
 2. **Protected Possessory Usufruct:** Primary dwellings, domestic plots, family homesteads, and small-scale artisanal workshops actively inhabited and maintained. Held under perpetual, non-market covenants modeled on the Community Land Trust (CLT) framework, possessory usufruct grants inviolable domestic privacy, hereditary succession of occupancy among active co-inhabitants, and complete immunity from market foreclosure or rent extraction.
 3. **Federated Commons Usufruct:** Watersheds, aquifers, forests, mineral deposits, energy grids, transport corridors, industrial fabrication centers, hospitals, and communication backbones. These constitute indivisible commons held in perpetual trust for current and future generations, administered by municipal sortition councils and dedicated operational guilds.
 
@@ -97,7 +95,7 @@ To secure inviolable personal liberty while prohibiting monopolistic exploitatio
 1. Secure residential shelter is an inalienable human right. The eviction or displacement of any person into homelessness or destitution is a structural crime and is unconstitutional.
 2. Residential landlordism, speculative property holding, and monetary rent extraction are legally null and void.
 3. Where structural hazards, environmental remediation, or irreconcilable interpersonal domestic crises necessitate physical relocation, disputes shall be adjudicated by a Local Mediation Panel composed of three (3) sortition-selected citizens.
-4. In non-fault administrative, environmental, or hazard relocations, no transfer may be executed until the community has secured an equivalent or superior dwelling satisfying the physiological, accessibility, and social requirements of the affected inhabitants. Where downscaled relocation is mandated under Article 5.2 due to persistent, unexcused refusal of civic labor reciprocity, secure subsistence shelter fulfilling all Tier 1 biological baselines remains unconditionally guaranteed.
+4. No relocation may be executed until the community has secured an equivalent or superior dwelling satisfying the physiological, accessibility, and social requirements of the affected inhabitants.
 
 ---
 
@@ -123,59 +121,57 @@ To secure inviolable personal liberty while prohibiting monopolistic exploitatio
 
 ---
 
----
-
 # **CHAPTER III: BIOPHYSICAL REALITY & THERMODYNAMIC RESOURCE ACCOUNTING**
 
 ### **Article 3.1 — The Thermodynamic Boundary and Demonetization of the Commons**
-1. Economic coordination, industrial metabolism, and resource distribution across Open Networked Earth (O.N.E.) are grounded strictly in thermodynamics and ecological mass balance.
-2. Financial fiat, compound debt, and speculative prices are stripped of legal standing as claims on the commons.
-3. Accounting measures exergy in kilowatt-hours (kWh), dry mass in kilograms (kg), water in liters (L), and circular cycle times.
-4. Physical thermodynamics defines the ceiling: no collective may budget or consume resources beyond verified replenishment rates of local watersheds and the biosphere.
-5. Allocations employ dynamic input-output matrices minimizing baseline deviations via convex optimization: $\min (x - x_{	ext{baseline}})^T W (x - x_{	ext{baseline}})$. The diagonal tensor  = \operatorname{diag}(w_{	ext{survival}}, w_{	ext{sanitation}}, w_{	ext{grid}}, w_{	ext{upkeep}}, w_{	ext{discretionary}})$ is governed by abiotic criticality and decay half-life. Under multi-vector deficits (water, phosphorus, rare catalysts), the Thermodynamic Lexicographic Viability Operator ($\mathcal{L}_{\min}$) enforces somatic survival over infrastructural upkeep across all dimensions, collapsing non-metabolic allocations along their durability gradient before quadratic solvers execute. Manual weight tampering during active epochs is barred.
+1. All economic coordination, industrial metabolism, and resource distribution across Open Networked Earth (O.N.E.) are grounded strictly in the physical laws of thermodynamics and ecological mass balance.
+2. Abstract financial fiat, compound debt instruments, and speculative price mechanisms are stripped of legal standing as claims on the biophysical commons.
+3. Accounting units are available physical exergy (kWh), dry material mass (kg), purified water volume (L), and circular regenerative cycle times.
+4. Thermodynamics defines society's non-negotiable ceiling: no human collective may budget, extract, or consume resources beyond verified replenishment rates of local watersheds and the biosphere.
+5. Multi-vector allocations utilize decentralized dynamic Leontief-Kantorovich matrices: exergy dissipation (kWh), mass (kg), geochemical turnover, and critical entropy gradients form a constraint vector; no production authorization may drive local entropy balances beyond stoichiometric replacement limits.
 
 ---
 
 ### **Article 3.2 — Absolute Prohibition of Usury, Speculation, and Debt Compounding**
-1. Contracts or algorithms requiring compound interest, debt bondage, or derivative speculation are void.
-2. Credit exists solely as exergy, material, and machine time allocations for verified infrastructure, maintenance, or ecological restoration.
-3. No debt may compound, no dwelling may be pledged as collateral, and project failure shall never cause personal destitution or baseline loss.
+1. Any contract, algorithm, or ledger requiring exponential compound interest, debt bondage, or financial derivative speculation is unconstitutional, void, and unenforceable.
+2. Credit exists solely as the planned administrative allocation of physical energy, raw materials, and tool time dedicated to verified civic infrastructure, communal maintenance, or ecological restoration.
+3. No debt may compound; no commons, ecosystem, or dwelling may be pledged as commercial collateral; and no project failure shall result in personal destitution, indentured labor, or revocation of usufruct.
 
 ---
 
 ### **Article 3.3 — The Three-Tier Democratic Hierarchy of Needs**
-Resource dispatch adheres strictly to the Constitutional Hierarchy of Needs:
-1. **Tier 1 (Vital Biological Baseline):** Absolute priority for universal survival: potable water, nutritious food, resilient shelter, climate regulation, and comprehensive healthcare.
-2. **Tier 2 (Civic Maintenance and Infrastructure):** Operational upkeep of water treatment, microgrids, transit, communication networks, hospitals, and repair fab-labs.
-3. **Tier 3 (Decentralized Discretionary Surplus and Open Fab-Labs):** Cultural creation, craft, specialized tooling, and exploratory science. Surpluses are distributed via quadratic preference voting and participatory lot rosters in communal Open Fab-Labs. Access requires in-situ non-delegable presence tokens. To neutralize proxy-queuing and shadow commercial rent-seeking without somatic surveillance: (a) all toolpaths, code, and bio-sequences loaded into Tier 3 machinery enter the Common Heritage under Copyfarleft covenants, with subtractive swarf and scrap returned to verified circular recycling balances to prevent covert material hoarding; (b) consecutive slot draws incur sortition entropy decay; and (c) firmware caps run-lengths, restricting tools to prototyping and communal repair.
-4. **Tier 2-A Indivisible Capital Goods Buffer:** Upstream industrial assets—pyrometallurgy, silicon purification, lithography, and heavy machine tooling—are indivisible social capital. Capital depreciation reserves must be fully restored before releasing surplus for Tier 3 fabrication.
+Thermodynamic measurements establish physical constraints, not human social value. All resource dispatch strictly adheres to the Constitutional Hierarchy of Needs:
+1. **Tier 1 (Vital Biological Baseline):** The absolute, non-negotiable priority allocated to universal survival: verified potable water, wholesome daily nutrition, secure residential shelter, domestic heating and cooling, and comprehensive preventative and emergency healthcare.
+2. **Tier 2 (Civic Maintenance and Common Infrastructure):** The operational maintenance of water treatment plants, microgrids, public transit arteries, open communication networks, hospitals, and repair fab-labs.
+3. **Tier 3 (Decentralized Discretionary Surplus and Open Fab-Lab Initiative):** Allocations dedicated to cultural creation, artisanal craft, specialized instruments, and exploratory science. Tier 3 operates without central bureaucracy or price rationing: once Tiers 1 and 2 are secured, verified ecological surpluses are distributed through quadratic preference signaling and participatory Fab-Lab time rosters. Anti-Brokerage Invariant: High-demand machine slots are non-transferable and subject to quadratic frequency dampening; unused reservations forfeit after fifteen (15) minutes to standby creators drawn by lot. To prevent clandestine commercial exploitation, the Execution-Equals-Publication rule applies: all toolpaths, G-code, and CAM schematics executed on communal machinery are automatically published to the open mesh commons (Art. 1.4).
+4. **Tier 2-A Indivisible Capital Goods Buffer:** Upstream industrial assets (pyrometallurgy, silicon purification, lithography, heavy tooling) are indivisible social capital insulated from Tier 3 competition. Capital replacement and depreciation reserves must be restored before releasing surplus for discretionary fabrication.
 
 ---
 
-### **Article 3.4 — Bioregional Carrying Capacity and Non-Surveillance Telemetry**
-1. Human extraction and manufacturing are bounded by watershed Ecological Carrying Capacity (ECC).
-2. Public sensor arrays monitor non-personal abiotic variables: aquifer recharge, river discharge, soil carbon, biomass, grid load, and thermal dissipation.
-3. Telemetry hardware must employ open-architecture industrial controllers (e.g., open-hardware Programmable Logic Controllers [PLCs]) with bit-for-bit verifiable, deterministic firmware.
-4. Invariant Privacy Mandate: Telemetry is strictly confined to abiotic metrics. Algorithmic surveillance, biometric tracking, facial recognition, or consumption profiling of individuals is an absolute constitutional crime.
+### **Article 3.4 — Bioregional Carrying Capacity, Telemetry, and Analog Ground-Truthing**
+1. Human extraction and manufacturing within each watershed are bounded by its Ecological Carrying Capacity (ECC).
+2. Continuous, publicly accessible sensor arrays monitor non-personal thermodynamic variables: aquifer replenishment, river discharge, soil carbon, biomass accumulation, grid load, and thermal dissipation.
+3. Telemetry hardware must utilize open-hardware Programmable Logic Controllers (PLCs) with bit-for-bit verifiable firmware, barring proprietary binary blobs or untrusted enclaves.
+4. Invariant Privacy Mandate: Sensor networks are strictly confined to abiotic and macro-ecological variables. Algorithmic surveillance, biometric tracking, or individual domestic profiling is an absolute constitutional crime.
+5. Citizen Ground-Truthing and Split-Sample Verification: To prevent digital model drift, hardware bio-fouling, or sensor collusion, Neighborhood Councils regularly commission lay Citizen Ground-Truthing Squads equipped with manual analog instruments (graduated dipsticks, mechanical flow meters, colorimetric reagents). Audits follow a blind split-sample protocol: duplicate sealed samples are verified independently by laboratories drawn by lot from non-contiguous watersheds, ensuring cybernetic ledgers remain tethered to physical reality.
 
 ---
 
 ### **Article 3.5 — Strategic Physical Reserves and Non-Linear Resilience**
-1. To ensure anti-fragility against nonlinear disruptions, droughts, storms, and epidemics, each bioregion maintains Strategic Physical Reserves.
-2. Reserves comprise: (a) biological staples: grains, seeds, medical inventories, and water sustaining residents for twelve to twenty-four (12–24) months; and (b) high-entropy technical capital: standardized power semiconductors, reverse-osmosis membranes, vacuum switchgear, and transformer cores sustaining islanded microgrids for at least thirty-six (36) months. In symmetric inter-basin emergencies (Article 10.3.1), reserves transition dynamically to a Shared Metabolic Equilibrium Protocol, equalizing surviving supply days across federated basins without breaching donor baseline survival.
-3. Strategic reserves cannot be alienated, financialized, exported for fiat currency, or liquidated during non-emergency periods.
+1. To ensure anti-fragility against disruptions, droughts, solar storms, or epidemics, each bioregional federation maintains Strategic Physical Reserves.
+2. Decentralized stocks of grains, preserved staples, heirloom seeds, critical pharmaceuticals, and stationary LFP energy buffers must support 12–24 months of Tier 1 survival without external inputs.
+3. Strategic reserves cannot be liquidated for speculative trade, exported for external fiat, or diverted into discretionary surplus.
 
 ---
 
 ### **Article 3.6 — Auditing, Assembly Parity, and Decision Thresholds**
-1. Thermodynamic balance sheets are public and audited continuously by sortition assemblies in strict odd-number parity:
-   * Neighborhood utility monitoring: governed by Neighborhood Sortition Councils comprising fifteen (15) citizens.
-   * Bioregional exergy dispatch and strategic reserves: governed by Bioregional Citizen Assemblies comprising one hundred and one (101) delegates.
+1. Physical ledgers and thermodynamic balance sheets are public, drafted in accessible language, and reviewed continuously by sortition assemblies in strict odd-number parity:
+   * Neighborhood utility monitoring: adjudicated by Neighborhood Sortition Councils comprising fifteen (15) citizens.
+   * Bioregional exergy dispatch and strategic reserve oversight: governed by Bioregional Citizen Assemblies comprising one hundred and one (101) delegates.
 2. Graduated Deliberative Thresholds:
-   * **Dynamic Pro-Rata Biophysical Scaling Protocol:** Under normative capacity, Tier 1 is non-negotiable. Catastrophic capacity loss below aggregate baseline ({	ext{real}} < \sum B_{	ext{Tier1}}$) deterministically triggers uniform pro-rata scaling: $lpha = C_{	ext{real}} / \sum B_{	ext{Tier1}} < 1.0$, applying identically across 100% of the population. Solver divergence past three hundred (300) seconds engages safe-mode lexicographic dispatch, freezing Tier 3 to preserve Tier 1 flows. Within twelve (12) hours, an emergency Sortition Assembly (101 delegates for bioregions; 301 for continents) audits telemetry and directs capital conversion. Caste triage is a crime against Chapter I.
-   * **75% Constitutional Supermajority:** Required to alter constitutional accounting formulas, reserve rules, or capital classifications.
+   * **75% Constitutional Supermajority:** Required strictly to alter, diminish, or recalculate per capita Tier 1 survival allocations.
    * **60% Qualified Majority:** Required for five-year bioregional infrastructural energy budgets and Tier 3 discretionary allocations.
-   * **50%+1 Simple Majority:** Permitted solely for procedural motions and emergency mobilization of Strategic Physical Reserves during certified natural disasters, carrying a mandatory thirty (30) day sunset review.
+   * **50%+1 Simple Majority:** Permitted solely for the immediate mobilization of Strategic Physical Reserves during certified natural disasters or ecological crises, carrying a mandatory thirty (30) day sunset review.
 
 ---
 
@@ -192,169 +188,168 @@ Resource dispatch adheres strictly to the Constitutional Hierarchy of Needs:
 ### **Article 4.2 — Tiered Assembly Architecture and Invariant Odd Parity**
 Deliberative authority is structured through concentric citizen chambers matched to bioregional scales. To permanently prevent mathematical ties, factional deadlock, and artificial parity splits, every deliberative body maintains strict odd-number parity:
 1. **Local Mediation Panels:** Three (3) citizens, serving three-month mandates, dedicated to immediate neighborhood conflict resolution, domestic safety, and housing restitution.
-2. **Neighborhood Sortition Councils:** Fifteen (15) citizens, serving six-month mandates, responsible for localized commons maintenance, public utility oversight, and communal facilities.
+   * *Subsidiarity Scale for Emerging Nodes (< 50 Pop):* Nascent settlements with fewer than fifty (50) adult residents vest sovereign municipal administration in the Local Mediation Panel (3 citizens), preventing labor exhaustion while preserving odd parity. To prevent intimate clan capture, no two individuals sharing first-degree kinship or domestic partnership may serve concurrently. Contested rulings retain an unconditional right of appeal (*Provocatio*) to a cross-watershed blind panel of fifteen (15) citizens. Deadlocked 75% supermajority votes in three-person panels automatically escalate to a direct plebiscite of all adult node residents.
+2. **Neighborhood Sortition Councils:** Fifteen (15) citizens, serving six-month mandates, responsible for localized commons maintenance, public utility oversight, and communal facilities (triggered automatically upon reaching fifty residents).
 3. **Bioregional Citizen Assemblies:** One hundred and one (101) delegates, serving one-year staggered mandates, governing watershed ecological balances, industrial zoning, and inter-node agreements.
 4. **Continental Governance Chambers:** Three hundred and one (301) citizens, serving eighteen-month staggered mandates, coordinating continental transport backbones, ecological regeneration corridors, and macro-balances.
-5. **Global Commons Assembly:** One thousand and one (1,001) citizens, serving two-year staggered mandates, establishing planetary thermodynamic boundaries, ratifying cross-continental covenants, and safeguarding constitutional invariants.
+5. **Global Commons Assembly:** One thousand and one (1,001) citizens, serving two-year staggered mandates, establishing planetary thermodynamic boundaries, ratifying cross-continental covenants, and safeguarding the constitutional invariants of the Earth.
 
 ---
 
-### **Article 4.3 — Stratified Selection, Universal Service, and Sortition Continuity**
-1. Jurors for all sortition bodies are selected from universal civic registers through open cryptographic and mechanical lotteries, stratified across age, gender, and geography.
-2. Civic service by lot is a universal prerogative and inviolable duty. Citizens summoned receive complete release from routine labor, guaranteed domestic support replacement, and full life-support allocations.
-3. Sortition Continuity: Assembly cohorts are renewed in quarterly tranches (one-fourth cohort renewal every ninety-one [91] days) to prevent epistemic severance and institutional memory collapse. Outgoing delegates spend their final thirty (30) days in non-voting pedagogical mentoring roles. Consecutive terms in the same tier are prohibited; every completed mandate requires a mandatory hiatus equal to twice the duration served.
-4. Prevention of Shadow Bureaucracies: Assembly facilitators and scribes serve on strictly temporary, rotating contracts. Administrative staff are barred from framing agendas or filtering citizen inquiries. Sortition delegates hold direct authority over inquiry formulation.
+### **Article 4.3 — Stratified Selection, Universal Service, and Anti-Bureaucratic Rotation**
+1. Jurors for all sortition bodies are selected from universal civic registers through open, publicly verifiable cryptographic and mechanical lotteries. Stratification mirrors the population across age, gender, and geography, eliminating educational, wealth, or cognitive bias.
+2. Civic service by lot is a universal prerogative and inviolable duty. Citizens summoned receive complete release from routine labor, guaranteed replacement of domestic support, and full life-support allocations.
+3. Anti-Entrenchment Mandate: No citizen may serve consecutive terms in the same tier; every mandate requires a mandatory hiatus equal to twice the duration of the term served.
+4. Prevention of Shadow Bureaucracies: Assembly secretariats, logistical facilitators, and legal scribes serve on strictly temporary, rotating contracts. It is an impeachable constitutional offense for administrative staff to frame deliberative agendas, filter citizen questions, or exercise covert influence over assembled jurors. Sortition delegates retain direct authority over agenda setting and inquiry formulation.
 
 ---
 
-### **Article 4.4 — Adversarial Translation, Epistemic Parity, and Precautionary Thresholds**
-1. Sortition jurors deliberate as the sovereign ethical conscience of the commons. Technical advisors and engineers serve strictly in an evidentiary, non-voting capacity.
-2. Tripartite Epistemic Working Groups: Specialized data, thermodynamic models, and algorithmic balance projections are translated into transparent scenarios by rotating working groups consisting of: (a) one-third domain scientists selected via rotating sortition from Global Scholastic Guilds; (b) one-third lay delegates drawn randomly from the Demarchic Assembly; and (c) one-third adversarial verifiers designated under the Heretic’s Commons (Article 1.4) charged with stress-testing dynamic assumptions. Permanent institutional modeling bodies are prohibited; all modeling code and computational weights must run on open deterministic nodes.
-3. Intelligibility and Subordination Mandate: Technical panels bear the duty to articulate models into plain-language scenarios before public sittings. Epistemic working groups possess zero legislative veto, hold no voting bloc within assemblies, and are structurally barred from assuming allocative governance or altering baseline constraint weights during deliberative deadlocks.
-4. Precautionary Invariant and Byzantine Validation: Where models indicate imminent risk of crossing planetary boundaries, the Precautionary Principle (*In dubio pro natura et vita*) takes precedence. Automated precautionary suspensions of production require independent confirmation via Byzantine Fault Tolerant (BFT) multi-modal sensor telemetry (coupling galvanic, thermal, and optical metrics). Contested anomalies or sensor divergence shall not freeze operational infrastructure; systems revert immediately to safe-state baseline parameters while a seventy-two (72) hour physical ground-truth audit is executed. Where sudden hydrological or exergy flow diversions threaten acute downstream metabolic shock, the ground-truth audit is expedited to twelve (12) hours before an emergency Local Mediation Panel (3 citizens) to prevent asymmetric inter-basin damage.
+### **Article 4.4 — Adversarial Expert Testimony and Intelligible Decision-Making**
+1. Sortition jurors deliberate not as technical specialists, but as the sovereign ethical conscience of the living commons. Technical advisors, scientists, and engineers serve strictly in an evidentiary, non-voting capacity.
+2. Mandatory Adversarial Cross-Examination: On complex proposals, the assembly equips two independent, rival expert panels mandated to interrogate each other’s empirical assumptions and unstated biases in open public sessions, deliberating free from corporate grants or debt.
+3. The Practical Intelligibility Mandate: Technical experts bear the affirmative burden of translating mathematical and algorithmic models into plain-language societal consequences, trade-offs, and failure scenarios.
+4. Epistemic Filibuster and Precautionary Invariant: If rival panels introduce manufactured confusion or bad-faith gridlock, the assembly invokes the Precautionary Principle (*In dubio pro natura et vita*), withholding approval. Precautionary suspension applies strictly to novel structural interventions; it shall never interrupt certified routine maintenance or critical life support. Persistent deadlocks are referred to an independent sortition panel of scientific practitioners from non-contiguous watersheds.
 
 ---
 
 ### **Article 4.5 — Deliberative Protocols and Graduated Voting Thresholds**
-Deliberative assemblies vote exclusively through graduated thresholds:
+To balance decisive responsiveness with permanent protection against hasty factional overreach, deliberative assemblies vote exclusively through graduated thresholds:
 1. **75% Constitutional Supermajority:** Required exclusively for structural amendments to this Constitution, alterations of Invariant Rights, declarations of de-commodification, or modifications to the biological survival baseline.
-2. **60% Qualified Majority:** Required for multi-year bioregional plans, foundational resource allocations, inter-watershed treaties, and general regulatory statutes. Rejection votes are null unless sponsored by a recognized minority of at least fifteen (15) delegates and accompanied by a thermodynamically certified alternative plan. If an assembly deadlocks on two successive ballots separated by fourteen (14) days, it initiates deterministic Condorcet rank-choice optimization across verified plans. If deadlock persists past sixty (60) days, an auxiliary Synthesis Jury of one hundred and one (101) citizens resolves the dispute within fourteen (14) days via simple majority (50%+1) run-off between the top two Condorcet finalists. Allocations continue uninterrupted under preceding empirical telemetry baselines, explicitly barring safe-mode triage.
-3. **50%+1 Simple Majority:** Permitted exclusively for routine procedural motions and emergency disaster responses carrying an automatic, unextendable thirty (30) day sunset clause.
+2. **60% Qualified Majority:** Required for multi-year bioregional development plans, foundational resource allocations, inter-watershed treaties, and the enactment of general regulatory statutes.
+3. **50%+1 Simple Majority:** Permitted exclusively for routine administrative scheduling, procedural assembly motions, and immediate emergency disaster responses. Emergency decrees passed by simple majority carry an automatic, unextendable thirty (30) day sunset clause, requiring subsequent ratification under the sixty percent (60%) qualified threshold.
 
 ---
 
 # **CHAPTER V: ESSENTIAL PHYSICAL LABOR, CARE & INTERGENERATIONAL SURVIVAL**
 
 ### **Article 5.1 — Shared Maintenance, Rotational Shifts, and Ergonomic Multipliers**
-1. Human civilization rests upon material upkeep. To eliminate exploited underclasses and hereditary castes, essential non-automated maintenance—sanitation, toxic recycling, soil regeneration, seasonal harvesting—constitutes a shared responsibility distributed through rotational rosters across able-bodied adults.
-2. Labor is de-commodified: human effort can neither be bought, rented, traded, nor subordinated through wage contracts or debt extortion.
-3. Ergonomic Multipliers and Kinetic Metabolic Floor: Arduous or hazardous tasks carry certified ergonomic time multipliers of 3x–5x against baseline obligations and sabbatical allocations. Unstaffed shifts scale through unpredictable Dutch matching intervals and inter-watershed pooling to prevent holdouts. Under emergency biophysical contractions (Article 3.6.2), somatic metabolic replenishment for active Class-A maintenance ({\text{kinetic}}$) is quarantined from pro-rata reductions, ensuring physical workers do not suffer physiological exhaustion relative to baseline recipients. Unstaffed nodes after three cycles are throttled until automation deploys.
-4. The Full Automation Trajectory: The strategic objective of O.N.E. is progressive automation of all arduous, hazardous, and repetitive labor through open robotics. Rotational labor is recognized as a transitional necessity; as automation expands, mandatory shifts systematically contract toward zero.
+1. Human civilization rests upon the physical upkeep of its material foundations. To permanently eradicate exploited underclasses and hereditary castes, all essential maintenance that cannot yet be automated—sanitation, toxic recycling, topsoil regeneration, and seasonal harvesting—constitutes a shared civic responsibility distributed through rotational rosters across able-bodied adults.
+2. Labor within Open Networked Earth (O.N.E.) is fundamentally de-commodified: human effort can neither be bought, rented, traded, nor subordinated through wage contracts or debt extortion.
+3. Ergonomic Multipliers: Arduous or hazardous tasks—including active emergency rescue, structural and wildland firefighting, toxic remediation, and levee shoring—carry certified ergonomic time multipliers of 3x–5x against baseline civic obligations, compressing required service intervals and prioritizing robotic automation. Hazard standby without active deployment is accounted strictly at baseline parity (1.0x) to eliminate rent-seeking idle accumulation.
+4. The Full Automation Trajectory and Transitional Mandate: The strategic goal of O.N.E. is the progressive and total automation of all arduous, hazardous, repetitive, and routine physical labor through open robotics and automated machinery. Rotational human physical labor is recognized as a necessary transitional mechanism during infrastructural rollout; as robotic automation expands, mandatory physical shifts systematically contract toward zero, liberating human existence for caregiving, empirical science, craftsmanship, and ecological stewardship.
 
 ---
 
-### **Article 5.2 — The Reciprocity Invariant and Graduated Non-Carceral Sanctions**
-1. The biological baseline of survival—clean water, daily caloric nutrition, shelter, and medical care—is an inalienable birthright, permanently immune to administrative revocation or labor compulsion.
-2. Membership in a self-governing community implies a binding duty of mutual material aid. Persistent refusal of assigned shifts without medical cause triggers an automated, four-stage progressive rebalancing:
-   * *Stage One:* Direct civic notification, transparent peer audit, and labor-capability reassessment before a Local Mediation Panel (3 citizens);
-   * *Stage Two:* Suspension of elective surplus claims (Tier 3 fab-lab queues, high-latency travel credits, specialized tooling) while baseline survival flows remain untouched;
-   * *Stage Three:* Suspension of political sortition rights and disqualification from holding deliberative civic office;
-   * *Stage Four:* Revocation of possessory usufruct over high-throughput communal assets and spatial assignment to an individual Tier 1 Baseline Accommodation. If physical relocation is refused, execution proceeds via non-kinetic Metabolic Decoupling: communal utility matrices (three-phase power, surplus compute, workshop loops) are rerouted around the asset perimeter to incoming stewards, while the occupied footprint is clamped to an autonomous Tier 1 Survival capsule providing inviolable water, calories, climate regulation, and connectivity. Somatic force, kinetic eviction, and carceral detention are unconstitutional.
-3. Immediate Reintegration Invariant: Full civic standing, sortition eligibility, and Tier 3 access are restored ipso jure the moment the citizen resumes scheduled reciprocity contributions.
+### **Article 5.2 — The Reciprocity Invariant and Anti-Free-Riding Sanctions**
+1. The biological baseline of survival—clean water, daily caloric nutrition, residential shelter, and primary medical care—is an inalienable birthright, permanently immune to administrative revocation or labor compulsion.
+2. Membership in a self-governing community implies a binding duty of mutual material aid. Where an able-bodied adult systematically refuses their assigned rotational shifts without medical cause, response proceeds through escalating non-carceral sanctions:
+   * Mandatory accompaniment before a Local Mediation Panel (3 citizens) to assess burnout or hidden disability;
+   * Suspension of political sortition rights and disqualification from holding deliberative office;
+   * Total exclusion from Tier 3 surplus fabrication, advanced computing grids, and inter-basin transit commons;
+   * Relocation within the municipal district to baseline subsistence accommodations, preserving physical life while barring free-riding on the uncompensated labor of others, applied specifically where the former dwelling incurs communal maintenance loads the individual refuses to reciprocate.
+3. Immediate Reintegration Invariant: The suspension of deliberative sortition rights and Tier 3 access is strictly non-punitive and carries zero perpetual civic stigma. Full civic standing, sortition eligibility, and Tier 3 commons access are restored *ipso jure* the moment the citizen resumes any scheduled reciprocity shift or mutually agreed equivalent civic contribution.
 
 ---
 
 ### **Article 5.3 — Empirical Child Education and Neurodevelopmental Integrity**
-1. Education within the commons is anchored strictly in replicated empirical science, developmental neurobiology, and sensory-motor prepared environments, barring ideological indoctrination and standardized testing cartels.
+1. Education within the commons is anchored strictly in replicated empirical science, developmental neurobiology, and proven pedagogical methods (including sensory-motor prepared environments), permanently barring ephemeral pedagogical fads, ideological indoctrination, and standardized testing cartels.
 2. Educational Triad:
-   * *Ages 0 to 7 (Physical Reality & Motor Foundation):* Anchored in tactile nature, soil cultivation, geometry, music, and unmeasured play, preventing attentional dysregulation linked to premature digital abstraction;
-   * *Ages 7 to 13 (Epistemic Hygiene & Dialectics):* Systematic instruction in cognitive de-biasing, statistical uncertainty, dynamic feedback systems, and Socratic dialogue;
-   * *Ages 13+ (Guild Apprenticeship & Mastery):* Integration into active research, agricultural, and fabrication collectives alongside mentors, establishing competence through peer-reviewed contribution.
+   * *Ages 0 to 7 (Physical Reality & Motor Foundation):* Anchored exclusively in tactile nature, soil cultivation, physical geometry, acoustic music, and unmeasured play, preventing attentional dysregulation linked to premature digital abstraction;
+   * *Ages 7 to 13 (Epistemic Hygiene & Dialectics):* Systematic instruction in cognitive de-biasing, statistical uncertainty, dynamic feedback systems, and Socratic dialogue to decouple inquiry from personal ego;
+   * *Ages 13+ (Guild Apprenticeship & Mastery):* Adolescent integration into active research, agricultural, and fabrication collectives alongside adult mentors, establishing competence through peer-reviewed real-world contribution.
 
 ---
 
 ### **Article 5.4 — Empirical Parenting Education and Universal Alloparenting**
-1. Rearing future generations requires specialized cognitive and somatic preparation. Bioregional communities establish Parenting Formation Commons rooted in attachment neurobiology, nervous system co-regulation, and the conscious deconstruction of intergenerational trauma scripts.
-2. The Alloparenting Practicum: As a universal civic prerequisite, young adults complete practical rotations in communal nurseries under experienced mentors, mastering pediatric first aid, sleep architecture, and somatic calming.
-3. The First 1,000 Days Scaffolding: Communal habitats embed postpartum caregivers directly within residential circles, guaranteeing twenty-four-hour relief, nourishment, and liberation from productive civic duties for new parents.
+1. Rearing future generations requires specialized cognitive, emotional, and somatic preparation. Bioregional communities establish evidence-based Parenting Formation Commons rooted in attachment neurobiology, nervous system co-regulation, and the conscious deconstruction of inherited intergenerational trauma scripts.
+2. The Alloparenting Practicum: As a universal civic prerequisite, young adults complete practical rotations in communal nurseries and early childcare hubs under experienced mentors, mastering pediatric first aid, sleep architecture, and infant somatic calming.
+3. The First 1,000 Days Scaffolding: Communal habitats embed postpartum caregivers and pediatric specialists directly within residential living circles, guaranteeing 24-hour relief, communal nourishment, and total liberation from productive civic duties for new parents.
 
 ---
 
 ### **Article 5.5 — Empirical Neuro-Medicine and Etiological Mental Health**
-1. Symptom-checklist taxonomies and profit-driven chemical sedation are permanently abolished. Mental health is stewarded through empirical neuro-medicine, environmental de-pathologization, and etiology-based diagnostics.
-2. Nervous system distress is treated primarily as a biological response to environmental stress, resolved through communitarian security, autonomy, and nature access.
-3. Clinical Intervention: Persistent psychiatric suffering is investigated through non-invasive biomarkers: neuro-inflammatory screening, endocrine profiling, and gut-brain metabolic analysis, strictly excluding continuous surveillance telemetry. Therapies prioritize curative neuroplasticity, somatic trauma release, and supervised restorative modalities. Human neurodiversity is protected as an evolutionary asset, never blunted for conformity.
-4. Epistemic Protection: Therapeutic methods remain subject to continuous empirical falsifiability and open clinical audit under the Heretic’s Commons framework.
+1. Monopolistic symptom-checklist taxonomies and profit-driven lifelong chemical sedation are permanently abolished. Mental health is stewarded through empirical neuro-medicine, environmental de-pathologization, and etiology-based diagnostics.
+2. Nervous system distress (anxiety, chronic demoralization, hyper-vigilance) is treated primarily as a biological response to environmental stress, resolved through communitarian security, autonomy, and nature access.
+3. Clinical Intervention: Persistent psychiatric suffering is investigated through objective biomarkers: high-resolution dynamic neuro-telemetry, neuro-inflammatory screening, endocrine profiling, and gut-brain metabolic analysis. Therapies prioritize curative neuroplasticity, somatic trauma release, and supervised neuro-restorative modalities. Human neurodiversity is protected as an evolutionary asset, never chemically blunted for social conformity.
+4. Epistemic Protection: No medical guild or assembly may establish a dogmatic monopoly over clinical science; therapeutic methods remain subject to continuous empirical falsifiability and open clinical audit under the Heretic’s Commons framework.
 
 ---
 
 ### **Article 5.6 — Caregiver Immunity and Sortition Governance**
 1. Childcare, early education, elder accompaniment, and somatic nursing constitute the supreme productive foundations of society. Any citizen actively engaged in daily family or community caregiving fulfills their civic reciprocity obligations ipso jure, receiving full exemption from rotational physical maintenance shifts.
-2. Intimidation Safeguards and Diagnostic Standards: Contested caregiver declarations rely on objective dependent-to-caregiver demographic verification ratios and certified diagnostic etiologies. Disputes are adjudicated not by immediate neighbors, but by a blind-drawn, cross-watershed Sortition Panel of fifteen (15) citizens convened from outside the registrant residential cluster, insulating jurors from clan capture, kin gaming, and inter-basin friction. Structural revisions to labor multipliers or educational standards require a seventy-five percent (75%) qualified supermajority vote of the seated Bioregional Citizen Assembly (101 delegates).
+2. Roster supervision is conducted by Neighborhood Sortition Councils (15 citizens). Structural revisions to labor multipliers or educational standards require a seventy-five percent (75%) qualified supermajority vote of the seated Bioregional Citizen Assembly (101 delegates).
 
 ---
 
 # **CHAPTER VI: DISTRIBUTED INFRASTRUCTURE, MICROGRIDS & ANALOG RESILIENCE**
 
-### **Article 6.1 — The Decoupling Mandate, Microgrid Autonomy, and Autonomic Protection**
+### **Article 6.1 — The Decoupling Mandate and Thirty-Day Islanded Autonomy**
 1. Every municipal habitat and bioregional node within Open Networked Earth (O.N.E.) must engineer and maintain physical infrastructure capable of complete islanded self-sufficiency.
-2. Thirty-Day Islanded Autonomy: In catastrophic macro-grid disruptions or external logistical severance, every node shall independently sustain Tier 1 life support—potable water filtration, domestic thermal regulation, medical refrigeration, and baseline nutritional preparation—for a mandatory minimum of thirty (30) consecutive days.
-3. Autonomic Protective Reflexes vs. Deliberative Allocation: Infrastructure control is bifurcated into Deliberative Allocation Logic and Autonomic Protective Reflexes. Sub-second stabilization—droop response, virtual inertia, overcurrent trips, and fluid transient mitigation (hydraulic accumulators, surge valves damping Joukowsky pressure spikes)—executes via deterministic analog circuitry or mechanical interlocks operating below one second. In water networks, gravity gradients are preserved via stepped break-pressure tanks and floating intake decanters; under emergency rationing, volumetric dispatch operates via batch-cycled timed head retention rather than steady-state aperture throttling, eliminating Darcy-Weisbach siphon breaks at high-elevation nodes. Autonomic loops cannot alter macro entitlements.
-4. Single-point systemic dependencies on external centralized cartels or fragile long-distance transmission grids are unconstitutional.
+2. In the event of catastrophic macro-grid disruption, extreme weather events, or external logistical severance, every node shall independently sustain foundational Tier 1 life support—potable water filtration, domestic thermal regulation, medical refrigeration, and baseline nutritional preparation—for a mandatory minimum of thirty (30) consecutive days.
+3. The design or deployment of critical municipal utilities that introduce single-point systemic dependencies on external centralized cartels or fragile long-distance transmission grids is unconstitutional.
 
 ---
 
 ### **Article 6.2 — Modular Distributed Energy and Thermodynamic Microgrid Architecture**
 1. Primary energy generation across all nodes is decentralized, modular, and grounded exclusively in renewable biophysical sources: distributed Photovoltaic (PV) arrays, micro-hydroelectric turbines, modular wind generators, and localized biomass digestion.
-2. Stationary electrical storage is restricted to non-toxic, long-duration, fire-safe architectures (e.g., Lithium Iron Phosphate [LFP] chemistry, sodium-ion cells, or mechanical gravity and flow reservoirs), eliminating reliance on toxic chemistry and scarce mineral monopolies.
+2. Stationary electrical storage is restricted to non-toxic, long-duration, fire-safe architectures—principally Lithium Iron Phosphate (LFP) chemistry and mechanical gravity or flow reservoirs—eliminating reliance on toxic cobalt and scarce mineral monopolies.
 3. Power distribution architectures are engineered for minimal thermodynamic entropy, utilizing localized Direct Current (DC) microgrid buses for direct coupling between generation arrays, chemical storage banks, and high-draw industrial drives, alongside resilient, high-efficiency Alternating Current (AC) distribution where spatial distance and standardized machinery require it.
 
 ---
 
 ### **Article 6.3 — Open Fabrication Commons and Universal Repairability**
 1. Productive capacity and mechanical repair capabilities are distributed across municipal fabrication commons and neighborhood workshops.
-2. Every bioregional node maintains equipped workshops containing standardized digital fabrication and machine-tool arrays (e.g., Computer Numerical Control [CNC] mills, precision lathes, cutting tables, induction forges, and additive fabricators) dedicated to infrastructure repair. In islanded Black-Sky operations, additive systems are authorized to deploy parameterized runtime rheology toolpaths to accommodate viscosity variations in recycled polymer and scrap metal feedstocks, exempting physical feed-rate compensation from static compile bans while maintaining open hardware designs.
-3. Industrial automation systems and Programmable Logic Controllers (PLCs) execute transparent, open-hardware machine code. To prevent sensor spoofing and actuator fatigue, protective tripping requires triple-modular redundancy with two-of-three (2-of-3) plausibility voting across orthogonal physical domains (thermal, pressure, galvanic) utilizing non-identical sensor micro-architectures with hard analog cooldown hysteresis.
-4. Blueprints and schematics constitute universal public commons. Planned obsolescence, cryptographic vendor lock-in, and proprietary software encumbrances on mechanical tools and spare parts are legally void.
+2. Every bioregional node shall maintain equipped municipal workshops containing standardized Computer Numerical Control (CNC) mills, precision lathes, laser cutting tables, induction forges, and additive manufacturing fabricators dedicated to agricultural, energetic, and civic infrastructure.
+3. Machine tools and automated industrial controls are operated exclusively via open-hardware Programmable Logic Controllers (PLCs) executing transparent, auditable machine code.
+4. Planned obsolescence, cryptographic vendor lock-in, and proprietary software encumbrances on mechanical tools and spare parts are legally void. Mechanical blueprints and schematics constitute universal public commons, accessible to all for local maintenance and replication.
 
 ---
 
-### **Article 6.4 — Distributed Telecommunications Mesh and Multi-Spectral Corridors**
+### **Article 6.4 — Distributed Telecommunications Mesh and Optical Corridors**
 1. Digital communications infrastructure is organized as a decentralized, resilient commons maintained directly by the population.
-2. Public networks operate through decentralized mesh architectures. To guarantee anti-fragility against electromagnetic interference, physical severance, or atmospheric degradation, nodes maintain multi-vector transmission redundancy (localized wireless mesh topologies, line-of-sight optical transceivers, directional microwave relays, sub-gigahertz telemetry, and buried quartz fiber waveguides).
-3. Atmospheric attenuation, radio-frequency denial, or optical scattering automatically triggers hardwired underground galvanic-pulse signaling pathways to maintain metabolic telemetry across inter-communal nodes.
-4. Network routing protocols are self-healing, encrypted end-to-end, and structurally immune to centralized packet inspection.
+2. Public networks operate through localized wireless mesh topologies, line-of-sight optical laser transceivers, directional microwave relays, and license-free sub-gigahertz Long Range (LoRa) radio telemetry bands.
+3. Network routing protocols are self-healing, encrypted end-to-end, and structurally immune to centralized packet inspection or corporate telecommunication choke points.
+4. High-bandwidth optical fibers deployed along rail corridors and aqueducts form open bioregional backbones, interconnecting watershed nodes into an open planetary data exchange without sovereign telecommunication gatekeepers.
 
 ---
 
-### **Article 6.5 — The Black-Sky Protocol, Synchrocheck Interlocks, and Dead-Bus Sequences**
-1. To ensure human survival against severe electromagnetic pulses, geomagnetic storms, and microelectronic collapse, all life-support networks incorporate non-electronic mechanical overrides under the Black-Sky Protocol.
-2. Cold-Start and Passive Synchrocheck Interlocks: Tier 1 recovery of electrical generation and life-support commons following total grid collapse shall be executable via human muscle-power, stored mechanical potential, or unassisted black-start prime movers, independent of microprocessors or external communications. To prevent catastrophic mechanical shearing or inverter destruction from human neuromuscular reaction time limits, closing onto energized alternating-current lines is physically governed by passive, non-programmable mechanical synchrocheck solenoids, analog dark-lamp permissives, or DC-decoupled bus couplings.
-3. Islanded Resynchronization Sequence: Reconnection of islanded microgrids to the regional backbone proceeds via zero-voltage dead-bus energization or self-synchronizing asynchronous direct-current interties, decoupling manual timing from electromagnetic phase alignment.
-4. Analog hydraulic regulators, gravity-fed aqueducts, and durable printed engineering archives shall be preserved and inspected at certified intervals.
+### **Article 6.5 — The Black-Sky Protocol and Analog Mechanical Fallbacks**
+1. To ensure human survival against severe electromagnetic pulses, solar geomagnetic storms, and total microelectronic degradation, all foundational life-support networks must incorporate non-electronic mechanical overrides under the Black-Sky Protocol.
+2. Primary municipal water gates, sewer redirection valves, reservoir distribution conduits, high-voltage physical isolators, and emergency medical storage lockers must maintain manual, human-operable levers and counterweights requiring zero software, electric power, or telemetric input.
+3. Analog hydraulic regulators, gravity-fed aqueducts, and durable printed cartographic and mechanical engineering archives shall be preserved and systematically inspected at certified intervals. Any critical life-support facility incapable of manual operation during total electronic collapse is unconstitutional and barred from operation.
 
 ---
 
 ### **Article 6.6 — Infrastructure Governance, Parity, and Decision Thresholds**
-1. Distributed networks are administered openly under sortition oversight in strict odd-number parity:
-   * Neighborhood utility oversight: governed by Neighborhood Sortition Councils comprising fifteen (15) citizens by a sixty percent (60%) qualified majority.
-   * Bioregional grid interties, aqueducts, and backbones: directed by Bioregional Citizen Assemblies comprising one hundred and one (101) delegates.
+1. The planning, installation, and physical expansion of distributed networks are administered openly under sortition oversight in strict odd-number parity:
+   * Neighborhood utility oversight and workshop reservations: governed by Neighborhood Sortition Councils comprising fifteen (15) citizens by a sixty percent (60%) qualified majority.
+   * Bioregional grid interties, watershed aqueducts, and optical backbones: directed by Bioregional Citizen Assemblies comprising one hundred and one (101) delegates.
 2. Graduated Decision Thresholds:
    * **75% Constitutional Supermajority:** Required to decommission critical life-support assets or transfer common infrastructure.
-   * **60% Qualified Majority:** Required to approve regional grid interconnections, water transfer treaties, or five-year infrastructural plans.
+   * **60% Qualified Majority:** Required to approve regional grid interconnections, water transfer treaties, or five-year infrastructural development plans.
    * **50%+1 Simple Majority:** Permitted solely for emergency load shedding, protective system decoupling, or immediate disaster repairs, carrying an automatic thirty (30) day sunset review.
 
 ---
 
 # **CHAPTER VII: OPEN COMPILER INTEGRITY & THE DEMOCRATIZATION OF CODE**
 
-### **Article 7.1 — The Axiom of Non-Sovereign Code and Deterministic Interlocks**
-1. Software, algorithmic models, computational compilers, and automated systems within Open Networked Earth (O.N.E.) are non-sovereign administrative instruments, permanently subordinate to human conscience and democratic sortition assemblies.
-2. The delegation of legislative drafting, judicial sentencing, biophysical resource rationing, or coercive restraint to autonomous algorithms, neural models, or artificial agents is an absolute constitutional nullity.
-3. Code shall never act as law. Computational engines serve solely as open logistical mirrors executing human-mandated allocations.
-4. Deterministic Physical Interlocks vs. Autonomous Governance: Automated feedback loops embedded within localized machinery are strictly limited to direct, closed-loop physical asset protection (e.g., governor valves, breaker trips, thermal switches, anti-cavitation throttling) engineered with calibrated analog anti-hunting hysteresis and cycle-rate limiters to eliminate resonant actuator fatigue. Such mechanisms constitute deterministic engineering safeties, not sovereign rationing. They must operate on hardwired, mathematically verifiable logic devoid of heuristic learning weights. Protective action shall never curtail net delivery of Tier 1 survival goods, requiring instantaneous parallel actuation of passive gravity-fed bypass lines backed by minimum one-hundred-twenty (120) hour conditioned local physical reserves.
+### **Article 7.1 — The Axiom of Non-Sovereign Code and the Subordination of Algorithms**
+1. Software, algorithmic models, computational compilers, and automated logistical systems within Open Networked Earth (O.N.E.) are strictly non-sovereign administrative instruments, permanently subordinate to human conscience and democratic sortition assemblies.
+2. The delegation of legislative drafting, judicial sentencing, biophysical resource rationing, or coercive physical restraint to autonomous algorithms, neural models, or artificial agents is an absolute constitutional nullity.
+3. Code shall never act as law. Computational engines serve solely as open logistical servants executing human-mandated allocations.
+4. To permanently eliminate the hazard of machine subjugation, public automation is restricted to verifiable oracle architectures devoid of subjective agency, legal personhood, or sovereign standing.
 
 ---
 
 ### **Article 7.2 — Absolute Prohibition of Proprietary Software in Public Commons**
 1. The deployment or execution of closed-source, obfuscated, proprietary, or trade-secret software across public administration, infrastructure telemetry, manufacturing commons, microgrids, or communication backbones is permanently prohibited.
-2. All operating systems, compilers, cryptographic libraries, database structures, and firmware embedded within industrial automation controllers (e.g., Programmable Logic Controllers [PLCs]) or microprocessors must reside in the public domain, free of Intellectual Property (IP) encumbrances, software patents, and commercial licensing locks.
+2. All operating systems, compilers, cryptographic libraries, database structures, and firmware embedded within Programmable Logic Controllers (PLCs) or microprocessors must reside in the public domain, free of Intellectual Property (IP) encumbrances, software patents, and commercial licensing locks.
 3. Any legal instrument, contract, or digital rights lock attempting to re-impose proprietary software monopolies within the commons is legally null and void.
 
 ---
 
-### **Article 7.3 — Bit-for-Bit Deterministic Reproducibility and Diverse Toolchain Verification**
+### **Article 7.3 — Bit-for-Bit Deterministic Reproducibility and Diverse Double-Compilation (DDC)**
 1. To permanently eliminate covert backdoors, compiler-level subversion, and hidden surveillance modules, every executable binary running on public life-support infrastructure must achieve deterministic, bit-for-bit binary reproducibility from verified, human-readable source code.
-2. Foundational kernels, cryptographic libraries, and industrial controller firmware must undergo deterministic diverse verification across independent open-source toolchains and heterogeneous microarchitectures (e.g., Diverse Double-Compilation [DDC]). DDC enforces compiler trust and semantic Abstract Syntax Tree (AST) equivalence across targets, rather than cross-Instruction Set Architecture (ISA) hash identity.
-3. Public repositories shall maintain decentralized build records. If binary non-reproducibility from public source trees is verified across independent builder attestations, the unverified distribution is barred; running systems deterministically execute an automated, bumpless safe-mode reversion to the preceding authenticated, immutable baseline ($B_0$).
+2. Foundational operating system kernels, cryptographic libraries, and industrial controller firmware must undergo Deterministic Diverse Double-Compilation (DDC) across functionally independent, open-source toolchains and diverse microprocessor microarchitectures.
+3. Public repositories shall maintain decentralized, cryptographically auditable build records. Any binary distribution whose compiled cryptographic hash cannot be independently reproduced from public source trees by any citizen node is instantly de-authorized from public infrastructure.
 
 ---
 
-### **Article 7.4 — Threshold Key Dispersion, Non-Biometric Authentication, and Reflex Integrity**
+### **Article 7.4 — Threshold Key Dispersion (t-MPC) and Non-Biometric Authentication**
 1. No individual engineer, programming guild, bioregional node, or administrative council may hold unilateral administrative root keys or master cryptographic access over public commons networks.
-2. Root certificates, network configuration signing keys, and microgrid coordination tokens are permanently fragmented via cryptographic secret-sharing protocols (e.g., Threshold Multi-Party Computation [t-MPC]) into shares distributed among demographically stratified sortition assemblies across multiple watersheds.
-3. Separation of Reflexive Physics from Deliberative Governance: Deliberative sortition assemblies possess absolute sovereignty over macro-biophysical budgets, operational envelopes, and code deployments. However, the Precautionary Suspension Protocol shall not mechanically sever hardwired sub-second physical and thermodynamic protective trips designed exclusively to prevent physical destruction of apparatus. Protective trip events that isolate physical commons trigger immediate sortition notice. To prevent cognitive exhaustion of sortition jurors and t-MPC networks during out-of-band acoustic or electromagnetic sensor spoofing, recurring trip petitions are batched for consolidated demarchic review within twenty-four (24) hours while passive physical bypasses sustain core Tier 1 flows.
-4. Civic participation, petitioning, and sortition registry access rely on non-biometric, cryptographic proof of unique personhood (e.g., Zero-Knowledge Proof-of-Personhood [ZK-PoP]), verifying living human individuality without harvesting biometric traits, facial imagery, or personal identity data.
+2. Root certificates, network configuration signing keys, and microgrid coordination tokens are permanently fragmented via Threshold Multi-Party Computation (t-MPC) into cryptographic shares distributed among demographically stratified sortition assemblies across multiple watersheds.
+3. Routine signing operations require multi-node consensus, while structural protocol migrations require an interactive threshold ceremony executed across sovereign sortition assemblies.
+4. Civic participation, petitioning, and sortition registry access rely on Zero-Knowledge Proof-of-Personhood (ZK-PoP), verifying living human individuality without harvesting biometric traits, facial imagery, or personal identity data.
 
 ---
 
@@ -379,63 +374,70 @@ Deliberative assemblies vote exclusively through graduated thresholds:
 
 # **CHAPTER VIII: PUBLIC SAFETY, DEFENSIVE DETERRENCE & RESTORATIVE JUSTICE**
 
-### **Article 8.1 — Abolition of Militarized Policing, Peace Guilds, and Defensive Deterrence**
-1. Militarized policing is permanently abolished across Open Networked Earth (O.N.E.). Stockpiling firearms, munitions, or chemical agents by civic personnel is unconstitutional.
-2. Civic Peace Guilds and Infrastructure Defense Cohorts: Public peace is stewarded by unarmed Civic Peace Guilds chosen by sortition, trained in de-escalation. If armed infiltration or sabotage of Class-A metabolic conduits occurs, sortition-selected Defense Cohorts deploy non-ballistic directed-energy interdiction within compromised conduits, expiring upon containment. Captured infiltrators are remanded to non-punitive stabilization suites under Article 8.4.
-3. Universal Weapon Ban: Designing, manufacturing, or compiling lethal weaponry and combat robotics is categorically prohibited to humans and machines alike.
-4. Graduated Escalatory Defense Framework: Defensive kinetic and electronic counter-measures sealed in subterranean redoubts operate under a strict tri-tier threshold:
-   * *Tier 1 (Sub-Threshold Interception):* Automated non-kinetic electronic soft-kill and directed RF disruption against uncrewed or stand-off threats targeting Class-A infrastructure, authorized by a sixty percent (60%) localized sortition quorum;
-   * *Tier 2 (Active Counter-Battery Point Defense):* Defensive hard-kill point interception upon verified kinetic impact on life support, authorized by a seventy percent (70%) sortition quorum;
-   * *Tier 3 (Black-Sky Autonomous Area Denial):* Full autonomous point defense against hypersonic or coordinated saturation sieges, triggered upon multi-sensor confirmation verified by an eighty percent (80%) regional sortition consensus, or automatically if communications are severed by total physical denial.
-   Defensive systems are strictly reactionary; to extinguish persistent sieges, proportional counter-battery suppression against verified firing platforms—including defilade targets engaged via Trajectory-Constrained Counter-Defilade Systems (TCCDS) with immutable abort limits—is authorized without territorial annexation. Defensive point-escort covers inter-basin mutual aid convoys (Article 10.4.4). Under subterranean galvanic isolation, cross-watershed forensic proofs (Article 8.4.3) are attested via Succinct Deterministic Verification Proofs (SDVPs) under 1,024 bits. Upon planetary unification, platforms are dismantled under Swords into Plowshares (*Gladii in vomeres*).
+### **Article 8.1 — Abolition of Militarized Policing, Weapon Ban, and Transitional Defense**
+1. Militarized policing is permanently abolished across Open Networked Earth (O.N.E.). Stockpiling firearms, munitions, explosives, or neuro-irritants by civic personnel is unconstitutional.
+2. Mercenary syndicates and Private Military Companies (PMCs) are prohibited as structural crimes. Public safety is stewarded through functional specialization:
+   * Civic Peace Guilds: Unarmed practitioners trained in interpersonal mediation, de-escalation, and restorative trauma triage;
+   * Civic Rescue & Fire Guilds: Dedicated services stewarding structural and wildland firefighting, technical search and rescue (SAR), geophysical disaster response, and hazardous material containment. Tactical incident command is strictly bounded to life-safety and physical mitigation; deploying emergency apparatus for crowd dispersal or coercion is unconstitutional. Orders of structural evacuation exceeding twenty-four (24) hours require sortition re-authorization by the Local Mediation Panel, barring administrative condemnation or eviction.
+3. Universal Weapon Ban: Designing, manufacturing, or compiling lethal weaponry, combat munitions, and combat robotics is categorically prohibited to humans and machines alike.
+4. Transitional Kinetic Defense: Until global planetary accession to O.N.E., the federation maintains defensive kinetic interdiction platforms (Anti-Access/Area Denial - A2/AD) sealed in subterranean redoubts:
+   * Tactical Point-Defense: Automated systems calibrated against incoming hostile projectiles or strike craft targeting infrastructure are pre-authorized for autonomous interception within local envelopes.
+   * Standoff Counter-Strike: Any engagement targeting hostile positions outside terminal point-defense requires dual-key seventy-five percent (75%) authorization of the Bioregional Assembly (101 delegates) and Continental Chamber (301 citizens).
+Upon planetary unification, all defensive platforms are dismantled and smelted into civilian infrastructure under Swords into Plowshares (*Gladii in vomeres*).
 
 ---
 
 ### **Article 8.2 — Ambient Spatial Safety and Non-Injurious Telemetry**
-1. Public safety is embedded in spatial architecture: daylight sightlines, elimination of entrapment zones, and physical machinery interlocks triggering kinetic shutdowns upon human approach.
-2. Ambient telemetry is strictly ephemeral: edge sensors process acoustics solely to detect physical impacts or structural fractures, purging non-trauma data every five hundred (500) milliseconds. Public sensors shall never record speech nor compile biometric registries.
+1. Public safety is embedded in spatial architecture: corridors and dwellings maintain daylight sightlines, eliminating entrapment zones. Automated machinery contains optical interlocks triggering kinetic shutdowns upon human approach.
+2. Ambient telemetry is strictly ephemeral: edge micro-relays process acoustics solely to detect physical impacts or structural fractures, purging non-trauma data every five hundred (500) milliseconds. Public sensors shall never record speech nor compile biometric registries.
 
 ---
 
 ### **Article 8.3 — The Charter of Victims’ Sovereignty and Reparative Primacy**
-1. Justice centers upon the autonomy, recovery, and dignity of the harmed party. Victims hold an inalienable right to decline restorative dialogue without loss of care.
-2. Spatial Non-Proximity: In physical violence or severe boundary violations, the burden of relocation falls upon the transgressor. The harmed person retains undisturbed tenure; the transgressor is reassigned outside the transit radius.
-3. Somatic Restitution: The community guarantees immediate trauma therapy and material restitution to the harmed party prior to allocating resources toward transgressor rehabilitation.
+1. Justice centers upon the autonomy, recovery, and dignity of the harmed party.
+2. Victims hold an inviolable right to decline restorative dialogue or contact without penalty or loss of care.
+3. The Spatial Non-Proximity Invariant: In physical violence or severe boundary violations, the burden of relocation falls exclusively upon the transgressor. The harmed person retains undisturbed tenure of their dwelling and commons; the transgressor is reassigned outside the victim's transit radius.
+4. Somatic Restitution: The community guarantees immediate trauma therapy and material restitution to the harmed party prior to allocating resources toward transgressor rehabilitation.
 
 ---
 
 ### **Article 8.4 — The Three-Stage Restorative Ladder and Fact-Centric Inquiry**
-Harms are resolved sequentially through Fact-Centric Inquiry (*Inquisitio Facti*), barring rhetorical oratory:
-1. **Stage 1 (Direct Sitting):** Facilitated dialogue before an unarmed mediator to negotiate voluntary restitution.
-2. **Stage 2 (Community Restorative Circle):** Facilitated dialogue before peers and witnesses, culminating in binding covenants.
-3. **Stage 3 (Citizen Arbitration Tribunal):** Binding adjudication by fifteen (15) citizens chosen by sortition from adjacent districts. Jurisdiction is restricted to verifiable physical harms—assault, somatic violation, enclosure, or ecological poisoning. Forensic evidence must undergo mandatory double-blind re-examination by a facility drawn by lot from a non-contiguous watershed.
-4. Usufruct Disputes: Revocation of usufruct or execution of Metabolic Decoupling (Articles 2.3.5, 5.2.2) falls under the exclusive jurisdiction of the Bioregional Usufruct Tribunal (15 sortition jurors from unrelated wards) ensuring strict structural impartiality.
+Disputes and harms are resolved sequentially:
+1. **Stage 1 (Direct Sitting):** Facilitated dialogue before an unarmed mediator to resolve misunderstandings and negotiate voluntary restitution.
+2. **Stage 2 (Community Restorative Circle):** Facilitated dialogue before peers and witnesses to address severe friction, culminating in binding covenants.
+3. **Stage 3 (Sortition Arbitration Tribunal):** Binding adjudication by a Citizen Tribunal of fifteen (15) citizens via Fact-Centric Inquiry (*Inquisitio Facti*). Adversarial courtroom trials and rhetorical oratory are abolished: proceedings evaluate strictly verifiable physical evidence, open logs, and bounded factual inquiries.
+4. **Strict Material Legality:** Tribunals possess jurisdiction exclusively over verifiable material harms—physical assault, somatic violation, enclosure, or ecological poisoning—and cannot prosecute ideological dissent. Jurors are selected by sortition from adjacent districts outside disputants' personal networks.
+5. **Mandatory Double-Blind Forensic Audit:** All forensic or telemetric evidence submitted in Stage 3 is automatically re-examined by a separate forensic facility drawn by lot from a non-contiguous watershed, admissible solely if fully reproducible under open scientific review.
 
 ---
 
-### **Article 8.5 — Custodia Civilis Territorialis and Absolute Ban on Carceral Coercion**
-1. Incarceration, punitive cages, solitary confinement, tracking shackles, and forced kinetic displacements are permanently abolished. Public enforcement operates solely upon resource flows, civic privileges, physical perimeter redesign, metabolic clamping (Article 2.3.5), and spatial routing, never upon somatic integrity.
-2. Custodia Civilis Territorialis: Where severe predatory violence resists stabilization, restraint occurs strictly as *Custodia Civilis Territorialis* within comfortable residential suites with open gardens, private rooms, nutritious meals, and medical care. Sensory deprivation and punitive isolation are banned. If hostile external sieges sever transit bypass corridors, cantons activate demilitarized humanitarian transfers and decentralized chemical precursor reserves (e.g., for water filtration membranes) to eliminate metabolic drain on the thirty-day baseline survival reserve.
-3. Procedural Guarantees: Protective detention requires sortition confirmation (15 citizens) within seventy-two (72) hours, assisted by an Invariants Guardian (*Custos Jurium*). Custodial status requires mandatory biannual review by a new sortition jury (15 citizens) under a sixty percent (60%) qualified majority.
+### **Article 8.5 — Custodia Civilis Territorialis and Inviolable Habeas Corpus**
+1. Retributive incarceration, solitary confinement, punitive cages, and capital execution are permanently abolished.
+2. Custodia Civilis Territorialis: Where an individual commits severe predatory violence resisting stabilization, physical restraint is designated as *Custodia Civilis Territorialis*.
+3. Non-Carceral Enclosure: Restraint occurs strictly within comfortable, daylight residential suites with open gardens, private rooms, nutritious meals, and comprehensive psychiatric care. Sensory deprivation, chemical blunting, and punitive isolation are banned.
+4. Procedural Habeas Corpus Guarantees:
+   * Emergency detention requires sortition validation (15 citizens) within seventy-two (72) hours, or release is mandatory;
+   * The Invariants Guardian (*Custos Jurium*): An independent sortition guardian assists the individual, verifying somatic well-being, vetoing leading or coercive questions, protecting expressive silence, and ensuring all exculpatory telemetry is evaluated;
+   * Mandatory Biannual Review: Custodial status is re-examined every one hundred eighty (180) days by a newly seated sortition jury (15 citizens), requiring a sixty percent (60%) qualified majority to sustain custody.
 
 ---
 
 ### **Article 8.6 — Adjudicative Assembly Parity and Decision Thresholds**
-1. Adjudications maintain strict odd parity: Local Panels comprise three (3) citizens; Neighborhood Tribunals comprise fifteen (15) citizens; Bioregional Chambers comprise one hundred and one (101) delegates.
+1. All adjudications maintain strict odd-number parity: Local Panels comprise three (3) citizens; Neighborhood Tribunals comprise fifteen (15) citizens; Bioregional Review Chambers comprise one hundred and one (101) delegates.
 2. Graduated Adjudicative Thresholds:
    * **75% Constitutional Supermajority:** Required to amend procedural protections or modify fundamental rights definitions.
-   * **60% Qualified Majority:** Required for the issuance or renewal of a Custodia Civilis Territorialis decree.
+   * **60% Qualified Majority:** Required for the issuance or biannual renewal of a Custodia Civilis Territorialis decree.
    * **50%+1 Simple Majority:** Permitted solely for immediate seventy-two-hour protective detention following active violence in flagrante delicto.
-3. The Right of Peaceful Exit: Every person retains the inalienable right to depart the bioregion unhindered with personal possessions, free from pursuit.
+3. The Right of Peaceful Exit: Every person retains the inalienable right to depart the bioregion unhindered with personal possessions, free from carceral pursuit.
 
 ---
 
 # **CHAPTER IX: THE TRANSITIONAL BRIDGE: FROM CAPITAL ENCLOSURE TO COMMONS**
 
 ### **Article 9.1 — The Dual-Track Handshake and Parallel Life-Support Systems**
-1. The transition from capital enclosure to planetary commons proceeds via the Dual-Track Handshake.
-2. Rather than violent rupture, autonomous nodes deploy open infrastructure, Community Land Trusts (CLTs), and mutual aid (Track B) to construct resilient life support while the speculative market (Track A) unravels under ecological and debt crises.
-3. As legacy systems fail, populations migrate into the commons, which expands by offering verified life support outside commodity circuits.
+1. The historical transition from capital enclosure and debt-based scarcity to the planetary commons proceeds through the deliberate architecture of the Dual-Track Handshake.
+2. Rather than pursuing violent macro-rupture, autonomous transition nodes deploy open-source infrastructure, Community Land Trusts (CLTs), and mutual aid networks (Track B) to construct parallel, resilient life-support systems while the incumbent speculative market economy (Track A) unravels under ecological and financial debt crises.
+3. As legacy supply chains and public services fail, populations migrate their daily material existence into the expanding commons. The commons expands not through ideological coercion, but by offering immediate, verified, and reliable life support outside commodity circuits.
 
 ---
 
@@ -449,7 +451,7 @@ Harms are resolved sequentially through Fact-Centric Inquiry (*Inquisitio Facti*
 ### **Article 9.3 — The External Trade Interface (ETI) and Demonetization Buffer**
 1. To procure essential non-local industrial commodities, specialized microelectronics, and advanced medicines from legacy jurisdictions without re-introducing monetary inequality internally, bioregional federations operate an External Trade Interface (ETI).
 2. The internal metabolism of Open Networked Earth (O.N.E.) maintains absolute demonetization: zero fiat currency, speculative debt, or market-based price mechanisms operate within the commons.
-3. Outward commercial interactions are quarantined within the ETI, prioritizing direct bilateral barter and physical bills-of-lading for certified priority precursors (rare elements, medical compounds, tooling). Outbound maritime hulls operate under the sovereign flag of O.N.E. registered with genuine-link usufruct credentials under international law. Consignments carry Cryptographic Usufruct Provenance Certificates (CUPC) attesting to zero debt, non-liability under legacy liens, and direct communal origin, shielding cargoes from foreign admiralty in rem arrests. Any legacy fiat received cannot be accumulated, hypothecated, or lent at interest; to eliminate external front-running, fiat holdings are liquidated within an unpredictable, entropy-dispersed temporal window executed via decentralized Time-Weighted Average Clearing (TWAC) governed by local cryptographic entropy beacons.
+3. Outward commercial interactions—such as the planned export of surplus renewable electricity or specialized engineering consultations—are quarantined within the ETI. Under the Twenty-Four-Hour Conversion Rule, all external fiat revenues received must be committed within twenty-four (24) hours to irrevocable physical procurement contracts, dedicated escrow, or direct delivery of non-depreciating assets, strategic grain reserves, or specialized raw materials, preventing financial speculation and sovereign asset freezing.
 
 ---
 
@@ -458,14 +460,14 @@ Harms are resolved sequentially through Fact-Centric Inquiry (*Inquisitio Facti*
 2. Strategic Dispersal and Hardened Survival: Critical food inventories, energy banks, and medical reserves are physically dispersed into reinforced, subterranean modular caches across all micro-watersheds, permanently eliminating single-point targets for aerial bombardment, drone interdiction, or naval blockades.
 3. The Defection Bounty and Civil Asylum Protocol: Against hostile armed personnel, the commons deploys continuous asymmetrical defection incentives. Any soldier, officer, or contractor who lays down functional arms, refuses offensive orders, or sabotages hostile operations is guaranteed immediate political asylum, lifelong Tier 1 biological security, unencumbered dwelling tenure, and total legal cancellation of external debt obligations for themselves and their family.
 4. The Swords into Plowshares (*Gladii in vomeres*) Protocol: All surrendered, captured, or decommissioned armaments, armored chassis, and munitions within the territory are permanently dismantled and smelted in public foundries, converting ballistic metals into wind turbine shafts, agricultural implements, and structural building frames.
-5. Non-Lethal Denial and Cryptographic Poison Pills: Operating in defensive synergy with the subterranean kinetic interdiction perimeters of Article 8.1, critical microgrids, manufacturing arrays, and digital repositories maintain an extreme backstop defended by distributed threshold cryptographic keys (e.g., via Threshold Multi-Party Computation [t-MPC]). In the event of armed physical occupation breaching outer deterrents, sortition authorities execute a distributed key sever that permanently deactivates high-tier industrial and computational functionality without cutting off basic domestic water and heating, depriving the aggressor of all logistical and financial value.
+5. Non-Lethal Denial and Cryptographic Poison Pills: Operating in defensive synergy with the subterranean kinetic interdiction perimeters of Article 8.1, critical microgrids, manufacturing arrays, and digital repositories maintain an extreme backstop defended by Threshold Multi-Party Computation (t-MPC) keys. In the event of armed physical occupation breaching outer deterrents, sortition authorities execute a distributed key sever that permanently deactivates high-tier industrial and computational functionality without cutting off basic domestic water and heating, depriving the aggressor of all logistical and financial value.
 
 ---
 
 ### **Article 9.5 — Universal Debt Jubilees and Insolvent Asset Transformation**
 1. Defaulted industrial production centers, bankrupt distribution hubs, and abandoned utility grids are systematically expropriated into municipal commons trusts.
 2. All compound-interest debts, predatory residential mortgages, and financial liens held by legacy institutions against personal dwellings and life-support infrastructure are abolished through comprehensive, unencumbered Debt Jubilees.
-3. Reclaimed manufacturing plants are re-engineered with open-architecture industrial automation systems (e.g., open-hardware Programmable Logic Controllers [PLCs]) and modular machine tools for circular metallurgical recycling, agricultural machinery repair, and localized civic utility.
+3. Reclaimed manufacturing plants are re-engineered with open-source Programmable Logic Controllers (PLCs) and modular machine tools for circular metallurgical recycling, agricultural machinery repair, and localized civic utility.
 
 ---
 
@@ -475,8 +477,6 @@ Harms are resolved sequentially through Fact-Centric Inquiry (*Inquisitio Facti*
    * **75% Constitutional Supermajority:** Required to enact universal Debt Jubilees, authorize involuntary industrial asset conversions, or ratify formal phase-gate advancements.
    * **60% Qualified Majority:** Required for annual ETI trade budgets and regional mutual-aid compacts with adjacent transitional nodes.
    * **50%+1 Simple Majority:** Permitted solely for defensive non-lethal interdiction and rapid supply adjustments during acute external embargos, subject to mandatory thirty (30) day legislative review.
-
----
 
 ---
 

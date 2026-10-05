@@ -55,6 +55,10 @@ This public repository contains the complete canonical constitutional charter, c
 │   ├── README.md                     # Transition architecture & human vector modeling
 │   ├── GAME_DESIGN.md                # Master Game Design Document (Hex grid, Leontief, Demarchy)
 │   └── app/                          # Interactive 60 FPS HTML5/WebGL living simulation
+├── game/                             # STANDALONE LIVING COMMONS GAME
+│   ├── index.html                    # Longitudinal Solarpunk colonization & demarchy web app
+│   ├── game.md                       # Master game mechanics & biophysical simulation specs
+│   └── src/                          # Modular state machine, hex renderer, solar terminator
 ├── simone/                           # SCIENTIFIC DISCRETE-EVENT CO-SIMULATOR
 │   └── simone-specs.md               # Biophysical GIS & psychometric co-simulation specs
 ├── habitat/                          # PHYSICAL COMMONS & REGENERATIVE HABITAT
@@ -64,6 +68,7 @@ This public repository contains the complete canonical constitutional charter, c
 ├── roadmap/                          # THE ROADMAP & TRANSITION PROTOCOL
 │   ├── roadmap.md                    # Master strategic bootstrap & dissemination playbook
 │   └── blueprints/                   # Real-world field manuals & operational startup guides
+│       ├── SEED_NODE_CANDIDATE_REGISTRY.md # Orthogonal climatic testbed & bioregional topology
 │       ├── SEED_NODE_QUICKSTART_HANDBOOK.md
 │       ├── STAGE_0_LEGAL_INCEPTION_BLUEPRINT.md
 │       ├── STAGE_1_SURVIVAL_CORE_BLUEPRINT.md

@@ -13,7 +13,7 @@ Stage 0 establishes the legal armor, secures the land anchor, and institutes the
 
 ## 2. Land Scouting Due Diligence Scorecard (2–5 Hectares)
 
-Every potential parcel must be audited against these five physical and legal invariants:
+Every potential parcel must be audited against these five physical and legal invariants (see initial global archetypes in [`SEED_NODE_CANDIDATE_REGISTRY.md`](SEED_NODE_CANDIDATE_REGISTRY.md)):
 
 | Criterion | Mandatory Minimum | Red-Flag Immediate Disqualification |
 | :--- | :--- | :--- |

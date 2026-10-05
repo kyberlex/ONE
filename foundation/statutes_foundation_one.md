@@ -181,6 +181,9 @@ The Foundation Board possesses all managerial and representative powers not expr
 1. **The Demarcation Invariant (The Two Spheres):** The Foundation is constituted under Swiss civil law solely as an external legal exoskeleton, property custodian, and legacy contract interface. All substantive principles governing internal human rights, housing usufruct occupancy within nodes, thermodynamic resource accounting, demarchic sortition assemblies across all tiers, labor reciprocity, communal education, and restorative justice are governed **exclusively and sovereignly by the Living Constitution of Open Networked Earth ([`ONE NETWORKED EARTH (O.N.E.).md`](../ONE%20NETWORKED%20EARTH%20%28O.N.E.%29.md))**.
 2. **Substantive Subordination & Non-Interference:** The Foundation Board possesses zero jurisdiction to alter, interpret, or legislate internal constitutional affairs of the O.N.E. commonwealth. The Foundation shall never act as an internal government, landlord, or employer.
 3. **Data Sovereignty & Swiss Data Protection Act (DSG):** In all operations, the Foundation complies with the Swiss Federal Act on Data Protection (*Bundesgesetz über den Datenschutz - DSG*). Personal data processing is restricted to the absolute operational minimum, authenticated via decentralized, non-biometric zero-knowledge proofs (ZK-PoP), with zero commercial profiling or surveillance.
+4. **The Genesis Anchor & Rigid Immutability Lock:**
+   - **Phase 0 (Genesis Architectural Hardening):** Prior to notarial deed execution, the Living Constitution undergoes iterative stress-testing and empirical patching via the O-ASIS engine to eliminate vulnerabilities and ensure systemic integrity.
+   - **Phase 1 (The Formal Legal Anchor):** Upon the execution of the notarial deed of incorporation of Foundation ONE under Swiss Civil Law (ZGB Art. 80 ff.), the finalized Living Constitution is permanently deposited as **Annex I (*Statutarischer Verfassungsanhang I: Die Lebendige Verfassung*)**. From that exact moment of legal constitution, **Rigid Canonical Immutability takes full legal effect**: the Founder, Foundation Board, developers, and AI systems irrevocably waive any power to unilaterally amend the Living Constitution. All future amendments require the strict 75% supermajority ratification of the seated sortition assemblies pursuant to Chapter IV, binding the Foundation under Swiss public foundation supervisory law (*ESA*).
 
 ---
 
@@ -431,6 +434,11 @@ Art. 13
 3. Datenschutz: Die Stiftung hält die Bestimmungen des Schweizerischen Datenschutzgesetzes (DSG) 
    strikt ein. Datenverarbeitungen beschränken sich auf das absolute Minimum, verwenden dezentrale 
    Zero-Knowledge-Verfahren und schliessen jede kommerzielle Nutzerprofilierung aus.
+4. Genesis-Anker und Unveränderlichkeitsbindung: Mit der notariellen Errichtung der Stiftung wird 
+   die Lebendige Verfassung als unverletzlicher Statutarischer Verfassungsanhang I hinterlegt. 
+   Ab diesem Zeitpunkt tritt die strikte Unveränderlichkeitsbindung in Kraft: Stifterin, Stiftungsrat 
+   und Dritte verzichten unwiderruflich auf jedes einseitige Änderungsrecht. Künftige Verfassungsänderungen 
+   unterliegen ausschliesslich der 75%-Zustimmung der durch Los bestimmten Bürgerversammlungen.
 ```
 
 ---

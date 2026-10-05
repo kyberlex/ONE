@@ -176,7 +176,7 @@ The structural chassis exists solely to protect the life-support core. All dynam
 
 ## 6. Bioclimatic Adaptations by Seed-Node Climate
 
-The internal core and chassis remain invariant across all geographies; the **external envelope adjusts to the thermodynamic realities of the bioregion**:
+The internal core and chassis remain invariant across all geographies; the **external envelope adjusts to the thermodynamic realities of the bioregion** (cataloged in the [Seed Node Candidate Registry](../roadmap/blueprints/SEED_NODE_CANDIDATE_REGISTRY.md)):
 
 | Zone / Climate | Envelope Insulation | Solar Shading Strategy | Fenestration & Glazing |
 | :--- | :--- | :--- | :--- |
