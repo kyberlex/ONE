@@ -147,9 +147,10 @@ game/
   - `renderCircadianOverlay(ctx)`: Dynamic lighting blending dawn orange, bright noon sunlight, amber dusk, and deep starry nightfall.
   - `renderWeather(ctx)`: Raindrop particle streaks, ground water ripples, wind drift particles, and lightning flash effects.
   - `renderJuice(ctx)`: Floating delta text (`+15 kWh`, `-20 L`), dust puffs on construction placement, and spring bounce transforms.
+  - `renderZoningGuidelines(ctx)`: Dynamic Solarpunk bioclimatic zoning overlay rendered in placement mode: Amber Solar/Microgrid Sector (South), Cyan Hydrological Spine (North/Slope), Steel Machine Shop & Logistics Axis (West), Emerald Residential Pod Courtyards (East), and Commons Sanctuary Hearth buffer (Camper center).
 * **Camera & Coordinate Systems:**
   - Smooth pan and zoom (`screenToWorld`, `worldToScreen`, `flyTo`, `flyToDistrict`).
-  - Interactive drag-and-drop building placement with collision detection (`checkPlacementCollision`).
+  - Interactive drag-and-drop building placement with collision detection and Commons Sanctuary preservation (`checkPlacementCollision`).
 
 ---
 

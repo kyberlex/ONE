@@ -451,9 +451,9 @@ export class SettlementCanvas {
     const snapX = Math.round(worldX / 20) * 20;
     const snapY = Math.round(worldY / 20) * 20;
 
-    // 1. Collision with camper van (center 0, 0, bounding box 70x45)
-    if (Math.abs(snapX) < 70 && Math.abs(snapY) < 45) {
-      return { valid: false, reason: 'Too close to Camper Van' };
+    // 1. Commons Sanctuary & Camper Van clearance (radius 64px & bounding box)
+    if (Math.hypot(snapX, snapY) < 64 || (Math.abs(snapX) < 70 && Math.abs(snapY) < 45)) {
+      return { valid: false, reason: 'Commons Sanctuary: village hearth must stay clear' };
     }
 
     // 2. Collision with ANY existing building (clearance of at least 55px)
@@ -722,8 +722,9 @@ export class SettlementCanvas {
     // 5.5 Hover & Click Selection Highlight
     this.renderHoverHighlight(ctx);
 
-    // 6. Placement Guide / Ghost Preview
+    // 6. Placement Guide & Dynamic Zoning Guidelines
     if (this.placementBuilding) {
+      this.renderZoningGuidelines(ctx);
       this.renderPlacementPreview(ctx);
     }
 
@@ -3082,6 +3083,220 @@ export class SettlementCanvas {
 
       ctx.restore();
     });
+  }
+
+  renderZoningGuidelines(ctx) {
+    if (!this.placementBuilding) return;
+
+    const pb = this.placementBuilding;
+    const time = performance.now() / 1000;
+    const pulse = 0.5 + 0.5 * Math.sin(time * 3);
+
+    const isSolar = ['solar_array', 'battery_bank', 'solar_thermal_tower', 'solar_foundry'].includes(pb);
+    const isHydro = ['rain_cistern', 'reed_bed', 'deep_well', 'retention_swale', 'aquaponics_greenhouse', 'biogas_digester'].includes(pb);
+    const isLogistics = ['fablab', 'foundry', 'heavy_gantry_mill', 'trike_depot', 'drone_vertiport', 'cobot_arm', 'scada_bot'].includes(pb);
+    const isResidential = ['guest_dome', 'kitchen_oven', 'clinic', 'school', 'elder_sanctuary', 'garden_bed', 'food_forest', 'mhu_dwelling', 'mhu'].includes(pb);
+
+    ctx.save();
+
+    // 1. Solar & Microgrid Sector (South: y > 0, angle from ~0.15*PI to 0.85*PI)
+    // Amber radial arc showing unshaded irradiance zones
+    const solarAlpha = isSolar ? (0.12 + 0.08 * pulse) : 0.05;
+    const solarBorderAlpha = isSolar ? (0.7 + 0.3 * pulse) : 0.25;
+
+    ctx.beginPath();
+    ctx.arc(0, 0, 310, 0.15 * Math.PI, 0.85 * Math.PI, false);
+    ctx.arc(0, 0, 90, 0.85 * Math.PI, 0.15 * Math.PI, true);
+    ctx.closePath();
+    ctx.fillStyle = `rgba(245, 158, 11, ${solarAlpha})`;
+    ctx.fill();
+
+    ctx.strokeStyle = `rgba(245, 158, 11, ${solarBorderAlpha})`;
+    ctx.lineWidth = isSolar ? 2.0 : 1.2;
+    ctx.setLineDash([8, 6]);
+    ctx.beginPath();
+    ctx.arc(0, 0, 310, 0.15 * Math.PI, 0.85 * Math.PI, false);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(0, 0, 90, 0.15 * Math.PI, 0.85 * Math.PI, false);
+    ctx.stroke();
+
+    // Irradiance radial ray guides
+    [0.25 * Math.PI, 0.5 * Math.PI, 0.75 * Math.PI].forEach(ang => {
+      ctx.beginPath();
+      ctx.moveTo(Math.cos(ang) * 90, Math.sin(ang) * 90);
+      ctx.lineTo(Math.cos(ang) * 310, Math.sin(ang) * 310);
+      ctx.stroke();
+    });
+
+    // Solar badge & label
+    ctx.setLineDash([]);
+    ctx.fillStyle = isSolar ? '#fbbf24' : 'rgba(251, 191, 36, 0.7)';
+    ctx.font = 'bold 11px system-ui';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('☀️ SOLAR & MICROGRID SECTOR (SOUTH)', 0, 200);
+    ctx.font = '9px system-ui';
+    ctx.fillStyle = isSolar ? '#fde68a' : 'rgba(253, 230, 138, 0.6)';
+    ctx.fillText('Optimal Unshaded Irradiance (+15 kWh/day peak yield)', 0, 216);
+
+    // 2. Hydrological Spine (North / Slope: y < 0, angle from -0.85*PI to -0.15*PI)
+    // Cyan elevation contour showing gravity-feed cistern lines and low-ground reed-bed drainage
+    const hydroAlpha = isHydro ? (0.12 + 0.08 * pulse) : 0.05;
+    const hydroBorderAlpha = isHydro ? (0.7 + 0.3 * pulse) : 0.25;
+
+    ctx.beginPath();
+    ctx.arc(0, 0, 290, -0.85 * Math.PI, -0.15 * Math.PI, false);
+    ctx.arc(0, 0, 90, -0.15 * Math.PI, -0.85 * Math.PI, true);
+    ctx.closePath();
+    ctx.fillStyle = `rgba(6, 182, 212, ${hydroAlpha})`;
+    ctx.fill();
+
+    ctx.strokeStyle = `rgba(6, 182, 212, ${hydroBorderAlpha})`;
+    ctx.lineWidth = isHydro ? 2.0 : 1.2;
+    ctx.setLineDash([8, 6]);
+
+    // Concentric stepped elevation contours
+    [150, 210, 270].forEach(r => {
+      ctx.beginPath();
+      ctx.arc(0, 0, r, -0.82 * Math.PI, -0.18 * Math.PI, false);
+      ctx.stroke();
+    });
+
+    // Hydrological Spine badge & label
+    ctx.setLineDash([]);
+    ctx.fillStyle = isHydro ? '#22d3ee' : 'rgba(34, 211, 238, 0.7)';
+    ctx.font = 'bold 11px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText('💧 HYDROLOGICAL SPINE (NORTH / SLOPE)', 0, -180);
+    ctx.font = '9px system-ui';
+    ctx.fillStyle = isHydro ? '#a5f3fc' : 'rgba(165, 243, 252, 0.6)';
+    ctx.fillText('Gravity-Feed Runoff & Low-Ground Reed-Bed Infiltration', 0, -164);
+
+    // 3. Machine Shop & Logistics Axis (West: x from -75 to -320, y from -70 to 70)
+    // Steel-tinted corridor connecting to the future Trike Depot and freight trails
+    const logAlpha = isLogistics ? (0.14 + 0.08 * pulse) : 0.05;
+    const logBorderAlpha = isLogistics ? (0.75 + 0.25 * pulse) : 0.25;
+
+    ctx.fillStyle = `rgba(148, 163, 184, ${logAlpha})`;
+    ctx.beginPath();
+    ctx.roundRect(-320, -65, 240, 130, 8);
+    ctx.fill();
+
+    ctx.strokeStyle = `rgba(148, 163, 184, ${logBorderAlpha})`;
+    ctx.lineWidth = isLogistics ? 2.0 : 1.2;
+    ctx.setLineDash([8, 6]);
+    ctx.beginPath();
+    ctx.roundRect(-320, -65, 240, 130, 8);
+    ctx.stroke();
+
+    // Central freight track guide
+    ctx.beginPath();
+    ctx.moveTo(-310, 0);
+    ctx.lineTo(-90, 0);
+    ctx.stroke();
+
+    // Directional chevron markers < < <
+    ctx.setLineDash([]);
+    ctx.fillStyle = isLogistics ? '#e2e8f0' : 'rgba(226, 232, 240, 0.7)';
+    ctx.font = 'bold 11px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText('⚙️ MACHINE SHOP & LOGISTICS AXIS (WEST)', -200, -35);
+    ctx.font = '9px system-ui';
+    ctx.fillStyle = isLogistics ? '#cbd5e1' : 'rgba(203, 213, 225, 0.6)';
+    ctx.fillText('Heavy Vibration & Trike Depot Freight Access ◀ ◀', -200, -20);
+
+    // 4. Residential Pod Clearings (East / Radial Courtyards: x > 65)
+    // Emerald dashed courtyards reserved for future MHUs (timber chassis + kitchen garden aprons)
+    const resAlpha = isResidential ? (0.13 + 0.08 * pulse) : 0.05;
+    const resBorderAlpha = isResidential ? (0.75 + 0.25 * pulse) : 0.25;
+
+    const pods = [
+      { x: 180, y: -65, r: 52, label: 'Pod α' },
+      { x: 220, y: 35, r: 56, label: 'Pod β' },
+      { x: 160, y: 115, r: 48, label: 'Pod γ' }
+    ];
+
+    pods.forEach(pod => {
+      // Pod fill
+      ctx.fillStyle = `rgba(16, 185, 129, ${resAlpha})`;
+      ctx.beginPath();
+      ctx.arc(pod.x, pod.y, pod.r, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Outer dashed courtyard boundary (kitchen garden apron)
+      ctx.strokeStyle = `rgba(16, 185, 129, ${resBorderAlpha})`;
+      ctx.lineWidth = isResidential ? 2.0 : 1.2;
+      ctx.setLineDash([6, 4]);
+      ctx.beginPath();
+      ctx.arc(pod.x, pod.y, pod.r, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // Inner timber chassis footprint guide (32x32px)
+      ctx.strokeStyle = `rgba(52, 211, 153, ${resBorderAlpha * 0.7})`;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([3, 3]);
+      ctx.strokeRect(pod.x - 16, pod.y - 16, 32, 32);
+
+      // Label inside pod
+      ctx.setLineDash([]);
+      ctx.fillStyle = isResidential ? '#6ee7b7' : 'rgba(110, 231, 183, 0.6)';
+      ctx.font = 'bold 9px system-ui';
+      ctx.textAlign = 'center';
+      ctx.fillText(`${pod.label} MHU Chassis + Apron`, pod.x, pod.y + pod.r - 12);
+    });
+
+    // Residential header
+    ctx.setLineDash([]);
+    ctx.fillStyle = isResidential ? '#34d399' : 'rgba(52, 211, 153, 0.7)';
+    ctx.font = 'bold 11px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText('🏡 RESIDENTIAL POD CLEARINGS (EAST)', 200, -135);
+    ctx.font = '9px system-ui';
+    ctx.fillStyle = isResidential ? '#a7f3d0' : 'rgba(167, 243, 208, 0.6)';
+    ctx.fillText('Quiet Living Courtyards & Permaculture Aprons', 200, -120);
+
+    // 5. Commons Sanctuary (Radius 0–60px around Camper)
+    // Warning indicator discouraging heavy industrial machinery at village center
+    const mouseDist = Math.hypot(this.mouseWorldPos?.x || 999, this.mouseWorldPos?.y || 999);
+    const isOverSanctuary = mouseDist <= 70;
+
+    ctx.save();
+    if (isOverSanctuary) {
+      // Danger / Warning active pulse
+      ctx.fillStyle = 'rgba(239, 68, 68, 0.18)';
+      ctx.strokeStyle = `rgba(239, 68, 68, ${0.7 + 0.3 * pulse})`;
+      ctx.lineWidth = 2.5;
+    } else {
+      // Peaceful protective boundary
+      ctx.fillStyle = 'rgba(245, 158, 11, 0.06)';
+      ctx.strokeStyle = 'rgba(245, 158, 11, 0.4)';
+      ctx.lineWidth = 1.5;
+    }
+
+    ctx.setLineDash([5, 5]);
+    ctx.beginPath();
+    ctx.arc(0, 0, 64, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.setLineDash([]);
+    if (isOverSanctuary) {
+      ctx.fillStyle = '#f87171';
+      ctx.font = 'bold 10px system-ui';
+      ctx.textAlign = 'center';
+      ctx.fillText('⚠️ COMMONS SANCTUARY', 0, -42);
+      ctx.font = '8px system-ui';
+      ctx.fillText('Keep Village Hearth & Agora Clear of Heavy Industry!', 0, -30);
+    } else {
+      ctx.fillStyle = 'rgba(251, 191, 36, 0.65)';
+      ctx.font = 'bold 9px system-ui';
+      ctx.textAlign = 'center';
+      ctx.fillText('🌿 Commons Sanctuary (60m)', 0, -38);
+    }
+    ctx.restore();
+
+    ctx.restore();
   }
 
   renderPlacementPreview(ctx) {

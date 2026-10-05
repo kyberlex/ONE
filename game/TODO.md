@@ -37,13 +37,14 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
   - **Privacy-First Fallback:** If location is blocked or Tor/VPN is used, smoothly defaults to the Mediterranean candidate corridor without annoying alert dialogs.
 
 ### **1.2 Bioclimatic Placement Overlay & Ghost Grid (`settlement_canvas.js`)**
-- [ ] **Dynamic Zoning Guidelines in Placement Mode:**
+- [x] **Dynamic Zoning Guidelines in Placement Mode:**
   - Render subtle, non-intrusive architectural guidelines while holding a ghost building:
-    - **Solar & Microgrid Sector (South):** Amber radial arc showing unshaded irradiance zones.
+    - **Solar & Microgrid Sector (South):** Amber radial arc showing unshaded irradiance zones with radial solar noon vectors.
     - **Hydrological Spine (North / Slope):** Cyan elevation contour showing gravity-feed cistern lines and low-ground reed-bed drainage.
     - **Machine Shop & Logistics Axis (West):** Steel-tinted corridor connecting to the future Trike Depot and freight trails.
     - **Residential Pod Clearings (East / Radial Courtyards):** Emerald dashed courtyards reserved for future MHUs (accounting for both the timber chassis and attached kitchen garden aprons).
-    - **Commons Sanctuary (Radius 0–60px around Camper):** Warning indicator discouraging heavy industrial machinery at village center.
+    - **Commons Sanctuary (Radius 0–60px around Camper):** Protective buffer indicator discouraging heavy industrial machinery at village center with active warning if encroached.
+  - Implemented in `game/src/render/settlement_canvas.js` (`renderZoningGuidelines`) with context-aware sector highlighting according to active building category and strict 64m Commons Sanctuary clearance in `checkPlacementCollision`.
 - [ ] **Soft Thermodynamic Proximity Feedback (`checkPlacementCollision`):**
   - Instant sensory tooltips and color feedback during dragging:
     - *“✅ 100% Unobstructed Irradiance (+15 kWh/day)”* vs *“⚠️ Canopy Shading (-30% yield)”*.
