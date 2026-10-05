@@ -105,7 +105,8 @@ game/
 * **Key Methods:**
   - `on(event, cb)`, `emit(event, payload)`: Custom event emitter for reactive UI updates.
   - `setPlayerProfile(name, vocationId, appearance)`: Initializes character data.
-  - `addBuilding(type, x, y, extraProps)`: Validates placement, checks district zoning, deducts labor/resources, records building with thermodynamic placement modifiers (`solarModifier`, `pumpEnergyKw`, `moraleBonus`), and triggers carrying capacity checks.
+  - `addBuilding(type, x, y, extraProps)`: Validates placement, checks district zoning, deducts labor/resources, records building with thermodynamic placement modifiers (`solarModifier`, `pumpEnergyKw`, `moraleBonus`), checks 3rd MHU placement threshold, and triggers carrying capacity checks.
+  - `retireCamperVanToLogistics()`: Milestone 1.4 handler: relocates camper van from `(0, 0)` to western logistics slipway `(-170, 20)`, consecrates `(0, 0)` as permanent `Central Agora & Pioneer Fire Hearth`, unseals +300L auxiliary water and +15,000 kcal dry cache, triggers +20 morale surge, and opens the celebratory milestone modal.
   - `getClearingRadius()`: Calculates dynamic carrying capacity clearing radius scaling through Stage 1 (340px Seed Campsite), Stage 2 (520px Ecovillage), and Stage 3 (750px–900px Full Dunbar Cell).
   - `checkClearingExpansion()`: Detects milestone clearing thresholds and emits `clearing_expanded` event.
   - `recalculateLaborBudget()`: Recalculates chore pool based on automated chores and population.
@@ -136,14 +137,15 @@ game/
 * **Key Visual Systems & Rendering Pipelines:**
   - `renderGround(ctx)`: Procedural grass meadows, dirt pathways, stone pavers, organic clearing clearing radius, and district zoning boundary glows.
   - `renderTrees(ctx)`: Procedural forest perimeter with wind swaying and seasonal leaf tinting.
-  - `renderCamperVan(ctx)`: Detailed pixel-perfect camper van sprite, deployable awning, rooftop solar array, and under-carriage shadow.
+  - `renderCentralAgora(ctx)`: Solarpunk Demarchic Assembly ring at `(0, 0)` featuring concentric sandstone flagstone pavers, radial demarchic sectors, curved circular timber benches, and sunken stone hearth with animated radial heat glow, dancing flames, and floating ember particles.
+  - `renderCamperVan(ctx)`: Detailed pixel-perfect camper van sprite, deployable awning, rooftop solar array, dynamic positioning (`van.x, van.y`), and Western Logistics Slipway status indicator when retired.
   - `renderBuildings(ctx)`: Vector rendering of all open-hardware modules:
     * Bifacial solar arrays with animated sun-tracking orientation.
     * Vertical-axis and horizontal-axis spinning wind turbines.
     * Rainwater cisterns with dynamic translucent water level indicators.
     * Bio-intensive greenhouses with growing crop rows and misting nozzles.
     * FabLab machine shop with robotic arms and welding sparks.
-    * MHU Modular Habitat Units with timber chassis, living roofs, and kitchen gardens.
+    * MHU Modular Habitat Units with CLT spruce wall chassis, clerestory windows, living sedum succulent green roof with blooming blossoms, timber entrance porch, and warm brass lanterns.
   - `renderPioneers(ctx)`: Dynamic walking pioneer characters with pathfinding, tool animations (hoeing, soldering, wrenching), and speech bubbles.
   - `renderConvoys(ctx)`: Overland cargo trikes pedaling along logistics pathways and VTOL drones taking off vertically from Vertiports.
   - `renderCircadianOverlay(ctx)`: Dynamic lighting blending dawn orange, bright noon sunlight, amber dusk, and deep starry nightfall.
@@ -155,6 +157,7 @@ game/
 * **Camera & Coordinate Systems:**
   - Smooth pan and zoom (`screenToWorld`, `worldToScreen`, `flyTo`, `flyToDistrict`, zoom-to-cursor wheel navigation from 0.30x macro-district view to 2.4x pioneer inspection).
   - Interactive drag-and-drop building placement with dynamic clearing boundary detection, Commons Sanctuary preservation, and thermodynamic modifier attribution (`checkPlacementCollision`, `placeBuildingAt`).
+  - Contextual structure inspection clicking (`findBuildingAt`) supporting Central Agora, repositioned Camper Van, and all modular dwellings.
 
 ---
 
@@ -257,16 +260,16 @@ game/
 ---
 
 #### **`game/src/ui/building_inspector.js`**
-* **File Path:** `game/src/ui/building_inspector.js` (550 lines, 22.4 KB)
-* **Role & Responsibility:** Detailed inspection modal triggered by clicking any structure on the canvas. Displays real-time thermodynamic metrics, component degradation health, open-hardware bill of materials (BOM), maintenance tasks, and relocation/dismantling options.
+* **File Path:** `game/src/ui/building_inspector.js` (639 lines, 26.5 KB)
+* **Role & Responsibility:** Detailed inspection modal triggered by clicking any structure or landmark on the canvas. Displays real-time thermodynamic metrics, component degradation health, open-hardware bill of materials (BOM), maintenance tasks, and relocation/dismantling options. Includes dedicated inspection suites for the Central Agora & Pioneer Fire Hearth (Demarchy Assembly convening, hearth acoustic jamming) and MHU Modular Habitat Units (CLT dwelling quarters, sedum living roof inspection).
 * **Exports:**
   - `BuildingInspectorModal` (Class)
 
 ---
 
 #### **`game/src/ui/event_modal.js`**
-* **File Path:** `game/src/ui/event_modal.js` (1,311 lines, 58.4 KB)
-* **Role & Responsibility:** Multi-purpose modal engine handling narrative events, climate crises, milestone unlocks, and Athenian Demarchy sortition assemblies.
+* **File Path:** `game/src/ui/event_modal.js` (1,377 lines, 61.2 KB)
+* **Role & Responsibility:** Multi-purpose modal engine handling narrative events, climate crises, milestone celebrations (`renderMilestoneModal`), and Athenian Demarchy sortition assemblies.
 * **Exports:**
   - `EventModal` (Class)
 

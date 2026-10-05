@@ -86,6 +86,8 @@ export class EventModal {
       this.renderEnergyManagementModal(options);
     } else if (type === 'weather_radar') {
       this.renderWeatherRadarModal(options);
+    } else if (type === 'milestone') {
+      this.renderMilestoneModal(options);
     }
   }
 
@@ -1305,6 +1307,71 @@ export class EventModal {
 
     this.modalEl.querySelector('#btn-event-close')?.addEventListener('click', () => this.close());
     this.modalEl.querySelector('#btn-weather-close')?.addEventListener('click', () => this.close());
+  }
+
+  /* -------------------------------------------------------------
+   * 10. Milestone Celebration Modal (e.g. Camper Van Transition)
+   * ----------------------------------------------------------- */
+  renderMilestoneModal(options = {}) {
+    const title = options.title || 'Milestone Achieved!';
+    const subtitle = options.subtitle || 'Historic Turning Point';
+    const heroIcon = options.heroIcon || '🌟';
+    const badgeText = options.badgeText || 'MILESTONE UNLOCKED';
+    const desc = options.description || 'A major civilizational threshold has been reached by the commons.';
+    const rewards = options.rewards || [];
+
+    this.modalEl.innerHTML = `
+      <div class="modal-window event-modal-window milestone-window" role="dialog" aria-modal="true" style="max-width: 620px;">
+        <div class="modal-header" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(245, 158, 11, 0.15)); border-bottom: 1px solid rgba(245, 158, 11, 0.3);">
+          <div class="modal-title-group">
+            <span class="modal-icon" style="font-size: 28px;">${heroIcon}</span>
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <h2 class="modal-title" style="color: #fbbf24; font-size: 1.25rem;">${title}</h2>
+                <span style="font-size: 10px; font-weight: 800; letter-spacing: 0.08em; padding: 2px 6px; border-radius: 4px; background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4);">${badgeText}</span>
+              </div>
+              <span class="modal-subtitle" style="color: #94a3b8;">${subtitle}</span>
+            </div>
+          </div>
+          <button type="button" class="btn-modal-close" id="btn-event-close" aria-label="Close dialog">✕</button>
+        </div>
+
+        <div class="event-modal-body" style="padding: 20px;">
+          <!-- Milestone Banner Narrative -->
+          <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: var(--radius-md); padding: 16px; margin-bottom: 18px; line-height: 1.6; color: #e2e8f0; font-size: 13px;">
+            <p style="margin: 0;">${desc}</p>
+          </div>
+
+          <!-- Unlocked Civic Rewards Grid -->
+          <h4 style="font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: #38bdf8; margin: 0 0 10px 0;">
+            🎁 Civilizational Consecration & Unlocked Reserves:
+          </h4>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-bottom: 16px;">
+            ${rewards.map(r => `
+              <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 10px 12px; display: flex; align-items: flex-start; gap: 10px;">
+                <span style="font-size: 20px; flex-shrink: 0;">${r.icon}</span>
+                <div>
+                  <div style="font-weight: 700; font-size: 12px; color: #f8fafc;">${r.label}</div>
+                  <div style="font-size: 11px; color: #94a3b8; margin-top: 2px;">${r.desc}</div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <div class="modal-footer" style="padding: 14px 20px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; justify-content: flex-end;">
+          <button type="button" class="btn-primary" id="btn-milestone-confirm" style="background: linear-gradient(135deg, #10b981, #059669); border: none; padding: 10px 20px; font-weight: 700; color: #fff; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+            🔥 Consecrate Hearth & Continue Building
+          </button>
+        </div>
+      </div>
+    `;
+
+    this.modalEl.querySelector('#btn-milestone-confirm')?.addEventListener('click', () => {
+      soundFX.playAcousticStrum();
+      this.close();
+    });
+    this.modalEl.querySelector('#btn-event-close')?.addEventListener('click', () => this.close());
   }
 }
 

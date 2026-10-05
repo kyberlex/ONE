@@ -289,6 +289,9 @@ export class GameHUD {
       } else if (type === 'drone_vertiport') {
         costLabel = `${costH}h • Vertiport`;
         extraTitle = ' • Autonomous cargo drone hub in Transit Vertiport';
+      } else if (type === 'mhu_dwelling') {
+        costLabel = `${costH}h • 3 Pioneers`;
+        extraTitle = ' • Cross-Laminated Timber Modular Habitat Unit (houses 3 pioneers)';
       }
 
       const isSelected = this.activeDockAction === type;
@@ -319,34 +322,39 @@ export class GameHUD {
       slot2 = makeSlotHtml('rain_cistern', '💧', 'Rain Cistern', 2.0, true, '');
       slot3 = makeSlotHtml('garden_bed', '🥗', 'Garden Bed', 2.0, true, '');
     } else if (activeTier === 2) {
-      // Tier 2: Hospitality & Mesh
+      // Tier 2: Hospitality & Mesh & Housing
       slot1 = makeSlotHtml('lora_mast', '📡', 'LoRa Mast', 2.0, hasGarden, 'Needs Garden');
       slot2 = makeSlotHtml('guest_dome', '🏨', 'Guest Pavilion', 3.0, hasLora, 'Needs LoRa');
       slot3 = makeSlotHtml('reed_bed', '🌿', 'Greywater Reeds', 2.0, hasGuest, 'Needs Guest Dome');
+      slot4 = makeSlotHtml('mhu_dwelling', '🏡', 'MHU Habitat', 4.0, hasGuest, 'Needs Guest Dome');
     } else if (activeTier === 3) {
       // Tier 3: Automation, Tooling & Scalable Artesian Wells
       slot1 = makeSlotHtml('fablab', '🛠️', 'FabLab Shop', 4.0, hasReed, 'Needs Reed Bed');
       slot2 = makeSlotHtml('farm_bot', '🤖', 'FarmBot CNC', 2.0, hasFablab, 'Needs FabLab');
       slot3 = makeSlotHtml('auto_valves', '💧', 'Auto-Valves', 1.5, hasFarmBot, 'Needs FarmBot');
       slot4 = makeSlotHtml('deep_well', '🚰', 'Artesian Well', 3.5, hasValves, 'Needs Valves');
+      slot5 = makeSlotHtml('mhu_dwelling', '🏡', 'MHU Habitat', 4.0, true, '');
     } else if (activeTier === 4) {
       // Tier 4: Craft, Hearth & Scalable Sodium Battery Banks
       slot1 = makeSlotHtml('foundry', '🔥', 'Metal Foundry', 3.5, hasValves, 'Needs Tier 3');
       slot2 = makeSlotHtml('kitchen_oven', '🍲', 'Communal Hearth', 3.0, hasFoundry, 'Needs Foundry');
       slot3 = makeSlotHtml('clinic', '🩺', 'Health Clinic', 3.0, hasKitchen, 'Needs Hearth');
       slot4 = makeSlotHtml('battery_bank', '🔋', 'Battery Bank', 3.0, hasFoundry, 'Needs Foundry');
+      slot5 = makeSlotHtml('mhu_dwelling', '🏡', 'MHU Habitat', 4.0, true, '');
     } else if (activeTier === 5) {
       // Tier 5: Ecology, Knowledge & Scalable Retention Swales
       slot1 = makeSlotHtml('food_forest', '🌲', 'Food Forest', 3.0, hasClinic, 'Needs Clinic');
       slot2 = makeSlotHtml('school', '📚', 'Open School', 3.0, hasForest, 'Needs Forest');
       slot3 = makeSlotHtml('elder_sanctuary', '👵', 'Elder Cabins', 3.0, hasSchool, 'Needs School');
       slot4 = makeSlotHtml('retention_swale', '🌿', 'Water Swale', 3.5, hasForest, 'Needs Forest');
+      slot5 = makeSlotHtml('mhu_dwelling', '🏡', 'MHU Habitat', 4.0, true, '');
     } else if (activeTier === 6) {
       // Tier 6: The Agora & Megaprojects
       slot1 = makeSlotHtml('agora', '🏛️', 'Agora Ring', 4.0, hasElder, 'Needs Elder Cabins');
       slot2 = makeSlotHtml('biogas_digester', '♻️', 'Biogas Digester', 4.0, hasBuilding('agora'), 'Needs Agora');
       slot3 = makeSlotHtml('seed_vault', '🌾', 'Seed Vault', 3.5, hasBuilding('biogas_digester'), 'Needs Biogas');
       slot4 = makeSlotHtml('solar_thermal_tower', '🗼', 'Thermal Tower', 5.0, hasBuilding('seed_vault'), 'Needs Seed Vault');
+      slot5 = makeSlotHtml('mhu_dwelling', '🏡', 'MHU Habitat', 4.0, true, '');
     } else {
       // Tier 7: District-Scale Eco-City Infrastructure
       slot1 = makeSlotHtml('aquaponics_greenhouse', '🥬', 'Aquaponics Dome', 3.5, hasBuilding('agora'), 'Needs Agora');

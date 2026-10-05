@@ -135,9 +135,19 @@ The foundational engine (`main.js`, `state.js`, `settlement_canvas.js`, `hud.js`
   - Procedural vegetation system in `settlement_canvas.js` maintaining 6 central campsite landmark trees while dynamically regenerating the perimeter forest beyond the active clearing boundary (`rebuildTrees`).
   - Solarpunk carrying capacity soil apron and bio-perimeter dashed telemetry contour rendered on ground canvas (`renderGround`).
   - Smooth zoom-to-cursor wheel navigation with fluid limits from 0.30x macro-district overview to 2.4x pioneer inspection.
+* **Completed (Epic 1.4 — The Camper Van Transition & The Central Agora):**
+  - Modular Habitat Unit (`mhu_dwelling`) CLT bio-dwelling (shelter capacity: 3 pioneers, living sedum roof with blossoms) added to construction catalogue and dock tiers.
+  - Automatic milestone trigger upon completing the 3rd MHU (`state.js:retireCamperVanToLogistics()`):
+    * Repositions pioneer camper van to the Western Logistics Slipway at `(-170, 20)` with status `auxiliary_standby`.
+    * Consecrates coordinate `(0, 0)` as the permanent Central Agora & Pioneer Fire Hearth, rendered with concentric flagstone pavers, curved timber benches, and sunken stone hearth with animated radial heat glow, flickering flame tongues, and floating ember particles.
+    * Unseals camper van auxiliary reserves: +300 L potable water capacity & stored water, +15,000 kcal emergency dry rations cache, and +20 community morale surge.
+    * Celebratory Solarpunk milestone modal (`event_modal.js:renderMilestoneModal`) with acoustic guitar strum soundscape and dedicated Agora/MHU panels in `building_inspector.js`.
 
 The remaining civilizational expansion tasks are catalogued in [`game/TODO.md`](TODO.md) across four macro pillars:
-1. **Epic 1:** Bioclimatic Zoning Guidelines, Soft Proximity Feedback, and Dynamic Clearing Expansion.
+1. **Epic 1:** Dunbar Horizon & Adjacent Node Mitosis (Sister Node 02).
+2. **Epic 2:** Inter-Node Logistics, Trade & Regional Convoys (Trikes, VTOL Drones).
+3. **Epic 3:** Four-Season Climate Engine & Extreme Crisis Contingency Protocols.
+4. **Epic 4:** Long-Horizon Progression & Civic Megaprojects.
 2. **Epic 2:** Inter-Node Trade, Cargo Trike & VTOL Drone Logistics.
 3. **Epic 3:** Four-Season Climate Engine, Evapotranspiration, and Extreme Weather Protocols.
 4. **Epic 4:** MHU Ecovillage Scaling, Intergenerational Demographics, and Municipal Sortition Demarchy.

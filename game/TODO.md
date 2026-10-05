@@ -62,11 +62,13 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
   - Implemented organic meadow apron and bio-perimeter dashed contour in `settlement_canvas.js` (`renderGround`), dynamic forest generation receding beyond the clearing edge (`rebuildTrees`), and smooth zoom-to-cursor wheel navigation with pan support from 0.30x to 2.4x.
 
 ### **1.4 The Camper Van Transition & The Central Agora (`state.js`, `event_modal.js`)**
-- [ ] **"Pioneers Under Their Own Roofs!" Milestone Event:**
-  - Triggers when the 3rd MHU is placed and operational.
-  - Retires the camper van from `(0, 0)` to the western logistics/charging slipway.
-  - Transforms coordinate `(0, 0)` into the permanent **Central Agora / Pioneer Fire Hearth** (gathering circle for Demarchy assemblies).
-  - Unseals camper van auxiliary reserves (the 300L backup water bladder and emergency dry cache).
+- [x] **"Pioneers Under Their Own Roofs!" Milestone Event:**
+  - Added `mhu_dwelling` (CLT bio-dwelling, 3 pioneers shelter capacity, max limit 50) to `starterKits` and `hud.js` dock slots.
+  - Automatically triggers when the 3rd MHU is placed and operational (`state.js:retireCamperVanToLogistics()`).
+  - Retires the camper van from `(0, 0)` to the western logistics/charging slipway at `(-170, 20)` with status `auxiliary_standby`.
+  - Transforms coordinate `(0, 0)` into the permanent **Central Agora / Pioneer Fire Hearth** (demarchic flagstone paving, concentric timber benches, sunken stone hearth with animated radial heat glow and dancing flames).
+  - Unseals camper van auxiliary reserves: +300 L potable water capacity & stored water, +15,000 kcal emergency dry rations cache, and +20 community morale surge.
+  - Celebratory Solarpunk milestone modal (`event_modal.js:renderMilestoneModal`) with rewards showcase, acoustic guitar strum fanfare, and rich inspection panels in `building_inspector.js`.
 
 ### **1.5 The 50-MHU Dunbar Horizon & Adjacent Node Mitosis (`state.js`, `world_map_modal.js`)**
 - [ ] **Dunbar Saturation Milestone (~50 MHUs / ~150 Residents):**

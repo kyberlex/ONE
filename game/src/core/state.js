@@ -224,6 +224,9 @@ export class GameState {
         sanitization_droid: { name: 'Sanitization Droid', maxLimit: 1, laborCostH: 2.0 },
         cobot_arm: { name: 'FabLab Cobot Sorter Arm', maxLimit: 1, laborCostH: 3.0 },
 
+        // Modular Habitat Units (Art. 4 Usufruct Dwelling Commons)
+        mhu_dwelling: { name: 'Modular Habitat Unit (MHU)', maxLimit: 50, laborCostH: 4.0, district: 'mhu_ecovillage' },
+
         // Bioregional Multi-District Infrastructure (Eco-City Scale)
         aquaponics_greenhouse: { name: 'Solar Aquaponics Greenhouse', maxLimit: 2, laborCostH: 3.5, yieldKcalPerDay: 6000, district: 'agro_belt' },
         grain_silo: { name: 'Heirloom Grain Silo (30k kcal)', maxLimit: 2, laborCostH: 3.0, district: 'agro_belt' },
@@ -1413,6 +1416,18 @@ export class GameState {
       building.name = 'Electric Cargo Trike Depot';
     } else if (type === 'drone_vertiport') {
       building.name = 'Autonomous Courier Vertiport';
+    } else if (type === 'mhu_dwelling') {
+      building.name = 'Modular Habitat Unit (MHU)';
+      building.shelterCapacity = 3;
+      this.data.shelterCapacity = (this.data.shelterCapacity || 3) + 3;
+      this.data.morale = Math.min(100, (this.data.morale || 85) + 5);
+
+      const mhuCount = (this.data.buildings.filter(b => b.type === 'mhu_dwelling').length) + 1;
+      if (mhuCount >= 3 && !this.data.camperVanRetired) {
+        setTimeout(() => {
+          this.retireCamperVanToLogistics();
+        }, 300);
+      }
     }
 
     this.data.buildings.push(building);
@@ -1423,6 +1438,77 @@ export class GameState {
     this.emit('resources_updated', this.data.resources);
     this.emit('objective_updated', this.data.objective);
     return building;
+  }
+
+  retireCamperVanToLogistics() {
+    if (this.data.camperVanRetired) return;
+    this.data.camperVanRetired = true;
+    this.data.centralAgoraConsecrated = true;
+
+    // 1. Relocate Camper Van from (0, 0) to Western Logistics/Charging Slipway (-170, 20)
+    let van = this.data.buildings.find(b => b.type === 'camper_van');
+    if (van) {
+      van.x = -170;
+      van.y = 20;
+      van.name = 'Pioneer Camper Van (Auxiliary Mobile Logistics)';
+      van.status = 'auxiliary_standby';
+    } else {
+      van = {
+        id: 'van-0',
+        type: 'camper_van',
+        name: 'Pioneer Camper Van (Auxiliary Mobile Logistics)',
+        x: -170,
+        y: 20,
+        status: 'auxiliary_standby',
+        shelterCapacity: 3
+      };
+      this.data.buildings.push(van);
+    }
+
+    // 2. Consecrate (0, 0) as Central Agora & Pioneer Fire Hearth
+    const agoraHearth = {
+      id: `central_agora-${Date.now().toString(36)}`,
+      type: 'central_agora',
+      name: 'Central Agora & Pioneer Fire Hearth',
+      x: 0,
+      y: 0,
+      createdAt: Date.now(),
+      status: 'operational',
+      consecratedDay: this.data.day || 1
+    };
+    this.data.buildings.push(agoraHearth);
+
+    // 3. Unseal Camper Van Auxiliary Reserves (+300L fresh water, +15,000 kcal dry cache, +20 morale)
+    this.data.resources.waterCapacityL = (this.data.resources.waterCapacityL || 2000) + 300;
+    this.data.resources.waterLiters = Math.min(this.data.resources.waterCapacityL, (this.data.resources.waterLiters || 0) + 300);
+    this.data.resources.foodKcal = (this.data.resources.foodKcal || 0) + 15000;
+    this.data.morale = Math.min(100, (this.data.morale || 85) + 20);
+
+    this.save();
+    this.emit('camper_van_retired', { van, agora: agoraHearth });
+    this.emit('agora_activated', agoraHearth);
+    this.emit('resources_updated', this.data.resources);
+
+    // 4. Milestone Celebration Modal Payload
+    const milestonePayload = {
+      id: 'milestone-camper-transition',
+      title: 'Pioneers Under Their Own Roofs!',
+      subtitle: 'Historic Milestone • The Camper Van Passes the Torch',
+      heroIcon: '🏛️',
+      badgeText: 'MILESTONE ACHIEVED',
+      description: 'With 3 Modular Habitat Units (MHUs) framed and weatherproofed, all founding pioneers now sleep under permanent CLT timber roofs! The loyal camper van has been unhitched and retired to the Western Logistics Slipway (-170, 20). Coordinate (0, 0) is now consecrated as the permanent Central Agora & Pioneer Fire Hearth for Demarchy Assemblies.',
+      rewards: [
+        { icon: '🏛️', label: 'Central Agora Consecrated', desc: 'Demarchy assembly ring and sacred stone fire hearth at (0, 0)' },
+        { icon: '💧', label: '+300L Auxiliary Water', desc: 'Camper van backup fresh-water bladder unsealed' },
+        { icon: '🥫', label: '+15,000 kcal Dry Cache', desc: 'Camper emergency rations released to the commons' },
+        { icon: '❤️', label: '+20 Morale Surge', desc: 'All pioneers sheltered in comfortable CLT dwellings' },
+        { icon: '🚐', label: 'Camper Repositioned', desc: 'Western Logistics Slipway (-170, 20) on standby' }
+      ]
+    };
+
+    if (typeof window !== 'undefined' && window.eventModal) {
+      window.eventModal.open('milestone', milestonePayload);
+    }
   }
 
   getWeatherForDay(day) {
@@ -2049,7 +2135,8 @@ export class GameState {
             heavy_gantry_mill: { name: '5-Axis LinuxCNC Gantry Mill', maxLimit: 1, laborCostH: 4.0, district: 'fablab_quarter' },
             solar_foundry: { name: 'Inductive Solar Foundry', maxLimit: 1, laborCostH: 3.5, district: 'fablab_quarter' },
             trike_depot: { name: 'Electric Cargo Trike Depot', maxLimit: 1, laborCostH: 3.0, district: 'transit_hub' },
-            drone_vertiport: { name: 'Autonomous Courier Vertiport', maxLimit: 1, laborCostH: 3.5, district: 'transit_hub' }
+            drone_vertiport: { name: 'Autonomous Courier Vertiport', maxLimit: 1, laborCostH: 3.5, district: 'transit_hub' },
+            mhu_dwelling: { name: 'Modular Habitat Unit (MHU)', maxLimit: 50, laborCostH: 4.0, district: 'mhu_ecovillage' }
           };
           if (!this.data.starterKits) this.data.starterKits = {};
           for (const [key, kitDef] of Object.entries(canonicalKits)) {

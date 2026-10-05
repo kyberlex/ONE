@@ -399,21 +399,36 @@ export class SettlementCanvas {
 
     // 1. Check constructed buildings
     for (const b of buildings) {
-      if (b.type === 'camper_van') continue;
-      const r = b.type === 'guest_dome' ? 36 : (b.type === 'fablab' ? 44 : 30);
+      if (b.type === 'camper_van' || b.type === 'central_agora') continue;
+      const r = b.type === 'guest_dome' ? 36 : (b.type === 'fablab' ? 44 : (b.type === 'mhu_dwelling' ? 32 : 30));
       const dist = Math.hypot(worldX - b.x, worldY - b.y);
       if (dist <= r) {
         return b;
       }
     }
 
-    // 2. Check camper van (around 0, 0 with box ~92x54)
-    if (Math.abs(worldX) < 48 && Math.abs(worldY) < 28) {
-      return buildings.find(b => b.type === 'camper_van') || {
+    // 2. Check Central Agora & Pioneer Fire Hearth at (0, 0)
+    if (gameState.data.centralAgoraConsecrated || buildings.some(b => b.type === 'central_agora')) {
+      if (Math.hypot(worldX, worldY) <= 48) {
+        return buildings.find(b => b.type === 'central_agora') || {
+          type: 'central_agora',
+          name: 'Central Agora & Pioneer Fire Hearth',
+          x: 0,
+          y: 0
+        };
+      }
+    }
+
+    // 3. Check Camper Van (around van.x, van.y with box ~92x54)
+    const van = buildings.find(b => b.type === 'camper_van');
+    const vx = van?.x !== undefined ? van.x : 0;
+    const vy = van?.y !== undefined ? van.y : 0;
+    if (Math.abs(worldX - vx) < 48 && Math.abs(worldY - vy) < 28) {
+      return van || {
         type: 'camper_van',
         name: 'Pioneer Haven (Camper Van)',
-        x: 0,
-        y: 0
+        x: vx,
+        y: vy
       };
     }
 
@@ -427,6 +442,7 @@ export class SettlementCanvas {
     const x = b.x || 0;
     const y = b.y || 0;
     const isVan = b.type === 'camper_van';
+    const isAgora = b.type === 'central_agora';
 
     ctx.save();
     ctx.translate(x, y);
@@ -442,15 +458,17 @@ export class SettlementCanvas {
     ctx.beginPath();
     if (isVan) {
       ctx.roundRect(-46 * pulse, -28 * pulse, 92 * pulse, 56 * pulse, 12);
+    } else if (isAgora) {
+      ctx.arc(0, 0, 48 * pulse, 0, Math.PI * 2);
     } else {
-      const r = (b.type === 'guest_dome' ? 36 : (b.type === 'fablab' ? 44 : 30)) * pulse;
+      const r = (b.type === 'guest_dome' ? 36 : (b.type === 'fablab' ? 44 : (b.type === 'mhu_dwelling' ? 32 : 30))) * pulse;
       ctx.arc(0, 0, r, 0, Math.PI * 2);
     }
     ctx.stroke();
 
     // Floating tooltip tag above building
-    const tagY = isVan ? -36 : -34;
-    const name = isVan ? '🚐 Pioneer Haven (Click to Inspect)' : `${b.name || 'Building'} (Click to Inspect)`;
+    const tagY = isVan ? -36 : (isAgora ? -48 : -34);
+    const name = isVan ? '🚐 Pioneer Haven (Click to Inspect)' : (isAgora ? '🏛️ Central Agora & Hearth (Click to Assemble)' : `${b.name || 'Building'} (Click to Inspect)`);
 
     ctx.font = 'bold 10px system-ui, -apple-system, sans-serif';
     const textWidth = ctx.measureText(name).width;
@@ -485,9 +503,12 @@ export class SettlementCanvas {
     // 2. Collision with ANY existing building (clearance of at least 55px)
     const buildings = gameState.data.buildings;
     for (const b of buildings) {
-      if (b.type === 'camper_van') continue;
-      const dist = Math.hypot(snapX - b.x, snapY - b.y);
-      if (dist < 55) {
+      if (b.type === 'central_agora') continue;
+      const bx = b.x !== undefined ? b.x : 0;
+      const by = b.y !== undefined ? b.y : 0;
+      const dist = Math.hypot(snapX - bx, snapY - by);
+      const minClearance = b.type === 'camper_van' ? 50 : 55;
+      if (dist < minClearance) {
         return { valid: false, reason: 'Too close to existing structure' };
       }
     }
@@ -796,7 +817,10 @@ export class SettlementCanvas {
     // 3. Constructed Infrastructure (Placed Buildings)
     this.renderBuildings(ctx);
 
-    // 4. The Camper Van (Centerpiece Base)
+    // 3.5 Central Agora & Pioneer Fire Hearth (when consecrated at 0, 0)
+    this.renderCentralAgora(ctx);
+
+    // 4. The Camper Van (Centerpiece Base or Repositioned Western Slipway)
     this.renderCamperVan(ctx);
 
     // 5. Pioneers (Living Animated Sprites)
@@ -1181,9 +1205,157 @@ export class SettlementCanvas {
     });
   }
 
-  renderCamperVan(ctx) {
+  renderCentralAgora(ctx) {
+    const isConsecrated = gameState.data.centralAgoraConsecrated || gameState.data.buildings?.some(b => b.type === 'central_agora');
+    if (!isConsecrated) return;
+
     ctx.save();
     ctx.translate(0, 0);
+
+    const time = performance.now() / 1000;
+
+    // 1. Concentric Sandstone & Basalt Flagstone Paving
+    ctx.fillStyle = 'rgba(217, 119, 6, 0.08)';
+    ctx.beginPath();
+    ctx.arc(0, 0, 56, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Paved Flagstone Ring
+    ctx.fillStyle = 'rgba(226, 232, 240, 0.12)';
+    ctx.strokeStyle = 'rgba(148, 163, 184, 0.4)';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.arc(0, 0, 48, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    // Radial Stone Joints (Demarchic Slices)
+    ctx.strokeStyle = 'rgba(148, 163, 184, 0.2)';
+    ctx.lineWidth = 0.8;
+    for (let a = 0; a < Math.PI * 2; a += Math.PI / 4) {
+      ctx.beginPath();
+      ctx.moveTo(Math.cos(a) * 22, Math.sin(a) * 22);
+      ctx.lineTo(Math.cos(a) * 48, Math.sin(a) * 48);
+      ctx.stroke();
+    }
+
+    // 2. Circular Socratic Timber Benches (Assembly Ring)
+    ctx.strokeStyle = '#78350f';
+    ctx.lineWidth = 5;
+    ctx.lineCap = 'round';
+    ctx.beginPath();
+    ctx.arc(0, 0, 34, Math.PI * 0.85, Math.PI * 1.65);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(0, 0, 34, Math.PI * 0.15, Math.PI * 0.65);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(0, 0, 34, -Math.PI * 0.25, Math.PI * 0.05);
+    ctx.stroke();
+
+    // Amber seat cushions
+    ctx.strokeStyle = '#d97706';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.arc(0, 0, 34, Math.PI * 0.90, Math.PI * 1.60);
+    ctx.arc(0, 0, 34, Math.PI * 0.20, Math.PI * 0.60);
+    ctx.stroke();
+
+    // Speaker's Stone Podium at North (-18, -32)
+    ctx.fillStyle = '#64748b';
+    ctx.strokeStyle = '#94a3b8';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.roundRect(-8, -42, 16, 8, 2);
+    ctx.fill();
+    ctx.stroke();
+
+    // 3. Central Sunken Stone Fire Hearth
+    ctx.fillStyle = '#334155';
+    ctx.strokeStyle = '#cbd5e1';
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.arc(0, 0, 16, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = '#0f172a';
+    ctx.beginPath();
+    ctx.arc(0, 0, 13, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Radial Ambient Heat & Light Glow
+    const glowRadius = 24 + Math.sin(time * 3.5) * 4;
+    const heatGlow = ctx.createRadialGradient(0, 0, 2, 0, 0, glowRadius);
+    heatGlow.addColorStop(0, 'rgba(251, 191, 36, 0.45)');
+    heatGlow.addColorStop(0.5, 'rgba(234, 88, 12, 0.25)');
+    heatGlow.addColorStop(1, 'rgba(239, 68, 68, 0)');
+    ctx.fillStyle = heatGlow;
+    ctx.beginPath();
+    ctx.arc(0, 0, glowRadius, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Red-hot Charcoal Bed
+    ctx.fillStyle = '#ea580c';
+    ctx.beginPath();
+    ctx.arc(0, 0, 9, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Animated Sacred Flame Tongues
+    const flameCount = 5;
+    for (let i = 0; i < flameCount; i++) {
+      const angle = (i / flameCount) * Math.PI * 2 + (time * 1.2);
+      const flameDist = 3 + Math.sin(time * 6 + i) * 2;
+      const fx = Math.cos(angle) * flameDist;
+      const fy = Math.sin(angle) * flameDist - 2;
+      const flameH = 7 + Math.sin(time * 9 + i * 2) * 3;
+
+      ctx.fillStyle = i % 2 === 0 ? '#facc15' : '#f97316';
+      ctx.beginPath();
+      ctx.moveTo(fx - 2, fy + 2);
+      ctx.quadraticCurveTo(fx, fy - flameH, fx, fy - flameH);
+      ctx.quadraticCurveTo(fx + 2, fy - flameH / 2, fx + 2, fy + 2);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    // Floating Sparks / Embers
+    for (let s = 0; s < 4; s++) {
+      const sparkT = (time * 1.5 + s * 0.4) % 1;
+      const sparkY = -6 - (sparkT * 28);
+      const sparkX = Math.sin(time * 3 + s * 1.5) * (4 + sparkT * 8);
+      const alpha = Math.max(0, 1 - sparkT);
+      ctx.fillStyle = `rgba(253, 224, 71, ${alpha})`;
+      ctx.beginPath();
+      ctx.arc(sparkX, sparkY, 1.2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Label Badge
+    ctx.fillStyle = '#fbbf24';
+    ctx.font = 'bold 8px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText('🏛️ Central Agora & Hearth', 0, 26);
+
+    ctx.restore();
+  }
+
+  renderCamperVan(ctx) {
+    const van = gameState.data.buildings?.find(b => b.type === 'camper_van');
+    const vx = van?.x !== undefined ? van.x : 0;
+    const vy = van?.y !== undefined ? van.y : 0;
+    const isRetired = gameState.data.camperVanRetired;
+
+    ctx.save();
+    ctx.translate(vx, vy);
+
+    if (isRetired) {
+      // Slipway Logistics Station Marker
+      ctx.fillStyle = '#f59e0b';
+      ctx.font = 'bold 8px system-ui';
+      ctx.textAlign = 'center';
+      ctx.fillText('⚡ AUX LOGISTICS SLIPWAY', 0, -32);
+    }
 
     // 1. Van Soft Ambient Shadow
     ctx.fillStyle = 'rgba(0, 0, 0, 0.45)';
@@ -1315,7 +1487,7 @@ export class SettlementCanvas {
   renderBuildings(ctx) {
     const buildings = gameState.data.buildings;
     buildings.forEach(b => {
-      if (b.type === 'camper_van') return; // rendered separately
+      if (b.type === 'camper_van' || b.type === 'central_agora') return; // rendered separately
 
       ctx.save();
       ctx.translate(b.x, b.y);
@@ -2861,6 +3033,87 @@ export class SettlementCanvas {
         ctx.font = 'bold 8px system-ui';
         ctx.textAlign = 'center';
         ctx.fillText('🛸 Courier Vertiport', 0, 22);
+
+      } else if (b.type === 'mhu_dwelling') {
+        // Modular Habitat Unit (MHU) - CLT chassis with living sedum roof
+        // 1. Soft Ambient Shadow
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.35)';
+        ctx.beginPath();
+        ctx.ellipse(0, 14, 26, 12, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        // 2. Timber Deck Porch & Steps
+        ctx.fillStyle = '#78350f';
+        ctx.fillRect(-22, 6, 44, 8);
+        ctx.strokeStyle = '#92400e';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(-22, 6, 44, 8);
+
+        // 3. CLT Wall Chassis (Warm Honey Spruce)
+        ctx.fillStyle = '#b45309';
+        ctx.strokeStyle = '#78350f';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.roundRect(-20, -14, 40, 22, 3);
+        ctx.fill();
+        ctx.stroke();
+
+        // CLT Plank Grain Lines
+        ctx.strokeStyle = 'rgba(120, 53, 15, 0.4)';
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        ctx.moveTo(-20, -6); ctx.lineTo(20, -6);
+        ctx.moveTo(-20, 2); ctx.lineTo(20, 2);
+        ctx.stroke();
+
+        // 4. Clerestory Triple-Glazed High Window
+        ctx.fillStyle = '#38bdf8';
+        ctx.strokeStyle = '#bae6fd';
+        ctx.lineWidth = 1;
+        ctx.fillRect(-14, -10, 28, 5);
+        ctx.strokeRect(-14, -10, 28, 5);
+
+        // 5. Living Sedum Green Roof (Sedum Succulent Carpet with Blossom Dots)
+        ctx.fillStyle = '#15803d';
+        ctx.strokeStyle = '#166534';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.roundRect(-24, -20, 48, 8, 4);
+        ctx.fill();
+        ctx.stroke();
+
+        // Sedum flowers (tiny pink & yellow blooms)
+        ctx.fillStyle = '#f43f5e';
+        ctx.fillRect(-18, -19, 2.5, 2.5);
+        ctx.fillRect(-4, -20, 2.5, 2.5);
+        ctx.fillRect(10, -18, 2.5, 2.5);
+        ctx.fillStyle = '#facc15';
+        ctx.fillRect(-10, -18, 2.5, 2.5);
+        ctx.fillRect(4, -19, 2.5, 2.5);
+        ctx.fillRect(16, -20, 2.5, 2.5);
+
+        // 6. Pioneer Door with warm lantern
+        ctx.fillStyle = '#451a03';
+        ctx.fillRect(6, -4, 9, 12);
+        // Brass door knob
+        ctx.fillStyle = '#fbbf24';
+        ctx.beginPath();
+        ctx.arc(8, 2, 1.2, 0, Math.PI * 2);
+        ctx.fill();
+        // Warm door lantern
+        ctx.fillStyle = '#fbbf24';
+        ctx.shadowColor = '#f59e0b';
+        ctx.shadowBlur = 6;
+        ctx.beginPath();
+        ctx.arc(3, -2, 2, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.shadowBlur = 0;
+
+        // Label Tag
+        ctx.fillStyle = '#34d399';
+        ctx.font = 'bold 8px system-ui';
+        ctx.textAlign = 'center';
+        ctx.fillText('🏡 MHU Habitat', 0, 22);
       }
 
       ctx.restore();

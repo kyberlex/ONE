@@ -436,6 +436,85 @@ export class BuildingInspectorModal {
           </div>
         </div>
       `;
+    } else if (b.type === 'central_agora') {
+      icon = '🏛️';
+      title = 'Central Agora & Pioneer Fire Hearth';
+      subtitle = 'Civic Demarchy Assembly • Sacred Common Hearth';
+      const juries = data.demarchyJuriesCount || 0;
+      metricsHtml = `
+        <div class="inspector-metrics-grid">
+          <div class="inspector-metric-card">
+            <span class="metric-label">ASSEMBLY STATUS</span>
+            <span class="metric-value text-gold">Ready for Sortition</span>
+            <span class="metric-sub">5-Juror Demarchic Council</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">DELIBERATIONS HELD</span>
+            <span class="metric-value text-emerald">${juries} Decisions</span>
+            <span class="metric-sub">75% Supermajority Rule</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">COMMUNITY MORALE</span>
+            <span class="metric-value text-cyan">${data.morale || 100}%</span>
+            <span class="metric-sub">Civic cohesion boost active</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">SACRED HEARTH</span>
+            <span class="metric-value text-rose">Perpetual Flame</span>
+            <span class="metric-sub">Consecrated Day ${b.consecratedDay || 1}</span>
+          </div>
+        </div>
+      `;
+      actionsHtml = `
+        <div class="inspector-actions-box">
+          <h4 class="inspector-actions-title">🏛️ Demarchy & Civic Hearth Operations:</h4>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-open-demarchy">
+            <span>🗳️ Convene Demarchy Sortition Assembly</span>
+            <small>Draw 5 jurors by lot to deliberate on civic policy</small>
+          </button>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-agora-gathering">
+            <span>🔥 Stoke Pioneer Fire & Strum Guitars</span>
+            <small>Gather pioneers around embers • Restore 100% Morale</small>
+          </button>
+        </div>
+      `;
+    } else if (b.type === 'mhu_dwelling') {
+      icon = '🏡';
+      title = b.name || 'Modular Habitat Unit (MHU)';
+      subtitle = 'Cross-Laminated Timber (CLT) Bio-Dwelling';
+      metricsHtml = `
+        <div class="inspector-metrics-grid">
+          <div class="inspector-metric-card">
+            <span class="metric-label">SHELTER CAPACITY</span>
+            <span class="metric-value text-emerald">3 Pioneers</span>
+            <span class="metric-sub">Permanent timber bedroom pods</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">SEDUM LIVING ROOF</span>
+            <span class="metric-value text-cyan">100% Thermal Cover</span>
+            <span class="metric-sub">Passive microclimate regulation</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">GREYWATER LOOP</span>
+            <span class="metric-value text-gold">Direct to Reeds</span>
+            <span class="metric-sub">Zero potable water wasted</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">STRUCTURAL LIFE</span>
+            <span class="metric-value text-emerald">100 Years</span>
+            <span class="metric-sub">CO2 negative timber build</span>
+          </div>
+        </div>
+      `;
+      actionsHtml = `
+        <div class="inspector-actions-box">
+          <h4 class="inspector-actions-title">🏡 Dwelling Comfort & Maintenance:</h4>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-tend-sedum">
+            <span>🌿 Inspect Sedum Living Roof & Air Drafts</span>
+            <small>Verify natural ventilation & succulent hydration</small>
+          </button>
+        </div>
+      `;
     } else {
       metricsHtml = `
         <div class="inspector-metric-card">
@@ -544,6 +623,15 @@ export class BuildingInspectorModal {
     addDiag('#btn-inspect-test-solar', 'Microgrid Synchronized (1.5 kW)');
     addDiag('#btn-inspect-test-guest', 'Guest Pavilion Prepared');
     addDiag('#btn-inspect-test-reed', 'Water Purity Optimal');
+    addDiag('#btn-inspect-tend-sedum', 'Living Roof Thriving');
+
+    this.overlayEl.querySelector('#btn-inspect-agora-gathering')?.addEventListener('click', () => {
+      soundFX.playAcousticStrum();
+      soundFX.playChoreExtinctionFanfare();
+      gameState.data.morale = 100;
+      gameState.save();
+      this.render();
+    });
   }
 }
 
