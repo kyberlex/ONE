@@ -105,7 +105,7 @@ game/
 * **Key Methods:**
   - `on(event, cb)`, `emit(event, payload)`: Custom event emitter for reactive UI updates.
   - `setPlayerProfile(name, vocationId, appearance)`: Initializes character data.
-  - `addBuilding(type, x, y)`: Validates placement, checks district zoning, deducts labor/resources, records building.
+  - `addBuilding(type, x, y, extraProps)`: Validates placement, checks district zoning, deducts labor/resources, records building with thermodynamic placement modifiers (`solarModifier`, `pumpEnergyKw`, `moraleBonus`).
   - `recalculateLaborBudget()`: Recalculates chore pool based on automated chores and population.
   - `extinguishChore(choreId, automationName)`: Permanently replaces manual chore with open-source automation.
   - `restUntilTomorrow()`: Executes the daily thermodynamic simulation loop:
@@ -148,9 +148,10 @@ game/
   - `renderWeather(ctx)`: Raindrop particle streaks, ground water ripples, wind drift particles, and lightning flash effects.
   - `renderJuice(ctx)`: Floating delta text (`+15 kWh`, `-20 L`), dust puffs on construction placement, and spring bounce transforms.
   - `renderZoningGuidelines(ctx)`: Dynamic Solarpunk bioclimatic zoning overlay rendered in placement mode: Amber Solar/Microgrid Sector (South), Cyan Hydrological Spine (North/Slope), Steel Machine Shop & Logistics Axis (West), Emerald Residential Pod Courtyards (East), and Commons Sanctuary Hearth buffer (Camper center).
+  - `renderPlacementPreview(ctx)`: Interactive ghost building preview with dynamic pill badge displaying soft thermodynamic proximity feedback (unshaded irradiance vs canopy shading, gravity flow vs uphill pumping, quiet courtyard vs workshop acoustic noise).
 * **Camera & Coordinate Systems:**
   - Smooth pan and zoom (`screenToWorld`, `worldToScreen`, `flyTo`, `flyToDistrict`).
-  - Interactive drag-and-drop building placement with collision detection and Commons Sanctuary preservation (`checkPlacementCollision`).
+  - Interactive drag-and-drop building placement with collision detection, Commons Sanctuary preservation, and thermodynamic modifier attribution (`checkPlacementCollision`, `placeBuildingAt`).
 
 ---
 

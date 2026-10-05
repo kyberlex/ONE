@@ -488,7 +488,56 @@ export class SettlementCanvas {
       return { valid: false, reason: 'Outside designated zoning districts' };
     }
 
-    return { valid: true, snapX, snapY };
+    // 5. Soft Thermodynamic Proximity Feedback
+    let feedback = null;
+    const isSolar = ['solar_array', 'battery_bank', 'solar_thermal_tower', 'solar_foundry'].includes(buildingType);
+    const isHydro = ['rain_cistern', 'reed_bed', 'retention_swale', 'deep_well'].includes(buildingType);
+    const isResidential = ['guest_dome', 'mhu_dwelling', 'mhu', 'kitchen_oven', 'clinic', 'school', 'elder_sanctuary'].includes(buildingType);
+    const isIndustrial = ['fablab', 'foundry', 'heavy_gantry_mill', 'trike_depot'].includes(buildingType);
+    const isAgro = ['garden_bed', 'food_forest', 'aquaponics_greenhouse'].includes(buildingType);
+
+    if (isSolar) {
+      // Check nearest tree distance
+      const minTreeDist = (this.trees || []).reduce((min, t) => Math.min(min, Math.hypot(snapX - t.x, snapY - t.y)), 9999);
+      if (snapY >= 10 && minTreeDist >= 75) {
+        feedback = { ok: true, text: '✅ 100% Unobstructed Irradiance (+15 kWh/day)', color: '#10b981', solarModifier: 1.0 };
+      } else {
+        feedback = { ok: false, text: '⚠️ Canopy Shading (-30% yield)', color: '#f59e0b', solarModifier: 0.70 };
+      }
+    } else if (isHydro) {
+      // Natural gravity flow from northern slope vs low-ground uphill pumping
+      if (snapY <= 40) {
+        feedback = { ok: true, text: '✅ Natural Gravity Flow (0 kW pumping)', color: '#06b6d4', pumpEnergyKw: 0 };
+      } else {
+        feedback = { ok: false, text: '⚠️ Uphill Pumping Load (+0.5 kW/day)', color: '#f59e0b', pumpEnergyKw: 0.5 };
+      }
+    } else if (isResidential) {
+      const nearIndustrial = (buildings || []).some(b => ['fablab', 'foundry', 'heavy_gantry_mill'].includes(b.type) && Math.hypot(snapX - b.x, snapY - b.y) < 130);
+      if (nearIndustrial) {
+        feedback = { ok: false, text: '⚠️ Workshop Noise (-15 morale)', color: '#ef4444', moraleBonus: -15 };
+      } else if (snapX > 40) {
+        feedback = { ok: true, text: '✅ Quiet Residential Courtyard (+10 morale)', color: '#10b981', moraleBonus: 10 };
+      } else {
+        feedback = { ok: true, text: '✅ Quiet Residential Courtyard (+5 morale)', color: '#10b981', moraleBonus: 5 };
+      }
+    } else if (isIndustrial) {
+      const nearResidential = (buildings || []).some(b => ['guest_dome', 'mhu_dwelling', 'mhu', 'kitchen_oven', 'clinic', 'school', 'elder_sanctuary'].includes(b.type) && Math.hypot(snapX - b.x, snapY - b.y) < 130) || (Math.hypot(snapX, snapY) < 100);
+      if (snapX < -60) {
+        feedback = { ok: true, text: '✅ Logistics Axis: Direct Freight & Vibration Absorption', color: '#94a3b8' };
+      } else if (nearResidential) {
+        feedback = { ok: false, text: '⚠️ Workshop Noise near Dwellings (-15 morale)', color: '#f59e0b' };
+      } else {
+        feedback = { ok: true, text: '⚙️ Industrial Machinery Plot', color: '#94a3b8' };
+      }
+    } else if (isAgro) {
+      if (snapY >= 0) {
+        feedback = { ok: true, text: '✅ Full Photoperiod Sunlight (+2,200 kcal/day)', color: '#10b981' };
+      } else {
+        feedback = { ok: false, text: '⚠️ Partial Shade Crop Plot (-20% yield)', color: '#f59e0b' };
+      }
+    }
+
+    return { valid: true, snapX, snapY, feedback };
   }
 
   placeBuildingAt(x, y) {
@@ -508,7 +557,13 @@ export class SettlementCanvas {
     }
 
     const type = this.placementBuilding;
-    const building = gameState.addBuilding(type, collision.snapX, collision.snapY);
+    const extraProps = {};
+    if (collision.feedback) {
+      if (collision.feedback.solarModifier !== undefined) extraProps.solarModifier = collision.feedback.solarModifier;
+      if (collision.feedback.pumpEnergyKw !== undefined) extraProps.pumpEnergyKw = collision.feedback.pumpEnergyKw;
+      if (collision.feedback.moraleBonus !== undefined) extraProps.moraleBonus = collision.feedback.moraleBonus;
+    }
+    const building = gameState.addBuilding(type, collision.snapX, collision.snapY, extraProps);
     if (building.error) {
       this.addFloatingText(collision.snapX, collision.snapY - 20, `⚠️ ${building.error}`, '#ef4444');
       this.cancelPlacementMode();
@@ -518,6 +573,10 @@ export class SettlementCanvas {
     // Juice audio & visual feedback
     soundFX.playBuildThunk();
     this.spawnDust(collision.snapX, collision.snapY);
+
+    if (collision.feedback) {
+      this.addFloatingText(collision.snapX, collision.snapY - 48, collision.feedback.text, collision.feedback.color);
+    }
 
     if (type === 'solar_array') {
       this.addFloatingText(collision.snapX, collision.snapY - 30, '+1.5 kWh/day Solar Grid!', '#fbbf24');
@@ -3306,14 +3365,18 @@ export class SettlementCanvas {
 
     const canBuild = gameState.canBuild(this.placementBuilding);
     const isInvalid = !collision.valid || !canBuild.ok;
-    const label = !canBuild.ok ? `⚠️ ${canBuild.reason}` : (!collision.valid ? `⚠️ ${collision.reason}` : '✓ Click to build (2h labor)');
+    const label = !canBuild.ok ? `⚠️ ${canBuild.reason}` : (!collision.valid ? `⚠️ ${collision.reason}` : `✓ Build (${canBuild.laborCostH || 2}h labor)`);
 
     ctx.save();
     ctx.translate(snapX, snapY);
 
-    ctx.fillStyle = isInvalid ? 'rgba(239, 68, 68, 0.25)' : 'rgba(16, 185, 129, 0.25)';
-    ctx.strokeStyle = isInvalid ? '#ef4444' : '#10b981';
-    ctx.lineWidth = 1.5;
+    const hasWarningFeedback = collision.feedback && !collision.feedback.ok;
+    const boxColor = isInvalid ? '#ef4444' : (hasWarningFeedback ? '#f59e0b' : '#10b981');
+    const boxBg = isInvalid ? 'rgba(239, 68, 68, 0.25)' : (hasWarningFeedback ? 'rgba(245, 158, 11, 0.25)' : 'rgba(16, 185, 129, 0.25)');
+
+    ctx.fillStyle = boxBg;
+    ctx.strokeStyle = boxColor;
+    ctx.lineWidth = 1.8;
     ctx.setLineDash([4, 4]);
 
     ctx.beginPath();
@@ -3321,10 +3384,32 @@ export class SettlementCanvas {
     ctx.fill();
     ctx.stroke();
 
-    ctx.fillStyle = isInvalid ? '#ef4444' : '#10b981';
+    // Primary status label
+    ctx.fillStyle = boxColor;
     ctx.font = 'bold 9px system-ui';
     ctx.textAlign = 'center';
-    ctx.fillText(label, 0, -20);
+    ctx.textBaseline = 'middle';
+    ctx.fillText(label, 0, -22);
+
+    // Instant sensory thermodynamic tooltip pill badge
+    if (collision.feedback && collision.valid && canBuild.ok) {
+      const fb = collision.feedback;
+      ctx.setLineDash([]);
+      ctx.font = 'bold 9px system-ui';
+      const textWidth = ctx.measureText(fb.text).width;
+      const pillWidth = Math.max(textWidth + 14, 80);
+
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.88)';
+      ctx.strokeStyle = fb.color;
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.roundRect(-pillWidth / 2, 20, pillWidth, 16, 8);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = fb.color;
+      ctx.fillText(fb.text, 0, 28);
+    }
 
     ctx.restore();
   }

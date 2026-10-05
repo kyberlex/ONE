@@ -127,6 +127,9 @@ The foundational engine (`main.js`, `state.js`, `settlement_canvas.js`, `hud.js`
   - Automatic Local Geolocation seamlessly centers the map on the player's real-world browser watershed, calculates localized solar irradiance (kWh/m²/yr) and precipitation (mm/yr), renders top 3 regional urban hubs, offers 6 established Candidate Corridors (Alps, Andes, Galicia, Sahel, Amazon, Kerala), and provides a silent privacy-first Mediterranean fallback without alert dialogs.
 * **Completed (Epic 1.2A — Dynamic Zoning Guidelines & Commons Sanctuary):**
   - Subtle, non-intrusive architectural guidelines in `settlement_canvas.js` (`renderZoningGuidelines`) rendered during ghost building placement: Amber Solar & Microgrid Sector (South) with unshaded irradiance vectors, Cyan Hydrological Spine (North / Slope) with gravity drainage contours, Steel Machine Shop & Logistics Axis (West) connecting to freight corridors, Emerald Residential Pod Courtyards (East) for future MHUs, and Commons Sanctuary (64m) protecting the village hearth and central agora.
+* **Completed (Epic 1.2B — Soft Thermodynamic Proximity Feedback):**
+  - Instant sensory feedback pill badges rendered in real time below ghost building previews during placement: unobstructed solar irradiance (+15 kWh/d) vs canopy shading (-30%), natural slope gravity flow (0 kW) vs uphill pumping load (+0.5 kW/d), and quiet courtyard (+10 morale) vs workshop acoustic vibration (-15 morale).
+  - Wired to physical simulation math in `state.js` (`restUntilTomorrow`), permanently attributing thermodynamic modifiers to placed infrastructure.
 
 The remaining civilizational expansion tasks are catalogued in [`game/TODO.md`](TODO.md) across four macro pillars:
 1. **Epic 1:** Bioclimatic Zoning Guidelines, Soft Proximity Feedback, and Dynamic Clearing Expansion.

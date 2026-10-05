@@ -45,11 +45,12 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
     - **Residential Pod Clearings (East / Radial Courtyards):** Emerald dashed courtyards reserved for future MHUs (accounting for both the timber chassis and attached kitchen garden aprons).
     - **Commons Sanctuary (Radius 0–60px around Camper):** Protective buffer indicator discouraging heavy industrial machinery at village center with active warning if encroached.
   - Implemented in `game/src/render/settlement_canvas.js` (`renderZoningGuidelines`) with context-aware sector highlighting according to active building category and strict 64m Commons Sanctuary clearance in `checkPlacementCollision`.
-- [ ] **Soft Thermodynamic Proximity Feedback (`checkPlacementCollision`):**
+- [x] **Soft Thermodynamic Proximity Feedback (`checkPlacementCollision`):**
   - Instant sensory tooltips and color feedback during dragging:
     - *“✅ 100% Unobstructed Irradiance (+15 kWh/day)”* vs *“⚠️ Canopy Shading (-30% yield)”*.
     - *“✅ Natural Gravity Flow (0 kW pumping)”* vs *“⚠️ Uphill Pumping Load (+0.5 kW/day)”*.
     - *“✅ Quiet Residential Courtyard (+10 morale)”* vs *“⚠️ Workshop Noise (-15 morale)”*.
+  - Implemented in `settlement_canvas.js` with live pill badge rendering on ghost placement box, and wired to `state.js` (`solarModifier`, `pumpEnergyKw`, `moraleBonus`) so placement choices physically modulate daily thermodynamic balances.
 
 ### **1.3 Organic Clearing Expansion & Dynamic Carrying Capacity (`settlement_canvas.js`, `state.js`)**
 - [ ] Replace static `Math.hypot(snapX, snapY) > 340` boundary with dynamic clearing radius scaling with population and milestones:

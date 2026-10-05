@@ -1001,7 +1001,7 @@ export class GameState {
     return rewardSummary;
   }
 
-  addBuilding(type, x, y) {
+  addBuilding(type, x, y, extraProps = {}) {
     const check = this.canBuild(type);
     if (!check.ok) {
       return { error: check.reason };
@@ -1025,7 +1025,8 @@ export class GameState {
       x,
       y,
       createdAt: Date.now(),
-      status: 'operational'
+      status: 'operational',
+      ...extraProps
     };
 
     if (type === 'solar_array') {
@@ -1635,16 +1636,26 @@ export class GameState {
     else if (day === 42) scheduledEvent = { type: 'weather_crisis', id: 'atmospheric_river', title: 'Torrential Atmospheric River' };
     else if (day === 45) scheduledEvent = { type: 'demarchy_dilemma', id: 'dil-fiat-trade', title: 'Agora Sortition: Honey Sell or Share?' };
     
-    // Solar generation scaled by atmospheric solar irradiance
-    const solarCount = this.data.buildings.filter(b => b.type === 'solar_array').length;
+    // Solar generation scaled by atmospheric solar irradiance & individual panel placement efficiency
+    const solarBuildings = this.data.buildings.filter(b => b.type === 'solar_array');
     const solarMultiplier = weather.solarIrradiance !== undefined ? weather.solarIrradiance : 1.0;
-    const solarGenerated = Math.round(solarCount * 15 * solarMultiplier);
+    const solarGenerated = Math.round(solarBuildings.reduce((sum, b) => {
+      const placementEff = b.solarModifier !== undefined ? b.solarModifier : 1.0;
+      return sum + (15 * solarMultiplier * placementEff);
+    }, 0));
+    const extraPumpLoadKw = this.data.buildings.reduce((sum, b) => sum + (b.pumpEnergyKw || 0), 0);
     const energyPrev = this.data.resources.energyStoredKwh;
     this.data.resources.energyStoredKwh = Math.min(
       this.data.resources.energyCapacityKwh,
-      Math.max(5, this.data.resources.energyStoredKwh - 10 + solarGenerated)
+      Math.max(5, this.data.resources.energyStoredKwh - 10 - extraPumpLoadKw + solarGenerated)
     );
     const netEnergy = this.data.resources.energyStoredKwh - energyPrev;
+
+    // Morale bonus or penalty from quiet courtyards vs workshop acoustic noise
+    const placementMoraleBonus = this.data.buildings.reduce((sum, b) => sum + (b.moraleBonus || 0), 0);
+    if (this.data.morale !== undefined && placementMoraleBonus !== 0) {
+      this.data.morale = Math.max(10, Math.min(100, this.data.morale + Math.sign(placementMoraleBonus) * Math.min(5, Math.abs(placementMoraleBonus))));
+    }
 
     // Process active inter-node cargo convoys
     const convoysArrived = [];
