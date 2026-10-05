@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "sim/app/**"
+      - "!sim/app/public/world_snapshot.json"
       - ".github/workflows/deploy_pages.yml"
   workflow_dispatch:
 

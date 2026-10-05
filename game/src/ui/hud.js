@@ -43,23 +43,28 @@ export class GameHUD {
     const debt = data.debtUsd !== undefined ? data.debtUsd : 12000;
     const isFeastDay = (data.day % 7 === 0 || data.objective?.id === 'obj-day7-feast') && !data.weekendFeastCelebrated;
 
+    const season = gameState.getSeason();
+
     // 1. Render Top HUD Bar, District Quick-Jump Ribbon & Objective Card
     this.hudContainer.innerHTML = `
       <div class="hud-top-bar">
         <!-- Site Name & Bioregion Badge -->
         <div class="hud-site-badge">
-          <span class="site-icon">🌱</span>
+          <span class="site-icon">${season.icon}</span>
           <div class="site-meta">
             <span class="site-name">${data.location.name}</span>
-            <span class="site-day">DAY ${data.day} • DAWN 06:00</span>
+            <span class="site-day">${season.name.toUpperCase()} (D${season.dayOfSeason}/7 • Y${season.year}) • DAY ${data.day}</span>
           </div>
         </div>
 
         <!-- Dynamic Weather & Climate Badge -->
-        <button type="button" class="hud-weather-badge ${data.weather?.isCrisis ? 'crisis-pulse' : ''}" id="btn-hud-weather" title="Weather: ${data.weather?.sky || 'Clear'} (${data.weather?.tempC || 22}°C, Rain: ${data.weather?.rainfallMm || 0}mm, Solar: ${Math.round((data.weather?.solarIrradiance || 1.0) * 100)}%) — Click for Climate Radar">
+        <button type="button" class="hud-weather-badge ${data.weather?.isCrisis ? 'crisis-pulse' : ''}" id="btn-hud-weather" title="${season.name} (Year ${season.year}): ${data.weather?.sky || 'Clear'} (${data.weather?.tempC || 22}°C, Rain: ${data.weather?.rainfallMm || 0}mm, Solar: ${Math.round((data.weather?.solarIrradiance || 1.0) * 100)}%, Evap: -${data.lastEvaporationL || 0}L/d) — Click for Climate Radar">
           <span class="weather-icon">${data.weather?.icon || '☀️'}</span>
           <div class="weather-meta">
-            <span class="weather-temp">${data.weather?.tempC || 22}°C</span>
+            <div style="display: flex; align-items: center; gap: 4px;">
+              <span class="weather-temp">${data.weather?.tempC || 22}°C</span>
+              <span style="font-size: 9.5px; opacity: 0.85; font-weight: 700; color: #38bdf8;">${season.icon} D${season.dayOfSeason}</span>
+            </div>
             <span class="weather-sky">${data.weather?.sky || 'Crisp Clear Dawn'}</span>
           </div>
         </button>
@@ -875,13 +880,23 @@ export class GameHUD {
       wBar.style.width = `${Math.min(100, (res.waterLiters / res.waterCapacityL) * 100)}%`;
     }
 
+    const siteDayEl = this.hudContainer.querySelector('.site-day');
+    const season = gameState.getSeason();
+    if (siteDayEl) {
+      siteDayEl.textContent = `${season.name.toUpperCase()} (D${season.dayOfSeason}/7 • Y${season.year}) • DAY ${gameState.data.day}`;
+    }
+
     const weatherBtn = this.hudContainer.querySelector('#btn-hud-weather');
     if (weatherBtn && gameState.data.weather) {
       const w = gameState.data.weather;
+      weatherBtn.title = `${season.name} (Year ${season.year}): ${w.sky || 'Clear'} (${w.tempC || 22}°C, Rain: ${w.rainfallMm || 0}mm, Solar: ${Math.round((w.solarIrradiance || 1.0) * 100)}%, Evap: -${gameState.data.lastEvaporationL || 0}L/d) — Click for Climate Radar`;
       weatherBtn.innerHTML = `
         <span class="weather-icon">${w.icon || '☀️'}</span>
         <div class="weather-meta">
-          <span class="weather-temp">${w.tempC}°C</span>
+          <div style="display: flex; align-items: center; gap: 4px;">
+            <span class="weather-temp">${w.tempC}°C</span>
+            <span style="font-size: 9.5px; opacity: 0.85; font-weight: 700; color: #38bdf8;">${season.icon} D${season.dayOfSeason}</span>
+          </div>
           <span class="weather-sky">${w.sky}</span>
         </div>
       `;

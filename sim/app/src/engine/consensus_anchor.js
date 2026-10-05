@@ -29,7 +29,12 @@ export class ConsensusAnchorManager {
 
   loadAutoAnchorEnabled() {
     const saved = localStorage.getItem('oasis_auto_anchor_enabled');
-    return saved !== null ? saved === 'true' : true; // Enabled by default
+    if (saved !== null) return saved === 'true';
+    // By default, disable automated anchor when running on localhost to avoid continuous remote commits during development
+    if (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+      return false;
+    }
+    return true; // Enabled by default in production deployments
   }
 
   setAutoAnchorEnabled(val) {

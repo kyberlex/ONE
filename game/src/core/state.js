@@ -127,6 +127,60 @@ export const REGIONAL_PARTNER_NODES = {
   }
 };
 
+/**
+ * Four Bioregional Seasons (7-Day Micro-Seasons / 28-Day Annual Cycle - Epic 3.1)
+ */
+export const SEASONS = {
+  SPRING: {
+    id: 'spring',
+    name: 'Spring',
+    nameKey: 'season_spring',
+    icon: '🌱',
+    description: 'Moderate temperatures, frequent showers, optimal seed germination.',
+    tempRange: [16, 22],
+    solarBase: 1.0,
+    cropGrowthMult: 1.25, // +25% crop growth
+    heatingDemandPerCapitaKw: 0,
+    evapCoeff: 0.06
+  },
+  SUMMER: {
+    id: 'summer',
+    name: 'Summer',
+    nameKey: 'season_summer',
+    icon: '☀️',
+    description: 'Peak solar irradiance, high temperatures, rapid evaporation, drought risk.',
+    tempRange: [28, 38],
+    solarBase: 1.25, // Peak irradiance 1.25 kW/m²
+    cropGrowthMult: 1.0,
+    heatingDemandPerCapitaKw: 0,
+    evapCoeff: 0.12 // Rapid evaporation (-15% water acceleration)
+  },
+  AUTUMN: {
+    id: 'autumn',
+    name: 'Autumn',
+    nameKey: 'season_autumn',
+    icon: '🍂',
+    description: 'Harvest bounty, cooling temperatures, heavy rainfall, storm runoff testing swales.',
+    tempRange: [14, 20],
+    solarBase: 0.85,
+    cropGrowthMult: 1.35, // Harvest bounty (+35% yield)
+    heatingDemandPerCapitaKw: 0.2,
+    evapCoeff: 0.05
+  },
+  WINTER: {
+    id: 'winter',
+    name: 'Winter',
+    nameKey: 'season_winter',
+    icon: '❄️',
+    description: 'Low solar irradiance, frost temperatures, frozen outdoor piping, thermal heating loads.',
+    tempRange: [0, 8],
+    solarBase: 0.55, // Low solar irradiance 0.55 kW/m²
+    cropGrowthMult: 0.40, // Outdoor beds dormant; greenhouse protected
+    heatingDemandPerCapitaKw: 1.5, // 1.5 kWh/capita thermal heating
+    evapCoeff: 0.01
+  }
+};
+
 export class GameState {
   constructor() {
     this.listeners = new Map();
@@ -214,6 +268,27 @@ export class GameState {
         cloudCover: 0.1,
         isCrisis: false
       },
+
+      // Four Bioregional Seasons (Epic 3.1: 7-day micro-seasons / 28-day annual cycle)
+      season: {
+        id: 'spring',
+        name: 'Spring',
+        nameKey: 'season_spring',
+        icon: '🌱',
+        description: 'Moderate temperatures, frequent showers, optimal seed germination.',
+        tempRange: [16, 22],
+        solarBase: 1.0,
+        cropGrowthMult: 1.25,
+        heatingDemandPerCapitaKw: 0,
+        evapCoeff: 0.06,
+        year: 1,
+        dayOfYear: 1,
+        dayOfSeason: 1,
+        totalDaysInSeason: 7,
+        totalDaysInYear: 28
+      },
+      lastEvaporationL: 0,
+      lastHeatingLoadKwh: 0,
 
       // Constructed Buildings on Grid
       buildings: [
@@ -2232,6 +2307,44 @@ export class GameState {
     };
   }
 
+  /**
+   * Resolves the active Bioregional Season for a given day (Epic 3.1)
+   * 28-day annual cycle divided into four 7-day micro-seasons:
+   * Days 1–7: Spring, Days 8–14: Summer, Days 15–21: Autumn, Days 22–28: Winter
+   */
+  getSeasonForDay(day = 1) {
+    const safeDay = Math.max(1, day);
+    const year = Math.floor((safeDay - 1) / 28) + 1;
+    const dayOfYear = ((safeDay - 1) % 28) + 1; // 1 to 28
+    const seasonIndex = Math.floor((dayOfYear - 1) / 7); // 0: Spring, 1: Summer, 2: Autumn, 3: Winter
+    const dayOfSeason = ((dayOfYear - 1) % 7) + 1; // 1 to 7
+
+    const seasonKeys = ['SPRING', 'SUMMER', 'AUTUMN', 'WINTER'];
+    const seasonConfig = SEASONS[seasonKeys[seasonIndex]] || SEASONS.SPRING;
+
+    return {
+      id: seasonConfig.id,
+      name: seasonConfig.name,
+      nameKey: seasonConfig.nameKey,
+      icon: seasonConfig.icon,
+      description: seasonConfig.description,
+      tempRange: seasonConfig.tempRange,
+      solarBase: seasonConfig.solarBase,
+      cropGrowthMult: seasonConfig.cropGrowthMult,
+      heatingDemandPerCapitaKw: seasonConfig.heatingDemandPerCapitaKw,
+      evapCoeff: seasonConfig.evapCoeff,
+      year,
+      dayOfYear,
+      dayOfSeason,
+      totalDaysInSeason: 7,
+      totalDaysInYear: 28
+    };
+  }
+
+  getSeason() {
+    return this.data.season || this.getSeasonForDay(this.data.day || 1);
+  }
+
   getWeatherForDay(day) {
     // Scheduled Climate Crisis Days (Matrix 3: 48h Advance Triage & Resilience)
     if (day === 5) return { tempC: -3, sky: 'Polar Cold Snap Frost', icon: '❄️', rainfallMm: 0, solarIrradiance: 0.70, windSpeedKmh: 28, cloudCover: 0.30, isCrisis: true, disasterId: 'cold_snap' };
@@ -2241,21 +2354,51 @@ export class GameState {
     if (day === 35) return { tempC: 16, sky: 'Mountain Flash Flood Cloudburst', icon: '⛈️', rainfallMm: 45, solarIrradiance: 0.15, windSpeedKmh: 42, cloudCover: 0.95, isCrisis: true, disasterId: 'flash_flood' };
     if (day === 42) return { tempC: 14, sky: 'Torrential Atmospheric River', icon: '🌊', rainfallMm: 55, solarIrradiance: 0.10, windSpeedKmh: 52, cloudCover: 1.0, isCrisis: true, disasterId: 'atmospheric_river' };
 
-    // Dynamic Bioregional Weather Pattern
-    const patterns = [
-      { tempC: 22, sky: 'Crisp Clear Dawn', icon: '☀️', rainfallMm: 0, solarIrradiance: 1.0, windSpeedKmh: 12, cloudCover: 0.10 },
-      { tempC: 18, sky: 'Afternoon Rain Showers', icon: '🌧️', rainfallMm: 16, solarIrradiance: 0.45, windSpeedKmh: 18, cloudCover: 0.80 },
-      { tempC: 21, sky: 'Warm Golden Sunshine', icon: '🌤️', rainfallMm: 0, solarIrradiance: 0.95, windSpeedKmh: 10, cloudCover: 0.20 },
-      { tempC: 17, sky: 'Overcast Coastal Drizzle', icon: '🌦️', rainfallMm: 6, solarIrradiance: 0.60, windSpeedKmh: 16, cloudCover: 0.75 },
-      { tempC: 24, sky: 'High Cirrus Clouds', icon: '⛅', rainfallMm: 0, solarIrradiance: 0.85, windSpeedKmh: 14, cloudCover: 0.35 },
-      { tempC: 16, sky: 'Steady Mountain Rain', icon: '🌧️', rainfallMm: 22, solarIrradiance: 0.35, windSpeedKmh: 20, cloudCover: 0.85 },
-      { tempC: 23, sky: 'Sunny Meadow Breeze', icon: '☀️', rainfallMm: 0, solarIrradiance: 1.0, windSpeedKmh: 12, cloudCover: 0.15 },
-      { tempC: 15, sky: 'Rolling Thunderstorm', icon: '⛈️', rainfallMm: 32, solarIrradiance: 0.20, windSpeedKmh: 36, cloudCover: 0.90 },
-      { tempC: 19, sky: 'Mild Overcast Canopy', icon: '☁️', rainfallMm: 2, solarIrradiance: 0.65, windSpeedKmh: 14, cloudCover: 0.70 },
-      { tempC: 25, sky: 'Brilliant High Sun', icon: '☀️', rainfallMm: 0, solarIrradiance: 1.0, windSpeedKmh: 8, cloudCover: 0.05 }
-    ];
+    // Dynamic Bioregional Weather Pattern integrated with Four Bioregional Seasons (Epic 3.1)
+    const season = this.getSeasonForDay(day);
+    const dayOfSeason = season.dayOfSeason;
 
-    return patterns[(day - 1) % patterns.length];
+    const seasonalPatterns = {
+      spring: [
+        { tempC: 18, sky: 'Crisp Clear Dawn', icon: '☀️', rainfallMm: 0, solarIrradiance: 1.0, windSpeedKmh: 12, cloudCover: 0.10 },
+        { tempC: 16, sky: 'Gentle Spring Showers', icon: '🌧️', rainfallMm: 18, solarIrradiance: 0.50, windSpeedKmh: 16, cloudCover: 0.75 },
+        { tempC: 19, sky: 'Warm Golden Sunshine', icon: '🌤️', rainfallMm: 0, solarIrradiance: 1.0, windSpeedKmh: 10, cloudCover: 0.20 },
+        { tempC: 17, sky: 'Overcast Valley Drizzle', icon: '🌦️', rainfallMm: 12, solarIrradiance: 0.60, windSpeedKmh: 14, cloudCover: 0.70 },
+        { tempC: 21, sky: 'Blooming Meadow Breeze', icon: '⛅', rainfallMm: 0, solarIrradiance: 1.05, windSpeedKmh: 15, cloudCover: 0.25 },
+        { tempC: 17, sky: 'Steady Spring Rain', icon: '🌧️', rainfallMm: 24, solarIrradiance: 0.40, windSpeedKmh: 18, cloudCover: 0.85 },
+        { tempC: 22, sky: 'Mild Solarpunk Afternoon', icon: '☀️', rainfallMm: 0, solarIrradiance: 1.10, windSpeedKmh: 12, cloudCover: 0.10 }
+      ],
+      summer: [
+        { tempC: 30, sky: 'High Solstice Sunshine', icon: '☀️', rainfallMm: 0, solarIrradiance: 1.25, windSpeedKmh: 10, cloudCover: 0.05 },
+        { tempC: 34, sky: 'Scorching Midday Sun', icon: '☀️', rainfallMm: 0, solarIrradiance: 1.25, windSpeedKmh: 8, cloudCover: 0.0 },
+        { tempC: 29, sky: 'Convective Heat Clouds', icon: '⛅', rainfallMm: 0, solarIrradiance: 1.15, windSpeedKmh: 12, cloudCover: 0.30 },
+        { tempC: 32, sky: 'Hot Mountain Breeze', icon: '🌤️', rainfallMm: 0, solarIrradiance: 1.20, windSpeedKmh: 14, cloudCover: 0.15 },
+        { tempC: 36, sky: 'Stifling Thermal Ridge', icon: '🌡️', rainfallMm: 0, solarIrradiance: 1.25, windSpeedKmh: 6, cloudCover: 0.05 },
+        { tempC: 28, sky: 'Afternoon Heat Storm', icon: '⛈️', rainfallMm: 14, solarIrradiance: 0.70, windSpeedKmh: 30, cloudCover: 0.80 },
+        { tempC: 33, sky: 'Golden Sunset Ember', icon: '☀️', rainfallMm: 0, solarIrradiance: 1.20, windSpeedKmh: 9, cloudCover: 0.05 }
+      ],
+      autumn: [
+        { tempC: 18, sky: 'Golden October Sun', icon: '🌤️', rainfallMm: 0, solarIrradiance: 0.90, windSpeedKmh: 14, cloudCover: 0.25 },
+        { tempC: 15, sky: 'Autumn Harvest Rain', icon: '🌧️', rainfallMm: 28, solarIrradiance: 0.40, windSpeedKmh: 22, cloudCover: 0.85 },
+        { tempC: 17, sky: 'Brisk Timber Canopy', icon: '⛅', rainfallMm: 0, solarIrradiance: 0.85, windSpeedKmh: 16, cloudCover: 0.40 },
+        { tempC: 14, sky: 'Misty Ridge Drizzle', icon: '🌦️', rainfallMm: 16, solarIrradiance: 0.50, windSpeedKmh: 18, cloudCover: 0.75 },
+        { tempC: 19, sky: 'Clear Autumn Solarpunk Sun', icon: '☀️', rainfallMm: 0, solarIrradiance: 0.95, windSpeedKmh: 12, cloudCover: 0.15 },
+        { tempC: 13, sky: 'Heavy Runoff Downpour', icon: '⛈️', rainfallMm: 36, solarIrradiance: 0.25, windSpeedKmh: 38, cloudCover: 0.95 },
+        { tempC: 16, sky: 'Amber Evening Chill', icon: '☁️', rainfallMm: 4, solarIrradiance: 0.65, windSpeedKmh: 15, cloudCover: 0.65 }
+      ],
+      winter: [
+        { tempC: 6, sky: 'Pale Low Winter Sun', icon: '☀️', rainfallMm: 0, solarIrradiance: 0.60, windSpeedKmh: 12, cloudCover: 0.20 },
+        { tempC: 2, sky: 'Frosty Cold Air Mass', icon: '❄️', rainfallMm: 0, solarIrradiance: 0.55, windSpeedKmh: 18, cloudCover: 0.45 },
+        { tempC: 4, sky: 'Freezing Winter Fog', icon: '🌫️', rainfallMm: 0, solarIrradiance: 0.35, windSpeedKmh: 8, cloudCover: 0.85 },
+        { tempC: 1, sky: 'Mountain Sleet & Slush', icon: '🌨️', rainfallMm: 12, solarIrradiance: 0.25, windSpeedKmh: 24, cloudCover: 0.95 },
+        { tempC: 5, sky: 'Crisp Frost Flurry', icon: '❄️', rainfallMm: 0, solarIrradiance: 0.55, windSpeedKmh: 15, cloudCover: 0.30 },
+        { tempC: 0, sky: 'Sub-Zero Alpine Freeze', icon: '🧊', rainfallMm: 0, solarIrradiance: 0.50, windSpeedKmh: 20, cloudCover: 0.40 },
+        { tempC: 7, sky: 'Late Winter Thaw', icon: '🌤️', rainfallMm: 2, solarIrradiance: 0.65, windSpeedKmh: 14, cloudCover: 0.50 }
+      ]
+    };
+
+    const patterns = seasonalPatterns[season.id] || seasonalPatterns.spring;
+    return patterns[(dayOfSeason - 1) % patterns.length];
   }
 
   restUntilTomorrow() {
@@ -2264,7 +2407,9 @@ export class GameState {
     this.data.hour = 6;
     this.data.isNight = false;
 
-    // Advance weather simulation
+    // Advance season and weather simulation (Epic 3.1)
+    const season = this.getSeasonForDay(this.data.day);
+    this.data.season = season;
     const weather = this.getWeatherForDay(this.data.day);
     this.data.weather = weather;
 
@@ -2273,6 +2418,8 @@ export class GameState {
     const dailyFoodNeed = peopleCount * 2200;
 
     // Daily food harvest from constructed agricultural infrastructure (Art. 1 & Line 196 game.md)
+    // Outdoor agro infrastructure obeys seasonal biological growth rates:
+    // Spring (+25%), Summer (1.0x), Autumn (+35% harvest bounty), Winter (0.4x frost dormancy)
     const gardenBedsCount = this.data.buildings.filter(b => b.type === 'garden_bed').length;
     const foodForestCount = this.data.buildings.filter(b => b.type === 'food_forest').length;
     const greenhouseCount = this.data.buildings.filter(b => b.type === 'aquaponics_greenhouse').length;
@@ -2280,7 +2427,10 @@ export class GameState {
     const hasKitchen = this.data.buildings.some(b => b.type === 'kitchen_oven');
     const hasBiogas = this.data.buildings.some(b => b.type === 'biogas_digester');
 
-    const foodGenerated = (gardenBedsCount * 2200) + (foodForestCount * 4500) + (greenhouseCount * 6000) + (hasKitchen ? 1200 : 0) + (hasBiogas ? 800 : 0);
+    const outdoorFoodGenerated = Math.round(((gardenBedsCount * 2200) + (foodForestCount * 4500)) * (season.cropGrowthMult || 1.0));
+    const indoorFoodGenerated = (greenhouseCount * 6000) + (hasKitchen ? 1200 : 0) + (hasBiogas ? 800 : 0);
+    const foodGenerated = outdoorFoodGenerated + indoorFoodGenerated;
+
     const maxFoodCap = 100000 + (siloCount * 30000);
     this.data.resources.foodCapacityKcal = maxFoodCap;
     this.data.resources.foodKcal = Math.min(maxFoodCap, this.data.resources.foodKcal + foodGenerated);
@@ -2310,6 +2460,17 @@ export class GameState {
     const waterDraw = hasReedBed ? Math.round(waterBase * 0.35) : waterBase;
     const waterConsumed = Math.min(this.data.resources.waterLiters, waterDraw);
     this.data.resources.waterLiters = Math.max(0, this.data.resources.waterLiters - waterDraw);
+
+    // Dynamic Evapotranspiration Loss (E_loss = A_exposed * (T_ambient - 15) * k_evap) (Epic 3.1)
+    // Covered/shaded cisterns have near-zero evaporation.
+    // Open swales (15 m²) and open garden beds (4 m²) experience evapotranspiration on warm/hot days (>15°C).
+    const exposedWaterAreaM2 = (swaleCount * 15) + (gardenBedsCount * 4);
+    const tempAboveRef = Math.max(0, weather.tempC - 15);
+    const kEvap = (weather.isCrisis && weather.disasterId === 'drought') ? 0.16 : (season.evapCoeff || 0.08);
+    const evaporationLossL = Math.min(this.data.resources.waterLiters, Math.round(exposedWaterAreaM2 * tempAboveRef * kEvap));
+    this.data.resources.waterLiters = Math.max(0, this.data.resources.waterLiters - evaporationLossL);
+    this.data.lastEvaporationL = evaporationLossL;
+
     const isDehydrated = this.data.resources.waterLiters <= 0;
 
     // Newcomer arrival cadence (Matrix 6: The 11 Canonical Vocations + Multi-Gen)
@@ -2486,10 +2647,21 @@ export class GameState {
       return sum + (15 * solarMultiplier * placementEff);
     }, 0));
     const extraPumpLoadKw = this.data.buildings.reduce((sum, b) => sum + (b.pumpEnergyKw || 0), 0);
+
+    // Thermal heating demand in cold weather (< 10°C / Winter - Epic 3.1)
+    let heatingLoadKwh = 0;
+    if (weather.tempC < 10) {
+      const rawHeating = peopleCount * Math.max(0, 10 - weather.tempC) * (season.heatingDemandPerCapitaKw || 0.4);
+      const woodStoveOffset = hasKitchen ? 4.0 : 0;
+      const agoraOffset = this.data.buildings.some(b => b.type === 'agora_fire_hearth') ? 2.5 : 0;
+      heatingLoadKwh = Math.max(0, Math.round((rawHeating - woodStoveOffset - agoraOffset) * 10) / 10);
+    }
+    this.data.lastHeatingLoadKwh = heatingLoadKwh;
+
     const energyPrev = this.data.resources.energyStoredKwh;
     this.data.resources.energyStoredKwh = Math.min(
       this.data.resources.energyCapacityKwh,
-      Math.max(5, this.data.resources.energyStoredKwh - 10 - extraPumpLoadKw + solarGenerated)
+      Math.max(5, this.data.resources.energyStoredKwh - 10 - extraPumpLoadKw - heatingLoadKwh + solarGenerated)
     );
     const netEnergy = this.data.resources.energyStoredKwh - energyPrev;
 
@@ -2539,17 +2711,21 @@ export class GameState {
     const report = {
       prevDay,
       day: this.data.day,
+      season,
       foodGenerated,
       foodConsumed,
       netFood,
       foodRemaining: this.data.resources.foodKcal,
+      cropGrowthMult: season.cropGrowthMult || 1.0,
       totalWaterHarvested,
       rainHarvested,
       wellHarvested,
       waterConsumed,
+      evaporationLossL,
       waterRemaining: this.data.resources.waterLiters,
       waterCapacityL: this.data.resources.waterCapacityL,
       solarGenerated,
+      heatingLoadKwh,
       netEnergy,
       energyStored: this.data.resources.energyStoredKwh,
       energyCapacity: this.data.resources.energyCapacityKwh,
@@ -2826,6 +3002,10 @@ export class GameState {
 
           if (!this.data.weather) {
             this.data.weather = this.getWeatherForDay(this.data.day || 1);
+          }
+
+          if (!this.data.season) {
+            this.data.season = this.getSeasonForDay(this.data.day || 1);
           }
 
           // Ensure starterKits contains all canonical buildings and scalable limits

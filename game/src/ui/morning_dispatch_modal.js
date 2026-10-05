@@ -34,6 +34,7 @@ export class MorningDispatchModal {
     this.onDismiss = onDismiss;
     const player = gameState.data.player || { name: 'Alex' };
     const day = report.day || gameState.data.day || 2;
+    const season = report.season || gameState.getSeason();
     const weather = report.weather || { tempC: 22, sky: 'Crisp Clear Dawn', icon: '☀️', solarIrradiance: '100%' };
     const objective = report.objective || gameState.data.objective || { title: 'Maintain Settlement', description: 'Survive in comfort.', reward: 'Stability' };
 
@@ -154,10 +155,10 @@ export class MorningDispatchModal {
       <div class="modal-window morning-dispatch-window">
         <div class="modal-header dispatch-header">
           <div class="modal-title-row">
-            <span class="modal-badge-gold">🌅 O.N.E. MORNING DISPATCH • DAWN 06:00</span>
+            <span class="modal-badge-gold">🌅 ${season.icon} ${season.name.toUpperCase()} (D${season.dayOfSeason}/7 • Y${season.year})</span>
             <h3>DAY ${day} DAWN REPORT</h3>
           </div>
-          <span class="dispatch-tag">SOLARPUNK COMMONS</span>
+          <span class="dispatch-tag">${season.name} • 06:00 Dawn</span>
         </div>
 
         <div class="modal-body dispatch-modal-body">
@@ -177,7 +178,7 @@ export class MorningDispatchModal {
                 ${(report.foodGenerated || 0) > 0 ? `+${report.foodGenerated.toLocaleString()} / -${(report.foodConsumed || 6600).toLocaleString()} kcal` : `-${(report.foodConsumed || 6600).toLocaleString()} kcal`}
               </div>
               <div class="audit-stock" id="dispatch-food-stock">${Math.round(foodRemaining).toLocaleString()} kcal</div>
-              <div class="audit-sub">${(report.foodGenerated || 0) > 0 ? `Harvest: +${report.foodGenerated.toLocaleString()} kcal/day` : `~${daysOfFood} days dry reserve`}</div>
+              <div class="audit-sub">${(report.foodGenerated || 0) > 0 ? `Harvest: +${report.foodGenerated.toLocaleString()} kcal/day (${Math.round((report.cropGrowthMult || 1.0) * 100)}% ${season.name})` : `~${daysOfFood} days dry reserve`}</div>
             </div>
 
             <!-- 💧 Water -->
@@ -190,7 +191,7 @@ export class MorningDispatchModal {
                 ${(report.totalWaterHarvested || 0) > 0 ? `+${report.totalWaterHarvested} L (Rain/Well)` : `-${report.waterConsumed || 150} L`}
               </div>
               <div class="audit-stock">${Math.round(waterRemaining).toLocaleString()} / ${report.waterCapacityL || gameState.data.resources.waterCapacityL} L</div>
-              <div class="audit-sub">${(report.totalWaterHarvested || 0) > 0 ? `Captured ${report.totalWaterHarvested} L from weather` : 'Domestic & hygiene draw'}</div>
+              <div class="audit-sub">${(report.totalWaterHarvested || 0) > 0 ? `+${report.totalWaterHarvested} L harvested` : 'Draw: -' + (report.waterConsumed || 150) + ' L'}${ (report.evaporationLossL || 0) > 0 ? ` • Evap: -${report.evaporationLossL} L` : ''}</div>
             </div>
 
             <!-- ⚡ Solar & Battery -->
@@ -201,7 +202,7 @@ export class MorningDispatchModal {
               </div>
               <div class="audit-flow flow-recharged">+${report.solarGenerated || 0} kWh</div>
               <div class="audit-stock">${Math.round(energyStored)} / ${energyCapacity} kWh</div>
-              <div class="audit-sub">Morning battery buffer</div>
+              <div class="audit-sub">${(report.heatingLoadKwh || 0) > 0 ? `Heating: -${report.heatingLoadKwh} kWh • Buffer` : 'Morning battery buffer'}</div>
             </div>
           </div>
 
@@ -215,6 +216,10 @@ export class MorningDispatchModal {
               <div class="meta-detail-row">
                 <span>Temperature: <strong>${weather.tempC}°C</strong></span>
                 <span>Solar Irradiance: <strong style="color: #fbbf24;">${weather.solarIrradiance}</strong></span>
+              </div>
+              <div class="meta-detail-row" style="margin-top: 4px; font-size: 11px; color: #94a3b8;">
+                <span>Season: <strong>${season.icon} ${season.name} (Year ${season.year})</strong></span>
+                <span>Agro Yield: <strong style="color: #34d399;">${Math.round((report.cropGrowthMult || 1.0) * 100)}%</strong></span>
               </div>
             </div>
 

@@ -1231,23 +1231,35 @@ export class EventModal {
   }
 
   /* -------------------------------------------------------------
-   * 9. Bioregional Climate Radar & Forecast Modal
+   * 9. Bioregional Climate Radar & Forecast Modal (Epic 3.1)
    * ----------------------------------------------------------- */
   renderWeatherRadarModal(options = {}) {
     const data = gameState.data;
     const currentDay = data.day || 1;
+    const season = gameState.getSeason();
     const weather = data.weather || gameState.getWeatherForDay(currentDay);
     const cisternCount = data.buildings?.filter(b => b.type === 'rain_cistern').length || 0;
     const swaleCount = data.buildings?.filter(b => b.type === 'retention_swale').length || 0;
+    const gardenCount = data.buildings?.filter(b => b.type === 'garden_bed').length || 0;
     const catchmentM2 = (cisternCount * 30) + (swaleCount * 60);
+    const exposedWaterAreaM2 = (swaleCount * 15) + (gardenCount * 4);
+    const tempAboveRef = Math.max(0, weather.tempC - 15);
+    const kEvap = (weather.isCrisis && weather.disasterId === 'drought') ? 0.16 : (season.evapCoeff || 0.08);
+    const estEvapL = Math.round(exposedWaterAreaM2 * tempAboveRef * kEvap);
 
     const f1 = gameState.getWeatherForDay(currentDay + 1);
+    const s1 = gameState.getSeasonForDay(currentDay + 1);
     const f2 = gameState.getWeatherForDay(currentDay + 2);
+    const s2 = gameState.getSeasonForDay(currentDay + 2);
     const f3 = gameState.getWeatherForDay(currentDay + 3);
+    const s3 = gameState.getSeasonForDay(currentDay + 3);
 
-    const renderForecastCard = (dayNum, f) => `
+    const renderForecastCard = (dayNum, f, s) => `
       <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-md); padding: 12px; display: flex; flex-direction: column; align-items: center; text-align: center;">
-        <span style="font-size: 10px; font-weight: 700; color: #94a3b8;">DAY ${dayNum}</span>
+        <div style="display: flex; justify-content: space-between; width: 100%; font-size: 10px; font-weight: 700; color: #94a3b8; margin-bottom: 2px;">
+          <span>DAY ${dayNum}</span>
+          <span style="color: #38bdf8;">${s.icon} D${s.dayOfSeason}/7</span>
+        </div>
         <span style="font-size: 26px; margin: 4px 0;">${f.icon}</span>
         <span style="font-size: 13px; font-weight: 700; color: #fff;">${f.tempC}°C</span>
         <span style="font-size: 10.5px; color: #cbd5e1; margin-top: 2px;">${f.sky}</span>
@@ -1258,19 +1270,37 @@ export class EventModal {
     `;
 
     this.modalEl.innerHTML = `
-      <div class="modal-window event-modal-window" style="max-width: 620px;" role="dialog" aria-modal="true">
+      <div class="modal-window event-modal-window" style="max-width: 640px;" role="dialog" aria-modal="true">
         <div class="modal-header">
           <div class="modal-title-group">
             <span class="modal-icon">🌤️</span>
             <div>
               <h2 class="modal-title">Bioregional Climate Radar</h2>
-              <span class="modal-subtitle">Thermodynamic Atmosphere • Precipitation Projection</span>
+              <span class="modal-subtitle">Thermodynamic Atmosphere • Four Seasons • Evapotranspiration</span>
             </div>
           </div>
           <button type="button" class="btn-modal-close" id="btn-event-close" aria-label="Close dialog">✕</button>
         </div>
 
         <div class="event-modal-body">
+          <!-- Season Hero Banner -->
+          <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(56, 189, 248, 0.12)); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="font-size: 32px;">${season.icon}</span>
+              <div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <h3 style="margin: 0; font-size: 15px; color: #fff;">${season.name.toUpperCase()} (Day ${season.dayOfSeason} of 7 • Year ${season.year})</h3>
+                  <span style="font-size: 10px; font-weight: 700; color: #34d399; background: rgba(16, 185, 129, 0.2); padding: 2px 6px; border-radius: 4px;">${Math.round((season.cropGrowthMult || 1.0) * 100)}% Agro Yield</span>
+                </div>
+                <p style="margin: 2px 0 0; font-size: 11px; color: #94a3b8; line-height: 1.3;">${season.description}</p>
+              </div>
+            </div>
+            <div style="text-align: right; font-size: 11px; color: #cbd5e1;">
+              <div>Solar Base: <strong style="color: #fbbf24;">${season.solarBase} kW/m²</strong></div>
+              <div>Temp Band: <strong>${season.tempRange[0]}–${season.tempRange[1]}°C</strong></div>
+            </div>
+          </div>
+
           <!-- Current Weather Hero Card -->
           <div style="background: rgba(14, 27, 36, 0.85); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-md); padding: 16px; margin-bottom: 14px; display: flex; align-items: center; gap: 16px;">
             <span style="font-size: 42px;">${weather.icon}</span>
@@ -1287,16 +1317,18 @@ export class EventModal {
             </div>
           </div>
 
-          <h3 class="consulting-title" style="margin-bottom: 8px;">📡 72-Hour Climate Forecast:</h3>
+          <h3 class="consulting-title" style="margin-bottom: 8px;">📡 72-Hour Bioregional Forecast:</h3>
           <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 12px;">
-            ${renderForecastCard(currentDay + 1, f1)}
-            ${renderForecastCard(currentDay + 2, f2)}
-            ${renderForecastCard(currentDay + 3, f3)}
+            ${renderForecastCard(currentDay + 1, f1, s1)}
+            ${renderForecastCard(currentDay + 2, f2, s2)}
+            ${renderForecastCard(currentDay + 3, f3, s3)}
           </div>
 
-          <p style="font-size: 11px; color: #94a3b8; line-height: 1.4; margin: 0;">
-            💡 <em>Dual-Track Physics Note:</em> Rain catchment scales directly with total roof and swale catchment area (${catchmentM2} m²). 1 mm of rain over 1 m² yields exactly 1.0 Liter of pure water.
-          </p>
+          <div style="background: rgba(15, 23, 42, 0.5); border-left: 3px solid #38bdf8; padding: 8px 12px; border-radius: 4px; font-size: 11px; color: #94a3b8; line-height: 1.45; margin-top: 10px;">
+            <div>💧 <strong>Dynamic Evapotranspiration:</strong> <code>E_loss = A_exposed × (T_ambient - 15) × k_evap</code>.</div>
+            <div>Covered cisterns (light-tight lids) exhibit <strong>0% evaporation</strong>. Open retention swales and permaculture beds (${exposedWaterAreaM2} m² exposed) evaporate ~<strong>${estEvapL} L/day</strong> at current ${weather.tempC}°C.</div>
+            <div style="margin-top: 4px;">❄️ <strong>Winter Thermal Heating:</strong> In cold snaps (&lt;10°C), residential dwellings draw thermal heating from the microgrid (mitigated by biomass cookstoves and the Central Agora fire hearth).</div>
+          </div>
         </div>
 
         <div class="modal-footer" style="display: flex; justify-content: flex-end;">

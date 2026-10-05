@@ -176,7 +176,7 @@ export class BuildingInspectorModal {
           <div class="inspector-metric-card">
             <span class="metric-label">WATER STORED</span>
             <span class="metric-value text-cyan">${data.resources.waterLiters.toLocaleString()} / ${data.resources.waterCapacityL.toLocaleString()} L</span>
-            <span class="metric-sub">Gravity-fed domestic reserve</span>
+            <span class="metric-sub">Covered tank: 0% evaporation loss</span>
           </div>
           <div class="inspector-metric-card">
             <span class="metric-label">FILTER STATUS</span>
@@ -191,6 +191,37 @@ export class BuildingInspectorModal {
           <button type="button" class="btn-inspector-action" id="btn-inspect-test-filter">
             <span>🔧 Check Inlet Gutter & Spigots</span>
             <small>Inspect mechanical integrity & brass spigots</small>
+          </button>
+        </div>
+      `;
+    } else if (b.type === 'retention_swale') {
+      icon = '🌿';
+      title = 'Perennial Retention Swale (15 m²)';
+      subtitle = 'Keyline Earthwork & Infiltration Swale';
+      const weather = data.weather || { tempC: 22 };
+      const season = gameState.getSeason();
+      const tempDelta = Math.max(0, weather.tempC - 15);
+      const estLoss = Math.round(15 * tempDelta * (season.evapCoeff || 0.08));
+      metricsHtml = `
+        <div class="inspector-metrics-grid">
+          <div class="inspector-metric-card">
+            <span class="metric-label">RUNOFF BASIN</span>
+            <span class="metric-value text-cyan">60 L/mm Rain</span>
+            <span class="metric-sub">15 m² natural percolation basin</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">EVAPORATION RATE</span>
+            <span class="metric-value text-gold">~${estLoss} L/day</span>
+            <span class="metric-sub">Open water surface at ${weather.tempC}°C</span>
+          </div>
+        </div>
+      `;
+
+      actionsHtml = `
+        <div class="inspector-actions-box">
+          <button type="button" class="btn-inspector-action" id="btn-inspect-clear-swale">
+            <span>🌿 Clear Bio-Filter Silt</span>
+            <small>Rake organic mulch and inspect overflow berm</small>
           </button>
         </div>
       `;
@@ -694,6 +725,7 @@ export class BuildingInspectorModal {
     };
 
     addDiag('#btn-inspect-test-filter', 'Filters 100% Clean');
+    addDiag('#btn-inspect-clear-swale', 'Berm & Silt Cleared');
     addDiag('#btn-inspect-test-solar', 'Microgrid Synchronized (1.5 kW)');
     addDiag('#btn-inspect-test-guest', 'Guest Pavilion Prepared');
     addDiag('#btn-inspect-test-reed', 'Water Purity Optimal');
