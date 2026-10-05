@@ -15,6 +15,7 @@ import { WorldMapController } from '../map/world_map.js';
 import { GLOBAL_STARTER_NODES, getClimateZoneFromLat, createCustomGlobalNode } from '../data/bioregions.js';
 import { formatPopulation } from '../data/cities.js';
 import { createAvatarCustomizer } from './avatar_customizer.js';
+import { soundFX } from '../audio/sound_fx.js';
 
 function haversineKm(lat1, lon1, lat2, lon2) {
   const R = 6371;
@@ -29,6 +30,7 @@ function haversineKm(lat1, lon1, lat2, lon2) {
 
 /**
  * 3-Stop Civilizational Progression Tour Datasets (Epic 1.1)
+ * Enriched with surrounding major cities and module micro-coordinates for automated zoom reconnaissance.
  */
 export const CIVILIZATIONAL_TOUR_STOPS = [
   {
@@ -46,6 +48,11 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
     debtUsd: 50000,
     debtLabel: '$50,000 Debt (Ticking Down)',
     summary: 'The humble beginning. Three pioneers living in a mobile camper van with auxiliary AGM batteries, unshaded bifacial solar panels, and emergency water cisterns while laying the thermodynamic foundation of the commons.',
+    majorCities: [
+      { name: 'Fairbanks', lat: 64.8378, lng: -147.7164, pop: 32500, popFormatted: '32.5k', distanceKm: 12, country: 'United States' },
+      { name: 'Anchorage', lat: 61.2181, lng: -149.9003, pop: 291000, popFormatted: '291k', distanceKm: 418, country: 'United States' },
+      { name: 'Whitehorse', lat: 60.7212, lng: -135.0568, pop: 25000, popFormatted: '25k', distanceKm: 785, country: 'Canada' }
+    ],
     modules: [
       {
         id: 'camper-van',
@@ -53,7 +60,9 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
         icon: '🚐',
         role: 'Mobile Basecamp & Auxiliary Storage',
         explanation: 'Provides initial 3-person bunking shelter, 45 kWh AGM battery storage, and 850 L water reserves before permanent timber framing begins.',
-        yield: 'Shelter for 3 • 45 kWh Battery Reserve • 850 L Water'
+        yield: 'Shelter for 3 • 45 kWh Battery Reserve • 850 L Water',
+        lat: 64.8378,
+        lng: -147.7164
       },
       {
         id: 'solar-array',
@@ -61,7 +70,9 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
         icon: '⚡',
         role: 'Southern Photovoltaic Array',
         explanation: 'Sited on unshaded southern clearing; bifacial panels capture both direct high-latitude sun and snow albedo reflections.',
-        yield: '+18.5 kWh / clear day (Seasonal sun tracking)'
+        yield: '+18.5 kWh / clear day (Seasonal sun tracking)',
+        lat: 64.8398,
+        lng: -147.7120
       },
       {
         id: 'water-flume',
@@ -69,7 +80,9 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
         icon: '💧',
         role: 'Gravity-Fed Hydrological Intake',
         explanation: 'Positioned along natural elevation contour to capture gravity-fed snowmelt and precipitation without electric pumping loads.',
-        yield: '+450 L / day baseline inflow (Zero pumping energy)'
+        yield: '+450 L / day baseline inflow (Zero pumping energy)',
+        lat: 64.8355,
+        lng: -147.7210
       }
     ]
   },
@@ -80,14 +93,19 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
     nodeName: 'Monte Sole Ecovillage',
     bioregion: 'Apennine Deciduous Bioregion',
     country: 'Italy',
-    lat: 44.333,
-    lng: 11.200,
+    lat: 44.3330,
+    lng: 11.2000,
     zoom: 7.0,
     population: 24,
     populationLabel: '24 Residents (6 Pods)',
     debtUsd: 15000,
     debtLabel: '$15,000 Debt (Drastically Reduced)',
     summary: 'The village emerges. Permanent reciprocal timber Modular Habitat Units (MHUs) house the expanding community. A FabLab machine shop fabricates open-source parts while reed-beds purify water.',
+    majorCities: [
+      { name: 'Bologna', lat: 44.4949, lng: 11.3426, pop: 390000, popFormatted: '390k', distanceKm: 28, country: 'Italy' },
+      { name: 'Firenze', lat: 43.7696, lng: 11.2558, pop: 360000, popFormatted: '360k', distanceKm: 63, country: 'Italy' },
+      { name: 'Modena', lat: 44.6471, lng: 10.9252, pop: 185000, popFormatted: '185k', distanceKm: 42, country: 'Italy' }
+    ],
     modules: [
       {
         id: 'mhu-clusters',
@@ -95,7 +113,9 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
         icon: '🏡',
         role: 'Civic Usufruct Dwellings',
         explanation: 'Open-hardware reciprocal timber pods with living sedum roofs and private kitchen garden aprons; 0 rent, strictly dynamic usufruct occupancy.',
-        yield: 'Shelter for 24 residents • High thermal mass • 0 Speculation'
+        yield: 'Shelter for 24 residents • High thermal mass • 0 Speculation',
+        lat: 44.3330,
+        lng: 11.2000
       },
       {
         id: 'fablab-shop',
@@ -103,7 +123,9 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
         icon: '⚙️',
         role: 'Open-Hardware Tooling & Robotics',
         explanation: 'Houses open-source LinuxCNC gantry mills and 3D printers, manufacturing automated FarmBots and replacement parts to extinguish manual chores.',
-        yield: '-12 kWh/day power draw • +100% mechanical repair speed'
+        yield: '-12 kWh/day power draw • +100% mechanical repair speed',
+        lat: 44.3348,
+        lng: 11.2038
       },
       {
         id: 'greywater-reedbed',
@@ -111,7 +133,9 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
         icon: '🌿',
         role: 'Biological Wetland Filtration',
         explanation: 'Constructed wetland with gravel substrates and native reeds that biologically purifies 65% of domestic greywater for crop sub-irrigation.',
-        yield: '+650 L / day recycled water (65% return rate)'
+        yield: '+650 L / day recycled water (65% return rate)',
+        lat: 44.3312,
+        lng: 11.1962
       }
     ]
   },
@@ -130,6 +154,11 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
     debtUsd: 0,
     debtLabel: '$0 Debt (100% Sovereign & Free)',
     summary: 'Mature civilizational harmony. The camper van is retired into the Central Agora demarchy hearth. A cargo trike depot and vertiport connect into the bioregional Reticulum federation with 100% solar autonomy.',
+    majorCities: [
+      { name: 'Detroit', lat: 42.3314, lng: -83.0458, pop: 639000, popFormatted: '639k', distanceKm: 6, country: 'United States' },
+      { name: 'Windsor', lat: 42.3149, lng: -83.0364, pop: 230000, popFormatted: '230k', distanceKm: 8, country: 'Canada' },
+      { name: 'Ann Arbor', lat: 42.2808, lng: -83.7430, pop: 123000, popFormatted: '123k', distanceKm: 54, country: 'United States' }
+    ],
     modules: [
       {
         id: 'central-agora',
@@ -137,7 +166,9 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
         icon: '🏛️',
         role: 'Athenian Demarchy Assembly',
         explanation: 'Erected on the exact coordinate of the founding camper van; hosts sortition citizen juries (odd parity) to deliberate on civic questions with 75% consensus.',
-        yield: 'Demarchic governance • Zero gridlock • +100 Morale'
+        yield: 'Demarchic governance • Zero gridlock • +100 Morale',
+        lat: 42.3015,
+        lng: -83.1098
       },
       {
         id: 'trike-depot',
@@ -145,7 +176,9 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
         icon: '🚲',
         role: 'Zero-Emission Inter-Node Logistics',
         explanation: 'Fleet of electric cargo trikes (250 kg freight box) and autonomous VTOL drones linking autonomous sister nodes across regional greenways.',
-        yield: '250 kg freight / trike • 60 km range • Zero fuel debt'
+        yield: '250 kg freight / trike • 60 km range • Zero fuel debt',
+        lat: 42.3035,
+        lng: -83.1062
       },
       {
         id: 'sovereign-microgrid',
@@ -153,7 +186,9 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
         icon: '☀️',
         role: 'Autonomous Energy Abundance',
         explanation: 'Extensive bifacial solar arrays, vertical-axis wind turbines, and stationary LFP battery banks delivering continuous energy surplus with zero utility bills.',
-        yield: '+420 kWh / day net surplus • Zero fossil dependence'
+        yield: '+420 kWh / day net surplus • Zero fossil dependence',
+        lat: 42.2995,
+        lng: -83.1138
       }
     ]
   }
@@ -222,8 +257,12 @@ export class EmbarkationDesk {
     this.hasManuallyCustomized = false;
     this.hasAutoGeolocated = false;
     
-    // Tour state
+    // Tour automated playback state
     this.currentTourStopIndex = 0;
+    this.currentTourSubStep = 0;
+    this.isTourPaused = false;
+    this.tourTimer = null;
+    this.tourModuleMarkers = [];
     this.selectedTourModule = null;
     this.tourMap = null;
     this.tourMarker = null;
@@ -374,9 +413,28 @@ export class EmbarkationDesk {
             <!-- Map Viewport -->
             <div class="tour-map-viewport">
               <div id="world-leaflet-tour-map" style="width: 100%; height: 100%;"></div>
-              <div class="tour-map-overlay-badge">
-                <span class="pulse-dot"></span>
-                <span id="tour-map-stop-indicator">RECONNAISSANCE: STOP 1 OF 3</span>
+              
+              <!-- Tour Automated Playback Ribbon -->
+              <div class="tour-playback-ribbon" id="tour-playback-ribbon">
+                <div class="tour-status-pill">
+                  <span class="pulse-dot"></span>
+                  <span id="tour-step-counter">STOP 1 / 3 • INITIATING</span>
+                </div>
+                <div class="tour-ticker-text" id="tour-ticker">
+                  Initializing Planetary Reconnaissance...
+                </div>
+                <div class="tour-controls-group">
+                  <button type="button" id="btn-tour-pause" class="btn-tour-ctrl" title="Pause or Resume Tour">
+                    <span id="tour-pause-icon">⏸️</span>
+                    <span id="tour-pause-label">Pause</span>
+                  </button>
+                  <button type="button" id="btn-tour-skip-substep" class="btn-tour-ctrl" title="Advance to next step">
+                    <span>⏭️ Next Step</span>
+                  </button>
+                  <button type="button" id="btn-tour-next-node" class="btn-tour-ctrl" title="Skip to next stage">
+                    <span>⏩ Next Stage</span>
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -554,7 +612,7 @@ export class EmbarkationDesk {
       });
     }
 
-    // Tour Navigation (Step 2)
+    // Tour Navigation & Automated Playback Controls (Step 2)
     const tourBackBtn = this.container.querySelector('#btn-tour-back');
     if (tourBackBtn) {
       tourBackBtn.addEventListener('click', () => {
@@ -566,6 +624,27 @@ export class EmbarkationDesk {
     if (tourSkipDirect) {
       tourSkipDirect.addEventListener('click', () => {
         this.goToStep(3);
+      });
+    }
+
+    const tourPauseBtn = this.container.querySelector('#btn-tour-pause');
+    if (tourPauseBtn) {
+      tourPauseBtn.addEventListener('click', () => {
+        this.toggleTourPause();
+      });
+    }
+
+    const tourSkipSubStepBtn = this.container.querySelector('#btn-tour-skip-substep');
+    if (tourSkipSubStepBtn) {
+      tourSkipSubStepBtn.addEventListener('click', () => {
+        this.skipTourSubStep();
+      });
+    }
+
+    const tourNextNodeBtn = this.container.querySelector('#btn-tour-next-node');
+    if (tourNextNodeBtn) {
+      tourNextNodeBtn.addEventListener('click', () => {
+        this.skipToNextTourStop();
       });
     }
 
@@ -618,17 +697,11 @@ export class EmbarkationDesk {
     });
   }
 
-  renderTourConsole() {
+  renderTourConsole(highlightSynoptic = false) {
     const consolePanel = this.container.querySelector('#tour-console-panel');
     if (!consolePanel) return;
 
     const stop = CIVILIZATIONAL_TOUR_STOPS[this.currentTourStopIndex];
-    const indicatorEl = this.container.querySelector('#tour-map-stop-indicator');
-    if (indicatorEl) {
-      indicatorEl.textContent = `RECONNAISSANCE: STOP ${this.currentTourStopIndex + 1} OF 3 • STAGE ${stop.stageNumber}`;
-    }
-
-    // Default select first module of this stop if none selected or invalid
     if (!this.selectedTourModule || !stop.modules.some(m => m.id === this.selectedTourModule.id)) {
       this.selectedTourModule = stop.modules[0];
     }
@@ -636,7 +709,7 @@ export class EmbarkationDesk {
     const isDebtFree = stop.debtUsd === 0;
 
     consolePanel.innerHTML = `
-      <div class="tour-header-row">
+      <div class="tour-header-row ${highlightSynoptic ? 'highlight-glow' : ''}">
         <div class="tour-node-title-box">
           <div class="tour-node-name">
             <span>${stop.nodeName}</span>
@@ -649,7 +722,7 @@ export class EmbarkationDesk {
         </div>
       </div>
 
-      <div class="tour-metrics-strip">
+      <div class="tour-metrics-strip ${highlightSynoptic ? 'highlight-glow' : ''}">
         <div class="metric-item">
           <span>👥</span>
           <strong>${stop.populationLabel}</strong>
@@ -673,7 +746,7 @@ export class EmbarkationDesk {
       <!-- Interactive Synoptic Module Inspection -->
       <div class="tour-modules-section">
         <div class="tour-modules-label">
-          <span>📐 Tap Featured Modules to Inspect Thermodynamic Architecture:</span>
+          <span>📐 Featured Modules (${stop.modules.length} Critical Systems):</span>
         </div>
         <div class="tour-modules-chips-row">
           ${stop.modules.map(mod => `
@@ -710,7 +783,7 @@ export class EmbarkationDesk {
               <span>Next Stage: ${CIVILIZATIONAL_TOUR_STOPS[this.currentTourStopIndex + 1].stageTitle.split(':')[1]?.trim() || 'Next'} ▶</span>
             </button>
           ` : `
-            <button type="button" id="btn-tour-finish-siting" class="btn-tour-primary-next" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+            <button type="button" id="btn-tour-finish-siting" class="btn-tour-primary-next" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
               <span>Plant My Seed Node ➔</span>
             </button>
           `}
@@ -722,10 +795,14 @@ export class EmbarkationDesk {
     consolePanel.querySelectorAll('.tour-module-chip').forEach(btn => {
       btn.addEventListener('click', () => {
         const modId = btn.dataset.modId;
-        const found = stop.modules.find(m => m.id === modId);
-        if (found) {
-          this.selectedTourModule = found;
-          this.renderTourConsole();
+        const foundIdx = stop.modules.findIndex(m => m.id === modId);
+        if (foundIdx !== -1) {
+          this.selectedTourModule = stop.modules[foundIdx];
+          this.renderTourConsole(false);
+          if (this.tourMap && this.tourMap.map) {
+            this.tourMap.map.flyTo([this.selectedTourModule.lat, this.selectedTourModule.lng], 10.8, { duration: 1.0 });
+            this.renderTourModuleMarkers(stop, foundIdx);
+          }
         }
       });
     });
@@ -735,8 +812,7 @@ export class EmbarkationDesk {
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
         if (this.currentTourStopIndex > 0) {
-          this.currentTourStopIndex--;
-          this.flyToTourStop(this.currentTourStopIndex);
+          this.startAutomatedTour(this.currentTourStopIndex - 1);
         }
       });
     }
@@ -745,8 +821,7 @@ export class EmbarkationDesk {
     if (nextBtn) {
       nextBtn.addEventListener('click', () => {
         if (this.currentTourStopIndex < 2) {
-          this.currentTourStopIndex++;
-          this.flyToTourStop(this.currentTourStopIndex);
+          this.startAutomatedTour(this.currentTourStopIndex + 1);
         }
       });
     }
@@ -759,35 +834,313 @@ export class EmbarkationDesk {
     }
   }
 
-  flyToTourStop(stopIndex) {
-    const stop = CIVILIZATIONAL_TOUR_STOPS[stopIndex];
+  startAutomatedTour(stopIndex = 0) {
+    this.stopAutomatedTour();
+    this.currentTourStopIndex = Math.max(0, Math.min(2, stopIndex));
+    this.currentTourSubStep = 0;
+    this.isTourPaused = false;
+    this.updateTourPauseUI();
+
+    this.executeTourSubStep(0);
+  }
+
+  stopAutomatedTour() {
+    if (this.tourTimer) {
+      clearTimeout(this.tourTimer);
+      this.tourTimer = null;
+    }
+    this.clearTourModuleMarkers();
+  }
+
+  toggleTourPause() {
+    this.isTourPaused = !this.isTourPaused;
+    this.updateTourPauseUI();
+
+    if (this.isTourPaused) {
+      if (this.tourTimer) {
+        clearTimeout(this.tourTimer);
+        this.tourTimer = null;
+      }
+      const ticker = this.container.querySelector('#tour-ticker');
+      if (ticker) {
+        ticker.innerHTML = `⏸️ <strong style="color: #fbbf24;">TOUR PAUSED</strong> • Inspect at your own pace or press Resume ▶️`;
+      }
+    } else {
+      this.executeTourSubStep(this.currentTourSubStep + 1);
+    }
+  }
+
+  updateTourPauseUI() {
+    const pauseBtn = this.container.querySelector('#btn-tour-pause');
+    const pauseIcon = this.container.querySelector('#tour-pause-icon');
+    const pauseLabel = this.container.querySelector('#tour-pause-label');
+    if (!pauseBtn) return;
+
+    if (this.isTourPaused) {
+      pauseBtn.classList.add('active-paused');
+      if (pauseIcon) pauseIcon.textContent = '▶️';
+      if (pauseLabel) pauseLabel.textContent = 'Resume';
+    } else {
+      pauseBtn.classList.remove('active-paused');
+      if (pauseIcon) pauseIcon.textContent = '⏸️';
+      if (pauseLabel) pauseLabel.textContent = 'Pause';
+    }
+  }
+
+  skipTourSubStep() {
+    if (this.tourTimer) {
+      clearTimeout(this.tourTimer);
+      this.tourTimer = null;
+    }
+    this.isTourPaused = false;
+    this.updateTourPauseUI();
+    this.executeTourSubStep(this.currentTourSubStep + 1);
+  }
+
+  skipToNextTourStop() {
+    if (this.tourTimer) {
+      clearTimeout(this.tourTimer);
+      this.tourTimer = null;
+    }
+    this.isTourPaused = false;
+    this.updateTourPauseUI();
+    if (this.currentTourStopIndex < 2) {
+      this.startAutomatedTour(this.currentTourStopIndex + 1);
+    } else {
+      this.goToStep(3);
+    }
+  }
+
+  renderTourModuleMarkers(stop, activeModIndex = -1) {
+    this.clearTourModuleMarkers();
+    if (!this.tourMap || !this.tourMap.map) return;
+
+    stop.modules.forEach((mod, idx) => {
+      const isActive = idx === activeModIndex;
+      const icon = L.divIcon({
+        className: 'tour-module-map-marker',
+        html: `
+          <div class="tour-module-pin-badge ${isActive ? 'active' : ''}">
+            <span>${mod.icon}</span>
+          </div>
+          <div class="tour-module-pin-label">${mod.name}</div>
+        `,
+        iconSize: [110, 56],
+        iconAnchor: [55, 28]
+      });
+
+      const m = L.marker([mod.lat, mod.lng], { icon, zIndexOffset: isActive ? 600 : 200 }).addTo(this.tourMap.map);
+      this.tourModuleMarkers.push(m);
+    });
+  }
+
+  clearTourModuleMarkers() {
+    if (this.tourModuleMarkers) {
+      this.tourModuleMarkers.forEach(m => {
+        if (this.tourMap && this.tourMap.map) {
+          this.tourMap.map.removeLayer(m);
+        }
+      });
+    }
+    this.tourModuleMarkers = [];
+  }
+
+  executeTourSubStep(subStep) {
+    if (!this.tourMap || !this.tourMap.map) return;
+    if (this.tourTimer) {
+      clearTimeout(this.tourTimer);
+      this.tourTimer = null;
+    }
+
+    const stop = CIVILIZATIONAL_TOUR_STOPS[this.currentTourStopIndex];
     if (!stop) return;
 
-    this.selectedTourModule = stop.modules[0];
-    this.renderTourConsole();
+    this.currentTourSubStep = subStep;
+    const counterEl = this.container.querySelector('#tour-step-counter');
+    const tickerEl = this.container.querySelector('#tour-ticker');
 
-    if (this.tourMap && this.tourMap.map) {
-      this.tourMap.map.flyTo([stop.lat, stop.lng], stop.zoom, { duration: 1.4 });
+    const scheduleNext = (delayMs) => {
+      if (this.isTourPaused) return;
+      this.tourTimer = setTimeout(() => {
+        this.executeTourSubStep(subStep + 1);
+      }, delayMs);
+    };
 
-      // Update or create pulsing beacon marker
-      if (this.tourMarker) {
-        this.tourMarker.remove();
+    if (soundFX && soundFX.playClick) {
+      soundFX.playClick();
+    }
+
+    switch (subStep) {
+      case 0: {
+        // 0. Present World Map
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • WORLD OVERVIEW`;
+        if (tickerEl) tickerEl.textContent = `🌍 Planetary Cartography: Locating Stop ${this.currentTourStopIndex + 1} of 3 (${stop.nodeName})...`;
+
+        this.clearTourModuleMarkers();
+        if (this.tourMap.regionalCitiesLayer) this.tourMap.regionalCitiesLayer.clearLayers();
+        if (this.tourMarker) {
+          this.tourMarker.remove();
+          this.tourMarker = null;
+        }
+
+        this.tourMap.map.flyTo([25, 0], 2.8, { duration: 1.5 });
+        this.renderTourConsole(false);
+        scheduleNext(3200);
+        break;
       }
 
-      this.tourMarker = L.circleMarker([stop.lat, stop.lng], {
-        radius: 14,
-        fillColor: stopIndex === 2 ? '#10b981' : stopIndex === 1 ? '#38bdf8' : '#fbbf24',
-        fillOpacity: 0.9,
-        color: '#ffffff',
-        weight: 3
-      }).addTo(this.tourMap.map);
+      case 1: {
+        // 1. Zoom in to region, give time to understand where we are (read big cities next to node)
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • REGIONAL WATERSHED`;
+        const cityNames = (stop.majorCities || []).map(c => c.name).join(', ');
+        if (tickerEl) tickerEl.innerHTML = `📍 Zooming to <strong style="color: #fbbf24;">${stop.bioregion}</strong> (${stop.country}) • Major Hubs: <strong style="color: #38bdf8;">${cityNames}</strong>`;
 
-      this.tourMarker.bindPopup(`
-        <div style="font-family: var(--font-heading); font-size: 13px; font-weight: 700; color: #020617; padding: 4px;">
-          ${stop.stageTitle}<br>
-          <span style="font-weight: 400; color: #475569;">${stop.nodeName}</span>
-        </div>
-      `).openPopup();
+        this.tourMap.map.flyTo([stop.lat, stop.lng], 5.8, { duration: 1.6 });
+
+        if (stop.majorCities && stop.majorCities.length > 0) {
+          this.tourMap.renderRegionalCities(stop.majorCities);
+        }
+
+        scheduleNext(4500);
+        break;
+      }
+
+      case 2: {
+        // 2. Show node synoptic, give time to read
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • SYNOPTIC CARD`;
+        if (tickerEl) tickerEl.innerHTML = `📋 Synoptic: <strong style="color: #10b981;">${stop.nodeName}</strong> • ${stop.populationLabel} • ${stop.debtLabel}`;
+
+        this.tourMap.map.flyTo([stop.lat, stop.lng], 6.5, { duration: 1.2 });
+
+        if (this.tourMarker) this.tourMarker.remove();
+        this.tourMarker = L.circleMarker([stop.lat, stop.lng], {
+          radius: 16,
+          fillColor: this.currentTourStopIndex === 2 ? '#10b981' : this.currentTourStopIndex === 1 ? '#38bdf8' : '#fbbf24',
+          fillOpacity: 0.9,
+          color: '#ffffff',
+          weight: 3
+        }).addTo(this.tourMap.map);
+
+        this.selectedTourModule = stop.modules[0];
+        this.renderTourConsole(true);
+        scheduleNext(4500);
+        break;
+      }
+
+      case 3: {
+        // 3. Zoom in to the node, give time to understand what's shown, highlight 1st module we'll inspect
+        const mod1 = stop.modules[0];
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • NODE PERIMETER`;
+        if (tickerEl) tickerEl.innerHTML = `🔭 Settlement Layout: Next inspecting Module 1: <strong style="color: #fbbf24;">${mod1.icon} ${mod1.name}</strong>`;
+
+        this.tourMap.map.flyTo([stop.lat, stop.lng], 8.8, { duration: 1.3 });
+        this.renderTourModuleMarkers(stop, 0);
+        this.selectedTourModule = mod1;
+        this.renderTourConsole(false);
+
+        scheduleNext(3400);
+        break;
+      }
+
+      case 4: {
+        // 4. Zoom into 1st module, give some time to understand what's shown
+        const mod1 = stop.modules[0];
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • MODULE 1 INSPECTION`;
+        if (tickerEl) tickerEl.innerHTML = `🔍 Module 1 Focus: <strong style="color: #fbbf24;">${mod1.name}</strong> (${mod1.role}) • Yield: <strong>${mod1.yield}</strong>`;
+
+        this.tourMap.map.flyTo([mod1.lat, mod1.lng], 10.8, { duration: 1.4 });
+        this.renderTourModuleMarkers(stop, 0);
+        this.selectedTourModule = mod1;
+        this.renderTourConsole(false);
+
+        scheduleNext(5200);
+        break;
+      }
+
+      case 5: {
+        // 5. Zoom back to node, highlight 2nd module we'll inspect
+        const mod2 = stop.modules[1];
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • NODE PERIMETER`;
+        if (tickerEl) tickerEl.innerHTML = `🔭 Returning to Settlement: Next inspecting Module 2: <strong style="color: #fbbf24;">${mod2.icon} ${mod2.name}</strong>`;
+
+        this.tourMap.map.flyTo([stop.lat, stop.lng], 8.8, { duration: 1.3 });
+        this.renderTourModuleMarkers(stop, 1);
+        this.selectedTourModule = mod2;
+        this.renderTourConsole(false);
+
+        scheduleNext(3400);
+        break;
+      }
+
+      case 6: {
+        // 6. Zoom into 2nd module, give some time to understand what's shown
+        const mod2 = stop.modules[1];
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • MODULE 2 INSPECTION`;
+        if (tickerEl) tickerEl.innerHTML = `🔍 Module 2 Focus: <strong style="color: #fbbf24;">${mod2.name}</strong> (${mod2.role}) • Yield: <strong>${mod2.yield}</strong>`;
+
+        this.tourMap.map.flyTo([mod2.lat, mod2.lng], 10.8, { duration: 1.4 });
+        this.renderTourModuleMarkers(stop, 1);
+        this.selectedTourModule = mod2;
+        this.renderTourConsole(false);
+
+        scheduleNext(5200);
+        break;
+      }
+
+      case 7: {
+        // 7. Zoom back to node, highlight 3rd module we'll inspect
+        const mod3 = stop.modules[2];
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • NODE PERIMETER`;
+        if (tickerEl) tickerEl.innerHTML = `🔭 Returning to Settlement: Next inspecting Module 3: <strong style="color: #fbbf24;">${mod3.icon} ${mod3.name}</strong>`;
+
+        this.tourMap.map.flyTo([stop.lat, stop.lng], 8.8, { duration: 1.3 });
+        this.renderTourModuleMarkers(stop, 2);
+        this.selectedTourModule = mod3;
+        this.renderTourConsole(false);
+
+        scheduleNext(3400);
+        break;
+      }
+
+      case 8: {
+        // 8. Zoom into 3rd module, give some time to understand what's shown
+        const mod3 = stop.modules[2];
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • MODULE 3 INSPECTION`;
+        if (tickerEl) tickerEl.innerHTML = `🔍 Module 3 Focus: <strong style="color: #fbbf24;">${mod3.name}</strong> (${mod3.role}) • Yield: <strong>${mod3.yield}</strong>`;
+
+        this.tourMap.map.flyTo([mod3.lat, mod3.lng], 10.8, { duration: 1.4 });
+        this.renderTourModuleMarkers(stop, 2);
+        this.selectedTourModule = mod3;
+        this.renderTourConsole(false);
+
+        scheduleNext(5200);
+        break;
+      }
+
+      case 9: {
+        // 9. Repeat above for other nodes or finish!
+        if (this.currentTourStopIndex < 2) {
+          if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} COMPLETE`;
+          if (tickerEl) tickerEl.innerHTML = `✅ Stage ${this.currentTourStopIndex + 1} Reconnaissance Complete • Transitioning to Stage ${this.currentTourStopIndex + 2}...`;
+
+          setTimeout(() => {
+            this.currentTourStopIndex++;
+            this.startAutomatedTour(this.currentTourStopIndex);
+          }, 1800);
+        } else {
+          if (counterEl) counterEl.textContent = `TOUR COMPLETE`;
+          if (tickerEl) tickerEl.innerHTML = `🎉 Planetary Reconnaissance Completed! All 3 Evolutionary Epochs Witnessed.`;
+
+          const finishBtn = this.container.querySelector('#btn-tour-finish-siting');
+          if (finishBtn) {
+            finishBtn.classList.add('pulse-glow');
+          }
+        }
+        break;
+      }
+
+      default:
+        break;
     }
   }
 
@@ -808,6 +1161,11 @@ export class EmbarkationDesk {
       const studioArrow = this.container.querySelector('#studio-toggle-arrow');
       if (studioDrawer) studioDrawer.classList.add('hidden');
       if (studioArrow) studioArrow.textContent = '▼';
+    }
+
+    // Stop automated tour timers whenever leaving stage 2
+    if (stepNumber !== 2) {
+      this.stopAutomatedTour();
     }
 
     if (stepNumber === 1) {
@@ -838,14 +1196,14 @@ export class EmbarkationDesk {
 
       setTimeout(() => {
         if (!this.tourMap) {
-          this.tourMap = new WorldMapController('world-leaflet-tour-map', () => {}, () => {});
+          this.tourMap = new WorldMapController('world-leaflet-tour-map', () => {}, () => {}, null, null, { isTourMap: true });
           this.tourMap.updateSolarTerminator(12, 80);
         }
         if (this.tourMap && this.tourMap.map) {
           this.tourMap.map.invalidateSize();
-          this.flyToTourStop(this.currentTourStopIndex);
+          this.startAutomatedTour(0);
         }
-      }, 80);
+      }, 100);
 
     } else if (stepNumber === 3) {
       // Step 3: Place Seed Node

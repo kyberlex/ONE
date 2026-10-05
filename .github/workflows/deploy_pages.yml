@@ -1,12 +1,6 @@
 name: Deploy O-ASIS to GitHub Pages
 
 on:
-  push:
-    branches: ["main"]
-    paths:
-      - "sim/app/**"
-      - "!sim/app/public/world_snapshot.json"
-      - ".github/workflows/deploy_pages.yml"
   workflow_dispatch:
 
 permissions:

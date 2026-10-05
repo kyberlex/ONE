@@ -15,13 +15,14 @@ import { t } from '../i18n/index.js';
 import { getNightPolygonCoordinates, isPointInNight } from './solar_terminator.js';
 
 export class WorldMapController {
-  constructor(containerId, onSelectNodeCallback, onFoundNodeCallback, onDiscreteZoomGestureCallback = null, onRegionCitiesChangedCallback = null) {
+  constructor(containerId, onSelectNodeCallback, onFoundNodeCallback, onDiscreteZoomGestureCallback = null, onRegionCitiesChangedCallback = null, options = {}) {
     this.containerId = containerId;
     this.onSelectNode = onSelectNodeCallback || (() => {});
     this.onFoundNode = onFoundNodeCallback || (() => {});
     this.onDiscreteZoomGesture = onDiscreteZoomGestureCallback;
     this.onRegionCitiesChanged = onRegionCitiesChangedCallback || (() => {});
-    this.nodes = [...GLOBAL_STARTER_NODES];
+    this.isTourMap = !!options.isTourMap;
+    this.nodes = this.isTourMap ? [] : [...GLOBAL_STARTER_NODES];
     this.map = null;
     this.markersLayer = null;
     this.regionalCitiesLayer = null;
@@ -531,6 +532,8 @@ export class WorldMapController {
   }
 
   bindMapEvents() {
+    if (this.isTourMap) return;
+
     // Click anywhere on map to plant or reposition beacon
     this.map.on('click', async e => {
       const lat = e.latlng.lat;

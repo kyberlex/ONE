@@ -24,12 +24,23 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
 
 ### **1.1 Interactive Planetary Reconnaissance Tour & Bioregional Siting (`embarkation.js`, `world_map.js`)**
 - [x] **The 3-Stop Civilizational Preview Tour (Between Name/Craft & Siting):**
-  - Camera flies across the planetary map to visit three distinct nodes showcasing the progression of O.N.E.:
+  - Camera automatically flies across the planetary map to visit three distinct nodes showcasing the progression of O.N.E. without requiring manual clicks or popup prompts:
     - **Stop 1 (Stage 1 / Seed Node - e.g. Yukon Haven):** 3 Pioneers, Camper Van, Bifacial Solar & Water Flume ($50k debt ticking).
     - **Stop 2 (Stage 2 / Ecovillage - e.g. Monte Sole):** 24 Residents, First MHU Family Clusters, FabLab Machine Shop, Greywater Reed-bed ($15k debt).
     - **Stop 3 (Stage 3 / Sovereign Superblock - e.g. Detroit Delray):** 148 Residents (~50 MHUs), Central Agora (ex-camper site), Cargo Trike Depot, 100% Solar & Zero Debt ($0).
-  - **Interactive Synoptic Module Inspection:**
-    - Player can click featured modules on each stop (e.g. Solar Array, FabLab, Agora) to reveal 1-sentence micro-tooltips explaining *why* they are placed there and their thermodynamic yield.
+  - **Automated 10-Step Reconnaissance Sequence:**
+    1. Present global world map view (zoom 2.8).
+    2. Fly zoom into regional watershed (zoom 5.8) displaying high-visibility surrounding major cities/hubs (e.g. Fairbanks, Anchorage, Whitehorse; Bologna, Firenze, Modena; Detroit, Windsor, Ann Arbor) with time to read and orient.
+    3. Display node synoptic card with stage overview, founders count, and debt trajectory.
+    4. Zoom in to node perimeter (zoom 8.8), render 3 solarpunk module pins, and highlight Module 1.
+    5. Fly zoom into Module 1 (zoom 10.8) displaying name, role, explanation, and thermodynamic yield.
+    6. Zoom back to node perimeter, highlight Module 2.
+    7. Fly zoom into Module 2 (zoom 10.8) displaying thermodynamic yield.
+    8. Zoom back to node perimeter, highlight Module 3.
+    9. Fly zoom into Module 3 (zoom 10.8) displaying thermodynamic yield.
+    10. Smoothly advance to repeat sequence for the next evolutionary stage node, with zero intrusive popups asking the player if they want to enter the village.
+  - **Interactive Playback Ribbon:**
+    - Live HUD ribbon showing active stage counter, animated pulse indicator, dynamic ticker text, and manual controls: `⏸️ Pause` / `▶️ Resume`, `⏭️ Next Step`, and `⏩ Next Stage`.
 - [x] **Automatic Local Geolocation with Complete Global Freedom:**
   - Seamlessly transitions from the Global Tour by auto-centering the map on the player's real-world browser location (via `navigator.geolocation` / IP fallback).
   - Drops a default beacon (`<LocalTown>-ONE`) and computes local solar irradiance, annual precipitation, and top 3 regional urban hubs.
@@ -161,15 +172,18 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
 > *"Entropy and thermodynamic reality govern all things. Water evaporates under scorching summer heat; pipes freeze in winter. True sovereignty means having engineering contingencies for zero-water and zero-sun conditions without turning back to extractive debt."*
 
 ### **3.1 Astronomical & Seasonal Cycle**
-- [ ] **Four Bioregional Seasons (7-Day Micro-Seasons or 28-Day Annual Cycle):**
+- [x] **Four Bioregional Seasons (7-Day Micro-Seasons or 28-Day Annual Cycle):**
   - **Spring (Days 1–7):** Moderate temperatures (16–22°C), frequent showers (+15–30mm rain), optimal seed germination (+25% crop growth).
   - **Summer (Days 8–14):** Peak solar irradiance (1.25 kW/m²), high temperatures (28–38°C), rapid evaporation (-15% water loss), drought risk.
-  - **Autumn (Days 15–21):** Harvest bounty, cooling temperatures (14–20°C), heavy rainfall, storm runoff testing swale absorption.
-  - **Winter (Days 22–28):** Low solar irradiance (0.55 kW/m²), frost temperatures (0–8°C), frozen outdoor piping, increased thermal heating loads.
-- [ ] **Dynamic Evapotranspiration & Thermodynamics:**
+  - **Autumn (Days 15–21):** Harvest bounty, cooling temperatures (14–20°C), heavy rainfall, storm runoff testing swale absorption (+35% crop growth).
+  - **Winter (Days 22–28):** Low solar irradiance (0.55 kW/m²), frost temperatures (0–8°C), frozen outdoor piping, increased thermal heating loads (-60% crop growth).
+  - Fully implemented in `state.js` (`SEASONS`, `getSeasonForDay(day)`), wired to dynamic crop growth rate, solar irradiance curves, ambient temperature baselines, and HUD/Morning Dispatch seasonal cards.
+- [x] **Dynamic Evapotranspiration & Thermodynamics:**
   - Evaporation formula: $E_{loss} = A_{exposed} \times (T_{ambient} - 15) \times k_{evap}$.
-  - Shaded cisterns and underground tanks have near-zero evaporation.
-  - Open ponds and swales experience natural percolation and seasonal fluctuations.
+  - Shaded cisterns and underground tanks have 0% exposure / zero evaporation.
+  - Open ponds, swales, and garden beds experience natural percolation and seasonal evapotranspiration loss on days over 15°C.
+  - Winter thermal heating loads simulated for dwellings below 10°C, mitigated by active Agora hearth and biomass cookstoves.
+  - Live evapotranspiration breakdown displayed in Morning Dispatch modal, building inspector, and Bioregional Climate Radar modal (`event_modal.js`).
 
 ### **3.2 Zero-Water & Extreme Weather Contingency Protocols**
 - [ ] **"What Happens When Water Drops to 0?" Architecture:**
