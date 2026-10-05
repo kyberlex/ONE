@@ -103,7 +103,7 @@ game/
   - `chores`: Daily 6-hour chore pool, `remainingHours`, `loggedToday`, and automation progression queue (`extinguishChore`).
   - `objective`: Active primary objective card tracking goals and unlocks.
   - `fleet`: Zero-emission logistics fleet array (`cargo_trike` and `vtol_drone` instances with battery SOC%, health%, payload capacity, and status).
-  - `convoys`: In-transit regional trade convoys (cargo trikes & VTOL drones).
+  - `convoys`: In-transit regional trade convoys array (`id`, `type`, `origin`, `destination`, `departureDay`, `departureHour`, `etaDay`, `etaHour`, `daysRemaining`, `status`, `cargoManifest`, `returnManifest`, `pioneerDriverId`, `vehicleId`, `distanceKm`, `transitEvent`).
   - `sisterNodes`: Federation network nodes (Sister Node 02, Monte Sole, Val di Cecina, Campi Flegrei, Alburni, Barbagia, Serra da Estrela, Detroit Delray, Rojava) enriched with bioregional specializations, export/demand portfolios, and affinities.
   - `milestones`: Set of completed civilizational milestones.
 * **Key Methods:**
@@ -123,6 +123,10 @@ game/
   - `getSisterNodes()`: Returns all active Reticulum federation sister nodes.
   - `getPartnerNode(nodeId)`: Returns specific partner node by ID, cross-referencing `REGIONAL_PARTNER_NODES`.
   - `getRegionalNodePortfolio(nodeId)`: Returns structured portfolio of bioregional exports and demands for trade manifest configuration.
+  - `dispatchConvoy(type, destination, cargoManifest, options)`: Logistics engine dispatcher: validates vehicle availability in `fleet`, verifies payload weight limits (250 kg trike / 25 kg drone), calculates battery energy draw, deducts traded commodities, assigns driver companion, transitions vehicle status to `in_transit`, calculates return manifest, and schedules arrival ETA.
+  - `dispatchCargoConvoy(...)`: Backward-compatible convenience wrapper delegating to `dispatchConvoy`.
+  - `generateReturnManifestForNode(destination, cargoManifest)`: Generates bioregionally tailored return commodities (ancient spelt grain, pozzolana binder, karst spring water, mountain wool insulation, or precision schematics) from partner node portfolios.
+  - `updateConvoys(dtDays)`: Advances in-transit convoys, simulates transit events (`weather_delayed` storms, `trail_obstacle` keyline detours, `mutual_aid_encounter` forage shares), resolves arrivals, unloads return cargo manifests into settlement stores, returns companion drivers, docks fleet vehicles, and updates odometer/sorties.
   - `getClearingRadius()`: Calculates dynamic carrying capacity clearing radius scaling through Stage 1 (340px Seed Campsite), Stage 2 (520px Ecovillage), and Stage 3 (750px–900px Full Dunbar Cell).
   - `checkClearingExpansion()`: Detects milestone clearing thresholds and emits `clearing_expanded` event.
   - `recalculateLaborBudget()`: Recalculates chore pool based on automated chores and population.
@@ -133,9 +137,8 @@ game/
     * Deducts basal metabolic caloric consumption (2,200 kcal/person/day).
     * Calculates water consumption and greywater reed-bed biological filtration return (65%).
     * Simulates component wear-and-tear degradation.
-    * Resolves active trade convoys and triggers morning dispatch events.
+    * Advances active convoys and reports arrivals and transit events via `updateConvoys`.
   - `orderEmergencyWaterTanker()`, `pumpEmergencyAquiferWater()`, `deployAtmosphericDewCatchers()`, `requestMeshEmergencyWater()`: Emergency water contingency actions.
-  - `dispatchCargoConvoy(...)`: Dispatches inter-node trade missions.
   - `save()`, `load()`, `reset()`: Local storage persistence handlers.
 
 ---

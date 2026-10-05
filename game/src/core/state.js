@@ -962,77 +962,393 @@ export class GameState {
   }
 
   /* -------------------------------------------------------------
-   * Reticulum Mesh Logistics & Sabbatical Exchange Protocol
+   * Reticulum Mesh Logistics & Regional Convoys (Epic 2.3)
    * ----------------------------------------------------------- */
-  dispatchCargoConvoy({ targetNodeId, vehicleType = 'trike', offerType, requestType }) {
-    const node = this.data.sisterNodes?.[targetNodeId];
-    if (!node) return { ok: false, reason: 'Invalid target sister node.' };
 
-    const energyCost = vehicleType === 'drone' ? 6.0 : 3.0;
-    if ((this.data.resources.energyStoredKwh || 0) < energyCost) {
-      return { ok: false, reason: `Need ${energyCost} kWh stored battery power to charge the ${vehicleType === 'drone' ? 'Courier Drone' : 'Solar Cargo Trike'}!` };
+  generateReturnManifestForNode(destination, cargoManifest = {}) {
+    const dest = destination || '';
+    if (dest === 'val_di_cecina') {
+      return {
+        foodKcal: 15000,
+        energyKwh: 0,
+        tools: ['geothermal_heat_pipe', 'borate_salts'],
+        seeds: [],
+        waterL: 0,
+        summary: '+15,000 kcal Geothermal Ancient Grains & Geothermal Heat Pipe'
+      };
+    } else if (dest === 'campi_flegrei') {
+      return {
+        foodKcal: 0,
+        energyKwh: 0,
+        tools: ['refractory_glass_tube', 'volcanic_zeolite_filter'],
+        seeds: [],
+        waterL: 3000,
+        summary: '+3,000 L Water Storage Pozzolana & Volcanic Zeolite Filters'
+      };
+    } else if (dest === 'alburni') {
+      return {
+        foodKcal: 5000,
+        energyKwh: 0,
+        tools: ['structural_chestnut_beam'],
+        seeds: [],
+        waterL: 2500,
+        summary: '+2,500 L Karst Spring Water, Structural Chestnut Beams & Olive Oil'
+      };
+    } else if (dest === 'barbagia') {
+      return {
+        foodKcal: 6000,
+        energyKwh: 0,
+        tools: ['compressed_wool_mat'],
+        seeds: ['heirloom_legume_seeds'],
+        waterL: 0,
+        summary: '+6,000 kcal Goat Cheese, Compressed Wool Mats & Legume Seeds'
+      };
+    } else if (dest === 'node_02') {
+      return {
+        foodKcal: 4000,
+        energyKwh: 20,
+        tools: [],
+        seeds: ['agro_nursery_stock'],
+        waterL: 0,
+        summary: '+20 kWh HVDC Power & +4,000 kcal Node 02 Agroforestry Produce'
+      };
+    } else if (dest === 'monte_sole') {
+      return {
+        foodKcal: 4000,
+        energyKwh: 0,
+        tools: ['solar_stirling_dish'],
+        seeds: [],
+        waterL: 0,
+        summary: '+4,000 kcal Roasted Chestnuts & Solar Stirling Dish Schematic'
+      };
+    } else if (dest === 'serra_estrela') {
+      return {
+        foodKcal: 0,
+        energyKwh: 30,
+        tools: ['pelton_wheel', 'lanital_insulation'],
+        seeds: [],
+        waterL: 0,
+        summary: '+30 kWh Pelton Hydro Power & Lanital Wool Insulation'
+      };
+    } else if (dest === 'detroit_delray') {
+      return {
+        foodKcal: 0,
+        energyKwh: 0,
+        tools: ['carbide_bits', 'heavy_gantry_mill'],
+        seeds: [],
+        waterL: 0,
+        summary: 'Tungsten Carbide Endmills & Heavy 5-Axis Gantry Mill Blueprint'
+      };
+    } else { // rojava / fallback
+      return {
+        foodKcal: 5000,
+        energyKwh: 0,
+        tools: ['demarchic_corpus'],
+        seeds: ['emmer_wheat_seeds'],
+        waterL: 0,
+        summary: '+5,000 kcal Heritage Emmer Grains & Demarchic Agora Sortition Corpus'
+      };
+    }
+  }
+
+  dispatchConvoy(type, destination, cargoManifest = {}, options = {}) {
+    // 1. Resolve vehicle type ('cargo_trike' or 'vtol_drone')
+    const vehicleType = type === 'drone' ? 'vtol_drone' : (type === 'trike' ? 'cargo_trike' : type);
+    const spec = VEHICLE_SPECS[vehicleType];
+    if (!spec) {
+      return { ok: false, reason: `Unknown vehicle type: ${type}. Must be cargo_trike or vtol_drone.` };
     }
 
-    if (offerType === 'energy') {
-      if ((this.data.resources.energyStoredKwh || 0) < energyCost + 15.0) {
-        return { ok: false, reason: `Need at least 15 kWh surplus energy (plus ${energyCost} kWh vehicle charge) to pack a power canister!` };
+    // 2. Resolve destination node
+    const node = this.getPartnerNode(destination);
+    if (!node) {
+      return { ok: false, reason: `Unknown destination node: ${destination}.` };
+    }
+
+    // 3. Check for available docked vehicle in fleet
+    if (!Array.isArray(this.data.fleet)) this.data.fleet = [];
+    let vehicle = this.data.fleet.find(v => v.type === vehicleType && v.status === 'docked');
+
+    // Auto-commission vehicle if Depot or Vertiport is present
+    if (!vehicle) {
+      const hasDepot = (this.data.buildings || []).some(b => 
+        (vehicleType === 'cargo_trike' && b.type === 'trike_depot') ||
+        (vehicleType === 'vtol_drone' && b.type === 'drone_vertiport')
+      );
+      if (hasDepot) {
+        vehicle = this.commissionVehicle(vehicleType);
       }
-      this.data.resources.energyStoredKwh -= (energyCost + 15.0);
-    } else if (offerType === 'food') {
-      if ((this.data.resources.foodKcal || 0) < 4000) {
-        return { ok: false, reason: 'Need at least 4,000 kcal food reserve to export organic harvest produce!' };
+    }
+
+    if (!vehicle) {
+      return { 
+        ok: false, 
+        reason: `No docked ${spec.name} available in fleet! ${vehicleType === 'cargo_trike' ? 'Build a Cargo Trike Depot or wait for returning trikes.' : 'Build a Courier Vertiport or wait for returning drones.'}` 
+      };
+    }
+
+    // 4. Energy requirements
+    const distanceKm = node.distanceKm || 50;
+    const energyNeededKwh = vehicleType === 'cargo_trike'
+      ? Math.max(1.0, (distanceKm / 100) * (spec.energyDrawKwhPer100Km || 1.5))
+      : Math.max(0.8, Math.ceil(distanceKm / 45) * (spec.energyDrawKwhPerSortie || 0.8));
+
+    const currentEnergy = this.data.resources?.energyStoredKwh !== undefined
+      ? this.data.resources.energyStoredKwh
+      : (this.data.resources?.energyKwh || 0);
+
+    if (currentEnergy < energyNeededKwh) {
+      return { 
+        ok: false, 
+        reason: `Need at least ${energyNeededKwh.toFixed(1)} kWh stored microgrid energy to charge ${spec.name} for the ${distanceKm} km route to ${node.name}!` 
+      };
+    }
+
+    // 5. Cargo Manifest validation & deduction
+    const foodKcal = cargoManifest.foodKcal || 0;
+    const energyKwh = cargoManifest.energyKwh || 0;
+    const tools = Array.isArray(cargoManifest.tools) ? [...cargoManifest.tools] : [];
+    const seeds = Array.isArray(cargoManifest.seeds) ? [...cargoManifest.seeds] : [];
+    const waterL = cargoManifest.waterL || 0;
+
+    const estWeightKg = (waterL * 1.0) + (foodKcal / 3000) + (tools.length * 2.5);
+    if (estWeightKg > spec.payloadKg) {
+      return {
+        ok: false,
+        reason: `Cargo weight (~${Math.round(estWeightKg)} kg) exceeds ${spec.name} maximum payload capacity of ${spec.payloadKg} kg!`
+      };
+    }
+
+    if (foodKcal > 0) {
+      if ((this.data.resources.foodKcal || 0) < foodKcal) {
+        return { ok: false, reason: `Need at least ${foodKcal.toLocaleString()} kcal food in storage to dispatch manifest!` };
       }
-      this.data.resources.energyStoredKwh -= energyCost;
-      this.data.resources.foodKcal -= 4000;
-    } else if (offerType === 'water') {
-      if ((this.data.resources.waterLiters || 0) < 1000) {
-        return { ok: false, reason: 'Need at least 1,000 L water reserve to export pure filtered rainwater!' };
+      this.data.resources.foodKcal -= foodKcal;
+    }
+
+    if (energyKwh > 0) {
+      if (currentEnergy < energyNeededKwh + energyKwh) {
+        return { ok: false, reason: `Need ${energyKwh} kWh cargo energy plus ${energyNeededKwh.toFixed(1)} kWh vehicle charge!` };
       }
-      this.data.resources.energyStoredKwh -= energyCost;
-      this.data.resources.waterLiters -= 1000;
-    } else if (offerType === 'tooling') {
-      const hasFablab = this.data.buildings?.some(b => b.type === 'fablab');
-      if (!hasFablab) {
-        return { ok: false, reason: 'Open-Source FabLab required to machine precision tooling exports!' };
+      if (this.data.resources.energyStoredKwh !== undefined) {
+        this.data.resources.energyStoredKwh -= (energyNeededKwh + energyKwh);
+      } else {
+        this.data.resources.energyKwh -= (energyNeededKwh + energyKwh);
       }
-      if ((this.data.chores?.remainingHours || 0) < 2.0) {
-        return { ok: false, reason: 'Need 2.0h pioneer labor to CNC machine precision tooling!' };
-      }
-      this.data.chores.remainingHours -= 2.0;
-      this.data.resources.energyStoredKwh -= energyCost;
     } else {
-      return { ok: false, reason: 'Unknown offer cargo type.' };
+      if (this.data.resources.energyStoredKwh !== undefined) {
+        this.data.resources.energyStoredKwh -= energyNeededKwh;
+      } else {
+        this.data.resources.energyKwh -= energyNeededKwh;
+      }
     }
+
+    if (waterL > 0) {
+      if ((this.data.resources.waterLiters || 0) < waterL) {
+        return { ok: false, reason: `Need at least ${waterL} L water in storage to dispatch manifest!` };
+      }
+      this.data.resources.waterLiters -= waterL;
+    }
+
+    // 6. Driver assignment (optional for trikes, null for autonomous drones)
+    let pioneerDriverId = null;
+    if (vehicleType === 'cargo_trike' && options.pioneerDriverId) {
+      const pioneer = (this.data.companions || []).find(c => c.id === options.pioneerDriverId);
+      if (pioneer) {
+        pioneerDriverId = pioneer.id;
+        pioneer.status = `Driving cargo trike to ${node.name}`;
+      }
+    }
+
+    // 7. Route timing: departure & ETA
+    const departureDay = this.data.day || 1;
+    const departureHour = this.data.hour || 8.0;
 
     let transitDays = 1;
-    if (vehicleType === 'drone') {
-      transitDays = node.distanceKm > 4000 ? 2 : 1;
+    if (vehicleType === 'vtol_drone') {
+      transitDays = distanceKm > 1000 ? 2 : 1;
     } else {
-      if (node.distanceKm > 3000) transitDays = 3;
-      else if (node.distanceKm > 500) transitDays = 2;
+      if (distanceKm > 2000) transitDays = 4;
+      else if (distanceKm > 500) transitDays = 2;
       else transitDays = 1;
     }
 
+    const etaDay = departureDay + transitDays;
+    const etaHour = departureHour + (transitDays * 24);
+
+    // 8. Generate dynamic returnManifest tailored to destination partner node
+    const returnManifest = options.returnManifest || this.generateReturnManifestForNode(destination, cargoManifest);
+
+    // 9. Create Convoy record
+    const convoyId = `convoy-${Date.now().toString(36)}-${Math.floor(Math.random() * 1000)}`;
     const convoy = {
-      id: `convoy-${Date.now().toString(36)}`,
-      targetNodeId,
-      targetNodeName: node.name,
-      vehicleType,
-      offerType,
-      requestType,
-      departureDay: this.data.day,
-      arrivalDay: this.data.day + transitDays,
+      id: convoyId,
+      type: vehicleType,
+      origin: 'local_node',
+      destination,
+      departureDay,
+      departureHour,
+      etaDay,
+      etaHour,
       daysRemaining: transitDays,
-      status: 'in_transit'
+      status: 'in_transit', // 'in_transit' | 'arrived' | 'returning' | 'weather_delayed'
+      cargoManifest: {
+        foodKcal,
+        energyKwh,
+        tools,
+        seeds,
+        waterL
+      },
+      returnManifest,
+      pioneerDriverId,
+      vehicleId: vehicle.id,
+      distanceKm,
+      transitEvent: null
     };
+
+    // Mark vehicle status
+    vehicle.status = 'in_transit';
+    vehicle.batterySocPct = Math.max(15, (vehicle.batterySocPct || 100) - Math.round((energyNeededKwh / (vehicle.batteryCapacityKwh || 1.0)) * 100));
 
     if (!Array.isArray(this.data.convoys)) this.data.convoys = [];
     this.data.convoys.push(convoy);
 
     this.save();
     this.emit('convoy_dispatched', convoy);
+    this.emit('fleet_updated', this.data.fleet);
     this.emit('resources_updated', this.data.resources);
     return { ok: true, convoy };
+  }
+
+  dispatchCargoConvoy({ targetNodeId, vehicleType = 'trike', offerType, requestType }) {
+    const vType = vehicleType === 'drone' ? 'vtol_drone' : 'cargo_trike';
+    const cargoManifest = {
+      foodKcal: offerType === 'food' ? 4000 : 0,
+      energyKwh: offerType === 'energy' ? 15.0 : 0,
+      waterL: offerType === 'water' ? 1000 : 0,
+      tools: offerType === 'tooling' ? ['laser_spindle_bushing'] : [],
+      seeds: []
+    };
+
+    return this.dispatchConvoy(vType, targetNodeId, cargoManifest, { requestType });
+  }
+
+  updateConvoys(dtDays = 1.0) {
+    if (!Array.isArray(this.data.convoys) || this.data.convoys.length === 0) {
+      return { arrived: [], events: [] };
+    }
+
+    const arrived = [];
+    const events = [];
+
+    for (const convoy of this.data.convoys) {
+      // 1. Check for transit events
+      if (convoy.status === 'in_transit' || convoy.status === 'weather_delayed') {
+        const roll = Math.random();
+        if (!convoy.transitEvent && roll < 0.25) {
+          const currentWeather = this.data.weather || {};
+          const isBadWeather = currentWeather.isCrisis || (currentWeather.windSpeedKmh > 40) || (currentWeather.rainfallMm > 25);
+
+          if (isBadWeather || roll < 0.08) {
+            convoy.status = 'weather_delayed';
+            convoy.daysRemaining += 1;
+            convoy.transitEvent = {
+              type: 'weather_delayed',
+              title: 'Weather Hold & Microgrid Standby',
+              desc: `${convoy.type === 'vtol_drone' ? 'High ridge winds (>45 km/h)' : 'Muddy greenway runoff'} triggered automated safety shelter delay (+1 day).`
+            };
+            events.push({ convoyId: convoy.id, event: convoy.transitEvent });
+          } else if (roll < 0.16) {
+            convoy.transitEvent = {
+              type: 'trail_obstacle',
+              title: 'Fallen Timber Detour Cleared',
+              desc: 'Pioneers safely navigated a keyline swale bypass with zero cargo damage.'
+            };
+            events.push({ convoyId: convoy.id, event: convoy.transitEvent });
+          } else {
+            this.data.resources.foodKcal = (this.data.resources.foodKcal || 0) + 500;
+            this.data.morale = Math.min(100, (this.data.morale || 85) + 5);
+            convoy.transitEvent = {
+              type: 'mutual_aid_encounter',
+              title: 'Bioregional Mutual-Aid Encounter',
+              desc: 'Encountered neighboring permaculture scouts along the greenway: shared forage (+500 kcal, +5 Morale).'
+            };
+            events.push({ convoyId: convoy.id, event: convoy.transitEvent });
+          }
+        } else if (convoy.status === 'weather_delayed') {
+          convoy.status = 'in_transit';
+        }
+      }
+
+      // 2. Decrement transit days
+      convoy.daysRemaining -= dtDays;
+
+      // 3. Check for arrival
+      if (convoy.daysRemaining <= 0) {
+        convoy.status = 'arrived';
+
+        // Unload returnManifest
+        const rm = convoy.returnManifest || {};
+        if (rm.foodKcal) {
+          this.data.resources.foodKcal = (this.data.resources.foodKcal || 0) + rm.foodKcal;
+        }
+        if (rm.energyKwh) {
+          const cap = this.data.resources.energyCapacityKwh || 100;
+          this.data.resources.energyStoredKwh = Math.min(cap, (this.data.resources.energyStoredKwh || 0) + rm.energyKwh);
+        }
+        if (rm.waterL) {
+          const cap = this.data.resources.waterCapacityL || 2000;
+          this.data.resources.waterLiters = Math.min(cap, (this.data.resources.waterLiters || 0) + rm.waterL);
+        }
+        if (Array.isArray(rm.tools)) {
+          if (!Array.isArray(this.data.unlockedSchematics)) this.data.unlockedSchematics = [];
+          rm.tools.forEach(t => {
+            if (!this.data.unlockedSchematics.includes(t)) {
+              this.data.unlockedSchematics.push(t);
+            }
+          });
+        }
+
+        // Return vehicle to fleet
+        if (convoy.vehicleId && Array.isArray(this.data.fleet)) {
+          const v = this.data.fleet.find(f => f.id === convoy.vehicleId);
+          if (v) {
+            v.status = 'docked';
+            v.sortiesCompleted = (v.sortiesCompleted || 0) + 1;
+            v.totalDistanceTraveledKm = (v.totalDistanceTraveledKm || 0) + (convoy.distanceKm * 2);
+          }
+        }
+
+        // Return driver companion to home
+        if (convoy.pioneerDriverId) {
+          const pioneer = (this.data.companions || []).find(c => c.id === convoy.pioneerDriverId);
+          if (pioneer) {
+            pioneer.status = 'Resting at home node';
+          }
+        }
+
+        // Update destination affinity and trade count
+        const targetNode = this.getPartnerNode(convoy.destination);
+        if (targetNode) {
+          targetNode.tradeHistoryCount = (targetNode.tradeHistoryCount || 0) + 1;
+          targetNode.affinity = Math.min(100, (targetNode.affinity || 85) + 5);
+        }
+
+        arrived.push({
+          convoyId: convoy.id,
+          nodeName: targetNode?.name || convoy.destination,
+          vehicle: convoy.type === 'vtol_drone' ? 'Autonomous Courier Drone' : 'Solar Cargo Trike',
+          returnManifest: rm,
+          deliveredGoods: rm.summary || `Cargo Unloaded: +${rm.foodKcal || 0} kcal, +${rm.waterL || 0} L, +${rm.energyKwh || 0} kWh`
+        });
+      }
+    }
+
+    // Filter out arrived convoys
+    this.data.convoys = this.data.convoys.filter(c => c.daysRemaining > 0);
+    this.save();
+
+    return { arrived, events };
   }
 
   sendPioneerOnSabbatical({ pioneerId, targetNodeId }) {
@@ -2183,22 +2499,9 @@ export class GameState {
       this.data.morale = Math.max(10, Math.min(100, this.data.morale + Math.sign(placementMoraleBonus) * Math.min(5, Math.abs(placementMoraleBonus))));
     }
 
-    // Process active inter-node cargo convoys
-    const convoysArrived = [];
-    if (Array.isArray(this.data.convoys)) {
-      this.data.convoys.forEach(c => {
-        c.daysRemaining -= 1;
-        if (c.daysRemaining <= 0) {
-          const rewardSummary = this.deliverConvoyCargo(c);
-          convoysArrived.push({
-            nodeName: c.targetNodeName,
-            vehicle: c.vehicleType === 'drone' ? 'Autonomous Courier Drone' : 'Solar Cargo Trike',
-            deliveredGoods: rewardSummary
-          });
-        }
-      });
-      this.data.convoys = this.data.convoys.filter(c => c.daysRemaining > 0);
-    }
+    // Process active inter-node cargo convoys & transit events (Epic 2.3)
+    const convoyUpdate = this.updateConvoys(1.0);
+    const convoysArrived = convoyUpdate.arrived;
 
     // Process active pioneer sabbaticals
     const sabbaticalsReturned = [];
@@ -2252,6 +2555,7 @@ export class GameState {
       energyCapacity: this.data.resources.energyCapacityKwh,
       weather,
       convoysArrived,
+      transitEvents: convoyUpdate.events || [],
       sabbaticalsReturned,
       objective: this.data.objective,
       scheduledEvent,

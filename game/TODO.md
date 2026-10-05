@@ -123,34 +123,23 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
   - Added dedicated node icons (`🌋`, `🌲`, `🐑`, `♨️`), interactive green/amber export & demand badges, and customized regional trade import catalogues in `world_map_modal.js`.
 
 ### **2.3 Logistics Engine & State Model (`state.js`)**
-- [ ] Add `convoys: []` collection to `gameState.data`:
-  ```javascript
-  {
-    id: 'convoy-78a9',
-    type: 'cargo_trike' | 'vtol_drone',
-    origin: 'local_node',
-    destination: 'val_di_cecina',
-    departureDay: 14,
-    departureHour: 8.0,
-    etaDay: 15,
-    etaHour: 14.0,
-    status: 'in_transit' | 'arrived' | 'returning' | 'weather_delayed',
-    cargoManifest: {
-      foodKcal: 0,
-      energyKwh: 0,
-      tools: ['laser_spindle_bushing'],
-      seeds: []
-    },
-    returnManifest: {
-      tools: ['geothermal_heat_pipe'],
-      foodKcal: 15000
-    },
-    pioneerDriverId: 'maya' // optional for trikes, null for autonomous drones
-  }
-  ```
-- [ ] Implement `dispatchConvoy(type, destination, cargoManifest)` method.
-- [ ] Implement `updateConvoys(dt)` in daily simulation loop (`restUntilTomorrow`).
-- [ ] Handle transit events (weather hold, trail obstacle, cooperative mutual-aid encounter).
+- [x] **Add `convoys: []` collection to `gameState.data`:**
+  - Implemented exact canonical schema with `id`, `type`, `origin`, `destination`, `departureDay`, `departureHour`, `etaDay`, `etaHour`, `daysRemaining`, `status` (`in_transit` | `arrived` | `returning` | `weather_delayed`), `cargoManifest`, `returnManifest`, `pioneerDriverId`, and `vehicleId`.
+- [x] **Implement `dispatchConvoy(type, destination, cargoManifest, options)` method:**
+  - Validates fleet vehicle availability and charges needed route energy from microgrid.
+  - Enforces payload capacity limits (250 kg for cargo trikes, 25 kg for VTOL drones).
+  - Deducts exported resources (food, energy, water, tools) and marks vehicle as `in_transit`.
+  - Supports driver assignment for overland trikes (`pioneerDriverId`) and autonomous flight for drones.
+  - Generates tailored `returnManifest` based on destination partner node specializations.
+- [x] **Implement `updateConvoys(dt)` in daily simulation loop (`restUntilTomorrow`):**
+  - Advanced daily transit progress and resolved completed trade runs.
+  - Automatically unloads `returnManifest` upon arrival (+kcal, +water, +energy, unlocked blueprints).
+  - Returns fleet vehicles to `docked` status and restores companion drivers.
+  - Increments trade history count and node affinity.
+- [x] **Handle Transit Events:**
+  - Weather holds (`weather_delayed` with safety delay during severe storms/gales).
+  - Trail obstacles (`trail_obstacle` safely bypassed via swale corridors).
+  - Cooperative mutual-aid encounters (`mutual_aid_encounter` granting shared forage and +morale).
 
 ### **2.4 UI & Visualization**
 - [ ] **Transit & Vertiport Logistics Desk Modal:**

@@ -168,7 +168,18 @@ The foundational engine (`main.js`, `state.js`, `settlement_canvas.js`, `hud.js`
   - State management methods: `getSisterNodes()`, `getPartnerNode(nodeId)`, and `getRegionalNodePortfolio(nodeId)` providing standardized access for convoy manifest validation.
   - Interactive Reticulum cartography in `world_map_modal.js`: dedicated regional node cards with distinct icons (`🌋`, `🌲`, `🐑`, `♨️`), distance, signal, affinity, styled green/amber badges for exports & demands, and customized trade import catalogues.
 
+* **Completed (Epic 2.3 — Logistics Engine & Convoy State Model):**
+  - Canonical `convoys: []` state schema in `state.js` tracking route lifecycle: `id`, `type` (`cargo_trike` or `vtol_drone`), `origin`, `destination`, departure/ETA timestamps, `status` (`in_transit`, `weather_delayed`, `arrived`), `cargoManifest`, `returnManifest`, assigned `pioneerDriverId`, docked/active `vehicleId`, distance, and dynamic `transitEvent`.
+  - Comprehensive trade dispatch workflow (`dispatchConvoy()`):
+    * Fleet vehicle availability validation, 48V LFP battery / high-C drone energy draw calculations, and payload weight limit verification (250 kg freight box / 25 kg aerial pod).
+    * Outbound resource deductions from local stores, companion driver reservation, and vehicle status transition to `in_transit`.
+    * Bioregional exchange engine (`generateReturnManifestForNode()`) generating reciprocal imports: Cecina ancient spelt grains, Campi Flegrei pozzolana binder, Alburni chestnut beams & karst water, Barbagia mountain wool & aged cheese, or precision tooling schematics.
+  - Daily simulation integration (`updateConvoys()` inside `restUntilTomorrow()`):
+    * Dynamic transit events: `weather_delayed` automated shelter delays during high ridge winds (>40 km/h) or heavy rainfall (>25 mm), `trail_obstacle` keyline swale bypasses, and `mutual_aid_encounter` shared permaculture forage (+500 kcal, +5 Morale).
+    * Automated cargo unloader: replenishes kcal, water, and kWh upon arrival, unlocks imported schematics, updates node trade history/affinity, increments vehicle odometers and sortie counts, and docks vehicles back into settlement fleet.
+
 The remaining civilizational expansion tasks are catalogued in [`game/TODO.md`](TODO.md) across three macro pillars:
-1. **Epic 2:** Inter-Node Logistics, Trade & Regional Convoys (Convoy State Model, Manifest Calculations, Logistics Desk Modal).
+1. **Epic 2:** Inter-Node Logistics, Trade & Regional Convoys (Logistics Desk Modal, Animated Corridors & Reticulum Paths).
 2. **Epic 3:** Four-Season Climate Engine, Evapotranspiration, and Extreme Weather Protocols.
 3. **Epic 4:** Long-Horizon Progression, Civic Megaprojects, and Municipal Sortition Demarchy.
+
