@@ -402,38 +402,99 @@ export class BuildingInspectorModal {
       `;
     } else if (b.type === 'trike_depot') {
       icon = '🚲';
-      title = 'Cargo Trike Depot';
-      subtitle = 'Transit Vertiport • Zero-Emission Freight Logistics';
+      title = 'Electric Cargo Trike Depot';
+      subtitle = 'Transit Hub • Zero-Emission Freight Logistics & Greenways';
+      const trikes = (gameState.getFleet ? gameState.getFleet('cargo_trike') : []) || [];
+      const totalTrikes = trikes.length || 1;
+      const dockedTrikes = trikes.filter(v => v.status === 'docked').length;
+      const avgSoc = totalTrikes > 0
+        ? Math.round(trikes.reduce((acc, v) => acc + (v.batterySocPct !== undefined ? v.batterySocPct : 100), 0) / totalTrikes)
+        : 100;
+      const totalPayload = totalTrikes * 250;
+
       metricsHtml = `
         <div class="inspector-metrics-grid">
           <div class="inspector-metric-card">
-            <span class="metric-label">FLEET STATUS</span>
-            <span class="metric-value text-emerald">4 Active Cargo Trikes</span>
-            <span class="metric-sub">250 kg freight box per trike</span>
+            <span class="metric-label">OVERLAND FLEET</span>
+            <span class="metric-value text-emerald">${dockedTrikes} / ${totalTrikes} Ready</span>
+            <span class="metric-sub">${totalPayload} kg total freight capacity</span>
           </div>
           <div class="inspector-metric-card">
-            <span class="metric-label">SOLAR CHARGING</span>
-            <span class="metric-value text-gold">1.2 kW Canopy</span>
-            <span class="metric-sub">48V LFP modular swappable packs</span>
+            <span class="metric-label">RANGE & EFFICIENCY</span>
+            <span class="metric-value text-gold">60 km Range</span>
+            <span class="metric-sub">1.5 kWh / 100 km (Overland Corridors)</span>
           </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">BATTERY STORAGE</span>
+            <span class="metric-value text-cyan">48V LFP Packs</span>
+            <span class="metric-sub">${avgSoc}% Average State of Charge (SOC)</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">GREENWAY CORRIDORS</span>
+            <span class="metric-value text-emerald">Active Mesh Trails</span>
+            <span class="metric-sub">Overland greenways & regional bike paths</span>
+          </div>
+        </div>
+      `;
+      actionsHtml = `
+        <div class="inspector-actions-box">
+          <h4 class="inspector-actions-title">🚲 Depot & Fleet Operations:</h4>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-trike-recharge">
+            <span>⚡ Recharge Swappable 48V LFP Packs</span>
+            <small>Top off docked cargo trikes from solar microgrid</small>
+          </button>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-trike-commission">
+            <span>🚲 Commission Additional Cargo Trike</span>
+            <small>Assemble new overland trike (250 kg freight box)</small>
+          </button>
         </div>
       `;
     } else if (b.type === 'drone_vertiport') {
       icon = '🚁';
-      title = 'Autonomous Drone Vertiport';
-      subtitle = 'Transit Vertiport • Regional Aerial Mesh & Logistics';
+      title = 'Autonomous Courier Vertiport';
+      subtitle = 'Transit Hub • Regional Aerial Mesh & Rapid Logistics';
+      const drones = (gameState.getFleet ? gameState.getFleet('vtol_drone') : []) || [];
+      const totalDrones = drones.length || 1;
+      const dockedDrones = drones.filter(v => v.status === 'docked').length;
+      const avgSoc = totalDrones > 0
+        ? Math.round(drones.reduce((acc, v) => acc + (v.batterySocPct !== undefined ? v.batterySocPct : 100), 0) / totalDrones)
+        : 100;
+
       metricsHtml = `
         <div class="inspector-metrics-grid">
           <div class="inspector-metric-card">
-            <span class="metric-label">MAX PAYLOAD</span>
-            <span class="metric-value text-cyan">25 kg VTOL</span>
-            <span class="metric-sub">Emergency medical & seed drops</span>
+            <span class="metric-label">AERIAL COURIER FLEET</span>
+            <span class="metric-value text-cyan">${dockedDrones} / ${totalDrones} Docked on Pad</span>
+            <span class="metric-sub">Autonomous VTOL quad-rotors</span>
           </div>
           <div class="inspector-metric-card">
-            <span class="metric-label">MESH COVERAGE</span>
-            <span class="metric-value text-emerald">45 km Bioregion</span>
-            <span class="metric-sub">Relay hops across Reticulum nodes</span>
+            <span class="metric-label">PRECISION PAYLOAD</span>
+            <span class="metric-value text-emerald">25 kg VTOL Box</span>
+            <span class="metric-sub">Rapid medical, seed drops & CNC spares</span>
           </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">MESH FLIGHT RADIUS</span>
+            <span class="metric-value text-gold">45 km Direct LOS</span>
+            <span class="metric-sub">Point-to-point over ridges & valleys</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">ENERGY DRAW</span>
+            <span class="metric-value text-cyan">0.8 kWh / Sortie</span>
+            <span class="metric-sub">${avgSoc}% Flight Battery SOC</span>
+          </div>
+        </div>
+      `;
+      actionsHtml = `
+        <div class="inspector-actions-box">
+          <h4 class="inspector-actions-title">🚁 Vertiport Flight Operations:</h4>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-drone-recharge">
+            <span>⚡ Rapid Charge Flight Batteries</span>
+            <small>Direct high-current recharge on landing pads</small>
+          </button>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-drone-commission">
+            <span>🚁 Assemble New VTOL Cargo Drone</span>
+            <small>Commission autonomous 25 kg air courier</small>
+          </button>
         </div>
       `;
     } else if (b.type === 'central_agora') {
@@ -640,6 +701,34 @@ export class BuildingInspectorModal {
     this.overlayEl.querySelector('#btn-inspect-mitosis-hub')?.addEventListener('click', () => {
       this.close();
       worldMapModal.open('nodes');
+    });
+
+    // Trike Depot operations
+    this.overlayEl.querySelector('#btn-inspect-trike-recharge')?.addEventListener('click', () => {
+      soundFX.playClick();
+      gameState.rechargeFleet();
+      this.render();
+    });
+
+    this.overlayEl.querySelector('#btn-inspect-trike-commission')?.addEventListener('click', () => {
+      soundFX.playClick();
+      soundFX.playChoreExtinctionFanfare();
+      gameState.commissionVehicle('cargo_trike');
+      this.render();
+    });
+
+    // Drone Vertiport operations
+    this.overlayEl.querySelector('#btn-inspect-drone-recharge')?.addEventListener('click', () => {
+      soundFX.playClick();
+      gameState.rechargeFleet();
+      this.render();
+    });
+
+    this.overlayEl.querySelector('#btn-inspect-drone-commission')?.addEventListener('click', () => {
+      soundFX.playClick();
+      soundFX.playChoreExtinctionFanfare();
+      gameState.commissionVehicle('vtol_drone');
+      this.render();
     });
   }
 }

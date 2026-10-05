@@ -5,6 +5,38 @@
  * License: AGPL-3.0-or-later
  */
 
+/**
+ * Canonical Vehicle Specifications for Inter-Node Logistics & Regional Convoys (Epic 2.1)
+ */
+export const VEHICLE_SPECS = {
+  cargo_trike: {
+    type: 'cargo_trike',
+    category: 'overland',
+    name: 'Electric Cargo Trike',
+    icon: '🚲',
+    payloadKg: 250,
+    rangeKm: 60,
+    energyDrawKwhPer100Km: 1.5,
+    batteryCapacityKwh: 1.0,
+    batteryVoltage: '48V LFP Swappable Pack',
+    routes: ['Overland greenways', 'Regional bike/cart corridors'],
+    description: 'Heavy-duty overland cargo trike with 250 kg freight box, regenerative hub motor, and swappable 48V LFP battery packs.'
+  },
+  vtol_drone: {
+    type: 'vtol_drone',
+    category: 'aerial',
+    name: 'Autonomous VTOL Cargo Drone',
+    icon: '🚁',
+    payloadKg: 25,
+    rangeKm: 45,
+    energyDrawKwhPerSortie: 0.8,
+    batteryCapacityKwh: 1.2,
+    batteryVoltage: 'High-C LFP Pack',
+    routes: ['Direct line-of-sight aerial mesh corridors'],
+    description: 'Autonomous electric vertical takeoff and landing drone for 25 kg rapid emergency, precision tools, and high-value cargo.'
+  }
+};
+
 export class GameState {
   constructor() {
     this.listeners = new Map();
@@ -237,6 +269,7 @@ export class GameState {
       },
 
       // Reticulum Mesh Inter-Node Logistics & Sabbaticals (Art. 4.2 & Model C Federation)
+      fleet: [],
       convoys: [],
       sabbaticals: [],
       unlockedSchematics: [],
@@ -1414,8 +1447,16 @@ export class GameState {
       this.data.fiatEarnedUsd = (this.data.fiatEarnedUsd || 0) + 2000;
     } else if (type === 'trike_depot') {
       building.name = 'Electric Cargo Trike Depot';
+      if (!Array.isArray(this.data.fleet)) this.data.fleet = [];
+      if (!this.data.fleet.some(v => v.type === 'cargo_trike')) {
+        this.commissionVehicle('cargo_trike', 'Solar Cargo Trike Alpha');
+      }
     } else if (type === 'drone_vertiport') {
       building.name = 'Autonomous Courier Vertiport';
+      if (!Array.isArray(this.data.fleet)) this.data.fleet = [];
+      if (!this.data.fleet.some(v => v.type === 'vtol_drone')) {
+        this.commissionVehicle('vtol_drone', 'SkyLink VTOL Courier Alpha');
+      }
     } else if (type === 'mhu_dwelling') {
       building.name = 'Modular Habitat Unit (MHU)';
       building.shelterCapacity = 3;
@@ -1616,6 +1657,149 @@ export class GameState {
     }
 
     return { ok: true, node: node02 };
+  }
+
+  // =========================================================================
+  // ZERO-EMISSION LOGISTICS FLEET & VEHICLE MANAGEMENT (EPIC 2.1)
+  // =========================================================================
+
+  getVehicleSpecs(type = null) {
+    if (type) return VEHICLE_SPECS[type] ? { ...VEHICLE_SPECS[type] } : null;
+    return JSON.parse(JSON.stringify(VEHICLE_SPECS));
+  }
+
+  getFleet(filter = null) {
+    if (!Array.isArray(this.data.fleet)) this.data.fleet = [];
+    if (!filter) return this.data.fleet;
+    if (typeof filter === 'string') {
+      return this.data.fleet.filter(v => 
+        v.type === filter || v.category === filter || v.status === filter
+      );
+    }
+    if (typeof filter === 'object') {
+      return this.data.fleet.filter(v => {
+        return Object.entries(filter).every(([k, val]) => v[k] === val);
+      });
+    }
+    return this.data.fleet;
+  }
+
+  commissionVehicle(type, customName = null, options = {}) {
+    const spec = VEHICLE_SPECS[type];
+    if (!spec) {
+      console.warn(`[GameState] Unknown vehicle type for commissioning: ${type}`);
+      return null;
+    }
+    if (!Array.isArray(this.data.fleet)) this.data.fleet = [];
+    const count = this.data.fleet.filter(v => v.type === type).length + 1;
+    const defaultName = type === 'cargo_trike' 
+      ? `Electric Cargo Trike #${count.toString().padStart(2, '0')}`
+      : `Autonomous VTOL Drone #${count.toString().padStart(2, '0')}`;
+
+    const vehicle = {
+      id: options.id || `fleet-${type}-${Date.now().toString(36)}-${Math.floor(Math.random() * 1000)}`,
+      type,
+      category: spec.category,
+      name: customName || defaultName,
+      icon: spec.icon,
+      payloadKg: spec.payloadKg,
+      rangeKm: spec.rangeKm,
+      energyDrawKwhPer100Km: spec.energyDrawKwhPer100Km || null,
+      energyDrawKwhPerSortie: spec.energyDrawKwhPerSortie || null,
+      batteryCapacityKwh: spec.batteryCapacityKwh,
+      batteryVoltage: spec.batteryVoltage,
+      batterySocPct: options.batterySocPct !== undefined ? options.batterySocPct : 100,
+      healthPct: options.healthPct !== undefined ? options.healthPct : 100,
+      status: options.status || 'docked', // 'docked' | 'in_transit' | 'charging' | 'maintenance'
+      routes: [...spec.routes],
+      assignedDriverId: options.assignedDriverId || null,
+      currentCargoKg: 0,
+      cargoManifest: {
+        foodKcal: 0,
+        energyKwh: 0,
+        tools: [],
+        seeds: [],
+        waterL: 0,
+        weightKg: 0
+      },
+      commissionedDay: this.data.day || 1,
+      totalDistanceTraveledKm: 0,
+      sortiesCompleted: 0
+    };
+
+    this.data.fleet.push(vehicle);
+    this.save();
+    this.emit('fleet_updated', this.data.fleet);
+    this.emit('vehicle_commissioned', vehicle);
+    return vehicle;
+  }
+
+  chargeVehicle(vehicleId, kwhLimit = null) {
+    if (!Array.isArray(this.data.fleet)) return { ok: false, reason: 'No fleet' };
+    const vehicle = this.data.fleet.find(v => v.id === vehicleId);
+    if (!vehicle) return { ok: false, reason: 'Vehicle not found' };
+
+    const missingSoc = 100 - (vehicle.batterySocPct || 0);
+    if (missingSoc <= 0) return { ok: true, chargedKwh: 0, vehicle };
+
+    const neededKwh = (missingSoc / 100) * (vehicle.batteryCapacityKwh || 1.0);
+    const availableEnergy = this.data.resources?.energyStoredKwh || this.data.resources?.energyKwh || 0;
+    
+    let drawKwh = Math.min(neededKwh, availableEnergy);
+    if (kwhLimit !== null) drawKwh = Math.min(drawKwh, kwhLimit);
+
+    if (drawKwh <= 0) return { ok: false, reason: 'Insufficient microgrid energy to charge' };
+
+    // Deduct from stored energy
+    if (this.data.resources.energyStoredKwh !== undefined) {
+      this.data.resources.energyStoredKwh = Math.max(0, this.data.resources.energyStoredKwh - drawKwh);
+    }
+    if (this.data.resources.energyKwh !== undefined) {
+      this.data.resources.energyKwh = Math.max(0, this.data.resources.energyKwh - drawKwh);
+    }
+
+    const socAdded = (drawKwh / (vehicle.batteryCapacityKwh || 1.0)) * 100;
+    vehicle.batterySocPct = Math.min(100, Math.round((vehicle.batterySocPct || 0) + socAdded));
+    if (vehicle.batterySocPct >= 100 && vehicle.status === 'charging') {
+      vehicle.status = 'docked';
+    }
+
+    this.save();
+    this.emit('fleet_updated', this.data.fleet);
+    this.emit('resources_updated', this.data.resources);
+    return { ok: true, chargedKwh: drawKwh, vehicle };
+  }
+
+  serviceVehicle(vehicleId) {
+    if (!Array.isArray(this.data.fleet)) return { ok: false, reason: 'No fleet' };
+    const vehicle = this.data.fleet.find(v => v.id === vehicleId);
+    if (!vehicle) return { ok: false, reason: 'Vehicle not found' };
+
+    vehicle.healthPct = 100;
+    if (vehicle.status === 'maintenance') {
+      vehicle.status = 'docked';
+    }
+
+    this.save();
+    this.emit('fleet_updated', this.data.fleet);
+    return { ok: true, vehicle };
+  }
+
+  rechargeFleet(maxTotalKwh = null) {
+    if (!Array.isArray(this.data.fleet)) return { ok: true, totalChargedKwh: 0 };
+    let totalChargedKwh = 0;
+    for (const vehicle of this.data.fleet) {
+      if (vehicle.status === 'docked' || vehicle.status === 'charging') {
+        if ((vehicle.batterySocPct || 0) < 100) {
+          const res = this.chargeVehicle(vehicle.id, maxTotalKwh ? maxTotalKwh - totalChargedKwh : null);
+          if (res.ok) {
+            totalChargedKwh += res.chargedKwh;
+          }
+          if (maxTotalKwh && totalChargedKwh >= maxTotalKwh) break;
+        }
+      }
+    }
+    return { ok: true, totalChargedKwh };
   }
 
   getWeatherForDay(day) {
@@ -2334,7 +2518,14 @@ export class GameState {
             this.data.emergencyPantryCaches = 3;
           }
 
-          // Ensure inter-node mesh logistics are initialized for existing saves
+          // Ensure inter-node mesh logistics and fleet are initialized for existing saves
+          if (!Array.isArray(this.data.fleet)) this.data.fleet = [];
+          if (this.data.buildings?.some(b => b.type === 'trike_depot') && !this.data.fleet.some(v => v.type === 'cargo_trike')) {
+            this.commissionVehicle('cargo_trike', 'Solar Cargo Trike Alpha');
+          }
+          if (this.data.buildings?.some(b => b.type === 'drone_vertiport') && !this.data.fleet.some(v => v.type === 'vtol_drone')) {
+            this.commissionVehicle('vtol_drone', 'SkyLink VTOL Courier Alpha');
+          }
           if (!Array.isArray(this.data.convoys)) this.data.convoys = [];
           if (!Array.isArray(this.data.sabbaticals)) this.data.sabbaticals = [];
           if (!Array.isArray(this.data.unlockedSchematics)) this.data.unlockedSchematics = [];

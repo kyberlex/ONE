@@ -87,16 +87,22 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
 > *"No node is an island. The Reticulum mesh binds autonomous communities into a resilient, cooperative federation without central banks or predatory logistics."*
 
 ### **2.1 Fleet Architecture & Vehicle Types**
-- [ ] **Electric Cargo Trikes (Overland Fleet):**
+- [x] **Electric Cargo Trikes (Overland Fleet):**
   - Payload: 250 kg freight box.
   - Range: 60 km per battery charge.
   - Energy Draw: 1.5 kWh/100 km (swappable 48V LFP battery packs).
   - Routes: Overland greenways and regional bike/cart corridors.
-- [ ] **Autonomous VTOL Cargo Drones (Aerial Fleet):**
+  - Canonical specs in `VEHICLE_SPECS.cargo_trike`, auto-commissioned on `trike_depot` construction.
+- [x] **Autonomous VTOL Cargo Drones (Aerial Fleet):**
   - Payload: 25 kg rapid emergency & high-value precision cargo.
   - Range: 45 km radius point-to-point.
   - Energy Draw: 0.8 kWh per sortie (recharged on Vertiport pad).
   - Routes: Direct line-of-sight aerial mesh corridors over ridges and valleys.
+  - Canonical specs in `VEHICLE_SPECS.vtol_drone`, auto-commissioned on `drone_vertiport` construction.
+- [x] **Fleet State Management & Operations (`state.js` & `building_inspector.js`):**
+  - Added `fleet: []` collection to `gameState.data`.
+  - Implemented `getVehicleSpecs()`, `getFleet()`, `commissionVehicle()`, `chargeVehicle()`, `serviceVehicle()`, and `rechargeFleet()`.
+  - Added interactive fleet status metrics (docked count, payload capacity, 48V LFP SOC%) and direct operational actions (recharge swappable packs, commission vehicles) in `building_inspector.js`.
 
 ### **2.2 Regional Partner Nodes & Bioregional Specializations**
 - [ ] **Val di Cecina (Geothermal & Agritech):**

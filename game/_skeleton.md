@@ -87,6 +87,7 @@ game/
 * **File Path:** `game/src/core/state.js` (2,226 lines, 93.3 KB)
 * **Role & Responsibility:** Central reactive single source of truth. Manages all game data, thermodynamic balances (kWh, L, kcal, waste), demographic rosters, chore labor pool, building catalogue, district spatial zoning, diurnal cycle, daily simulation tick (`restUntilTomorrow`), emergency contingency actions, and IndexedDB/localStorage persistence.
 * **Exports:**
+  - `VEHICLE_SPECS` (Canonical vehicle specifications for `cargo_trike` [250 kg freight box, 60 km range, 1.5 kWh/100km, 48V LFP] and `vtol_drone` [25 kg payload, 45 km radius, 0.8 kWh/sortie])
   - `GameState` (Class)
   - `gameState` (Default Singleton Instance)
 * **Key State Properties (`this.data`):**
@@ -100,16 +101,23 @@ game/
   - `districts`: Spatial zones (`pioneer_commons`, `agro_belt`, `fablab_district`, `residential_ecovillage`, `transit_vertiport`).
   - `chores`: Daily 6-hour chore pool, `remainingHours`, `loggedToday`, and automation progression queue (`extinguishChore`).
   - `objective`: Active primary objective card tracking goals and unlocks.
+  - `fleet`: Zero-emission logistics fleet array (`cargo_trike` and `vtol_drone` instances with battery SOC%, health%, payload capacity, and status).
   - `convoys`: In-transit regional trade convoys (cargo trikes & VTOL drones).
   - `milestones`: Set of completed civilizational milestones.
 * **Key Methods:**
   - `on(event, cb)`, `emit(event, payload)`: Custom event emitter for reactive UI updates.
   - `setPlayerProfile(name, vocationId, appearance)`: Initializes character data.
-  - `addBuilding(type, x, y, extraProps)`: Validates placement, checks district zoning, deducts labor/resources, records building with thermodynamic placement modifiers (`solarModifier`, `pumpEnergyKw`, `moraleBonus`), checks 3rd MHU placement threshold, and triggers carrying capacity checks.
+  - `addBuilding(type, x, y, extraProps)`: Validates placement, checks district zoning, deducts labor/resources, records building with thermodynamic placement modifiers (`solarModifier`, `pumpEnergyKw`, `moraleBonus`), checks 3rd MHU placement threshold, triggers carrying capacity checks, and auto-commissions initial vehicles on `trike_depot` and `drone_vertiport` completion.
   - `retireCamperVanToLogistics()`: Milestone 1.4 handler: relocates camper van from `(0, 0)` to western logistics slipway `(-170, 20)`, consecrates `(0, 0)` as permanent `Central Agora & Pioneer Fire Hearth`, unseals +300L auxiliary water and +15,000 kcal dry cache, triggers +20 morale surge, and opens the celebratory milestone modal.
   - `getDunbarProgress()`: Computes active carrying capacity metric against 50 MHUs (~150 residents) and returns percentage, threshold reached state, and mitosis status.
   - `triggerDunbarHorizon()`: Milestone 1.5 handler: triggers when 50 MHUs are built, sets `dunbarHorizonReached`, and emits milestone event.
   - `launchCellularMitosis(crew, sisterNodeName)`: Dispatches the founding expedition of 3 seasoned pioneers, unhitches the expedition camper, and founds Sister Node 02 in an adjacent hex cell (12 km away). Unlocks 12 km bike greenway, HVDC microgrid bus (+20 kWh), and line-of-sight Reticulum mesh link.
+  - `getVehicleSpecs(type)`: Returns canonical specifications for vehicles from `VEHICLE_SPECS`.
+  - `getFleet(filter)`: Returns fleet vehicles filtered by category (`overland` / `aerial`), type, or status.
+  - `commissionVehicle(type, customName, options)`: Creates, registers, and commissions a new vehicle instance into `this.data.fleet`.
+  - `chargeVehicle(vehicleId, kwhLimit)`: Draws stored microgrid energy to recharge vehicle batteries to 100% SOC.
+  - `serviceVehicle(vehicleId)`: Restores damaged vehicle health to 100% and resets status to docked.
+  - `rechargeFleet(maxTotalKwh)`: Recharges all docked fleet vehicles from available solar microgrid energy.
   - `getClearingRadius()`: Calculates dynamic carrying capacity clearing radius scaling through Stage 1 (340px Seed Campsite), Stage 2 (520px Ecovillage), and Stage 3 (750px–900px Full Dunbar Cell).
   - `checkClearingExpansion()`: Detects milestone clearing thresholds and emits `clearing_expanded` event.
   - `recalculateLaborBudget()`: Recalculates chore pool based on automated chores and population.
@@ -263,8 +271,12 @@ game/
 ---
 
 #### **`game/src/ui/building_inspector.js`**
-* **File Path:** `game/src/ui/building_inspector.js` (639 lines, 26.5 KB)
-* **Role & Responsibility:** Detailed inspection modal triggered by clicking any structure or landmark on the canvas. Displays real-time thermodynamic metrics, component degradation health, open-hardware bill of materials (BOM), maintenance tasks, and relocation/dismantling options. Includes dedicated inspection suites for the Central Agora & Pioneer Fire Hearth (Demarchy Assembly convening, hearth acoustic jamming) and MHU Modular Habitat Units (CLT dwelling quarters, sedum living roof inspection).
+* **File Path:** `game/src/ui/building_inspector.js` (737 lines, 32.1 KB)
+* **Role & Responsibility:** Detailed inspection modal triggered by clicking any structure or landmark on the canvas. Displays real-time thermodynamic metrics, component degradation health, open-hardware bill of materials (BOM), maintenance tasks, and relocation/dismantling options. Includes dedicated inspection suites for:
+  - **Electric Cargo Trike Depot:** Overland fleet status (`X / Y Ready`), total freight payload capacity (250 kg/trike), 60 km range, 48V LFP battery SOC%, swappable pack recharging, and commissioning new trikes.
+  - **Autonomous Courier Vertiport:** Aerial courier status (`X / Y Docked`), precision payload (25 kg VTOL), 45 km direct LOS mesh flight radius, 0.8 kWh/sortie energy draw, rapid landing pad recharging, and assembling new VTOL drones.
+  - **Central Agora & Pioneer Fire Hearth:** Demarchy Assembly convening, hearth acoustic jamming, and Cellular Mitosis expedition portal.
+  - **MHU Modular Habitat Units:** CLT dwelling quarters, sedum living roof inspection, and dynamic usufruct tenure.
 * **Exports:**
   - `BuildingInspectorModal` (Class)
 

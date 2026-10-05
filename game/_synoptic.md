@@ -151,7 +151,15 @@ The foundational engine (`main.js`, `state.js`, `settlement_canvas.js`, `hud.js`
   - Interactive Cellular Mitosis Hub card in `world_map_modal.js` displaying carrying capacity telemetry, mitosis dispatch button, and dedicated Sister Node 02 greenway card with rapid shuttle actions.
   - Central Agora inspector integration in `building_inspector.js` providing direct access to the Cellular Mitosis hub.
 
+* **Completed (Epic 2.1 — Fleet Architecture & Vehicle Types):**
+  - Canonical zero-emission logistics fleet specifications exported via `VEHICLE_SPECS` in `state.js`:
+    * **Electric Cargo Trikes (Overland Fleet):** 250 kg freight box, 60 km range, 1.5 kWh/100 km energy efficiency, swappable 48V LFP battery packs, overland greenway and bike/cart corridor routing.
+    * **Autonomous VTOL Cargo Drones (Aerial Fleet):** 25 kg precision freight payload, 45 km direct LOS flight radius, 0.8 kWh per sortie, high-C flight battery packs, aerial mesh corridors over ridges and valleys.
+  - Fleet state management in `state.js`: `this.data.fleet` collection with `getVehicleSpecs()`, `getFleet()`, `commissionVehicle()`, `chargeVehicle()`, `serviceVehicle()`, and `rechargeFleet()`.
+  - Automatic commissioning: building `Electric Cargo Trike Depot` auto-commissions `Solar Cargo Trike Alpha`; building `Autonomous Courier Vertiport` auto-commissions `SkyLink VTOL Courier Alpha`.
+  - Rich interactive inspection suites in `building_inspector.js`: real-time fleet readiness, freight payload capacity, 48V LFP SOC%, range telemetry, solar microgrid top-off recharging, and vehicle assembly/commissioning actions.
+
 The remaining civilizational expansion tasks are catalogued in [`game/TODO.md`](TODO.md) across three macro pillars:
-1. **Epic 2:** Inter-Node Logistics, Trade & Regional Convoys (Trikes, VTOL Drones, Manifests).
+1. **Epic 2:** Inter-Node Logistics, Trade & Regional Convoys (Regional Partner Nodes, Bioregional Specializations, Convoy Manifests, Logistics Desk Modal).
 2. **Epic 3:** Four-Season Climate Engine, Evapotranspiration, and Extreme Weather Protocols.
 3. **Epic 4:** Long-Horizon Progression, Civic Megaprojects, and Municipal Sortition Demarchy.
