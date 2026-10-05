@@ -23,7 +23,7 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
 > *"A city without an architectural conscience collapses into chaotic sprawl. An interactive planetary reconnaissance tour reveals the 3 stages of civilizational growth, while an invisible thermodynamic master grid guides Day 1 module placement, protects the future Agora, and scales effortlessly into 50-MHU cellular superblocks before federating with adjacent nodes."*
 
 ### **1.1 Interactive Planetary Reconnaissance Tour & Bioregional Siting (`embarkation.js`, `world_map.js`)**
-- [ ] **The 3-Stop Civilizational Preview Tour (Between Name/Craft & Siting):**
+- [x] **The 3-Stop Civilizational Preview Tour (Between Name/Craft & Siting):**
   - Camera flies across the planetary map to visit three distinct nodes showcasing the progression of O.N.E.:
     - **Stop 1 (Stage 1 / Seed Node - e.g. Yukon Haven):** 3 Pioneers, Camper Van, Bifacial Solar & Water Flume ($50k debt ticking).
     - **Stop 2 (Stage 2 / Ecovillage - e.g. Monte Sole):** 24 Residents, First MHU Family Clusters, FabLab Machine Shop, Greywater Reed-bed ($15k debt).

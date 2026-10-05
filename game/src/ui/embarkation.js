@@ -1,13 +1,15 @@
 /**
  * O.N.E. Pioneer Embarkation Desk
- * 3-Stage Guided Onboarding:
- * Stage 1: Select Name + Craft (The 3 Passports) -> Next
- * Stage 2: Place Seed Node (Authentic Sim World/Regional Map + Nearby / Pick on Map) -> Next
- * Stage 3: Cinematic Zoom In & Start Plot
+ * 3-Stage Guided Onboarding & Planetary Reconnaissance:
+ * Stage 1: Select Name + Craft + Look (The 3 Passports) -> Next
+ * Stage 2: 3-Stop Civilizational Preview Tour (Yukon Seed -> Monte Sole Ecovillage -> Detroit Superblock) -> Next
+ * Stage 3: Place Seed Node (Local Geolocation + Free Planetary Siting) -> Embark to Plot
+ *
  * Author: Kyberlex <kyberlex@proton.me>
  * License: AGPL-3.0-or-later
  */
 
+import L from 'leaflet';
 import { gameState } from '../core/state.js';
 import { WorldMapController } from '../map/world_map.js';
 import { GLOBAL_STARTER_NODES, getClimateZoneFromLat, createCustomGlobalNode } from '../data/bioregions.js';
@@ -25,12 +27,144 @@ function haversineKm(lat1, lon1, lat2, lon2) {
   return Math.round(R * c);
 }
 
+/**
+ * 3-Stop Civilizational Progression Tour Datasets (Epic 1.1)
+ */
+export const CIVILIZATIONAL_TOUR_STOPS = [
+  {
+    id: 'stop-1-seed',
+    stageNumber: 1,
+    stageTitle: 'STAGE 1: THE SEED CAMP (DAYS 1–7)',
+    nodeName: 'Yukon Haven Seed Beacon',
+    bioregion: 'Subarctic Boreal Shield',
+    country: 'Canada / Alaska',
+    lat: 64.8378,
+    lng: -147.7164,
+    zoom: 6.5,
+    population: 3,
+    populationLabel: '3 Founders (Van Camp)',
+    debtUsd: 50000,
+    debtLabel: '$50,000 Debt (Ticking Down)',
+    summary: 'The humble beginning. Three pioneers living in a mobile camper van with auxiliary AGM batteries, unshaded bifacial solar panels, and emergency water cisterns while laying the thermodynamic foundation of the commons.',
+    modules: [
+      {
+        id: 'camper-van',
+        name: 'Pioneer Camper Van',
+        icon: '🚐',
+        role: 'Mobile Basecamp & Auxiliary Storage',
+        explanation: 'Provides initial 3-person bunking shelter, 45 kWh AGM battery storage, and 850 L water reserves before permanent timber framing begins.',
+        yield: 'Shelter for 3 • 45 kWh Battery Reserve • 850 L Water'
+      },
+      {
+        id: 'solar-array',
+        name: 'Bifacial Solar Array',
+        icon: '⚡',
+        role: 'Southern Photovoltaic Array',
+        explanation: 'Sited on unshaded southern clearing; bifacial panels capture both direct high-latitude sun and snow albedo reflections.',
+        yield: '+18.5 kWh / clear day (Seasonal sun tracking)'
+      },
+      {
+        id: 'water-flume',
+        name: 'Snow-Melt & Rain Flume',
+        icon: '💧',
+        role: 'Gravity-Fed Hydrological Intake',
+        explanation: 'Positioned along natural elevation contour to capture gravity-fed snowmelt and precipitation without electric pumping loads.',
+        yield: '+450 L / day baseline inflow (Zero pumping energy)'
+      }
+    ]
+  },
+  {
+    id: 'stop-2-ecovillage',
+    stageNumber: 2,
+    stageTitle: 'STAGE 2: THE ECOVILLAGE (DAYS 8–25)',
+    nodeName: 'Monte Sole Ecovillage',
+    bioregion: 'Apennine Deciduous Bioregion',
+    country: 'Italy',
+    lat: 44.333,
+    lng: 11.200,
+    zoom: 7.0,
+    population: 24,
+    populationLabel: '24 Residents (6 Pods)',
+    debtUsd: 15000,
+    debtLabel: '$15,000 Debt (Drastically Reduced)',
+    summary: 'The village emerges. Permanent reciprocal timber Modular Habitat Units (MHUs) house the expanding community. A FabLab machine shop fabricates open-source parts while reed-beds purify water.',
+    modules: [
+      {
+        id: 'mhu-clusters',
+        name: 'Modular Habitat Units (MHUs)',
+        icon: '🏡',
+        role: 'Civic Usufruct Dwellings',
+        explanation: 'Open-hardware reciprocal timber pods with living sedum roofs and private kitchen garden aprons; 0 rent, strictly dynamic usufruct occupancy.',
+        yield: 'Shelter for 24 residents • High thermal mass • 0 Speculation'
+      },
+      {
+        id: 'fablab-shop',
+        name: 'FabLab Machine Shop',
+        icon: '⚙️',
+        role: 'Open-Hardware Tooling & Robotics',
+        explanation: 'Houses open-source LinuxCNC gantry mills and 3D printers, manufacturing automated FarmBots and replacement parts to extinguish manual chores.',
+        yield: '-12 kWh/day power draw • +100% mechanical repair speed'
+      },
+      {
+        id: 'greywater-reedbed',
+        name: 'Greywater Reed-Bed Basin',
+        icon: '🌿',
+        role: 'Biological Wetland Filtration',
+        explanation: 'Constructed wetland with gravel substrates and native reeds that biologically purifies 65% of domestic greywater for crop sub-irrigation.',
+        yield: '+650 L / day recycled water (65% return rate)'
+      }
+    ]
+  },
+  {
+    id: 'stop-3-superblock',
+    stageNumber: 3,
+    stageTitle: 'STAGE 3: SOVEREIGN SUPERBLOCK (~50 MHUs)',
+    nodeName: 'Detroit Delray Sovereign Commons',
+    bioregion: 'Great Lakes Basin',
+    country: 'United States',
+    lat: 42.3015,
+    lng: -83.1098,
+    zoom: 7.5,
+    population: 148,
+    populationLabel: '148 Citizens (Dunbar Limit)',
+    debtUsd: 0,
+    debtLabel: '$0 Debt (100% Sovereign & Free)',
+    summary: 'Mature civilizational harmony. The camper van is retired into the Central Agora demarchy hearth. A cargo trike depot and vertiport connect into the bioregional Reticulum federation with 100% solar autonomy.',
+    modules: [
+      {
+        id: 'central-agora',
+        name: 'Central Agora Hearth',
+        icon: '🏛️',
+        role: 'Athenian Demarchy Assembly',
+        explanation: 'Erected on the exact coordinate of the founding camper van; hosts sortition citizen juries (odd parity) to deliberate on civic questions with 75% consensus.',
+        yield: 'Demarchic governance • Zero gridlock • +100 Morale'
+      },
+      {
+        id: 'trike-depot',
+        name: 'Cargo Trike & Vertiport Hub',
+        icon: '🚲',
+        role: 'Zero-Emission Inter-Node Logistics',
+        explanation: 'Fleet of electric cargo trikes (250 kg freight box) and autonomous VTOL drones linking autonomous sister nodes across regional greenways.',
+        yield: '250 kg freight / trike • 60 km range • Zero fuel debt'
+      },
+      {
+        id: 'sovereign-microgrid',
+        name: '100% Microgrid & LFP Banks',
+        icon: '☀️',
+        role: 'Autonomous Energy Abundance',
+        explanation: 'Extensive bifacial solar arrays, vertical-axis wind turbines, and stationary LFP battery banks delivering continuous energy surplus with zero utility bills.',
+        yield: '+420 kWh / day net surplus • Zero fossil dependence'
+      }
+    ]
+  }
+];
+
 export class EmbarkationDesk {
   constructor(containerEl, onEmbarkCallback = () => {}) {
     this.container = containerEl;
     this.onEmbark = onEmbarkCallback;
 
-    this.currentStep = 1; // 1 = Name/Job/Look, 2 = Map & Seed Founding
+    this.currentStep = 1; // 1 = Name/Job, 2 = Recon Tour, 3 = Siting & Embark
 
     this.selectedVocation = gameState.data.player.vocationId || 'electrician';
     this.playerName = gameState.data.player.name || 'Alex';
@@ -45,6 +179,12 @@ export class EmbarkationDesk {
     this.avatarCustomizer = null;
     this.hasManuallyCustomized = false;
     
+    // Tour state
+    this.currentTourStopIndex = 0;
+    this.selectedTourModule = null;
+    this.tourMap = null;
+    this.tourMarker = null;
+
     // Seed Node starting state
     this.currentLat = gameState.data.location.lat || 45.138;
     this.currentLng = gameState.data.location.lng || 7.054;
@@ -176,17 +316,46 @@ export class EmbarkationDesk {
           <!-- Stage 1 Action Bar -->
           <div class="embark-action-bar">
             <button id="btn-step1-next" class="btn-embark-cta">
-              <span>Next: Place Seed Node</span>
+              <span>Next: Planetary Reconnaissance Tour</span>
               <span>➔</span>
             </button>
             <p class="embark-footnote">
-              Selected: <strong style="color: #fbbf24;">${this.playerName}</strong> (<span id="footnote-role">${this.selectedVocation.toUpperCase()}</span>). Next, choose where your van lands.
+              Selected: <strong style="color: #fbbf24;">${this.playerName}</strong> (<span id="footnote-role">${this.selectedVocation.toUpperCase()}</span>). Next, witness the 3 stages of O.N.E. progression.
             </p>
           </div>
         </div>
 
-        <!-- STAGE 2: PLACE SEED NODE (MAP SCREEN) -->
-        <div id="stage-2-map" class="embark-form-wrap stage-panel hidden">
+        <!-- STAGE 2: 3-STOP CIVILIZATIONAL PREVIEW TOUR (EPIC 1.1) -->
+        <div id="stage-2-tour" class="embark-form-wrap stage-panel hidden">
+          <div class="tour-container-card">
+            <!-- Map Viewport -->
+            <div class="tour-map-viewport">
+              <div id="world-leaflet-tour-map" style="width: 100%; height: 100%;"></div>
+              <div class="tour-map-overlay-badge">
+                <span class="pulse-dot"></span>
+                <span id="tour-map-stop-indicator">RECONNAISSANCE: STOP 1 OF 3</span>
+              </div>
+            </div>
+
+            <!-- Tour Console Panel -->
+            <div class="tour-console-panel" id="tour-console-panel">
+              <!-- Dynamically populated via renderTourConsole() -->
+            </div>
+          </div>
+
+          <!-- Tour Persistent Skip / Quick Action -->
+          <div class="stage-nav-row" style="margin-top: 8px;">
+            <button id="btn-tour-back" class="btn-secondary-back">
+              <span>↩ Back to Craft</span>
+            </button>
+            <button id="btn-tour-skip-direct" class="btn-tour-skip">
+              <span>Skip Tour & Plant My Seed ➔</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- STAGE 3: PLACE SEED NODE (MAP SCREEN) -->
+        <div id="stage-3-map" class="embark-form-wrap stage-panel hidden">
           <div class="location-card full-map-card">
             <div class="location-header">
               <div class="location-title-box">
@@ -236,12 +405,12 @@ export class EmbarkationDesk {
             </div>
           </div>
 
-          <!-- Stage 2 Action Bar -->
+          <!-- Stage 3 Action Bar -->
           <div class="embark-action-bar stage-nav-row">
-            <button id="btn-step2-back" class="btn-secondary-back">
-              <span>↩ Back</span>
+            <button id="btn-step3-back" class="btn-secondary-back">
+              <span>↩ Back to Tour</span>
             </button>
-            <button id="btn-step2-embark" class="btn-embark-cta">
+            <button id="btn-step3-embark" class="btn-embark-cta">
               <span>Next: Embark to Plot</span>
               <span>➔</span>
             </button>
@@ -256,10 +425,12 @@ export class EmbarkationDesk {
   attachEvents() {
     // Callsign live update
     const nameInput = this.container.querySelector('#callsign-input');
-    nameInput.addEventListener('input', (e) => {
-      this.playerName = e.target.value.trim() || 'Alex';
-      this.updateCardNames();
-    });
+    if (nameInput) {
+      nameInput.addEventListener('input', (e) => {
+        this.playerName = e.target.value.trim() || 'Alex';
+        this.updateCardNames();
+      });
+    }
 
     // Passport selection
     const cards = this.container.querySelectorAll('.passport-card');
@@ -314,7 +485,7 @@ export class EmbarkationDesk {
       });
     }
 
-    // Step 1 -> Step 2
+    // Step 1 -> Step 2 (Tour)
     const step1Next = this.container.querySelector('#btn-step1-next');
     if (step1Next) {
       step1Next.addEventListener('click', () => {
@@ -322,34 +493,235 @@ export class EmbarkationDesk {
       });
     }
 
-    // Step 2 -> Step 1 (Back)
-    const step2Back = this.container.querySelector('#btn-step2-back');
-    if (step2Back) {
-      step2Back.addEventListener('click', () => {
+    // Tour Navigation (Step 2)
+    const tourBackBtn = this.container.querySelector('#btn-tour-back');
+    if (tourBackBtn) {
+      tourBackBtn.addEventListener('click', () => {
         this.goToStep(1);
       });
     }
 
-    // Step 2 -> Step 3 (Embark with zoom-in dive)
-    const step2Embark = this.container.querySelector('#btn-step2-embark');
-    if (step2Embark) {
-      step2Embark.addEventListener('click', () => {
+    const tourSkipDirect = this.container.querySelector('#btn-tour-skip-direct');
+    if (tourSkipDirect) {
+      tourSkipDirect.addEventListener('click', () => {
+        this.goToStep(3);
+      });
+    }
+
+    // Step 3 Back -> Step 2 (Tour)
+    const step3Back = this.container.querySelector('#btn-step3-back');
+    if (step3Back) {
+      step3Back.addEventListener('click', () => {
+        this.goToStep(2);
+      });
+    }
+
+    // Step 3 -> Embark to Plot
+    const step3Embark = this.container.querySelector('#btn-step3-embark');
+    if (step3Embark) {
+      step3Embark.addEventListener('click', () => {
         this.startCinematicZoomAndEmbark();
       });
+    }
+  }
+
+  renderTourConsole() {
+    const consolePanel = this.container.querySelector('#tour-console-panel');
+    if (!consolePanel) return;
+
+    const stop = CIVILIZATIONAL_TOUR_STOPS[this.currentTourStopIndex];
+    const indicatorEl = this.container.querySelector('#tour-map-stop-indicator');
+    if (indicatorEl) {
+      indicatorEl.textContent = `RECONNAISSANCE: STOP ${this.currentTourStopIndex + 1} OF 3 • STAGE ${stop.stageNumber}`;
+    }
+
+    // Default select first module of this stop if none selected or invalid
+    if (!this.selectedTourModule || !stop.modules.some(m => m.id === this.selectedTourModule.id)) {
+      this.selectedTourModule = stop.modules[0];
+    }
+
+    const isDebtFree = stop.debtUsd === 0;
+
+    consolePanel.innerHTML = `
+      <div class="tour-header-row">
+        <div class="tour-node-title-box">
+          <div class="tour-node-name">
+            <span>${stop.nodeName}</span>
+          </div>
+          <span class="tour-node-bioregion">🌿 ${stop.bioregion} (${stop.country})</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span class="tour-stage-tag">${stop.stageTitle}</span>
+          <span class="tour-debt-tag ${isDebtFree ? 'zero-debt' : ''}">${stop.debtLabel}</span>
+        </div>
+      </div>
+
+      <div class="tour-metrics-strip">
+        <div class="metric-item">
+          <span>👥</span>
+          <strong>${stop.populationLabel}</strong>
+        </div>
+        <div class="metric-item">
+          <span>⚡</span>
+          <strong>${this.currentTourStopIndex === 0 ? '45 kWh Reserve' : this.currentTourStopIndex === 1 ? '120 kWh / day' : '420 kWh Surplus'}</strong>
+        </div>
+        <div class="metric-item">
+          <span>💧</span>
+          <strong>${this.currentTourStopIndex === 0 ? '850 L Tanks' : this.currentTourStopIndex === 1 ? '+650 L Recycled' : 'Closed Loop'}</strong>
+        </div>
+        <div class="metric-item">
+          <span>🛡️</span>
+          <strong>${isDebtFree ? '100% Post-Scarcity Commons' : 'Transition Trajectory'}</strong>
+        </div>
+      </div>
+
+      <p class="tour-summary-p">${stop.summary}</p>
+
+      <!-- Interactive Synoptic Module Inspection -->
+      <div class="tour-modules-section">
+        <div class="tour-modules-label">
+          <span>📐 Tap Featured Modules to Inspect Thermodynamic Architecture:</span>
+        </div>
+        <div class="tour-modules-chips-row">
+          ${stop.modules.map(mod => `
+            <button type="button" class="tour-module-chip ${this.selectedTourModule.id === mod.id ? 'active' : ''}" data-mod-id="${mod.id}">
+              <span>${mod.icon}</span>
+              <span>${mod.name}</span>
+            </button>
+          `).join('')}
+        </div>
+
+        <!-- 1-Sentence Micro-Tooltip Display -->
+        <div class="tour-module-tooltip-box">
+          <div class="tour-tooltip-title-row">
+            <span class="tour-tooltip-name">${this.selectedTourModule.icon} ${this.selectedTourModule.name}</span>
+            <span class="tour-tooltip-role">${this.selectedTourModule.role}</span>
+          </div>
+          <p class="tour-tooltip-explanation">"${this.selectedTourModule.explanation}"</p>
+          <div class="tour-tooltip-yield">
+            ⚡ Thermodynamic Yield: <strong>${this.selectedTourModule.yield}</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Navigation Controls -->
+      <div class="tour-nav-controls-row">
+        <div class="tour-nav-group-left">
+          <button type="button" id="btn-tour-prev-stop" class="btn-tour-step" ${this.currentTourStopIndex === 0 ? 'disabled' : ''}>
+            <span>◀ Previous Stage</span>
+          </button>
+        </div>
+        <div class="tour-nav-group-right">
+          ${this.currentTourStopIndex < 2 ? `
+            <button type="button" id="btn-tour-next-stop" class="btn-tour-primary-next">
+              <span>Next Stage: ${CIVILIZATIONAL_TOUR_STOPS[this.currentTourStopIndex + 1].stageTitle.split(':')[1]?.trim() || 'Next'} ▶</span>
+            </button>
+          ` : `
+            <button type="button" id="btn-tour-finish-siting" class="btn-tour-primary-next" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+              <span>Plant My Seed Node ➔</span>
+            </button>
+          `}
+        </div>
+      </div>
+    `;
+
+    // Attach module click events
+    consolePanel.querySelectorAll('.tour-module-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const modId = btn.dataset.modId;
+        const found = stop.modules.find(m => m.id === modId);
+        if (found) {
+          this.selectedTourModule = found;
+          this.renderTourConsole();
+        }
+      });
+    });
+
+    // Prev / Next button bindings
+    const prevBtn = consolePanel.querySelector('#btn-tour-prev-stop');
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        if (this.currentTourStopIndex > 0) {
+          this.currentTourStopIndex--;
+          this.flyToTourStop(this.currentTourStopIndex);
+        }
+      });
+    }
+
+    const nextBtn = consolePanel.querySelector('#btn-tour-next-stop');
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        if (this.currentTourStopIndex < 2) {
+          this.currentTourStopIndex++;
+          this.flyToTourStop(this.currentTourStopIndex);
+        }
+      });
+    }
+
+    const finishBtn = consolePanel.querySelector('#btn-tour-finish-siting');
+    if (finishBtn) {
+      finishBtn.addEventListener('click', () => {
+        this.goToStep(3);
+      });
+    }
+  }
+
+  flyToTourStop(stopIndex) {
+    const stop = CIVILIZATIONAL_TOUR_STOPS[stopIndex];
+    if (!stop) return;
+
+    this.selectedTourModule = stop.modules[0];
+    this.renderTourConsole();
+
+    if (this.tourMap && this.tourMap.map) {
+      this.tourMap.map.flyTo([stop.lat, stop.lng], stop.zoom, { duration: 1.4 });
+
+      // Update or create pulsing beacon marker
+      if (this.tourMarker) {
+        this.tourMarker.remove();
+      }
+
+      this.tourMarker = L.circleMarker([stop.lat, stop.lng], {
+        radius: 14,
+        fillColor: stopIndex === 2 ? '#10b981' : stopIndex === 1 ? '#38bdf8' : '#fbbf24',
+        fillOpacity: 0.9,
+        color: '#ffffff',
+        weight: 3
+      }).addTo(this.tourMap.map);
+
+      this.tourMarker.bindPopup(`
+        <div style="font-family: var(--font-heading); font-size: 13px; font-weight: 700; color: #020617; padding: 4px;">
+          ${stop.stageTitle}<br>
+          <span style="font-weight: 400; color: #475569;">${stop.nodeName}</span>
+        </div>
+      `).openPopup();
     }
   }
 
   goToStep(stepNumber) {
     this.currentStep = stepNumber;
     const stage1 = this.container.querySelector('#stage-1-passports');
-    const stage2 = this.container.querySelector('#stage-2-map');
+    const stage2 = this.container.querySelector('#stage-2-tour');
+    const stage3 = this.container.querySelector('#stage-3-map');
     const titleEl = this.container.querySelector('#embark-title');
     const subtitleEl = this.container.querySelector('#embark-subtitle');
     const badgeEl = this.container.querySelector('#step-badge');
 
+    // Clean up 3D customizer when leaving stage 1
+    if (this.avatarCustomizer && stepNumber !== 1) {
+      this.avatarCustomizer.destroy();
+      this.avatarCustomizer = null;
+      const studioDrawer = this.container.querySelector('#pioneer-avatar-studio-drawer');
+      const studioArrow = this.container.querySelector('#studio-toggle-arrow');
+      if (studioDrawer) studioDrawer.classList.add('hidden');
+      if (studioArrow) studioArrow.textContent = '▼';
+    }
+
     if (stepNumber === 1) {
       stage2.classList.add('hidden');
       stage2.classList.remove('active');
+      stage3.classList.add('hidden');
+      stage3.classList.remove('active');
       stage1.classList.remove('hidden');
       stage1.classList.add('active');
 
@@ -357,53 +729,59 @@ export class EmbarkationDesk {
       subtitleEl.textContent = '"Three pioneers. One seed. What is your craft?"';
       badgeEl.textContent = 'STAGE 1 / 3: NAME & CRAFT';
     } else if (stepNumber === 2) {
-      // If 3D customizer is open, clean it up before switching to map
-      if (this.avatarCustomizer) {
-        this.avatarCustomizer.destroy();
-        this.avatarCustomizer = null;
-        const studioDrawer = this.container.querySelector('#pioneer-avatar-studio-drawer');
-        const studioArrow = this.container.querySelector('#studio-toggle-arrow');
-        if (studioDrawer) studioDrawer.classList.add('hidden');
-        if (studioArrow) studioArrow.textContent = '▼';
-      }
-
+      // Step 2: Reconnaissance Tour
       stage1.classList.add('hidden');
       stage1.classList.remove('active');
+      stage3.classList.add('hidden');
+      stage3.classList.remove('active');
       stage2.classList.remove('hidden');
       stage2.classList.add('active');
 
+      titleEl.textContent = 'PLANETARY RECONNAISSANCE TOUR';
+      subtitleEl.textContent = 'Witness the three evolutionary epochs of an Open Networked Earth settlement.';
+      badgeEl.textContent = 'STAGE 2 / 3: CIVILIZATIONAL PROGRESSION';
+
+      this.renderTourConsole();
+
+      setTimeout(() => {
+        if (!this.tourMap) {
+          this.tourMap = new WorldMapController('world-leaflet-tour-map', () => {}, () => {});
+          this.tourMap.updateSolarTerminator(12, 80);
+        }
+        if (this.tourMap && this.tourMap.map) {
+          this.tourMap.map.invalidateSize();
+          this.flyToTourStop(this.currentTourStopIndex);
+        }
+      }, 80);
+
+    } else if (stepNumber === 3) {
+      // Step 3: Place Seed Node
+      stage1.classList.add('hidden');
+      stage1.classList.remove('active');
+      stage2.classList.add('hidden');
+      stage2.classList.remove('active');
+      stage3.classList.remove('hidden');
+      stage3.classList.add('active');
+
       titleEl.textContent = 'PLACE YOUR SEED NODE';
       subtitleEl.textContent = `Pioneer ${this.playerName}, where will you plant the seed of O.N.E.?`;
-      badgeEl.textContent = 'STAGE 2 / 3: SEED LOCATION';
+      badgeEl.textContent = 'STAGE 3 / 3: SEED LOCATION';
 
-      // Initialize map on first display or invalidate size
-      if (!this.worldMap) {
-        setTimeout(() => this.initMapController(), 50);
-      } else {
-        setTimeout(async () => {
-          if (this.worldMap.map) {
-            this.worldMap.map.invalidateSize();
-            this.worldMap.showRegion(
-              this.selectedSeedNode || { lat: this.currentLat, lng: this.currentLng },
-              false
-            );
-            const res = await this.worldMap.resolveLocation(this.currentLat, this.currentLng, false);
-            if (res) {
-              if (!this.seedName || this.seedName === 'Home Seed') {
-                this.seedName = res.nodeName;
-                const seedInput = this.container.querySelector('#seed-name-input');
-                if (seedInput) seedInput.value = this.seedName;
-              }
-              this.majorCities = res.majorCities || [];
-              this.updateTelemetry(this.selectedSeedNode || { lat: this.currentLat, lng: this.currentLng, name: this.seedName }, this.majorCities);
-            }
-          }
-        }, 100);
-      }
+      setTimeout(() => {
+        if (!this.worldMap) {
+          this.initSitingMapController();
+        } else if (this.worldMap.map) {
+          this.worldMap.map.invalidateSize();
+          this.worldMap.showRegion(
+            this.selectedSeedNode || { lat: this.currentLat, lng: this.currentLng },
+            false
+          );
+        }
+      }, 80);
     }
   }
 
-  initMapController() {
+  initSitingMapController() {
     const mapEl = document.getElementById('world-leaflet-map');
     if (!mapEl || this.worldMap) return;
 
@@ -418,7 +796,7 @@ export class EmbarkationDesk {
         const seedInput = this.container.querySelector('#seed-name-input');
         if (seedInput) seedInput.value = this.seedName;
         this.worldMap.resolveLocation(selectedNode.lat, selectedNode.lng, false).then(res => {
-          this.majorCities = res.majorCities || [];
+          this.majorCities = res?.majorCities || [];
           this.updateTelemetry(selectedNode, this.majorCities);
         });
       },
@@ -428,7 +806,7 @@ export class EmbarkationDesk {
         this.selectedSeedNode = foundedNode;
         this.currentLat = foundedNode.lat;
         this.currentLng = foundedNode.lng;
-        this.seedName = foundedNode.name; // Automatically has -ONE!
+        this.seedName = foundedNode.name;
         this.majorCities = foundedNode.majorCities || [];
         const seedInput = this.container.querySelector('#seed-name-input');
         if (seedInput) seedInput.value = this.seedName;
@@ -441,7 +819,6 @@ export class EmbarkationDesk {
       },
       null,
       (updatedMajorCities) => {
-        // Automatically syncs whenever visible region changes (moveend / zoom / pan)
         if (updatedMajorCities && updatedMajorCities.length > 0) {
           this.majorCities = updatedMajorCities;
           this.updateTelemetry(this.selectedSeedNode || { lat: this.currentLat, lng: this.currentLng, name: this.seedName }, this.majorCities);
@@ -449,10 +826,7 @@ export class EmbarkationDesk {
       }
     );
 
-    // Initial solar terminator render
     this.worldMap.updateSolarTerminator(12, 80);
-
-    // Center map on region & resolve initial location with nearest town and regional hubs
     this.worldMap.showRegion({ lat: this.currentLat, lng: this.currentLng }, false);
     this.worldMap.resolveLocation(this.currentLat, this.currentLng, false).then(res => {
       if (res) {
@@ -466,7 +840,7 @@ export class EmbarkationDesk {
       }
     });
 
-    // Map floating buttons
+    // Map floating buttons for Stage 3
     const gpsBtn = this.container.querySelector('#btn-map-gps');
     if (gpsBtn) {
       gpsBtn.addEventListener('click', () => {
@@ -483,7 +857,7 @@ export class EmbarkationDesk {
               gpsBtn.innerHTML = `<span>✅ Nearby</span>`;
               this.currentLat = data.lat;
               this.currentLng = data.lng;
-              this.seedName = data.nodeName; // Automatically has -ONE!
+              this.seedName = data.nodeName;
               this.majorCities = data.majorCities || [];
 
               const seedNode = createCustomGlobalNode({
