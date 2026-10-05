@@ -178,8 +178,24 @@ The foundational engine (`main.js`, `state.js`, `settlement_canvas.js`, `hud.js`
     * Dynamic transit events: `weather_delayed` automated shelter delays during high ridge winds (>40 km/h) or heavy rainfall (>25 mm), `trail_obstacle` keyline swale bypasses, and `mutual_aid_encounter` shared permaculture forage (+500 kcal, +5 Morale).
     * Automated cargo unloader: replenishes kcal, water, and kWh upon arrival, unlocks imported schematics, updates node trade history/affinity, increments vehicle odometers and sortie counts, and docks vehicles back into settlement fleet.
 
-The remaining civilizational expansion tasks are catalogued in [`game/TODO.md`](TODO.md) across three macro pillars:
-1. **Epic 2:** Inter-Node Logistics, Trade & Regional Convoys (Logistics Desk Modal, Animated Corridors & Reticulum Paths).
-2. **Epic 3:** Four-Season Climate Engine, Evapotranspiration, and Extreme Weather Protocols.
-3. **Epic 4:** Long-Horizon Progression, Civic Megaprojects, and Municipal Sortition Demarchy.
+* **Completed (Epic 2.4 — Logistics Desk Modal, Animated Corridors & Mesh Radar):**
+  - **Transit & Vertiport Logistics Desk Modal (`logistics_modal.js`):**
+    * Accessible globally via keyboard shortcut `L`, directly from Trike Depot & Drone Vertiport building inspectors, or from the Reticulum mesh console.
+    * Features 3 dedicated operational panels:
+      1. *Manifest Builder:* Dynamic sliders for food kcal (0.5 kg/1,000 kcal), stored energy (7 kg/kWh LFP), water (1.0 kg/L), and CNC tooling (+5 kg) with live payload mass calculations against vehicle limits (250 kg trike / 25 kg drone), route energy budgets, and reciprocal inbound commodities previews.
+      2. *Fleet Management:* Live fleet overview of docked and in-transit vehicles, battery SOC% gauges, mechanical wear health%, single-vehicle and fleet-wide microgrid top-off recharging, and open-hardware assembly bays for commissioning new trikes and drones.
+      3. *In-Transit Telemetry & Radar:* Real-time status cards tracking active trade runs and dynamic transit events.
+  - **Interactive Canvas Animations (`settlement_canvas.js`):**
+    * Overland Solar Cargo Trikes departing from Trike Depot down the western logistics corridor with rotating spoked wheels, solar PV canopy glint, cargo tie-downs, and trailing procedural dust puff particles.
+    * Autonomous SkyLink VTOL Courier Drones executing vertical pad liftoff, high-frequency spinning rotor blur, navigation strobes (port red, starboard green, tail white), pad downwash ground dust rings, and forward aerodynamic flight pitch accelerating northwest.
+    * Inbound convoys docking and unloading crates with floating Solarpunk juice labels (`+15k kcal Ancient Spelt Grain!`) and fanfare audio upon arrival.
+  - **Regional World Map & Reticulum Radar Integration (`world_map_modal.js` & `world_map.js`):**
+    * Animated SVG vector radar view showing the central settlement node connected to 6 bioregional sister nodes via pulsing green dashed mesh link beams.
+    * Real-time moving pulse dots traveling along Reticulum mesh paths displaying vehicle badges and ETA days remaining.
+    * Seamless integration with Leaflet map overlays in `world_map.js`.
+
+The remaining civilizational expansion tasks are catalogued in [`game/TODO.md`](TODO.md) across two macro pillars:
+1. **Epic 3:** Four-Season Climate Engine, Evapotranspiration, and Extreme Weather Protocols.
+2. **Epic 4:** Long-Horizon Progression, Civic Megaprojects, and Municipal Sortition Demarchy.
+
 

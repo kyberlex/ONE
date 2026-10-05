@@ -142,15 +142,17 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
   - Cooperative mutual-aid encounters (`mutual_aid_encounter` granting shared forage and +morale).
 
 ### **2.4 UI & Visualization**
-- [ ] **Transit & Vertiport Logistics Desk Modal:**
-  - Fleet management screen showing docked trikes/drones, battery SOC%, and maintenance health.
-  - Trade order configuration: manifest builder with real-time payload mass and energy budget calculations.
-- [ ] **Interactive Canvas Animations:**
-  - Trikes departing from Trike Depot down the western logistics corridor.
-  - Drones lifting off vertically from Vertiport pads ('H'), spinning rotors, and flying off toward the edge of the world.
+- [x] **Transit & Vertiport Logistics Desk Modal (`logistics_modal.js`):**
+  - Dedicated Solarpunk modal opened via hotkey `L`, Trike Depot / Drone Vertiport building inspectors, or Reticulum console.
+  - Fleet management screen showing docked trikes/drones, battery SOC%, and mechanical maintenance health.
+  - Trade order configuration: manifest builder with real-time payload mass calculation (250 kg trike / 25 kg drone limits) and route energy budget calculations.
+- [x] **Interactive Canvas Animations (`settlement_canvas.js`):**
+  - Trikes departing from Trike Depot down the western logistics corridor with spoked rotating wheels, solar canopy, crate strapping, and trailing dust puffs.
+  - Drones lifting off vertically from Vertiport pads ('H'), spinning rotors with high-frequency blur, navigation strobes, downwash ground dust rings, and forward aerodynamic flight pitch heading northwest.
   - Inbound convoys docking and unloading crates with floating juice labels (`+15k kcal Ancient Spelt Grain!`).
-- [ ] **Regional World Map Integration:**
+- [x] **Regional World Map Integration (`world_map_modal.js` & `world_map.js`):**
   - Moving pulse dots along Reticulum mesh paths showing real-time positions of convoys between bioregional nodes.
+  - Integrated animated SVG vector radar in `world_map_modal.js` and Leaflet route overlays in `world_map.js`.
 
 ---
 

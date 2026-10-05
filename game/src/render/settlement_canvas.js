@@ -113,8 +113,23 @@ export class SettlementCanvas {
       }
     });
 
-    gameState.on('day_advanced', () => {
+    gameState.on('day_advanced', (report) => {
       this.updatePioneers();
+      if (report && Array.isArray(report.convoysArrived) && report.convoysArrived.length > 0) {
+        const buildings = gameState.data.buildings || [];
+        const trikeDepot = buildings.find(b => b.type === 'trike_depot');
+        const vertiport = buildings.find(b => b.type === 'drone_vertiport');
+        const depotX = trikeDepot ? trikeDepot.x : -170;
+        const depotY = trikeDepot ? trikeDepot.y : 20;
+
+        report.convoysArrived.forEach((arr, i) => {
+          setTimeout(() => {
+            const label = arr.deliveredGoods ? `📦 ${arr.deliveredGoods}` : '+15k kcal Ancient Spelt Grain!';
+            this.addFloatingText(depotX, depotY - 35, label, '#10b981');
+            soundFX.playChoreExtinctionFanfare();
+          }, i * 700);
+        });
+      }
     });
   }
 
@@ -3379,102 +3394,248 @@ export class SettlementCanvas {
     if (convoys.length === 0) return;
 
     const time = Date.now() * 0.001;
+
+    // Find Depot and Vertiport structures
+    const buildings = gameState.data.buildings || [];
+    const trikeDepot = buildings.find(b => b.type === 'trike_depot');
+    const vertiport = buildings.find(b => b.type === 'drone_vertiport');
+
+    const depotPos = trikeDepot ? { x: trikeDepot.x, y: trikeDepot.y } : { x: -170, y: 20 };
+    const vertiportPos = vertiport ? { x: vertiport.x, y: vertiport.y } : { x: -210, y: -40 };
+
     convoys.forEach((c, idx) => {
-      // Interpolate along the road curve: from (0, 35) to (80, 100) to (220, 180)
-      const progress = ((time * 0.12 + idx * 0.4) % 1.0);
-      const t = progress;
-      const x = Math.pow(1 - t, 2) * 20 + 2 * (1 - t) * t * 90 + Math.pow(t, 2) * 230;
-      const y = Math.pow(1 - t, 2) * 45 + 2 * (1 - t) * t * 110 + Math.pow(t, 2) * 190;
+      const isDrone = c.type === 'vtol_drone' || c.vehicleType === 'drone';
+      const isOverland = !isDrone;
+      const rawDest = c.destination || c.targetNodeName || 'Regional Node';
+      const destName = rawDest.replace(/_/g, ' ').split(' ')[0];
 
-      ctx.save();
-      ctx.translate(x, y);
+      if (isOverland) {
+        // Trikes departing from Trike Depot down the western logistics corridor
+        const speed = 0.09;
+        const progress = ((time * speed + idx * 0.35) % 1.0);
 
-      if (c.vehicleType === 'drone') {
-        // Floating Autonomous Drone
-        const hoverY = Math.sin(time * 6) * 4 - 15;
-        ctx.translate(0, hoverY);
+        // Path: Depot -> Western Slipway -> Out to regional trails (-440, 55)
+        const startX = depotPos.x, startY = depotPos.y;
+        const midX = depotPos.x - 110, midY = depotPos.y + 15;
+        const endX = -440, endY = 55;
 
-        // Drone Shadow
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
-        ctx.beginPath();
-        ctx.ellipse(0, 15 - hoverY, 12, 6, 0, 0, Math.PI * 2);
-        ctx.fill();
+        const t = progress;
+        const x = Math.pow(1 - t, 2) * startX + 2 * (1 - t) * t * midX + Math.pow(t, 2) * endX;
+        const y = Math.pow(1 - t, 2) * startY + 2 * (1 - t) * t * midY + Math.pow(t, 2) * endY;
 
-        // Drone Body
-        ctx.fillStyle = '#0f172a';
-        ctx.fillRect(-10, -6, 20, 12);
-        ctx.fillStyle = '#38bdf8';
-        ctx.beginPath();
-        ctx.arc(0, 0, 4, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.save();
+        ctx.translate(x, y);
 
-        // 4 Rotors spinning
-        const rotorAngle = time * 25;
-        [[-8, -8], [8, -8], [-8, 8], [8, 8]].forEach(([rx, ry]) => {
-          ctx.strokeStyle = '#94a3b8';
-          ctx.lineWidth = 1.5;
+        // Trailing Dust Puffs behind rear wheels
+        for (let d = 1; d <= 3; d++) {
+          const dustPhase = (time * 12 + d * 2.5) % 8;
+          const dustAlpha = Math.max(0, 0.35 - dustPhase * 0.04);
+          ctx.fillStyle = `rgba(202, 178, 140, ${dustAlpha})`;
           ctx.beginPath();
-          ctx.moveTo(rx - Math.cos(rotorAngle) * 5, ry - Math.sin(rotorAngle) * 5);
-          ctx.lineTo(rx + Math.cos(rotorAngle) * 5, ry + Math.sin(rotorAngle) * 5);
+          ctx.arc(-16 - dustPhase * 3.5, 6 - dustPhase * 1.2, 2.5 + dustPhase * 1.2, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        // Ground Shadow
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.32)';
+        ctx.beginPath();
+        ctx.ellipse(0, 8, 19, 7, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Trike Frame (Solarpunk Emerald)
+        ctx.fillStyle = '#10b981';
+        ctx.fillRect(-14, -5, 26, 9);
+        ctx.strokeStyle = '#047857';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(-14, -5, 26, 9);
+
+        // Rear Cargo Box (Insulated Composite)
+        ctx.fillStyle = '#b45309';
+        ctx.fillRect(-16, -9, 16, 13);
+        ctx.strokeStyle = '#78350f';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(-16, -9, 16, 13);
+
+        // Cargo Strapping Ties
+        ctx.strokeStyle = '#fbbf24';
+        ctx.lineWidth = 1.2;
+        ctx.beginPath();
+        ctx.moveTo(-12, -9); ctx.lineTo(-12, 4);
+        ctx.moveTo(-6, -9); ctx.lineTo(-6, 4);
+        ctx.stroke();
+
+        // Bifacial Solar Canopy over crate
+        ctx.fillStyle = '#0284c7';
+        ctx.fillRect(-18, -14, 20, 3.5);
+        ctx.strokeStyle = '#38bdf8';
+        ctx.strokeRect(-18, -14, 20, 3.5);
+
+        // Wheels with rotating spokes
+        const wheelAngle = time * 20;
+        [-10, 8].forEach(wx => {
+          ctx.fillStyle = '#1e293b';
+          ctx.beginPath();
+          ctx.arc(wx, 6, 4.5, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.strokeStyle = '#94a3b8';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(wx - Math.cos(wheelAngle) * 4, 6 - Math.sin(wheelAngle) * 4);
+          ctx.lineTo(wx + Math.cos(wheelAngle) * 4, 6 + Math.sin(wheelAngle) * 4);
           ctx.stroke();
         });
 
-        // Cargo box below
-        ctx.fillStyle = '#d97706';
-        ctx.fillRect(-6, 6, 12, 8);
-      } else {
-        // Solar Cargo Trike
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.35)';
+        // Rider Pioneer Driver
+        ctx.fillStyle = '#f59e0b'; // Helmet
         ctx.beginPath();
-        ctx.ellipse(0, 8, 18, 7, 0, 0, Math.PI * 2);
+        ctx.arc(4, -10, 4, 0, Math.PI * 2);
         ctx.fill();
+        ctx.fillStyle = '#38bdf8'; // Protective jacket
+        ctx.fillRect(1, -6, 6, 8);
 
-        // Trike Frame (Solarpunk Green)
-        ctx.fillStyle = '#10b981';
-        ctx.fillRect(-12, -4, 24, 8);
-
-        // Rear Cargo Crate
-        ctx.fillStyle = '#d97706';
-        ctx.fillRect(-14, -8, 14, 12);
-        ctx.strokeStyle = '#78350f';
+        // Floating Banner above vehicle
+        const labelText = `🚴 Cargo Trike ➔ ${destName} (${c.daysRemaining || 1}d)`;
+        ctx.font = 'bold 9px sans-serif';
+        const tw = ctx.measureText(labelText).width;
+        ctx.fillStyle = 'rgba(15, 23, 42, 0.9)';
+        ctx.strokeStyle = '#34d399';
         ctx.lineWidth = 1;
-        ctx.strokeRect(-14, -8, 14, 12);
+        ctx.fillRect(-tw / 2 - 5, -30, tw + 10, 14);
+        ctx.strokeRect(-tw / 2 - 5, -30, tw + 10, 14);
+        ctx.fillStyle = '#f8fafc';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(labelText, 0, -23);
 
-        // Solar Canopy over crate
-        ctx.fillStyle = '#0284c7';
-        ctx.fillRect(-16, -13, 18, 3);
+        ctx.restore();
 
-        // Wheels with spin
-        ctx.fillStyle = '#1e293b';
+      } else {
+        // Drones lifting off vertically from Vertiport pads ('H'), spinning rotors, and flying off toward edge of world
+        const padX = vertiportPos.x, padY = vertiportPos.y;
+        const speed = 0.08;
+        const progress = ((time * speed + idx * 0.4) % 1.0);
+
+        // Stage 1 (0.0 to 0.25): Vertical liftoff from pad
+        // Stage 2 (0.25 to 1.0): Accelerate forward and climb toward Northwest boundary (-480, -320)
+        let x, y, alt, tiltAngle;
+        if (progress < 0.25) {
+          const p1 = progress / 0.25;
+          x = padX;
+          y = padY;
+          alt = p1 * 55;
+          tiltAngle = p1 * 0.05;
+        } else {
+          const p2 = (progress - 0.25) / 0.75;
+          x = padX + (-480 - padX) * p2;
+          y = padY + (-320 - padY) * p2;
+          alt = 55 + p2 * 120;
+          tiltAngle = -0.22; // Aerodynamic forward flight pitch
+        }
+
+        ctx.save();
+        // Render ground shadow on the pad/ground
+        ctx.fillStyle = `rgba(0, 0, 0, ${Math.max(0.05, 0.4 - (alt / 180) * 0.35)})`;
         ctx.beginPath();
-        ctx.arc(-8, 5, 4, 0, Math.PI * 2);
-        ctx.arc(8, 5, 4, 0, Math.PI * 2);
+        const shadowSize = Math.max(4, 14 - (alt / 180) * 8);
+        ctx.ellipse(x, y + 10, shadowSize, shadowSize * 0.5, 0, 0, Math.PI * 2);
         ctx.fill();
 
-        // Rider Pioneer
-        ctx.fillStyle = '#f59e0b'; // helmet
+        // Rotor downwash dust ring when close to pad
+        if (alt < 45) {
+          const downwashPulse = (time * 10) % 12;
+          ctx.strokeStyle = `rgba(202, 178, 140, ${Math.max(0, 0.4 - downwashPulse * 0.03)})`;
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.ellipse(x, y + 10, 10 + downwashPulse * 2, (10 + downwashPulse * 2) * 0.45, 0, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+
+        // Translate to airborne vehicle position
+        ctx.translate(x, y - alt);
+        ctx.rotate(tiltAngle);
+
+        // Drone Composite Chassis
+        ctx.fillStyle = '#0f172a';
+        ctx.fillRect(-10, -5, 20, 10);
+        ctx.strokeStyle = '#38bdf8';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(-10, -5, 20, 10);
+
+        // Center Autopilot Dome
+        ctx.fillStyle = '#38bdf8';
         ctx.beginPath();
-        ctx.arc(4, -9, 4, 0, Math.PI * 2);
+        ctx.arc(0, 0, 3.5, 0, Math.PI * 2);
         ctx.fill();
-        ctx.fillStyle = '#38bdf8'; // jacket
-        ctx.fillRect(1, -5, 6, 7);
+
+        // 4 Carbon Quad-Arms & Spinning Rotors
+        const rotorAngle = time * 35;
+        const armOffsets = [[-10, -8], [10, -8], [-10, 8], [10, 8]];
+        armOffsets.forEach(([rx, ry], rIdx) => {
+          ctx.strokeStyle = '#475569';
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.moveTo(0, 0);
+          ctx.lineTo(rx, ry);
+          ctx.stroke();
+
+          // High-speed rotor disk blur
+          ctx.strokeStyle = 'rgba(148, 163, 184, 0.85)';
+          ctx.lineWidth = 1.2;
+          ctx.beginPath();
+          ctx.moveTo(rx - Math.cos(rotorAngle + rIdx) * 6.5, ry - Math.sin(rotorAngle + rIdx) * 6.5);
+          ctx.lineTo(rx + Math.cos(rotorAngle + rIdx) * 6.5, ry + Math.sin(rotorAngle + rIdx) * 6.5);
+          ctx.stroke();
+
+          // Rotor hub
+          ctx.fillStyle = '#e2e8f0';
+          ctx.beginPath();
+          ctx.arc(rx, ry, 1.5, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        // Navigation LEDs (Port Red, Starboard Green)
+        ctx.fillStyle = '#ef4444'; // Red Port (left)
+        ctx.beginPath();
+        ctx.arc(-11, -8, 1.8, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = '#22c55e'; // Green Starboard (right)
+        ctx.beginPath();
+        ctx.arc(11, -8, 1.8, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Flashing tail strobe (White)
+        if (Math.floor(time * 4) % 2 === 0) {
+          ctx.fillStyle = '#ffffff';
+          ctx.beginPath();
+          ctx.arc(0, 6, 2, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        // Underslung Precision Cargo Container (Amber/Yellow)
+        ctx.fillStyle = '#d97706';
+        ctx.fillRect(-6, 5, 12, 7);
+        ctx.strokeStyle = '#f59e0b';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(-6, 5, 12, 7);
+
+        // Convoy Label
+        ctx.rotate(-tiltAngle); // Keep text horizontal
+        const droneLabel = `🚁 SkyLink VTOL ➔ ${destName} (${c.daysRemaining || 1}d)`;
+        ctx.font = 'bold 9px sans-serif';
+        const dtw = ctx.measureText(droneLabel).width;
+        ctx.fillStyle = 'rgba(15, 23, 42, 0.9)';
+        ctx.strokeStyle = '#38bdf8';
+        ctx.lineWidth = 1;
+        ctx.fillRect(-dtw / 2 - 5, -25, dtw + 10, 14);
+        ctx.strokeRect(-dtw / 2 - 5, -25, dtw + 10, 14);
+        ctx.fillStyle = '#f8fafc';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(droneLabel, 0, -18);
+
+        ctx.restore();
       }
-
-      // Floating Convoy Banner above vehicle
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.88)';
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.6)';
-      ctx.lineWidth = 1;
-      const labelText = `${c.vehicleType === 'drone' ? '🛸 Express' : '🚴 Trike'} ➔ ${c.targetNodeName.split(' ')[0]}`;
-      ctx.font = 'bold 9px sans-serif';
-      const tw = ctx.measureText(labelText).width;
-      ctx.fillRect(-tw / 2 - 4, -28, tw + 8, 13);
-      ctx.strokeRect(-tw / 2 - 4, -28, tw + 8, 13);
-      ctx.fillStyle = '#f8fafc';
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText(labelText, 0, -21);
-
-      ctx.restore();
     });
   }
 

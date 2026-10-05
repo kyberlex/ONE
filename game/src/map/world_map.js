@@ -285,21 +285,48 @@ export class WorldMapController {
     }
   }
 
-  updateTradeConvoys(convoys, tradeEngine) {
+  updateTradeConvoys(convoys, tradeEngine = null) {
     if (!this.convoysLayer) return;
     this.convoysLayer.clearLayers();
-    if (!convoys || convoys.length === 0 || !tradeEngine) return;
+    if (!convoys || convoys.length === 0) return;
 
     for (const convoy of convoys) {
-      const pos = tradeEngine.getConvoyGeoPosition(convoy);
-      if (!pos) continue;
+      let originLat, originLng, destLat, destLng, progressPct;
+      const isDrone = convoy.type === 'vtol_drone' || convoy.vehicleType === 'drone';
+      const vehicleIcon = isDrone ? '🚁' : '🚴';
+      const vehicleName = isDrone ? 'Autonomous Courier Drone' : 'Solar Cargo Trike';
+      const originName = convoy.originName || 'Home Settlement';
+      const destName = (convoy.destination || convoy.destName || convoy.targetNodeName || 'Sister Node').replace(/_/g, ' ');
 
-      const origin = tradeEngine.getNodeById(convoy.originNodeId);
-      const dest = tradeEngine.getNodeById(convoy.destNodeId);
-      if (!origin || !dest) continue;
+      if (tradeEngine && tradeEngine.getConvoyGeoPosition && tradeEngine.getNodeById) {
+        const pos = tradeEngine.getConvoyGeoPosition(convoy);
+        const origin = tradeEngine.getNodeById(convoy.originNodeId);
+        const dest = tradeEngine.getNodeById(convoy.destNodeId);
+        if (pos && origin && dest) {
+          originLat = origin.lat; originLng = origin.lng;
+          destLat = dest.lat; destLng = dest.lng;
+          progressPct = convoy.progressTicks / convoy.totalTicks;
+        }
+      }
+
+      if (originLat === undefined) {
+        const homeNode = this.nodes.find(n => n.id === 'val_di_susa' || n.isPlayerHome) || this.nodes[0] || { lat: 45.13, lng: 7.05 };
+        const destNode = this.nodes.find(n => n.id === convoy.destination || n.id === convoy.destNodeId) || this.nodes[1] || { lat: 43.32, lng: 10.86 };
+
+        originLat = homeNode.lat;
+        originLng = homeNode.lng;
+        destLat = destNode.lat;
+        destLng = destNode.lng;
+
+        const totalDays = Math.max(1, (convoy.etaDay - convoy.departureDay) || (convoy.daysRemaining ? convoy.daysRemaining + 1 : 2));
+        progressPct = Math.max(0.05, Math.min(0.95, (1 - ((convoy.daysRemaining || 1) / totalDays))));
+      }
+
+      const currLat = originLat + (destLat - originLat) * (progressPct || 0.5);
+      const currLng = originLng + (destLng - originLng) * (progressPct || 0.5);
 
       // Draw highlighted animated active convoy route
-      const routeLine = L.polyline([[origin.lat, origin.lng], [dest.lat, dest.lng]], {
+      const routeLine = L.polyline([[originLat, originLng], [destLat, destLng]], {
         color: '#f59e0b',
         weight: 3.5,
         opacity: 0.85,
@@ -308,46 +335,21 @@ export class WorldMapController {
       });
       this.convoysLayer.addLayer(routeLine);
 
-      // Custom animated convoy vehicle icon
+      // Custom animated convoy vehicle icon with pulsing halo
       const customIcon = L.divIcon({
         className: 'convoy-leaflet-marker',
         html: `
-          <div class="convoy-marker-wrapper">
-            <div class="convoy-pulse-ring"></div>
-            <div class="convoy-vehicle-badge">${convoy.vehicleIcon}</div>
-            <div class="convoy-tag">${convoy.outgoingCommodity} (${Math.round((convoy.progressTicks / convoy.totalTicks) * 100)}%)</div>
+          <div class="convoy-marker-wrapper" style="position: relative; text-align: center;">
+            <div class="convoy-pulse-ring" style="position: absolute; top: -5px; left: -5px; width: 34px; height: 34px; border-radius: 50%; border: 2px solid ${isDrone ? '#38bdf8' : '#fbbf24'}; animation: convoyPulse 1.8s infinite;"></div>
+            <div class="convoy-vehicle-badge" style="width: 24px; height: 24px; border-radius: 50%; background: #0f172a; border: 1.5px solid ${isDrone ? '#38bdf8' : '#fbbf24'}; display: flex; align-items: center; justify-content: center; font-size: 13px;">${vehicleIcon}</div>
+            <div class="convoy-tag" style="background: rgba(15,23,42,0.9); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 1px 4px; font-size: 9px; font-weight: 700; color: #f8fafc; white-space: nowrap; margin-top: 2px;">${destName.split(' ')[0]} (${Math.round((progressPct || 0.5) * 100)}%)</div>
           </div>
         `,
         iconSize: [40, 40],
         iconAnchor: [20, 20]
       });
 
-      const marker = L.marker([pos.lat, pos.lng], { icon: customIcon });
-
-      const remainingHours = Math.max(1, convoy.totalTicks - convoy.progressTicks);
-      const popupHtml = `
-        <div class="convoy-map-popup">
-          <div class="convoy-popup-header">
-            <span class="convoy-vehicle-large">${convoy.vehicleIcon}</span>
-            <div>
-              <h4>${convoy.vehicleName}</h4>
-              <span class="convoy-route-badge">${convoy.originName} ➔ ${convoy.destName}</span>
-            </div>
-          </div>
-          <div class="convoy-popup-body">
-            <div><strong>${t('mapStatusLabel', 'Status:')}</strong> ${convoy.status === 'OUTBOUND' ? t('convoysOutboundTransit', 'Outbound to Destination') : t('convoysInboundReturn', 'Returning with Barter Cargo')}</div>
-            <div><strong>${t('mapCargoLabel', 'Cargo:')}</strong> ${convoy.outgoingAmount.toLocaleString()} ${convoy.outgoingUnit} ${convoy.outgoingIcon}</div>
-            ${convoy.returnCargo ? `<div><strong>${t('convoysExpectedReciprocal', 'Reciprocal Load')}:</strong> ${convoy.returnCargo.amount.toLocaleString()} ${convoy.returnCargo.unit} ${convoy.returnCargo.icon}</div>` : ''}
-            <div><strong>${t('mapEtaLabel', 'ETA: {hours} hour(s)').replace('{hours}', remainingHours)}</strong></div>
-          </div>
-        </div>
-      `;
-
-      marker.bindPopup(popupHtml, {
-        className: 'one-custom-leaflet-popup',
-        maxWidth: 280
-      });
-
+      const marker = L.marker([currLat, currLng], { icon: customIcon });
       this.convoysLayer.addLayer(marker);
     }
   }

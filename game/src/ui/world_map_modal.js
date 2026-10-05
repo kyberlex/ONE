@@ -11,6 +11,7 @@
 
 import { gameState } from '../core/state.js';
 import { soundFX } from '../audio/sound_fx.js';
+import { logisticsModal } from './logistics_modal.js';
 
 export class WorldMapModal {
   constructor() {
@@ -548,45 +549,117 @@ export class WorldMapModal {
     const convoys = gameState.data.convoys || [];
     const sabbaticals = gameState.data.sabbaticals || [];
 
-    if (convoys.length === 0 && sabbaticals.length === 0) {
-      return `
-        <div style="text-align: center; padding: 40px 20px;">
-          <span style="font-size: 48px; display: block; margin-bottom: 12px;">📡</span>
-          <h3 style="font-size: 15px; font-weight: 700; color: #f8fafc; margin-bottom: 4px;">Reticulum Skies Clear</h3>
-          <p style="font-size: 12px; color: #94a3b8; max-width: 440px; margin: 0 auto 16px auto;">
-            No cargo trikes or courier drones currently on the mountain trail.
-            Switch to the <strong>Dispatch Trade Convoy</strong> tab to exchange surplus resources with sister nodes!
-          </p>
-          <button type="button" class="btn-primary" id="btn-quick-to-trade" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);">
-            🚴 Plan a Trade Convoy
-          </button>
-        </div>
-      `;
-    }
+    const radarNodes = [
+      { id: 'val_di_cecina', name: 'Val di Cecina', icon: '♨️', x: 130, y: 150 },
+      { id: 'monte_sole', name: 'Monte Sole', icon: '🌰', x: 300, y: 45 },
+      { id: 'node_02', name: 'Sister Node 02', icon: '🧬', x: 460, y: 80 },
+      { id: 'campi_flegrei', name: 'Campi Flegrei', icon: '🌋', x: 380, y: 240 },
+      { id: 'alburni', name: 'Alburni', icon: '🌲', x: 490, y: 260 },
+      { id: 'barbagia', name: 'Barbagia', icon: '🐑', x: 150, y: 250 }
+    ];
+    const homeX = 300, homeY = 150;
 
     return `
       <div style="display: flex; flex-direction: column; gap: 14px;">
+        <!-- Top action bar: open full logistics desk -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 8px 14px;">
+          <div>
+            <strong style="color: #f8fafc; font-size: 12.5px;">Reticulum Mesh Convoy Radar</strong>
+            <span style="font-size: 11px; color: #94a3b8; display: block;">Real-time LoRa packet telemetry & active transit positions</span>
+          </div>
+          <button type="button" class="btn-primary" id="btn-open-logistics-desk" style="padding: 6px 14px; font-size: 11.5px; background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);">
+            📦 Open Logistics Desk & Manifest Builder
+          </button>
+        </div>
+
+        <!-- Animated SVG Radar -->
+        <div style="background: radial-gradient(circle at center, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98)); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 10px; position: relative;">
+          <svg viewBox="0 0 600 300" style="width: 100%; height: auto; max-height: 250px; display: block;">
+            <!-- Radar Range Rings -->
+            <circle cx="${homeX}" cy="${homeY}" r="50" fill="none" stroke="rgba(56, 189, 248, 0.12)" stroke-width="1" />
+            <circle cx="${homeX}" cy="${homeY}" r="100" fill="none" stroke="rgba(56, 189, 248, 0.10)" stroke-width="1" />
+            <circle cx="${homeX}" cy="${homeY}" r="150" fill="none" stroke="rgba(56, 189, 248, 0.08)" stroke-width="1" />
+
+            <!-- Mesh Connection Paths -->
+            ${radarNodes.map(n => `
+              <line x1="${homeX}" y1="${homeY}" x2="${n.x}" y2="${n.y}" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4, 6" opacity="0.6">
+                <animate attributeName="stroke-dashoffset" from="20" to="0" dur="2s" repeatCount="indefinite" />
+              </line>
+            `).join('')}
+
+            <!-- Center Home Settlement -->
+            <circle cx="${homeX}" cy="${homeY}" r="14" fill="rgba(56, 189, 248, 0.25)" stroke="#38bdf8" stroke-width="2" />
+            <circle cx="${homeX}" cy="${homeY}" r="5" fill="#38bdf8" />
+            <text x="${homeX}" y="${homeY + 24}" fill="#f8fafc" font-size="10" font-weight="bold" text-anchor="middle">Settlement Node</text>
+
+            <!-- Sister Nodes -->
+            ${radarNodes.map(n => `
+              <g transform="translate(${n.x}, ${n.y})">
+                <circle cx="0" cy="0" r="12" fill="rgba(15, 23, 42, 0.85)" stroke="#34d399" stroke-width="1.5" />
+                <text x="0" y="4" text-anchor="middle" font-size="11">${n.icon}</text>
+                <text x="0" y="20" fill="#cbd5e1" font-size="9" font-weight="600" text-anchor="middle">${n.name.split(' ')[0]}</text>
+              </g>
+            `).join('')}
+
+            <!-- Real-Time Moving Pulse Dots along Reticulum Paths -->
+            ${convoys.map((c, idx) => {
+              const destId = c.destination || c.targetNodeId || 'val_di_cecina';
+              const destPos = radarNodes.find(n => n.id === destId) || radarNodes[0];
+              const progress = Math.max(0.08, Math.min(0.92, (c.daysRemaining ? (1 - (c.daysRemaining / Math.max(1, (c.etaDay - c.departureDay) || (c.daysRemaining + 1)))) : 0.5)));
+              const currX = homeX + (destPos.x - homeX) * progress;
+              const currY = homeY + (destPos.y - homeY) * progress;
+              const isDrone = c.type === 'vtol_drone' || c.vehicleType === 'drone';
+
+              return `
+                <g class="radar-pulse-convoy">
+                  <circle cx="${currX}" cy="${currY}" r="8" fill="${isDrone ? '#38bdf8' : '#fbbf24'}" stroke="#ffffff" stroke-width="1.5">
+                    <animate attributeName="r" values="6;10;6" dur="1.5s" repeatCount="indefinite" />
+                  </circle>
+                  <text x="${currX}" y="${currY - 12}" fill="#f8fafc" font-size="9" font-weight="bold" text-anchor="middle" style="text-shadow: 0 1px 3px rgba(0,0,0,0.8);">
+                    ${isDrone ? '🚁' : '🚴'} ETA: ${c.daysRemaining || 1}d
+                  </text>
+                </g>
+              `;
+            }).join('')}
+          </svg>
+        </div>
+
         ${convoys.length > 0 ? `
-          <h3 class="consulting-title" style="margin: 0;">🚴 Active Cargo Convoys on the Road:</h3>
+          <h3 class="consulting-title" style="margin: 0;">🚴 Active Cargo Convoys on the Trail (${convoys.length}):</h3>
           <div style="display: flex; flex-direction: column; gap: 8px;">
-            ${convoys.map(c => `
-              <div class="consulting-order-card" style="border: 1px solid rgba(56, 189, 248, 0.3);">
-                <span style="font-size: 24px;">${c.vehicleType === 'drone' ? '🛸' : '🚴'}</span>
-                <div style="flex: 1;">
-                  <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <h4 class="order-name" style="margin: 0; font-size: 13px;">
-                      ${c.vehicleType === 'drone' ? 'Courier Drone' : 'Solar Cargo Trike'} ➔ ${c.targetNodeName}
-                    </h4>
-                    <span style="font-size: 11px; color: #34d399; font-weight: 700;">
-                      ${c.daysRemaining} Dawn${c.daysRemaining > 1 ? 's' : ''} Remaining (Arrival Day ${c.arrivalDay})
+            ${convoys.map(c => {
+              const isDrone = c.type === 'vtol_drone' || c.vehicleType === 'drone';
+              const targetName = c.destination ? c.destination.replace(/_/g, ' ') : (c.targetNodeName || 'Regional Node');
+              const outbound = c.cargoManifest ? `${c.cargoManifest.foodKcal || 0} kcal, ${c.cargoManifest.energyKwh || 0} kWh` : (c.offerType || 'Commons Surplus');
+              const returnInfo = c.returnManifest?.summary || c.requestType || 'Bioregional Commodities';
+              const hasEvent = !!c.transitEvent;
+
+              return `
+                <div class="consulting-order-card" style="border: 1px solid ${hasEvent ? '#f59e0b' : 'rgba(56, 189, 248, 0.3)'};">
+                  <span style="font-size: 24px;">${isDrone ? '🛸' : '🚴'}</span>
+                  <div style="flex: 1;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <h4 class="order-name" style="margin: 0; font-size: 13px;">
+                        ${isDrone ? 'Autonomous Drone Courier' : 'Solar Cargo Trike'} ➔ ${targetName}
+                      </h4>
+                      <span style="font-size: 11px; color: #34d399; font-weight: 700;">
+                        ${c.daysRemaining} Dawn${c.daysRemaining > 1 ? 's' : ''} Remaining (ETA Day ${c.etaDay || (c.arrivalDay || 2)})
+                      </span>
+                    </div>
+
+                    ${hasEvent ? `
+                      <div style="margin: 4px 0; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 4px; padding: 4px 8px; font-size: 10.5px; color: #fde047;">
+                        ⚠️ <strong>Transit Event:</strong> ${c.transitEvent.title} — ${c.transitEvent.desc}
+                      </div>
+                    ` : ''}
+
+                    <span class="order-desc" style="display: block; margin-top: 4px;">
+                      Outbound Cargo: <strong>${outbound}</strong> • Reciprocal Cargo: <strong>${returnInfo}</strong>
                     </span>
                   </div>
-                  <span class="order-desc" style="display: block; margin-top: 4px;">
-                    Outbound Cargo: <strong>${c.offerType}</strong> • Requesting: <strong>${c.requestType}</strong>
-                  </span>
                 </div>
-              </div>
-            `).join('')}
+              `;
+            }).join('')}
           </div>
         ` : ''}
 
@@ -917,6 +990,13 @@ export class WorldMapModal {
       soundFX.playClick();
       this.activeTab = 'trade';
       this.render();
+    });
+
+    // Open full Logistics Desk button
+    this.modalEl.querySelector('#btn-open-logistics-desk')?.addEventListener('click', () => {
+      soundFX.playClick();
+      this.close();
+      logisticsModal.open('manifest');
     });
 
     // Dispatch Convoy Action

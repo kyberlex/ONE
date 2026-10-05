@@ -16,6 +16,7 @@ import { morningDispatchModal } from './morning_dispatch_modal.js';
 import { eventModal } from './event_modal.js';
 import { worldMapModal } from './world_map_modal.js';
 import { buildingInspector } from './building_inspector.js';
+import { logisticsModal } from './logistics_modal.js';
 import { soundFX } from '../audio/sound_fx.js';
 
 export class GameHUD {
@@ -542,6 +543,9 @@ export class GameHUD {
       } else if (e.key === '0' || e.key.toLowerCase() === 'g') {
         soundFX.playClick();
         this.selectDistrict('whole_city');
+      } else if (e.key.toLowerCase() === 'l') {
+        soundFX.playClick();
+        logisticsModal.open('manifest');
       } else if (e.key === 'Escape') {
         if (this.activeDockAction) {
           this.activeDockAction = null;

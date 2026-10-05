@@ -12,6 +12,7 @@ import { soundFX } from '../audio/sound_fx.js';
 import { choreBoardModal } from './chore_board_modal.js';
 import { eventModal } from './event_modal.js';
 import { worldMapModal } from './world_map_modal.js';
+import { logisticsModal } from './logistics_modal.js';
 
 export class BuildingInspectorModal {
   constructor() {
@@ -439,6 +440,10 @@ export class BuildingInspectorModal {
       actionsHtml = `
         <div class="inspector-actions-box">
           <h4 class="inspector-actions-title">🚲 Depot & Fleet Operations:</h4>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-trike-logistics-desk" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.2), rgba(15, 23, 42, 0.6)); border-color: rgba(56, 189, 248, 0.4);">
+            <span>📦 Open Regional Logistics Desk</span>
+            <small>Configure trade manifests, calculate payload & energy budgets</small>
+          </button>
           <button type="button" class="btn-inspector-action" id="btn-inspect-trike-recharge">
             <span>⚡ Recharge Swappable 48V LFP Packs</span>
             <small>Top off docked cargo trikes from solar microgrid</small>
@@ -487,6 +492,10 @@ export class BuildingInspectorModal {
       actionsHtml = `
         <div class="inspector-actions-box">
           <h4 class="inspector-actions-title">🚁 Vertiport Flight Operations:</h4>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-drone-logistics-desk" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.2), rgba(15, 23, 42, 0.6)); border-color: rgba(56, 189, 248, 0.4);">
+            <span>📦 Open Regional Logistics Desk</span>
+            <small>Configure aerial couriers, precision drops & regional manifests</small>
+          </button>
           <button type="button" class="btn-inspector-action" id="btn-inspect-drone-recharge">
             <span>⚡ Rapid Charge Flight Batteries</span>
             <small>Direct high-current recharge on landing pads</small>
@@ -704,6 +713,12 @@ export class BuildingInspectorModal {
     });
 
     // Trike Depot operations
+    this.overlayEl.querySelector('#btn-inspect-trike-logistics-desk')?.addEventListener('click', () => {
+      soundFX.playClick();
+      this.close();
+      logisticsModal.open('manifest');
+    });
+
     this.overlayEl.querySelector('#btn-inspect-trike-recharge')?.addEventListener('click', () => {
       soundFX.playClick();
       gameState.rechargeFleet();
@@ -718,6 +733,12 @@ export class BuildingInspectorModal {
     });
 
     // Drone Vertiport operations
+    this.overlayEl.querySelector('#btn-inspect-drone-logistics-desk')?.addEventListener('click', () => {
+      soundFX.playClick();
+      this.close();
+      logisticsModal.open('manifest');
+    });
+
     this.overlayEl.querySelector('#btn-inspect-drone-recharge')?.addEventListener('click', () => {
       soundFX.playClick();
       gameState.rechargeFleet();

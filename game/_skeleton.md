@@ -45,6 +45,7 @@ game/
     │   ├── hud.js               # Top HUD (tickers, objective card) & Contextual Bottom Dock
     │   ├── embarkation.js       # Milestone 1 onboarding flow & avatar/seed selection
     │   ├── building_inspector.js# Building inspection modal & dual-track hardware specs
+    │   ├── logistics_modal.js   # Transit & Vertiport Logistics Desk & Manifest Builder
     │   ├── event_modal.js       # Crisis dilemmas, milestone achievements & morning alerts
     │   ├── morning_dispatch_modal.js # Dawn simulation report & chore allocation review
     │   ├── chore_board_modal.js # Manual chore board & open-hardware automation tracker
@@ -166,7 +167,11 @@ game/
     * FabLab machine shop with robotic arms and welding sparks.
     * MHU Modular Habitat Units with CLT spruce wall chassis, clerestory windows, living sedum succulent green roof with blooming blossoms, timber entrance porch, and warm brass lanterns.
   - `renderPioneers(ctx)`: Dynamic walking pioneer characters with pathfinding, tool animations (hoeing, soldering, wrenching), and speech bubbles.
-  - `renderConvoys(ctx)`: Overland cargo trikes pedaling along logistics pathways and VTOL drones taking off vertically from Vertiports.
+  - `renderConvoys(ctx)`: Interactive logistics corridor animations:
+    * Solar Cargo Trikes departing down the western logistics corridor from Trike Depot with spoked rotating wheels, bifacial solar canopy reflection, crate strapping ties, and trailing procedural dust puffs behind rear wheels.
+    * SkyLink VTOL Courier Drones executing vertical liftoff from Vertiport pad 'H', high-speed spinning blurred rotors, navigation strobes (port red, starboard green, flashing white strobe), pad downwash ground dust ring, and forward aerodynamic flight pitch accelerating northwest.
+    * Floating destination banner pills with ETA days remaining.
+    * Inbound convoy arrival and docking resolving with floating juice text (`+15k kcal Ancient Spelt Grain!`) and fanfare audio.
   - `renderCircadianOverlay(ctx)`: Dynamic lighting blending dawn orange, bright noon sunlight, amber dusk, and deep starry nightfall.
   - `renderWeather(ctx)`: Raindrop particle streaks, ground water ripples, wind drift particles, and lightning flash effects.
   - `renderJuice(ctx)`: Floating delta text (`+15 kWh`, `-20 L`), dust puffs on construction placement, and spring bounce transforms.
@@ -279,14 +284,26 @@ game/
 ---
 
 #### **`game/src/ui/building_inspector.js`**
-* **File Path:** `game/src/ui/building_inspector.js` (737 lines, 32.1 KB)
+* **File Path:** `game/src/ui/building_inspector.js` (752 lines, 33.2 KB)
 * **Role & Responsibility:** Detailed inspection modal triggered by clicking any structure or landmark on the canvas. Displays real-time thermodynamic metrics, component degradation health, open-hardware bill of materials (BOM), maintenance tasks, and relocation/dismantling options. Includes dedicated inspection suites for:
-  - **Electric Cargo Trike Depot:** Overland fleet status (`X / Y Ready`), total freight payload capacity (250 kg/trike), 60 km range, 48V LFP battery SOC%, swappable pack recharging, and commissioning new trikes.
-  - **Autonomous Courier Vertiport:** Aerial courier status (`X / Y Docked`), precision payload (25 kg VTOL), 45 km direct LOS mesh flight radius, 0.8 kWh/sortie energy draw, rapid landing pad recharging, and assembling new VTOL drones.
+  - **Electric Cargo Trike Depot:** Direct action button to open Regional Logistics Desk & Manifest Builder, overland fleet status (`X / Y Ready`), total freight payload capacity (250 kg/trike), 60 km range, 48V LFP battery SOC%, swappable pack recharging, and commissioning new trikes.
+  - **Autonomous Courier Vertiport:** Direct action button to open Vertiport Flight Desk & Manifest Builder, aerial courier status (`X / Y Docked`), precision payload (25 kg VTOL), 45 km direct LOS mesh flight radius, 0.8 kWh/sortie energy draw, rapid landing pad recharging, and assembling new VTOL drones.
   - **Central Agora & Pioneer Fire Hearth:** Demarchy Assembly convening, hearth acoustic jamming, and Cellular Mitosis expedition portal.
   - **MHU Modular Habitat Units:** CLT dwelling quarters, sedum living roof inspection, and dynamic usufruct tenure.
 * **Exports:**
   - `BuildingInspectorModal` (Class)
+
+---
+
+#### **`game/src/ui/logistics_modal.js`**
+* **File Path:** `game/src/ui/logistics_modal.js` (540 lines, 26.5 KB)
+* **Role & Responsibility:** Dedicated Solarpunk Logistics Desk and Manifest Builder modal (hotkey `L`). Provides 3 core operational panels:
+  1. **Configure Trade Manifest:** Real-time payload mass calculation (250 kg cargo trike / 25 kg VTOL courier drone limits) with interactive sliders for Food (0.5 kg/1,000 kcal), Stored Energy (7 kg/kWh LFP), Potable Water (1.0 kg/L), and CNC tooling (+5 kg). Displays live route energy budget calculation vs battery reserve, transit time in Dawns, and preview of reciprocal inbound commodities.
+  2. **Fleet Management & Service:** Complete fleet roster displaying docked trikes and courier drones, 48V LFP and high-C battery SOC% gauges, mechanical wear health%, total distance logged, sorties completed, single-vehicle/fleet-wide microgrid top-off recharging, and open-source assembly bay for commissioning new vehicles.
+  3. **In-Transit Telemetry & Reticulum Vector Radar:** Interactive SVG radar displaying the central settlement node and 6 regional sister nodes, green animated dashed mesh link beams, real-time moving pulse dots with vehicle badges, and telemetry cards with active transit events (`weather_delayed` storms, `trail_obstacle` detours, and `mutual_aid_encounter` forage shares).
+* **Exports:**
+  - `LogisticsDeskModal` (Class)
+  - `logisticsModal` (Singleton Instance registered on `window.logisticsModal`)
 
 ---
 
