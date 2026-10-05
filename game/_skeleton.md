@@ -107,6 +107,9 @@ game/
   - `setPlayerProfile(name, vocationId, appearance)`: Initializes character data.
   - `addBuilding(type, x, y, extraProps)`: Validates placement, checks district zoning, deducts labor/resources, records building with thermodynamic placement modifiers (`solarModifier`, `pumpEnergyKw`, `moraleBonus`), checks 3rd MHU placement threshold, and triggers carrying capacity checks.
   - `retireCamperVanToLogistics()`: Milestone 1.4 handler: relocates camper van from `(0, 0)` to western logistics slipway `(-170, 20)`, consecrates `(0, 0)` as permanent `Central Agora & Pioneer Fire Hearth`, unseals +300L auxiliary water and +15,000 kcal dry cache, triggers +20 morale surge, and opens the celebratory milestone modal.
+  - `getDunbarProgress()`: Computes active carrying capacity metric against 50 MHUs (~150 residents) and returns percentage, threshold reached state, and mitosis status.
+  - `triggerDunbarHorizon()`: Milestone 1.5 handler: triggers when 50 MHUs are built, sets `dunbarHorizonReached`, and emits milestone event.
+  - `launchCellularMitosis(crew, sisterNodeName)`: Dispatches the founding expedition of 3 seasoned pioneers, unhitches the expedition camper, and founds Sister Node 02 in an adjacent hex cell (12 km away). Unlocks 12 km bike greenway, HVDC microgrid bus (+20 kWh), and line-of-sight Reticulum mesh link.
   - `getClearingRadius()`: Calculates dynamic carrying capacity clearing radius scaling through Stage 1 (340px Seed Campsite), Stage 2 (520px Ecovillage), and Stage 3 (750px–900px Full Dunbar Cell).
   - `checkClearingExpansion()`: Detects milestone clearing thresholds and emits `clearing_expanded` event.
   - `recalculateLaborBudget()`: Recalculates chore pool based on automated chores and population.
@@ -300,8 +303,11 @@ game/
 ---
 
 #### **`game/src/ui/world_map_modal.js`**
-* **File Path:** `game/src/ui/world_map_modal.js` (782 lines, 30.6 KB)
-* **Role & Responsibility:** Full-screen regional cartography modal. Displays federated sister nodes, Reticulum radio signal links, active trade convoys, and allows dispatching cargo trikes and drones.
+* **File Path:** `game/src/ui/world_map_modal.js` (866 lines, 45.1 KB)
+* **Role & Responsibility:** Full-screen regional cartography and Reticulum mesh modal. Features:
+  - Dunbar Horizon & Cellular Mitosis Hub card tracking the 50-MHU carrying capacity threshold with progress bar and Founding Expedition dispatch button.
+  - Sister Node 02 (Cellular Mitosis Child) topology card displaying 12 km greenway distance, HVDC microgrid bus status, and line-of-sight Reticulum radio link.
+  - Vehicle dispatch console (cargo trikes & autonomous VTOL drones), inter-node trade manifest builder, and Art. 4.2 pioneer sabbatical exchange desk.
 * **Exports:**
   - `WorldMapModal` (Class)
 

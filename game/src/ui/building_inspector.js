@@ -476,6 +476,10 @@ export class BuildingInspectorModal {
             <span>🔥 Stoke Pioneer Fire & Strum Guitars</span>
             <small>Gather pioneers around embers • Restore 100% Morale</small>
           </button>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-mitosis-hub">
+            <span>🧬 Dunbar Horizon & Cellular Mitosis</span>
+            <small>Inspect carrying capacity & Sister Node 02 expedition</small>
+          </button>
         </div>
       `;
     } else if (b.type === 'mhu_dwelling') {
@@ -631,6 +635,11 @@ export class BuildingInspectorModal {
       gameState.data.morale = 100;
       gameState.save();
       this.render();
+    });
+
+    this.overlayEl.querySelector('#btn-inspect-mitosis-hub')?.addEventListener('click', () => {
+      this.close();
+      worldMapModal.open('nodes');
     });
   }
 }

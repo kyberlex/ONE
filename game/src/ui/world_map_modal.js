@@ -26,6 +26,7 @@ export class WorldMapModal {
   }
 
   init() {
+    if (typeof document === 'undefined') return;
     let existing = document.getElementById('mesh-map-overlay');
     if (!existing) {
       existing = document.createElement('div');
@@ -185,24 +186,79 @@ export class WorldMapModal {
    * ----------------------------------------------------------- */
   renderNodesTab() {
     const nodes = this.getNodeCatalog();
+    const dunbar = gameState.getDunbarProgress ? gameState.getDunbarProgress() : { mhuCount: 0, target: 50, pct: 0, isReached: false, isMitosisComplete: false };
 
     return `
+      <!-- Cellular Mitosis & Dunbar Horizon Hub -->
+      <div class="dunbar-mitosis-card" style="background: linear-gradient(135deg, rgba(6, 78, 59, 0.4), rgba(15, 23, 42, 0.7)); border: 1px solid rgba(52, 211, 153, 0.35); border-radius: var(--radius-md); padding: 14px 16px; margin-bottom: 14px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 24px;">🧬</span>
+            <div>
+              <h3 style="font-size: 13.5px; font-weight: 800; color: #34d399; margin: 0; text-transform: uppercase; letter-spacing: 0.05em;">
+                Cellular Mitosis & Carrying Capacity (Art. 4)
+              </h3>
+              <span style="font-size: 11px; color: #94a3b8;">
+                Dunbar Horizon Threshold: 50 MHUs • 150 Residents Max per Sovereign Cell
+              </span>
+            </div>
+          </div>
+          <span style="font-size: 10px; font-weight: 800; background: ${dunbar.isMitosisComplete ? 'rgba(52, 211, 153, 0.2)' : (dunbar.isReached ? 'rgba(251, 191, 36, 0.2)' : 'rgba(56, 189, 248, 0.2)')}; color: ${dunbar.isMitosisComplete ? '#34d399' : (dunbar.isReached ? '#fbbf24' : '#38bdf8')}; border: 1px solid currentColor; padding: 2px 8px; border-radius: 10px;">
+            ${dunbar.isMitosisComplete ? 'MITOSIS COMPLETE • SISTER NODE ACTIVE' : (dunbar.isReached ? 'CAPACITY REACHED • EXPEDITION READY' : `${dunbar.mhuCount} / 50 MHUs (${dunbar.pct}%)`)}
+          </span>
+        </div>
+
+        <div style="background: rgba(15, 23, 42, 0.6); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 10px; border: 1px solid rgba(255, 255, 255, 0.06);">
+          <div style="width: ${Math.min(100, Math.max(4, dunbar.pct))}%; height: 100%; background: linear-gradient(90deg, #10b981, #38bdf8); border-radius: 4px; transition: width 0.4s ease;"></div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11.5px; color: #e2e8f0; line-height: 1.4;">
+          <p style="margin: 0; max-width: 480px;">
+            ${dunbar.isMitosisComplete ? `
+              ✅ <strong>Sister Node 02 Operational:</strong> Connected via 12 km bike greenway, HVDC microgrid bus, and zero-latency Reticulum radio link.
+            ` : (dunbar.isReached ? `
+              🌟 <strong>Dunbar Equilibrium Reached:</strong> Unhitch the expedition camper van and assemble 3 seasoned pioneers to found Sister Node 02 in an adjacent hex cell!
+            ` : `
+              🌱 <strong>Organic Growth:</strong> Construct Modular Habitat Units (MHUs) to house pioneers. Upon reaching 50 MHUs (150 citizens), cellular division unlocks to seed Node 02.
+            `)}
+          </p>
+
+          ${!dunbar.isMitosisComplete ? `
+            <button type="button" class="btn-primary" id="btn-launch-mitosis" style="padding: 7px 14px; font-size: 11px; font-weight: 700; background: linear-gradient(135deg, #10b981 0%, #047857 100%); border: none; border-radius: 6px; cursor: pointer; color: #fff; white-space: nowrap;">
+              🚀 Launch Mitosis Expedition
+            </button>
+          ` : `
+            <span style="font-size: 11px; font-weight: 700; color: #34d399; display: flex; align-items: center; gap: 4px;">
+              <span>🚴 12 km</span> • <span>⚡ HVDC</span> • <span>📡 Mesh</span>
+            </span>
+          `}
+        </div>
+      </div>
+
       <div class="mesh-nodes-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px;">
         ${nodes.map(n => `
-          <div class="mesh-node-card" style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-md); padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="mesh-node-card" style="background: ${n.isMitosisChild ? 'rgba(6, 78, 59, 0.35)' : 'rgba(15, 23, 42, 0.7)'}; border: 1px solid ${n.isMitosisChild ? 'rgba(52, 211, 153, 0.4)' : 'rgba(255, 255, 255, 0.1)'}; border-radius: var(--radius-md); padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
               <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
                 <div style="display: flex; align-items: center; gap: 10px;">
                   <span style="font-size: 24px;">${this.getNodeIcon(n.id)}</span>
                   <div>
                     <h3 style="font-size: 14px; font-weight: 700; color: #f8fafc; margin: 0;">${n.name}</h3>
-                    <span style="font-size: 11px; color: #94a3b8;">${n.region}</span>
+                    <span style="font-size: 11px; color: ${n.isMitosisChild ? '#6ee7b7' : '#94a3b8'};">${n.region}</span>
                   </div>
                 </div>
-                <span class="node-status-pill" style="font-size: 10px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 2px 8px; border-radius: 12px; font-weight: 700;">
-                  ${n.distanceKm} km
+                <span class="node-status-pill" style="font-size: 10px; background: ${n.isMitosisChild ? 'rgba(52, 211, 153, 0.2)' : 'rgba(56, 189, 248, 0.15)'}; color: ${n.isMitosisChild ? '#34d399' : '#38bdf8'}; border: 1px solid currentColor; padding: 2px 8px; border-radius: 12px; font-weight: 700;">
+                  ${n.distanceKm} km ${n.isMitosisChild ? '• GREENWAY' : ''}
                 </span>
               </div>
+
+              ${n.isMitosisChild ? `
+                <div style="display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap;">
+                  <span style="font-size: 9.5px; padding: 1px 6px; border-radius: 4px; background: rgba(52, 211, 153, 0.15); color: #6ee7b7; border: 1px solid rgba(52, 211, 153, 0.3);">🚴 Overland Greenway</span>
+                  <span style="font-size: 9.5px; padding: 1px 6px; border-radius: 4px; background: rgba(251, 191, 36, 0.15); color: #fde047; border: 1px solid rgba(251, 191, 36, 0.3);">⚡ HVDC Microgrid</span>
+                  <span style="font-size: 9.5px; padding: 1px 6px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.3);">📡 Reticulum LOS</span>
+                </div>
+              ` : ''}
 
               <div style="font-size: 11.5px; color: #cbd5e1; margin-bottom: 8px; line-height: 1.4;">
                 <strong>Commons Specialization:</strong> ${n.specialty}
@@ -552,6 +608,7 @@ export class WorldMapModal {
    * ----------------------------------------------------------- */
   getNodeIcon(nodeId) {
     const map = {
+      node_02: '🧬',
       monte_sole: '⛰️',
       val_di_cecina: '♨️',
       serra_estrela: '🏔️',
@@ -562,7 +619,24 @@ export class WorldMapModal {
   }
 
   getImportsForNode(nodeId) {
-    if (nodeId === 'monte_sole') {
+    if (nodeId === 'node_02') {
+      return [
+        {
+          id: 'hvdc_surplus',
+          name: 'Direct DC Microgrid Interconnect',
+          icon: '⚡',
+          benefit: '+20 kWh Clean Energy',
+          desc: 'High-voltage DC power bus running alongside the 12 km bike greenway.'
+        },
+        {
+          id: 'agro_nursery',
+          name: 'Sister Node Agroforestry Nursery Stock',
+          icon: '🌳',
+          benefit: '+4,000 kcal Food',
+          desc: 'Grafted heirloom fruit saplings & perennial nitrogen-fixing shrubs.'
+        }
+      ];
+    } else if (nodeId === 'monte_sole') {
       return [
         {
           id: 'chestnuts',
@@ -674,6 +748,15 @@ export class WorldMapModal {
         if (imports.length > 0) this.selectedRequest = imports[0].id;
         this.render();
       });
+    });
+
+    // Launch Cellular Mitosis Founding Expedition
+    this.modalEl.querySelector('#btn-launch-mitosis')?.addEventListener('click', () => {
+      soundFX.playClick();
+      soundFX.playChoreExtinctionFanfare();
+      soundFX.playAcousticStrum();
+      gameState.launchCellularMitosis();
+      this.render();
     });
 
     // Quick node sabbatical click in Nodes tab

@@ -71,10 +71,14 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
   - Celebratory Solarpunk milestone modal (`event_modal.js:renderMilestoneModal`) with rewards showcase, acoustic guitar strum fanfare, and rich inspection panels in `building_inspector.js`.
 
 ### **1.5 The 50-MHU Dunbar Horizon & Adjacent Node Mitosis (`state.js`, `world_map_modal.js`)**
-- [ ] **Dunbar Saturation Milestone (~50 MHUs / ~150 Residents):**
-  - Local cell reaches full ecological carrying capacity.
-  - Triggers the **"Cellular Mitosis" Founding Expedition**: assemble a crew of 3 seasoned pioneers, unhitch the expedition camper, and journey to an adjacent hex cell to found **Node 02 (Sister Node)**.
-  - Interconnect Node 01 and Node 02 via overland bike greenway, high-voltage DC microgrid bus, and Reticulum mesh radio.
+- [x] **Dunbar Saturation Milestone (~50 MHUs / ~150 Residents):**
+  - Added `getDunbarProgress()` and `triggerDunbarHorizon()` in `state.js` tracking the 50-MHU carrying capacity threshold.
+  - Implemented `launchCellularMitosis(crew, name)` in `state.js`:
+    - Founds **Node 02 (Sister Node)** in adjacent hex cell (12 km away).
+    - Unlocks 3 physical and digital interconnections: 12 km overland bike greenway (rapid 0.5-day cargo trike shuttle corridor), high-voltage DC (HVDC) microgrid bus (+20 kWh energy buffer), and zero-latency line-of-sight Reticulum mesh radio link.
+    - Restores pioneer morale to 100% and triggers celebratory milestone modal.
+  - Integrated interactive Cellular Mitosis & Dunbar Horizon Hub card in `world_map_modal.js` displaying real-time carrying capacity progress (`${mhuCount} / 50 MHUs`), mitosis expedition launch button, and distinct Solarpunk greenway badges on Node 02.
+  - Added Cellular Mitosis shortcut action on the Central Agora in `building_inspector.js`.
 
 ---
 

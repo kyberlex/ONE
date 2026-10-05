@@ -1428,6 +1428,11 @@ export class GameState {
           this.retireCamperVanToLogistics();
         }, 300);
       }
+      if (mhuCount >= 50 && !this.data.dunbarHorizonReached) {
+        setTimeout(() => {
+          this.triggerDunbarHorizon();
+        }, 600);
+      }
     }
 
     this.data.buildings.push(building);
@@ -1509,6 +1514,108 @@ export class GameState {
     if (typeof window !== 'undefined' && window.eventModal) {
       window.eventModal.open('milestone', milestonePayload);
     }
+  }
+
+  getDunbarProgress() {
+    const mhuCount = (this.data.buildings || []).filter(b => b.type === 'mhu_dwelling').length;
+    const target = 50;
+    const residents = mhuCount * 3;
+    const pct = Math.min(100, Math.round((mhuCount / target) * 100));
+    return {
+      mhuCount,
+      target,
+      residents,
+      residentsTarget: 150,
+      pct,
+      isReached: mhuCount >= target || !!this.data.dunbarHorizonReached,
+      isMitosisComplete: !!this.data.cellularMitosisComplete
+    };
+  }
+
+  triggerDunbarHorizon() {
+    if (this.data.dunbarHorizonReached) return;
+    this.data.dunbarHorizonReached = true;
+    this.save();
+    this.emit('dunbar_horizon_reached', { mhuCount: 50, residents: 150 });
+
+    const milestonePayload = {
+      id: 'milestone-dunbar-horizon',
+      title: 'Dunbar Carrying Capacity Reached!',
+      subtitle: '50 MHUs • 150 Residents • Ecological Horizon',
+      heroIcon: '🧬',
+      badgeText: 'CELLULAR MITOSIS READY',
+      description: 'The seed cell has reached its full carrying capacity of 50 Modular Habitat Units (~150 residents). The human social fabric and watershed balance are operating at peak Dunbar equilibrium. Instead of expanding into an overcrowded, alienated metropolis, Article 4 mandates Cellular Mitosis: dispatching a 3-pioneer founding expedition with the expedition camper van to seed Node 02 in an adjacent hex cell!',
+      rewards: [
+        { icon: '🧬', label: 'Cellular Mitosis Unlocked', desc: 'Founding expedition ready in Regional Mesh Map' },
+        { icon: '🚴', label: 'Overland Greenway Planned', desc: '12 km cycle & freight corridor route mapped' },
+        { icon: '⚡', label: 'HVDC Microgrid Bus Link', desc: 'Direct DC power sharing across valleys' },
+        { icon: '📡', label: 'Line-of-Sight Mesh Radio', desc: 'Sub-gigahertz Reticulum telemetry link' }
+      ]
+    };
+
+    if (typeof window !== 'undefined' && window.eventModal) {
+      window.eventModal.open('milestone', milestonePayload);
+    }
+  }
+
+  launchCellularMitosis(crew = ['maya', 'leo', 'nico'], sisterNodeName = 'Node 02 (Sister Node)') {
+    if (this.data.cellularMitosisComplete) return { ok: false, reason: 'Node 02 already founded!' };
+
+    this.data.dunbarHorizonReached = true;
+    this.data.cellularMitosisComplete = true;
+
+    // Create Sister Node 02 in adjacent hex cell (12 km away)
+    const node02 = {
+      id: 'node_02',
+      name: sisterNodeName,
+      region: 'Adjacent Hex Cell (12 km Greenway)',
+      distanceKm: 12,
+      signal: '100% (Direct LOS LoRa & Optical Fiber)',
+      specialty: 'High-Voltage DC Microgrid Bus & Agroforestry Nursery',
+      affinity: 100,
+      tradeHistoryCount: 0,
+      isMitosisChild: true,
+      foundedDay: this.data.day || 50,
+      pioneerFounders: crew,
+      interconnections: {
+        bikeGreenway: true,
+        hvdcMicrogrid: true,
+        reticulumMeshRadio: true
+      }
+    };
+
+    if (!this.data.sisterNodes) this.data.sisterNodes = {};
+    this.data.sisterNodes.node_02 = node02;
+
+    // Thermodynamic & Social Federation Rewards
+    this.data.morale = 100;
+    this.data.resources.energyCapacityKwh += 20;
+    this.data.resources.energyStoredKwh = Math.min(this.data.resources.energyCapacityKwh, (this.data.resources.energyStoredKwh || 0) + 20);
+
+    this.save();
+    this.emit('cellular_mitosis_founded', node02);
+    this.emit('resources_updated', this.data.resources);
+
+    const milestonePayload = {
+      id: 'milestone-node02-founded',
+      title: 'Sister Node 02 Founded!',
+      subtitle: 'Cellular Mitosis Successful • Sovereign Federation Expands',
+      heroIcon: '🌱',
+      badgeText: 'NODE 02 ACTIVE',
+      description: `The founding expedition has reached the adjacent hex cell (12 km away) and consecrated Sister Node 02! The expedition camper van is stationed at the new site. The 12 km overland bike greenway, high-voltage DC microgrid bus, and line-of-sight Reticulum mesh link are now fully operational.`,
+      rewards: [
+        { icon: '🚴', label: '12 km Bike Greenway Active', desc: 'Direct 0.5-day cargo trike shuttle corridor' },
+        { icon: '⚡', label: 'HVDC Microgrid Interconnect', desc: '+20 kWh inter-node power balancing buffer' },
+        { icon: '📡', label: 'LOS Reticulum Mesh Link', desc: 'Zero-latency telemetry between Node 01 & 02' },
+        { icon: '❤️', label: 'Morale Restored to 100%', desc: 'Pioneers celebrate sovereign federation mitosis' }
+      ]
+    };
+
+    if (typeof window !== 'undefined' && window.eventModal) {
+      window.eventModal.open('milestone', milestonePayload);
+    }
+
+    return { ok: true, node: node02 };
   }
 
   getWeatherForDay(day) {

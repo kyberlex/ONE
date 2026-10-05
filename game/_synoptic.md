@@ -142,13 +142,16 @@ The foundational engine (`main.js`, `state.js`, `settlement_canvas.js`, `hud.js`
     * Consecrates coordinate `(0, 0)` as the permanent Central Agora & Pioneer Fire Hearth, rendered with concentric flagstone pavers, curved timber benches, and sunken stone hearth with animated radial heat glow, flickering flame tongues, and floating ember particles.
     * Unseals camper van auxiliary reserves: +300 L potable water capacity & stored water, +15,000 kcal emergency dry rations cache, and +20 community morale surge.
     * Celebratory Solarpunk milestone modal (`event_modal.js:renderMilestoneModal`) with acoustic guitar strum soundscape and dedicated Agora/MHU panels in `building_inspector.js`.
+* **Completed (Epic 1.5 — The 50-MHU Dunbar Horizon & Adjacent Node Mitosis):**
+  - Dunbar carrying capacity tracking in `state.js` (`getDunbarProgress()`) scaling to the 50-MHU / 150-resident equilibrium threshold.
+  - "Cellular Mitosis" Founding Expedition (`state.js:launchCellularMitosis()`):
+    * Founds **Node 02 (Sister Node)** in adjacent hex cell (12 km away) settling 3 seasoned pioneers with the expedition camper van.
+    * Activates 3 inter-node lifelines: 12 km overland bike greenway (rapid cargo shuttle corridor), high-voltage DC (HVDC) microgrid bus (+20 kWh energy balancing buffer), and line-of-sight Reticulum mesh link (zero-latency telemetry).
+    * Restores pioneer morale to 100% and triggers celebratory milestone modal.
+  - Interactive Cellular Mitosis Hub card in `world_map_modal.js` displaying carrying capacity telemetry, mitosis dispatch button, and dedicated Sister Node 02 greenway card with rapid shuttle actions.
+  - Central Agora inspector integration in `building_inspector.js` providing direct access to the Cellular Mitosis hub.
 
-The remaining civilizational expansion tasks are catalogued in [`game/TODO.md`](TODO.md) across four macro pillars:
-1. **Epic 1:** Dunbar Horizon & Adjacent Node Mitosis (Sister Node 02).
-2. **Epic 2:** Inter-Node Logistics, Trade & Regional Convoys (Trikes, VTOL Drones).
-3. **Epic 3:** Four-Season Climate Engine & Extreme Crisis Contingency Protocols.
-4. **Epic 4:** Long-Horizon Progression & Civic Megaprojects.
-2. **Epic 2:** Inter-Node Trade, Cargo Trike & VTOL Drone Logistics.
-3. **Epic 3:** Four-Season Climate Engine, Evapotranspiration, and Extreme Weather Protocols.
-4. **Epic 4:** MHU Ecovillage Scaling, Intergenerational Demographics, and Municipal Sortition Demarchy.
-5. **Epic 5:** Dynamic LOD Rendering, District Soundscape Audio, and Dual-Track CAD Export.
+The remaining civilizational expansion tasks are catalogued in [`game/TODO.md`](TODO.md) across three macro pillars:
+1. **Epic 2:** Inter-Node Logistics, Trade & Regional Convoys (Trikes, VTOL Drones, Manifests).
+2. **Epic 3:** Four-Season Climate Engine, Evapotranspiration, and Extreme Weather Protocols.
+3. **Epic 4:** Long-Horizon Progression, Civic Megaprojects, and Municipal Sortition Demarchy.
