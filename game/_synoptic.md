@@ -130,6 +130,11 @@ The foundational engine (`main.js`, `state.js`, `settlement_canvas.js`, `hud.js`
 * **Completed (Epic 1.2B — Soft Thermodynamic Proximity Feedback):**
   - Instant sensory feedback pill badges rendered in real time below ghost building previews during placement: unobstructed solar irradiance (+15 kWh/d) vs canopy shading (-30%), natural slope gravity flow (0 kW) vs uphill pumping load (+0.5 kW/d), and quiet courtyard (+10 morale) vs workshop acoustic vibration (-15 morale).
   - Wired to physical simulation math in `state.js` (`restUntilTomorrow`), permanently attributing thermodynamic modifiers to placed infrastructure.
+* **Completed (Epic 1.3 — Organic Clearing Expansion & Dynamic Carrying Capacity):**
+  - Organic scaling of village clearing radius across civilizational milestones: Stage 1 (340px Seed Campsite), Stage 2 (520px Ecovillage), and Stage 3 (750px–900px Full Dunbar Cell with 3 residential pods).
+  - Procedural vegetation system in `settlement_canvas.js` maintaining 6 central campsite landmark trees while dynamically regenerating the perimeter forest beyond the active clearing boundary (`rebuildTrees`).
+  - Solarpunk carrying capacity soil apron and bio-perimeter dashed telemetry contour rendered on ground canvas (`renderGround`).
+  - Smooth zoom-to-cursor wheel navigation with fluid limits from 0.30x macro-district overview to 2.4x pioneer inspection.
 
 The remaining civilizational expansion tasks are catalogued in [`game/TODO.md`](TODO.md) across four macro pillars:
 1. **Epic 1:** Bioclimatic Zoning Guidelines, Soft Proximity Feedback, and Dynamic Clearing Expansion.

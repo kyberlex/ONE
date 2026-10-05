@@ -53,11 +53,13 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
   - Implemented in `settlement_canvas.js` with live pill badge rendering on ghost placement box, and wired to `state.js` (`solarModifier`, `pumpEnergyKw`, `moraleBonus`) so placement choices physically modulate daily thermodynamic balances.
 
 ### **1.3 Organic Clearing Expansion & Dynamic Carrying Capacity (`settlement_canvas.js`, `state.js`)**
-- [ ] Replace static `Math.hypot(snapX, snapY) > 340` boundary with dynamic clearing radius scaling with population and milestones:
-  - **Stage 1 (Days 1–7, 3 Pioneers):** 340px radius (Seed Campsite).
-  - **Stage 2 (Days 8–20, 6–10 Pioneers):** 520px radius (Pod A & B clearings expand naturally).
-  - **Stage 3 (Days 20–50, 20–50 Pioneers / 50 MHUs):** 750px–900px radius (Full Dunbar cell with 3 residential pods).
-- [ ] Support pan & smooth canvas zoom levels accommodating the expanded clearing as the village matures.
+- [x] **Organic Clearing Expansion & Dynamic Carrying Capacity:**
+  - Replaced static `340px` boundary with dynamic clearing radius scaling with population and milestones:
+    - **Stage 1 (Days 1–7, 3 Pioneers):** 340px radius (Seed Campsite).
+    - **Stage 2 (Days 8–20, 6–10 Pioneers):** 520px radius (Pod A & B clearings expand naturally).
+    - **Stage 3 (Days 20–50, 20–50 Pioneers / 50 MHUs):** 750px–900px radius (Full Dunbar cell with 3 residential pods).
+  - Implemented `getClearingRadius()` and `checkClearingExpansion()` in `state.js`, triggering `clearing_expanded` event on milestone advancement.
+  - Implemented organic meadow apron and bio-perimeter dashed contour in `settlement_canvas.js` (`renderGround`), dynamic forest generation receding beyond the clearing edge (`rebuildTrees`), and smooth zoom-to-cursor wheel navigation with pan support from 0.30x to 2.4x.
 
 ### **1.4 The Camper Van Transition & The Central Agora (`state.js`, `event_modal.js`)**
 - [ ] **"Pioneers Under Their Own Roofs!" Milestone Event:**

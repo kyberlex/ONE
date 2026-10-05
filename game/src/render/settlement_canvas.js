@@ -46,8 +46,8 @@ export class SettlementCanvas {
     this.pioneers = [];
     this.initPioneers();
 
-    // Trees & decorative landscape objects
-    this.trees = [
+    // Landmark campsite trees (permanent shade trees inside camp)
+    this.campsiteLandmarkTrees = [
       { x: -160, y: -90, radius: 24, type: 'pine' },
       { x: -130, y: 130, radius: 26, type: 'oak' },
       { x: 170, y: -110, radius: 22, type: 'pine' },
@@ -55,6 +55,8 @@ export class SettlementCanvas {
       { x: -80, y: -140, radius: 20, type: 'oak' },
       { x: 110, y: 140, radius: 22, type: 'pine' }
     ];
+    this.trees = [];
+    this.rebuildTrees();
 
     this.animFrameId = null;
     this.lastTickTime = performance.now();
@@ -262,12 +264,36 @@ export class SettlementCanvas {
       }
     });
 
-    // Wheel Zoom
+    // Wheel Zoom with zoom-to-cursor & smooth limits
     this.canvas.addEventListener('wheel', (e) => {
       e.preventDefault();
-      const zoomFactor = e.deltaY < 0 ? 1.1 : 0.9;
-      this.camera.zoom = Math.min(this.camera.maxZoom, Math.max(this.camera.minZoom, this.camera.zoom * zoomFactor));
+      const rect = this.canvas.getBoundingClientRect();
+      const mouseScreenX = e.clientX - rect.left;
+      const mouseScreenY = e.clientY - rect.top;
+
+      const zoomFactor = e.deltaY < 0 ? 1.12 : 0.89;
+      const newZoom = Math.min(this.camera.maxZoom, Math.max(this.camera.minZoom, this.camera.zoom * zoomFactor));
+
+      if (newZoom !== this.camera.zoom) {
+        const cx = this.cssWidth / 2;
+        const cy = this.cssHeight / 2;
+        const worldX = (mouseScreenX - cx) / this.camera.zoom - this.camera.x;
+        const worldY = (mouseScreenY - cy) / this.camera.zoom - this.camera.y;
+
+        this.camera.zoom = newZoom;
+        this.camera.x = (mouseScreenX - cx) / newZoom - worldX;
+        this.camera.y = (mouseScreenY - cy) / newZoom - worldY;
+      }
     }, { passive: false });
+
+    // Organic carrying capacity clearing expansion listener
+    gameState.on('clearing_expanded', ({ newRadius }) => {
+      this.rebuildTrees();
+      const targetZoom = newRadius >= 750 ? 0.65 : (newRadius >= 520 ? 0.95 : 1.25);
+      this.flyTo(0, 0, targetZoom, 1400);
+      this.addFloatingText(0, -90, `🌲 Village Carrying Capacity Expanded to ${newRadius}m!`, '#10b981');
+      soundFX.playSuccess();
+    });
 
     // Touch Support for mobile / tablet
     let touchDist = 0;
@@ -474,9 +500,10 @@ export class SettlementCanvas {
       }
     }
 
-    // 4. Boundary check: allow placement inside central clearing OR any unlocked district
+    // 4. Boundary check: allow placement inside dynamic clearing OR any unlocked district
     const distFromCenter = Math.hypot(snapX, snapY);
-    const inCentralClearing = distFromCenter <= 340;
+    const clearingRadius = gameState.getClearingRadius ? gameState.getClearingRadius() : 340;
+    const inCentralClearing = distFromCenter <= clearingRadius;
     const districts = gameState.getDistricts ? gameState.getDistricts() : [];
     const inDistrict = districts.some(d => {
       if (!d.unlocked) return false;
@@ -485,7 +512,7 @@ export class SettlementCanvas {
     });
 
     if (!inCentralClearing && !inDistrict) {
-      return { valid: false, reason: 'Outside designated zoning districts' };
+      return { valid: false, reason: `Outside clearing (${clearingRadius}m) & districts` };
     }
 
     // 5. Soft Thermodynamic Proximity Feedback
@@ -812,6 +839,33 @@ export class SettlementCanvas {
     ctx.arc(0, 30, 1250, 0, Math.PI * 2);
     ctx.fill();
 
+    // 1.5 Organic Carrying Capacity Clearing Apron
+    const clearingRadius = gameState.getClearingRadius ? gameState.getClearingRadius() : 340;
+    const clearingGrad = ctx.createRadialGradient(0, 30, clearingRadius * 0.35, 0, 30, clearingRadius);
+    clearingGrad.addColorStop(0, 'rgba(21, 49, 35, 0.40)');
+    clearingGrad.addColorStop(0.7, 'rgba(16, 185, 129, 0.09)');
+    clearingGrad.addColorStop(0.95, 'rgba(16, 185, 129, 0.02)');
+    clearingGrad.addColorStop(1, 'rgba(0, 0, 0, 0.0)');
+    ctx.fillStyle = clearingGrad;
+    ctx.beginPath();
+    ctx.arc(0, 30, clearingRadius, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Subtle Solarpunk bio-perimeter dashed contour
+    ctx.strokeStyle = 'rgba(16, 185, 129, 0.22)';
+    ctx.lineWidth = 1.8;
+    ctx.setLineDash([8, 8]);
+    ctx.beginPath();
+    ctx.arc(0, 30, clearingRadius, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Telemetry indicator tag at clearing perimeter
+    ctx.fillStyle = 'rgba(110, 231, 183, 0.45)';
+    ctx.font = 'bold 9px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText(`⭘ Carrying Capacity Clearing: ${clearingRadius}m Radius`, 0, 30 + clearingRadius - 10);
+
     // 2. Subtle Macro Grid Lines (40px grid)
     ctx.strokeStyle = 'rgba(16, 185, 129, 0.04)';
     ctx.lineWidth = 1;
@@ -1071,6 +1125,33 @@ export class SettlementCanvas {
       ctx.arc(f.x, f.y, 2, 0, Math.PI * 2);
       ctx.fill();
     });
+  }
+
+  rebuildTrees() {
+    const clearingRadius = gameState.getClearingRadius ? gameState.getClearingRadius() : 340;
+    const list = [...this.campsiteLandmarkTrees];
+
+    // Generate natural perimeter forest ringing outside the clearing
+    const numPerimeterTrees = 36;
+    for (let i = 0; i < numPerimeterTrees; i++) {
+      const angle = (i / numPerimeterTrees) * Math.PI * 2;
+      const distFromR = clearingRadius + 30 + ((i * 37) % 90);
+      const x = Math.round(Math.cos(angle) * distFromR);
+      const y = Math.round(Math.sin(angle) * distFromR);
+
+      // Check distance to primary arterial paths
+      const pathClearance = 35;
+      const isNearNorthPath = Math.abs(x) < pathClearance && y < 0;
+      const isNearWestPath = Math.abs(y) < pathClearance && x < 0;
+      const isNearEastPath = Math.abs(y) < pathClearance && x > 0;
+      if (isNearNorthPath || isNearWestPath || isNearEastPath) continue;
+
+      const type = (i % 3 === 0) ? 'pine' : (i % 3 === 1 ? 'oak' : 'apple');
+      const radius = 22 + (i % 7) * 2;
+      list.push({ x, y, radius, type, isPerimeter: true });
+    }
+
+    this.trees = list;
   }
 
   renderTrees(ctx) {

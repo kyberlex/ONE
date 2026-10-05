@@ -178,6 +178,7 @@ export class GameState {
       fiatEarnedUsd: 0,
       weekendFeastCelebrated: false,
       morale: 100,
+      clearingRadius: 340,
       demarchyJuriesCount: 0,
       resolvedDilemmas: [],
 
@@ -706,6 +707,36 @@ export class GameState {
       return { ok: true, district: this.data.districts[districtId] };
     }
     return { ok: false, reason: 'District not found' };
+  }
+
+  getClearingRadius() {
+    const pop = (this.data.companions?.length || 2) + 1;
+    const mhuCount = (this.data.buildings || []).filter(b => ['mhu_dwelling', 'mhu', 'guest_dome'].includes(b.type)).length;
+    const day = this.data.day || 1;
+
+    if (pop >= 20 || mhuCount >= 8 || day >= 21) {
+      // Stage 3: Full Dunbar cell with 3 residential pods (750px - 900px)
+      const extra = Math.min(150, (pop - 20) * 5 + mhuCount * 3);
+      return 750 + Math.max(0, extra);
+    } else if (pop >= 6 || mhuCount >= 2 || day >= 8) {
+      // Stage 2: Pod A & B clearings expand naturally (520px)
+      return 520;
+    } else {
+      // Stage 1: Seed Campsite (340px)
+      return 340;
+    }
+  }
+
+  checkClearingExpansion() {
+    const currentRadius = this.getClearingRadius();
+    if (!this.data.clearingRadius) {
+      this.data.clearingRadius = currentRadius;
+    } else if (currentRadius > this.data.clearingRadius) {
+      const prevRadius = this.data.clearingRadius;
+      this.data.clearingRadius = currentRadius;
+      this.emit('clearing_expanded', { prevRadius, newRadius: currentRadius, day: this.data.day });
+      this.save();
+    }
   }
 
   canBuild(type) {
@@ -1385,6 +1416,7 @@ export class GameState {
     }
 
     this.data.buildings.push(building);
+    this.checkClearingExpansion();
     this.reconcileStateAndObjectives();
     this.save();
     this.emit('building_added', building);
@@ -1612,6 +1644,9 @@ export class GameState {
       });
       this.data.chores.dailyPoolHours = 22.0;
     }
+
+    // Check organic carrying capacity clearing expansion
+    this.checkClearingExpansion();
 
     // Scheduled Event Trigger (Matrix 2 Threats, Matrix 3 Weather, Matrix 7 Weekends, Matrix 7.3 Demarchy)
     let scheduledEvent = null;
