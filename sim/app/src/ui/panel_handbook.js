@@ -257,15 +257,15 @@ export class PanelHandbookController {
           <div class="callout-platform-icon">🏛️</div>
           <div class="callout-platform-content">
             <h4 class="callout-platform-title">${t('handbookOneMovementTitle', 'The Living Movement Behind O-ASIS')}</h4>
-            <p class="callout-platform-desc">${t('handbookOneMovementDesc', 'O-ASIS is the discrete thermodynamic simulation of the Open Networked Earth (O.N.E.) post-work civilization. Explore the 46 articles of the Living Constitution, download the 6-volume thriller novel saga for free, or inspect the open hardware transition roadmap at open-networked-earth.surge.sh.')}</p>
+            <p class="callout-platform-desc">${t('handbookOneMovementDesc', 'O-ASIS is the discrete thermodynamic simulation of the Open Networked Earth (O.N.E.) post-work civilization. Explore the 46 articles of the Living Constitution, download the 6-volume thriller novel saga for free, or inspect the open hardware transition roadmap at one-commons.github.io.')}</p>
             <div class="callout-platform-btns">
-              <a href="https://open-networked-earth.surge.sh/#constitution" target="_blank" rel="noopener noreferrer" class="btn-callout-link">
+              <a href="https://one-commons.github.io/#constitution" target="_blank" rel="noopener noreferrer" class="btn-callout-link">
                 📜 ${t('btnReadConstitution', 'Read Constitution v2.0 ↗')}
               </a>
-              <a href="https://open-networked-earth.surge.sh/#books" target="_blank" rel="noopener noreferrer" class="btn-callout-link">
+              <a href="https://one-commons.github.io/#books" target="_blank" rel="noopener noreferrer" class="btn-callout-link">
                 📚 ${t('btnReadThrillers', 'Free Thriller Ebooks ↗')}
               </a>
-              <a href="https://open-networked-earth.surge.sh" target="_blank" rel="noopener noreferrer" class="btn-callout-link btn-callout-highlight">
+              <a href="https://one-commons.github.io" target="_blank" rel="noopener noreferrer" class="btn-callout-link btn-callout-highlight">
                 🌐 ${t('btnVisitPortal', 'Explore O.N.E. Portal ↗')}
               </a>
             </div>

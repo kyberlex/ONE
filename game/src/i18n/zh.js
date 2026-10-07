@@ -1212,7 +1212,7 @@ export const zh = {
   handbookPlatformLinkTooltip: '探索 Open Networked Earth (O.N.E.) 主平台',
   handbookPlatformLinkBtn: 'O.N.E. 运动 ↗',
   handbookOneMovementTitle: 'O-ASIS 背后的生命力运动',
-  handbookOneMovementDesc: 'O-ASIS 是后劳工文明 Open Networked Earth (O.N.E.) 的离散热力学模拟。探索《活体宪法》的 46 项条款，免费下载 6 卷惊悚小说，或在 open-networked-earth.surge.sh 查阅开源硬件路线图。',
+  handbookOneMovementDesc: 'O-ASIS 是后劳工文明 Open Networked Earth (O.N.E.) 的离散热力学模拟。探索《活体宪法》的 46 项条款，免费下载 6 卷惊悚小说，或在 one-commons.github.io 查阅开源硬件路线图。',
   btnReadConstitution: '阅读宪法第 2.0 版 ↗',
   btnReadThrillers: '免费惊悚小说电子书 ↗',
   btnVisitPortal: '探索 O.N.E. 门户 ↗',

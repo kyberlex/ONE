@@ -170,7 +170,7 @@ export class GuideTourController {
           <div class="guide-welcome-box">
             <strong>${t('guideStep5Welcome', "Welcome to O-ASIS! Follow your Starter Objectives to begin.")}</strong>
             <div class="guide-portal-backlink-row" style="margin-top: 12px;">
-              <a href="https://open-networked-earth.surge.sh" target="_blank" rel="noopener noreferrer" class="btn-guide-portal-link" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; background: rgba(16,185,129,0.18); border: 1px solid rgba(16,185,129,0.45); border-radius: 8px; color: #34d399; font-weight: 600; font-size: 0.85rem; text-decoration: none; box-shadow: 0 2px 10px rgba(16,185,129,0.2);">
+              <a href="https://one-commons.github.io" target="_blank" rel="noopener noreferrer" class="btn-guide-portal-link" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; background: rgba(16,185,129,0.18); border: 1px solid rgba(16,185,129,0.45); border-radius: 8px; color: #34d399; font-weight: 600; font-size: 0.85rem; text-decoration: none; box-shadow: 0 2px 10px rgba(16,185,129,0.2);">
                 🌐 ${t('guideExploreOnePlatform', 'Discover the O.N.E. Movement (Constitution & Thrillers) ↗')}
               </a>
             </div>

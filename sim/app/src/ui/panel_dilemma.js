@@ -371,7 +371,7 @@ export class PanelDilemmaController {
         <div class="dilemma-badge">
           <img src="/one-logo-white.svg" alt="O.N.E." class="dilemma-stamp-icon" />
           <span>🏛️ ${t('councilDeliberationBadge', 'CITIZEN ASSEMBLY DELIBERATION')} • ${docket.originBioregionIcon || '🌱'} ${docket.originNodeName}</span>
-          <a href="https://open-networked-earth.surge.sh/#constitution" target="_blank" rel="noopener noreferrer" class="meta-pill meta-pill-link" style="margin-left: auto; text-decoration: none; color: #34d399; font-size: 0.78rem;" title="Read O.N.E. Living Constitution on main platform">
+          <a href="https://one-commons.github.io/#constitution" target="_blank" rel="noopener noreferrer" class="meta-pill meta-pill-link" style="margin-left: auto; text-decoration: none; color: #34d399; font-size: 0.78rem;" title="Read O.N.E. Living Constitution on main platform">
             📜 ${docket.targetArticles} ↗
           </a>
         </div>
@@ -486,7 +486,7 @@ export class PanelDilemmaController {
             <span class="meta-pill">⚖️ ${tier.descriptionKey ? t(tier.descriptionKey, tier.descriptionDefault) : tier.descriptionDefault}</span>
             <span class="meta-pill text-cyan">⏱️ ${t('mandateTermDays', 'Day {day} of 30 • Next Rotation in {hours}h').replace('{day}', dayInTerm).replace('{hours}', hoursToNextRot)}</span>
             <span class="meta-pill text-green">🌐 ${t('confederalTrust', 'Confederal Trust')}: ${this.sim.peerReview.confederalTrust}/100</span>
-            <a href="https://open-networked-earth.surge.sh/#constitution" target="_blank" rel="noopener noreferrer" class="meta-pill meta-pill-link" style="text-decoration: none; color: #34d399; font-weight: 600;" title="Explore the 46 Articles of the Living Constitution">
+            <a href="https://one-commons.github.io/#constitution" target="_blank" rel="noopener noreferrer" class="meta-pill meta-pill-link" style="text-decoration: none; color: #34d399; font-weight: 600;" title="Explore the 46 Articles of the Living Constitution">
               📜 ${t('readConstitutionLink', 'Living Constitution (46 Articles) ↗')}
             </a>
           </div>

@@ -1212,7 +1212,7 @@ export const ar = {
   handbookPlatformLinkTooltip: 'استكشف المنصة الرئيسية لـ Open Networked Earth (O.N.E.)',
   handbookPlatformLinkBtn: 'حركة O.N.E. ↗',
   handbookOneMovementTitle: 'الحركة الحية وراء O-ASIS',
-  handbookOneMovementDesc: 'O-ASIS هي المحاكاة الديناميكية الحرارية المنفصلة لحضارة ما بعد العمل Open Networked Earth (O.N.E.). استكشف 46 مادة من الدستور الحي، أو قم بتنزيل سلسلة روايات الإثارة المكونة من 6 مجلدات مجانًا، أو تفقد خارطة طريق الأجهزة المفتوحة على open-networked-earth.surge.sh.',
+  handbookOneMovementDesc: 'O-ASIS هي المحاكاة الديناميكية الحرارية المنفصلة لحضارة ما بعد العمل Open Networked Earth (O.N.E.). استكشف 46 مادة من الدستور الحي، أو قم بتنزيل سلسلة روايات الإثارة المكونة من 6 مجلدات مجانًا، أو تفقد خارطة طريق الأجهزة المفتوحة على one-commons.github.io.',
   btnReadConstitution: 'قراءة الدستور الإصدار 2.0 ↗',
   btnReadThrillers: 'كتب إلكترونية مجانية للإثارة ↗',
   btnVisitPortal: 'استكشف بوابة O.N.E. ↗',

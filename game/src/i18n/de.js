@@ -1212,7 +1212,7 @@ export const de = {
   handbookPlatformLinkTooltip: 'Die Hauptplattform von Open Networked Earth (O.N.E.) erkunden',
   handbookPlatformLinkBtn: 'O.N.E. Bewegung ↗',
   handbookOneMovementTitle: 'Die lebendige Bewegung hinter O-ASIS',
-  handbookOneMovementDesc: 'O-ASIS ist die diskrete thermodynamische Simulation der Post-Arbeits-Zivilisation Open Networked Earth (O.N.E.). Erkunden Sie die 46 Artikel der lebendigen Verfassung, laden Sie die 6-bändige Thriller-Saga kostenlos herunter oder prüfen Sie die Open-Hardware-Roadmap auf open-networked-earth.surge.sh.',
+  handbookOneMovementDesc: 'O-ASIS ist die diskrete thermodynamische Simulation der Post-Arbeits-Zivilisation Open Networked Earth (O.N.E.). Erkunden Sie die 46 Artikel der lebendigen Verfassung, laden Sie die 6-bändige Thriller-Saga kostenlos herunter oder prüfen Sie die Open-Hardware-Roadmap auf one-commons.github.io.',
   btnReadConstitution: 'Verfassung v2.0 lesen ↗',
   btnReadThrillers: 'Kostenlose Thriller-E-Books ↗',
   btnVisitPortal: 'O.N.E. Portal erkunden ↗',

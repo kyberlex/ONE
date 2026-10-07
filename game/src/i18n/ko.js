@@ -1212,7 +1212,7 @@ export const ko = {
   handbookPlatformLinkTooltip: 'Open Networked Earth (O.N.E.) 메인 플랫폼 탐색',
   handbookPlatformLinkBtn: 'O.N.E. 운동 ↗',
   handbookOneMovementTitle: 'O-ASIS 뒤에 있는 살아있는 운동',
-  handbookOneMovementDesc: 'O-ASIS는 탈노동 문명 Open Networked Earth(O.N.E.)의 이산 열역학 시뮬레이션입니다. 살아있는 헌법의 46개 조항을 탐색하고, 6권 분량의 스릴러 소설을 무료로 다운로드하거나 open-networked-earth.surge.sh에서 오픈 하드웨어 전환 로드맵을 확인하세요.',
+  handbookOneMovementDesc: 'O-ASIS는 탈노동 문명 Open Networked Earth(O.N.E.)의 이산 열역학 시뮬레이션입니다. 살아있는 헌법의 46개 조항을 탐색하고, 6권 분량의 스릴러 소설을 무료로 다운로드하거나 one-commons.github.io에서 오픈 하드웨어 전환 로드맵을 확인하세요.',
   btnReadConstitution: '헌법 v2.0 읽기 ↗',
   btnReadThrillers: '무료 스릴러 전자책 ↗',
   btnVisitPortal: 'O.N.E. 포털 탐색 ↗',

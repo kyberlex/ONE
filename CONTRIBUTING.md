@@ -30,7 +30,7 @@ For philosophical debates, speculative ideas, local seed-node initiatives, and s
 
 ### B. O.N.E. Improvement Proposals (OIP / RFCs)
 If you identify a genuine systemic gap (an unresolved Class-1 operational protocol, an unmodeled friction in input-output matrices, or an ambiguity in article implementation):
-1. Review the existing 46 Articles in [`ONE NETWORKED EARTH (O.N.E.).md`](ONE%20NETWORKED%20EARTH%20(O.N.E.).md) and the interactive AI challenge on [open-networked-earth.surge.sh/#challenge](https://open-networked-earth.surge.sh/#challenge).
+1. Review the existing 46 Articles in [`ONE NETWORKED EARTH (O.N.E.).md`](ONE%20NETWORKED%20EARTH%20(O.N.E.).md) and the interactive AI challenge at [one-commons.github.io/#challenge](https://one-commons.github.io/#challenge) *(Mirror: [open-networked-earth.surge.sh/#challenge](https://open-networked-earth.surge.sh/#challenge))*.
 2. Open a discussion under the **Ideas / Proposals** category on GitHub Discussions.
 3. Submit concrete mathematical formulas, plain-language legal articles, or thermodynamic parameters.
 

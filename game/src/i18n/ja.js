@@ -1212,7 +1212,7 @@ export const ja = {
   handbookPlatformLinkTooltip: 'Open Networked Earth (O.N.E.) メインプラットフォームを探索',
   handbookPlatformLinkBtn: 'O.N.E. ムーブメント ↗',
   handbookOneMovementTitle: 'O-ASIS の背後にある生きたムーブメント',
-  handbookOneMovementDesc: 'O-ASIS は、ポスト労働文明 Open Networked Earth (O.N.E.) の離散熱力学シミュレーションです。「生きた憲法」の 46 条を探索し、全 6 巻のスリラー小説を無料でダウンロードするか、open-networked-earth.surge.sh でオープンハードウェア移行ロードマップを確認してください。',
+  handbookOneMovementDesc: 'O-ASIS は、ポスト労働文明 Open Networked Earth (O.N.E.) の離散熱力学シミュレーションです。「生きた憲法」の 46 条を探索し、全 6 巻のスリラー小説を無料でダウンロードするか、one-commons.github.io でオープンハードウェア移行ロードマップを確認してください。',
   btnReadConstitution: '憲法 v2.0 を読む ↗',
   btnReadThrillers: '無料のスリラー電子書籍 ↗',
   btnVisitPortal: 'O.N.E. ポータルを探索 ↗',

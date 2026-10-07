@@ -7,7 +7,7 @@
 > **The Open-Source Socio-Technical Operating System for a Post-Work, Post-Monetary Planetary Civilization.**
 
 <p align="center">
-  <a href="https://open-networked-earth.surge.sh">🌐 Live Edge Platform</a> •
+  <a href="https://one-commons.github.io">🌐 Live Web Portal (one-commons.github.io)</a> •
   <a href="https://one-oasis.surge.sh">🎮 Play O-ASIS MMO (one-oasis.surge.sh)</a> •
   <a href="books/README.md">📚 6-Volume Novel Series</a> •
   <a href="https://notebook.google.com/notebook/c123b58e-7e33-4565-8c1c-c5da2de98471">🧠 Interactive AI Oracle</a> •
@@ -202,9 +202,9 @@ We do not ask for blind belief. O.N.E. has been subjected to rigorous multi-agen
 
 ## **VI. Verification & Dialectic Tools**
 
-* **Live AI Challenge Arena:** Test your hardest objections against the 46 Canonical Articles in real-time at [open-networked-earth.surge.sh/#challenge](https://open-networked-earth.surge.sh/#challenge).
+* **Live AI Challenge Arena:** Test your hardest objections against the 46 Canonical Articles in real-time at [one-commons.github.io/#challenge](https://one-commons.github.io/#challenge) *(Mirror: [open-networked-earth.surge.sh/#challenge](https://open-networked-earth.surge.sh/#challenge))*.
 * **Google NotebookLM Deep-Dive:** Query the multimodal knowledge base and listen to the conversational audio podcast at [NotebookLM O.N.E. Suite](https://notebooklm.google.com/notebook/8a979273-c4b6-4288-b55b-4cb75fad95a0).
-* **The Thriller Series:** Read the 15-language literary saga dramatizing the real-world friction of the transition at [open-networked-earth.surge.sh/#books](https://open-networked-earth.surge.sh/#books).
+* **The Thriller Series:** Read the 15-language literary saga dramatizing the real-world friction of the transition at [one-commons.github.io/#books](https://one-commons.github.io/#books) *(Mirror: [open-networked-earth.surge.sh/#books](https://open-networked-earth.surge.sh/#books))*.
 
 ---
 

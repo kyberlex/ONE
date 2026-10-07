@@ -1212,7 +1212,7 @@ export const tr = {
   handbookPlatformLinkTooltip: 'Open Networked Earth (O.N.E.) Ana Platformunu Keşfedin',
   handbookPlatformLinkBtn: 'O.N.E. Hareketi ↗',
   handbookOneMovementTitle: 'O-ASIS\'in Arkasındaki Yaşayan Hareket',
-  handbookOneMovementDesc: 'O-ASIS, çalışma sonrası uygarlık Open Networked Earth\'ün (O.N.E.) kesikli termodinamik simülasyonudur. Yaşayan Anayasa\'nın 46 maddesini keşfedin, 6 ciltlik gerilim romanı serisini ücretsiz indirin veya open-networked-earth.surge.sh adresinden açık donanım yol haritasını inceleyin.',
+  handbookOneMovementDesc: 'O-ASIS, çalışma sonrası uygarlık Open Networked Earth\'ün (O.N.E.) kesikli termodinamik simülasyonudur. Yaşayan Anayasa\'nın 46 maddesini keşfedin, 6 ciltlik gerilim romanı serisini ücretsiz indirin veya one-commons.github.io adresinden açık donanım yol haritasını inceleyin.',
   btnReadConstitution: 'Anayasa v2.0\'ı Oku ↗',
   btnReadThrillers: 'Ücretsiz Gerilim E-kitapları ↗',
   btnVisitPortal: 'O.N.E. Portalını Keşfedin ↗',

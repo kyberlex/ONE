@@ -1212,7 +1212,7 @@ export const ru = {
   handbookPlatformLinkTooltip: 'Изучите основную платформу Open Networked Earth (O.N.E.)',
   handbookPlatformLinkBtn: 'Движение O.N.E. ↗',
   handbookOneMovementTitle: 'Живое движение, стоящее за O-ASIS',
-  handbookOneMovementDesc: 'O-ASIS — это дискретное термодинамическое моделирование посттрудовой цивилизации Open Networked Earth (O.N.E.). Ознакомьтесь с 46 статьями Живой Конституции, бесплатно скачайте 6-томную сагу триллеров или изучите дорожную карту открытого оборудования на open-networked-earth.surge.sh.',
+  handbookOneMovementDesc: 'O-ASIS — это дискретное термодинамическое моделирование посттрудовой цивилизации Open Networked Earth (O.N.E.). Ознакомьтесь с 46 статьями Живой Конституции, бесплатно скачайте 6-томную сагу триллеров или изучите дорожную карту открытого оборудования на one-commons.github.io.',
   btnReadConstitution: 'Читать Конституцию v2.0 ↗',
   btnReadThrillers: 'Бесплатные триллеры в Ebook ↗',
   btnVisitPortal: 'Изучить портал O.N.E. ↗',
