@@ -1,0 +1,41 @@
+# O.N.E. Canonical Glossary — Hindi (hi)
+Open Networked Earth -> Open Networked Earth (खुली नेटवर्क पृथ्वी)
+O.N.E. -> O.N.E.
+Usufruct -> उसुफ्रुक्ट (उपभोग अधिकार)
+Universal Usufruct -> सार्वभौमिक उपभोग अधिकार
+Sortition -> लॉटरी चयन (सॉर्टिशन)
+Rotational Sortition -> घूर्णन लॉटरी प्रणाली
+Class 0 Invariants -> कक्षा 0 अपरिवर्तनीय नियम
+Thermodynamic Accounting -> थर्मोडायनामिक लेखांकन
+Thermodynamic Balance -> थर्मोडायनामिक संतुलन
+Heretic's Commons -> पाखंडी का साझा क्षेत्र
+Community Land Trust -> कम्युनिटी लैंड ट्रस्ट (CLT)
+Ecological Carrying Capacity -> पारिस्थितिक वहन क्षमता
+Deterministic Diverse Double-Compilation -> नियतात्मक विविध दोहरा संकलन (DDC)
+Threshold Multi-Party Computation -> थ्रेशोल्ड मल्टी-पार्टी कंप्यूटेशन (t-MPC)
+Zero-Knowledge Proof-of-Personhood -> ज़ीरो-नॉलेज व्यक्ति प्रमाण (ZK-PoP)
+External Trade Interface -> बाह्य व्यापार इंटरफ़ेस (ETI)
+Delray Foundry -> डेलरे फाउंड्री
+Ambassador Bridge -> एंबेसडर ब्रिज
+River Rouge -> रिवर रूज
+Zug Island -> जुग द्वीप
+Aegis-Apex -> एजिस-एपेक्स
+Meridian -> मेरिडियन
+Blackiron -> ब्लैकआयरन
+Marcus Vance -> मार्कस वेंस
+Elena Cruz -> एलेना क्रूज़
+Toby Morales -> टोबी मोरालेस
+Maya Lin-Mercado -> माया लिन-मर्काडो
+Ray Miller -> रे मिलर
+Kira Vance -> किरा वेंस
+Sully -> सुली
+Campbell -> कैंपबेल
+Leo -> लियो
+Sarah -> सारा
+Mateo -> माटेओ
+FCI Milan -> एफसीआई मिलान
+West Jefferson -> वेस्ट जेफरसन
+Dearborn Street -> डियरबॉर्न स्ट्रीट
+Sandwich -> सैंडविच
+Windsor -> विंडसर
+Detroit -> डेट्रॉइट

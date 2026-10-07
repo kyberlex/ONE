@@ -11,6 +11,7 @@
 import { gameState } from '../core/state.js';
 import { soundFX } from '../audio/sound_fx.js';
 import { buildingInspector } from '../ui/building_inspector.js';
+import { InteriorRenderer } from './interior_renderer.js';
 
 export class SettlementCanvas {
   constructor(canvasEl) {
@@ -38,6 +39,16 @@ export class SettlementCanvas {
     this.hoveredBuilding = null;
     this.selectedBuilding = null;
 
+    // Interior cutaway state (Level 4)
+    this.activeInterior = null; // null or { type, name, entity, scene }
+
+    // 4-Level Tour state (Level 3 Node & Level 4 Interior)
+    this.isTourMode = false;
+    this.tourStopIndex = 0;
+    this.overrideBuildings = null;
+    this.overridePioneers = null;
+    this.highlightEntity = null; // { x, y, label, icon }
+
     // Visual feedback particles
     this.floatingTexts = [];
     this.particles = [];
@@ -50,7 +61,7 @@ export class SettlementCanvas {
     this.campsiteLandmarkTrees = [
       { x: -160, y: -90, radius: 24, type: 'pine' },
       { x: -130, y: 130, radius: 26, type: 'oak' },
-      { x: 170, y: -110, radius: 22, type: 'pine' },
+      { x: 80, y: -130, radius: 22, type: 'pine' },
       { x: 190, y: 80, radius: 28, type: 'apple' },
       { x: -80, y: -140, radius: 20, type: 'oak' },
       { x: 110, y: 140, radius: 22, type: 'pine' }
@@ -817,6 +828,21 @@ export class SettlementCanvas {
     const ctx = this.ctx;
     ctx.clearRect(0, 0, this.cssWidth, this.cssHeight);
 
+    // LEVEL 4: ARCHITECTURAL INTERIOR CUTAWAY (sim/ reuse)
+    if (this.activeInterior && this.activeInterior.scene) {
+      ctx.save();
+      ctx.translate(this.cssWidth / 2, this.cssHeight / 2);
+      ctx.scale(this.camera.zoom, this.camera.zoom);
+      ctx.translate(this.camera.x, this.camera.y);
+
+      const weather = gameState.getBioregionalWeather ? gameState.getBioregionalWeather() : null;
+      InteriorRenderer.renderInterior(ctx, this.cssWidth, this.cssHeight, this.activeInterior.scene, this.tick, weather, 12);
+      ctx.restore();
+
+      this.renderInteriorOverlay(ctx);
+      return;
+    }
+
     ctx.save();
     // Center camera
     ctx.translate(this.cssWidth / 2, this.cssHeight / 2);
@@ -826,8 +852,11 @@ export class SettlementCanvas {
     // 1. Terrain & Grid Ground
     this.renderGround(ctx);
 
-    // 2. Landscape Trees & Flora
+    // 2. Landscape Trees & Flora (semi-transparent, zero trees on heliport)
     this.renderTrees(ctx);
+
+    // 2.5 District Telemetry Banners (rendered on top of trees so never covered)
+    this.renderDistrictBanners(ctx);
 
     // 3. Constructed Infrastructure (Placed Buildings)
     this.renderBuildings(ctx);
@@ -843,6 +872,11 @@ export class SettlementCanvas {
 
     // 5.2 Inter-Node Logistics Convoys
     this.renderConvoys(ctx);
+
+    // 5.4 Tour Highlighting Beacon (Level 3 Node Overview)
+    if (this.highlightEntity) {
+      this.renderTourHighlight(ctx);
+    }
 
     // 5.5 Hover & Click Selection Highlight
     this.renderHoverHighlight(ctx);
@@ -1115,27 +1149,6 @@ export class SettlementCanvas {
         });
       }
 
-      // 4.3 Floating Solarpunk District Telemetry Banner
-      const tagText = `${d.icon} ${d.name.toUpperCase()}`;
-      ctx.font = 'bold 10px system-ui, -apple-system, sans-serif';
-      const textMetrics = ctx.measureText(tagText);
-      const tagW = textMetrics.width + 20;
-      const tagH = 20;
-      const tagY = cy - r - 12;
-
-      ctx.fillStyle = isHovered ? 'rgba(15, 23, 42, 0.95)' : 'rgba(15, 23, 42, 0.82)';
-      ctx.strokeStyle = isHovered ? d.color : 'rgba(255, 255, 255, 0.15)';
-      ctx.lineWidth = isHovered ? 1.5 : 1.0;
-      ctx.beginPath();
-      ctx.roundRect(cx - tagW / 2, tagY - tagH / 2, tagW, tagH, 6);
-      ctx.fill();
-      ctx.stroke();
-
-      ctx.fillStyle = isHovered ? '#ffffff' : d.color;
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText(tagText, cx, tagY);
-
       ctx.restore();
     });
 
@@ -1166,9 +1179,31 @@ export class SettlementCanvas {
     });
   }
 
+  /**
+   * Checks whether a position is within the heliport / vertiport landing and safety clear zone
+   */
+  isNearHeliport(x, y) {
+    // 1. Permanent Intermodal Transit Hub & Vertiport pads at (300, 280)
+    if (Math.hypot(x - 300, y - 280) < 155) return true;
+    if (Math.hypot(x - 255, y - 280) < 85) return true;
+    if (Math.hypot(x - 345, y - 280) < 85) return true;
+
+    // 2. Stage 3 Sovereign Superblock Vertiport Pad & Trike Depot
+    if (Math.hypot(x - 220, y - (-60)) < 90) return true;
+    if (Math.hypot(x - 160, y - (-80)) < 90) return true;
+    if (Math.hypot(x - (-210), y - (-40)) < 90) return true;
+
+    // 3. Dynamic placed buildings
+    const buildings = this.overrideBuildings || gameState.data.buildings || [];
+    return buildings.some(b => 
+      (b.type === 'drone_vertiport' || b.type === 'trike_depot') && 
+      Math.hypot(x - b.x, y - b.y) < 90
+    );
+  }
+
   rebuildTrees() {
     const clearingRadius = gameState.getClearingRadius ? gameState.getClearingRadius() : 340;
-    const list = [...this.campsiteLandmarkTrees];
+    const list = this.campsiteLandmarkTrees.filter(t => !this.isNearHeliport(t.x, t.y));
 
     // Generate natural perimeter forest ringing outside the clearing
     const numPerimeterTrees = 36;
@@ -1185,6 +1220,9 @@ export class SettlementCanvas {
       const isNearEastPath = Math.abs(y) < pathClearance && x > 0;
       if (isNearNorthPath || isNearWestPath || isNearEastPath) continue;
 
+      // STRICT EXCLUSION: Zero trees on or near heliport / vertiport pads
+      if (this.isNearHeliport(x, y)) continue;
+
       const type = (i % 3 === 0) ? 'pine' : (i % 3 === 1 ? 'oak' : 'apple');
       const radius = 22 + (i % 7) * 2;
       list.push({ x, y, radius, type, isPerimeter: true });
@@ -1194,9 +1232,16 @@ export class SettlementCanvas {
   }
 
   renderTrees(ctx) {
+    ctx.save();
+    // Semi-transparent trees (50% opacity) so labels, heliports, and ground elements remain visible
+    ctx.globalAlpha = 0.50;
+
     this.trees.forEach(t => {
+      // Ensure zero trees on or near the heliport / vertiport pads
+      if (this.isNearHeliport(t.x, t.y)) return;
+
       // Tree cast shadow
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.35)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.20)';
       ctx.beginPath();
       ctx.ellipse(t.x + 8, t.y + 12, t.radius * 0.9, t.radius * 0.45, 0.2, 0, Math.PI * 2);
       ctx.fill();
@@ -1205,7 +1250,7 @@ export class SettlementCanvas {
       ctx.fillStyle = '#451a03';
       ctx.fillRect(t.x - 3, t.y - 4, 6, 16);
 
-      // Foliage layers with wind sway
+      // Foliage layers with wind sway (semi-transparent)
       const sway = Math.sin(this.tick * 0.04 + t.x) * 1.5;
       ctx.fillStyle = t.type === 'pine' ? '#064e3b' : (t.type === 'apple' ? '#15803d' : '#047857');
       ctx.beginPath();
@@ -1218,10 +1263,48 @@ export class SettlementCanvas {
       ctx.arc(t.x + sway - 3, t.y - 16, t.radius * 0.75, 0, Math.PI * 2);
       ctx.fill();
     });
+
+    ctx.restore();
+  }
+
+  /**
+   * Renders district telemetry banners on top of trees so they are never occluded
+   */
+  renderDistrictBanners(ctx) {
+    const districts = gameState.getDistricts ? gameState.getDistricts() : [];
+    districts.forEach(d => {
+      const cx = d.center.x;
+      const cy = d.center.y;
+      const r = d.radius;
+      const isHovered = this.hoveredDistrict && this.hoveredDistrict.id === d.id;
+
+      // Floating Solarpunk District Telemetry Banner (on top of trees)
+      const tagText = `${d.icon} ${d.name.toUpperCase()}`;
+      ctx.font = 'bold 10px system-ui, -apple-system, sans-serif';
+      const textMetrics = ctx.measureText(tagText);
+      const tagW = textMetrics.width + 20;
+      const tagH = 20;
+      const tagY = cy - r - 12;
+
+      ctx.fillStyle = isHovered ? 'rgba(15, 23, 42, 0.95)' : 'rgba(15, 23, 42, 0.88)';
+      ctx.strokeStyle = isHovered ? d.color : 'rgba(255, 255, 255, 0.25)';
+      ctx.lineWidth = isHovered ? 1.8 : 1.2;
+      ctx.beginPath();
+      ctx.roundRect(cx - tagW / 2, tagY - tagH / 2, tagW, tagH, 6);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = isHovered ? '#ffffff' : d.color;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(tagText, cx, tagY);
+    });
   }
 
   renderCentralAgora(ctx) {
-    const isConsecrated = gameState.data.centralAgoraConsecrated || gameState.data.buildings?.some(b => b.type === 'central_agora');
+    const isConsecrated = (this.isTourMode && this.tourStopIndex === 2) ||
+      gameState.data.centralAgoraConsecrated ||
+      (this.overrideBuildings || gameState.data.buildings)?.some(b => b.type === 'central_agora');
     if (!isConsecrated) return;
 
     ctx.save();
@@ -1356,10 +1439,10 @@ export class SettlementCanvas {
   }
 
   renderCamperVan(ctx) {
-    const van = gameState.data.buildings?.find(b => b.type === 'camper_van');
+    const van = (this.overrideBuildings || gameState.data.buildings)?.find(b => b.type === 'camper_van');
     const vx = van?.x !== undefined ? van.x : 0;
     const vy = van?.y !== undefined ? van.y : 0;
-    const isRetired = gameState.data.camperVanRetired;
+    const isRetired = (this.isTourMode && this.tourStopIndex === 2) || gameState.data.camperVanRetired;
 
     ctx.save();
     ctx.translate(vx, vy);
@@ -1500,7 +1583,7 @@ export class SettlementCanvas {
   }
 
   renderBuildings(ctx) {
-    const buildings = gameState.data.buildings;
+    const buildings = this.overrideBuildings || gameState.data.buildings;
     buildings.forEach(b => {
       if (b.type === 'camper_van' || b.type === 'central_agora') return; // rendered separately
 
@@ -3137,8 +3220,9 @@ export class SettlementCanvas {
 
   renderPioneers(ctx) {
     const now = performance.now();
+    const pioneers = this.overridePioneers || this.pioneers;
 
-    this.pioneers.forEach(p => {
+    pioneers.forEach(p => {
       ctx.save();
       ctx.translate(p.x, p.y);
 
@@ -4137,6 +4221,262 @@ export class SettlementCanvas {
       }
     }
 
+    ctx.restore();
+  }
+
+  /**
+   * Sets up 4-Level civilizational tour preset for settlement overview (Level 3)
+   */
+  setTourPreset(stopIndex, highlightModIndex = -1) {
+    this.isTourMode = true;
+    this.tourStopIndex = stopIndex;
+
+    this.camera.targetX = 0;
+    this.camera.targetY = 0;
+    this.camera.x = 0;
+    this.camera.y = 0;
+    this.camera.zoom = 1.15;
+    this.camera.targetZoom = 1.15;
+
+    if (stopIndex === 0) {
+      // STOP 1: THE SEED CAMP (Yukon Haven)
+      this.overrideBuildings = [
+        { id: 'tour-van-0', type: 'camper_van', name: 'Pioneer Camper Van', x: 0, y: 0, level: 1, condition: 1.0 },
+        { id: 'tour-solar-0', type: 'solar_array', name: 'Bifacial Solar Array', x: 130, y: -50, level: 1, condition: 1.0 },
+        { id: 'tour-water-0', type: 'rain_cistern', name: 'Snow-Melt & Rain Flume', x: -110, y: 90, level: 1, condition: 1.0 },
+        { id: 'tour-garden-0', type: 'garden_bed', name: 'Starter Permaculture Bed', x: 70, y: 80, level: 1, condition: 1.0 }
+      ];
+
+      this.overridePioneers = [
+        { id: 'p1', name: 'Alex', role: 'Mechanical Rig', isPlayer: true, x: -20, y: 40, targetX: -20, targetY: 40, speed: 0.5, facing: 1, color: '#fbbf24', appearance: { gender: 'M', hairStyle: 'fade', hairColor: '#1e293b', skinTone: '#fbb77a' } },
+        { id: 'p2', name: 'Maya', role: 'Agro-Ecologist', x: 60, y: 70, targetX: 60, targetY: 70, speed: 0.5, facing: -1, color: '#34d399', appearance: { gender: 'F', hairStyle: 'long', hairColor: '#78350f', skinTone: '#fed7aa' } },
+        { id: 'p3', name: 'Leo', role: 'Systems Architect', x: 110, y: -30, targetX: 110, targetY: -30, speed: 0.5, facing: 1, color: '#38bdf8', appearance: { gender: 'M', hairStyle: 'curly', hairColor: '#0f172a', skinTone: '#d97706' } }
+      ];
+
+      const modTargets = [
+        { x: 0, y: 0, label: 'Pioneer Camper Van', icon: '🚐', type: 'CAMPER_VAN' },
+        { x: 130, y: -50, label: 'Bifacial Solar Array', icon: '⚡', type: 'SOLAR_ARRAY' },
+        { x: -110, y: 90, label: 'Snow-Melt & Rain Flume', icon: '💧', type: 'WATER_FLUME' }
+      ];
+
+      this.highlightEntity = (highlightModIndex >= 0 && highlightModIndex < modTargets.length)
+        ? modTargets[highlightModIndex]
+        : null;
+
+    } else if (stopIndex === 1) {
+      // STOP 2: THE ECOVILLAGE (Monte Sole)
+      this.overrideBuildings = [
+        { id: 'tour-van-1', type: 'camper_van', name: 'Auxiliary Storage Van', x: -210, y: 60, level: 1, condition: 1.0 },
+        { id: 'tour-mhu-1', type: 'mhu_dwelling', name: 'Modular Habitat Unit A', x: 130, y: 50, level: 2, condition: 1.0 },
+        { id: 'tour-mhu-2', type: 'mhu_dwelling', name: 'Modular Habitat Unit B', x: 180, y: 110, level: 2, condition: 1.0 },
+        { id: 'tour-fablab-1', type: 'fablab', name: 'FabLab Machine Shop', x: -130, y: -70, level: 2, condition: 1.0 },
+        { id: 'tour-reed-1', type: 'reed_bed', name: 'Greywater Reed-Bed Basin', x: -100, y: 120, level: 2, condition: 1.0 },
+        { id: 'tour-solar-1', type: 'solar_array', name: 'Rooftop Solar Array', x: 60, y: -90, level: 2, condition: 1.0 },
+        { id: 'tour-garden-1', type: 'garden_bed', name: 'Polyculture Terrace', x: 80, y: 140, level: 2, condition: 1.0 }
+      ];
+
+      this.overridePioneers = [
+        { id: 'p1', name: 'Alex', role: 'Mechanical Rig', isPlayer: true, x: -110, y: -50, targetX: -110, targetY: -50, speed: 0.5, facing: 1, color: '#fbbf24', appearance: { gender: 'M', hairStyle: 'fade', hairColor: '#1e293b', skinTone: '#fbb77a' } },
+        { id: 'p2', name: 'Elena', role: 'Water Steward', x: -80, y: 105, targetX: -80, targetY: 105, speed: 0.5, facing: -1, color: '#06b6d4', appearance: { gender: 'F', hairStyle: 'bun', hairColor: '#b45309', skinTone: '#fed7aa' } },
+        { id: 'p3', name: 'Tariq', role: 'Circular Engineer', x: -140, y: -45, targetX: -140, targetY: -45, speed: 0.5, facing: 1, color: '#f59e0b', appearance: { gender: 'M', hairStyle: 'fade', hairColor: '#1e293b', skinTone: '#d97706' } },
+        { id: 'p4', name: 'Chiara', role: 'Architect', x: 110, y: 35, targetX: 110, targetY: 35, speed: 0.5, facing: 1, color: '#a855f7', appearance: { gender: 'F', hairStyle: 'long', hairColor: '#0f172a', skinTone: '#fbb77a' } },
+        { id: 'p5', name: 'Matteo', role: 'Agro-Forester', x: 50, y: 120, targetX: 50, targetY: 120, speed: 0.5, facing: -1, color: '#22c55e', appearance: { gender: 'M', hairStyle: 'buzz', hairColor: '#451a03', skinTone: '#fed7aa' } }
+      ];
+
+      const modTargets = [
+        { x: 130, y: 50, label: 'Modular Habitat Units (MHUs)', icon: '🏡', type: 'DWELLING' },
+        { x: -130, y: -70, label: 'FabLab Machine Shop', icon: '⚙️', type: 'WORKSHOP' },
+        { x: -100, y: 120, label: 'Greywater Reed-Bed Basin', icon: '🌿', type: 'WATER' }
+      ];
+
+      this.highlightEntity = (highlightModIndex >= 0 && highlightModIndex < modTargets.length)
+        ? modTargets[highlightModIndex]
+        : null;
+
+    } else if (stopIndex === 2) {
+      // STOP 3: SOVEREIGN SUPERBLOCK (Detroit Delray)
+      this.overrideBuildings = [
+        { id: 'tour-agora-2', type: 'central_agora', name: 'Central Agora Hearth', x: 0, y: 0, level: 3, condition: 1.0 },
+        { id: 'tour-van-2', type: 'camper_van', name: 'Historic Seed Van (Slipway)', x: -220, y: 60, level: 1, condition: 1.0 },
+        { id: 'tour-trike-2', type: 'trike_depot', name: 'Cargo Trike & Vertiport Hub', x: 160, y: -80, level: 3, condition: 1.0 },
+        { id: 'tour-drone-2', type: 'drone_vertiport', name: 'Autonomous Vertiport Pad', x: 220, y: -60, level: 3, condition: 1.0 },
+        { id: 'tour-solar-2', type: 'solar_array', name: 'Bifacial Solar Tracking Farm', x: -160, y: -80, level: 3, condition: 1.0 },
+        { id: 'tour-batt-2', type: 'battery_bank', name: '100% Microgrid & LFP Banks', x: -200, y: -50, level: 3, condition: 1.0 },
+        { id: 'tour-mhu-2a', type: 'mhu_dwelling', name: 'Superblock Pod A', x: 120, y: 70, level: 3, condition: 1.0 },
+        { id: 'tour-mhu-2b', type: 'mhu_dwelling', name: 'Superblock Pod B', x: 190, y: 130, level: 3, condition: 1.0 },
+        { id: 'tour-mhu-2c', type: 'mhu_dwelling', name: 'Superblock Pod C', x: -110, y: 130, level: 3, condition: 1.0 }
+      ];
+
+      this.overridePioneers = [
+        { id: 'p1', name: 'Alex', role: 'Demarchy Delegate', isPlayer: true, x: 0, y: 15, targetX: 0, targetY: 15, speed: 0.5, facing: 1, color: '#fbbf24', appearance: { gender: 'M', hairStyle: 'fade', hairColor: '#1e293b', skinTone: '#fbb77a' } },
+        { id: 'p2', name: 'Hiroshi', role: 'Grid Architect', x: -150, y: -65, targetX: -150, targetY: -65, speed: 0.5, facing: -1, color: '#10b981', appearance: { gender: 'M', hairStyle: 'buzz', hairColor: '#0f172a', skinTone: '#fed7aa' } },
+        { id: 'p3', name: 'Elena', role: 'Courier Dispatcher', x: 145, y: -65, targetX: 145, targetY: -65, speed: 0.5, facing: 1, color: '#06b6d4', appearance: { gender: 'F', hairStyle: 'bun', hairColor: '#78350f', skinTone: '#fed7aa' } },
+        { id: 'p4', name: 'Marcus', role: 'Fabrication Lead', x: 90, y: 55, targetX: 90, targetY: 55, speed: 0.5, facing: -1, color: '#f59e0b', appearance: { gender: 'M', hairStyle: 'long', hairColor: '#1e293b', skinTone: '#d97706' } },
+        { id: 'p5', name: 'Maya', role: 'Biosphere Council', x: -10, y: -15, targetX: -10, targetY: -15, speed: 0.5, facing: 1, color: '#34d399', appearance: { gender: 'F', hairStyle: 'long', hairColor: '#78350f', skinTone: '#fed7aa' } }
+      ];
+
+      const modTargets = [
+        { x: 0, y: 0, label: 'Central Agora Hearth', icon: '🏛️', type: 'AGORA' },
+        { x: 160, y: -80, label: 'Cargo Trike & Vertiport Hub', icon: '🚲', type: 'TRIKE_DEPOT' },
+        { x: -160, y: -80, label: '100% Microgrid & LFP Banks', icon: '☀️', type: 'SOVEREIGN_MICROGRID' }
+      ];
+
+      this.highlightEntity = (highlightModIndex >= 0 && highlightModIndex < modTargets.length)
+        ? modTargets[highlightModIndex]
+        : null;
+    }
+
+    if (this.highlightEntity) {
+      this.camera.targetX = -this.highlightEntity.x * 0.35;
+      this.camera.targetY = -this.highlightEntity.y * 0.35;
+      this.camera.x = this.camera.targetX;
+      this.camera.y = this.camera.targetY;
+    }
+
+    // Refresh trees to respect tour stop specific buildings and heliports
+    this.rebuildTrees();
+  }
+
+  /**
+   * Enters Level 4 Architectural Interior Cutaway
+   */
+  enterInterior(entityOrData) {
+    if (!entityOrData) return;
+
+    let type = entityOrData.type || entityOrData.id || 'AGORA';
+    let name = entityOrData.name || 'Module Interior';
+    let isPlayerHome = Boolean(entityOrData.isPlayerHome);
+    let isGuest = Boolean(entityOrData.isGuest);
+
+    const interiorData = {
+      type,
+      name,
+      isPlayerHome,
+      isGuest,
+      entity: entityOrData
+    };
+
+    const scene = InteriorRenderer.buildInteriorScene(interiorData, null, null);
+
+    if (!this.activeInterior) {
+      this.savedOverviewCamera = {
+        x: this.camera.x,
+        y: this.camera.y,
+        zoom: this.camera.zoom
+      };
+    }
+
+    this.camera.targetX = 0;
+    this.camera.targetY = 0;
+    this.camera.x = 0;
+    this.camera.y = 0;
+    const fitZoom = Math.min(1.0, (this.cssHeight - 60) / scene.height, (this.cssWidth - 60) / scene.width);
+    this.camera.zoom = Math.max(0.60, fitZoom);
+    this.camera.targetZoom = this.camera.zoom;
+
+    this.activeInterior = {
+      ...interiorData,
+      scene
+    };
+  }
+
+  /**
+   * Exits Level 4 and returns to Level 3 Settlement Overview
+   */
+  exitInterior() {
+    this.activeInterior = null;
+    if (this.savedOverviewCamera) {
+      this.camera.x = this.savedOverviewCamera.x;
+      this.camera.y = this.savedOverviewCamera.y;
+      this.camera.zoom = this.savedOverviewCamera.zoom;
+      this.camera.targetZoom = this.savedOverviewCamera.zoom;
+      this.savedOverviewCamera = null;
+    } else {
+      this.camera.x = 0;
+      this.camera.y = 0;
+      this.camera.zoom = 1.15;
+      this.camera.targetZoom = 1.15;
+    }
+  }
+
+  renderTourHighlight(ctx) {
+    if (!this.highlightEntity) return;
+    const { x, y, label, icon } = this.highlightEntity;
+    const now = performance.now();
+    const pulse = Math.sin(now * 0.006) * 5;
+    const alpha = (Math.sin(now * 0.005) + 1) * 0.35 + 0.35;
+
+    ctx.save();
+    ctx.translate(x, y);
+
+    // 1. Concentric Solarpunk Beacon Rings
+    ctx.strokeStyle = `rgba(251, 191, 36, ${alpha})`;
+    ctx.lineWidth = 2.5;
+    ctx.setLineDash([6, 6]);
+    ctx.beginPath();
+    ctx.arc(0, 0, 48 + pulse, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    ctx.strokeStyle = 'rgba(56, 189, 248, 0.8)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(0, 0, 36, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // 2. Highlighting Callout Target Marker / Flag above
+    ctx.fillStyle = 'rgba(15, 23, 42, 0.90)';
+    ctx.strokeStyle = '#fbbf24';
+    ctx.lineWidth = 1.5;
+    const text = `${icon || '🎯'} ${label || 'Inspection Target'}`;
+    ctx.font = 'bold 11px system-ui';
+    const textW = ctx.measureText(text).width + 24;
+
+    ctx.beginPath();
+    ctx.roundRect(-textW / 2, -64, textW, 26, 6);
+    ctx.fill();
+    ctx.stroke();
+
+    // Pointer notch
+    ctx.fillStyle = '#fbbf24';
+    ctx.beginPath();
+    ctx.moveTo(0, -38);
+    ctx.lineTo(-6, -44);
+    ctx.lineTo(6, -44);
+    ctx.closePath();
+    ctx.fill();
+
+    // Text label
+    ctx.fillStyle = '#f8fafc';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(text, 0, -51);
+
+    ctx.restore();
+  }
+
+  renderInteriorOverlay(ctx) {
+    if (!this.activeInterior) return;
+    const name = this.activeInterior.name || 'Module';
+
+    ctx.save();
+    // Top-left HUD badge in screen space
+    ctx.fillStyle = 'rgba(15, 23, 42, 0.88)';
+    ctx.strokeStyle = '#38bdf8';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.roundRect(16, 16, Math.min(360, this.cssWidth - 32), 48, 8);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = '#38bdf8';
+    ctx.font = 'bold 10px system-ui';
+    ctx.textAlign = 'left';
+    ctx.fillText('🔍 LEVEL 4: ARCHITECTURAL INTERIOR CUTAWAY', 28, 33);
+
+    ctx.fillStyle = '#f8fafc';
+    ctx.font = 'bold 12px system-ui';
+    ctx.fillText(name, 28, 51);
     ctx.restore();
   }
 

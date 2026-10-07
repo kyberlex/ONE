@@ -1,0 +1,41 @@
+# O.N.E. Canonical Glossary — Korean (ko)
+Open Networked Earth -> Open Networked Earth (열린 네트워크 지구)
+O.N.E. -> O.N.E.
+Usufruct -> 용익권
+Universal Usufruct -> 보편적 용익권
+Sortition -> 추첨제
+Rotational Sortition -> 순환 추첨제
+Class 0 Invariants -> 0급 불변원칙
+Thermodynamic Accounting -> 열역학적 회계
+Thermodynamic Balance -> 열역학적 균형
+Heretic's Commons -> 이단자의 공유지
+Community Land Trust -> 공동체 토지 신탁 (CLT)
+Ecological Carrying Capacity -> 생태적 수용력
+Deterministic Diverse Double-Compilation -> 결정론적 다중 이중 컴파일 (DDC)
+Threshold Multi-Party Computation -> 임계 다자간 연산 (t-MPC)
+Zero-Knowledge Proof-of-Personhood -> 영지식 인간 증명 (ZK-PoP)
+External Trade Interface -> 대외 무역 인터페이스 (ETI)
+Delray Foundry -> 델레이 주조소
+Ambassador Bridge -> 앰배서더 다리
+River Rouge -> 루즈 강
+Zug Island -> 주그 섬
+Aegis-Apex -> 이지스-에이펙스
+Meridian -> 메리디안
+Blackiron -> 블랙아이언
+Marcus Vance -> 마커스 밴스
+Elena Cruz -> 엘레나 크루즈
+Toby Morales -> 토비 모랄레스
+Maya Lin-Mercado -> 마야 린-메르카도
+Ray Miller -> 레이 밀러
+Kira Vance -> 키라 밴스
+Sully -> 설리
+Campbell -> 캠벨
+Leo -> 레오
+Sarah -> 사라
+Mateo -> 마테오
+FCI Milan -> 밀란 연방 교도소 (FCI Milan)
+West Jefferson -> 웨스트 제퍼슨
+Dearborn Street -> 디어본 거리
+Sandwich -> 샌드위치
+Windsor -> 윈저
+Detroit -> 디트로이트

@@ -1,0 +1,41 @@
+# O.N.E. Canonical Glossary — Russian (ru)
+Open Networked Earth -> Open Networked Earth (Открытая Сетевая Земля)
+O.N.E. -> O.N.E.
+Usufruct -> Узуфрукт
+Universal Usufruct -> Универсальный узуфрукт
+Sortition -> Жребий (Сортиция)
+Rotational Sortition -> Ротационная сортиция
+Class 0 Invariants -> Инварианты Класса 0
+Thermodynamic Accounting -> Термодинамический учет
+Thermodynamic Balance -> Термодинамический баланс
+Heretic's Commons -> Община Еретика
+Community Land Trust -> Community Land Trust (Общественный земельный траст)
+Ecological Carrying Capacity -> Экологическая емкость биосферы
+Deterministic Diverse Double-Compilation -> Детерминированная диверсифицированная двойная компиляция (DDC)
+Threshold Multi-Party Computation -> Пороговые многопартийные вычисления (t-MPC)
+Zero-Knowledge Proof-of-Personhood -> Доказательство личности с нулевым разглашением (ZK-PoP)
+External Trade Interface -> Внешний торговый интерфейс (ETI)
+Delray Foundry -> Завод в Делрее
+Ambassador Bridge -> Мост Амбассадор
+River Rouge -> Ривер-Руж
+Zug Island -> Остров Зуг
+Aegis-Apex -> Aegis-Apex
+Meridian -> Meridian
+Blackiron -> Blackiron
+Marcus Vance -> Маркус Вэнс
+Elena Cruz -> Елена Крус
+Toby Morales -> Тоби Моралес
+Maya Lin-Mercado -> Майя Лин-Меркадо
+Ray Miller -> Рэй Миллер
+Kira Vance -> Кира Вэнс
+Sully -> Салли
+Campbell -> Кэмпбелл
+Leo -> Лео
+Sarah -> Сара
+Mateo -> Матео
+FCI Milan -> FCI Milan
+West Jefferson -> Уэст-Джефферсон
+Dearborn Street -> Дирборн-стрит
+Sandwich -> Сэндвич
+Windsor -> Виндзор
+Detroit -> Детройт

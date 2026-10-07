@@ -1,0 +1,41 @@
+# O.N.E. Canonical Glossary — Italian (it)
+Open Networked Earth -> Open Networked Earth (Terra Aperta e Connessa)
+O.N.E. -> O.N.E.
+Usufruct -> Usufrutto
+Universal Usufruct -> Usufrutto Universale
+Sortition -> Sorteggio
+Rotational Sortition -> Sorteggio a Rotazione
+Class 0 Invariants -> Invarianti di Classe 0
+Thermodynamic Accounting -> Contabilità Termodinamica
+Thermodynamic Balance -> Equilibrio Termodinamico
+Heretic's Commons -> Commons dell'Eretico
+Community Land Trust -> Community Land Trust
+Ecological Carrying Capacity -> Capacità di Carico Ecologico
+Deterministic Diverse Double-Compilation -> Deterministic Diverse Double-Compilation (DDC)
+Threshold Multi-Party Computation -> Computazione Multi-Parte a Soglia (t-MPC)
+Zero-Knowledge Proof-of-Personhood -> Dimostrazione di Personalità a Conoscenza Zero (ZK-PoP)
+External Trade Interface -> External Trade Interface (ETI)
+Delray Foundry -> Fonderia di Delray
+Ambassador Bridge -> Ambassador Bridge
+River Rouge -> River Rouge
+Zug Island -> Zug Island
+Aegis-Apex -> Aegis-Apex
+Meridian -> Meridian
+Blackiron -> Blackiron
+Marcus Vance -> Marcus Vance
+Elena Cruz -> Elena Cruz
+Toby Morales -> Toby Morales
+Maya Lin-Mercado -> Maya Lin-Mercado
+Ray Miller -> Ray Miller
+Kira Vance -> Kira Vance
+Sully -> Sully
+Campbell -> Campbell
+Leo -> Leo
+Sarah -> Sarah
+Mateo -> Mateo
+FCI Milan -> FCI Milan
+West Jefferson -> West Jefferson
+Dearborn Street -> Dearborn Street
+Sandwich -> Sandwich
+Windsor -> Windsor
+Detroit -> Detroit

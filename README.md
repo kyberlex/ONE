@@ -9,6 +9,7 @@
 <p align="center">
   <a href="https://open-networked-earth.surge.sh">🌐 Live Edge Platform</a> •
   <a href="https://one-oasis.surge.sh">🎮 Play O-ASIS MMO (one-oasis.surge.sh)</a> •
+  <a href="books/README.md">📚 6-Volume Novel Series</a> •
   <a href="https://notebook.google.com/notebook/c123b58e-7e33-4565-8c1c-c5da2de98471">🧠 Interactive AI Oracle</a> •
   <a href="https://github.com/kyberlex/ONE/discussions">💬 Dialectic Forum & RFCs</a> •
   <a href="sim/README.md">📖 Simulation Architecture</a> •
@@ -51,6 +52,15 @@ This public repository contains the complete canonical constitutional charter, c
 .
 ├── ONE NETWORKED EARTH (O.N.E.).md   # Canonical Master Constitution (46 Statutory Articles)
 ├── COMPARATIVE_ANALYSIS.md           # Comparative Benchmark: O.N.E. vs. 9 Alternative Models
+├── books/                            # THE 6-VOLUME MASTER NOVEL SERIES & EPUB CANON
+│   ├── README.md                     # Series index, narrative architecture, and EPUB catalog
+│   ├── vol0/                         # Vol 0: Genesis of the Commons (Spitsbergen 2026)
+│   ├── vol1/                         # Vol 1: The Great Disruption (North America — Ground Zero)
+│   ├── vol2/                         # Vol 2: The Metabolic Shift (Western Europe)
+│   ├── vol3/                         # Vol 3: The Planetary Commons (East & South Asia)
+│   ├── vol4/                         # Vol 4: The Kinetic Frontier (Global South & Pacific)
+│   ├── vol5/                         # Vol 5: The Resilient Horizon (Global Convergence)
+│   └── dossier.md                    # Master narrative bible & screenplay treatments
 ├── sim/                              # LIVING WEB SANDBOX & GAME ENGINE
 │   ├── README.md                     # Transition architecture & human vector modeling
 │   ├── GAME_DESIGN.md                # Master Game Design Document (Hex grid, Leontief, Demarchy)

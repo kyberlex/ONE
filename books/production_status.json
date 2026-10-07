@@ -1,0 +1,75 @@
+{
+  "status": "PRODUCTION_COMPLETE",
+  "started_at": "2026-09-12T21:19:16.004040+00:00",
+  "last_updated": "2026-09-14T22:25:00.000000+00:00",
+  "current_volume": 0,
+  "current_unit": "VOL0_CH24",
+  "current_stage": "COMPLETE",
+  "total_chapters_target": 274,
+  "total_chapters_drafted": 274,
+  "total_chapters_translated": 1839,
+  "epubs_compiled_en": 6,
+  "epubs_compiled_it": 6,
+  "recent_activity": [
+    "[*] Volume 0 Ch 18 demagogue simulation resolution & pure sortition synthesis reconciled",
+    "[*] Master English & Russian Volume 0 EPUBs successfully compiled and synchronized",
+    "[*] Master i18n & Translation Matrix synchronized across 14 languages"
+  ],
+  "last_audit": {
+    "unit": "VOL0_CH18",
+    "iteration": 2,
+    "word_count": 2162,
+    "state": "LEDGER_PASSED",
+    "style": "STYLE_APPROVED"
+  },
+  "volumes": {
+    "0": {
+      "title": "O.N.E. — The Conclave: Volume 0 (Genesis)",
+      "drafted": 24,
+      "translated": 24,
+      "epub_en": true,
+      "epub_it": true,
+      "completed": true
+    },
+    "1": {
+      "title": "O.N.E. — Open Networked Earth: Volume 1 (Ground Zero)",
+      "drafted": 50,
+      "translated": 50,
+      "epub_en": true,
+      "epub_it": true,
+      "completed": true
+    },
+    "2": {
+      "title": "O.N.E. — The Transalpine Corridor: Volume 2 (Europe)",
+      "drafted": 50,
+      "translated": 50,
+      "epub_en": true,
+      "epub_it": true,
+      "completed": true
+    },
+    "3": {
+      "title": "O.N.E. — The Andean Watershed: Volume 3 (Latin America)",
+      "drafted": 50,
+      "translated": 50,
+      "epub_en": true,
+      "epub_it": true,
+      "completed": true
+    },
+    "4": {
+      "title": "O.N.E. — The Maritime Commons: Volume 4 (Asia-Pacific)",
+      "drafted": 50,
+      "translated": 50,
+      "epub_en": true,
+      "epub_it": true,
+      "completed": true
+    },
+    "5": {
+      "title": "O.N.E. — The Geneva Charter: Volume 5 (The Convergence)",
+      "drafted": 50,
+      "translated": 50,
+      "epub_en": true,
+      "epub_it": true,
+      "completed": true
+    }
+  }
+}

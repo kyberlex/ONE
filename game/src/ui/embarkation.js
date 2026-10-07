@@ -16,6 +16,7 @@ import { GLOBAL_STARTER_NODES, getClimateZoneFromLat, createCustomGlobalNode } f
 import { formatPopulation } from '../data/cities.js';
 import { createAvatarCustomizer } from './avatar_customizer.js';
 import { soundFX } from '../audio/sound_fx.js';
+import { SettlementCanvas } from '../render/settlement_canvas.js';
 
 function haversineKm(lat1, lon1, lat2, lon2) {
   const R = 6371;
@@ -56,6 +57,7 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
     modules: [
       {
         id: 'camper-van',
+        type: 'CAMPER_VAN',
         name: 'Pioneer Camper Van',
         icon: '🚐',
         role: 'Mobile Basecamp & Auxiliary Storage',
@@ -66,6 +68,7 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
       },
       {
         id: 'solar-array',
+        type: 'SOLAR_ARRAY',
         name: 'Bifacial Solar Array',
         icon: '⚡',
         role: 'Southern Photovoltaic Array',
@@ -76,6 +79,7 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
       },
       {
         id: 'water-flume',
+        type: 'WATER_FLUME',
         name: 'Snow-Melt & Rain Flume',
         icon: '💧',
         role: 'Gravity-Fed Hydrological Intake',
@@ -109,6 +113,7 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
     modules: [
       {
         id: 'mhu-clusters',
+        type: 'DWELLING',
         name: 'Modular Habitat Units (MHUs)',
         icon: '🏡',
         role: 'Civic Usufruct Dwellings',
@@ -119,6 +124,7 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
       },
       {
         id: 'fablab-shop',
+        type: 'WORKSHOP',
         name: 'FabLab Machine Shop',
         icon: '⚙️',
         role: 'Open-Hardware Tooling & Robotics',
@@ -129,6 +135,7 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
       },
       {
         id: 'greywater-reedbed',
+        type: 'WATER',
         name: 'Greywater Reed-Bed Basin',
         icon: '🌿',
         role: 'Biological Wetland Filtration',
@@ -162,6 +169,7 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
     modules: [
       {
         id: 'central-agora',
+        type: 'AGORA',
         name: 'Central Agora Hearth',
         icon: '🏛️',
         role: 'Athenian Demarchy Assembly',
@@ -172,6 +180,7 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
       },
       {
         id: 'trike-depot',
+        type: 'TRIKE_DEPOT',
         name: 'Cargo Trike & Vertiport Hub',
         icon: '🚲',
         role: 'Zero-Emission Inter-Node Logistics',
@@ -182,6 +191,7 @@ export const CIVILIZATIONAL_TOUR_STOPS = [
       },
       {
         id: 'sovereign-microgrid',
+        type: 'SOVEREIGN_MICROGRID',
         name: '100% Microgrid & LFP Banks',
         icon: '☀️',
         role: 'Autonomous Energy Abundance',
@@ -265,6 +275,7 @@ export class EmbarkationDesk {
     this.tourModuleMarkers = [];
     this.selectedTourModule = null;
     this.tourMap = null;
+    this.tourCanvas = null;
     this.tourMarker = null;
 
     // Seed Node starting state
@@ -410,12 +421,15 @@ export class EmbarkationDesk {
         <!-- STAGE 2: 3-STOP CIVILIZATIONAL PREVIEW TOUR (EPIC 1.1) -->
         <div id="stage-2-tour" class="embark-form-wrap stage-panel hidden">
           <div class="tour-container-card">
-            <!-- Map Viewport -->
-            <div class="tour-map-viewport">
+            <!-- Map & Canvas Viewport -->
+            <div class="tour-map-viewport" style="position: relative;">
               <div id="world-leaflet-tour-map" style="width: 100%; height: 100%;"></div>
+              <div id="tour-canvas-container" class="hidden" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 10; background: #050f0a;">
+                <canvas id="tour-settlement-canvas" style="width: 100%; height: 100%; display: block;"></canvas>
+              </div>
               
               <!-- Tour Automated Playback Ribbon -->
-              <div class="tour-playback-ribbon" id="tour-playback-ribbon">
+              <div class="tour-playback-ribbon" id="tour-playback-ribbon" style="z-index: 20;">
                 <div class="tour-status-pill">
                   <span class="pulse-dot"></span>
                   <span id="tour-step-counter">STOP 1 / 3 • INITIATING</span>
@@ -799,10 +813,22 @@ export class EmbarkationDesk {
         if (foundIdx !== -1) {
           this.selectedTourModule = stop.modules[foundIdx];
           this.renderTourConsole(false);
-          if (this.tourMap && this.tourMap.map) {
-            this.tourMap.map.flyTo([this.selectedTourModule.lat, this.selectedTourModule.lng], 10.8, { duration: 1.0 });
-            this.renderTourModuleMarkers(stop, foundIdx);
+
+          const leafletEl = document.getElementById('world-leaflet-tour-map');
+          const canvasContainer = document.getElementById('tour-canvas-container');
+          if (leafletEl) leafletEl.style.display = 'none';
+          if (canvasContainer) {
+            canvasContainer.classList.remove('hidden');
+            if (this.tourCanvas) {
+              this.tourCanvas.resize();
+              this.tourCanvas.enterInterior(this.selectedTourModule);
+            }
           }
+
+          const counterEl = this.container.querySelector('#tour-step-counter');
+          const tickerEl = this.container.querySelector('#tour-ticker');
+          if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • LEVEL 4: INTERIOR INSPECTION`;
+          if (tickerEl) tickerEl.innerHTML = `🔍 Level 4 (Interior): <strong style="color: #fbbf24;">${this.selectedTourModule.name}</strong> • Yield: <strong>${this.selectedTourModule.yield}</strong>`;
         }
       });
     });
@@ -850,6 +876,9 @@ export class EmbarkationDesk {
       this.tourTimer = null;
     }
     this.clearTourModuleMarkers();
+    if (this.tourCanvas) {
+      this.tourCanvas.exitInterior();
+    }
   }
 
   toggleTourPause() {
@@ -958,6 +987,22 @@ export class EmbarkationDesk {
     this.currentTourSubStep = subStep;
     const counterEl = this.container.querySelector('#tour-step-counter');
     const tickerEl = this.container.querySelector('#tour-ticker');
+    const leafletEl = document.getElementById('world-leaflet-tour-map');
+    const canvasContainer = document.getElementById('tour-canvas-container');
+
+    const showLeaflet = () => {
+      if (leafletEl) leafletEl.style.display = 'block';
+      if (canvasContainer) canvasContainer.classList.add('hidden');
+      if (this.tourCanvas) this.tourCanvas.exitInterior();
+    };
+
+    const showCanvas = () => {
+      if (leafletEl) leafletEl.style.display = 'none';
+      if (canvasContainer) {
+        canvasContainer.classList.remove('hidden');
+        if (this.tourCanvas) this.tourCanvas.resize();
+      }
+    };
 
     const scheduleNext = (delayMs) => {
       if (this.isTourPaused) return;
@@ -972,9 +1017,10 @@ export class EmbarkationDesk {
 
     switch (subStep) {
       case 0: {
-        // 0. Present World Map
-        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • WORLD OVERVIEW`;
-        if (tickerEl) tickerEl.textContent = `🌍 Planetary Cartography: Locating Stop ${this.currentTourStopIndex + 1} of 3 (${stop.nodeName})...`;
+        // LEVEL 1: Present World Map (Leaflet)
+        showLeaflet();
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • LEVEL 1: PLANETARY EARTH`;
+        if (tickerEl) tickerEl.innerHTML = `🌍 Level 1 (World Map): Locating Stop ${this.currentTourStopIndex + 1} of 3 (${stop.nodeName})...`;
 
         this.clearTourModuleMarkers();
         if (this.tourMap.regionalCitiesLayer) this.tourMap.regionalCitiesLayer.clearLayers();
@@ -990,10 +1036,11 @@ export class EmbarkationDesk {
       }
 
       case 1: {
-        // 1. Zoom in to region, give time to understand where we are (read big cities next to node)
-        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • REGIONAL WATERSHED`;
+        // LEVEL 2: Regional watershed view with neighboring cities (Leaflet)
+        showLeaflet();
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • LEVEL 2: REGIONAL WATERSHED`;
         const cityNames = (stop.majorCities || []).map(c => c.name).join(', ');
-        if (tickerEl) tickerEl.innerHTML = `📍 Zooming to <strong style="color: #fbbf24;">${stop.bioregion}</strong> (${stop.country}) • Major Hubs: <strong style="color: #38bdf8;">${cityNames}</strong>`;
+        if (tickerEl) tickerEl.innerHTML = `📍 Level 2 (Region): Bioregion <strong style="color: #fbbf24;">${stop.bioregion}</strong> (${stop.country}) • Major Hubs: <strong style="color: #38bdf8;">${cityNames}</strong>`;
 
         this.tourMap.map.flyTo([stop.lat, stop.lng], 5.8, { duration: 1.6 });
 
@@ -1006,8 +1053,9 @@ export class EmbarkationDesk {
       }
 
       case 2: {
-        // 2. Show node synoptic, give time to read
-        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • SYNOPTIC CARD`;
+        // LEVEL 2: Show node synoptic overview (Leaflet)
+        showLeaflet();
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • LEVEL 2: NODE SYNOPTIC`;
         if (tickerEl) tickerEl.innerHTML = `📋 Synoptic: <strong style="color: #10b981;">${stop.nodeName}</strong> • ${stop.populationLabel} • ${stop.debtLabel}`;
 
         this.tourMap.map.flyTo([stop.lat, stop.lng], 6.5, { duration: 1.2 });
@@ -1023,102 +1071,117 @@ export class EmbarkationDesk {
 
         this.selectedTourModule = stop.modules[0];
         this.renderTourConsole(true);
-        scheduleNext(4500);
+        scheduleNext(4200);
         break;
       }
 
       case 3: {
-        // 3. Zoom in to the node, give time to understand what's shown, highlight 1st module we'll inspect
+        // LEVEL 3: Zoom in to Node on Settlement Canvas, highlight Module 1
         const mod1 = stop.modules[0];
-        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • NODE PERIMETER`;
-        if (tickerEl) tickerEl.innerHTML = `🔭 Settlement Layout: Next inspecting Module 1: <strong style="color: #fbbf24;">${mod1.icon} ${mod1.name}</strong>`;
+        showCanvas();
+        if (this.tourCanvas) {
+          this.tourCanvas.exitInterior();
+          this.tourCanvas.setTourPreset(this.currentTourStopIndex, 0);
+        }
 
-        this.tourMap.map.flyTo([stop.lat, stop.lng], 8.8, { duration: 1.3 });
-        this.renderTourModuleMarkers(stop, 0);
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • LEVEL 3: SETTLEMENT NODE`;
+        if (tickerEl) tickerEl.innerHTML = `🔭 Level 3 (Node Canvas): Settlement Layout • Next inspecting: <strong style="color: #fbbf24;">${mod1.icon} ${mod1.name}</strong>`;
+
         this.selectedTourModule = mod1;
         this.renderTourConsole(false);
-
-        scheduleNext(3400);
+        scheduleNext(4200);
         break;
       }
 
       case 4: {
-        // 4. Zoom into 1st module, give some time to understand what's shown
+        // LEVEL 4: Zoom into Module 1 Interior Cutaway on Canvas
         const mod1 = stop.modules[0];
-        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • MODULE 1 INSPECTION`;
-        if (tickerEl) tickerEl.innerHTML = `🔍 Module 1 Focus: <strong style="color: #fbbf24;">${mod1.name}</strong> (${mod1.role}) • Yield: <strong>${mod1.yield}</strong>`;
+        showCanvas();
+        if (this.tourCanvas) {
+          this.tourCanvas.enterInterior(mod1);
+        }
 
-        this.tourMap.map.flyTo([mod1.lat, mod1.lng], 10.8, { duration: 1.4 });
-        this.renderTourModuleMarkers(stop, 0);
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • LEVEL 4: MODULE 1 INTERIOR`;
+        if (tickerEl) tickerEl.innerHTML = `🔍 Level 4 (Interior Cutaway): <strong style="color: #fbbf24;">${mod1.name}</strong> (${mod1.role}) • Yield: <strong>${mod1.yield}</strong>`;
+
         this.selectedTourModule = mod1;
         this.renderTourConsole(false);
-
-        scheduleNext(5200);
+        scheduleNext(5500);
         break;
       }
 
       case 5: {
-        // 5. Zoom back to node, highlight 2nd module we'll inspect
+        // LEVEL 3: Zoom back to Node on Settlement Canvas, highlight Module 2
         const mod2 = stop.modules[1];
-        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • NODE PERIMETER`;
-        if (tickerEl) tickerEl.innerHTML = `🔭 Returning to Settlement: Next inspecting Module 2: <strong style="color: #fbbf24;">${mod2.icon} ${mod2.name}</strong>`;
+        showCanvas();
+        if (this.tourCanvas) {
+          this.tourCanvas.exitInterior();
+          this.tourCanvas.setTourPreset(this.currentTourStopIndex, 1);
+        }
 
-        this.tourMap.map.flyTo([stop.lat, stop.lng], 8.8, { duration: 1.3 });
-        this.renderTourModuleMarkers(stop, 1);
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • LEVEL 3: SETTLEMENT NODE`;
+        if (tickerEl) tickerEl.innerHTML = `🔭 Level 3 (Node Canvas): Returning to Overview • Next inspecting: <strong style="color: #fbbf24;">${mod2.icon} ${mod2.name}</strong>`;
+
         this.selectedTourModule = mod2;
         this.renderTourConsole(false);
-
-        scheduleNext(3400);
+        scheduleNext(4000);
         break;
       }
 
       case 6: {
-        // 6. Zoom into 2nd module, give some time to understand what's shown
+        // LEVEL 4: Zoom into Module 2 Interior Cutaway on Canvas
         const mod2 = stop.modules[1];
-        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • MODULE 2 INSPECTION`;
-        if (tickerEl) tickerEl.innerHTML = `🔍 Module 2 Focus: <strong style="color: #fbbf24;">${mod2.name}</strong> (${mod2.role}) • Yield: <strong>${mod2.yield}</strong>`;
+        showCanvas();
+        if (this.tourCanvas) {
+          this.tourCanvas.enterInterior(mod2);
+        }
 
-        this.tourMap.map.flyTo([mod2.lat, mod2.lng], 10.8, { duration: 1.4 });
-        this.renderTourModuleMarkers(stop, 1);
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • LEVEL 4: MODULE 2 INTERIOR`;
+        if (tickerEl) tickerEl.innerHTML = `🔍 Level 4 (Interior Cutaway): <strong style="color: #fbbf24;">${mod2.name}</strong> (${mod2.role}) • Yield: <strong>${mod2.yield}</strong>`;
+
         this.selectedTourModule = mod2;
         this.renderTourConsole(false);
-
-        scheduleNext(5200);
+        scheduleNext(5500);
         break;
       }
 
       case 7: {
-        // 7. Zoom back to node, highlight 3rd module we'll inspect
+        // LEVEL 3: Zoom back to Node on Settlement Canvas, highlight Module 3
         const mod3 = stop.modules[2];
-        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • NODE PERIMETER`;
-        if (tickerEl) tickerEl.innerHTML = `🔭 Returning to Settlement: Next inspecting Module 3: <strong style="color: #fbbf24;">${mod3.icon} ${mod3.name}</strong>`;
+        showCanvas();
+        if (this.tourCanvas) {
+          this.tourCanvas.exitInterior();
+          this.tourCanvas.setTourPreset(this.currentTourStopIndex, 2);
+        }
 
-        this.tourMap.map.flyTo([stop.lat, stop.lng], 8.8, { duration: 1.3 });
-        this.renderTourModuleMarkers(stop, 2);
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • LEVEL 3: SETTLEMENT NODE`;
+        if (tickerEl) tickerEl.innerHTML = `🔭 Level 3 (Node Canvas): Returning to Overview • Next inspecting: <strong style="color: #fbbf24;">${mod3.icon} ${mod3.name}</strong>`;
+
         this.selectedTourModule = mod3;
         this.renderTourConsole(false);
-
-        scheduleNext(3400);
+        scheduleNext(4000);
         break;
       }
 
       case 8: {
-        // 8. Zoom into 3rd module, give some time to understand what's shown
+        // LEVEL 4: Zoom into Module 3 Interior Cutaway on Canvas
         const mod3 = stop.modules[2];
-        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • MODULE 3 INSPECTION`;
-        if (tickerEl) tickerEl.innerHTML = `🔍 Module 3 Focus: <strong style="color: #fbbf24;">${mod3.name}</strong> (${mod3.role}) • Yield: <strong>${mod3.yield}</strong>`;
+        showCanvas();
+        if (this.tourCanvas) {
+          this.tourCanvas.enterInterior(mod3);
+        }
 
-        this.tourMap.map.flyTo([mod3.lat, mod3.lng], 10.8, { duration: 1.4 });
-        this.renderTourModuleMarkers(stop, 2);
+        if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} / 3 • LEVEL 4: MODULE 3 INTERIOR`;
+        if (tickerEl) tickerEl.innerHTML = `🔍 Level 4 (Interior Cutaway): <strong style="color: #fbbf24;">${mod3.name}</strong> (${mod3.role}) • Yield: <strong>${mod3.yield}</strong>`;
+
         this.selectedTourModule = mod3;
         this.renderTourConsole(false);
-
-        scheduleNext(5200);
+        scheduleNext(5500);
         break;
       }
 
       case 9: {
-        // 9. Repeat above for other nodes or finish!
+        // STOP COMPLETE: Advance or finish!
         if (this.currentTourStopIndex < 2) {
           if (counterEl) counterEl.textContent = `STOP ${this.currentTourStopIndex + 1} COMPLETE`;
           if (tickerEl) tickerEl.innerHTML = `✅ Stage ${this.currentTourStopIndex + 1} Reconnaissance Complete • Transitioning to Stage ${this.currentTourStopIndex + 2}...`;
@@ -1198,6 +1261,12 @@ export class EmbarkationDesk {
         if (!this.tourMap) {
           this.tourMap = new WorldMapController('world-leaflet-tour-map', () => {}, () => {}, null, null, { isTourMap: true });
           this.tourMap.updateSolarTerminator(12, 80);
+        }
+        if (!this.tourCanvas) {
+          const canvasEl = document.getElementById('tour-settlement-canvas');
+          if (canvasEl) {
+            this.tourCanvas = new SettlementCanvas(canvasEl);
+          }
         }
         if (this.tourMap && this.tourMap.map) {
           this.tourMap.map.invalidateSize();
@@ -1556,6 +1625,11 @@ export class EmbarkationDesk {
         mapEl.style.transition = 'filter 1.2s ease, transform 1.2s ease';
       }
       this.worldMap.map.flyTo([this.currentLat, this.currentLng], 13, { duration: 1.2 });
+    }
+
+    if (this.tourCanvas) {
+      this.tourCanvas.destroy();
+      this.tourCanvas = null;
     }
 
     setTimeout(() => {

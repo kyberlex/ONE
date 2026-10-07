@@ -1,0 +1,41 @@
+# O.N.E. Canonical Glossary — Turkish (tr)
+Open Networked Earth -> Open Networked Earth (Açık Ağ Bağlantılı Dünya)
+O.N.E. -> O.N.E.
+Usufruct -> İntifa Hakkı (Usufruct)
+Universal Usufruct -> Evrensel İntifa Hakkı
+Sortition -> Kura Yöntemi (Sortisyon)
+Rotational Sortition -> Dönüşümlü Kura Sistemi
+Class 0 Invariants -> Sınıf 0 Değişmezleri
+Thermodynamic Accounting -> Termodinamik Muhasebe
+Thermodynamic Balance -> Termodinamik Denge
+Heretic's Commons -> Sapkının Müşterekleri
+Community Land Trust -> Topluluk Toprak Vakfı (CLT)
+Ecological Carrying Capacity -> Ekolojik Taşıma Kapasitesi
+Deterministic Diverse Double-Compilation -> Deterministik Çeşitlendirilmiş Çift Derleme (DDC)
+Threshold Multi-Party Computation -> Eşik Çok Partili Hesaplama (t-MPC)
+Zero-Knowledge Proof-of-Personhood -> Sıfır Bilgi Kişilik Kanıtı (ZK-PoP)
+External Trade Interface -> Harici Ticaret Arayüzü (ETI)
+Delray Foundry -> Delray Dökümhanesi
+Ambassador Bridge -> Ambassador Köprüsü
+River Rouge -> Rouge Nehri
+Zug Island -> Zug Adası
+Aegis-Apex -> Aegis-Apex
+Meridian -> Meridian
+Blackiron -> Blackiron
+Marcus Vance -> Marcus Vance
+Elena Cruz -> Elena Cruz
+Toby Morales -> Toby Morales
+Maya Lin-Mercado -> Maya Lin-Mercado
+Ray Miller -> Ray Miller
+Kira Vance -> Kira Vance
+Sully -> Sully
+Campbell -> Campbell
+Leo -> Leo
+Sarah -> Sarah
+Mateo -> Mateo
+FCI Milan -> FCI Milan Cezaevi
+West Jefferson -> West Jefferson
+Dearborn Street -> Dearborn Caddesi
+Sandwich -> Sandwich
+Windsor -> Windsor
+Detroit -> Detroit

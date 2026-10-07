@@ -1,0 +1,41 @@
+# O.N.E. Canonical Glossary — Chinese (zh)
+Open Networked Earth -> 开放网络地球 (O.N.E.)
+O.N.E. -> O.N.E.
+Usufruct -> 用益权
+Universal Usufruct -> 普遍用益权
+Sortition -> 抽签治理 (Sortition)
+Rotational Sortition -> 轮换抽签
+Class 0 Invariants -> 零级不变量
+Thermodynamic Accounting -> 热力学核算
+Thermodynamic Balance -> 热力学平衡
+Heretic's Commons -> 异端公地
+Community Land Trust -> 社区土地信托 (CLT)
+Ecological Carrying Capacity -> 生态承载力
+Deterministic Diverse Double-Compilation -> 确定性多样化双重编译 (DDC)
+Threshold Multi-Party Computation -> 门限多方安全计算 (t-MPC)
+Zero-Knowledge Proof-of-Personhood -> 零知识人格证明 (ZK-PoP)
+External Trade Interface -> 外部贸易接口 (ETI)
+Delray Foundry -> 德尔雷铸造厂
+Ambassador Bridge -> 大使桥
+River Rouge -> 鲁日河
+Zug Island -> 祖格岛
+Aegis-Apex -> 宙斯盾-顶点 (Aegis-Apex)
+Meridian -> 经线 (Meridian)
+Blackiron -> 黑铁 (Blackiron)
+Marcus Vance -> 马库斯·万斯
+Elena Cruz -> 埃莱娜·克鲁斯
+Toby Morales -> 托比·莫拉莱斯
+Maya Lin-Mercado -> 玛雅·林-梅尔卡多
+Ray Miller -> 雷·米勒
+Kira Vance -> 基拉·万斯
+Sully -> 萨利
+Campbell -> 坎贝尔
+Leo -> 里奥
+Sarah -> 莎拉
+Mateo -> 马特奥
+FCI Milan -> 米兰联邦监狱
+West Jefferson -> 西杰斐逊大街
+Dearborn Street -> 迪尔伯恩街
+Sandwich -> 桑威奇
+Windsor -> 温莎
+Detroit -> 底特律

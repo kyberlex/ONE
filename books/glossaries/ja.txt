@@ -1,0 +1,41 @@
+# O.N.E. Canonical Glossary — Japanese (ja)
+Open Networked Earth -> オープン・ネットワークト・アース（O.N.E.）
+O.N.E. -> O.N.E.
+Usufruct -> 用益権（Usufruct）
+Universal Usufruct -> 普遍的用益権
+Sortition -> 抽籤制（Sortition）
+Rotational Sortition -> 輪番抽籤
+Class 0 Invariants -> クラス0不変原理
+Thermodynamic Accounting -> 熱力学的資源会計
+Thermodynamic Balance -> 熱力学的均衡
+Heretic's Commons -> 異端者のコモンズ
+Community Land Trust -> コミュニティ・ランド・トラスト（CLT）
+Ecological Carrying Capacity -> 生態系収容力
+Deterministic Diverse Double-Compilation -> 決定論的多様二重コンパイル（DDC）
+Threshold Multi-Party Computation -> 閾値秘密分散マルチパーティ計算（t-MPC）
+Zero-Knowledge Proof-of-Personhood -> ゼロ知識人間性証明（ZK-PoP）
+External Trade Interface -> 外部貿易インターフェース（ETI）
+Delray Foundry -> デルレイ鋳造所
+Ambassador Bridge -> アンバサダー橋
+River Rouge -> ルージュ川
+Zug Island -> ズーク島
+Aegis-Apex -> イージス・エイペックス
+Meridian -> メリディアン
+Blackiron -> ブラックアイアン
+Marcus Vance -> マーカス・ヴァンス
+Elena Cruz -> エレナ・クルス
+Toby Morales -> トビー・モラレス
+Maya Lin-Mercado -> マヤ・リン＝メルカド
+Ray Miller -> レイ・ミラー
+Kira Vance -> キラ・ヴァンス
+Sully -> サリー
+Campbell -> キャンベル
+Leo -> レオ
+Sarah -> サラ
+Mateo -> マテオ
+FCI Milan -> ミラン連邦刑務所
+West Jefferson -> ウェスト・ジェファーソン
+Dearborn Street -> ディアボーン通り
+Sandwich -> サンドウィッチ
+Windsor -> ウィンザー
+Detroit -> デトロイト

@@ -1,0 +1,41 @@
+# O.N.E. Canonical Glossary — Spanish (es)
+Open Networked Earth -> Open Networked Earth (Tierra Abierta y Conectada)
+O.N.E. -> O.N.E.
+Usufruct -> Usufructo
+Universal Usufruct -> Usufructo Universal
+Sortition -> Sorteo
+Rotational Sortition -> Sorteo Rotativo
+Class 0 Invariants -> Invariantes de Clase 0
+Thermodynamic Accounting -> Contabilidad Termodinámica
+Thermodynamic Balance -> Equilibrio Termodinámico
+Heretic's Commons -> Bienes Comunes del Hereje
+Community Land Trust -> Fideicomiso de Tierras Comunitarias (CLT)
+Ecological Carrying Capacity -> Capacidad de Carga Ecológica
+Deterministic Diverse Double-Compilation -> Doble Compilación Diversa Determinista (DDC)
+Threshold Multi-Party Computation -> Computación Multipartita por Umbral (t-MPC)
+Zero-Knowledge Proof-of-Personhood -> Prueba de Personalidad de Conocimiento Cero (ZK-PoP)
+External Trade Interface -> Interfaz de Comercio Exterior (ETI)
+Delray Foundry -> Fundición de Delray
+Ambassador Bridge -> Puente Ambassador
+River Rouge -> River Rouge
+Zug Island -> Zug Island
+Aegis-Apex -> Aegis-Apex
+Meridian -> Meridian
+Blackiron -> Blackiron
+Marcus Vance -> Marcus Vance
+Elena Cruz -> Elena Cruz
+Toby Morales -> Toby Morales
+Maya Lin-Mercado -> Maya Lin-Mercado
+Ray Miller -> Ray Miller
+Kira Vance -> Kira Vance
+Sully -> Sully
+Campbell -> Campbell
+Leo -> Leo
+Sarah -> Sarah
+Mateo -> Mateo
+FCI Milan -> FCI Milan
+West Jefferson -> West Jefferson
+Dearborn Street -> Dearborn Street
+Sandwich -> Sandwich
+Windsor -> Windsor
+Detroit -> Detroit

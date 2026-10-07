@@ -1,0 +1,41 @@
+# O.N.E. Canonical Glossary — Arabic (ar)
+Open Networked Earth -> كوكب الأرض الشبكي المفتوح (O.N.E.)
+O.N.E. -> O.N.E.
+Usufruct -> حق الانتفاع
+Universal Usufruct -> حق الانتفاع الشامل
+Sortition -> القرعة الدستورية
+Rotational Sortition -> القرعة الدورية بالتعاقب
+Class 0 Invariants -> ثوابت الفئة صفر
+Thermodynamic Accounting -> المحاسبة الديناميكية الحرارية
+Thermodynamic Balance -> التوازن الديناميكي الحراري
+Heretic's Commons -> مشاع الهراطقة
+Community Land Trust -> صندوق أراضي المجتمع (CLT)
+Ecological Carrying Capacity -> القدرة الاستيعابية البيئية
+Deterministic Diverse Double-Compilation -> الترجمة المزدوجة المتنوعة الحتمية (DDC)
+Threshold Multi-Party Computation -> الحساب متعدد الأطراف القائم على العتبة (t-MPC)
+Zero-Knowledge Proof-of-Personhood -> إثبات الشخصية بالمعرفة الصفرية (ZK-PoP)
+External Trade Interface -> واجهة التجارة الخارجية (ETI)
+Delray Foundry -> مسبك ديلراي
+Ambassador Bridge -> جسر السفير
+River Rouge -> نهر روج
+Zug Island -> جزيرة زوغ
+Aegis-Apex -> إيجيس-أبيكس
+Meridian -> ميريديان
+Blackiron -> بلاك آيرون
+Marcus Vance -> ماركوس فانس
+Elena Cruz -> إيلينا كروز
+Toby Morales -> توبي موراليس
+Maya Lin-Mercado -> مايا لين-ميركادو
+Ray Miller -> راي ميلر
+Kira Vance -> كيرا فانس
+Sully -> سولي
+Campbell -> كامبل
+Leo -> ليو
+Sarah -> سارة
+Mateo -> ماتيو
+FCI Milan -> سجن ميلان الفيدرالي
+West Jefferson -> ويست جيفرسون
+Dearborn Street -> شارع ديربورن
+Sandwich -> ساندويتش
+Windsor -> وندسور
+Detroit -> ديترويت
