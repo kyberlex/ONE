@@ -37,6 +37,8 @@ In addition to the novel manuscripts, this directory contains complete screenwri
 
 ## **III. ONLINE ACCESS & DIGITAL DOWNLOADS**
 
+The source repository hosts the canonical English manuscripts. Complete localized editions across all 15 global languages (Arabic, German, Spanish, French, Hindi, Indonesian, Italian, Japanese, Korean, Portuguese, Russian, Turkish, Chinese) are compiled and accessible via the official web portal reader and downloadable as EPUBs:
+
 - **Official Web Portal & Interactive Reader:** [`https://open-networked-earth.surge.sh/#books`](https://open-networked-earth.surge.sh/#books)
 - **Permanent Preservation Archive:** [`https://archive.org/details/open-networked-earth-vol0-genesis`](https://archive.org/details/open-networked-earth-vol0-genesis)
 - **Community Dialectic & RFCs:** [`https://github.com/kyberlex/ONE/discussions`](https://github.com/kyberlex/ONE/discussions)
