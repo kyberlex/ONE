@@ -100,7 +100,22 @@ Heating a 200 m² multi-room house during a polar vortex will drain the entire b
 
 ---
 
-## 6. Stage 1 Bill of Materials (BOM) & Equipment Checklist
+## 6. The Stage 1 Human Maintenance Protocol (The 5-Lever Chore Architecture)
+
+Stage 1 operates before open-source humanoid robotics arrive in Stage 2/3. To prevent chore friction, burnout, and social resentment across the non-waivable **5 to 7 hours/week per adult** metabolic chore baseline, nodes deploy the five complementary levers:
+
+1. **Ergonomic Engineering Pre-Emption:** Primitive manual drudgery is systematically engineered away:
+   - *Sanitation:* Continuous-batch thermophilic composting chambers with solar-powered Archimedes augers (eliminating manual bucket hauling).
+   - *Weeding:* 15 cm ramial chipped wood (RCW) sheet-mulch and perennial polycultures reduce weeding by 90%.
+   - *Greywater:* Siphon-flushed gravity phytodepuration reed beds eliminate manual filter scrubbing.
+2. **Dynamic Dutch Auction (Time-Multiplier Bidding):** Unpopular high-friction tasks (e.g. digester cleaning, filter maintenance) are posted on the digital mesh. Unclaimed tasks tick up algorithmically in time credits (1.5x $\to$ 2.0x $\to$ 3.5x $\to$ 5.0x per Art. 5.1.3). A resident completing 1 hour of a 5.0x-rated task clears their entire 5-hour weekly requirement in a single hour, voluntarily clearing dirty jobs without coercion.
+3. **The Weekly "Talkoot" Communal Sprint:** Rather than atomizing maintenance into lonely, alienated shifts, 70% of routine upkeep is executed in a **Weekly 3-Hour Commons Sprint** (modeled on the Finnish *Talkoot*, Amish *Barn Raising*, and Andean *Minka*). The entire community works collectively with music and teamwork, followed by a shared communal feast.
+4. **Radically Transparent Stage 1 Onboarding:** The Stage 1 Pioneer Covenant filters out utopian tourists. Incoming pioneers explicitly affirm the 5–7 hr/wk physical maintenance compact before moving on-site, ensuring the pioneer cohort consists entirely of active builders.
+5. **Apprenticeship Pairs & Non-Carceral Reintegration (Arts. 5.1 & 5.2):** High-stakes chores are always paired (1 mentor + 1 apprentice), transforming maintenance into pedagogical empowerment. Defection is addressed via Article 5.2's non-carceral sanction ladder, restoring full standing *ipso jure* upon shift resumption.
+
+---
+
+## 7. Stage 1 Bill of Materials (BOM) & Equipment Checklist
 
 | Item | Specification / Model | Est. Cost (USD/EUR) | Purpose |
 | :--- | :--- | :--- | :--- |
