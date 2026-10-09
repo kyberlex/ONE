@@ -5,7 +5,7 @@
 **Author:** Kyberlex (`kyberlex@proton.me`)  
 **Repository:** [https://github.com/kyberlex/ONE](https://github.com/kyberlex/ONE)  
 **License:** AGPL-3.0-or-later / Open Knowledge  
-**Canonical Anchors:** [`bible/ONE NETWORKED EARTH (O.N.E.).md`](bible/ONE%20NETWORKED%20EARTH%20(O.N.E.).md) | [`synoptic.md`](synoptic.md) | [`oasis/oasis.md`](oasis/oasis.md)  
+**Canonical Anchors:** [`bible/ONE NETWORKED EARTH (O.N.E.).md`](bible/ONE%20NETWORKED%20EARTH%20(O.N.E.).md) | [`AI_BENCHMARK_POST_WORK.md`](AI_BENCHMARK_POST_WORK.md) | [`synoptic.md`](synoptic.md) | [`oasis/oasis.md`](oasis/oasis.md)  
 
 ---
 

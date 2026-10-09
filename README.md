@@ -17,6 +17,7 @@
   <a href="habitat/README.md">🏡 Habitat Architecture</a> •
   <a href="roadmap/roadmap.md">🗺️ Transition Roadmap</a> •
   <a href="foundation/README.md">🏛️ Foundation & Legal Statutes</a> •
+  <a href="AI_BENCHMARK_POST_WORK.md">🤖 4-AI Post-Work Benchmark</a> •
   <a href="COMPARATIVE_ANALYSIS.md">⚖️ Comparative Analysis</a> •
   <a href="oasis/README.md">🛡️ Immunity Matrix</a> •
   <a href="CODE_OF_CONDUCT.md">📜 Code of Conduct</a> •
@@ -51,6 +52,7 @@ This public repository contains the complete canonical constitutional charter, c
 ```
 .
 ├── ONE NETWORKED EARTH (O.N.E.).md   # Canonical Master Constitution (46 Statutory Articles)
+├── AI_BENCHMARK_POST_WORK.md        # 4-Lab Frontier AI Benchmark (Gemini, ChatGPT, Claude, Grok)
 ├── COMPARATIVE_ANALYSIS.md           # Comparative Benchmark: O.N.E. vs. 9 Alternative Models
 ├── books/                            # THE 6-VOLUME MASTER NOVEL SERIES & EPUB CANON
 │   ├── README.md                     # Series index, narrative architecture, and EPUB catalog

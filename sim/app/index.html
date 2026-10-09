@@ -23,6 +23,15 @@
           </div>
         </a>
 
+        <!-- Independent AI Benchmark Trigger Badge -->
+        <button id="btn-open-ai-benchmark" class="one-brand-badge btn-ai-benchmark-badge" title="Independent 3-AI Benchmark (Gemini, ChatGPT, Grok) Under Zero Marginal Labor ($MC_L → 0)" style="background: rgba(14, 165, 233, 0.12); border-color: rgba(56, 189, 248, 0.4);">
+          <span style="font-size: 18px; line-height: 1;">⚖️</span>
+          <div class="one-brand-text">
+            <span class="one-brand-name" style="color: #38bdf8;">AI BENCHMARK</span>
+            <span class="one-brand-sub" style="color: #34d399; font-weight: 700;">#1 (9.0/10) ↗</span>
+          </div>
+        </button>
+
         <div class="hud-meters-row">
         <!-- 1. ⚡ Energy & Heat -->
         <div class="resource-meter" id="meter-energy" title="Available Energy Buffer & Battery Reserve" data-i18n-title="meterEnergyTooltip">
@@ -120,6 +129,10 @@
             </div>
             <div class="dropdown-divider"></div>
             <div class="dropdown-section">
+              <button id="btn-open-ai-benchmark-menu" class="nav-group-item" title="Independent 3-AI Benchmark (Gemini, ChatGPT, Grok)">
+                <span class="item-icon">⚖️</span>
+                <span class="item-label">AI Benchmark (3 AIs)</span>
+              </button>
               <button id="btn-open-handbook" class="nav-group-item" title="Survival Rulebook & Field Manual (F1 / G)" data-i18n-title="handbookTooltip">
                 <span class="item-icon">📖</span>
                 <span class="item-label" data-i18n="handbookBtnLabel">Rulebook</span>
@@ -586,6 +599,305 @@
         <div id="handbook-modal-content" class="modal-body"></div>
       </div>
     </div>
+
+    <!-- MODAL: Independent 3-AI Comparative Benchmark (Gemini, ChatGPT, Grok) -->
+    <div id="modal-ai-benchmark" class="modal-overlay hidden">
+      <div class="modal-window modal-window-wide modal-window-ai-benchmark">
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <img src="/one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
+            <h3 id="modal-ai-benchmark-title">⚖️ Independent AI Comparative Benchmark</h3>
+            <span class="badge badge-ai-frontier">GEMINI • CHATGPT • CLAUDE • GROK</span>
+          </div>
+          <div class="modal-header-actions">
+            <a href="https://github.com/kyberlex/ONE/blob/main/AI_BENCHMARK_POST_WORK.md" target="_blank" rel="noopener noreferrer" class="btn-handbook-platform-link" title="Read Full Canonical Benchmark on GitHub">
+              📄 <span>Canonical Source (.md) ↗</span>
+            </a>
+            <button id="btn-close-ai-benchmark-modal" class="btn-close-modal" title="Close (ESC)">✕</button>
+          </div>
+        </div>
+
+        <div class="modal-body modal-body-ai">
+          <!-- Benchmark Tab Navigation -->
+          <div class="ai-tabs-bar">
+            <button class="ai-tab-btn active" data-tab="matrix">🏆 Master Matrix</button>
+            <button class="ai-tab-btn" data-tab="dimensions">📊 6 Dimensions</button>
+            <button class="ai-tab-btn" data-tab="nordic">📉 Nordic Fiscal Math</button>
+            <button class="ai-tab-btn" data-tab="transition">⚠️ Transition Paradox (2.5/10)</button>
+          </div>
+
+          <!-- TAB 1: MASTER MATRIX -->
+          <div id="ai-pane-matrix" class="ai-tab-pane active">
+            <div class="ai-callout-header">
+              <p>Four frontier artificial intelligences (<strong>Google Gemini</strong>, <strong>OpenAI ChatGPT</strong>, <strong>Anthropic Claude</strong>, and <strong>xAI Grok</strong>) were blindly tasked with evaluating six economic architectures strictly under an automated, steady-state civilization where marginal labor costs reach zero (<em>MC<sub>L</sub> → 0</em>).</p>
+            </div>
+
+            <div class="ai-table-wrap">
+              <table class="ai-benchmark-table">
+                <thead>
+                  <tr>
+                    <th>Architecture</th>
+                    <th class="th-center">4-AI Consensus</th>
+                    <th class="th-center">Gemini</th>
+                    <th class="th-center">ChatGPT</th>
+                    <th class="th-center">Claude</th>
+                    <th class="th-center">Grok</th>
+                    <th class="th-center">Transition (1-10)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="tr-highlight-one">
+                    <td>
+                      <div class="arch-cell">
+                        <span class="arch-badge-rank rank-1">🥇 1</span>
+                        <div>
+                          <strong>Open Networked Earth (O.N.E.)</strong>
+                          <span class="arch-sub">Universal Usufruct • Demarchy • Exergy</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="td-center score-cell score-gold">8.13</td>
+                    <td class="td-center score-cell">8.50</td>
+                    <td class="td-center score-cell">8.33</td>
+                    <td class="td-center score-cell">6.50</td>
+                    <td class="td-center score-cell">9.17</td>
+                    <td class="td-center score-cell score-red">2.5 / 10</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="arch-cell">
+                        <span class="arch-badge-rank rank-2">🥈 2</span>
+                        <div>
+                          <strong>Ostrom-Style Commons</strong>
+                          <span class="arch-sub">Common-Pool Resources • Polycentric</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="td-center score-cell score-high">6.66</td>
+                    <td class="td-center score-cell">6.83</td>
+                    <td class="td-center score-cell">7.00</td>
+                    <td class="td-center score-cell">5.80</td>
+                    <td class="td-center score-cell">7.00</td>
+                    <td class="td-center score-cell score-mid">5.5 / 10</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="arch-cell">
+                        <span class="arch-badge-rank rank-3">🥉 3</span>
+                        <div>
+                          <strong>Cooperative Market Socialism</strong>
+                          <span class="arch-sub">Worker Equity • Market Exchange</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="td-center score-cell score-mid">5.80</td>
+                    <td class="td-center score-cell">5.33</td>
+                    <td class="td-center score-cell">7.17</td>
+                    <td class="td-center score-cell">5.20</td>
+                    <td class="td-center score-cell">5.50</td>
+                    <td class="td-center score-cell score-mid">4.8 / 10</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="arch-cell">
+                        <span class="arch-badge-rank">4</span>
+                        <div>
+                          <strong>Nordic Social Democracy</strong>
+                          <span class="arch-sub">Welfare State • Tripartite • Tax Transfers</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="td-center score-cell score-mid">5.33</td>
+                    <td class="td-center score-cell">4.83</td>
+                    <td class="td-center score-cell">6.33</td>
+                    <td class="td-center score-cell">5.50</td>
+                    <td class="td-center score-cell">4.67</td>
+                    <td class="td-center score-cell score-high">7.0 / 10</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="arch-cell">
+                        <span class="arch-badge-rank">5</span>
+                        <div>
+                          <strong>Centralized State Socialism</strong>
+                          <span class="arch-sub">State Monopoly • Gosplan Planning</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="td-center score-cell score-low">4.03</td>
+                    <td class="td-center score-cell">3.83</td>
+                    <td class="td-center score-cell">6.00</td>
+                    <td class="td-center score-cell">2.80</td>
+                    <td class="td-center score-cell">3.50</td>
+                    <td class="td-center score-cell score-low">2.8 / 10</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="arch-cell">
+                        <span class="arch-badge-rank">6</span>
+                        <div>
+                          <strong>Neoliberal / Free-Market</strong>
+                          <span class="arch-sub">Private Capital • Price Clearing • GDP</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="td-center score-cell score-danger">3.21</td>
+                    <td class="td-center score-cell">2.67</td>
+                    <td class="td-center score-cell">4.17</td>
+                    <td class="td-center score-cell">3.00</td>
+                    <td class="td-center score-cell">3.00</td>
+                    <td class="td-center score-cell score-gold">9.0 / 10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- The Inverse Transition Callout -->
+            <div class="ai-paradox-box">
+              <div class="ai-paradox-badge">⚡ THE INVERSE TRANSITION LAW</div>
+              <p>All four AI models diagnosed an exact <strong>inverse relationship</strong> between steady-state viability and transition feasibility: systems native to full automation (O.N.E. @ 8.13) face extreme institutional friction (2.5/10) against legacy debt and property regimes. Meanwhile, capitalism transitions with zero friction (9.0/10) because replacing labor with machines is its native instinct, even though it results in terminal demand collapse.</p>
+            </div>
+            <div style="margin-top: 10px; font-size: 0.78rem; color: var(--text-muted); text-align: center;">
+              Full methodology, prompt transcript &amp; model parameters (Gemini 3.8 Flash Extended Reasoning, ChatGPT, Claude 3.5 Sonnet, Grok) documented in canonical source.
+            </div>
+          </div>
+
+          <!-- TAB 2: 6 DIMENSIONS -->
+          <div id="ai-pane-dimensions" class="ai-tab-pane">
+            <div class="dimensions-grid">
+              <div class="dim-card">
+                <div class="dim-header">
+                  <span class="dim-title">1. Post-Work Decoupling &amp; Autonomy</span>
+                  <span class="dim-score score-gold">O.N.E. 9.5 / 10</span>
+                </div>
+                <p>Universal usufruct physically decouples survival from wage labor. Automated seed nodes provide calories, power, water, and shelter as unconditional metabolic entitlements, preventing clientelist subjugation to either state bureaucrats or platform monopolies.</p>
+              </div>
+
+              <div class="dim-card">
+                <div class="dim-header">
+                  <span class="dim-title">2. Ecological &amp; Biophysical Limits</span>
+                  <span class="dim-score score-gold">O.N.E. 10 / 10 (Unanimous)</span>
+                </div>
+                <p>Hardcoded thermodynamic Leontief exergy budgets and mass-balance cycles replace monetary valuation. Biocentric carrying capacity ceilings are inviolable constraints rather than market externalities; infinite growth is extinguished.</p>
+              </div>
+
+              <div class="dim-card">
+                <div class="dim-header">
+                  <span class="dim-title">3. Complex Non-Basic Allocation</span>
+                  <span class="dim-score score-high">O.N.E. 7.5 / 10</span>
+                </div>
+                <p>Core survival is abundant and demonetized. For rivalrous, positional luxuries (prime locations, bespoke craft, high-end compute), O.N.E. utilizes sortition queues and demarchic deliberation, accepting coordination latency to prevent wealth exclusion.</p>
+              </div>
+
+              <div class="dim-card">
+                <div class="dim-header">
+                  <span class="dim-title">4. Governance Integrity &amp; Anti-Oligarchy</span>
+                  <span class="dim-score score-gold">O.N.E. 9.0 / 10</span>
+                </div>
+                <p>Statistical demarchy with strict odd-parity assemblies (3, 15, 101, 301, 1001) prevents careerist corruption, lobbyist capture, and algorithmic technocracy. Decisions are made by rotating citizen juries, not sovereign AI or political classes.</p>
+              </div>
+
+              <div class="dim-card">
+                <div class="dim-header">
+                  <span class="dim-title">5. Dynamic Innovation &amp; Maintenance</span>
+                  <span class="dim-score score-high">O.N.E. 7.5 / 10</span>
+                </div>
+                <p>Open fab-labs, Copyfarleft licenses, and unconstrained open-source scientific commons eliminate patent moats and bankruptcy risk. Intrinsic curiosity drives basic science, while automated diagnostics handle physical infrastructure upkeep.</p>
+              </div>
+
+              <div class="dim-card">
+                <div class="dim-header">
+                  <span class="dim-title">6. Zero-Labor Systemic Coherence</span>
+                  <span class="dim-score score-gold">O.N.E. 10 / 10 (Unanimous)</span>
+                </div>
+                <p>Purpose-built from first principles for zero wage labor. The economic circuit operates directly on physical mass-energy balances, completely immune to the fiscal collapse that destroys debt-backed fiat and payroll-tax welfare states.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: NORDIC FISCAL MATH -->
+          <div id="ai-pane-nordic" class="ai-tab-pane">
+            <div class="nordic-math-card">
+              <h4>The Mathematical Proof: Why Social Democracy Dies With Wage Labor</h4>
+              <p class="math-intro">Both Gemini and ChatGPT derived the macroeconomic identity of the sovereign welfare state to prove its structural breakdown when marginal labor costs reach zero:</p>
+              
+              <div class="math-formula-box">
+                <code>T<sub>total</sub> = t<sub>w</sub> · W + t<sub>c</sub> · C + t<sub>k</sub> · Π</code>
+              </div>
+
+              <div class="math-steps-list">
+                <div class="math-step">
+                  <span class="step-num">1</span>
+                  <div>
+                    <strong>Collapse of Aggregate Wages:</strong>
+                    <p>In modern Nordic economies, direct labor taxes (<em>t<sub>w</sub> · W</em>) and worker-driven consumption taxes generate <strong>60% to 75%</strong> of public revenues. As automation drives human labor costs to zero (<em>MC<sub>L</sub> → 0 ⇒ W → 0</em>), labor tax receipts vanish entirely: <code>t<sub>w</sub> · W = 0</code>.</p>
+                  </div>
+                </div>
+
+                <div class="math-step">
+                  <span class="step-num">2</span>
+                  <div>
+                    <strong>The UBI-VAT Negative Loop:</strong>
+                    <p>Without wages, household consumption must be funded by state cash transfers or UBI (<em>C = U</em>). If the state attempts to tax this consumption via VAT (<em>t<sub>c</sub> ≈ 25%</em>), net revenue is negative: <code>Net = t<sub>c</sub> · U - U = -(1 - t<sub>c</sub>)U</code>. The state merely recovers a fraction of the liquidity it injected.</p>
+                  </div>
+                </div>
+
+                <div class="math-step">
+                  <span class="step-num">3</span>
+                  <div>
+                    <strong>The Capital Tax Dilemma:</strong>
+                    <p>To fund civilization exclusively from corporate profits (<em>T<sub>total</sub> ≈ t<sub>k</sub> · Π</em>), the tax rate <em>t<sub>k</sub></em> must exceed 85–95%. In competitive automated markets where marginal costs are near zero, competitive prices also collapse toward zero, eliminating economic profit <em>Π</em> except in artificial monopolies. Aggressive capital taxation prompts flight or investment strikes.</p>
+                  </div>
+                </div>
+
+                <div class="math-step">
+                  <span class="step-num">4</span>
+                  <div>
+                    <strong>The Post-Monetary Solution:</strong>
+                    <p>Open Networked Earth avoids this breakdown by removing money entirely from the core metabolic metabolism: <code>Metabolic Input ➔ Automated Capital ➔ Exergy / Material Flow ➔ Universal Usufruct ➔ Direct Provisioning</code>. No tax extraction or debt servicing is needed.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: TRANSITION PARADOX & TECHNO-FEUDAL TRAP -->
+          <div id="ai-pane-transition" class="ai-tab-pane">
+            <div class="transition-trap-card">
+              <h4>The 2/10 Feasibility Score: Why Breakdown Defaults to Techno-Feudalism</h4>
+              <p>When mass automation displaces human wage labor faster than governments can deploy UBI, the legacy order undergoes cascading institutional gridlock:</p>
+
+              <div class="breakdown-grid">
+                <div class="breakdown-col">
+                  <h5>💥 Cascading Legacy Failure</h5>
+                  <ul>
+                    <li><strong>Financial Circuit Freezes:</strong> Millions default on mortgages and loans. Central bank QE props up bank balance sheets, but borrower insolvency paralyzes the real economy.</li>
+                    <li><strong>Eviction Court Saturation:</strong> Housing courts face multi-year dockets. States decree emergency eviction moratoria, leaving titles and housing stocks in legal limbo.</li>
+                    <li><strong>Emergency Rationing:</strong> Inability to fund cash UBI forces states to distribute digital food vouchers and place failing energy grids into state receivership.</li>
+                  </ul>
+                </div>
+
+                <div class="breakdown-col">
+                  <h5>🏰 The Default: Techno-Feudalism</h5>
+                  <p>A power vacuum does <strong>not</strong> spontaneously organize into a solarpunk commons. Without counter-power, private owners of automated infrastructure (autonomous delivery, satellite constellations, robotic farms) step in as private sovereigns:</p>
+                  <p class="highlight-quote">"They provide food, housing, and connectivity not for cash, but in exchange for biometric tracking, algorithmic compliance, and total surrender of citizenship rights."</p>
+                </div>
+              </div>
+
+              <div class="dual-track-answer-box">
+                <h5>🛠️ The O.N.E. Countermeasure: Pre-Configured Physical Seed Nodes</h5>
+                <p>Because breakdown defaults to feudalism or warlordism, <strong>O.N.E. Stage 0–3 Seed Nodes</strong> (Community Land Trusts, Passivhaus MHU timber dwellings, 48V LFP microgrids, CNC fab-labs, and odd-parity sortition assemblies) must be constructed within existing legal frameworks <em>before</em> macroeconomic crises strike.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer modal-footer-ai">
+          <span class="footer-note">Source: Independent Multi-LLM Benchmark (Oct 2026) • AGPL-3.0-or-later</span>
+          <button id="btn-close-ai-benchmark-footer" class="btn-primary" style="padding: 8px 18px;">Understood</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- ONBOARDING GUIDE SPOTLIGHT OVERLAY (ITEM 17) -->
@@ -623,7 +935,431 @@
     </div>
   </div>
 
-  <script type="module" src="./src/main.js"></script>
+  <!-- STYLES & INTERACTION SCRIPT FOR INDEPENDENT AI BENCHMARK MODAL -->
+  <style>
+    .btn-ai-benchmark-badge {
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-ai-benchmark-badge:hover {
+      border-color: #38bdf8 !important;
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.4) !important;
+      transform: translateY(-1px);
+    }
+    .modal-window-ai-benchmark {
+      max-width: 980px;
+      width: 94%;
+      max-height: 88vh;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 189, 248, 0.15);
+    }
+    .badge-ai-frontier {
+      background: rgba(56, 189, 248, 0.12);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      font-size: 10.5px;
+      padding: 3px 9px;
+      border-radius: 9999px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+    }
+    .modal-body-ai {
+      padding: 18px 24px;
+      overflow-y: auto;
+      color: #e2e8f0;
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+    .ai-tabs-bar {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+      overflow-x: auto;
+    }
+    .ai-tab-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94a3b8;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .ai-tab-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .ai-tab-btn.active {
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      border-color: rgba(56, 189, 248, 0.5);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+    }
+    .ai-tab-pane {
+      display: none;
+      animation: fadeIn 0.2s ease-out;
+    }
+    .ai-tab-pane.active {
+      display: block;
+    }
+    .ai-callout-header {
+      background: rgba(15, 23, 42, 0.6);
+      border-left: 3px solid #38bdf8;
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+      color: #cbd5e1;
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+    .ai-table-wrap {
+      overflow-x: auto;
+      margin-bottom: 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(2, 6, 23, 0.5);
+    }
+    .ai-benchmark-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 12px;
+    }
+    .ai-benchmark-table th {
+      background: rgba(15, 23, 42, 0.85);
+      color: #94a3b8;
+      padding: 10px 12px;
+      font-weight: 600;
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      white-space: nowrap;
+    }
+    .ai-benchmark-table td {
+      padding: 9px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+      vertical-align: middle;
+    }
+    .tr-highlight-one {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 3px solid #10b981;
+    }
+    .tr-highlight-one td {
+      color: #ecfdf5;
+      font-weight: 500;
+    }
+    .arch-cell {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .arch-badge-rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      font-weight: 700;
+      font-size: 11px;
+      color: #94a3b8;
+      flex-shrink: 0;
+    }
+    .arch-badge-rank.rank-1 {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+    .arch-badge-rank.rank-2 {
+      background: rgba(148, 163, 184, 0.15);
+      color: #cbd5e1;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+    .arch-badge-rank.rank-3 {
+      background: rgba(217, 119, 6, 0.15);
+      color: #d97706;
+      border: 1px solid rgba(217, 119, 6, 0.3);
+    }
+    .arch-sub {
+      display: block;
+      font-size: 10.5px;
+      color: #64748b;
+      font-weight: normal;
+      margin-top: 1px;
+    }
+    .score-cell {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 12.5px;
+    }
+    .score-gold {
+      color: #34d399;
+      font-weight: 800;
+      text-shadow: 0 0 8px rgba(52, 211, 153, 0.4);
+    }
+    .score-high { color: #38bdf8; }
+    .score-mid { color: #fbbf24; }
+    .score-low { color: #f97316; }
+    .score-danger { color: #ef4444; }
+    .score-red {
+      color: #f87171;
+      font-weight: 800;
+      background: rgba(239, 68, 68, 0.12);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+    .th-center, .td-center { text-align: center; }
+    .ai-paradox-box {
+      background: rgba(245, 158, 11, 0.07);
+      border: 1px solid rgba(245, 158, 11, 0.28);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-top: 10px;
+    }
+    .ai-paradox-badge {
+      color: #fbbf24;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      margin-bottom: 4px;
+    }
+    .ai-paradox-box p {
+      font-size: 12px;
+      margin: 0;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+    .dimensions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .dim-card {
+      background: rgba(15, 23, 42, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .dim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+      gap: 6px;
+    }
+    .dim-title {
+      font-weight: 700;
+      color: #f1f5f9;
+      font-size: 12.5px;
+    }
+    .dim-score {
+      font-size: 11px;
+      font-weight: 700;
+      font-family: monospace;
+      white-space: nowrap;
+    }
+    .dim-card p {
+      font-size: 11.5px;
+      color: #94a3b8;
+      margin: 0;
+      line-height: 1.45;
+    }
+    .nordic-math-card, .transition-trap-card {
+      background: rgba(15, 23, 42, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .nordic-math-card h4, .transition-trap-card h4 {
+      color: #ecfdf5;
+      font-size: 14.5px;
+      margin: 0 0 8px 0;
+    }
+    .math-intro {
+      font-size: 12.5px;
+      color: #94a3b8;
+      margin-bottom: 10px;
+    }
+    .math-formula-box {
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 6px;
+      padding: 10px 14px;
+      text-align: center;
+      margin: 10px 0 14px 0;
+      font-size: 15px;
+      color: #38bdf8;
+      font-family: monospace;
+    }
+    .math-steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .math-step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 12px;
+    }
+    .step-num {
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 11px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .math-step p {
+      margin: 2px 0 0 0;
+      color: #94a3b8;
+      line-height: 1.4;
+    }
+    .math-step code {
+      background: rgba(0, 0, 0, 0.3);
+      color: #38bdf8;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+    .breakdown-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 12px 0;
+    }
+    @media (max-width: 720px) {
+      .breakdown-grid { grid-template-columns: 1fr; }
+    }
+    .breakdown-col {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 12px;
+    }
+    .breakdown-col h5 {
+      margin: 0 0 8px 0;
+      font-size: 13px;
+      color: #f1f5f9;
+    }
+    .breakdown-col ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #94a3b8;
+    }
+    .breakdown-col li { margin-bottom: 6px; line-height: 1.4; }
+    .highlight-quote {
+      border-left: 2px solid #f87171;
+      padding-left: 10px;
+      color: #fca5a5;
+      font-style: italic;
+      font-size: 11.5px;
+      margin: 8px 0 0 0;
+      line-height: 1.4;
+    }
+    .dual-track-answer-box {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+    .dual-track-answer-box h5 {
+      margin: 0 0 4px 0;
+      color: #34d399;
+      font-size: 13px;
+    }
+    .dual-track-answer-box p {
+      margin: 0;
+      color: #cbd5e1;
+      line-height: 1.4;
+    }
+    .modal-footer-ai {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.2);
+      font-size: 11px;
+      color: #64748b;
+    }
+  </style>
+
+  <script>
+    (function initAiBenchmarkModal() {
+      const modal = document.getElementById('modal-ai-benchmark');
+      if (!modal) return;
+
+      const btnOpenHud = document.getElementById('btn-open-ai-benchmark');
+      const btnOpenMenu = document.getElementById('btn-open-ai-benchmark-menu');
+      const btnCloseHeader = document.getElementById('btn-close-ai-benchmark-modal');
+      const btnCloseFooter = document.getElementById('btn-close-ai-benchmark-footer');
+
+      function openModal() {
+        document.querySelectorAll('.modal-overlay').forEach(el => {
+          if (el !== modal) el.classList.add('hidden');
+        });
+        modal.classList.remove('hidden');
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+      }
+
+      if (btnOpenHud) btnOpenHud.addEventListener('click', openModal);
+      if (btnOpenMenu) btnOpenMenu.addEventListener('click', () => {
+        const dropdown = document.getElementById('system-menu-dropdown');
+        if (dropdown) dropdown.classList.add('hidden');
+        openModal();
+      });
+
+      if (btnCloseHeader) btnCloseHeader.addEventListener('click', closeModal);
+      if (btnCloseFooter) btnCloseFooter.addEventListener('click', closeModal);
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          closeModal();
+        }
+      });
+
+      const tabBtns = modal.querySelectorAll('.ai-tab-btn');
+      const tabPanes = modal.querySelectorAll('.ai-tab-pane');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetTab = btn.getAttribute('data-tab');
+          tabBtns.forEach(b => b.classList.remove('active'));
+          tabPanes.forEach(p => p.classList.remove('active'));
+
+          btn.classList.add('active');
+          const targetPane = document.getElementById('ai-pane-' + targetTab);
+          if (targetPane) targetPane.classList.add('active');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
 
