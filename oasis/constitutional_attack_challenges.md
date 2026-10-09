@@ -76,12 +76,13 @@ A rigorous audit against the constitutional text reveals that **five of the seve
   1. **Mandatory Rival Panels (Art. 4.4.2):** On any complex technical proposal, the assembly is constitutionally required to summon and fund **two independent, rival expert panels** mandated to cross-examine and expose each other’s hidden biases, modeling assumptions, and uncertainties in open public sessions.
   2. **Affirmative Intelligibility Burden (Art. 4.4.3):** Technical experts bear the legal burden of translating differential equations into plain-language societal trade-offs.
   3. **Precautionary Veto (Art. 4.4.4):** If technical teams generate manufactured confusion or unresolvable jargon, the assembly immediately invokes *In dubio pro natura et vita*, automatically suspending the project without disrupting baseline maintenance.
+  4. **The 48-Hour Civic Algorithmic Audit Protocol (CAAP — Challenge OP-03):** To prevent technocrats from exploiting the 48-hour deliberative window during resource shocks, the system mandates hierarchical decomposition (reducing complexity to 4 local variables), dual competing solvers (Precaution Alpha vs. Throughput Beta) cross-examined by a sortition Devil's Advocate, and interactive WebAssembly sensitivity sandboxes. Technical teams cannot smuggle in hidden priorities; decisions require the jury's Threshold Multi-Party Computation (t-MPC) cryptographic key release (Art. 7.4).
 
 ---
 
-## **III. THE TWO REAL OPERATIONAL EDGE-CASE PROTOCOLS**
+## **III. THE THREE REAL OPERATIONAL EDGE-CASE PROTOCOLS**
 
-The audit isolates two genuine, non-trivial operational challenges that require precise technical design rather than constitutional amendments:
+The audit isolates three genuine, non-trivial operational challenges that require precise technical design rather than constitutional amendments:
 
 ---
 
@@ -110,3 +111,21 @@ While real estate and productive land are fully protected under dynamic usufruct
 #### **The Operational Solution (Protocol Design):**
 1. **Soulbound Cryptographic Reservation Tokens:** FabLab scheduling systems utilize non-transferable, identity-bound booking tokens. A reservation slot cannot be re-assigned, transferred, or swapped.
 2. **Dynamic Slot Forfeiture:** If the registered custodian is not physically present at the workstation within 15 minutes of the scheduled start time, the slot automatically forfeits to the next citizen drawn by lot from the standby queue.
+
+---
+
+### **CHALLENGE OP-03: Algorithmic Deliberation Compression & The 48-Hour Civic Audit Protocol (CAAP)**
+* **Originating Vector:** Ex-Attack 007 / Frontier AI Red-Team Critique (Claude & ChatGPT)
+* **Domain:** Nomothetic Algorithmic Governance & Leontief Planning
+* **Target Articles:** [`Art. 4.4`](../bible/chapters/chapter_04.md), [`Art. 7.1`](../bible/chapters/chapter_07.md), [`Art. 7.4`](../bible/chapters/chapter_07.md), [`Art. 7.5`](../bible/chapters/chapter_07.md)
+
+#### **The Empirical Friction:**
+A continental Leontief inverse matrix $(I - A)^{-1}$ dynamic balancing model encompasses thousands of interdependent input-output variables. If an emergency resource shock requires an algorithmic reallocation within a 48-hour deliberative window, lay citizens cannot audit raw linear programs. Static technical dossiers create an inevitable cognitive bottleneck where citizens must either defer to software developers or trigger paralysis.
+
+#### **The Operational Solution (The 48-Hour CAAP Framework):**
+1. **Mathematical Subsidiarity via Hierarchical Decomposition:** Dantzig-Wolfe / Benders decomposition mathematically isolates the macro-problem into localized watershed sub-problems. A Neighborhood Council (15 citizens) audits strictly 4 local boundary variables (*Water, Power, Calories, Solid Waste*); Bioregional Assemblies audit only trunk-line freight and grid interconnects.
+2. **Event-Driven Circuit Breaker:** Daily routine allocations execute automatically within statutory baselines. The 48-hour sortition jury convenes *only* upon an anomaly exception (boundary breach $> \delta$, citizen petition, or red-team alarm).
+3. **The Adversarial Courtroom (Dual Competing Solvers):** Technocrats are barred from submitting a single plan. Two rival solvers (Precaution Alpha vs. Throughput Beta) compute competing Pareto vectors. A sortition-appointed Devil's Advocate presents the cross-examination, exposing who bears the physical sacrifice under each plan.
+4. **Interactive Sensitivity Sandboxes (WASM/WebGPU):** Citizens manipulate visual sliders (*Reserve Buffer %, Sector Throttling %*) on touch displays, recalculating consequences in $< 1.0$s with real-time color heat maps.
+5. **Cryptographic Sovereign Lock (Art. 7.4):** Physical controllers (PLCs, grid switches) require the sortition jury's Threshold Multi-Party Computation (t-MPC) key release to execute the parameters, cementing democratic supremacy over code.
+* **Public Ratification Draft:** Fully specified in [`oasis/github_discussions_rfcs.md`](github_discussions_rfcs.md#rfc-003-the-48-hour-civic-algorithmic-audit-protocol-caap--democratic-supremacy-over-high-dimensional-leontief-planning).
