@@ -80,9 +80,9 @@ A rigorous audit against the constitutional text reveals that **five of the seve
 
 ---
 
-## **III. THE FOUR REAL OPERATIONAL EDGE-CASE PROTOCOLS**
+## **III. THE FIVE REAL OPERATIONAL EDGE-CASE PROTOCOLS**
 
-The audit isolates four genuine, non-trivial operational challenges that require precise technical design rather than constitutional amendments:
+The audit isolates five genuine, non-trivial operational challenges that require precise technical design rather than constitutional amendments:
 
 ---
 
@@ -147,3 +147,22 @@ Corporate robotics conglomerates and semiconductor monopolies enclose advanced a
 4. **Exponential Reinvestment Loop:** 100% of corporate fiat licensing profits flow into the Foundation Capital Vault to: (1) bulk-procure frontier hardware directly for nodes, (2) pre-finance 10-year municipal tax escrows and land purchases, and (3) finance the rapid birth of Node #2, Node #3, Node #4 worldwide.
 5. **DRM Jailbreaking & Offline Root Firmware:** Proprietary hardware is stripped of remote cloud tethers via open-source firmware (LinuxCNC, VESC, Klipper), turning vendor-locked machines into resilient, local-first enterprise designs.
 * **Public Ratification Draft:** Fully specified in [`oasis/github_discussions_rfcs.md`](github_discussions_rfcs.md#rfc-004-the-frontier-technology--foundation-dual-licensing-acceleration-engine).
+
+---
+
+### **CHALLENGE OP-05: Positional Luxury Bottlenecks & Scientific Precautionary Stagnation**
+* **Originating Vector:** Frontier AI Red-Team Critique (ChatGPT, Gemini & Claude)
+* **Domain:** Positional Goods Allocation, High-Compute Governance & Research Freedom
+* **Target Articles:** [`Art. 2.1.2`](../bible/chapters/chapter_02.md), [`Art. 2.5`](../bible/chapters/chapter_02.md), [`Art. 3.3.3`](../bible/chapters/chapter_03.md), [`Art. 7.1`](../bible/chapters/chapter_07.md), [`Art. 7.4`](../bible/chapters/chapter_07.md)
+
+#### **The Empirical Friction:**
+While core metabolic needs (food, water, power, shelter) are fully abundant and demonetized, *positional amenities* (scenic coastlines, mountain chalets, bespoke craft) and *peak scientific assets* (supercomputers, research reactors) are physically finite and rivalrous. Static sortition queues create coordination delays and shadow barter. Furthermore, applying an un-differentiated precautionary veto across all physical processes threatens to stall high-risk frontier science (lithography, fusion, quantum physics).
+
+#### **The Operational Solution (The Dual Positional & Scientific Commons):**
+1. **The Civic Retreat Usufruct Pool:** Prime geographic landmarks are covenanted permanently as inalienable Civic Retreat Commons. Access is allocated in 2-to-6-week non-renewable sabbatical windows via deterministic lottery using soulbound, non-transferable reservation tokens (RFC-002), eliminating speculative hoarding and secondary markets.
+2. **Artisanal & Bespoke Goods Commons:** Unique handmade craft operates under non-monetary gift reciprocity, mutual gifting, or merit-blind exhibition sortition. Chattel liens and speculative resale are constitutionally void.
+3. **Demarchic Science Juries:** Peak experimental compute and specialized research apparatus are allocated by 9-to-15 member peer juries chosen by domain sortition from active contributors, eliminating both grant-chasing cartels and lay incompetence.
+4. **Bifurcated Precautionary Boundary:** Within sealed, shielded laboratory environments, complete investigative and computational freedom is guaranteed; only environmental release vectors trigger citizen assembly CAAP review.
+5. **The Foundation Commercialization Loop:** Breakthroughs are dual-licensed externally to legacy corporations by Foundation ONE, generating billions in fiat revenues to build next-generation compute clusters and research hubs for the commons.
+* **Public Ratification Draft:** Fully specified in [`oasis/github_discussions_rfcs.md`](github_discussions_rfcs.md#rfc-005-positional-scarcity-allocation--demarchic-frontier-science-governance).
+

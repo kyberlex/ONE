@@ -62,11 +62,48 @@ To prevent charismatic local leaders from entrenching authoritarian enclaves:
 
 ---
 
-## 6. Stage 3 Watershed Action Checklist
+## 6. The Positional Scarcity & Sabbatical Retreat Commons
+
+While baseline metabolic goods (calories, clean water, kilowatt-hours, modular housing) are abundant and demonetized, **positional goods** (prime oceanfront dwellings, alpine lookout cabins, historic architecture) cannot be multiplied by automation:
+
+### 6.1. The Civic Retreat Usufruct Pool
+* **No Fee-Simple Monopolization:** High-amenity parcels are held permanently by the Land Trust / Foundation ONE under inalienable title. No individual or lineage may claim permanent exclusive residence over unique geographical landmarks.
+* **Soulbound Sabbatical Rotations:** Prime retreat sites are scheduled in **2 to 6-week non-renewable sabbatical windows** via deterministic lottery.
+* **Anti-Speculation Tokenization:** Reservation tokens are non-fungible, non-tradable, and identity-bound (RFC-002). Sub-leasing, bartering slots, or exchanging access for private goods automatically voids the reservation and triggers a 2-year sabbatical cooling lock.
+
+### 6.2. Artisanal & Bespoke Goods (The Non-Monetary Gift Commons)
+* **Bespoke Independence:** Unique, handmade non-basic items (fine musical instruments, hand-woven textiles, bespoke furniture, fine art) are produced at will by creators using commons fab-lab tools.
+* **Direct Gifting & Peer Exhibition:** Distribution is governed strictly by the artisan's personal gifting, non-monetary mutual reciprocity, or blind sortition for high-demand exhibition allocations. Chattel liens, debt pledges, and secondary speculative resale are legally and constitutionally void.
+
+---
+
+## 7. Frontier Science Infrastructure & Demarchic High-Compute Allocation
+
+High-consequence scientific assets—such as advanced semiconductor fabrication clusters, quantum computing testbeds, synchrotron beamlines, and biological containment facilities—require federated watershed scale:
+
+### 7.1. Demarchic Science Juries (Domain-Sortition Peer Allocation)
+* **The Elimination of Grant-Writing Oligarchies:** High-value compute and laboratory beamtime are not allocated by corporate venture capital, state patronage, or lay lotteries.
+* **Domain Sortition:** Allocation panels consist of 9 to 15 peer researchers drawn by lot from an open registry of active contributors in that specific scientific domain. Panels rotate semi-annually, evaluating research proposals based on open reproducibility and biophysical relevance.
+
+### 7.2. The Bifurcated Precautionary Boundary
+* **Unrestricted Shielded Research:** Within hermetically sealed, biosafety-rated, or radiation-shielded laboratory boundaries, complete scientific freedom and high-energy experimentation are constitutionally guaranteed. The Precautionary Principle does **not** stifle fundamental physical, quantum, or materials inquiry.
+* **Rigid Environmental Release Safeguards:** The moment an experiment involves ambient environmental releases, genetic propagation into the biosphere, or high-voltage external grid connections, the protocol falls strictly under Article 7's 48-Hour CAAP citizen jury audit.
+
+### 7.3. The Scientific Commercialization Engine (Foundation ONE Loop)
+* **Enterprise Dual-Licensing:** Novel physical discoveries (e.g., solid-state battery electrolytes, high-efficiency solar photovoltaics, room-temperature superconducting alloys) are published 100% open-source inside O.N.E. for humanity.
+* **Fiat Capital Extraction:** Foundation ONE packages enterprise patent suites and commercial rights for legacy multinational corporations in the fiat economy, generating billions in corporate licensing revenue.
+* **Commons Reinvestment:** 100% of these fiat windfalls are reinvested to construct next-generation particle accelerators, advanced supercomputing clusters, and robotic fab-labs for the planetary commons.
+
+---
+
+## 8. Stage 3 Watershed Action Checklist
 
 - [ ] Deploy 3x solar-powered LoRa mesh repeaters on elevated ridge lines within the watershed.
 - [ ] Establish daily automated Reticulum packet heartbeat between all member nodes.
 - [ ] Form the Inter-Node Sortition Registry with rotating jury rosters.
 - [ ] Implement the Leontief-Kantorovich physical exergy ledger for inter-node equipment loans.
+- [ ] Covenant high-amenity scenic dwellings as Civic Retreat Commons under soulbound sabbatical rotations.
+- [ ] Commission federated edge GPU compute cluster governed by the watershed Demarchic Science Jury.
 - [ ] Execute annual watershed mutual-aid emergency drill (simulated total blackout and physical road obstruction).
 - [ ] File formal utility service disconnection notices with host utility providers.
+

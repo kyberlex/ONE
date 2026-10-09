@@ -116,3 +116,40 @@ If O.N.E. seed nodes restrict themselves to obsolete vintage scrap or backyard h
 - How should the boundary between "non-commercial commons use" (CHF 0) and "enterprise commercial exploitation" (commercial license required) be calibrated in the Open Usufruct Hardware License?
 ```
 
+---
+
+### **RFC-005: Positional Scarcity Allocation & Demarchic Frontier Science Governance**
+* **Category:** RFC / Operational Protocols  
+* **Labels:** `area:allocation`, `status:operational-qa`, `ref:OP-05`, `ref:SCIENCE`  
+* **Reference:** [`oasis/constitutional_attack_challenges.md`](constitutional_attack_challenges.md#challenge-op-05-positional-luxury-bottlenecks--scientific-precautionary-stagnation), [`roadmap/roadmap.md`](../roadmap/roadmap.md) § 1.1, § 4 (Phase 3), [`roadmap/blueprints/STAGE_3_WATERSHED_FEDERATION_BLUEPRINT.md`](../roadmap/blueprints/STAGE_3_WATERSHED_FEDERATION_BLUEPRINT.md) § 6, § 7
+
+```markdown
+### Background & Problem Statement
+In October 2026, independent frontier AI red teams (OpenAI ChatGPT, Google Gemini, and Anthropic Claude) identified two interrelated allocation tensions in advanced post-work economies:
+1. **Positional Scarcity:** While basic metabolic goods (calories, clean water, modular shelter) can be multiplied by automation, positional luxuries (prime oceanfront dwellings, historic mountain lodges, bespoke craft) are physically finite and rivalrous. Static waiting lists create coordination latency and informal shadow barter.
+2. **Precautionary Stagnation vs. Frontier Science:** An un-differentiated precautionary veto across all physical processes risks creating a conservative bias that slows high-energy physics, semiconductor lithography, fusion R&D, and peak compute experimentation.
+
+### Proposed Operational Protocols
+1. **The Civic Retreat Usufruct Pool (Soulbound Sabbatical Rotations):**
+   - Unique high-amenity locations (coastal cliffs, pristine lakefronts, alpine lookouts) are held permanently by the Land Trust / Foundation ONE under inalienable title.
+   - Access is scheduled in **2 to 6-week non-renewable sabbatical windows** via deterministic lottery.
+   - Reservation tokens are soulbound and non-transferable (RFC-002). Any attempt to sub-lease or barter access automatically revokes the slot and triggers a 2-year sabbatical cooling lock.
+2. **Artisanal & Bespoke Goods Commons:**
+   - Unique handmade creations (fine instruments, original paintings, bespoke ceramics) are distributed via direct creator gifting, non-monetary mutual reciprocity, or blind sortition for high-demand exhibition allocations.
+   - Secondary financial speculation, debt pledges, and chattel mortgages on artisanal works are legally and constitutionally void.
+3. **Demarchic Science Juries (Domain-Sortition Peer Allocation):**
+   - High-consequence experimental compute (peak GPU/quantum clusters) and specialized laboratory beamtime are allocated neither by corporate capital nor lay sortition.
+   - Allocation juries consist of 9 to 15 peer researchers selected by lot from an open registry of active domain contributors, rotating semi-annually.
+4. **The Bifurcated Precautionary Boundary:**
+   - *Shielded Investigation:* Within hermetically sealed, biosafety-rated, or radiation-shielded lab boundaries, complete scientific freedom, extreme energy levels, and computational exploration are constitutionally protected.
+   - *Environmental Release Trigger:* The moment an experiment involves ambient environmental releases, genetic dissemination into the wild, or external high-voltage grid perturbations, the protocol automatically triggers the Article 7 48-Hour CAAP citizen jury audit.
+5. **The Scientific Commercialization Flywheel:**
+   - Physical breakthroughs (solid-state battery chemistries, room-temperature superconductors, metamaterials) are published 100% open-source inside O.N.E. for humanity.
+   - Concurrently, Foundation ONE packages enterprise patent suites and commercial rights for multinational corporations in the fiat market, extracting corporate revenues to fund the next tier of supercomputing and laboratory infrastructure for the global commons.
+
+### Deliberative Questions for the Community
+- What tenure duration (2 weeks, 4 weeks, or 6 weeks) provides the optimal balance between rest depth and broad civic access to high-amenity Sabbatical Retreats?
+- How should peer qualification for Demarchic Science Juries be verified in an open-source, permissionless manner without re-creating academic credentialism?
+```
+
+
