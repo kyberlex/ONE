@@ -80,9 +80,9 @@ A rigorous audit against the constitutional text reveals that **five of the seve
 
 ---
 
-## **III. THE THREE REAL OPERATIONAL EDGE-CASE PROTOCOLS**
+## **III. THE FOUR REAL OPERATIONAL EDGE-CASE PROTOCOLS**
 
-The audit isolates three genuine, non-trivial operational challenges that require precise technical design rather than constitutional amendments:
+The audit isolates four genuine, non-trivial operational challenges that require precise technical design rather than constitutional amendments:
 
 ---
 
@@ -129,3 +129,21 @@ A continental Leontief inverse matrix $(I - A)^{-1}$ dynamic balancing model enc
 4. **Interactive Sensitivity Sandboxes (WASM/WebGPU):** Citizens manipulate visual sliders (*Reserve Buffer %, Sector Throttling %*) on touch displays, recalculating consequences in $< 1.0$s with real-time color heat maps.
 5. **Cryptographic Sovereign Lock (Art. 7.4):** Physical controllers (PLCs, grid switches) require the sortition jury's Threshold Multi-Party Computation (t-MPC) key release to execute the parameters, cementing democratic supremacy over code.
 * **Public Ratification Draft:** Fully specified in [`oasis/github_discussions_rfcs.md`](github_discussions_rfcs.md#rfc-003-the-48-hour-civic-algorithmic-audit-protocol-caap--democratic-supremacy-over-high-dimensional-leontief-planning).
+
+---
+
+### **CHALLENGE OP-04: Hardware Enclosure, Technological Stagnation & The Dual-Licensing Acceleration Engine**
+* **Originating Vector:** Frontier AI Red-Team Critique (Claude & Grok)
+* **Domain:** Open-Source Hardware, FabLabs & Global Capital Arbitrage
+* **Target Articles:** [`Art. 3.3`](../bible/chapters/chapter_03.md), [`Art. 7.3`](../bible/chapters/chapter_07.md), [`foundation/statutes_foundation_one.md`](../foundation/statutes_foundation_one.md) (Section 5), [`roadmap/roadmap.md`](../roadmap/roadmap.md) § 1.1, § 3.3
+
+#### **The Empirical Friction:**
+Corporate robotics conglomerates and semiconductor monopolies enclose advanced automation (AI silicon, bipedal humanoid kinesthetics, harmonic drive gearboxes) under patents, cloud telemetry DRMs, and high-capital barriers. If embryonic O.N.E. nodes retreat into a Luddite vintage ghetto using only obsolete tools, they remain trapped in manual labor and fail to scale. If they adopt proprietary machines, they surrender node autonomy to corporate cloud lockouts.
+
+#### **The Operational Solution (The Frontier Dual-Licensing Engine):**
+1. **The Frontier-First Mandate:** O.N.E. rejects vintage-only stagnation. Nodes deploy, benchmark, and innovate on the newest state-of-the-art technologies (edge AI accelerators, 6-DOF robotics, harmonic drives, solid-state batteries, additive metal printing).
+2. **Inner Commons Invariant:** All code, firmware, CAD designs, root jailbreaks, and neural weights are 100% libre, copyleft commons (AGPL-3.0 / CERN-OHL / CC BY-SA / Open Usufruct) for humanity at CHF 0.
+3. **Foundation Commercialization Monopoly:** Foundation ONE holds the statutory exclusive legal monopoly to patent, package, and commercialize enterprise dual-licenses, certifications, and support SLAs to legacy corporate primes.
+4. **Exponential Reinvestment Loop:** 100% of corporate fiat licensing profits flow into the Foundation Capital Vault to: (1) bulk-procure frontier hardware directly for nodes, (2) pre-finance 10-year municipal tax escrows and land purchases, and (3) finance the rapid birth of Node #2, Node #3, Node #4 worldwide.
+5. **DRM Jailbreaking & Offline Root Firmware:** Proprietary hardware is stripped of remote cloud tethers via open-source firmware (LinuxCNC, VESC, Klipper), turning vendor-locked machines into resilient, local-first enterprise designs.
+* **Public Ratification Draft:** Fully specified in [`oasis/github_discussions_rfcs.md`](github_discussions_rfcs.md#rfc-004-the-frontier-technology--foundation-dual-licensing-acceleration-engine).
