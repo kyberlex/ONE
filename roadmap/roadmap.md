@@ -251,19 +251,28 @@ A bootstrapping node funds property taxes, bulk raw metals, grid backup power, a
 3. **Decoupled Compute Micro-Array:** Cognitive workstations, CAD servers, and satellite transceivers are powered by a dedicated low-voltage 2.5 kW solar array and 10 kWh battery buffer, physically isolated from industrial 400V fabrication circuits, ensuring fiat cash flows continue even if industrial machinery is offline or repossessed.
 4. **Internal Demonetization & Anti-Corruption Firewall (Art. 9.3):** No fiat currency circulates inside Track B. ETI fiat is channeled into communal procurement reserves, eliminating ongoing operational costs.
 
-#### Hardening Against Cognitive Labor Compression (The Anti-ETI-Erosion Architecture)
-The 2026 4-Frontier AI Benchmark diagnosed a fatal vulnerability in conventional communal economics: **frontier AI destroys remote knowledge-work freelancing ($MC_L \to 0$) faster than it builds houses or grows potatoes.** If a seed node relies on continuous monthly freelance software, CAD, or consulting retainers to pay municipal property taxes and utility fees, the node faces structural insolvency when AI models automate those services.
+#### Hardening Against Cognitive Labor Compression: The Foundation Clearinghouse Architecture
+The 2026 4-Frontier AI Benchmark diagnosed a fatal vulnerability in conventional communal economics: **frontier AI destroys remote knowledge-work freelancing ($MC_L \to 0$) faster than it builds houses or grows potatoes.** If a seed node relies on its individual members doing monthly freelance software, CAD, or consulting retainers to pay municipal property taxes and utility fees, the node faces structural insolvency when AI models automate those services.
 
-O.N.E. solves this via a **Three-Pillar Fiscal Immunization Model**:
-1. **The Pre-Capitalized 10-Year Municipal Tax Escrow (The Sinking Fund):**
-   * Stage 0 land acquisition budgets must mandate an immutable, pre-capitalized escrow holding **10 full years of municipal property taxes and mandatory statutory compliance fees**.
-   * Held strictly by Entity A (Passive Land Trust) in conservative, inflation-indexed or local sovereign reserve vehicles, this escrow guarantees that even if external freelance revenues drop to absolute zero overnight, the node cannot be foreclosed or evicted by county or municipal tax authorities.
-2. **Statutory Conservation Easement & Agricultural Tax Abatement (80%–100% Tax Erasure):**
+To eliminate this vulnerability, O.N.E. strictly decouples seed nodes from localized financial engineering:
+
+1. **All Financing Originates from Foundation ONE:**
+   * Seed nodes do not burden individual pioneer members with complex micro-financing, debt, or personal capital liabilities.
+   * **Foundation ONE** (governed under Swiss Civil Law, ZGB Art. 80 ff., and Statutory Articles 2 & 3) acts as the sovereign financial clearinghouse. The Foundation centrally provides the non-debt capital required for:
+     * Stage 0 Rural Land Acquisition (held permanently under inalienable Foundation / CLT asset-lock custody).
+     * The Pre-Capitalized **10-Year Municipal Tax Escrow (The Sinking Fund)**, permanently extinguishing property tax foreclosure risk on Day 1.
+     * Tier-0 Essential Life-Support Infrastructure (deep-well borehole pump, 40,000L gravity cistern, 48V LFP off-grid power core).
+2. **All External Fiat Revenues Flow 100% to Foundation ONE:**
+   * Any fiat revenue generated across the global network—such as legacy commercial derivative licensing (literature, film/streaming adaptations per Stat. Art. 2.2), open-source research grants, enterprise dual-licensing of fablab technologies, and institutional service agreements—flows **directly and exclusively into Foundation ONE**.
+   * Individual seed nodes do not retain private fiat treasuries, completely preventing internal class stratification and localized commercial drift.
+3. **Frictionless Capital Redistribution & Perpetual Node Spawning:**
+   * Foundation ONE pools all external surpluses into an immutable, non-profit replication endowment.
+   * As funds accumulate, they are deployed to fund and spawn **Node #2, Node #3, Node #4...** in orthogonal bioregions, scaling the planetary commons organically without bank debt or speculative investment.
+4. **Statutory Conservation Easement & Agricultural Tax Abatement (80%–100% Tax Erasure):**
    * In parallel with escrow capitalization, Entity A covenants non-residential land under registered regenerative agroforestry, riparian buffer zones, and open-space conservation easements (e.g. US IRC § 170(h) Conservation Easements / Agricultural Present-Use Value, Swiss ZGB Art. 80 ff. *Landwirtschaftliche Nutzfläche / Naturschutz*, European *Natura 2000*).
    * This reclassifies the parcel from speculative market rates to statutory agricultural/conservation assessments, slashing recurring municipal tax obligations by **80% to 100%** into negligible nominal amounts.
-3. **ETI as Front-Loaded Capex Sourcing, Never Recurring Opex:**
-   * In O.N.E., the External Trade Interface (ETI) is strictly an initial capital-expenditure pipeline during Months 0–18, converting early fiat surpluses into permanent physical machinery (LFP batteries, solar PV, CNC timber tools, high-tensile fasteners, borehole pumps).
-   * Once physical Stage 1 caloric and energy buffers are installed, internal running costs are zero. The node never requires ongoing monthly fiat sales to feed, warm, or house its members.
+5. **100% Post-Monetary Nodes:**
+   * Because Foundation ONE absorbs all external financial relations, taxes, and capital allocations, the seed nodes themselves remain **purely post-monetary**. Members focus 100% of their energy on physical biophysical resilience, agroecology, and demarchic governance—completely immune to external labor market volatility.
 
 ---
 
