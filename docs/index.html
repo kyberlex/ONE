@@ -7,7 +7,6 @@
   <meta name="description" content="Persistent cooperative planetary simulator and living resilience engine based on Leontief thermodynamics, dynamic usufruct, direct democracy and dual-track open hardware." />
   <link rel="icon" type="image/svg+xml" href="./one-logo.svg" />
   <link rel="apple-touch-icon" href="./one-logo.png" />
-  <script type="module" crossorigin src="./assets/index-DnHt0Gm-.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-DlWHCvYR.css">
 </head>
 <body>
@@ -899,7 +898,7 @@
         </div>
       </div>
     </div>
-
+  </div>
 
   <!-- ONBOARDING GUIDE SPOTLIGHT OVERLAY (ITEM 17) -->
   <div id="onboarding-guide-overlay" class="onboarding-guide-overlay hidden">
@@ -934,373 +933,10 @@
         </div>
       </div>
     </div>
+  </div>
+
   <!-- STYLES & INTERACTION SCRIPT FOR INDEPENDENT AI BENCHMARK MODAL -->
-  <style>
-    .btn-ai-benchmark-badge {
-      cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .btn-ai-benchmark-badge:hover {
-      border-color: #38bdf8 !important;
-      box-shadow: 0 0 16px rgba(56, 189, 248, 0.4) !important;
-      transform: translateY(-1px);
-    }
-    .modal-window-ai-benchmark {
-      max-width: 980px;
-      width: 94%;
-      max-height: 88vh;
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 189, 248, 0.15);
-    }
-    .badge-ai-frontier {
-      background: rgba(56, 189, 248, 0.12);
-      color: #38bdf8;
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      font-size: 10.5px;
-      padding: 3px 9px;
-      border-radius: 9999px;
-      font-weight: 700;
-      letter-spacing: 0.6px;
-    }
-    .modal-body-ai {
-      padding: 18px 24px;
-      overflow-y: auto;
-      color: #e2e8f0;
-      font-size: 13.5px;
-      line-height: 1.55;
-    }
-    .ai-tabs-bar {
-      display: flex;
-      gap: 8px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding-bottom: 10px;
-      margin-bottom: 16px;
-      overflow-x: auto;
-    }
-    .ai-tab-btn {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #94a3b8;
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-size: 12.5px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      white-space: nowrap;
-    }
-    .ai-tab-btn:hover {
-      color: #fff;
-      background: rgba(255, 255, 255, 0.09);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-    .ai-tab-btn.active {
-      color: #38bdf8;
-      background: rgba(56, 189, 248, 0.12);
-      border-color: rgba(56, 189, 248, 0.5);
-      box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
-    }
-    .ai-tab-pane {
-      display: none;
-      animation: fadeIn 0.2s ease-out;
-    }
-    .ai-tab-pane.active {
-      display: block;
-    }
-    .ai-callout-header {
-      background: rgba(15, 23, 42, 0.6);
-      border-left: 3px solid #38bdf8;
-      padding: 10px 14px;
-      border-radius: 6px;
-      margin-bottom: 14px;
-      color: #cbd5e1;
-      font-size: 12.5px;
-      line-height: 1.45;
-    }
-    .ai-table-wrap {
-      overflow-x: auto;
-      margin-bottom: 14px;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(2, 6, 23, 0.5);
-    }
-    .ai-benchmark-table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 12px;
-    }
-    .ai-benchmark-table th {
-      background: rgba(15, 23, 42, 0.85);
-      color: #94a3b8;
-      padding: 10px 12px;
-      font-weight: 600;
-      font-size: 10.5px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      white-space: nowrap;
-    }
-    .ai-benchmark-table td {
-      padding: 9px 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      color: #cbd5e1;
-      vertical-align: middle;
-    }
-    .tr-highlight-one {
-      background: rgba(16, 185, 129, 0.1);
-      border-left: 3px solid #10b981;
-    }
-    .tr-highlight-one td {
-      color: #ecfdf5;
-      font-weight: 500;
-    }
-    .arch-cell {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .arch-badge-rank {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 26px;
-      height: 26px;
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.06);
-      font-weight: 700;
-      font-size: 11px;
-      color: #94a3b8;
-      flex-shrink: 0;
-    }
-    .arch-badge-rank.rank-1 {
-      background: rgba(245, 158, 11, 0.2);
-      color: #fbbf24;
-      border: 1px solid rgba(245, 158, 11, 0.4);
-    }
-    .arch-badge-rank.rank-2 {
-      background: rgba(148, 163, 184, 0.15);
-      color: #cbd5e1;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-    }
-    .arch-badge-rank.rank-3 {
-      background: rgba(217, 119, 6, 0.15);
-      color: #d97706;
-      border: 1px solid rgba(217, 119, 6, 0.3);
-    }
-    .arch-sub {
-      display: block;
-      font-size: 10.5px;
-      color: #64748b;
-      font-weight: normal;
-      margin-top: 1px;
-    }
-    .score-cell {
-      font-family: 'JetBrains Mono', monospace;
-      font-weight: 700;
-      font-size: 12.5px;
-    }
-    .score-gold {
-      color: #34d399;
-      font-weight: 800;
-      text-shadow: 0 0 8px rgba(52, 211, 153, 0.4);
-    }
-    .score-high { color: #38bdf8; }
-    .score-mid { color: #fbbf24; }
-    .score-low { color: #f97316; }
-    .score-danger { color: #ef4444; }
-    .score-red {
-      color: #f87171;
-      font-weight: 800;
-      background: rgba(239, 68, 68, 0.12);
-      padding: 2px 6px;
-      border-radius: 4px;
-      border: 1px solid rgba(239, 68, 68, 0.3);
-    }
-    .th-center, .td-center { text-align: center; }
-    .ai-paradox-box {
-      background: rgba(245, 158, 11, 0.07);
-      border: 1px solid rgba(245, 158, 11, 0.28);
-      border-radius: 8px;
-      padding: 10px 14px;
-      margin-top: 10px;
-    }
-    .ai-paradox-badge {
-      color: #fbbf24;
-      font-size: 10.5px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
-      margin-bottom: 4px;
-    }
-    .ai-paradox-box p {
-      font-size: 12px;
-      margin: 0;
-      color: #cbd5e1;
-      line-height: 1.45;
-    }
-    .dimensions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 12px;
-    }
-    .dim-card {
-      background: rgba(15, 23, 42, 0.55);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      border-radius: 8px;
-      padding: 12px 14px;
-    }
-    .dim-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 6px;
-      gap: 6px;
-    }
-    .dim-title {
-      font-weight: 700;
-      color: #f1f5f9;
-      font-size: 12.5px;
-    }
-    .dim-score {
-      font-size: 11px;
-      font-weight: 700;
-      font-family: monospace;
-      white-space: nowrap;
-    }
-    .dim-card p {
-      font-size: 11.5px;
-      color: #94a3b8;
-      margin: 0;
-      line-height: 1.45;
-    }
-    .nordic-math-card, .transition-trap-card {
-      background: rgba(15, 23, 42, 0.55);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 10px;
-      padding: 16px;
-    }
-    .nordic-math-card h4, .transition-trap-card h4 {
-      color: #ecfdf5;
-      font-size: 14.5px;
-      margin: 0 0 8px 0;
-    }
-    .math-intro {
-      font-size: 12.5px;
-      color: #94a3b8;
-      margin-bottom: 10px;
-    }
-    .math-formula-box {
-      background: rgba(0, 0, 0, 0.45);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      border-radius: 6px;
-      padding: 10px 14px;
-      text-align: center;
-      margin: 10px 0 14px 0;
-      font-size: 15px;
-      color: #38bdf8;
-      font-family: monospace;
-    }
-    .math-steps-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .math-step {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      font-size: 12px;
-    }
-    .step-num {
-      background: rgba(56, 189, 248, 0.15);
-      color: #38bdf8;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 11px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .math-step p {
-      margin: 2px 0 0 0;
-      color: #94a3b8;
-      line-height: 1.4;
-    }
-    .math-step code {
-      background: rgba(0, 0, 0, 0.3);
-      color: #38bdf8;
-      padding: 1px 4px;
-      border-radius: 3px;
-    }
-    .breakdown-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin: 12px 0;
-    }
-    @media (max-width: 720px) {
-      .breakdown-grid { grid-template-columns: 1fr; }
-    }
-    .breakdown-col {
-      background: rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 8px;
-      padding: 12px;
-      font-size: 12px;
-    }
-    .breakdown-col h5 {
-      margin: 0 0 8px 0;
-      font-size: 13px;
-      color: #f1f5f9;
-    }
-    .breakdown-col ul {
-      margin: 0;
-      padding-left: 18px;
-      color: #94a3b8;
-    }
-    .breakdown-col li { margin-bottom: 6px; line-height: 1.4; }
-    .highlight-quote {
-      border-left: 2px solid #f87171;
-      padding-left: 10px;
-      color: #fca5a5;
-      font-style: italic;
-      font-size: 11.5px;
-      margin: 8px 0 0 0;
-      line-height: 1.4;
-    }
-    .dual-track-answer-box {
-      background: rgba(16, 185, 129, 0.08);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      border-radius: 8px;
-      padding: 12px 14px;
-      margin-top: 10px;
-      font-size: 12px;
-    }
-    .dual-track-answer-box h5 {
-      margin: 0 0 4px 0;
-      color: #34d399;
-      font-size: 13px;
-    }
-    .dual-track-answer-box p {
-      margin: 0;
-      color: #cbd5e1;
-      line-height: 1.4;
-    }
-    .modal-footer-ai {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 24px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(0, 0, 0, 0.2);
-      font-size: 11px;
-      color: #64748b;
-    }
-  </style>
+  <style>.btn-ai-benchmark-badge{cursor:pointer;transition:all .2s cubic-bezier(.4,0,.2,1)}.btn-ai-benchmark-badge:hover{transform:translateY(-1px);border-color:#38bdf8!important;box-shadow:0 0 16px #38bdf866!important}.modal-window-ai-benchmark{border:1px solid #38bdf84d;width:94%;max-width:980px;max-height:88vh;box-shadow:0 25px 60px #000c,0 0 30px #38bdf826}.badge-ai-frontier{color:#38bdf8;letter-spacing:.6px;background:#38bdf81f;border:1px solid #38bdf859;border-radius:9999px;padding:3px 9px;font-size:10.5px;font-weight:700}.modal-body-ai{color:#e2e8f0;padding:18px 24px;font-size:13.5px;line-height:1.55;overflow-y:auto}.ai-tabs-bar{border-bottom:1px solid #ffffff14;gap:8px;margin-bottom:16px;padding-bottom:10px;display:flex;overflow-x:auto}.ai-tab-btn{color:#94a3b8;cursor:pointer;white-space:nowrap;background:#ffffff0d;border:1px solid #ffffff1a;border-radius:8px;padding:8px 14px;font-size:12.5px;font-weight:600;transition:all .2s}.ai-tab-btn:hover{color:#fff;background:#ffffff17;border-color:#fff3}.ai-tab-btn.active{color:#38bdf8;background:#38bdf81f;border-color:#38bdf880;box-shadow:0 0 12px #38bdf833}.ai-tab-pane{animation:.2s ease-out fadeIn;display:none}.ai-tab-pane.active{display:block}.ai-callout-header{color:#cbd5e1;background:#0f172a99;border-left:3px solid #38bdf8;border-radius:6px;margin-bottom:14px;padding:10px 14px;font-size:12.5px;line-height:1.45}.ai-table-wrap{background:#02061780;border:1px solid #ffffff14;border-radius:10px;margin-bottom:14px;overflow-x:auto}.ai-benchmark-table{border-collapse:collapse;text-align:left;width:100%;font-size:12px}.ai-benchmark-table th{color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;background:#0f172ad9;border-bottom:1px solid #ffffff1a;padding:10px 12px;font-size:10.5px;font-weight:600}.ai-benchmark-table td{color:#cbd5e1;vertical-align:middle;border-bottom:1px solid #ffffff0d;padding:9px 12px}.tr-highlight-one{background:#10b9811a;border-left:3px solid #10b981}.tr-highlight-one td{color:#ecfdf5;font-weight:500}.arch-cell{align-items:center;gap:10px;display:flex}.arch-badge-rank{color:#94a3b8;background:#ffffff0f;border-radius:6px;flex-shrink:0;justify-content:center;align-items:center;width:26px;height:26px;font-size:11px;font-weight:700;display:inline-flex}.arch-badge-rank.rank-1{color:#fbbf24;background:#f59e0b33;border:1px solid #f59e0b66}.arch-badge-rank.rank-2{color:#cbd5e1;background:#94a3b826;border:1px solid #94a3b84d}.arch-badge-rank.rank-3{color:#d97706;background:#d9770626;border:1px solid #d977064d}.arch-sub{color:#64748b;margin-top:1px;font-size:10.5px;font-weight:400;display:block}.score-cell{font-family:JetBrains Mono,monospace;font-size:12.5px;font-weight:700}.score-gold{color:#34d399;text-shadow:0 0 8px #34d39966;font-weight:800}.score-high{color:#38bdf8}.score-mid{color:#fbbf24}.score-low{color:#f97316}.score-danger{color:#ef4444}.score-red{color:#f87171;background:#ef44441f;border:1px solid #ef44444d;border-radius:4px;padding:2px 6px;font-weight:800}.th-center,.td-center{text-align:center}.ai-paradox-box{background:#f59e0b12;border:1px solid #f59e0b47;border-radius:8px;margin-top:10px;padding:10px 14px}.ai-paradox-badge{color:#fbbf24;letter-spacing:.8px;margin-bottom:4px;font-size:10.5px;font-weight:800}.ai-paradox-box p{color:#cbd5e1;margin:0;font-size:12px;line-height:1.45}.dimensions-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;display:grid}.dim-card{background:#0f172a8c;border:1px solid #ffffff12;border-radius:8px;padding:12px 14px}.dim-header{justify-content:space-between;align-items:baseline;gap:6px;margin-bottom:6px;display:flex}.dim-title{color:#f1f5f9;font-size:12.5px;font-weight:700}.dim-score{white-space:nowrap;font-family:monospace;font-size:11px;font-weight:700}.dim-card p{color:#94a3b8;margin:0;font-size:11.5px;line-height:1.45}.nordic-math-card,.transition-trap-card{background:#0f172a8c;border:1px solid #ffffff14;border-radius:10px;padding:16px}.nordic-math-card h4,.transition-trap-card h4{color:#ecfdf5;margin:0 0 8px;font-size:14.5px}.math-intro{color:#94a3b8;margin-bottom:10px;font-size:12.5px}.math-formula-box{text-align:center;color:#38bdf8;background:#00000073;border:1px solid #38bdf84d;border-radius:6px;margin:10px 0 14px;padding:10px 14px;font-family:monospace;font-size:15px}.math-steps-list{flex-direction:column;gap:10px;display:flex}.math-step{align-items:flex-start;gap:12px;font-size:12px;display:flex}.step-num{color:#38bdf8;background:#38bdf826;border-radius:50%;flex-shrink:0;justify-content:center;align-items:center;width:22px;height:22px;margin-top:1px;font-size:11px;font-weight:700;display:flex}.math-step p{color:#94a3b8;margin:2px 0 0;line-height:1.4}.math-step code{color:#38bdf8;background:#0000004d;border-radius:3px;padding:1px 4px}.breakdown-grid{grid-template-columns:1fr 1fr;gap:14px;margin:12px 0;display:grid}@media (width<=720px){.breakdown-grid{grid-template-columns:1fr}}.breakdown-col{background:#0000004d;border:1px solid #ffffff0d;border-radius:8px;padding:12px;font-size:12px}.breakdown-col h5{color:#f1f5f9;margin:0 0 8px;font-size:13px}.breakdown-col ul{color:#94a3b8;margin:0;padding-left:18px}.breakdown-col li{margin-bottom:6px;line-height:1.4}.highlight-quote{color:#fca5a5;border-left:2px solid #f87171;margin:8px 0 0;padding-left:10px;font-size:11.5px;font-style:italic;line-height:1.4}.dual-track-answer-box{background:#10b98114;border:1px solid #10b9814d;border-radius:8px;margin-top:10px;padding:12px 14px;font-size:12px}.dual-track-answer-box h5{color:#34d399;margin:0 0 4px;font-size:13px}.dual-track-answer-box p{color:#cbd5e1;margin:0;line-height:1.4}.modal-footer-ai{color:#64748b;background:#0003;border-top:1px solid #ffffff14;justify-content:space-between;align-items:center;padding:12px 24px;font-size:11px;display:flex}</style>
 
   <script>
     (function initAiBenchmarkModal() {
@@ -1313,7 +949,6 @@
       const btnCloseFooter = document.getElementById('btn-close-ai-benchmark-footer');
 
       function openModal() {
-        // Close other modals if open
         document.querySelectorAll('.modal-overlay').forEach(el => {
           if (el !== modal) el.classList.add('hidden');
         });
@@ -1326,7 +961,6 @@
 
       if (btnOpenHud) btnOpenHud.addEventListener('click', openModal);
       if (btnOpenMenu) btnOpenMenu.addEventListener('click', () => {
-        // Close dropdown menu
         const dropdown = document.getElementById('system-menu-dropdown');
         if (dropdown) dropdown.classList.add('hidden');
         openModal();
@@ -1335,19 +969,16 @@
       if (btnCloseHeader) btnCloseHeader.addEventListener('click', closeModal);
       if (btnCloseFooter) btnCloseFooter.addEventListener('click', closeModal);
 
-      // Close on backdrop click
       modal.addEventListener('click', (e) => {
         if (e.target === modal) closeModal();
       });
 
-      // Close on Escape key
       window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
           closeModal();
         }
       });
 
-      // Tab navigation
       const tabBtns = modal.querySelectorAll('.ai-tab-btn');
       const tabPanes = modal.querySelectorAll('.ai-tab-pane');
 
