@@ -54,8 +54,9 @@ To prevent commercial liabilities, taxes, and supplier disputes from touching th
 * **Common Law (US / UK / Canada / Australia):** Incorporate a 501(c)(3) Community Land Trust (CLT) or Perpetual Purpose Trust (PPT). Recorded deed includes:
   1. *Perpetual Usufruct Restriction:* Land may never be mortgaged, subdivided, or sold for speculative gain.
   2. *Notice of Non-Responsibility:* Entity A’s fee title is insulated against mechanics' liens incurred by Entity B.
-* **Civil Law (Continental Europe / Switzerland):** Incorporate a non-profit Foundation (*Gemeinnützige Stiftung* / ZGB Art. 80 ff.) with immutable asset lock (*Vermögensbindung*). Establish a municipal compliance escrow to prevent administrative code fines (*Zustandsstörerhaftung*) from becoming senior liens (*Sicherungshypothek*) in the *Grundbuch*.
-* **Customary Commons (Latin America / Agrarian Reform):** Inscribe agrarian title through an *Asamblea de Formalidades Especiales* and register with the National Agrarian Registry (RAN) under *Ley Agraria* Arts. 45/46. This eliminates precarious *posesionario irregular* status and bars arbitrary eviction.
+  3. *Fiscal Immunization (The Anti-Freelance-Erosion Shield):* Entity A pre-capitalizes a dedicated **10-Year Municipal Tax Escrow** (The Sinking Fund) and registers a **Perpetual Conservation Easement / Agricultural Present-Use Abatement** (IRC § 170(h) / state PUV), reducing annual assessed property taxes by 80%–100% and completely neutralizing dependence on vulnerable freelance income.
+* **Civil Law (Continental Europe / Switzerland):** Incorporate a non-profit Foundation (*Gemeinnützige Stiftung* / ZGB Art. 80 ff.) with immutable asset lock (*Vermögensbindung*). Register land under statutory agrarian/ecological usufruct (*Landwirtschaftliche Nutzfläche* / *Naturschutz*), and establish a **10-Year Municipal Tax Escrow** alongside an administrative compliance reserve to prevent administrative code fines (*Zustandsstörerhaftung*) from becoming senior liens (*Sicherungshypothek*) in the *Grundbuch*.
+* **Customary Commons (Latin America / Agrarian Reform):** Inscribe agrarian title through an *Asamblea de Formalidades Especiales* and register with the National Agrarian Registry (RAN) under *Ley Agraria* Arts. 45/46. This eliminates precarious *posesionario irregular* status, secures communal tax-exempt status, and bars arbitrary eviction.
 
 ### 3.2. Entity B: The Operating Cooperative
 * Incorporate as a Worker-Owned Cooperative (Uniform Limited Cooperative Association - ULCAA, or European *Genossenschaft* / *Verein*).
@@ -91,6 +92,8 @@ To prevent commercial liabilities, taxes, and supplier disputes from touching th
 - [ ] Form Entity B (Worker-Owned Operating Co-op) with zero-unsecured-debt bylaws.
 - [ ] Complete Phase I Environmental Site Assessment (ESA) and groundwater hydrological test.
 - [ ] Execute 50-year Ground Lease between Entity A and Entity B with UCC § 9-604 fixture severance.
-- [ ] Seed municipal compliance defense escrow (6–12 months of property taxes + legal retainer).
+- [ ] Pre-capitalize 10-Year Municipal Tax Escrow (The Sinking Fund) to eliminate ongoing freelance tax dependency.
+- [ ] Record Conservation Easement / Agricultural Tax Abatement covenants (slashing assessed tax rolls by 80%–100%).
+- [ ] Seed municipal compliance defense escrow (code defense + legal retainer).
 - [ ] Establish initial 3-person sortition mediation panel roster.
 - [ ] Set up offline emergency archive (MicroSD cards containing O.N.E. Constitution, CAD, and legal docs).

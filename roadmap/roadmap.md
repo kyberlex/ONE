@@ -65,7 +65,8 @@ TRANSITION FEASIBILITY SCORE:  [█████░░░░░░░░░░░
 Transition friction is maximal not because O.N.E. is flawed, but because it requires the simultaneous deconstruction of the legacy macro-system:
 * **Abolition of Fee-Simple Absentee Title:** Replacing speculative real estate with dynamic possessory usufruct directly threatens constitutional private property clauses, mortgage-backed securities, and municipal property tax rolls.
 * **Decoupling from Fiat Debt Circulation:** Demonetizing baseline survival by-passes central bank fiat creation, interest-bearing debt, and commercial banking circuits.
-* **The ETI Arbitrage Vulnerability (Claude's Critique):** While seed nodes rely on Track B cognitive freelancing to pay municipal taxes and buy specialized hardware, the very AI accelerating post-work will simultaneously compress freelance wages, mandating rapid acceleration toward legal tax exemption.
+* **The ETI Arbitrage Vulnerability & The Freelance Erosion Trap (Claude & ChatGPT Critique):** While seed nodes initially rely on Track B cognitive freelancing (software, CAD, consulting) to pay municipal taxes and buy specialized hardware, the very frontier AI accelerating post-work simultaneously destroys the freelance knowledge-labor market *first* ($MC_L \to 0$ for digital work years before physical robotics mature). If nodes rely on continuous monthly gig income, they face insolvency before physical autonomy is achieved.  
+  * *Hardened Solution:* O.N.E. seed nodes reject recurring operational reliance on cognitive gig work. In Stage 0, nodes deploy the **Pre-Capitalized 10-Year Municipal Tax Escrow** and secure **Perpetual Conservation Easement / Agricultural Tax Abatements** (reducing property tax rolls by 80%–100%), rendering the land fiscally immune to cognitive labor market collapses.
 * **Elimination of the Representative Political Class:** Replacing electoral parties with rotating odd-parity sortition assemblies renders career politicians and lobbying cartels obsolete.
 
 #### The Failure Vector: What Happens When Legacy Systems Displace Labor Before UBI
@@ -250,6 +251,20 @@ A bootstrapping node funds property taxes, bulk raw metals, grid backup power, a
 3. **Decoupled Compute Micro-Array:** Cognitive workstations, CAD servers, and satellite transceivers are powered by a dedicated low-voltage 2.5 kW solar array and 10 kWh battery buffer, physically isolated from industrial 400V fabrication circuits, ensuring fiat cash flows continue even if industrial machinery is offline or repossessed.
 4. **Internal Demonetization & Anti-Corruption Firewall (Art. 9.3):** No fiat currency circulates inside Track B. ETI fiat is channeled into communal procurement reserves, eliminating ongoing operational costs.
 
+#### Hardening Against Cognitive Labor Compression (The Anti-ETI-Erosion Architecture)
+The 2026 4-Frontier AI Benchmark diagnosed a fatal vulnerability in conventional communal economics: **frontier AI destroys remote knowledge-work freelancing ($MC_L \to 0$) faster than it builds houses or grows potatoes.** If a seed node relies on continuous monthly freelance software, CAD, or consulting retainers to pay municipal property taxes and utility fees, the node faces structural insolvency when AI models automate those services.
+
+O.N.E. solves this via a **Three-Pillar Fiscal Immunization Model**:
+1. **The Pre-Capitalized 10-Year Municipal Tax Escrow (The Sinking Fund):**
+   * Stage 0 land acquisition budgets must mandate an immutable, pre-capitalized escrow holding **10 full years of municipal property taxes and mandatory statutory compliance fees**.
+   * Held strictly by Entity A (Passive Land Trust) in conservative, inflation-indexed or local sovereign reserve vehicles, this escrow guarantees that even if external freelance revenues drop to absolute zero overnight, the node cannot be foreclosed or evicted by county or municipal tax authorities.
+2. **Statutory Conservation Easement & Agricultural Tax Abatement (80%–100% Tax Erasure):**
+   * In parallel with escrow capitalization, Entity A covenants non-residential land under registered regenerative agroforestry, riparian buffer zones, and open-space conservation easements (e.g. US IRC § 170(h) Conservation Easements / Agricultural Present-Use Value, Swiss ZGB Art. 80 ff. *Landwirtschaftliche Nutzfläche / Naturschutz*, European *Natura 2000*).
+   * This reclassifies the parcel from speculative market rates to statutory agricultural/conservation assessments, slashing recurring municipal tax obligations by **80% to 100%** into negligible nominal amounts.
+3. **ETI as Front-Loaded Capex Sourcing, Never Recurring Opex:**
+   * In O.N.E., the External Trade Interface (ETI) is strictly an initial capital-expenditure pipeline during Months 0–18, converting early fiat surpluses into permanent physical machinery (LFP batteries, solar PV, CNC timber tools, high-tensile fasteners, borehole pumps).
+   * Once physical Stage 1 caloric and energy buffers are installed, internal running costs are zero. The node never requires ongoing monthly fiat sales to feed, warm, or house its members.
+
 ---
 
 ## 4. Phased Decoupling Matrix (Years 0 to 15)
@@ -267,6 +282,7 @@ Dual-Tier Shield     30-Day Autonomy         Metabolic Closure         Direct Ex
 ### Phase 0: Ground Zero & Legal Inception (Months 0–12)
 * Incorporate the Two-Tier Legal Shield under the active Jurisprudential Archetype.
 * Secure 2–5 hectares of rural land with clean, unencumbered water rights (verifying grandfathered residential buildings under civil law, or registering agrarian usufruct under customary commons).
+* Pre-capitalize the **10-Year Municipal Tax Escrow (The Sinking Fund)** and record **Conservation Easement / Agricultural Tax Abatement covenants**.
 * Institute the first 3-person sortition mediation panel with decoupled corporate directorships.
 * **Autonomy Level:** 0%. Complete dependency on Track A, managed transparently through ETI seed capital.
 
