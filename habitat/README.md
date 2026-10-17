@@ -34,3 +34,4 @@ All habitat designs and blueprints within this repository adhere strictly to the
 * **Universal Usufruct:** Abolition of absentee real estate speculation. Built on non-permanent, reversible dry foundations (helical piles/ballast) or reclaimed into municipal Commons Trusts.
 * **Thermodynamic Conservation:** Passivhaus energy conservation, closed-loop local material flows (Data-In, Data-Out metabolism), short-loop metallurgical recycling.
 * **Biometric Privacy:** Abiotic telemetry only (CO2, VOC, humidity, temperature). Zero continuous audio capture or biometric tracking.
+* **Universal Accessibility & Barrier-Free Design:** 100% of dwelling chassis are wheelchair-accessible by default (ISO 21542 / DIN 18040-2). Zero-step continuous finished floor plane, modular reversible ramps, ≥ 900 mm clear doorways, Ø 1500 mm turning circles, roll-in showers, and reinforced cavedio backing for modular grab bars.

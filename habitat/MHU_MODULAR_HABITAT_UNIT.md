@@ -92,6 +92,46 @@ The MHU structure operates upon the **Open Building Principle** (separation of p
   * Floor and ceiling joist bay spans: $1200\text{ mm}$ and $2400\text{ mm}$ multiples matching standard sheet goods.
   * Clear ceiling height: $2500\text{ mm}$ finished interior; $2850\text{ mm}$ structural rough opening.
 
+### 2.3 Universal Accessibility & Barrier-Free Invariant (Class-0 Mandate)
+In accordance with the **Tier 1 Biological Baseline** (Article 1.3), **100% of MHU chassis are universally barrier-free and fully wheelchair-accessible by default from fabrication**. Accessibility is not treated as an optional medical retrofit, but as an foundational structural invariant:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│             UNIVERSAL ACCESSIBILITY INVARIANTS (ISO 21542 / DIN 18040-2)     │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ 1. ZERO-STEP CONTINUOUS PLANE:                                              │
+│    • Single unbroken finished floor plane across the entire dwelling.       │
+│    • Zero internal steps or sunken spaces; flush entrance threshold        │
+│      (≤ 15 mm drop-seal / magnetic Passivhaus gasket with slotted drain).   │
+│                                                                             │
+│ 2. EXTERIOR MODULAR RAMP INTERFACE:                                         │
+│    • Elevated ground-screw chassis paired with modular dry timber ramps     │
+│      (slope ≤ 1:12 / 8.33%, clear width ≥ 1200 mm, 1500x1500 mm rest       │
+│      landings every 6 m linear span).                                       │
+│                                                                             │
+│ 3. CLEAR PASSAGEWAYS & DOORWAYS:                                            │
+│    • Minimum clear door opening width: ≥ 900 mm across all rooms.           │
+│    • Minimum corridor and interior circulation lane width: ≥ 1200 mm.       │
+│    • Sliding pocket doors preferred to maximize clear turning clearances.   │
+│                                                                             │
+│ 4. 1500 mm ROTATION ZONES:                                                  │
+│    • Unobstructed Ø 1500 mm wheelchair turning circles (360° rotation) in:  │
+│      vestibule, living room, kitchen work zone, master bedroom, & bathroom. │
+│                                                                             │
+│ 5. BARRIER-FREE WET CORE (ROLL-IN SANITARY):                                │
+│    • Zero-threshold roll-in curbless shower with integrated linear drain.   │
+│    • Toilet clearance: ≥ 900 mm lateral transfer zone on transfer side.     │
+│    • Service Cavity Backing: 18 mm structural plywood reinforcement        │
+│      plates pre-installed inside the 50 mm cavedio across all wet-room      │
+│      walls at 700–1000 mm height for modular grab bars (zero vapor breach). │
+│    • Roll-under sink with ≥ 700 mm knee clearance.                          │
+│                                                                             │
+│ 6. ERGONOMIC REACH & AUTOMATION:                                            │
+│    • Switches, Home Assistant panels, and handles: 850–1050 mm height.      │
+│    • Plugs & ports in cavedio: ≥ 450 mm above finished floor level.         │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
 ---
 
 ## 3. Envelope Hygrothermal Dynamics & Decoupled Service Layer
@@ -346,6 +386,10 @@ The MHU engineering specification directly benchmarks, utilizes, and interfaces 
 * **OSArch / Open-Source Architecture Community:**
   * *AEC Open Toolchain Platform:* [https://osarch.org](https://osarch.org)
   * *BlenderBIM (IfcOpenShell):* [https://blenderbim.org](https://blenderbim.org)
+* **Universal Accessibility & Barrier-Free Standards:**
+  * *ISO 21542:2021:* Building construction — Accessibility and usability of the built environment.
+  * *DIN 18040-2:* Construction of accessible buildings — Design principles — Part 2: Dwellings (Barrier-free and wheelchair usability).
+  * *European Standard EN 301 549 & D.M. 236/1989:* Ergonomic reach, barrier-free continuous planar circulation, and sanitary turning envelopes.
 * **Digital Fabrication & Automation Toolchains:**
   * *FreeCAD:* [https://www.freecad.org](https://www.freecad.org)
   * *OpenPLC Project:* [https://openplcproject.com](https://openplcproject.com)
