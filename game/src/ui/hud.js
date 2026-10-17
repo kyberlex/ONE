@@ -165,17 +165,17 @@ export class GameHUD {
           <span class="ribbon-label">Agro Belt</span>
         </button>` : ''}
         ${gameState.isDistrictUnlocked('fablab_quarter') ? `
-        <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'fablab_quarter' ? 'active' : ''}" data-district="fablab_quarter" title="East District: Open FabLab Quarter, Gantry Mill & Solar Induction Foundry">
+        <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'fablab_quarter' ? 'active' : ''}" data-district="fablab_quarter" title="West District: Open FabLab Quarter, Gantry Mill & Solar Induction Foundry">
           <span class="ribbon-icon">⚙️</span>
           <span class="ribbon-label">FabLab Quarter</span>
         </button>` : ''}
         ${gameState.isDistrictUnlocked('mhu_ecovillage') ? `
-        <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'mhu_ecovillage' ? 'active' : ''}" data-district="mhu_ecovillage" title="South District: MHU Ecovillage, Modular Habitats & Passive Solar Cabins">
+        <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'mhu_ecovillage' ? 'active' : ''}" data-district="mhu_ecovillage" title="East District: MHU Ecovillage, Modular Habitats & Passive Solar Cabins">
           <span class="ribbon-icon">🏡</span>
           <span class="ribbon-label">MHU Ecovillage</span>
         </button>` : ''}
         ${gameState.isDistrictUnlocked('transit_hub') ? `
-        <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'transit_hub' ? 'active' : ''}" data-district="transit_hub" title="West District: Logistics & Transit Vertiport, Cargo Trike Depot & Drones">
+        <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'transit_hub' ? 'active' : ''}" data-district="transit_hub" title="South-East District: Logistics & Transit Vertiport, Cargo Trike Depot & Drones">
           <span class="ribbon-icon">🚆</span>
           <span class="ribbon-label">Transit Vertiport</span>
         </button>` : ''}

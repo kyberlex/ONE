@@ -1026,20 +1026,20 @@ export class SettlementCanvas {
       ctx.quadraticCurveTo(-140, 90, -320, 220);
       ctx.stroke();
 
-      // 3.3 FabLab Industrial Road (East): Central clearing -> FabLab Quarter
+      // 3.3 FabLab Industrial Road (West): Central clearing -> FabLab Quarter
       ctx.strokeStyle = 'rgba(180, 83, 9, 0.22)'; // terracotta paver track
       ctx.lineWidth = 20;
       ctx.beginPath();
       ctx.moveTo(0, 25);
-      ctx.quadraticCurveTo(160, -10, 340, -30);
+      ctx.quadraticCurveTo(-160, -10, -340, -30);
       ctx.stroke();
 
-      // 3.4 MHU Ecovillage Promenade (West): Central clearing -> Living Ecovillage
-      ctx.strokeStyle = 'rgba(217, 119, 6, 0.18)'; // pea-gravel walkway
+      // 3.4 MHU Ecovillage Promenade (East): Central clearing -> Living Ecovillage
+      ctx.strokeStyle = 'rgba(168, 85, 247, 0.20)'; // pea-gravel walkway
       ctx.lineWidth = 20;
       ctx.beginPath();
       ctx.moveTo(0, 25);
-      ctx.quadraticCurveTo(-150, -30, -340, -80);
+      ctx.quadraticCurveTo(150, -10, 340, -30);
       ctx.stroke();
 
       // 3.5 Intermodal Logistics Corridor (South-East): Central clearing -> Transit Hub
@@ -1050,14 +1050,15 @@ export class SettlementCanvas {
       ctx.quadraticCurveTo(140, 130, 300, 280);
       ctx.stroke();
 
-      // 3.6 Circumferential Inter-District Ring Road: Agro Belt <-> Transit Hub <-> FabLab
+      // 3.6 Circumferential Inter-District Ring Road: FabLab <-> Agro Belt <-> Transit Hub <-> MHU Ecovillage
       ctx.strokeStyle = 'rgba(148, 163, 184, 0.12)';
       ctx.lineWidth = 16;
       ctx.setLineDash([12, 8]);
       ctx.beginPath();
-      ctx.moveTo(-320, 220);
+      ctx.moveTo(-340, -30);
+      ctx.quadraticCurveTo(-360, 95, -320, 220);
       ctx.quadraticCurveTo(0, 340, 300, 280);
-      ctx.quadraticCurveTo(360, 140, 340, -30);
+      ctx.quadraticCurveTo(360, 125, 340, -30);
       ctx.stroke();
       ctx.setLineDash([]);
 
@@ -1065,8 +1066,8 @@ export class SettlementCanvas {
       const bollardAlpha = Math.max(0.15, this.nightAlpha || 0);
       const bollards = [
         { x: 0, y: -50 }, { x: -80, y: 70 }, { x: -190, y: 140 }, { x: -260, y: 190 },
-        { x: 90, y: 5 }, { x: 200, y: -15 }, { x: 280, y: -25 },
-        { x: -90, y: -10 }, { x: -210, y: -50 }, { x: -280, y: -70 },
+        { x: -90, y: -10 }, { x: -200, y: -15 }, { x: -280, y: -25 },
+        { x: 90, y: -10 }, { x: 200, y: -15 }, { x: 280, y: -25 },
         { x: 80, y: 80 }, { x: 170, y: 170 }, { x: 240, y: 230 }
       ];
       bollards.forEach(b => {

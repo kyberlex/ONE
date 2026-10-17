@@ -538,7 +538,7 @@ export class GameState {
           name: 'FabLab & Circular Industrial Quarter',
           icon: '⚙️',
           tag: 'Open Hardware & Heavy Tooling',
-          center: { x: 340, y: -30 },
+          center: { x: -340, y: -30 },
           radius: 190,
           unlocked: false,
           description: '5-axis LinuxCNC gantry mill, recycled filament extruder, induction solar foundry, cobots.',
@@ -551,7 +551,7 @@ export class GameState {
           name: 'Modular Habitat (MHU) Ecovillage',
           icon: '🏡',
           tag: 'Dynamic Usufruct Living (Art. 4)',
-          center: { x: -340, y: -80 },
+          center: { x: 340, y: -30 },
           radius: 190,
           unlocked: false,
           description: 'CLT geodesic residential clusters, greywater reed-bed wetland, communal kitchen hearth, health clinic.',
@@ -3660,7 +3660,7 @@ export class GameState {
                 name: 'FabLab & Circular Industrial Quarter',
                 icon: '⚙️',
                 tag: 'Open Hardware & Heavy Tooling',
-                center: { x: 340, y: -30 },
+                center: { x: -340, y: -30 },
                 radius: 190,
                 unlocked: false,
                 description: '5-axis LinuxCNC gantry mill, recycled filament extruder, induction solar foundry, cobots.',
@@ -3673,7 +3673,7 @@ export class GameState {
                 name: 'Modular Habitat (MHU) Ecovillage',
                 icon: '🏡',
                 tag: 'Dynamic Usufruct Living (Art. 4)',
-                center: { x: -340, y: -80 },
+                center: { x: 340, y: -30 },
                 radius: 190,
                 unlocked: false,
                 description: 'CLT geodesic residential clusters, greywater reed-bed wetland, communal kitchen hearth, health clinic.',
@@ -3695,6 +3695,21 @@ export class GameState {
                 stats: { residents: 0, powerDrawKw: 5.0, output: 'Active Convoys' }
               }
             };
+          }
+
+          // Canonical Solarpunk Bioclimatic Alignment Migration:
+          // Invert legacy misplaced district coordinates in existing localStorage saves:
+          // West (Negative X) = Machine Shop & FabLab Circular Industrial Quarter
+          // East (Positive X) = Residential Pod Courtyards & MHU Ecovillage
+          if (this.data.districts) {
+            if (this.data.districts.fablab_quarter && this.data.districts.fablab_quarter.center.x > 0) {
+              console.log('⚙️ [GameState] Aligning FabLab Industrial Quarter to West (-340, -30)');
+              this.data.districts.fablab_quarter.center = { x: -340, y: -30 };
+            }
+            if (this.data.districts.mhu_ecovillage && this.data.districts.mhu_ecovillage.center.x < 0) {
+              console.log('🏡 [GameState] Aligning MHU Ecovillage to East (340, -30)');
+              this.data.districts.mhu_ecovillage.center = { x: 340, y: -30 };
+            }
           }
 
           // Heal depleted food reserve in existing test saves if zero
