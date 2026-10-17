@@ -568,8 +568,9 @@ export class SettlementCanvas {
     const isSolar = ['solar_array', 'battery_bank', 'solar_thermal_tower', 'solar_foundry'].includes(buildingType);
     const isHydro = ['rain_cistern', 'reed_bed', 'retention_swale', 'deep_well'].includes(buildingType);
     const isResidential = ['guest_dome', 'mhu_dwelling', 'mhu', 'mhu_couple', 'mhu_family', 'mhu_studio', 'mhu_bathhouse', 'school_nursery', 'kitchen_oven', 'clinic', 'school', 'elder_sanctuary'].includes(buildingType);
-    const isIndustrial = ['fablab', 'foundry', 'heavy_gantry_mill', 'trike_depot'].includes(buildingType);
-    const isAgro = ['garden_bed', 'food_forest', 'aquaponics_greenhouse'].includes(buildingType);
+    const isIndustrial = ['fablab', 'foundry', 'heavy_gantry_mill', 'cobot_arm', 'scada_bot'].includes(buildingType);
+    const isTransit = ['trike_depot', 'drone_vertiport'].includes(buildingType);
+    const isAgro = ['garden_bed', 'food_forest', 'aquaponics_greenhouse', 'grain_silo'].includes(buildingType);
 
     if (isSolar) {
       // Check nearest tree distance
@@ -598,14 +599,22 @@ export class SettlementCanvas {
     } else if (isIndustrial) {
       const nearResidential = (buildings || []).some(b => ['guest_dome', 'mhu_dwelling', 'mhu', 'mhu_couple', 'mhu_family', 'mhu_studio', 'mhu_bathhouse', 'school_nursery', 'kitchen_oven', 'clinic', 'school', 'elder_sanctuary'].includes(b.type) && Math.hypot(snapX - b.x, snapY - b.y) < 130) || (Math.hypot(snapX, snapY) < 100);
       if (snapX < -60) {
-        feedback = { ok: true, text: '✅ Logistics Axis: Direct Freight & Vibration Absorption', color: '#94a3b8' };
+        feedback = { ok: true, text: '✅ Fabrication Axis: Direct Freight & Vibration Absorption', color: '#94a3b8' };
       } else if (nearResidential) {
         feedback = { ok: false, text: '⚠️ Workshop Noise near Dwellings (-15 morale)', color: '#f59e0b' };
       } else {
         feedback = { ok: true, text: '⚙️ Industrial Machinery Plot', color: '#94a3b8' };
       }
+    } else if (isTransit) {
+      if (snapX >= 100 && snapY >= 100) {
+        feedback = { ok: true, text: '✅ Regional Transit Hub: Overland Trail & Flight Clearway', color: '#06b6d4' };
+      } else {
+        feedback = { ok: false, text: '⚠️ Best placed in South-East Transit Hub', color: '#f59e0b' };
+      }
     } else if (isAgro) {
-      if (snapY >= 0) {
+      if (snapX <= -100 && snapY >= 60) {
+        feedback = { ok: true, text: '✅ Agroecological Belt: Prime Soil & Bioswale Access', color: '#10b981' };
+      } else if (snapY >= 0) {
         feedback = { ok: true, text: '✅ Full Photoperiod Sunlight (+2,200 kcal/day)', color: '#10b981' };
       } else {
         feedback = { ok: false, text: '⚠️ Partial Shade Crop Plot (-20% yield)', color: '#f59e0b' };
@@ -1010,12 +1019,12 @@ export class SettlementCanvas {
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
 
-      // 3.1 Agora Promenade (North): Central clearing -> Agora Core
+      // 3.1 Water Way & Hydrological Flume (North): Central clearing -> Water Spine & Cisterns
       ctx.strokeStyle = 'rgba(203, 213, 225, 0.16)'; // crushed limestone cobble
       ctx.lineWidth = 18;
       ctx.beginPath();
-      ctx.moveTo(0, 15);
-      ctx.lineTo(0, -115);
+      ctx.moveTo(0, -15);
+      ctx.lineTo(0, -180);
       ctx.stroke();
 
       // 3.2 Agro Commons Trail (South-West): Central clearing -> Agroecological Belt
@@ -1353,7 +1362,7 @@ export class SettlementCanvas {
       const textMetrics = ctx.measureText(tagText);
       const tagW = textMetrics.width + 20;
       const tagH = 20;
-      const tagY = cy - r - 12;
+      const tagY = d.id === 'agora_core' ? -70 : (cy - r - 12);
 
       ctx.fillStyle = isHovered ? 'rgba(15, 23, 42, 0.95)' : 'rgba(15, 23, 42, 0.88)';
       ctx.strokeStyle = isHovered ? d.color : 'rgba(255, 255, 255, 0.25)';
@@ -4359,9 +4368,11 @@ export class SettlementCanvas {
     const pulse = 0.5 + 0.5 * Math.sin(time * 3);
 
     const isSolar = ['solar_array', 'battery_bank', 'solar_thermal_tower', 'solar_foundry'].includes(pb);
-    const isHydro = ['rain_cistern', 'reed_bed', 'deep_well', 'retention_swale', 'aquaponics_greenhouse', 'biogas_digester'].includes(pb);
-    const isLogistics = ['fablab', 'foundry', 'heavy_gantry_mill', 'trike_depot', 'drone_vertiport', 'cobot_arm', 'scada_bot'].includes(pb);
-    const isResidential = ['guest_dome', 'kitchen_oven', 'clinic', 'school', 'school_nursery', 'elder_sanctuary', 'garden_bed', 'food_forest', 'mhu_dwelling', 'mhu', 'mhu_couple', 'mhu_family', 'mhu_studio', 'mhu_bathhouse'].includes(pb);
+    const isHydro = ['rain_cistern', 'reed_bed', 'deep_well', 'retention_swale', 'biogas_digester'].includes(pb);
+    const isFabLab = ['fablab', 'foundry', 'heavy_gantry_mill', 'cobot_arm', 'scada_bot'].includes(pb);
+    const isTransit = ['trike_depot', 'drone_vertiport'].includes(pb);
+    const isAgro = ['garden_bed', 'food_forest', 'aquaponics_greenhouse', 'grain_silo'].includes(pb);
+    const isResidential = ['guest_dome', 'kitchen_oven', 'clinic', 'school', 'school_nursery', 'elder_sanctuary', 'mhu_dwelling', 'mhu', 'mhu_couple', 'mhu_family', 'mhu_studio', 'mhu_bathhouse'].includes(pb);
 
     ctx.save();
 
@@ -4439,10 +4450,10 @@ export class SettlementCanvas {
     ctx.fillStyle = isHydro ? '#a5f3fc' : 'rgba(165, 243, 252, 0.6)';
     ctx.fillText('Gravity-Feed Runoff & Low-Ground Reed-Bed Infiltration', 0, -164);
 
-    // 3. Machine Shop & Logistics Axis (West: x from -75 to -320, y from -70 to 70)
-    // Steel-tinted corridor connecting to the future Trike Depot and freight trails
-    const logAlpha = isLogistics ? (0.14 + 0.08 * pulse) : 0.05;
-    const logBorderAlpha = isLogistics ? (0.75 + 0.25 * pulse) : 0.25;
+    // 3. Machine Shop & Fabrication Axis (West: x from -75 to -320, y from -70 to 70)
+    // Steel-tinted corridor connecting to the FabLab and machine shop
+    const logAlpha = isFabLab ? (0.14 + 0.08 * pulse) : 0.05;
+    const logBorderAlpha = isFabLab ? (0.75 + 0.25 * pulse) : 0.25;
 
     ctx.fillStyle = `rgba(148, 163, 184, ${logAlpha})`;
     ctx.beginPath();
@@ -4450,7 +4461,7 @@ export class SettlementCanvas {
     ctx.fill();
 
     ctx.strokeStyle = `rgba(148, 163, 184, ${logBorderAlpha})`;
-    ctx.lineWidth = isLogistics ? 2.0 : 1.2;
+    ctx.lineWidth = isFabLab ? 2.0 : 1.2;
     ctx.setLineDash([8, 6]);
     ctx.beginPath();
     ctx.roundRect(-320, -65, 240, 130, 8);
@@ -4464,13 +4475,13 @@ export class SettlementCanvas {
 
     // Directional chevron markers < < <
     ctx.setLineDash([]);
-    ctx.fillStyle = isLogistics ? '#e2e8f0' : 'rgba(226, 232, 240, 0.7)';
+    ctx.fillStyle = isFabLab ? '#e2e8f0' : 'rgba(226, 232, 240, 0.7)';
     ctx.font = 'bold 11px system-ui';
     ctx.textAlign = 'center';
-    ctx.fillText('⚙️ MACHINE SHOP & LOGISTICS AXIS (WEST)', -200, -35);
+    ctx.fillText('⚙️ MACHINE SHOP & FABRICATION AXIS (WEST)', -200, -35);
     ctx.font = '9px system-ui';
-    ctx.fillStyle = isLogistics ? '#cbd5e1' : 'rgba(203, 213, 225, 0.6)';
-    ctx.fillText('Heavy Vibration & Trike Depot Freight Access ◀ ◀', -200, -20);
+    ctx.fillStyle = isFabLab ? '#cbd5e1' : 'rgba(203, 213, 225, 0.6)';
+    ctx.fillText('Heavy Vibration & Gantry Mill Slipway ◀ ◀', -200, -20);
 
     // 4. Residential Pod Clearings (East / Radial Courtyards: x > 65)
     // Emerald dashed courtyards reserved for future MHUs (timber chassis + kitchen garden aprons)
@@ -4561,6 +4572,56 @@ export class SettlementCanvas {
       ctx.fillText('🌿 Commons Sanctuary (60m)', 0, -38);
     }
     ctx.restore();
+
+    // 6. Intermodal Transit & Vertiport Hub (South-East: x: 300, y: 280)
+    const transitAlpha = isTransit ? (0.16 + 0.08 * pulse) : 0.05;
+    const transitBorderAlpha = isTransit ? (0.80 + 0.20 * pulse) : 0.25;
+
+    ctx.fillStyle = `rgba(6, 182, 212, ${transitAlpha})`;
+    ctx.beginPath();
+    ctx.roundRect(190, 190, 220, 160, 10);
+    ctx.fill();
+
+    ctx.strokeStyle = `rgba(6, 182, 212, ${transitBorderAlpha})`;
+    ctx.lineWidth = isTransit ? 2.0 : 1.2;
+    ctx.setLineDash([8, 6]);
+    ctx.beginPath();
+    ctx.roundRect(190, 190, 220, 160, 10);
+    ctx.stroke();
+
+    ctx.setLineDash([]);
+    ctx.fillStyle = isTransit ? '#38bdf8' : 'rgba(56, 189, 248, 0.7)';
+    ctx.font = 'bold 11px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText('🚆 INTERMODAL TRANSIT & VERTIPORT (SOUTH-EAST)', 300, 245);
+    ctx.font = '9px system-ui';
+    ctx.fillStyle = isTransit ? '#bae6fd' : 'rgba(186, 230, 253, 0.6)';
+    ctx.fillText('Overland Trike Freight & Drone Flight Skyway ▶ ▶', 300, 260);
+
+    // 7. Agroecological Commons Belt (South-West: x: -320, y: 220)
+    const agroAlpha = isAgro ? (0.16 + 0.08 * pulse) : 0.05;
+    const agroBorderAlpha = isAgro ? (0.80 + 0.20 * pulse) : 0.25;
+
+    ctx.fillStyle = `rgba(16, 185, 129, ${agroAlpha})`;
+    ctx.beginPath();
+    ctx.roundRect(-420, 120, 200, 180, 10);
+    ctx.fill();
+
+    ctx.strokeStyle = `rgba(16, 185, 129, ${agroBorderAlpha})`;
+    ctx.lineWidth = isAgro ? 2.0 : 1.2;
+    ctx.setLineDash([8, 6]);
+    ctx.beginPath();
+    ctx.roundRect(-420, 120, 200, 180, 10);
+    ctx.stroke();
+
+    ctx.setLineDash([]);
+    ctx.fillStyle = isAgro ? '#34d399' : 'rgba(52, 211, 153, 0.7)';
+    ctx.font = 'bold 11px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText('🌾 AGROECOLOGICAL COMMONS (SOUTH-WEST)', -320, 155);
+    ctx.font = '9px system-ui';
+    ctx.fillStyle = isAgro ? '#a7f3d0' : 'rgba(167, 243, 208, 0.6)';
+    ctx.fillText('Full Photoperiod Insolation, Keyline Swales & Silos', -320, 170);
 
     ctx.restore();
   }

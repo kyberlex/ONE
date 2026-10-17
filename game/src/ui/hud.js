@@ -160,7 +160,7 @@ export class GameHUD {
           <span class="ribbon-label">Agora Core</span>
         </button>` : ''}
         ${gameState.isDistrictUnlocked('agro_belt') ? `
-        <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'agro_belt' ? 'active' : ''}" data-district="agro_belt" title="North District: Agro Commons Belt, Aquaponics Domes & Silos">
+        <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'agro_belt' ? 'active' : ''}" data-district="agro_belt" title="South-West District: Agro Commons Belt, Aquaponics Domes & Silos">
           <span class="ribbon-icon">🌾</span>
           <span class="ribbon-label">Agro Belt</span>
         </button>` : ''}

@@ -512,8 +512,8 @@ export class GameState {
           name: 'Civic Agora & Demarchy Core',
           icon: '🏛️',
           tag: 'Art. 2 & 3 Assembly',
-          center: { x: 0, y: -115 },
-          radius: 140,
+          center: { x: 0, y: 0 },
+          radius: 120,
           unlocked: false,
           description: 'Athenian sortition amphitheater, living constitution archive, elder sanctuary, LoRa mesh mast.',
           vocationFocus: ['mediator', 'elder', 'telemetry'],
@@ -3634,8 +3634,8 @@ export class GameState {
                 name: 'Civic Agora & Demarchy Core',
                 icon: '🏛️',
                 tag: 'Art. 2 & 3 Assembly',
-                center: { x: 0, y: -115 },
-                radius: 140,
+                center: { x: 0, y: 0 },
+                radius: 120,
                 unlocked: false,
                 description: 'Athenian sortition amphitheater, living constitution archive, elder sanctuary, LoRa mesh mast.',
                 vocationFocus: ['mediator', 'elder', 'telemetry'],
@@ -3709,6 +3709,11 @@ export class GameState {
             if (this.data.districts.mhu_ecovillage && this.data.districts.mhu_ecovillage.center.x < 0) {
               console.log('🏡 [GameState] Aligning MHU Ecovillage to East (340, -30)');
               this.data.districts.mhu_ecovillage.center = { x: 340, y: -30 };
+            }
+            if (this.data.districts.agora_core && (this.data.districts.agora_core.center.y !== 0 || this.data.districts.agora_core.center.x !== 0)) {
+              console.log('🏛️ [GameState] Aligning Civic Agora & Demarchy Core to Village Center (0, 0)');
+              this.data.districts.agora_core.center = { x: 0, y: 0 };
+              this.data.districts.agora_core.radius = 120;
             }
           }
 
