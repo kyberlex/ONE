@@ -2,6 +2,75 @@
 
 This document tracks pending architectural features, research frontiers, and unresolved governance dilemmas for the living simulation engine ([`sim/`](./)).
 
+
+---
+
+## **🌿 MASTER PIVOT: THE LIVING DIORAMA & WHAT-IF SANDBOX (OCT 2026)**
+
+### **Core Identity & Division of Labor**
+* **`game/` (The Living Commons Game):** Active, first-person subjective gameplay (driving cargo trikes, flying VTOL drones, crafting MHU modules, inventory management, personal missions, survival actions).
+* **`sim/` (O-ASIS Living Sandbox):** A soothing, mesmerizing, epistemic **"What-If?" Living Diorama** where the user observes a self-sustaining Solarpunk settlement in real time, tweaks 1-2 systemic levers (Automation, Weather, Grid Shock, Population), and watches the thermodynamic and social cascade.
+
+### **Inviolable Preserved Pillars (Zero-Loss Core)**
+1. **The 4 Discrete Zoom Levels:** World (Planetary Leaflet) ➔ Region (Bioregion watershed) ➔ Node (2.5D Living Village) ➔ Building (Interior architectural cutaway).
+2. **Interactive 3D WebGL Engines:** Three.js 3D Avatar customizer and 3D Open Hardware / Prop viewer.
+3. **Animated Living Entities:** Pioneers walking, working, gathering at the Agora, talking via dynamic speech bubbles.
+4. **Click-to-Inspect:** Clean, immediate contextual cards when clicking any building, field, turbine, or citizen.
+5. **Player Onboarding & Customizable Look:** Choosing identity, vocation, and customizing 3D avatar appearance with real-time settlement arrival.
+
+### **Sequential Implementation Steps**
+- [x] **Task 1: Declutter UI & Re-focus the Screen on the Living Canvas** (COMPLETED & VERIFIED)
+  - Purged misleading AI benchmark modal, styles, badges and inline scripts from `index.html`.
+  - Restored essential `<script type="module" src="./src/main.js"></script>` to boot simulation engine.
+  - Disabled intrusive startup auto-popups (Guide tour is now on-demand via Menu).
+  - Minimized starter quest HUD by default to give 100% unobstructed view of the living canvas.
+  - Hid floating chat launcher button to clear the bottom right.
+  - Verified 4 zoom levels (World ➔ Region ➔ Village ➔ Interior), 3D prop/avatar engines, and click inspection.
+- [x] **Task 2: The "What-If?" Sandbox Control Dock** (COMPLETED & VERIFIED)
+  - Created modular [`WhatIfDockController`](app/src/ui/whatif_dock.js) mounted directly above bottom footer controls.
+  - Implemented 4 interactive macro-levers with real-time diorama & thermodynamic reactivity:
+    - *Automation & Robotics Slider (0% ➔ 100%)*: Dynamically shifts human chore targets from 6.0h down to 0.3h/day, deploys/retires 5 cybernetic robot types (`farmRover`, `esp32Valves`, `mpptOptimizer`, `cleaningBot`, `cncSorter`) via `robotManager.syncRobots()`, and directs pioneers between productive chores and Agora creative leisure (`🎨` vs `🌾`).
+    - *Circadian Sun Clock Scrubber (00:00 ➔ 23:00)*: Real-time time scrubbing via `setCircadianHour()` altering solar angle, night illumination, street lanterns, and ambient canvas tint without lag.
+    - *Weather Presets (☀️ Sun, ☁️ Overcast, 🌧️ Rain, ⛈️ Storm, 🌡️ Heat)*: 1-click meteorological shift with dynamic rain canvas streaks, wind speed, solar generation, and soil moisture shifts.
+    - *Resilience Shocks*: 1-click `⚡ Sever Grid` islanding test, `👥 +25 Arrivals` triggering dynamic usufruct MHU pod construction and sortition jury expansion, and `🔄 Reset` restoring Solarpunk equilibrium baseline.
+  - Added collapsible glassmorphic dock UI with smooth transitions and full English + Italian i18n key parity.
+  - Verified live at `http://localhost:5173/` with browser testing across all levers and zero console regressions.
+- [x] **Task 3: Visual Flow Lenses (Energy & Water Heatmaps)** (COMPLETED & VERIFIED)
+  - Created modular [`FlowLensesRenderer`](app/src/settlement/flow_lenses_renderer.js) decoupled into two clean render passes (`renderUnderlay` and `renderOverlay`).
+  - Integrated 3 flow lens modes (`ENERGY`, `WATER`, `ALL`) plus clean diorama view (`OFF`):
+    - *⚡ Energy Lens*: Animated glowing bus conduits with traveling golden electrons from Solar PV & Wind Array (`-280, -140`) to central distribution hub, FabLab (`-290, 75`), Aeroponic Greenhouse (`290, 75`), and Agora, with active kW floating telemetry badges and solar generation heatmaps.
+    - *💧 Water Lens*: Animated aqueduct conduits with flowing cyan water droplets from Rain Catchment & Deep Well Cistern (`280, -140`) to Aeroponic Greenhouse, Agora drinking fountains, and closed-loop 65% greywater return to reed-bed biofiltration wetlands (`0, 250`).
+    - *🌐 Both / Metabolic Lens*: Dual-track simultaneous overlay visualizing total cyber-physical thermodynamics.
+  - Added pill selector in What-If dock header (`[👁️ LENS: | Off | ⚡ Energy | 💧 Water | 🌐 Both]`) and keyboard shortcut `L` to cycle through lenses.
+  - Verified 60 FPS animation, full i18n synchronization (`en.js`, `it.js`), and tested live in browser at `http://localhost:5173/`.
+- [x] **Task 4: Dynamic Citizen Life & Contextual Speech Bubbles** (COMPLETED & VERIFIED)
+  - Created contextual dialogue corpus [`citizen_dialogues.js`](app/src/data/citizen_dialogues.js) with 14 categories (`HIGH_AUTOMATION`, `LOW_AUTOMATION`, `WEATHER_RAIN`, `WEATHER_STORMY`, `WEATHER_HEATWAVE`, `WEATHER_SUNNY`, `WEATHER_OVERCAST`, `SHOCK_GRID_SEVERED`, `SHOCK_GRID_CONNECTED`, `SHOCK_ARRIVALS`, `CIRCADIAN_DAWN`, `CIRCADIAN_NOON`, `CIRCADIAN_DUSK`, `CIRCADIAN_NIGHT`, `AMBIENT_COMMONS`).
+  - Upgraded canvas rendering in [`settlement_renderer.js`](app/src/settlement/settlement_renderer.js) with dynamic multi-line word wrapping, rounded Solarpunk dark glassmorphism bubbles, glowing borders, drop shadows, and downward pointer tips (no more 30-char truncation).
+  - Connected contextual reactions directly to What-If macro-levers in [`whatif_dock.js`](app/src/ui/whatif_dock.js):
+    - Automation slider triggers automated chore freedom or shared rotational labor lines.
+    - Circadian scrubber triggers dawn, noon, sunset dusk, and stargazing night-watch chatter.
+    - Meteorological pills trigger rainfall cistern filling, storm wind generation, heatwave cooling, and solar daylight remarks.
+    - Resilience shocks trigger off-grid autonomy resilience and refugee welcome pods.
+  - Deepened citizen click inspection in [`panel_citizen.js`](app/src/ui/panel_citizen.js):
+    - Integrated real-time biometric indicators: Morale & Wellbeing (`😊 94% (Flourishing)`), Energy & Hydration (`⚡ 100% • 💧 100% Guaranteed`).
+    - Added live *"💭 CURRENT THOUGHT"* Solarpunk glassmorphic quote card.
+    - Added interactive *"💬 Greet Pioneer"* button with instant animated canvas speech bubble reaction and thought refresh.
+  - Verified live at `http://localhost:5173/` with browser subagent screenshots and zero console/build errors.
+- [x] **Task 5: Polish, Audio Ambience & "Play the Game" Bridge** (COMPLETED & VERIFIED)
+  - Created generative Web Audio synthesizer [`AmbienceAudioEngine`](app/src/engine/ambience_audio.js):
+    - Synthesizes 5 zero-dependency procedural audio layers (warm pentatonic drone, Agora bioswale water flow, rain/wind noise filter, daylight songbird FM chirps, nocturnal crickets & hearth firepit crackles).
+    - Features smooth cross-fading, circadian day/night transitions, reactive weather scaling, localStorage persistence, and mute toggle (`M`).
+  - Created Zen / Screensaver Mode [`ZenModeController`](app/src/ui/zen_mode.js):
+    - 1-click & keyboard shortcut (`Z` / `Escape`) mode that completely dims HUD chrome, header, footer, docks, and objective widgets with a smooth 0.5s CSS transition.
+    - Activates cinematic orbital camera drift (`zenDrift`) in [`SettlementRenderer`](app/src/settlement/settlement_renderer.js), slowly framing the living settlement.
+    - Renders an interactive floating exit pill (`#zen-exit-pill`) to easily return to interactive mode.
+  - Implemented The Living Commons Game Bridge [`PanelGameBridgeController`](app/src/ui/panel_game_bridge.js):
+    - Added discrete `🎮 Play Game ➔` action button in the What-If dock header and top system menu.
+    - Glassmorphic modal (`#modal-game-bridge`) explaining the division of labor: `sim/` (high-level living diorama) vs `game/` (first-person 3D ground gameplay, cargo trikes, VTOL drones, MHU fabrication, P2P mesh).
+    - Provides instant 1-click launcher targeting `http://localhost:5174/` (local) or `/game/` (production).
+  - Resolved Auto weather pill state in [`whatif_dock.js`](app/src/ui/whatif_dock.js) and [`thermodynamics.js`](app/src/engine/thermodynamics.js).
+  - Verified live at `http://localhost:5173/` with browser tests and screenshots across all features.
+
 ---
 
 ## **🔥 0. HIGH PRIORITY (PRE-LAUNCH OCT 13): ONBOARDING OVERHAUL, IN-GAME SURVIVAL ADVISOR & PROGRESSIVE DISCLOSURE**
@@ -69,7 +138,7 @@ Direct playtester feedback (e.g. `Pepisohn` on `r/incremental_games`, `WarningRe
 ### **C. Post-Completion Operational Checklist**
 
 Once code and simulation behaviors are fully implemented and verified:
-- [ ] **Update User Guide(s):** Update `sim/USER_GUIDE.md` with the new 5-step guided prologue, Survival Advisor, and difficulty selector; recompile the vector PDF manual via `python3 sim/generate_handbook.py` (`sim/O-ASIS_User_Handbook.pdf`).
+- [x] **Update User Guide(s):** Updated `sim/USER_GUIDE.md` with the What-If Living Diorama, 4 macro-levers, Visual Flow Lenses, Zen mode, audio ambience, and The Living Commons Game Bridge; recompiled vector PDF manual via `python3 sim/generate_handbook.py` (`sim/O-ASIS_User_Handbook.pdf`) with 22 balanced pages and 16 figures.
 - [ ] **Redeploy Simulator:** Run `python3 scripts/deploy_sim_surge.py` to publish the updated build to `https://one-oasis.surge.sh` (and the itch.io iframe), and synchronize GitHub Pages (`https://kyberlex.github.io/ONE`).
 - [ ] **Community Follow-Up & Announcement Campaign:** Reply to user `Pepisohn` on `r/incremental_games` with the onboarding changelog, launch the direct link on `r/WebGames`, and publish the Devlog on `itch.io`.
 

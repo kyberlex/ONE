@@ -88,6 +88,8 @@ export class EventModal {
       this.renderWeatherRadarModal(options);
     } else if (type === 'milestone') {
       this.renderMilestoneModal(options);
+    } else if (type === 'wedding') {
+      this.renderWeddingModal(options);
     }
   }
 
@@ -655,14 +657,36 @@ export class EventModal {
     const dilemmas = gameState.getDemarchyDilemmas();
     const d = dilemmas.find(x => x.id === dilemmaId) || dilemmas[0];
 
-    // Pick 5 citizens by sortition with odd-parity
+    // Scale sortition jury size dynamically (5, 7, 9) preserving odd-parity invariant (Epic 4.4)
     const allCitizens = [gameState.data.player, ...(gameState.data.companions || [])];
+    const pop = allCitizens.length;
+    let targetJurySize = 5;
+    if (pop >= 18 || gameState.data.day >= 24) targetJurySize = 9;
+    else if (pop >= 8 || gameState.data.day >= 14) targetJurySize = 7;
+    
+    // Invariant: odd-parity strictly preserved
+    if (targetJurySize % 2 === 0) targetJurySize -= 1;
+    targetJurySize = Math.min(targetJurySize, allCitizens.length % 2 === 0 ? allCitizens.length - 1 : allCitizens.length);
+    if (targetJurySize < 3) targetJurySize = 3;
+
+    // Elders wisdom mentorship in governance: prioritize including at least one elder as deliberator
+    const elders = allCitizens.filter(c => c.vocationId === 'elder' || c.id === 'elder_rosa' || c.isElder);
+    const nonElders = allCitizens.filter(c => !elders.includes(c));
+
     const jurors = [];
-    const pool = [...allCitizens];
-    for (let i = 0; i < Math.min(5, pool.length); i++) {
+    if (elders.length > 0) {
+      const elderCopy = [...elders];
+      const elderIdx = Math.floor(Math.random() * elderCopy.length);
+      jurors.push(elderCopy.splice(elderIdx, 1)[0]);
+    }
+    const pool = [...nonElders];
+    while (jurors.length < targetJurySize && pool.length > 0) {
       const idx = Math.floor(Math.random() * pool.length);
       jurors.push(pool.splice(idx, 1)[0]);
     }
+
+    // Required 75% qualified supermajority threshold
+    const supermajorityThreshold = Math.ceil(jurors.length * 0.75);
 
     this.modalEl.innerHTML = `
       <div class="modal-window event-modal-window agora-window" role="dialog" aria-modal="true">
@@ -671,7 +695,7 @@ export class EventModal {
             <span class="modal-icon">🏛️</span>
             <div>
               <h2 class="modal-title">Agora Demarchy Assembly: ${d.title}</h2>
-              <span class="modal-subtitle">5-Juror Sortition Jury • 75% Supermajority Deliberation</span>
+              <span class="modal-subtitle">${jurors.length}-Juror Sortition Jury • 75% Qualified Supermajority (${supermajorityThreshold}/${jurors.length} Votes Required)</span>
             </div>
           </div>
           <button type="button" class="btn-modal-close" id="btn-event-close" aria-label="Close dialog">✕</button>
@@ -680,14 +704,18 @@ export class EventModal {
         <div class="event-modal-body">
           <!-- Sortition Jurors Panel -->
           <div class="agora-jurors-box">
-            <span class="agora-jurors-label">🎲 Odd-Parity Sortition Jury Drawn by Lot:</span>
+            <span class="agora-jurors-label">🎲 Odd-Parity Sortition Jury (${jurors.length} Members Drawn by Lot):</span>
             <div class="agora-jurors-chips">
-              ${jurors.map(j => `
-                <div class="agora-juror-chip">
-                  <span>${j.icon || '🧑'}</span>
-                  <span>${j.name}</span>
-                </div>
-              `).join('')}
+              ${jurors.map(j => {
+                const isElder = j.vocationId === 'elder' || j.id === 'elder_rosa' || j.isElder;
+                const roleBadge = isElder ? '<span style="color: #f59e0b; font-size: 0.7rem; font-weight: 700; margin-left: 4px;">[Elder]</span>' : '';
+                return `
+                  <div class="agora-juror-chip" ${isElder ? 'style="border-color: #f59e0b; background: rgba(245, 158, 11, 0.15);"' : ''}>
+                    <span>${j.icon || '🧑'}</span>
+                    <span>${j.name}${roleBadge}</span>
+                  </div>
+                `;
+              }).join('')}
             </div>
           </div>
 
@@ -742,17 +770,17 @@ export class EventModal {
       if (btnA) btnA.disabled = true;
       if (btnB) btnB.disabled = true;
 
-      // Simulated juror deliberation
-      const aVotes = choiceKey === 'A' ? 4 : 1;
-      const bVotes = 5 - aVotes;
-      const isSupermajority = aVotes >= 4 || bVotes >= 4;
+      // Simulated juror deliberation respecting the 75% supermajority threshold
+      const aVotes = choiceKey === 'A' ? supermajorityThreshold : Math.max(1, jurors.length - supermajorityThreshold);
+      const bVotes = jurors.length - aVotes;
+      const isSupermajority = (choiceKey === 'A' && aVotes >= supermajorityThreshold) || (choiceKey === 'B' && bVotes >= supermajorityThreshold);
 
       if (resultsEl) {
         resultsEl.style.display = 'block';
         resultsEl.innerHTML = `
           <div class="agora-tally-box">
             <h4 style="color: #34d399;">🗳️ Voting Tally: Option A: ${aVotes} Votes • Option B: ${bVotes} Votes</h4>
-            <p>${isSupermajority ? '🌟 <strong>75% Supermajority Ratified!</strong> The constitutional decision is sealed into law.' : '✓ Simple majority ratified by assembly.'}</p>
+            <p>${isSupermajority ? `🌟 <strong>75% Qualified Supermajority Ratified (${Math.max(aVotes, bVotes)}/${jurors.length})!</strong> The constitutional decision is sealed into law.` : `✓ Simple majority (${Math.max(aVotes, bVotes)}/${jurors.length}) deliberated by assembly.`}</p>
           </div>
         `;
       }
@@ -769,6 +797,84 @@ export class EventModal {
     this.modalEl.querySelector('#btn-vote-b')?.addEventListener('click', () => castVote('B'));
     this.modalEl.querySelector('#btn-event-close')?.addEventListener('click', () => this.close());
     this.modalEl.querySelector('#btn-agora-adjourn')?.addEventListener('click', () => this.close());
+  }
+
+  /* -------------------------------------------------------------
+   * 5.1. Village Wedding & Life Union Celebration (Epic 4.3)
+   * ----------------------------------------------------------- */
+  renderWeddingModal(options = {}) {
+    const couple = options.couple || ['Maya', 'Leo'];
+    const day = options.day || gameState.data.day || 15;
+
+    soundFX.playAcousticStrum();
+    soundFX.playChoreExtinctionFanfare();
+
+    this.modalEl.innerHTML = `
+      <div class="modal-window event-modal-window wedding-window" role="dialog" aria-modal="true" style="border-color: #f59e0b; box-shadow: 0 0 40px rgba(245, 158, 11, 0.25);">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon">💍</span>
+            <div>
+              <h2 class="modal-title">Village Wedding: ${couple[0]} & ${couple[1]}</h2>
+              <span class="modal-subtitle">Generational Milestone at Central Agora • Dynamic Usufruct (Art. 4)</span>
+            </div>
+          </div>
+          <button type="button" class="btn-modal-close" id="btn-event-close" aria-label="Close dialog">✕</button>
+        </div>
+
+        <div class="event-modal-body">
+          <div class="wedding-hero-banner" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(16, 185, 129, 0.2)); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 12px; padding: 20px; text-align: center; margin-bottom: 20px;">
+            <div style="font-size: 3rem; margin-bottom: 8px;">🏮 🥂 🎻 🍕 🌸</div>
+            <h3 style="color: #fbbf24; margin: 0 0 8px 0; font-size: 1.25rem;">Life Union Celebration under the Agora Cedar Arch</h3>
+            <p style="color: #cbd5e1; max-width: 520px; margin: 0 auto; line-height: 1.5; font-size: 0.95rem;">
+              The entire community gathered at coordinate (0, 0) around the sacred pioneer hearth. With acoustic lute tunes, lanterns strung between chestnut pillars, and wood-fired pizzas from the communal oven, the village celebrates this generational foundation!
+            </p>
+          </div>
+
+          <div class="inspector-metrics-grid" style="margin-bottom: 20px;">
+            <div class="inspector-metric-card" style="border-color: #f59e0b;">
+              <span class="metric-label">COMMUNAL MORALE</span>
+              <span class="metric-value text-gold">100% (Surge)</span>
+              <span class="metric-sub">Pioneer collective joy maxed</span>
+            </div>
+            <div class="inspector-metric-card" style="border-color: #10b981;">
+              <span class="metric-label">HOUSING COMMONS</span>
+              <span class="metric-value text-emerald">Family Cluster Ready</span>
+              <span class="metric-sub">Eligible for In-Situ CNC Extension</span>
+            </div>
+            <div class="inspector-metric-card" style="border-color: #38bdf8;">
+              <span class="metric-label">VILLAGE CHRONICLE</span>
+              <span class="metric-value text-cyan">Sealed in Ledger</span>
+              <span class="metric-sub">Recorded as Day ${day} Milestone</span>
+            </div>
+            <div class="inspector-metric-card" style="border-color: #a855f7;">
+              <span class="metric-label">DEMARCHY HARMONY</span>
+              <span class="metric-value text-purple">+25% Social Cohesion</span>
+              <span class="metric-sub">Reduces assembly friction</span>
+            </div>
+          </div>
+
+          <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 16px;">
+            <h4 style="color: #34d399; margin: 0 0 6px 0;">🏡 Dynamic Usufruct & Longitudinal Family Growth (Art. 4.3):</h4>
+            <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.4; margin: 0;">
+              Under Open Building principles, as new children join the family over simulated seasons, the couple can either <strong>bolt on CNC timber extension cassettes</strong> to their couple pod, or relocate to a <strong>6-person Family Cluster near the Open Forest School</strong>, returning their 2-person dwelling back to the Civic Housing Pool for young incoming pioneers.
+            </p>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-primary" id="btn-wedding-toast" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; font-weight: 600; padding: 10px 24px;">
+            🥂 Toast the Couple & Adjourn to Feast
+          </button>
+        </div>
+      </div>
+    `;
+
+    this.modalEl.querySelector('#btn-event-close')?.addEventListener('click', () => this.close());
+    this.modalEl.querySelector('#btn-wedding-toast')?.addEventListener('click', () => {
+      soundFX.playClick();
+      this.close();
+    });
   }
 
   /* -------------------------------------------------------------
@@ -900,7 +1006,9 @@ export class EventModal {
     const pct = Math.min(100, Math.round((waterL / capacityL) * 100));
     const peopleCount = Math.max(3, (data.companions?.length || 2) + 1);
     const hasReedBed = data.buildings?.some(b => b.type === 'reed_bed');
-    const waterBase = peopleCount * 50;
+    const isConserving = !!data.waterConservationActive || waterL <= 0;
+    const perPersonWater = isConserving ? 30 : 50;
+    const waterBase = peopleCount * perPersonWater;
     const dailyDraw = hasReedBed ? Math.round(waterBase * 0.35) : waterBase;
     const daysAutonomy = dailyDraw > 0 ? Math.floor(waterL / dailyDraw) : 99;
 
@@ -914,18 +1022,22 @@ export class EventModal {
     const expectedCatchment = Math.round(catchmentM2 * rainfallMm);
     const remainingH = data.chores?.remainingHours !== undefined ? data.chores.remainingHours : 6.0;
     const fiatUsd = data.fiatEarnedUsd || 0;
-    const hasLora = data.buildings?.some(b => b.type === 'lora_mast');
+    const hasLora = data.buildings?.some(b => b.type === 'lora_mast') || (data.day || 1) >= 7;
+    const hasFablab = data.buildings?.some(b => b.type === 'fablab');
+    const currentEnergy = Math.round(data.resources.energyStoredKwh || 0);
+    const isCamperUnsealed = !!data.camperWaterReserveUnsealed;
+    const isWellPrioritized = !!data.solarWellPriorityActive;
 
-    const isEmergency = options.isEmergency || waterL <= 0;
+    const isEmergency = options.isEmergency || waterL <= 0 || isConserving;
 
     this.modalEl.innerHTML = `
-      <div class="modal-window event-modal-window" style="max-width: 660px;" role="dialog" aria-modal="true">
+      <div class="modal-window event-modal-window" style="max-width: 680px;" role="dialog" aria-modal="true">
         <div class="modal-header">
           <div class="modal-title-group">
             <span class="modal-icon">${waterL <= 0 ? '🚨' : '💧'}</span>
             <div>
               <h2 class="modal-title">${waterL <= 0 ? 'EMERGENCY: Water Depleted!' : 'Water Management & Hydrological Desk'}</h2>
-              <span class="modal-subtitle">Rainwater Catchment • Deep Aquifer • Emergency Tankers</span>
+              <span class="modal-subtitle">Rainwater Catchment • Deep Aquifer • 6-Stage Contingency Protocols</span>
             </div>
           </div>
           <button type="button" class="btn-modal-close" id="btn-event-close" aria-label="Close dialog">✕</button>
@@ -934,10 +1046,12 @@ export class EventModal {
         <div class="event-modal-body">
           ${isEmergency ? `
             <div style="background: rgba(239, 68, 68, 0.15); border: 1px solid #ef4444; border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 12px;">
-              <span style="font-weight: 700; color: #fca5a5; display: block; font-size: 13px;">⚠️ CRITICAL WATER EXHAUSTION (0 Liters)</span>
+              <span style="font-weight: 700; color: #fca5a5; display: block; font-size: 13px;">
+                ${waterL <= 0 ? '⚠️ CRITICAL WATER EXHAUSTION (0 Liters)' : '⚡ WATER CONSERVATION EMERGENCY ACTIVE'}
+              </span>
               <p style="margin: 4px 0 0; font-size: 11px; color: #fecaca; line-height: 1.4;">
-                Settlement cisterns are dry! Without water, crops will wilt and community morale drops by -15%/day.
-                You can <strong>work for legacy to order an emergency tanker</strong>, <strong>hand-pump groundwater</strong>, or <strong>call sister nodes on mesh</strong>.
+                Non-essential water lines shut off automatically. Garden beds enter drought-survival mode (-50% crop growth), 
+                and domestic draw is restricted to <strong>30 L/person/day</strong>. Engage the 6 contingency stages below to restore hydrological abundance!
               </p>
             </div>
           ` : ''}
@@ -954,7 +1068,7 @@ export class EventModal {
               <div class="debt-progress-fill" style="width: ${pct}%; background: ${waterL <= 0 ? '#ef4444' : (waterL < 500 ? '#f59e0b' : 'linear-gradient(90deg, #0284c7 0%, #38bdf8 100%)')};"></div>
             </div>
             <div style="display: flex; justify-content: space-between; font-size: 11px; color: #94a3b8; margin-top: 6px;">
-              <span>Daily Draw: <strong>${dailyDraw} L/d</strong> (${peopleCount} pioneers • ${hasReedBed ? '65% reed-bed recycled' : 'no recycling'})</span>
+              <span>Daily Draw: <strong>${dailyDraw} L/d</strong> (${peopleCount} pioneers • ${isConserving ? '30L rationing' : '50L baseline'} • ${hasReedBed ? '65% reed-bed recycled' : 'no recycling'})</span>
               <span>Reserve: <strong>${daysAutonomy} days</strong> autonomy</span>
             </div>
           </div>
@@ -974,67 +1088,108 @@ export class EventModal {
             <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-md); padding: 10px 12px;">
               <span style="font-size: 10px; color: #94a3b8; font-weight: 700; text-transform: uppercase;">🚰 Deep Artesian Yield</span>
               <div style="font-size: 13px; font-weight: 700; color: #fff; margin-top: 2px;">
-                ${wellCount > 0 ? `+${wellCount * 250} L/day Continuous Flow` : '0 L/day (No Well Built)'}
+                ${wellCount > 0 ? `+${wellCount * (isWellPrioritized ? 350 : 250)} L/day Continuous Flow` : '0 L/day (No Well Built)'}
               </div>
-              <span style="font-size: 10.5px; color: #34d399;">
-                ${wellCount > 0 ? 'Solar aquifer pump flows regardless of rain!' : 'Deep Wells unlock in Tier 3'}
+              <span style="font-size: 10.5px; color: ${isWellPrioritized ? '#fbbf24' : '#34d399'};">
+                ${wellCount > 0 ? (isWellPrioritized ? '⚡ Solar priority active (+350 L/d)!' : 'Solar aquifer pump flows regardless of rain.') : 'Deep Wells unlock in Tier 3'}
               </span>
             </div>
           </div>
 
-          <!-- Emergency Action Options -->
-          <h3 class="consulting-title" style="margin-bottom: 8px;">🚨 Emergency Water Relief Actions:</h3>
+          <!-- The 6 Canonical Contingency Stages -->
+          <h3 class="consulting-title" style="margin-bottom: 8px;">🛡️ The 6-Stage Zero-Water Contingency Protocol (Epic 3.2):</h3>
           <div style="display: flex; flex-direction: column; gap: 8px;">
 
-            <!-- Option 1: Legacy Water Tanker -->
-            <div class="consulting-order-card" style="border: 1px solid rgba(56, 189, 248, 0.3);">
+            <!-- Stage 1: Water Conservation Emergency -->
+            <div class="consulting-order-card" style="border: 1px solid ${isConserving ? '#f59e0b' : 'rgba(255, 255, 255, 0.1)'};">
               <div style="flex: 1;">
-                <h4 class="order-name">🚚 Order Emergency Municipal Water Tanker (+1,000 L)</h4>
+                <h4 class="order-name">
+                  1️⃣ Water Conservation Mode 
+                  <span style="font-size: 10px; padding: 2px 6px; border-radius: 4px; background: ${isConserving ? '#f59e0b' : '#334155'}; color: #fff; margin-left: 6px;">
+                    ${isConserving ? 'ACTIVE' : 'STANDBY'}
+                  </span>
+                </h4>
+                <span class="order-desc">Shut off decorative and non-essential lines. Garden beds enter drought survival (-50% crop yield). Reduces domestic draw from 50 to 30 L/person.</span>
+              </div>
+              <button type="button" class="btn-primary" id="btn-water-conservation" style="background: ${isConserving ? '#f59e0b' : '#334155'}; color: #fff;">
+                ${isConserving ? 'Deactivate' : 'Activate Rationing'}
+              </button>
+            </div>
+
+            <!-- Stage 2: Camper Van Auxiliary Bladder -->
+            <div class="consulting-order-card" style="border: 1px solid ${!isCamperUnsealed ? 'rgba(56, 189, 248, 0.4)' : 'rgba(255, 255, 255, 0.08)'};">
+              <div style="flex: 1;">
+                <h4 class="order-name">
+                  2️⃣ Camper Van Sealed Auxiliary Bladder (+300 L)
+                  <span style="font-size: 10px; padding: 2px 6px; border-radius: 4px; background: ${isCamperUnsealed ? '#475569' : '#10b981'}; color: #fff; margin-left: 6px;">
+                    ${isCamperUnsealed ? 'UNSEALED' : 'SEALED RESERVE'}
+                  </span>
+                </h4>
+                <span class="order-desc">Unseal the sealed 300 L fresh-water reserve in the camper van under-floor chassis. Instant emergency buffer.</span>
+              </div>
+              <button type="button" class="btn-primary" id="btn-water-camper" ${isCamperUnsealed ? 'disabled' : ''} style="${!isCamperUnsealed ? 'background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);' : ''}">
+                ${isCamperUnsealed ? 'Already Unsealed' : 'Unseal (+300 L)'}
+              </button>
+            </div>
+
+            <!-- Stage 3: Atmospheric Water Harvesting (FabLab Dehumidifier) -->
+            <div class="consulting-order-card" style="${hasFablab ? 'border: 1px solid rgba(56, 189, 248, 0.3);' : 'opacity: 0.6;'}">
+              <div style="flex: 1;">
+                <h4 class="order-name">3️⃣ FabLab Atmospheric Condensation Chiller (+80 L)</h4>
                 <span class="order-desc">
-                  ${fiatUsd >= 150 
-                    ? `Spend $150 fiat balance (You have $${fiatUsd.toLocaleString()}) to dispatch bulk truck delivery.`
-                    : `Spend 2.0h remote CAD/consulting for legacy clients to earn $150 and dispatch delivery.`}
+                  ${hasFablab 
+                    ? `Use 5 kWh stored solar energy (available: ${currentEnergy} kWh) to run Peltier dehumidifiers and harvest 80 L from air moisture.` 
+                    : 'Requires Open FabLab (Tier 3) to operate condensation chillers.'}
                 </span>
               </div>
-              <button type="button" class="btn-primary" id="btn-water-tanker" ${fiatUsd < 150 && remainingH < 2.0 ? 'disabled' : ''} style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);">
-                ${fiatUsd >= 150 ? 'Buy ($150 Fiat ➔ +1k L)' : 'Work 2h for Legacy ➔ Buy Water'}
+              <button type="button" class="btn-primary" id="btn-water-fablab" ${!hasFablab || currentEnergy < 20 ? 'disabled' : ''} style="${hasFablab && currentEnergy >= 20 ? 'background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);' : ''}">
+                Harvest (-5 kWh ➔ +80 L)
               </button>
             </div>
 
-            <!-- Option 2: Manual Aquifer Pumping -->
-            <div class="consulting-order-card">
+            <!-- Stage 4: Deep Artesian Well Solar Pump Priority -->
+            <div class="consulting-order-card" style="${wellCount > 0 ? 'border: 1px solid rgba(16, 185, 129, 0.4);' : 'opacity: 0.6;'}">
               <div style="flex: 1;">
-                <h4 class="order-name">🚰 Manual Artesian Well Lever Pumping (+300 L)</h4>
-                <span class="order-desc">Spend 2.0h pioneer muscle labor on the cast-iron backup lever to draw groundwater.</span>
+                <h4 class="order-name">4️⃣ Deep Artesian Well Solar Pump Priority (+250-350 L/d)</h4>
+                <span class="order-desc">
+                  ${wellCount > 0 
+                    ? (isWellPrioritized ? '⚡ Solar circuit prioritizes deep aquifer pumps (+350 L/day continuous regardless of drought).' : 'Standard flow 250 L/day. Engage priority to boost yield to 350 L/day.') 
+                    : 'Requires Deep Artesian Solar Well (Tier 3).'}
+                </span>
               </div>
-              <button type="button" class="btn-primary" id="btn-water-pump" ${remainingH < 2.0 ? 'disabled' : ''}>
-                Pump (2.0h Labor ➔ +300 L)
+              <button type="button" class="btn-primary" id="btn-water-well-priority" ${wellCount <= 0 ? 'disabled' : ''} style="${wellCount > 0 ? 'background: linear-gradient(135deg, #10b981 0%, #059669 100%);' : ''}">
+                ${isWellPrioritized ? 'Priority Active (350 L/d)' : 'Prioritize Well Pumps'}
               </button>
             </div>
 
-            <!-- Option 3: Atmospheric Dew Nets -->
-            <div class="consulting-order-card">
-              <div style="flex: 1;">
-                <h4 class="order-name">🕸️ Rig Atmospheric Raschel Dew Nets (+150 L)</h4>
-                <span class="order-desc">Spend 1.5h pioneer labor setting condensation mesh on the mountain ridge.</span>
-              </div>
-              <button type="button" class="btn-primary" id="btn-water-dew" ${remainingH < 1.5 ? 'disabled' : ''}>
-                Deploy (1.5h ➔ +150 L)
-              </button>
-            </div>
-
-            <!-- Option 4: Reticulum Mesh Mutual Aid -->
+            <!-- Stage 5: Reticulum Mesh Water Convoy from Alburni -->
             <div class="consulting-order-card" style="${hasLora ? 'border: 1px solid rgba(16, 185, 129, 0.4);' : 'opacity: 0.6;'}">
               <div style="flex: 1;">
-                <h4 class="order-name">📡 Reticulum Mesh Sister Node Convoy (+500 L)</h4>
+                <h4 class="order-name">5️⃣ Bioregional Mesh Water Convoy from Alburni (+1,500 L)</h4>
                 <span class="order-desc">
-                  ${hasLora ? 'Broadcast packet to Monte Sole node. Electric cargo trike dispatches +500 L free solidarity aid.' : 'Requires LoRa Telemetry Mast (Tier 2) to broadcast distress signal.'}
+                  ${hasLora 
+                    ? 'Broadcast distress packet to Alburni Karst Commons. An electric cargo trike delivers +1,500 L in food-grade bladders with zero fiat debt (repaid in future seeds/parts).' 
+                    : 'Requires LoRa Telemetry Mast or Day 7+ to broadcast regional distress packets.'}
                 </span>
               </div>
-              <button type="button" class="btn-primary" id="btn-water-mesh" ${!hasLora ? 'disabled' : ''} style="${hasLora ? 'background: linear-gradient(135deg, #059669 0%, #047857 100%);' : ''}">
-                Mesh Aid (+500 L Free)
+              <button type="button" class="btn-primary" id="btn-water-mesh-convoy" ${!hasLora ? 'disabled' : ''} style="${hasLora ? 'background: linear-gradient(135deg, #059669 0%, #047857 100%);' : ''}">
+                Request Convoy (+1,500 L Free)
               </button>
             </div>
+
+            <!-- Stage 6: The Extractive Water Tanker Dilemma -->
+            <div class="consulting-order-card" style="border: 1px solid rgba(239, 68, 68, 0.35);">
+              <div style="flex: 1;">
+                <h4 class="order-name">6️⃣ Extractive Water Tanker at the Gate (Agora Dilemma)</h4>
+                <span class="order-desc">
+                  A private corporate tanker arrives offering 5,000 L emergency water, demanding $2,500 debt or a 10-year land title. Convocate citizens to deliberate!
+                </span>
+              </div>
+              <button type="button" class="btn-primary" id="btn-water-dilemma" style="background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);">
+                Convene Agora Assembly ⚖️
+              </button>
+            </div>
+
           </div>
         </div>
 
@@ -1048,44 +1203,55 @@ export class EventModal {
     `;
 
     // Handlers
-    this.modalEl.querySelector('#btn-water-tanker')?.addEventListener('click', () => {
-      const res = gameState.orderEmergencyWaterTanker();
+    this.modalEl.querySelector('#btn-water-conservation')?.addEventListener('click', () => {
+      soundFX.playClick();
+      gameState.toggleWaterConservation();
+      this.renderWaterManagementModal(options);
+    });
+
+    this.modalEl.querySelector('#btn-water-camper')?.addEventListener('click', () => {
+      const res = gameState.unsealCamperVanWaterReserve();
       if (res.ok) {
         soundFX.playBuildThunk();
         this.renderWaterManagementModal(options);
       } else {
-        alert(res.reason || 'Failed to order water tanker');
+        alert(res.reason || 'Failed to unseal camper bladder');
       }
     });
 
-    this.modalEl.querySelector('#btn-water-pump')?.addEventListener('click', () => {
-      const res = gameState.pumpEmergencyAquiferWater();
+    this.modalEl.querySelector('#btn-water-fablab')?.addEventListener('click', () => {
+      const res = gameState.runFablabDehumidifier();
       if (res.ok) {
         soundFX.playBuildThunk();
         this.renderWaterManagementModal(options);
       } else {
-        alert(res.reason || 'Failed to pump aquifer');
+        alert(res.reason || 'Failed to run condensation chiller');
       }
     });
 
-    this.modalEl.querySelector('#btn-water-dew')?.addEventListener('click', () => {
-      const res = gameState.deployAtmosphericDewCatchers();
+    this.modalEl.querySelector('#btn-water-well-priority')?.addEventListener('click', () => {
+      const res = gameState.prioritizeSolarWellPumping();
       if (res.ok) {
-        soundFX.playBuildThunk();
+        soundFX.playClick();
         this.renderWaterManagementModal(options);
       } else {
-        alert(res.reason || 'Failed to deploy dew nets');
+        alert(res.reason || 'Failed to prioritize well');
       }
     });
 
-    this.modalEl.querySelector('#btn-water-mesh')?.addEventListener('click', () => {
-      const res = gameState.requestMeshEmergencyWater();
+    this.modalEl.querySelector('#btn-water-mesh-convoy')?.addEventListener('click', () => {
+      const res = gameState.requestMeshWaterConvoy();
       if (res.ok) {
         soundFX.playChoreExtinctionFanfare();
         this.renderWaterManagementModal(options);
       } else {
-        alert(res.reason || 'Failed to request mesh water');
+        alert(res.reason || 'Failed to request mesh water convoy');
       }
+    });
+
+    this.modalEl.querySelector('#btn-water-dilemma')?.addEventListener('click', () => {
+      this.close();
+      this.open('demarchy_dilemma', { id: 'dil-water-tanker' });
     });
 
     this.modalEl.querySelector('#btn-water-enlarge')?.addEventListener('click', () => {

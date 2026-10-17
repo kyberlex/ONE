@@ -9,10 +9,10 @@
 </p>
 
 <p align="center">
-  <a href="https://one-oasis.surge.sh"><b>🚀 PLAY LIVE IN BROWSER (Surge CDN)</b></a> •
-  <a href="https://kyberlex.github.io/ONE/"><b>🌐 PLAY ON GITHUB PAGES</b></a> •
-  <a href="sim/O-ASIS_User_Handbook.pdf"><b>📥 DOWNLOAD FIELD MANUAL (PDF)</b></a> •
-  <a href="https://github.com/kyberlex/ONE/discussions"><b>💬 CITIZEN DISCUSSIONS</b></a>
+  <a href="https://kyberlex.github.io/ONE/"><b>🚀 LAUNCH INTERACTIVE PLATFORM (HUB)</b></a> •
+  <a href="https://kyberlex.github.io/ONE/game/"><b>🎮 PLAY LIVING COMMONS GAME</b></a> •
+  <a href="https://kyberlex.github.io/ONE/sim/"><b>🔬 OPEN O-ASIS SANDBOX</b></a> •
+  <a href="sim/O-ASIS_User_Handbook.pdf"><b>📥 FIELD MANUAL (PDF)</b></a>
 </p>
 
 ---
@@ -34,8 +34,9 @@ Traditional city-builders and economic simulations (SimCity, Factorio, Anno) tra
 ## **How to Play**
 
 ### **Option 1: Play in Browser (Zero Install)**
-* **Edge CDN:** [https://one-oasis.surge.sh](https://one-oasis.surge.sh)
-* **GitHub Pages Mirror:** [https://kyberlex.github.io/ONE/](https://kyberlex.github.io/ONE/)
+* **Interactive Platform Hub:** [https://kyberlex.github.io/ONE/](https://kyberlex.github.io/ONE/)
+* **Living Commons Game Direct:** [https://kyberlex.github.io/ONE/game/](https://kyberlex.github.io/ONE/game/)
+* **O-ASIS Sandbox Direct:** [https://kyberlex.github.io/ONE/sim/](https://kyberlex.github.io/ONE/sim/)
 
 ### **Option 2: Run Locally (Offline / Local Dev)**
 ```bash

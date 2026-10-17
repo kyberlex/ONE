@@ -1,0 +1,8 @@
+*.map
+.DS_Store
+*/.DS_Store
+Thumbs.db
+*.tmp
+.git/
+.gitignore
+.surgeignore

@@ -82,10 +82,84 @@ When the game loads, you are looking at your new village canvas. Here is exactly
 
 ---
 
+## 🌿 THE WHAT-IF? LIVING DIORAMA & SANDBOX DOCK
+
+![What-If Living Diorama & Visual Flow Lenses](handbook_assets/13_whatif_diorama_lenses.png)
+*Figure 2: The What-If Living Diorama. Scrub circadian time, tune automation, switch visual flow lenses, or sever the commercial grid to observe systemic thermodynamic cascades.*
+
+O-ASIS has evolved beyond a high-stress micro-management simulator into a soothing, mesmerizing **"What-If?" Living Diorama**. Instead of juggling panicked emergency menus, you sit back and observe a self-sustaining Solarpunk eco-settlement flowing in real time, tweaking 1–2 systemic macro-levers in the floating **What-If Dock** to see how the village adapts:
+
+### The 4 Master Levers
+
+1. **🤖 Automation & Robotics (0% ➔ 100%):**  
+   Drag the automation slider to shift the settlement from manual labor (6.0h daily chores per citizen) to full cybernetic autonomy (0.3h/day). As you slide it up, the FabLab deploys autonomous rovers, mist drones, SCADA crawlers, and cobots to take over physical labor. Pioneers leave the fields and gather around the Agora hearth to socialize, make art, or play music!
+2. **☀️ Circadian Sun Clock Scrubber (00:00 ➔ 23:00):**  
+   Scrub local time dynamically across the 24-hour solar cycle without lag. Watch the dawn sunlight wake the greenhouses, solar arrays hit peak noon generation, evening lanterns illuminate the boulevards, and night-watch citizens stargaze by the hearth fire while residents sleep in their pods.
+3. **🌤️ Weather & Climate Presets (☀️ Sun, ☁️ Overcast, 🌧️ Rain, ⛈️ Storm, 🌡️ Heat, 🔄 Auto):**  
+   Trigger instant meteorological shifts. Watch rain clouds fill subterranean cisterns, storms rev up wind generation, or heatwaves test building thermal insulation. Tap `[🔄 Auto]` anytime to restore autonomous atmospheric simulation.
+4. **⚡ Resilience Shocks (1-Click Stress Tests):**  
+   - **⚡ Sever Grid:** Cut off commercial utility lines to test off-grid islanding resilience. Does your battery storage survive the night?
+   - **👥 +25 Arrivals:** Welcome 25 climate arrivals into the community. Watch usufruct MHU pods construct dynamically and Athenian sortition assemblies expand to accommodate new neighbors.
+   - **🔄 Reset:** Instantly restores the settlement to its peaceful Solarpunk equilibrium baseline.
+
+---
+
+## 👁️ VISUAL FLOW LENSES: ENERGY & WATER CONDUITS
+
+Press `[L]` or click the **LENS** pills in the What-If dock header to illuminate the invisible thermodynamic lifelines of the settlement:
+
+- **⚡ Energy Lens:** Highlights the underground microgrid conduits with animated golden electrons pulsing from the Solar PV & Wind Array into the central distribution transformer, FabLab, and residential pods. Live floating badges display active kW load and generation.
+- **💧 Water Lens:** Highlights the municipal aqueduct conduits with flowing cyan water droplets connecting the deep well rain cistern to aeroponic greenhouse misting loops and Agora drinking fountains, with a 65% closed-loop return through reed-bed biofiltration wetlands.
+- **🌐 Both (Metabolic Lens):** Activates simultaneous energy and hydrology overlays for a comprehensive cyber-physical view.
+- **Off:** Returns to the pure, clean Solarpunk diorama landscape.
+
+---
+
+## 🧘 ZEN SCREENSAVER MODE & GENERATIVE AUDIO AMBIENCE
+
+![Zen Screensaver Mode](handbook_assets/14_zen_screensaver.png)
+*Figure 3: Zen Screensaver Mode. Complete HUD chrome dismissal with cinematic camera drift, gentle procedural soundscapes, and a floating exit pill.*
+
+### 🧘 Zen Screensaver Mode (`[Z]` or `[Esc]`)
+Need a calming, animated Solarpunk diorama on your second monitor while you work, study, or meditate?
+- Press **`[Z]`** or click **`Zen`** in the What-If dock or top menu.
+- All HUD meters, headers, footers, objectives, and dock controls smoothly fade out over 0.5s.
+- The camera engages gentle, organic orbital drift (`zenDrift`), slowly floating around the village center to showcase pioneer life.
+- Click the floating **`#zen-exit-pill`** or press **`[Esc]`** anytime to bring back full interactive controls.
+
+### 🔊 Generative Solarpunk Audio Ambience (`[M]`)
+O-ASIS features a built-in, zero-dependency environmental sound synthesizer built directly with the **Web Audio API** (0 KB audio downloads):
+- **Warm Harmonic Drone:** Pentatonic sine chord bed (A2/E3) with slow resonant lowpass filtering.
+- **Hydrological Flow:** Bandpass filtered water stream murmurs simulating Agora fountains and bioswales.
+- **Meteorological Rain & Wind:** Filtered noise buffer dynamically scaling with rainfall volume and storm wind velocity.
+- **Daylight Songbirds:** Gentle procedural FM frequency sweeps triggering throughout the sunny hours.
+- **Nocturnal Crickets & Embers:** High-frequency micro-pulses and soft hearth fire crackles at night.
+- Press **`[M]`** or click the **Sound** button to toggle mute at any time.
+
+---
+
+## 🎮 STEP ONTO THE SOIL: THE LIVING COMMONS GAME BRIDGE
+
+![The Living Commons Game Bridge](handbook_assets/15_game_bridge_modal.png)
+*Figure 4: The Living Commons Game Bridge modal. Learn about the division of labor between the high-level diorama and first-person 3D ground gameplay.*
+
+Wondering how O-ASIS connects with **The Living Commons Game (`game/`)**?
+Click the **`🎮 Play Game ➔`** button in the What-If dock or top menu to open the bridge sheet:
+
+- **`sim/` (The Living Diorama):** Serves as the macro-scale sandbox—systemic thermodynamics, Leontief balances, bioregional trade, and Athenian demarchy assemblies.
+- **`game/` (The Living Commons Game):** Takes you down onto the soil in full first-person 3D:
+  1. **Ground Exploration:** Drive electric cargo trikes, fly environmental monitoring VTOL drones, and explore bioregional watersheds.
+  2. **Hands-On Usufruct Crafting:** Physically construct Modular Habitat Units (MHU), manage your personal tool inventory, and fabricate open-hardware parts.
+  3. **Real-Time P2P Mesh:** Deliberate with fellow pioneers over serverless WebRTC, vote on sortition juries, and pool volunteer hours.
+
+Click **`🚀 Launch The Living Commons Game ➔`** to jump directly into the 3D ground world!
+
+---
+
 ## 🌍 EXPLORING THE WORLD: 100% OFFLINE MAP
 
 ![100% Offline Global Cartography with Astronomical Terminator](handbook_assets/02_world_map.png)
-*Figure 2: The global cartography view. The curved dark shadow is the real astronomical solar terminator showing where it is currently day and night across Earth.*
+*Figure 5: The global cartography view. The curved dark shadow is the real astronomical solar terminator showing where it is currently day and night across Earth.*
 
 Press `[M]` anytime to zoom out into the **Global Cartography View**.
 
@@ -99,7 +173,7 @@ Press `[M]` anytime to zoom out into the **Global Cartography View**.
 ## 🏡 HOUSING RULES: "USE IT OR LOSE IT" & SABBATICAL LOCKS
 
 ![Dynamic Usufruct Dwelling Pod & Sabbatical Lock](handbook_assets/05_housing_usufruct.png)
-*Figure 3: Inside your dwelling pod. You can see your hydroponic salad rack, battery backup, and the cryptographic Sabbatical Lock switch.*
+*Figure 6: Inside your dwelling pod. You can see your hydroponic salad rack, battery backup, and the cryptographic Sabbatical Lock switch.*
 
 ### The Usufruct Rule: Homes are for Living, Not Speculating
 In O-ASIS, nobody can buy 10 houses and force others to pay rent:
@@ -120,7 +194,7 @@ If you are planning to go on an expedition, explore another village, or take a b
 ## 🧹 ROTATIONAL CHORES & FIRING YOURSELF WITH ROBOTS!
 
 ![Rotational Chores Board & Maintenance](handbook_assets/04_chores_maintenance.png)
-*Figure 4: The Chores Board showing the 4 civic guilds, active shifts, and how many weekly hours of chores have been eliminated by your robot fleet.*
+*Figure 7: The Chores Board showing the 4 civic guilds, active shifts, and how many weekly hours of chores have been eliminated by your robot fleet.*
 
 ### The 4 Civic Guilds
 Nobody gets stuck doing the dirty jobs forever. Every week, pioneers rotate through 4 guilds:
@@ -137,7 +211,7 @@ Nothing lasts forever! If a water pump runs for 100 hours without someone greasi
 ## 🤖 YOUR 5 ROBOT BUDDIES (HOW TO CANCEL HUMAN LABOR!)
 
 ![FabLab Cybernetic Robotics Tech Tree](handbook_assets/06_dualtrack_robots.png)
-*Figure 5: The FabLab Robotics Tech Tree. Research parts and build autonomous automata to reduce human chore hours to zero.*
+*Figure 8: The FabLab Robotics Tech Tree. Research parts and build autonomous automata to reduce human chore hours to zero.*
 
 Why do manual labor when you can build friendly solarpunk robots to do it for you? Press `[B]` to visit the FabLab and build these 5 machines:
 
@@ -154,7 +228,7 @@ Why do manual labor when you can build friendly solarpunk robots to do it for yo
 ## 🏛️ ATHENIAN DEMARCHY: VOTING LIKE ANCIENT ATHENS
 
 ![Athenian Sortition Assembly & Confederal Codex](handbook_assets/03_sortition_council.png)
-*Figure 6: The Citizen Sortition Assembly. A random jury of pioneers votes on community crises, creating binding case laws in the Confederal Codex.*
+*Figure 9: The Citizen Sortition Assembly. A random jury of pioneers votes on community crises, creating binding case laws in the Confederal Codex.*
 
 ### No Corrupt Politicians!
 O-ASIS has **no elections, no campaign ads, and no professional politicians**. Instead, it uses **Athenian Demarchy (Sortition)**:
@@ -176,7 +250,7 @@ Every choice your council ratifies becomes part of the **Confederal Case Law Cod
 ### Cantieri Civici (Giant Community Builds)
 
 ![Cantieri Civici Megaprojects Infrastructure](handbook_assets/07_civic_megaprojects.png)
-*Figure 7: The Cantieri Civici board. Work with your friends to contribute labor shifts and pooled materials to build epic infrastructure.*
+*Figure 10: The Cantieri Civici board. Work with your friends to contribute labor shifts and pooled materials to build epic infrastructure.*
 
 Press `[P]` to open **Cantieri Civici**. These are massive communal builds that nobody can complete alone:
 - **Solarpunk Community Amphitheater:** A gorgeous outdoor stone arena for assemblies, theater, and concerts. Boosts happiness!
@@ -192,7 +266,7 @@ When a project hits 100%, the whole village automatically throws a **Grand Feast
 ### Trade Convoys (Solidarity Barter)
 
 ![Inter-Node Trade Convoys & Fiat Displacement](handbook_assets/08_trade_convoys.png)
-*Figure 8: Inter-Node Trade Convoys. Load up solar trucks with extra food or batteries, ship them across mountains, and watch the "Fiat Dollars Displaced" counter climb!*
+*Figure 11: Inter-Node Trade Convoys. Load up solar trucks with extra food or batteries, ship them across mountains, and watch the "Fiat Dollars Displaced" counter climb!*
 
 If your village makes way too much olive oil but needs spare battery cells:
 1. Open the Convoys menu.
@@ -208,7 +282,7 @@ If your village makes way too much olive oil but needs spare battery cells:
 ### Your Sovereign Passport (No Google or Email Needed!)
 
 ![Sovereign Cryptographic Passport & QR Sync](handbook_assets/09_player_passport.png)
-*Figure 9: Your Sovereign Passport. A private elliptic-curve keypair made in your browser gives you a unique solarpunk avatar and instant 2D QR sync.*
+*Figure 12: Your Sovereign Passport. A private elliptic-curve keypair made in your browser gives you a unique solarpunk avatar and instant 2D QR sync.*
 
 You never have to give O-ASIS your email address, phone number, or create a password:
 - When you first load the game, your browser uses modern cryptography (**ECDSA P-256**) to generate your own digital keypair.
@@ -220,7 +294,7 @@ You never have to give O-ASIS your email address, phone number, or create a pass
 ### 1-Click Multiplayer Rooms (WebRTC + Nostr)
 
 ![Serverless Multiplayer Room & Nostr Telemetry](handbook_assets/10_multiplayer_invite.png)
-*Figure 10: The Multiplayer Invite panel. Copy your room link and send it to friends to play together on a decentralized peer-to-peer mesh.*
+*Figure 13: The Multiplayer Invite panel. Copy your room link and send it to friends to play together on a decentralized peer-to-peer mesh.*
 
 - Click the **Multiplayer** button and copy your unique room URL (for example: `?joinNode=valencia-commons`).
 - Paste the link into WhatsApp, Discord, or Signal.
@@ -231,7 +305,7 @@ You never have to give O-ASIS your email address, phone number, or create a pass
 ### Village Chat & Secret Encrypted Whispers
 
 ![Encrypted Village Chat & E2EE Whispers](handbook_assets/11_village_chat.png)
-*Figure 11: The Village Chat drawer. Talk to the whole town around the fire, or click any player to start an End-to-End Encrypted (E2EE) private whisper channel.*
+*Figure 14: The Village Chat drawer. Talk to the whole town around the fire, or click any player to start an End-to-End Encrypted (E2EE) private whisper channel.*
 
 Press `[T]` to pull out the chat drawer:
 - **Plaza Chat:** Send messages to everyone currently in town.
@@ -243,7 +317,7 @@ Press `[T]` to pull out the chat drawer:
 ## 🛠️ THE DUAL-TRACK BRIDGE: PRINT REAL GADGETS!
 
 ![3D Solarpunk Prop Inspector & Physical Blueprint Bridge](handbook_assets/06_dualtrack_hardware_3d.png)
-*Figure 12: The interactive 3D Prop Inspector. Rotate and inspect real-world 3D printable components in 1:50 miniature or 1:1 real engineering scale.*
+*Figure 15: The interactive 3D Prop Inspector. Rotate and inspect real-world 3D printable components in 1:50 miniature or 1:1 real engineering scale.*
 
 This is where O-ASIS leaves every other game behind. Everything you research in the game corresponds to **real open-source engineering files**:
 
@@ -258,7 +332,7 @@ This is where O-ASIS leaves every other game behind. Everything you research in 
 ## 📢 ANONYMOUS BUG REPORTS & SUGGESTIONS
 
 ![Zero-Leak Anonymous Feedback Relay](handbook_assets/12_feedback_relay.png)
-*Figure 13: The Anonymous Feedback Relay. Submit bug reports, feature ideas, or simulation hypotheses directly to GitHub without tracking or account creation.*
+*Figure 16: The Anonymous Feedback Relay. Submit bug reports, feature ideas, or simulation hypotheses directly to GitHub without tracking or account creation.*
 
 Found a bug or have an awesome idea for a new robot?
 - Click the bug icon in the bottom corner.
@@ -274,6 +348,9 @@ Keep this handy reference next to your keyboard:
 | Key | What it Does |
 |:---:|:---|
 | `[Space]` | **Pause / Unpause:** Freeze time to think, plan, or stop an emergency! |
+| `[Z]` | **Zen Screensaver Mode:** Dismiss all HUD chrome for a serene, drifting living diorama. |
+| `[M]` | **Mute / Unmute Audio:** Toggle generative Solarpunk ambience soundscape. |
+| `[L]` | **Cycle Flow Lenses:** Cycle through Energy ⚡, Water 💧, Both 🌐, and Off. |
 | `[1]` | **Normal Speed:** 1 second = 1 in-game hour. |
 | `[2]` | **Fast Forward:** 2x speed for busy work. |
 | `[5]` | **Hyper Warp:** 5x speed to zoom through quiet nights. |
@@ -284,10 +361,9 @@ Keep this handy reference next to your keyboard:
 | `[D]` | **Demarchy & Codex:** Deliberate in the Citizen Assembly and view village laws. |
 | `[P]` | **Megaprojects (Cantieri):** Team up to build amphitheatres and heating loops. |
 | `[B]` | **FabLab & Hardware:** Inspect 3D models and download `.STL` / `.YAML` blueprints. |
-| `[M]` | **World Map:** Toggle the 100% offline planetary projection. |
 | `[N]` | **Node Overview:** Inspect village health, population, and biomass reserves. |
 | `[T]` | **Village Chat:** Open the chat drawer for plaza messages and secret whispers. |
-| `[Esc]` | **Close Any Window:** Instantly dismiss any open menu or sheet. |
+| `[Esc]` | **Close / Exit Zen:** Instantly dismiss any open menu or exit Zen mode. |
 
 ---
 

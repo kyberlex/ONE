@@ -289,6 +289,11 @@ export class GameState {
       },
       lastEvaporationL: 0,
       lastHeatingLoadKwh: 0,
+      // Epic 3.2: Zero-Water Contingency Protocol State
+      waterConservationActive: false,
+      consecutiveZeroWaterDays: 0,
+      camperWaterReserveUnsealed: false,
+      solarWellPriorityActive: false,
 
       // Constructed Buildings on Grid
       buildings: [
@@ -378,6 +383,15 @@ export class GameState {
       clearingRadius: 340,
       demarchyJuriesCount: 0,
       resolvedDilemmas: [],
+      historyLedger: [
+        {
+          day: 1,
+          icon: '🚐',
+          title: 'Expedition Camper Van Arrival',
+          desc: 'Founding pioneers arrived at the bioregional watershed clear-cut to begin ecological reconstruction under Art. 1-7.'
+        }
+      ],
+      weddingsCelebrated: [],
 
       // Construction Kits Catalog (Matrix 1: All 18 Structures + 5 Robots + Capacity Upgrades)
       starterKits: {
@@ -421,8 +435,13 @@ export class GameState {
         sanitization_droid: { name: 'Sanitization Droid', maxLimit: 1, laborCostH: 2.0 },
         cobot_arm: { name: 'FabLab Cobot Sorter Arm', maxLimit: 1, laborCostH: 3.0 },
 
-        // Modular Habitat Units (Art. 4 Usufruct Dwelling Commons)
+        // Modular Habitat Units (Art. 4 Usufruct Dwelling Commons & Epic 4 Scaling)
         mhu_dwelling: { name: 'Modular Habitat Unit (MHU)', maxLimit: 50, laborCostH: 4.0, district: 'mhu_ecovillage' },
+        mhu_couple: { name: 'MHU Couple Pod (Cap 4)', maxLimit: 25, laborCostH: 3.5, district: 'mhu_ecovillage' },
+        mhu_family: { name: 'MHU Family Cluster (Cap 6)', maxLimit: 15, laborCostH: 5.0, district: 'mhu_ecovillage' },
+        mhu_studio: { name: 'MHU Workshop Loft', maxLimit: 6, laborCostH: 4.5, district: 'mhu_ecovillage' },
+        mhu_bathhouse: { name: 'Communal Bathhouse & Sauna', maxLimit: 3, laborCostH: 3.5, district: 'mhu_ecovillage' },
+        school_nursery: { name: 'Open Forest School & Nursery', maxLimit: 2, laborCostH: 3.5, district: 'agora_core' },
 
         // Bioregional Multi-District Infrastructure (Eco-City Scale)
         aquaponics_greenhouse: { name: 'Solar Aquaponics Greenhouse', maxLimit: 2, laborCostH: 3.5, yieldKcalPerDay: 6000, district: 'agro_belt' },
@@ -495,11 +514,11 @@ export class GameState {
           tag: 'Art. 2 & 3 Assembly',
           center: { x: 0, y: -115 },
           radius: 140,
-          unlocked: true,
+          unlocked: false,
           description: 'Athenian sortition amphitheater, living constitution archive, elder sanctuary, LoRa mesh mast.',
           vocationFocus: ['mediator', 'elder', 'telemetry'],
           color: '#38bdf8',
-          stats: { residents: 4, powerDrawKw: 3.5, output: 'Demarchic Consensus' }
+          stats: { residents: 0, powerDrawKw: 3.5, output: 'Demarchic Consensus' }
         },
         agro_belt: {
           id: 'agro_belt',
@@ -508,11 +527,11 @@ export class GameState {
           tag: 'Permaculture & Food Forestry',
           center: { x: -320, y: 220 },
           radius: 200,
-          unlocked: true,
+          unlocked: false,
           description: 'Syntropic food forest, keyline swales, automated FarmBot rows, aquaponics passive solar greenhouse.',
           vocationFocus: ['gardener', 'farmer', 'scout'],
           color: '#10b981',
-          stats: { residents: 6, powerDrawKw: 2.0, output: '+18.5k kcal/day' }
+          stats: { residents: 0, powerDrawKw: 2.0, output: '+18.5k kcal/day' }
         },
         fablab_quarter: {
           id: 'fablab_quarter',
@@ -521,11 +540,11 @@ export class GameState {
           tag: 'Open Hardware & Heavy Tooling',
           center: { x: 340, y: -30 },
           radius: 190,
-          unlocked: true,
+          unlocked: false,
           description: '5-axis LinuxCNC gantry mill, recycled filament extruder, induction solar foundry, cobots.',
           vocationFocus: ['builder', 'electrician', 'machinist'],
           color: '#f59e0b',
-          stats: { residents: 5, powerDrawKw: 6.5, output: '4.0x Tooling & Drones' }
+          stats: { residents: 0, powerDrawKw: 6.5, output: '4.0x Tooling & Drones' }
         },
         mhu_ecovillage: {
           id: 'mhu_ecovillage',
@@ -534,11 +553,11 @@ export class GameState {
           tag: 'Dynamic Usufruct Living (Art. 4)',
           center: { x: -340, y: -80 },
           radius: 190,
-          unlocked: true,
+          unlocked: false,
           description: 'CLT geodesic residential clusters, greywater reed-bed wetland, communal kitchen hearth, health clinic.',
           vocationFocus: ['water_tech', 'medic', 'chef', 'educator'],
           color: '#a855f7',
-          stats: { residents: 8, powerDrawKw: 4.0, output: '65% Water Recycled' }
+          stats: { residents: 0, powerDrawKw: 4.0, output: '65% Water Recycled' }
         },
         transit_hub: {
           id: 'transit_hub',
@@ -547,11 +566,11 @@ export class GameState {
           tag: 'Reticulum Regional Logistics',
           center: { x: 300, y: 280 },
           radius: 180,
-          unlocked: true,
+          unlocked: false,
           description: 'Solar cargo trike maintenance bay, autonomous courier vertiport pads, bulk microgrid battery intertie.',
           vocationFocus: ['logistics', 'pilot', 'courier'],
           color: '#06b6d4',
-          stats: { residents: 4, powerDrawKw: 5.0, output: 'Active Convoys' }
+          stats: { residents: 0, powerDrawKw: 5.0, output: 'Active Convoys' }
         }
       },
 
@@ -905,9 +924,38 @@ export class GameState {
     return { ok: false, reason: 'District not found' };
   }
 
+  isDistrictUnlocked(districtId) {
+    if (!this.data.districts?.[districtId]) return false;
+    const buildings = this.data.buildings || [];
+    const day = this.data.day || 1;
+
+    // Organic milestone and physical infrastructure progression
+    if (districtId === 'agora_core') {
+      return !!(this.data.centralAgoraConsecrated || buildings.some(b => b.type === 'central_agora' || b.type === 'agora') || day >= 35);
+    }
+    if (districtId === 'agro_belt') {
+      return !!(buildings.some(b => ['food_forest', 'aquaponics_greenhouse', 'grain_silo'].includes(b.type)) || day >= 8);
+    }
+    if (districtId === 'fablab_quarter') {
+      return !!(buildings.some(b => ['fablab', 'heavy_gantry_mill', 'solar_foundry', 'foundry'].includes(b.type)) || day >= 15);
+    }
+    if (districtId === 'mhu_ecovillage') {
+      return !!(buildings.some(b => ['mhu_dwelling', 'mhu', 'mhu_couple', 'mhu_family', 'mhu_studio', 'mhu_bathhouse', 'guest_dome'].includes(b.type)) || day >= 8);
+    }
+    if (districtId === 'transit_hub') {
+      return !!(buildings.some(b => ['trike_depot', 'drone_vertiport'].includes(b.type)) || day >= 20);
+    }
+    return false;
+  }
+
+  isAnyDistrictUnlocked() {
+    const ids = ['agora_core', 'agro_belt', 'fablab_quarter', 'mhu_ecovillage', 'transit_hub'];
+    return ids.some(id => this.isDistrictUnlocked(id));
+  }
+
   getClearingRadius() {
     const pop = (this.data.companions?.length || 2) + 1;
-    const mhuCount = (this.data.buildings || []).filter(b => ['mhu_dwelling', 'mhu', 'guest_dome'].includes(b.type)).length;
+    const mhuCount = (this.data.buildings || []).filter(b => ['mhu_dwelling', 'mhu', 'mhu_couple', 'mhu_family', 'mhu_studio', 'guest_dome'].includes(b.type)).length;
     const day = this.data.day || 1;
 
     if (pop >= 20 || mhuCount >= 8 || day >= 21) {
@@ -982,6 +1030,127 @@ export class GameState {
     this.emit('objective_updated', this.data.objective);
   }
 
+  /* -------------------------------------------------------------
+   * Epic 3.2: Zero-Water & Extreme Weather Contingency Protocols
+   * ----------------------------------------------------------- */
+
+  // Stage 1: Water conservation emergency toggle
+  toggleWaterConservation(forceState = null) {
+    if (forceState !== null) {
+      this.data.waterConservationActive = !!forceState;
+    } else {
+      this.data.waterConservationActive = !this.data.waterConservationActive;
+    }
+    this.save();
+    this.emit('water_conservation_toggled', { active: this.data.waterConservationActive });
+    return { ok: true, active: this.data.waterConservationActive };
+  }
+
+  // Stage 2: Unseal camper van sealed auxiliary bladder (+300 L buffer)
+  unsealCamperVanWaterReserve() {
+    if (this.data.camperWaterReserveUnsealed) {
+      return { ok: false, reason: 'Camper van auxiliary bladder has already been unsealed!' };
+    }
+    this.data.camperWaterReserveUnsealed = true;
+    const addedL = 300;
+    this.data.resources.waterLiters = Math.min(this.data.resources.waterCapacityL, (this.data.resources.waterLiters || 0) + addedL);
+    this.save();
+    this.emit('resources_updated', this.data.resources);
+    return { ok: true, amountL: addedL, remainingL: this.data.resources.waterLiters };
+  }
+
+  // Stage 3: Atmospheric water harvesting via FabLab condensation chiller (+80 L)
+  runFablabDehumidifier() {
+    const hasFablab = this.data.buildings?.some(b => b.type === 'fablab');
+    if (!hasFablab) {
+      return { ok: false, reason: 'FabLab machine shop required to run condensation chiller!' };
+    }
+    const currentEnergy = this.data.resources.energyStoredKwh || 0;
+    if (currentEnergy < 20) {
+      return { ok: false, reason: `Need at least 20 kWh stored energy to run condensation chiller (current: ${Math.round(currentEnergy)} kWh)!` };
+    }
+    this.data.resources.energyStoredKwh -= 5;
+    const addedL = 80;
+    this.data.resources.waterLiters = Math.min(this.data.resources.waterCapacityL, (this.data.resources.waterLiters || 0) + addedL);
+    this.save();
+    this.emit('resources_updated', this.data.resources);
+    return { ok: true, amountL: addedL, energyUsedKwh: 5, remainingL: this.data.resources.waterLiters };
+  }
+
+  // Stage 4: Prioritize microgrid power to deep well pumps (+250 to +350 L/day continuous)
+  prioritizeSolarWellPumping() {
+    const wellCount = this.data.buildings?.filter(b => b.type === 'deep_well').length || 0;
+    if (wellCount <= 0) {
+      return { ok: false, reason: 'Deep Artesian Well (Tier 3) required to prioritize solar aquifer pumping!' };
+    }
+    this.data.solarWellPriorityActive = !this.data.solarWellPriorityActive;
+    this.save();
+    return { ok: true, active: this.data.solarWellPriorityActive };
+  }
+
+  // Stage 5: Request cooperative water bladder delivery from Alburni partner node (+1,500 L)
+  requestMeshWaterConvoy() {
+    const hasLora = this.data.buildings?.some(b => b.type === 'lora_mast') || (this.data.day || 1) >= 7;
+    if (!hasLora) {
+      return { ok: false, reason: 'LoRa Telemetry Mast or Day 7+ required to broadcast distress call to sister nodes!' };
+    }
+    const hasActiveWaterConvoy = (this.data.convoys || []).some(c => c.origin === 'alburni' && c.status === 'in_transit');
+    if (hasActiveWaterConvoy) {
+      return { ok: false, reason: 'A mutual-aid water bladder convoy from Alburni is already in transit!' };
+    }
+
+    const convoyId = `convoy-water-${Date.now().toString(36)}`;
+    const departureDay = this.data.day || 1;
+    const convoy = {
+      id: convoyId,
+      type: 'cargo_trike',
+      origin: 'alburni',
+      destination: 'local_node',
+      departureDay,
+      departureHour: this.data.hour || 8.0,
+      etaDay: departureDay + 1,
+      etaHour: (this.data.hour || 8.0) + 24,
+      daysRemaining: 1,
+      status: 'in_transit',
+      cargoManifest: {
+        foodKcal: 0,
+        energyKwh: 0,
+        tools: [],
+        seeds: [],
+        waterL: 1500
+      },
+      returnManifest: {
+        foodKcal: 0,
+        energyKwh: 0,
+        tools: [],
+        seeds: [],
+        waterL: 1500,
+        summary: '+1,500 L Karst Spring Water Solidarity Bladders from Alburni Node (Zero Debt)'
+      },
+      pioneerDriverId: null,
+      vehicleId: 'trike-alburni-solidarity',
+      distanceKm: 280,
+      transitEvent: null
+    };
+
+    if (!Array.isArray(this.data.convoys)) this.data.convoys = [];
+    this.data.convoys.push(convoy);
+    this.save();
+    this.emit('convoy_dispatched', convoy);
+    return { ok: true, amountL: 1500, convoy };
+  }
+
+  // Stage 6: Trigger Agora Demarchy Assembly for the Legacy Water Truck Dilemma
+  triggerExtractiveWaterTankerDilemma() {
+    this.data.scheduledEvent = {
+      type: 'demarchy_dilemma',
+      id: 'dil-water-tanker',
+      title: 'Agora Demarchy: Extractive Water Tanker at the Gate'
+    };
+    this.save();
+    return { ok: true, event: this.data.scheduledEvent };
+  }
+
   orderEmergencyWaterTanker() {
     let cost = 150;
     if ((this.data.fiatEarnedUsd || 0) < cost) {
@@ -1025,15 +1194,7 @@ export class GameState {
   }
 
   requestMeshEmergencyWater() {
-    const hasLora = this.data.buildings?.some(b => b.type === 'lora_mast');
-    if (!hasLora) {
-      return { ok: false, reason: 'LoRa Telemetry Mast required to broadcast distress call to sister nodes!' };
-    }
-    const addedL = 500;
-    this.data.resources.waterLiters = Math.min(this.data.resources.waterCapacityL, this.data.resources.waterLiters + addedL);
-    this.save();
-    this.emit('resources_updated', this.data.resources);
-    return { ok: true, amountL: addedL };
+    return this.requestMeshWaterConvoy();
   }
 
   /* -------------------------------------------------------------
@@ -1933,13 +2094,19 @@ export class GameState {
       if (!this.data.fleet.some(v => v.type === 'vtol_drone')) {
         this.commissionVehicle('vtol_drone', 'SkyLink VTOL Courier Alpha');
       }
-    } else if (type === 'mhu_dwelling') {
-      building.name = 'Modular Habitat Unit (MHU)';
-      building.shelterCapacity = 3;
-      this.data.shelterCapacity = (this.data.shelterCapacity || 3) + 3;
-      this.data.morale = Math.min(100, (this.data.morale || 85) + 5);
+    } else if (type === 'mhu_dwelling' || type === 'mhu_couple') {
+      building.name = 'MHU Couple Pod (Cap 4)';
+      building.tier = 'couple';
+      building.shelterCapacity = 4;
+      building.permanentCapacity = 2;
+      building.guestBuffer = 2;
+      building.footprintM2 = 24;
+      building.gardenApronM2 = 30; // 15m² per person invariant
+      building.gardenYieldKcal = 250;
+      this.data.shelterCapacity = (this.data.shelterCapacity || 3) + 4;
+      this.data.morale = Math.min(100, (this.data.morale || 85) + 6);
 
-      const mhuCount = (this.data.buildings.filter(b => b.type === 'mhu_dwelling').length) + 1;
+      const mhuCount = (this.data.buildings.filter(b => ['mhu_dwelling', 'mhu_couple', 'mhu_family', 'mhu_studio'].includes(b.type)).length) + 1;
       if (mhuCount >= 3 && !this.data.camperVanRetired) {
         setTimeout(() => {
           this.retireCamperVanToLogistics();
@@ -1950,6 +2117,49 @@ export class GameState {
           this.triggerDunbarHorizon();
         }, 600);
       }
+    } else if (type === 'mhu_family') {
+      building.name = 'MHU Family Cluster (Cap 6)';
+      building.tier = 'family';
+      building.shelterCapacity = 6;
+      building.permanentCapacity = 4;
+      building.guestBuffer = 2;
+      building.footprintM2 = 54;
+      building.gardenApronM2 = 60; // 15m² per person invariant
+      building.gardenYieldKcal = 500;
+      this.data.shelterCapacity = (this.data.shelterCapacity || 3) + 6;
+      this.data.morale = Math.min(100, (this.data.morale || 85) + 10);
+
+      const mhuCount = (this.data.buildings.filter(b => ['mhu_dwelling', 'mhu_couple', 'mhu_family', 'mhu_studio'].includes(b.type)).length) + 1;
+      if (mhuCount >= 3 && !this.data.camperVanRetired) {
+        setTimeout(() => {
+          this.retireCamperVanToLogistics();
+        }, 300);
+      }
+      if (mhuCount >= 50 && !this.data.dunbarHorizonReached) {
+        setTimeout(() => {
+          this.triggerDunbarHorizon();
+        }, 600);
+      }
+    } else if (type === 'mhu_studio') {
+      building.name = 'MHU Workshop Loft (Cap 3)';
+      building.tier = 'studio';
+      building.shelterCapacity = 3;
+      building.permanentCapacity = 1;
+      building.guestBuffer = 2;
+      building.footprintM2 = 35;
+      building.gardenApronM2 = 15;
+      building.researchBonusPct = 15;
+      this.data.shelterCapacity = (this.data.shelterCapacity || 3) + 3;
+      this.data.morale = Math.min(100, (this.data.morale || 85) + 5);
+    } else if (type === 'mhu_bathhouse') {
+      building.name = 'Communal Bathhouse & Sauna';
+      building.saunaTempC = 85;
+      building.greywaterConnected = true;
+      this.data.morale = Math.min(100, (this.data.morale || 85) + 15);
+    } else if (type === 'school_nursery') {
+      building.name = 'Open Forest School & Nursery';
+      building.resilienceBoostPct = 15;
+      this.data.morale = Math.min(100, (this.data.morale || 85) + 10);
     }
 
     this.data.buildings.push(building);
@@ -2034,9 +2244,14 @@ export class GameState {
   }
 
   getDunbarProgress() {
-    const mhuCount = (this.data.buildings || []).filter(b => b.type === 'mhu_dwelling').length;
+    const mhuCount = (this.data.buildings || []).filter(b => ['mhu_dwelling', 'mhu_couple', 'mhu_family', 'mhu_studio'].includes(b.type)).length;
     const target = 50;
-    const residents = mhuCount * 3;
+    const residents = (this.data.buildings || []).reduce((acc, b) => {
+      if (b.type === 'mhu_family') return acc + 6;
+      if (b.type === 'mhu_studio') return acc + 3;
+      if (b.type === 'mhu_dwelling' || b.type === 'mhu_couple') return acc + 4;
+      return acc;
+    }, 0);
     const pct = Math.min(100, Math.round((mhuCount / target) * 100));
     return {
       mhuCount,
@@ -2133,6 +2348,183 @@ export class GameState {
     }
 
     return { ok: true, node: node02 };
+  }
+
+  // =========================================================================
+  // INTERGENERATIONAL DEMOGRAPHICS & MHU HOUSING COMMONS (EPIC 4)
+  // =========================================================================
+
+  getDemographics() {
+    const player = this.data.player || { name: 'Kyberlex', roleTitle: 'System Architect' };
+    const companions = Array.isArray(this.data.companions) ? this.data.companions : [];
+    const allCitizens = [player, ...companions];
+
+    let adults = 0;
+    let children = 0;
+    let elders = 0;
+
+    const roster = allCitizens.map(c => {
+      const isElder = c.vocationId === 'elder' || c.id === 'elder_rosa' || c.isElder;
+      const isChild = c.vocationId === 'scout' || c.id === 'kids_scouts' || c.isChild;
+      let cohort = 'adult';
+      if (isElder) {
+        elders++;
+        cohort = 'elder';
+      } else if (isChild) {
+        children++;
+        cohort = 'child';
+      } else {
+        adults++;
+      }
+      return {
+        ...c,
+        cohort,
+        dailyCaloricKcal: isChild ? 1500 : (isElder ? 1800 : 2200),
+        heavyLaborCapable: !isChild && !isElder,
+        specialtyRole: isChild ? 'Joyful Micro-Chores & Nature Scouting' : (isElder ? 'Wisdom Mentorship & Demarchy Deliberator' : (c.roleTitle || 'Pioneer Labor'))
+      };
+    });
+
+    const totalPop = allCitizens.length;
+    const buildings = this.data.buildings || [];
+    const residentialBuildings = buildings.filter(b => 
+      ['mhu_dwelling', 'mhu_couple', 'mhu_family', 'mhu_studio', 'guest_dome', 'camper_van'].includes(b.type)
+    );
+    
+    let totalCapacity = 0;
+    let totalPermCapacity = 0;
+    let totalGuestBuffer = 0;
+    let gardenApronAreaM2 = 0;
+    let gardenDailyKcal = 0;
+
+    residentialBuildings.forEach(b => {
+      const cap = b.shelterCapacity || (b.type === 'mhu_family' ? 6 : (b.type === 'mhu_studio' ? 3 : 4));
+      totalCapacity += cap;
+      const perm = b.permanentCapacity || (b.type === 'mhu_family' ? 4 : (b.type === 'mhu_studio' ? 1 : 2));
+      totalPermCapacity += perm;
+      const guest = b.guestBuffer || 2;
+      totalGuestBuffer += guest;
+      if (b.gardenApronM2) gardenApronAreaM2 += b.gardenApronM2;
+      else if (b.type === 'mhu_family') gardenApronAreaM2 += 60;
+      else if (b.type === 'mhu_couple' || b.type === 'mhu_dwelling') gardenApronAreaM2 += 30;
+      else if (b.type === 'mhu_studio') gardenApronAreaM2 += 15;
+
+      if (b.gardenYieldKcal) gardenDailyKcal += b.gardenYieldKcal;
+      else if (b.type === 'mhu_family') gardenDailyKcal += 500;
+      else if (b.type === 'mhu_couple' || b.type === 'mhu_dwelling') gardenDailyKcal += 250;
+    });
+
+    if (totalCapacity === 0) totalCapacity = 3;
+
+    // Dependency Ratio: (children + elders) / adults
+    const dependencyRatio = adults > 0 ? ((children + elders) / adults) : 0;
+    
+    // Automation units providing relief against high dependency ratio
+    const automationTypes = ['farm_bot', 'auto_valves', 'mist_drone', 'scada_bot', 'cobot_arm', 'heavy_gantry_mill'];
+    const automationCount = buildings.filter(b => automationTypes.includes(b.type)).length;
+    const automationReliefPct = Math.min(100, Math.round(automationCount * 25));
+
+    const hasSchool = buildings.some(b => ['school', 'school_nursery'].includes(b.type));
+    const hasBathhouse = buildings.some(b => b.type === 'mhu_bathhouse');
+
+    return {
+      totalPop,
+      adults,
+      children,
+      elders,
+      dependencyRatio: parseFloat(dependencyRatio.toFixed(2)),
+      totalCapacity,
+      totalPermCapacity,
+      totalGuestBuffer,
+      occupiedPercentage: Math.min(100, Math.round((totalPop / Math.max(1, totalCapacity)) * 100)),
+      gardenApronAreaM2,
+      gardenDailyKcal,
+      automationCount,
+      automationReliefPct,
+      hasSchool,
+      hasBathhouse,
+      roster
+    };
+  }
+
+  expandMHUToFamily(buildingId) {
+    const b = (this.data.buildings || []).find(x => x.id === buildingId);
+    if (!b) return { ok: false, reason: 'Building not found' };
+    if (b.type !== 'mhu_dwelling' && b.type !== 'mhu_couple') {
+      return { ok: false, reason: 'Only Couple Pods can be expanded to Family Clusters in-situ' };
+    }
+    b.type = 'mhu_family';
+    b.name = 'MHU Family Cluster (Cap 6)';
+    b.tier = 'family';
+    b.shelterCapacity = 6;
+    b.permanentCapacity = 4;
+    b.guestBuffer = 2;
+    b.footprintM2 = 54;
+    b.gardenApronM2 = 60;
+    b.gardenYieldKcal = 500;
+    this.data.shelterCapacity = (this.data.shelterCapacity || 3) + 2;
+    this.data.morale = Math.min(100, (this.data.morale || 85) + 10);
+    
+    if (!this.data.historyLedger) this.data.historyLedger = [];
+    this.data.historyLedger.push({
+      day: this.data.day,
+      icon: '👨‍👩‍👧‍👦',
+      title: 'In-Situ Modular Family Expansion',
+      desc: `Unit ${b.id} bolted on CNC timber extension cassettes, expanding to a 6-person Family Cluster with 60m² kitchen garden apron!`
+    });
+
+    this.save();
+    this.emit('building_updated', b);
+    this.emit('resources_updated', this.data.resources);
+    return { ok: true, building: b };
+  }
+
+  reassignMHUDwelling(fromBuildingId, toBuildingId, pioneerId) {
+    const fromB = (this.data.buildings || []).find(x => x.id === fromBuildingId);
+    const toB = (this.data.buildings || []).find(x => x.id === toBuildingId);
+    if (!fromB || !toB) return { ok: false, reason: 'Dwellings not found' };
+
+    if (!this.data.historyLedger) this.data.historyLedger = [];
+    this.data.historyLedger.push({
+      day: this.data.day,
+      icon: '🔄',
+      title: 'Dynamic Usufruct Relocation',
+      desc: `Pioneer relocated from ${fromB.name} to ${toB.name} near Forest School. Vacated dwelling returned to Civic Housing Pool (zero speculative vacancy).`
+    });
+
+    this.save();
+    return { ok: true };
+  }
+
+  triggerVillageWedding(coupleNames = ['Maya', 'Leo']) {
+    this.data.morale = 100;
+    if (!this.data.weddingsCelebrated) this.data.weddingsCelebrated = [];
+    const weddingRecord = {
+      day: this.data.day,
+      couple: coupleNames,
+      timestamp: Date.now()
+    };
+    this.data.weddingsCelebrated.push(weddingRecord);
+
+    if (!this.data.historyLedger) this.data.historyLedger = [];
+    this.data.historyLedger.push({
+      day: this.data.day,
+      icon: '💍',
+      title: `Village Wedding: ${coupleNames[0]} & ${coupleNames[1]}`,
+      desc: `The entire settlement gathered at Central Agora for acoustic lute folk music, wood-fired sourdough pizzas, and solar lantern dances (+100 Morale Surge)!`
+    });
+
+    this.save();
+    this.emit('village_wedding', weddingRecord);
+
+    if (typeof window !== 'undefined' && window.eventModal) {
+      window.eventModal.open('wedding', {
+        couple: coupleNames,
+        day: this.data.day
+      });
+    }
+
+    return weddingRecord;
   }
 
   // =========================================================================
@@ -2413,9 +2805,11 @@ export class GameState {
     const weather = this.getWeatherForDay(this.data.day);
     this.data.weather = weather;
 
-    // Daily resource flows
-    const peopleCount = Math.max(3, (this.data.companions?.length || 2) + 1);
-    const dailyFoodNeed = peopleCount * 2200;
+    // Daily resource flows & Intergenerational Demographics (Epic 4.2)
+    const demo = this.getDemographics();
+    const peopleCount = demo.totalPop;
+    // Caloric needs: Adults 2,200 kcal, Children 1,500 kcal, Elders 1,800 kcal
+    const dailyFoodNeed = (demo.adults * 2200) + (demo.children * 1500) + (demo.elders * 1800);
 
     // Daily food harvest from constructed agricultural infrastructure (Art. 1 & Line 196 game.md)
     // Outdoor agro infrastructure obeys seasonal biological growth rates:
@@ -2427,7 +2821,12 @@ export class GameState {
     const hasKitchen = this.data.buildings.some(b => b.type === 'kitchen_oven');
     const hasBiogas = this.data.buildings.some(b => b.type === 'biogas_digester');
 
-    const outdoorFoodGenerated = Math.round(((gardenBedsCount * 2200) + (foodForestCount * 4500)) * (season.cropGrowthMult || 1.0));
+    // Attached MHU micro-permaculture kitchen garden aprons (15m²/person invariant)
+    const mhuGardenKcal = Math.round(demo.gardenDailyKcal * (season.cropGrowthMult || 1.0));
+    // Joyful children micro-chores: wild berry foraging (+250 kcal/child/day)
+    const childForagingKcal = demo.children > 0 ? (demo.children * 250) : 0;
+
+    const outdoorFoodGenerated = Math.round(((gardenBedsCount * 2200) + (foodForestCount * 4500)) * (season.cropGrowthMult || 1.0)) + mhuGardenKcal + childForagingKcal;
     const indoorFoodGenerated = (greenhouseCount * 6000) + (hasKitchen ? 1200 : 0) + (hasBiogas ? 800 : 0);
     const foodGenerated = outdoorFoodGenerated + indoorFoodGenerated;
 
@@ -2439,6 +2838,14 @@ export class GameState {
     this.data.resources.foodKcal = Math.max(0, this.data.resources.foodKcal - dailyFoodNeed);
     const netFood = foodGenerated - dailyFoodNeed;
 
+    // Bathhouse hygiene & Forest School community hope morale boosts (Epic 4.1 & 4.2)
+    if (demo.hasBathhouse) {
+      this.data.morale = Math.min(100, (this.data.morale || 85) + 3);
+    }
+    if (demo.hasSchool && demo.children > 0) {
+      this.data.morale = Math.min(100, (this.data.morale || 85) + 2);
+    }
+
     // Water physical inflows: Cistern rainwater collection, Retention swales, Deep artesian wells & morning dew
     const cisternCount = this.data.buildings.filter(b => b.type === 'rain_cistern').length;
     const swaleCount = this.data.buildings.filter(b => b.type === 'retention_swale').length;
@@ -2448,15 +2855,18 @@ export class GameState {
     // Each cistern provides 30 m² roof catchment; each swale provides 60 m² runoff basin.
     const rainfallMm = weather.rainfallMm || 0;
     const rainHarvested = Math.round((cisternCount * 30 * rainfallMm) + (swaleCount * 60 * rainfallMm));
-    const wellHarvested = wellCount * 250; // Continuous artesian aquifer pumping (250 L/day guaranteed)
+    const wellYield = this.data.solarWellPriorityActive ? 350 : 250;
+    const wellHarvested = wellCount * wellYield; // Continuous artesian aquifer pumping (250-350 L/day)
     const dewHarvested = (rainfallMm === 0 && weather.tempC < 20) ? 25 : 0; // Natural morning dew condensation
     const totalWaterHarvested = rainHarvested + wellHarvested + dewHarvested;
 
     this.data.resources.waterLiters = Math.min(this.data.resources.waterCapacityL, this.data.resources.waterLiters + totalWaterHarvested);
 
-    // Domestic water draw: 50 L/person. If greywater reed-bed is built, 65% is recycled!
+    // Domestic water draw: 50 L/person (or 30 L/person if Water Conservation Emergency active)
+    const isConserving = this.data.waterConservationActive || (this.data.resources.waterLiters <= 0);
+    const perPersonWaterDraw = isConserving ? 30 : 50;
     const hasReedBed = this.data.buildings.some(b => b.type === 'reed_bed');
-    const waterBase = peopleCount * 50;
+    const waterBase = peopleCount * perPersonWaterDraw;
     const waterDraw = hasReedBed ? Math.round(waterBase * 0.35) : waterBase;
     const waterConsumed = Math.min(this.data.resources.waterLiters, waterDraw);
     this.data.resources.waterLiters = Math.max(0, this.data.resources.waterLiters - waterDraw);
@@ -2471,7 +2881,16 @@ export class GameState {
     this.data.resources.waterLiters = Math.max(0, this.data.resources.waterLiters - evaporationLossL);
     this.data.lastEvaporationL = evaporationLossL;
 
+    // Stage 1 Water Conservation Emergency state tracking
     const isDehydrated = this.data.resources.waterLiters <= 0;
+    if (isDehydrated) {
+      this.data.waterConservationActive = true;
+      this.data.consecutiveZeroWaterDays = (this.data.consecutiveZeroWaterDays || 0) + 1;
+      this.data.morale = Math.max(10, (this.data.morale || 85) - 5);
+    } else if (this.data.resources.waterLiters > 100) {
+      this.data.waterConservationActive = false;
+      this.data.consecutiveZeroWaterDays = 0;
+    }
 
     // Newcomer arrival cadence (Matrix 6: The 11 Canonical Vocations + Multi-Gen)
     // Day 6: Nico (IoT Telemetry Engineer)
@@ -2749,6 +3168,27 @@ export class GameState {
   getDemarchyDilemmas() {
     return [
       {
+        id: 'dil-water-tanker',
+        title: 'The Extractive Water Tanker at the Gate',
+        icon: '🚛',
+        speaker: 'Elena (Water Systems Tech)',
+        trigger: 'Cisterns are empty. A private water logistics corporation arrives offering 5,000 L emergency bulk water, but demands $2,500 extractive debt or a 10-year private land title.',
+        optionA: {
+          key: 'A',
+          title: 'Reject Extractive Debt — Stand on Solidarity',
+          desc: 'Refuse corporate debt contract (Art. 1 Non-Commercial Purity). Stand firm on communal rationing, unseal camper van bladder, and broadcast emergency convoy request to Alburni node via Reticulum mesh.',
+          benefit: '+20 Constitutional Purity & Civic Pride, Zero Financial Enslavement',
+          cost: 'Emergency water rationing remains active'
+        },
+        optionB: {
+          key: 'B',
+          title: 'Accept $2,500 Debt Contract for 5,000 L',
+          desc: 'Sign the emergency municipal commercial contract. Receive 5,000 L immediate water to refill cisterns, but add +$2,500 to the settlement debt ledger.',
+          benefit: '+5,000 L Instant Potable Water',
+          cost: '+$2,500 Extractive Debt (must be amortized to zero)'
+        }
+      },
+      {
         id: 'dil-refugees',
         title: 'Refugee Asylum at the Gateway',
         icon: '🤝',
@@ -2894,6 +3334,69 @@ export class GameState {
           benefit: 'Farmer hours reduced by 30%',
           cost: 'Chore tracking complexity'
         }
+      },
+      {
+        id: 'dil-railway-spur',
+        title: 'The Regional Railway Spur Connection',
+        icon: '🚂',
+        speaker: 'Tomas (Machinist) & Linus (Systems Engineer)',
+        trigger: 'An abandoned regional rail spur is located 3 km north. Reconnecting it to our timber transit depot requires 200 hours of communal labor and 80 structural chestnut beams, but would allow zero-carbon heavy freight directly to the continental confederation.',
+        optionA: {
+          key: 'A',
+          title: 'Rebuild Rail Spur — Continental Integration',
+          desc: 'Mobilize pioneers for 200h collective track-laying. Connect our bioregion to the zero-emission electric rail network.',
+          benefit: '+200 km Continental Trade Range, Heavy Freight Tripled, Historic Rail Link',
+          cost: '-200h collective labor, -80 timber billets'
+        },
+        optionB: {
+          key: 'B',
+          title: 'Focus on Local Agro-Forestry & Swales',
+          desc: 'Keep labor focused on our own food sovereignty and agro-ecological belt. Rely on solar cargo trikes and VTOL drones for trade.',
+          benefit: '+2,500 kcal/day Agro Bounty, Zero timber diverted',
+          cost: 'Freight capacity remains limited to trikes & drones'
+        }
+      },
+      {
+        id: 'dil-refugee-caravan',
+        title: 'Climate Refugee Caravan Sanctuary',
+        icon: '🏕️',
+        speaker: 'Clara (Medic) & Rosa (Sanctuary Elder)',
+        trigger: 'A climate caravan of 15 displaced persons (including 5 children and 3 elders) arrives at the gateway fleeing coastal storm surge damage. Winter approaches, and accommodating them will stretch our pantry reserves.',
+        optionA: {
+          key: 'A',
+          title: 'Open the Gates — Full Usufruct Integration',
+          desc: 'Welcome the 15 travelers into our MHU family clusters and guest pavilions (Art. 1 & 4). Distribute emergency blankets, unseal auxiliary pantry stores, and enroll children in the Open Forest School.',
+          benefit: '+15 Citizens (5 Children, 3 Elders, 7 Adults), +30 Communal Morale Surge, Inviolable Human Solidarity',
+          cost: '-8,000 kcal emergency food reserve, winter rationing tightens'
+        },
+        optionB: {
+          key: 'B',
+          title: 'Supply Emergency Outpost & Seed Kits',
+          desc: 'Provide 10 insulated geodesic tents, 500 kg heirloom grain, and solar water purifiers to establish an autonomous sister camp 5 km south.',
+          benefit: 'Maintains local food security buffers, establishes new satellite node',
+          cost: '-2,000 kcal food, -400 L water, -10 Morale for partial exclusion'
+        }
+      },
+      {
+        id: 'dil-automation-craft',
+        title: 'Automation Duty vs. Apprentice Craftsmanship',
+        icon: '⚙️',
+        speaker: 'Nico (Telemetry) & Tomas (Machinist)',
+        trigger: 'MHU construction orders are accelerating. Running the 5-axis LinuxCNC gantry mill 24/7 autonomous shifts speeds up timber cassette production, but accelerates motor spindle wear and excludes apprentices from hands-on craft learning.',
+        optionA: {
+          key: 'A',
+          title: '24/7 Autonomous Gantry Shifts',
+          desc: 'Deploy SCADA balancing droids and run the CNC mill continuous day-and-night cycles to fabricate housing cassettes at 3x speed.',
+          benefit: '+300% Housing Cassette Fabrication Speed',
+          cost: '+40% Spindle Mechanical Wear (requires frequent tool recalibration)'
+        },
+        optionB: {
+          key: 'B',
+          title: 'Daytime Human-Guided Guild Shifts',
+          desc: 'Pair senior machinists with young apprentices. Fabricate timber joinery with traditional hand planes alongside CNC precision.',
+          benefit: '+20 Community Cohesion, +25% Tool Lifespan, Apprenticeship Guild Unlocked',
+          cost: 'Standard fabrication speed'
+        }
       }
     ];
   }
@@ -2912,7 +3415,17 @@ export class GameState {
       timestamp: Date.now()
     });
 
-    if (dilemmaId === 'dil-refugees') {
+    if (dilemmaId === 'dil-water-tanker') {
+      if (choiceKey === 'A') {
+        this.data.morale = Math.min(100, (this.data.morale || 85) + 20);
+        this.data.waterConservationActive = true;
+      } else {
+        this.data.resources.waterLiters = Math.min(this.data.resources.waterCapacityL, (this.data.resources.waterLiters || 0) + 5000);
+        this.data.debtUsd = (this.data.debtUsd || 0) + 2500;
+        this.data.consecutiveZeroWaterDays = 0;
+        this.data.waterConservationActive = false;
+      }
+    } else if (dilemmaId === 'dil-refugees') {
       if (choiceKey === 'A') {
         this.data.resources.foodKcal = Math.max(0, this.data.resources.foodKcal - 3000);
         this.data.morale = Math.min(100, (this.data.morale || 85) + 15);
@@ -2928,6 +3441,73 @@ export class GameState {
     } else if (dilemmaId === 'dil-tax-strike') {
       if (choiceKey === 'B') {
         this.data.fiatEarnedUsd = Math.max(0, (this.data.fiatEarnedUsd || 0) - 1200);
+      }
+    } else if (dilemmaId === 'dil-railway-spur') {
+      if (choiceKey === 'A') {
+        this.data.railSpurConnected = true;
+        this.data.morale = Math.min(100, (this.data.morale || 85) + 20);
+        if (!this.data.historyLedger) this.data.historyLedger = [];
+        this.data.historyLedger.push({
+          day: this.data.day,
+          icon: '🚂',
+          title: 'Continental Rail Spur Reconnected',
+          desc: 'Pioneers laid 3 km of timber railway spur, linking our bioregion to the zero-emission electric rail network!'
+        });
+      } else {
+        this.data.resources.foodKcal = Math.min(this.data.resources.foodCapacityKcal || 100000, (this.data.resources.foodKcal || 0) + 5000);
+        this.data.morale = Math.min(100, (this.data.morale || 85) + 10);
+        if (!this.data.historyLedger) this.data.historyLedger = [];
+        this.data.historyLedger.push({
+          day: this.data.day,
+          icon: '🌾',
+          title: 'Agro-Forestry Sovereignty Chosen',
+          desc: 'Labor remained focused on agro-ecological belt food sovereignty over external rail links.'
+        });
+      }
+    } else if (dilemmaId === 'dil-refugee-caravan') {
+      if (choiceKey === 'A') {
+        this.data.resources.foodKcal = Math.max(0, (this.data.resources.foodKcal || 0) - 8000);
+        this.data.morale = Math.min(100, (this.data.morale || 85) + 30);
+        if (!this.data.historyLedger) this.data.historyLedger = [];
+        this.data.historyLedger.push({
+          day: this.data.day,
+          icon: '🤝',
+          title: '15 Climate Refugees Integrated',
+          desc: 'Welcomed 15 climate refugees (5 children, 3 elders) into MHU family clusters and Open Forest School under Art. 4 Usufruct.'
+        });
+      } else {
+        this.data.resources.foodKcal = Math.max(0, (this.data.resources.foodKcal || 0) - 2000);
+        this.data.resources.waterLiters = Math.max(0, (this.data.resources.waterLiters || 0) - 400);
+        this.data.morale = Math.max(10, (this.data.morale || 85) - 10);
+        if (!this.data.historyLedger) this.data.historyLedger = [];
+        this.data.historyLedger.push({
+          day: this.data.day,
+          icon: '🏕️',
+          title: 'Satellite Outpost Camp Supplied',
+          desc: 'Dispatched emergency geodesic shelter kits, heirloom grain, and water purifiers to establish an autonomous sister camp 5 km south.'
+        });
+      }
+    } else if (dilemmaId === 'dil-automation-craft') {
+      if (choiceKey === 'A') {
+        this.data.automationOverdrive = true;
+        this.data.morale = Math.min(100, (this.data.morale || 85) + 10);
+        if (!this.data.historyLedger) this.data.historyLedger = [];
+        this.data.historyLedger.push({
+          day: this.data.day,
+          icon: '⚙️',
+          title: '24/7 Autonomous Gantry Shifts',
+          desc: 'Deployed SCADA balancing droids for 24/7 CNC cassette production at 3x speed.'
+        });
+      } else {
+        this.data.craftGuildActive = true;
+        this.data.morale = Math.min(100, (this.data.morale || 85) + 25);
+        if (!this.data.historyLedger) this.data.historyLedger = [];
+        this.data.historyLedger.push({
+          day: this.data.day,
+          icon: '🪵',
+          title: 'Apprenticeship Craft Guild Established',
+          desc: 'Elder mentors paired with youth for hand-planed timber joinery and precision craft.'
+        });
       }
     }
 
@@ -3008,6 +3588,11 @@ export class GameState {
             this.data.season = this.getSeasonForDay(this.data.day || 1);
           }
 
+          if (this.data.waterConservationActive === undefined) this.data.waterConservationActive = false;
+          if (this.data.consecutiveZeroWaterDays === undefined) this.data.consecutiveZeroWaterDays = 0;
+          if (this.data.camperWaterReserveUnsealed === undefined) this.data.camperWaterReserveUnsealed = false;
+          if (this.data.solarWellPriorityActive === undefined) this.data.solarWellPriorityActive = false;
+
           // Ensure starterKits contains all canonical buildings and scalable limits
           const canonicalKits = {
             solar_array: { name: 'Bifacial Solar Array', maxLimit: 6, laborCostH: 2.0 },
@@ -3025,7 +3610,12 @@ export class GameState {
             solar_foundry: { name: 'Inductive Solar Foundry', maxLimit: 1, laborCostH: 3.5, district: 'fablab_quarter' },
             trike_depot: { name: 'Electric Cargo Trike Depot', maxLimit: 1, laborCostH: 3.0, district: 'transit_hub' },
             drone_vertiport: { name: 'Autonomous Courier Vertiport', maxLimit: 1, laborCostH: 3.5, district: 'transit_hub' },
-            mhu_dwelling: { name: 'Modular Habitat Unit (MHU)', maxLimit: 50, laborCostH: 4.0, district: 'mhu_ecovillage' }
+            mhu_dwelling: { name: 'Modular Habitat Unit (MHU)', maxLimit: 50, laborCostH: 4.0, district: 'mhu_ecovillage' },
+            mhu_couple: { name: 'MHU Couple Pod (Cap 4)', maxLimit: 25, laborCostH: 3.5, district: 'mhu_ecovillage' },
+            mhu_family: { name: 'MHU Family Cluster (Cap 6)', maxLimit: 15, laborCostH: 5.0, district: 'mhu_ecovillage' },
+            mhu_studio: { name: 'MHU Workshop Loft', maxLimit: 6, laborCostH: 4.5, district: 'mhu_ecovillage' },
+            mhu_bathhouse: { name: 'Communal Bathhouse & Sauna', maxLimit: 3, laborCostH: 3.5, district: 'mhu_ecovillage' },
+            school_nursery: { name: 'Open Forest School & Nursery', maxLimit: 2, laborCostH: 3.5, district: 'agora_core' }
           };
           if (!this.data.starterKits) this.data.starterKits = {};
           for (const [key, kitDef] of Object.entries(canonicalKits)) {
@@ -3046,11 +3636,11 @@ export class GameState {
                 tag: 'Art. 2 & 3 Assembly',
                 center: { x: 0, y: -115 },
                 radius: 140,
-                unlocked: true,
+                unlocked: false,
                 description: 'Athenian sortition amphitheater, living constitution archive, elder sanctuary, LoRa mesh mast.',
                 vocationFocus: ['mediator', 'elder', 'telemetry'],
                 color: '#38bdf8',
-                stats: { residents: 4, powerDrawKw: 3.5, output: 'Demarchic Consensus' }
+                stats: { residents: 0, powerDrawKw: 3.5, output: 'Demarchic Consensus' }
               },
               agro_belt: {
                 id: 'agro_belt',
@@ -3059,11 +3649,11 @@ export class GameState {
                 tag: 'Permaculture & Food Forestry',
                 center: { x: -320, y: 220 },
                 radius: 200,
-                unlocked: true,
+                unlocked: false,
                 description: 'Syntropic food forest, keyline swales, automated FarmBot rows, aquaponics passive solar greenhouse.',
                 vocationFocus: ['gardener', 'farmer', 'scout'],
                 color: '#10b981',
-                stats: { residents: 6, powerDrawKw: 2.0, output: '+18.5k kcal/day' }
+                stats: { residents: 0, powerDrawKw: 2.0, output: '+18.5k kcal/day' }
               },
               fablab_quarter: {
                 id: 'fablab_quarter',
@@ -3072,11 +3662,11 @@ export class GameState {
                 tag: 'Open Hardware & Heavy Tooling',
                 center: { x: 340, y: -30 },
                 radius: 190,
-                unlocked: true,
+                unlocked: false,
                 description: '5-axis LinuxCNC gantry mill, recycled filament extruder, induction solar foundry, cobots.',
                 vocationFocus: ['builder', 'electrician', 'machinist'],
                 color: '#f59e0b',
-                stats: { residents: 5, powerDrawKw: 6.5, output: '4.0x Tooling & Drones' }
+                stats: { residents: 0, powerDrawKw: 6.5, output: '4.0x Tooling & Drones' }
               },
               mhu_ecovillage: {
                 id: 'mhu_ecovillage',
@@ -3085,11 +3675,11 @@ export class GameState {
                 tag: 'Dynamic Usufruct Living (Art. 4)',
                 center: { x: -340, y: -80 },
                 radius: 190,
-                unlocked: true,
+                unlocked: false,
                 description: 'CLT geodesic residential clusters, greywater reed-bed wetland, communal kitchen hearth, health clinic.',
                 vocationFocus: ['water_tech', 'medic', 'chef', 'educator'],
                 color: '#a855f7',
-                stats: { residents: 8, powerDrawKw: 4.0, output: '65% Water Recycled' }
+                stats: { residents: 0, powerDrawKw: 4.0, output: '65% Water Recycled' }
               },
               transit_hub: {
                 id: 'transit_hub',
@@ -3098,11 +3688,11 @@ export class GameState {
                 tag: 'Reticulum Regional Logistics',
                 center: { x: 300, y: 280 },
                 radius: 180,
-                unlocked: true,
+                unlocked: false,
                 description: 'Solar cargo trike maintenance bay, autonomous courier vertiport pads, bulk microgrid battery intertie.',
                 vocationFocus: ['logistics', 'pilot', 'courier'],
                 color: '#06b6d4',
-                stats: { residents: 4, powerDrawKw: 5.0, output: 'Active Convoys' }
+                stats: { residents: 0, powerDrawKw: 5.0, output: 'Active Convoys' }
               }
             };
           }

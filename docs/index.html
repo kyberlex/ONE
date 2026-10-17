@@ -3,998 +3,658 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>O-ASIS Dual-Track | Living Thermodynamic Sandbox & Resilience MMO</title>
-  <meta name="description" content="Persistent cooperative planetary simulator and living resilience engine based on Leontief thermodynamics, dynamic usufruct, direct democracy and dual-track open hardware." />
-  <link rel="icon" type="image/svg+xml" href="./one-logo.svg" />
-  <link rel="apple-touch-icon" href="./one-logo.png" />
-  <link rel="stylesheet" crossorigin href="./assets/index-DlWHCvYR.css">
+  <title>O.N.E. • The Living Interactive Platform (Commons Game & O-ASIS Sandbox)</title>
+  <meta name="description" content="Open Networked Earth Interactive Hub: Experience the Solarpunk Living Commons Game or audit the macroscopic O-ASIS thermodynamic sandbox and demarchic governance." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #040907;
+      --bg-card: rgba(8, 20, 16, 0.72);
+      --border-card: rgba(52, 211, 153, 0.22);
+      --border-hover: rgba(52, 211, 153, 0.6);
+      --accent-emerald: #10b981;
+      --accent-emerald-glow: rgba(16, 185, 129, 0.4);
+      --accent-amber: #f59e0b;
+      --accent-cyan: #06b6d4;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.04) 0%, transparent 60%);
+      background-attachment: fixed;
+    }
+
+    /* Ambient animated solar grid backdrop */
+    .ambient-grid {
+      position: fixed;
+      inset: 0;
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Top Navigation Header */
+    header {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(16px);
+      background: rgba(4, 9, 7, 0.65);
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.5));
+    }
+
+    .brand-text h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 40%, #a7f3d0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-text p {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--accent-emerald);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .nav-btn-highlight {
+      border-color: rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.08);
+    }
+
+    .nav-btn-highlight:hover {
+      border-color: #34d399;
+      color: #fff;
+      background: rgba(16, 185, 129, 0.2);
+    }
+
+    /* Main Container */
+    main {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      max-width: 1240px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 44px 24px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-intro {
+      text-align: center;
+      max-width: 780px;
+      margin-bottom: 44px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: #34d399;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* Dual Experience Showcase Grid */
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      width: 100%;
+      max-width: 1120px;
+      margin-bottom: 48px;
+    }
+
+    .exp-card {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      padding: 36px 32px;
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+    }
+
+    .exp-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.5), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .exp-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 24px -6px var(--accent-emerald-glow);
+    }
+
+    .exp-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Amber theme for sandbox card */
+    .exp-card.card-sandbox {
+      border-color: rgba(245, 158, 11, 0.2);
+    }
+
+    .exp-card.card-sandbox:hover {
+      border-color: rgba(245, 158, 11, 0.6);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 24px -6px rgba(245, 158, 11, 0.35);
+    }
+
+    .exp-card.card-sandbox::before {
+      background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.6), transparent);
+    }
+
+    .card-top {
+      margin-bottom: 24px;
+    }
+
+    .card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .badge-game {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-sandbox {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.55;
+      margin-bottom: 22px;
+    }
+
+    .card-pills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .card-pill-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+    }
+
+    .card-pill-icon {
+      font-size: 1rem;
+      width: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn-launch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px 24px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-launch-game {
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      box-shadow: 0 4px 18px rgba(16, 185, 129, 0.35);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+    }
+
+    .btn-launch-game:hover {
+      box-shadow: 0 6px 24px rgba(16, 185, 129, 0.55);
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+    }
+
+    .btn-launch-sandbox {
+      background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+      box-shadow: 0 4px 18px rgba(245, 158, 11, 0.35);
+      border: 1px solid rgba(251, 191, 36, 0.4);
+    }
+
+    .btn-launch-sandbox:hover {
+      box-shadow: 0 6px 24px rgba(245, 158, 11, 0.55);
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+    }
+
+    .card-meta-notes {
+      font-size: 0.76rem;
+      color: #64748b;
+      text-align: center;
+    }
+
+    /* Cross-Resource Showcase Bar */
+    .resource-band {
+      width: 100%;
+      max-width: 1120px;
+      background: rgba(8, 20, 16, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 24px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(14px);
+    }
+
+    .resource-band-text h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+
+    .resource-band-text p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .resource-band-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .res-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .res-link:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 24px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      color: #64748b;
+      font-size: 0.82rem;
+      backdrop-filter: blur(10px);
+      background: rgba(4, 9, 7, 0.8);
+    }
+
+    footer a {
+      color: var(--accent-emerald);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design (Mobile Portrait & Landscape) */
+    @media (max-width: 900px) {
+      header {
+        padding: 14px 20px;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .header-nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .resource-band {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+      }
+      .resource-band-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.85rem;
+      }
+      .exp-card {
+        padding: 24px 20px;
+      }
+      .card-title {
+        font-size: 1.45rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div id="app-container">
-    <!-- Top HUD: Brand Logo & 4 Conserved Resource Meters -->
-    <header id="hud-header">
-      <div class="hud-left-brand-row">
-        <!-- O.N.E. Stamped Brand Badge (Links to Main O.N.E. Platform) -->
-        <a href="https://one-commons.github.io" target="_blank" rel="noopener noreferrer" class="one-brand-badge" title="Open Networked Earth (O.N.E.) — Visit Constitution, Fiction & Vision ↗" data-i18n-title="oneBrandTooltip">
-          <img src="./one-logo-white.svg" alt="O.N.E. Logo" class="one-brand-logo-img" />
-          <div class="one-brand-text">
-            <span class="one-brand-name">O.N.E. ↗</span>
-            <span class="one-brand-sub" data-i18n="hudBrandPortal">PORTAL</span>
+  <div class="ambient-grid"></div>
+
+  <!-- Header Navigation -->
+  <header>
+    <a href="https://one-commons.github.io" class="brand-wrap" title="Visit Open Networked Earth (O.N.E.) Master Portal">
+      <img src="./one-logo-white.svg" alt="O.N.E. Logo" class="brand-logo" />
+      <div class="brand-text">
+        <h1>O.N.E. PLATFORM</h1>
+        <p>Open Networked Earth</p>
+      </div>
+    </a>
+
+    <nav class="header-nav">
+      <a href="https://one-commons.github.io" class="nav-btn nav-btn-highlight" target="_blank" rel="noopener noreferrer">
+        🌐 Master Portal ↗
+      </a>
+      <a href="https://one-commons.github.io#constitution" class="nav-btn" target="_blank" rel="noopener noreferrer">
+        📜 Constitution ↗
+      </a>
+      <a href="https://one-commons.github.io#books" class="nav-btn" target="_blank" rel="noopener noreferrer">
+        📚 Ebooks ↗
+      </a>
+      <a href="https://github.com/kyberlex/ONE" class="nav-btn" target="_blank" rel="noopener noreferrer">
+        💻 GitHub ↗
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Experience Selector -->
+  <main>
+    <div class="hero-intro">
+      <div class="hero-pill">
+        <span>✨ The Living Interactive Platform</span>
+      </div>
+      <h2 class="hero-title">
+        Choose your gateway into <span>Open Networked Earth</span>
+      </h2>
+      <p class="hero-desc">
+        Experience the physical transition to a post-scarcity, moneyless civilization.
+        Play as a pioneer building a thriving solarpunk commons from the ground up,
+        or audit the macroscopic thermodynamic balances and constitutional demarchy.
+      </p>
+    </div>
+
+    <!-- Dual Experience Grid -->
+    <div class="experience-grid">
+
+      <!-- Card 1: Living Commons Game -->
+      <article class="exp-card card-game">
+        <div class="card-top">
+          <div class="card-badge badge-game">
+            <span>🎮 Client-Side Solarpunk Game</span>
           </div>
+          <h3 class="card-title">Living Commons Game</h3>
+          <p class="card-desc">
+            A bottom-up, longitudinal settlement builder. Found your node with 3 pioneers and a camper van, 
+            place biophilic modules along real hydrological and solar contours, balance the 14h chore pool, 
+            and experience moneyless dynamic usufruct in a living 60 FPS canvas world.
+          </p>
+
+          <div class="card-pills-list">
+            <div class="card-pill-item">
+              <span class="card-pill-icon">🚐</span>
+              <span><strong>Camper Van Genesis:</strong> Siting, solar noon vectors & water flumes</span>
+            </div>
+            <div class="card-pill-item">
+              <span class="card-pill-icon">☀️</span>
+              <span><strong>Thermodynamic Balances:</strong> Conserved energy, water, crops & compute</span>
+            </div>
+            <div class="card-pill-item">
+              <span class="card-pill-icon">📋</span>
+              <span><strong>Labor Emancipation:</strong> 14h/week chore pool & weekend pizza feast</span>
+            </div>
+            <div class="card-pill-item">
+              <span class="card-pill-icon">📡</span>
+              <span><strong>P2P Mesh Network:</strong> Local-first Reticulum & sister node trade</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="./game/" class="btn-launch btn-launch-game" id="btnLaunchGame" title="Launch O.N.E. Living Commons Game">
+            <span>Launch Living Commons Game</span>
+            <span>➔</span>
+          </a>
+          <p class="card-meta-notes">Browser 60 FPS Canvas 2D • Procedural Audio • WebRTC Multi-Device</p>
+        </div>
+      </article>
+
+      <!-- Card 2: O-ASIS Thermodynamic Sandbox -->
+      <article class="exp-card card-sandbox">
+        <div class="card-top">
+          <div class="card-badge badge-sandbox">
+            <span>🔬 Macro-Systemic Cockpit</span>
+          </div>
+          <h3 class="card-title">O-ASIS Epistemic Sandbox</h3>
+          <p class="card-desc">
+            A macroscopic engineering simulator and formal stress-testing cockpit. 
+            Audit closed-loop Leontief input-output matrices, Athenian sortition assemblies in odd parity 
+            (75% qualified supermajority), and stress-test the Living Constitution against banking debt & systemic shocks.
+          </p>
+
+          <div class="card-pills-list">
+            <div class="card-pill-item">
+              <span class="card-pill-icon">⚡</span>
+              <span><strong>Leontief Input-Output:</strong> Rigorous 4-balance physical conservation</span>
+            </div>
+            <div class="card-pill-item">
+              <span class="card-pill-icon">🏛️</span>
+              <span><strong>Demarchic Sortition Juries:</strong> Odd parity juries & 75% consensus</span>
+            </div>
+            <div class="card-pill-item">
+              <span class="card-pill-icon">🛡️</span>
+              <span><strong>Red Team AI:</strong> Adversarial stress-tests against financial extraction</span>
+            </div>
+            <div class="card-pill-item">
+              <span class="card-pill-icon">🛠️</span>
+              <span><strong>Dual-Track Bridge:</strong> Real 3D CAD (.STL) & Home Assistant YAML</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="./sim/" class="btn-launch btn-launch-sandbox" id="btnLaunchSandbox" title="Launch O-ASIS Epistemic Sandbox">
+            <span>Launch O-ASIS Sandbox</span>
+            <span>➔</span>
+          </a>
+          <p class="card-meta-notes">Systemic Cockpit • Leontief Thermodynamics • Athenian Sortition</p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Secondary Resource Showcase Band -->
+    <div class="resource-band">
+      <div class="resource-band-text">
+        <h3>Civilizational Blueprints & Open Knowledge</h3>
+        <p>All virtual simulations correspond to legally sound jurisprudence and verified open hardware.</p>
+      </div>
+
+      <div class="resource-band-links">
+        <a href="https://one-commons.github.io#constitution" class="res-link" target="_blank" rel="noopener noreferrer">
+          📜 Living Constitution
         </a>
-
-        <!-- Independent AI Benchmark Trigger Badge -->
-        <button id="btn-open-ai-benchmark" class="one-brand-badge btn-ai-benchmark-badge" title="Independent 4-AI Benchmark (Gemini, ChatGPT, Claude, Grok) Under Zero Marginal Labor ($MC_L → 0)" style="background: rgba(14, 165, 233, 0.12); border-color: rgba(56, 189, 248, 0.4);">
-          <span style="font-size: 18px; line-height: 1;">⚖️</span>
-          <div class="one-brand-text">
-            <span class="one-brand-name" style="color: #38bdf8;">AI BENCHMARK</span>
-            <span class="one-brand-sub" style="color: #34d399; font-weight: 700;">#1 (8.1/10) ↗</span>
-          </div>
-        </button>
-
-        <div class="hud-meters-row">
-        <!-- 1. ⚡ Energy & Heat -->
-        <div class="resource-meter" id="meter-energy" title="Available Energy Buffer & Battery Reserve" data-i18n-title="meterEnergyTooltip">
-          <div class="meter-title-row">
-            <span data-i18n="meterEnergyTitle">⚡ Energy</span>
-            <span id="meter-energy-delta" class="delta positive">+14.2 kW</span>
-          </div>
-          <div class="meter-bar-track">
-            <div id="meter-energy-bar" class="meter-bar-fill fill-energy" style="width: 74%;"></div>
-          </div>
-          <div class="meter-stat-row">
-            <span id="meter-energy-val">280 / 380 kWh</span>
-            <span id="compute-status-pill" class="badge" data-i18n="meterMeshOk">Mesh OK</span>
-          </div>
-        </div>
-
-        <!-- 2. 💧 Potable Water & Irrigation -->
-        <div class="resource-meter" id="meter-water" title="Potable Water & Irrigation Reserves" data-i18n-title="meterWaterTooltip">
-          <div class="meter-title-row">
-            <span data-i18n="meterWaterTitle">💧 Water</span>
-            <span id="meter-water-delta" class="delta positive">+180 L/h</span>
-          </div>
-          <div class="meter-bar-track">
-            <div id="meter-water-bar" class="meter-bar-fill fill-water" style="width: 64%;"></div>
-          </div>
-          <div class="meter-stat-row">
-            <span id="meter-water-val">32,000 / 50,000 L</span>
-            <span class="text-dim" data-i18n="meterGreywaterLoop">65% Loop</span>
-          </div>
-        </div>
-
-        <!-- 3. 🥗 Calories & Food Sovereignty -->
-        <div class="resource-meter" id="meter-food" title="Food Calorie Stocks" data-i18n-title="meterFoodTooltip">
-          <div class="meter-title-row">
-            <span data-i18n="meterFoodTitle">🥗 Food</span>
-            <span id="meter-food-delta" class="delta positive">+420 kcal/h</span>
-          </div>
-          <div class="meter-bar-track">
-            <div id="meter-food-bar" class="meter-bar-fill fill-food" style="width: 60%;"></div>
-          </div>
-          <div class="meter-stat-row">
-            <span id="meter-food-val">29.1 days</span>
-            <span class="text-dim">1.8M kcal</span>
-          </div>
-        </div>
-
-        <!-- 4. ⏳ Free Time & Community Morale -->
-        <div class="resource-meter" id="meter-morale" title="Free Time & Community Morale" data-i18n-title="meterMoraleTooltip">
-          <div class="meter-title-row">
-            <span data-i18n="meterMoraleTitle">⏳ Free Time</span>
-            <span id="meter-freehours-val">15.2h Free/day</span>
-          </div>
-          <div class="meter-bar-track">
-            <div id="meter-morale-bar" class="meter-bar-fill fill-morale" style="width: 85%;"></div>
-          </div>
-          <div class="meter-stat-row">
-            <span id="meter-morale-val">85% Morale</span>
-            <span class="text-dim" data-i18n="meterCitizens">28 Citizens</span>
-          </div>
-        </div>
-      </div>
-      </div>
-
-      <!-- 4-Level Discrete Zoom Bar -->
-      <div class="discrete-zoom-bar">
-        <button id="btn-zoom-out" class="btn-zoom-step" title="Zoom Out" data-i18n-title="zoomStepOut">−</button>
-        <div class="zoom-segments">
-          <button id="btn-view-world" class="zoom-segment-btn" data-level="0" title="World Map" data-i18n-title="zoomWorldTooltip" data-i18n="zoomWorld">🌍 World</button>
-          <button class="zoom-segment-btn" data-level="1" title="Region View" data-i18n-title="zoomRegionTooltip" data-i18n="zoomRegion">🏞️ Region</button>
-          <button id="btn-view-village" class="zoom-segment-btn active" data-level="2" title="Village Commons" data-i18n-title="zoomVillageTooltip" data-i18n="zoomVillage">🏘️ Village</button>
-          <button class="zoom-segment-btn" data-level="3" title="Building Interior" data-i18n-title="zoomInteriorTooltip" data-i18n="zoomInterior">🏢 Interior</button>
-        </div>
-        <button id="btn-zoom-in" class="btn-zoom-step" title="Zoom In" data-i18n-title="zoomStepIn">+</button>
-        <button id="btn-my-home" class="btn-toggle-view btn-home-pill hidden" title="Go to Your Dwelling" data-i18n-title="goToMyHome">👑 <span id="home-pill-text" data-i18n="yourHomeBadge">My Home</span></button>
-      </div>
-
-      <!-- Right HUD: Expandable System & Community Menu Group -->
-      <div class="hud-right-stack">
-        <div id="group-system-menu" class="nav-collapsible-group">
-          <button id="btn-toggle-system-menu" class="btn-group-toggle" title="Menu & System" data-i18n-title="btnSystemMenuTooltip">
-            <span class="group-toggle-icon">⚙️</span>
-            <span class="group-toggle-label" data-i18n="btnSystemMenu">Menu</span>
-            <span class="group-chevron">▾</span>
-          </button>
-          <div id="system-menu-dropdown" class="nav-group-dropdown hidden">
-            <div class="dropdown-section">
-              <button id="btn-open-passport" class="nav-group-item" title="Player Profile & Character" data-i18n-title="passportTooltip">
-                <span class="item-icon">🔑</span>
-                <span class="item-label" data-i18n="passportBtnLabel">Character</span>
-              </button>
-              <button id="btn-invite-friend" class="nav-group-item" title="Multiplayer Settlement Invite" data-i18n-title="inviteFriendTooltip">
-                <span class="item-icon">🔗</span>
-                <span class="item-label" data-i18n="inviteFriendBtn">Invite</span>
-              </button>
-            </div>
-            <div class="dropdown-divider"></div>
-            <div class="dropdown-section">
-              <button id="btn-open-ai-benchmark-menu" class="nav-group-item" title="Independent 3-AI Benchmark (Gemini, ChatGPT, Grok)">
-                <span class="item-icon">⚖️</span>
-                <span class="item-label">AI Benchmark (3 AIs)</span>
-              </button>
-              <button id="btn-open-handbook" class="nav-group-item" title="Survival Rulebook & Field Manual (F1 / G)" data-i18n-title="handbookTooltip">
-                <span class="item-icon">📖</span>
-                <span class="item-label" data-i18n="handbookBtnLabel">Rulebook</span>
-              </button>
-              <button id="btn-open-guide" class="nav-group-item" title="Interactive Onboarding Tour" data-i18n-title="guideTooltip">
-                <span class="item-icon">🧭</span>
-                <span class="item-label" data-i18n="guideBtnLabel">Tour</span>
-              </button>
-              <button id="btn-open-feedback" class="nav-group-item" title="Ideas & Bug Reports" data-i18n-title="feedbackTooltip">
-                <span class="item-icon">💡</span>
-                <span class="item-label" data-i18n="btnFeedback">Ideas & Bugs</span>
-              </button>
-            </div>
-            <div class="dropdown-divider"></div>
-            <div class="dropdown-section">
-              <div class="nav-group-row lang-row">
-                <span class="item-icon">🌐</span>
-                <div class="lang-selector-box">
-                  <select id="lang-select" class="lang-dropdown" aria-label="Select Language">
-                    <option value="en">🇬🇧 English</option>
-                    <option value="it">🇮🇹 Italiano</option>
-                    <option value="es">🇪🇸 Español</option>
-                    <option value="fr">🇫🇷 Français</option>
-                    <option value="de">🇩🇪 Deutsch</option>
-                    <option value="pt">🇵🇹 Português</option>
-                    <option value="ru">🇷🇺 Русский</option>
-                    <option value="zh">🇨🇳 中文</option>
-                    <option value="ja">🇯🇵 日本語</option>
-                    <option value="ko">🇰🇷 한국어</option>
-                    <option value="hi">🇮🇳 हिन्दी</option>
-                    <option value="ar">🇸🇦 العربية</option>
-                    <option value="id">🇮🇩 Bahasa Indonesia</option>
-                    <option value="tr">🇹🇷 Türkçe</option>
-                  </select>
-                </div>
-              </div>
-              <div class="nav-group-row legacy-threat-badge">
-                <span data-i18n="legacySystemAlert">🏦 Legacy Threat:</span>
-                <div class="threat-bar-track">
-                  <div id="threat-level-bar" style="width: 15%;"></div>
-                </div>
-                <span id="threat-level-val">15%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="hud-alert-ticker" data-i18n="defaultTicker">🌱 O-ASIS Dual-Track initialized. Detroit Delray node operational.</div>
-      </div>
-    </header>
-
-    <!-- Main Viewport: 2D World Map & Bioclimatic Village Canvas -->
-    <main id="main-viewport">
-      <!-- 1. 2D Earth Map View (Leaflet CartoDB Dark Matter) -->
-      <div id="world-map-view" class="view-panel hidden">
-        <div id="world-leaflet-map"></div>
-        <div class="map-overlay-floating">
-          <div class="map-controls-row">
-            <button id="btn-locate-bioregion" class="btn-map-control">
-              📍 <span data-i18n="btnLocateMe">Locate My Bioregion</span>
-            </button>
-          </div>
-          <div id="user-location-info" class="user-location-info hidden"></div>
-        </div>
-      </div>
-
-
-      <!-- 2. Bioclimatic Settlement & Village View (60 FPS Canvas) -->
-      <div id="settlement-view" class="view-panel active">
-        <div id="settlement-header-bar" class="settlement-header-bar">
-          <button id="btn-back-to-world" class="btn-settlement-back">
-            ⬅️ <span data-i18n="btnBackToMap">Back to World Map</span>
-          </button>
-          <div class="settlement-meta-box">
-            <span id="settlement-node-name" class="settlement-node-name">Detroit Delray Commons</span>
-            <span id="settlement-climate-tag" class="settlement-climate-tag">Temperate • Hex-Loft</span>
-          </div>
-          <div class="settlement-header-actions">
-            <button id="btn-starter-objectives-toggle" class="btn-claim-header btn-objectives-pill hidden" title="Toggle Starter Objectives" data-i18n-title="starterObjectivesTitle">
-              🎯 <span data-i18n="starterBtnExpand">Objectives</span>
-            </button>
-            <button id="btn-quick-claim" class="btn-claim-header">
-              🔑 <span data-i18n="btnClaimUsufruct">Claim Usufruct Dwelling</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Floating Starter Objectives Widget (First Quest HUD) -->
-        <div id="hud-starter-objectives" class="hud-starter-objectives" aria-live="polite"></div>
-
-        <!-- Floating Facilities Quick-Access Dock (All 8 Core Commons Infrastructures) -->
-        <div id="hud-facilities-dock" class="hud-facilities-dock" role="toolbar" aria-label="Settlement Facilities" data-i18n-aria="dockFacilitiesAria">
-          <button class="facility-dock-btn" data-infra-id="infra-mesh" title="📡 Bioregional Mesh Telemetry Tower" data-i18n-title="infra_mesh_name">
-            <span class="facility-icon">📡</span>
-            <span class="facility-short" data-i18n="infra_mesh_label">Mesh</span>
-          </button>
-          <button class="facility-dock-btn" data-infra-id="infra-solar" title="⚡ Solar PV & Wind Microgrid" data-i18n-title="infra_solar_name">
-            <span class="facility-icon">⚡</span>
-            <span class="facility-short" data-i18n="infra_solar_label">Solar</span>
-          </button>
-          <button class="facility-dock-btn" data-infra-id="infra-water" title="💧 Rain Catchment & Cistern" data-i18n-title="infra_water_name">
-            <span class="facility-icon">💧</span>
-            <span class="facility-short" data-i18n="infra_water_label">Rain</span>
-          </button>
-          <button class="facility-dock-btn" data-infra-id="infra-food" title="🥗 Aeroponic Greenhouse & Food Commons" data-i18n-title="infra_food_name">
-            <span class="facility-icon">🥗</span>
-            <span class="facility-short" data-i18n="infra_food_label">Aeroponic</span>
-          </button>
-          <button class="facility-dock-btn" data-infra-id="infra-fablab" title="💻 FabLab & Circular Workshop" data-i18n-title="infra_fablab_name">
-            <span class="facility-icon">💻</span>
-            <span class="facility-short" data-i18n="infra_fablab_label">FabLab</span>
-          </button>
-          <button class="facility-dock-btn" data-infra-id="infra-school" title="📚 Commons School & Forest Nursery" data-i18n-title="infra_school_name">
-            <span class="facility-icon">📚</span>
-            <span class="facility-short" data-i18n="infra_school_label">School</span>
-          </button>
-          <button class="facility-dock-btn" data-infra-id="infra-garden" title="🌸 Shared Intergenerational Garden" data-i18n-title="infra_garden_name">
-            <span class="facility-icon">🌸</span>
-            <span class="facility-short" data-i18n="infra_garden_label">Garden</span>
-          </button>
-          <button class="facility-dock-btn" data-infra-id="infra-elder" title="🏡 Intergenerational Elder Sanctuary" data-i18n-title="infra_elder_name">
-            <span class="facility-icon">🏡</span>
-            <span class="facility-short" data-i18n="infra_elder_label">Elder Care</span>
-          </button>
-        </div>
-
-        <!-- Floating Interior Navigation Bar (Visible when inside a building/dwelling) -->
-        <div id="hud-interior-bar" class="hud-interior-bar hidden">
-          <div class="interior-breadcrumb">
-            <span class="interior-root" data-i18n="interiorRootVillage">🏘️ Village</span>
-            <span class="interior-sep">/</span>
-            <span id="interior-room-name" class="interior-current">🏢 FabLab & Circular Workshop</span>
-          </div>
-          <div class="interior-actions">
-            <button id="btn-exit-interior" class="btn-exit-interior" title="Return to outdoors overview (ESC)" data-i18n-title="btnExitInteriorTooltip">
-              <span data-i18n="btnExitInterior">⬅️ Exit to Village</span> <span class="key-shortcut">[ESC]</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Floating Interior Prop Tooltip Card (Positioned safely above footer) -->
-        <div id="interior-prop-tooltip" class="interior-prop-tooltip hidden" title="Click to inspect 3D WebGL model & STL blueprint" data-i18n-title="propTooltipInspect">
-          <div class="prop-tooltip-header">
-            <span id="prop-tooltip-name" class="prop-tooltip-name">Component</span>
-            <span class="prop-tooltip-badge" data-i18n="propTooltipBadge3D">3D MODEL</span>
-          </div>
-          <p id="prop-tooltip-desc" class="prop-tooltip-desc" data-i18n="propTooltipDefaultDesc">High-performance bioclimatic usufruct fixture.</p>
-          <div class="prop-tooltip-hint" data-i18n="propTooltipInspectHint">👆 Click to inspect 3D WebGL model & STL blueprint</div>
-        </div>
-
-        <canvas id="settlement-canvas"></canvas>
-      </div>
-
-
-
-      <!-- Tactical Hex Canvas (Preserved for compatibility) -->
-      <canvas id="hex-canvas" style="display: none;"></canvas>
-    </main>
-
-
-    <!-- Bottom Footer: Time Controls & Action Drawers -->
-    <footer id="hud-footer">
-      <div class="time-controls-box">
-        <div class="time-badge">
-          <span id="time-sun-icon">☀️</span>
-          <span id="time-clock-display">12:00</span>
-          <span id="time-day-display" class="text-dim">Day 1</span>
-        </div>
-        <div class="weather-badge" id="hud-weather-badge" title="Dynamic Atmospheric Weather & Thermodynamics" data-i18n-title="weatherBadgeTooltip">
-          <span id="weather-icon">☀️</span>
-          <span id="weather-temp-display">21°C</span>
-          <span id="weather-name-display" class="text-dim">Sunny</span>
-        </div>
-        <div class="speed-btn-group">
-          <button id="btn-speed-0" class="btn-speed" title="Pause" data-i18n-title="speedPause">⏸</button>
-          <button id="btn-speed-1" class="btn-speed active" title="Normal speed (1x)" data-i18n-title="speed1x">1x</button>
-          <button id="btn-speed-2" class="btn-speed" title="Fast speed (2x)" data-i18n-title="speed2x">2x</button>
-          <button id="btn-speed-5" class="btn-speed" title="Hyper speed (5x)" data-i18n-title="speed5x">5x</button>
-        </div>
-      </div>
-
-      <div class="actions-btn-bar">
-        <div id="group-commons-hub" class="nav-collapsible-group bottom-group">
-          <button id="btn-toggle-commons-hub" class="btn-group-toggle btn-hub-toggle" title="Commons Hub & Operations" data-i18n-title="btnCommonsHubTooltip">
-            <span class="group-toggle-icon">🏛️</span>
-            <span class="group-toggle-label" data-i18n="btnCommonsHub">Commons Hub</span>
-            <span id="commons-hub-alert-dot" class="hub-alert-dot hidden" title="Urgent Civic Assembly Deliberation!"></span>
-            <span class="group-chevron">▴</span>
-          </button>
-          <div id="commons-hub-dropdown" class="nav-group-dropdown commons-hub-palette hidden">
-            <button id="btn-open-council" class="nav-group-item hub-item">
-              <span class="item-icon">🏛️</span>
-              <div class="item-text">
-                <span class="item-label" data-i18n="navCouncil">Assembly</span>
-                <span class="item-sub" data-i18n="subCouncil">Sortition & Direct Democracy</span>
-              </div>
-              <span id="council-alert-pill" class="hub-alert-pill hidden">!</span>
-            </button>
-            <button id="btn-open-chores" class="nav-group-item hub-item">
-              <span class="item-icon">📋</span>
-              <div class="item-text">
-                <span class="item-label" data-i18n="navChores">Chores & Shifts</span>
-                <span class="item-sub" data-i18n="subChores">Community Labor Allocation</span>
-              </div>
-            </button>
-            <button id="btn-open-housing" class="nav-group-item hub-item">
-              <span class="item-icon">🏘️</span>
-              <div class="item-text">
-                <span class="item-label" data-i18n="navHousing">Homes & Housing</span>
-                <span class="item-sub" data-i18n="subHousing">Dynamic Usufruct Dwellings</span>
-              </div>
-            </button>
-            <button id="btn-open-tech" class="nav-group-item hub-item">
-              <span class="item-icon">🤖</span>
-              <div class="item-text">
-                <span class="item-label" data-i18n="navTech">Robots & Tech</span>
-                <span class="item-sub" data-i18n="subTech">FabLab Automation & Blueprints</span>
-              </div>
-            </button>
-            <button id="btn-open-convoys" class="nav-group-item hub-item">
-              <span class="item-icon">🚚</span>
-              <div class="item-text">
-                <span class="item-label" data-i18n="navConvoys">Trade & Convoys</span>
-                <span class="item-sub" data-i18n="subConvoys">Inter-Node Barter Mesh</span>
-              </div>
-            </button>
-          </div>
-        </div>
-
-        <!-- Official O.N.E. Footer Stamp -->
-        <div class="hud-footer-stamp" title="Open Networked Earth" data-i18n-title="oneBrandTooltip">
-          <img src="./one-logo-white.svg" alt="O.N.E. Stamp" class="footer-stamp-icon" />
-          <span class="footer-stamp-text">O.N.E.</span>
-        </div>
-      </div>
-    </footer>
-
-    <!-- MODAL: Node Management & Chores Drawer -->
-    <div id="modal-node-management" class="modal-overlay hidden">
-      <div class="modal-window">
-        <div class="modal-header">
-          <div class="modal-title-box">
-            <img src="./one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 id="modal-node-title" data-i18n="nodeHubTitle">Village Commons Hub</h3>
-          </div>
-          <div class="modal-header-actions">
-            <a href="https://one-commons.github.io" target="_blank" rel="noopener noreferrer" class="btn-handbook-platform-link" title="Visit Open Networked Earth (O.N.E.) Main Platform" data-i18n-title="onePlatformLinkTooltip">
-              🌐 <span data-i18n="onePlatformLinkBtn">O.N.E. Platform ↗</span>
-            </a>
-            <button id="btn-close-node-modal" class="btn-close-modal">✕</button>
-          </div>
-        </div>
-        <div id="node-management-content" class="modal-body"></div>
+        <a href="https://one-commons.github.io#blueprints" class="res-link" target="_blank" rel="noopener noreferrer">
+          🛠️ 3D CAD Blueprints
+        </a>
+        <a href="https://one-commons.github.io#books" class="res-link" target="_blank" rel="noopener noreferrer">
+          📚 6-Volume Fiction
+        </a>
+        <a href="https://github.com/kyberlex/ONE/discussions" class="res-link" target="_blank" rel="noopener noreferrer">
+          💬 Dialectic Forum
+        </a>
       </div>
     </div>
+  </main>
 
-    <!-- MODAL: Athenian Sortition Dilemma & Crisis -->
-    <div id="modal-dilemma" class="modal-overlay hidden">
-      <div class="modal-window">
-        <div class="modal-header">
-          <div class="modal-title-box">
-            <img src="./one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 data-i18n="councilDeliberationBadge">Citizen Assembly</h3>
-          </div>
-          <button id="btn-close-dilemma-modal" class="btn-close-modal">✕</button>
-        </div>
-        <div id="dilemma-content" class="modal-body"></div>
-      </div>
-    </div>
-
-    <!-- MODAL: Dual-Track Tech Tree & Real Hardware Blueprints -->
-    <div id="modal-dualtrack" class="modal-overlay hidden">
-      <div class="modal-window">
-        <div class="modal-header">
-          <div class="modal-title-box">
-            <img src="./one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 data-i18n="dualTrackTitle">FabLab & Robots</h3>
-          </div>
-          <button id="btn-close-dualtrack-modal" class="btn-close-modal">✕</button>
-        </div>
-        <div id="dualtrack-content" class="modal-body"></div>
-      </div>
-    </div>
-
-    <!-- MODAL: Bioclimatic Dwelling Inspection & Usufruct Claim -->
-    <div id="modal-dwelling" class="modal-overlay hidden">
-      <div class="modal-window modal-window-wide">
-        <div class="modal-header">
-          <div class="modal-title-box">
-            <img src="./one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 id="dwelling-modal-title" data-i18n="dwellingModalTitle">Bioclimatic Dwelling & Usufruct Rights</h3>
-          </div>
-          <button id="btn-close-dwelling-modal" class="btn-close-modal">✕</button>
-        </div>
-        <div id="dwelling-modal-content" class="modal-body"></div>
-      </div>
-    </div>
-
-    <!-- MODAL: Citizen Dossier & 3D Sovereign Avatar Studio -->
-    <div id="modal-citizen" class="modal-overlay hidden">
-      <div class="modal-window modal-window-citizen">
-        <div class="modal-header">
-          <div class="modal-title-box">
-            <span id="citizen-modal-avatar-icon" style="font-size: 24px;">👤</span>
-            <h3 id="citizen-modal-name" data-i18n="citizenDossierTitle">Citizen Dossier</h3>
-            <span id="citizen-modal-vocation-badge" class="badge badge-success" data-i18n="badgeCitizen">CITIZEN</span>
-          </div>
-          <button id="btn-close-citizen-modal" class="btn-close-modal">✕</button>
-        </div>
-        <div id="citizen-modal-content" class="modal-body"></div>
-      </div>
-    </div>
-
-    <!-- MODAL: Constitutional Private Residence Barrier -->
-    <div id="modal-privacy-lock" class="modal-overlay hidden">
-      <div class="modal-window" style="max-width: 480px;">
-        <div class="modal-header">
-          <div class="modal-title-box">
-            <span style="font-size: 20px;">🔒</span>
-            <h3 id="privacy-modal-title" data-i18n="privacyModalTitle">Private Usufruct Sanctuary</h3>
-          </div>
-          <button id="btn-close-privacy-modal" class="btn-close-modal">✕</button>
-        </div>
-        <div id="privacy-modal-content" class="modal-body">
-          <div class="privacy-lock-card">
-            <div class="occupant-badge-header" style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
-              <span id="privacy-occupant-avatar" style="font-size: 36px; background: rgba(255,255,255,0.08); padding: 8px; border-radius: 50%;">🧑</span>
-              <div>
-                <h4 id="privacy-occupant-name" style="margin: 0 0 4px 0; color: #f8fafc; font-size: 16px;">Citizen</h4>
-                <span id="privacy-occupant-vocation" class="badge badge-success">Permaculturist</span>
-              </div>
-            </div>
-            <div class="constitutional-quote-box" style="background: rgba(0, 0, 0, 0.35); border-left: 3px solid var(--emerald-primary); padding: 12px; border-radius: 6px; margin-bottom: 16px;">
-              <div style="font-size: 10px; color: var(--emerald-primary); font-weight: bold; letter-spacing: 1px; margin-bottom: 4px;" data-i18n="privacyArticleCitation">📜 O.N.E. CONSTITUTION • ARTICLE 4.1</div>
-              <p style="font-size: 12px; color: #cbd5e1; margin: 0; line-height: 1.4;" data-i18n="privacyModalDesc">"Individual usufruct dwellings and personal living spaces are strictly inviolable sanctuaries of personal autonomy. Entry without explicit invitation of the occupant is constitutionally prohibited."</p>
-            </div>
-            <div id="privacy-knock-result" class="privacy-knock-result hidden" style="margin-bottom: 14px; padding: 10px; border-radius: 8px; font-size: 13px;"></div>
-            <div class="privacy-modal-actions" style="display: flex; gap: 10px;">
-              <button id="btn-knock-door" class="btn-primary" style="flex: 1; padding: 10px;" data-i18n="btnKnockDoor">🚪 Knock on Door</button>
-              <button id="btn-respect-privacy" class="btn-secondary" style="flex: 1; padding: 10px;" data-i18n="btnRespectPrivacy">Dismiss</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MODAL: Dual-Track 3D Model Inspector for Interior Props & Machinery -->
-    <div id="modal-prop-3d" class="modal-overlay hidden">
-      <div class="modal-window modal-window-prop3d">
-        <div class="modal-header">
-          <div class="modal-title-box">
-            <span style="font-size: 20px;">🔬</span>
-            <h3 id="prop-3d-title" data-i18n="prop3DTitle">Dual-Track 3D Hardware Inspector</h3>
-            <span id="prop-3d-category" class="badge badge-success" data-i18n="badgeOpenHardware">OPEN HARDWARE</span>
-          </div>
-          <button id="btn-close-prop-3d" class="btn-close-modal">✕</button>
-        </div>
-        <div class="prop-3d-body">
-          <div class="prop-3d-viewport-box">
-            <div id="prop-3d-canvas-container" class="prop-3d-canvas-container"></div>
-            <div class="prop-3d-canvas-toolbar">
-              <button id="btn-prop-auto-rotate" class="btn-prop-toolbar active" title="Toggle 3D Auto-Rotation" data-i18n-title="propAutoRotateTooltip" data-i18n="propAutoRotate">🔄 Auto-Rotate</button>
-              <button id="btn-prop-reset-cam" class="btn-prop-toolbar" title="Reset Camera Perspective" data-i18n-title="propResetCamTooltip" data-i18n="propResetCam">🔍 Reset View</button>
-              <button id="btn-prop-download-stl" class="btn-prop-toolbar btn-prop-download" title="Export Watertight 3D Printable STL" data-i18n-title="propDownloadStlTooltip" data-i18n="propDownloadStl">📥 Download .STL Blueprint</button>
-            </div>
-            <div class="prop-3d-hint" data-i18n="prop3DHint">💡 Drag to rotate 360° • Scroll / Pinch to zoom • Right-click to pan</div>
-          </div>
-          <div class="prop-3d-sidebar">
-            <div class="prop-3d-desc-box">
-              <p id="prop-3d-desc" data-i18n="prop3DDesc">Dual-Track open source hardware module.</p>
-            </div>
-            <div class="prop-3d-specs-section">
-              <h4 data-i18n="prop3DTabEngineering">⚙️ Engineering & Thermodynamics</h4>
-              <table id="prop-3d-specs-table" class="prop-specs-table"></table>
-            </div>
-            <div class="prop-3d-yaml-section">
-              <h4 data-i18n="prop3DTabTelemetry">⚡ Home Assistant Telemetry (MQTT / Zigbee)</h4>
-              <pre id="prop-3d-yaml-preview" class="prop-yaml-code"></pre>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MODAL: Inter-Node Trade Convoys & Logistics Fleet -->
-    <div id="modal-convoys" class="modal-overlay hidden">
-      <div class="modal-window modal-window-wide">
-        <div class="modal-header">
-          <div class="modal-title-box">
-            <img src="./one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 data-i18n="convoysModalTitle">Inter-Node Barter Logistics & Trade Fleet</h3>
-            <span class="badge badge-success" data-i18n="badgePlanetaryMesh">PLANETARY MESH</span>
-          </div>
-          <button id="btn-close-convoys-modal" class="btn-close-modal">✕</button>
-        </div>
-        <div id="convoys-content" class="modal-body"></div>
-      </div>
-    </div>
-
-    <!-- MODAL: Sovereign Citizen Cryptographic Passport & P2P Sync -->
-    <div id="modal-passport" class="modal-overlay hidden">
-      <div class="modal-window modal-window-passport">
-        <div class="modal-header">
-          <div class="modal-title-box">
-            <img src="./one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 id="modal-passport-title" data-i18n="passportModalTitle">Citizen Cryptographic Passport</h3>
-            <span class="badge badge-success" data-i18n="badgeOfflineResilient">OFFLINE RESILIENT</span>
-          </div>
-          <button id="btn-close-passport-modal" class="btn-close-modal">✕</button>
-        </div>
-        <div id="passport-modal-content" class="modal-body"></div>
-      </div>
-    </div>
-
-    <!-- MODAL: In-Game Feedback & Community Reporter -->
-    <div id="modal-feedback" class="modal-overlay hidden">
-      <div class="modal-window modal-window-feedback">
-        <div class="modal-header">
-          <div class="modal-title-box">
-            <img src="./one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 id="modal-feedback-title" data-i18n="modalFeedbackTitle">💡 Community Feedback & Bug Reporter</h3>
-            <span class="badge badge-success" data-i18n="badgeZeroLogin">ZERO LOGIN</span>
-          </div>
-          <button id="btn-close-feedback-modal" class="btn-close-modal">✕</button>
-        </div>
-        <div id="feedback-modal-content" class="modal-body"></div>
-      </div>
-    </div>
-
-    <!-- MODAL: Multiplayer Settlement Invite & Serverless Room URL (ITEM 18) -->
-    <div id="modal-invite" class="modal-overlay hidden">
-      <div class="modal-window modal-window-invite">
-        <div class="modal-header">
-          <div class="modal-title-box">
-            <img src="./one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 id="modal-invite-title" data-i18n="inviteModalTitle">Multiplayer Settlement Invite</h3>
-            <span class="badge badge-success" data-i18n="badgeServerlessWebrtc">SERVERLESS P2P</span>
-          </div>
-          <button id="btn-close-invite-modal" class="btn-close-modal">✕</button>
-        </div>
-        <div id="invite-modal-content" class="modal-body"></div>
-      </div>
-    </div>
-
-    <!-- MODAL: Survival Rulebook & Player Field Manual -->
-    <div id="modal-handbook" class="modal-overlay hidden">
-      <div class="modal-window modal-window-handbook">
-        <div class="modal-header">
-          <div class="modal-title-box">
-            <img src="./one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 id="modal-handbook-title" data-i18n="handbookModalTitle">📖 Survival Rulebook &amp; Field Manual</h3>
-            <span class="badge badge-success" data-i18n="badgeRulebookP2P">FIELD MANUAL</span>
-          </div>
-          <div class="modal-header-actions">
-            <a href="https://one-commons.github.io" target="_blank" rel="noopener noreferrer" class="btn-handbook-platform-link" title="Explore the Open Networked Earth (O.N.E.) Main Platform" data-i18n-title="handbookPlatformLinkTooltip">
-              🌐 <span data-i18n="handbookPlatformLinkBtn">O.N.E. Movement ↗</span>
-            </a>
-            <a href="https://github.com/kyberlex/ONE/raw/main/sim/O-ASIS_User_Handbook.pdf" target="_blank" rel="noopener noreferrer" class="btn-handbook-download-pdf" title="Download Printable Vector PDF (18 Pages)" data-i18n-title="handbookPdfDownloadTooltip">
-              📥 <span data-i18n="handbookDownloadPdfBtn">Download PDF (18 Pgs)</span>
-            </a>
-            <button id="btn-close-handbook-modal" class="btn-close-modal" title="Close (ESC)">✕</button>
-          </div>
-        </div>
-        <div id="handbook-modal-content" class="modal-body"></div>
-      </div>
-    </div>
-
-    <!-- MODAL: Independent 3-AI Comparative Benchmark (Gemini, ChatGPT, Grok) -->
-    <div id="modal-ai-benchmark" class="modal-overlay hidden">
-      <div class="modal-window modal-window-wide modal-window-ai-benchmark">
-        <div class="modal-header">
-          <div class="modal-title-box">
-            <img src="./one-logo-white.svg" alt="O.N.E. Logo" class="modal-header-logo-stamp" />
-            <h3 id="modal-ai-benchmark-title">⚖️ Independent AI Comparative Benchmark</h3>
-            <span class="badge badge-ai-frontier">GEMINI • CHATGPT • CLAUDE • GROK</span>
-          </div>
-          <div class="modal-header-actions">
-            <a href="https://github.com/kyberlex/ONE/blob/main/AI_BENCHMARK_POST_WORK.md" target="_blank" rel="noopener noreferrer" class="btn-handbook-platform-link" title="Read Full Canonical Benchmark on GitHub">
-              📄 <span>Canonical Source (.md) ↗</span>
-            </a>
-            <button id="btn-close-ai-benchmark-modal" class="btn-close-modal" title="Close (ESC)">✕</button>
-          </div>
-        </div>
-
-        <div class="modal-body modal-body-ai">
-          <!-- Benchmark Tab Navigation -->
-          <div class="ai-tabs-bar">
-            <button class="ai-tab-btn active" data-tab="matrix">🏆 Master Matrix</button>
-            <button class="ai-tab-btn" data-tab="dimensions">📊 6 Dimensions</button>
-            <button class="ai-tab-btn" data-tab="nordic">📉 Nordic Fiscal Math</button>
-            <button class="ai-tab-btn" data-tab="transition">⚠️ Transition Paradox (2.5/10)</button>
-          </div>
-
-          <!-- TAB 1: MASTER MATRIX -->
-          <div id="ai-pane-matrix" class="ai-tab-pane active">
-            <div class="ai-callout-header">
-              <p>Four frontier artificial intelligences (<strong>Google Gemini</strong>, <strong>OpenAI ChatGPT</strong>, <strong>Anthropic Claude</strong>, and <strong>xAI Grok</strong>) were blindly tasked with evaluating six economic architectures strictly under an automated, steady-state civilization where marginal labor costs reach zero (<em>MC<sub>L</sub> → 0</em>).</p>
-            </div>
-
-            <div class="ai-table-wrap">
-              <table class="ai-benchmark-table">
-                <thead>
-                  <tr>
-                    <th>Architecture</th>
-                    <th class="th-center">4-AI Consensus</th>
-                    <th class="th-center">Gemini</th>
-                    <th class="th-center">ChatGPT</th>
-                    <th class="th-center">Claude</th>
-                    <th class="th-center">Grok</th>
-                    <th class="th-center">Transition (1-10)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="tr-highlight-one">
-                    <td>
-                      <div class="arch-cell">
-                        <span class="arch-badge-rank rank-1">🥇 1</span>
-                        <div>
-                          <strong>Open Networked Earth (O.N.E.)</strong>
-                          <span class="arch-sub">Universal Usufruct • Demarchy • Exergy</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="td-center score-cell score-gold">8.13</td>
-                    <td class="td-center score-cell">8.50</td>
-                    <td class="td-center score-cell">8.33</td>
-                    <td class="td-center score-cell">6.50</td>
-                    <td class="td-center score-cell">9.17</td>
-                    <td class="td-center score-cell score-red">2.5 / 10</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="arch-cell">
-                        <span class="arch-badge-rank rank-2">🥈 2</span>
-                        <div>
-                          <strong>Ostrom-Style Commons</strong>
-                          <span class="arch-sub">Common-Pool Resources • Polycentric</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="td-center score-cell score-high">6.66</td>
-                    <td class="td-center score-cell">6.83</td>
-                    <td class="td-center score-cell">7.00</td>
-                    <td class="td-center score-cell">5.80</td>
-                    <td class="td-center score-cell">7.00</td>
-                    <td class="td-center score-cell score-mid">5.5 / 10</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="arch-cell">
-                        <span class="arch-badge-rank rank-3">🥉 3</span>
-                        <div>
-                          <strong>Cooperative Market Socialism</strong>
-                          <span class="arch-sub">Worker Equity • Market Exchange</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="td-center score-cell score-mid">5.80</td>
-                    <td class="td-center score-cell">5.33</td>
-                    <td class="td-center score-cell">7.17</td>
-                    <td class="td-center score-cell">5.20</td>
-                    <td class="td-center score-cell">5.50</td>
-                    <td class="td-center score-cell score-mid">4.8 / 10</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="arch-cell">
-                        <span class="arch-badge-rank">4</span>
-                        <div>
-                          <strong>Nordic Social Democracy</strong>
-                          <span class="arch-sub">Welfare State • Tripartite • Tax Transfers</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="td-center score-cell score-mid">5.33</td>
-                    <td class="td-center score-cell">4.83</td>
-                    <td class="td-center score-cell">6.33</td>
-                    <td class="td-center score-cell">5.50</td>
-                    <td class="td-center score-cell">4.67</td>
-                    <td class="td-center score-cell score-high">7.0 / 10</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="arch-cell">
-                        <span class="arch-badge-rank">5</span>
-                        <div>
-                          <strong>Centralized State Socialism</strong>
-                          <span class="arch-sub">State Monopoly • Gosplan Planning</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="td-center score-cell score-low">4.03</td>
-                    <td class="td-center score-cell">3.83</td>
-                    <td class="td-center score-cell">6.00</td>
-                    <td class="td-center score-cell">2.80</td>
-                    <td class="td-center score-cell">3.50</td>
-                    <td class="td-center score-cell score-low">2.8 / 10</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="arch-cell">
-                        <span class="arch-badge-rank">6</span>
-                        <div>
-                          <strong>Neoliberal / Free-Market</strong>
-                          <span class="arch-sub">Private Capital • Price Clearing • GDP</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="td-center score-cell score-danger">3.21</td>
-                    <td class="td-center score-cell">2.67</td>
-                    <td class="td-center score-cell">4.17</td>
-                    <td class="td-center score-cell">3.00</td>
-                    <td class="td-center score-cell">3.00</td>
-                    <td class="td-center score-cell score-gold">9.0 / 10</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- The Inverse Transition Callout -->
-            <div class="ai-paradox-box">
-              <div class="ai-paradox-badge">⚡ THE INVERSE TRANSITION LAW</div>
-              <p>All four AI models diagnosed an exact <strong>inverse relationship</strong> between steady-state viability and transition feasibility: systems native to full automation (O.N.E. @ 8.13) face extreme institutional friction (2.5/10) against legacy debt and property regimes. Meanwhile, capitalism transitions with zero friction (9.0/10) because replacing labor with machines is its native instinct, even though it results in terminal demand collapse.</p>
-            </div>
-            <div style="margin-top: 10px; font-size: 0.78rem; color: var(--text-muted); text-align: center;">
-              Full methodology, prompt transcript &amp; model parameters (Gemini 3.8 Flash Extended Reasoning, ChatGPT, Claude 3.5 Sonnet, Grok) documented in canonical source.
-            </div>
-          </div>
-
-          <!-- TAB 2: 6 DIMENSIONS -->
-          <div id="ai-pane-dimensions" class="ai-tab-pane">
-            <div class="dimensions-grid">
-              <div class="dim-card">
-                <div class="dim-header">
-                  <span class="dim-title">1. Post-Work Decoupling &amp; Autonomy</span>
-                  <span class="dim-score score-gold">O.N.E. 9.5 / 10</span>
-                </div>
-                <p>Universal usufruct physically decouples survival from wage labor. Automated seed nodes provide calories, power, water, and shelter as unconditional metabolic entitlements, preventing clientelist subjugation to either state bureaucrats or platform monopolies.</p>
-              </div>
-
-              <div class="dim-card">
-                <div class="dim-header">
-                  <span class="dim-title">2. Ecological &amp; Biophysical Limits</span>
-                  <span class="dim-score score-gold">O.N.E. 10 / 10 (Unanimous)</span>
-                </div>
-                <p>Hardcoded thermodynamic Leontief exergy budgets and mass-balance cycles replace monetary valuation. Biocentric carrying capacity ceilings are inviolable constraints rather than market externalities; infinite growth is extinguished.</p>
-              </div>
-
-              <div class="dim-card">
-                <div class="dim-header">
-                  <span class="dim-title">3. Complex Non-Basic Allocation</span>
-                  <span class="dim-score score-high">O.N.E. 7.5 / 10</span>
-                </div>
-                <p>Core survival is abundant and demonetized. For rivalrous, positional luxuries (prime locations, bespoke craft, high-end compute), O.N.E. utilizes sortition queues and demarchic deliberation, accepting coordination latency to prevent wealth exclusion.</p>
-              </div>
-
-              <div class="dim-card">
-                <div class="dim-header">
-                  <span class="dim-title">4. Governance Integrity &amp; Anti-Oligarchy</span>
-                  <span class="dim-score score-gold">O.N.E. 9.0 / 10</span>
-                </div>
-                <p>Statistical demarchy with strict odd-parity assemblies (3, 15, 101, 301, 1001) prevents careerist corruption, lobbyist capture, and algorithmic technocracy. Decisions are made by rotating citizen juries, not sovereign AI or political classes.</p>
-              </div>
-
-              <div class="dim-card">
-                <div class="dim-header">
-                  <span class="dim-title">5. Dynamic Innovation &amp; Maintenance</span>
-                  <span class="dim-score score-high">O.N.E. 7.5 / 10</span>
-                </div>
-                <p>Open fab-labs, Copyfarleft licenses, and unconstrained open-source scientific commons eliminate patent moats and bankruptcy risk. Intrinsic curiosity drives basic science, while automated diagnostics handle physical infrastructure upkeep.</p>
-              </div>
-
-              <div class="dim-card">
-                <div class="dim-header">
-                  <span class="dim-title">6. Zero-Labor Systemic Coherence</span>
-                  <span class="dim-score score-gold">O.N.E. 10 / 10 (Unanimous)</span>
-                </div>
-                <p>Purpose-built from first principles for zero wage labor. The economic circuit operates directly on physical mass-energy balances, completely immune to the fiscal collapse that destroys debt-backed fiat and payroll-tax welfare states.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- TAB 3: NORDIC FISCAL MATH -->
-          <div id="ai-pane-nordic" class="ai-tab-pane">
-            <div class="nordic-math-card">
-              <h4>The Mathematical Proof: Why Social Democracy Dies With Wage Labor</h4>
-              <p class="math-intro">Both Gemini and ChatGPT derived the macroeconomic identity of the sovereign welfare state to prove its structural breakdown when marginal labor costs reach zero:</p>
-              
-              <div class="math-formula-box">
-                <code>T<sub>total</sub> = t<sub>w</sub> · W + t<sub>c</sub> · C + t<sub>k</sub> · Π</code>
-              </div>
-
-              <div class="math-steps-list">
-                <div class="math-step">
-                  <span class="step-num">1</span>
-                  <div>
-                    <strong>Collapse of Aggregate Wages:</strong>
-                    <p>In modern Nordic economies, direct labor taxes (<em>t<sub>w</sub> · W</em>) and worker-driven consumption taxes generate <strong>60% to 75%</strong> of public revenues. As automation drives human labor costs to zero (<em>MC<sub>L</sub> → 0 ⇒ W → 0</em>), labor tax receipts vanish entirely: <code>t<sub>w</sub> · W = 0</code>.</p>
-                  </div>
-                </div>
-
-                <div class="math-step">
-                  <span class="step-num">2</span>
-                  <div>
-                    <strong>The UBI-VAT Negative Loop:</strong>
-                    <p>Without wages, household consumption must be funded by state cash transfers or UBI (<em>C = U</em>). If the state attempts to tax this consumption via VAT (<em>t<sub>c</sub> ≈ 25%</em>), net revenue is negative: <code>Net = t<sub>c</sub> · U - U = -(1 - t<sub>c</sub>)U</code>. The state merely recovers a fraction of the liquidity it injected.</p>
-                  </div>
-                </div>
-
-                <div class="math-step">
-                  <span class="step-num">3</span>
-                  <div>
-                    <strong>The Capital Tax Dilemma:</strong>
-                    <p>To fund civilization exclusively from corporate profits (<em>T<sub>total</sub> ≈ t<sub>k</sub> · Π</em>), the tax rate <em>t<sub>k</sub></em> must exceed 85–95%. In competitive automated markets where marginal costs are near zero, competitive prices also collapse toward zero, eliminating economic profit <em>Π</em> except in artificial monopolies. Aggressive capital taxation prompts flight or investment strikes.</p>
-                  </div>
-                </div>
-
-                <div class="math-step">
-                  <span class="step-num">4</span>
-                  <div>
-                    <strong>The Post-Monetary Solution:</strong>
-                    <p>Open Networked Earth avoids this breakdown by removing money entirely from the core metabolic metabolism: <code>Metabolic Input ➔ Automated Capital ➔ Exergy / Material Flow ➔ Universal Usufruct ➔ Direct Provisioning</code>. No tax extraction or debt servicing is needed.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- TAB 4: TRANSITION PARADOX & TECHNO-FEUDAL TRAP -->
-          <div id="ai-pane-transition" class="ai-tab-pane">
-            <div class="transition-trap-card">
-              <h4>The 2/10 Feasibility Score: Why Breakdown Defaults to Techno-Feudalism</h4>
-              <p>When mass automation displaces human wage labor faster than governments can deploy UBI, the legacy order undergoes cascading institutional gridlock:</p>
-
-              <div class="breakdown-grid">
-                <div class="breakdown-col">
-                  <h5>💥 Cascading Legacy Failure</h5>
-                  <ul>
-                    <li><strong>Financial Circuit Freezes:</strong> Millions default on mortgages and loans. Central bank QE props up bank balance sheets, but borrower insolvency paralyzes the real economy.</li>
-                    <li><strong>Eviction Court Saturation:</strong> Housing courts face multi-year dockets. States decree emergency eviction moratoria, leaving titles and housing stocks in legal limbo.</li>
-                    <li><strong>Emergency Rationing:</strong> Inability to fund cash UBI forces states to distribute digital food vouchers and place failing energy grids into state receivership.</li>
-                  </ul>
-                </div>
-
-                <div class="breakdown-col">
-                  <h5>🏰 The Default: Techno-Feudalism</h5>
-                  <p>A power vacuum does <strong>not</strong> spontaneously organize into a solarpunk commons. Without counter-power, private owners of automated infrastructure (autonomous delivery, satellite constellations, robotic farms) step in as private sovereigns:</p>
-                  <p class="highlight-quote">"They provide food, housing, and connectivity not for cash, but in exchange for biometric tracking, algorithmic compliance, and total surrender of citizenship rights."</p>
-                </div>
-              </div>
-
-              <div class="dual-track-answer-box">
-                <h5>🛠️ The O.N.E. Countermeasure: Pre-Configured Physical Seed Nodes</h5>
-                <p>Because breakdown defaults to feudalism or warlordism, <strong>O.N.E. Stage 0–3 Seed Nodes</strong> (Community Land Trusts, Passivhaus MHU timber dwellings, 48V LFP microgrids, CNC fab-labs, and odd-parity sortition assemblies) must be constructed within existing legal frameworks <em>before</em> macroeconomic crises strike.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal-footer modal-footer-ai">
-          <span class="footer-note">Source: Independent Multi-LLM Benchmark (Oct 2026) • AGPL-3.0-or-later</span>
-          <button id="btn-close-ai-benchmark-footer" class="btn-primary" style="padding: 8px 18px;">Understood</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ONBOARDING GUIDE SPOTLIGHT OVERLAY (ITEM 17) -->
-  <div id="onboarding-guide-overlay" class="onboarding-guide-overlay hidden">
-    <svg id="guide-spotlight-svg" class="guide-spotlight-svg" width="100%" height="100%">
-      <defs>
-        <mask id="guide-spotlight-mask">
-          <rect width="100%" height="100%" fill="white" />
-          <rect id="guide-mask-cutout" x="0" y="0" width="0" height="0" rx="14" fill="black" />
-        </mask>
-      </defs>
-      <rect width="100%" height="100%" fill="rgba(2, 6, 23, 0.78)" mask="url(#guide-spotlight-mask)" />
-    </svg>
-    <div id="guide-spotlight-reticle" class="guide-spotlight-reticle"></div>
-    <div id="guide-card" class="guide-card" role="dialog" aria-modal="true" aria-labelledby="guide-card-title">
-      <div class="guide-card-header">
-        <div class="guide-badge-box">
-          <span class="guide-step-badge" id="guide-step-badge">Step 1 / 5</span>
-          <span class="guide-phase-tag" id="guide-phase-tag">Core Survival</span>
-        </div>
-        <button id="btn-guide-close" class="btn-guide-close" title="Close Tour" aria-label="Close Tour">✕</button>
-      </div>
-      <div class="guide-card-body">
-        <h3 class="guide-card-title" id="guide-card-title">...</h3>
-        <div id="guide-card-desc">...</div>
-      </div>
-      <div class="guide-card-footer">
-        <div class="guide-dots" id="guide-dots"></div>
-        <div class="guide-btn-group">
-          <button id="btn-guide-skip" class="btn-guide-secondary" data-i18n="guideBtnSkip">Skip Tour</button>
-          <button id="btn-guide-prev" class="btn-guide-secondary" data-i18n="guideBtnBack">⬅ Back</button>
-          <button id="btn-guide-next" class="btn-guide-primary" data-i18n="guideBtnNext">Next ➔</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- STYLES & INTERACTION SCRIPT FOR INDEPENDENT AI BENCHMARK MODAL -->
-  <style>.btn-ai-benchmark-badge{cursor:pointer;transition:all .2s cubic-bezier(.4,0,.2,1)}.btn-ai-benchmark-badge:hover{transform:translateY(-1px);border-color:#38bdf8!important;box-shadow:0 0 16px #38bdf866!important}.modal-window-ai-benchmark{border:1px solid #38bdf84d;width:94%;max-width:980px;max-height:88vh;box-shadow:0 25px 60px #000c,0 0 30px #38bdf826}.badge-ai-frontier{color:#38bdf8;letter-spacing:.6px;background:#38bdf81f;border:1px solid #38bdf859;border-radius:9999px;padding:3px 9px;font-size:10.5px;font-weight:700}.modal-body-ai{color:#e2e8f0;padding:18px 24px;font-size:13.5px;line-height:1.55;overflow-y:auto}.ai-tabs-bar{border-bottom:1px solid #ffffff14;gap:8px;margin-bottom:16px;padding-bottom:10px;display:flex;overflow-x:auto}.ai-tab-btn{color:#94a3b8;cursor:pointer;white-space:nowrap;background:#ffffff0d;border:1px solid #ffffff1a;border-radius:8px;padding:8px 14px;font-size:12.5px;font-weight:600;transition:all .2s}.ai-tab-btn:hover{color:#fff;background:#ffffff17;border-color:#fff3}.ai-tab-btn.active{color:#38bdf8;background:#38bdf81f;border-color:#38bdf880;box-shadow:0 0 12px #38bdf833}.ai-tab-pane{animation:.2s ease-out fadeIn;display:none}.ai-tab-pane.active{display:block}.ai-callout-header{color:#cbd5e1;background:#0f172a99;border-left:3px solid #38bdf8;border-radius:6px;margin-bottom:14px;padding:10px 14px;font-size:12.5px;line-height:1.45}.ai-table-wrap{background:#02061780;border:1px solid #ffffff14;border-radius:10px;margin-bottom:14px;overflow-x:auto}.ai-benchmark-table{border-collapse:collapse;text-align:left;width:100%;font-size:12px}.ai-benchmark-table th{color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;background:#0f172ad9;border-bottom:1px solid #ffffff1a;padding:10px 12px;font-size:10.5px;font-weight:600}.ai-benchmark-table td{color:#cbd5e1;vertical-align:middle;border-bottom:1px solid #ffffff0d;padding:9px 12px}.tr-highlight-one{background:#10b9811a;border-left:3px solid #10b981}.tr-highlight-one td{color:#ecfdf5;font-weight:500}.arch-cell{align-items:center;gap:10px;display:flex}.arch-badge-rank{color:#94a3b8;background:#ffffff0f;border-radius:6px;flex-shrink:0;justify-content:center;align-items:center;width:26px;height:26px;font-size:11px;font-weight:700;display:inline-flex}.arch-badge-rank.rank-1{color:#fbbf24;background:#f59e0b33;border:1px solid #f59e0b66}.arch-badge-rank.rank-2{color:#cbd5e1;background:#94a3b826;border:1px solid #94a3b84d}.arch-badge-rank.rank-3{color:#d97706;background:#d9770626;border:1px solid #d977064d}.arch-sub{color:#64748b;margin-top:1px;font-size:10.5px;font-weight:400;display:block}.score-cell{font-family:JetBrains Mono,monospace;font-size:12.5px;font-weight:700}.score-gold{color:#34d399;text-shadow:0 0 8px #34d39966;font-weight:800}.score-high{color:#38bdf8}.score-mid{color:#fbbf24}.score-low{color:#f97316}.score-danger{color:#ef4444}.score-red{color:#f87171;background:#ef44441f;border:1px solid #ef44444d;border-radius:4px;padding:2px 6px;font-weight:800}.th-center,.td-center{text-align:center}.ai-paradox-box{background:#f59e0b12;border:1px solid #f59e0b47;border-radius:8px;margin-top:10px;padding:10px 14px}.ai-paradox-badge{color:#fbbf24;letter-spacing:.8px;margin-bottom:4px;font-size:10.5px;font-weight:800}.ai-paradox-box p{color:#cbd5e1;margin:0;font-size:12px;line-height:1.45}.dimensions-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;display:grid}.dim-card{background:#0f172a8c;border:1px solid #ffffff12;border-radius:8px;padding:12px 14px}.dim-header{justify-content:space-between;align-items:baseline;gap:6px;margin-bottom:6px;display:flex}.dim-title{color:#f1f5f9;font-size:12.5px;font-weight:700}.dim-score{white-space:nowrap;font-family:monospace;font-size:11px;font-weight:700}.dim-card p{color:#94a3b8;margin:0;font-size:11.5px;line-height:1.45}.nordic-math-card,.transition-trap-card{background:#0f172a8c;border:1px solid #ffffff14;border-radius:10px;padding:16px}.nordic-math-card h4,.transition-trap-card h4{color:#ecfdf5;margin:0 0 8px;font-size:14.5px}.math-intro{color:#94a3b8;margin-bottom:10px;font-size:12.5px}.math-formula-box{text-align:center;color:#38bdf8;background:#00000073;border:1px solid #38bdf84d;border-radius:6px;margin:10px 0 14px;padding:10px 14px;font-family:monospace;font-size:15px}.math-steps-list{flex-direction:column;gap:10px;display:flex}.math-step{align-items:flex-start;gap:12px;font-size:12px;display:flex}.step-num{color:#38bdf8;background:#38bdf826;border-radius:50%;flex-shrink:0;justify-content:center;align-items:center;width:22px;height:22px;margin-top:1px;font-size:11px;font-weight:700;display:flex}.math-step p{color:#94a3b8;margin:2px 0 0;line-height:1.4}.math-step code{color:#38bdf8;background:#0000004d;border-radius:3px;padding:1px 4px}.breakdown-grid{grid-template-columns:1fr 1fr;gap:14px;margin:12px 0;display:grid}@media (width<=720px){.breakdown-grid{grid-template-columns:1fr}}.breakdown-col{background:#0000004d;border:1px solid #ffffff0d;border-radius:8px;padding:12px;font-size:12px}.breakdown-col h5{color:#f1f5f9;margin:0 0 8px;font-size:13px}.breakdown-col ul{color:#94a3b8;margin:0;padding-left:18px}.breakdown-col li{margin-bottom:6px;line-height:1.4}.highlight-quote{color:#fca5a5;border-left:2px solid #f87171;margin:8px 0 0;padding-left:10px;font-size:11.5px;font-style:italic;line-height:1.4}.dual-track-answer-box{background:#10b98114;border:1px solid #10b9814d;border-radius:8px;margin-top:10px;padding:12px 14px;font-size:12px}.dual-track-answer-box h5{color:#34d399;margin:0 0 4px;font-size:13px}.dual-track-answer-box p{color:#cbd5e1;margin:0;line-height:1.4}.modal-footer-ai{color:#64748b;background:#0003;border-top:1px solid #ffffff14;justify-content:space-between;align-items:center;padding:12px 24px;font-size:11px;display:flex}</style>
-
-  <script>
-    (function initAiBenchmarkModal() {
-      const modal = document.getElementById('modal-ai-benchmark');
-      if (!modal) return;
-
-      const btnOpenHud = document.getElementById('btn-open-ai-benchmark');
-      const btnOpenMenu = document.getElementById('btn-open-ai-benchmark-menu');
-      const btnCloseHeader = document.getElementById('btn-close-ai-benchmark-modal');
-      const btnCloseFooter = document.getElementById('btn-close-ai-benchmark-footer');
-
-      function openModal() {
-        document.querySelectorAll('.modal-overlay').forEach(el => {
-          if (el !== modal) el.classList.add('hidden');
-        });
-        modal.classList.remove('hidden');
-      }
-
-      function closeModal() {
-        modal.classList.add('hidden');
-      }
-
-      if (btnOpenHud) btnOpenHud.addEventListener('click', openModal);
-      if (btnOpenMenu) btnOpenMenu.addEventListener('click', () => {
-        const dropdown = document.getElementById('system-menu-dropdown');
-        if (dropdown) dropdown.classList.add('hidden');
-        openModal();
-      });
-
-      if (btnCloseHeader) btnCloseHeader.addEventListener('click', closeModal);
-      if (btnCloseFooter) btnCloseFooter.addEventListener('click', closeModal);
-
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-      });
-
-      window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-          closeModal();
-        }
-      });
-
-      const tabBtns = modal.querySelectorAll('.ai-tab-btn');
-      const tabPanes = modal.querySelectorAll('.ai-tab-pane');
-
-      tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const targetTab = btn.getAttribute('data-tab');
-          tabBtns.forEach(b => b.classList.remove('active'));
-          tabPanes.forEach(p => p.classList.remove('active'));
-
-          btn.classList.add('active');
-          const targetPane = document.getElementById('ai-pane-' + targetTab);
-          if (targetPane) targetPane.classList.add('active');
-        });
-      });
-    })();
-  </script>
+  <!-- Canonical Footer -->
+  <footer>
+    <p>
+      <strong>Open Networked Earth (O.N.E.)</strong> • 100% Free & Open Knowledge (<a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener noreferrer">AGPL-3.0</a>) • 
+      Maintained under persona <strong>Kyberlex</strong> (<a href="mailto:kyberlex@proton.me">kyberlex@proton.me</a>) • Zero Microtransactions & Zero Speculation
+    </p>
+  </footer>
 </body>
 </html>
-

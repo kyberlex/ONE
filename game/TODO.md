@@ -186,7 +186,7 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
   - Live evapotranspiration breakdown displayed in Morning Dispatch modal, building inspector, and Bioregional Climate Radar modal (`event_modal.js`).
 
 ### **3.2 Zero-Water & Extreme Weather Contingency Protocols**
-- [ ] **"What Happens When Water Drops to 0?" Architecture:**
+- [x] **"What Happens When Water Drops to 0?" Architecture:**
   - **Stage 1 (Water Conservation Emergency):** Non-essential water lines shut off automatically. Garden beds enter drought-survival mode.
   - **Stage 2 (Emergency Van Auxiliary Bladder):** Unseal the sealed 300L camper van fresh-water reserve (+300 L buffer).
   - **Stage 3 (Atmospheric Water Harvesting / Dehumidifier):** If energy stored > 20 kWh, run condensation chiller in FabLab to extract 80 L/day from air humidity.
@@ -195,12 +195,12 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
   - **Stage 6 (Legacy Water Truck Dilemma):** A private extractive water tanker arrives at settlement edge offering water in exchange for $2,500 debt or private property concessions—deliberated in Agora Demarchy Assembly!
 
 ### **3.3 Weather Visuals & Atmospheric Sensory Juice**
-- [ ] Canvas seasonal backdrop:
+- [x] Canvas seasonal backdrop:
   - Spring: Lush verdant greens, blooming wildflowers on meadow edges.
   - Summer: Golden straw hues, heat shimmer ripples on stone pavers.
   - Autumn: Amber ochre leaf fall, wet soil reflections.
   - Winter: Cool desaturated frost hues, chimney smoke curls from Communal Hearth and MHU stoves.
-- [ ] Weather particle effects:
+- [x] Weather particle effects:
   - Rain showers and heavy downpours with rippling ground puddles.
   - Lightning flash illumination during convective summer thunderstorms.
   - Dust/pollen drifting on hot wind days.
@@ -212,7 +212,7 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
 > *"Dynamic Usufruct: Land and housing are commons for living, not speculative assets. The Modular Habitat Unit (MHU) is an open-hardware standard for rapid, circular, dignified dwelling."*
 
 ### **4.1 Modular Habitat Unit (MHU) Construction & Open Hardware Sync**
-- [ ] Implement MHU building tiers matching [`habitat/MHU_MODULAR_HABITAT_UNIT.md`](habitat/MHU_MODULAR_HABITAT_UNIT.md):
+- [x] **Implement MHU building tiers matching [`habitat/MHU_MODULAR_HABITAT_UNIT.md`](habitat/MHU_MODULAR_HABITAT_UNIT.md):**
   - **Proportional Chassis Sizing & Family Scaling:**
     - **MHU Couple Pod (2 Residents):** Standard single-bay chassis ($18\text{–}24\text{ m}^2$).
     - **MHU Family Cluster (4 Residents):** Expanded multi-bay modular chassis ($45\text{–}54\text{ m}^2$), significantly larger footprint with private sleeping nooks and shared central atrium.
@@ -226,11 +226,11 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
   - **Specialist Community Structures:**
     - **MHU Studio / Workshop Loft:** Living space over craft workshop or laboratory.
     - **MHU Communal Bathhouse & Sauna:** Solar thermal water heating with greywater reed-bed connection.
-- [ ] Material bills of materials (BOM):
+- [x] **Material bills of materials (BOM):**
   - Local timber billets, CNC-machined interlocking joinery, compressed earth blocks (CEB), polycarbonate glazing.
 
 ### **4.2 Population Growth, Intergenerational Demographics & Vocation Cohorts**
-- [ ] **Intergenerational Demographic Evolution (Children & Elders):**
+- [x] **Intergenerational Demographic Evolution (Children & Elders):**
   - As new pioneer cohorts arrive and population scales toward 50–150 residents, the settlement transforms from a pure work-camp into a full, living intergenerational community:
     - **Children Demographic:**
       - Dependent residents requiring daily caloric intake, dignified shelter, and community care (exempt from heavy manual chores).
@@ -247,23 +247,23 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
     - **The Dependency Ratio & Automation Impetus:**
       - Because children and elders consume resources while performing less heavy industrial labor, the manual chore pool tightens per capita.
       - This creates the direct systemic incentive to deploy **Open Hardware Automation (Art. 5.4)** (ESP32 irrigation solenoids, CNC FarmBots, automated grain mills), liberating working adults to focus on care, education, and cultural life.
-- [ ] Pioneer roster scaling from 3 founders to 12+ permanent citizens:
+- [x] **Pioneer roster scaling from 3 founders to 12+ permanent citizens:**
   - **Agronomists & Mycologists:** Boost soil biological health and mushroom cultivation in food forest.
   - **Systems Engineers & LinuxCNC Operators:** Maintain automated gantry mills, drone firmware, and mesh nodes.
   - **Herbalists & Paramedics:** Staff the Health Clinic, compounding bioregional tinctures and managing wellness.
   - **Educators & Artists:** Run the Open School, preserve oral lore, and document open-source CAD blueprints.
-- [ ] Housing allocation & Sabbatical Locks:
+- [x] **Housing allocation & Sabbatical Locks:**
   - Inactive citizens release dwellings back to Civic Housing Pool unless sabbatical lock is engaged.
   - Living satisfaction metrics: thermal comfort, food diversity, free leisure time, civic participation.
 
 ### **4.3 Community Life, Weddings & Longitudinal Family Dynamics**
-- [ ] **Village Weddings & Life Union Festivals:**
+- [x] **Village Weddings & Life Union Festivals:**
   - As the settlement matures beyond early survival (15+ residents), pioneers form lasting interpersonal bonds, culminating in **Community Wedding Celebrations** hosted at the Central Agora:
     - Triggers an all-village celebration feast, acoustic folk music, and lantern lighting (+100 communal morale).
     - Commemorated in the village history ledger as a generational milestone.
-- [ ] **Longitudinal Family Simulation (0 to 4 Children over Simulated Years):**
+- [x] **Longitudinal Family Simulation (0 to 4 Children over Simulated Years):**
   - Over multi-year cycles, married couples may welcome between **0 and 4 children**, creating shifting spatial and caloric needs over time.
-- [ ] **Dynamic Housing Choice: In-Situ Modular Expansion vs. School-Proximate Relocation:**
+- [x] **Dynamic Housing Choice: In-Situ Modular Expansion vs. School-Proximate Relocation:**
   - When a household expands, Dynamic Usufruct (Art. 4) and Open Building principles offer two distinct architectural solutions:
     - **Option A — Modular Chassis Extension (Outer Zone Plots):**
       - If the current 2-person MHU is situated in an outer pod perimeter with sufficient unshaded yard clearance, the family can build and bolt on **CNC timber extension cassettes** (adding 1–2 children's bedrooms) and expand their attached kitchen garden apron.
@@ -273,7 +273,7 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
       - The vacated 2-person MHU is immediately reassigned to incoming young pioneer pairs or visiting sabbatical scholars, maintaining 100% housing occupancy with zero speculative vacancies.
 
 ### **4.4 Municipal-Scale Demarchy & Socratic Juries**
-- [ ] As settlement exceeds 20 residents, civic governance scales:
+- [x] **As settlement exceeds 20 residents, civic governance scales:**
   - Assembly juries expanded from 5 to 7 or 9 members selected by lot (odd parity strictly preserved).
   - New high-stakes dilemmas:
     - *The Regional Railway Spur:* Should we dedicate 200 hours of labor to reconnect the abandoned rail spur to the national network?
@@ -284,13 +284,13 @@ From a humble founding plot with a single camper van and three pioneers, Open Ne
 
 ## **VI. EPIC 5: PROGRESSIVE DISCLOSURE & ENGINE POLISH**
 
-- [ ] **Dynamic Level-of-Detail (LOD) Rendering:**
+- [x] **Dynamic Level-of-Detail (LOD) Rendering:**
   - Macro zoom (0.30x–0.45x): Simplified architectural silhouettes and district boundary glows for buttery 60 FPS performance.
   - Micro zoom (0.80x–1.50x): Full vector mechanical details (spinning spindles, swimming fish in aquaponics, billowing chimney smoke).
-- [ ] **Audio Soundscape Synthesizer Expansion:**
+- [x] **Audio Soundscape Synthesizer Expansion:**
   - District-specific ambient layers (crickets and water flow in Agro Belt, mechanical hum and sparks in FabLab, wind chimes in MHU Ecovillage, prop whir in Transit Vertiport).
   - Seasonal audio cues: summer cicadas, autumn wind gusts, winter stillness.
-- [ ] **Dual-Track Real-World Blueprint Export:**
+- [x] **Dual-Track Real-World Blueprint Export:**
   - "Export Blueprints" button in Building Inspector downloading actual 3D printable STL files and Home Assistant automation YAML configurations for real-world builders.
 
 ---

@@ -17,6 +17,8 @@ import { t } from '../i18n/index.js';
 import { InteriorRenderer, getCitizenAppearance } from './interior_renderer.js';
 import { RobotManager } from './robot_manager.js';
 import { CivicProjectsRenderer } from './civic_projects_renderer.js';
+import { FlowLensesRenderer } from './flow_lenses_renderer.js';
+import { getRandomDialogue } from '../data/citizen_dialogues.js';
 
 export class SettlementRenderer {
 
@@ -46,6 +48,8 @@ export class SettlementRenderer {
       lastMouseX: 0,
       lastMouseY: 0
     };
+    this.zenDrift = false;
+    this.zenTimer = 0;
     this.highlightedBuilding = null;
 
     // Entities in village
@@ -78,6 +82,9 @@ export class SettlementRenderer {
 
     // Civic Megaprojects Renderer (Chapter V Cantieri Civici)
     this.civicProjectsRenderer = new CivicProjectsRenderer(this);
+
+    // Visual Flow Lenses (Energy & Water Metabolic Heatmaps - Task 3)
+    this.flowLensesRenderer = new FlowLensesRenderer(this);
   }
 
   showCitizenSpeechBubble(citizenName, text, durationMs = 6000) {
@@ -102,6 +109,27 @@ export class SettlementRenderer {
     // Ensure remote peer has an avatar representation on canvas
     if (!citizenName.includes('You') && !citizenName.includes('Player')) {
       this.ensurePeerAvatar(citizenName);
+    }
+  }
+
+  triggerContextualDialogue(category, count = 2) {
+    if (!this.citizens || this.citizens.length === 0) return;
+    const candidates = this.citizens.filter(c => !c.isPlayer);
+    if (candidates.length === 0) return;
+
+    // Pick citizens
+    const shuffled = [...candidates].sort(() => Math.random() - 0.5);
+    const chosen = shuffled.slice(0, Math.min(count, shuffled.length));
+
+    for (let i = 0; i < chosen.length; i++) {
+      const citizen = chosen[i];
+      const line = getRandomDialogue(category);
+      if (line) {
+        setTimeout(() => {
+          this.showCitizenSpeechBubble(citizen.name, line, 6500);
+          citizen.lastSpokenThought = line;
+        }, i * 400);
+      }
     }
   }
 
@@ -2089,6 +2117,16 @@ export class SettlementRenderer {
       this.interiorTick++;
     }
 
+    // Zen Mode slow cinematic camera drift
+    if (this.zenDrift && !this.activeInterior) {
+      this.zenTimer = (this.zenTimer || 0) + (dt || 0.016);
+      const driftRadius = 45; // subtle offset in pixels
+      const driftSpeed = 0.08; // very slow cinematic drift
+      this.camera.targetX = Math.sin(this.zenTimer * driftSpeed) * driftRadius;
+      this.camera.targetY = Math.cos(this.zenTimer * driftSpeed * 0.7) * (driftRadius * 0.6);
+      this.camera.targetZoom = 1.0 + Math.sin(this.zenTimer * driftSpeed * 0.4) * 0.04;
+    }
+
     // Smooth camera zoom lerp
     this.camera.zoom += (this.camera.targetZoom - this.camera.zoom) * 0.15;
     // Smooth camera pan lerp towards targetX and targetY
@@ -2195,6 +2233,17 @@ export class SettlementRenderer {
         }
       }
 
+      // Ambient dialogue tick: an active citizen shares an autonomous thought every ~14 seconds
+      this.ambientDialogueTimer = (this.ambientDialogueTimer || 0) + dt;
+      if (this.ambientDialogueTimer > 14) {
+        this.ambientDialogueTimer = 0;
+        const hour = this.sim ? (typeof this.sim.localHour === 'number' ? this.sim.localHour : this.sim.currentHour) : 12;
+        const isSlumber = hour >= 21 || hour < 6;
+        if (!isSlumber && Math.random() < 0.85) {
+          this.triggerContextualDialogue('AMBIENT_COMMONS', 1);
+        }
+      }
+
       // Check for Intergenerational Interaction in the Shared Garden
       const gardenInf = this.infrastructures.find(inf => inf.type === 'GARDEN');
       if (gardenInf) {
@@ -2257,6 +2306,7 @@ export class SettlementRenderer {
     const ctx = this.ctx;
     const w = this.canvas.width / (window.devicePixelRatio || 1);
     const h = this.canvas.height / (window.devicePixelRatio || 1);
+    const isNight = this.sim ? (typeof this.sim.isNight === 'boolean' ? this.sim.isNight : (this.sim.localHour >= 21 || this.sim.localHour < 6)) : false;
 
     ctx.save();
     ctx.clearRect(0, 0, w, h);
@@ -2280,6 +2330,11 @@ export class SettlementRenderer {
 
     // 3. Render Village Ground Roads & Paths
     this.renderPathways(ctx);
+
+    // 3.5 Render Flow Lenses Ground Heatmaps & Conduits (Task 3)
+    if (this.flowLensesRenderer) {
+      this.flowLensesRenderer.renderUnderlay(ctx, isNight, this.lastTime);
+    }
 
     // 4. Render Infrastructures
     for (const b of this.infrastructures) {
@@ -2327,7 +2382,6 @@ export class SettlementRenderer {
     }
 
     // 4.5 Render Civic Megaprojects (Chapter V Cantieri Civici)
-    const isNight = this.sim ? (typeof this.sim.isNight === 'boolean' ? this.sim.isNight : (this.sim.localHour >= 21 || this.sim.localHour < 6)) : false;
     if (this.civicProjectsRenderer) {
       this.civicProjectsRenderer.render(ctx, isNight, this.lastTime);
     }
@@ -2346,6 +2400,11 @@ export class SettlementRenderer {
     // 7.5 Render Autonomous Working Robots & Cybernetic Machinery
     if (this.robotManager) {
       this.robotManager.render(ctx, isNight);
+    }
+
+    // 7.75 Render Flow Lenses Travelling Pulses & Telemetry Badges (Task 3)
+    if (this.flowLensesRenderer) {
+      this.flowLensesRenderer.renderOverlay(ctx, isNight, this.lastTime);
     }
 
     // 8. Render Citizens / Pioneers
@@ -3447,43 +3506,68 @@ export class SettlementRenderer {
       const alpha = isChat ? Math.min(1.0, (chatBubble.expiresAt - now) / 500) : 1.0;
 
       ctx.save();
-      ctx.globalAlpha = alpha;
+      ctx.globalAlpha = Math.max(0, Math.min(1.0, alpha));
 
-      // Truncate length for compact display
-      const maxLen = 30;
-      const displayText = text.length > maxLen ? text.slice(0, maxLen - 1) + '…' : text;
+      // Font and multi-line wrapping
+      ctx.font = '500 10.5px system-ui, -apple-system, sans-serif';
+      const maxLineWidth = 145;
+      const words = String(text).split(' ');
+      const lines = [];
+      let currentLine = '';
 
-      ctx.font = '500 10px system-ui, sans-serif';
-      const textWidth = ctx.measureText(displayText).width;
-      const bw = Math.max(26, textWidth + 14);
-      const bh = 20;
-      const bubbleY = c.isPlayer ? -60 : (c.isHuman ? -48 : -38);
+      for (const w of words) {
+        const testLine = currentLine ? `${currentLine} ${w}` : w;
+        if (ctx.measureText(testLine).width > maxLineWidth && currentLine) {
+          lines.push(currentLine);
+          currentLine = w;
+        } else {
+          currentLine = testLine;
+        }
+      }
+      if (currentLine) lines.push(currentLine);
+
+      // Compute bubble dimensions
+      let maxW = 32;
+      for (const l of lines) {
+        maxW = Math.max(maxW, ctx.measureText(l).width);
+      }
+      const bw = maxW + 18;
+      const lineHeight = 13.5;
+      const bh = lines.length * lineHeight + 10;
+      const bubbleY = (c.isPlayer ? -60 : (c.isHuman ? -52 : -42)) - (bh - 20);
       const bx = -bw / 2;
 
-      // Bubble background & glowing border
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.95)';
+      // Bubble background with subtle shadow
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.94)';
       ctx.strokeStyle = c.isPlayer ? '#fbbf24' : (c.isHuman ? '#38bdf8' : '#10b981');
       ctx.lineWidth = isChat ? 1.5 : 1;
+      ctx.shadowColor = c.isPlayer ? 'rgba(251, 191, 36, 0.4)' : (c.isHuman ? 'rgba(56, 189, 248, 0.4)' : 'rgba(16, 185, 129, 0.4)');
+      ctx.shadowBlur = 8;
+
       ctx.beginPath();
-      ctx.roundRect(bx, bubbleY, bw, bh, 5);
+      ctx.roundRect(bx, bubbleY, bw, bh, 6);
       ctx.fill();
       ctx.stroke();
 
       // Pointer tail
+      ctx.shadowBlur = 0;
       ctx.beginPath();
-      ctx.moveTo(-3, bubbleY + bh);
-      ctx.lineTo(0, bubbleY + bh + 4);
-      ctx.lineTo(3, bubbleY + bh);
+      ctx.moveTo(-4, bubbleY + bh);
+      ctx.lineTo(0, bubbleY + bh + 5);
+      ctx.lineTo(4, bubbleY + bh);
       ctx.closePath();
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.95)';
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.94)';
       ctx.fill();
       ctx.stroke();
 
-      // Text inside
+      // Render wrapped text lines
       ctx.fillStyle = '#f8fafc';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      ctx.fillText(displayText, 0, bubbleY + bh / 2);
+      const startY = bubbleY + 6 + lineHeight / 2;
+      for (let i = 0; i < lines.length; i++) {
+        ctx.fillText(lines[i], 0, startY + i * lineHeight);
+      }
 
       ctx.restore();
     }
@@ -3687,7 +3771,7 @@ export class SettlementRenderer {
     }
 
     // 5. Active Disaster Alert Banner in top-center
-    if (weather.activeDisaster) {
+    if (weather.activeDisaster && !this.zenDrift) {
       const d = weather.activeDisaster;
       const bannerW = 460;
       const bannerH = 34;
@@ -3718,6 +3802,8 @@ export class SettlementRenderer {
   }
 
   renderHudOverlay(ctx, w, h) {
+    if (this.zenDrift) return; // Keep canvas 100% serene in Zen screensaver mode
+
     // 1. Simulation Pause Banner when paused
     const simSpeed = this.sim ? this.sim.speedMultiplier : 1;
     if (simSpeed === 0) {

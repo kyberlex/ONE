@@ -13,6 +13,7 @@ import { choreBoardModal } from './chore_board_modal.js';
 import { eventModal } from './event_modal.js';
 import { worldMapModal } from './world_map_modal.js';
 import { logisticsModal } from './logistics_modal.js';
+import { blueprintExportModal } from './blueprint_export_modal.js';
 
 export class BuildingInspectorModal {
   constructor() {
@@ -583,40 +584,200 @@ export class BuildingInspectorModal {
           </button>
         </div>
       `;
-    } else if (b.type === 'mhu_dwelling') {
+    } else if (b.type === 'mhu_dwelling' || b.type === 'mhu_couple') {
       icon = '🏡';
-      title = b.name || 'Modular Habitat Unit (MHU)';
-      subtitle = 'Cross-Laminated Timber (CLT) Bio-Dwelling';
+      title = b.name || 'MHU Couple Pod (Cap 4)';
+      subtitle = 'C24 Hybrid Timber Chassis • 24 m² Net Living Area';
       metricsHtml = `
         <div class="inspector-metrics-grid">
           <div class="inspector-metric-card">
             <span class="metric-label">SHELTER CAPACITY</span>
-            <span class="metric-value text-emerald">3 Pioneers</span>
-            <span class="metric-sub">Permanent timber bedroom pods</span>
+            <span class="metric-value text-emerald">4 Pioneers</span>
+            <span class="metric-sub">2 Permanent + 2 Universal Guest Buffer</span>
           </div>
           <div class="inspector-metric-card">
-            <span class="metric-label">SEDUM LIVING ROOF</span>
-            <span class="metric-value text-cyan">100% Thermal Cover</span>
-            <span class="metric-sub">Passive microclimate regulation</span>
+            <span class="metric-label">ATTACHED KITCHEN APRON</span>
+            <span class="metric-value text-cyan">30 m² Bio-Intensive</span>
+            <span class="metric-sub">15 m²/person invariant (+250 kcal/d)</span>
           </div>
           <div class="inspector-metric-card">
-            <span class="metric-label">GREYWATER LOOP</span>
-            <span class="metric-value text-gold">Direct to Reeds</span>
-            <span class="metric-sub">Zero potable water wasted</span>
+            <span class="metric-label">HYGROTHERMAL ENVELOPE</span>
+            <span class="metric-value text-gold">U = 0.118 W/m²K</span>
+            <span class="metric-sub">Passivhaus GUTEX wood-fiber + Intello</span>
           </div>
           <div class="inspector-metric-card">
-            <span class="metric-label">STRUCTURAL LIFE</span>
-            <span class="metric-value text-emerald">100 Years</span>
-            <span class="metric-sub">CO2 negative timber build</span>
+            <span class="metric-label">DYNAMIC USUFRUCT</span>
+            <span class="metric-value text-emerald">Active Usufruct</span>
+            <span class="metric-sub">Sabbatical Lock Eligible (Art. 4)</span>
           </div>
         </div>
       `;
       actionsHtml = `
         <div class="inspector-actions-box">
-          <h4 class="inspector-actions-title">🏡 Dwelling Comfort & Maintenance:</h4>
+          <h4 class="inspector-actions-title">🏡 Dwelling Evolution & Maintenance:</h4>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-expand-mhu-family">
+            <span>🔨 Bolt-on CNC Family Extension Cassette</span>
+            <small>Expand to 6-Person Family Cluster with 60 m² Kitchen Apron</small>
+          </button>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-forage-apron">
+            <span>🥗 Harvest Herbs & Greens from Attached Apron</span>
+            <small>Pluck fresh organic basil, spinach & mint (+150 kcal)</small>
+          </button>
           <button type="button" class="btn-inspector-action" id="btn-inspect-tend-sedum">
             <span>🌿 Inspect Sedum Living Roof & Air Drafts</span>
             <small>Verify natural ventilation & succulent hydration</small>
+          </button>
+        </div>
+      `;
+    } else if (b.type === 'mhu_family') {
+      icon = '👨‍👩‍👧‍👦';
+      title = b.name || 'MHU Family Cluster (Cap 6)';
+      subtitle = 'Multi-Bay Modular Timber Chassis • 54 m² with Central Atrium';
+      metricsHtml = `
+        <div class="inspector-metrics-grid">
+          <div class="inspector-metric-card">
+            <span class="metric-label">SHELTER CAPACITY</span>
+            <span class="metric-value text-emerald">6 Pioneers</span>
+            <span class="metric-sub">4 Permanent + 2 Universal Guest Buffer</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">ATTACHED KITCHEN APRON</span>
+            <span class="metric-value text-cyan">60 m² Bio-Intensive</span>
+            <span class="metric-sub">15 m²/person invariant (+500 kcal/d)</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">UNIVERSAL ACCESSIBILITY</span>
+            <span class="metric-value text-gold">DIN 18040-2 Flush</span>
+            <span class="metric-sub">Zero-step entrance ramp & roll-in wet core</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">CENTRAL GLAZED ATRIUM</span>
+            <span class="metric-value text-emerald">Passive Solar</span>
+            <span class="metric-sub">Clerestory cross-ventilation corridor</span>
+          </div>
+        </div>
+      `;
+      actionsHtml = `
+        <div class="inspector-actions-box">
+          <h4 class="inspector-actions-title">👨‍👩‍👧‍👦 Family Habitat Care:</h4>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-forage-apron">
+            <span>🍓 Harvest Strawberries & Kale from Family Yard</span>
+            <small>Gather fresh berries from attached permaculture apron (+250 kcal)</small>
+          </button>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-tend-sedum">
+            <span>🌿 Tend Chamomile & Sedum Living Roofs</span>
+            <small>Check succulent coverage across dual bedroom wings</small>
+          </button>
+        </div>
+      `;
+    } else if (b.type === 'mhu_studio') {
+      icon = '📐';
+      title = b.name || 'MHU Workshop Loft (Cap 3)';
+      subtitle = 'Two-Story Hybrid Chassis • Craft Workshop & Prototyping Laboratory';
+      metricsHtml = `
+        <div class="inspector-metrics-grid">
+          <div class="inspector-metric-card">
+            <span class="metric-label">SHELTER CAPACITY</span>
+            <span class="metric-value text-emerald">3 Pioneers</span>
+            <span class="metric-sub">1 Permanent Resident + 2 Sabbatical Guests</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">RESEARCH VELOCITY</span>
+            <span class="metric-value text-cyan">+15% Speed</span>
+            <span class="metric-sub">Accelerates schematic and CAD prototyping</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">HARDWARE BENCH</span>
+            <span class="metric-value text-gold">LinuxCNC & 3D Dock</span>
+            <span class="metric-sub">Direct FabLab sub-bus connection</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">ROOFTOP SOLAR</span>
+            <span class="metric-value text-emerald">Dedicated PV</span>
+            <span class="metric-sub">Zero-loss DC power to prototyping tools</span>
+          </div>
+        </div>
+      `;
+      actionsHtml = `
+        <div class="inspector-actions-box">
+          <h4 class="inspector-actions-title">🔬 Prototyping & Craft Actions:</h4>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-studio-cad">
+            <span>💻 Run FreeCAD Parametric Modeling Session</span>
+            <small>Generate open-source timber joinery blueprints</small>
+          </button>
+        </div>
+      `;
+    } else if (b.type === 'mhu_bathhouse') {
+      icon = '♨️';
+      title = b.name || 'Communal Bathhouse & Sauna';
+      subtitle = 'Solar Thermal Vacuum Tube Core • Closed-Loop Reed Bed Greywater';
+      metricsHtml = `
+        <div class="inspector-metrics-grid">
+          <div class="inspector-metric-card">
+            <span class="metric-label">CEDAR SAUNA CORE</span>
+            <span class="metric-value text-gold">85°C Wood-Fired</span>
+            <span class="metric-sub">Heated with pruned agroforestry billets</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">SOLAR THERMAL TUBES</span>
+            <span class="metric-value text-cyan">400 L / Day</span>
+            <span class="metric-sub">65°C hot water for community showers</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">GREYWATER CLOSED-LOOP</span>
+            <span class="metric-value text-emerald">100% Recycled</span>
+            <span class="metric-sub">Subsurface gravity flow to gravel reed bed</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">COMMUNITY HYGIENE</span>
+            <span class="metric-value text-emerald">+15 Morale</span>
+            <span class="metric-sub">Eliminates physical fatigue & muscle aches</span>
+          </div>
+        </div>
+      `;
+      actionsHtml = `
+        <div class="inspector-actions-box">
+          <h4 class="inspector-actions-title">♨️ Wellness & Thermal Comfort:</h4>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-sauna-session">
+            <span>🔥 Host Evening Communal Sauna Session</span>
+            <small>Pioneers relax with herbal sauna steam infusions (+10 Morale)</small>
+          </button>
+        </div>
+      `;
+    } else if (b.type === 'school_nursery' || b.type === 'school') {
+      icon = '🌲';
+      title = b.name || 'Open Forest School & Community Nursery';
+      subtitle = 'Natural Timber-Frame Pavilion • Outdoor Classroom & Sandpit';
+      metricsHtml = `
+        <div class="inspector-metrics-grid">
+          <div class="inspector-metric-card">
+            <span class="metric-label">FUTURE HOPE SURGE</span>
+            <span class="metric-value text-emerald">+15% Resilience</span>
+            <span class="metric-sub">Permanent buffer against climate despair</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">YOUTH MICRO-CHORES</span>
+            <span class="metric-value text-cyan">+250 kcal/child</span>
+            <span class="metric-sub">Daily wild berry foraging & seed sorting</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">OPEN CURRICULUM</span>
+            <span class="metric-value text-gold">Nature Scouting</span>
+            <span class="metric-sub">Syntropic agroforestry, robotics, oral history</span>
+          </div>
+          <div class="inspector-metric-card">
+            <span class="metric-label">INTERGENERATIONAL</span>
+            <span class="metric-value text-emerald">Elder Mentorship</span>
+            <span class="metric-sub">Seasoned citizens share lore & crafts</span>
+          </div>
+        </div>
+      `;
+      actionsHtml = `
+        <div class="inspector-actions-box">
+          <h4 class="inspector-actions-title">📚 Forest School Activities:</h4>
+          <button type="button" class="btn-inspector-action" id="btn-inspect-school-workshop">
+            <span>📖 Host Botany & Robotics Discovery Circle</span>
+            <small>Children sort heirloom seeds and test ESP32 moisture sensors (+5 Morale)</small>
           </button>
         </div>
       `;
@@ -648,7 +809,10 @@ export class BuildingInspectorModal {
           ${actionsHtml}
         </div>
 
-        <div class="modal-footer">
+        <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
+          <button type="button" class="btn-primary" id="btn-inspector-export-bp" style="background: linear-gradient(135deg, #059669, #0284c7); border: none; font-size: 0.82rem; padding: 7px 14px; border-radius: 6px; display: flex; align-items: center; gap: 6px; font-weight: 600;">
+            📐 Export Blueprints & CAD (.STL / YAML)
+          </button>
           <button type="button" class="btn-secondary" id="btn-inspector-done">${b.type === 'camper_van' ? 'Return to Haven' : 'Back to Settlement'}</button>
         </div>
       </div>
@@ -660,6 +824,12 @@ export class BuildingInspectorModal {
   attachEvents() {
     this.overlayEl.querySelector('#btn-inspector-close')?.addEventListener('click', () => this.close());
     this.overlayEl.querySelector('#btn-inspector-done')?.addEventListener('click', () => this.close());
+
+    // Dual-Track Blueprint & STL Export
+    this.overlayEl.querySelector('#btn-inspector-export-bp')?.addEventListener('click', () => {
+      soundFX.playClick();
+      blueprintExportModal.open(this.currentBuilding?.type || 'mhu_couple');
+    });
 
     // Consulting orders from camper van
     this.overlayEl.querySelector('#btn-inspect-consult-2h')?.addEventListener('click', () => {
@@ -782,6 +952,76 @@ export class BuildingInspectorModal {
       soundFX.playChoreExtinctionFanfare();
       gameState.commissionVehicle('vtol_drone');
       this.render();
+    });
+
+    // Epic 4: MHU Family In-Situ Expansion
+    this.overlayEl.querySelector('#btn-inspect-expand-mhu-family')?.addEventListener('click', () => {
+      if (!this.selectedBuilding) return;
+      soundFX.playClick();
+      soundFX.playChoreExtinctionFanfare();
+      const res = gameState.expandMHUToFamily(this.selectedBuilding.id);
+      if (res.ok) {
+        this.selectedBuilding = res.building;
+        this.render();
+      }
+    });
+
+    // Epic 4: Harvest from attached kitchen garden apron
+    this.overlayEl.querySelector('#btn-inspect-forage-apron')?.addEventListener('click', () => {
+      soundFX.playClick();
+      soundFX.playChoreExtinctionFanfare();
+      const yieldKcal = this.selectedBuilding?.type === 'mhu_family' ? 250 : 150;
+      gameState.data.resources.foodKcal = Math.min(
+        gameState.data.resources.foodCapacityKcal || 100000,
+        (gameState.data.resources.foodKcal || 0) + yieldKcal
+      );
+      gameState.data.morale = Math.min(100, (gameState.data.morale || 85) + 3);
+      gameState.save();
+      gameState.emit('resources_updated', gameState.data.resources);
+      const btn = this.overlayEl.querySelector('#btn-inspect-forage-apron');
+      if (btn) {
+        btn.innerHTML = `<span>✅ Harvested +${yieldKcal} kcal!</span><small>Fresh organic herbs, strawberries & greens enjoyed</small>`;
+        btn.style.borderColor = '#10b981';
+      }
+    });
+
+    // Epic 4: FreeCAD modeling session in MHU studio
+    this.overlayEl.querySelector('#btn-inspect-studio-cad')?.addEventListener('click', () => {
+      soundFX.playClick();
+      soundFX.playChoreExtinctionFanfare();
+      gameState.data.morale = Math.min(100, (gameState.data.morale || 85) + 5);
+      gameState.save();
+      const btn = this.overlayEl.querySelector('#btn-inspect-studio-cad');
+      if (btn) {
+        btn.innerHTML = `<span>✅ IFC4 Blueprints Compiled!</span><small>Standard C24 timber joinery exported to FabLab</small>`;
+        btn.style.borderColor = '#38bdf8';
+      }
+    });
+
+    // Epic 4: Communal Sauna session
+    this.overlayEl.querySelector('#btn-inspect-sauna-session')?.addEventListener('click', () => {
+      soundFX.playAcousticStrum();
+      soundFX.playChoreExtinctionFanfare();
+      gameState.data.morale = Math.min(100, (gameState.data.morale || 85) + 10);
+      gameState.save();
+      const btn = this.overlayEl.querySelector('#btn-inspect-sauna-session');
+      if (btn) {
+        btn.innerHTML = `<span>✅ 85°C Herbal Sauna Infusion!</span><small>Pioneers rejuvenated (+10 Morale Surge)</small>`;
+        btn.style.borderColor = '#f59e0b';
+      }
+    });
+
+    // Epic 4: Forest School workshop
+    this.overlayEl.querySelector('#btn-inspect-school-workshop')?.addEventListener('click', () => {
+      soundFX.playAcousticStrum();
+      soundFX.playChoreExtinctionFanfare();
+      gameState.data.morale = Math.min(100, (gameState.data.morale || 85) + 5);
+      gameState.save();
+      const btn = this.overlayEl.querySelector('#btn-inspect-school-workshop');
+      if (btn) {
+        btn.innerHTML = `<span>✅ Discovery Circle Concluded!</span><small>Nature scouts sorted 40 heirloom seed varieties (+5 Morale)</small>`;
+        btn.style.borderColor = '#10b981';
+      }
     });
   }
 }

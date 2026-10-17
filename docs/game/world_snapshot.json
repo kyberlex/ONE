@@ -1,0 +1,536 @@
+{
+  "schemaVersion": 1,
+  "network": "O-ASIS Confederated Mesh",
+  "genesis": false,
+  "tick": 39951,
+  "day": 1665,
+  "timestamp": "2026-09-30T10:33:37Z",
+  "nodes": {
+    "node-detroit": {
+      "id": "node-detroit",
+      "name": "Detroit Delray Commons",
+      "bioregion": "Great Lakes Basin",
+      "country": "United States",
+      "currencySymbol": "$",
+      "currencyCode": "USD",
+      "currencyName": "US Dollar",
+      "lat": 0,
+      "lng": -83.1098,
+      "climateKey": "TEMPERATE",
+      "population": 28,
+      "morale": 99,
+      "fiatTreasury": 3250,
+      "thermo": {
+        "energy": {
+          "batteryStoredKwh": 350,
+          "batteryCapacityKwh": 350
+        },
+        "water": {
+          "cisternStoredL": 49138.16526638528,
+          "cisternCapacityL": 50000
+        },
+        "food": {
+          "granaryStoredKcal": 0
+        },
+        "compute": {}
+      },
+      "robots": {
+        "esp32Valves": {
+          "name": "ESP32 Smart Irrigation Valves",
+          "count": 0,
+          "hoursCancelled": 2,
+          "domain": "agriculture"
+        },
+        "farmRover": {
+          "name": "Autonomous Agro-Rover (Seeding/Weeding)",
+          "count": 0,
+          "hoursCancelled": 4,
+          "domain": "agriculture"
+        },
+        "mpptOptimizer": {
+          "name": "SCADA Microgrid Auto-Balancer",
+          "count": 0,
+          "hoursCancelled": 3,
+          "domain": "facilities"
+        },
+        "cleaningBot": {
+          "name": "Common House Sanitization Bot",
+          "count": 0,
+          "hoursCancelled": 2,
+          "domain": "care"
+        },
+        "cncSorter": {
+          "name": "FabLab Shredder & Sorter Arm",
+          "count": 0,
+          "hoursCancelled": 4,
+          "domain": "workshop"
+        }
+      },
+      "dwellings": {
+        "totalPods": 32,
+        "occupiedPods": 28,
+        "claimedPods": 1,
+        "sabbaticalLocks": 0
+      },
+      "chores": {
+        "agriculture": 3,
+        "facilities": 2,
+        "care": 2,
+        "workshop": 2
+      }
+    },
+    "node-val-di-susa": {
+      "id": "node-val-di-susa",
+      "name": "Val di Susa Eco-Federation",
+      "bioregion": "Cottian Alps Bioregion",
+      "country": "Italy",
+      "currencySymbol": "€",
+      "currencyCode": "EUR",
+      "currencyName": "Euro",
+      "lat": 45.1328,
+      "lng": 7.0542,
+      "climateKey": "TEMPERATE",
+      "population": 24,
+      "morale": 88,
+      "fiatTreasury": 14200,
+      "thermo": {
+        "energy": {
+          "batteryStoredKwh": 10760,
+          "batteryCapacityKwh": 12000,
+          "solarGenerationKwh": 410,
+          "consumptionKwh": 290
+        },
+        "water": {
+          "cisternStoredL": 41444,
+          "cisternCapacityL": 60000,
+          "rainInflowL": 750,
+          "consumptionL": 380
+        },
+        "food": {
+          "granaryStoredKcal": 1650000,
+          "dailyBiometricFloorKcal": 52800,
+          "daysRemaining": 31.2
+        },
+        "compute": {
+          "meshMflops": 10500,
+          "activePeers": 10
+        }
+      },
+      "robots": {
+        "farmRover": 1,
+        "esp32Valves": 1,
+        "mpptOptimizer": 0,
+        "cleaningBot": 0,
+        "cncSorter": 1
+      },
+      "civicProjects": {
+        "amphitheater": {
+          "progress": 50,
+          "donatedHours": 100,
+          "targetHours": 200,
+          "completed": false
+        },
+        "biogasDigester": {
+          "progress": 10,
+          "donatedHours": 30,
+          "targetHours": 300,
+          "completed": false
+        },
+        "deepRainReservoir": {
+          "progress": 0,
+          "donatedHours": 0,
+          "targetHours": 400,
+          "completed": false
+        },
+        "solarTower": {
+          "progress": 0,
+          "donatedHours": 0,
+          "targetHours": 500,
+          "completed": false
+        },
+        "seedVault": {
+          "progress": 0,
+          "donatedHours": 0,
+          "targetHours": 350,
+          "completed": false
+        }
+      },
+      "dwellings": {
+        "totalPods": 29,
+        "occupiedPods": 24,
+        "claimedPods": 0,
+        "sabbaticalLocks": 1
+      },
+      "chores": {
+        "landHours": 32,
+        "facilitiesHours": 20,
+        "careHours": 16,
+        "workshopHours": 18
+      }
+    },
+    "node-alaska": {
+      "id": "node-alaska",
+      "name": "Yukon-Alaska Resilient Haven",
+      "bioregion": "Subarctic Boreal Shield",
+      "country": "United States / Canada",
+      "currencySymbol": "$",
+      "currencyCode": "USD",
+      "currencyName": "US Dollar",
+      "lat": 64.8378,
+      "lng": -147.7164,
+      "climateKey": "ARCTIC",
+      "population": 18,
+      "morale": 82,
+      "fiatTreasury": 9800,
+      "thermo": {
+        "energy": {
+          "batteryStoredKwh": 5640,
+          "batteryCapacityKwh": 10000,
+          "solarGenerationKwh": 280,
+          "consumptionKwh": 310
+        },
+        "water": {
+          "cisternStoredL": 26084,
+          "cisternCapacityL": 40000,
+          "rainInflowL": 350,
+          "consumptionL": 280
+        },
+        "food": {
+          "granaryStoredKcal": 1350000,
+          "dailyBiometricFloorKcal": 39600,
+          "daysRemaining": 34
+        },
+        "compute": {
+          "meshMflops": 8000,
+          "activePeers": 8
+        }
+      },
+      "robots": {
+        "farmRover": 0,
+        "esp32Valves": 1,
+        "mpptOptimizer": 1,
+        "cleaningBot": 0,
+        "cncSorter": 0
+      },
+      "civicProjects": {
+        "amphitheater": {
+          "progress": 10,
+          "donatedHours": 20,
+          "targetHours": 200,
+          "completed": false
+        },
+        "biogasDigester": {
+          "progress": 25,
+          "donatedHours": 75,
+          "targetHours": 300,
+          "completed": false
+        },
+        "deepRainReservoir": {
+          "progress": 0,
+          "donatedHours": 0,
+          "targetHours": 400,
+          "completed": false
+        },
+        "solarTower": {
+          "progress": 0,
+          "donatedHours": 0,
+          "targetHours": 500,
+          "completed": false
+        },
+        "seedVault": {
+          "progress": 10,
+          "donatedHours": 35,
+          "targetHours": 350,
+          "completed": false
+        }
+      },
+      "dwellings": {
+        "totalPods": 21,
+        "occupiedPods": 18,
+        "claimedPods": 0,
+        "sabbaticalLocks": 0
+      },
+      "chores": {
+        "landHours": 24,
+        "facilitiesHours": 22,
+        "careHours": 14,
+        "workshopHours": 12
+      }
+    },
+    "node-sahel": {
+      "id": "node-sahel",
+      "name": "Sahel Solar Oasis",
+      "bioregion": "Niger River Basin",
+      "country": "Niger",
+      "currencySymbol": "CFA",
+      "currencyCode": "XOF",
+      "currencyName": "West African CFA Franc",
+      "lat": 13.5116,
+      "lng": 2.1254,
+      "climateKey": "ARID",
+      "population": 32,
+      "morale": 84,
+      "fiatTreasury": 18000,
+      "thermo": {
+        "energy": {
+          "batteryStoredKwh": 13060,
+          "batteryCapacityKwh": 14000,
+          "solarGenerationKwh": 620,
+          "consumptionKwh": 360
+        },
+        "water": {
+          "cisternStoredL": 34880,
+          "cisternCapacityL": 65000,
+          "rainInflowL": 380,
+          "consumptionL": 480
+        },
+        "food": {
+          "granaryStoredKcal": 2100000,
+          "dailyBiometricFloorKcal": 70400,
+          "daysRemaining": 29.8
+        },
+        "compute": {
+          "meshMflops": 13500,
+          "activePeers": 14
+        }
+      },
+      "robots": {
+        "farmRover": 1,
+        "esp32Valves": 1,
+        "mpptOptimizer": 1,
+        "cleaningBot": 0,
+        "cncSorter": 0
+      },
+      "civicProjects": {
+        "amphitheater": {
+          "progress": 20,
+          "donatedHours": 40,
+          "targetHours": 200,
+          "completed": false
+        },
+        "biogasDigester": {
+          "progress": 5,
+          "donatedHours": 15,
+          "targetHours": 300,
+          "completed": false
+        },
+        "deepRainReservoir": {
+          "progress": 15,
+          "donatedHours": 60,
+          "targetHours": 400,
+          "completed": false
+        },
+        "solarTower": {
+          "progress": 5,
+          "donatedHours": 25,
+          "targetHours": 500,
+          "completed": false
+        },
+        "seedVault": {
+          "progress": 0,
+          "donatedHours": 0,
+          "targetHours": 350,
+          "completed": false
+        }
+      },
+      "dwellings": {
+        "totalPods": 38,
+        "occupiedPods": 32,
+        "claimedPods": 0,
+        "sabbaticalLocks": 0
+      },
+      "chores": {
+        "landHours": 42,
+        "facilitiesHours": 28,
+        "careHours": 22,
+        "workshopHours": 18
+      }
+    },
+    "node-amazon": {
+      "id": "node-amazon",
+      "name": "Amazonas Bioregional Basin",
+      "bioregion": "Rio Negro Watershed",
+      "country": "Brazil",
+      "currencySymbol": "R$",
+      "currencyCode": "BRL",
+      "currencyName": "Brazilian Real",
+      "lat": -3.119,
+      "lng": -60.0217,
+      "climateKey": "TROPICAL",
+      "population": 26,
+      "morale": 89,
+      "fiatTreasury": 13000,
+      "thermo": {
+        "energy": {
+          "batteryStoredKwh": 10460,
+          "batteryCapacityKwh": 11000,
+          "solarGenerationKwh": 480,
+          "consumptionKwh": 310
+        },
+        "water": {
+          "cisternStoredL": 48636,
+          "cisternCapacityL": 55000,
+          "rainInflowL": 950,
+          "consumptionL": 420
+        },
+        "food": {
+          "granaryStoredKcal": 1950000,
+          "dailyBiometricFloorKcal": 57200,
+          "daysRemaining": 34
+        },
+        "compute": {
+          "meshMflops": 11000,
+          "activePeers": 11
+        }
+      },
+      "robots": {
+        "farmRover": 1,
+        "esp32Valves": 1,
+        "mpptOptimizer": 0,
+        "cleaningBot": 0,
+        "cncSorter": 0
+      },
+      "civicProjects": {
+        "amphitheater": {
+          "progress": 40,
+          "donatedHours": 80,
+          "targetHours": 200,
+          "completed": false
+        },
+        "biogasDigester": {
+          "progress": 20,
+          "donatedHours": 60,
+          "targetHours": 300,
+          "completed": false
+        },
+        "deepRainReservoir": {
+          "progress": 0,
+          "donatedHours": 0,
+          "targetHours": 400,
+          "completed": false
+        },
+        "solarTower": {
+          "progress": 0,
+          "donatedHours": 0,
+          "targetHours": 500,
+          "completed": false
+        },
+        "seedVault": {
+          "progress": 15,
+          "donatedHours": 52,
+          "targetHours": 350,
+          "completed": false
+        }
+      },
+      "dwellings": {
+        "totalPods": 30,
+        "occupiedPods": 26,
+        "claimedPods": 0,
+        "sabbaticalLocks": 0
+      },
+      "chores": {
+        "landHours": 36,
+        "facilitiesHours": 22,
+        "careHours": 18,
+        "workshopHours": 16
+      }
+    },
+    "node-kerala": {
+      "id": "node-kerala",
+      "name": "Kerala Coastal Autonomous Commune",
+      "bioregion": "Malabar Coast",
+      "country": "India",
+      "currencySymbol": "₹",
+      "currencyCode": "INR",
+      "currencyName": "Indian Rupee",
+      "lat": 9.9312,
+      "lng": 76.2673,
+      "climateKey": "TROPICAL",
+      "population": 30,
+      "morale": 91,
+      "fiatTreasury": 15500,
+      "thermo": {
+        "energy": {
+          "batteryStoredKwh": 11160,
+          "batteryCapacityKwh": 12000,
+          "solarGenerationKwh": 510,
+          "consumptionKwh": 340
+        },
+        "water": {
+          "cisternStoredL": 45504,
+          "cisternCapacityL": 52000,
+          "rainInflowL": 880,
+          "consumptionL": 460
+        },
+        "food": {
+          "granaryStoredKcal": 2200000,
+          "dailyBiometricFloorKcal": 66000,
+          "daysRemaining": 33.3
+        },
+        "compute": {
+          "meshMflops": 12500,
+          "activePeers": 13
+        }
+      },
+      "robots": {
+        "farmRover": 1,
+        "esp32Valves": 1,
+        "mpptOptimizer": 1,
+        "cleaningBot": 0,
+        "cncSorter": 0
+      },
+      "civicProjects": {
+        "amphitheater": {
+          "progress": 60,
+          "donatedHours": 120,
+          "targetHours": 200,
+          "completed": false
+        },
+        "biogasDigester": {
+          "progress": 30,
+          "donatedHours": 90,
+          "targetHours": 300,
+          "completed": false
+        },
+        "deepRainReservoir": {
+          "progress": 10,
+          "donatedHours": 40,
+          "targetHours": 400,
+          "completed": false
+        },
+        "solarTower": {
+          "progress": 0,
+          "donatedHours": 0,
+          "targetHours": 500,
+          "completed": false
+        },
+        "seedVault": {
+          "progress": 5,
+          "donatedHours": 18,
+          "targetHours": 350,
+          "completed": false
+        }
+      },
+      "dwellings": {
+        "totalPods": 34,
+        "occupiedPods": 30,
+        "claimedPods": 0,
+        "sabbaticalLocks": 0
+      },
+      "chores": {
+        "landHours": 40,
+        "facilitiesHours": 26,
+        "careHours": 20,
+        "workshopHours": 18
+      }
+    }
+  },
+  "metadata": {
+    "engineVersion": "0.1.0",
+    "consensusStandard": "Git-as-a-State-Anchor (O-ASIS Dual-Track Protocol)",
+    "p2pTransport": "WebRTC DataChannel + Nostr NIP-01 + BroadcastChannel",
+    "author": "Kyberlex <kyberlex@proton.me>",
+    "license": "AGPL-3.0-or-later"
+  },
+  "thermoConsensusHash": "5f299fa1e36c6b0d216abeaaa242ef8b250c73fe41ffb9a0a1ded01a4efbea1a"
+}

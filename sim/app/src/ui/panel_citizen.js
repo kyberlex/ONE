@@ -9,12 +9,14 @@
 
 import { Avatar3DViewer } from './avatar_3d_viewer.js';
 import { getCitizenAppearance } from '../settlement/interior_renderer.js';
+import { getRandomDialogue } from '../data/citizen_dialogues.js';
 import { t } from '../i18n/index.js';
 
 export class PanelCitizenController {
   constructor(sim, options = {}) {
     this.sim = sim;
     this.options = options;
+    this.settlementRenderer = options.settlementRenderer || null;
     this.onLocateDwelling = options.onLocateDwelling || (() => {});
     this.onOpenChat = options.onOpenChat || (() => {});
 
@@ -87,6 +89,10 @@ export class PanelCitizenController {
     const homePodType = c.homeDwelling ? (c.homeDwelling.dwellingType || 'Bioclimatic Hex-Loft') : 'Bioclimatic Hex-Loft';
     const activityDesc = c.activityDesc || (c.activity ? `Engaged in ${c.activity}` : 'Active in village life');
 
+    const defaultThought = c.lastSpokenThought || getRandomDialogue('AMBIENT_COMMONS');
+    c.lastSpokenThought = defaultThought;
+    const moraleVal = Math.round(c.morale || (this.sim.node?.morale || 94));
+
     const statusBadge = c.isPlayer 
       ? `<span class="status-pill status-player">👑 ${t('citizen.status_player', 'You (Local Player)')}</span>`
       : (c.isHuman 
@@ -130,6 +136,14 @@ export class PanelCitizenController {
               <span class="stat-value"><strong>${c.dailyHours || 4} ${t('citizenHoursPerDay', 'hours / day')}</strong> ${t('citizenSabbaticalSafe', '(Sabbatical Safe)')}</span>
             </div>
             <div class="stat-line">
+              <span class="stat-label">${t('citizenMoraleLabel', 'Morale & Wellbeing:')}</span>
+              <span class="stat-value"><span class="biometric-tag morale-high">😊 ${moraleVal}% (${t('moraleHighDesc', 'Flourishing')})</span></span>
+            </div>
+            <div class="stat-line">
+              <span class="stat-label">${t('citizenEnergyHydrationLabel', 'Energy & Hydration:')}</span>
+              <span class="stat-value text-cyan">⚡ 100% • 💧 100%</span>
+            </div>
+            <div class="stat-line">
               <span class="stat-label">${t('citizenCurrentRoutineLabel', 'Current Routine:')}</span>
               <span class="stat-value text-green">${activityDesc}</span>
             </div>
@@ -143,6 +157,15 @@ export class PanelCitizenController {
             </div>
           </div>
 
+          <!-- Live Contextual Thought Bubble -->
+          <div class="citizen-thought-card">
+            <div class="thought-card-header">
+              <span class="thought-icon">💭</span>
+              <span class="thought-header-title">${t('citizenThoughtHeader', 'CURRENT THOUGHT')}</span>
+            </div>
+            <p class="thought-card-text" id="citizen-thought-text">"${defaultThought}"</p>
+          </div>
+
           <div class="constitutional-protection-box">
             <div class="quote-header">${t('citizenDefenseHeader', '📜 O.N.E. CONSTITUTION • USURPATION DEFENSE')}</div>
             <p>${t('citizenDefenseDesc', '"No citizen may be evicted, priced out, or subjected to debt servitude. Basic sustenance and dwelling usufruct are unconditional birthrights."')}</p>
@@ -154,6 +177,9 @@ export class PanelCitizenController {
                 ${t('citizenCenterPodBtn', '🏡 Center on Pod #{num}').replace('{num}', homePodNum)}
               </button>
             ` : ''}
+            <button id="btn-greet-citizen" class="btn-action-greet" style="flex: 1;">
+              ${t('citizenGreetBtn', '💬 Greet Pioneer')}
+            </button>
             <button id="btn-chat-with-citizen" class="btn-primary" style="flex: 1.2;">
               ${t('citizenChatBtn', '💬 Message in Village Chat')}
             </button>
@@ -204,6 +230,43 @@ export class PanelCitizenController {
       locateBtn.addEventListener('click', () => {
         this.close();
         this.onLocateDwelling(c.homeDwelling);
+      });
+    }
+
+    const greetBtn = document.getElementById('btn-greet-citizen');
+    if (greetBtn) {
+      greetBtn.addEventListener('click', () => {
+        let cat = 'AMBIENT_COMMONS';
+        const h = this.sim?.currentHour ?? 12;
+        if (h >= 21 || h <= 4) cat = 'CIRCADIAN_NIGHT';
+        else if (h >= 5 && h <= 8) cat = 'CIRCADIAN_DAWN';
+        else if (this.sim?.thermo?.weather?.id === 'RAIN') cat = 'WEATHER_RAIN';
+        else if (this.sim?.thermo?.weather?.id === 'STORMY') cat = 'WEATHER_STORMY';
+        else if (this.sim?.thermo?.weather?.id === 'HEATWAVE') cat = 'WEATHER_HEATWAVE';
+
+        const newThought = getRandomDialogue(cat);
+        c.lastSpokenThought = newThought;
+
+        const thoughtTextEl = document.getElementById('citizen-thought-text');
+        if (thoughtTextEl) {
+          thoughtTextEl.textContent = `"${newThought}"`;
+          thoughtTextEl.classList.remove('pulse-text');
+          void thoughtTextEl.offsetWidth;
+          thoughtTextEl.classList.add('pulse-text');
+        }
+
+        if (this.settlementRenderer) {
+          this.settlementRenderer.showCitizenSpeechBubble(c.name, newThought, 7000);
+        }
+
+        greetBtn.innerHTML = t('citizenGreetedMsg', '✨ Greeted!');
+        greetBtn.classList.add('greeted');
+        setTimeout(() => {
+          if (greetBtn) {
+            greetBtn.innerHTML = t('citizenGreetBtn', '💬 Greet Pioneer');
+            greetBtn.classList.remove('greeted');
+          }
+        }, 1800);
       });
     }
 

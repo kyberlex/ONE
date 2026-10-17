@@ -17,7 +17,7 @@ import { eventModal } from './event_modal.js';
 import { worldMapModal } from './world_map_modal.js';
 import { buildingInspector } from './building_inspector.js';
 import { logisticsModal } from './logistics_modal.js';
-import { soundFX } from '../audio/sound_fx.js';
+import { soundFX, ambienceAudio } from '../audio/sound_fx.js';
 
 export class GameHUD {
   constructor(hudContainerEl, dockContainerEl, settlementCanvas) {
@@ -42,8 +42,11 @@ export class GameHUD {
     const data = gameState.data;
     const debt = data.debtUsd !== undefined ? data.debtUsd : 12000;
     const isFeastDay = (data.day % 7 === 0 || data.objective?.id === 'obj-day7-feast') && !data.weekendFeastCelebrated;
+    const isMeshUnlocked = (data.buildings || []).some(b => b.type === 'lora_mast') || data.day >= 7;
+    const hasDistricts = gameState.isAnyDistrictUnlocked ? gameState.isAnyDistrictUnlocked() : false;
 
     const season = gameState.getSeason();
+    ambienceAudio.update(12, data.weather, season, this.selectedDistrict);
 
     // 1. Render Top HUD Bar, District Quick-Jump Ribbon & Objective Card
     this.hudContainer.innerHTML = `
@@ -128,8 +131,8 @@ export class GameHUD {
             </button>
           ` : ''}
 
-          <button type="button" id="btn-hud-mesh" class="btn-hud-tool" title="Open Regional Reticulum Mesh Map">
-            <span class="tool-icon">📡</span>
+          <button type="button" id="btn-hud-mesh" class="btn-hud-tool ${isMeshUnlocked ? '' : 'locked'}" title="${isMeshUnlocked ? 'Open Regional Reticulum Mesh Map' : '🔒 Regional Reticulum Mesh Map (Requires LoRa Mast or Day 7+)'}">
+            <span class="tool-icon">${isMeshUnlocked ? '📡' : '🔒'}</span>
             <span class="tool-label">Mesh</span>
           </button>
 
@@ -144,33 +147,40 @@ export class GameHUD {
         </div>
       </div>
 
-      <!-- Solarpunk District Quick-Jump Ribbon (Centered Navigation) -->
+      <!-- Solarpunk District Quick-Jump Ribbon (Centered Navigation - Progressive Disclosure) -->
+      ${hasDistricts ? `
       <div class="hud-district-ribbon" id="hud-district-ribbon">
         <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'whole_city' ? 'active' : ''}" data-district="whole_city" title="Macro Bird's-Eye View: Whole Solarpunk Eco-City (1250px Macro Terrain)">
           <span class="ribbon-icon">🌐</span>
           <span class="ribbon-label">City Map</span>
         </button>
+        ${gameState.isDistrictUnlocked('agora_core') ? `
         <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'agora_core' ? 'active' : ''}" data-district="agora_core" title="Center District: Agora Demarchy Core & Socratic Living Commons">
           <span class="ribbon-icon">🏛️</span>
           <span class="ribbon-label">Agora Core</span>
-        </button>
+        </button>` : ''}
+        ${gameState.isDistrictUnlocked('agro_belt') ? `
         <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'agro_belt' ? 'active' : ''}" data-district="agro_belt" title="North District: Agro Commons Belt, Aquaponics Domes & Silos">
           <span class="ribbon-icon">🌾</span>
           <span class="ribbon-label">Agro Belt</span>
-        </button>
+        </button>` : ''}
+        ${gameState.isDistrictUnlocked('fablab_quarter') ? `
         <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'fablab_quarter' ? 'active' : ''}" data-district="fablab_quarter" title="East District: Open FabLab Quarter, Gantry Mill & Solar Induction Foundry">
           <span class="ribbon-icon">⚙️</span>
           <span class="ribbon-label">FabLab Quarter</span>
-        </button>
+        </button>` : ''}
+        ${gameState.isDistrictUnlocked('mhu_ecovillage') ? `
         <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'mhu_ecovillage' ? 'active' : ''}" data-district="mhu_ecovillage" title="South District: MHU Ecovillage, Modular Habitats & Passive Solar Cabins">
           <span class="ribbon-icon">🏡</span>
           <span class="ribbon-label">MHU Ecovillage</span>
-        </button>
+        </button>` : ''}
+        ${gameState.isDistrictUnlocked('transit_hub') ? `
         <button type="button" class="district-ribbon-btn ${this.selectedDistrict === 'transit_hub' ? 'active' : ''}" data-district="transit_hub" title="West District: Logistics & Transit Vertiport, Cargo Trike Depot & Drones">
           <span class="ribbon-icon">🚆</span>
           <span class="ribbon-label">Transit Vertiport</span>
-        </button>
+        </button>` : ''}
       </div>
+      ` : ''}
 
       <!-- Always-On Objective Card (Top Left) -->
       <div class="hud-objective-card" id="hud-objective-card">
@@ -185,6 +195,9 @@ export class GameHUD {
         </div>
       </div>
     `;
+
+    // Bind interactive triggers on the newly rendered top bar
+    this.bindTopBarEvents();
 
     // 2. Render Terra Nil-Style Bottom Dock (Max 4 Choices)
     this.renderDock();
@@ -295,9 +308,21 @@ export class GameHUD {
       } else if (type === 'drone_vertiport') {
         costLabel = `${costH}h • Vertiport`;
         extraTitle = ' • Autonomous cargo drone hub in Transit Vertiport';
-      } else if (type === 'mhu_dwelling') {
-        costLabel = `${costH}h • 3 Pioneers`;
-        extraTitle = ' • Cross-Laminated Timber Modular Habitat Unit (houses 3 pioneers)';
+      } else if (type === 'mhu_dwelling' || type === 'mhu_couple') {
+        costLabel = `${costH}h • Cap 4`;
+        extraTitle = ' • MHU Couple Pod: 2 permanent residents + 2 guests buffer, attached 30m² kitchen garden apron (+250 kcal/d)';
+      } else if (type === 'mhu_family') {
+        costLabel = `${costH}h • Cap 6`;
+        extraTitle = ' • MHU Family Cluster: 4 permanent residents + 2 guests buffer, central atrium, attached 60m² kitchen garden apron (+500 kcal/d)';
+      } else if (type === 'mhu_studio') {
+        costLabel = `${costH}h • Loft & Lab`;
+        extraTitle = ' • MHU Workshop Loft: living quarters + prototyping laboratory (+15% research speed)';
+      } else if (type === 'mhu_bathhouse') {
+        costLabel = `${costH}h • Solar Sauna`;
+        extraTitle = ' • Communal Bathhouse & Sauna: solar thermal vacuum tubes + greywater reed-bed loop (+15 Morale)';
+      } else if (type === 'school_nursery' || type === 'school') {
+        costLabel = `${costH}h • Education`;
+        extraTitle = ' • Open Forest School & Nursery: nature scouting, sandpit, youth micro-chores (+15% community resilience)';
       }
 
       const isSelected = this.activeDockAction === type;
@@ -332,28 +357,33 @@ export class GameHUD {
       slot1 = makeSlotHtml('lora_mast', '📡', 'LoRa Mast', 2.0, hasGarden, 'Needs Garden');
       slot2 = makeSlotHtml('guest_dome', '🏨', 'Guest Pavilion', 3.0, hasLora, 'Needs LoRa');
       slot3 = makeSlotHtml('reed_bed', '🌿', 'Greywater Reeds', 2.0, hasGuest, 'Needs Guest Dome');
-      slot4 = makeSlotHtml('mhu_dwelling', '🏡', 'MHU Habitat', 4.0, hasGuest, 'Needs Guest Dome');
+      slot4 = makeSlotHtml('mhu_couple', '🏡', 'Couple Pod', 3.5, hasGuest, 'Needs Guest Dome');
+      slot5 = makeSlotHtml('mhu_family', '👨‍👩‍👧‍👦', 'Family Cluster', 5.0, hasGuest, 'Needs Guest Dome');
+      slot6 = makeSlotHtml('mhu_bathhouse', '♨️', 'Bathhouse', 3.5, hasReed, 'Needs Reed Bed');
     } else if (activeTier === 3) {
       // Tier 3: Automation, Tooling & Scalable Artesian Wells
       slot1 = makeSlotHtml('fablab', '🛠️', 'FabLab Shop', 4.0, hasReed, 'Needs Reed Bed');
       slot2 = makeSlotHtml('farm_bot', '🤖', 'FarmBot CNC', 2.0, hasFablab, 'Needs FabLab');
       slot3 = makeSlotHtml('auto_valves', '💧', 'Auto-Valves', 1.5, hasFarmBot, 'Needs FarmBot');
       slot4 = makeSlotHtml('deep_well', '🚰', 'Artesian Well', 3.5, hasValves, 'Needs Valves');
-      slot5 = makeSlotHtml('mhu_dwelling', '🏡', 'MHU Habitat', 4.0, true, '');
+      slot5 = makeSlotHtml('mhu_couple', '🏡', 'Couple Pod', 3.5, true, '');
+      slot6 = makeSlotHtml('mhu_family', '👨‍👩‍👧‍👦', 'Family Cluster', 5.0, true, '');
     } else if (activeTier === 4) {
       // Tier 4: Craft, Hearth & Scalable Sodium Battery Banks
       slot1 = makeSlotHtml('foundry', '🔥', 'Metal Foundry', 3.5, hasValves, 'Needs Tier 3');
       slot2 = makeSlotHtml('kitchen_oven', '🍲', 'Communal Hearth', 3.0, hasFoundry, 'Needs Foundry');
       slot3 = makeSlotHtml('clinic', '🩺', 'Health Clinic', 3.0, hasKitchen, 'Needs Hearth');
       slot4 = makeSlotHtml('battery_bank', '🔋', 'Battery Bank', 3.0, hasFoundry, 'Needs Foundry');
-      slot5 = makeSlotHtml('mhu_dwelling', '🏡', 'MHU Habitat', 4.0, true, '');
+      slot5 = makeSlotHtml('mhu_studio', '📐', 'Workshop Loft', 4.5, true, '');
+      slot6 = makeSlotHtml('mhu_family', '👨‍👩‍👧‍👦', 'Family Cluster', 5.0, true, '');
     } else if (activeTier === 5) {
       // Tier 5: Ecology, Knowledge & Scalable Retention Swales
       slot1 = makeSlotHtml('food_forest', '🌲', 'Food Forest', 3.0, hasClinic, 'Needs Clinic');
-      slot2 = makeSlotHtml('school', '📚', 'Open School', 3.0, hasForest, 'Needs Forest');
+      slot2 = makeSlotHtml('school_nursery', '📚', 'Forest School', 3.5, hasForest, 'Needs Forest');
       slot3 = makeSlotHtml('elder_sanctuary', '👵', 'Elder Cabins', 3.0, hasSchool, 'Needs School');
       slot4 = makeSlotHtml('retention_swale', '🌿', 'Water Swale', 3.5, hasForest, 'Needs Forest');
-      slot5 = makeSlotHtml('mhu_dwelling', '🏡', 'MHU Habitat', 4.0, true, '');
+      slot5 = makeSlotHtml('mhu_couple', '🏡', 'Couple Pod', 3.5, true, '');
+      slot6 = makeSlotHtml('mhu_family', '👨‍👩‍👧‍👦', 'Family Cluster', 5.0, true, '');
     } else if (activeTier === 6) {
       // Tier 6: The Agora & Megaprojects
       slot1 = makeSlotHtml('agora', '🏛️', 'Agora Ring', 4.0, hasElder, 'Needs Elder Cabins');
@@ -420,7 +450,9 @@ export class GameHUD {
     this.bindDockButtons();
   }
 
-  bindEvents() {
+  bindTopBarEvents() {
+    if (!this.hudContainer) return;
+
     // Profile Modal Trigger
     const profileBtn = this.hudContainer.querySelector('#btn-hud-profile');
     if (profileBtn) {
@@ -502,6 +534,11 @@ export class GameHUD {
     if (meshBtn) {
       meshBtn.addEventListener('click', () => {
         soundFX.playClick();
+        const isMeshUnlocked = (gameState.data.buildings || []).some(b => b.type === 'lora_mast') || (gameState.data.day || 1) >= 7;
+        if (!isMeshUnlocked) {
+          this.canvas?.addFloatingText(0, -60, '🔒 Erect LoRa Mast on Day 7 to detect Mesh signals', '#f59e0b');
+          return;
+        }
         worldMapModal.open();
       });
     }
@@ -532,32 +569,6 @@ export class GameHUD {
         const dist = btn.dataset.district;
         this.selectDistrict(dist);
       });
-    });
-
-    // Global Solarpunk Hotkeys (1-7 for Progression Tiers, 0/G for Whole City Map, Escape to Cancel)
-    window.addEventListener('keydown', (e) => {
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-      const hasModal = document.querySelector('.modal-overlay:not(.hidden)');
-      if (hasModal) return;
-
-      if (e.key >= '1' && e.key <= '7') {
-        const targetTier = parseInt(e.key, 10);
-        soundFX.playClick();
-        this.selectedTier = targetTier;
-        this.renderDock();
-      } else if (e.key === '0' || e.key.toLowerCase() === 'g') {
-        soundFX.playClick();
-        this.selectDistrict('whole_city');
-      } else if (e.key.toLowerCase() === 'l') {
-        soundFX.playClick();
-        logisticsModal.open('manifest');
-      } else if (e.key === 'Escape') {
-        if (this.activeDockAction) {
-          this.activeDockAction = null;
-          this.canvas?.cancelPlacementMode();
-          this.renderDock();
-        }
-      }
     });
 
     // Primary Objective Card Click -> Direct Contextual Action
@@ -643,6 +654,36 @@ export class GameHUD {
         this.canvas?.addFloatingText(0, -60, `★ Goal: ${obj.title}`, '#34d399');
       });
     }
+  }
+
+  bindEvents() {
+    this.bindTopBarEvents();
+
+    // Global Solarpunk Hotkeys (1-7 for Progression Tiers, 0/G for Whole City Map, Escape to Cancel)
+    window.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      const hasModal = document.querySelector('.modal-overlay:not(.hidden)');
+      if (hasModal) return;
+
+      if (e.key >= '1' && e.key <= '7') {
+        const targetTier = parseInt(e.key, 10);
+        soundFX.playClick();
+        this.selectedTier = targetTier;
+        this.renderDock();
+      } else if (e.key === '0' || e.key.toLowerCase() === 'g') {
+        soundFX.playClick();
+        this.selectDistrict('whole_city');
+      } else if (e.key.toLowerCase() === 'l') {
+        soundFX.playClick();
+        logisticsModal.open('manifest');
+      } else if (e.key === 'Escape') {
+        if (this.activeDockAction) {
+          this.activeDockAction = null;
+          this.canvas?.cancelPlacementMode();
+          this.renderDock();
+        }
+      }
+    });
 
     // React to live game events
     gameState.on('resources_updated', (res) => {
@@ -663,14 +704,6 @@ export class GameHUD {
       this.renderDock();
     });
 
-    gameState.on('day_advanced', () => {
-      this.renderDock();
-      this.updateResourceMeters(gameState.data.resources);
-      if (gameState.data.objective) {
-        this.updateObjective(gameState.data.objective);
-      }
-    });
-
     gameState.on('objective_updated', (obj) => {
       this.updateObjective(obj);
       this.renderDock();
@@ -687,9 +720,9 @@ export class GameHUD {
     });
 
     gameState.on('day_advanced', (data) => {
-      const dayEl = this.hudContainer.querySelector('.site-day');
-      if (dayEl) dayEl.textContent = `DAY ${data.day} • DAWN 06:00`;
-      this.updateResourceMeters(data.resources);
+      // Re-render HUD to reflect new day/season/weather and rebind all top bar interactive triggers
+      this.render();
+
       this.canvas?.addFloatingText(0, -60, `🌅 Welcome to Day ${data.day} Dawn!`, '#fbbf24');
 
       // Open Morning Dispatch modal with overnight audit
@@ -716,8 +749,6 @@ export class GameHUD {
           }, 400);
         }
       });
-
-      this.render();
     });
 
     gameState.on('player_updated', (p) => {
@@ -787,9 +818,18 @@ export class GameHUD {
         const chores = gameState.data.chores || {};
         const remainingH = chores.remainingHours !== undefined ? chores.remainingHours : 6.0;
 
-        // Confirmation toast if unused labor remains
+        // Confirmation toast & visual button update if unused labor remains
         if (remainingH >= 2.0 && !this.pendingEarlyRest) {
           this.pendingEarlyRest = true;
+          restBtn.classList.add('confirm-early-rest');
+          const titleEl = restBtn.querySelector('.dock-slot-title');
+          const costEl = restBtn.querySelector('.dock-slot-cost');
+          const prevTitle = titleEl ? titleEl.textContent : 'Rest to Dawn';
+          const prevCost = costEl ? costEl.textContent : '';
+
+          if (titleEl) titleEl.textContent = '⚠️ Confirm Early Rest?';
+          if (costEl) costEl.textContent = `${remainingH.toFixed(1)}h unused labor`;
+
           const debt = gameState.data.debtUsd || 0;
           if (debt > 0) {
             this.canvas?.addFloatingText(0, -60, `💡 ${remainingH.toFixed(1)}h unused labor! Take consulting to pay debt, or click Rest again.`, '#f59e0b');
@@ -797,11 +837,17 @@ export class GameHUD {
             this.canvas?.addFloatingText(0, -60, `⚠️ ${remainingH.toFixed(1)}h unused labor! Click Rest again to turn in early.`, '#f59e0b');
           }
           setTimeout(() => {
-            this.pendingEarlyRest = false;
+            if (this.pendingEarlyRest) {
+              this.pendingEarlyRest = false;
+              restBtn.classList.remove('confirm-early-rest');
+              if (titleEl) titleEl.textContent = prevTitle;
+              if (costEl) costEl.textContent = prevCost;
+            }
           }, 3500);
           return;
         }
         this.pendingEarlyRest = false;
+        restBtn.classList.remove('confirm-early-rest');
 
         // Disable button during transition to prevent spamming
         restBtn.disabled = true;
@@ -824,7 +870,12 @@ export class GameHUD {
   }
 
   selectDistrict(districtId) {
+    if (districtId !== 'whole_city' && !this.canvas?.isTourMode && gameState.isDistrictUnlocked && !gameState.isDistrictUnlocked(districtId)) {
+      this.canvas?.addFloatingText(0, -60, '🔒 District not yet founded', '#f59e0b');
+      return;
+    }
     this.selectedDistrict = districtId;
+    ambienceAudio.update(12, gameState.data.weather, gameState.getSeason(), districtId);
     const ribbonBtns = this.hudContainer?.querySelectorAll('.district-ribbon-btn');
     ribbonBtns?.forEach(btn => {
       btn.classList.toggle('active', btn.dataset.district === districtId);

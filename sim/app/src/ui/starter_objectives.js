@@ -61,7 +61,7 @@ export class StarterObjectivesController {
       preventive_maintenance: false,
       explore_trade: false,
       currentPhase: 1,
-      minimized: false,
+      minimized: true,
       dismissed: false
     };
   }

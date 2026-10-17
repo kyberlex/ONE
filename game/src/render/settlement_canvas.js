@@ -426,7 +426,7 @@ export class SettlementCanvas {
     // 1. Check constructed buildings
     for (const b of buildings) {
       if (b.type === 'camper_van' || b.type === 'central_agora') continue;
-      const r = b.type === 'guest_dome' ? 36 : (b.type === 'fablab' ? 44 : (b.type === 'mhu_dwelling' ? 32 : 30));
+      const r = b.type === 'mhu_family' ? 38 : (b.type === 'mhu_bathhouse' ? 36 : (b.type === 'mhu_studio' ? 34 : (b.type === 'guest_dome' ? 36 : (b.type === 'fablab' ? 44 : (['mhu_dwelling', 'mhu_couple', 'school_nursery', 'school'].includes(b.type) ? 32 : 30)))));
       const dist = Math.hypot(worldX - b.x, worldY - b.y);
       if (dist <= r) {
         return b;
@@ -445,11 +445,11 @@ export class SettlementCanvas {
       }
     }
 
-    // 3. Check Camper Van (around van.x, van.y with box ~92x54)
+    // 3. Check Camper Van (around van.x, van.y with box ~130x84)
     const van = buildings.find(b => b.type === 'camper_van');
     const vx = van?.x !== undefined ? van.x : 0;
     const vy = van?.y !== undefined ? van.y : 0;
-    if (Math.abs(worldX - vx) < 48 && Math.abs(worldY - vy) < 28) {
+    if (Math.abs(worldX - vx) < 65 && Math.abs(worldY - vy) < 42) {
       return van || {
         type: 'camper_van',
         name: 'Pioneer Haven (Camper Van)',
@@ -487,7 +487,8 @@ export class SettlementCanvas {
     } else if (isAgora) {
       ctx.arc(0, 0, 48 * pulse, 0, Math.PI * 2);
     } else {
-      const r = (b.type === 'guest_dome' ? 36 : (b.type === 'fablab' ? 44 : (b.type === 'mhu_dwelling' ? 32 : 30))) * pulse;
+      const baseR = b.type === 'mhu_family' ? 38 : (b.type === 'mhu_bathhouse' ? 36 : (b.type === 'mhu_studio' ? 34 : (b.type === 'guest_dome' ? 36 : (b.type === 'fablab' ? 44 : (['mhu_dwelling', 'mhu_couple', 'school_nursery', 'school'].includes(b.type) ? 32 : 30)))));
+      const r = baseR * pulse;
       ctx.arc(0, 0, r, 0, Math.PI * 2);
     }
     ctx.stroke();
@@ -566,7 +567,7 @@ export class SettlementCanvas {
     let feedback = null;
     const isSolar = ['solar_array', 'battery_bank', 'solar_thermal_tower', 'solar_foundry'].includes(buildingType);
     const isHydro = ['rain_cistern', 'reed_bed', 'retention_swale', 'deep_well'].includes(buildingType);
-    const isResidential = ['guest_dome', 'mhu_dwelling', 'mhu', 'kitchen_oven', 'clinic', 'school', 'elder_sanctuary'].includes(buildingType);
+    const isResidential = ['guest_dome', 'mhu_dwelling', 'mhu', 'mhu_couple', 'mhu_family', 'mhu_studio', 'mhu_bathhouse', 'school_nursery', 'kitchen_oven', 'clinic', 'school', 'elder_sanctuary'].includes(buildingType);
     const isIndustrial = ['fablab', 'foundry', 'heavy_gantry_mill', 'trike_depot'].includes(buildingType);
     const isAgro = ['garden_bed', 'food_forest', 'aquaponics_greenhouse'].includes(buildingType);
 
@@ -595,7 +596,7 @@ export class SettlementCanvas {
         feedback = { ok: true, text: '✅ Quiet Residential Courtyard (+5 morale)', color: '#10b981', moraleBonus: 5 };
       }
     } else if (isIndustrial) {
-      const nearResidential = (buildings || []).some(b => ['guest_dome', 'mhu_dwelling', 'mhu', 'kitchen_oven', 'clinic', 'school', 'elder_sanctuary'].includes(b.type) && Math.hypot(snapX - b.x, snapY - b.y) < 130) || (Math.hypot(snapX, snapY) < 100);
+      const nearResidential = (buildings || []).some(b => ['guest_dome', 'mhu_dwelling', 'mhu', 'mhu_couple', 'mhu_family', 'mhu_studio', 'mhu_bathhouse', 'school_nursery', 'kitchen_oven', 'clinic', 'school', 'elder_sanctuary'].includes(b.type) && Math.hypot(snapX - b.x, snapY - b.y) < 130) || (Math.hypot(snapX, snapY) < 100);
       if (snapX < -60) {
         feedback = { ok: true, text: '✅ Logistics Axis: Direct Freight & Vibration Absorption', color: '#94a3b8' };
       } else if (nearResidential) {
@@ -852,6 +853,9 @@ export class SettlementCanvas {
     // 1. Terrain & Grid Ground
     this.renderGround(ctx);
 
+    // 1.5 Dynamic Level-of-Detail (LOD): District Boundary Field Glows (Macro LOD)
+    this.renderDistrictBoundaryGlows(ctx);
+
     // 2. Landscape Trees & Flora (semi-transparent, zero trees on heliport)
     this.renderTrees(ctx);
 
@@ -900,12 +904,23 @@ export class SettlementCanvas {
   }
 
   renderGround(ctx) {
-    // 1. Bioregional Macro-Terrain Base (1250px radius)
+    const season = gameState.getSeason ? gameState.getSeason() : { id: 'spring', name: 'Spring' };
+    const seasonId = season.id || 'spring';
+
+    // 1. Bioregional Macro-Terrain Base (1250px radius) modulated by Active Season (Epic 3.3)
+    const seasonPalettes = {
+      spring: { inner: '#143c24', mid: '#0e2b1a', outer: '#081a10', edge: '#040d08' },
+      summer: { inner: '#2a2612', mid: '#1d1a0c', outer: '#121008', edge: '#080704' },
+      autumn: { inner: '#2f1c0f', mid: '#20120a', outer: '#140b06', edge: '#080402' },
+      winter: { inner: '#13212c', mid: '#0d171f', outer: '#080f14', edge: '#04070a' }
+    };
+    const pal = seasonPalettes[seasonId] || seasonPalettes.spring;
+
     const bgGradient = ctx.createRadialGradient(0, 30, 80, 0, 30, 1200);
-    bgGradient.addColorStop(0, '#153123'); // fertile central valley
-    bgGradient.addColorStop(0.5, '#0f241a');
-    bgGradient.addColorStop(0.85, '#091811');
-    bgGradient.addColorStop(1, '#050f0a');
+    bgGradient.addColorStop(0, pal.inner);
+    bgGradient.addColorStop(0.5, pal.mid);
+    bgGradient.addColorStop(0.85, pal.outer);
+    bgGradient.addColorStop(1, pal.edge);
 
     ctx.fillStyle = bgGradient;
     ctx.beginPath();
@@ -914,9 +929,17 @@ export class SettlementCanvas {
 
     // 1.5 Organic Carrying Capacity Clearing Apron
     const clearingRadius = gameState.getClearingRadius ? gameState.getClearingRadius() : 340;
+    const apronTints = {
+      spring: 'rgba(16, 185, 129, 0.12)',
+      summer: 'rgba(245, 158, 11, 0.10)',
+      autumn: 'rgba(217, 119, 6, 0.11)',
+      winter: 'rgba(56, 189, 248, 0.08)'
+    };
+    const apronTint = apronTints[seasonId] || apronTints.spring;
+
     const clearingGrad = ctx.createRadialGradient(0, 30, clearingRadius * 0.35, 0, 30, clearingRadius);
     clearingGrad.addColorStop(0, 'rgba(21, 49, 35, 0.40)');
-    clearingGrad.addColorStop(0.7, 'rgba(16, 185, 129, 0.09)');
+    clearingGrad.addColorStop(0.7, apronTint);
     clearingGrad.addColorStop(0.95, 'rgba(16, 185, 129, 0.02)');
     clearingGrad.addColorStop(1, 'rgba(0, 0, 0, 0.0)');
     ctx.fillStyle = clearingGrad;
@@ -925,7 +948,8 @@ export class SettlementCanvas {
     ctx.fill();
 
     // Subtle Solarpunk bio-perimeter dashed contour
-    ctx.strokeStyle = 'rgba(16, 185, 129, 0.22)';
+    const contourColor = seasonId === 'winter' ? 'rgba(56, 189, 248, 0.35)' : (seasonId === 'summer' ? 'rgba(245, 158, 11, 0.30)' : 'rgba(16, 185, 129, 0.25)');
+    ctx.strokeStyle = contourColor;
     ctx.lineWidth = 1.8;
     ctx.setLineDash([8, 8]);
     ctx.beginPath();
@@ -933,11 +957,38 @@ export class SettlementCanvas {
     ctx.stroke();
     ctx.setLineDash([]);
 
+    // Spring Wildflowers along Meadow Edges
+    if (seasonId === 'spring') {
+      const flowerColors = ['#fde047', '#c084fc', '#f8fafc', '#f472b6', '#38bdf8'];
+      const flowerCount = 42;
+      for (let i = 0; i < flowerCount; i++) {
+        const angle = (i / flowerCount) * Math.PI * 2 + (i * 0.13);
+        const dist = clearingRadius * (0.82 + ((i * 7) % 16) * 0.01);
+        const fx = Math.cos(angle) * dist;
+        const fy = 30 + Math.sin(angle) * dist * 0.85;
+        ctx.fillStyle = flowerColors[i % flowerColors.length];
+        ctx.beginPath();
+        ctx.arc(fx, fy, 2.0, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    // Winter Frost Crystals along Clearing Edge
+    if (seasonId === 'winter') {
+      ctx.fillStyle = 'rgba(224, 242, 254, 0.45)';
+      for (let i = 0; i < 30; i++) {
+        const angle = (i / 30) * Math.PI * 2;
+        const fx = Math.cos(angle) * clearingRadius;
+        const fy = 30 + Math.sin(angle) * clearingRadius;
+        ctx.fillRect(fx - 1.5, fy - 1.5, 3, 3);
+      }
+    }
+
     // Telemetry indicator tag at clearing perimeter
-    ctx.fillStyle = 'rgba(110, 231, 183, 0.45)';
+    ctx.fillStyle = seasonId === 'winter' ? 'rgba(186, 230, 253, 0.55)' : 'rgba(110, 231, 183, 0.45)';
     ctx.font = 'bold 9px system-ui';
     ctx.textAlign = 'center';
-    ctx.fillText(`⭘ Carrying Capacity Clearing: ${clearingRadius}m Radius`, 0, 30 + clearingRadius - 10);
+    ctx.fillText(`⭘ Carrying Capacity Clearing: ${clearingRadius}m Radius (${season.name})`, 0, 30 + clearingRadius - 10);
 
     // 2. Subtle Macro Grid Lines (40px grid)
     ctx.strokeStyle = 'rgba(16, 185, 129, 0.04)';
@@ -953,83 +1004,90 @@ export class SettlementCanvas {
     }
     ctx.stroke();
 
-    // 3. Solarpunk Arterial Pathways
-    ctx.lineCap = 'round';
-    ctx.lineJoin = 'round';
+    // 3. Solarpunk Arterial Pathways (Progressive Disclosure: only emerge as sister districts unlock or in Tour Mode)
+    const hasDistricts = this.isTourMode || (gameState.isAnyDistrictUnlocked && gameState.isAnyDistrictUnlocked());
+    if (hasDistricts) {
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
 
-    // 3.1 Agora Promenade (North): Central clearing -> Agora Core
-    ctx.strokeStyle = 'rgba(203, 213, 225, 0.16)'; // crushed limestone cobble
-    ctx.lineWidth = 18;
-    ctx.beginPath();
-    ctx.moveTo(0, 15);
-    ctx.lineTo(0, -115);
-    ctx.stroke();
-
-    // 3.2 Agro Commons Trail (South-West): Central clearing -> Agroecological Belt
-    ctx.strokeStyle = 'rgba(41, 31, 20, 0.40)'; // packed organic mulch & clay
-    ctx.lineWidth = 22;
-    ctx.beginPath();
-    ctx.moveTo(0, 25);
-    ctx.quadraticCurveTo(-140, 90, -320, 220);
-    ctx.stroke();
-
-    // 3.3 FabLab Industrial Road (East): Central clearing -> FabLab Quarter
-    ctx.strokeStyle = 'rgba(180, 83, 9, 0.22)'; // terracotta paver track
-    ctx.lineWidth = 20;
-    ctx.beginPath();
-    ctx.moveTo(0, 25);
-    ctx.quadraticCurveTo(160, -10, 340, -30);
-    ctx.stroke();
-
-    // 3.4 MHU Ecovillage Promenade (West): Central clearing -> Living Ecovillage
-    ctx.strokeStyle = 'rgba(217, 119, 6, 0.18)'; // pea-gravel walkway
-    ctx.lineWidth = 20;
-    ctx.beginPath();
-    ctx.moveTo(0, 25);
-    ctx.quadraticCurveTo(-150, -30, -340, -80);
-    ctx.stroke();
-
-    // 3.5 Intermodal Logistics Corridor (South-East): Central clearing -> Transit Hub
-    ctx.strokeStyle = 'rgba(64, 49, 31, 0.45)'; // reinforced logistics dirt/gravel
-    ctx.lineWidth = 24;
-    ctx.beginPath();
-    ctx.moveTo(0, 25);
-    ctx.quadraticCurveTo(140, 130, 300, 280);
-    ctx.stroke();
-
-    // 3.6 Circumferential Inter-District Ring Road: Agro Belt <-> Transit Hub <-> FabLab
-    ctx.strokeStyle = 'rgba(148, 163, 184, 0.12)';
-    ctx.lineWidth = 16;
-    ctx.setLineDash([12, 8]);
-    ctx.beginPath();
-    ctx.moveTo(-320, 220);
-    ctx.quadraticCurveTo(0, 340, 300, 280);
-    ctx.quadraticCurveTo(360, 140, 340, -30);
-    ctx.stroke();
-    ctx.setLineDash([]);
-
-    // 3.7 Low-Voltage Solar Pathway Bollards along paths (illuminate warm amber at dusk/night)
-    const bollardAlpha = Math.max(0.15, this.nightAlpha || 0);
-    const bollards = [
-      { x: 0, y: -50 }, { x: -80, y: 70 }, { x: -190, y: 140 }, { x: -260, y: 190 },
-      { x: 90, y: 5 }, { x: 200, y: -15 }, { x: 280, y: -25 },
-      { x: -90, y: -10 }, { x: -210, y: -50 }, { x: -280, y: -70 },
-      { x: 80, y: 80 }, { x: 170, y: 170 }, { x: 240, y: 230 }
-    ];
-    bollards.forEach(b => {
-      // Bollard base post
-      ctx.fillStyle = '#334155';
-      ctx.fillRect(b.x - 2, b.y - 4, 4, 8);
-      // Amber solar LED
-      ctx.fillStyle = `rgba(251, 191, 36, ${0.4 + bollardAlpha * 0.6})`;
+      // 3.1 Agora Promenade (North): Central clearing -> Agora Core
+      ctx.strokeStyle = 'rgba(203, 213, 225, 0.16)'; // crushed limestone cobble
+      ctx.lineWidth = 18;
       ctx.beginPath();
-      ctx.arc(b.x, b.y - 4, 2.5, 0, Math.PI * 2);
-      ctx.fill();
-    });
+      ctx.moveTo(0, 15);
+      ctx.lineTo(0, -115);
+      ctx.stroke();
+
+      // 3.2 Agro Commons Trail (South-West): Central clearing -> Agroecological Belt
+      ctx.strokeStyle = 'rgba(41, 31, 20, 0.40)'; // packed organic mulch & clay
+      ctx.lineWidth = 22;
+      ctx.beginPath();
+      ctx.moveTo(0, 25);
+      ctx.quadraticCurveTo(-140, 90, -320, 220);
+      ctx.stroke();
+
+      // 3.3 FabLab Industrial Road (East): Central clearing -> FabLab Quarter
+      ctx.strokeStyle = 'rgba(180, 83, 9, 0.22)'; // terracotta paver track
+      ctx.lineWidth = 20;
+      ctx.beginPath();
+      ctx.moveTo(0, 25);
+      ctx.quadraticCurveTo(160, -10, 340, -30);
+      ctx.stroke();
+
+      // 3.4 MHU Ecovillage Promenade (West): Central clearing -> Living Ecovillage
+      ctx.strokeStyle = 'rgba(217, 119, 6, 0.18)'; // pea-gravel walkway
+      ctx.lineWidth = 20;
+      ctx.beginPath();
+      ctx.moveTo(0, 25);
+      ctx.quadraticCurveTo(-150, -30, -340, -80);
+      ctx.stroke();
+
+      // 3.5 Intermodal Logistics Corridor (South-East): Central clearing -> Transit Hub
+      ctx.strokeStyle = 'rgba(64, 49, 31, 0.45)'; // reinforced logistics dirt/gravel
+      ctx.lineWidth = 24;
+      ctx.beginPath();
+      ctx.moveTo(0, 25);
+      ctx.quadraticCurveTo(140, 130, 300, 280);
+      ctx.stroke();
+
+      // 3.6 Circumferential Inter-District Ring Road: Agro Belt <-> Transit Hub <-> FabLab
+      ctx.strokeStyle = 'rgba(148, 163, 184, 0.12)';
+      ctx.lineWidth = 16;
+      ctx.setLineDash([12, 8]);
+      ctx.beginPath();
+      ctx.moveTo(-320, 220);
+      ctx.quadraticCurveTo(0, 340, 300, 280);
+      ctx.quadraticCurveTo(360, 140, 340, -30);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // 3.7 Low-Voltage Solar Pathway Bollards along paths (illuminate warm amber at dusk/night)
+      const bollardAlpha = Math.max(0.15, this.nightAlpha || 0);
+      const bollards = [
+        { x: 0, y: -50 }, { x: -80, y: 70 }, { x: -190, y: 140 }, { x: -260, y: 190 },
+        { x: 90, y: 5 }, { x: 200, y: -15 }, { x: 280, y: -25 },
+        { x: -90, y: -10 }, { x: -210, y: -50 }, { x: -280, y: -70 },
+        { x: 80, y: 80 }, { x: 170, y: 170 }, { x: 240, y: 230 }
+      ];
+      bollards.forEach(b => {
+        // Bollard base post
+        ctx.fillStyle = '#334155';
+        ctx.fillRect(b.x - 2, b.y - 4, 4, 8);
+        // Amber solar LED
+        ctx.fillStyle = `rgba(251, 191, 36, ${0.4 + bollardAlpha * 0.6})`;
+        ctx.beginPath();
+        ctx.arc(b.x, b.y - 4, 2.5, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    }
 
     // 4. The 5 Canonical Bioregional Districts Ground Visuals
     const districts = gameState.getDistricts ? gameState.getDistricts() : [];
     districts.forEach(d => {
+      // Progressive disclosure: only render district ground visuals if unlocked or in Tour Mode
+      const isUnlocked = this.isTourMode || (gameState.isDistrictUnlocked && gameState.isDistrictUnlocked(d.id));
+      if (!isUnlocked) return;
+
       ctx.save();
       const cx = d.center.x;
       const cy = d.center.y;
@@ -1183,15 +1241,21 @@ export class SettlementCanvas {
    * Checks whether a position is within the heliport / vertiport landing and safety clear zone
    */
   isNearHeliport(x, y) {
-    // 1. Permanent Intermodal Transit Hub & Vertiport pads at (300, 280)
-    if (Math.hypot(x - 300, y - 280) < 155) return true;
-    if (Math.hypot(x - 255, y - 280) < 85) return true;
-    if (Math.hypot(x - 345, y - 280) < 85) return true;
+    const hasTransitHub = this.isTourMode || (gameState.isDistrictUnlocked && gameState.isDistrictUnlocked('transit_hub'));
 
-    // 2. Stage 3 Sovereign Superblock Vertiport Pad & Trike Depot
-    if (Math.hypot(x - 220, y - (-60)) < 90) return true;
-    if (Math.hypot(x - 160, y - (-80)) < 90) return true;
-    if (Math.hypot(x - (-210), y - (-40)) < 90) return true;
+    // 1. Permanent Intermodal Transit Hub & Vertiport pads at (300, 280) (only if transit hub unlocked or in tour)
+    if (hasTransitHub) {
+      if (Math.hypot(x - 300, y - 280) < 155) return true;
+      if (Math.hypot(x - 255, y - 280) < 85) return true;
+      if (Math.hypot(x - 345, y - 280) < 85) return true;
+    }
+
+    // 2. Stage 3 Sovereign Superblock Vertiport Pad & Trike Depot (in tour stop 3)
+    if (this.isTourMode && this.tourStopIndex === 2) {
+      if (Math.hypot(x - 220, y - (-60)) < 90) return true;
+      if (Math.hypot(x - 160, y - (-80)) < 90) return true;
+      if (Math.hypot(x - (-210), y - (-40)) < 90) return true;
+    }
 
     // 3. Dynamic placed buildings
     const buildings = this.overrideBuildings || gameState.data.buildings || [];
@@ -1273,6 +1337,10 @@ export class SettlementCanvas {
   renderDistrictBanners(ctx) {
     const districts = gameState.getDistricts ? gameState.getDistricts() : [];
     districts.forEach(d => {
+      // Progressive disclosure: only render telemetry banners for unlocked districts or in Tour Mode
+      const isUnlocked = this.isTourMode || (gameState.isDistrictUnlocked && gameState.isDistrictUnlocked(d.id));
+      if (!isUnlocked) return;
+
       const cx = d.center.x;
       const cy = d.center.y;
       const r = d.radius;
@@ -1298,6 +1366,46 @@ export class SettlementCanvas {
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(tagText, cx, tagY);
+    });
+  }
+
+  /**
+   * Dynamic Level-of-Detail (LOD): District Boundary Field Glows (Macro LOD 0.30x - 0.52x)
+   * Renders soft glowing halos and dashed boundary rings for each district when zoomed out.
+   */
+  renderDistrictBoundaryGlows(ctx) {
+    const isMacroLOD = this.camera.zoom < 0.52;
+    if (!isMacroLOD && !this.hoveredDistrict) return;
+
+    const districts = gameState.getDistricts ? gameState.getDistricts() : [];
+    districts.forEach(d => {
+      const isUnlocked = this.isTourMode || (gameState.isDistrictUnlocked && gameState.isDistrictUnlocked(d.id));
+      if (!isUnlocked) return;
+
+      const cx = d.center.x;
+      const cy = d.center.y;
+      const r = d.radius;
+      const isHovered = this.hoveredDistrict && this.hoveredDistrict.id === d.id;
+
+      // Soft district radial wash
+      const grad = ctx.createRadialGradient(cx, cy, r * 0.2, cx, cy, r * 1.05);
+      grad.addColorStop(0, `${d.color}22`);
+      grad.addColorStop(0.7, `${d.color}11`);
+      grad.addColorStop(1, 'transparent');
+
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r * 1.05, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Glowing dashed boundary ring
+      ctx.strokeStyle = isHovered ? d.color : `${d.color}66`;
+      ctx.lineWidth = isHovered ? 2.5 : 1.5;
+      ctx.setLineDash([8, 6]);
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.setLineDash([]);
     });
   }
 
@@ -1582,13 +1690,122 @@ export class SettlementCanvas {
     ctx.restore();
   }
 
+  /**
+   * Dynamic Level-of-Detail (LOD): Macro Architectural Silhouette (0.30x - 0.49x)
+   * High-performance, bold geometric silhouettes with district color glows & stamped icons.
+   */
+  renderBuildingMacroSilhouette(ctx, b) {
+    const colorMap = {
+      solar_array: '#f59e0b',
+      battery_bank: '#f59e0b',
+      rain_cistern: '#0284c7',
+      deep_well: '#0284c7',
+      reed_bed: '#059669',
+      retention_swale: '#059669',
+      garden_bed: '#10b981',
+      food_forest: '#15803d',
+      aquaponics_greenhouse: '#10b981',
+      grain_silo: '#eab308',
+      lora_mast: '#38bdf8',
+      guest_dome: '#06b6d4',
+      mhu_dwelling: '#06b6d4',
+      mhu_couple: '#06b6d4',
+      mhu_family: '#06b6d4',
+      mhu_studio: '#a855f7',
+      mhu_bathhouse: '#0ea5e9',
+      school_nursery: '#10b981',
+      school: '#10b981',
+      elder_sanctuary: '#ec4899',
+      fablab: '#a855f7',
+      foundry: '#f97316',
+      solar_foundry: '#f97316',
+      kitchen_oven: '#f59e0b',
+      clinic: '#ef4444',
+      farm_bot: '#10b981',
+      auto_valves: '#06b6d4',
+      trike_depot: '#38bdf8',
+      drone_vertiport: '#38bdf8',
+      agora: '#eab308',
+      biogas_digester: '#10b981',
+      seed_vault: '#eab308'
+    };
+    const iconMap = {
+      solar_array: '⚡',
+      battery_bank: '🔋',
+      rain_cistern: '💧',
+      deep_well: '🚰',
+      reed_bed: '🌿',
+      retention_swale: '🌊',
+      garden_bed: '🥗',
+      food_forest: '🌲',
+      aquaponics_greenhouse: '🐟',
+      grain_silo: '🌾',
+      lora_mast: '📡',
+      guest_dome: '🏨',
+      mhu_dwelling: '🏡',
+      mhu_couple: '🏡',
+      mhu_family: '👨‍👩‍👧‍👦',
+      mhu_studio: '📐',
+      mhu_bathhouse: '♨️',
+      school_nursery: '📚',
+      school: '📚',
+      elder_sanctuary: '👵',
+      fablab: '🛠️',
+      foundry: '🔥',
+      solar_foundry: '🔥',
+      kitchen_oven: '🍲',
+      clinic: '🩺',
+      farm_bot: '🤖',
+      auto_valves: '💧',
+      trike_depot: '🚲',
+      drone_vertiport: '🚁',
+      agora: '🏛️',
+      biogas_digester: '♻️',
+      seed_vault: '🌱'
+    };
+
+    const color = colorMap[b.type] || '#38bdf8';
+    const icon = iconMap[b.type] || '🏗️';
+    const size = ['mhu_family', 'fablab', 'aquaponics_greenhouse', 'guest_dome', 'agora'].includes(b.type) ? 36 : 24;
+
+    // Glowing halo
+    ctx.fillStyle = `${color}22`;
+    ctx.beginPath();
+    ctx.arc(0, 0, size * 1.3, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Geometric silhouette box
+    ctx.fillStyle = 'rgba(15, 23, 42, 0.95)';
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 2.0;
+    ctx.beginPath();
+    ctx.roundRect(-size, -size * 0.75, size * 2, size * 1.5, 6);
+    ctx.fill();
+    ctx.stroke();
+
+    // Stamped icon glyph
+    ctx.font = `${Math.round(size * 0.9)}px system-ui`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(icon, 0, 0);
+  }
+
   renderBuildings(ctx) {
+    const isMacroLOD = this.camera.zoom < 0.50;
+    const isMicroLOD = this.camera.zoom >= 0.85;
     const buildings = this.overrideBuildings || gameState.data.buildings;
     buildings.forEach(b => {
       if (b.type === 'camper_van' || b.type === 'central_agora') return; // rendered separately
 
       ctx.save();
       ctx.translate(b.x, b.y);
+
+      // Dynamic Level-of-Detail (LOD): Macro Architectural Silhouette
+      if (isMacroLOD) {
+        this.renderBuildingMacroSilhouette(ctx, b);
+        ctx.restore();
+        return;
+      }
 
       if (b.type === 'solar_array') {
         // Solar Array Shadow
@@ -1617,6 +1834,17 @@ export class SettlementCanvas {
         ctx.roundRect(-24, -18, 48, 18, 3);
         ctx.fill();
         ctx.stroke();
+
+        // Micro LOD: Specular solar glint sweeping across PV glass
+        if (isMicroLOD) {
+          const glintX = -20 + (((this.tick || 0) * 0.7) % 40);
+          const glintGrad = ctx.createLinearGradient(glintX, -18, glintX + 6, -1);
+          glintGrad.addColorStop(0, 'rgba(255,255,255,0)');
+          glintGrad.addColorStop(0.5, 'rgba(255,255,255,0.4)');
+          glintGrad.addColorStop(1, 'rgba(255,255,255,0)');
+          ctx.fillStyle = glintGrad;
+          ctx.fillRect(glintX, -18, 8, 17);
+        }
 
         // Solar Grid Lines
         ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
@@ -1927,8 +2155,26 @@ export class SettlementCanvas {
         ctx.strokeStyle = '#ef4444';
         ctx.lineWidth = 1;
         ctx.strokeRect(-10, -3, 8, 7);
-        // Active CNC Torch / Welder Sparks
-        if (Math.random() < 0.4) {
+        // Active CNC Spindle & Welder Sparks
+        if (isMicroLOD) {
+          // Micro mechanical details: LinuxCNC spinning gantry spindle, stepper drive belt, electric discharge sparks
+          const spindleX = -4 + Math.sin((this.tick || 0) * 0.15) * 10;
+          ctx.strokeStyle = '#38bdf8';
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.moveTo(spindleX, -3);
+          ctx.lineTo(spindleX, 4);
+          ctx.stroke();
+
+          // Rapid electrical discharge arc sparks
+          ctx.fillStyle = '#60a5fa';
+          ctx.beginPath();
+          ctx.arc(spindleX, 4, 2.5, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = '#fef08a';
+          ctx.fillRect(spindleX + (Math.random() - 0.5) * 8, 4 + (Math.random() - 0.5) * 8, 2, 2);
+          ctx.fillRect(spindleX + (Math.random() - 0.5) * 8, 4 + (Math.random() - 0.5) * 8, 1.5, 1.5);
+        } else if (Math.random() < 0.4) {
           ctx.fillStyle = '#f59e0b';
           ctx.beginPath();
           ctx.arc(6, 1, 2.5, 0, Math.PI * 2);
@@ -2880,6 +3126,37 @@ export class SettlementCanvas {
         ctx.ellipse(-14, 2, 10, 6, 0, 0, Math.PI * 2);
         ctx.fill();
 
+        // Micro LOD: Animated Swimming Golden Koi & Silver Trout
+        if (isMicroLOD) {
+          const fishTime = ((this.tick || 0) * 0.05);
+          const kx = -14 + Math.cos(fishTime) * 6;
+          const ky = 2 + Math.sin(fishTime) * 3.5;
+          const tx = -14 + Math.cos(fishTime + Math.PI) * 5;
+          const ty = 2 + Math.sin(fishTime + Math.PI) * 2.8;
+
+          // Golden-orange Koi
+          ctx.fillStyle = '#f97316';
+          ctx.beginPath();
+          ctx.ellipse(kx, ky, 2.5, 1.2, fishTime + Math.PI / 2, 0, Math.PI * 2);
+          ctx.fill();
+          // Koi tail fin
+          ctx.fillStyle = '#fef08a';
+          ctx.fillRect(kx - Math.sin(fishTime) * 2, ky + Math.cos(fishTime) * 2, 1.2, 1.2);
+
+          // Silver Trout
+          ctx.fillStyle = '#e2e8f0';
+          ctx.beginPath();
+          ctx.ellipse(tx, ty, 2.2, 1.0, fishTime + Math.PI * 1.5, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Water ripple rings
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.35)';
+          ctx.lineWidth = 0.6;
+          ctx.beginPath();
+          ctx.ellipse(-14, 2, 7 + Math.sin(fishTime * 2) * 2, 4 + Math.sin(fishTime * 2) * 1.2, 0, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+
         // Vertical Aeroponic Grow Towers
         ctx.fillStyle = '#10b981';
         [4, 12, 20].forEach(gx => {
@@ -3132,27 +3409,53 @@ export class SettlementCanvas {
         ctx.textAlign = 'center';
         ctx.fillText('🛸 Courier Vertiport', 0, 22);
 
-      } else if (b.type === 'mhu_dwelling') {
-        // Modular Habitat Unit (MHU) - CLT chassis with living sedum roof
+      } else if (b.type === 'mhu_dwelling' || b.type === 'mhu_couple') {
+        // Modular Habitat Unit (MHU Couple Pod) - C24 chassis with living sedum roof + attached 30m² garden apron
         // 1. Soft Ambient Shadow
         ctx.fillStyle = 'rgba(0, 0, 0, 0.35)';
         ctx.beginPath();
-        ctx.ellipse(0, 14, 26, 12, 0, 0, Math.PI * 2);
+        ctx.ellipse(0, 14, 28, 13, 0, 0, Math.PI * 2);
         ctx.fill();
 
-        // 2. Timber Deck Porch & Steps
+        // 2. Attached L-Shaped Micro-Permaculture Kitchen Garden Apron (15m²/person invariant = 30m²)
+        ctx.fillStyle = '#3e2723'; // rich compost soil
+        ctx.beginPath();
+        ctx.roundRect(-34, -6, 12, 20, 2);
+        ctx.fill();
+        ctx.strokeStyle = '#795548'; // cedar planter border
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        // Garden veggies & herbs (spinach, basil, rosemary)
+        ctx.fillStyle = '#10b981';
+        ctx.fillRect(-32, -4, 3, 3);
+        ctx.fillRect(-27, -3, 3, 3);
+        ctx.fillRect(-31, 3, 3, 3);
+        ctx.fillRect(-26, 4, 3, 3);
+        ctx.fillRect(-30, 9, 3, 3);
+        // Lavender flower dots
+        ctx.fillStyle = '#c084fc';
+        ctx.fillRect(-27, 8, 2, 2);
+        ctx.fillRect(-32, -1, 2, 2);
+        // Micro drip irrigation line
+        ctx.strokeStyle = '#1e293b';
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        ctx.moveTo(-29, -4); ctx.lineTo(-29, 12);
+        ctx.stroke();
+
+        // 3. Timber Deck Porch & Barrier-Free Entrance Ramp
         ctx.fillStyle = '#78350f';
-        ctx.fillRect(-22, 6, 44, 8);
+        ctx.fillRect(-20, 6, 42, 8);
         ctx.strokeStyle = '#92400e';
         ctx.lineWidth = 1;
-        ctx.strokeRect(-22, 6, 44, 8);
+        ctx.strokeRect(-20, 6, 42, 8);
 
-        // 3. CLT Wall Chassis (Warm Honey Spruce)
+        // 4. CLT Wall Chassis (Warm Honey Spruce C24)
         ctx.fillStyle = '#b45309';
         ctx.strokeStyle = '#78350f';
         ctx.lineWidth = 1.5;
         ctx.beginPath();
-        ctx.roundRect(-20, -14, 40, 22, 3);
+        ctx.roundRect(-18, -14, 38, 22, 3);
         ctx.fill();
         ctx.stroke();
 
@@ -3160,50 +3463,49 @@ export class SettlementCanvas {
         ctx.strokeStyle = 'rgba(120, 53, 15, 0.4)';
         ctx.lineWidth = 0.8;
         ctx.beginPath();
-        ctx.moveTo(-20, -6); ctx.lineTo(20, -6);
-        ctx.moveTo(-20, 2); ctx.lineTo(20, 2);
+        ctx.moveTo(-18, -6); ctx.lineTo(20, -6);
+        ctx.moveTo(-18, 2); ctx.lineTo(20, 2);
         ctx.stroke();
 
-        // 4. Clerestory Triple-Glazed High Window
+        // 5. Clerestory Triple-Glazed High Window
         ctx.fillStyle = '#38bdf8';
         ctx.strokeStyle = '#bae6fd';
         ctx.lineWidth = 1;
-        ctx.fillRect(-14, -10, 28, 5);
-        ctx.strokeRect(-14, -10, 28, 5);
+        ctx.fillRect(-12, -10, 26, 5);
+        ctx.strokeRect(-12, -10, 26, 5);
 
-        // 5. Living Sedum Green Roof (Sedum Succulent Carpet with Blossom Dots)
+        // 6. Living Sedum Green Roof (Sedum Succulent Carpet with Blossom Dots)
         ctx.fillStyle = '#15803d';
         ctx.strokeStyle = '#166534';
         ctx.lineWidth = 2;
         ctx.beginPath();
-        ctx.roundRect(-24, -20, 48, 8, 4);
+        ctx.roundRect(-22, -20, 46, 8, 4);
         ctx.fill();
         ctx.stroke();
 
-        // Sedum flowers (tiny pink & yellow blooms)
+        // Sedum flowers
         ctx.fillStyle = '#f43f5e';
-        ctx.fillRect(-18, -19, 2.5, 2.5);
-        ctx.fillRect(-4, -20, 2.5, 2.5);
-        ctx.fillRect(10, -18, 2.5, 2.5);
+        ctx.fillRect(-16, -19, 2.5, 2.5);
+        ctx.fillRect(-2, -20, 2.5, 2.5);
+        ctx.fillRect(12, -18, 2.5, 2.5);
         ctx.fillStyle = '#facc15';
-        ctx.fillRect(-10, -18, 2.5, 2.5);
-        ctx.fillRect(4, -19, 2.5, 2.5);
-        ctx.fillRect(16, -20, 2.5, 2.5);
+        ctx.fillRect(-8, -18, 2.5, 2.5);
+        ctx.fillRect(6, -19, 2.5, 2.5);
+        ctx.fillRect(18, -20, 2.5, 2.5);
 
-        // 6. Pioneer Door with warm lantern
+        // 7. Pioneer Door with brass knob & warm lantern
         ctx.fillStyle = '#451a03';
-        ctx.fillRect(6, -4, 9, 12);
-        // Brass door knob
+        ctx.fillRect(8, -4, 9, 12);
         ctx.fillStyle = '#fbbf24';
         ctx.beginPath();
-        ctx.arc(8, 2, 1.2, 0, Math.PI * 2);
+        ctx.arc(10, 2, 1.2, 0, Math.PI * 2);
         ctx.fill();
         // Warm door lantern
         ctx.fillStyle = '#fbbf24';
         ctx.shadowColor = '#f59e0b';
         ctx.shadowBlur = 6;
         ctx.beginPath();
-        ctx.arc(3, -2, 2, 0, Math.PI * 2);
+        ctx.arc(5, -2, 2, 0, Math.PI * 2);
         ctx.fill();
         ctx.shadowBlur = 0;
 
@@ -3211,7 +3513,332 @@ export class SettlementCanvas {
         ctx.fillStyle = '#34d399';
         ctx.font = 'bold 8px system-ui';
         ctx.textAlign = 'center';
-        ctx.fillText('🏡 MHU Habitat', 0, 22);
+        ctx.fillText('🏡 MHU Couple Pod', 0, 22);
+
+      } else if (b.type === 'mhu_family') {
+        // Modular Habitat Unit (MHU Family Cluster) - Expanded Multi-Bay Chassis (45-54 m²) with Central Atrium & 60m² Garden
+        // 1. Broad Ambient Shadow
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.38)';
+        ctx.beginPath();
+        ctx.ellipse(0, 16, 42, 16, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        // 2. Wrap-Around Attached Micro-Permaculture Apron (60 m² Bio-Intensive Beds)
+        ctx.fillStyle = '#3e2723';
+        ctx.beginPath();
+        ctx.roundRect(-42, -10, 12, 26, 3);
+        ctx.fill();
+        ctx.strokeStyle = '#795548';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+
+        // Strawberry bushes and vegetable greens
+        ctx.fillStyle = '#16a34a';
+        ctx.fillRect(-40, -8, 4, 4);
+        ctx.fillRect(-35, -4, 4, 4);
+        ctx.fillRect(-39, 2, 4, 4);
+        ctx.fillRect(-35, 7, 4, 4);
+        ctx.fillRect(-39, 11, 4, 4);
+        // Red ripe strawberries
+        ctx.fillStyle = '#ef4444';
+        ctx.fillRect(-38, -6, 2, 2);
+        ctx.fillRect(-34, 4, 2, 2);
+        ctx.fillRect(-37, 12, 2, 2);
+
+        // Children's mini wooden swing set at right apron
+        ctx.strokeStyle = '#78350f';
+        ctx.lineWidth = 1.2;
+        ctx.beginPath();
+        ctx.moveTo(34, 4); ctx.lineTo(38, -12); ctx.lineTo(42, 4);
+        ctx.moveTo(38, -12); ctx.lineTo(38, -3);
+        ctx.stroke();
+        // Swing seat
+        ctx.fillStyle = '#d97706';
+        ctx.fillRect(36, -3, 4, 1.5);
+
+        // 3. Wide Timber Deck Porch & Accessible Zero-Step Entrance Ramp
+        ctx.fillStyle = '#78350f';
+        ctx.fillRect(-28, 8, 58, 8);
+        ctx.strokeStyle = '#92400e';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(-28, 8, 58, 8);
+        // Ramp guardrail
+        ctx.strokeStyle = '#b45309';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(-28, 8); ctx.lineTo(-20, 14);
+        ctx.stroke();
+
+        // 4. Expanded Dual CLT Wings (Warm Honey Spruce)
+        ctx.fillStyle = '#b45309';
+        ctx.strokeStyle = '#78350f';
+        ctx.lineWidth = 1.5;
+        // Left bedroom wing
+        ctx.beginPath();
+        ctx.roundRect(-26, -14, 24, 24, 3);
+        ctx.fill();
+        ctx.stroke();
+        // Right living wing
+        ctx.beginPath();
+        ctx.roundRect(4, -14, 24, 24, 3);
+        ctx.fill();
+        ctx.stroke();
+
+        // 5. Central Glazed Passivhaus Atrium (Connecting Corridor with Skylight)
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.35)';
+        ctx.strokeStyle = '#0284c7';
+        ctx.lineWidth = 1.5;
+        ctx.fillRect(-4, -18, 10, 26);
+        ctx.strokeRect(-4, -18, 10, 26);
+        // Glass mullions
+        ctx.strokeStyle = '#e0f2fe';
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        ctx.moveTo(-4, -10); ctx.lineTo(6, -10);
+        ctx.moveTo(-4, -2); ctx.lineTo(6, -2);
+        ctx.stroke();
+
+        // 6. Dual Living Sedum Roof with chamomile flowers
+        ctx.fillStyle = '#15803d';
+        ctx.strokeStyle = '#166534';
+        ctx.lineWidth = 2;
+        // Left roof
+        ctx.beginPath();
+        ctx.roundRect(-30, -20, 28, 8, 4);
+        ctx.fill();
+        ctx.stroke();
+        // Right roof
+        ctx.beginPath();
+        ctx.roundRect(2, -20, 28, 8, 4);
+        ctx.fill();
+        ctx.stroke();
+
+        // Chamomile white and yellow blooms
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(-24, -19, 2.5, 2.5);
+        ctx.fillRect(-12, -18, 2.5, 2.5);
+        ctx.fillRect(8, -19, 2.5, 2.5);
+        ctx.fillRect(20, -18, 2.5, 2.5);
+        ctx.fillStyle = '#facc15';
+        ctx.fillRect(-23, -18.5, 1.2, 1.2);
+        ctx.fillRect(9, -18.5, 1.2, 1.2);
+
+        // 7. Double Entrance Door with Warm Lanterns
+        ctx.fillStyle = '#451a03';
+        ctx.fillRect(-3, 0, 8, 10);
+        // Lanterns on both wings
+        ctx.fillStyle = '#fbbf24';
+        ctx.shadowColor = '#f59e0b';
+        ctx.shadowBlur = 6;
+        ctx.beginPath();
+        ctx.arc(-8, -4, 2, 0, Math.PI * 2);
+        ctx.arc(10, -4, 2, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.shadowBlur = 0;
+
+        // Label Tag
+        ctx.fillStyle = '#34d399';
+        ctx.font = 'bold 8px system-ui';
+        ctx.textAlign = 'center';
+        ctx.fillText('👨‍👩‍👧‍👦 MHU Family Cluster', 0, 24);
+
+      } else if (b.type === 'mhu_studio') {
+        // MHU Studio / Workshop Loft - 2-story craft loft chassis (35 m²)
+        // 1. Ambient Shadow
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.35)';
+        ctx.beginPath();
+        ctx.ellipse(0, 14, 26, 12, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        // 2. Ground-Floor Workshop Timber Frame
+        ctx.fillStyle = '#78350f';
+        ctx.strokeStyle = '#451a03';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.roundRect(-18, -8, 36, 20, 2);
+        ctx.fill();
+        ctx.stroke();
+
+        // Double Workshop Barn Doors with iron hinges
+        ctx.fillStyle = '#92400e';
+        ctx.fillRect(-12, -4, 11, 14);
+        ctx.fillRect(1, -4, 11, 14);
+        ctx.strokeStyle = '#1e293b';
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        ctx.moveTo(-12, -1); ctx.lineTo(-1, -1);
+        ctx.moveTo(1, -1); ctx.lineTo(12, -1);
+        ctx.stroke();
+
+        // 3. Upper Living Loft with Dormer Window
+        ctx.fillStyle = '#b45309';
+        ctx.strokeStyle = '#78350f';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.roundRect(-14, -22, 28, 16, 2);
+        ctx.fill();
+        ctx.stroke();
+
+        // Dormer glowing window
+        ctx.fillStyle = '#fde047';
+        ctx.fillRect(-8, -18, 16, 6);
+        ctx.strokeStyle = '#78350f';
+        ctx.lineWidth = 0.8;
+        ctx.strokeRect(-8, -18, 16, 6);
+
+        // 4. Compact Rooftop Solar Mini-Array
+        ctx.fillStyle = '#1e3a8a';
+        ctx.strokeStyle = '#60a5fa';
+        ctx.lineWidth = 1;
+        ctx.fillRect(-16, -26, 32, 5);
+        ctx.strokeRect(-16, -26, 32, 5);
+
+        // Label Tag
+        ctx.fillStyle = '#38bdf8';
+        ctx.font = 'bold 8px system-ui';
+        ctx.textAlign = 'center';
+        ctx.fillText('📐 MHU Workshop Loft', 0, 22);
+
+      } else if (b.type === 'mhu_bathhouse') {
+        // Communal Bathhouse & Sauna - Solar thermal vacuum tubes + wood-fired hearth + reed-bed drainage
+        // 1. Ambient Shadow
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.35)';
+        ctx.beginPath();
+        ctx.ellipse(0, 14, 28, 13, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        // 2. Red Cedar Timber Slat Facade
+        ctx.fillStyle = '#9a3412';
+        ctx.strokeStyle = '#7c2d12';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.roundRect(-22, -12, 44, 22, 3);
+        ctx.fill();
+        ctx.stroke();
+
+        // Horizontal cedar slat lines
+        ctx.strokeStyle = 'rgba(67, 20, 7, 0.4)';
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        for (let y = -8; y <= 6; y += 4) {
+          ctx.moveTo(-22, y); ctx.lineTo(22, y);
+        }
+        ctx.stroke();
+
+        // 3. Wood-Fired Sauna Fieldstone Chimney
+        ctx.fillStyle = '#475569';
+        ctx.strokeStyle = '#334155';
+        ctx.lineWidth = 1;
+        ctx.fillRect(10, -24, 8, 14);
+        ctx.strokeRect(10, -24, 8, 14);
+
+        // 4. Rooftop Solar Thermal Vacuum Tube Collector Array
+        ctx.fillStyle = '#1e40af';
+        ctx.strokeStyle = '#93c5fd';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.roundRect(-24, -20, 32, 8, 2);
+        ctx.fill();
+        ctx.stroke();
+        // Glass vacuum tube glass lines
+        ctx.strokeStyle = '#bfdbfe';
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        for (let x = -20; x <= 4; x += 3) {
+          ctx.moveTo(x, -19); ctx.lineTo(x, -13);
+        }
+        ctx.stroke();
+
+        // 5. Duckboard Timber Entryway
+        ctx.fillStyle = '#d97706';
+        ctx.fillRect(-10, 8, 20, 6);
+        ctx.strokeStyle = '#92400e';
+        ctx.lineWidth = 0.8;
+        ctx.strokeRect(-10, 8, 20, 6);
+
+        // 6. Greywater Swale Channel to Reed Bed
+        ctx.strokeStyle = '#0284c7';
+        ctx.lineWidth = 2;
+        ctx.setLineDash([3, 2]);
+        ctx.beginPath();
+        ctx.moveTo(-16, 12); ctx.lineTo(-28, 18);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Label Tag
+        ctx.fillStyle = '#f59e0b';
+        ctx.font = 'bold 8px system-ui';
+        ctx.textAlign = 'center';
+        ctx.fillText('♨️ Bathhouse & Sauna', 0, 22);
+
+      } else if (b.type === 'school_nursery') {
+        // Open Forest School, Natural Playground & Community Nursery
+        // 1. Soft Ambient Shadow
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.30)';
+        ctx.beginPath();
+        ctx.ellipse(0, 14, 30, 14, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        // 2. Natural Tree-Trunk Log Columns & Deck Floor
+        ctx.fillStyle = '#a16207';
+        ctx.fillRect(-22, 6, 44, 6);
+        ctx.strokeStyle = '#713f12';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(-22, 6, 44, 6);
+
+        // 4 Round Timber Pillars
+        ctx.fillStyle = '#854d0e';
+        ctx.fillRect(-20, -10, 4, 16);
+        ctx.fillRect(-6, -10, 4, 16);
+        ctx.fillRect(6, -10, 4, 16);
+        ctx.fillRect(18, -10, 4, 16);
+
+        // 3. Weatherproof Striped Conical Pavilion Roof (Forest Green & Terracotta)
+        ctx.fillStyle = '#166534';
+        ctx.beginPath();
+        ctx.moveTo(0, -26);
+        ctx.lineTo(-26, -10);
+        ctx.lineTo(26, -10);
+        ctx.closePath();
+        ctx.fill();
+        ctx.strokeStyle = '#14532d';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+        // Terracotta stripes
+        ctx.fillStyle = '#c2410c';
+        ctx.beginPath();
+        ctx.moveTo(0, -26); ctx.lineTo(-8, -10); ctx.lineTo(0, -10); ctx.closePath();
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(0, -26); ctx.lineTo(12, -10); ctx.lineTo(20, -10); ctx.closePath();
+        ctx.fill();
+
+        // 4. Outdoor Blackboard on Timber Easel
+        ctx.fillStyle = '#1e293b';
+        ctx.fillRect(-12, -6, 12, 9);
+        ctx.strokeStyle = '#78350f';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(-12, -6, 12, 9);
+        // Chalk markings
+        ctx.fillStyle = '#f8fafc';
+        ctx.fillRect(-10, -4, 4, 1);
+        ctx.fillRect(-10, -1, 7, 1);
+        ctx.fillRect(-10, 1, 5, 1);
+
+        // 5. Children's Sandpit with timber log border
+        ctx.fillStyle = '#fef08a';
+        ctx.beginPath();
+        ctx.roundRect(8, -4, 14, 9, 3);
+        ctx.fill();
+        ctx.strokeStyle = '#ca8a04';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+
+        // Label Tag
+        ctx.fillStyle = '#34d399';
+        ctx.font = 'bold 8px system-ui';
+        ctx.textAlign = 'center';
+        ctx.fillText('🌲 Open Forest School', 0, 22);
       }
 
       ctx.restore();
@@ -3733,7 +4360,7 @@ export class SettlementCanvas {
     const isSolar = ['solar_array', 'battery_bank', 'solar_thermal_tower', 'solar_foundry'].includes(pb);
     const isHydro = ['rain_cistern', 'reed_bed', 'deep_well', 'retention_swale', 'aquaponics_greenhouse', 'biogas_digester'].includes(pb);
     const isLogistics = ['fablab', 'foundry', 'heavy_gantry_mill', 'trike_depot', 'drone_vertiport', 'cobot_arm', 'scada_bot'].includes(pb);
-    const isResidential = ['guest_dome', 'kitchen_oven', 'clinic', 'school', 'elder_sanctuary', 'garden_bed', 'food_forest', 'mhu_dwelling', 'mhu'].includes(pb);
+    const isResidential = ['guest_dome', 'kitchen_oven', 'clinic', 'school', 'school_nursery', 'elder_sanctuary', 'garden_bed', 'food_forest', 'mhu_dwelling', 'mhu', 'mhu_couple', 'mhu_family', 'mhu_studio', 'mhu_bathhouse'].includes(pb);
 
     ctx.save();
 
@@ -4016,6 +4643,42 @@ export class SettlementCanvas {
       ctx.fill();
       ctx.restore();
     });
+
+    // Chimney & Hearth Smoke Puffs (Epic 3.3)
+    const now = performance.now() * 0.001;
+    const season = gameState.getSeason ? gameState.getSeason() : { id: 'spring' };
+    const weather = gameState.data.weather || {};
+    const isCold = (weather.tempC || 20) < 14 || season.id === 'winter' || season.id === 'autumn';
+    const buildings = this.overrideBuildings || gameState.data.buildings || [];
+
+    const smokeSources = [];
+    if (!gameState.data.centralAgoraConsecrated) {
+      smokeSources.push({ x: -28, y: -24 }); // Camper van wood stove flue
+    } else {
+      smokeSources.push({ x: 0, y: -6 }); // Central Agora Pioneer Fire Hearth
+    }
+    buildings.forEach(b => {
+      if (b.type === 'kitchen_oven') smokeSources.push({ x: b.x, y: b.y - 18 });
+      if (b.type === 'foundry' || b.type === 'solar_foundry') smokeSources.push({ x: b.x + 12, y: b.y - 25 });
+      if (b.type === 'mhu_bathhouse') smokeSources.push({ x: b.x + 8, y: b.y - 24 });
+      if (isCold && (['mhu_dwelling', 'mhu_couple', 'mhu_family', 'mhu_studio', 'elder_sanctuary'].includes(b.type))) smokeSources.push({ x: b.x - 10, y: b.y - 28 });
+    });
+
+    smokeSources.forEach(s => {
+      for (let p = 0; p < 3; p++) {
+        const puffTime = (now * 0.55 + p * 0.6) % 1.8;
+        const progress = puffTime / 1.8;
+        const radius = 2.5 + progress * 8.5;
+        const alpha = Math.max(0, (1 - progress) * (isCold ? 0.32 : 0.18));
+        const px = s.x + Math.sin(puffTime * 2.2 + p) * 3 + (progress * 14);
+        const py = s.y - (progress * 34);
+
+        ctx.fillStyle = `rgba(226, 232, 240, ${alpha})`;
+        ctx.beginPath();
+        ctx.arc(px, py, radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    });
   }
 
   playNightfallTransition(onPeak, onComplete) {
@@ -4170,9 +4833,34 @@ export class SettlementCanvas {
 
       // Lightning flash
       if (isStorm && Math.random() < 0.012) {
-        ctx.fillStyle = 'rgba(240, 249, 255, 0.25)';
+        ctx.fillStyle = 'rgba(240, 249, 255, 0.28)';
         ctx.fillRect(0, 0, w, h);
       }
+
+      // Ground puddles & concentric expanding ripple rings during rain (Epic 3.3)
+      const puddlePositions = [
+        { x: w * 0.42, y: h * 0.52, rx: 18, ry: 7 },
+        { x: w * 0.58, y: h * 0.48, rx: 24, ry: 9 },
+        { x: w * 0.36, y: h * 0.64, rx: 20, ry: 8 },
+        { x: w * 0.65, y: h * 0.68, rx: 22, ry: 8 }
+      ];
+      puddlePositions.forEach((p, idx) => {
+        // Puddle water sheen
+        ctx.fillStyle = 'rgba(186, 230, 253, 0.12)';
+        ctx.beginPath();
+        ctx.ellipse(p.x, p.y, p.rx, p.ry, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Expanding concentric ripples
+        const ripplePhase = (now * 0.002 + idx * 0.45) % 1.0;
+        const rippleR = p.rx * 0.3 + ripplePhase * (p.rx * 0.7);
+        const rippleAlpha = Math.max(0, (1 - ripplePhase) * 0.35);
+        ctx.strokeStyle = `rgba(224, 242, 254, ${rippleAlpha})`;
+        ctx.lineWidth = 1.0;
+        ctx.beginPath();
+        ctx.ellipse(p.x, p.y, rippleR, rippleR * 0.4, 0, 0, Math.PI * 2);
+        ctx.stroke();
+      });
     }
 
     // 3. Hail Pellets (Hailstorm crisis)
@@ -4200,7 +4888,7 @@ export class SettlementCanvas {
       }
     }
 
-    // 4. Heatwave & Drought Amber Shimmer
+    // 4. Heatwave & Drought Amber Shimmer (Epic 3.3)
     const isDrought = weather.disasterId === 'drought' || weather.tempC >= 32;
     if (isDrought) {
       const amberPulse = (Math.sin(now * 0.003) + 1) * 0.04;
@@ -4218,6 +4906,30 @@ export class SettlementCanvas {
           else ctx.lineTo(x, waveY);
         }
         ctx.stroke();
+      }
+
+      // Drifting dry dust / pollen particles
+      if (!this.dustParticles) {
+        this.dustParticles = Array.from({ length: 35 }, () => ({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: 0.6 + Math.random() * 0.9,
+          vy: Math.sin(Math.random() * Math.PI) * 0.3,
+          r: 1.0 + Math.random() * 1.5,
+          alpha: 0.2 + Math.random() * 0.35
+        }));
+      }
+      for (const dp of this.dustParticles) {
+        dp.x += dp.vx;
+        dp.y += Math.sin(dp.x * 0.01) * 0.2;
+        if (dp.x > w + 20) {
+          dp.x = -15;
+          dp.y = Math.random() * h;
+        }
+        ctx.fillStyle = `rgba(251, 191, 36, ${dp.alpha})`;
+        ctx.beginPath();
+        ctx.arc(dp.x, dp.y, dp.r, 0, Math.PI * 2);
+        ctx.fill();
       }
     }
 

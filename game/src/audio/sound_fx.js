@@ -7,12 +7,14 @@
  * License: AGPL-3.0-or-later
  */
 
+import { ambienceAudio } from './ambience_audio.js';
+
 class SoundFX {
   constructor() {
     this.ctx = null;
     this.enabled = true;
     this.ambientOsc = null;
-    this.isMuted = false;
+    this.isMuted = typeof localStorage !== 'undefined' ? localStorage.getItem('one_game_sound_muted') === 'true' : false;
   }
 
   init() {
@@ -25,10 +27,17 @@ class SoundFX {
     if (this.ctx && this.ctx.state === 'suspended') {
       this.ctx.resume().catch(() => {});
     }
+    if (!this.isMuted) {
+      ambienceAudio.init();
+    }
   }
 
   toggleMute() {
     this.isMuted = !this.isMuted;
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('one_game_sound_muted', String(this.isMuted));
+    }
+    ambienceAudio.setMuted(this.isMuted);
     return !this.isMuted;
   }
 
@@ -225,4 +234,4 @@ class SoundFX {
 }
 
 export const soundFX = new SoundFX();
-
+export { ambienceAudio } from './ambience_audio.js';

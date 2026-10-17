@@ -100,6 +100,20 @@ export class SimulationManager {
   }
 
   /**
+   * Directly sets the current circadian hour (0..23) for What-If scrubbing
+   */
+  setCircadianHour(targetHour) {
+    const day = Math.floor(this.tickCount / 24);
+    const h = ((Number(targetHour) % 24) + 24) % 24;
+    this.tickCount = day * 24 + h;
+    this.thermo.tick(this.currentHour, this.node.population, this.node.choreAssignments, {
+      agroResilience: this.node.agroResilience,
+      robots: this.node.robots
+    });
+    this.notifyTick();
+  }
+
+  /**
    * Dynamic Circadian Time Warp Scheduler (ITEM 5)
    * - Night (21:00 - 05:59): 500ms base at 1x (~2 hours per second) to swiftly pass slumber.
    * - Day (06:00 - 20:59): 1600ms base at 1x (~0.625 hours per second) for thoughtful gameplay.

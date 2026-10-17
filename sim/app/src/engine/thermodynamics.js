@@ -227,12 +227,44 @@ export class ThermodynamicEngine {
       durationHoursLeft: 14,
       activeDisaster: null // Holds disaster object if an active disaster is underway
     };
+    this.weatherManualLock = false;
+  }
+
+  /**
+   * Sets meteorological state to a specific weather type (locks weather if manualLock is true)
+   */
+  setWeather(typeId, manualLock = true) {
+    this.weatherManualLock = manualLock;
+    const wConfig = WEATHER_TYPES[typeId] || WEATHER_TYPES.SUNNY;
+    this.weather.type = wConfig.id;
+    this.weather.nameKey = wConfig.nameKey;
+    this.weather.icon = wConfig.icon;
+    this.weather.name = wConfig.name;
+    this.weather.cloudCover = wConfig.cloudCover;
+    this.weather.rainfallMmPerHour = wConfig.rainfallMmPerHour;
+    this.weather.windSpeedKmh = wConfig.windSpeedKmh;
+    this.weather.temperatureC = wConfig.temperatureC;
+    this.weather.durationHoursLeft = 24;
+    this.weather.activeDisaster = null;
+    return this.weather;
+  }
+
+  /**
+   * Unlocks weather manual lock and resumes natural atmospheric simulation
+   */
+  setAutoWeather() {
+    this.weatherManualLock = false;
+    return this.weather;
   }
 
   /**
    * Advances meteorological cycle dynamically
    */
   updateWeather(currentTick) {
+    if (this.weatherManualLock) {
+      return;
+    }
+
     // If an active disaster is occurring, decrement duration
     if (this.weather.activeDisaster) {
       this.weather.activeDisaster.durationHoursLeft--;
@@ -518,8 +550,8 @@ export class ThermodynamicEngine {
     if (this.weather.temperatureC > 26) {
       moistureDelta -= (this.weather.temperatureC - 26) * 0.15;
     }
-    if (this.weather.rainIntensity > 0) {
-      moistureDelta += this.weather.rainIntensity * 12;
+    if (this.weather.rainfallMmPerHour > 0) {
+      moistureDelta += (this.weather.rainfallMmPerHour || 0) * 1.5;
     }
     // Permaculture Mulch & Biochar retains 60% of moisture loss
     if (moistureDelta < 0 && agroResilience.permacultureMulch?.installed) {
@@ -783,9 +815,9 @@ export class ThermodynamicEngine {
   getSnapshot() {
     return {
       energy: {
-        currentKwh: Math.round(this.energy.batteryStoredKwh),
+        currentKwh: Math.round(Number.isFinite(this.energy.batteryStoredKwh) ? this.energy.batteryStoredKwh : 180),
         capacityKwh: Math.round(this.energy.batteryCapacityKwh * this.energy.batteryHealth * ((this.machinery.batteryBank.lifecycleHealth || 100) / 100)),
-        percent: Math.round((this.energy.batteryStoredKwh / (this.energy.batteryCapacityKwh * this.energy.batteryHealth)) * 100),
+        percent: Math.round(((Number.isFinite(this.energy.batteryStoredKwh) ? this.energy.batteryStoredKwh : 180) / (this.energy.batteryCapacityKwh * this.energy.batteryHealth)) * 100),
         netDelta: Number(this.energy.netFlowKwh.toFixed(1)),
         isSolarActive: !this.energy.isNight && this.energy.lastSolarKw > 1,
         solarKw: this.energy.lastSolarKw,
@@ -793,16 +825,16 @@ export class ThermodynamicEngine {
         isNight: this.energy.isNight
       },
       water: {
-        currentL: Math.round(this.water.cisternStoredL),
+        currentL: Math.round(Number.isFinite(this.water.cisternStoredL) ? this.water.cisternStoredL : 32000),
         capacityL: this.water.cisternCapacityL,
-        percent: Math.round((this.water.cisternStoredL / this.water.cisternCapacityL) * 100),
+        percent: Math.round(((Number.isFinite(this.water.cisternStoredL) ? this.water.cisternStoredL : 32000) / this.water.cisternCapacityL) * 100),
         netDelta: Number(this.water.netFlowL.toFixed(0))
       },
       food: {
-        currentKcal: Math.round(this.food.granaryStoredKcal),
+        currentKcal: Math.round(Number.isFinite(this.food.granaryStoredKcal) ? this.food.granaryStoredKcal : 1800000),
         capacityKcal: this.food.granaryCapacityKcal,
-        percent: Math.round((this.food.granaryStoredKcal / this.food.granaryCapacityKcal) * 100),
-        daysRemaining: Number((this.food.granaryStoredKcal / (30 * 2200)).toFixed(1)),
+        percent: Math.round(((Number.isFinite(this.food.granaryStoredKcal) ? this.food.granaryStoredKcal : 1800000) / this.food.granaryCapacityKcal) * 100),
+        daysRemaining: Number(((Number.isFinite(this.food.granaryStoredKcal) ? this.food.granaryStoredKcal : 1800000) / (30 * 2200)).toFixed(1)),
         netDelta: Number(this.food.netFlowKcal.toFixed(0)),
         lastIndoorHarvestKcal: Math.round(this.food.lastIndoorHarvestKcal || 0),
         lastOutdoorHarvestKcal: Math.round(this.food.lastOutdoorHarvestKcal || 0),

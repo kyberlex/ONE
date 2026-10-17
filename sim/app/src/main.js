@@ -25,6 +25,10 @@ import { PanelInviteController } from './ui/panel_invite.js';
 import { NavGroupManager } from './ui/nav_groups.js';
 import { GuideTourController } from './ui/guide_tour.js';
 import { StarterObjectivesController } from './ui/starter_objectives.js';
+import { WhatIfDockController } from './ui/whatif_dock.js';
+import { AmbienceAudioEngine } from './engine/ambience_audio.js';
+import { ZenModeController } from './ui/zen_mode.js';
+import { PanelGameBridgeController } from './ui/panel_game_bridge.js';
 import { ChatEngine } from './engine/chat_engine.js';
 import { storageIDB } from './engine/storage_idb.js';
 import { CitizenPassportManager } from './engine/citizen_passport.js';
@@ -81,6 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let panelChat = null;
   let guideTour = null;
   let starterObjectives = null;
+  let whatifDock = null;
 
   // 1b. Initialize Serverless P2P WebRTC Mesh
   storageIDB.getActiveIdentity().then(id => { if (id) sim.myIdentity = id; });
@@ -426,6 +431,9 @@ window.addEventListener('DOMContentLoaded', () => {
     if (starterObjectives) {
       starterObjectives.render();
     }
+    if (whatifDock && typeof whatifDock.updateDomReadouts === 'function') {
+      whatifDock.updateDomReadouts();
+    }
   });
 
 
@@ -467,6 +475,7 @@ window.addEventListener('DOMContentLoaded', () => {
       panelNode.open('projects');
     }
   });
+  panelCitizen.settlementRenderer = settlementRenderer;
 
   // 5b. Initialize P2P Village Chat & Mesh Telegram Engine
   chatEngine = new ChatEngine(sim, msg => {
@@ -691,6 +700,52 @@ window.addEventListener('DOMContentLoaded', () => {
     zoomCoordinator,
     hud
   });
+
+  // Initialize Ambience Audio Engine (Task 5)
+  const ambienceAudio = new AmbienceAudioEngine(sim);
+
+  // Initialize Zen Mode Controller (Task 5)
+  const zenMode = new ZenModeController(sim, {
+    settlementRenderer,
+    ambienceAudio,
+    hud
+  });
+
+  // Initialize The Living Commons Game Bridge (Task 5)
+  const panelGameBridge = new PanelGameBridgeController(sim);
+
+  // Initialize What-If? Living Diorama Control Dock (Task 2 & 5)
+  whatifDock = new WhatIfDockController(sim, {
+    settlementRenderer,
+    hud,
+    zoomCoordinator,
+    ambienceAudio,
+    zenMode,
+    panelGameBridge
+  });
+
+  const menuBtnAudio = document.getElementById('menu-btn-audio');
+  if (menuBtnAudio) {
+    menuBtnAudio.addEventListener('click', () => {
+      const isMuted = ambienceAudio.toggleMute();
+      zenMode.updateAudioIcons(isMuted);
+      if (whatifDock) whatifDock.updateAudioIcons(isMuted);
+    });
+  }
+
+  const menuBtnZen = document.getElementById('menu-btn-zen');
+  if (menuBtnZen) {
+    menuBtnZen.addEventListener('click', () => {
+      zenMode.toggle();
+    });
+  }
+
+  const menuBtnGame = document.getElementById('menu-btn-game');
+  if (menuBtnGame) {
+    menuBtnGame.addEventListener('click', () => {
+      panelGameBridge.open();
+    });
+  }
 
   function updateSettlementMetaHeader() {
     const nameEl = document.getElementById('settlement-node-name');
@@ -985,6 +1040,10 @@ window.addEventListener('DOMContentLoaded', () => {
     if (chatEngine) {
       chatEngine.tickAmbientChatter(state.tick, sim.thermo, sim.node);
     }
+    if (ambienceAudio && !ambienceAudio.isMuted) {
+      const weatherId = sim.thermo?.weather?.id || 'SUNNY';
+      ambienceAudio.update(state.hour, weatherId);
+    }
   });
 
   sim.onNotificationListeners.push(notif => {
@@ -1068,6 +1127,10 @@ window.addEventListener('DOMContentLoaded', () => {
       hud.updateSpeedButtons(5);
     } else if (e.key === 'm' || e.key === 'M') {
       switchView(currentView === 'world' ? 'settlement' : 'world');
+    } else if (e.key === 'l' || e.key === 'L') {
+      if (whatifDock && (!e.target || (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA'))) {
+        whatifDock.cycleLens();
+      }
     }
   });
 
@@ -1132,12 +1195,7 @@ window.addEventListener('DOMContentLoaded', () => {
   hud.update(sim.getFullState());
   zoomCoordinator.setLevel(ZOOM_LEVELS.NODE, null, true); // Start at NODE village level
 
-  // Check if first-time onboarding tour should start (only if not arriving via invite wizard)
-  setTimeout(() => {
-    if (!inviteRoomParam && guideTour && !guideTour.isCompleted() && (!panelPassport || !panelPassport.isOpen)) {
-      guideTour.start(0);
-    }
-  }, 1400);
+  // Onboarding tour is available on-demand via the Tour button in the system menu
 
   // Expose app context for telemetry and inspection
   window.app = {
@@ -1151,6 +1209,10 @@ window.addEventListener('DOMContentLoaded', () => {
     panelChat,
     guideTour,
     starterObjectives,
+    whatifDock,
+    ambienceAudio,
+    zenMode,
+    panelGameBridge,
     panelInvite,
     p2pMesh,
     panelNode,

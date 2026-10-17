@@ -2006,6 +2006,10 @@ html, body {
   display: none !important;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .modal-window {
   background: rgba(11, 22, 28, 0.96);
   border: 1px solid var(--border-glass);
@@ -2878,6 +2882,13 @@ html, body {
   box-shadow: 0 8px 24px rgba(245, 158, 11, 0.25) !important;
 }
 
+.dock-btn-rest.confirm-early-rest {
+  border-color: #f59e0b !important;
+  background: rgba(245, 158, 11, 0.22) !important;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.5) !important;
+  animation: pulse 1s infinite alternate;
+}
+
 /* ============================================================
    CHORE BOARD & METABOLIC EXTINCTION QUEUE (ARTICLE 5.4)
    ============================================================ */
@@ -3629,6 +3640,18 @@ html, body {
   color: #fff;
   border-color: #38bdf8;
   box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.btn-hud-tool.locked {
+  opacity: 0.55;
+  filter: grayscale(0.5);
+  cursor: pointer;
+  border-style: dashed;
+}
+
+.btn-hud-tool.locked:hover {
+  border-color: #f59e0b;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
 }
 
 .btn-hud-feast-pill {
