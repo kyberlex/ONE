@@ -1722,6 +1722,9 @@ export class GameState {
       });
     }
 
+    const resourceDeltas = {};
+    const previousObjective = this.data.objective ? { ...this.data.objective } : null;
+
     const id = `${type}-${Date.now().toString(36)}`;
     const building = {
       id,
@@ -1736,6 +1739,8 @@ export class GameState {
     if (type === 'solar_array') {
       building.name = 'Bifacial Solar Array';
       building.outputKwh = 1.5;
+      resourceDeltas.energyCapacityKwh = 15;
+      resourceDeltas.energyStoredKwh = 15;
       this.data.resources.energyCapacityKwh += 15;
       this.data.resources.energyStoredKwh = Math.min(this.data.resources.energyCapacityKwh, this.data.resources.energyStoredKwh + 15);
       
@@ -1759,6 +1764,8 @@ export class GameState {
     } else if (type === 'rain_cistern') {
       building.name = 'Rainwater Cistern (1,000 L)';
       building.capacityL = 1000;
+      resourceDeltas.waterCapacityL = 1000;
+      resourceDeltas.waterLiters = 350;
       this.data.resources.waterCapacityL += 1000;
       this.data.resources.waterLiters = Math.min(this.data.resources.waterCapacityL, this.data.resources.waterLiters + 350);
 
@@ -1781,6 +1788,7 @@ export class GameState {
     } else if (type === 'garden_bed') {
       building.name = 'Permaculture Garden Bed';
       building.yieldKcal = 2200;
+      resourceDeltas.foodKcal = 2500;
       this.data.resources.foodKcal += 2500;
 
       if (this.data.objective?.id === 'obj-day3-food') {
@@ -2163,6 +2171,20 @@ export class GameState {
     }
 
     this.data.buildings.push(building);
+
+    // Record last placement for instant Undo (Ctrl+Z)
+    this.lastPlacement = {
+      buildingId: building.id,
+      type,
+      name: building.name || type,
+      x,
+      y,
+      laborCostH: check.laborCostH,
+      resourceDeltas,
+      previousObjective,
+      timestamp: Date.now()
+    };
+
     this.checkClearingExpansion();
     this.reconcileStateAndObjectives();
     this.save();
@@ -2170,6 +2192,159 @@ export class GameState {
     this.emit('resources_updated', this.data.resources);
     this.emit('objective_updated', this.data.objective);
     return building;
+  }
+
+  canUndoPlacement() {
+    if (!this.lastPlacement) return false;
+    return (this.data.buildings || []).some(b => b.id === this.lastPlacement.buildingId);
+  }
+
+  undoLastPlacement() {
+    if (!this.lastPlacement) {
+      return { ok: false, reason: 'No recent placement to undo' };
+    }
+
+    const { buildingId, type, name, laborCostH, resourceDeltas, previousObjective } = this.lastPlacement;
+    const bIndex = (this.data.buildings || []).findIndex(b => b.id === buildingId);
+    if (bIndex === -1) {
+      this.lastPlacement = null;
+      return { ok: false, reason: 'Building no longer exists' };
+    }
+
+    // 1. Remove building from state
+    const [removed] = this.data.buildings.splice(bIndex, 1);
+
+    // 2. Refund labor hours
+    if (this.data.chores && laborCostH) {
+      this.data.chores.remainingHours = Math.min(10, (this.data.chores.remainingHours || 0) + laborCostH);
+      if (this.data.chores.loggedToday && this.data.chores.loggedToday.length > 0) {
+        const lastIdx = this.data.chores.loggedToday.findLastIndex(c => c.type === type);
+        if (lastIdx !== -1) {
+          this.data.chores.loggedToday.splice(lastIdx, 1);
+        }
+      }
+    }
+
+    // 3. Revert resource deltas
+    if (resourceDeltas) {
+      if (resourceDeltas.energyCapacityKwh) {
+        this.data.resources.energyCapacityKwh = Math.max(10, (this.data.resources.energyCapacityKwh || 100) - resourceDeltas.energyCapacityKwh);
+      }
+      if (resourceDeltas.energyStoredKwh) {
+        this.data.resources.energyStoredKwh = Math.max(0, Math.min(this.data.resources.energyCapacityKwh, (this.data.resources.energyStoredKwh || 0) - resourceDeltas.energyStoredKwh));
+      }
+      if (resourceDeltas.waterCapacityL) {
+        this.data.resources.waterCapacityL = Math.max(500, (this.data.resources.waterCapacityL || 2000) - resourceDeltas.waterCapacityL);
+      }
+      if (resourceDeltas.waterLiters) {
+        this.data.resources.waterLiters = Math.max(0, Math.min(this.data.resources.waterCapacityL, (this.data.resources.waterLiters || 0) - resourceDeltas.waterLiters));
+      }
+      if (resourceDeltas.foodKcal) {
+        this.data.resources.foodKcal = Math.max(0, (this.data.resources.foodKcal || 0) - resourceDeltas.foodKcal);
+      }
+      if (resourceDeltas.grainSiloCapacityKcal) {
+        this.data.grainSiloCapacityKcal = Math.max(0, (this.data.grainSiloCapacityKcal || 0) - resourceDeltas.grainSiloCapacityKcal);
+      }
+    }
+
+    // 4. Reset active flags if no other buildings of this type remain
+    const hasMore = (this.data.buildings || []).some(b => b.type === type);
+    if (!hasMore) {
+      if (type === 'lora_mast') this.data.meshRadioActive = false;
+      if (type === 'reed_bed') this.data.greywaterRecycled = false;
+      if (type === 'fablab') this.data.fablabActive = false;
+      if (type === 'farm_bot') this.data.farmBotActive = false;
+      if (type === 'auto_valves') this.data.autoValvesActive = false;
+      if (type === 'aquaponics_greenhouse') this.data.aquaponicsActive = false;
+      if (type === 'heavy_gantry_mill') this.data.heavyGantryMillActive = false;
+      if (type === 'solar_foundry') this.data.solarFoundryActive = false;
+      if (type === 'trike_depot') this.data.trikeDepotActive = false;
+      if (type === 'drone_vertiport') this.data.droneVertiportActive = false;
+    }
+
+    // 5. Revert active objective if it had progressed
+    if (previousObjective) {
+      this.data.objective = { ...previousObjective };
+    }
+
+    this.lastPlacement = null;
+    this.save();
+    this.emit('building_removed', { id: buildingId, type });
+    this.emit('resources_updated', this.data.resources);
+    this.emit('chores_updated', this.data.chores);
+    if (previousObjective) {
+      this.emit('objective_updated', this.data.objective);
+    }
+
+    return { ok: true, type, name: name || removed.name || type, laborCostH };
+  }
+
+  relocateBuilding(buildingId, newX, newY, extraProps = {}) {
+    const building = (this.data.buildings || []).find(b => b.id === buildingId);
+    if (!building) return { ok: false, reason: 'Building not found' };
+    if (building.type === 'camper_van' || building.type === 'central_agora') {
+      return { ok: false, reason: 'Camper Van and Central Agora cannot be moved' };
+    }
+
+    building.x = newX;
+    building.y = newY;
+    if (extraProps.solarModifier !== undefined) building.solarModifier = extraProps.solarModifier;
+    if (extraProps.pumpEnergyKw !== undefined) building.pumpEnergyKw = extraProps.pumpEnergyKw;
+    if (extraProps.moraleBonus !== undefined) building.moraleBonus = extraProps.moraleBonus;
+
+    if (this.lastPlacement && this.lastPlacement.buildingId === buildingId) {
+      this.lastPlacement.x = newX;
+      this.lastPlacement.y = newY;
+    }
+
+    this.save();
+    this.emit('building_updated', building);
+    return { ok: true, building };
+  }
+
+  dismantleBuilding(buildingId) {
+    const bIndex = (this.data.buildings || []).findIndex(b => b.id === buildingId);
+    if (bIndex === -1) return { ok: false, reason: 'Building not found' };
+    const b = this.data.buildings[bIndex];
+    if (b.type === 'camper_van' || b.type === 'central_agora') {
+      return { ok: false, reason: 'Cannot dismantle Central Hearth' };
+    }
+
+    const [removed] = this.data.buildings.splice(bIndex, 1);
+
+    if (removed.type === 'solar_array') {
+      this.data.resources.energyCapacityKwh = Math.max(10, (this.data.resources.energyCapacityKwh || 100) - 15);
+      this.data.resources.energyStoredKwh = Math.min(this.data.resources.energyCapacityKwh, this.data.resources.energyStoredKwh || 0);
+    } else if (removed.type === 'rain_cistern') {
+      this.data.resources.waterCapacityL = Math.max(500, (this.data.resources.waterCapacityL || 2000) - 1000);
+      this.data.resources.waterLiters = Math.min(this.data.resources.waterCapacityL, this.data.resources.waterLiters || 0);
+    } else if (removed.type === 'grain_silo') {
+      this.data.grainSiloCapacityKcal = Math.max(0, (this.data.grainSiloCapacityKcal || 0) - 30000);
+    }
+
+    const hasMore = (this.data.buildings || []).some(item => item.type === removed.type);
+    if (!hasMore) {
+      if (removed.type === 'lora_mast') this.data.meshRadioActive = false;
+      if (removed.type === 'reed_bed') this.data.greywaterRecycled = false;
+      if (removed.type === 'fablab') this.data.fablabActive = false;
+      if (removed.type === 'farm_bot') this.data.farmBotActive = false;
+      if (removed.type === 'auto_valves') this.data.autoValvesActive = false;
+      if (removed.type === 'aquaponics_greenhouse') this.data.aquaponicsActive = false;
+      if (removed.type === 'heavy_gantry_mill') this.data.heavyGantryMillActive = false;
+      if (removed.type === 'solar_foundry') this.data.solarFoundryActive = false;
+      if (removed.type === 'trike_depot') this.data.trikeDepotActive = false;
+      if (removed.type === 'drone_vertiport') this.data.droneVertiportActive = false;
+    }
+
+    if (this.lastPlacement && this.lastPlacement.buildingId === buildingId) {
+      this.lastPlacement = null;
+    }
+
+    this.save();
+    this.emit('building_removed', { id: buildingId, type: removed.type });
+    this.emit('resources_updated', this.data.resources);
+
+    return { ok: true, name: removed.name || removed.type, type: removed.type };
   }
 
   retireCamperVanToLogistics() {
@@ -2794,6 +2969,7 @@ export class GameState {
   }
 
   restUntilTomorrow() {
+    this.lastPlacement = null;
     const prevDay = this.data.day;
     this.data.day += 1;
     this.data.hour = 6;

@@ -32,6 +32,7 @@ export class GameHUD {
 
     if (typeof window !== 'undefined') {
       window.gameHud = this;
+      window.gameHUD = this;
     }
 
     this.render();
@@ -401,6 +402,19 @@ export class GameHUD {
       slot6 = makeSlotHtml('drone_vertiport', '🚁', 'Drone Vertiport', 4.0, hasBuilding('agora'), 'Needs Agora');
     }
 
+    const canUndo = gameState.canUndoPlacement ? gameState.canUndoPlacement() : false;
+    const lastPlacement = gameState.lastPlacement;
+    const undoSlot = (canUndo && lastPlacement) ? `
+      <!-- Undo Last Module Placement -->
+      <button type="button" class="dock-slot-btn dock-btn-undo" id="btn-dock-undo" title="Undo placement of ${lastPlacement.name || lastPlacement.type} (Ctrl+Z) — 100% labor refund and pick up module">
+        <div class="dock-slot-icon">↩️</div>
+        <div class="dock-slot-meta">
+          <span class="dock-slot-title">Undo Move</span>
+          <span class="dock-slot-cost">${lastPlacement.name ? lastPlacement.name.split(' ')[0] : 'Last'} ↩</span>
+        </div>
+      </button>
+    ` : '';
+
     this.dockContainer.innerHTML = `
       <!-- Tier Switcher Navigation (Clean Solarpunk Tabs) -->
       <div class="dock-tier-switcher">
@@ -427,7 +441,7 @@ export class GameHUD {
         </button>
       </div>
 
-      <!-- Terra Nil-Style Dock (3 to 6 slots + Rest) -->
+      <!-- Terra Nil-Style Dock (3 to 6 slots + Undo + Rest) -->
       <div class="terra-nil-dock">
         ${slot1}
         ${slot2}
@@ -435,6 +449,7 @@ export class GameHUD {
         ${slot4 || ''}
         ${slot5 || ''}
         ${slot6 || ''}
+        ${undoSlot}
 
         <!-- Slot Rest: Rest & Greet Tomorrow -->
         <button type="button" class="dock-slot-btn dock-btn-rest ${(gameState.data.chores?.remainingHours || 0) < 2.0 ? 'rest-recommended' : ''}" id="btn-dock-rest" title="Advance time to next dawn and restore pioneer labor">
@@ -676,8 +691,11 @@ export class GameHUD {
       } else if (e.key.toLowerCase() === 'l') {
         soundFX.playClick();
         logisticsModal.open('manifest');
+      } else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z' && !e.shiftKey) {
+        e.preventDefault();
+        this.performUndo();
       } else if (e.key === 'Escape') {
-        if (this.activeDockAction) {
+        if (this.activeDockAction || this.canvas?.relocatingBuilding) {
           this.activeDockAction = null;
           this.canvas?.cancelPlacementMode();
           this.renderDock();
@@ -686,6 +704,9 @@ export class GameHUD {
     });
 
     // React to live game events
+    gameState.on('building_added', () => this.renderDock());
+    gameState.on('building_removed', () => this.renderDock());
+    gameState.on('building_updated', () => this.renderDock());
     gameState.on('resources_updated', (res) => {
       this.updateResourceMeters(res);
     });
@@ -799,8 +820,18 @@ export class GameHUD {
       });
     });
 
+    // Undo button
+    const undoBtn = this.dockContainer.querySelector('#btn-dock-undo');
+    if (undoBtn) {
+      undoBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        soundFX.playClick();
+        this.performUndo();
+      });
+    }
+
     // Constructible building placement buttons
-    this.dockContainer.querySelectorAll('.dock-slot-btn:not(.built):not(.locked):not(#btn-dock-rest)').forEach(btn => {
+    this.dockContainer.querySelectorAll('.dock-slot-btn:not(.built):not(.locked):not(#btn-dock-rest):not(#btn-dock-undo)').forEach(btn => {
       btn.addEventListener('click', () => {
         soundFX.playClick();
         const type = btn.dataset.building;
@@ -888,6 +919,22 @@ export class GameHUD {
         this.canvas.flyToDistrict(districtId);
       }
     }
+  }
+
+  performUndo() {
+    if (!gameState.undoLastPlacement) return;
+    const res = gameState.undoLastPlacement();
+    if (!res.ok) {
+      this.canvas?.addFloatingText(0, -50, `⚠️ ${res.reason}`, '#ef4444');
+      return;
+    }
+
+    soundFX.playBuildThunk();
+    if (this.canvas) {
+      this.canvas.addFloatingText(0, -50, `↩️ Undid ${res.name}! Labor refunded (+${res.laborCostH || 2}h).`, '#38bdf8');
+      this.togglePlacement(res.type);
+    }
+    this.renderDock();
   }
 
   togglePlacement(type) {

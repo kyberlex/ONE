@@ -36,6 +36,7 @@ export class SettlementCanvas {
     this.dragDistance = 0;
     this.mouseWorldPos = { x: 0, y: 0 };
     this.placementBuilding = null; // 'solar_array' | 'rain_cistern' | 'garden_bed'
+    this.relocatingBuilding = null; // active building being moved
     this.hoveredBuilding = null;
     this.selectedBuilding = null;
 
@@ -269,6 +270,8 @@ export class SettlementCanvas {
 
       if (this.placementBuilding) {
         this.placeBuildingAt(worldPos.x, worldPos.y);
+      } else if (this.relocatingBuilding) {
+        this.completeRelocatingBuildingAt(worldPos.x, worldPos.y);
       } else {
         const clicked = this.findBuildingAt(worldPos.x, worldPos.y);
         if (clicked) {
@@ -417,7 +420,16 @@ export class SettlementCanvas {
 
   cancelPlacementMode() {
     this.placementBuilding = null;
+    this.relocatingBuilding = null;
     this.canvas.style.cursor = 'default';
+  }
+
+  startRelocatingBuilding(building) {
+    this.cancelPlacementMode();
+    this.relocatingBuilding = building;
+    this.canvas.style.cursor = 'crosshair';
+    this.addFloatingText(building.x || 0, (building.y || 0) - 20, `📦 Pick a new plot for ${building.name || building.type}!`, '#38bdf8');
+    if (window.gameHUD) window.gameHUD.activeDockAction = null;
   }
 
   findBuildingAt(worldX, worldY) {
@@ -531,6 +543,7 @@ export class SettlementCanvas {
     const buildings = gameState.data.buildings;
     for (const b of buildings) {
       if (b.type === 'central_agora') continue;
+      if (this.relocatingBuilding && b.id === this.relocatingBuilding.id) continue;
       const bx = b.x !== undefined ? b.x : 0;
       const by = b.y !== undefined ? b.y : 0;
       const dist = Math.hypot(snapX - bx, snapY - by);
@@ -710,6 +723,37 @@ export class SettlementCanvas {
     }
 
     this.cancelPlacementMode();
+    if (window.gameHUD) window.gameHUD.renderDock();
+  }
+
+  completeRelocatingBuildingAt(x, y) {
+    if (!this.relocatingBuilding) return;
+    const b = this.relocatingBuilding;
+    const collision = this.checkPlacementCollision(x, y, b.type);
+    if (!collision.valid) {
+      this.addFloatingText(x, y - 20, `⚠️ ${collision.reason}!`, '#ef4444');
+      return;
+    }
+
+    const extraProps = {};
+    if (collision.feedback) {
+      if (collision.feedback.solarModifier !== undefined) extraProps.solarModifier = collision.feedback.solarModifier;
+      if (collision.feedback.pumpEnergyKw !== undefined) extraProps.pumpEnergyKw = collision.feedback.pumpEnergyKw;
+      if (collision.feedback.moraleBonus !== undefined) extraProps.moraleBonus = collision.feedback.moraleBonus;
+    }
+
+    const res = gameState.relocateBuilding(b.id, collision.snapX, collision.snapY, extraProps);
+    if (!res.ok) {
+      this.addFloatingText(collision.snapX, collision.snapY - 20, `⚠️ ${res.reason}`, '#ef4444');
+      this.cancelPlacementMode();
+      return;
+    }
+
+    soundFX.playBuildThunk();
+    this.spawnDust(collision.snapX, collision.snapY);
+    this.addFloatingText(collision.snapX, collision.snapY - 30, `📦 Relocated ${b.name || b.type}!`, '#10b981');
+    this.cancelPlacementMode();
+    if (window.gameHUD) window.gameHUD.renderDock();
   }
 
   addFloatingText(x, y, text, color = '#10b981') {
@@ -895,7 +939,7 @@ export class SettlementCanvas {
     this.renderHoverHighlight(ctx);
 
     // 6. Placement Guide & Dynamic Zoning Guidelines
-    if (this.placementBuilding) {
+    if (this.placementBuilding || this.relocatingBuilding) {
       this.renderZoningGuidelines(ctx);
       this.renderPlacementPreview(ctx);
     }
@@ -4361,9 +4405,8 @@ export class SettlementCanvas {
   }
 
   renderZoningGuidelines(ctx) {
-    if (!this.placementBuilding) return;
-
-    const pb = this.placementBuilding;
+    const pb = this.placementBuilding || (this.relocatingBuilding ? this.relocatingBuilding.type : null);
+    if (!pb) return;
     const time = performance.now() / 1000;
     const pulse = 0.5 + 0.5 * Math.sin(time * 3);
 
@@ -4627,13 +4670,31 @@ export class SettlementCanvas {
   }
 
   renderPlacementPreview(ctx) {
-    const collision = this.checkPlacementCollision(this.mouseWorldPos.x, this.mouseWorldPos.y, this.placementBuilding);
+    const pb = this.placementBuilding || (this.relocatingBuilding ? this.relocatingBuilding.type : null);
+    if (!pb) return;
+
+    const collision = this.checkPlacementCollision(this.mouseWorldPos.x, this.mouseWorldPos.y, pb);
     const snapX = collision.snapX || Math.round(this.mouseWorldPos.x / 20) * 20;
     const snapY = collision.snapY || Math.round(this.mouseWorldPos.y / 20) * 20;
 
-    const canBuild = gameState.canBuild(this.placementBuilding);
+    const canBuild = this.relocatingBuilding ? { ok: true, laborCostH: 0 } : gameState.canBuild(pb);
     const isInvalid = !collision.valid || !canBuild.ok;
-    const label = !canBuild.ok ? `⚠️ ${canBuild.reason}` : (!collision.valid ? `⚠️ ${collision.reason}` : `✓ Build (${canBuild.laborCostH || 2}h labor)`);
+    const label = this.relocatingBuilding
+      ? (!collision.valid ? `⚠️ ${collision.reason}` : '✓ Relocate Module Here (Free)')
+      : (!canBuild.ok ? `⚠️ ${canBuild.reason}` : (!collision.valid ? `⚠️ ${collision.reason}` : `✓ Build (${canBuild.laborCostH || 2}h labor)`));
+
+    // Tether line from old position to new position
+    if (this.relocatingBuilding) {
+      ctx.save();
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(this.relocatingBuilding.x || 0, this.relocatingBuilding.y || 0);
+      ctx.lineTo(snapX, snapY);
+      ctx.stroke();
+      ctx.restore();
+    }
 
     ctx.save();
     ctx.translate(snapX, snapY);

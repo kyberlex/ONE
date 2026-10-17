@@ -809,10 +809,20 @@ export class BuildingInspectorModal {
           ${actionsHtml}
         </div>
 
-        <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
-          <button type="button" class="btn-primary" id="btn-inspector-export-bp" style="background: linear-gradient(135deg, #059669, #0284c7); border: none; font-size: 0.82rem; padding: 7px 14px; border-radius: 6px; display: flex; align-items: center; gap: 6px; font-weight: 600;">
-            📐 Export Blueprints & CAD (.STL / YAML)
-          </button>
+        <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap;">
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <button type="button" class="btn-primary" id="btn-inspector-export-bp" style="background: linear-gradient(135deg, #059669, #0284c7); border: none; font-size: 0.82rem; padding: 7px 14px; border-radius: 6px; display: flex; align-items: center; gap: 6px; font-weight: 600;">
+              📐 Export Blueprints & CAD (.STL / YAML)
+            </button>
+            ${b.type !== 'camper_van' && b.type !== 'central_agora' ? `
+              <button type="button" class="btn-secondary btn-relocate-building" id="btn-inspector-relocate" title="Pick up and move this module to a new plot without penalty" style="border: 1px solid rgba(56, 189, 248, 0.45); color: #38bdf8; background: rgba(56, 189, 248, 0.12); font-size: 0.82rem; padding: 7px 12px; border-radius: 6px; font-weight: 600; display: flex; align-items: center; gap: 5px;">
+                📦 Relocate
+              </button>
+              <button type="button" class="btn-secondary btn-dismantle-building" id="btn-inspector-dismantle" title="Dismantle module into circular reusable parts (100% recirculation)" style="border: 1px solid rgba(239, 68, 68, 0.4); color: #f87171; background: rgba(239, 68, 68, 0.10); font-size: 0.82rem; padding: 7px 12px; border-radius: 6px; font-weight: 600; display: flex; align-items: center; gap: 5px;">
+                ♻️ Dismantle
+              </button>
+            ` : ''}
+          </div>
           <button type="button" class="btn-secondary" id="btn-inspector-done">${b.type === 'camper_van' ? 'Return to Haven' : 'Back to Settlement'}</button>
         </div>
       </div>
@@ -824,6 +834,34 @@ export class BuildingInspectorModal {
   attachEvents() {
     this.overlayEl.querySelector('#btn-inspector-close')?.addEventListener('click', () => this.close());
     this.overlayEl.querySelector('#btn-inspector-done')?.addEventListener('click', () => this.close());
+
+    // Relocate Module
+    this.overlayEl.querySelector('#btn-inspector-relocate')?.addEventListener('click', () => {
+      soundFX.playClick();
+      const b = this.currentBuilding;
+      this.close();
+      if (window.settlementCanvas) {
+        window.settlementCanvas.startRelocatingBuilding(b);
+      }
+    });
+
+    // Dismantle Module
+    this.overlayEl.querySelector('#btn-inspector-dismantle')?.addEventListener('click', () => {
+      soundFX.playClick();
+      const b = this.currentBuilding;
+      this.close();
+      const res = gameState.dismantleBuilding(b.id);
+      if (res.ok) {
+        soundFX.playBuildThunk();
+        if (window.settlementCanvas) {
+          window.settlementCanvas.spawnDust(b.x || 0, b.y || 0);
+          window.settlementCanvas.addFloatingText(b.x || 0, (b.y || 0) - 20, `♻️ Dismantled ${res.name}! Reusable parts returned.`, '#f87171');
+        }
+        if (window.gameHUD) {
+          window.gameHUD.renderDock();
+        }
+      }
+    });
 
     // Dual-Track Blueprint & STL Export
     this.overlayEl.querySelector('#btn-inspector-export-bp')?.addEventListener('click', () => {

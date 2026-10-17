@@ -2882,11 +2882,39 @@ html, body {
   box-shadow: 0 8px 24px rgba(245, 158, 11, 0.25) !important;
 }
 
-.dock-btn-rest.confirm-early-rest {
-  border-color: #f59e0b !important;
-  background: rgba(245, 158, 11, 0.22) !important;
-  box-shadow: 0 0 20px rgba(245, 158, 11, 0.5) !important;
-  animation: pulse 1s infinite alternate;
+.dock-btn-undo {
+  border-color: rgba(56, 189, 248, 0.45);
+  background: rgba(14, 165, 233, 0.12);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dock-btn-undo:hover {
+  border-color: #38bdf8 !important;
+  background: rgba(14, 165, 233, 0.25) !important;
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.35) !important;
+  transform: translateY(-2px);
+}
+
+.btn-relocate-building {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-relocate-building:hover {
+  background: rgba(56, 189, 248, 0.25) !important;
+  border-color: #38bdf8 !important;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3) !important;
+  transform: translateY(-1px);
+}
+
+.btn-dismantle-building {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-dismantle-building:hover {
+  background: rgba(239, 68, 68, 0.22) !important;
+  border-color: #ef4444 !important;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3) !important;
+  transform: translateY(-1px);
 }
 
 /* ============================================================
