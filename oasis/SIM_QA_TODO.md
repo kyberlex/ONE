@@ -19,6 +19,9 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 | ID | Title | Domain | Target Articles | Stage | Active Agent / Next Action |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **`SIM-QA-06`** | Transformation of Legacy High-Capital Industrial Assets, Hyperscale Compute & Metropolises | Heavy Industry / Usufruct / Urban Metabolism | Art. 2.1, Art. 2.2, Art. 2.3, Art. 3.1, Art. 3.3.4, Art. 3.4, Art. 6.4, Art. 7.2, Art. 7.4, Art. 9.3, Art. 9.5, Art. 10.3, Art. 10.4 | `[STAGE 3: PURPLE_PATCH]` | Canonical documentation verified ([`oasis/legacy_high_capital_assets.md`](legacy_high_capital_assets.md)); awaiting confederal ratification |
+| **`SIM-QA-07`** | Active Solar Management via Reversible $L_1$ Lagrange Sunshade vs. Chemical Terrestrial Geoengineering | Planetary Climate / Celestial Commons / Geoengineering | Art. 10.5, Art. 11.1, Art. 11.5 | `[STAGE 1: HYPOTHESIS]` | Registered as formal dialectic hypothesis; awaiting adversarial Red Team stress-test |
+| **`SIM-QA-08`** | Deep-Space Defensive Realism: Distributed Kinetic & Laser Immune System vs. Ballistic Mass-Velocity Threats | Astrodynamics / Deep-Space Defense / Game Theory | Art. 8.1, Art. 11.4, Art. 11.6 | `[STAGE 1: HYPOTHESIS]` | Registered as formal dialectic hypothesis; awaiting adversarial Red Team stress-test |
+| **`SIM-QA-09`** | Autonomous AI & Robotic Swarm Aggression: Hard Galvanic Air-Gaps, Directed-Energy Point Defense & Non-Somatic Countermeasures | Autonomous Warfare / Cyber-Physical Defense / Asymmetric Resilience | Art. 6.3, Art. 7.1, Art. 8.1.4, Art. 8.2, Art. 11.6 | `[STAGE 1: HYPOTHESIS]` | Registered as formal dialectic hypothesis; awaiting adversarial Red Team stress-test |
 
 ---
 
