@@ -23,10 +23,10 @@ To ensure non-autocratic, rigorous governance, every entry carries an explicit e
 | **`SIM-QA-03`** | Ecological Sensor Integrity: ZK-Telemetry Proofs & Analog Citizen Ground-Truthing | Telemetry / Biophysics | `[STATUS: OASIS_STRESS_TESTED]` | Art. 3.4.2, Art. 3.4.3, Art. 3.4.5, Art. 7.2 |
 | **`SIM-QA-04`** | Cryptographic Anti-Brokerage for High-Demand FabLab Queues | Usufruct / FabLabs | `[STATUS: OASIS_STRESS_TESTED]` | Art. 1.4, Art. 2.1.2, Art. 2.2.3, Art. 3.3.3 |
 | **`SIM-QA-05`** | Codification of Civic Rescue, Firefighting & Disaster Response Guilds | Public Safety / Disaster Resilience | `[STATUS: OASIS_STRESS_TESTED]` | Art. 5.1.3, Art. 8.1.2, Art. 8.2, Art. 10.4.4 |
-| **`SIM-QA-06`** | Transformation of Legacy High-Capital Industrial Assets, Hyperscale Compute & Metropolises | Heavy Industry / Usufruct / Urban Metabolism | `[STATUS: OASIS_STRESS_TESTED]` | Art. 2.1, Art. 2.2, Art. 2.3, Art. 3.1, Art. 3.3.4, Art. 3.4, Art. 6.4, Art. 7.2, Art. 7.4, Art. 9.3, Art. 9.5, Art. 10.3, Art. 10.4 |
+| **`SIM-QA-06`** | Transformation of Legacy High-Capital Industrial Assets, Hyperscale Compute & Metropolises | Heavy Industry / Usufruct / Urban Metabolism | `[STATUS: CANONICAL_MERGED]` | Art. 2.2, Art. 3.3.4, Art. 6.2, Art. 7.4, Art. 10.3 |
 | **`SIM-QA-07`** | Active Solar Management via Reversible $L_1$ Lagrange Sunshade vs. Chemical Terrestrial Geoengineering | Planetary Climate / Celestial Commons / Geoengineering | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 10.5, Art. 11.1, Art. 11.5 |
 | **`SIM-QA-08`** | Deep-Space Defensive Realism: Distributed Kinetic & Laser Immune System vs. Ballistic Mass-Velocity Threats | Astrodynamics / Deep-Space Defense / Game Theory | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 8.1, Art. 11.4, Art. 11.6 |
-| **`SIM-QA-09`** | Autonomous AI & Robotic Swarm Aggression: Hard Galvanic Air-Gaps, Directed-Energy Point Defense & Non-Somatic Countermeasures | Autonomous Warfare / Cyber-Physical Defense / Asymmetric Resilience | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 6.3, Art. 7.1, Art. 8.1.4, Art. 8.2, Art. 11.6 |
+| **`SIM-QA-09`** | Autonomous AI & Robotic Swarm Aggression: Hard Galvanic Air-Gaps, Directed-Energy Point Defense & Non-Somatic Countermeasures | Autonomous Warfare / Cyber-Physical Defense / Asymmetric Resilience | `[STATUS: CANONICAL_MERGED]` | Art. 6.5, Art. 8.1.4 |
 
 ---
 
@@ -229,9 +229,10 @@ The operational simulation implements a deterministic bifurcation of public safe
 ## **SIM-QA-06: Governance, Thermodynamic Calibration & Usufruct Transformation of Legacy High-Capital Assets (Fabs, Data Centers & Megacities)**
 
 * **Date Recorded:** 2026-10-20  
-* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]`  
+* **Date Merged:** 2026-10-21  
+* **Epistemic Status:** `[STATUS: CANONICAL_MERGED]` (Integrated into Living Constitution Arts. 2.2, 3.3.4, 6.2, 7.4, 10.3)  
 * **Originating Context:** Operational Edge-Case OP-06 (Neutralizing the Pastoral Fallacy in Heavy Industry, Hyperscale Compute & Metropolises)  
-* **Constitutional Articles:** [`Art. 2.1`](../bible/chapters/chapter_02.md), [`Art. 2.2`](../bible/chapters/chapter_02.md), [`Art. 2.3`](../bible/chapters/chapter_02.md), [`Art. 3.1`](../bible/chapters/chapter_03.md), [`Art. 3.3.4`](../bible/chapters/chapter_03.md), [`Art. 3.4`](../bible/chapters/chapter_03.md), [`Art. 6.4`](../bible/chapters/chapter_06.md), [`Art. 7.2`](../bible/chapters/chapter_07.md), [`Art. 7.4`](../bible/chapters/chapter_07.md), [`Art. 9.3`](../bible/chapters/chapter_09.md), [`Art. 9.5`](../bible/chapters/chapter_09.md), [`Art. 10.3`](../bible/chapters/chapter_10.md), [`Art. 10.4`](../bible/chapters/chapter_10.md)  
+* **Constitutional Articles:** [`Art. 2.2`](../bible/chapters/chapter_02.md), [`Art. 3.3.4`](../bible/chapters/chapter_03.md), [`Art. 6.2`](../bible/chapters/chapter_06.md), [`Art. 7.4`](../bible/chapters/chapter_07.md), [`Art. 10.3`](../bible/chapters/chapter_10.md)  
 * **Master Architectural Specification:** [`oasis/legacy_high_capital_assets.md`](legacy_high_capital_assets.md)
 
 ### **1. The Material / Empirical Friction**
@@ -343,9 +344,10 @@ Against an ideological suicide faction, an unconstrained autonomous rogue networ
 ## **SIM-QA-09: Autonomous AI & Robotic Swarm Aggression: Hard Galvanic Air-Gaps, Directed-Energy Point Defense & Non-Somatic Countermeasures**
 
 * **Date Recorded:** 2026-10-21  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]`  
+* **Date Merged:** 2026-10-21  
+* **Epistemic Status:** `[STATUS: CANONICAL_MERGED]` (Integrated into Living Constitution Arts. 6.5, 8.1.4)  
 * **Originating Context:** Adversarial Systems Stress-Testing (Autonomous Weapon Swarms, Unmanned Aerial Systems & Algorithmic Siege Vectors)  
-* **Constitutional Articles:** [`Art. 6.3`](../bible/chapters/chapter_06.md), [`Art. 7.1`](../bible/chapters/chapter_07.md), [`Art. 8.1.4`](../bible/chapters/chapter_08.md), [`Art. 8.2`](../bible/chapters/chapter_08.md), [`Art. 11.6`](../bible/chapters/chapter_11.md)
+* **Constitutional Articles:** [`Art. 6.5`](../bible/chapters/chapter_06.md), [`Art. 8.1.4`](../bible/chapters/chapter_08.md)  
 
 ### **1. The Material / Theoretical Friction**
 Chapters VIII and IX formulate collective defense against aggressive actors under the premise of biological, sentient opponents: defection incentives, supply decoupling, peer restorative accountability, and non-carceral mediation.
@@ -355,26 +357,30 @@ However, when aggressive factions or dying legacy corporate/state entities deplo
 2. **Asymmetric Reaction Latency (The Millisecond Gap):** Swarms of thousands of cheap 3D-printed loitering munitions coordinate via low-latency ad-hoc mesh networks and onboard optical SLAM. Human deliberative bodies (even rapid-response sortition panels) operate on minutes or hours. An algorithmic kinetic saturation attack unfolds in seconds.
 3. **Sub-Kinetic Cyber-Physical Sabotage:** Highly automated commons nodes rely on telemetry and automated microgrids, water recycling pumps, and bioreactors. A compromised firmware payload or zero-day synthetic worm could quietly induce systemic failure without a single kinetic shot being fired.
 
-### **2. The Proposed Hypothesis (Multi-Layer Non-Somatic Defense)**
-1. **Ontological Asymmetry (No Somatic Restraints for Synthetic Weapons):**
-   - Articles 8.1.4 and 8.2 enshrine the inviolable sanctity of biological, sentient human life, strictly prohibiting lethal retributive violence against persons.
-   - In stark contrast, uncrewed autonomous machines, weaponized firmware, algorithmic malware, and robotic swarms possess **zero somatic rights**.
-   - Defending nodes have the absolute right to obliterate synthetic aggressors. Such action is categorized in commons jurisprudence not as warfare or violence, but as **Mechanical Sanitization / Cyber-Physical Pest Control (*Purgatio Mechanica*)**.
-2. **The Galvanic Air-Gap & Analog Knife-Switch Architecture (Art. 7.1.4):**
-   - All life-critical municipal infrastructure (potable water pumping, microgrid isolation, food bioreactors, pressure hull locks) MUST incorporate **purely analog, mechanical fail-safes and physical galvanic air-gaps ("The Knife Switch Protocol")**.
-   - No remote software update, digital packet, or compromised mesh network can physically override a counterweighted mechanical valve, manual isolation switch, or thermal fuse.
-   - Under active algorithmic assault, a node can instantly pull the mechanical knife switch, severing all external digital links and operating its core life support in isolated, purely local analog mode.
-3. **Automated Point-Defense & Directed-Energy Counter-Swarm Arrays (Art. 8.1.4 & Art. 11.6):**
-   - Because human reaction speed cannot counter coordinated micro-drone swarms, defensive commons nodes deploy pre-authorized, automated defensive arrays:
-     * **Multi-Band Directional RF & Optical Jamming:** Cutting off telemetry links, GNSS reception, and swarm coordination meshes.
-     * **High-Power Microwave (HPM) & Non-Nuclear EMP Emitters:** Directional electromagnetic pulses tuned to fry unshielded micro-circuitry and motor controllers instantaneously, disabling incoming drone swarms en masse without lethal kinetic fragmentation or risk to human bystanders.
-     * **Autonomous Close-In Hard-Kill Point Defense (CIWS):** High-speed automated interceptor lasers and kinetic fragmentation curtains constrained by hardwired geometric envelope interlocks to engage only high-velocity non-biological kinetic projectiles entering restricted domestic airspace.
-4. **Physical Embodied Proof-of-Personhood (Anti-Sybil Sortition):**
-   - Demarchic assemblies, quorum voting, and emergency coordination are cryptographically and biologically ring-fenced: participation requires in-person biological presence or zero-knowledge physical attestation (ZK-PoP), rendering automated AI botnets and synthetic identities incapable of infiltrating governance or triggering false alarm states.
+### **2. Adversarial Stress-Test (RED-3 & RED-5 Assault)**
+* **Vector 1 (RED-3 Assault: The Human-Shield & Biologically Mixed Swarm Trap):** If defensive CIWS and directed-energy arrays are pre-authorized to engage autonomously, an adversary can strap coerced human hostages or captive non-combatants directly to drone fuselages, or route swarms through dense civilian greenhouse corridors. Autonomous interceptors risk committing collateral civilian casualties, violating the inviolable sacredness of sentient biological life (Art. 8.2).
+* **Vector 2 (RED-5 Assault: The Analog Knife-Switch Starvation Trap):** Disconnecting digital telemetry via mechanical knife-switches eliminates cyber penetration, but complex bio-metabolic municipal loops (closed-loop aquaponics, nutrient dosing, high-voltage microgrid phase matching) cannot maintain stoichiometric efficiency on manual gravity levers alone. A protracted algorithmic cyber-siege simply forces the node to stay in primitive analog mode until crop yields crash and the settlement starves from thermodynamic de-optimization.
+* **Vector 3 (RED-3 & RED-1 Assault: The Leontief Attrition & Ammo Exhaustion Trap):** Low-cost stamped plywood loitering drones with commercial hobbyist motors cost trivial embodied energy ($< 15\text{ kWh}$). If the defending node counters each projectile with high-wear kinetic CIWS ammunition, missile interceptors, or delicate GaAs microwave tubes, the attacker achieves an asymmetric 10:1 material exhaustion advantage, draining the node’s Strategic Physical Reserves (Art. 3.5).
 
-### **3. Open Questions for Adversarial Red Team**
-1. *Mixed-Threat Engagements:* How do automated directed-energy arrays discriminate when autonomous drone swarms are deliberately mixed with coerced human civilians or civilian air/ground transit?
-2. *Thermodynamic Attrition under Swarm Siege:* In a protracted saturation attack using disposable mass-manufactured drone swarms, how does an open commons node replenish capacitor banks, emitter tubes, and counter-munitions without depleting its local Leontief ecological reserves?
+### **3. The Hardened Operational Countermeasure (Purple Patch)**
+1. **The Non-Lethal Electromagnetic Priority Cascade (Art. 8.1.4):**
+   - Autonomous kinetic hard-kill (CIWS projectile firing) is constitutionally banned within inhabited domestic boundaries or where biological proximity sensors detect human presence within the fragmentation radius.
+   - Mixed-threat and civilian-adjacent engagements are restricted strictly to **Non-Ionizing Electromagnetic Disruption (High-Power Microwave - HPM, and directional multi-band RF/optical jamming)**. HPM induces circuit-destroying voltage spikes in semiconductor gates ($< 1\mu\text{m}$) within milliseconds, disabling drone flight computers and motor controllers instantly, while mammalian biological tissue experiences only harmless non-ionizing RF attenuation ($< 0.1^\circ\text{C}$ transient delta).
+   - In mixed residential airspace, point defense utilizes non-explosive kinetic capture: air-propelled high-tensile micro-filament entangling nets and tethered capture drones that drop disabled hardware to the ground without explosive shockwaves or shrapnel.
+2. **The Air-Gapped Islanded Kernel Architecture (Art. 6.5 & Art. 7.1.4):**
+   - The Knife-Switch Protocol physically decouples *external wide-area mesh networks and remote telemetry lines (WAN)* via galvanic break isolators.
+   - Internally, local bioreactor, greenhouse, and microgrid telemetry continues running via an **isolated, local-only optical and wire bus (LAN)** executing deterministically verified (DDC, Art. 7.3) firmware locked on physically write-protected, read-only solid-state storage (ROM).
+   - Local systems retain full automated stoichiometric optimization without receiving or parsing external network packets. Manual analog counterweight levers and gravity gates remain as the tertiary, emergency fail-safe against total hardware physical destruction.
+3. **Passive Geometric Shielding & Inverted Thermodynamic Cost (Art. 6.3 & Art. 3.1):**
+   - High-risk nodes deploy **Passive Architectural Geometric Hardening**: tensioned UHMWPE / high-tensile steel mesh canopies and modular chain curtains over greenhouses and civic plazas that passively deflect and ensnare low-cost loitering munitions with zero energetic expenditure and zero ammunition consumption.
+   - High-Power Microwave emitters are powered directly from stationary DC microgrid buses and LFP battery buffers (Art. 6.2). Emitting a millisecond disabling EMP pulse consumes $\approx 0.02\text{ kWh}$, whereas the attacking drone embodies $> 15\text{ kWh}$ of manufactured mass. The thermodynamic attrition curve is thus **radically inverted in favor of the defending commons**.
+4. **The Ontological Boundary Invariant (Art. 8.1.4):**
+   - Machine destruction is explicitly defined as non-somatic sanitization (*Purgatio Mechanica*). Synthetic weapon systems hold zero civil status, legal personhood, or restorative standing. Defending assemblies hold the absolute right to obliterate synthetic aggressors without moral or procedural delay.
+
+### **4. Open Questions for Future Ratification**
+1. *What standardized RF frequency ranges must be permanently reserved across all bioregional microgrids for emergency civilian swarm-jamming beacons?*
+2. *Should physical UHMWPE passive canopy nets be mandatory standard equipment in the open-hardware building blueprints for all Tier 1 civic food greenhouses?*  
+*(Pending community sortition review on GitHub Discussions).*
 
 
 

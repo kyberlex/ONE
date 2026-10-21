@@ -18,10 +18,8 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 
 | ID | Title | Domain | Target Articles | Stage | Active Agent / Next Action |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **`SIM-QA-06`** | Transformation of Legacy High-Capital Industrial Assets, Hyperscale Compute & Metropolises | Heavy Industry / Usufruct / Urban Metabolism | Art. 2.1, Art. 2.2, Art. 2.3, Art. 3.1, Art. 3.3.4, Art. 3.4, Art. 6.4, Art. 7.2, Art. 7.4, Art. 9.3, Art. 9.5, Art. 10.3, Art. 10.4 | `[STAGE 3: PURPLE_PATCH]` | Canonical documentation verified ([`oasis/legacy_high_capital_assets.md`](legacy_high_capital_assets.md)); awaiting confederal ratification |
 | **`SIM-QA-07`** | Active Solar Management via Reversible $L_1$ Lagrange Sunshade vs. Chemical Terrestrial Geoengineering | Planetary Climate / Celestial Commons / Geoengineering | Art. 10.5, Art. 11.1, Art. 11.5 | `[STAGE 1: HYPOTHESIS]` | Registered as formal dialectic hypothesis; awaiting adversarial Red Team stress-test |
 | **`SIM-QA-08`** | Deep-Space Defensive Realism: Distributed Kinetic & Laser Immune System vs. Ballistic Mass-Velocity Threats | Astrodynamics / Deep-Space Defense / Game Theory | Art. 8.1, Art. 11.4, Art. 11.6 | `[STAGE 1: HYPOTHESIS]` | Registered as formal dialectic hypothesis; awaiting adversarial Red Team stress-test |
-| **`SIM-QA-09`** | Autonomous AI & Robotic Swarm Aggression: Hard Galvanic Air-Gaps, Directed-Energy Point Defense & Non-Somatic Countermeasures | Autonomous Warfare / Cyber-Physical Defense / Asymmetric Resilience | Art. 6.3, Art. 7.1, Art. 8.1.4, Art. 8.2, Art. 11.6 | `[STAGE 1: HYPOTHESIS]` | Registered as formal dialectic hypothesis; awaiting adversarial Red Team stress-test |
 
 ---
 
@@ -31,6 +29,8 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 
 | ID | Title | Date Merged | Canonical Commits / Articles |
 | :--- | :--- | :--- | :--- |
+| **`SIM-QA-09`** | Autonomous AI & Robotic Swarm Aggression: Hard Galvanic Air-Gaps, Directed-Energy Point Defense & Non-Somatic Countermeasures | 2026-10-21 | [Art. 6.5](../bible/chapters/chapter_06.md), [Art. 8.1.4](../bible/chapters/chapter_08.md), [ONE NETWORKED EARTH (O.N.E.).md](../bible/ONE%20NETWORKED%20EARTH%20%28O.N.E.%29.md) |
+| **`SIM-QA-06`** | Transformation of Legacy High-Capital Industrial Assets, Hyperscale Compute & Metropolises | 2026-10-21 | [Art. 2.2](../bible/chapters/chapter_02.md), [Art. 3.3.4](../bible/chapters/chapter_03.md), [Art. 6.2](../bible/chapters/chapter_06.md), [Art. 7.4](../bible/chapters/chapter_07.md), [Art. 10.3](../bible/chapters/chapter_10.md), [ONE NETWORKED EARTH (O.N.E.).md](../bible/ONE%20NETWORKED%20EARTH%20%28O.N.E.%29.md) |
 | **`SIM-QA-05`** | Codification of Civic Rescue, Firefighting & Disaster Response Guilds | 2026-10-05 | [Art. 5.1.3](../bible/chapters/chapter_05.md#L6), [Art. 8.1.2](../bible/chapters/chapter_08.md#L5), [ONE NETWORKED EARTH (O.N.E.).md](../bible/ONE%20NETWORKED%20EARTH%20%28O.N.E.%29.md) |
 | **`SIM-QA-01`** | Quorum Scaling & Demarchic Viability for Emerging Nodes (< 50 Pop) | 2026-10-05 | [Art. 4.2.1](../bible/chapters/chapter_04.md#L14), [Art. 4.2.2](../bible/chapters/chapter_04.md#L15), [ONE NETWORKED EARTH (O.N.E.).md](../bible/ONE%20NETWORKED%20EARTH%20%28O.N.E.%29.md) |
 | **`SIM-QA-02`** | Dual-Tier Tool Boundary: Civic Tool Libraries vs. Inviolable Personal Craft Gear | 2026-10-05 | [Art. 2.2.1](../bible/chapters/chapter_02.md#L12), [ONE NETWORKED EARTH (O.N.E.).md](../bible/ONE%20NETWORKED%20EARTH%20%28O.N.E.%29.md) |
