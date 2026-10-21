@@ -152,4 +152,46 @@ In October 2026, independent frontier AI red teams (OpenAI ChatGPT, Google Gemin
 - How should peer qualification for Demarchic Science Juries be verified in an open-source, permissionless manner without re-creating academic credentialism?
 ```
 
+---
+
+### **RFC-006: Structural Transformation of Legacy High-Capital Industrial Assets, Hyperscale Compute & Metropolises**
+* **Category:** RFC / Operational Protocols  
+* **Labels:** `area:industry`, `area:urbanism`, `status:operational-qa`, `ref:OP-06`, `ref:Tier-2A`  
+* **Reference:** [`oasis/constitutional_attack_challenges.md`](constitutional_attack_challenges.md#challenge-op-06-transformation-of-legacy-high-capital-assets-hyperscale-compute--dense-urban-sinks-neutralizing-the-pastoral-fallacy), [`oasis/legacy_high_capital_assets.md`](legacy_high_capital_assets.md), `SIM-QA-06`  
+
+```markdown
+### Background & Problem Statement
+In the constitutional and thermodynamic architecture of Open Networked Earth (O.N.E.), legacy high-capital assets—semiconductor fabrication facilities, petrochemical and synthesis complexes, hyperscale data centers, and dense urban metropolises—are neither abandoned nor dismantled into pastoral fantasy. Instead, they undergo a structural, legal, and biophysical transformation governed by five core constitutional mechanisms.
+
+### Proposed Operational Protocols
+1. **Classification as Tier 2-A "Indivisible Capital Goods" (Art. 2.2 & Art. 3.3.4):**
+   - High-throughput facilities (extreme ultraviolet lithography fabs, chlor-alkali chemical plants, heavy foundries) cannot be atomized into municipal workshops without catastrophic loss of yield and physics-defying thermodynamic penalties. They are recognized as indivisible social capital.
+   - Operational control is delegated to specialized, technical worker guilds (chemists, solid-state physicists, systems engineers), while macro-allocation, ecological budgets, and output priorities are governed by Bioregional Citizen Assemblies (101 delegates) and the Global Commons Assembly (1,001 delegates).
+   - Article 3.3.4 strictly dictates that physical capital depreciation reserves (tool wear, catalyst degradation, target replacement) must be fully replenished from the thermodynamic ledger before any surplus output is dispatched to Tier 3 discretionary fab-labs or exploratory fabrication.
+
+2. **Thermodynamic Mass-Balance Re-Engineering (Art. 3.1 & Art. 3.4):**
+   - A modern 3nm/2nm semiconductor fab consumes tens of millions of liters of ultrapure water daily and volatile process gases (NF3, SF6, fluorinated solvents). Under O.N.E., fabs cannot operate on linear throughput. They must implement closed-circuit evaporation, catalytic chemical recovery, and dry-scrubbing systems. If a chemical complex breaches the regenerative boundary of its hosting river basin, the Thermodynamic Lexicographic Viability Operator (L_min) deterministically throttles synthesis run-lengths to protect somatic water baselines.
+   - Hyperscale data centers and exothermic chemical synthesis are re-engineered as thermal energy sources. High-grade and low-grade reject heat is piped directly into district heating networks, greenhouse biomass loops, or low-temperature organic Rankine cycle turbines rather than vented into local microclimates.
+
+3. **Compute Infrastructure: From Corporate Hyperscalers to Federated Commons (Ch. VII & Art. 6.4):**
+   - Monopolistic cloud infrastructure and proprietary firmware (firmware blobs, microcode locks, black-box orchestration stacks) are banned (Art. 7.2). Data centers must transition to bit-for-bit verifiable, deterministic open-source firmware (open BMC, RISC-V/Open-Compute hardware, open-standard hypervisors).
+   - Administrative root access is permanently fragmented using Threshold Multi-Party Computation (t-MPC) keys distributed among sortition jurors across non-contiguous watersheds (Art. 7.4). No single state, corporation, or engineer cartel holds the kill-switch or the root key.
+   - Data centers serve as primary flexible thermodynamic loads. Training clusters for machine learning or large-scale scientific simulations operate as interruptible loads that ramp down instantly during renewable generation deficits, protecting Tier 1 survival grids without brownouts.
+
+4. **Dense Urban Agglomerations (Big Cities) as Metabolic Sinks (Ch. II, Art. 2.1, Art. 2.3, Art. 10.3, Art. 10.4):**
+   - Absolute private dominium, absentee landlordism, and mortgage-backed financialization are abolished (Art. 2.1). High-density housing towers convert into Protected Possessory Usufruct held by resident-managed Community Land Trusts. Eviction is constitutionally barred (Art. 2.3).
+   - Urban fabrics are aggressively retrofitted for energy autonomy: building-integrated photovoltaics, passive solar retrofits, gravity-assisted water cisterns, de-paving for microclimate cooling, and urban permaculture belts.
+   - Cities that inevitably exceed their micro-basin carrying capacity (triggering Red Status under Art. 10.4) do not extract resources by financial coercion. Instead, they enter transparent, bilateral physical exergy-and-materials compacts with surplus agricultural and energy basins, balanced directly on public input-output ledgers (Art. 10.3).
+
+5. **The Transition: Expropriation, Debt Cancellation, and ETI Buffers (Ch. IX):**
+   - As corporate conglomerates, real estate trusts, and utility monopolies fracture under ecological disruption, supply chain friction, and unsustainable compound debt, O.N.E. bioregions execute Universal Debt Jubilees (Art. 9.5.2). Abandoned or bankrupt fabs, refineries, and logistics hubs are expropriated via adverse possession and common heritage easements into public commons trusts (Art. 9.5).
+   - While legacy nation-states still exist, advanced inputs (specialized photolithography optics from Zeiss/ASML, high-purity rare earth precursors, ultra-pure target materials) are procured through the ETI via direct physical barter, bilateral bills-of-lading, and non-hypothecated clearing buffers, completely shielding the internal demonetized economy from external currency speculation (Art. 9.3).
+   - Once global unification is achieved, any legacy manufacturing region attempting to withhold critical outputs (such as microprocessors or life-saving chemical precursors) to enforce asymmetric political power faces automatic Systemic Decoupling (Disiunctio Reticularis), shutting off federated high-voltage grid interties and inter-basin transit until reciprocity is restored (Art. 10.3.3).
+
+### Deliberative Questions for the Community
+- What operational metrics should Bioregional Citizen Assemblies use to set the boundary between Tier 2-A capital reserve replenishment and Tier 3 discretionary fab-lab dispatch?
+- How should inter-basin physical exergy-and-materials compacts be structured to prevent historical metropolitan hegemony over agrarian/energy watersheds?
+```
+
+
 

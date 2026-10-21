@@ -5,7 +5,7 @@
 **Author:** Kyberlex (`kyberlex@proton.me`)  
 **Repository:** [https://github.com/kyberlex/ONE](https://github.com/kyberlex/ONE)  
 **License:** AGPL-3.0-or-later / Open Knowledge  
-**Canonical Anchors:** [`bible/ONE NETWORKED EARTH (O.N.E.).md`](bible/ONE%20NETWORKED%20EARTH%20(O.N.E.).md) | [`AI_BENCHMARK_POST_WORK.md`](AI_BENCHMARK_POST_WORK.md) | [`synoptic.md`](synoptic.md) | [`oasis/oasis.md`](oasis/oasis.md)  
+**Canonical Anchors:** [`bible/ONE NETWORKED EARTH (O.N.E.).md`](bible/ONE%20NETWORKED%20EARTH%20(O.N.E.).md) | [`AI_BENCHMARK_POST_WORK.md`](AI_BENCHMARK_POST_WORK.md) | [`oasis/legacy_high_capital_assets.md`](oasis/legacy_high_capital_assets.md) | [`synoptic.md`](synoptic.md) | [`oasis/oasis.md`](oasis/oasis.md)  
 
 ---
 
@@ -224,7 +224,7 @@ RANK  POST-FIAT PARADIGM                              CT   AA   AS   RM   TF   T
 
 5. **Eliminating Currency Without Ration Cards:**  
    Instead of distributing bureaucratic quota cards with demurrage expiration dates, O.N.E. designs anti-accumulation directly into the physics of production:
-   * Upstream capital goods (Tier 2-A: smelters, semiconductor cleanrooms) are indivisible social trust assets, insulated from consumer bidding.
+   * Upstream capital goods (Tier 2-A: smelters, semiconductor cleanrooms, chemical synthesis) are indivisible social trust assets, insulated from consumer bidding and governed under guild stewardship with mandatory depreciation replenishment (see: [`oasis/legacy_high_capital_assets.md`](oasis/legacy_high_capital_assets.md)).
    * Discretionary fabrication operates on-demand in community Fab-Labs through quadratic preference signaling; files enter the public domain, and scrap metal returns to circular recycling loops.
    * Housing security is guaranteed through perpetual possessory usufruct, while unmaintained dwellings return automatically to the Civic Housing Pool.
 

@@ -534,3 +534,54 @@ Disputes and harms are resolved sequentially:
    * **60% Qualified Majority:** Required to ratify multilateral inter-basin resource corridors and long-term continental infrastructure compacts.
    * **50%+1 Simple Majority:** Permitted solely for emergency disaster relief mobilization and seasonal transit schedules, subject to a thirty (30) day mandatory review.
 3. Through this Universal Covenant, all federated bioregions pledge mutual solidarity, perpetual peace, and common stewardship for the flourishing of Earth and all its descendants.
+
+---
+
+# **CHAPTER XI: THE CELESTIAL COMMONS & INTERPLANETARY FEDERATION**
+## **(OPEN NETWORKED SOL — O.N.S.)**
+
+### **Article 11.1 — The Sol Commons and Abolition of Celestial Dominium (*Patrimonium Solis*)**
+1. Outer space, celestial bodies, planetary surfaces, asteroids, comets, Lagrange gravitational equilibrium points ($L_1$–$L_5$), and orbital trajectories constitute an indivisible, non-enclosable celestial commons (*Patrimonium Solis*) belonging to all living beings and their descendants.
+2. National annexation, corporate sovereignty, private equity claims, absentee title, and speculative reservation of celestial bodies or orbital slots are permanently barred across Open Networked Sol (O.N.S.).
+3. Positional advantages—including permanently shadowed polar volatile traps, peak-of-eternal-light solar ridges, stable orbital altitudes, and transfer corridors—shall never be leased, sold, or hoarded. Access is managed through open sortition rosters and non-monetized physical docking queues.
+4. Extracted abiotic minerals and volatiles exist strictly as possessory usufruct conditional upon active stewardship, non-wasteful extraction, and the immediate publication of structural assays and process tooling into the Open Commons.
+
+---
+
+### **Article 11.2 — Engineered Metabolic Envelopes and Closed-Loop Carrying Capacity**
+1. Beyond Earth’s biosphere, the foundational political and ecological unit of human civilization transitions from the natural hydrological basin to the artificial metabolic envelope: the Closed Ecological Life-Support System (CELSS).
+2. In a CELSS—whether situated within an orbital cylinder, a lunar lava tube, a Martian regolith vault, or a transit cycler hull—mass balance is an absolute thermodynamic ceiling. Volatile inventories of water ($H_2O$), nitrogen ($N_2$), carbon ($C$), and phosphorus ($P$) represent closed, unalterable community trusts.
+3. Carrying capacity telemetry in engineered habitats is measured by re-circulation loop efficiency, volatile leakage rates, structural pressure integrity, and net radiator thermal dissipation capacity ($W/m^2$). Habitation permits and spatial expansions must strictly conform to verifiable biophysical equilibrium.
+
+---
+
+### **Article 11.3 — Invariant Atmospheric Sovereignty and the Anti-Despotism Interlock**
+1. In all pressurized habitats and transit vessels, atmospheric composition ($21\%\ O_2,\ 78\%\ N_2$ at nominal sea-level pressure), potable water, radiation attenuation, and thermal maintenance constitute universal, non-derogable Tier 1 survival rights.
+2. Life-support systems shall never be commodified, metered against labor output, monetized as debt, or weaponized for behavioral conditioning or political submission. The creation of an oxygen or pressure monopsony is classified under Article 1.2 as an existential crime of violence.
+3. Environmental control architectures must incorporate hardwired, non-programmable analog mechanical overrides and continuous passive bypass lines accessible to all inhabitants. No software algorithm, automated administrative decree, or sortition vote may throttle life-support circuits.
+4. Metabolic Decoupling in Dispute Resolution: In sealed environments, restorative justice measures under Article 5.2 operate under strict metabolic decoupling. Non-reciprocal inhabitants may face temporary suspension of elective Tier 3 tooling, computational bandwidth, or luxury facilities, but shall never face expulsion into vacuum, carceral confinement that restricts biophysical baselines, or atmospheric rationing.
+
+---
+
+### **Article 11.4 — Thermodynamic Astrodynamics: Mass, Exergy, and Velocity Budgets**
+1. Interplanetary logistics and material exchanges shall not be governed by fiat currency or financial debt, but coordinated directly through physical input-output vectors:
+   $$\mathbf{x} = [E_{\text{exergy}}\ (\text{kWh}),\ m_{\text{dry}}\ (\text{kg}),\ V_{\text{volatiles}}\ (\text{L}),\ \Delta v\ (\text{km/s})]$$
+2. Reaction mass (propellant inventory) and kinetic velocity changes ($\Delta v$) are recognized as finite thermodynamic commons vectors. Accelerating mass across planetary gravity wells incurs physical energy expenditures that must be balanced by verifiable utility to the federated network.
+3. Heavy industrial refinement facilities—including vacuum induction furnaces, centrifugal smelters, solar concentrators, and silicon zone-refining arrays—are indivisible Tier 2-A common assets held in collective trust to prevent systemic supply bottlenecks.
+
+---
+
+### **Article 11.5 — Light-Cone Subsidiarity and Asynchronous Demarchic Sortition**
+1. Because the finite speed of light imposes communications latencies across astronomical distances (ranging from seconds in cislunar space to hours in the outer Solar System), centralized interplanetary democracy is physically impossible. Governance operates strictly on Light-Cone Subsidiarity: no remote assembly holds jurisdiction over decisions that can be resolved within the local habitat envelope.
+2. The Sortition Architecture:
+   * **Habitat and CELSS Sortition Councils (15 to 101 citizens):** Maintain total operational sovereignty over interior life, fab-lab access, spatial layout, and rotational shift coordination in odd-numbered parity.
+   * **Planetary and System Chambers (301 citizens):** Coordinate regional $\Delta v$ transit corridors, deep volatile reserves, and high-entropy smelting logistics within a gravity well or orbital subsystem.
+   * **The Sol Commons Assembly (1,001 delegates):** Operates on asynchronous deliberative epochs (90-day cycles), maintaining universal constitutional invariants, open deterministic compiler toolchains, genetic seedbanks, and orbital collision avoidance protocols.
+3. Multi-regional ratifications and dispute arbitrations synchronize over delay-tolerant mesh networks through cryptographic append-only ledgers.
+
+---
+
+### **Article 11.6 — Kinetic Non-Aggression, Planetary Protection, and Swords into Plowshares**
+1. Because any high-mass propulsion system or directed asteroid represents a kinetic weapon of planetary destruction, intentional propulsion burns directed along impact trajectories toward inhabited habitats, moons, or Earth are prohibited under Article 8.1 as structural mass aggression.
+2. Asteroid maneuvering, orbital transfers, and planetary redirection burns must be verified by Byzantine Fault Tolerant (BFT) optical and radar tracking arrays. Propulsion control software must remain auditable, open-source, and physically interlocked against hazardous collision corridors.
+3. In accordance with the principle of Swords into Plowshares (*Gladii in vomeres*), all decommissioned propulsion stages, deep-space pressure hulls, and radiation shielding plates are surrendered to cycler foundries for remelting into common habitat rings, thermal radiators, and water storage walls.

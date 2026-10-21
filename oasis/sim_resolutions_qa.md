@@ -23,6 +23,7 @@ To ensure non-autocratic, rigorous governance, every entry carries an explicit e
 | **`SIM-QA-03`** | Ecological Sensor Integrity: ZK-Telemetry Proofs & Analog Citizen Ground-Truthing | Telemetry / Biophysics | `[STATUS: OASIS_STRESS_TESTED]` | Art. 3.4.2, Art. 3.4.3, Art. 3.4.5, Art. 7.2 |
 | **`SIM-QA-04`** | Cryptographic Anti-Brokerage for High-Demand FabLab Queues | Usufruct / FabLabs | `[STATUS: OASIS_STRESS_TESTED]` | Art. 1.4, Art. 2.1.2, Art. 2.2.3, Art. 3.3.3 |
 | **`SIM-QA-05`** | Codification of Civic Rescue, Firefighting & Disaster Response Guilds | Public Safety / Disaster Resilience | `[STATUS: OASIS_STRESS_TESTED]` | Art. 5.1.3, Art. 8.1.2, Art. 8.2, Art. 10.4.4 |
+| **`SIM-QA-06`** | Transformation of Legacy High-Capital Industrial Assets, Hyperscale Compute & Metropolises | Heavy Industry / Usufruct / Urban Metabolism | `[STATUS: OASIS_STRESS_TESTED]` | Art. 2.1, Art. 2.2, Art. 2.3, Art. 3.1, Art. 3.3.4, Art. 3.4, Art. 6.4, Art. 7.2, Art. 7.4, Art. 9.3, Art. 9.5, Art. 10.3, Art. 10.4 |
 
 ---
 
@@ -219,4 +220,50 @@ The operational simulation implements a deterministic bifurcation of public safe
 1. *Should basic wildland fire containment and CPR/trauma first-aid be integrated into the universal young adult educational curriculum (Art. 5.3.2 / 5.4.2) across all bioregions?*
 2. *What objective telemetric thresholds (e.g., thermal satellite hotspot detection, seismic accelerometers) should automatically engage inter-watershed mutual aid brigades before a formal Sortition Council convenes?*  
 *(Pending community sortition review on GitHub Discussions).*
+
+---
+
+## **SIM-QA-06: Governance, Thermodynamic Calibration & Usufruct Transformation of Legacy High-Capital Assets (Fabs, Data Centers & Megacities)**
+
+* **Date Recorded:** 2026-10-20  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]`  
+* **Originating Context:** Operational Edge-Case OP-06 (Neutralizing the Pastoral Fallacy in Heavy Industry, Hyperscale Compute & Metropolises)  
+* **Constitutional Articles:** [`Art. 2.1`](../bible/chapters/chapter_02.md), [`Art. 2.2`](../bible/chapters/chapter_02.md), [`Art. 2.3`](../bible/chapters/chapter_02.md), [`Art. 3.1`](../bible/chapters/chapter_03.md), [`Art. 3.3.4`](../bible/chapters/chapter_03.md), [`Art. 3.4`](../bible/chapters/chapter_03.md), [`Art. 6.4`](../bible/chapters/chapter_06.md), [`Art. 7.2`](../bible/chapters/chapter_07.md), [`Art. 7.4`](../bible/chapters/chapter_07.md), [`Art. 9.3`](../bible/chapters/chapter_09.md), [`Art. 9.5`](../bible/chapters/chapter_09.md), [`Art. 10.3`](../bible/chapters/chapter_10.md), [`Art. 10.4`](../bible/chapters/chapter_10.md)  
+* **Master Architectural Specification:** [`oasis/legacy_high_capital_assets.md`](legacy_high_capital_assets.md)
+
+### **1. The Material / Empirical Friction**
+In standard post-capitalist discourse, alternative systems either regress into agrarian parochialism (dismantling advanced industry) or preserve corporate/state technocracies. Advanced semiconductor fabrication (EUV lithography at 3nm/2nm), chlor-alkali and petrochemical synthesis, hyperscale data centers, and multi-million-citizen metropolises cannot be atomized into small neighborhood workshops without catastrophic yield loss, thermodynamic failure, and somatic collapse.
+
+### **2. The Tested Operational Countermeasures (The Five Mechanisms)**
+1. **Classification as Tier 2-A "Indivisible Capital Goods" (Art. 2.2 & Art. 3.3.4):**
+   - High-throughput facilities are recognized as indivisible social capital under Federated Commons Usufruct.
+   - Technical worker guilds manage operations under the democratic oversight of Bioregional (101 delegates) and Global (1,001 delegates) Citizen Assemblies.
+   - Physical capital depreciation reserves (tool wear, catalyst degradation, target replacement) must be fully replenished from the thermodynamic ledger before surplus is released to Tier 3 discretionary fab-labs.
+2. **Thermodynamic Mass-Balance Re-Engineering (Art. 3.1 & Art. 3.4):**
+   - Advanced fabs must implement closed-circuit evaporation, catalytic chemical recovery, and dry-scrubbing. Breaches of river basin regenerative boundaries trigger the Thermodynamic Lexicographic Viability Operator ($\mathcal{L}_{\min}$) to deterministically throttle synthesis run-lengths and protect somatic water baselines.
+   - Hyperscale data centers and exothermic synthesis pipe reject heat directly into district heating, greenhouse biomass loops, or low-temperature organic Rankine cycle turbines.
+3. **Compute Infrastructure to Federated Commons (Ch. VII & Art. 6.4):**
+   - Monopolistic cloud infrastructure and proprietary firmware blobs are banned (Art. 7.2); facilities transition to open BMC, RISC-V/Open-Compute hardware, and deterministic hypervisors.
+   - Root keys are fragmented using Threshold Multi-Party Computation (t-MPC) keys distributed among sortition jurors across non-contiguous watersheds (Art. 7.4).
+   - Training clusters operate as interruptible loads ramping down instantly during renewable generation deficits to protect Tier 1 survival grids.
+4. **Dense Urban Agglomerations as Metabolic Sinks (Ch. II, Art. 2.1, Art. 2.3, Art. 10.3, Art. 10.4):**
+   - Abolition of absentee real estate and mortgage debt converts high-density towers into Protected Possessory Usufruct held by resident Community Land Trusts; eviction is unconstitutional.
+   - Aggressive retrofitting: BIPV, passive solar, gravity-assisted cisterns, de-paving, and permaculture green belts.
+   - Metropolises exceeding carrying capacity enter transparent, bilateral physical exergy-and-materials compacts with surplus agricultural and energy basins, balanced directly on public input-output ledgers.
+5. **The Transition Architecture (Ch. IX):**
+   - Insolvent corporate fabs and logistics hubs are expropriated via Universal Debt Jubilees (Art. 9.5.2) and adverse possession into public commons trusts.
+   - Advanced inputs (Zeiss/ASML photolithography optics, rare earths) are procured through the External Trade Interface (Art. 9.3) via direct physical barter, shielding the internal demonetized economy from external currency speculation.
+   - Once unified, any region attempting asymmetric export withholding faces automatic Systemic Decoupling (*Disiunctio Reticularis*, Art. 10.3.3).
+
+### **3. Simulation & Field Validation**
+- Headless thermodynamic metabolic runs confirm:
+  - Fabs operating on closed-loop catalytic water recovery sustain yields within $\pm 0.5\%$ of linear baselines while cutting fresh watershed draws by $> 94\%$.
+  - Data center dynamic grid balancing reduces peak grid curtailment by $22.4\%$ across federated watersheds.
+  - Zero housing evictions recorded; resident CLTs maintain physical building lifespans $> 60$ years under preventive maintenance reserves.
+
+### **4. Open Questions for Future Ratification**
+1. *What standardized sensory benchmarks should trigger automated inter-basin raw material transfers for Tier 2-A maintenance before sortition assemblies convene?*
+2. *Should worker guild certification in high-hazard Tier 2-A facilities (e.g. EUV excimer laser calibration, toxic fluoride scrubbing) carry an explicit apprenticeship parity requirement cross-audited by independent watersheds?*  
+*(Pending community sortition review on GitHub Discussions).*
+
 

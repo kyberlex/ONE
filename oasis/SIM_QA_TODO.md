@@ -18,7 +18,7 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 
 | ID | Title | Domain | Target Articles | Stage | Active Agent / Next Action |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| *None* | *All registered genesis SIM-QA dockets (01–05) fully stress-tested and merged.* | — | — | `IDLE` | Awaiting new simulation edge-cases from O-ASIS sandbox |
+| **`SIM-QA-06`** | Transformation of Legacy High-Capital Industrial Assets, Hyperscale Compute & Metropolises | Heavy Industry / Usufruct / Urban Metabolism | Art. 2.1, Art. 2.2, Art. 2.3, Art. 3.1, Art. 3.3.4, Art. 3.4, Art. 6.4, Art. 7.2, Art. 7.4, Art. 9.3, Art. 9.5, Art. 10.3, Art. 10.4 | `[STAGE 3: PURPLE_PATCH]` | Canonical documentation verified ([`oasis/legacy_high_capital_assets.md`](legacy_high_capital_assets.md)); awaiting confederal ratification |
 
 ---
 
