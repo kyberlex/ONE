@@ -24,8 +24,8 @@ To ensure non-autocratic, rigorous governance, every entry carries an explicit e
 | **`SIM-QA-04`** | Cryptographic Anti-Brokerage for High-Demand FabLab Queues | Usufruct / FabLabs | `[STATUS: OASIS_STRESS_TESTED]` | Art. 1.4, Art. 2.1.2, Art. 2.2.3, Art. 3.3.3 |
 | **`SIM-QA-05`** | Codification of Civic Rescue, Firefighting & Disaster Response Guilds | Public Safety / Disaster Resilience | `[STATUS: OASIS_STRESS_TESTED]` | Art. 5.1.3, Art. 8.1.2, Art. 8.2, Art. 10.4.4 |
 | **`SIM-QA-06`** | Transformation of Legacy High-Capital Industrial Assets, Hyperscale Compute & Metropolises | Heavy Industry / Usufruct / Urban Metabolism | `[STATUS: CANONICAL_MERGED]` | Art. 2.2, Art. 3.3.4, Art. 6.2, Art. 7.4, Art. 10.3 |
-| **`SIM-QA-07`** | Active Solar Management via Reversible $L_1$ Lagrange Sunshade vs. Chemical Terrestrial Geoengineering | Planetary Climate / Celestial Commons / Geoengineering | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 10.5, Art. 11.1, Art. 11.5 |
-| **`SIM-QA-08`** | Deep-Space Defensive Realism: Distributed Kinetic & Laser Immune System vs. Ballistic Mass-Velocity Threats | Astrodynamics / Deep-Space Defense / Game Theory | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 8.1, Art. 11.4, Art. 11.6 |
+| **`SIM-QA-07`** | Active Solar Management via Reversible $L_1$ Lagrange Sunshade vs. Chemical Terrestrial Geoengineering | Planetary Climate / Celestial Commons / Geoengineering | `[STATUS: CANONICAL_MERGED]` | Art. 10.5, Art. 11.1 |
+| **`SIM-QA-08`** | Deep-Space Defensive Realism: Distributed Kinetic & Laser Immune System vs. Ballistic Mass-Velocity Threats | Astrodynamics / Deep-Space Defense / Game Theory | `[STATUS: CANONICAL_MERGED]` | Art. 11.6 |
 | **`SIM-QA-09`** | Autonomous AI & Robotic Swarm Aggression: Hard Galvanic Air-Gaps, Directed-Energy Point Defense & Non-Somatic Countermeasures | Autonomous Warfare / Cyber-Physical Defense / Asymmetric Resilience | `[STATUS: CANONICAL_MERGED]` | Art. 6.5, Art. 8.1.4 |
 
 ---
@@ -275,69 +275,58 @@ In standard post-capitalist discourse, alternative systems either regress into a
 ## **SIM-QA-07: Active Solar Management via Reversible L1 Lagrange Sunshade vs. Chemical Terrestrial Geoengineering**
 
 * **Date Recorded:** 2026-10-21  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]`  
+* **Date Merged:** 2026-10-21  
+* **Epistemic Status:** `[STATUS: CANONICAL_MERGED]` (Integrated into Living Constitution Arts. 10.5, 11.1)  
 * **Originating Context:** Epistemic Review with Hard-Science Futurists (Isaac Arthur SFIA & Planetary Thermodynamics)  
-* **Constitutional Articles:** [`Art. 10.5`](../bible/chapters/chapter_10.md), [`Art. 11.1`](../bible/chapters/chapter_11.md), [`Art. 11.5`](../bible/chapters/chapter_11.md)
+* **Constitutional Articles:** [`Art. 10.5`](../bible/chapters/chapter_10.md), [`Art. 11.1`](../bible/chapters/chapter_11.md)
 
 ### **1. The Material / Theoretical Friction**
-Article 10.5 currently bans all unilateral geoengineering, aerosol spraying, and ocean fertilization, permitting stabilization only to avert acute multi-species tipping points via a 75% qualified supermajority of the Global Commons Assembly and the affirmative consent of *every affected watershed*.
+Article 10.5 originally banned all unilateral geoengineering, aerosol spraying, and ocean fertilization, permitting stabilization only to avert acute multi-species tipping points via a 75% qualified supermajority of the Global Commons Assembly and the affirmative consent of *every affected watershed*.
 
 As raised in adversarial stress-testing:
-1. **The Veto Paralysis Trap:** In an already destabilized climate (420+ ppm CO2, permafrost thaw), demanding unanimous consent across every terrestrial watershed creates a structural paralysis trap (*liberum veto*). While assemblies deliberate, runaway thermal feedback loops (e.g. Arctic albedo flip) may lock in irreversible extinction cascades.
-2. **Category Error (Chemical SRM vs. Optical Space Deflection):** Art. 10.5 conflates terrestrial chemical interventions (stratospheric sulfur injection, oceanic iron dumping)—which carry asymmetric toxic precipitation, monsoon disruption, and termination shock—with **passive optical occultation in deep space**. An adjustable solar sunshade situated at the Earth-Sun $L_1$ Lagrange point (reducing insolation by 0.5%–1.5%) produces zero chemical fallout, alters no atmospheric chemistry, and can be modulated or dispersed cleanly.
+1. **The Veto Paralysis Trap:** In an already destabilized climate (420+ ppm CO2, permafrost thaw), demanding unanimous consent across every terrestrial watershed creates a structural paralysis trap (*liberum veto*). While assemblies deliberate, runaway thermal feedback loops (e.g. Arctic albedo flip) lock in irreversible extinction cascades.
+2. **Category Error (Chemical SRM vs. Optical Space Deflection):** Terrestrial chemical interventions (stratospheric sulfur injection, oceanic iron dumping) carry asymmetric toxic precipitation, monsoon disruption, and catastrophic termination shock. In contrast, **passive optical occultation in deep space** ($L_1$ Lagrange point, reducing insolation by 0.5%–1.5%) produces zero chemical fallout, alters no atmospheric chemistry, and can be modulated or dispersed cleanly.
 
-### **2. The Proposed Hypothesis (Bifurcated Solar Governance)**
-1. **Perpetual Constitutional Ban on Chemical Tropospheric/Stratospheric Geoengineering (Art. 10.5.2):**
-   - The absolute prohibition against aerosol dispersal, chemical seeding, and oceanic fertilization remains inviolate.
-2. **Classification of L1 Solar Deflection as a Sol Commons Trust (Ch. XI & Art. 11.1):**
+### **2. Adversarial Stress-Test (RED-1 & RED-2 Assault)**
+* **Vector 1 (RED-1 Assault: Latent Asymmetric Insolation Conflicts):** Reducing the solar constant by 1.0% alters global hydrological Hadley circulation unevenly. While temperate zones benefit from cooling, tropical monsoon basins might experience convective precipitation shifts, creating inter-regional disputes.
+* **Vector 2 (RED-2 & RED-5 Assault: Sabotage, Capture & Mass-Ballast Termination Shock):** An aggressive faction could dock propulsion units or ballast mass to hold the array fixed, or detonate the array suddenly, triggering an abrupt termination shock warming spike that collapses global agriculture in a single growing season.
+
+### **3. The Hardened Operational Countermeasure (Purple Patch)**
+1. **Perpetual Constitutional Ban on Chemical Geoengineering (Art. 10.5.2):**
+   - The absolute prohibition against aerosol dispersal, tropospheric sulfur injection, and oceanic chemical fertilization remains permanently inviolate.
+2. **Classification of L1 Solar Deflection as a Sol Commons Trust (Art. 10.5.3 & Art. 11.1):**
    - Deep-space optical management is categorized under Chapter XI (*Patrimonium Solis*) not as atmospheric interference, but as **Solar Flux Regulation (*Administratio Insolationis*)**.
-   - Any L1 sunshade array must be constructed exclusively from modular thin-film diffractive occulting disks assembled by orbital cycler foundries (Art. 11.6).
-3. **Reformed Demarchic Decision Protocol (Art. 11.5):**
-   - Deployment or modulation does not require unanimous watershed consent. It requires:
-     * A 75% Qualified Supermajority of the Sol Commons Assembly (1,001 sortition delegates);
-     * A 66% Concurring Supermajority across Continental Governance Chambers (301 delegates each).
-4. **Physical Fail-Safe (Passive Solar Feathering):**
-   - To eliminate "termination shock" and administrative capture, all L1 occulting units must incorporate passive radiation-pressure trim tabs. If active cryptographic keep-alive beacons from the federated ground telemetry are lost for $> 14$ consecutive days, solar photon pressure automatically feathers and disperses the sunshade array out of the $L_1$ occultation axis, restoring the unmitigated solar constant without sudden kinetic disruption.
-
-### **3. Open Questions for Adversarial Red Team**
-1. *Does an L1 solar flux reduction of 1.0% alter global precipitation patterns unevenly across equatorial vs. boreal watersheds, thereby creating latent asymmetric bioclimatic conflicts?*
-2. *Can the passive solar feathering mechanism be subverted through orbital docking sabotage or unauthorized mass-ballast attachment?*
+   - Deployment requires a seventy-five percent (75%) qualified supermajority of the Global Commons Assembly (1,001 delegates) and a sixty-six percent (66%) concurring vote across Continental Governance Chambers (301 delegates each), eliminating the single-watershed *liberum veto* paralysis.
+3. **Passive Fail-Safe (Radiation Pressure Self-Dispersal / Anti-Termination Shock):**
+   - All $L_1$ occulting units maintain passive radiation-pressure trim tabs. If active cryptographic keep-alive beacons from ground telemetry lapse for $> 14$ consecutive days, solar photon pressure automatically destabilizes and feathers the disks out of the occultation corridor over a thirty-six (36) month gradual decay gradient, preventing abrupt termination shock and administrative blackmail.
 
 ---
 
 ## **SIM-QA-08: Deep-Space Defensive Realism: Distributed Kinetic & Laser Immune System vs. Ballistic Mass-Velocity Threats**
 
 * **Date Recorded:** 2026-10-21  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]`  
+* **Date Merged:** 2026-10-21  
+* **Epistemic Status:** `[STATUS: CANONICAL_MERGED]` (Integrated into Living Constitution Art. 11.6)  
 * **Originating Context:** Epistemic Review with Defense Realists & Astrodynamics Experts (Isaac Arthur SFIA & Orbital Ballistics)  
-* **Constitutional Articles:** [`Art. 8.1`](../bible/chapters/chapter_08.md), [`Art. 11.4`](../bible/chapters/chapter_11.md), [`Art. 11.6`](../bible/chapters/chapter_11.md)
+* **Constitutional Articles:** [`Art. 11.6`](../bible/chapters/chapter_11.md)
 
 ### **1. The Material / Theoretical Friction**
-Chapters VIII and IX establish a non-carceral, restorative defense doctrine grounded in asymmetric dissuasion, economic decoupling, and defection incentives. Chapter XI (Art. 11.6) bars kinetic weapons and high-thrust collision burns (*Gladii in vomeres*).
+Fundamental astrodynamics establishes that in deep space, any high-mass propulsion drive is an intrinsic weapon of mass destruction ($E_k = \frac{1}{2}mv^2$). A standard 5,000-ton freighter or deflected asteroid at $50\text{ km/s}$ carries kinetic energy of dozens of megatons.
+Defection incentives and restorative procedures are physically inert against a ballistic mass coasting on a collision trajectory toward an inhabited habitat ring or Earth.
 
-However, fundamental astrodynamics establishes that:
-$$\text{In deep space, any propulsion drive is an intrinsic weapon of mass destruction: } E_k = \frac{1}{2}m v^2$$
-A standard 5,000-ton bulk freighter cruising at $50\text{ km/s}$ or a 50-meter near-Earth asteroid deflected toward a pressurized CELSS habitat ring or a terrestrial metropolis carries kinetic energy on the scale of dozens of megatons of TNT.
+### **2. Adversarial Stress-Test (RED-3 & RED-5 Assault)**
+* **Vector 1 (RED-3 Assault: The Dual-Use Orbital Death-Ray / Mirror Hijack):** A GW-class phased-array laser station capable of asteroid ablation could be re-targeted at a planetary city or CELSS habitat, creating an instantaneous relativistic death-ray.
+* **Vector 2 (RED-5 Assault: Astronomical Light-Delay & Sortition Paralysis):** A hyperbolic collision burn at $60\text{ km/s}$ might be detected with only a 15-minute terminal intercept window. If light-delay is 12 minutes, real-time sortition voting guarantees death by latency.
+* **Vector 3 (RED-3 & RED-4 Assault: Standing Praetorian Fleet Extortion):** Maintaining dedicated combat interceptor tugs creates a specialized military caste that extracts social resources.
 
-Against an ideological suicide faction, an unconstrained autonomous rogue network, or an aggressive piratical breakout:
-* Defection incentives and legal restorative procedures are physically inert against a ballistic mass already coasting on a collision trajectory.
-* A commons civilization with zero active kinetic interception capability lives at the mercy of single-point existential decapitation.
-
-### **2. The Proposed Hypothesis (The Planetary & Orbital Immune System)**
-1. **Re-conceptualization from "Offensive Force" to "Civilizational Immune System":**
-   - Asteroid hazard deflection, orbital debris clearance, and defensive interdiction are unified into a single physical infrastructure: the **Orbital Immune System (*Systema Immunitatis Caelestis*)**.
-2. **Distributed Active Deflection Infrastructure (Art. 11.6):**
-   - The Sol Federation deploys networked, high-power phased-array laser stations (GW-class solar-powered ablation arrays) and autonomous kinetic counter-interceptors in high-inclination sentinel orbits.
-   - Laser arrays operate continuously for orbital debris clearing and solar sail propulsion assistance during peacetime, eliminating standing military parasitism.
-3. **Hardwired Analog Defensive Logic Gates:**
-   - Laser arrays and kinetic counter-interceptors are physically interlocked against planetary bombardment or offensive targeting: optical and guidance sensors are hardwired with analog geometric blinders that trip and ground power systems if the beam or missile trajectory aims within a designated safe cone of any registered inhabited habitat or sovereign watershed.
-   - Firing authorization against terminal collision vectors ($\Delta d < \text{safe corridor}$) requires Threshold Multi-Party Cryptographic (t-MPC) keys distributed among sortition-drawn Space Defense Panels (301 citizens across planetary and habitat chambers, rotating every 90 days).
-4. **Mandatory Kinetic Redirection Reserves:**
-   - Dedicated low-latency interceptor tugs must be maintained in high-energy storage orbits solely for terminal mass deflection, funded as an inviolable Tier 1 collective safety trust.
-
-### **3. Open Questions for Adversarial Red Team**
-1. *Could a phased-array laser station designed for ablation deflection be secretly retrofitted with mirror redirection to conduct offensive orbital bombardment against terrestrial ground nodes?*
-2. *How do asynchronous demarchic sortition assemblies (Ch. XI) handle emergency interception decisions when light-delay exceeds the intercept window (e.g. high-velocity interstellar interlopers on hyperbolic orbits)?*
+### **3. The Hardened Operational Countermeasure (Purple Patch)**
+1. **The Orbital Immune System (*Systema Immunitatis Caelestis*, Art. 11.6.2):**
+   - Planetary defense is re-conceptualized not as an offensive fleet, but as civilizational immune infrastructure.
+   - Phased-array laser stations and autonomous interceptor tugs maintain 100% civilian peacetime utility: laser arrays beam photon pressure to propel civilian solar-sail cargo clippers and clear orbital debris, while tugs harvest dead satellites for remelting under Swords into Plowshares (*Gladii in vomeres*, Art. 11.6.3).
+2. **Hardwired Optical Geometric Blinders:**
+   - Emitters are hardwired with analog geometric occulters and blinders that mechanically trip and dump power to space radiators if the beam is pointed within a $15^\circ$ exclusion cone of any registered inhabited habitat, moon, or Earth.
+3. **Deterministic Physics-Bounded Autonomous Interception Corridor:**
+   - Sortition assemblies deliberate in advance on the mathematical intercept envelope. Terminal interception runs on pre-compiled, open-source, bit-for-bit verifiable firmware executing across Byzantine Fault Tolerant (BFT) optical radar sentinels, overcoming astronomical light-delay without sacrificing democratic sovereignty.
 
 ---
 

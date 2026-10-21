@@ -500,24 +500,23 @@ Disputes and harms are resolved sequentially:
 # **CHAPTER X: BIOREGIONAL WATERSHED FEDERATION & THE PLANETARY COVENANT**
 
 ### **Article 10.1 — The Watershed as Primary Sovereign Unit and Bioregional Subsidiarity**
-1. Westphalian frontiers, colonial partitions, and sovereign territorial enclosures are permanently abolished across Open Networked Earth (O.N.E.).
-2. The foundational political unit of human organization is the natural Bioregional Watershed, delineated by hydrological catchment basins, mountain ranges, aquifer flows, and coastal interfaces.
-3. Governance adheres strictly to the principle of Bioregional Subsidiarity: every civic, technological, and agricultural decision is resolved at the lowest ecological scale possible—from the neighborhood micro-basin to the valley council.
-4. Higher-tier assemblies possess zero jurisdiction to override local autonomy, save for actions that export physical pollution, breach inter-basin aquifer stability, or violate invariant human rights.
+1. Westphalian frontiers, colonial borders, and sovereign territorial enclosures are permanently abolished.
+2. The foundational political unit is the natural Bioregional Watershed, bounded by hydrological catchments, aquifers, and coastal biomes.
+3. Governance adheres to Bioregional Subsidiarity: decisions are resolved at the lowest ecological scale possible, from neighborhood micro-basins to valley councils.
+4. Higher-tier assemblies possess zero jurisdiction to override local autonomy, save to halt exported pollution, protect shared aquifers, or defend invariant rights.
 
 ---
 
 ### **Article 10.2 — Ecological Personhood and Interspecies Guardianship (*Jus Biosphaerae*)**
-1. Major river systems, ancient forests, coastal wetlands, and subterranean aquifers are recognized as Juridical Persons (*Personae Biologicae*) possessing the inalienable right to exist, flow, regenerate, and maintain thermodynamic balance under *Jus Biosphaerae*.
-2. Natural biomes cannot be owned, leased, severed, or commodified.
-3. In all assemblies, the rights of non-human biomes and future generations are defended by Guardians of the Biosphere (*Curatores Biosphaerae*), composed of sortition-selected citizens sitting alongside rotating field naturalists. Guardians hold standing to initiate injunctions and demand assembly reviews against extractive projects threatening biospheric continuity.
+1. Major river systems, ancient forests, coastal wetlands, and aquifers are Juridical Persons (*Personae Biologicae*) holding the inalienable right to exist, flow, and regenerate under *Jus Biosphaerae*. Natural biomes cannot be owned, leased, or commodified.
+2. Guardians of the Biosphere (*Curatores Biosphaerae*), comprising sortition citizens and rotating field naturalists, represent non-human biomes and future generations in all assemblies, holding standing to enjoin projects threatening ecological continuity.
 
 ---
 
 ### **Article 10.3 — Physical Inter-Basin Reciprocity and Anti-Cartel Pacts**
-1. Inter-bioregional trade proceeds through bilateral and multilateral physical resource compacts, operating without financial speculation, debt instruments, or currency exchange.
-2. Basins endowed with mineral deposits, seasonal solar abundance, or hydrological surpluses exchange physical exergy, circular refined metals, and specialized equipment directly on open thermodynamic ledgers. Dense urban agglomerations exceeding local footprints operate not through financial extraction, but as specialized metabolic organs under bilateral reciprocity compacts, exchanging advanced industrial outputs and scientific coordination for food and energy surpluses.
-3. Hoarding critical life-support resources, forming extractive cartels, or imposing upstream hydrological cutoffs triggers automatic Systemic Decoupling (*Disiunctio Reticularis*): immediate suspension of inter-basin optical backbones, federated electrical interties, and transit access to rare materials and advanced medical buffers, enforcing biophysical compliance through non-violent material isolation. All logistics routing and allocations remain auditable across open mesh telemetry.
+1. Inter-bioregional trade proceeds through bilateral physical resource compacts, operating without financial speculation, debt instruments, or currency exchange.
+2. Basins exchange physical exergy, refined metals, and specialized equipment directly on open thermodynamic ledgers. Dense urban agglomerations operate as specialized metabolic organs under bilateral compacts, trading advanced industrial outputs and scientific research for food and energy surpluses.
+3. Hoarding life-support resources, forming cartels, or cutting off downstream water triggers automatic Systemic Decoupling (*Disiunctio Reticularis*): immediate suspension of inter-basin grid interties, transit corridors, and advanced medical buffers until reciprocity is restored.
 
 ---
 
@@ -528,14 +527,14 @@ Disputes and harms are resolved sequentially:
    * **Amber Status (Dynamic Buffer):** The basin approaches seasonal carrying thresholds; permanent residential allocation prioritizes family reunification, specialized labor requests, and voluntary infrastructure expansion.
    * **Red Status (Carrying Ceiling):** The basin has reached physical thermodynamic limits; permanent residential tenure creation is paused until regional carrying capacity expands.
 3. Inviolable Sanctuary Guarantee: Under no circumstances shall any human being face armed pushback, physical interdiction, or involuntary deportation. Even under Red Status, all travelers retain unconditional access to hospitality pavilions, clean water, wholesome food, emergency medical care, and safe transit.
-4. Mandatory Federal Rebalancing and Transit Bypass for Red-Status Basins: When a watershed incurs emergency Red Status from sudden climate shocks or displacement flows, adjacent Green and Amber basins bear a binding obligation to activate mutual-aid corridors, deploying modular desalination, portable microgrids, and mobile medical hubs. Where arrivals exceed the instantaneous life-support ceiling of a Red-Status basin’s hospitality infrastructure, the Continental Governance Chamber triggers the Immediate Transit Bypass Protocol: high-speed rail and maritime corridors prioritize transport of arriving populations across the saturated zone directly into designated Reception Nodes within contiguous Green and Amber basins, fully financed as a federal obligation.
+4. Mandatory Federal Rebalancing and Transit Bypass for Red-Status Basins: When a watershed incurs emergency Red Status, adjacent Green and Amber basins bear a binding obligation to activate mutual-aid corridors, deploying modular desalination, portable microgrids, and mobile medical hubs. Where arrivals exceed the instantaneous life-support ceiling of local hospitality infrastructure, the Continental Chamber triggers the Immediate Transit Bypass Protocol: high-speed rail and maritime transit corridors prioritize transporting arriving populations across the saturated zone into designated Reception Nodes within contiguous Green and Amber basins.
 
 ---
 
-### **Article 10.5 — Planetary Commons Stewardship and Atmospheric Invariants**
-1. The global atmosphere, the oceanic commons, the cryosphere, and the electromagnetic spectrum constitute the indivisible planetary life-support heritage of all living organisms.
-2. Unilateral geoengineering interventions, persistent atmospheric aerosol spraying, and large-scale oceanic chemical seeding are strictly prohibited.
-3. Planetary earth-system stabilization programs may only be authorized to avert acute, multi-species catastrophic tipping points, requiring the affirmative consent of every affected watershed and a seventy-five percent (75%) qualified supermajority vote of the Global Commons Assembly.
+### **Article 10.5 — Planetary Commons Stewardship and Solar Flux Regulation**
+1. The global atmosphere, oceanic commons, cryosphere, and electromagnetic spectrum constitute the indivisible planetary life-support heritage of all living organisms.
+2. Perpetual Ban on Chemical Geoengineering: Unilateral atmospheric aerosol injection, stratospheric sulfur dispersal, and oceanic chemical fertilization are permanently prohibited as existential ecocidal hazards.
+3. Reversible Solar Flux Regulation (*Administratio Insolationis*): To counter runaway climate tipping points without chemical fallout, deep-space optical management via passive, diffractive $L_1$ Lagrange sunshade arrays is recognized under Article 11.1 as a Sol Commons trust. Deployment requires a seventy-five percent (75%) qualified supermajority of the Global Commons Assembly (1,001 delegates) and a sixty-six percent (66%) concurring vote across Continental Chambers. Occulting units must maintain passive radiation-pressure trim tabs that feather and disperse the array automatically over thirty-six (36) months if ground beacons lapse, preventing administrative capture and abrupt termination shock.
 
 ---
 
@@ -558,10 +557,10 @@ Disputes and harms are resolved sequentially:
 ## **(OPEN NETWORKED SOL — O.N.S.)**
 
 ### **Article 11.1 — The Sol Commons and Abolition of Celestial Dominium (*Patrimonium Solis*)**
-1. Outer space, celestial bodies, planetary surfaces, asteroids, comets, Lagrange gravitational equilibrium points ($L_1$–$L_5$), and orbital trajectories constitute an indivisible, non-enclosable celestial commons (*Patrimonium Solis*) belonging to all living beings and their descendants.
-2. National annexation, corporate sovereignty, private equity claims, absentee title, and speculative reservation of celestial bodies or orbital slots are permanently barred across Open Networked Sol (O.N.S.).
-3. Positional advantages—including permanently shadowed polar volatile traps, peak-of-eternal-light solar ridges, stable orbital altitudes, and transfer corridors—shall never be leased, sold, or hoarded. Access is managed through open sortition rosters and non-monetized physical docking queues.
-4. Extracted abiotic minerals and volatiles exist strictly as possessory usufruct conditional upon active stewardship, non-wasteful extraction, and the immediate publication of structural assays and process tooling into the Open Commons.
+1. Outer space, celestial bodies, asteroids, comets, Lagrange equilibrium points ($L_1$–$L_5$), and orbital trajectories constitute an indivisible celestial commons (*Patrimonium Solis*). Solar flux regulation via passive diffractive occultation at Earth-Sun $L_1$ is classified as a Sol Commons trust, barred from commercial enclosure or weaponization.
+2. National annexation, corporate sovereignty, private equity claims, and speculative reservation of celestial bodies or orbital slots are permanently barred across Open Networked Sol (O.N.S.).
+3. Positional advantages—polar volatile traps, solar ridges, stable orbital altitudes, and transfer corridors—shall never be leased, sold, or hoarded. Access is managed through open sortition rosters and physical docking queues.
+4. Extracted abiotic minerals and volatiles exist strictly as possessory usufruct conditional upon active stewardship and immediate publication of structural assays and process tooling into the Open Commons.
 
 ---
 
@@ -574,9 +573,9 @@ Disputes and harms are resolved sequentially:
 
 ### **Article 11.3 — Invariant Atmospheric Sovereignty and the Anti-Despotism Interlock**
 1. In all pressurized habitats and transit vessels, atmospheric composition ($21\%\ O_2,\ 78\%\ N_2$ at nominal sea-level pressure), potable water, radiation attenuation, and thermal maintenance constitute universal, non-derogable Tier 1 survival rights.
-2. Life-support systems shall never be commodified, metered against labor output, monetized as debt, or weaponized for behavioral conditioning or political submission. The creation of an oxygen or pressure monopsony is classified under Article 1.2 as an existential crime of violence.
-3. Environmental control architectures must incorporate hardwired, non-programmable analog mechanical overrides and continuous passive bypass lines accessible to all inhabitants. No software algorithm, automated administrative decree, or sortition vote may throttle life-support circuits.
-4. Metabolic Decoupling in Dispute Resolution: In sealed environments, restorative justice measures under Article 5.2 operate under strict metabolic decoupling. Non-reciprocal inhabitants may face temporary suspension of elective Tier 3 tooling, computational bandwidth, or luxury facilities, but shall never face expulsion into vacuum, carceral confinement that restricts biophysical baselines, or atmospheric rationing.
+2. Life-support systems shall never be commodified, metered against labor, or weaponized for behavioral submission. Creating an oxygen or pressure monopsony is an existential crime under Article 1.2.
+3. Environmental control architectures must incorporate hardwired analog mechanical overrides and continuous passive bypass lines accessible to all inhabitants. No software algorithm, automated decree, or sortition vote may throttle life-support circuits.
+4. Metabolic Decoupling in Dispute Resolution: In sealed environments, restorative justice measures under Article 5.2 operate under strict metabolic decoupling. Non-reciprocal inhabitants may face temporary suspension of elective Tier 3 tooling or computational bandwidth, but shall never face expulsion into vacuum, carceral confinement restricting biophysical baselines, or atmospheric rationing.
 
 ---
 
@@ -589,7 +588,7 @@ Disputes and harms are resolved sequentially:
 ---
 
 ### **Article 11.5 — Light-Cone Subsidiarity and Asynchronous Demarchic Sortition**
-1. Because the finite speed of light imposes communications latencies across astronomical distances (ranging from seconds in cislunar space to hours in the outer Solar System), centralized interplanetary democracy is physically impossible. Governance operates strictly on Light-Cone Subsidiarity: no remote assembly holds jurisdiction over decisions that can be resolved within the local habitat envelope.
+1. Because the finite speed of light imposes latency across astronomical distances, centralized interplanetary democracy is physically impossible. Governance operates strictly on Light-Cone Subsidiarity: no remote assembly holds jurisdiction over decisions resolvable within the local habitat envelope.
 2. The Sortition Architecture:
    * **Habitat and CELSS Sortition Councils (15 to 101 citizens):** Maintain total operational sovereignty over interior life, fab-lab access, spatial layout, and rotational shift coordination in odd-numbered parity.
    * **Planetary and System Chambers (301 citizens):** Coordinate regional $\Delta v$ transit corridors, deep volatile reserves, and high-entropy smelting logistics within a gravity well or orbital subsystem.
@@ -598,7 +597,7 @@ Disputes and harms are resolved sequentially:
 
 ---
 
-### **Article 11.6 — Kinetic Non-Aggression, Planetary Protection, and Swords into Plowshares**
-1. Because any high-mass propulsion system or directed asteroid represents a kinetic weapon of planetary destruction, intentional propulsion burns directed along impact trajectories toward inhabited habitats, moons, or Earth are prohibited under Article 8.1 as structural mass aggression.
-2. Asteroid maneuvering, orbital transfers, and planetary redirection burns must be verified by Byzantine Fault Tolerant (BFT) optical and radar tracking arrays. Propulsion control software must remain auditable, open-source, and physically interlocked against hazardous collision corridors.
-3. In accordance with the principle of Swords into Plowshares (*Gladii in vomeres*), all decommissioned propulsion stages, deep-space pressure hulls, and radiation shielding plates are surrendered to cycler foundries for remelting into common habitat rings, thermal radiators, and water storage walls.
+### **Article 11.6 — Kinetic Non-Aggression, the Orbital Immune System, and Swords into Plowshares**
+1. Because any high-mass propulsion system or redirected asteroid represents an intrinsic kinetic weapon ($E_k = \frac{1}{2}mv^2$), intentional propulsion burns toward inhabited habitats, moons, or Earth are prohibited under Article 8.1 as structural mass aggression.
+2. The Orbital Immune System (*Systema Immunitatis Caelestis*): To protect against ballistic collisions and rogue asteroids without standing military forces, the Sol Federation maintains distributed phased-array laser stations and autonomous interceptor tugs. In peacetime, these systems propel civilian solar sails and clear orbital debris. Emitters incorporate analog geometric blinders that trip power if aimed within an inhabited exclusion cone; terminal interception operates via pre-compiled deterministic firmware audited by sortition assemblies, overcoming astronomical light-delay.
+3. Tracking Verification and Swords into Plowshares: All planetary trajectories are verified by Byzantine Fault Tolerant (BFT) optical-radar networks. Decommissioned propulsion stages and pressure hulls are surrendered to cycler foundries for remelting into common habitat rings and thermal radiators under Swords into Plowshares (*Gladii in vomeres*).

@@ -16,10 +16,11 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 
 ## **ACTIVE PIPELINE BOARD**
 
+*(No active pending dockets. All 9 empirical edge cases and systemic stress-tests have been resolved and merged into the Living Constitution).*
+
 | ID | Title | Domain | Target Articles | Stage | Active Agent / Next Action |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **`SIM-QA-07`** | Active Solar Management via Reversible $L_1$ Lagrange Sunshade vs. Chemical Terrestrial Geoengineering | Planetary Climate / Celestial Commons / Geoengineering | Art. 10.5, Art. 11.1, Art. 11.5 | `[STAGE 1: HYPOTHESIS]` | Registered as formal dialectic hypothesis; awaiting adversarial Red Team stress-test |
-| **`SIM-QA-08`** | Deep-Space Defensive Realism: Distributed Kinetic & Laser Immune System vs. Ballistic Mass-Velocity Threats | Astrodynamics / Deep-Space Defense / Game Theory | Art. 8.1, Art. 11.4, Art. 11.6 | `[STAGE 1: HYPOTHESIS]` | Registered as formal dialectic hypothesis; awaiting adversarial Red Team stress-test |
+| *None* | *All active dockets merged* | — | — | `[STAGE 4: CANONICAL_MERGE]` | Pipeline clear |
 
 ---
 
@@ -29,6 +30,8 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 
 | ID | Title | Date Merged | Canonical Commits / Articles |
 | :--- | :--- | :--- | :--- |
+| **`SIM-QA-08`** | Deep-Space Defensive Realism: Distributed Kinetic & Laser Immune System vs. Ballistic Mass-Velocity Threats | 2026-10-21 | [Art. 11.6](../bible/chapters/chapter_11.md), [ONE NETWORKED EARTH (O.N.E.).md](../bible/ONE%20NETWORKED%20EARTH%20%28O.N.E.%29.md) |
+| **`SIM-QA-07`** | Active Solar Management via Reversible $L_1$ Lagrange Sunshade vs. Chemical Terrestrial Geoengineering | 2026-10-21 | [Art. 10.5](../bible/chapters/chapter_10.md), [Art. 11.1](../bible/chapters/chapter_11.md), [ONE NETWORKED EARTH (O.N.E.).md](../bible/ONE%20NETWORKED%20EARTH%20%28O.N.E.%29.md) |
 | **`SIM-QA-09`** | Autonomous AI & Robotic Swarm Aggression: Hard Galvanic Air-Gaps, Directed-Energy Point Defense & Non-Somatic Countermeasures | 2026-10-21 | [Art. 6.5](../bible/chapters/chapter_06.md), [Art. 8.1.4](../bible/chapters/chapter_08.md), [ONE NETWORKED EARTH (O.N.E.).md](../bible/ONE%20NETWORKED%20EARTH%20%28O.N.E.%29.md) |
 | **`SIM-QA-06`** | Transformation of Legacy High-Capital Industrial Assets, Hyperscale Compute & Metropolises | 2026-10-21 | [Art. 2.2](../bible/chapters/chapter_02.md), [Art. 3.3.4](../bible/chapters/chapter_03.md), [Art. 6.2](../bible/chapters/chapter_06.md), [Art. 7.4](../bible/chapters/chapter_07.md), [Art. 10.3](../bible/chapters/chapter_10.md), [ONE NETWORKED EARTH (O.N.E.).md](../bible/ONE%20NETWORKED%20EARTH%20%28O.N.E.%29.md) |
 | **`SIM-QA-05`** | Codification of Civic Rescue, Firefighting & Disaster Response Guilds | 2026-10-05 | [Art. 5.1.3](../bible/chapters/chapter_05.md#L6), [Art. 8.1.2](../bible/chapters/chapter_08.md#L5), [ONE NETWORKED EARTH (O.N.E.).md](../bible/ONE%20NETWORKED%20EARTH%20%28O.N.E.%29.md) |
