@@ -42,15 +42,16 @@ Discrete step for individual villager. In the homogeneous limit, villagers draw 
 exact daily allocation proportional to dt.
 """
 function villager_step!(agent::Villager, model)
-    dt = model.properties.dt_days
+    props = abmproperties(model)
+    dt = props.dt_days
     # Each agent draws their demand for the interval dt
     draw_E = agent.energy_draw_kwh * dt * agent.compliance_rate
     draw_W = agent.hydration_need_l * dt * agent.compliance_rate
     draw_C = agent.metabolic_need_kcal * dt * agent.compliance_rate
     draw_P = agent.compute_need_core_hours * dt * agent.compliance_rate
 
-    s = model.properties.current_state
-    model.properties.current_state = VillageState(
+    s = props.current_state
+    props.current_state = VillageState(
         max(0.0, s.energy_kwh - draw_E),
         max(0.0, s.water_l - draw_W),
         max(0.0, s.calories_kcal - draw_C),
@@ -65,7 +66,7 @@ end
 Global environmental step: applies physical inflows and decay over interval dt.
 """
 function village_model_step!(model)
-    props = model.properties
+    props = abmproperties(model)
     p = props.params
     dt = props.dt_days
     s = props.current_state

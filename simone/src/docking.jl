@@ -52,7 +52,7 @@ function run_docking_benchmark(
     num_steps = round(Int, total_days / dt_abm)
     step_village_abm!(abm_model, num_steps)
 
-    props = abm_model.properties
+    props = abmproperties(abm_model)
     t_abm = props.history_time
     abm_E = props.history_energy
     abm_W = props.history_water
@@ -71,16 +71,22 @@ function run_docking_benchmark(
         t_val = t_abm[i]
         u_ode = ode_sol(t_val)
 
-        push!(ode_E, u_ode[1])
-        push!(ode_W, u_ode[2])
-        push!(ode_C, u_ode[3])
-        push!(ode_P, u_ode[4])
+        # Physical capacity clamping
+        val_E = min(params.battery_capacity_kwh, max(0.0, u_ode[1]))
+        val_W = min(params.water_cistern_capacity_l, max(0.0, u_ode[2]))
+        val_C = min(params.caloric_granary_capacity_kcal, max(0.0, u_ode[3]))
+        val_P = min(params.compute_capacity_core_hours, max(0.0, u_ode[4]))
+
+        push!(ode_E, val_E)
+        push!(ode_W, val_W)
+        push!(ode_C, val_C)
+        push!(ode_P, val_P)
 
         # Relative error against non-zero baselines
-        err_E = abs(u_ode[1] - abm_E[i]) / max(1.0, params.battery_capacity_kwh)
-        err_W = abs(u_ode[2] - abm_W[i]) / max(1.0, params.water_cistern_capacity_l)
-        err_C = abs(u_ode[3] - abm_C[i]) / max(1.0, params.caloric_granary_capacity_kcal)
-        err_P = abs(u_ode[4] - abm_P[i]) / max(1.0, params.compute_capacity_core_hours)
+        err_E = abs(val_E - abm_E[i]) / max(1.0, params.battery_capacity_kwh)
+        err_W = abs(val_W - abm_W[i]) / max(1.0, params.water_cistern_capacity_l)
+        err_C = abs(val_C - abm_C[i]) / max(1.0, params.caloric_granary_capacity_kcal)
+        err_P = abs(val_P - abm_P[i]) / max(1.0, params.compute_capacity_core_hours)
 
         step_max = max(err_E, err_W, err_C, err_P)
         if step_max > max_err
