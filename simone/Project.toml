@@ -1,0 +1,35 @@
+name = "Simone"
+uuid = "b2b61d84-dce6-43b0-95cf-c312a3dc4fc9"
+authors = [
+    "Kyberlex <kyberlex@proton.me>",
+    "Rainer Rodrigues <@rainerrodrigues>"
+]
+version = "0.1.0-dev"
+license = "AGPL-3.0-or-later"
+
+[deps]
+Agents = "46ada45e-f475-11e8-3400-f70559f21568"
+BenchmarkTools = "6e4b3a7d-e445-529c-902b-140c310c75cb"
+DataFrames = "a93c0a0b-5b3e-5b37-9099-b1493d61eb76"
+DifferentialEquations = "0c46a032-ebad-572d-998f-eeecd968ebb3"
+JSON3 = "0f8b85d8-7281-11e9-1625-2323a5729447"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+ModelingToolkit = "961ee093-0014-5012-94e3-611484646210"
+StaticArrays = "90137f2a-88ca-564e-bc53-9014073b85e3"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+Agents = "6"
+DataFrames = "1"
+DifferentialEquations = "7"
+JSON3 = "1"
+ModelingToolkit = "9"
+StaticArrays = "1"
+julia = "1.10"
+
+[extras]
+BenchmarkTools = "6e4b3a7d-e445-529c-902b-140c310c75cb"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["BenchmarkTools", "Test"]

@@ -26,6 +26,13 @@
 
 ---
 
+> [!IMPORTANT]
+> ### 🤝 **Seeking Co-Stewards across the 5 Pillars (Genesis Quorum)**
+> Are you exploring the codebase or simulating post-work models? We are assembling the founding co-steward team across **Media & Narrative**, **Commons Economy**, **Sortition Demarchy**, **Scientific Simulation (SIMONE / Julia)**, and **Open Hardware Habitat** before the Swiss Foundation Genesis Lock.  
+> 👉 **[Explore Open Roles & Join the Co-Steward Discussions](https://github.com/kyberlex/ONE/discussions)**
+
+---
+
 ## **What is O.N.E.?**
 
 Artificial Intelligence and humanoid robotics are eliminating wage labor forever. Instead of descending into corporate techno-feudalism and surveillance poverty, **Open Networked Earth (O.N.E.)** turns automation into human emancipation: guaranteed survival baselines, decentralized energy and food commons, and governance by ordinary citizens chosen by statistical lottery.
