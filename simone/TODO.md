@@ -123,3 +123,13 @@ The full formal specification for SIMONE is defined in [`simone/simone-specs.md`
   - If approved, evaluate whether to adopt `Sirens.jl` as an architectural dependency or benchmark against its ABM-ODE coupling strategy.
 - [ ] **Task 5.2: Formal ODD Protocol Documentation**
   - Author a formal Overview, Design concepts, and Details (ODD) protocol paper for peer review across the JuliaDynamics community.
+
+---
+
+## **VIII. PHASE 6: P2P SUBSTRATE COUPLING & REA EVENT DOCKING**
+
+- [ ] **Task 6.1: Ingestion Adapter for Elohim `epr-rea` Biophysical Events**
+  - As defined in the O.N.E. / Elohim Translation Map (October 2026), create a Julia JSON deserializer for external `FlowEvent` payloads from Elohim Protocol's content-addressed Rust substrate (`elohim/epr-rea`).
+  - Map incoming raw event streams (kWh energy generation/consumption, liters of water, kg of food/biomass, machine wear cycle hours) directly into SIMONE's state vectors $\mathbf{S}_{\text{ODE}}(t)$.
+  - Verify that the discrete REA event folds agree with SIMONE's continuous differential equation trajectories (docking validation between P2P economic log and physical conservation laws).
+

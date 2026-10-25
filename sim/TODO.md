@@ -518,5 +518,12 @@ Tracks gameplay usability, aesthetic accessibility, circadian simulation pacing,
   - *Outcome:* Una volta caricato lo zip su itch.io una sola volta, ogni futuro deploy su Surge aggiorna istantaneamente in tempo reale anche la pagina su itch.io, riducendo a zero il costo di manutenzione.
   - *Status:* **COMPLETATO & TESTATO (1.47 KB package pronto in `spread/o-asis-itch-iframe.zip`)**
 
+- [ ] **ITEM 22: P2P & Whisper Cryptographic Hardening (Peer Review by Elohim Protocol, Oct 2026):**
+  - *Context:* External peer audit of `b359ce9` by Matthew B. Dowell / Elohim Protocol identified two cryptographic gaps in the client-side prototype:
+    1. `chat_engine.js:45`: Whisper encryption key currently derives from recipient public string / fingerprint and broadcasts plain text; needs proper asymmetric key exchange (ECDH / Curve25519) without plaintext leakage.
+    2. `p2p_mesh.js:424`: Action ingestion accepts unauthenticated incoming state deltas if signature fields are absent (`isValid = true` by default); needs strict rejection of unsigned or unverifiable action payloads.
+  - *Action:* Harden `encryptWhisper` and make signature verification mandatory for all incoming P2P action deltas.
+
+
 
 
