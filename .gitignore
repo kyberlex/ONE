@@ -24,6 +24,11 @@ build/
 .env.*
 !.env.example
 
+# PDF outputs (local review only, excluded from GitHub)
+pdfs(it)/
+pdfs(en)/
+*.pdf
+
 # Python Artifacts
 __pycache__/
 *.py[cod]
