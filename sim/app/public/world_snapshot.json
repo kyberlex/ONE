@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "network": "O-ASIS Confederated Mesh",
   "genesis": false,
-  "tick": 241003,
-  "day": 10042,
-  "timestamp": "2026-10-26T02:55:26Z",
+  "tick": 241015,
+  "day": 10043,
+  "timestamp": "2026-10-26T18:08:32Z",
   "nodes": {
     "node-detroit": {
       "id": "node-detroit",
@@ -22,7 +22,7 @@
       "fiatTreasury": 3250,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 350,
+          "batteryStoredKwh": 0,
           "batteryCapacityKwh": 350
         },
         "water": {
@@ -101,7 +101,7 @@
           "consumptionKwh": 290
         },
         "water": {
-          "cisternStoredL": 44071,
+          "cisternStoredL": 44515,
           "cisternCapacityL": 60000,
           "rainInflowL": 750,
           "consumptionL": 380
@@ -184,13 +184,13 @@
       "fiatTreasury": 9800,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 3710,
+          "batteryStoredKwh": 1550,
           "batteryCapacityKwh": 10000,
           "solarGenerationKwh": 280,
           "consumptionKwh": 310
         },
         "water": {
-          "cisternStoredL": 26581,
+          "cisternStoredL": 26665,
           "cisternCapacityL": 40000,
           "rainInflowL": 350,
           "consumptionL": 280
@@ -279,7 +279,7 @@
           "consumptionKwh": 360
         },
         "water": {
-          "cisternStoredL": 34170,
+          "cisternStoredL": 34050,
           "cisternCapacityL": 65000,
           "rainInflowL": 380,
           "consumptionL": 480
@@ -362,13 +362,13 @@
       "fiatTreasury": 13000,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 8530,
+          "batteryStoredKwh": 6370,
           "batteryCapacityKwh": 11000,
           "solarGenerationKwh": 480,
           "consumptionKwh": 310
         },
         "water": {
-          "cisternStoredL": 52399,
+          "cisternStoredL": 53035,
           "cisternCapacityL": 55000,
           "rainInflowL": 950,
           "consumptionL": 420
@@ -451,13 +451,13 @@
       "fiatTreasury": 15500,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 8820,
+          "batteryStoredKwh": 10380,
           "batteryCapacityKwh": 12000,
           "solarGenerationKwh": 510,
           "consumptionKwh": 340
         },
         "water": {
-          "cisternStoredL": 48486,
+          "cisternStoredL": 48990,
           "cisternCapacityL": 52000,
           "rainInflowL": 880,
           "consumptionL": 460
@@ -532,5 +532,5 @@
     "author": "Kyberlex <kyberlex@proton.me>",
     "license": "AGPL-3.0-or-later"
   },
-  "thermoConsensusHash": "e0e515332ed5d33bd96346b26da672ec158a216a9d66fe2540f7c60af9a635ae"
+  "thermoConsensusHash": "7c5729d1413f68e8c2a437f8ac4ec3b76414a8081842ebb7ec342ecbda8e4087"
 }
