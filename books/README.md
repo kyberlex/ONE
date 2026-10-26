@@ -1,6 +1,6 @@
 # **OPEN NETWORKED EARTH (O.N.E.) — THE 6-VOLUME MASTER NOVEL SERIES**
 
-> **The Commercial "Trojan Horse": Translating a Post-Scarcity Socio-Technical Model into an Immersive, High-Voltage Thriller Phenomenon.**
+> **The Cultural Vehicle: Translating an Open-Source Post-Labor Civil Architecture into an Immersive, High-Voltage Thriller Phenomenon.**
 
 Authored under the pseudonymous persona **Kyberlex** (`kyberlex@proton.me`) for [`https://github.com/kyberlex/ONE`](https://github.com/kyberlex/ONE).
 

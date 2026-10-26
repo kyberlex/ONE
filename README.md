@@ -4,7 +4,7 @@
 
 # **OPEN NETWORKED EARTH (O.N.E.)**
 
-> **The Open-Source Socio-Technical Operating System for a Post-Work, Post-Monetary Planetary Civilization.**
+> **An open-source civil architecture for the post-labor transition: replacing wage debt and land speculation with automated commons, modular habitat, and sortition demarchy.**
 
 <p align="center">
   <a href="https://one-commons.github.io">🌐 Live Web Portal (one-commons.github.io)</a> •
@@ -28,7 +28,7 @@
 
 > [!IMPORTANT]
 > ### 🤝 **Seeking Co-Stewards across the 5 Pillars (Genesis Quorum)**
-> Are you exploring the codebase or simulating post-work models? We are assembling the founding co-steward team across **Media & Narrative**, **Commons Economy**, **Sortition Demarchy**, **Scientific Simulation (SIMONE / Julia)**, and **Open Hardware Habitat** before the Swiss Foundation Genesis Lock.  
+> Are you exploring the codebase or modeling the post-labor transition? We are assembling the founding co-steward team across **Media & Narrative**, **Commons Economy**, **Sortition Demarchy**, **Scientific Simulation (SIMONE / Julia)**, and **Open Hardware Habitat** before the Swiss Foundation Genesis Lock.  
 > 👉 **[Explore Open Roles & Join the Co-Steward Discussions](https://github.com/kyberlex/ONE/discussions)**
 
 ---

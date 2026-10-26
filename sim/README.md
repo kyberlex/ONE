@@ -11,7 +11,7 @@
 ## **I. VISION & PURPOSE: WHY WE SIMULATE**
 
 The O.N.E. simulator is not a video game and is not an abstract academic exercise.  
-It is the **computational proving ground** that allows humanity to mathematically verify the feasibility of a post-scarcity civilization **before committing physical land, resources, and human lives**.
+It is the **computational proving ground** that allows humanity to mathematically verify the feasibility of an automated commons and post-labor civil architecture **before committing physical land, resources, and human lives**.
 
 This document preserves and codifies the complete architecture of the simulation engine, split into its two fundamental layers:
 1. **O-ASIS (O.N.E. Adversarial Stress-Test Simulation):** Simulates the system **under constitutional steady-state** (planetary zero-money, usufruct, and sortition society).
