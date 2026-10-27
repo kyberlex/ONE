@@ -384,7 +384,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       font-family: 'JetBrains Mono', monospace;
     }
 
-    /* 2-Column Grid: Fixed 460px Height (Zero Jumping) */
+    /* 2-Column Grid: Fixed 500px Height (Zero Jumping) */
     .we-grid {
       display: grid;
       grid-template-columns: 1.65fr 1fr;
@@ -398,8 +398,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 14px;
       overflow: hidden;
-      height: 460px;
-      max-height: 460px;
+      height: 500px;
+      max-height: 500px;
       display: flex;
       flex-direction: column;
     }
@@ -462,14 +462,14 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       transform: translateY(-1px);
     }
 
-    /* Inspector HUD: Strict Fixed 460px Height (Zero Jumping) */
+    /* Inspector HUD: Strict Fixed 500px Height (Zero Jumping) */
     .we-hud {
       background: rgba(4, 12, 10, 0.7);
       border: 1px solid rgba(52, 211, 153, 0.18);
       border-radius: 14px;
-      padding: 20px;
-      height: 460px;
-      max-height: 460px;
+      padding: 22px;
+      height: 500px;
+      max-height: 500px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -1055,11 +1055,11 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           </div>
         </div>
 
-        <!-- 2-Column Canvas + Inspector Grid (Fixed Constant 460px Height: Zero Jumping) -->
+        <!-- 2-Column Canvas + Inspector Grid (Fixed Constant 500px Height: Zero Jumping) -->
         <div class="we-grid">
           <!-- Canvas Viewport Area -->
           <div class="we-canvas-box">
-            <canvas id="watershedCanvas" width="900" height="460"></canvas>
+            <canvas id="watershedCanvas" width="900" height="500"></canvas>
             <div class="we-canvas-overlay">
               <div class="we-hint" id="weHintText">
                 <span>🌐 Click basin to select • Drag to pan</span>
@@ -1256,7 +1256,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
   <!-- =====================================================================
        CLIENT-SIDE INTERACTIVE ENGINE: REAL SATELLITE CARTOGRAPHY (SIM REUSE)
        - Strict Single Action Controls (1 Zoom Button, 1 Sim Button, 1 Game Button)
-       - Fixed 460px Box Height (Zero Jumping on Bioregion Change)
+       - Fixed 500px Box Height (Zero Jumping on Bioregion Change)
        ===================================================================== -->
   <script>
     (function () {
@@ -1626,13 +1626,14 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       let activeFilter = "all";
       let particles = [];
 
-      const worldCenter = toWorldPx(10, 20); // Atlantic / Europe / Equator center
+      const worldCenter = [MAP_SIZE / 2.0, MAP_SIZE / 2.0]; // Longitude 0° & Latitude 0° (Equator) - perfect planetary balance
       const camera = { x: worldCenter[0], y: worldCenter[1], zoom: 1.0 };
       const targetCamera = { x: worldCenter[0], y: worldCenter[1], zoom: 1.0 };
       let zoomMode = "WORLD"; // 'WORLD' or 'REGION'
 
       function getBaseScale() {
-        return (height / MAP_SIZE) * 1.08;
+        // Fits world width across canvas (zero duplication) while showing all inhabited continents
+        return Math.max(width / MAP_SIZE, (height / MAP_SIZE) * 1.15);
       }
 
       function getScale() {
@@ -1657,10 +1658,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         const rect = canvas.getBoundingClientRect();
         const dpr = window.devicePixelRatio || 1;
         width = rect.width || 900;
-        height = rect.height || 460;
-        canvas.width = width * dpr;
-        canvas.height = height * dpr;
-        ctx.scale(dpr, dpr);
+        height = rect.height || 500;
+        canvas.width = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       }
 
       // Initialize flow particles along river arteries in world pixels
@@ -1715,9 +1716,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       }
 
       function setViewWorld() {
-        const wc = toWorldPx(10, 20);
-        targetCamera.x = wc[0];
-        targetCamera.y = wc[1];
+        targetCamera.x = worldCenter[0];
+        targetCamera.y = worldCenter[1];
         targetCamera.zoom = 1.0;
         updateZoomState();
       }
@@ -1777,10 +1777,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
 
         if (currentEarthImg && currentEarthImg.complete) {
           ctx.drawImage(currentEarthImg, imgScreenX, imgScreenY, imgScreenW, imgScreenH);
-          if (imgScreenX > 0) {
+          if (imgScreenX > 1) {
             ctx.drawImage(currentEarthImg, imgScreenX - imgScreenW, imgScreenY, imgScreenW, imgScreenH);
           }
-          if (imgScreenX + imgScreenW < width) {
+          if (imgScreenX + imgScreenW < width - 1) {
             ctx.drawImage(currentEarthImg, imgScreenX + imgScreenW, imgScreenY, imgScreenW, imgScreenH);
           }
         }
