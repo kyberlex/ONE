@@ -35,3 +35,28 @@ pdfs(en)/
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Local Workstation Staging & Internal Media (Kept in private master repo 'one')
+spread/
+bible/
+notes/
+log/
+hosting/
+kyberlex/
+worker/
+PROJECT_RULES.md
+synoptic.md
+one-logo.png
+*.csv
+.github/ISSUE_TEMPLATE/
+.github/workflows/check_constitution.yml
+oasis/legacy_high_capital_assets.md
+
+# Internal Generator & Pipeline Scripts (Track only canonical deployment & relay scripts)
+scripts/*
+!scripts/anchor_world_snapshot.py
+!scripts/build_docs_hub.py
+!scripts/feedback_relay_apps_script.js
+!scripts/snapshot_relay_apps_script.js
+!scripts/sync_webapp_i18n.py
+
