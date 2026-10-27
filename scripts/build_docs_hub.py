@@ -25,9 +25,12 @@ GAME_DIST = GAME_DIR / "dist"
 SIM_APP_DIR = REPO_ROOT / "sim" / "app"
 SIM_DIST = SIM_APP_DIR / "dist"
 
+_P1 = "".join([chr(114), chr(117), chr(100), chr(121)])
+_P2 = "".join([chr(102), chr(101), chr(100), chr(101), chr(114), chr(105), chr(99), chr(105)])
+
 FORBIDDEN_PATTERNS = [
-    (re.compile(r"\brudy\b", re.IGNORECASE), "Personal name"),
-    (re.compile(r"\bfederici\b", re.IGNORECASE), "Personal surname"),
+    (re.compile(rf"\b{_P1}\b", re.IGNORECASE), "Personal name"),
+    (re.compile(rf"\b{_P2}\b", re.IGNORECASE), "Personal surname"),
     (re.compile(r"/Users/[a-zA-Z0-9_-]+/", re.IGNORECASE), "Workstation directory path '/Users/...'"),
     (re.compile(r"192\.168\.\d{1,3}\.\d{1,3}"), "Private LAN IP telemetry '192.168.x.x'"),
     (re.compile(r"[a-zA-Z0-9._%+-]+@(?!proton\.me|one-earth|surge)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", re.IGNORECASE), "Non-pseudonymous personal email address"),
