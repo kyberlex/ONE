@@ -6,6 +6,7 @@
   <title>O.N.E. • The Living Interactive Platform (Watershed Explorer, Commons Game & O-ASIS)</title>
   <meta name="description" content="Open Networked Earth Interactive Hub: Explore the planet by bioregional watersheds, experience the Living Commons Game, and audit the macroscopic O-ASIS thermodynamic sandbox." />
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preload" as="image" href="./assets/map/world_high.webp" type="image/webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -1727,20 +1728,66 @@
         ctx.fillStyle = "#020705";
         ctx.fillRect(0, 0, width, height);
 
-        // Draw Real Earth Satellite Map (with horizontal wraparound)
-        const scale = getScale();
-        const imgScreenW = MAP_SIZE * scale;
-        const imgScreenH = MAP_SIZE * scale;
-        const imgScreenX = width / 2.0 - camera.x * scale;
-        const imgScreenY = height / 2.0 - camera.y * scale;
-
+        // 1. Draw Real Earth Satellite Map (Razor-sharp sub-pixel source cropping from world_high.webp)
         if (currentEarthImg && currentEarthImg.complete) {
-          ctx.drawImage(currentEarthImg, imgScreenX, imgScreenY, imgScreenW, imgScreenH);
-          if (imgScreenX > 1) {
-            ctx.drawImage(currentEarthImg, imgScreenX - imgScreenW, imgScreenY, imgScreenW, imgScreenH);
-          }
-          if (imgScreenX + imgScreenW < width - 1) {
-            ctx.drawImage(currentEarthImg, imgScreenX + imgScreenW, imgScreenY, imgScreenW, imgScreenH);
+          ctx.imageSmoothingEnabled = true;
+          ctx.imageSmoothingQuality = "high";
+
+          const imgNativeW = currentEarthImg.naturalWidth || MAP_SIZE;
+          const imgRatio = imgNativeW / MAP_SIZE;
+
+          const [wLeft, wTop] = screenToWorld(0, 0);
+          const [wRight, wBottom] = screenToWorld(width, height);
+
+          // Clamped vertical bounds in world coordinates [0, MAP_SIZE]
+          const clampedTop = Math.max(0, wTop);
+          const clampedBottom = Math.min(MAP_SIZE, wBottom);
+
+          if (clampedBottom > clampedTop) {
+            const [, screenTop] = worldToScreen(0, clampedTop);
+            const [, screenBottom] = worldToScreen(0, clampedBottom);
+            const destH = screenBottom - screenTop;
+            const srcH = (clampedBottom - clampedTop) * imgRatio;
+            const srcY = clampedTop * imgRatio;
+
+            if (wLeft >= 0 && wRight <= MAP_SIZE) {
+              // Direct high-resolution source slice (crystal clear for Region zoom & centered World view)
+              const srcX = wLeft * imgRatio;
+              const srcW = (wRight - wLeft) * imgRatio;
+              ctx.drawImage(currentEarthImg, srcX, srcY, srcW, srcH, 0, screenTop, width, destH);
+            } else {
+              // Seamless horizontal wraparound
+              const mainLeft = Math.max(0, wLeft);
+              const mainRight = Math.min(MAP_SIZE, wRight);
+              if (mainRight > mainLeft) {
+                const [screenLeft] = worldToScreen(mainLeft, 0);
+                const [screenRight] = worldToScreen(mainRight, 0);
+                const destW = screenRight - screenLeft;
+                const srcX = mainLeft * imgRatio;
+                const srcW = (mainRight - mainLeft) * imgRatio;
+                ctx.drawImage(currentEarthImg, srcX, srcY, srcW, srcH, screenLeft, screenTop, destW, destH);
+              }
+              if (wLeft < 0) {
+                const wrapLeft = MAP_SIZE + wLeft;
+                const wrapRight = MAP_SIZE;
+                const [wrapScreenLeft] = worldToScreen(wLeft, 0);
+                const [wrapScreenRight] = worldToScreen(0, 0);
+                const destW = wrapScreenRight - wrapScreenLeft;
+                const srcX = wrapLeft * imgRatio;
+                const srcW = (wrapRight - wrapLeft) * imgRatio;
+                ctx.drawImage(currentEarthImg, srcX, srcY, srcW, srcH, wrapScreenLeft, screenTop, destW, destH);
+              }
+              if (wRight > MAP_SIZE) {
+                const wrapLeft = 0;
+                const wrapRight = wRight - MAP_SIZE;
+                const [wrapScreenLeft] = worldToScreen(MAP_SIZE, 0);
+                const [wrapScreenRight] = worldToScreen(wRight, 0);
+                const destW = wrapScreenRight - wrapScreenLeft;
+                const srcX = 0;
+                const srcW = (wrapRight - wrapLeft) * imgRatio;
+                ctx.drawImage(currentEarthImg, srcX, srcY, srcW, srcH, wrapScreenLeft, screenTop, destW, destH);
+              }
+            }
           }
         }
 
@@ -1950,7 +1997,16 @@
           if (isPointInPoly([wx, wy], b.polygonPx)) {
             selectedBasin = b;
             updateHUD(b);
-            setViewRegion(b);
+            setViewRegion(b); // Smooth Pan + Zoom into bioregion
+
+            // Sync active chip
+            activeFilter = b.biome;
+            const allChips = document.querySelectorAll(".we-chip");
+            allChips.forEach(c => {
+              c.classList.toggle("active", c.getAttribute("data-biome") === b.biome);
+            });
+            const matchedCount = WATERSHEDS.filter(x => x.biome === b.biome).length;
+            document.getElementById("weCountBadge").textContent = `${matchedCount} Sovereign Basins Mapped`;
             break;
           }
         }
@@ -1964,11 +2020,17 @@
             setViewRegion(selectedBasin);
           } else {
             setViewWorld();
+            activeFilter = "all";
+            const allChips = document.querySelectorAll(".we-chip");
+            allChips.forEach(c => {
+              c.classList.toggle("active", c.getAttribute("data-biome") === "all");
+            });
+            document.getElementById("weCountBadge").textContent = `${WATERSHEDS.length} Sovereign Basins Mapped`;
           }
         });
       }
 
-      // Filter Chips handler
+      // Filter Chips handler: 'all' zooms to World Map, specific biomes pan + zoom to Bioregion
       const chips = document.querySelectorAll(".we-chip");
       chips.forEach(chip => {
         chip.addEventListener("click", () => {
@@ -1976,17 +2038,25 @@
           chip.classList.add("active");
           activeFilter = chip.getAttribute("data-biome");
 
-          if (activeFilter !== "all" && selectedBasin.biome !== activeFilter) {
-            const firstMatch = WATERSHEDS.find(b => b.biome === activeFilter);
-            if (firstMatch) {
-              selectedBasin = firstMatch;
-              updateHUD(firstMatch);
-              if (zoomMode === "REGION") setViewRegion(firstMatch);
+          if (activeFilter === "all") {
+            // Zoom out to World Map
+            setViewWorld();
+            document.getElementById("weCountBadge").textContent = `${WATERSHEDS.length} Sovereign Basins Mapped`;
+          } else {
+            // Pan + Zoom into Bioregion
+            const matches = WATERSHEDS.filter(b => b.biome === activeFilter);
+            if (matches.length > 0) {
+              let target = matches[0];
+              if (selectedBasin && selectedBasin.biome === activeFilter) {
+                const curIdx = matches.findIndex(b => b.id === selectedBasin.id);
+                target = matches[(curIdx + 1) % matches.length];
+              }
+              selectedBasin = target;
+              updateHUD(target);
+              setViewRegion(target);
             }
+            document.getElementById("weCountBadge").textContent = `${matches.length} Sovereign Basins Mapped`;
           }
-
-          const matchedCount = activeFilter === "all" ? WATERSHEDS.length : WATERSHEDS.filter(b => b.biome === activeFilter).length;
-          document.getElementById("weCountBadge").textContent = `${matchedCount} Sovereign Basins Mapped`;
         });
       });
 
