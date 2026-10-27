@@ -34,7 +34,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/one-logo-luminous.svg">
 
   <!-- Master Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=1789460000">
+  <link rel="stylesheet" href="styles.css?v=2026102120">
 
   <!-- Privacy-Friendly Analytics (Zero-Cookie, Open-Source Commons) -->
   <script data-goatcounter="https://open-networked-earth.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -50,7 +50,7 @@
     <div class="container nav-wrap">
       <a href="#manifesto" class="brand-logo" id="brandLogo" aria-label="Open Networked Earth (O.N.E.)">
         <div class="logo-badge">
-          <img src="assets/one-logo-white.svg" alt="O.N.E. Logo" />
+          <img src="assets/one-logo-luminous.svg" alt="O.N.E. Logo" />
         </div>
         <div class="brand-acrostic">
           <span class="brand-lead">O</span><span class="brand-tail">pen</span>
@@ -62,12 +62,12 @@
       <nav>
         <ul class="nav-menu" id="navMenu">
           <li><a href="#synoptic" class="nav-link" id="navSynoptic" data-i18n="nav.overview">Overview</a></li>
+          <li><a href="#co-stewards" class="nav-link" id="navStewards" data-i18n="nav.stewards">Co-Stewards</a></li>
           <li><a href="#constitution" class="nav-link" id="navConstitution" data-i18n="nav.constitution">Constitution</a></li>
-          <li><a href="#benchmark" class="nav-link" id="navBenchmark">AI Benchmark</a></li>
+          <li><a href="#benchmark" class="nav-link" id="navBenchmark" data-i18n="nav.benchmark">AI Benchmark</a></li>
           <li><a href="#roadmap" class="nav-link" id="navRoadmap" data-i18n="nav.roadmap">Roadmap</a></li>
           <li><a href="#challenge" class="nav-link" id="navChallenge" data-i18n="nav.challenge">Challenge</a></li>
           <li><a href="#books" class="nav-link" id="navBooks" data-i18n="nav.thrillers">Thrillers</a></li>
-          <li><a href="#co-stewards" class="nav-link" id="navStewards">Co-Stewards</a></li>
           <li><a href="https://kyberlex.github.io/ONE/" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-simulator" id="navSimulator" title="O.N.E. Interactive Platform (Living Commons Game & O-ASIS Sandbox)" data-i18n="nav.simulator">🎮 Play & Simulate ↗</a></li>
           <li><a href="https://github.com/kyberlex/one/discussions" target="_blank" rel="noopener noreferrer" class="nav-link" id="navForum" title="O.N.E. Dialectic Forum & RFC Proposals">Forum / RFC ↗</a></li>
         </ul>
@@ -111,39 +111,66 @@
     <!-- 1. HERO SECTION -->
     <section class="hero-section" id="manifesto">
       <div class="container hero-content">
-        <div class="hero-tag" data-i18n="hero.tag">An Open-Source Civil Architecture for the Post-Labor Transition</div>
-        <h1 class="hero-title">
-          <span data-i18n="hero.title_part1">When machines do the work,</span><br>
-          <span class="hero-gradient" data-i18n="hero.title_part2">humanity inherits the Earth.</span>
-        </h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">
-          Artificial Intelligence and robotics are eliminating wage labor forever. Instead of descending into corporate techno-feudalism, 
-          <strong>Open Networked Earth (O.N.E.)</strong> turns automation into human emancipation: 
-          guaranteed food, housing, energy, and healthcare for every person alive — governed by ordinary citizen juries, not politicians.
-        </p>
+        <div class="hero-grid">
+          <div class="hero-text-col">
+            <div class="hero-tag" data-i18n="hero.tag">An Open-Source Civil Architecture for the Post-Labor Transition</div>
+            <h1 class="hero-title">
+              <span data-i18n="hero.title_part1">When machines do the work,</span><br>
+              <span class="hero-gradient" data-i18n="hero.title_part2">humanity inherits the Earth.</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
+              Artificial Intelligence and robotics are eliminating wage labor forever. Instead of descending into corporate techno-feudalism, 
+              <strong>Open Networked Earth (O.N.E.)</strong> turns automation into human emancipation: 
+              guaranteed food, housing, energy, and healthcare for every person alive — governed by ordinary citizen juries, not politicians.
+            </p>
 
-        <!-- Decisive CTAs with Direct Downloads & Guidance -->
-        <div class="hero-actions">
-          <a href="https://kyberlex.github.io/ONE/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-play-oasis" id="heroPlayOasisBtn" title="Launch O.N.E. Interactive Platform (Living Commons Game & O-ASIS Sandbox)">
-            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <span data-i18n="hero.btn_simulator">Play & Simulate (Hub) ↗</span>
-          </a>
-          <a href="#synoptic" class="btn btn-secondary" id="heroSynopticBtn">
-            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            <span data-i18n="hero.btn_primer">3-Minute Primer</span>
-          </a>
-          <a href="#explainer-video" class="btn btn-secondary" id="heroVideoBtn">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8.64L15.27 12 10 15.36V8.64M8 5v14l11-7L8 5z"/></svg>
-            <span data-i18n="hero.btn_video">Watch Explainer (8 min)</span>
-          </a>
-          <a href="#constitution" class="btn btn-secondary" id="heroReadConstBtn">
-            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            <span data-i18n="hero.btn_constitution">Explore Constitution</span>
-          </a>
-          <a href="#books" class="btn btn-secondary" id="heroReadNovelBtn">
-            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-            <span data-i18n="hero.btn_novels">Read Thrillers (Free Ebooks)</span>
-          </a>
+            <!-- Decisive CTAs: 2 Primary Paths -->
+            <div class="hero-actions">
+              <a href="#synoptic" class="btn btn-primary" id="heroSynopticBtn">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                <span data-i18n="hero.btn_discover">Discover O.N.E. →</span>
+              </a>
+              <a href="#co-stewards" class="btn btn-secondary" id="heroStewardsBtn">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                <span data-i18n="hero.btn_stewards">Build (Co-Steward)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-media-col">
+            <!-- Visual Reel: Civilizational Prologue (9:16 Vertical Video) -->
+            <div class="hero-prologue-card glass-panel" id="heroPrologueCard">
+              <div class="video-responsive-wrapper" id="heroVideoWrapper">
+                <video 
+                  id="heroVideoPlayer" 
+                  controls 
+                  playsinline 
+                  preload="metadata" 
+                  poster="assets/hero_video_poster_9_16.jpg">
+                  <source src="assets/videos/one-wars-remastered.mp4" type="video/mp4">
+                  <!-- Multi-Language Subtitles (Auto-synchronized with UI language) -->
+                  <track kind="subtitles" label="English" srclang="en" src="assets/subtitles/wars_en.vtt" default>
+                  <track kind="subtitles" label="Italiano" srclang="it" src="assets/subtitles/wars_it.vtt">
+                  <track kind="subtitles" label="Español" srclang="es" src="assets/subtitles/wars_es.vtt">
+                  <track kind="subtitles" label="Français" srclang="fr" src="assets/subtitles/wars_fr.vtt">
+                  <track kind="subtitles" label="Deutsch" srclang="de" src="assets/subtitles/wars_de.vtt">
+                  <track kind="subtitles" label="Português" srclang="pt" src="assets/subtitles/wars_pt.vtt">
+                  <track kind="subtitles" label="Русский" srclang="ru" src="assets/subtitles/wars_ru.vtt">
+                  <track kind="subtitles" label="中文" srclang="zh" src="assets/subtitles/wars_zh.vtt">
+                  <track kind="subtitles" label="日本語" srclang="ja" src="assets/subtitles/wars_ja.vtt">
+                  <track kind="subtitles" label="한국어" srclang="ko" src="assets/subtitles/wars_ko.vtt">
+                  <track kind="subtitles" label="العربية" srclang="ar" src="assets/subtitles/wars_ar.vtt">
+                  <track kind="subtitles" label="हिन्दी" srclang="hi" src="assets/subtitles/wars_hi.vtt">
+                  <track kind="subtitles" label="Bahasa Indonesia" srclang="id" src="assets/subtitles/wars_id.vtt">
+                  <track kind="subtitles" label="Türkçe" srclang="tr" src="assets/subtitles/wars_tr.vtt">
+                  Your browser does not support HTML5 video playback.
+                </video>
+                <button class="video-play-overlay-btn" id="heroVideoPlayOverlayBtn" aria-label="Play Civilizational Prologue">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7L8 5z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Clean, Accessible Features Strip -->
@@ -155,6 +182,8 @@
               <span class="feature-desc" data-i18n="features.survival_desc">Food, housing, healthcare & energy as unconditional birthrights</span>
             </div>
           </div>
+
+        
           <div class="feature-item">
             <span class="feature-icon">🏡</span>
             <div class="feature-text">
@@ -178,6 +207,237 @@
           </div>
         </div>
 
+        <!-- The Visceral Contrast Matrix: Track A vs Track B -->
+        <div class="contrast-matrix-wrap glass-panel" id="contrastMatrix">
+          <div class="contrast-matrix-header">
+            <span class="section-tag" data-i18n="contrast.tag">Civilizational Operating Systems</span>
+            <h2 class="contrast-matrix-title" data-i18n="contrast.title">Track A vs. Track B: The Civilizational Fork</h2>
+            <p class="contrast-matrix-desc" data-i18n="contrast.desc">
+              When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.
+            </p>
+          </div>
+          <div class="contrast-grid">
+            <!-- Track A -->
+            <div class="contrast-card contrast-track-a">
+              <div class="contrast-card-header">
+                <span class="contrast-track-badge badge-track-a" data-i18n="contrast.track_a_badge">Track A • Legacy Default</span>
+                <h3 class="contrast-track-title" data-i18n="contrast.track_a_title">Techno-Feudal Extraction</h3>
+                <p class="contrast-track-desc" data-i18n="contrast.track_a_desc">Monopolized automation, perpetual debt, and speculative rentierism.</p>
+              </div>
+              <ul class="contrast-items-list">
+                <li>
+                  <span class="contrast-bullet bullet-fail">✕</span>
+                  <div>
+                    <strong data-i18n="contrast.track_a_item1_title">Conditional Survival:</strong>
+                    <span data-i18n="contrast.track_a_item1_desc">Basic food, shelter, and care gated behind disappearing wage labor.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="contrast-bullet bullet-fail">✕</span>
+                  <div>
+                    <strong data-i18n="contrast.track_a_item2_title">Allodial Land Speculation:</strong>
+                    <span data-i18n="contrast.track_a_item2_desc">Predatory landlordism, compounding rents, and algorithmic evictions.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="contrast-bullet bullet-fail">✕</span>
+                  <div>
+                    <strong data-i18n="contrast.track_a_item3_title">Billionaire Oligarchy:</strong>
+                    <span data-i18n="contrast.track_a_item3_desc">Corporate lobbying, partisan theater, and manufactured consent.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="contrast-bullet bullet-fail">✕</span>
+                  <div>
+                    <strong data-i18n="contrast.track_a_item4_title">Carceral Coercion:</strong>
+                    <span data-i18n="contrast.track_a_item4_desc">Militarized policing and punitive retribution protecting property over life.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="contrast-bullet bullet-fail">✕</span>
+                  <div>
+                    <strong data-i18n="contrast.track_a_item5_title">Thermodynamic Ecocide:</strong>
+                    <span data-i18n="contrast.track_a_item5_desc">Infinite exponential compound growth on a strictly finite biosphere.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Track B -->
+            <div class="contrast-card contrast-track-b">
+              <div class="contrast-card-header">
+                <span class="contrast-track-badge badge-track-b" data-i18n="contrast.track_b_badge">Track B • Open Networked Earth</span>
+                <h3 class="contrast-track-title" data-i18n="contrast.track_b_title">Universal Usufruct & Demarchy</h3>
+                <p class="contrast-track-desc" data-i18n="contrast.track_b_desc">Machines work for the commons; humanity inherits guaranteed survival and self-governance.</p>
+              </div>
+              <ul class="contrast-items-list">
+                <li>
+                  <span class="contrast-bullet bullet-pass">✓</span>
+                  <div>
+                    <strong data-i18n="contrast.track_b_item1_title">Unconditional Birthright:</strong>
+                    <span data-i18n="contrast.track_b_item1_desc">Food, housing, healthcare, clean water & energy guaranteed for life.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="contrast-bullet bullet-pass">✓</span>
+                  <div>
+                    <strong data-i18n="contrast.track_b_item2_title">Dynamic Usufruct:</strong>
+                    <span data-i18n="contrast.track_b_item2_desc">Protected personal dwellings; zero rent, zero speculation, zero landlordism.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="contrast-bullet bullet-pass">✓</span>
+                  <div>
+                    <strong data-i18n="contrast.track_b_item3_title">Statistical Sortition:</strong>
+                    <span data-i18n="contrast.track_b_item3_desc">Citizen juries drawn by lot in strict odd parity; zero career politicians.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="contrast-bullet bullet-pass">✓</span>
+                  <div>
+                    <strong data-i18n="contrast.track_b_item4_title">Restorative Peace Guilds:</strong>
+                    <span data-i18n="contrast.track_b_item4_desc">De-escalation, conflict mediation, and root-cause civic restoration.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="contrast-bullet bullet-pass">✓</span>
+                  <div>
+                    <strong data-i18n="contrast.track_b_item5_title">Thermodynamic Exergy Limits:</strong>
+                    <span data-i18n="contrast.track_b_item5_desc">Physical accounting in kWh, liters, and topsoil health—not debt-fiat.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        </div>
+    </section>
+
+    
+
+    <!-- 2. CALL FOR CO-STEWARDS & DOMAIN CRITICS (PHASE 0 GENESIS HARDENING) -->
+    <section class="section" id="co-stewards">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="stewards.tag">Phase 0 Genesis Hardening</span>
+          <h2 class="section-title" data-i18n="stewards.title">Call for Co-Stewards & Domain Critics</h2>
+          <p class="section-desc" data-i18n="stewards.desc">
+            Open Networked Earth is built on open peer production. Before the Living Constitution is permanently deposited under Swiss Civil Law (ZGB Art. 80 ff.), our foundational pillars must be stress-tested through adversarial peer review. We are actively seeking our <strong>Priority 0 Media Co-Steward</strong> and technical domain builders to harden the architecture against entropy.
+          </p>
+        </div>
+
+        <div class="stewards-grid">
+          <!-- Pillar 0: Media, Storytelling & Community (PRIORITY 0 FEATURED SPOTLIGHT) -->
+          <div class="steward-card steward-featured glass-panel">
+            <div class="steward-card-header">
+              <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                <span class="pillar-num" style="color:var(--accent-amber); font-weight:800;" data-i18n="stewards.p0_badge">Pillar 0 • Strategic Inversion</span>
+                <span class="steward-badge badge-priority" data-i18n="stewards.badge_priority">🔥 Priority 0 • Active Search</span>
+              </div>
+              <span class="steward-badge badge-seeking" data-i18n="stewards.badge_seeking_cofounder">Seeking Co-Founder</span>
+            </div>
+            <h3 class="steward-title" data-i18n="stewards.p0_title">Media, Storytelling & Community Co-Steward</h3>
+            <div class="steward-role">
+              <strong data-i18n="stewards.label_target_profile">Target Profile:</strong> <span data-i18n="stewards.p0_role">Open-source comms activist, Solarpunk/Commons creator, independent podcaster, video storyteller, or community builder.</span>
+            </div>
+            <div class="steward-doubt">
+              <strong data-i18n="stewards.label_mandate">The Mandate & Strategic Goal:</strong> <span data-i18n="stewards.p0_doubt">Eliminate the solo-creator bottleneck by taking operational co-ownership of public storytelling, YouTube/Shorts video distribution, Reddit/X dialogue, and leading the outreach campaign to seat the remaining technical domain builders. If you believe a post-work civilization needs a powerful cultural voice, this is the co-founding role.</span>
+            </div>
+            <div class="steward-actions">
+              <a href="https://github.com/kyberlex/ONE/discussions/13" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-i18n="stewards.p0_btn_cta">Join Media Dialectic (#13) →</a>
+              <a href="mailto:kyberlex@proton.me?subject=Pillar%200%20Media%20Co-Steward%20Application" class="btn btn-secondary btn-sm" data-i18n="stewards.p0_btn_email">Apply Directly via Email →</a>
+            </div>
+          </div>
+
+          <!-- Pillar 1: Economy -->
+          <div class="steward-card glass-panel">
+            <div class="steward-card-header">
+              <span class="pillar-num" data-i18n="stewards.p1_num">Pillar 1</span>
+              <span class="steward-badge badge-seeking" data-i18n="stewards.badge_seeking">Open for Co-Steward</span>
+            </div>
+            <h3 class="steward-title" data-i18n="stewards.p1_title">Economy & Thermodynamic Balances</h3>
+            <div class="steward-role"><strong data-i18n="stewards.label_domain">Domain:</strong> <span data-i18n="stewards.p1_role">Ecological / Heterodox Economics, Leontief Input-Output</span></div>
+            <div class="steward-doubt">
+              <strong data-i18n="stewards.label_doubt">Open Dialectic & Doubt:</strong> <span data-i18n="stewards.p1_doubt">Can money-less thermodynamic accounting completely replace market price discovery and Gosplan bureaucracy without supply shortages or rationing?</span>
+            </div>
+            <div class="steward-actions">
+              <a href="https://github.com/kyberlex/ONE/discussions/9" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-i18n="stewards.p1_btn_cta">Join Economic Dialectic (#9) →</a>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Governance -->
+          <div class="steward-card glass-panel">
+            <div class="steward-card-header">
+              <span class="pillar-num" data-i18n="stewards.p2_num">Pillar 2</span>
+              <span class="steward-badge badge-seeking" data-i18n="stewards.badge_seeking">Open for Co-Steward</span>
+            </div>
+            <h3 class="steward-title" data-i18n="stewards.p2_title">Governance, Law & Dynamic Usufruct</h3>
+            <div class="steward-role"><strong data-i18n="stewards.label_domain">Domain:</strong> <span data-i18n="stewards.p2_role">Commons Jurisprudence, Demarchy / Sortition, Swiss Civil Law</span></div>
+            <div class="steward-doubt">
+              <strong data-i18n="stewards.label_doubt">Open Dialectic & Doubt:</strong> <span data-i18n="stewards.p2_doubt">Are demarchic sortition lotteries mathematically immune to lobbying and oligarchic capture? Does Swiss Association (Verein) law provide bulletproof shielding?</span>
+            </div>
+            <div class="steward-actions">
+              <a href="https://github.com/kyberlex/ONE/discussions/10" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-i18n="stewards.p2_btn_cta">Join Legal Dialectic (#10) →</a>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Simulation -->
+          <div class="steward-card glass-panel steward-active">
+            <div class="steward-card-header">
+              <span class="pillar-num" data-i18n="stewards.p3_num">Pillar 3</span>
+              <div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+                <span class="steward-badge badge-seeking" data-i18n="stewards.badge_seeking">Open for Co-Steward</span>
+                <span class="steward-badge badge-active" data-i18n="stewards.badge_active">Actives: 1</span>
+              </div>
+            </div>
+            <h3 class="steward-title" data-i18n="stewards.p3_title">Simulation & Scientific Sandbox</h3>
+            <div class="steward-role"><strong data-i18n="stewards.label_domain">Domain:</strong> <span data-i18n="stewards.p3_role">Julia Discrete-Event Co-Simulation (SIMONE), Agents.jl & MTBF Wear</span></div>
+            <div class="steward-doubt">
+              <strong data-i18n="stewards.label_doubt">Open Dialectic & Doubt:</strong> <span data-i18n="stewards.p3_doubt">Validating the single-village Julia prototype, stock-and-flow ODE docking tests, and multiscale biophysical solver decoupling. Additional co-stewards actively sought.</span>
+            </div>
+            <div class="steward-actions">
+              <a href="https://github.com/kyberlex/ONE/discussions/11" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-i18n="stewards.p3_btn_cta">Join Simulation Dialectic (#11) →</a>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Habitat -->
+          <div class="steward-card glass-panel">
+            <div class="steward-card-header">
+              <span class="pillar-num" data-i18n="stewards.p4_num">Pillar 4</span>
+              <span class="steward-badge badge-seeking" data-i18n="stewards.badge_seeking">Open for Co-Steward</span>
+            </div>
+            <h3 class="steward-title" data-i18n="stewards.p4_title">Habitat & Open-Hardware Resilience</h3>
+            <div class="steward-role"><strong data-i18n="stewards.label_domain">Domain:</strong> <span data-i18n="stewards.p4_role">Microgrids, Home Assistant Zigbee/MQTT, CNC Timber Cassettes</span></div>
+            <div class="steward-doubt">
+              <strong data-i18n="stewards.label_doubt">Open Dialectic & Doubt:</strong> <span data-i18n="stewards.p4_doubt">Do Modular Habitat Units (MHU) and open-hardware microgrids withstand real-world 40-year thermal cycles and catastrophic grid disconnection?</span>
+            </div>
+            <div class="steward-actions">
+              <a href="https://github.com/kyberlex/ONE/discussions/12" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-i18n="stewards.p4_btn_cta">Join Habitat Dialectic (#12) →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="stewards-footer-cta glass-panel" style="margin-top: 32px; padding: 28px 24px; text-align: center;">
+          <h4 style="color:var(--text-main); font-size:1.25rem; font-weight:700; margin-bottom:8px;" data-i18n="stewards.cta_title">Ready to Build or Break O.N.E.?</h4>
+          <p style="color:var(--text-muted); font-size:0.95rem; max-width:720px; margin:0 auto 20px; line-height:1.5;" data-i18n="stewards.cta_desc">
+            Whether you want to co-steward a foundational pillar or act as an independent critic hunting thermodynamic and nomothetic edge cases, your contribution directly hardens the Genesis Block.
+          </p>
+          <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+            <a href="https://github.com/kyberlex/ONE/discussions" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:10px 24px;" data-i18n="stewards.btn_all_discussions">
+              💬 View All Discussions on GitHub
+            </a>
+            <a href="mailto:kyberlex@proton.me?subject=O.N.E.%20Co-Steward%20/%20Critic%20Inquiry" class="btn btn-secondary" style="padding:10px 24px;" data-i18n="stewards.btn_contact">
+              ✉️ Contact Kyberlex (kyberlex@proton.me)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. THE 4 GATEWAYS SECTION (MODULAR HUBS) -->
+    <section class="section gateways-hub-section" id="gateways">
+      <div class="container">
         <!-- Four Clear Exploration Gateways -->
         <div class="gateway-intro">
           <span class="gateway-tag" data-i18n="gateway.tag">Explore O.N.E.</span>
@@ -197,7 +457,7 @@
             <div class="funnel-step" data-i18n="gateway.step2_tag">Step 2 • The Architecture</div>
             <div class="funnel-icon">⚖️</div>
             <h3 class="funnel-title" data-i18n="gateway.step2_title">Inspect</h3>
-            <p class="funnel-desc" data-i18n="gateway.step2_desc">Browse the 60 articles of non-carceral, thermodynamic constitutional law: sortition lotteries, usufruct tenure, and restorative peace.</p>
+            <p class="funnel-desc" data-i18n="gateway.step2_desc">Browse the 66 articles of non-carceral, thermodynamic constitutional law: sortition lotteries, usufruct tenure, and restorative peace.</p>
             <div class="funnel-link" data-i18n="gateway.step2_link">Search Constitution →</div>
           </a>
 
@@ -227,7 +487,62 @@
           <h2 class="section-title" data-i18n="synoptic.title">How Open Networked Earth Works</h2>
           <p class="section-desc" data-i18n="synoptic.subtitle">
             A plain-language guide to why the old economic rules are breaking, how past systems failed, 
-            and what replaces wage debt and land speculation in the post-labor transition.
+            and what replaces money and politicians in the post-work world.
+          </p>
+        </div>
+
+        <!-- Executive Framework Charter Card -->
+        <div class="framework-abstract-card glass-panel">
+          <div class="framework-abstract-header">
+            <span class="badge" data-i18n="synoptic.charter_badge">Civilizational Charter</span>
+            <span class="framework-abstract-tag">Canonical Executive Synthesis</span>
+          </div>
+          <p class="framework-abstract-lead" data-i18n="synoptic.charter_text">
+            The Open Networked Earth (O.N.E.) framework establishes a post-capitalist global constitution rooted in universal usufruct, thermodynamic accounting, and sortition governance—replacing debt-based financial extraction while strictly protecting personal possessions. It guarantees every individual invariant bodily sovereignty and an unconditioned baseline of survival: clean water, nutrient-dense food, resilient shelter, and healthcare. Planetary governance is coordinated through stratified sortition assemblies in strict odd-number parity, eliminating career politicians and electoral oligarchies. Physical resources are managed as federated commons within biophysical carrying capacities, powered by open-source hardware and peer-to-peer verification. Ultimately, O.N.E. provides an actionable transitional bridge toward a peaceful, high-technology planetary federation grounded in thermodynamic balance and ecological stewardship.
+          </p>
+        </div>
+
+        
+
+        <!-- Concept Visual Banner -->
+        <div class="primer-concept-banner glass-panel">
+          <img src="assets/post_work_commons.jpeg?v=1789456900" alt="Post-Work Bioregional Commons" class="primer-concept-img">
+          <div class="primer-concept-overlay">
+            <span class="caption-tag" data-i18n="synoptic.banner_tag">Thermodynamic Commons in Action</span>
+            <h3 style="font-family:var(--font-heading); font-size:1.4rem; color:#fff; margin-bottom:6px;" data-i18n="synoptic.banner_title">
+              Abundance Without Exploitation
+            </h3>
+            <p style="font-size:0.92rem; color:#cbd5e1; max-width:640px;" data-i18n="synoptic.banner_desc">
+              Clean solar architecture, autonomous agroecology rovers, and restorative public heritage gardens — freeing humanity from wage dependency.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive Primer Tabs -->
+        <div class="primer-tabs-wrap">
+          <div class="primer-tabs" id="primerTabs">
+            <button class="primer-tab-btn active" data-tab="postwork" data-i18n="synoptic.tab_postwork">⚡ 1. The Post-Work Shift</button>
+            <button class="primer-tab-btn" data-tab="failures" data-i18n="synoptic.tab_failures">🏛️ 2. Why Past Systems Failed</button>
+            <button class="primer-tab-btn" data-tab="pillars" data-i18n="synoptic.tab_pillars">🛡️ 3. The 4 Core Pillars</button>
+            <button class="primer-tab-btn" data-tab="roadmap" data-i18n="synoptic.tab_roadmap">🌱 4. The Transition Roadmap</button>
+          </div>
+        </div>
+
+        <!-- Tab Content Container -->
+        <div class="primer-content-box glass-panel" id="primerContent">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. THE CONSTITUTION EXPLORER -->
+    <section class="section" id="constitution">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="const.title">The Living Constitution of O.N.E.</h2>
+          <p class="section-desc" data-i18n="const.subtitle">
+            Ten chapters of non-carceral, thermodynamic statutory law. 
+            Explore the articles below, search clauses, or download verified PDFs.
           </p>
         </div>
 
@@ -299,47 +614,6 @@
           </div>
         </div>
 
-        <!-- Concept Visual Banner -->
-        <div class="primer-concept-banner glass-panel">
-          <img src="assets/post_work_commons.jpeg?v=1789456900" alt="Post-Labor Bioregional Commons" class="primer-concept-img">
-          <div class="primer-concept-overlay">
-            <span class="caption-tag" data-i18n="synoptic.banner_tag">Thermodynamic Commons in Action</span>
-            <h3 style="font-family:var(--font-heading); font-size:1.4rem; color:#fff; margin-bottom:6px;" data-i18n="synoptic.banner_title">
-              Abundance Without Exploitation
-            </h3>
-            <p style="font-size:0.92rem; color:#cbd5e1; max-width:640px;" data-i18n="synoptic.banner_desc">
-              Clean solar architecture, autonomous agroecology rovers, and restorative public heritage gardens — freeing humanity from wage dependency.
-            </p>
-          </div>
-        </div>
-
-        <!-- Interactive Primer Tabs -->
-        <div class="primer-tabs-wrap">
-          <div class="primer-tabs" id="primerTabs">
-            <button class="primer-tab-btn active" data-tab="postwork" data-i18n="synoptic.tab_postwork">⚡ 1. The Post-Labor Transition</button>
-            <button class="primer-tab-btn" data-tab="failures" data-i18n="synoptic.tab_failures">🏛️ 2. Why Past Systems Failed</button>
-            <button class="primer-tab-btn" data-tab="pillars" data-i18n="synoptic.tab_pillars">🛡️ 3. The 4 Core Pillars</button>
-            <button class="primer-tab-btn" data-tab="roadmap" data-i18n="synoptic.tab_roadmap">🌱 4. The Transition Roadmap</button>
-          </div>
-        </div>
-
-        <!-- Tab Content Container -->
-        <div class="primer-content-box glass-panel" id="primerContent">
-          <!-- Populated by app.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. THE CONSTITUTION EXPLORER -->
-    <section class="section" id="constitution">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" data-i18n="const.title">The Living Constitution of O.N.E.</h2>
-          <p class="section-desc" data-i18n="const.subtitle">
-            Ten chapters of non-carceral, thermodynamic statutory law. 
-            Explore the articles below, search clauses, or download verified PDFs.
-          </p>
-        </div>
 
         <div class="constitution-controls">
           <div class="search-bar">
@@ -347,7 +621,6 @@
             <input type="text" class="search-input" id="constitutionSearch" data-i18n-placeholder="const.search_placeholder" placeholder="Search keywords (e.g. 'water', 'housing', 'sortition', 'guns', 'money')...">
           </div>
           <div class="constitution-actions">
-            <span class="volume-badge badge-available" id="constStatusBadge" data-i18n="const.badge_available">Complete & Available</span>
             <button class="btn-toggle-all" id="toggleAllArticlesBtn" data-i18n="const.expand_all">Expand All</button>
             <a href="assets/ebooks/O.N.E._Constitution_en.epub" class="btn-download" id="constEpubDlBtn" download="O.N.E._Constitution_en.epub" target="_blank" rel="noopener noreferrer" data-i18n="const.download_epub">
               Constitution (EPUB)
@@ -388,7 +661,7 @@
             <div class="benchmark-title-box">
               <span class="benchmark-icon">⚖️</span>
               <div>
-                <h3 class="benchmark-heading">4-Lab Consensus Scorecard: Steady-State Post-Labor Index</h3>
+                <h3 class="benchmark-heading">4-Lab Consensus Scorecard: Steady-State Post-Work Index</h3>
                 <p class="benchmark-subheading">Independent cross-evaluation across 6 dimensions: Autonomy, Ecology, Scarcity Allocation, Anti-Oligarchy, Innovation, Zero-Labor Coherence</p>
               </div>
             </div>
@@ -838,6 +1111,9 @@
           </div>
         </div>
       </div>
+
+        
+
     </section>
 
     <!-- 5. O-ASIS SIMULATION ARENA: TRY TO BREAK O.N.E. -->
@@ -913,7 +1189,7 @@
         <div class="oasis-showcase-card">
           <div class="oasis-showcase-badge" data-i18n="oasis_showcase.badge">🎮 LIVING THERMODYNAMIC SANDBOX & MMO</div>
           <h2 class="oasis-showcase-title">
-            <span data-i18n="oasis_showcase.title_part1">Experience the Post-Labor Commons in</span><br>
+            <span data-i18n="oasis_showcase.title_part1">Experience the Post-Work Civilization in</span><br>
             <span class="hero-gradient" data-i18n="oasis_showcase.title_part2">O-ASIS Dual-Track</span>
           </h2>
           <p class="oasis-showcase-desc" data-i18n="oasis_showcase.desc">
@@ -1122,106 +1398,7 @@
       </div>
     </section>
 
-    <!-- 7. CALL FOR CO-STEWARDS & DOMAIN CRITICS (PHASE 0 ARCHITECTURAL HARDENING) -->
-    <section class="section" id="co-stewards">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag" style="background: rgba(0, 229, 255, 0.1); border-color: rgba(0, 229, 255, 0.3); color: var(--accent-cyan);">Phase 0 Genesis Hardening</span>
-          <h2 class="section-title">Call for Co-Stewards & Domain Critics</h2>
-          <p class="section-desc">
-            Open Networked Earth is built on open peer production. Before the Living Constitution is permanently deposited under Swiss Civil Law (ZGB Art. 80 ff.), each of our four foundational pillars must be stress-tested through adversarial peer review. We seek four domain builders (Co-Stewards) and rigorous specialists (Critics) to challenge and harden the architecture.
-          </p>
-        </div>
-
-        <div class="stewards-grid">
-          <!-- Pillar 1: Economy -->
-          <div class="steward-card glass-panel" style="--pillar-accent: var(--accent-amber);">
-            <div class="steward-card-header">
-              <span class="pillar-num">Pillar 1</span>
-              <span class="steward-badge badge-seeking">🔍 Seeking Co-Steward & Critics</span>
-            </div>
-            <h3 class="steward-title">Economy & Thermodynamic Balances</h3>
-            <div class="steward-role">Domain: Ecological / Heterodox Economics, Leontief Input-Output</div>
-            <div class="steward-doubt">
-              <strong>Open Dialectic & Doubt:</strong> Can money-less thermodynamic accounting completely replace market price discovery and Gosplan bureaucracy without supply shortages or rationing?
-            </div>
-            <div class="steward-actions">
-              <a href="https://github.com/kyberlex/one/discussions/11" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Join Economic Dialectic →</a>
-            </div>
-          </div>
-
-          <!-- Pillar 2: Governance -->
-          <div class="steward-card glass-panel" style="--pillar-accent: var(--accent-emerald);">
-            <div class="steward-card-header">
-              <span class="pillar-num">Pillar 2</span>
-              <span class="steward-badge badge-seeking">🔍 Seeking Co-Steward & Critics</span>
-            </div>
-            <h3 class="steward-title">Governance, Law & Dynamic Usufruct</h3>
-            <div class="steward-role">Domain: Commons Jurisprudence, Demarchy / Sortition, Swiss Civil Law</div>
-            <div class="steward-doubt">
-              <strong>Open Dialectic & Doubt:</strong> Are demarchic sortition lotteries mathematically immune to lobbying and oligarchic capture? Does Swiss Association (Verein) law provide bulletproof shielding?
-            </div>
-            <div class="steward-actions">
-              <a href="https://github.com/kyberlex/one/discussions/11" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Join Legal Dialectic →</a>
-            </div>
-          </div>
-
-          <!-- Pillar 3: Simulation -->
-          <div class="steward-card glass-panel steward-active" style="--pillar-accent: var(--accent-cyan);">
-            <div class="steward-card-header">
-              <span class="pillar-num">Pillar 3</span>
-              <span class="steward-badge badge-active">🟢 Active Co-Steward</span>
-            </div>
-            <h3 class="steward-title">Simulation & Scientific Sandbox</h3>
-            <div class="steward-role">
-              <strong>Co-Steward: Rainer Rodrigues</strong> (<a href="https://github.com/rainerrodrigues" target="_blank" rel="noopener noreferrer" style="color:var(--accent-cyan);">@rainerrodrigues</a> / <code>u/Techman_16</code>)<br>
-              Domain: Julia Discrete-Event Co-Simulation (SIMONE), Agents.jl & MTBF Wear
-            </div>
-            <div class="steward-doubt">
-              <strong>Active Research:</strong> Validating the single-village Julia prototype, stock-and-flow ODE docking tests, and multiscale biophysical solver decoupling.
-            </div>
-            <div class="steward-actions">
-              <a href="https://github.com/kyberlex/one/discussions/11" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Inspect Simulation Work →</a>
-            </div>
-          </div>
-
-          <!-- Pillar 4: Habitat -->
-          <div class="steward-card glass-panel" style="--pillar-accent: var(--accent-magenta, #f43f5e);">
-            <div class="steward-card-header">
-              <span class="pillar-num">Pillar 4</span>
-              <span class="steward-badge badge-seeking">🔍 Seeking Co-Steward & Critics</span>
-            </div>
-            <h3 class="steward-title">Habitat & Open-Hardware Resilience</h3>
-            <div class="steward-role">Domain: Microgrids, Home Assistant Zigbee/MQTT, CNC Timber Cassettes</div>
-            <div class="steward-doubt">
-              <strong>Open Dialectic & Doubt:</strong> Do Modular Habitat Units (MHU) and open-hardware microgrids withstand real-world 40-year thermal cycles and catastrophic grid disconnection?
-            </div>
-            <div class="steward-actions">
-              <a href="https://github.com/kyberlex/one/discussions/11" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Join Habitat Dialectic →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="stewards-footer-cta glass-panel" style="margin-top: 32px; padding: 28px 24px; text-align: center;">
-          <h4 style="color:#fff; font-size:1.2rem; margin-bottom:8px;">Ready to Build or Break O.N.E.?</h4>
-          <p style="color:var(--text-muted); font-size:0.95rem; max-width:720px; margin:0 auto 20px; line-height:1.5;">
-            Whether you want to co-steward a foundational pillar or act as an independent critic hunting thermodynamic and nomothetic edge cases, your contribution directly hardens the Genesis Block.
-          </p>
-          <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
-            <a href="https://github.com/kyberlex/one/discussions/11" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:10px 24px;">
-              💬 Join Red-Team Dialectic on GitHub (#11)
-            </a>
-            <a href="mailto:kyberlex@proton.me?subject=O.N.E.%20Co-Steward%20/%20Critic%20Inquiry" class="btn btn-secondary" style="padding:10px 24px;">
-              ✉️ Contact Kyberlex (kyberlex@proton.me)
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ========================================================================
+    <!-- ========================================================================
        FIELD BLUEPRINT & HANDOUT VIEWER MODAL
        ======================================================================== -->
   <div class="reader-modal-overlay" id="blueprintModal">
@@ -1290,31 +1467,24 @@
     </div>
   </div>
 
+  </main>
+
   <!-- ========================================================================
        SITE FOOTER
        ======================================================================== -->
   <footer style="padding:48px 0; border-top:1px solid var(--border-subtle); text-align:center; font-size:0.85rem; color:var(--text-muted);">
     <div class="container">
-      <div class="footer-links" style="margin-bottom: 24px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <a href="#synoptic" style="color: var(--text-muted); text-decoration: none;" data-i18n="nav.overview">Overview</a>
-        <a href="#constitution" style="color: var(--text-muted); text-decoration: none;" data-i18n="nav.constitution">Constitution</a>
-        <a href="#roadmap" style="color: var(--text-muted); text-decoration: none;" data-i18n="nav.roadmap">Roadmap</a>
-        <a href="#challenge" style="color: var(--text-muted); text-decoration: none;" data-i18n="nav.challenge">Challenge</a>
-        <a href="#books" style="color: var(--text-muted); text-decoration: none;" data-i18n="nav.thrillers">Thrillers</a>
-        <a href="#co-stewards" style="color: var(--accent-cyan); text-decoration: none;">Co-Stewards</a>
-        <a href="https://kyberlex.github.io/ONE/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600; text-decoration: none;" data-i18n="nav.simulator">🎮 Play & Simulate ↗</a>
-        <a href="https://github.com/kyberlex/one/discussions" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); text-decoration: none;">Forum / RFC ↗</a>
-      </div>
-      <p style="margin-bottom:8px; font-weight:600; color:#fff;" data-i18n="footer.line1">
+      <div class="footer-links" id="footerLinks"></div>
+      <p style="margin-bottom:8px; font-weight:600; color:var(--text-main);" data-i18n="footer.line1">
         OPEN NETWORKED EARTH (O.N.E.) • Copyfarleft Open Usufruct Covenants • Zero Allodial Copyright
       </p>
-      <p style="color:var(--text-faint);" data-i18n="footer.line2">
+      <p class="footer-faint" data-i18n="footer.line2">
         Deterministic Multi-Agent Engine Synchronized with Origin Main • Canonical Constitution v2.0-RATIFIED
       </p>
     </div>
   </footer>
 
   <!-- Application Logic -->
-  <script src="app.js?v=2.5"></script>
+  <script src="app.js?v=2026102120"></script>
 </body>
 </html>

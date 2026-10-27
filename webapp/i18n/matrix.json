@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-19T13:50:54.460500",
-  "total_ui_keys": 282,
+  "generated_at": "2026-10-27T21:49:55.178676",
+  "total_ui_keys": 378,
   "languages": [
     {
       "code": "en",
@@ -75,109 +75,109 @@
   ],
   "ui_stats": {
     "en": {
-      "total": 282,
-      "translated": 282,
+      "total": 378,
+      "translated": 378,
       "identical_to_en": 0,
       "missing": 0,
       "pct": 100.0
     },
     "it": {
-      "total": 282,
-      "translated": 277,
-      "identical_to_en": 5,
+      "total": 378,
+      "translated": 371,
+      "identical_to_en": 7,
       "missing": 0,
-      "pct": 98.2
+      "pct": 98.1
     },
     "fr": {
-      "total": 282,
-      "translated": 258,
-      "identical_to_en": 22,
-      "missing": 2,
-      "pct": 91.5
+      "total": 378,
+      "translated": 261,
+      "identical_to_en": 106,
+      "missing": 11,
+      "pct": 69.0
     },
     "de": {
-      "total": 282,
-      "translated": 258,
-      "identical_to_en": 22,
-      "missing": 2,
-      "pct": 91.5
+      "total": 378,
+      "translated": 261,
+      "identical_to_en": 106,
+      "missing": 11,
+      "pct": 69.0
     },
     "es": {
-      "total": 282,
-      "translated": 259,
-      "identical_to_en": 21,
-      "missing": 2,
-      "pct": 91.8
+      "total": 378,
+      "translated": 262,
+      "identical_to_en": 105,
+      "missing": 11,
+      "pct": 69.3
     },
     "pt": {
-      "total": 282,
-      "translated": 259,
-      "identical_to_en": 21,
-      "missing": 2,
-      "pct": 91.8
+      "total": 378,
+      "translated": 262,
+      "identical_to_en": 105,
+      "missing": 11,
+      "pct": 69.3
     },
     "zh": {
-      "total": 282,
-      "translated": 261,
-      "identical_to_en": 19,
-      "missing": 2,
-      "pct": 92.6
+      "total": 378,
+      "translated": 264,
+      "identical_to_en": 103,
+      "missing": 11,
+      "pct": 69.8
     },
     "ja": {
-      "total": 282,
-      "translated": 261,
-      "identical_to_en": 19,
-      "missing": 2,
-      "pct": 92.6
+      "total": 378,
+      "translated": 264,
+      "identical_to_en": 103,
+      "missing": 11,
+      "pct": 69.8
     },
     "ko": {
-      "total": 282,
-      "translated": 280,
-      "identical_to_en": 0,
-      "missing": 2,
-      "pct": 99.3
+      "total": 378,
+      "translated": 283,
+      "identical_to_en": 84,
+      "missing": 11,
+      "pct": 74.9
     },
     "hi": {
-      "total": 282,
-      "translated": 280,
-      "identical_to_en": 0,
-      "missing": 2,
-      "pct": 99.3
+      "total": 378,
+      "translated": 283,
+      "identical_to_en": 84,
+      "missing": 11,
+      "pct": 74.9
     },
     "ar": {
-      "total": 282,
-      "translated": 261,
-      "identical_to_en": 19,
-      "missing": 2,
-      "pct": 92.6
+      "total": 378,
+      "translated": 264,
+      "identical_to_en": 103,
+      "missing": 11,
+      "pct": 69.8
     },
     "ru": {
-      "total": 282,
-      "translated": 280,
-      "identical_to_en": 0,
-      "missing": 2,
-      "pct": 99.3
+      "total": 378,
+      "translated": 283,
+      "identical_to_en": 84,
+      "missing": 11,
+      "pct": 74.9
     },
     "id": {
-      "total": 282,
-      "translated": 277,
-      "identical_to_en": 3,
-      "missing": 2,
-      "pct": 98.2
+      "total": 378,
+      "translated": 280,
+      "identical_to_en": 87,
+      "missing": 11,
+      "pct": 74.1
     },
     "tr": {
-      "total": 282,
-      "translated": 278,
-      "identical_to_en": 2,
-      "missing": 2,
-      "pct": 98.6
+      "total": 378,
+      "translated": 281,
+      "identical_to_en": 86,
+      "missing": 11,
+      "pct": 74.3
     }
   },
   "datasets_stats": {
     "en": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -193,7 +193,7 @@
     "it": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -209,7 +209,7 @@
     "fr": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -225,7 +225,7 @@
     "de": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -241,7 +241,7 @@
     "es": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -257,7 +257,7 @@
     "pt": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -273,7 +273,7 @@
     "zh": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -289,7 +289,7 @@
     "ja": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -305,7 +305,7 @@
     "ko": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -321,7 +321,7 @@
     "hi": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -337,7 +337,7 @@
     "ar": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -353,7 +353,7 @@
     "ru": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -369,7 +369,7 @@
     "id": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -385,7 +385,7 @@
     "tr": {
       "constitution": {
         "exists": true,
-        "articles": 60,
+        "articles": 66,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -411,14 +411,14 @@
       "pct": 100.0
     },
     "fr": {
-      "available_count": 0,
+      "available_count": 7,
       "total_target": 7,
-      "pct": 0.0
+      "pct": 100.0
     },
     "de": {
-      "available_count": 2,
+      "available_count": 7,
       "total_target": 7,
-      "pct": 28.6
+      "pct": 100.0
     },
     "es": {
       "available_count": 7,
@@ -436,14 +436,14 @@
       "pct": 100.0
     },
     "ja": {
-      "available_count": 0,
+      "available_count": 7,
       "total_target": 7,
-      "pct": 0.0
+      "pct": 100.0
     },
     "ko": {
-      "available_count": 0,
+      "available_count": 7,
       "total_target": 7,
-      "pct": 0.0
+      "pct": 100.0
     },
     "hi": {
       "available_count": 7,
@@ -451,24 +451,24 @@
       "pct": 100.0
     },
     "ar": {
-      "available_count": 0,
+      "available_count": 7,
       "total_target": 7,
-      "pct": 0.0
+      "pct": 100.0
     },
     "ru": {
-      "available_count": 2,
+      "available_count": 7,
       "total_target": 7,
-      "pct": 28.6
+      "pct": 100.0
     },
     "id": {
-      "available_count": 0,
+      "available_count": 7,
       "total_target": 7,
-      "pct": 0.0
+      "pct": 100.0
     },
     "tr": {
-      "available_count": 0,
+      "available_count": 7,
       "total_target": 7,
-      "pct": 0.0
+      "pct": 100.0
     }
   },
   "novel_stats": {
@@ -503,33 +503,33 @@
       }
     },
     "fr": {
-      "completed": 0,
+      "completed": 284,
       "target": 284,
-      "remaining": 284,
-      "pct": 0.0,
-      "volumes": {
-        "const": 0,
-        "vol0": 0,
-        "vol1": 0,
-        "vol2": 0,
-        "vol3": 0,
-        "vol4": 0,
-        "vol5": 0
-      }
-    },
-    "de": {
-      "completed": 34,
-      "target": 284,
-      "remaining": 250,
-      "pct": 12.0,
+      "remaining": 0,
+      "pct": 100.0,
       "volumes": {
         "const": 10,
         "vol0": 24,
-        "vol1": 0,
-        "vol2": 0,
-        "vol3": 0,
-        "vol4": 0,
-        "vol5": 0
+        "vol1": 50,
+        "vol2": 50,
+        "vol3": 50,
+        "vol4": 50,
+        "vol5": 50
+      }
+    },
+    "de": {
+      "completed": 284,
+      "target": 284,
+      "remaining": 0,
+      "pct": 100.0,
+      "volumes": {
+        "const": 10,
+        "vol0": 24,
+        "vol1": 50,
+        "vol2": 50,
+        "vol3": 50,
+        "vol4": 50,
+        "vol5": 50
       }
     },
     "es": {
@@ -578,33 +578,33 @@
       }
     },
     "ja": {
-      "completed": 0,
+      "completed": 284,
       "target": 284,
-      "remaining": 284,
-      "pct": 0.0,
+      "remaining": 0,
+      "pct": 100.0,
       "volumes": {
-        "const": 0,
-        "vol0": 0,
-        "vol1": 0,
-        "vol2": 0,
-        "vol3": 0,
-        "vol4": 0,
-        "vol5": 0
+        "const": 10,
+        "vol0": 24,
+        "vol1": 50,
+        "vol2": 50,
+        "vol3": 50,
+        "vol4": 50,
+        "vol5": 50
       }
     },
     "ko": {
-      "completed": 0,
+      "completed": 284,
       "target": 284,
-      "remaining": 284,
-      "pct": 0.0,
+      "remaining": 0,
+      "pct": 100.0,
       "volumes": {
-        "const": 0,
-        "vol0": 0,
-        "vol1": 0,
-        "vol2": 0,
-        "vol3": 0,
-        "vol4": 0,
-        "vol5": 0
+        "const": 10,
+        "vol0": 24,
+        "vol1": 50,
+        "vol2": 50,
+        "vol3": 50,
+        "vol4": 50,
+        "vol5": 50
       }
     },
     "hi": {
@@ -623,63 +623,63 @@
       }
     },
     "ar": {
-      "completed": 0,
+      "completed": 284,
       "target": 284,
-      "remaining": 284,
-      "pct": 0.0,
+      "remaining": 0,
+      "pct": 100.0,
       "volumes": {
-        "const": 0,
-        "vol0": 0,
-        "vol1": 0,
-        "vol2": 0,
-        "vol3": 0,
-        "vol4": 0,
-        "vol5": 0
+        "const": 10,
+        "vol0": 24,
+        "vol1": 50,
+        "vol2": 50,
+        "vol3": 50,
+        "vol4": 50,
+        "vol5": 50
       }
     },
     "ru": {
-      "completed": 101,
+      "completed": 284,
       "target": 284,
-      "remaining": 183,
-      "pct": 35.6,
+      "remaining": 0,
+      "pct": 100.0,
       "volumes": {
-        "const": 0,
+        "const": 10,
         "vol0": 24,
         "vol1": 50,
-        "vol2": 27,
-        "vol3": 0,
-        "vol4": 0,
-        "vol5": 0
+        "vol2": 50,
+        "vol3": 50,
+        "vol4": 50,
+        "vol5": 50
       }
     },
     "id": {
-      "completed": 0,
+      "completed": 284,
       "target": 284,
-      "remaining": 284,
-      "pct": 0.0,
+      "remaining": 0,
+      "pct": 100.0,
       "volumes": {
-        "const": 0,
-        "vol0": 0,
-        "vol1": 0,
-        "vol2": 0,
-        "vol3": 0,
-        "vol4": 0,
-        "vol5": 0
+        "const": 10,
+        "vol0": 24,
+        "vol1": 50,
+        "vol2": 50,
+        "vol3": 50,
+        "vol4": 50,
+        "vol5": 50
       }
     },
     "tr": {
-      "completed": 0,
+      "completed": 284,
       "target": 284,
-      "remaining": 284,
-      "pct": 0.0,
+      "remaining": 0,
+      "pct": 100.0,
       "volumes": {
-        "const": 0,
-        "vol0": 0,
-        "vol1": 0,
-        "vol2": 0,
-        "vol3": 0,
-        "vol4": 0,
-        "vol5": 0
+        "const": 10,
+        "vol0": 24,
+        "vol1": 50,
+        "vol2": 50,
+        "vol3": 50,
+        "vol4": 50,
+        "vol5": 50
       }
     }
   },
@@ -692,95 +692,95 @@
       "composite_pct": 100.0
     },
     "it": {
-      "ui_pct": 98.2,
+      "ui_pct": 98.1,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.3
+      "composite_pct": 99.2
     },
     "fr": {
-      "ui_pct": 91.5,
+      "ui_pct": 69.0,
       "const_pct": 100.0,
       "qa_pct": 100.0,
-      "ebooks_pct": 0.0,
-      "composite_pct": 81.6
+      "ebooks_pct": 100.0,
+      "composite_pct": 87.6
     },
     "de": {
-      "ui_pct": 91.5,
+      "ui_pct": 69.0,
       "const_pct": 100.0,
       "qa_pct": 100.0,
-      "ebooks_pct": 28.6,
-      "composite_pct": 85.9
+      "ebooks_pct": 100.0,
+      "composite_pct": 87.6
     },
     "es": {
-      "ui_pct": 91.8,
+      "ui_pct": 69.3,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 96.7
+      "composite_pct": 87.7
     },
     "pt": {
-      "ui_pct": 91.8,
+      "ui_pct": 69.3,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 96.7
+      "composite_pct": 87.7
     },
     "zh": {
-      "ui_pct": 92.6,
+      "ui_pct": 69.8,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 97.0
+      "composite_pct": 87.9
     },
     "ja": {
-      "ui_pct": 92.6,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 0.0,
-      "composite_pct": 82.0
-    },
-    "ko": {
-      "ui_pct": 99.3,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 0.0,
-      "composite_pct": 84.7
-    },
-    "hi": {
-      "ui_pct": 99.3,
+      "ui_pct": 69.8,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.7
+      "composite_pct": 87.9
+    },
+    "ko": {
+      "ui_pct": 74.9,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 90.0
+    },
+    "hi": {
+      "ui_pct": 74.9,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 90.0
     },
     "ar": {
-      "ui_pct": 92.6,
+      "ui_pct": 69.8,
       "const_pct": 100.0,
       "qa_pct": 100.0,
-      "ebooks_pct": 0.0,
-      "composite_pct": 82.0
+      "ebooks_pct": 100.0,
+      "composite_pct": 87.9
     },
     "ru": {
-      "ui_pct": 99.3,
+      "ui_pct": 74.9,
       "const_pct": 100.0,
       "qa_pct": 100.0,
-      "ebooks_pct": 28.6,
-      "composite_pct": 89.0
+      "ebooks_pct": 100.0,
+      "composite_pct": 90.0
     },
     "id": {
-      "ui_pct": 98.2,
+      "ui_pct": 74.1,
       "const_pct": 100.0,
       "qa_pct": 100.0,
-      "ebooks_pct": 0.0,
-      "composite_pct": 84.3
+      "ebooks_pct": 100.0,
+      "composite_pct": 89.6
     },
     "tr": {
-      "ui_pct": 98.6,
+      "ui_pct": 74.3,
       "const_pct": 100.0,
       "qa_pct": 100.0,
-      "ebooks_pct": 0.0,
-      "composite_pct": 84.4
+      "ebooks_pct": 100.0,
+      "composite_pct": 89.7
     }
   },
   "key_details": [
@@ -1919,6 +1919,90 @@
       }
     },
     {
+      "key": "challenge.oracle_btn",
+      "section": "challenge",
+      "en_val": "Launch Public NotebookLM Oracle ↗",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "MISSING",
+        "de": "MISSING",
+        "es": "MISSING",
+        "pt": "MISSING",
+        "zh": "MISSING",
+        "ja": "MISSING",
+        "ko": "MISSING",
+        "hi": "MISSING",
+        "ar": "MISSING",
+        "ru": "MISSING",
+        "id": "MISSING",
+        "tr": "MISSING"
+      }
+    },
+    {
+      "key": "challenge.oracle_desc",
+      "section": "challenge",
+      "en_val": "Engage directly with the complete canonical constitution, adversarial stress-testing proofs (O-ASIS), transition blueprints, and podcast transcripts through an open Google NotebookLM knowledge oracle.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "MISSING",
+        "de": "MISSING",
+        "es": "MISSING",
+        "pt": "MISSING",
+        "zh": "MISSING",
+        "ja": "MISSING",
+        "ko": "MISSING",
+        "hi": "MISSING",
+        "ar": "MISSING",
+        "ru": "MISSING",
+        "id": "MISSING",
+        "tr": "MISSING"
+      }
+    },
+    {
+      "key": "challenge.oracle_note",
+      "section": "challenge",
+      "en_val": "⚠️ Note: A Google account is required by NotebookLM to interact with the model.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "MISSING",
+        "de": "MISSING",
+        "es": "MISSING",
+        "pt": "MISSING",
+        "zh": "MISSING",
+        "ja": "MISSING",
+        "ko": "MISSING",
+        "hi": "MISSING",
+        "ar": "MISSING",
+        "ru": "MISSING",
+        "id": "MISSING",
+        "tr": "MISSING"
+      }
+    },
+    {
+      "key": "challenge.oracle_title",
+      "section": "challenge",
+      "en_val": "O.N.E. Public AI Oracle (NotebookLM)",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "MISSING",
+        "de": "MISSING",
+        "es": "MISSING",
+        "pt": "MISSING",
+        "zh": "MISSING",
+        "ja": "MISSING",
+        "ko": "MISSING",
+        "hi": "MISSING",
+        "ar": "MISSING",
+        "ru": "MISSING",
+        "id": "MISSING",
+        "tr": "MISSING"
+      }
+    },
+    {
       "key": "challenge.quick_label",
       "section": "challenge",
       "en_val": "Frequently Tested Objections:",
@@ -2273,6 +2357,615 @@
         "ru": "TRANSLATED",
         "id": "TRANSLATED",
         "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "contrast.desc",
+      "section": "contrast",
+      "en_val": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.tag",
+      "section": "contrast",
+      "en_val": "Civilizational Operating Systems",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.title",
+      "section": "contrast",
+      "en_val": "Track A vs. Track B: The Civilizational Fork",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_a_badge",
+      "section": "contrast",
+      "en_val": "Track A • Legacy Default",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_a_desc",
+      "section": "contrast",
+      "en_val": "Monopolized automation, perpetual debt, and speculative rentierism.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_a_item1_desc",
+      "section": "contrast",
+      "en_val": "Basic food, shelter, and care gated behind disappearing wage labor.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_a_item1_title",
+      "section": "contrast",
+      "en_val": "Conditional Survival:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_a_item2_desc",
+      "section": "contrast",
+      "en_val": "Predatory landlordism, compounding rents, and algorithmic evictions.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_a_item2_title",
+      "section": "contrast",
+      "en_val": "Allodial Land Speculation:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_a_item3_desc",
+      "section": "contrast",
+      "en_val": "Corporate lobbying, partisan theater, and manufactured consent.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_a_item3_title",
+      "section": "contrast",
+      "en_val": "Billionaire Oligarchy:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_a_item4_desc",
+      "section": "contrast",
+      "en_val": "Militarized policing and punitive retribution protecting property over life.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_a_item4_title",
+      "section": "contrast",
+      "en_val": "Carceral Coercion:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_a_item5_desc",
+      "section": "contrast",
+      "en_val": "Infinite exponential compound growth on a strictly finite biosphere.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_a_item5_title",
+      "section": "contrast",
+      "en_val": "Thermodynamic Ecocide:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_a_title",
+      "section": "contrast",
+      "en_val": "Techno-Feudal Extraction",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_b_badge",
+      "section": "contrast",
+      "en_val": "Track B • Open Networked Earth",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_b_desc",
+      "section": "contrast",
+      "en_val": "Machines work for the commons; humanity inherits guaranteed survival and self-governance.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_b_item1_desc",
+      "section": "contrast",
+      "en_val": "Food, housing, healthcare, clean water & energy guaranteed for life.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_b_item1_title",
+      "section": "contrast",
+      "en_val": "Unconditional Birthright:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_b_item2_desc",
+      "section": "contrast",
+      "en_val": "Protected personal dwellings; zero rent, zero speculation, zero landlordism.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_b_item2_title",
+      "section": "contrast",
+      "en_val": "Dynamic Usufruct:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_b_item3_desc",
+      "section": "contrast",
+      "en_val": "Citizen juries drawn by lot in strict odd parity; zero career politicians.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_b_item3_title",
+      "section": "contrast",
+      "en_val": "Statistical Sortition:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_b_item4_desc",
+      "section": "contrast",
+      "en_val": "De-escalation, conflict mediation, and root-cause civic restoration.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_b_item4_title",
+      "section": "contrast",
+      "en_val": "Restorative Peace Guilds:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_b_item5_desc",
+      "section": "contrast",
+      "en_val": "Physical accounting in kWh, liters, and topsoil health—not debt-fiat.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_b_item5_title",
+      "section": "contrast",
+      "en_val": "Thermodynamic Exergy Limits:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "contrast.track_b_title",
+      "section": "contrast",
+      "en_val": "Universal Usufruct & Demarchy",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
       }
     },
     {
@@ -2927,6 +3620,48 @@
       }
     },
     {
+      "key": "hero.btn_simulator",
+      "section": "hero",
+      "en_val": "Play & Simulate (Hub) ↗",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "hero.btn_video",
+      "section": "hero",
+      "en_val": "Watch Explainer (8 min)",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "MISSING",
+        "de": "MISSING",
+        "es": "MISSING",
+        "pt": "MISSING",
+        "zh": "MISSING",
+        "ja": "MISSING",
+        "ko": "MISSING",
+        "hi": "MISSING",
+        "ar": "MISSING",
+        "ru": "MISSING",
+        "id": "MISSING",
+        "tr": "MISSING"
+      }
+    },
+    {
       "key": "hero.subtitle",
       "section": "hero",
       "en_val": "Artificial Intelligence and robotics are eliminating wage labor forever. Instead of descending into corporate techno-feudalism, <strong>Open Networked Earth (O.N.E.)</strong> turns automation into human emancipation: guaranteed food, housing, energy, and healthcare for every person alive — governed by ordinary citizen juries, not politicians.",
@@ -3008,6 +3743,69 @@
         "ru": "TRANSLATED",
         "id": "TRANSLATED",
         "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "hero_video.badge",
+      "section": "hero_video",
+      "en_val": "Civilizational Prologue • 2m 10s",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "hero_video.desc",
+      "section": "hero_video",
+      "en_val": "Watch the visual prologue illustrating human history from territorial warfare to machine-driven emancipation.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "hero_video.title",
+      "section": "hero_video",
+      "en_val": "From 100,000 Years of Warfare to Machine Emancipation",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
       }
     },
     {
@@ -3137,6 +3935,27 @@
       }
     },
     {
+      "key": "nav.oracle",
+      "section": "nav",
+      "en_val": "Oracle AI ↗",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "MISSING",
+        "de": "MISSING",
+        "es": "MISSING",
+        "pt": "MISSING",
+        "zh": "MISSING",
+        "ja": "MISSING",
+        "ko": "MISSING",
+        "hi": "MISSING",
+        "ar": "MISSING",
+        "ru": "MISSING",
+        "id": "MISSING",
+        "tr": "MISSING"
+      }
+    },
+    {
       "key": "nav.overview",
       "section": "nav",
       "en_val": "Overview",
@@ -3179,6 +3998,27 @@
       }
     },
     {
+      "key": "nav.simulator",
+      "section": "nav",
+      "en_val": "🎮 Play & Simulate ↗",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
       "key": "nav.thrillers",
       "section": "nav",
       "en_val": "Thrillers",
@@ -3200,9 +4040,261 @@
       }
     },
     {
+      "key": "oasis_showcase.badge",
+      "section": "oasis_showcase",
+      "en_val": "🎮 LIVING THERMODYNAMIC SANDBOX & MMO",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "IDENTICAL_TO_EN",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "oasis_showcase.btn_handbook",
+      "section": "oasis_showcase",
+      "en_val": "Download Player Field Manual (PDF) ↗",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "oasis_showcase.btn_launch",
+      "section": "oasis_showcase",
+      "en_val": "Launch Interactive Platform (Hub) ↗",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "oasis_showcase.desc",
+      "section": "oasis_showcase",
+      "en_val": "Test the constitution with your own hands. Build autonomous solarpunk eco-villages, balance real Leontief physics across 4 physical flows (⚡ kWh, 💧 Liters, 🥗 Calories, 💻 Compute), deliberate on civic crises via Athenian citizen juries, and resist the predatory Legacy Financial AI in a 100% serverless P2P mesh.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "oasis_showcase.feat1_desc",
+      "section": "oasis_showcase",
+      "en_val": "Real energy, battery degradation, rainwater harvesting, closed-loop hydroponics and circular FabLab material recycling.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "oasis_showcase.feat1_title",
+      "section": "oasis_showcase",
+      "en_val": "Closed-Loop Thermodynamics",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "oasis_showcase.feat2_desc",
+      "section": "oasis_showcase",
+      "en_val": "Citizen assemblies chosen by lot in strict odd parity to arbitrate community dilemmas and ratify confederal case-law precedents.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "oasis_showcase.feat2_title",
+      "section": "oasis_showcase",
+      "en_val": "Demarchic Sortition Juries",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "oasis_showcase.feat3_desc",
+      "section": "oasis_showcase",
+      "en_val": "In-game triumphs directly unlock verified, real-world 3D printable .STL open hardware and Home Assistant automations.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "oasis_showcase.feat3_title",
+      "section": "oasis_showcase",
+      "en_val": "Dual-Track Physical Bridge",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "oasis_showcase.title_part1",
+      "section": "oasis_showcase",
+      "en_val": "Experience the Post-Labor Commons in",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "oasis_showcase.title_part2",
+      "section": "oasis_showcase",
+      "en_val": "O-ASIS Dual-Track",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "IDENTICAL_TO_EN",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
       "key": "primer_content.failures",
       "section": "primer_content",
-      "en_val": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    2. Why Past Civilizational Models Failed\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:20px;\">\n    Throughout history, humanity tried four major civilizational operating systems. Every single one failed to produce lasting peace, equity, or ecological balance:\n  </p>\n  <div class=\"model-comparison\">\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">1. Religion</div>\n      <div class=\"model-status red\">Failed</div>\n      <div style=\"color:var(--text-muted);\">Holy wars, dogmatic superstition, and clergy hierarchies policing human minds with guilt and supernatural fear.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">2. Feudalism</div>\n      <div class=\"model-status red\">Failed</div>\n      <div style=\"color:var(--text-muted);\">Hereditary monarchies owning land by \"divine right,\" reducing ordinary people to serfs under the sword.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">3. State Communism</div>\n      <div class=\"model-status red\">Failed</div>\n      <div style=\"color:var(--text-muted);\">Private landlords replaced by party dictators, central planning paralysis, and carceral state terror.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">4. Capitalism</div>\n      <div class=\"model-status red\">Failed</div>\n      <div style=\"color:var(--text-muted);\">Compound debt, artificial scarcity, commodification of basic survival, and catastrophic planetary ecocide.</div>\n    </div>\n  </div>\n  <div class=\"primer-feature-card\" style=\"margin-top:20px; border-color:rgba(16, 185, 129, 0.4); background:rgba(16, 185, 129, 0.06);\">\n    <h4 style=\"color:var(--accent-emerald);\">✨ The 5th Path: Open Networked Earth (O.N.E.)</h4>\n    <p style=\"color:var(--text-secondary);\">Neither corporate exploitation nor state tyranny: usufruct care without landlordism, citizen lotteries without politicians, and guaranteed survival without money.</p>\n  </div>\n</div>",
+      "en_val": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:#fff; margin-bottom:12px;\">\n    2. Why Past Civilizational Models Failed\n  </h3>\n  <p style=\"font-size:1.05rem; color:#cbd5e1; line-height:1.7; margin-bottom:20px;\">\n    Throughout history, humanity tried four major civilizational operating systems. Every single one failed to produce lasting peace, equity, or ecological balance:\n  </p>\n  <div class=\"model-comparison\">\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">1. Religion</div>\n      <div class=\"model-status red\">Failed</div>\n      <div style=\"color:var(--text-muted);\">Holy wars, dogmatic superstition, and clergy hierarchies policing human minds with guilt and supernatural fear.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">2. Feudalism</div>\n      <div class=\"model-status red\">Failed</div>\n      <div style=\"color:var(--text-muted);\">Hereditary monarchies owning land by \"divine right,\" reducing ordinary people to serfs under the sword.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">3. State Communism</div>\n      <div class=\"model-status red\">Failed</div>\n      <div style=\"color:var(--text-muted);\">Private landlords replaced by party dictators, central planning paralysis, and carceral state terror.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">4. Capitalism</div>\n      <div class=\"model-status red\">Failed</div>\n      <div style=\"color:var(--text-muted);\">Compound debt, artificial scarcity, commodification of basic survival, and catastrophic planetary ecocide.</div>\n    </div>\n  </div>\n  <div class=\"primer-feature-card\" style=\"margin-top:20px; border-color:rgba(16, 185, 129, 0.4); background:rgba(16, 185, 129, 0.06);\">\n    <h4 style=\"color:var(--accent-emerald);\">✨ The 5th Path: Open Networked Earth (O.N.E.)</h4>\n    <p style=\"color:#e2e8f0;\">Neither corporate exploitation nor state tyranny: usufruct care without landlordism, citizen lotteries without politicians, and guaranteed survival without money.</p>\n  </div>\n</div>",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -3223,7 +4315,7 @@
     {
       "key": "primer_content.pillars",
       "section": "primer_content",
-      "en_val": "<div class=\"primer-tab-pane\">\n  <div style=\"display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;\">\n    <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin:0;\">\n      3. The Four Core Principles of O.N.E.\n    </h3>\n    <a href=\"#constitution\" class=\"btn btn-secondary\" style=\"display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; padding:8px 16px;\">\n      <span>📜 Jump to Constitution</span>\n      <span>→</span>\n    </a>\n  </div>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4>⚡ 1. The Survival Baseline (Moneyless Society)</h4>\n      <p>Every person born on Earth has an unconditional, lifelong birthright to pure water, nutritious food, modern housing, complete healthcare, and clean power. Survival is never a bargaining chip.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🏡 2. Property as Care, Not Speculation</h4>\n      <p>Personal belongings (clothing, tools, books) are permanently protected. Family homes are held under secure possessory usufruct for life. Land speculation, rental exploitation, and evictions are strictly abolished.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🎲 3. Governance by Statistical Lottery</h4>\n      <p>Elections breed billionaire donor capture, demagoguery, and corruption. Public policy is decided by sortition assemblies: ordinary citizens randomly drawn like trial juries, advised by competing panels of experts.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🌿 4. Ecological Exergy Limits</h4>\n      <p>Infinite exponential growth on a finite planet is mathematical suicide. Economic accounting is denominated directly in thermodynamic metrics (kilowatt-hours, liters of water, topsoil regeneration), not paper fiat.</p>\n    </div>\n  </div>\n</div>",
+      "en_val": "<div class=\"primer-tab-pane\">\n  <div style=\"display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;\">\n    <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:#fff; margin:0;\">\n      3. The Four Core Principles of O.N.E.\n    </h3>\n    <a href=\"#constitution\" class=\"btn btn-secondary\" style=\"display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; padding:8px 16px;\">\n      <span>📜 Jump to Constitution</span>\n      <span>→</span>\n    </a>\n  </div>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4>⚡ 1. The Survival Baseline (Moneyless Society)</h4>\n      <p>Every person born on Earth has an unconditional, lifelong birthright to pure water, nutritious food, modern housing, complete healthcare, and clean power. Survival is never a bargaining chip.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🏡 2. Property as Care, Not Speculation</h4>\n      <p>Personal belongings (clothing, tools, books) are permanently protected. Family homes are held under secure possessory usufruct for life. Land speculation, rental exploitation, and evictions are strictly abolished.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🎲 3. Governance by Statistical Lottery</h4>\n      <p>Elections breed billionaire donor capture, demagoguery, and corruption. Public policy is decided by sortition assemblies: ordinary citizens randomly drawn like trial juries, advised by competing panels of experts.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🌿 4. Ecological Exergy Limits</h4>\n      <p>Infinite exponential growth on a finite planet is mathematical suicide. Economic accounting is denominated directly in thermodynamic metrics (kilowatt-hours, liters of water, topsoil regeneration), not paper fiat.</p>\n    </div>\n  </div>\n</div>",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -3244,7 +4336,7 @@
     {
       "key": "primer_content.postwork",
       "section": "primer_content",
-      "en_val": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    1. The Imminent Post-Labor Reality: Why Automation Changes Everything\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    For thousands of years, human civilization operated on the iron rule: <em>\"He who does not work, neither shall he eat.\"</em> \n    Humanoid robotics, autonomous machinery, and generative AI are breaking that equation forever. When machines perform farming, \n    construction, transportation, energy generation, and healthcare at near-zero marginal cost, human survival must be decoupled from employment.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ The Dystopian Default: Techno-Feudalism</h4>\n      <p>Under current market rules, tech monopolies own the automated labor force. Billions become \"unemployable,\" stripped of wages, and forced into extreme precarity while wealth concentrates into a handful of corporate oligarchs.</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 The O.N.E. Blueprint: Machine Liberation</h4>\n      <p>The productive power of automation is declared the common heritage of all humanity. Machine labor frees human beings from drudgery, poverty, and wage servitude—making food, shelter, and energy free birthrights.</p>\n    </div>\n  </div>\n</div>",
+      "en_val": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:#fff; margin-bottom:12px;\">\n    1. The Imminent Post-Labor Reality: Why Automation Changes Everything\n  </h3>\n  <p style=\"font-size:1.05rem; color:#cbd5e1; line-height:1.7; margin-bottom:24px;\">\n    For thousands of years, human civilization operated on the iron rule: <em>\"He who does not work, neither shall he eat.\"</em> \n    Humanoid robotics, autonomous machinery, and generative AI are breaking that equation forever. When machines perform farming, \n    construction, transportation, energy generation, and healthcare at near-zero marginal cost, human survival must be decoupled from employment.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ The Dystopian Default: Techno-Feudalism</h4>\n      <p>Under current market rules, tech monopolies own the automated labor force. Billions become \"unemployable,\" stripped of wages, and forced into extreme precarity while wealth concentrates into a handful of corporate oligarchs.</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 The O.N.E. Blueprint: Machine Liberation</h4>\n      <p>The productive power of automation is declared the common heritage of all humanity. Machine labor frees human beings from drudgery, poverty, and wage servitude—making food, shelter, and energy free birthrights.</p>\n    </div>\n  </div>\n</div>",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -3265,7 +4357,7 @@
     {
       "key": "primer_content.roadmap",
       "section": "primer_content",
-      "en_val": "<div class=\"primer-tab-pane\">\n  <div style=\"display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:12px;\">\n    <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin:0;\">\n      4. The Transition Roadmap: How We Get There\n    </h3>\n    <a href=\"#roadmap\" class=\"btn btn-secondary\" style=\"display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; padding:8px 16px;\">\n      <span>🌱 Jump to Roadmap</span>\n      <span>→</span>\n    </a>\n  </div>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:20px;\">\n    We do not wait for global collapse or violent revolution. O.N.E. spreads through a <strong>dual-track handshake</strong>: building the resilient new commons today while the legacy system falters.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🇨🇭 1. The Legal Armor (Swiss Verein)</h4>\n      <p>Starting as an autonomous Swiss Association (ZGB Art. 60 ff.) holding open IP and assets with zero capital minimums and full member privacy.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🌱 2. Bioregional Seed Nodes</h4>\n      <p>Three people can establish a local Community Land Trust (CLT), mutual-aid food forest, or microgrid using open-source O.N.E. governance covenants.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🤝 3. Non-Violent Civil Conversion</h4>\n      <p>Unarmed civic peace guilds replace militarized policing with restorative de-escalation; corporate debt is cleared through universal jubilee.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🌍 4. Planetary Federation</h4>\n      <p>Watershed councils federate into continental chambers, replacing nation-state rivalries with ecological and thermodynamic coordination.</p>\n    </div>\n  </div>\n</div>",
+      "en_val": "<div class=\"primer-tab-pane\">\n  <div style=\"display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:12px;\">\n    <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:#fff; margin:0;\">\n      4. The Transition Roadmap: How We Get There\n    </h3>\n    <a href=\"#roadmap\" class=\"btn btn-secondary\" style=\"display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; padding:8px 16px;\">\n      <span>🌱 Jump to Roadmap</span>\n      <span>→</span>\n    </a>\n  </div>\n  <p style=\"font-size:1.05rem; color:#cbd5e1; line-height:1.7; margin-bottom:20px;\">\n    We do not wait for global collapse or violent revolution. O.N.E. spreads through a <strong>dual-track handshake</strong>: building the resilient new commons today while the legacy system falters.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🇨🇭 1. The Legal Armor (Swiss Verein)</h4>\n      <p>Starting as an autonomous Swiss Association (ZGB Art. 60 ff.) holding open IP and assets with zero capital minimums and full member privacy.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🌱 2. Bioregional Seed Nodes</h4>\n      <p>Three people can establish a local Community Land Trust (CLT), mutual-aid food forest, or microgrid using open-source O.N.E. governance covenants.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🤝 3. Non-Violent Civil Conversion</h4>\n      <p>Unarmed civic peace guilds replace militarized policing with restorative de-escalation; corporate debt is cleared through universal jubilee.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🌍 4. Planetary Federation</h4>\n      <p>Watershed councils federate into continental chambers, replacing nation-state rivalries with ecological and thermodynamic coordination.</p>\n    </div>\n  </div>\n</div>",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -5888,6 +6980,867 @@
       }
     },
     {
+      "key": "stewards.badge_active",
+      "section": "stewards",
+      "en_val": "Actives: 1",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.badge_priority",
+      "section": "stewards",
+      "en_val": "🔥 Priority 0 • Active Search",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.badge_seeking",
+      "section": "stewards",
+      "en_val": "Open for Co-Steward",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.badge_seeking_cofounder",
+      "section": "stewards",
+      "en_val": "Seeking Co-Founder",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.btn_all_discussions",
+      "section": "stewards",
+      "en_val": "💬 View All Discussions on GitHub",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.btn_contact",
+      "section": "stewards",
+      "en_val": "✉️ Contact Kyberlex (kyberlex@proton.me)",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.cta_desc",
+      "section": "stewards",
+      "en_val": "Whether you want to co-steward a foundational pillar or act as an independent critic hunting thermodynamic and nomothetic edge cases, your contribution directly hardens the Genesis Block.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.cta_title",
+      "section": "stewards",
+      "en_val": "Ready to Build or Break O.N.E.?",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.desc",
+      "section": "stewards",
+      "en_val": "Open Networked Earth is built on open peer production. Before the Living Constitution is permanently deposited under Swiss Civil Law (ZGB Art. 80 ff.), our foundational pillars must be stress-tested through adversarial peer review. We are actively seeking our <strong>Priority 0 Media Co-Steward</strong> and technical domain builders to harden the architecture against entropy.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.label_domain",
+      "section": "stewards",
+      "en_val": "Domain:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.label_doubt",
+      "section": "stewards",
+      "en_val": "Open Dialectic & Doubt:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.label_mandate",
+      "section": "stewards",
+      "en_val": "The Mandate & Strategic Goal:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.label_target_profile",
+      "section": "stewards",
+      "en_val": "Target Profile:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p0_badge",
+      "section": "stewards",
+      "en_val": "Pillar 0 • Strategic Inversion",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p0_btn_cta",
+      "section": "stewards",
+      "en_val": "Join Media Dialectic (#13) →",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p0_btn_email",
+      "section": "stewards",
+      "en_val": "Apply Directly via Email →",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p0_doubt",
+      "section": "stewards",
+      "en_val": "Eliminate the solo-creator bottleneck by taking operational co-ownership of public storytelling, YouTube/Shorts video distribution, Reddit/X dialogue, and leading the outreach campaign to seat the remaining technical domain builders. If you believe a post-labor civilization needs a powerful cultural voice, this is the co-founding role.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p0_role",
+      "section": "stewards",
+      "en_val": "Open-source comms activist, Solarpunk/Commons creator, independent podcaster, video storyteller, or community builder.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p0_title",
+      "section": "stewards",
+      "en_val": "Media, Storytelling & Community Co-Steward",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p1_btn_cta",
+      "section": "stewards",
+      "en_val": "Join Economic Dialectic (#9) →",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p1_doubt",
+      "section": "stewards",
+      "en_val": "Can money-less thermodynamic accounting completely replace market price discovery and Gosplan bureaucracy without supply shortages or rationing?",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p1_num",
+      "section": "stewards",
+      "en_val": "Pillar 1",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p1_role",
+      "section": "stewards",
+      "en_val": "Ecological / Heterodox Economics, Leontief Input-Output",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p1_title",
+      "section": "stewards",
+      "en_val": "Economy & Thermodynamic Balances",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p2_btn_cta",
+      "section": "stewards",
+      "en_val": "Join Legal Dialectic (#10) →",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p2_doubt",
+      "section": "stewards",
+      "en_val": "Are demarchic sortition lotteries mathematically immune to lobbying and oligarchic capture? Does Swiss Association (Verein) law provide bulletproof shielding?",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p2_num",
+      "section": "stewards",
+      "en_val": "Pillar 2",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p2_role",
+      "section": "stewards",
+      "en_val": "Commons Jurisprudence, Demarchy / Sortition, Swiss Civil Law",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p2_title",
+      "section": "stewards",
+      "en_val": "Governance, Law & Dynamic Usufruct",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p3_btn_cta",
+      "section": "stewards",
+      "en_val": "Join Simulation Dialectic (#11) →",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p3_doubt",
+      "section": "stewards",
+      "en_val": "Validating the single-village Julia prototype, stock-and-flow ODE docking tests, and multiscale biophysical solver decoupling. Additional co-stewards actively sought.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p3_num",
+      "section": "stewards",
+      "en_val": "Pillar 3",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p3_role",
+      "section": "stewards",
+      "en_val": "Julia Discrete-Event Co-Simulation (SIMONE), Agents.jl & MTBF Wear",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p3_title",
+      "section": "stewards",
+      "en_val": "Simulation & Scientific Sandbox",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p4_btn_cta",
+      "section": "stewards",
+      "en_val": "Join Habitat Dialectic (#12) →",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p4_doubt",
+      "section": "stewards",
+      "en_val": "Do Modular Habitat Units (MHU) and open-hardware microgrids withstand real-world 40-year thermal cycles and catastrophic grid disconnection?",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p4_num",
+      "section": "stewards",
+      "en_val": "Pillar 4",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p4_role",
+      "section": "stewards",
+      "en_val": "Microgrids, Home Assistant Zigbee/MQTT, CNC Timber Cassettes",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.p4_title",
+      "section": "stewards",
+      "en_val": "Habitat & Open-Hardware Resilience",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.tag",
+      "section": "stewards",
+      "en_val": "Phase 0 Genesis Hardening",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "stewards.title",
+      "section": "stewards",
+      "en_val": "Call for Co-Stewards & Domain Critics",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
       "key": "synoptic.banner_desc",
       "section": "synoptic",
       "en_val": "Clean solar architecture, autonomous agroecology rovers, and restorative public heritage gardens — freeing humanity from wage dependency.",
@@ -6074,6 +8027,69 @@
         "ru": "TRANSLATED",
         "id": "TRANSLATED",
         "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "video.badge",
+      "section": "video",
+      "en_val": "Architectural Explainer • 8 Minutes",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "MISSING",
+        "de": "MISSING",
+        "es": "MISSING",
+        "pt": "MISSING",
+        "zh": "MISSING",
+        "ja": "MISSING",
+        "ko": "MISSING",
+        "hi": "MISSING",
+        "ar": "MISSING",
+        "ru": "MISSING",
+        "id": "MISSING",
+        "tr": "MISSING"
+      }
+    },
+    {
+      "key": "video.desc",
+      "section": "video",
+      "en_val": "Watch the complete architectural walkthrough explaining how machine abundance, thermodynamic usufruct, and sortition juries replace wage slavery and debt-fiat.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "MISSING",
+        "de": "MISSING",
+        "es": "MISSING",
+        "pt": "MISSING",
+        "zh": "MISSING",
+        "ja": "MISSING",
+        "ko": "MISSING",
+        "hi": "MISSING",
+        "ar": "MISSING",
+        "ru": "MISSING",
+        "id": "MISSING",
+        "tr": "MISSING"
+      }
+    },
+    {
+      "key": "video.title",
+      "section": "video",
+      "en_val": "Why Money Dies When Energy Becomes Abundant",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "MISSING",
+        "de": "MISSING",
+        "es": "MISSING",
+        "pt": "MISSING",
+        "zh": "MISSING",
+        "ja": "MISSING",
+        "ko": "MISSING",
+        "hi": "MISSING",
+        "ar": "MISSING",
+        "ru": "MISSING",
+        "id": "MISSING",
+        "tr": "MISSING"
       }
     },
     {
@@ -6723,9 +8739,9 @@
           "status": "AVAILABLE"
         },
         "fr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Constitution_fr.epub",
+          "status": "AVAILABLE"
         },
         "de": {
           "available": true,
@@ -6748,14 +8764,14 @@
           "status": "AVAILABLE"
         },
         "ja": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Constitution_ja.epub",
+          "status": "AVAILABLE"
         },
         "ko": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Constitution_ko.epub",
+          "status": "AVAILABLE"
         },
         "hi": {
           "available": true,
@@ -6763,24 +8779,24 @@
           "status": "AVAILABLE"
         },
         "ar": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Constitution_ar.epub",
+          "status": "AVAILABLE"
         },
         "ru": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Constitution_ru.epub",
+          "status": "AVAILABLE"
         },
         "id": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Constitution_id.epub",
+          "status": "AVAILABLE"
         },
         "tr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Constitution_tr.epub",
+          "status": "AVAILABLE"
         }
       }
     },
@@ -6799,9 +8815,9 @@
           "status": "AVAILABLE"
         },
         "fr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol0_Genesis_fr.epub",
+          "status": "AVAILABLE"
         },
         "de": {
           "available": true,
@@ -6824,14 +8840,14 @@
           "status": "AVAILABLE"
         },
         "ja": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol0_Genesis_ja.epub",
+          "status": "AVAILABLE"
         },
         "ko": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol0_Genesis_ko.epub",
+          "status": "AVAILABLE"
         },
         "hi": {
           "available": true,
@@ -6839,9 +8855,9 @@
           "status": "AVAILABLE"
         },
         "ar": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol0_Genesis_ar.epub",
+          "status": "AVAILABLE"
         },
         "ru": {
           "available": true,
@@ -6849,14 +8865,14 @@
           "status": "AVAILABLE"
         },
         "id": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol0_Genesis_id.epub",
+          "status": "AVAILABLE"
         },
         "tr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol0_Genesis_tr.epub",
+          "status": "AVAILABLE"
         }
       }
     },
@@ -6875,14 +8891,14 @@
           "status": "AVAILABLE"
         },
         "fr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol1_Open_Networked_Earth_fr.epub",
+          "status": "AVAILABLE"
         },
         "de": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol1_Open_Networked_Earth_de.epub",
+          "status": "AVAILABLE"
         },
         "es": {
           "available": true,
@@ -6900,14 +8916,14 @@
           "status": "AVAILABLE"
         },
         "ja": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol1_Open_Networked_Earth_ja.epub",
+          "status": "AVAILABLE"
         },
         "ko": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol1_Open_Networked_Earth_ko.epub",
+          "status": "AVAILABLE"
         },
         "hi": {
           "available": true,
@@ -6915,9 +8931,9 @@
           "status": "AVAILABLE"
         },
         "ar": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol1_Open_Networked_Earth_ar.epub",
+          "status": "AVAILABLE"
         },
         "ru": {
           "available": true,
@@ -6925,14 +8941,14 @@
           "status": "AVAILABLE"
         },
         "id": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol1_Open_Networked_Earth_id.epub",
+          "status": "AVAILABLE"
         },
         "tr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol1_Open_Networked_Earth_tr.epub",
+          "status": "AVAILABLE"
         }
       }
     },
@@ -6951,14 +8967,14 @@
           "status": "AVAILABLE"
         },
         "fr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol2_Open_Networked_Earth_fr.epub",
+          "status": "AVAILABLE"
         },
         "de": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol2_Open_Networked_Earth_de.epub",
+          "status": "AVAILABLE"
         },
         "es": {
           "available": true,
@@ -6976,14 +8992,14 @@
           "status": "AVAILABLE"
         },
         "ja": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol2_Open_Networked_Earth_ja.epub",
+          "status": "AVAILABLE"
         },
         "ko": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol2_Open_Networked_Earth_ko.epub",
+          "status": "AVAILABLE"
         },
         "hi": {
           "available": true,
@@ -6991,24 +9007,24 @@
           "status": "AVAILABLE"
         },
         "ar": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol2_Open_Networked_Earth_ar.epub",
+          "status": "AVAILABLE"
         },
         "ru": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol2_Open_Networked_Earth_ru.epub",
+          "status": "AVAILABLE"
         },
         "id": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol2_Open_Networked_Earth_id.epub",
+          "status": "AVAILABLE"
         },
         "tr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol2_Open_Networked_Earth_tr.epub",
+          "status": "AVAILABLE"
         }
       }
     },
@@ -7027,14 +9043,14 @@
           "status": "AVAILABLE"
         },
         "fr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol3_Open_Networked_Earth_fr.epub",
+          "status": "AVAILABLE"
         },
         "de": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol3_Open_Networked_Earth_de.epub",
+          "status": "AVAILABLE"
         },
         "es": {
           "available": true,
@@ -7052,14 +9068,14 @@
           "status": "AVAILABLE"
         },
         "ja": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol3_Open_Networked_Earth_ja.epub",
+          "status": "AVAILABLE"
         },
         "ko": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol3_Open_Networked_Earth_ko.epub",
+          "status": "AVAILABLE"
         },
         "hi": {
           "available": true,
@@ -7067,24 +9083,24 @@
           "status": "AVAILABLE"
         },
         "ar": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol3_Open_Networked_Earth_ar.epub",
+          "status": "AVAILABLE"
         },
         "ru": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol3_Open_Networked_Earth_ru.epub",
+          "status": "AVAILABLE"
         },
         "id": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol3_Open_Networked_Earth_id.epub",
+          "status": "AVAILABLE"
         },
         "tr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol3_Open_Networked_Earth_tr.epub",
+          "status": "AVAILABLE"
         }
       }
     },
@@ -7103,14 +9119,14 @@
           "status": "AVAILABLE"
         },
         "fr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol4_Open_Networked_Earth_fr.epub",
+          "status": "AVAILABLE"
         },
         "de": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol4_Open_Networked_Earth_de.epub",
+          "status": "AVAILABLE"
         },
         "es": {
           "available": true,
@@ -7128,14 +9144,14 @@
           "status": "AVAILABLE"
         },
         "ja": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol4_Open_Networked_Earth_ja.epub",
+          "status": "AVAILABLE"
         },
         "ko": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol4_Open_Networked_Earth_ko.epub",
+          "status": "AVAILABLE"
         },
         "hi": {
           "available": true,
@@ -7143,24 +9159,24 @@
           "status": "AVAILABLE"
         },
         "ar": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol4_Open_Networked_Earth_ar.epub",
+          "status": "AVAILABLE"
         },
         "ru": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol4_Open_Networked_Earth_ru.epub",
+          "status": "AVAILABLE"
         },
         "id": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol4_Open_Networked_Earth_id.epub",
+          "status": "AVAILABLE"
         },
         "tr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol4_Open_Networked_Earth_tr.epub",
+          "status": "AVAILABLE"
         }
       }
     },
@@ -7179,14 +9195,14 @@
           "status": "AVAILABLE"
         },
         "fr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol5_Open_Networked_Earth_fr.epub",
+          "status": "AVAILABLE"
         },
         "de": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol5_Open_Networked_Earth_de.epub",
+          "status": "AVAILABLE"
         },
         "es": {
           "available": true,
@@ -7204,14 +9220,14 @@
           "status": "AVAILABLE"
         },
         "ja": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol5_Open_Networked_Earth_ja.epub",
+          "status": "AVAILABLE"
         },
         "ko": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol5_Open_Networked_Earth_ko.epub",
+          "status": "AVAILABLE"
         },
         "hi": {
           "available": true,
@@ -7219,109 +9235,26 @@
           "status": "AVAILABLE"
         },
         "ar": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol5_Open_Networked_Earth_ar.epub",
+          "status": "AVAILABLE"
         },
         "ru": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol5_Open_Networked_Earth_ru.epub",
+          "status": "AVAILABLE"
         },
         "id": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol5_Open_Networked_Earth_id.epub",
+          "status": "AVAILABLE"
         },
         "tr": {
-          "available": false,
-          "filename": null,
-          "status": "MISSING"
+          "available": true,
+          "filename": "O.N.E._Vol5_Open_Networked_Earth_tr.epub",
+          "status": "AVAILABLE"
         }
       }
     }
-  ],
-  "hero": {
-    "btn_discover": "Discover O.N.E. →",
-    "btn_stewards": "Build (Co-Steward)"
-  },
-  "hero_video": {
-    "badge": "Civilizational Prologue • 2m 10s",
-    "title": "From 100,000 Years of Warfare to Machine Emancipation",
-    "desc": "Watch the visual prologue illustrating human history from territorial warfare to machine-driven emancipation."
-  },
-  "contrast": {
-    "tag": "Civilizational Operating Systems",
-    "title": "Track A vs. Track B: The Civilizational Fork",
-    "desc": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
-    "track_a_badge": "Track A • Legacy Default",
-    "track_a_title": "Techno-Feudal Extraction",
-    "track_a_desc": "Monopolized automation, perpetual debt, and speculative rentierism.",
-    "track_a_item1_title": "Conditional Survival:",
-    "track_a_item1_desc": "Basic food, shelter, and care gated behind disappearing wage labor.",
-    "track_a_item2_title": "Allodial Land Speculation:",
-    "track_a_item2_desc": "Predatory landlordism, compounding rents, and algorithmic evictions.",
-    "track_a_item3_title": "Billionaire Oligarchy:",
-    "track_a_item3_desc": "Corporate lobbying, partisan theater, and manufactured consent.",
-    "track_a_item4_title": "Carceral Coercion:",
-    "track_a_item4_desc": "Militarized policing and punitive retribution protecting property over life.",
-    "track_a_item5_title": "Thermodynamic Ecocide:",
-    "track_a_item5_desc": "Infinite exponential compound growth on a strictly finite biosphere.",
-    "track_b_badge": "Track B • Open Networked Earth",
-    "track_b_title": "Universal Usufruct & Demarchy",
-    "track_b_desc": "Machines work for the commons; humanity inherits guaranteed survival and self-governance.",
-    "track_b_item1_title": "Unconditional Birthright:",
-    "track_b_item1_desc": "Food, housing, healthcare, clean water & energy guaranteed for life.",
-    "track_b_item2_title": "Dynamic Usufruct:",
-    "track_b_item2_desc": "Protected personal dwellings; zero rent, zero speculation, zero landlordism.",
-    "track_b_item3_title": "Statistical Sortition:",
-    "track_b_item3_desc": "Citizen juries drawn by lot in strict odd parity; zero career politicians.",
-    "track_b_item4_title": "Restorative Peace Guilds:",
-    "track_b_item4_desc": "De-escalation, conflict mediation, and root-cause civic restoration.",
-    "track_b_item5_title": "Thermodynamic Exergy Limits:",
-    "track_b_item5_desc": "Physical accounting in kWh, liters, and topsoil health—not debt-fiat."
-  },
-  "stewards": {
-    "tag": "Phase 0 Genesis Hardening",
-    "title": "Call for Co-Stewards & Domain Critics",
-    "desc": "Open Networked Earth is built on open peer production. Before the Living Constitution is permanently deposited under Swiss Civil Law (ZGB Art. 80 ff.), our foundational pillars must be stress-tested through adversarial peer review. We are actively seeking our <strong>Priority 0 Media Co-Steward</strong> and technical domain builders to harden the architecture against entropy.",
-    "p0_badge": "Pillar 0 • Strategic Inversion",
-    "badge_priority": "🔥 Priority 0 • Active Search",
-    "badge_seeking_cofounder": "Seeking Co-Founder",
-    "badge_seeking": "Open for Co-Steward",
-    "badge_active": "Actives: 1",
-    "p0_title": "Media, Storytelling & Community Co-Steward",
-    "label_target_profile": "Target Profile:",
-    "p0_role": "Open-source comms activist, Solarpunk/Commons creator, independent podcaster, video storyteller, or community builder.",
-    "label_mandate": "The Mandate & Strategic Goal:",
-    "p0_doubt": "Eliminate the solo-creator bottleneck by taking operational co-ownership of public storytelling, YouTube/Shorts video distribution, Reddit/X dialogue, and leading the outreach campaign to seat the remaining technical domain builders. If you believe a post-labor civilization needs a powerful cultural voice, this is the co-founding role.",
-    "p0_btn_cta": "Join Media Dialectic (#13) →",
-    "p0_btn_email": "Apply Directly via Email →",
-    "p1_num": "Pillar 1",
-    "p1_title": "Economy & Thermodynamic Balances",
-    "label_domain": "Domain:",
-    "p1_role": "Ecological / Heterodox Economics, Leontief Input-Output",
-    "label_doubt": "Open Dialectic & Doubt:",
-    "p1_doubt": "Can money-less thermodynamic accounting completely replace market price discovery and Gosplan bureaucracy without supply shortages or rationing?",
-    "p1_btn_cta": "Join Economic Dialectic (#9) →",
-    "p2_num": "Pillar 2",
-    "p2_title": "Governance, Law & Dynamic Usufruct",
-    "p2_role": "Commons Jurisprudence, Demarchy / Sortition, Swiss Civil Law",
-    "p2_doubt": "Are demarchic sortition lotteries mathematically immune to lobbying and oligarchic capture? Does Swiss Association (Verein) law provide bulletproof shielding?",
-    "p2_btn_cta": "Join Legal Dialectic (#10) →",
-    "p3_num": "Pillar 3",
-    "p3_title": "Simulation & Scientific Sandbox",
-    "p3_role": "Julia Discrete-Event Co-Simulation (SIMONE), Agents.jl & MTBF Wear",
-    "p3_doubt": "Validating the single-village Julia prototype, stock-and-flow ODE docking tests, and multiscale biophysical solver decoupling. Additional co-stewards actively sought.",
-    "p3_btn_cta": "Join Simulation Dialectic (#11) →",
-    "p4_num": "Pillar 4",
-    "p4_title": "Habitat & Open-Hardware Resilience",
-    "p4_role": "Microgrids, Home Assistant Zigbee/MQTT, CNC Timber Cassettes",
-    "p4_doubt": "Do Modular Habitat Units (MHU) and open-hardware microgrids withstand real-world 40-year thermal cycles and catastrophic grid disconnection?",
-    "p4_btn_cta": "Join Habitat Dialectic (#12) →",
-    "cta_title": "Ready to Build or Break O.N.E.?",
-    "cta_desc": "Whether you want to co-steward a foundational pillar or act as an independent critic hunting thermodynamic and nomothetic edge cases, your contribution directly hardens the Genesis Block.",
-    "btn_all_discussions": "💬 View All Discussions on GitHub",
-    "btn_contact": "✉️ Contact Kyberlex (kyberlex@proton.me)"
-  }
+  ]
 }
