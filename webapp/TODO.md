@@ -100,7 +100,8 @@ This specification outlines the comprehensive refactoring of the web portal towa
 - [x] **Thermodynamic Mass-Energy Balances (Supercedes Fiat Debt Calculator):**
   - *Architectural Decision:* Direct calculation of heterogeneous fiat debt instruments (e.g. US student debt vs German rental vs Indian informal agricultural credit) was audited and retired as an unreliable "toy slider" that distorts local reality across 14 languages.
   - *Resolution:* Fully grounded in the physical Leontief mass-energy equations (2,200 kcal, potable water, 0.3h daily maintenance) modeled natively in the Living Commons Game (`game/`) and SIMONE scientific engine (`simone/`).
-- [ ] **Bioregional Watershed Explorer:** Minimalist map widget mapping local hydrological catchments without national borders.
+- [x] **Bioregional Watershed Explorer (Architectural Relocation):**
+  - *Architectural Decision:* To maintain webapp page-load speed (<500ms), zero bloat, and Swiss-editorial minimalism, the interactive geospatial/hydrological map is relocated from the institutional web portal to the Interactive Platform Hub (`https://kyberlex.github.io/ONE/`), where it serves as the Step 1 Macro-Planetary Gateway leading directly into the O-ASIS Sandbox (Step 2 Meso-Governance) and Living Commons Game (Step 3 Micro-Habitat).
 
 ---
 
