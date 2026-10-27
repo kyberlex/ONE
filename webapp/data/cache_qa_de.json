@@ -1,0 +1,942 @@
+{
+  "QA-HOUS-01": {
+    "id": "QA-HOUS-01",
+    "question": "Kann die Gemeinschaft, ein Rat oder ein Komitee mein Zuhause beschlagnahmen?",
+    "verdict": "GELÖST: Absoluter lebenslanger Nießbrauch ohne Zwangsräumung",
+    "lead": "Niemand kann Sie zwangsräumen oder Ihr Zuhause konfiszieren: Der persönliche Nießbrauch ist ein unveräußerliches verfassungsmäßiges Geburtsrecht auf Lebenszeit.",
+    "points": [
+      "Ihr primärer Wohnsitz und persönlicher Lebensraum sind durch die Konstitutions-Invarianten der Klasse 0 geschützt: Wohnungsräumungen sind strikt verfassungswidrig.",
+      "Es gibt keine Hypotheken, Grundsteuern oder Mietzahlungen: Sie können Ihre Bleibe nicht aufgrund finanzieller Notlagen verlieren.",
+      "Wohnraum wird als nicht verhandelbare biologische Notwendigkeit anerkannt, nicht als handelbares Finanzgut.",
+      "Gemeinderäte haben keinerlei Befugnis, bewohnten Wohnraum gegen den Willen der Bewohner neu zuzuweisen."
+    ],
+    "keywords": [
+      "Nießbrauch",
+      "Wohnrecht",
+      "Klasse 0 Invarianten",
+      "Zwangsräumungsschutz",
+      "Grundeigentum"
+    ]
+  },
+  "QA-HOUS-02": {
+    "id": "QA-HOUS-02",
+    "question": "Was motiviert jemanden dazu, das eigene Haus instand zu halten oder das Dach zu reparieren, ohne Marktwerterhöhung?",
+    "verdict": "GELÖST: Direkter Stolz auf das Wohnumfeld, kostenlose Baumaterialien und Gildenunterstützung",
+    "lead": "Sie pflegen Ihr Zuhause, weil Sie und Ihre Liebsten darin leben, unterstützt durch kostenlose Gemeinschaftsmaterialien und spezialisierte Handwerksgilden.",
+    "points": [
+      "Menschen kümmern sich auf natürliche Weise um ihre unmittelbare Umgebung, wenn sie vom Stress durch Miete und Schulden befreit sind.",
+      "Hochwertige Isolierung, Solarpaneele und Dachbaustoffe werden kostenlos von zentralen Fabrikationslagern der Watershed-Regionen bereitgestellt.",
+      "Lokale Instandhaltungsgilden bieten fachkundige gemeinschaftliche Arbeitskraft und Diagnosewerkzeuge für strukturelle Reparaturen.",
+      "Beim Umzug in eine neue Bioregion geben Sie den Nießbrauch in gutem Zustand ab, ohne spekulative Schulden oder Abschlussgebühren."
+    ],
+    "keywords": [
+      "Instandhaltung",
+      "Gildensystem",
+      "Wohnkultur",
+      "Eigenverantwortung",
+      "Fabrikationslager"
+    ]
+  },
+  "QA-HOUS-03": {
+    "id": "QA-HOUS-03",
+    "question": "Darf ich weiterhin persönliche Dinge wie Werkzeuge, Kleidung, ein Auto oder ein Boot besitzen?",
+    "verdict": "GELÖST: Heiliger persönlicher Besitz und Arbeitswerkzeuge sind vollständig geschützt",
+    "lead": "O.N.E. unterscheidet strikt zwischen persönlichem Eigentum und monopolistischem Privateigentum: Ihre persönlichen Gegenstände gehören allein Ihnen.",
+    "points": [
+      "Ihre Kleidung, Computer, Bücher, Erbstücke, handgefertigte Gegenstände und Musikinstrumente werden als persönlicher Lebensbereich eingestuft.",
+      "Persönliche Verkehrsmittel (Fahrräder, E-Lastenräder, Boote) verbleiben in Ihrem exklusiven Besitz.",
+      "Abgeschafft ist das Eigentum in Abwesenheit: Sie können nicht eine ganze Fabrik, einen Grundwasserleiter oder 50 Wohnungen besitzen, um Miete von anderen zu extrahieren.",
+      "Werkzeuge für individuelle Kunst und Handwerk sind verfassungsmäßig garantiert und verbleiben beim Handwerker."
+    ],
+    "keywords": [
+      "Persönliches Eigentum",
+      "Besitzrechte",
+      "Persönlichkeitsrecht",
+      "Handwerkszeug",
+      "Wirtschaftsdemokratie"
+    ]
+  },
+  "QA-HOUS-04": {
+    "id": "QA-HOUS-04",
+    "question": "Kann ich mein Haus, meinen Garten oder persönliche Gegenstände an meine Kinder vererben?",
+    "verdict": "GELÖST: Kontinuität des persönlichen Wohnraums für Familie und Erbe",
+    "lead": "Wenn Ihre Kinder oder Partner mit Ihnen zusammenleben, behalten sie ein kontinuierliches Wohnrecht; persönliche Gegenstände gehen direkt an Ihre Liebsten über.",
+    "points": [
+      "Familienmitglieder, die einen aktiven Wohnsitz teilen, erben beim Tod eines Elternteils den ununterbrochenen Nießbrauch.",
+      "Persönliche Gegenstände, Handwerkszeuge, Kunstwerke und Familienerbstücke werden gemäß Ihren persönlichen Wünschen ohne Erbschaftssteuern übertragen.",
+      "Leere Wohn-Nießbräuche Verstorbener, die nicht von Mitbewohnern beansprucht werden, fließen zurück in den gemeinsamen Pool der Watershed-Region.",
+      "Generationenübergreifende finanzielle Imperien und Vermieter-Dynastien sind dauerhaft beendet."
+    ],
+    "keywords": [
+      "Erbrecht",
+      "Wohnrechtkontinuität",
+      "Familienerbe",
+      "Besitzübergang",
+      "Wohnraumverwaltung"
+    ]
+  },
+  "QA-HOUS-05": {
+    "id": "QA-HOUS-05",
+    "question": "Wie geht O.N.E. mit verlassenen Häusern oder längeren Reisen um?",
+    "verdict": "GELÖST: Großzügige Reisezeiträume und gemeinschaftliche Neuzuweisung leerstehender Orte",
+    "lead": "Sie sind frei, für Forschung, Kunst oder Erkundungen zu reisen, während Ihr Zuhause für Sie reserviert bleibt; verlassene Räume werden für andere saniert.",
+    "points": [
+      "Längere Abwesenheiten für Studium, Sabbaticals oder Pflegezeiten (bis zu 24 Monate) werden einfach registriert, um z. B. das Einfrieren von Leitungen im Winter zu verhindern.",
+      "Ein Zuhause wird niemals als verlassen erklärt, solange eine persönliche Obhut oder Betreuungsvereinbarungen aktiv sind.",
+      "Tatsächlich verlassene, nicht instand gehaltene Strukturen werden von durch Losverfahren bestimmten Nachbarschaftsräten geprüft und als öffentlicher Wohnraum restauriert.",
+      "Kein privater Immobilienentwickler kann Häuser absichtlich leer stehen lassen, um künstliche Knappheit zu erzeugen."
+    ],
+    "keywords": [
+      "Reisefreiheit",
+      "Losverfahren",
+      "Leerstandsmanagement",
+      "Gemeinwohlnutzung",
+      "Wohnraum-Ressourcen"
+    ]
+  },
+  "QA-WORK-01": {
+    "id": "QA-WORK-01",
+    "question": "Wer reinigt die Kanalisation, bringt den Müll raus und macht gefährliche Arbeit, wenn es keine Lohnarbeit gibt?",
+    "verdict": "GELÖST: Fortschrittliche Robotik, kurze geteilte Schichtrotationen und soziale Anerkennung",
+    "lead": "Anstatt Menschen durch Hungerzwang in gefährliche Arbeit zu drängen, automatisiert O.N.E. Schmutzarbeit und verteilt den Rest in leichten Rotationsschichten.",
+    "points": [
+      "Die oberste Priorität der offenen Fab-Labs liegt in der Entwicklung autonomer Roboter für Abwasser, Müll und toxische Aufgaben.",
+      "Verbleibende manuelle Aufgaben werden unter allen arbeitsfähigen Bürgern in kurzen, rotierenden Schichten von wenigen Stunden pro Monat verteilt.",
+      "Freiwillige, die anstrengende Schichten übernehmen, erhalten höchste soziale Anerkennung, ehrenamtliche Auszeichnungen und Priorität bei Ermessensgütern.",
+      "Frischgebackene Eltern (erste 1000 Tage), Studierende in Intensivphasen und Vollzeit-Pflegende sind vollständig von körperlich schweren Schichten befreit."
+    ],
+    "keywords": [
+      "Robotik",
+      "Rotationsarbeit",
+      "Soziale Ehre",
+      "Arbeitsbefreiung",
+      "Automatisierung"
+    ]
+  },
+  "QA-WORK-02": {
+    "id": "QA-WORK-02",
+    "question": "Warum sollten hochqualifizierte Fachkräfte wie Chirurgen oder Ingenieure ohne hohe Gehälter arbeiten?",
+    "verdict": "GELÖST: Berufung, höchster sozialer Respekt, keine Studiengebühren und modernste Labore",
+    "lead": "Chirurgen und Ingenieure wählen ihren Beruf aus Leidenschaft und Meisterschaft, nicht um medizinische Schulden oder Krankenhausgewinne zu bedienen.",
+    "points": [
+      "Medizinausbildung, chirurgische Facharztausbildungen und Ingenieursschulen sind zu 100 % kostenlos und für jeden mit tatsächlicher Begabung offen.",
+      "Chirurgen praktizieren ohne 80-Stunden-Schichten, Klageangst durch Versicherungen oder administrative Abrechnungsbürokratie.",
+      "Ingenieure haben uneingeschränkten Zugang zu Open-Source-Hardware, modernen Fab-Labs und grenzenloser Zusammenarbeit ohne betriebliche Geheimhaltungsvereinbarungen.",
+      "Wahrer gesellschaftlicher Status, Anerkennung unter Kollegen und tiefgreifende berufliche Erfüllung ersetzen abstrakte Geldkompensation."
+    ],
+    "keywords": [
+      "Berufung",
+      "Bildungsfreiheit",
+      "Fachliche Meisterschaft",
+      "Open-Source-Forschung",
+      "Gesellschaftlicher Status"
+    ]
+  },
+  "QA-WORK-03": {
+    "id": "QA-WORK-03",
+    "question": "Was passiert mit dauerhaften Trittbrettfahrern, die sich weigern, irgendetwas beizutragen?",
+    "verdict": "GELÖST: Biologisches Überleben bleibt garantiert; Luxus- und Ermessenskontingente ruhen",
+    "lead": "Niemand hungert, verliert sein Zuhause oder wird wegen Verweigerung inhaftiert; jedoch wird der Zugang zu Luxusgütern, speziellen Werkzeugen und Reisen pausiert.",
+    "points": [
+      "Gemäß den Konstitutions-Invarianten der Klasse 0 erhält jeder Mensch bedingungsloses Überleben der Stufe 1: sauberes Wasser, Nahrung, Obdach und medizinische Versorgung.",
+      "Beharrliche Weigerung, zu grundlegenden Rotationsaufgaben beizutragen, führt zur Aussetzung der Ermessenszuteilungen der Stufe 3.",
+      "Sie erhalten dann keinen Zugriff auf interkontinentale Reisemöglichkeiten, Hochenergie-Forschungslabore, Luxusfertigung oder gemeinschaftliche Kulturbereiche.",
+      "Natürliche soziale Reibung und das menschliche Bedürfnis nach Verbindung unter Gleichen lösen chronisches Desinteresse ohne Gewalt oder Gefängnisse."
+    ],
+    "keywords": [
+      "Bedingungsloses Überleben",
+      "Soziale Teilhabe",
+      "Klasse 0 Invarianten",
+      "Trittbrettfahrerschutz",
+      "Ressourcenzuteilung"
+    ]
+  },
+  "QA-WORK-04": {
+    "id": "QA-WORK-04",
+    "question": "Ist verpflichtende gemeinsame Instandhaltung nicht Zwangsarbeit wie in Sowjet-Gulags?",
+    "verdict": "GELÖST: Totale somatische Freiheit, keine Zwangsarbeitslager und Selbstverwaltung der Bürger",
+    "lead": "Der sowjetische Kommunismus nutzte Polizei, interne Pässe und Gulags, um Quoten zu erzwingen; O.N.E. verbietet Zwangsarbeit, Polizei und Gefängnisse für immer.",
+    "points": [
+      "Artikel 1.2 verbietet verfassungsmäßig Zwangsarbeit, Zwangsrekrutierung und physische Inhaftierung.",
+      "Instandhaltungsschichten betragen im Durchschnitt weniger als 5 bis 7 Stunden pro Monat für einen typischen Bürger, keine 60-Stunden-Wochen in Fabriken.",
+      "Sie können für jede Instandhaltungsaufgabe wählen, tauschen, planen oder technologische robotische Ersatzlösungen vorschlagen.",
+      "Es gibt keine zentrale Parteibürokratie (Gosplan), die Produktionsziele diktiert: Lokale Watershed-Räte verwalten sich selbst."
+    ],
+    "keywords": [
+      "Zwangsarbeitsverbot",
+      "Selbstverwaltung",
+      "Somatische Freiheit",
+      "Dezentralisierung",
+      "Verfassungsrecht"
+    ]
+  },
+  "QA-WORK-05": {
+    "id": "QA-WORK-05",
+    "question": "Kann ich meinen Beruf wechseln oder künstlerische Interessen verfolgen, wann immer ich möchte?",
+    "verdict": "GELÖST: Reibungslose Karriereübergänge, lebenslanges Lernen und offene Werkstätten",
+    "lead": "Da Ihr Überleben nicht an einen Vorgesetzten gebunden ist, können Sie in jeder Lebensphase Felder wechseln, neue Künste erlernen oder Forschungsgilden beitreten.",
+    "points": [
+      "Sie sind niemals in einem gehassten Job gefangen, nur um die Krankenversicherung zu behalten oder die nächste Miete zu zahlen.",
+      "Alle Gilden (Astronomie, Holzbearbeitung, Bio-Engineering, Musik, Landwirtschaft) bieten offene, selbstbestimmte Ausbildungen an.",
+      "Das 'Heretic's Commons' (Ketzerschatzkammer) garantiert Zugang zu Laboren und Materialien für explorative, nicht-kommerzielle Experimente.",
+      "Menschliche Kreativität blüht auf, wenn sie von der seelenzerstörenden Erschöpfung der Lohnsklaverei befreit ist."
+    ],
+    "keywords": [
+      "Karrierewechsel",
+      "Lebenslanges Lernen",
+      "Heretic's Commons",
+      "Kreative Freiheit",
+      "Berufliche Selbstentfaltung"
+    ]
+  },
+  "QA-DEM-01": {
+    "id": "QA-DEM-01",
+    "question": "Warum setzen wir auf das Losverfahren (Sortition) statt auf die Wahl von Politikern?",
+    "verdict": "GELÖST: Das Losverfahren eliminiert Wahlkämpfe, oligarchische Bestechung und korrupte Parteien.",
+    "lead": "Wahlen führen zwangsläufig zu politischen Oligarchien aus wohlhabenden, charismatischen Eliten; das Losverfahren wählt hingegen echte Querschnitte der Bürger aus.",
+    "points": [
+      "Wahlen erfordern massive Wahlkampfspenden, Medienkontrolle und charismatische Demagogie, was direkt in die Korruption führt.",
+      "Kryptographische Zufallslotterien wählen normale Eltern, Lehrer, Krankenpfleger und Mechaniker aus, die die wahre Vielfalt der Gesellschaft widerspiegeln.",
+      "Die Amtszeiten sind kurz (12-24 Monate) mit obligatorischer Rotation: Es gibt keine dauerhaften politischen Karrieren oder Drehtüreffekte durch Lobbyismus.",
+      "Die Bürger beraten auf Basis unabhängiger wissenschaftlicher Briefings statt durch den Fraktionszwang von Parteien."
+    ],
+    "keywords": [
+      "Losverfahren",
+      "Bürgerräte",
+      "Demokratie-Update",
+      "Anti-Korruption",
+      "Politische Partizipation"
+    ]
+  },
+  "QA-DEM-02": {
+    "id": "QA-DEM-02",
+    "question": "Wird ein durch Losverfahren besetztes Gremium nicht kritische Infrastruktur wie Kernkraftwerke aus technischer Unkenntnis gefährden?",
+    "verdict": "GELÖST: Strikte Trennung zwischen technischen Expertenbeiräten und bürgerlichen Wertekonsultationen.",
+    "lead": "Zufällig ausgewählte Bürger konstruieren weder Turbinen noch Brennstäbe: Zertifizierte epistemische Gruppen liefern technische Modelle; das Gremium entscheidet über die Prioritäten der Gemeinschaft.",
+    "points": [
+      "Zertifizierte Wissenschaftler, Hydrologen und Physiker bilden epistemische Arbeitsgruppen, um machbare technische Optionen zu formulieren.",
+      "Wichtige Sicherheitsvorkehrung: Technische Experten haben strikt beratende, nicht stimmberechtigte Rollen, um technokratische Tyrannei zu verhindern.",
+      "Experten sind gesetzlich verpflichtet, komplexe thermodynamische Modelle in verständliche, zugängliche Abwägungsoptionen zu übersetzen.",
+      "Das Bürgergremium gewichtet menschliche und ökologische Werte (z. B. Transitgeschwindigkeit vs. Feuchtgebietsschutz), keine mathematischen Kalküle."
+    ],
+    "keywords": [
+      "Epistemische Gruppen",
+      "Technische Expertise",
+      "Bürgerentscheid",
+      "Infrastruktur",
+      "Risikomanagement"
+    ]
+  },
+  "QA-DEM-03": {
+    "id": "QA-DEM-03",
+    "question": "Wie verhindert das Wahlsystem, dass ein lauter, charismatischer Demagoge den Rat kapert?",
+    "verdict": "GELÖST: Mathematische Paarvergleich-Filter eliminieren polarisierende Scharfmacher.",
+    "lead": "Anders als beim einfachen Mehrheitswahlrecht, bei dem eine aggressive 30%-Minderheit dominieren kann, stellt Condorcet jede Option im direkten Vergleich gegen jede andere.",
+    "points": [
+      "Bei der Condorcet-Wahl gewinnt eine Option nur, wenn sie jede Alternative in direkten Eins-zu-eins-Vergleichen besiegt.",
+      "Ein charismatischer Unruhestifter mit 30 % fanatischer Unterstützung wird mathematisch abgelehnt, wenn die anderen 70 % seinen Vorschlag als ihre letzte Wahl einstufen.",
+      "Geheime Abstimmungen und Abkühlphasen verhindern, dass aggressive Persönlichkeiten ruhigere Ratsmitglieder einschüchtern.",
+      "Entscheidungen erfordern qualifizierte Supermehrheiten (75 %), was einen konstruktiven Konsens gegenüber toxischer Polarisierung erzwingt."
+    ],
+    "keywords": [
+      "Condorcet-Verfahren",
+      "Demokratie-Sicherheit",
+      "Konsensfindung",
+      "Wahlmathematik",
+      "Bulling-Prävention"
+    ]
+  },
+  "QA-DEM-04": {
+    "id": "QA-DEM-04",
+    "question": "Bin ich verpflichtet, in einem Rat zu dienen, wenn mein Name gezogen wird?",
+    "verdict": "GELÖST: Bedingungsloses Recht auf Ablehnung und planbare Zurückstellung.",
+    "lead": "Niemand wird unter Zwang in ein öffentliches Amt berufen: Sie können das Mandat ohne Strafe ablehnen oder Ihren Dienst auf einen passenderen Zeitpunkt verschieben.",
+    "points": [
+      "Körperliche Autonomie (Artikel 1.2) verbietet strikt die politische Zwangsrekrutierung.",
+      "Pflegepersonen, Menschen in Trauer, Studierende oder Erkrankte können sofortige, unhinterfragte Zurückstellungen beantragen.",
+      "Wenn Sie ablehnen, zieht der kryptographische Zufallsgenerator sofort einen Ersatzkandidaten aus dem registrierten Einzugsgebiet.",
+      "Der Dienst wird durch volle physische Entlastung, Kinderbetreuung und komfortable Unterkünfte begleitet, um die Teilhabe zu erleichtern."
+    ],
+    "keywords": [
+      "Bürgerpflicht",
+      "Autonomie",
+      "Freiwilligkeit",
+      "Partizipation",
+      "Soziale Absicherung"
+    ]
+  },
+  "QA-DEM-05": {
+    "id": "QA-DEM-05",
+    "question": "Was hält externe Interessengruppen oder Kartelle davon ab, Bürger zu bestechen?",
+    "verdict": "GELÖST: Kryptographische Anonymität, Geldlosigkeit und blinde Beratung.",
+    "lead": "Man kann niemanden bestechen, wenn man nicht weiß, wer im Rat sitzt, bis dieser zusammentritt – und Geld existiert nicht mehr, um Einfluss zu kaufen.",
+    "points": [
+      "Die Identitäten der Ratsmitglieder sind mittels Zero-Knowledge-Schwellenkryptographie versiegelt, bis die Sitzung in abgeschirmten Räumen beginnt.",
+      "Da privates Fiat-Geld abgeschafft ist, gibt es kein Offshore-Konto oder spekulative Währungen, die als Bestechung angeboten werden könnten.",
+      "Ratsmitglieder stimmen anonym über kryptographische Terminals ab, was die Verifizierung von Bestechungen für Bestechungsversuche unmöglich macht.",
+      "Die kurze Dauer der Ratsperioden macht den Aufbau permanenter Einflussnetzwerke mathematisch unmöglich."
+    ],
+    "keywords": [
+      "Korruptionsschutz",
+      "Kryptographie",
+      "Anonymität",
+      "Integrität",
+      "Transparenz"
+    ]
+  },
+  "QA-THERM-01": {
+    "id": "QA-THERM-01",
+    "question": "Wie sieht ohne Geld ein persönlicher Kontostand oder eine Smartphone-Anzeige aus?",
+    "verdict": "GELÖST: Biophysikalische Gesundheitsindikatoren statt abstrakter Schuldscheine.",
+    "lead": "Anstelle eines beunruhigenden Kontostands mit Fiat-Währung zeigt Ihr Interface lokale Wasserreserven, Kapazitäten für saubere Energie und persönliche Dispositions-Token.",
+    "points": [
+      "Keine Bankgebühren, Überziehungsmeldungen, Kreditkartenzinsen oder Hypothekenabrechnungen: Finanzielle Angst ist ausgerottet.",
+      "Der Bildschirm zeigt den Lebenszustand Ihrer Bioregion: Grundwasserpegel, Reserven im erneuerbaren Stromnetz und Ernteprognosen.",
+      "Sie sehen Ihre persönliche Quote für die Bestellung spezialisierter Fab-Lab-Komponenten oder die Buchung von Hochgeschwindigkeitsreisen (Tier 3).",
+      "Das Interface verfolgt den physischen Wohlstand und ökologische Grenzen statt zusammengesetzter finanzieller Schulden."
+    ],
+    "keywords": [
+      "Bioregionale Ökonomie",
+      "Ressourcen-Interface",
+      "Geldloses System",
+      "Ökologisches Limit",
+      "Wohlbefinden"
+    ]
+  },
+  "QA-THERM-02": {
+    "id": "QA-THERM-02",
+    "question": "Wie entscheidet O.N.E., wer bei einer extremen Energiekrise oder Dürre Wasser oder Strom erhält?",
+    "verdict": "GELÖST: Biologische Triage schützt das menschliche Überleben vor Luxus-Golfplätzen.",
+    "lead": "Im Kapitalismus kühlen die Reichen ihre Villen, während die Armen frieren; in O.N.E. kappt der Algorithmus automatisch den Luxus vor dem menschlichen Leben.",
+    "points": [
+      "L_min ist wie biologische Triage im Körper: Bei Unterkühlung fließt das Blut zum Herzen und Gehirn, nicht zu den Fingerspitzen.",
+      "Tier 1 (sauberes Trinkwasser, medizinische Notfallversorgung, Basisheizung) ist verfassungsmäßig unantastbar.",
+      "Tier 2 (grundlegende Lebensmitteltransporte, Kommunikationsnetze) wird durch gepufferte Reserven aufrechterhalten.",
+      "Tier 3 (Springbrunnen, Luxusfertigung, private Freizeiteinrichtungen) wird bei einer Krise sofort und automatisch abgeschaltet."
+    ],
+    "keywords": [
+      "Triage",
+      "Existenzsicherung",
+      "Energiekrise",
+      "Verteilungsgerechtigkeit",
+      "O.N.E."
+    ]
+  },
+  "QA-THERM-03": {
+    "id": "QA-THERM-03",
+    "question": "Was ist das Erbe des Ketzers (Heretic's Commons) und warum sind 7 % der planetaren Energie dafür reserviert?",
+    "verdict": "GELÖST: Garantierte Energie für hochriskante, unkonventionelle und dissidente Ideen.",
+    "lead": "Um bürokratische Stagnation und Konformismus zu verhindern, sind 7 % aller verfügbaren Exergie verfassungsmäßig für unkonventionelle Forschung reserviert.",
+    "points": [
+      "Kein Mainstream-Komitee oder wissenschaftlicher Konsens kann den Zugang zum Erbe des Ketzers verweigern.",
+      "Innovatoren mit exzentrischen Theorien (kalte Fusion, radikale Solarpunk-Landwirtschaft, Grenzphysik) erhalten unblockierte Laborzeiten und Materialien.",
+      "Dies stellt sicher, dass das Paradigma niemals zu einer dogmatischen, starren Bürokratie wird, die neue Entdeckungen ablehnt.",
+      "Wenn ein Experiment scheitert, droht kein persönlicher finanzieller Ruin; wenn es gelingt, kommt der offene Bauplan der gesamten Menschheit zugute."
+    ],
+    "keywords": [
+      "Heretic's Commons",
+      "Innovation",
+      "Forschungsfreiheit",
+      "Wissenschaftliche Dissidenz",
+      "Kreativität"
+    ]
+  },
+  "QA-THERM-04": {
+    "id": "QA-THERM-04",
+    "question": "Wie betreibt O.N.E. Handel mit dem Ausland, ohne sich mit Fiat-Währungen zu infizieren?",
+    "verdict": "GELÖST: Physische Clearingstelle mit randomisierten Puffern gegen Währungsspekulation.",
+    "lead": "Das Externe Handelsinterface (ETI) kauft notwendige ausländische Waren mit staatlichen Exportgütern, während es die internen Bürger von ausländischen Währungsspielen isoliert.",
+    "points": [
+      "Ausländische Fiat-Währungen (USD, EUR) werden strikt als toxische externe Waren behandelt und zirkulieren niemals in O.N.E.-Gebieten.",
+      "Das Externe Handelsinterface (ETI) fungiert als einseitige physische Membran: Es kauft spezialisierte ausländische Maschinen mit Exportüberschüssen.",
+      "Randomisierte Transaktionsfenster verhindern, dass algorithmische Hochfrequenzhändler den Austauschpuffer angreifen.",
+      "Innerhalb von O.N.E. genießen die Bürger einen bedingungslosen Nießbrauch, der vollständig von der internationalen Wechselkursvolatilität entkoppelt ist."
+    ],
+    "keywords": [
+      "Handelsinterface",
+      "Währungsisolierung",
+      "Nießbrauch",
+      "Wirtschaftssouveränität",
+      "Clearingstelle"
+    ]
+  },
+  "QA-THERM-05": {
+    "id": "QA-THERM-05",
+    "question": "Was hindert Individuen daran, Vorräte zu horten und einen illegalen Schwarzmarkt zu gründen?",
+    "verdict": "GELÖST: Fehlen von knappen Geldtoken und universelle offene Verfügbarkeit.",
+    "lead": "Schwarzmärkte gedeihen durch künstliche Knappheit und Bargeld; wenn jeder bereits freien Zugang zu Nahrung, Werkzeugen und Wohnraum hat, ergibt Horten keinen Sinn.",
+    "points": [
+      "Sie können nichts weiterverkaufen, das jeder bereits kostenlos im Lager der Nachbarschaftsgemeinschaft erhalten kann.",
+      "Ohne Fiat-Geld zum Horten zieht die Anhäufung von 1.000 Säcken Getreide nur Ungeziefer und soziale Scham an.",
+      "Offene Telemetrie- und Werkzeug-Sharing-Register überwachen makroskopische Kapitalausrüstung, was geheime Fabrikumzäunungen unmöglich macht.",
+      "Schenken, persönlicher Tausch und kreativer Barterhandel mit handgefertigter Kunst sind vollständig erlaubt: Nur ausbeuterische Geschäftemacherei ist unmöglich."
+    ],
+    "keywords": [
+      "Schwarzmarktverhinderung",
+      "Ressourcen-Verfügbarkeit",
+      "Horten",
+      "Wirtschaftsfreiheit",
+      "Tauschkultur"
+    ]
+  },
+  "QA-JUST-01": {
+    "id": "QA-JUST-01",
+    "question": "Wie geht O.N.E. ohne Polizei oder Gefängnisse mit gewalttätigen Straftätern, Mördern oder Psychopathen um?",
+    "verdict": "GELÖST: Somatische Deeskalation, räumliche Trennung in humanen Schutzeinrichtungen und psychiatrische Betreuung",
+    "lead": "O.N.E. schafft Betonkäfige und strafende Folter ab; Personen, die eine unmittelbare lebensbedrohliche Gefahr darstellen, werden physisch in sichere therapeutische Schutzeinrichtungen verlegt.",
+    "points": [
+      "Käfige, punitive Isolationshaft und die Todesstrafe sind gemäß den Class 0 Invariants der Verfassung für immer verboten.",
+      "Wenn jemand schwere Gewalt anwendet, trennen geschulte, unbewaffnete Friedensgilden den Täter physisch, um die Opfer zu schützen.",
+      "Täter werden in spezialisierte therapeutische Heilzentren in anderen Bioregionen verlegt, wo sie umfassende medizinische Versorgung erhalten.",
+      "Da 90 % der klassischen Kriminalität durch Armut, Drogenkriege und Schulden verursacht werden, sinken die Raten für Gewaltverbrechen drastisch."
+    ],
+    "keywords": [
+      "Gewaltprävention",
+      "Friedensgilden",
+      "Restorative Justiz",
+      "Class 0 Invariants",
+      "Therapeutische Unterbringung"
+    ]
+  },
+  "QA-JUST-02": {
+    "id": "QA-JUST-02",
+    "question": "Warum verbietet O.N.E. bewaffnete Polizeikräfte und persönliche Schusswaffen?",
+    "verdict": "GELÖST: Beseitigung von Werkzeugen massiver kinetischer Tötung und bewaffnetem Staatsterror",
+    "lead": "Militarisierte Polizeikräfte schützen Staats- und Firmeneigentum durch Gewalt; O.N.E. ersetzt bewaffnete Polizei durch unbewaffnete Konflikt-Deeskalatoren.",
+    "points": [
+      "Handfeuerwaffen, Sturmgewehre und ballistische Schusswaffen sind im zivilen und gesellschaftlichen Alltag verfassungsrechtlich verboten.",
+      "Zivile Friedensgilden sind in gewaltfreier Kampfkunst, somatischer Deeskalation und psychiatrischer Mediation geschult.",
+      "Bei Streitigkeiten kommen Mediatoren nicht mit gezogenen Waffen, um in Panikmomenten auf Verdächtige zu schießen.",
+      "Die Gemeinschaft setzt auf Kreise der wiederherstellenden Gerechtigkeit, in denen der Schaden anerkannt, geheilt und wiedergutgemacht wird."
+    ],
+    "keywords": [
+      "Waffenverbot",
+      "Deeskalation",
+      "Friedensgilden",
+      "Sicherheit ohne Waffen",
+      "Konfliktmediation"
+    ]
+  },
+  "QA-JUST-03": {
+    "id": "QA-JUST-03",
+    "question": "Welche Gerechtigkeit oder Entschädigung erhalten Opfer, wenn ihnen jemand Schaden zufügt oder ihre Besitztümer beschädigt?",
+    "verdict": "GELÖST: Reale materielle Wiedergutmachung aus Gemeinschaftspools und psychologische Heilung",
+    "lead": "In herkömmlichen Systemen erhalten Opfer nichts, während Täter im Gefängnis verrotten; in O.N.E. ersetzt die Gemeinschaft beschädigte Gegenstände sofort und mediiert Heilung.",
+    "points": [
+      "Jeder beschädigte persönliche Besitz wird sofort und kostenlos aus dem Inventar der Gemeinschafts-Wasserscheide ersetzt oder repariert.",
+      "Opfern wird sofortige medizinische, psychologische und habitat-basierte Zuflucht geboten.",
+      "Die Person, die den Schaden verursacht hat, leistet unter Anleitung der Gemeinschaft Wiedergutmachungsdienste.",
+      "Der Fokus liegt auf echter Heilung, Verantwortung und der Verhinderung von Wiederholungen statt auf Rache."
+    ],
+    "keywords": [
+      "Wiedergutmachung",
+      "Restorative Justiz",
+      "Opferschutz",
+      "Gemeinschaftspool",
+      "Schadensersatz"
+    ]
+  },
+  "QA-JUST-04": {
+    "id": "QA-JUST-04",
+    "question": "Was hindert Lynchmobs oder Straßengerechtigkeit daran, sich ohne Polizei zu bilden?",
+    "verdict": "GELÖST: Schnelle Deeskalationsketten und striktes Verbot von Mob-Gewalt",
+    "lead": "Vigilantismus ist ein expliziter Verstoß gegen die Class 0 Invariants: Friedensgilden greifen physisch ein, um Vergeltungsgewalt zu verhindern.",
+    "points": [
+      "Vergeltungsgewalt, Lynchjustiz und Mob-Gerichte sind gemäß Artikel 1.2 verfassungswidrig.",
+      "Schnelle Eingreiftruppen der Friedensgilden setzen nicht-tödliche Schutzschilde ein, um Menschenmengen aufzulösen und Beschuldigte zu schützen.",
+      "Beschuldigte Personen werden sofort in eine neutrale Schutzeinrichtung per Losverfahren über die Bezirksgrenzen hinweg eskortiert.",
+      "Objektive demarchische Faktenfindungsversammlungen stellen sicher, dass emotionale Leidenschaften abkühlen, bevor deliberative Heilungsprozesse beginnen."
+    ],
+    "keywords": [
+      "Lynchjustizverbot",
+      "Losverfahren",
+      "Demarchie",
+      "Class 0 Invariants",
+      "Deeskalationsschutz"
+    ]
+  },
+  "QA-JUST-05": {
+    "id": "QA-JUST-05",
+    "question": "Wie schützt O.N.E. Opfer von häuslicher Gewalt und Missbrauch innerhalb von Haushalten?",
+    "verdict": "GELÖST: Sofortiger bedingungsloser Zufluchtsort, schnelle Trennung und gemeinschaftlicher Schutz",
+    "lead": "In einer kapitalistischen Gesellschaft fangen Täter ihre Opfer durch finanzielle Abhängigkeit ein; in O.N.E. haben Opfer von Geburt an unabhängigen Wohnraum und Existenzgarantien.",
+    "points": [
+      "Finanzieller Missbrauch ist unmöglich: Kein Partner kann Bankkonten kontrollieren, Nahrungsmittel entziehen oder die Gesundheitsversorgung einschränken.",
+      "Jedes Viertel unterhält dedizierte, komfortable Zufluchtsorte mit 24/7-Betreuung und Gemeinschaftsküchen.",
+      "Opfer können sofort in ein neues, unabhängiges Zuhause ihrer Wahl umziehen, ohne auf langwierige Scheidungsverfahren zu warten.",
+      "Missbräuchliche Personen werden dauerhaft aus dem Haushalt ausgeschlossen und in verpflichtende Programme zur Verhaltensänderung aufgenommen."
+    ],
+    "keywords": [
+      "Häusliche Gewalt",
+      "Zuflucht",
+      "Existenzgarantie",
+      "Finanzielle Unabhängigkeit",
+      "Gemeinschaftsschutz"
+    ]
+  },
+  "QA-EDU-01": {
+    "id": "QA-EDU-01",
+    "question": "Warum beschränkt O.N.E. Tablets und Smartphones für kleine Kinder bis zum Alter von 7 Jahren?",
+    "verdict": "GELÖST: Schutz junger Gehirne vor Aufmerksamkeitsstörungen und sensorischer Atrophie",
+    "lead": "Kommerzielle Tech-Unternehmen entwickeln süchtig machende Bildschirme für Kleinkinder; O.N.E. priorisiert taktile Natur, Musik, räumliches Spiel und die Gesundheit des Nervensystems.",
+    "points": [
+      "Die Neurobiologie belegt, dass 0–7 Jahre das kritische Fenster für sensomotorische Integration, 3D-Raumwahrnehmung und menschliche Bindung sind.",
+      "Die frühe Kindheit konzentriert sich auf Erde, Bäume, Holzwerkzeuge, Ton, Musikinstrumente und freies, ungemessenes Spiel im Freien.",
+      "Vorzeitige digitale Immersion führt zu dopaminerger Erschöpfung, Angstzuständen und fragmentierten Aufmerksamkeitsspannen.",
+      "Kinder entwickeln eine tiefe Resilienz des Nervensystems und emotionale Ko-Regulation mit echten menschlichen Gefährten."
+    ],
+    "keywords": [
+      "Digitale Hygiene",
+      "Frühe Kindheit",
+      "Neuroentwicklung",
+      "Sensorische Integration",
+      "Bildschirmpause"
+    ]
+  },
+  "QA-EDU-02": {
+    "id": "QA-EDU-02",
+    "question": "Was ist Epistemische Hygiene und wie lernen Kinder, kritisch zu denken?",
+    "verdict": "GELÖST: Denken lernen statt Denkvorgaben: Erkennen von Manipulation und Denkfehlern",
+    "lead": "Anstatt auswendig gelernter Standardtests werden Kinder darauf trainiert, kognitive Verzerrungen zu erkennen, emotionale Manipulation zu entlarven und Beweise zu schätzen.",
+    "points": [
+      "Schüler beherrschen die wissenschaftliche Methode, Wahrscheinlichkeitsrechnung, den Umgang mit Unsicherheit, kognitive Entzerrung und formale logische Fehlschlüsse.",
+      "Tägliche sokratische Kreise fördern respektvolle Debatten, das Hinterfragen von Annahmen und das Zuhören bei gegensätzlichen Ansichten.",
+      "Kinder lernen zu erkennen, wann ein Sprecher Angst, falsche Dichotomien oder charismatische Tricks zur Manipulation nutzt.",
+      "Dies schafft eine erwachsene Bürgerschaft, die vollständig immun gegen politische Propaganda und Verschwörungshysterie ist."
+    ],
+    "keywords": [
+      "Epistemische Hygiene",
+      "Kritisches Denken",
+      "Logische Fehlschlüsse",
+      "Sokratische Methode",
+      "Manipulation"
+    ]
+  },
+  "QA-EDU-03": {
+    "id": "QA-EDU-03",
+    "question": "Was ist die Unterstützung für die ersten 1.000 Tage und wie unterstützt O.N.E. neue Eltern?",
+    "verdict": "GELÖST: Vollständige Arbeitsbefreiung für neue Eltern und rund um die Uhr kommunale Entlastung",
+    "lead": "Die Aufzucht sicherer, gesunder Babys wird als grundlegendste Arbeit der Zivilisation anerkannt: Neue Eltern sind von allen Wartungspflichten befreit.",
+    "points": [
+      "Neue Eltern erhalten vollständige, anstandslose Immunität von rotierenden Wartungsschichten für die ersten 1.000 Tage des Kindes.",
+      "Universelles Alloparenting bricht die erschöpfende Isolation der Kleinfamilie: Gemeinschaftskindergärten bieten herzliche, erfahrene Unterstützung.",
+      "Ausgebildete Geburtsdoulas, Stillberater und Ernährungsgilden bringen warme Nahrung und Entlastung direkt in den Haushalt.",
+      "Gesunde Nervensysteme bei Babys verhindern die Entstehung traumatisierter, ängstlicher oder gewalttätiger Erwachsener."
+    ],
+    "keywords": [
+      "Erste 1000 Tage",
+      "Elternschaft",
+      "Alloparenting",
+      "Arbeitsbefreiung",
+      "Gemeinschaftsunterstützung"
+    ]
+  },
+  "QA-EDU-04": {
+    "id": "QA-EDU-04",
+    "question": "Wie funktionieren Universitäten, Forschungsinstitute und höhere Bildung in O.N.E.?",
+    "verdict": "GELÖST: 100% kostenlose höhere Bildung, Peer-Review und praktische Labor-Lehrlingsschaften",
+    "lead": "Höhere Bildung ist ein offenes öffentliches Gut: Jeder kann Medizin, Quantencomputing oder Philosophie ohne Schulden oder kommerzielle Ausbeutung studieren.",
+    "points": [
+      "Null Studiengebühren, keine Paywalls bei Lehrbüchern und keine räuberischen Studentenkredite.",
+      "Standardisiertes wettbewerbsorientiertes Ranking wird durch Portfolio-Meisterschaft, wissenschaftliches Peer-Review und praktische Laborprojekte ersetzt.",
+      "Teenager treten mit 13 Jahren in Gilden-Lehrlingsschaften ein und arbeiten neben erfahrenen Forschern an realen ökologischen und industriellen Problemen.",
+      "Wissenschaftliche Entdeckungen gehören der ganzen Welt unter offenen Copyfarleft-Lizenzen."
+    ],
+    "keywords": [
+      "Bildungsfreiheit",
+      "Wissenschaft",
+      "Lehrlingsschaft",
+      "Copyfarleft",
+      "Offene Forschung"
+    ]
+  },
+  "QA-EDU-05": {
+    "id": "QA-EDU-05",
+    "question": "Können Familien ihre Kinder zu Hause unterrichten oder kulturelle Traditionen vermitteln?",
+    "verdict": "GELÖST: Freiheit der Heimbildung, sofern Gewaltfreiheit und körperliche Integrität gewahrt bleiben",
+    "lead": "Familien sind völlig frei, zu Hause zu unterrichten, Sprachen zu vermitteln und kulturelles Erbe zu feiern, solange Kinder vor Gewalt geschützt werden.",
+    "points": [
+      "Eltern haben die souveräne Autonomie, zwischen Heimlernen, kooperativen Gemeinschaftsschulen oder Wald-Lehrlingsschaften zu wählen.",
+      "Indigene Sprachen, regionale Dialekte und historische Überlieferungen werden aktiv gefördert und dokumentiert.",
+      "Die einzige unantastbare Basis: Kinder dürfen keiner physischen Gewalt, körperlichen Bestrafung oder medizinischen Vernachlässigung ausgesetzt werden.",
+      "Gemeinschaftswissenschaftslabore, Sportplätze und Kunstateliers stehen Kindern, die zu Hause lernen, jederzeit offen."
+    ],
+    "keywords": [
+      "Heimbildung",
+      "Kulturvermittlung",
+      "Autonomie",
+      "Bildungsfreiheit",
+      "Kinderschutz"
+    ]
+  },
+  "QA-SCI-01": {
+    "id": "QA-SCI-01",
+    "question": "Wer finanziert teure medizinische Heilmittel und Krebsforschung ohne Patente und Gewinne aus geistigem Eigentum?",
+    "verdict": "GELÖST: Garantierte Laborressourcen, offene globale Zusammenarbeit und Verbot von Pharma-Preiswucher",
+    "lead": "Pharmariesen geben mehr für Werbung und Aktienrückkäufe aus als für Forschung; in O.N.E. erhalten Wissenschaftler garantierte Laborkapazitäten und teilen Entdeckungen offen.",
+    "points": [
+      "Informationen, chemische Formeln und genetische Codes sind nicht-rivalisierend: Das Kopieren eines medizinischen Bauplans kostet keine physische Energie.",
+      "Medizinische Forscher erhalten eine garantierte Lebensgrundlage, modernste Bioreaktoren und KI-Modellierungscluster.",
+      "Keine geheimen Patentportfolios: Wenn ein Labor in Detroit ein Heilmittel entdeckt, können Wissenschaftler in Tokio und São Paulo es innerhalb weniger Stunden synthetisieren.",
+      "Keinem Menschen wird jemals Insulin, ein Krebsmedikament oder ein Impfstoff verweigert, weil er sich die Monopolpreise von Unternehmen nicht leisten kann."
+    ],
+    "keywords": [
+      "Medizinforschung",
+      "Open-Source-Medizin",
+      "Patentsystem",
+      "Pharmazeutische Autonomie"
+    ]
+  },
+  "QA-SCI-02": {
+    "id": "QA-SCI-02",
+    "question": "Können fortschrittliche Halbleiterchips und Prozessoren ohne proprietäre Toolchains hergestellt werden?",
+    "verdict": "GELÖST: Heterogene, offene RISC-Architekturen, vielfältige Toolchains und gemeinschaftliche Lithografie",
+    "lead": "Geschlossene proprietäre Silizium-Hardware verbirgt Backdoors und geplante Obsoleszenz; O.N.E. baut transparente, durch globale Gemeinschaften geprüfte Multi-ISA-Prozessoren.",
+    "points": [
+      "Alle Befehlssätze basieren auf offenem Silizium (RISC-V, OpenPower) mit öffentlich verifizierbaren Masken-Designs.",
+      "Diverse Double-Compilation (DDC) stellt sicher, dass keine versteckten Compiler-Backdoors in heterogenen Toolchains überleben können.",
+      "Kritische Infrastrukturknoten nutzen dreifach modulare redundante Chips, die auf unterschiedlichen Fertigungslinien hergestellt werden.",
+      "Community-Fab-Labs recyceln hochreines Silizium und fertigen langlebige 28nm-65nm Industrieknoten lokal."
+    ],
+    "keywords": [
+      "Halbleiterherstellung",
+      "Offene Hardware",
+      "RISC-V",
+      "IT-Sicherheit"
+    ]
+  },
+  "QA-SCI-03": {
+    "id": "QA-SCI-03",
+    "question": "Sind Megaprojekte wie Weltraumteleskope oder Fusionsreaktoren ohne Milliardäre oder staatliche Imperien möglich?",
+    "verdict": "GELÖST: Globale wissenschaftliche Zusammenarbeit, befreit von militärischen Verteidigungshaushalten",
+    "lead": "Die größten wissenschaftlichen Leistungen der Menschheit (James Webb, CERN, Human Genome) waren öffentliche Kollaborationen; O.N.E. skaliert dies global.",
+    "points": [
+      "Ohne die Billionen, die für Raketen, stehende Heere und Finanzspekulationen verschwendet werden, ist die planetare Ingenieurskapazität enorm.",
+      "Wissenschaftler auf allen Kontinenten teilen frei Rechencluster, Radioastronomie-Arrays und Startanlagen.",
+      "Weltraummissionen konzentrieren sich auf echte Astrophysik und planetare Verteidigung, nicht auf exzentrische Weltraumtourismus-Trips von Milliardären.",
+      "Offene Ingenieurs-Repositories ermöglichen Millionen von Hobby-Astronomen und Makern, sinnvolle Codes und Telemetriedaten beizusteuern."
+    ],
+    "keywords": [
+      "Planetare Ingenieurskunst",
+      "Wissenschaftskooperation",
+      "Megaprojekte",
+      "Forschungsfreiheit"
+    ]
+  },
+  "QA-SCI-04": {
+    "id": "QA-SCI-04",
+    "question": "Wie verhindert O.N.E., dass Schurkenlabore tödliche Krankheitserreger oder gefährliche KI synthetisieren?",
+    "verdict": "GELÖST: Echtzeit-Air-Gap-Verifizierung, Schwellenwert-Syntheseschlüssel und strikte Biosicherheitsgrenzen",
+    "lead": "Tödliche Biowaffen und unkontrollierte Gain-of-Function-Forschung sind Verstöße gegen die Klasse-0-Invarianten: Automatisierte Gensequenzierer erfordern physische Multi-Party-Schlüssel.",
+    "points": [
+      "Synthetische DNA-Drucker erfordern kryptografische Multi-Watershed-Schwellenwertschlüssel (t-MPC), um eingeschränkte Virusstämme zu synthetisieren.",
+      "Biologische Sicherheitsprotokolle sind in der Hardware-Logik verankert: Drucker schalten sich bei Erkennung tödlicher Sequenzsignaturen physisch ab.",
+      "Gefährliche Gain-of-Function-Erregerforschung für kriegerische Zwecke ist dauerhaft als Verbrechen gegen das Überleben der Menschheit klassifiziert.",
+      "Da es keine Rendite für privates Risikokapital bei Schurken-Biotechs gibt, verschwindet der ökonomische Anreiz, geheime Erreger zu entwickeln."
+    ],
+    "keywords": [
+      "Biosicherheit",
+      "Klasse-0-Invarianten",
+      "Gentechnik-Kontrolle",
+      "Präventivsicherheit"
+    ]
+  },
+  "QA-SCI-05": {
+    "id": "QA-SCI-05",
+    "question": "Kann ich Software schreiben, Filme drehen, malen oder Musik unter meinem eigenen Namen veröffentlichen?",
+    "verdict": "GELÖST: Absolute moralische Urheberrechte, künstlerische Autonomie und freie kreative Werkzeuge",
+    "lead": "Sie besitzen das dauerhafte moralische Recht auf Nennung Ihrer kreativen Werke; Sie können lediglich das Urheberrecht nicht nutzen, um Kunst von der menschlichen Kultur fernzuhalten.",
+    "points": [
+      "Ihr Name ist dauerhaft mit Ihrem Code, Romanen, Liedern und Gemälden verbunden: Die moralische Urheberschaft ist unveräußerlich.",
+      "Künstler erhalten eine garantierte Lebensgrundlage und Atelierräume: Sie müssen ihre Seele nie an kommerzielle Werbeagenturen verkaufen.",
+      "Offene Musikarchive und digitale Bibliotheken sind jedem Menschen ohne Paywalls oder Abogebühren zugänglich.",
+      "Kreatives Remixen und kulturelle Evolution werden gefeiert, anstatt von Unterhaltungskonzernen verklagt zu werden."
+    ],
+    "keywords": [
+      "Urheberrecht",
+      "Künstlerische Freiheit",
+      "Moralische Urheberschaft",
+      "Kreativwerkzeuge"
+    ]
+  },
+  "QA-REL-01": {
+    "id": "QA-REL-01",
+    "question": "Können religiöse Gemeinschaften Kirchen, Moscheen und Tempel in O.N.E. unterhalten?",
+    "verdict": "GELÖST: Volle Religionsfreiheit und heiliger Nießbrauch an Kultstätten",
+    "lead": "Glaube, Gebet und spirituelle Verehrung sind sakrosankte persönliche und gemeinschaftliche Freiheiten: Gemeinschaften halten vollen Nießbrauch an ihren heiligen Räumen.",
+    "points": [
+      "Religionsfreiheit und spirituelle Praxis sind eine unverletzliche Klasse-0-Invariante: Kein säkularer Staat kann religiöse Verehrung verbieten.",
+      "Kirchen, Moscheen, Tempel und Meditationszentren erhalten anerkannte Nießbrauchsrechte als gemeinschaftliche kulturelle Zufluchtsorte.",
+      "Spirituelle Kongregationen zahlen keine Grundsteuern oder gewerblichen Versorgungsaufschläge.",
+      "Religiöse Vielfalt und indigene spirituelle Traditionen sind vor Verfolgung oder erzwungener Säkularisierung geschützt."
+    ],
+    "keywords": [
+      "Religionsfreiheit",
+      "Nießbrauch",
+      "Kultstätten",
+      "Spirituelle Autonomie"
+    ]
+  },
+  "QA-REL-02": {
+    "id": "QA-REL-02",
+    "question": "Wie erhalten große historische Kathedralen, Tempel oder Denkmäler Energie und Heizung ohne Geld?",
+    "verdict": "GELÖST: Exergie-Zuweisungen für das kulturelle Erbe, beschlossen durch Wasserscheiden-Versammlungen",
+    "lead": "Historische sakrale Architektur wird als geteiltes menschliches Erbe anerkannt: Die grundlegende Erhaltung und Beheizung werden durch lokale Losverfahren-Räte zugewiesen.",
+    "points": [
+      "Wasserscheiden-Losverfahren-Räte beraten über grundlegende thermische Energie- und Beleuchtungszuteilungen für sakrale Kulturbauten.",
+      "Gemeinden organisieren aktiv Freiwilligengilden, um ihre heiligen Räume zu pflegen, zu reinigen und zu betreuen.",
+      "Keine alte Kathedrale oder historische Moschee wird jemals wegen unbezahlter Schulden an private Luxushotelentwickler versteigert.",
+      "Besondere Festtage und heilige Feierlichkeiten erhalten erweiterte saisonale Energiequoten."
+    ],
+    "keywords": [
+      "Kulturerbe",
+      "Losverfahren",
+      "Energiezuweisung",
+      "Gemeinschaftsverwaltung"
+    ]
+  },
+  "QA-REL-03": {
+    "id": "QA-REL-03",
+    "question": "Kann ein religiöser Kult Zwangsheiraten, gewaltsame Disziplinierung oder das Festhalten von Mitgliedern erzwingen?",
+    "verdict": "GELÖST: Bedingungsloses Recht auf Austritt und striktes Verbot körperlicher Nötigung",
+    "lead": "Religiöser Glaube ist völlig frei; physische Nötigung, Zwangsheirat, Kindesmissbrauch und Geiselnahmen sind streng verfassungswidrig.",
+    "points": [
+      "Jeder Mensch hat das bedingungslose, unveräußerliche Recht, jede religiöse Gruppe, Familie oder Sekte jederzeit zu verlassen.",
+      "Zwangsheiraten, Ehrenmorde und körperliche Gewalt verstoßen gegen Klasse-0-Invarianten und lösen sofortige Interventionen der Friedensgilden aus.",
+      "Da jeder Bürger ein unabhängiges, garantiertes Wohnrecht und Nahrungsmittel hat, können Sektenführer Hunger oder Obdachlosigkeit nicht als Fessel nutzen.",
+      "Die körperliche Integrität von Kindern und die Freiheit von Gewalt sind über alle Glaubensrichtungen hinweg nicht verhandelbar."
+    ],
+    "keywords": [
+      "Recht auf Austritt",
+      "Gewaltverbot",
+      "Klasse-0-Invarianten",
+      "Menschenrechte"
+    ]
+  },
+  "QA-REL-04": {
+    "id": "QA-REL-04",
+    "question": "Dürfen religiöse Eltern ihren Kindern Schriften, Glauben und Ethik vermitteln?",
+    "verdict": "GELÖST: Eltern sind frei, Schriften und spirituelle Werte zu Hause und in religiösen Zentren zu lehren",
+    "lead": "Eltern und Glaubensgemeinschaften können ihren Kindern frei theologische Werte, heilige Schriften und spirituelle Rituale vermitteln.",
+    "points": [
+      "Kirchen und Moscheen können frei Sonntagsschulen, Korankurse, Jeschiwot und buddhistische Meditationsklassen betreiben.",
+      "Staatliche Behörden haben keinerlei Macht, Gebete vorzuschreiben, heilige Texte zu zensieren oder spirituelle Feste zu verbieten.",
+      "Kinder haben zudem Zugang zu offenen Gemeinschaftsbibliotheken und Wissenschaftswerkstätten, um eine ausgewogene, autonome Perspektive zu gewährleisten.",
+      "Spirituelles Wachstum wird durch freiwillige Liebe und Gemeinschaftsverbindung gefördert, nicht durch staatlichen Zwang."
+    ],
+    "keywords": [
+      "Religiöse Erziehung",
+      "Elternrechte",
+      "Bildungsfreiheit",
+      "Glaubenspraxis"
+    ]
+  },
+  "QA-REL-05": {
+    "id": "QA-REL-05",
+    "question": "Was verhindert ohne Polizei historische sektiererische Fehden und religiöse Gewalt zwischen Gruppen?",
+    "verdict": "GELÖST: Totale Entwaffnung, interreligiöse Räte und geteilte ökologische Interdependenz",
+    "lead": "Religionskriege wurden historisch durch politische Führer angeheizt, die um Land und Öl kämpften; in O.N.E. sind Waffen abgeschafft und Gemeinschaften teilen sich die Lebenserhaltung.",
+    "points": [
+      "Es existieren keine Schusswaffen oder schweren Waffen zur Bewaffnung sektiererischer Milizen: Religiöse Fraktionen können keine kinetischen Bürgerkriege führen.",
+      "Alle Glaubensrichtungen teilen dieselben Wasserleitungen, Solaranlagen und medizinischen Kliniken: Das gegenseitige Überleben erfordert tägliche Kooperation.",
+      "Interreligiöse Konkordate bringen Älteste und Führer in regelmäßigen Losverfahren-Mediatorenkreisen zusammen.",
+      "Die ökologische Ehrfurcht vor dem lebendigen Planeten vereint verschiedene spirituelle Traditionen in gemeinsamer Verantwortung."
+    ],
+    "keywords": [
+      "Friedenssicherung",
+      "Interreligiöser Dialog",
+      "Entwaffnung",
+      "Ökologische Solidarität"
+    ]
+  },
+  "QA-RIG-01": {
+    "id": "QA-RIG-01",
+    "question": "Welche expliziten verfassungsrechtlichen Schutzmaßnahmen gibt es für LGBTQ+-Personen, Geschlechtsidentität und sexuelle Minderheiten?",
+    "verdict": "GELÖST: Absolute somatische körperliche Autonomie, volle geschlechtliche Selbstbestimmung und Schutz vor Belästigung",
+    "lead": "Ihr Körper, Ihre Geschlechtsidentität und Ihr Privatleben sind Ihr souveräner persönlicher Bereich: Diskriminierung, Kriminalisierung und Belästigung sind streng verfassungswidrig.",
+    "points": [
+      "Artikel 1.2 garantiert die vollständige körperliche und somatische Selbstbestimmung als unantastbare Verfassungsinvariante der Klasse 0.",
+      "Geschlechtsangleichende Gesundheitsversorgung, psychologische Betreuung und reproduktive Autonomie sind bedingungslos und kostenlos garantiert.",
+      "Keine Kirche, kein Staat, kein Rat und kein Nachbar hat die rechtliche Befugnis, einvernehmliche Beziehungen zwischen Erwachsenen oder den geschlechtlichen Ausdruck zu kontrollieren.",
+      "Hass und Belästigung lösen sofortige schützende Gemeinschaftsinterventionen durch zivile Friedensgilden aus."
+    ],
+    "keywords": [
+      "Körperliche Autonomie",
+      "LGBTQ-Rechte",
+      "Klasse 0 Invarianten",
+      "Selbstbestimmung",
+      "Diskriminierungsschutz"
+    ]
+  },
+  "QA-RIG-02": {
+    "id": "QA-RIG-02",
+    "question": "Was verhindert, dass Rassismus, ethnische Profilierung oder rassistische Diskriminierung in O.N.E. fortbestehen?",
+    "verdict": "GELÖST: Abschaffung bewaffneter rassistischer Polizei, gleiche Ressourcen und diverse Losverfahren",
+    "lead": "Institutioneller Rassismus wird durch bewaffnete Polizeistreifen und wirtschaftliche Armut aufrechterhalten; O.N.E. schafft beides ab und garantiert gleiche Geburtsrechte für jede Herkunft.",
+    "points": [
+      "Keine bewaffneten Polizeikräfte, die Schwarze, Brown-People oder Minderheiten in den Straßen anhalten, filzen oder profilieren.",
+      "Universeller, bedingungsloser Nießbrauch garantiert, dass keine ethnische Minderheit in Elend gefangen ist oder ihr eine hochwertige Gesundheitsversorgung verwehrt wird.",
+      "Kryptographische Losverfahren stellen sicher, dass öffentliche Räte die wahre demographische Vielfalt der Gemeinschaft widerspiegeln, ohne Wahlkreismanipulation.",
+      "Indigene Kulturen und historisch unterdrückte Völker erhalten Priorität bei der Rückgabe von Land-Nießbrauch und kultureller Autonomie."
+    ],
+    "keywords": [
+      "Antirassismus",
+      "Losverfahren",
+      "Nießbrauch",
+      "Soziale Gerechtigkeit",
+      "Dezentralisierung"
+    ]
+  },
+  "QA-RIG-03": {
+    "id": "QA-RIG-03",
+    "question": "Kann O.N.E. jemals Individuen zu Impfungen oder unfreiwilligen medizinischen Behandlungen zwingen?",
+    "verdict": "GELÖST: Absolute körperliche Integrität: keinerlei erzwungene medizinische Eingriffe oder Mandate",
+    "lead": "Ihr Körpergewebe gehört ausschließlich Ihnen: Kein Rat oder öffentliche Stelle darf Ihren Körper gegen Ihr informiertes Einverständnis injizieren, medikamentös behandeln oder operieren.",
+    "points": [
+      "Informiertes, freiwilliges Einverständnis ist eine absolute Verfassungsinvariante der Klasse 0: erzwungene Injektionen und medizinischer Zwang sind streng verfassungswidrig.",
+      "Öffentliche Gesundheit beruht auf radikaler Transparenz, offenen wissenschaftlichen Daten und freiwilligem Vertrauen, nicht auf autoritären Polizeimandaten.",
+      "Während Ausbrüchen von Infektionskrankheiten nutzen Gemeinschaften freiwillige Isolations-Zufluchtsorte, hocheffiziente Belüftung und offene Luftfilter.",
+      "Mitarbeiter des Gesundheitswesens bieten mitfühlende Beratung, niemals zwangsweise Gewalt."
+    ],
+    "keywords": [
+      "Körperliche Integrität",
+      "Informierte Zustimmung",
+      "Klasse 0 Invarianten",
+      "Medizinische Freiheit",
+      "Autonomie"
+    ]
+  },
+  "QA-RIG-04": {
+    "id": "QA-RIG-04",
+    "question": "Wie werden autistische, behinderte und neurodivergente Individuen in O.N.E. unterstützt?",
+    "verdict": "GELÖST: Eingebaute universelle physische Barrierefreiheit, sensorische Ruher, sensorische Ruheräume und maßgeschneiderte Betreuung",
+    "lead": "Der Kapitalismus verwirft jeden, der keinen Unternehmensgewinn erwirtschaften kann; O.N.E. garantiert volle, würdevolle Lebensgrundlagen und ergonomische Umgebungen für alle Neurotypen.",
+    "points": [
+      "Öffentliche Architektur schreibt stufenlosen universellen Zugang, taktile Wege und sensorisch freundliche Ruheräume in jedem zivilen Zentrum vor.",
+      "Autistische, ADHS- und neurodivergente Personen werden mit sensorischen Dekompressionsräumen unterstützt, ohne soziale Stigmatisierung.",
+      "Vollzeit-Pflegeassistenten werden mit reichhaltigen kommunalen Ressourcen ausgestattet, um sicherzustellen, dass Pflegende niemals unter Burnout leiden.",
+      "Menschen mit schweren Behinderungen halten volle, bedingungslose Nießbrauchsrechte für Wohnraum, Ernährung und maßgeschneiderte Hilfstechnik."
+    ],
+    "keywords": [
+      "Barrierefreiheit",
+      "Inklusion",
+      "Nießbrauch",
+      "Neurodiversität",
+      "Fürsorge"
+    ]
+  },
+  "QA-RIG-05": {
+    "id": "QA-RIG-05",
+    "question": "Was passiert mit Menschen, die in ehemaligen Gefängnissen eingesperrt sind, wenn eine Region zu O.N.E. wechselt?",
+    "verdict": "GELÖST: Geordnete Dekarzerierung, Trauma-Dekompressions-Zufluchtsorte und berufliche Integration",
+    "lead": "Masseneinsperrung endet: gewaltfreie Drogen- und Eigentumsstraftäter werden direkt in kommunalem Wohnraum willkommen geheißen; gewalttätige Täter durchlaufen eine therapeutische Heilung.",
+    "points": [
+      "Über 80% der ehemaligen Häftlinge (Drogenvergehen, Armutsdelikte, Unfähigkeit zur Kautionszahlung) erhalten sofortige Amnestie und ein Nießbrauch-Zuhause.",
+      "Dekompressions-Heilungshütten helfen ehemals Inhaftierten, das psychologische Trauma der Einzelhaft im Gefängnis zu heilen.",
+      "Berufsgilden lehren praktische Robotik, ökologische Landwirtschaft und Holzverarbeitung, um Würde und Sinn wiederherzustellen.",
+      "Die wenigen Individuen mit aktiven gewalttätigen Tendenzen werden in sicheren therapeutischen Zufluchtsorten ohne Käfige oder Brutalität betreut."
+    ],
+    "keywords": [
+      "Dekarzerierung",
+      "Amnestie",
+      "Rehabilitation",
+      "Traumaheilung",
+      "Nießbrauch"
+    ]
+  },
+  "QA-DEF-01": {
+    "id": "QA-DEF-01",
+    "question": "Was ist die Übergabeprämie (Defection Bounty) und wie neutralisiert O.N.E. einfallende Armeen und Söldner?",
+    "verdict": "GELÖST: Angebot von lebenslangem Asyl, Häusern und Schuldenerlass für einfallende Soldaten",
+    "lead": "Statt junge Soldaten in blutiger Zermürbung abzuschlachten, sendet O.N.E. ein offenes Angebot: Lege deine Waffe nieder, und wir geben dir ein Zuhause auf Lebenszeit und löschen deine Schulden.",
+    "points": [
+      "Die meisten Soldaten und Söldner kämpfen nur, weil sie Gehaltsschecks benötigen, um Hypotheken zu zahlen, Familien zu ernähren und Schulden zu entkommen.",
+      "O.N.E. sendet eine unblockierbare Nachricht über die Frontlinie, die sofortiges, bedingungsloses politisches Asyl anbietet.",
+      "Soldaten, die die Linie überschreiten, erhalten lebenslanges Wohnen, medizinische Versorgung, und ihre kapitalistischen Altschulden werden über den Handelspuffer beglichen.",
+      "Ihre Sturmgewehre und gepanzerten Fahrzeuge werden in offenen Induktionsöfen zu Windturbinenteilen und landwirtschaftlichen Traktoren eingeschmolzen."
+    ],
+    "keywords": [
+      "Übergabeprämie",
+      "Schuldenerlass",
+      "Pazifismus",
+      "Asyl",
+      "Defektion"
+    ]
+  },
+  "QA-DEF-02": {
+    "id": "QA-DEF-02",
+    "question": "Wie verteidigt sich O.N.E. ohne stehende Heere gegen Hyperschallraketen, Luftschläge oder Panzerdivisionen?",
+    "verdict": "GELÖST: Stachelschwein-Strategie: automatisierte Punktverteidigungs-Abfangjäger und kein eroberbarer Preis",
+    "lead": "Man kann ein Stachelschwein nicht erobern, ohne an den Stacheln zu ersticken: automatisierte Abfangjäger schießen eingehende Munition ab, während Dezentralisierung keinen zentralen Siegespreis hinterlässt.",
+    "points": [
+      "O.N.E. unterhält autonome kinetische und gerichtete Energie-Punktverteidigungen, die streng darauf programmiert sind, ankommende Raketen, Drohnen und Artillerie abzufangen.",
+      "Es gibt kein zentrales Parlament, keinen Tresor einer Zentralbank und keine nationale Hauptstadt zu erobern: die Gesellschaft ist vollständig dezentralisiert.",
+      "Kritische Wasserventile und Mikro-Netze entkoppeln sich bei Angriffen mechanisch, wodurch eine feindliche Übernahme technisch unmöglich wird.",
+      "Die Eroberung eines Gebiets bringt keine materielle Beute, keine Ölreserven zum Stehlen und eine nicht kooperative Bevölkerung, die Lohnarbeit verweigert."
+    ],
+    "keywords": [
+      "Stachelschwein-Strategie",
+      "Punktverteidigung",
+      "Dezentralisierung",
+      "Autonome Verteidigung",
+      "Resilienz"
+    ]
+  },
+  "QA-DEF-03": {
+    "id": "QA-DEF-03",
+    "question": "Wie gelangen wir von der heutigen Welt zu O.N.E., ohne einen gewalttätigen, katastrophalen globalen Krieg auszulösen?",
+    "verdict": "GELÖST: Bau des Rettungsboots (Track B), während die kapitalistische Titanic (Track A) untergeht",
+    "lead": "Man stürmt nicht das Kapitol und baut keine Guillotinen: man konstruiert lokale solare Mikronetze, Gemeinschaftslandfonds und offene Fab-Labs direkt neben dem scheiternden Fiat-System.",
+    "points": [
+      "Track A ist die sterbende kapitalistische Wirtschaft, geplagt von Hyperinflation, unbezahlbaren Schulden und zerfallender Infrastruktur.",
+      "Track B ist das offene thermodynamische Gemeingut, das friedlich in jeder Nachbarschaft, jedem Lagerhaus und jedem Wassereinzugsgebiet wächst.",
+      "Wenn alte Unternehmen bankrottgehen, reklamieren Arbeiter und Bürger verlassene Fabriken durch Inbesitznahme und verwandeln sie in Werkstätten.",
+      "Menschen lassen Schulden und Lohnarbeit einfach hinter sich und entziehen dem alten System den menschlichen Gehorsam, bis es sich friedlich auflöst."
+    ],
+    "keywords": [
+      "Transformation",
+      "Gemeingut",
+      "Rettungsboot-Strategie",
+      "Inbesitznahme",
+      "Post-Labor"
+    ]
+  },
+  "QA-DEF-04": {
+    "id": "QA-DEF-04",
+    "question": "Kann eine gewöhnliche Gruppe von Bürgern morgen einen O.N.E.-Gemeinschaftsknoten gründen, ohne auf globale Verträge zu warten?",
+    "verdict": "GELÖST: Ja: Einen Gemeinschaftslandfonds bilden, Solarenergie bündeln und durch Losverfahren arbeiten",
+    "lead": "Man braucht nicht die Unterschrift eines Präsidenten: 15 Nachbarn können Land bündeln, netzunabhängige Solaranlagen und Gärten einrichten und die O.N.E.-Governance sofort übernehmen.",
+    "points": [
+      "Jede Gruppe kann einen rechtlichen Gemeinschaftslandfonds (CLT) etablieren, um Wohnimmobilien dauerhaft vom spekulativen Markt zu entfernen.",
+      "Einsatz von Open-Source-Dach-Solarmikronetzen und Regenwasser-Sammelsystemen, um physische Versorgungsautonomie zu erlangen.",
+      "Nachbarschaftsentscheidungen mittels rotierender Losverfahren-Versammlungen mit 75% Konsens anstelle von politischem Streit durchführen.",
+      "Die O.N.E.-Verfassung ist Open-Source-Code, bereit, in jeder Nachbarschaft auf der Erde zu laufen."
+    ],
+    "keywords": [
+      "Gemeinschaftslandfonds",
+      "Mikronetze",
+      "Losverfahren",
+      "Selbstverwaltung",
+      "Dezentraler Start"
+    ]
+  },
+  "QA-DEF-05": {
+    "id": "QA-DEF-05",
+    "question": "Wie geht O.N.E. mit Einwanderung, nationalen Grenzen und Millionen von Klimaflüchtlingen um?",
+    "verdict": "GELÖST: Universelle Bewegungsfreiheit, offene Migrationskorridore und einladende Zentren",
+    "lead": "Nationale Grenzen sind künstliche Linien auf Karten, um kolonialen Besitz zu schützen; in O.N.E. wird jeder Mensch, der vor ökologischer Katastrophe flieht, mit Unterkunft und Nahrung willkommen geheißen.",
+    "points": [
+      "Die Freiheit der terrestrischen Migration durch die Biosphäre ist ein unverletzliches biologisches Menschenrecht.",
+      "Ankommende Flüchtlinge werden nicht in elende Internierungslager getrieben oder auf See ertränkt: Empfangszentren bieten sofortige Unterkunft und medizinische Hilfe.",
+      "Neuankömmlinge werden in Produktionsnetzwerke der Wassereinzugsgebiete integriert und bringen ihre reichhaltigen kulturellen Perspektiven und Fähigkeiten ein.",
+      "Massive planetare Wiederaufforstung und dezentrale Solarnetze absorbieren Populationen, ohne lokale Ökologien zu überlasten."
+    ],
+    "keywords": [
+      "Bewegungsfreiheit",
+      "Klimaflüchtlinge",
+      "Migration",
+      "Menschenrechte",
+      "Einladungskultur"
+    ]
+  }
+}

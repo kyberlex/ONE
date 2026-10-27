@@ -1,0 +1,932 @@
+{
+  "QA-HOUS-01": {
+    "id": "QA-HOUS-01",
+    "question": "La communauté, un conseil ou un comité peuvent-ils saisir mon domicile ?",
+    "verdict": "RÉSOLU : Usufruit viager possessif absolu sans expulsion",
+    "lead": "Personne ne peut vous expulser ni confisquer votre domicile : l'usufruit personnel est un droit constitutionnel inaliénable à vie.",
+    "points": [
+      "Votre résidence principale et votre espace de vie personnel sont protégés par les invariants constitutionnels de classe 0 : les expulsions résidentielles sont strictement inconstitutionnelles.",
+      "Il n'existe ni prêts hypothécaires, ni taxes foncières, ni loyers : vous ne pouvez pas perdre votre toit en raison de difficultés financières.",
+      "Le logement est reconnu comme une nécessité biologique non négociable, et non comme une marchandise financière échangeable.",
+      "Les conseils communautaires n'ont aucune autorité pour réattribuer un domicile occupé contre la volonté de son occupant."
+    ],
+    "keywords": [
+      "usufruit",
+      "logement",
+      "invariants classe 0",
+      "expulsion",
+      "droit inaliénable"
+    ]
+  },
+  "QA-HOUS-02": {
+    "id": "QA-HOUS-02",
+    "question": "Qu'est-ce qui pousse quelqu'un à entretenir sa maison ou à réparer le toit sans équité de marché ?",
+    "verdict": "RÉSOLU : Fierté d'habiter, matériaux de construction gratuits et soutien des guildes",
+    "lead": "Vous prenez soin de votre maison parce que vous et vos proches y vivez, avec le soutien de matériaux communautaires gratuits et de guildes d'outillage spécialisé.",
+    "points": [
+      "Les êtres humains prennent naturellement soin de leur abri immédiat lorsqu'ils sont libérés du stress du loyer et de la dette.",
+      "L'isolation de haute performance, les panneaux solaires et les matériaux de toiture sont distribués sans coût monétaire depuis les entrepôts de fabrication du bassin versant.",
+      "Les guildes d'entretien locales fournissent une main-d'œuvre collaborative qualifiée et des outils de diagnostic pour les réparations structurelles.",
+      "Lors d'un déménagement dans une nouvelle biorégion, vous libérez l'usufruit en bon état sans dette spéculative ni pénalités de clôture."
+    ],
+    "keywords": [
+      "entretien",
+      "guildes",
+      "biorégion",
+      "autonomie",
+      "usufruit"
+    ]
+  },
+  "QA-HOUS-03": {
+    "id": "QA-HOUS-03",
+    "question": "Puis-je toujours posséder des biens personnels comme des outils, des vêtements, une voiture ou un bateau ?",
+    "verdict": "RÉSOLU : Biens personnels sacrés et outils individuels totalement protégés",
+    "lead": "O.N.E. distingue strictement les possessions personnelles de la propriété privée monopolistique : vos objets personnels vous appartiennent en propre.",
+    "points": [
+      "Vos vêtements, ordinateurs, livres, objets de famille, créations artisanales et instruments de musique sont classés comme biens personnels intimes.",
+      "Les véhicules de transport personnel (vélos, vélos-cargos électriques, bateaux) restent sous votre garde possessive exclusive.",
+      "Ce qui est aboli, c'est la propriété par absence : vous ne pouvez pas posséder une usine entière, une nappe phréatique ou 50 appartements pour en extraire une rente.",
+      "Les outils d'artisanat et d'art individuel sont constitutionnellement garantis comme devant rester entre les mains de l'artisan."
+    ],
+    "keywords": [
+      "biens personnels",
+      "propriété privée",
+      "artisanat",
+      "possession",
+      "usage"
+    ]
+  },
+  "QA-HOUS-04": {
+    "id": "QA-HOUS-04",
+    "question": "Puis-je laisser ma maison, mon jardin ou mes objets personnels à mes enfants en héritage ?",
+    "verdict": "RÉSOLU : Continuité du domicile familial et transfert du patrimoine",
+    "lead": "Si vos enfants ou partenaires vivent avec vous, ils conservent un droit d'occupation continu ; les objets personnels sont transmis directement à vos proches.",
+    "points": [
+      "Les membres de la famille partageant une résidence active héritent de l'usufruit possessif sans interruption au décès d'un parent.",
+      "Les effets personnels, outils de métier, œuvres d'art et héritages familiaux sont transmis selon vos volontés sans droits de succession.",
+      "Les usufruits résidentiels vides de personnes décédées non réclamés par des co-habitants vivants retournent dans le pool commun du bassin versant.",
+      "Les empires financiers dynastiques et les dynasties de propriétaires absents sont définitivement abolis."
+    ],
+    "keywords": [
+      "héritage",
+      "succession",
+      "famille",
+      "usufruit",
+      "transmission"
+    ]
+  },
+  "QA-HOUS-05": {
+    "id": "QA-HOUS-05",
+    "question": "Comment O.N.E. gère-t-il les maisons abandonnées ou les voyages prolongés ?",
+    "verdict": "RÉSOLU : Buffers de voyage généreux et réattribution communautaire des sites vacants",
+    "lead": "Vous êtes libre de voyager pour la recherche, l'art ou l'exploration, votre maison étant préservée pour vous ; les espaces délaissés sont réhabilités pour autrui.",
+    "points": [
+      "Les absences prolongées pour étude, congé sabbatique ou assistance aux proches (jusqu'à 24 mois) sont simplement enregistrées pour prévenir tout problème technique.",
+      "Une maison n'est jamais déclarée abandonnée tant que la garde personnelle ou les arrangements d'entretien restent actifs.",
+      "Les structures réellement abandonnées et non entretenues sont inspectées par des conseils de quartier tirés au sort et restaurées en logement public.",
+      "Aucun promoteur immobilier privé ne peut laisser délibérément des maisons vacantes pour créer une rareté artificielle."
+    ],
+    "keywords": [
+      "tirage au sort",
+      "logement public",
+      "voyage",
+      "réhabilitation",
+      "vacance"
+    ]
+  },
+  "QA-WORK-01": {
+    "id": "QA-WORK-01",
+    "question": "Qui nettoie les égouts, sort les poubelles et fait les travaux dangereux s'il n'y a pas de salariat ?",
+    "verdict": "RÉSOLU : Robotique avancée, rotations partagées brèves et honneurs sociaux",
+    "lead": "Au lieu de forcer les plus pauvres à des travaux dangereux sous la menace de la faim, O.N.E. automatise les tâches ingrates et partage le reste via de courtes rotations.",
+    "points": [
+      "La priorité absolue des fab-labs ouverts est la conception de robots autonomes pour les tâches d'assainissement, de déchets et de toxicité.",
+      "Les tâches manuelles résiduelles sont partagées entre tous les citoyens valides par de brèves rotations de quelques heures par mois.",
+      "Les volontaires effectuant des tâches pénibles reçoivent une reconnaissance sociale maximale, des distinctions honorifiques et une priorité pour les biens discrétionnaires.",
+      "Les nouveaux parents (premiers 1 000 jours), les étudiants et les aidants à plein temps sont totalement exemptés des tâches physiques lourdes."
+    ],
+    "keywords": [
+      "robotique",
+      "rotation",
+      "travail pénible",
+      "automatisation",
+      "partage"
+    ]
+  },
+  "QA-WORK-02": {
+    "id": "QA-WORK-02",
+    "question": "Pourquoi des professionnels qualifiés comme les chirurgiens travailleraient-ils sans salaires élevés ?",
+    "verdict": "RÉSOLU : Vocation, respect social suprême, absence de dettes et laboratoires de pointe",
+    "lead": "Les chirurgiens et ingénieurs exercent leur métier par passion et maîtrise, et non pour rembourser des dettes d'études ou satisfaire des marges hospitalières.",
+    "points": [
+      "L'éducation médicale, les internats et les écoles d'ingénieurs sont 100 % gratuits et ouverts à tous ceux ayant des aptitudes réelles.",
+      "Les chirurgiens pratiquent sans les gardes épuisantes de 80 heures, sans le poids juridique des assurances et sans paperasse administrative de facturation.",
+      "Les ingénieurs ont un accès illimité au matériel open-source, aux fab-labs avancés et à une collaboration sans clauses de confidentialité (NDA) d'entreprise.",
+      "Le prestige social, la reconnaissance par les pairs et l'épanouissement vocationnel remplacent la compensation monétaire abstraite."
+    ],
+    "keywords": [
+      "vocation",
+      "éducation gratuite",
+      "maîtrise",
+      "prestige",
+      "open-source"
+    ]
+  },
+  "QA-WORK-03": {
+    "id": "QA-WORK-03",
+    "question": "Qu'arrive-t-il aux personnes qui refusent systématiquement de contribuer à quoi que ce soit ?",
+    "verdict": "RÉSOLU : Survie biologique garantie ; accès aux luxes et quotas discrétionnaires suspendus",
+    "lead": "Personne ne meurt de faim, ne se retrouve sans-abri ou n'est emprisonné ; cependant, l'accès aux luxes discrétionnaires, outils spéciaux et voyages est suspendu.",
+    "points": [
+      "Sous les invariants de classe 0, chaque humain reçoit une survie inconditionnelle de niveau 1 : eau potable, nourriture, logement et soins médicaux.",
+      "Le refus persistant de contribuer aux corvées de base entraîne la suspension des allocations discrétionnaires de niveau 3.",
+      "Vous ne pouvez pas accéder aux trajets intercontinentaux, aux laboratoires de recherche de pointe, à la fabrication de luxe ou aux fonds culturels communautaires.",
+      "La friction sociale naturelle et le désir humain de connexion règlent le désengagement chronique sans violence ni prisons."
+    ],
+    "keywords": [
+      "survie inconditionnelle",
+      "responsabilité",
+      "niveau 1",
+      "frugalité",
+      "contribution"
+    ]
+  },
+  "QA-WORK-04": {
+    "id": "QA-WORK-04",
+    "question": "Le travail partagé obligatoire n'est-il pas du travail forcé comme dans les goulags soviétiques ?",
+    "verdict": "RÉSOLU : Liberté somatique totale, zéro camp de travail forcé et autogestion citoyenne",
+    "lead": "Le communisme soviétique utilisait la police et les camps pour forcer des quotas ; O.N.E. bannit le travail forcé, la police et les prisons pour toujours.",
+    "points": [
+      "L'article 1.2 interdit constitutionnellement le travail forcé, la conscription obligatoire et l'incarcération physique.",
+      "Les rotations d'entretien représentent moins de 5 à 7 heures par mois pour un citoyen moyen, et non 60 heures par semaine d'exploitation industrielle.",
+      "Vous pouvez choisir, échanger, planifier ou proposer des remplacements technologiques robotisés pour toute tâche d'entretien.",
+      "Il n'existe aucune bureaucratie centrale (type Gosplan) dictant les objectifs de production : les conseils de bassin versant s'autogèrent."
+    ],
+    "keywords": [
+      "travail forcé",
+      "liberté",
+      "autogestion",
+      "article 1.2",
+      "bureaucratie"
+    ]
+  },
+  "QA-WORK-05": {
+    "id": "QA-WORK-05",
+    "question": "Puis-je changer de carrière ou explorer des voies artistiques quand je le souhaite ?",
+    "verdict": "RÉSOLU : Transitions de carrière sans friction, apprentissage tout au long de la vie et ateliers ouverts",
+    "lead": "Parce que votre survie n'est pas liée à un patron, vous pouvez changer de domaine, apprendre de nouveaux arts ou rejoindre des guildes de recherche à tout moment.",
+    "points": [
+      "Vous n'êtes jamais enchaîné à un emploi détesté simplement pour garder une assurance santé ou payer le loyer du mois prochain.",
+      "Toutes les guildes (astronomie, menuiserie, bio-ingénierie, musique, agriculture) proposent des apprentissages ouverts et autodidactes.",
+      "Les Biens de l'Hérétique garantissent l'accès aux laboratoires et aux matériaux pour des expériences exploratoires non commerciales.",
+      "La créativité humaine s'épanouit lorsqu'elle est libérée de l'épuisement déshumanisant du salariat."
+    ],
+    "keywords": [
+      "transition",
+      "apprentissage",
+      "créativité",
+      "biens de l'hérétique",
+      "vocation"
+    ]
+  },
+  "QA-DEM-01": {
+    "id": "QA-DEM-01",
+    "question": "Pourquoi utiliser le tirage au sort (sortition) au lieu de voter pour des politiciens ?",
+    "verdict": "RÉSOLU : Le tirage au sort élimine les campagnes politiques, la corruption oligarchique et les partis corrompus.",
+    "lead": "Les élections produisent inévitablement des oligarchies politiques composées d'élites riches et charismatiques ; le tirage au sort sélectionne des échantillons représentatifs de citoyens ordinaires.",
+    "points": [
+      "Les élections exigent des dons massifs, le contrôle des médias et une démagogie charismatique, menant tout droit à la corruption.",
+      "Le tirage au sort cryptographique sélectionne des parents, enseignants, infirmiers et mécaniciens ordinaires, reflétant la vraie diversité communautaire.",
+      "Les mandats sont courts (12-24 mois) avec une rotation obligatoire : il n'existe pas de carrière politique permanente ni de portes tournantes pour les lobbyistes.",
+      "Les citoyens délibèrent en s'appuyant sur des briefings scientifiques indépendants plutôt que sur la discipline de parti."
+    ],
+    "keywords": [
+      "tirage au sort",
+      "démocratie directe",
+      "antidémagogie",
+      "gouvernance citoyenne",
+      "sortition"
+    ]
+  },
+  "QA-DEM-02": {
+    "id": "QA-DEM-02",
+    "question": "Un groupe tiré au sort ne risque-t-il pas de paralyser des infrastructures critiques comme les centrales nucléaires par ignorance technique ?",
+    "verdict": "RÉSOLU : Distinction stricte entre conseillers en ingénierie technique et jurys de valeurs citoyennes.",
+    "lead": "Les citoyens tirés au sort ne conçoivent pas de turbines ou de barres de réacteur : des groupes épistémiques certifiés fournissent les modèles techniques ; le jury décide des priorités communautaires.",
+    "points": [
+      "Des scientifiques, hydrologues et physiciens certifiés forment des Groupes de Travail Épistémiques pour formuler des options techniques réalisables.",
+      "Sauvegarde cruciale : les experts techniques jouent un rôle strictement consultatif, sans droit de vote, pour éviter toute tyrannie technocratique.",
+      "Les experts ont l'obligation légale de traduire les modèles thermodynamiques complexes en choix accessibles et compréhensibles.",
+      "Le jury citoyen pèse les valeurs humaines et écologiques (ex: vitesse de transit vs préservation des zones humides), pas le calcul mathématique."
+    ],
+    "keywords": [
+      "experts",
+      "gouvernance technique",
+      "responsabilité citoyenne",
+      "science citoyenne",
+      "décision publique"
+    ]
+  },
+  "QA-DEM-03": {
+    "id": "QA-DEM-03",
+    "question": "Comment le système de vote empêche-t-il un démagogue charismatique de prendre le contrôle du conseil ?",
+    "verdict": "RÉSOLU : Le filtrage mathématique par paires élimine les intimidateurs polarisants.",
+    "lead": "Contrairement au vote pluraliste simple où une minorité agressive de 30 % peut dominer, le vote Condorcet oppose chaque option à toutes les autres en duel.",
+    "points": [
+      "Dans le vote Condorcet, une option ne gagne que si elle bat toutes les alternatives lors de comparaisons directes.",
+      "Un intimidateur charismatique soutenu par 30 % de fanatiques est mathématiquement rejeté si les 70 % restants classent sa proposition en dernier choix.",
+      "Le vote secret et les pauses de réflexion empêchent les personnalités agressives d'intimider les jurés plus calmes.",
+      "Les décisions exigent des supermajorités qualifiées (75 %), forçant un consensus constructif plutôt qu'une polarisation toxique."
+    ],
+    "keywords": [
+      "vote Condorcet",
+      "mathématiques électorales",
+      "consensus",
+      "anti-démagogie",
+      "équité"
+    ]
+  },
+  "QA-DEM-04": {
+    "id": "QA-DEM-04",
+    "question": "Suis-je obligé de siéger à un conseil si mon nom est tiré au sort ?",
+    "verdict": "RÉSOLU : Droit inconditionnel de récusation et report programmé.",
+    "lead": "Nul n'est contraint d'exercer une fonction civique sous la menace : vous pouvez décliner sans pénalité ou reporter votre service à un moment plus opportun.",
+    "points": [
+      "L'autonomie corporelle (Article 1.2) interdit strictement la conscription politique forcée.",
+      "Les aidants, les personnes en deuil, les étudiants ou les malades peuvent déposer des demandes de report immédiates et sans justification.",
+      "Si vous déclinez, le moteur de tirage au sort cryptographique sélectionne instantanément un citoyen remplaçant dans le bassin local.",
+      "Le service s'accompagne d'une aide physique complète, d'un accès aux services de garde d'enfants et d'un hébergement confortable pour faciliter la participation."
+    ],
+    "keywords": [
+      "autonomie",
+      "droit de retrait",
+      "service civique",
+      "liberté individuelle",
+      "participation volontaire"
+    ]
+  },
+  "QA-DEM-05": {
+    "id": "QA-DEM-05",
+    "question": "Qu'est-ce qui empêche les intérêts extérieurs ou les cartels de soudoyer les jurés citoyens ?",
+    "verdict": "RÉSOLU : Anonymat cryptographique, absence d'argent et délibération à l'aveugle.",
+    "lead": "Il est impossible de corrompre quelqu'un si l'on ignore qui compose le jury avant qu'il ne siège, et l'argent n'existe plus pour acheter de l'influence.",
+    "points": [
+      "L'identité des jurés est scellée par une cryptographie à seuil et à divulgation nulle de connaissance jusqu'à l'ouverture de la session dans des chambres isolées.",
+      "Comme la monnaie fiduciaire privée est abolie, il n'existe aucun compte offshore ni devise spéculative à offrir.",
+      "Les jurés votent anonymement sur des terminaux cryptographiques en circuit fermé, rendant la vérification d'un pot-de-vin impossible pour les corrupteurs.",
+      "La brève durée des conseils rend l'établissement de réseaux d'influence permanente mathématiquement irréalisable."
+    ],
+    "keywords": [
+      "cryptographie",
+      "anonymat",
+      "anti-corruption",
+      "intégrité",
+      "sécurité"
+    ]
+  },
+  "QA-THERM-01": {
+    "id": "QA-THERM-01",
+    "question": "Sans argent, à quoi ressemble un solde personnel ou l'écran d'un téléphone ?",
+    "verdict": "RÉSOLU : Indicateurs de santé biophysique réels au lieu de jetons de dette abstraits.",
+    "lead": "Au lieu d'un solde bancaire anxiogène affichant des devises fiduciaires, votre interface affiche les réserves locales du bassin versant, la capacité d'énergie propre et les jetons de disposition personnelle.",
+    "points": [
+      "Fini les frais bancaires, alertes de découvert, intérêts de cartes de crédit ou avis de crédit immobilier : l'anxiété financière est éradiquée.",
+      "L'écran affiche le statut vivant de votre biorégion : niveaux des aquifères, réserves du réseau renouvelable et prévisions de récolte.",
+      "Vous voyez votre quota discrétionnaire de Niveau 3 pour commander des composants spécialisés en fab-lab ou réserver des voyages à grande vitesse.",
+      "L'interface suit l'abondance physique et les limites écologiques plutôt que la dette financière composée."
+    ],
+    "keywords": [
+      "indicateurs biophysiques",
+      "économie de ressources",
+      "abondance",
+      "interface utilisateur",
+      "gestion de crise"
+    ]
+  },
+  "QA-THERM-02": {
+    "id": "QA-THERM-02",
+    "question": "Comment O.N.E. décide-t-elle qui reçoit de l'eau ou de l'énergie en cas de crise extrême ou de sécheresse ?",
+    "verdict": "RÉSOLU : Le triage biologique protège la survie humaine avant les terrains de golf de luxe.",
+    "lead": "Sous le capitalisme, les riches gardent leurs manoirs climatisés tandis que les pauvres gèlent ; dans O.N.E., l'algorithme coupe automatiquement le luxe avant la vie humaine.",
+    "points": [
+      "L_min fonctionne comme le triage biologique du corps : en cas d'hypothermie, le sang afflue vers le cœur et le cerveau, pas vers les extrémités.",
+      "Le Niveau 1 (eau potable, cliniques d'urgence, chauffage domestique de base) est constitutionnellement inviolable.",
+      "Le Niveau 2 (transit alimentaire essentiel, réseaux de communication de base) est maintenu grâce aux réserves tampon.",
+      "Le Niveau 3 (fontaines, fabrication de luxe, loisirs privés) est suspendu instantanément et automatiquement jusqu'à la fin de la crise."
+    ],
+    "keywords": [
+      "triage biologique",
+      "priorités de survie",
+      "limites écologiques",
+      "gestion énergétique",
+      "équité"
+    ]
+  },
+  "QA-THERM-03": {
+    "id": "QA-THERM-03",
+    "question": "Qu'est-ce que les « Communs de l'Hérétique » et pourquoi 7 % de l'énergie planétaire y sont-ils réservés ?",
+    "verdict": "RÉSOLU : Énergie garantie pour les idées à haut risque, non conventionnelles et dissidentes.",
+    "lead": "Pour éviter la stagnation bureaucratique et le conformisme, 7 % de toute l'exergie disponible sont constitutionnellement réservés à la recherche non conventionnelle.",
+    "points": [
+      "Aucun comité dominant ou consensus académique ne peut opposer son veto à l'accès aux Communs de l'Hérétique.",
+      "Les innovateurs avec des théories étranges (fusion froide, agriculture solarpunk radicale, physique marginale) reçoivent du temps de laboratoire et des matériaux sans blocage.",
+      "Cela garantit que le paradigme ne devienne jamais une bureaucratie rigide et dogmatique rejetant les nouvelles découvertes.",
+      "Si une expérience échoue, il n'y a pas de ruine financière personnelle ; si elle réussit, le plan ouvert profite à toute l'humanité."
+    ],
+    "keywords": [
+      "innovation",
+      "recherche hérétique",
+      "liberté académique",
+      "progrès",
+      "communs"
+    ]
+  },
+  "QA-THERM-04": {
+    "id": "QA-THERM-04",
+    "question": "Comment O.N.E. commerce-t-elle avec les pays étrangers sans être infectée par la monnaie fiduciaire ?",
+    "verdict": "RÉSOLU : Chambre de compensation physique avec tampons randomisés contre la spéculation monétaire.",
+    "lead": "L'Interface de Commerce Extérieur achète les biens étrangers nécessaires grâce aux exportations de l'État, tout en isolant les citoyens internes des jeux de devises étrangères.",
+    "points": [
+      "Les devises fiduciaires étrangères (USD, EUR) sont traitées strictement comme des produits externes toxiques, ne circulant jamais à l'intérieur des territoires d'O.N.E.",
+      "L'Interface de Commerce Extérieur (ICE) agit comme une membrane physique à sens unique : elle achète des machines étrangères spécialisées avec les surplus d'exportation.",
+      "Des fenêtres de règlement de transaction randomisées empêchent les traders algorithmiques à haute fréquence d'attaquer le tampon d'échange.",
+      "À l'intérieur d'O.N.E., les citoyens jouissent d'un usufruit inconditionnel totalement découplé de la volatilité des changes internationaux."
+    ],
+    "keywords": [
+      "commerce extérieur",
+      "usufruit",
+      "souveraineté monétaire",
+      "protection économique",
+      "interface physique"
+    ]
+  },
+  "QA-THERM-05": {
+    "id": "QA-THERM-05",
+    "question": "Qu'est-ce qui empêche les individus de stocker des fournitures et de créer un marché noir illégal ?",
+    "verdict": "RÉSOLU : Absence de jetons monétaires rares et disponibilité universelle ouverte.",
+    "lead": "Les marchés noirs prospèrent sur la rareté artificielle et l'argent liquide ; quand chacun a déjà accès gratuitement à la nourriture, aux outils et au logement, le stockage n'a aucun sens.",
+    "points": [
+      "Vous ne pouvez pas revendre ce que n'importe qui peut déjà obtenir gratuitement à l'entrepôt des communs du quartier.",
+      "Sans devise fiduciaire à thésauriser, accumuler 1 000 sacs de grain ne fait qu'attirer la vermine et l'opprobre social.",
+      "La télémétrie ouverte et les registres de partage d'outils suivent les équipements de production macroscopiques, rendant les usines secrètes impossibles.",
+      "Le don, le commerce personnel et le troc créatif d'art artisanal sont pleinement autorisés : seule l'exploitation prédatrice est impossible."
+    ],
+    "keywords": [
+      "marché noir",
+      "rareté artificielle",
+      "partage des ressources",
+      "abondance",
+      "anti-accaparement"
+    ]
+  },
+  "QA-JUST-01": {
+    "id": "QA-JUST-01",
+    "question": "Comment O.N.E. gère-t-elle les criminels violents, les meurtriers ou les psychopathes sans police ni prisons ?",
+    "verdict": "RÉSOLU : Désescalade somatique, séparation physique dans des sanctuaires humains et soins psychiatriques.",
+    "lead": "O.N.E. abolit les cages en béton et la torture punitive ; les individus représentant un danger mortel immédiat sont physiquement relocalisés dans des sanctuaires thérapeutiques sécurisés.",
+    "points": [
+      "Les cages, l'isolement punitif et la peine de mort sont à jamais bannis par les Invariants Constitutionnels de Classe 0.",
+      "Lorsqu'un acte de violence grave survient, des Guildes de la Paix entraînées et non armées séparent physiquement l'agresseur pour protéger les victimes.",
+      "Les contrevenants sont relocalisés dans des sanctuaires thérapeutiques spécialisés situés dans des biorégions distinctes, avec accès complet aux soins médicaux.",
+      "Comme 90 % de la criminalité héritée du passé est liée à la pauvreté, aux guerres de la drogue et à l'endettement, les taux de violence chutent radicalement."
+    ],
+    "keywords": [
+      "justice réparatrice",
+      "sanctuaire thérapeutique",
+      "non-violence",
+      "abolition pénale"
+    ]
+  },
+  "QA-JUST-02": {
+    "id": "QA-JUST-02",
+    "question": "Pourquoi O.N.E. interdit-elle les forces de police armées et les armes à feu personnelles ?",
+    "verdict": "RÉSOLU : Suppression des outils de massacre cinétique et de la terreur étatique armée.",
+    "lead": "Les forces de police militarisées protègent la propriété de l'État et des entreprises par la violence ; O.N.E. remplace les policiers armés par des médiateurs de conflits non armés.",
+    "points": [
+      "Les armes de poing, les armes d'assaut et les armes à feu balistiques sont constitutionnellement prohibées dans la vie civile et domestique.",
+      "Les Guildes de la Paix Civique sont formées aux arts martiaux non-violents, à la désescalade somatique et à la médiation psychiatrique.",
+      "Lorsqu'un différend survient, les médiateurs n'arrivent pas les armes au poing pour tirer sur des suspects dans un moment de panique.",
+      "La communauté s'appuie sur des cercles de justice réparatrice où le préjudice est reconnu, soigné et réparé."
+    ],
+    "keywords": [
+      "désarmement",
+      "médiation de conflit",
+      "sécurité civile",
+      "justice restaurative"
+    ]
+  },
+  "QA-JUST-03": {
+    "id": "QA-JUST-03",
+    "question": "Quelle justice ou restitution les victimes reçoivent-elles lorsqu'elles subissent des dommages corporels ou matériels ?",
+    "verdict": "RÉSOLU : Restitution matérielle réelle via les fonds communs et guérison psychologique.",
+    "lead": "Dans les systèmes judiciaires hérités du passé, les victimes n'obtiennent rien tandis que les délinquants croupissent en prison ; chez O.N.E., la communauté remplace immédiatement les objets endommagés et accompagne la guérison.",
+    "points": [
+      "Tout bien personnel endommagé est immédiatement remplacé ou réparé sans frais à partir de l'inventaire des biens communs du bassin versant.",
+      "Les victimes bénéficient d'un soutien médical, psychologique et d'un hébergement sécurisé immédiat.",
+      "La personne à l'origine du préjudice travaille sous la guidance de la communauté pour effectuer un service réparateur afin de compenser ses actes.",
+      "L'accent est mis sur la guérison véritable, la responsabilité et la prévention des récidives plutôt que sur la vengeance."
+    ],
+    "keywords": [
+      "réparation",
+      "indemnisation",
+      "soutien aux victimes",
+      "biens communs"
+    ]
+  },
+  "QA-JUST-04": {
+    "id": "QA-JUST-04",
+    "question": "Qu'est-ce qui empêche la formation de milices ou d'une justice expéditive sans police ?",
+    "verdict": "RÉSOLU : Cordons de désescalade rapide et interdiction stricte de la violence de foule.",
+    "lead": "La justice expéditive constitue une violation explicite des Invariants de Classe 0 : les Guildes de la Paix s'interposent physiquement pour prévenir toute violence retaliatoire.",
+    "points": [
+      "La violence retaliatoire, les lynchages et les procès populaires sont constitutionnellement invalides selon l'Article 1.2.",
+      "Les cohortes d'intervention rapide des Guildes de la Paix déploient des boucliers protecteurs non létaux pour disperser les foules et protéger les personnes accusées.",
+      "Les individus accusés sont immédiatement escortés vers un sanctuaire neutre géré par tirage au sort au-delà des limites du district.",
+      "Des assemblées démarchiques d'enquête assurent que les passions émotionnelles s'apaisent avant que les délibérations réparatrices ne commencent."
+    ],
+    "keywords": [
+      "tirage au sort",
+      "non-violence",
+      "démarchie",
+      "prévention des foules"
+    ]
+  },
+  "QA-JUST-05": {
+    "id": "QA-JUST-05",
+    "question": "Comment O.N.E. protège-t-elle les victimes de violence domestique au sein des foyers ?",
+    "verdict": "RÉSOLU : Hébergement immédiat inconditionnel, séparation rapide et protection communautaire.",
+    "lead": "Dans la société capitaliste, les agresseurs piègent leurs victimes par la dépendance financière ; chez O.N.E., les victimes disposent dès la naissance de logements indépendants et de garanties de survie.",
+    "points": [
+      "L'abus financier est impossible : aucun partenaire ne peut contrôler vos comptes bancaires, supprimer vos accès alimentaires ou vous priver de soins de santé.",
+      "Chaque quartier maintient des sanctuaires d'hébergement immédiat, confortables et accessibles 24/7, avec cuisines communautaires.",
+      "Les victimes peuvent instantanément se réinstaller dans un nouveau foyer indépendant de leur choix sans attendre les procédures judiciaires.",
+      "Les individus abusifs sont définitivement exclus du foyer et placés dans des programmes obligatoires de rééducation comportementale."
+    ],
+    "keywords": [
+      "protection des victimes",
+      "logement indépendant",
+      "autonomie financière",
+      "sanctuaire"
+    ]
+  },
+  "QA-EDU-01": {
+    "id": "QA-EDU-01",
+    "question": "Pourquoi O.N.E. restreint-elle l'usage des tablettes et smartphones chez les enfants de moins de 7 ans ?",
+    "verdict": "RÉSOLU : Protection des jeunes cerveaux contre la dysrégulation attentionnelle et l'atrophie sensorielle.",
+    "lead": "Les entreprises technologiques conçoivent des écrans addictifs pour les tout-petits ; O.N.E. privilégie la nature tactile, la musique, le jeu spatial et la santé du système nerveux.",
+    "points": [
+      "La neurobiologie prouve que la période 0-7 ans est cruciale pour l'intégration sensori-motrice, la conscience spatiale 3D et l'attachement humain.",
+      "La petite enfance se concentre sur la terre, les arbres, les outils de menuiserie, l'argile, les instruments de musique et le jeu extérieur libre et non mesuré.",
+      "L'immersion numérique prématurée conduit à un épuisement dopaminergique, de l'anxiété et une fragmentation de la capacité d'attention.",
+      "Les enfants développent une résilience profonde du système nerveux et une co-régulation émotionnelle avec des pairs humains réels."
+    ],
+    "keywords": [
+      "neurodéveloppement",
+      "éducation sensorielle",
+      "santé mentale",
+      "développement de l'enfant"
+    ]
+  },
+  "QA-EDU-02": {
+    "id": "QA-EDU-02",
+    "question": "Qu'est-ce que l'Hygiène Épistémique et comment apprend-on aux enfants à penser de manière critique ?",
+    "verdict": "RÉSOLU : Apprendre à penser, pas quoi penser : repérer les manipulations et les sophismes.",
+    "lead": "Plutôt que l'apprentissage par cœur pour des tests standardisés, les enfants sont entraînés à détecter les biais cognitifs, repérer la manipulation émotionnelle et valoriser les preuves.",
+    "points": [
+      "Les étudiants maîtrisent la méthode scientifique, les probabilités, l'incertitude, le débiaisage cognitif et les sophismes logiques formels.",
+      "Les cercles socratiques quotidiens encouragent le débat respectueux, le questionnement des hypothèses et l'écoute des points de vue opposés.",
+      "Les enfants apprennent à identifier quand un orateur utilise la peur, de fausses dichotomies ou des astuces charismatiques pour les manipuler.",
+      "Cela crée une citoyenneté adulte totalement immunisée contre la propagande politique et l'hystérie complotiste."
+    ],
+    "keywords": [
+      "esprit critique",
+      "hygiène épistémique",
+      "méthode socratique",
+      "débiaisage"
+    ]
+  },
+  "QA-EDU-03": {
+    "id": "QA-EDU-03",
+    "question": "Qu'est-ce que l'Échafaudage des 1 000 Premiers Jours et comment O.N.E. soutient-elle les nouveaux parents ?",
+    "verdict": "RÉSOLU : Immunité totale de travail pour les nouveaux parents et soutien communautaire constant.",
+    "lead": "Élever des enfants sécurisés et en bonne santé est reconnu comme le travail fondamental de la civilisation : les nouveaux parents sont libérés de toute tâche d'entretien.",
+    "points": [
+      "Les nouveaux parents bénéficient d'une immunité totale et incontestée contre les rotations de tâches d'entretien durant les 1 000 premiers jours de l'enfant.",
+      "L'alloparentalité universelle brise l'isolement épuisant de la famille nucléaire : les crèches communautaires offrent un soutien chaleureux et expérimenté.",
+      "Des doulas formées, des coachs en lactation et des guildes de cuisine apportent nourriture et soulagement directement au foyer.",
+      "Des systèmes nerveux sains chez les nourrissons préviennent l'émergence d'adultes traumatisés, anxieux ou violents."
+    ],
+    "keywords": [
+      "parentalité",
+      "alloparentalité",
+      "soutien aux familles",
+      "santé périnatale"
+    ]
+  },
+  "QA-EDU-04": {
+    "id": "QA-EDU-04",
+    "question": "Comment fonctionnent les universités, instituts de recherche et l'enseignement supérieur chez O.N.E. ?",
+    "verdict": "RÉSOLU : Enseignement supérieur 100 % gratuit, évaluation par les pairs et apprentissage en laboratoire.",
+    "lead": "L'enseignement supérieur est un bien public ouvert : chacun peut étudier la médecine, l'informatique quantique ou la philosophie sans dette ni commercialisation.",
+    "points": [
+      "Zéro frais de scolarité, zéro barrière financière pour les ressources pédagogiques et zéro prêt étudiant prédateur.",
+      "Le classement compétitif standardisé est remplacé par la maîtrise par portefeuille, l'évaluation scientifique par les pairs et des projets de laboratoire pratiques.",
+      "Les adolescents intègrent des guildes d'apprentissage dès 13 ans, travaillant aux côtés de chercheurs seniors sur des problèmes écologiques et industriels réels.",
+      "Les découvertes scientifiques appartiennent au monde entier sous des licences copyfarleft ouvertes."
+    ],
+    "keywords": [
+      "enseignement gratuit",
+      "recherche ouverte",
+      "apprentissage",
+      "science collaborative"
+    ]
+  },
+  "QA-EDU-05": {
+    "id": "QA-EDU-05",
+    "question": "Les familles peuvent-elles instruire leurs enfants à domicile ou transmettre leurs traditions culturelles ?",
+    "verdict": "RÉSOLU : Liberté d'instruction à domicile tant que la non-violence et l'intégrité corporelle sont respectées.",
+    "lead": "Les familles sont totalement libres d'enseigner à domicile, de transmettre des langues et de célébrer leur héritage culturel, tant que les enfants sont protégés de la violence.",
+    "points": [
+      "Les parents possèdent l'autonomie souveraine de choisir l'apprentissage à domicile, la scolarité coopérative ou l'apprentissage en forêt.",
+      "Les langues indigènes, les dialectes régionaux et le savoir historique sont activement favorisés et documentés.",
+      "Le seul invariant inviolable : les enfants ne peuvent être soumis à la violence physique, aux châtiments corporels ou à la négligence médicale.",
+      "Les laboratoires scientifiques communautaires, les terrains de sport et les ateliers d'art restent ouverts aux enfants instruits à domicile à tout moment."
+    ],
+    "keywords": [
+      "liberté pédagogique",
+      "instruction à domicile",
+      "héritage culturel",
+      "droits de l'enfant"
+    ]
+  },
+  "QA-SCI-01": {
+    "id": "QA-SCI-01",
+    "question": "Sans brevets ni profits liés à la propriété intellectuelle, qui financera les traitements médicaux coûteux et la recherche sur le cancer ?",
+    "verdict": "RÉSOLU : Ressources de laboratoire garanties, collaboration mondiale ouverte et fin du profit pharmaceutique abusif",
+    "lead": "Les géants pharmaceutiques dépensent davantage en publicité et en rachat d'actions qu'en R&D ; dans O.N.E., les scientifiques disposent de laboratoires garantis et partagent leurs découvertes ouvertement.",
+    "points": [
+      "L'information, les formules chimiques et le code génétique ne sont pas rivaux : copier un plan médical ne coûte aucune énergie physique.",
+      "Les chercheurs médicaux bénéficient de bases de vie garanties, de bioréacteurs de pointe et de clusters de modélisation par IA.",
+      "Aucun portefeuille de brevets secrets : lorsqu'un laboratoire à Détroit découvre un remède, les scientifiques à Tokyo et à São Paulo peuvent le synthétiser en quelques heures.",
+      "Aucun être humain ne se voit refuser une dose d'insuline, un médicament contre le cancer ou un vaccin parce qu'il ne peut payer les prix imposés par des monopoles."
+    ],
+    "keywords": [
+      "recherche médicale ouverte",
+      "fin des brevets",
+      "accès universel aux soins",
+      "innovation scientifique"
+    ]
+  },
+  "QA-SCI-02": {
+    "id": "QA-SCI-02",
+    "question": "Les puces semi-conductrices et processeurs avancés peuvent-ils être fabriqués sans chaînes d'outils propriétaires ?",
+    "verdict": "RÉSOLU : Architectures RISC ouvertes et hétérogènes, chaînes d'outils diversifiées et lithographie communautaire",
+    "lead": "Le silicium propriétaire dissimule des portes dérobées et l'obsolescence programmée ; O.N.E. construit des processeurs transparents et multi-ISA audités par des communautés mondiales.",
+    "points": [
+      "Tous les jeux d'instructions des processeurs sont basés sur du silicium ouvert (RISC-V, OpenPower) avec des masques de conception vérifiables publiquement.",
+      "La double compilation diversifiée (DDC) garantit qu'aucune porte dérobée de compilateur ne puisse survivre à travers des chaînes d'outils hétérogènes.",
+      "Les nœuds d'infrastructure critique utilisent des puces redondantes triple-modulaires fabriquées sur des lignes de fonderie dissemblables.",
+      "Les fab-labs communautaires recyclent le silicium de haute pureté et fabriquent localement des nœuds industriels durables de 28nm à 65nm."
+    ],
+    "keywords": [
+      "matériel ouvert",
+      "RISC-V",
+      "souveraineté technologique",
+      "sécurité informatique"
+    ]
+  },
+  "QA-SCI-03": {
+    "id": "QA-SCI-03",
+    "question": "Les mégaprojets comme les télescopes spatiaux ou les réacteurs à fusion peuvent-ils exister sans milliardaires ou empires étatiques ?",
+    "verdict": "RÉSOLU : Coopération scientifique planétaire libérée des budgets de défense militaire",
+    "lead": "Les plus grandes réussites scientifiques de l'humanité (James Webb, CERN, Génome humain) étaient des collaborations publiques ; O.N.E. généralise cela à l'échelle mondiale.",
+    "points": [
+      "Sans les milliers de milliards gaspillés en missiles balistiques, armées permanentes et spéculation financière, la capacité d'ingénierie planétaire est immense.",
+      "Les scientifiques de tous les continents mutualisent librement leurs clusters de calcul, réseaux de radioastronomie et installations de lancement.",
+      "Les missions spatiales se concentrent sur l'astrophysique réelle et la défense planétaire, non sur le tourisme spatial pour milliardaires.",
+      "Les dépôts d'ingénierie ouverte permettent à des millions d'astronomes amateurs et de makers de contribuer avec du code et de la télémétrie."
+    ],
+    "keywords": [
+      "science collaborative",
+      "projets planétaires",
+      "fin du complexe militaro-industriel",
+      "ingénierie ouverte"
+    ]
+  },
+  "QA-SCI-04": {
+    "id": "QA-SCI-04",
+    "question": "Comment O.N.E. empêche-t-il des laboratoires voyous de synthétiser des agents pathogènes mortels ou une IA dangereuse ?",
+    "verdict": "RÉSOLU : Vérification en temps réel par isoloir, clés de synthèse à seuil et limites strictes de biosécurité",
+    "lead": "Les armes biologiques létales et la recherche incontrôlée sur le gain de fonction sont des violations des Invariants de Classe 0 : les synthétiseurs de gènes automatisés nécessitent des clés physiques multi-parties.",
+    "points": [
+      "Les imprimantes d'ADN synthétique exigent des clés cryptographiques à seuil multi-parties (t-MPC) pour synthétiser des souches virales restreintes.",
+      "Les protocoles de biosécurité sont intégrés à la logique matérielle : les imprimantes s'arrêtent physiquement dès la détection de signatures de séquences létales.",
+      "La recherche sur le gain de fonction des agents pathogènes à des fins militaires est classée comme crime contre la survie humaine.",
+      "Comme il n'y a pas de retours sur investissement en capital-risque pour les biotechs voyous, l'incitation économique au développement d'agents pathogènes secrets disparaît."
+    ],
+    "keywords": [
+      "biosécurité",
+      "invariants de classe 0",
+      "éthique technologique",
+      "protection humaine"
+    ]
+  },
+  "QA-SCI-05": {
+    "id": "QA-SCI-05",
+    "question": "Puis-je écrire des logiciels, faire des films, peindre ou sortir de la musique sous mon propre nom ?",
+    "verdict": "RÉSOLU : Droits d'auteur moraux absolus, autonomie artistique et outils créatifs libres",
+    "lead": "Vous conservez une attribution morale permanente sur vos créations ; vous ne pouvez simplement pas utiliser le droit d'auteur pour restreindre l'accès de l'humanité à la culture.",
+    "points": [
+      "Votre nom est attaché de façon permanente à votre code, vos romans, chansons et peintures : le droit moral d'auteur est inaliénable.",
+      "Les artistes bénéficient de bases de vie garanties et d'ateliers : vous n'avez jamais à vendre votre âme aux agences de publicité commerciales.",
+      "Les archives musicales ouvertes et les bibliothèques numériques sont accessibles à tout enfant humain sans barrières de paiement.",
+      "Le remixage créatif et l'évolution culturelle sont célébrés plutôt que poursuivis en justice par des conglomérats de divertissement."
+    ],
+    "keywords": [
+      "propriété morale",
+      "culture libre",
+      "autonomie de l'artiste",
+      "créativité"
+    ]
+  },
+  "QA-REL-01": {
+    "id": "QA-REL-01",
+    "question": "Les communautés religieuses peuvent-elles maintenir des églises, des mosquées et des temples dans O.N.E. ?",
+    "verdict": "RÉSOLU : Liberté totale de culte et usufruit des sanctuaires sacrés",
+    "lead": "La foi, la prière et le culte spirituel sont des libertés sacrées personnelles et communautaires : les communautés détiennent un usufruit complet sur leurs espaces sacrés.",
+    "points": [
+      "La liberté de religion et de pratique spirituelle est un invariant de classe 0 inviolable : aucun État laïc ne peut interdire le culte religieux.",
+      "Les églises, mosquées, temples et centres de méditation reçoivent des droits d'usufruit reconnus en tant que sanctuaires culturels communautaires.",
+      "Les congrégations spirituelles ne paient pas d'impôts fonciers ni de surtaxes sur les services publics commerciaux.",
+      "La diversité religieuse et les traditions spirituelles autochtones sont protégées contre la persécution ou la sécularisation forcée."
+    ],
+    "keywords": [
+      "liberté religieuse",
+      "usufruit",
+      "sanctuaires sacrés",
+      "droits spirituels"
+    ]
+  },
+  "QA-REL-02": {
+    "id": "QA-REL-02",
+    "question": "Comment les grandes cathédrales, temples ou monuments historiques reçoivent-ils de l'énergie et du chauffage sans argent ?",
+    "verdict": "RÉSOLU : Allocations d'exergie pour le patrimoine culturel décidées par des assemblées de bassin versant",
+    "lead": "L'architecture sacrée historique est reconnue comme un patrimoine humain partagé : la préservation et le chauffage communautaire sont alloués par des conseils de tirage au sort locaux.",
+    "points": [
+      "Les conseils de tirage au sort de bassin versant délibèrent sur les allocations d'énergie thermique et d'éclairage pour les bâtiments culturels sacrés.",
+      "Les congrégations organisent activement des guildes de bénévoles pour entretenir, nettoyer et prendre soin de leurs espaces sacrés.",
+      "Aucune cathédrale ancienne ou mosquée historique ne sera jamais vendue aux enchères à des promoteurs d'hôtels de luxe pour des dettes impayées.",
+      "Les journées de fête et les célébrations saintes bénéficient de quotas d'énergie saisonniers élargis."
+    ],
+    "keywords": [
+      "patrimoine mondial",
+      "tirage au sort",
+      "gestion énergétique",
+      "préservation culturelle"
+    ]
+  },
+  "QA-REL-03": {
+    "id": "QA-REL-03",
+    "question": "Un culte religieux peut-il imposer des mariages forcés, une discipline violente ou retenir ses membres contre leur volonté ?",
+    "verdict": "RÉSOLU : Droit de sortie inconditionnel et interdiction totale de la coercition physique",
+    "lead": "La croyance religieuse est totalement libre ; la coercition physique, le mariage forcé, l'abus d'enfant et la prise d'otages sont strictement anticonstitutionnels.",
+    "points": [
+      "Tout être humain possède le droit inconditionnel et inaliénable de quitter tout groupe religieux, famille ou culte à tout moment.",
+      "Les mariages forcés, la violence honorifique et l'abus physique violent les invariants de classe 0 et déclenchent l'intervention immédiate de la Guilde de la Paix.",
+      "Comme chaque citoyen dispose d'un logement et d'une nourriture garantis, les leaders de sectes ne peuvent utiliser la famine ou le sans-abrisme pour piéger leurs membres.",
+      "L'intégrité corporelle des enfants et leur protection contre la violence ne sont pas négociables, quelles que soient les croyances."
+    ],
+    "keywords": [
+      "droit de sortie",
+      "non-coercition",
+      "protection des mineurs",
+      "droits humains"
+    ]
+  },
+  "QA-REL-04": {
+    "id": "QA-REL-04",
+    "question": "Les parents religieux peuvent-ils enseigner les écritures, la foi et l'éthique à leurs enfants ?",
+    "verdict": "RÉSOLU : Les parents sont libres d'enseigner les écritures et les valeurs spirituelles à domicile et dans les centres de culte",
+    "lead": "Les parents et les communautés de foi sont libres de transmettre des valeurs théologiques, des écritures saintes et des rituels spirituels à leurs enfants.",
+    "points": [
+      "Les églises et mosquées peuvent opérer librement des écoles du dimanche, des études coraniques, des yeshivas et des classes de méditation bouddhiste.",
+      "Les autorités étatiques n'ont aucun pouvoir pour dicter des prières, censurer des textes sacrés ou interdire des fêtes spirituelles.",
+      "Les enfants ont également accès aux bibliothèques communautaires ouvertes et aux ateliers scientifiques pour assurer une perspective équilibrée et autonome.",
+      "La croissance spirituelle est nourrie par l'amour volontaire et le lien communautaire, non par l'imposition étatique."
+    ],
+    "keywords": [
+      "éducation religieuse",
+      "liberté parentale",
+      "transmission culturelle",
+      "valeurs spirituelles"
+    ]
+  },
+  "QA-REL-05": {
+    "id": "QA-REL-05",
+    "question": "Sans police, qu'est-ce qui empêche les querelles sectaires historiques et la violence religieuse entre les groupes ?",
+    "verdict": "RÉSOLU : Désarmement total, conseils interreligieux et interdépendance écologique partagée",
+    "lead": "Les guerres religieuses sont historiquement alimentées par des leaders politiques se disputant les terres et le pétrole ; dans O.N.E., les armes sont abolies et les communautés partagent le support de vie.",
+    "points": [
+      "Aucune arme à feu ou arme lourde n'existe pour armer des milices sectaires : les factions religieuses ne peuvent mener de guerres civiles cinétiques.",
+      "Toutes les croyances partagent les mêmes réseaux d'eau, champs solaires et cliniques médicales : la survie mutuelle exige une coopération quotidienne.",
+      "Les concordats interreligieux réunissent les anciens et les leaders dans des cercles de médiation réguliers basés sur le tirage au sort.",
+      "La révérence écologique pour la planète vivante unit diverses traditions spirituelles dans une gestion partagée."
+    ],
+    "keywords": [
+      "désarmement",
+      "concordat interreligieux",
+      "coopération vitale",
+      "fin de la violence sectaire"
+    ]
+  },
+  "QA-RIG-01": {
+    "id": "QA-RIG-01",
+    "question": "Quelles sont les protections constitutionnelles explicites pour les personnes LGBTQ+, l'identité de genre et les minorités sexuelles ?",
+    "verdict": "RÉSOLU : Autonomie corporelle somatique absolue, pleine affirmation de genre et protection contre le harcèlement.",
+    "lead": "Votre corps, votre identité de genre et votre vie intime sont votre domaine personnel souverain : la discrimination, la criminalisation et le harcèlement sont strictement anticonstitutionnels.",
+    "points": [
+      "L'article 1.2 garantit une autodétermination corporelle et somatique complète en tant qu'invariant constitutionnel de classe 0 intouchable.",
+      "Les soins d'affirmation de genre, le soutien psychologique et l'autonomie reproductive sont garantis inconditionnellement et sans frais.",
+      "Aucune église, aucun État, aucun conseil ni aucun voisin n'a le pouvoir légal de policer les relations entre adultes consentants ou l'expression de genre.",
+      "Le harcèlement motivé par la haine déclenche une intervention protectrice immédiate de la communauté par les Guildes de la Paix Civique."
+    ],
+    "keywords": [
+      "autonomie corporelle",
+      "affirmation de genre",
+      "droits LGBTQ+",
+      "invariants constitutionnels",
+      "protection sociale"
+    ]
+  },
+  "QA-RIG-02": {
+    "id": "QA-RIG-02",
+    "question": "Qu'est-ce qui empêche le racisme, le profilage ethnique ou la discrimination raciale de persister dans O.N.E. ?",
+    "verdict": "RÉSOLU : Abolition de la police armée raciste, ressources égales et tirage au sort diversifié.",
+    "lead": "Le racisme institutionnel est maintenu par les patrouilles de police armées et la pauvreté économique ; O.N.E. abolit les deux et garantit des droits de naissance égaux pour chaque héritage.",
+    "points": [
+      "Zéro force de police armée pratiquant le contrôle au faciès ou le profilage des citoyens noirs, racisés ou issus de minorités dans les rues des quartiers.",
+      "L'usufruit universel inconditionnel garantit qu'aucune minorité raciale n'est piégée dans la misère ou privée de soins de santé de qualité.",
+      "Le tirage au sort cryptographique assure que les conseils publics reflètent la véritable diversité démographique de la communauté sans découpage électoral partisan.",
+      "Les cultures autochtones et les peuples historiquement opprimés bénéficient d'une restitution prioritaire de l'usufruit des terres et de l'autonomie culturelle."
+    ],
+    "keywords": [
+      "lutte contre le racisme",
+      "tirage au sort",
+      "usufruit universel",
+      "équité raciale",
+      "justice sociale"
+    ]
+  },
+  "QA-RIG-03": {
+    "id": "QA-RIG-03",
+    "question": "O.N.E. peut-elle forcer des individus à se faire vacciner ou à subir des traitements médicaux involontaires ?",
+    "verdict": "RÉSOLU : Intégrité corporelle absolue : zéro intervention médicale forcée ou mandatée.",
+    "lead": "Vos tissus corporels vous appartiennent exclusivement : aucun conseil ou agence publique ne peut injecter, médiquer ou opérer votre corps contre votre consentement éclairé.",
+    "points": [
+      "Le consentement éclairé et volontaire est un invariant constitutionnel de classe 0 absolu : les injections forcées et la coercition médicale sont strictement anticonstitutionnelles.",
+      "La santé publique repose sur une transparence radicale, des données scientifiques ouvertes et une confiance volontaire, non sur des mandats policiers autoritaires.",
+      "Lors d'épidémies de maladies infectieuses, les communautés utilisent des refuges d'isolement volontaires, une ventilation à haute efficacité et des filtres à air en milieu ouvert.",
+      "Les professionnels de santé proposent un accompagnement bienveillant, jamais de force coercitive."
+    ],
+    "keywords": [
+      "intégrité corporelle",
+      "consentement éclairé",
+      "éthique médicale",
+      "liberté individuelle",
+      "santé publique"
+    ]
+  },
+  "QA-RIG-04": {
+    "id": "QA-RIG-04",
+    "question": "Comment les personnes autistes, handicapées et neurodivergentes sont-elles soutenues dans O.N.E. ?",
+    "verdict": "RÉSOLU : Accessibilité physique universelle intégrée, salles de calme sensoriel et soins personnalisés.",
+    "lead": "Le capitalisme rejette quiconque ne peut générer de profit d'entreprise ; O.N.E. garantit une base de vie digne et des environnements ergonomiques pour tous les neurotypes.",
+    "points": [
+      "L'architecture publique impose une accessibilité universelle sans marches, des chemins tactiles et auditifs, et des salles de calme sensoriel dans chaque hub civique.",
+      "Les individus autistes, TDAH et neurodivergents sont soutenus par des espaces de décompression sensorielle sans stigmatisation sociale.",
+      "Des aides soignants à temps plein sont fournis avec des ressources communautaires riches, garantissant que les aidants ne connaissent jamais l'épuisement professionnel.",
+      "Les personnes souffrant de handicaps sévères détiennent des droits d'usufruit complets et inconditionnels au logement, à la nutrition et à l'assistance technologique adaptée."
+    ],
+    "keywords": [
+      "neurodiversité",
+      "accessibilité universelle",
+      "usufruit",
+      "inclusion",
+      "soin communautaire"
+    ]
+  },
+  "QA-RIG-05": {
+    "id": "QA-RIG-05",
+    "question": "Qu'advient-il des personnes actuellement incarcérées dans les prisons de l'ancien système lors de la transition vers O.N.E. ?",
+    "verdict": "RÉSOLU : Incarcération ordonnée, sanctuaires de décompression traumatique et intégration professionnelle.",
+    "lead": "L'incarcération de masse prend fin : les délinquants non-violents pour infractions liées aux drogues ou aux biens sont accueillis directement dans des logements communautaires ; les délinquants violents transitent par une guérison thérapeutique.",
+    "points": [
+      "Plus de 80 % des anciens prisonniers (infractions liées à la drogue, crimes de pauvreté, incapacité de payer une caution) reçoivent une amnistie immédiate et des logements en usufruit.",
+      "Des refuges de guérison et de décompression aident les personnes anciennement incarcérées à guérir du traumatisme psychologique lié à l'isolement carcéral.",
+      "Les guildes professionnelles enseignent la robotique pratique, l'agriculture biologique et la menuiserie pour restaurer la dignité et le sens des responsabilités.",
+      "Les rares individus présentant des tendances violentes actives sont pris en charge dans des sanctuaires thérapeutiques sécurisés sans cages ni brutalité."
+    ],
+    "keywords": [
+      "décarcération",
+      "amnistie",
+      "réhabilitation",
+      "justice réparatrice",
+      "usufruit"
+    ]
+  },
+  "QA-DEF-01": {
+    "id": "QA-DEF-01",
+    "question": "Qu'est-ce que la « Prime de Défection » et comment O.N.E. neutralise-t-elle les armées envahissantes et les mercenaires ?",
+    "verdict": "RÉSOLU : Offre aux soldats envahisseurs d'un asile à vie, de logements et de l'annulation de leurs dettes.",
+    "lead": "Au lieu de massacrer de jeunes soldats dans une attrition sanglante, O.N.E. diffuse une offre ouverte : déposez vos armes, et nous vous offrons un foyer pour la vie et effaçons vos dettes.",
+    "points": [
+      "La plupart des soldats et mercenaires ne combattent que parce qu'ils ont besoin d'un salaire pour payer des prêts immobiliers, nourrir leur famille et échapper à l'endettement.",
+      "O.N.E. diffuse un message inaltérable sur la ligne de front offrant l'asile politique inconditionnel immédiat.",
+      "Les soldats qui traversent la ligne reçoivent un logement à vie, des soins médicaux, et leurs dettes capitalistes héritées sont réglées via le tampon commercial.",
+      "Leurs fusils d'assaut et véhicules blindés sont fondus dans des fours à induction ouverts pour fabriquer des éoliennes et des tracteurs agricoles."
+    ],
+    "keywords": [
+      "prime de défection",
+      "asile politique",
+      "pacifisme",
+      "annulation de dette",
+      "démilitarisation"
+    ]
+  },
+  "QA-DEF-02": {
+    "id": "QA-DEF-02",
+    "question": "Sans armées permanentes, comment O.N.E. se défend-elle contre les missiles hypersoniques, les frappes aériennes ou les divisions blindées ?",
+    "verdict": "RÉSOLU : Stratégie du porc-épic : intercepteurs de défense ponctuelle automatisés et absence de cible centrale.",
+    "lead": "Vous ne pouvez pas conquérir un porc-épic sans vous étouffer avec ses piquants : des intercepteurs automatisés abattent les munitions entrantes, tandis que la décentralisation supprime toute cible centrale.",
+    "points": [
+      "O.N.E. maintient des systèmes de défense cinétiques et à énergie dirigée autonomes programmés strictement pour intercepter les roquettes, drones et artilleries entrantes.",
+      "Il n'y a pas de parlement central, de coffre-fort de banque centrale ou de capitale nationale à capturer : la société est totalement décentralisée.",
+      "Les valves d'eau critiques et les micro-réseaux se découplent mécaniquement lors des attaques, rendant la prise de contrôle hostile techniquement impossible.",
+      "Conquérir une zone ne rapporte aucun butin monétaire, aucune réserve de pétrole à voler et une population non coopérative qui refuse le travail salarié."
+    ],
+    "keywords": [
+      "stratégie du porc-épic",
+      "défense automatisée",
+      "décentralisation",
+      "interception",
+      "sécurité"
+    ]
+  },
+  "QA-DEF-03": {
+    "id": "QA-DEF-03",
+    "question": "Comment parvenir à O.N.E. depuis le monde actuel sans déclencher une guerre mondiale violente et catastrophique ?",
+    "verdict": "RÉSOLU : Construire le canot de sauvetage (Piste B) pendant que le Titanic capitaliste (Piste A) sombre.",
+    "lead": "Vous n'attaquez pas le Capitole et n'installez pas de guillotines : vous construisez des micro-réseaux solaires locaux, des fiducies foncières communautaires et des laboratoires de fabrication ouverts parallèlement au système monétaire défaillant.",
+    "points": [
+      "La Piste A est l'économie capitaliste mourante, en proie à l'hyperinflation, aux dettes impayables et aux infrastructures en décomposition.",
+      "La Piste B est le bien commun thermodynamique ouvert, croissant pacifiquement dans chaque quartier, entrepôt et bassin versant.",
+      "À mesure que les vieilles entreprises font faillite, les travailleurs et les citoyens récupèrent les usines abandonnées par possession adverse et les transforment en ateliers.",
+      "Les gens abandonnent simplement la dette et le travail salarié, affamant l'ancien système de conformité humaine jusqu'à ce qu'il se dissolve pacifiquement."
+    ],
+    "keywords": [
+      "transition",
+      "fiducie foncière",
+      "économie communautaire",
+      "désobéissance civile",
+      "résilience"
+    ]
+  },
+  "QA-DEF-04": {
+    "id": "QA-DEF-04",
+    "question": "Un groupe ordinaire de citoyens peut-il démarrer un nœud communautaire O.N.E. dès demain sans attendre des traités mondiaux ?",
+    "verdict": "RÉSOLU : Oui : formez une fiducie foncière, mutualisez l'énergie solaire et fonctionnez par tirage au sort.",
+    "lead": "Vous n'avez pas besoin de la signature d'un président : 15 voisins peuvent mutualiser des terres, installer du solaire hors réseau et des jardins, et adopter la gouvernance d'O.N.E. dès maintenant.",
+    "points": [
+      "Tout groupe peut établir une Fiducie Foncière Communautaire (FFC) pour retirer définitivement les logements résidentiels du marché spéculatif.",
+      "Déployez des micro-réseaux solaires en libre accès sur les toits et des systèmes de récupération d'eau de pluie pour gagner en autonomie physique.",
+      "Prenez les décisions de voisinage en utilisant des assemblées par tirage au sort rotationnel avec un consensus à 75 % au lieu de débats politiques.",
+      "La Constitution d'O.N.E. est un code open-source prêt à être utilisé dans n'importe quel quartier sur Terre."
+    ],
+    "keywords": [
+      "nœud communautaire",
+      "tirage au sort",
+      "fiducie foncière",
+      "autogestion",
+      "micro-réseau"
+    ]
+  },
+  "QA-DEF-05": {
+    "id": "QA-DEF-05",
+    "question": "Comment O.N.E. gère-t-elle l'immigration, les frontières nationales et les millions de réfugiés climatiques ?",
+    "verdict": "RÉSOLU : Liberté de mouvement universelle, corridors de migration ouverts et hubs d'accueil.",
+    "lead": "Les frontières nationales sont des lignes artificielles tracées sur des cartes pour protéger la propriété coloniale ; dans O.N.E., tout être humain fuyant un désastre écologique est accueilli avec un abri et de la nourriture.",
+    "points": [
+      "La liberté de migration terrestre à travers la biosphère est un droit humain biologique inviolable.",
+      "Les réfugiés ne sont pas parqués dans des camps de détention sordides ou noyés en mer : les hubs d'accueil fournissent un abri immédiat et une aide médicale.",
+      "Les nouveaux arrivants sont intégrés dans les réseaux de production des bassins versants, contribuant avec leurs riches perspectives culturelles et leurs compétences.",
+      "Le reboisement planétaire massif et les réseaux solaires décentralisés absorbent les populations sans surcharger les écologies locales."
+    ],
+    "keywords": [
+      "migration",
+      "réfugiés climatiques",
+      "liberté de circulation",
+      "accueil humanitaire",
+      "frontières"
+    ]
+  }
+}

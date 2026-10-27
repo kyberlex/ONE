@@ -1,0 +1,528 @@
+{
+  "lang_name": "العربية",
+  "nav": {
+    "overview": "نظرة عامة",
+    "constitution": "الدستور",
+    "roadmap": "خارطة الطريق",
+    "challenge": "حلبة التحدي",
+    "thrillers": "الروايات",
+    "simulator": "🎮 لعبة المحاكاة الحية ↗",
+    "stewards": "Co-Stewards",
+    "benchmark": "AI Benchmark"
+  },
+  "hero": {
+    "tag": "المخطط المفتوح لحضارة ما بعد العمل",
+    "title_part1": "حين تتولى الآلات العمل،",
+    "title_part2": "ترث البشرية كوكب الأرض.",
+    "subtitle": "الذكاء الاصطناعي والروبوتات يقضيان على العمل المأجور إلى الأبد. بدلاً من الانزلاق نحو الإقطاعية الرقمية للشركات، يحول <strong>كوكب الأرض الشبكي المفتوح (O.N.E.)</strong> الأتمتة إلى تحرر إنساني: غذاء وسكن وطاقة ورعاية صحية مضمونة لكل إنسان — تحت إدارة مجالس مواطنين بالقرعة الإحصائية، لا سياسيين محترفين.",
+    "btn_primer": "دليل الـ 3 دقائق",
+    "btn_constitution": "استكشف الدستور",
+    "btn_novels": "اقرأ الروايات (كتب إلكترونية مجانية)",
+    "btn_simulator": "العب O-ASIS MMO ↗",
+    "btn_discover": "Discover O.N.E. →",
+    "btn_stewards": "Build (Co-Steward)"
+  },
+  "features": {
+    "survival_title": "البقاء العالمي المضمون",
+    "survival_desc": "الغذاء والمسكن والرعاية الصحية والطاقة كحقوق ميلاد غير مشروطة",
+    "housing_title": "منازل بلا إيجارات",
+    "housing_desc": "حيازة محمية بحق الانتفاع؛ صفر إخلاء قسري أو مضاربات عقارية",
+    "sortition_title": "الديمقراطية بالقرعة",
+    "sortition_desc": "مواطنون عاديون يتم اختيارهم بالقرعة الإحصائية؛ صفر سياسيين محترفين",
+    "commons_title": "وفرة الآلات للجميع",
+    "commons_desc": "تقنيات الأتمتة والشبكات الشمسية المصغرة كإرث عام مشترك"
+  },
+  "gateway": {
+    "tag": "استكشف O.N.E.",
+    "heading": "أربعة مسارات للتعمق في المنظومة",
+    "step1_tag": "الخطوة ١ • البديهة والأساس",
+    "step1_title": "الفهم والاستيعاب",
+    "step1_desc": "ملخص بصري في ٣ دقائق يوضح أسباب انهيار الرأسمالية والشيوعية، وكيف تنسق O.N.E. المجتمع البشري بلا نقود ورقية ولا سياسيين محترفين.",
+    "step1_link": "افتح النظرة العامة →",
+    "step2_tag": "الخطوة ٢ • البنية الدستورية",
+    "step2_title": "فحص البنود",
+    "step2_desc": "تصفح ٦٠ مادة من القانون الدستوري الثرموديناميكي غير القمعي: الديمقراطية بالقرعة الإحصائية، حق الانتفاع، والعدالة التصالحية.",
+    "step2_link": "استكشف الدستور كاملاً →",
+    "step3_tag": "الخطوة ٣ • الاختبار والمحاجة",
+    "step3_title": "التحدي الفكري",
+    "step3_desc": "اختبر ذكاءنا الاصطناعي الجدلي بأصعب اعتراضاتك: «ماذا لو رفض الجميع العمل؟»، «من يدفع التكلفة؟»، أو «هل يمكن للأحزاب التلاعب بالقرعة؟»",
+    "step3_link": "ادخل إلى حلبة التحدي O.N.E. →",
+    "step4_tag": "الخطوة ٤ • القلب والوجدان",
+    "step4_title": "عيش الملحمة",
+    "step4_desc": "سلسلة الإثارة التشويقية عالية التوتر: تابع أشخاصاً عاديين يدافعون عن المشاعات الجديدة في ديترويت وجبال الألب وجنيف.",
+    "step4_link": "استكشف الخريطة والكتب →"
+  },
+  "synoptic": {
+    "title": "كيف يعمل كوكب الأرض الشبكي المفتوح",
+    "subtitle": "دليل بلغة واضحة: لماذا تنهار القواعد الاقتصادية القديمة، وكيف فشلت الأنظمة السابقة، وما الذي يحل محل المال والسياسيين في عالم ما بعد العمل.",
+    "banner_tag": "المشاع الديناميكي الحراري عملياً",
+    "banner_title": "وفرة حقيقية بلا استغلال",
+    "banner_desc": "طاقة شمسية نظيفة، وروبوتات زراعية ذاتية القيادة، ومزارع استصلاح عامة تحرر البشرية من عبودية الأجور.",
+    "tab_postwork": "⚡ 1. التحول لما بعد العمل",
+    "tab_failures": "🏛️ 2. أسباب فشل الأنظمة السابقة",
+    "tab_pillars": "🛡️ 3. الأركان الأربعة الأساسية",
+    "tab_roadmap": "🌱 4. خارطة طريق الانتقال"
+  },
+  "primer_content": {
+    "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    1. واقع ما بعد العمل الوشيك: لماذا يُغيّر الأتمتة كل الموازين\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    على مدى آلاف السنين، خضعت الحضارة الإنسانية لقانون صارم: <em>«من لا يعمل لا يأكل».</em>\n    إن الروبوتات المجسمة والآلات المستقلة والذكاء الاصطناعي التوليدي تكسر هذه المعادلة إلى الأبد. عندما تتولى الآلات الزراعة والبناء والنقل وتوليد الطاقة والرعاية الصحية بتكلفة هامشية تقارب الصفر، يجب فصل البقاء البشري نهائياً عن العمل المأجور.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ السيناريو الكارثي الافتراضي: الإقطاع التقني</h4>\n      <p>في ظل قواعد السوق الحالية، تحتكر شركات التكنولوجيا العملاقة قوة العمل المؤتمتة بالكامل. ويصبح مليارات البشر «غير قابلين للتوظيف»، محرومين من الأجور وغارقين في الفقر، بينما تتركز الثروة في أيدي قلة من الأوليغارشية.</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 نموذج O.N.E.: الانعتاق الميكانيكي</h4>\n      <p>تُعلن القوة الإنتاجية للأتمتة إرثاً مشتركاً للبشرية جمعاء. يحرر عمل الآلات الإنسان من الشقاء والفقر وعبودية الأجر، ليحول الغذاء والمأوى والطاقة إلى حقوق ولادة غير مشروطة.</p>\n    </div>\n  </div>\n</div>",
+    "failures": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    2. لماذا انهارت النماذج الحضارية السابقة\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:20px;\">\n    عبر التاريخ، اختبرت البشرية أربعة أنظمة لتنظيم المجتمع. لم ينجح أي منها في تحقيق سلام دائم أو عدالة أو توازن بيئي:\n  </p>\n  <div class=\"model-comparison\">\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">1. الثيوقراطية الدينية</div>\n      <div class=\"model-status red\">فاشلة</div>\n      <div style=\"color:var(--text-muted);\">حروب دينية، محاكم تفتيش وهياكل كهنوتية تتحكم في الضمائر عبر الخوف والذنب.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">2. الإقطاعية</div>\n      <div class=\"model-status red\">فاشلة</div>\n      <div style=\"color:var(--text-muted);\">ملكيات وراثية تحتكر الأرض بـ «الحق الإلهي»، مستعبدة الشعوب بالسيف.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">3. شيوعية الدولة المركزية</div>\n      <div class=\"model-status red\">فاشلة</div>\n      <div style=\"color:var(--text-muted);\">استبدال الملاك ببيروقراطية الحزب الواحد، شلل التخطيط المركزي ورعب المعتقلات.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">4. الرأسمالية المالية</div>\n      <div class=\"model-status red\">فاشلة</div>\n      <div style=\"color:var(--text-muted);\">فوائد مركبة، ديون متصاعدة، ندرة مصطنعة لمقومات الحياة وتدمير بيئي كوكبي.</div>\n    </div>\n  </div>\n  <div class=\"primer-feature-card\" style=\"margin-top:20px; border-color:rgba(16, 185, 129, 0.4); background:rgba(16, 185, 129, 0.06);\">\n    <h4 style=\"color:var(--accent-emerald);\">✨ المسار الخامس: Open Networked Earth (O.N.E.)</h4>\n    <p style=\"color:var(--text-secondary);\">لا استغلال تجاري ولا استبداد حكومي: ائتمان حق الانتفاع دون ريع عقاري، مجالس شعبية بالقرعة دون سياسيين محترفين، وضمان البقاء دون نقود ورقية.</p>\n  </div>\n</div>",
+    "pillars": "<div class=\"primer-tab-pane\">\n  <div style=\"display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;\">\n    <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin:0;\">\n      3. المبادئ الدستورية الأربعة الحاكمة لـ O.N.E.\n    </h3>\n    <a href=\"#constitution\" class=\"btn btn-secondary\" style=\"display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; padding:8px 16px;\">\n      <span>📜 تصفح الدستور</span>\n      <span>→</span>\n    </a>\n  </div>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4>⚡ 1. أرضية البقاء الحيوية (مجتمع بلا نقود)</h4>\n      <p>لكل إنسان يولد على الأرض حق أبدي في ماء نقي، غذاء صحي، مسكن كريم، رعاية طبية شاملة وطاقة نظيفة. البقاء البيولوجي لا يخضع للمساومة أبداً.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🏡 2. الملكية كأمانة حق انتفاع</h4>\n      <p>المقتنيات الشخصية (ملابس، أدوات، كتب) محمية بشكل دائم. المساكن العائلية تُحفظ بحق انتفاع مدى الحياة. يُحظر تماماً الاحتكار العقاري والإيجار الربحي والإخلاء القسري.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🎲 3. الديمقراطية بالقرعة الإحصائية</h4>\n      <p>الانتخابات تغذي الفساد وشراء الذمم والشعبوية. تُسند القرارات العامة لمجالس تُختار بالقرعة: مواطنون عاديون كهيئة محلفين، تساندهم لجان خبراء مستقلة.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🌿 4. الحدود الثرموديناميكية الفيزيائية</h4>\n      <p>النمو الأسي غير المحدود على كوكب محدود انتحار رياضي. المحاسبة الاقتصادية الحقيقية تُقاس بوحدات فيزيائية (كيلوواط ساعة، لترات ماء، خصوبة التربة) وليس بالديون الورقية.</p>\n    </div>\n  </div>\n</div>",
+    "roadmap": "<div class=\"primer-tab-pane\">\n  <div style=\"display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:12px;\">\n    <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin:0;\">\n      4. خارطة طريق التحول: كيف نصل إلى الهدف\n    </h3>\n    <a href=\"#roadmap\" class=\"btn btn-secondary\" style=\"display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; padding:8px 16px;\">\n      <span>🌱 استكشف خارطة الطريق</span>\n      <span>→</span>\n    </a>\n  </div>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:20px;\">\n    نحن لا ننتظر انهياراً عالمياً ولا ندعو إلى ثورة مسلحة. تتقدم O.N.E. عبر <strong>استراتيجية مزدوجة منسقة</strong>: بناء المشاعات الصامدة اليوم بينما يستنزف النظام القديم نفسه.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🇨🇭 1. الدرع القانوني (الجمعية السويسرية)</h4>\n      <p>الانطلاق كجمعية سويسرية مستقلة (المادة 60 وما يليها من القانون المدني السويسري) لحماية الملكية الفكرية المفتوحة والأصول المشتركة بدون رأس مال أدنى وبخصوصية كاملة.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🌱 2. العقد البذرية البيئية المحلية</h4>\n      <p>يكفي ثلاثة أفراد لتأسيس صندوق أراضٍ مجتمعي (CLT)، أو غابة غذائية تعاونية، أو شبكة طاقة متجددة باستخدام مواثيق O.N.E. المفتوحة.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🤝 3. التحول المدني اللاعنفي</h4>\n      <p>نقابات سلام غير مسلحة تحل محل الشرطة العسكرية عبر الوساطة التصالحية؛ وتُلغى ديون النظام القديم بيوبيل شامل.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🌍 4. اتحاد الأحواض المائية الكوكبي</h4>\n      <p>تتحد مجالس الأحواض المائية في غرف قارية، مستبدلة صراعات الدول القومية بالتنسيق البيئي والحراري المشترك.</p>\n    </div>\n  </div>\n</div>"
+  },
+  "const": {
+    "title": "دستور O.N.E. الحي",
+    "subtitle": "عشرة فصول من القانون الأساسي القائم على التوازن الديناميكي الحراري وغير العقابي. تصفح المواد أو ابحث عن البنود أو حمل نسخ PDF المعتمدة.",
+    "search_placeholder": "ابحث عن الكلمات المفتاحية (مثل: 'ماء'، 'سكن'، 'قرعة'، 'طاقة')...",
+    "expand_all": "توسيع الكل",
+    "collapse_all": "طي الكل",
+    "download_epub": "الدستور (EPUB)",
+    "download_pdf": "الدستور (PDF)",
+    "tab_all": "All Chapters",
+    "tab_chap": "Chap",
+    "chapter_label": "CHAPTER",
+    "article_singular": "Article",
+    "article_plural": "Articles",
+    "no_results": "لا توجد مواد تطابق معايير البحث الخاصة بك.",
+    "badge_available": "مكتملة ومتاحة"
+  },
+  "roadmap": {
+    "title": "كيفية بناء عقدة بذرية ذاتية الحكم",
+    "desc": "دليل تشغيلي عملي خطوة بخطوة: إلغاء تسليع الأراضي قانونياً، وتأمين الحياة خارج الشبكة، وتنظيم العمل بلا رؤساء أو أجور، وإرساء السيادة الاقتصادية.",
+    "shield_title": "هندسة مجربة ومحمية على أرض الواقع",
+    "shield_subtitle": "مختبرة ضد 53 نمط فشل قانوني ومالي وميكانيكي • صفر نقاط ضعف فردية (RSV-1: 0)",
+    "archetype_common": "🇬🇧 القانون العام (Common Law)",
+    "archetype_civil": "🇪🇺 القانون المدني",
+    "archetype_customary": "🇲🇽 مشاع الأعراف التقليدية",
+    "sys1_title": "الدرع القانوني وقفل الأصول",
+    "sys1_desc": "فصل الأراضي الساكنة عن العمليات التجارية لحماية الأرض من الديون والضرائب والمصادرات:",
+    "sys1_item1": "<strong>الكيان (أ) (صندوق أراضي ساكن):</strong> حظر أصول غير قابل للإلغاء، صفر تجارة، صفر ديون، صفر رهون.",
+    "sys1_item2": "<strong>الكيان (ب) (تعاونية تشغيلية):</strong> امتصاص المخاطر التجارية تحت قاعدة <em>حظر الديون غير المضمونة</em>.",
+    "sys1_item3": "<strong>المنقولات القابلة للفصل (UCC § 9-604 / ZGB 677):</strong> الأدوات ملك للمستأجر؛ الأرض لا يمكن الحجز عليها.",
+    "sys1_item4": "<strong>دفاع التراخيص والاحتياطي:</strong> هياكل متنقلة معتمدة مرورياً + ميزانية احتياطية لـ 12 شهراً للدفاع القانوني.",
+    "sys2_title": "العمل البشري والتناغم",
+    "sys2_desc": "القضاء على احتكار المهارات، والتهرب من الواجبات، وظهور الطبقية، وإنهاك المؤسسين:",
+    "sys2_item1": "<strong>الحد الأدنى الحيوي الإلزامي:</strong> 5-7 ساعات أسبوعياً من الواجبات الأساسية (طهي، نظافة، حطب) لكل بالغ.",
+    "sys2_item2": "<strong>ثنائيات التدريب المستوى صفر:</strong> صيانة الشبكات والآبار تتطلب دائماً خبيراً معتمداً مع متدرب.",
+    "sys2_item3": "<strong>أقفال الأمان الميكانيكية كاستل:</strong> مفاتيح فيزيائية تمنع حدوث شرارات كهربائية أو تشغيل المضخات دون ماء.",
+    "sys2_item4": "<strong>الملاذ التعاوني الآمن:</strong> صياغة العمل الداخلي كمساعدة متبادلة، مما يسقط أي ادعاءات عمالية مأجورة.",
+    "sys3_title": "الجسر الاقتصادي (موازنة التجارة الخارجية ETI)",
+    "sys3_desc": "توليد النقد للضرائب والرقائق عبر العمل الفكري المستقل دون استنزاف طاقة الأعضاء:",
+    "sys3_item1": "<strong>سقف الاستشارات الخارجية:</strong> حصر الساعات الخارجية بـ 15-20 ساعة أسبوعياً لحماية الحياة المشتركة.",
+    "sys3_item2": "<strong>قاعدة الدفعة المقدمة 50%:</strong> اشتراط دفعة 50% مقدماً تدعمها احتياطيات تجارية تغطي 90 يوماً.",
+    "sys3_item3": "<strong>محطات حوسبة مستقلة:</strong> حواسيب وأجهزة اتصالات مدعومة بمصفوفة شمسية معزولة قدرة 2.5 كـ.و / 10 كـ.و.س.",
+    "sys3_item4": "<strong>الملاذ الداخلي اللا-نقدي:</strong> حظر تام لتداول العملات داخل المجتمع؛ السكن والغذاء والماء مجانية وغير مشروطة.",
+    "sys4_title": "دعم الحياة الديناميكي الحراري",
+    "sys4_desc": "ضمان البقاء الجسدي أثناء موجات الصقيع القارص وانقطاع الكهرباء وانهيار سلاسل الإمداد:",
+    "sys4_item1": "<strong>خزان 40,000 لتر مع ممر 48V DC:</strong> خزان أرضي معزول ومضخة بئر عميقة متصلة مباشرة بالبطاريات.",
+    "sys4_item2": "<strong>قبو بطاريات LFP بقدرة 48 فولت:</strong> إدارة شحن ذكية عند انخفاض الحرارة لمنع تضرر خلايا الليثيوم.",
+    "sys4_item3": "<strong>مخزون غذائي لـ 180 يوماً:</strong> حبوب وبقوليات معزولة مع بروتوكول استنبات يومي لرفع فيتامين C بنسبة 600%.",
+    "sys4_item4": "<strong>النواة الحرارية بمساحة 50 م² (-30°م):</strong> ملجأ فائق العزل تحت الأرض يعتمد على أنابيب التبادل الحراري الأرضية.",
+    "config_tag": "⚡ أداة التهيئة الهندسية التفاعلية",
+    "config_title": "تهيئة عقدتك البذرية الإقليمية",
+    "config_subtitle": "اختر نطاقك القضائي وحجم المجتمع لحساب المواصفات الدقيقة.",
+    "config_label_arch": "1. النموذج القضائي القانوني",
+    "config_btn_common": "🇬🇧 القانون العام (Common Law)",
+    "config_btn_civil": "🇪🇺 القانون المدني",
+    "config_btn_customary": "🇲🇽 مشاع الأعراف التقليدية",
+    "config_label_scale": "2. الحجم الأولي للمجتمع",
+    "config_scale_5": "5 مؤسسين (المرحلة 0 - النواة)",
+    "config_scale_15": "15 رائداً (المرحلة 1 - القرية)",
+    "config_scale_35": "35 مقيماً (عقدة كاملة)",
+    "stepper_tag": "مخططات العمل الميدانية",
+    "stepper_title": "مراحل التنفيذ الأربع (من السنة 0 إلى 15)",
+    "stepper_desc": "انقر على كل مرحلة لعرض المعالم الهندسية وقوائم المعدات وتحميل الدليل الميداني.",
+    "quickstart_text": "<strong>⚡ هل تحتاج نظرة سريعة؟</strong> اقرأ قائمة الخطوات العشر في ",
+    "quickstart_btn": "دليل الجيب الميداني (صفحتان) (.md)",
+    "quickstart_dl": "⬇️ تحميل (.md)",
+    "step_0": "المرحلة 0: التأسيس القانوني والأرض",
+    "step_1": "المرحلة 1: نواة البقاء والغذاء",
+    "step_2": "المرحلة 2: ورشة التصنيع والمعدات",
+    "step_3": "المرحلة 3: اتحاد أحواض المياه",
+    "qa_tag": "العقبات الميدانية والحلول",
+    "qa_title": "تجاوز التحديات الحقيقية",
+    "qa_desc": "كيف تتعامل فرقنا مع مخالفات البناء، ودعاوى الدائنين، وبرودة الشتاء القارس.",
+    "q1_question": "🏛️ ماذا لو رفض مفتشو البلدية البيوت الصغيرة والمراحيض البيئية؟",
+    "q1_answer": "<strong>الدفاع القانوني:</strong> تعتمد الوحدات على هياكل متنقلة مجازة مرورياً (ANSI A119.5). قانونياً تعد <em>منقولات قابلة للفصل</em> وليست مباني سكنية ثابتة. ويحتفظ الكيان (ب) باحتياطي مالي لـ 12 شهراً للدفاع القضائي دون مساس بالأرض.",
+    "q2_question": "📉 ماذا لو تعثر عميل خارجي وطالب مورد معدات بمبلغ 180,000 دولار؟",
+    "q2_answer": "<strong>فاعلية الدرع المزدوج:</strong> تتحمل التعاونية (ب) الإفلاس التجاري بينما يظل صندوق الأرض (أ) محمياً تماماً. يرفض القضاء دمج الذمم المالية، ولا يملك الدائنون سوى الحجز على الآلات المنقولة دون أي حق في حجز الأرض أو شبكات الماء والكهرباء.",
+    "q3_question": "💻 ماذا لو رفض مهندسو البرمجيات المشاركة في الأعمال اليدوية والنظافة؟",
+    "q3_answer": "<strong>قاعدة الجهد الحيوي الإلزامية:</strong> يلتزم كل بالغ بـ 5 إلى 7 ساعات أسبوعياً في المهام الحيوية (طهي، صيانة، نظافة). لا يمكن الاستعاضة عن هذا بالمال أو بساعات البرمجة، منعاً لنشوء طبقات ممتازة.",
+    "q4_question": "❄️ كيف تتصرفون إذا هبطت الحرارة إلى -30°م لثلاثة أسابيع متواصلة؟",
+    "q4_answer": "<strong>صمود النواة الحرارية:</strong> ينسحب المجتمع إلى النواة الحرارية (50 م²) فائقة العزل تحت الأرض والمستفيدة من حرارة التربة. وتعمل منظومات البطاريات بذكاء ضد التجمد، مع كفاية المخزون الغذائي لـ 180 يوماً.",
+    "pillar_1": "System I",
+    "pillar_2": "System II",
+    "pillar_3": "System III",
+    "pillar_4": "System IV",
+    "badge_0": "Yr 0",
+    "badge_1": "Yrs 1-3",
+    "badge_2": "Yrs 3-7",
+    "badge_3": "Yrs 7-15"
+  },
+  "roadmap_config": {
+    "tag_legal": "١. الهيكل القانوني والمؤسسي للكيان",
+    "desc_operating": "يعمل من خلال:",
+    "desc_debt": "قاعدة 'صفر ديون غير مضمونة' تمنع بشكل قاطع وصول أي التزامات تجارية إلى صندوق الأرض.",
+    "tag_zoning": "٢. الحماية العقارية والتنظيمية",
+    "tag_capital": "٣. تكوين رأس المال والتمويل",
+    "tag_water": "٤. السيادة المائية المستقلة",
+    "tag_battery": "٥. مخزن بطاريات 48V LFP",
+    "tag_food": "٦. مخزون غذائي للطوارئ لمدة ١٨٠ يوماً",
+    "archetypes": {
+      "common_law": {
+        "name": "القانون العام (الولايات المتحدة / المملكة المتحدة / كندا / أستراليا)",
+        "entity_a": "صندوق أراضي المجتمع 501(c)(3) (CLT)",
+        "entity_b": "تعاونية عمالية مملوكة للأعضاء (LLC / ULCAA)",
+        "capital": "قسائم استهلاك مسبقة الدفع (٥٠٠–٢٥٠٠ دولار) بموجب إعفاء حق الانتفاع الاستهلاكي Reves v. Ernst & Young",
+        "zoning": "وحدات سكنية متنقلة متوافقة مع ANSI A119.5 مع وصلات فصل سريع (أموال منقولة وليست عقارات)",
+        "escrow": "حساب ضمان احتياطي لمدة ١٢ شهراً للتعويضات البلدية والنزاعات التنظيمية",
+        "statutory_defense": "تجهيزات تجارية قابلة للفك UCC § 9-604 + جدول إهلاك إيجاري لمدة ١٠ سنوات (حماية 11 U.S.C. § 548)"
+      },
+      "civil_law": {
+        "name": "القانون المدني (أوروبا القارية / سويسرا / العالم العربي)",
+        "entity_a": "مؤسسة نفع عام غير ربحية / وقف أهلي مجتمعي",
+        "entity_b": "تعاونية إنتاجية عمالية / جمعية تشغيلية",
+        "capital": "هبات وتبرعات غير قابلة للاسترداد + سندات تدريب مدفوعة مسبقاً معفاة من الرقابة المصرفية",
+        "zoning": "مبانٍ ريفية قائمة محمية بحكم الأسبقية + خزانات مياه مطابقة للمواصفات",
+        "escrow": "حساب ضمان امتثال بلدي (درع الحماية من المسؤولية المدنية)",
+        "statutory_defense": "حق انتفاع عيني مسجل رسمياً بقيمة حقيقية محصن ضد دعاوى الإفلاس والاسترداد"
+      },
+      "customary_commons": {
+        "name": "الأعراف والتقاليد المشتركة والأراضي الجماعية (المشاع)",
+        "entity_a": "أراضٍ قبلية ومشاع غير قابلة للتصرف / حمى مسجل",
+        "entity_b": "تعاونية تضامن مجتمعي للإنتاج الزراعي",
+        "capital": "صندوق دوار مجتمعي للعون المتبادل + عقود تضامنية مسبقة على المحاصيل",
+        "zoning": "بناء بيئي تقليدي بالتربة والحجر تحت استثناءات الحيازة العرفية",
+        "escrow": "مجلس الحكماء والوسطاء + مخزون احتياطي طارئ من البذور المشتركة",
+        "statutory_defense": "المعاهدات الدولية لحماية حقوق الشعوب الأصلية (اتفاقية العمل 169) والتحصين الدستوري للأراضي الزراعية"
+      }
+    },
+    "scales": {
+      "5": {
+        "water": "خزان أرضي ٤٠،٠٠٠ لتر + بئر ارتوازي",
+        "water_desc": "٤٠،٠٠٠ لتر تحت الأرض مقاومة للتجمد مع تحويلة يدوية لبطارية 48V DC لمضخة البئر",
+        "battery": "مخزن بطاريات LFP بقدرة ١٥ كيلوواط/ساعة (48V)",
+        "battery_desc": "قبو بطاريات معزول حرارياً مع تكييف سلبي عبر أنابيب باطن الأرض ونظام حماية BMS",
+        "food": "مخزون غذائي جاف لمدة ١٨٠ يوماً",
+        "food_desc": "حبوب وبقوليات معبأة بإحكام + صواني إنبات إنزيمي دورية لتوفير الفيتامينات الأساسية",
+        "land": "٠.٨ هكتار"
+      },
+      "15": {
+        "water": "خزان مزدوج سعة ١٢٠،٠٠٠ لتر + بئرين",
+        "water_desc": "نظام انسياب بالجاذبية مزدوج مع مراحل تنقية رملية وتعقيم بالأشعة فوق البنفسجية",
+        "battery": "شبكة صغرى LFP بقدرة ٤٥ كيلوواط/ساعة (48V)",
+        "battery_desc": "خزائن بطاريات صناعية مع محولات متوازية وفصل تلقائي للأحمال غير الحرجة",
+        "food": "مخزن مؤن لـ ١٥ شخصاً لمدة ١٨٠ يوماً",
+        "food_desc": "زراعة غابية كثيفة ومدرجات + أقبية أرضية للتبريد الطبيعي وحفظ الجذور",
+        "land": "٢.٥ هكتار"
+      },
+      "35": {
+        "water": "بحيرة مائية ترابية سعة ٣٠٠،٠٠٠ لتر",
+        "water_desc": "حوض تجميع طبيعي مستمر التغذية من الينابيع مع ضغط هيدروستاتيكي بدون مضخات",
+        "battery": "نواة ثلاثية الأطوار بقدرة ١٢٠ كيلوواط/ساعة (48V / 400V)",
+        "battery_desc": "شبكة صناعية مقترنة بالتيار المتردد مع توليد كهرومائي مصغر للحمل الأساسي",
+        "food": "اكتفاء ذاتي سنوي للحوض المائي",
+        "food_desc": "نظام زراعي غابي متعدد الطبقات + كهوف تخزين وتخمير تحت الأرض",
+        "land": "٦ هكتارات"
+      }
+    }
+  },
+  "roadmap_stepper": {
+    "btn_view_stage": "📐 عرض المخطط الميداني للمرحلة {stage}",
+    "btn_download": "⬇️ تحميل المخطط (.md)"
+  },
+  "challenge": {
+    "title": "«حاول كسر O.N.E.»",
+    "desc": "أخضعنا هذا الدستور لـ 6 جولات من المحاكاة العدائية الصارمة بالذكاء الاصطناعي لاختبار الهجمات المصرفية والحصار القانوني. انقر على الأسئلة الشائعة أو اطرح أصعب اعتراضاتك.",
+    "quick_label": "الاعتراضات الأكثر اختباراً:",
+    "chip_work": "1. بدون عمل مأجور: من يطعمنا؟",
+    "chip_work_query": "ماذا لو رفض الناس العمل؟ من يوفر الغذاء ويصون شبكات الصرف في O.N.E.؟",
+    "chip_money": "2. بدون نقود: من يدفع التكاليف؟",
+    "chip_money_query": "من يمول المستشفيات والجسور والقطارات بدون نقود أو ضرائب؟",
+    "chip_prisons": "4. بدون سجون: الجرائم العنيفة؟",
+    "chip_prisons_query": "كيف يتم التعامل مع العنف والجرائم الخطيرة بدون شرطة وسجون؟",
+    "chip_lottery": "التلاعب بالقرعة؟",
+    "chip_lottery_query": "هل يستطيع أصحاب المليارات أو الخطباء شراء مجالس القرعة الشعبية؟",
+    "chip_communism": "هل هذه شيوعية؟",
+    "chip_communism_query": "ما الفارق الجوهري بين O.N.E. والشيوعية الشمولية التي شهدها القرن العشرون؟",
+    "sidebar_title": "سيناريوهات الهجوم المختبرة",
+    "input_placeholder": "اطرح أصعب اعتراض لديك...",
+    "btn_send": "اختبار",
+    "label_probe": "مسبار الهجوم المعادي",
+    "label_adjudicator": "القاضي المعياري O-ASIS",
+    "label_inquiry": "استفسار الزائر المتشكك",
+    "label_resolution": "الحل الدستوري الحاسم:",
+    "chip_property": "3. بدون ملكية خاصة: ماذا عن منزلي؟",
+    "chip_property_query": "بدون ملكية خاصة، هل يمكن لأي شخص الاستيلاء على منزلي أو ممتلكاتي الشخصية؟",
+    "chip_politics": "5. بدون سياسيين: من يحكم؟",
+    "chip_politics_query": "كيف تعمل القرعة المدنية الدورية بدون استيلاء الدهماء على السلطة؟",
+    "chip_patents": "6. بدون براءات اختراع: من يبتكر؟",
+    "chip_patents_query": "بدون احتكار براءات الاختراع، من يستثمر في الأبحاث الطبية والتقنيات المعقدة؟",
+    "chip_army": "7. بدون جيوش: الغزو العسكري؟",
+    "chip_army_query": "ما الذي يمنع الجيوش الأجنبية من غزو مناطق O.N.E. بدون جيش نظامي؟",
+    "chip_ussr": "8. بلا أسواق: هل هذه شيوعية؟",
+    "chip_ussr_query": "كيف يختلف O.N.E. عن شيوعية الدولة والأنظمة الاستبدادية في القرن العشرين؟",
+    "chip_capitalism": "9. هل هي رأسمالية؟ هل يمكنني بدء مشروع؟",
+    "chip_capitalism_query": "هل يمكنني تأسيس ورشة عمل أو مشروع تجاري مستقل دون رأسمالية؟",
+    "chip_education": "10. التعليم: كيف تعمل المدارس؟",
+    "chip_education_query": "كيف تعمل المدارس والجامعات وتعليم الأطفال دون رسوم دراسية أو اختبارات معيارية؟",
+    "chip_religion": "11. الدين: هل دور العبادة والشعائر حرة؟",
+    "chip_religion_query": "هل الأديان ودور العبادة والمعتقدات الروحية محمية أم مقموعة؟",
+    "chip_discrimination": "12. التمييز: العنصرية وحقوق مجتمع الميم؟",
+    "chip_discrimination_query": "كيف تتم حماية الأقليات من العنصرية والتمييز القائم على النوع الاجتماعي والاضطهاد؟"
+  },
+  "books": {
+    "title": "الملحمة الكوكبية",
+    "desc": "الأفكار الكبرى تنتصر حين تسكن الوجدان. عش تجربة O.N.E. عبر ستة مسارح عالمية في ملحمة تشويق تقنية وقانونية باهرة من أجل حرية وكرامة الإنسان.",
+    "chart_tag": "خارطة العالم التفاعلية",
+    "chart_title": "مسارح الرواية الستة",
+    "chart_desc": "انقر على أي منارة في الخريطة للاطلاع على مسرح الأحداث وتحميل الجزء الخاص به.",
+    "btn_epub": "تحميل EPUB",
+    "btn_pdf": "تحميل PDF",
+    "status_complete": "مكتملة ومتاحة للتحميل",
+    "tag": "خريطة العالم التفاعلية وملحمة الإثارة الكبرى",
+    "map_vol0": "VOL 0: SVALBARD",
+    "map_vol1": "VOL 1: DETROIT",
+    "map_vol2": "VOL 2: ALPS",
+    "map_vol3": "VOL 3: AMAZON",
+    "map_vol4": "VOL 4: MALACCA",
+    "map_vol5": "VOL 5: GENEVA",
+    "btn_coming_soon": "قريباً",
+    "status_coming_soon": "قيد الترجمة"
+  },
+  "volume_details": {
+    "vol0": {
+      "title": "التكوين: شرارة سفالبارد",
+      "subtitle": "المجلد ٠: الملاذ القطبي السري • ٧٨° شمالاً",
+      "theater": "سفالبارد / عالمي",
+      "core_theme": "تشفير معزول داخل مخزن البذور القطبي، إطلاق شبكة ألياف ضوئية سرية، والصحوة الدستورية الأولى.",
+      "hook": "قبل أن تنتفض ديترويت، تم صهر هيكل الحضارة الجديدة في أعماق البازلت القطبي."
+    },
+    "vol1": {
+      "title": "نقطة الصفر: بروتوكول ديلراي",
+      "subtitle": "المجلد ١: أمريكا الشمالية • ديترويت / وندسور",
+      "theater": "أمريكا الشمالية",
+      "core_theme": "تحويل المنشآت الصناعية المهجورة، مهلة الـ ٤٨ ساعة للإخلاء القضائي، ومجلس القرعة المدني.",
+      "hook": "حين جاء المحضرون مدججين بالسلاح، أجابتهم ديلراي بقوانين الديناميكا الحرارية وحكم القرعة."
+    },
+    "vol2": {
+      "title": "المعقل الألبي",
+      "subtitle": "المجلد ٢: أوروبا عبر الألب • فاليه وتيتشينو",
+      "theater": "أوروبا عبر الألب",
+      "core_theme": "حماية أنابيب التوليد الكهرومائي الشاهقة، مصدات الانهيارات الجليدية، واتحاد المشاعات الإقليمية.",
+      "hook": "أرسلوا مرتزقة لقطع الكهرباء؛ لكن الجبال الشاهقة انحازت للشعب."
+    },
+    "vol3": {
+      "title": "نهر النار",
+      "subtitle": "المجلد ٣: حوض الأمازون والأنديز",
+      "theater": "الأمازون والأنديز",
+      "core_theme": "الدفاع عن حوض النهر، اعتراض مسيرات الرش الكيميائي، ومواثيق الانتفاع المشترك مع السكان الأصليين.",
+      "hook": "النهر ليس ملكية خاصة لأحد: إنه الجهاز الدوري للقارة بأسرها."
+    },
+    "vol4": {
+      "title": "الخندق البحري",
+      "subtitle": "المجلد ٤: مضيق ملقا وأوراسيا",
+      "theater": "جنوب شرق آسيا والمحيطين",
+      "core_theme": "السيطرة الخوارزمية على الموانئ، حواجز الحاويات البحرية، واستعادة كابلات الألياف الضوئية المغمورة.",
+      "hook": "عشرة آلاف سفينة تجارية توقفت حين رفض العمال النقود وأعلنوها ملكية عامة مشتركة."
+    },
+    "vol5": {
+      "title": "قمة التقارب",
+      "subtitle": "المجلد ٥: كانتون جنيف • الميثاق الكوكبي",
+      "theater": "جنيف / عالمي",
+      "core_theme": "إلغاء الديون السيادية، اليوبيل العالمي الشامل، وأول مؤتمر شعبي عالمي بالقرعة الإحصائية.",
+      "hook": "تبخرت ديون العالم القديم في ظهيرة واحدة: وخطت البشرية خطواتها الأولى نحو شمس الحرية."
+    }
+  },
+  "modal": {
+    "title": "المخطط الميداني ودليل التطبيق العملي",
+    "download_md": "⬇️ تحميل .md",
+    "close": "إغلاق المخطط (Esc)"
+  },
+  "footer": {
+    "line1": "كوكب الأرض الشبكي المفتوح (O.N.E.) • عهود حق الانتفاع المفتوح كابيفارليفت • صفر حقوق احتكارية",
+    "line2": "محرك متعدد الوكلاء حتمي متزامن مع Origin Main • الدستور المعتمد v2.0-مصدق"
+  },
+  "roadmap_phases": [
+    {
+      "title": "المرحلة ٠: التأسيس القانوني وحصانة الأرض ضد التصرف",
+      "badge": "السنة ٠ • التحصين القانوني",
+      "desc": "تحصين الأرض قانونياً قبل وصول أي آليات ثقيلة. لا يتم بناء أي مساكن حتى يتم توثيق وتسجيل الدرع القانوني مزدوج الطبقات رسمياً.",
+      "milestones": [
+        {
+          "label": "الدرع القانوني",
+          "title": "الفصل الكامل بين كيانين",
+          "text": "تأسيس صندوق الأرض السلبي (الكيان أ) وتعاونية العمال التشغيلية (الكيان ب) بحسابات مصرفية منفصلة وحظر شامل لتشابك الديون."
+        },
+        {
+          "label": "أمان الأرض",
+          "title": "سند حق انتفاع لمدة ٩٩ عاماً",
+          "text": "إبرام عهود حق انتفاع غير قابلة للتصرف تمنع إعادة البيع للمضاربة أو الرهن العقاري أو الحجز القضائي."
+        },
+        {
+          "label": "حقوق المياه",
+          "title": "تحديد مسارات الجاذبية وحفر البئر",
+          "text": "مسح الفروق الهيدروستاتيكية الطبيعية بالجاذبية، حفر البئر الارتوازي وتركيب خط تحويل سلبي يعمل بدون كهرباء."
+        }
+      ]
+    },
+    {
+      "title": "المرحلة ١: نواة البقاء والسيادة الغذائية الحيوية",
+      "badge": "السنوات ١–٣ • الاستقلال البيولوجي",
+      "desc": "نشر شبكات تيار مستمر 48V DC، وتشييد نوى حرارية محصنة بمساحة 50 م²، وزراعة غابات غذائية معمرة وفائقة الكثافة.",
+      "milestones": [
+        {
+          "label": "النواة الحرارية",
+          "title": "ملاذ شتوي بمساحة 50 م²",
+          "text": "ملاذ فائق العزل ومدفون جزئياً تحت الأرض مع أنابيب تهوية أرضية يقاوم درجات حرارة -30 مئوية بالاعتماد على كتلته الحرارية السلبية."
+        },
+        {
+          "label": "الشبكة الصغرى DC",
+          "title": "بنك بطاريات LFP سعة ١٥–٤٥ ك.و.س",
+          "text": "ناقل طاقة 48V DC مزود بنظام BMS ذكي لمنع الشحن في التجمد، ومفاتيح ميكانيكية متداخلة من طراز كاستل لمنع الأخطاء."
+        },
+        {
+          "label": "تجديد التربة",
+          "title": "مؤن زراعية تكفي ١٨٠ يوماً",
+          "text": "أحواض زراعية مكثفة، بساتين فاكهة معمرة، ودورات سماد دودي حيوي لإعادة تخصيب الأرض تلقائياً."
+        }
+      ]
+    },
+    {
+      "title": "المرحلة ٢: معمل التصنيع المفتوح والسيادة الميكانيكية",
+      "badge": "السنوات ٣–٧ • الاكتفاء الميكانيكي",
+      "desc": "تشغيل مخارط التحكم الرقمي CNC، وتصنيع الدوائر الإلكترونية، وتفعيل جسر الاستشارات الإدراكية ETI لتغطية الرسوم الحكومية.",
+      "milestones": [
+        {
+          "label": "الآلات المفتوحة",
+          "title": "ورشة التصنيع الميكانيكي Fab-Lab",
+          "text": "قاطع بلازما CNC، مخرطة معادن، وماكينة لحام تعمل جميعها بنظام LinuxCNC البرمجي المفتوح ودون اتصال بالإنترنت."
+        },
+        {
+          "label": "الجسر الاقتصادي",
+          "title": "استشارات معرفية ETI",
+          "text": "عقود استشارية خارجية متخصصة بسقف ساعات محدد (بحد أقصى ١٥ ساعة أسبوعياً للشخص) لسداد الضرائب بالعملة الورقية."
+        },
+        {
+          "label": "المعمل الحيوي",
+          "title": "تحاليل المياه وبنك البذور",
+          "text": "مختبر متنقل لمراقبة سلامة مصادر المياه ميكروبيولوجياً وحفظ السلالات الحية من البذور البلدية المتوارثة."
+        }
+      ]
+    },
+    {
+      "title": "المرحلة ٣: فيدرالية الحوض المائي والملكيات المشتركة",
+      "badge": "السنوات ٧–١٥ • الشبكة الإقليمية الحيوية",
+      "desc": "ربط الملكيات المشتركة المستقلة في الحوض المائي عبر شبكة راديو لاسلكية موشومة والمقايضة الديناميكية الحرارية دون عملات ورقية.",
+      "milestones": [
+        {
+          "label": "راديو ميش",
+          "title": "اتحاد الحوض المائي الإقليمي",
+          "text": "ربط من ٣ إلى ٥ نوى مجاورة عبر حزم راديو LoRa المشفرة ومشاركة الآلات الزراعية والمعدات الثقيلة."
+        },
+        {
+          "label": "التبادل المادي",
+          "title": "مقايضة ليونتيف-كانتوروفيتش",
+          "text": "تبادل مباشر غير نقدي للكيلوواط/ساعة، وساعات تشغيل المعدات، والبذور محسوبة بقيمتها الفيزيائية الحقيقية."
+        },
+        {
+          "label": "الانفصال التام",
+          "title": "استقلال البنية التحتية بالكامل",
+          "text": "فصل خطوط المرافق التجارية القديمة بصورة نهائية أو إبقاؤها حصرياً كخط احتياطي بارد لحالات الطوارئ القصوى."
+        }
+      ]
+    }
+  ],
+  "oasis_showcase": {
+    "badge": "🎮 LIVING THERMODYNAMIC SANDBOX & MMO",
+    "title_part1": "Experience the Post-Labor Commons in",
+    "title_part2": "O-ASIS Dual-Track",
+    "desc": "Test the constitution with your own hands. Build autonomous solarpunk eco-villages, balance real Leontief physics across 4 physical flows (⚡ kWh, 💧 Liters, 🥗 Calories, 💻 Compute), deliberate on civic crises via Athenian citizen juries, and resist the predatory Legacy Financial AI in a 100% serverless P2P mesh.",
+    "feat1_title": "Closed-Loop Thermodynamics",
+    "feat1_desc": "Real energy, battery degradation, rainwater harvesting, closed-loop hydroponics and circular FabLab material recycling.",
+    "feat2_title": "Demarchic Sortition Juries",
+    "feat2_desc": "Citizen assemblies chosen by lot in strict odd parity to arbitrate community dilemmas and ratify confederal case-law precedents.",
+    "feat3_title": "Dual-Track Physical Bridge",
+    "feat3_desc": "In-game triumphs directly unlock verified, real-world 3D printable .STL open hardware and Home Assistant automations.",
+    "btn_launch": "Launch O-ASIS Simulator (Browser 60 FPS) ↗",
+    "btn_handbook": "Download Player Field Manual (PDF) ↗"
+  },
+  "hero_video": {
+    "badge": "Civilizational Prologue • 2m 10s",
+    "title": "From 100,000 Years of Warfare to Machine Emancipation",
+    "desc": "Watch the visual prologue illustrating human history from territorial warfare to machine-driven emancipation."
+  },
+  "contrast": {
+    "tag": "Civilizational Operating Systems",
+    "title": "Track A vs. Track B: The Civilizational Fork",
+    "desc": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
+    "track_a_badge": "Track A • Legacy Default",
+    "track_a_title": "Techno-Feudal Extraction",
+    "track_a_desc": "Monopolized automation, perpetual debt, and speculative rentierism.",
+    "track_a_item1_title": "Conditional Survival:",
+    "track_a_item1_desc": "Basic food, shelter, and care gated behind disappearing wage labor.",
+    "track_a_item2_title": "Allodial Land Speculation:",
+    "track_a_item2_desc": "Predatory landlordism, compounding rents, and algorithmic evictions.",
+    "track_a_item3_title": "Billionaire Oligarchy:",
+    "track_a_item3_desc": "Corporate lobbying, partisan theater, and manufactured consent.",
+    "track_a_item4_title": "Carceral Coercion:",
+    "track_a_item4_desc": "Militarized policing and punitive retribution protecting property over life.",
+    "track_a_item5_title": "Thermodynamic Ecocide:",
+    "track_a_item5_desc": "Infinite exponential compound growth on a strictly finite biosphere.",
+    "track_b_badge": "Track B • Open Networked Earth",
+    "track_b_title": "Universal Usufruct & Demarchy",
+    "track_b_desc": "Machines work for the commons; humanity inherits guaranteed survival and self-governance.",
+    "track_b_item1_title": "Unconditional Birthright:",
+    "track_b_item1_desc": "Food, housing, healthcare, clean water & energy guaranteed for life.",
+    "track_b_item2_title": "Dynamic Usufruct:",
+    "track_b_item2_desc": "Protected personal dwellings; zero rent, zero speculation, zero landlordism.",
+    "track_b_item3_title": "Statistical Sortition:",
+    "track_b_item3_desc": "Citizen juries drawn by lot in strict odd parity; zero career politicians.",
+    "track_b_item4_title": "Restorative Peace Guilds:",
+    "track_b_item4_desc": "De-escalation, conflict mediation, and root-cause civic restoration.",
+    "track_b_item5_title": "Thermodynamic Exergy Limits:",
+    "track_b_item5_desc": "Physical accounting in kWh, liters, and topsoil health—not debt-fiat."
+  },
+  "stewards": {
+    "tag": "Phase 0 Genesis Hardening",
+    "title": "Call for Co-Stewards & Domain Critics",
+    "desc": "Open Networked Earth is built on open peer production. Before the Living Constitution is permanently deposited under Swiss Civil Law (ZGB Art. 80 ff.), our foundational pillars must be stress-tested through adversarial peer review. We are actively seeking our <strong>Priority 0 Media Co-Steward</strong> and technical domain builders to harden the architecture against entropy.",
+    "p0_badge": "Pillar 0 • Strategic Inversion",
+    "badge_priority": "🔥 Priority 0 • Active Search",
+    "badge_seeking_cofounder": "Seeking Co-Founder",
+    "badge_seeking": "Open for Co-Steward",
+    "badge_active": "Actives: 1",
+    "p0_title": "Media, Storytelling & Community Co-Steward",
+    "label_target_profile": "Target Profile:",
+    "p0_role": "Open-source comms activist, Solarpunk/Commons creator, independent podcaster, video storyteller, or community builder.",
+    "label_mandate": "The Mandate & Strategic Goal:",
+    "p0_doubt": "Eliminate the solo-creator bottleneck by taking operational co-ownership of public storytelling, YouTube/Shorts video distribution, Reddit/X dialogue, and leading the outreach campaign to seat the remaining technical domain builders. If you believe a post-labor civilization needs a powerful cultural voice, this is the co-founding role.",
+    "p0_btn_cta": "Join Media Dialectic (#13) →",
+    "p0_btn_email": "Apply Directly via Email →",
+    "p1_num": "Pillar 1",
+    "p1_title": "Economy & Thermodynamic Balances",
+    "label_domain": "Domain:",
+    "p1_role": "Ecological / Heterodox Economics, Leontief Input-Output",
+    "label_doubt": "Open Dialectic & Doubt:",
+    "p1_doubt": "Can money-less thermodynamic accounting completely replace market price discovery and Gosplan bureaucracy without supply shortages or rationing?",
+    "p1_btn_cta": "Join Economic Dialectic (#9) →",
+    "p2_num": "Pillar 2",
+    "p2_title": "Governance, Law & Dynamic Usufruct",
+    "p2_role": "Commons Jurisprudence, Demarchy / Sortition, Swiss Civil Law",
+    "p2_doubt": "Are demarchic sortition lotteries mathematically immune to lobbying and oligarchic capture? Does Swiss Association (Verein) law provide bulletproof shielding?",
+    "p2_btn_cta": "Join Legal Dialectic (#10) →",
+    "p3_num": "Pillar 3",
+    "p3_title": "Simulation & Scientific Sandbox",
+    "p3_role": "Julia Discrete-Event Co-Simulation (SIMONE), Agents.jl & MTBF Wear",
+    "p3_doubt": "Validating the single-village Julia prototype, stock-and-flow ODE docking tests, and multiscale biophysical solver decoupling. Additional co-stewards actively sought.",
+    "p3_btn_cta": "Join Simulation Dialectic (#11) →",
+    "p4_num": "Pillar 4",
+    "p4_title": "Habitat & Open-Hardware Resilience",
+    "p4_role": "Microgrids, Home Assistant Zigbee/MQTT, CNC Timber Cassettes",
+    "p4_doubt": "Do Modular Habitat Units (MHU) and open-hardware microgrids withstand real-world 40-year thermal cycles and catastrophic grid disconnection?",
+    "p4_btn_cta": "Join Habitat Dialectic (#12) →",
+    "cta_title": "Ready to Build or Break O.N.E.?",
+    "cta_desc": "Whether you want to co-steward a foundational pillar or act as an independent critic hunting thermodynamic and nomothetic edge cases, your contribution directly hardens the Genesis Block.",
+    "btn_all_discussions": "💬 View All Discussions on GitHub",
+    "btn_contact": "✉️ Contact Kyberlex (kyberlex@proton.me)"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "templates": [
+    {
+      "pattern": "¿Cómo protege O.N.E. contra {topic} bajo presión?",
+      "title": "Prueba de estrés sistémico sobre {topic}",
+      "verdict": "RESUELTO: Los bloqueos constitucionales resilientes protegen {topic}"
+    },
+    {
+      "pattern": "¿Existe alguna excepción a las reglas sobre {topic} durante emergencias?",
+      "title": "Verificación de exención de emergencia para {topic}",
+      "verdict": "RESUELTO: Los Invariantes de Clase 0 permanecen inmutables incluso en emergencias"
+    },
+    {
+      "pattern": "¿Cuál es el impacto civilizatorio a largo plazo de {topic}?",
+      "title": "Viabilidad evolutiva a largo plazo de {topic}",
+      "verdict": "RESUELTO: Equilibrio sostenible logrado sin acumulación de capital"
+    },
+    {
+      "pattern": "¿Cómo auditan e inspeccionan los ciudadanos comunes {topic}?",
+      "title": "Protocolo de auditoría demárquica para {topic}",
+      "verdict": "RESUELTO: Telemetría abierta transparente e inspecciones por sorteo ciudadano"
+    },
+    {
+      "pattern": "¿Qué sucede si los consejos locales no están de acuerdo sobre {topic}?",
+      "title": "Resolución dialéctica inter-cuenca sobre {topic}",
+      "verdict": "RESUELTO: Asambleas bioregionales federadas y mediación de Condorcet"
+    }
+  ],
+  "topics": {
+    "housing": [
+      "usufructo residencial",
+      "distribución de materiales de construcción",
+      "herramientas personales de oficio",
+      "continuidad del hábitat",
+      "viviendas desocupadas"
+    ],
+    "work": [
+      "tareas rotativas",
+      "motivación científica",
+      "derecho a la no participación",
+      "coordinación ergonómica",
+      "transiciones entre gremios"
+    ],
+    "demarchy": [
+      "jurados por sorteo",
+      "grupos de trabajo epistémicos",
+      "umbrales de consenso",
+      "derechos de recusación ciudadana",
+      "anonimato del jurado"
+    ],
+    "thermodynamics": [
+      "medidores personales de recursos",
+      "triaje energético L_min",
+      "el 7% del Común del Hereje",
+      "interfaz de comercio exterior",
+      "reservas contra el arbitraje"
+    ],
+    "justice": [
+      "santuarios restaurativos",
+      "ausencia de armas de fuego",
+      "restitución a la víctima",
+      "cordones anti-linchamiento",
+      "protección de refugios íntimos"
+    ],
+    "education": [
+      "etapas del desarrollo infantil",
+      "currículo de higiene epistémica",
+      "apoyo a los primeros 1.000 días",
+      "academias universitarias abiertas",
+      "derechos de educación en el hogar"
+    ],
+    "science": [
+      "abolición de patentes médicas",
+      "cadenas de herramientas de silicio abiertas",
+      "megaciencia planetaria",
+      "síntesis genética de bioseguridad",
+      "autoría de derechos morales"
+    ],
+    "religion": [
+      "santuarios de culto sagrado",
+      "preservación energética de catedrales",
+      "desescalada sectaria",
+      "educación teológica",
+      "concordatos interreligiosos"
+    ],
+    "rights": [
+      "autonomía somática LGBTQ+",
+      "igualdad biofísica universal",
+      "medicina no coercitiva",
+      "accesibilidad universal",
+      "integración post-penal"
+    ],
+    "defense": [
+      "recompensa por deserción para soldados",
+      "defensa de punto de erizo",
+      "hoja de ruta de doble vía",
+      "creación de nodos locales",
+      "corredores de migración abierta"
+    ]
+  }
+}

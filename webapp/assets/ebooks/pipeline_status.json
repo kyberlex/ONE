@@ -1,0 +1,179 @@
+{
+  "active_language": null,
+  "active_volume": null,
+  "active_pid": 89474,
+  "status": "completed",
+  "progress": {
+    "percentage": 0,
+    "current_paragraph": 0,
+    "total_paragraphs": 0,
+    "elapsed": "00:00",
+    "eta": "-",
+    "speed": "0 it/s"
+  },
+  "events": [
+    {
+      "type": "language_completed",
+      "timestamp": "2026-09-17T08:49:21.763300",
+      "reported_to_chat": true,
+      "details": {
+        "lang": "zh",
+        "volumes": [
+          "constitution",
+          "vol0",
+          "vol1",
+          "vol2",
+          "vol3",
+          "vol4",
+          "vol5"
+        ]
+      }
+    },
+    {
+      "type": "pipeline_paused",
+      "timestamp": "2026-09-17T09:08:18.847533",
+      "reported_to_chat": true,
+      "details": "Translations paused per user request"
+    },
+    {
+      "type": "language_completed",
+      "timestamp": "2026-09-17T12:50:18.460382",
+      "reported_to_chat": false,
+      "details": {
+        "lang": "it",
+        "volumes": [
+          "constitution",
+          "vol0",
+          "vol1",
+          "vol2",
+          "vol3",
+          "vol4",
+          "vol5"
+        ]
+      }
+    },
+    {
+      "type": "pipeline_paused",
+      "timestamp": "2026-09-17T14:43:04.180038",
+      "reported_to_chat": false,
+      "details": "Paused by user to free bandwidth; scheduled to run nightly 01:00 AM - 07:00 AM"
+    },
+    {
+      "type": "language_completed",
+      "timestamp": "2026-09-17T17:11:27.880461",
+      "reported_to_chat": false,
+      "details": {
+        "lang": "es",
+        "volumes": [
+          "constitution",
+          "vol0",
+          "vol1",
+          "vol2",
+          "vol3",
+          "vol4",
+          "vol5"
+        ]
+      }
+    },
+    {
+      "type": "language_completed",
+      "timestamp": "2026-09-17T21:44:28.972112",
+      "reported_to_chat": false,
+      "details": {
+        "lang": "hi",
+        "volumes": [
+          "constitution",
+          "vol0",
+          "vol1",
+          "vol2",
+          "vol3",
+          "vol4",
+          "vol5"
+        ]
+      }
+    },
+    {
+      "type": "language_completed",
+      "timestamp": "2026-09-19T05:32:49.930721",
+      "details": {
+        "lang": "pt"
+      }
+    },
+    {
+      "type": "language_completed",
+      "timestamp": "2026-09-19T14:33:38.208590",
+      "details": {
+        "lang": "ru"
+      }
+    },
+    {
+      "type": "language_completed",
+      "timestamp": "2026-09-19T15:42:57.476588",
+      "details": {
+        "lang": "ja"
+      }
+    },
+    {
+      "type": "language_completed",
+      "timestamp": "2026-09-19T16:34:45.899813",
+      "details": {
+        "lang": "de"
+      }
+    },
+    {
+      "type": "language_completed",
+      "timestamp": "2026-09-19T17:41:07.518742",
+      "details": {
+        "lang": "fr"
+      }
+    },
+    {
+      "type": "language_completed",
+      "timestamp": "2026-09-19T20:03:42.664396",
+      "details": {
+        "lang": "ar"
+      }
+    },
+    {
+      "type": "language_completed",
+      "timestamp": "2026-09-19T21:15:13.705188",
+      "details": {
+        "lang": "ko"
+      }
+    },
+    {
+      "type": "language_completed",
+      "timestamp": "2026-09-19T22:10:41.619659",
+      "details": {
+        "lang": "id"
+      }
+    }
+  ],
+  "last_hourly_chat_update": "2026-09-17T08:40:06.382029",
+  "completed_languages": [
+    "zh",
+    "it",
+    "es",
+    "hi",
+    "pt",
+    "ru",
+    "ja",
+    "de",
+    "fr",
+    "ar",
+    "ko",
+    "id",
+    "tr"
+  ],
+  "last_updated": "2026-09-19T02:26:17.518699",
+  "schedule": {
+    "window_start": "01:00",
+    "window_end": "07:00",
+    "current_state": "active_night_window",
+    "next_start": "active_now",
+    "last_checked": "2026-09-19T02:04:33.657558"
+  },
+  "active_chapter": "ALL_14_LANGUAGES_COMPLETED",
+  "last_error": "Failed translation after 5 attempts: vol3_ch04_en.md",
+  "target_start": "2026-09-20T01:00:00.000008"
+}

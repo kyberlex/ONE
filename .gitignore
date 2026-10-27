@@ -28,6 +28,8 @@ build/
 pdfs(it)/
 pdfs(en)/
 *.pdf
+!webapp/assets/ebooks/*.pdf
+!sim/*.pdf
 
 # Python Artifacts
 __pycache__/

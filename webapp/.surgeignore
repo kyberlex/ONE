@@ -1,0 +1,25 @@
+# ==============================================================================
+# SURGE DEPLOYMENT IGNORE LIST FOR O.N.E. (OPEN NETWORKED EARTH)
+# ==============================================================================
+# Ensure zero system artifacts, zero internal logs, and zero telemetry leak.
+
+# Internal daemon and translation logs
+assets/ebooks/logs/
+assets/ebooks/logs/**
+*.log
+
+# System metadata
+.DS_Store
+*/.DS_Store
+Thumbs.db
+
+# Temporary translation caches and runtime temp files
+*.tmp
+*.bin
+*.temp.bin
+pipeline_status*.tmp
+
+# Version control artifacts
+.git/
+.gitignore
+.surgeignore

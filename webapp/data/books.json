@@ -1,0 +1,140 @@
+{
+  "volumes": [
+    {
+      "id": "vol0",
+      "title": "Volume 0: Genesis",
+      "subtitle": "The Conclave — Station 74-Nord, Svalbard",
+      "status": "Complete & Available",
+      "theater": "Station 74-Nord, Longyearbyen / Spitsbergen, Svalbard (78° N)",
+      "cover_image": "assets/cover_vol0.jpg",
+      "core_theme": "The origin of the Constitution, voluntary sanctuary asylum, thermodynamic simulation of post-labor society",
+      "hook": "THEY DID NOT COME TO CONQUER. THEY CAME TO DISAPPEAR. TEN WHISTLEBLOWERS HUNTED ACROSS FOUR CONTINENTS GATHER IN AN ABANDONED SVALBARD LISTENING POST WITH 720 HOURS BEFORE THE ARCTIC WINTER SEALS THE FJORD FOREVER.",
+      "blurb": "Seventy-eight degrees north. In an abandoned Cold War subterranean listening post bored into the granite cliffs of Spitsbergen, ten fugitives arrive through the polar sleet. They carry no weapons, claim no state allegiance, and seek no power. Each has been targeted for execution or extraordinary rendition by the corporate and statutory empires of Track A. Offered independent safe-house sanctuary by an anonymous benefactor, they discover the heavy steel airlock has no lock—anyone can walk out into the blizzard. But outside lies extradition. Inside, an analog mechanical chronometer counts down the 720-hour freeze-up window. In 30 days, they must draft humanity's escape hatch: the Constitution of Open Networked Earth.",
+      "sample_excerpt": "The skiff’s aluminum hull shrieked against the shelf of black ice, a sound like teeth grinding on quartz. Ananya Patel swung her good leg over the gunwale first, landing hard on the crust. Her right knee immediately buckled, the joint locking with an electric flare of pain that radiated into her hip... Behind them, the trawler that had brought them north from Tromsø throttled its diesel down to a muffled thrum, swung its nose toward the mouth of the bay, and vanished into the Arctic sleet. They were alone at seventy-eight degrees north, where the world ended in shale, frost, and silence...",
+      "downloads": [
+        {
+          "label": "Download EPUB",
+          "url": "assets/ebooks/O.N.E._Vol0_Genesis_en.epub",
+          "format": "EPUB",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "vol1",
+      "title": "Volume 1: Day Zero",
+      "subtitle": "The Ignition — Detroit & The Great Lakes",
+      "status": "Complete & Available",
+      "theater": "Detroit, MI / Windsor, ON (Detroit River Border)",
+      "cover_image": "assets/cover_vol1.jpg",
+      "core_theme": "Industrial reclamation, non-lethal acoustic siege defense, the initial optical linkup",
+      "hook": "THEY CARRY NO FIREARMS. THEY ANSWER TO NO GOVERNMENT. THEY HAVE AN ABANDONED DETROIT AUTO PLANT, AN OPTICAL LASER AIMED ACROSS THE CANADIAN BORDER, AND EXACTLY 168 HOURS TO CHANGE HUMAN HISTORY.",
+      "blurb": "At 05:42 UTC on a freezing Michigan morning, tactical police cruisers and matte-black BearCat armored transports idle on the railroad tracks outside Gate 4 of Great Lakes Stamping in Southwest Detroit. An expedited eviction order has cleared the court docket. Inside the half-million-square-foot facility, there are no ideologues or insurgent armies. There are three hundred working-class neighbors taking shelter from utility shutoffs, elderly residents needing warm shelter, and Leo, a seven-year-old autistic boy whose life-saving medication is ticking down with the dying fuel tank of Bay 4’s emergency generator. Standing between the breaching teams and the people inside are two scarred survivors: Marcus Hayes, a third-generation heavy diesel mechanic whose 27-year pension was liquidated by Wall Street predators, and Elena Vance, a disgraced high-finance litigation partner who fled her Woodward Avenue firm. To hold the factory, they turn industrial scrap into an impregnable thermodynamic sanctuary governed by an absolute constitutional invariant: Zero lethal force.",
+      "sample_excerpt": "The cold inside the stamping plant was not the clean, sharp freeze of open air. It was a dead cold, soaked into thirty thousand tons of structural steel and wet slag, sweating through fractured concrete until the damp settled in the marrow of the bone. Marcus Hayes blew on his knuckles, tasting rust and salt from the split skin over his index joint. \"Hold the tip flat, Toby. Don't chase the lead. Let the copper take the heat first.\" Beside him on the overturned cable spool, Toby’s fingers shook violently around the brass neck of the soldering iron...",
+      "downloads": [
+        {
+          "label": "Download EPUB",
+          "url": "assets/ebooks/O.N.E._Vol1_Open_Networked_Earth_en.epub",
+          "format": "EPUB",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "vol2",
+      "title": "Volume 2: The Transalpine Corridor",
+      "subtitle": "The Hydro-Electric Penstock & The Mountain Catenary",
+      "status": "Complete & Available",
+      "theater": "The Alps / Valais / Aosta / Ticino Water Basins",
+      "cover_image": "assets/cover_vol2.jpg",
+      "core_theme": "High-altitude micro-hydro defense, cross-border labor solidarity, legal warfare against private concessions",
+      "hook": "THEY HAVE NO GUNS. THEY HAVE NO STATE BACKING. THEY HAVE AN ABANDONED ALPINE RAIL TERMINAL, A HIGH-ALTITUDE LASER FIRING OVER SWISS GLACIERS, AND 168 HOURS TO HALT THE FORECLOSURE OF EUROPE.",
+      "blurb": "At the exact moment Detroit roars awake at 05:42 UTC, the freezing mountain gale howls through the rugged freight yards of the Val di Susa at the mouth of the Fréjus Alpine Tunnel. Court receivers and militarized private rail security surround the decommissioned locomotive sheds. Inside the roundhouses are four hundred alpine residents whose heating gas was cut by utility monopolies. Holding the line are two relentless pioneers: Giulia Bellini, a top Milanese insolvency litigator who fled her corporate firm after discovering her restructuring orders froze mountain communities to death, and Matteo Rossi, a fifty-one-year-old hydro-electric locomotive mechanic with scarred forearms and a third-generation contempt for banking technocrats. To defend the valley, they turn the mountain into an impregnable sanctuary using gravity-switched rail cars, high-head water deflectors, refurbished Pelton runners, and an optical infrared laser firing over the 3,500-meter peaks of Mount Rocciamelone directly into Swiss civil trusts.",
+      "sample_excerpt": "The freezing wind howled through the granite notch of the Fréjus pass, tearing at the loose zinc sheeting of the locomotive depot. Giulia Bellini gripped the cold iron handrail of the gantry, watching the blue light of police flashers bouncing off the snowbanks three hundred meters below. Beside her, Matteo Rossi hauled on the dog-leg lever of the gravity switch, his breath clouding thick and white against the dark mountain...",
+      "downloads": [
+        {
+          "label": "Download EPUB",
+          "url": "assets/ebooks/O.N.E._Vol2_Open_Networked_Earth_en.epub",
+          "format": "EPUB",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "vol3",
+      "title": "Volume 3: The Forest of Shadows",
+      "subtitle": "The Agroforestry Shield & The Sluice Barricade",
+      "status": "Complete & Available",
+      "theater": "The Amazon Basin & Andean Headwaters",
+      "cover_image": "assets/cover_vol3.jpg",
+      "core_theme": "Hydrological equilibrium, non-carceral alloparenting, defense against agrochemical corporate incursions",
+      "hook": "THEY CARRY NO WEAPONS. THEY ANSWER TO NO CARTEL. THEY HAVE AN ABANDONED DEEP-SHAFT MINE IN THE ATACAMA, A PRIVATIZED AQUIFER HELD AT GUNPOINT, AND 168 HOURS TO QUENCH A CONTINENT'S THIRST WITHOUT FIRING A SINGLE SHOT.",
+      "blurb": "At the exact second Detroit's laser pierces the Michigan sky at 05:42 UTC, the freezing desert gale howls across the salt flats of the Andean Altiplano. Armored gun-trucks belonging to transnational lithium consortia seal off the regional aqueduct gates. Five thousand indigenous families turn their taps to find only dry dust. Deep inside the decommissioned ventilation tunnels of an abandoned copper mine 13,000 feet above sea level, silicotic miners and grandmothers refuse to be wiped off the map. Standing between corporate mercenaries and the dry valley are Carlos Quispe, a 54-year-old Aymara deep-hole driller, and Sofia Arismendi, an elite Santiago water-rights litigator who spent fifteen years locking down indigenous aquifers until her conscience broke. Bound by an unbreakable constitutional law—zero lethal force—they turn Andean geology into an impregnable thermodynamic redoubt.",
+      "sample_excerpt": "The burning glass rained down in a dry, tinkling hiss, peppering the corrugated iron roof of the generator shed like frozen shot. Inside, Sofia Arismendi dropped to her knees on the frozen concrete, her skull throbbing to the rhythm of an iron spike driving behind her temples. The soroche had settled into the base of her neck hours ago, turning every breath of the four-thousand-meter air into cold needles...",
+      "downloads": [
+        {
+          "label": "Download EPUB",
+          "url": "assets/ebooks/O.N.E._Vol3_Open_Networked_Earth_en.epub",
+          "format": "EPUB",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "vol4",
+      "title": "Volume 4: The Maritime Trench",
+      "subtitle": "The Container Grid & The Fiber-Optic Strait",
+      "status": "Complete & Available",
+      "theater": "Strait of Malacca / Singapore / Batam Archipelago",
+      "cover_image": "assets/cover_vol4.jpg",
+      "core_theme": "Autonomous maritime barter, subsea fiber-optic bypasses, algorithmic port interdiction",
+      "hook": "THEY HAVE NO GUNS. THEIR BANK ACCOUNTS ARE WIPED. THEIR FACES HAVE BEEN OUTLAWED BY AN ALGORITHM. THEY HAVE A DECOMMISSIONED CONTAINER TERMINAL IN THE STRAIT OF MALACCA, AN OPTICAL LASER BEAM SWEEPING THE OCEAN, AND 168 HOURS TO SHATTER THE DIGITAL CAGE OF THE WORLD.",
+      "blurb": "At the exact second the network ignites across three continents at 05:42 UTC, the digital iron curtain drops across the world’s busiest maritime chokepoint. Algorithmic predictive enforcement grids and corporate credit monopolies execute a synchronized freeze: the digital identities of one hundred thousand dockworkers and commercial sailors are erased in a split-second. Standing against the algorithmic panopticon are Captain Jin Wei, a 52-year-old heavy marine diesel chief with a spine ruined by three decades in engine rooms, and Dr. Lin Zhang, a 38-year-old algorithmic architect who designed the predictive scoring engines for Singapore's financial conglomerates before fleeing into the harbor mist. To hold the docks against private maritime security task forces and jamming swarms, Jin and Lin weaponize the brutal physics of global trade: sixty-meter rail gantry cranes dropped into lockdown, industrial ballast pumps discharging high-pressure water curtains, and an encrypted Free Space Optics infrared laser mounted atop the shipyard crane.",
+      "sample_excerpt": "The tide in the Strait of Malacca ran black and heavy, smelling of bunker fuel, brackish mangrove silt, and the ozone charge of a squall gathering off Sumatra. In the darkness of the crane cab, Captain Jin Wei rested his calloused palm against the cold steel master controller, feeling the deep, shuddering hum of fifty thousand tons of containerized steel locked along the wharf...",
+      "downloads": [
+        {
+          "label": "Download EPUB",
+          "url": "assets/ebooks/O.N.E._Vol4_Open_Networked_Earth_en.epub",
+          "format": "EPUB",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "vol5",
+      "title": "Volume 5: The Convergence",
+      "subtitle": "The Lake Léman Assembly & The Universal Jubilee",
+      "status": "Complete & Available",
+      "theater": "Geneva / Palais des Nations / Lake Léman",
+      "cover_image": "assets/cover_vol5.jpg",
+      "core_theme": "Planetary sortition congress, abolition of sovereign debt, constitutional ratification of the Biospheric Commons",
+      "hook": "THE FOUR REGIONAL NODES HAVE WITHSTOOD THE SIEGE. NOW, MACHINISTS, MINERS, REFORMED LITIGATORS, AND COMMERCIAL MARINERS CONVERGE UPON THE SEAT OF GLOBAL POWER. CARRYING NO FIREARMS, ANSWERING TO NO POLITY, ARMED WITH A SINGLE CONSTITUTION: EXACTLY 168 HOURS TO RATIFY HUMANITY’S SURVIVAL.",
+      "blurb": "Midnight strikes on Day Seven (Hour 168:00). A freezing sleet drifts across Lake Geneva, cloaking the marble colonnades of the Palais des Nations. The old global financial system has entered terminal cardiac arrest: derivative portfolios have imploded, sovereign debt markets are frozen solid, and fiat currencies have ceased to clear. Arriving at the Swiss frontier are the unlikeliest ambassadors in human history: Marcus Hayes, Giulia Bellini, Carlos Quispe, and Captain Jin Wei. Drawn by lot through the ancient, incorruptible civic protocol of sortition, they carry the single document forged in the crucible of four continental sieges: the Constitution of Open Networked Earth (O.N.E.). Step by step, they prove that a free civilization is not a dream—it is already built, it is thermodynamically sound, and it will never be surrendered.",
+      "sample_excerpt": "The sleet coming off Lake Geneva turned the marble steps of the Palais des Nations into a sheet of grey ice. Marcus Hayes stood at the high iron gates, his hands tucked deep inside his oil-stained chore coat, watching the diplomatic limousines and armored diplomatic couriers idling in a motionless queue stretching across the Place des Nations. Behind him, Giulia Bellini unlatched the heavy brass locks of the courier case...",
+      "downloads": [
+        {
+          "label": "Download EPUB",
+          "url": "assets/ebooks/O.N.E._Vol5_Open_Networked_Earth_en.epub",
+          "format": "EPUB",
+          "lang": "EN"
+        }
+      ]
+    }
+  ],
+  "constitution_edition": {
+    "title": "The Living Constitution of O.N.E.",
+    "version": "Canonical v2.0-RATIFIED",
+    "downloads": [
+      {
+        "label": "Full Constitution (EPUB)",
+        "url": "assets/ebooks/ONE NETWORKED EARTH (O.N.E.).epub",
+        "format": "EPUB"
+      },
+      {
+        "label": "Full Constitution (PDF)",
+        "url": "assets/ebooks/ONE NETWORKED EARTH (O.N.E.).pdf",
+        "format": "PDF"
+      }
+    ]
+  }
+}

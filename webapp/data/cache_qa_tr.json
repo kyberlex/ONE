@@ -1,0 +1,943 @@
+{
+  "QA-HOUS-01": {
+    "id": "QA-HOUS-01",
+    "question": "Topluluk, bir konsey veya bir komite evime el koyabilir mi?",
+    "verdict": "ÇÖZÜLDÜ: Tahliye edilemez, ömür boyu mutlak zilyetlik intifa hakkı",
+    "lead": "Hiç kimse sizi tahliye edemez veya evinize el koyamaz: kişisel intifa hakkı, yaşam boyu dokunulmaz bir anayasal haktır.",
+    "points": [
+      "Birincil konutunuz ve kişisel yaşam alanınız, 0. Sınıf Anayasal Değişmezler tarafından korunmaktadır: konuttan tahliye kesinlikle anayasaya aykırıdır.",
+      "İpotek, emlak vergisi veya kira ödemesi yoktur: mali zorluklar nedeniyle barınma hakkınızı kaybedemezsiniz.",
+      "Barınma, alınıp satılabilir bir finansal meta değil, pazarlık konusu yapılamaz biyolojik bir zorunluluk olarak kabul edilir.",
+      "Topluluk konseylerinin, zilyedinin rızası dışında işgal edilmiş bir evi yeniden tahsis etme yetkisi yoktur."
+    ],
+    "keywords": [
+      "İntifa hakkı",
+      "Anayasal güvence",
+      "Barınma hakkı",
+      "Tahliye yasağı",
+      "Konut dokunulmazlığı"
+    ]
+  },
+  "QA-HOUS-02": {
+    "id": "QA-HOUS-02",
+    "question": "Piyasa değeri (özkaynak) olmadan evinin bakımını yapmak veya çatıyı onarmak için kim motive olur?",
+    "verdict": "ÇÖZÜLDÜ: Doğrudan yaşam gururu, ücretsiz yapı malzemeleri ve zanaat loncaları desteği",
+    "lead": "Evinize değer verirsiniz çünkü siz ve sevdikleriniz orada yaşıyorsunuz; bu süreç ücretsiz topluluk malzemeleri ve uzman araç-gereç loncaları tarafından desteklenmektedir.",
+    "points": [
+      "İnsanlar, kira ve borç baskısından kurtulduklarında doğrudan yaşadıkları alana doğal olarak özen gösterirler.",
+      "Yüksek kaliteli yalıtım, güneş panelleri ve çatı kaplama malzemeleri, su havzası üretim depolarından sıfır maliyetle dağıtılır.",
+      "Yerel bakım loncaları, yapısal onarımlar için yetenekli iş birliği ve teşhis araçları sağlar.",
+      "Yeni bir biyo-bölgeye taşınırken, intifa hakkınızı spekülatif borç veya cezai şart olmadan iyi durumda teslim edersiniz."
+    ],
+    "keywords": [
+      "Bakım loncaları",
+      "İntifa hakkı",
+      "Topluluk desteği",
+      "Üretim depoları",
+      "Yaşam alanı"
+    ]
+  },
+  "QA-HOUS-03": {
+    "id": "QA-HOUS-03",
+    "question": "Aletler, kıyafetler, araba veya tekne gibi kişisel eşyalara sahip olabilir miyim?",
+    "verdict": "ÇÖZÜLDÜ: Kutsal kişisel mülkiyet ve şahsi aletler tam koruma altındadır",
+    "lead": "O.N.E., kişisel eşyaları monopolistik özel mülkiyetten kesin çizgilerle ayırır: şahsi eşyalarınız sadece size aittir.",
+    "points": [
+      "Kıyafetleriniz, bilgisayarlarınız, kitaplarınız, aile yadigârlarınız, el yapımı eşyalarınız ve müzik aletleriniz mahrem kişisel mülkiyet olarak sınıflandırılır.",
+      "Kişisel ulaşım araçları (bisikletler, kargo e-bisikletleri, tekneler) özel zilyetliğiniz altında kalır.",
+      "Kaldırılan şey gıyabında sahipliktir: başka birinden kira geliri elde etmek için koca bir fabrika, su havzası veya 50 daireye sahip olamazsınız.",
+      "Bireysel sanat ve zanaat araçlarının sanatçıda kalması anayasal olarak garanti altına alınmıştır."
+    ],
+    "keywords": [
+      "Kişisel mülkiyet",
+      "Zilyetlik",
+      "Gıyabında sahiplik",
+      "Bireysel eşyalar",
+      "Anayasal hak"
+    ]
+  },
+  "QA-HOUS-04": {
+    "id": "QA-HOUS-04",
+    "question": "Evimi, bahçemi veya kişisel eşyalarımı çocuklarıma miras bırakabilir miyim?",
+    "verdict": "ÇÖZÜLDÜ: Aile için konut sürekliliği ve miras aktarımı",
+    "lead": "Çocuklarınız veya partneriniz sizinle birlikte yaşıyorsa, kesintisiz oturum hakkını korurlar; kişisel eşyalar doğrudan sevdiklerinize geçer.",
+    "points": [
+      "Aktif bir konutta birlikte yaşayan aile üyeleri, ebeveyn vefat ettiğinde kesintisiz zilyetlik intifa hakkını devralır.",
+      "Kişisel eşyalar, zanaat aletleri, sanat eserleri ve aile yadigârları, veraset vergisi olmaksızın kişisel arzularınıza göre aktarılır.",
+      "Vefat edenlerin, birlikte yaşayanlarca talep edilmeyen boş konut intifa hakları, su havzası ortak kullanım havuzuna geri döner.",
+      "Nesiller boyu süren finansal imparatorluklar ve mülk sahibi hanedanlar kalıcı olarak sona erdirilmiştir."
+    ],
+    "keywords": [
+      "İntifa hakkı",
+      "Veraset",
+      "Aile yadigârı",
+      "Konut sürekliliği",
+      "Ortak kullanım"
+    ]
+  },
+  "QA-HOUS-05": {
+    "id": "QA-HOUS-05",
+    "question": "O.N.E. terk edilmiş evleri veya uzun süreli seyahatleri nasıl ele alır?",
+    "verdict": "ÇÖZÜLDÜ: Cömert seyahat tamponları ve atıl alanların topluluk tarafından yeniden tahsisi",
+    "lead": "Araştırma, sanat veya keşif için seyahat etmekte özgürsünüz; eviniz sizin için korunur; bakımsız ve terk edilmiş alanlar başkaları için yenilenir.",
+    "points": [
+      "Eğitim, izin veya bakım süreçleri için uzun süreli ayrılıklar (24 aya kadar), kışın boruların donmasını önlemek amacıyla basitçe kayıt altına alınır.",
+      "Kişisel zilyetlik veya bakım düzenlemeleri aktif kaldığı sürece hiçbir ev terk edilmiş sayılmaz.",
+      "Gerçekten terk edilmiş ve bakımsız yapılar, kura ile belirlenen (Sortition) mahalle konseyleri tarafından denetlenir ve kamu konutu olarak restore edilir.",
+      "Hiçbir özel gayrimenkul geliştiricisi, yapay kıtlık yaratmak için evleri kasıtlı olarak boş bırakamaz."
+    ],
+    "keywords": [
+      "Kura ile yönetim",
+      "Sortition",
+      "Konut tahsisi",
+      "Seyahat hakları",
+      "Sosyal konut"
+    ]
+  },
+  "QA-WORK-01": {
+    "id": "QA-WORK-01",
+    "question": "Ücretli emek yoksa kanalizasyonları kim temizler, çöpleri kim alır ve tehlikeli işleri kim yapar?",
+    "verdict": "ÇÖZÜLDÜ: İleri robotik, kısa rotasyonel vardiyalar ve sosyal onur",
+    "lead": "Yoksul insanları açlık tehdidiyle tehlikeli işlere zorlamak yerine, O.N.E. kirli işleri otomatiğe bağlar ve geri kalanını hafif dönüşümlü vardiyalarla paylaşır.",
+    "points": [
+      "Açık üretim laboratuvarlarının (fab-labs) bir numaralı önceliği; kanalizasyon, atık ve zehirli görevler için otonom robotlar ve boru tarayıcıları geliştirmektir.",
+      "Artan manuel işler, sağlıklı tüm vatandaşlar arasında ayda birkaç saatlik kısa, rotasyonel vardiyalarla paylaşılır.",
+      "Zorlu vardiyaları üstlenen gönüllüler, en yüksek sosyal takdiri, fahri meslektaş ayrıcalıklarını ve isteğe bağlı mallarda önceliği kazanır.",
+      "Yeni ebeveynler (ilk 1000 gün), yoğun eğitim dönemindeki öğrenciler ve tam zamanlı bakım verenler, ağır fiziksel vardiyalardan tamamen muaftır."
+    ],
+    "keywords": [
+      "Robotik",
+      "Rotasyonel vardiyalar",
+      "Sosyal sorumluluk",
+      "Otomasyon",
+      "Fiziksel emek"
+    ]
+  },
+  "QA-WORK-02": {
+    "id": "QA-WORK-02",
+    "question": "Cerrahlar veya mühendisler gibi yüksek nitelikli profesyoneller neden yüksek maaş olmadan çalışsın?",
+    "verdict": "ÇÖZÜLDÜ: Mesleki tutku, en üst düzey sosyal saygı, sıfır öğrenim borcu ve ileri düzey laboratuvarlar",
+    "lead": "Cerrahlar ve mühendisler; tıp okulu borçlarını ödemek veya hastane kâr marjlarını yükseltmek için değil, tutku ve ustalık arzusuyla mesleklerine yönelirler.",
+    "points": [
+      "Tıp eğitimi, cerrahi uzmanlık ve mühendislik okulları %100 ücretsizdir ve gerçek yeteneği olan herkese açıktır.",
+      "Cerrahlar; 80 saatlik uykusuz vardiyalar, tıbbi uygulama hatası sigortası kavgası veya idari faturalandırma evrakları olmadan çalışır.",
+      "Mühendisler; açık kaynaklı donanımlara, gelişmiş üretim laboratuvarlarına ve kurumsal gizlilik sözleşmeleri olmadan sınırsız iş birliği imkânına sahiptir.",
+      "Gerçek toplumsal prestij, meslektaş tanınırlığı ve derin mesleki tatmin, soyut parasal ödüllerin yerini alır."
+    ],
+    "keywords": [
+      "Mesleki tutku",
+      "Eğitim özgürlüğü",
+      "Sosyal prestij",
+      "Açık bilim",
+      "Liyakat"
+    ]
+  },
+  "QA-WORK-03": {
+    "id": "QA-WORK-03",
+    "question": "Hiçbir şeye katkıda bulunmayı reddeden ısrarcı 'bedavacılara' ne olur?",
+    "verdict": "ÇÖZÜLDÜ: Biyolojik hayatta kalma garanti altındadır; lüks ve isteğe bağlı kotalar dondurulur",
+    "lead": "Kimse aç bırakılmaz, evsiz bırakılmaz veya reddettiği için hapsedilmez; ancak lüks tüketim, özel araçlar ve seyahat haklarına erişim askıya alınır.",
+    "points": [
+      "0. Sınıf Değişmezler uyarınca her insan koşulsuz 1. Kademe hayatta kalma garantisine sahiptir: temiz su, beslenme, barınma ve tıbbi bakım.",
+      "Temel rotasyonel işlere katkıda bulunmayı ısrarla reddetmek, 3. Kademe isteğe bağlı tahsislerin askıya alınmasıyla sonuçlanır.",
+      "Kıtalararası seyahat haklarına, yüksek enerjili araştırma laboratuvarlarına, lüks üretimlere veya topluluk kültürel havuzlarına erişemezsiniz.",
+      "Doğal sosyal sürtünme ve insanın meslektaş bağları kurma arzusu, şiddet veya hapishaneye başvurmadan kronik kopukluğu çözer."
+    ],
+    "keywords": [
+      "Hayatta kalma garantisi",
+      "Toplumsal sorumluluk",
+      "İsteğe bağlı kotalar",
+      "Sosyal uyum",
+      "Sınıfsal güvence"
+    ]
+  },
+  "QA-WORK-04": {
+    "id": "QA-WORK-04",
+    "question": "Zorunlu ortak bakım, Sovyet gulaglarındaki gibi zorunlu çalıştırma değil mi?",
+    "verdict": "ÇÖZÜLDÜ: Tam bedensel özgürlük, zorunlu çalışma kamplarının olmaması ve vatandaşların öz yönetimi",
+    "lead": "Sovyet komünizmi kotaları zorlamak için polisi, iç pasaportları ve gulagları kullandı; O.N.E. ise zorunlu çalışmayı, polisi ve hapishaneleri sonsuza dek yasaklar.",
+    "points": [
+      "Anayasa Madde 1.2, zorunlu çalışmayı, zorunlu askerliği ve fiziksel hapsedilmeyi anayasal olarak yasaklar.",
+      "Bakım vardiyaları tipik bir vatandaş için haftalık 60 saatlik ezici fabrika sömürüsü değil, aylık ortalama 5 ila 7 saatten az sürmektedir.",
+      "Herhangi bir bakım görevi için teknolojik robotik değiştirmeleri seçebilir, değiştirebilir, planlayabilir veya önerebilirsiniz.",
+      "Üretim hedeflerini dikte eden merkezi bir parti bürokrasisi (Gosplan) yoktur: yerel su havzası konseyleri kendilerini yönetir."
+    ],
+    "keywords": [
+      "Bedensel özgürlük",
+      "Zorunlu çalışma yasağı",
+      "Öz yönetim",
+      "Anayasal yasak",
+      "Su havzası konseyi"
+    ]
+  },
+  "QA-WORK-05": {
+    "id": "QA-WORK-05",
+    "question": "İstediğim zaman kariyer değiştirebilir veya sanatsal arayışlar peşinde koşabilir miyim?",
+    "verdict": "ÇÖZÜLDÜ: Sürtünmesiz kariyer geçişleri, yaşam boyu öğrenme ve açık atölyeler",
+    "lead": "Hayatta kalmanız bir patrona bağlı olmadığı için, hayatın herhangi bir aşamasında alan değiştirebilir, yeni sanatlar öğrenebilir veya araştırma loncalarına katılabilirsiniz.",
+    "points": [
+      "Sağlık sigortasını korumak veya bir sonraki ayın kirasını ödemek için nefret ettiğiniz bir işe asla mahkûm edilmezsiniz.",
+      "Tüm loncalar (astronomi, ahşap işleri, biyo-mühendislik, müzik, tarım) açık ve kendi hızınızda ilerleyen çıraklık imkânları sunar.",
+      "Heretiklerin Ortak Alanı (Heretic's Commons), keşifsel ve ticari olmayan deneyler için laboratuvarlara ve malzemelere erişimi garanti eder.",
+      "İnsan yaratıcılığı, ücretli köleliğin ruh emici yorgunluğundan kurtulduğunda yeşerir."
+    ],
+    "keywords": [
+      "Kariyer özgürlüğü",
+      "Yaşam boyu öğrenme",
+      "Mesleki loncalar",
+      "Heretiklerin ortak alanı",
+      "Yaratıcı özgürlük"
+    ]
+  },
+  "QA-DEM-01": {
+    "id": "QA-DEM-01",
+    "question": "Neden politikacıları oylamak yerine kura ile seçilen yurttaş meclislerini (sortition) tercih ediyoruz?",
+    "verdict": "ÇÖZÜLDÜ: Kura sistemi, siyasi kampanyaları, oligarşik rüşveti ve yozlaşmış partileri ortadan kaldırır",
+    "lead": "Seçimler kaçınılmaz olarak zengin ve karizmatik seçkinlerden oluşan siyasi oligarşiler yaratır; kura sistemi ise sıradan yurttaşlardan oluşan gerçek bir temsil kesiti oluşturur.",
+    "points": [
+      "Seçimler devasa kampanya bağışları, medya kontrolü ve karizmatik demagoji gerektirir, bu da doğrudan yozlaşmaya yol açar.",
+      "Kriptografik kura sistemi; ebeveynleri, öğretmenleri, hemşireleri ve işçileri seçerek toplumun gerçek çeşitliliğini yansıtır.",
+      "Görev süreleri kısadır (12-24 ay) ve zorunlu rotasyon vardır: kalıcı siyasi kariyerler veya lobici döner kapılar yoktur.",
+      "Yurttaşlar, parti disiplini yerine bağımsız bilimsel bilgilendirmelerle karar alma süreçlerini yürütürler."
+    ],
+    "keywords": [
+      "kura sistemi",
+      "demokrasi",
+      "siyasi oligarşi",
+      "yurttaş meclisleri",
+      "yozlaşma"
+    ]
+  },
+  "QA-DEM-02": {
+    "id": "QA-DEM-02",
+    "question": "Rastgele seçilen bir meclis, teknik bilgisizlik nedeniyle nükleer santraller gibi kritik altyapıları çökertmez mi?",
+    "verdict": "ÇÖZÜLDÜ: Teknik mühendislik danışmanları ve yurttaş değerler jürileri arasında kesin ayrım",
+    "lead": "Rastgele seçilen yurttaşlar türbin veya reaktör çubuklarını tasarlamaz: sertifikalı epistemik gruplar teknik modelleri sunar; jüri ise toplumun önceliklerine karar verir.",
+    "points": [
+      "Sertifikalı bilim insanları, hidroloji uzmanları ve fizikçiler, uygulanabilir mühendislik seçeneklerini formüle etmek için Epistemik Çalışma Grupları oluşturur.",
+      "Kritik güvenlik önlemi: teknik uzmanlar yalnızca danışmanlık rolündedir ve oy hakları yoktur, bu da teknokratik tiranlığı engeller.",
+      "Uzmanlar, karmaşık termodinamik modelleri anlaşılır ve erişilebilir seçeneklere dönüştürmekle yasal olarak yükümlüdür.",
+      "Yurttaş jürisi, matematiksel hesaplamaları değil, insani ve ekolojik değerleri (örneğin; ulaşım hızı ve sulak alanların korunması) tartar."
+    ],
+    "keywords": [
+      "epistemik gruplar",
+      "teknik yönetim",
+      "yurttaş jürisi",
+      "altyapı güvenliği",
+      "teknokrasi"
+    ]
+  },
+  "QA-DEM-03": {
+    "id": "QA-DEM-03",
+    "question": "Oylama sistemi, gürültücü ve karizmatik bir demagogun meclisi ele geçirmesini nasıl engeller?",
+    "verdict": "ÇÖZÜLDÜ: İkili matematiksel filtreleme, kutuplaştırıcı zorbaları eler",
+    "lead": "Agresif bir %30 azınlığın baskın olabildiği basit çoğunlukçu oylamanın aksine, Condorcet yöntemi her seçeneği birbirine karşı doğrudan yarıştırır.",
+    "points": [
+      "Condorcet oylamasında bir seçenek, ancak tüm alternatifleri bire bir karşılaştırmalarda mağlup ederse kazanır.",
+      "%30'luk fanatik bir desteğe sahip karizmatik bir zorba, diğer %70'in önerisini son tercihi olarak sıralaması durumunda matematiksel olarak elenir.",
+      "Gizli oylama ve sakinleşme süreleri, agresif kişiliklerin daha sakin jüri üyelerini sindirmesini engeller.",
+      "Kararlar nitelikli süper çoğunluk (%75) gerektirir, bu da zehirli kutuplaşma yerine yapıcı bir uzlaşıyı zorunlu kılar."
+    ],
+    "keywords": [
+      "Condorcet oylaması",
+      "matematiksel filtreleme",
+      "demagoji",
+      "uzlaşı",
+      "superçoğunluk"
+    ]
+  },
+  "QA-DEM-04": {
+    "id": "QA-DEM-04",
+    "question": "İsmim çekilirse mecliste görev almaya zorlanır mıyım?",
+    "verdict": "ÇÖZÜLDÜ: Koşulsuz ret hakkı ve planlı erteleme imkanı",
+    "lead": "Hiç kimse silah zoruyla kamu görevine getirilmez: hiçbir ceza olmaksızın reddedebilir veya hizmetinizi daha uygun bir zamana erteleyebilirsiniz.",
+    "points": [
+      "Fiziksel bedensel özerklik (Madde 1.2), zorunlu siyasi askerliği kesinlikle yasaklar.",
+      "Bakım verenler, yas sürecindekiler, öğrenciler veya sağlık sorunu yaşayanlar doğrudan ve sorgusuz erteleme talep edebilir.",
+      "Görevi reddederseniz, kriptografik kura motoru anında kayıtlı havuzdan yedek bir yurttaş seçer.",
+      "Katılımı kolaylaştırmak için hizmet süresi boyunca fiziksel rahatlama, çocuk bakımı ve konforlu yaşam alanları sağlanır."
+    ],
+    "keywords": [
+      "ret hakkı",
+      "yurttaşlık görevi",
+      "bedensel özerklik",
+      "kura katılımı",
+      "gönüllülük"
+    ]
+  },
+  "QA-DEM-05": {
+    "id": "QA-DEM-05",
+    "question": "Dış güçlerin veya kartellerin yurttaş jürilerine rüşvet vermesini ne engeller?",
+    "verdict": "ÇÖZÜLDÜ: Kriptografik anonimlik, parasızlık ve körü körüne müzakere",
+    "lead": "Jüri üyeleri koltuklarına oturana kadar kim oldukları bilinmediğinden rüşvet veremezsiniz; ayrıca etki satın alacak para da artık mevcut değildir.",
+    "points": [
+      "Jüri üyelerinin kimlikleri, oturumlar yalıtılmış odalarda başlayana kadar sıfır bilgi kanıtlı kriptografi ile mühürlenir.",
+      "Özel itibari para (fiat) kaldırıldığı için, teklif edilebilecek bir offshore banka hesabı veya spekülatif para birimi yoktur.",
+      "Jüri üyeleri kapalı devre kriptografik terminallerde anonim oy kullanır, bu da rüşvetin doğrulanmasını imkansız kılar.",
+      "Meclislerin kısa süreli olması, kalıcı bir nüfuz ağı kurmayı matematiksel olarak imkansız hale getirir."
+    ],
+    "keywords": [
+      "kriptografik anonimlik",
+      "rüşvetle mücadele",
+      "sıfır bilgi kanıtı",
+      "şeffaflık",
+      "etki ticareti"
+    ]
+  },
+  "QA-THERM-01": {
+    "id": "QA-THERM-01",
+    "question": "Para olmadan, kişisel bakiye veya ekran arayüzü nasıl görünür?",
+    "verdict": "ÇÖZÜLDÜ: Soyut borç jetonları yerine gerçek biyofiziksel sağlık göstergeleri",
+    "lead": "İtibari para gösteren kaygılı bir banka bakiyesi yerine arayüzünüz; yerel su havzası rezervlerini, temiz enerji kapasitesini ve kişisel kullanım haklarınızı görüntüler.",
+    "points": [
+      "Banka ücretleri, kredi kartı faizleri veya ipotek ödemeleri yoktur: finansal kaygı tamamen ortadan kaldırılmıştır.",
+      "Ekran, biyobölgenizin canlı durumunu gösterir: su seviyeleri, yenilenebilir şebeke rezervleri ve hasat tahminleri.",
+      "Kişisel Tier 3 kullanım kotanızı görerek özel bileşenler sipariş edebilir veya yüksek hızlı seyahat için rezervasyon yapabilirsiniz.",
+      "Arayüz, bileşik finansal borç yerine fiziksel bolluğu ve ekolojik sınırları takip eder."
+    ],
+    "keywords": [
+      "biyofiziksel sağlık",
+      "kaynak yönetimi",
+      "finansal kaygısızlık",
+      "ekolojik sınırlar",
+      "arayüz"
+    ]
+  },
+  "QA-THERM-02": {
+    "id": "QA-THERM-02",
+    "question": "O.N.E., aşırı bir enerji krizi veya kuraklık sırasında suyun veya gücün kime gideceğine nasıl karar verir?",
+    "verdict": "ÇÖZÜLDÜ: Biyolojik triyaj, insan hayatını lüks golf sahalarından önce korur",
+    "lead": "Kapitalizmde zenginler klimalı malikanelerinde otururken yoksullar donar; O.N.E.'da algoritma, lüks tüketimi insan hayatından önce otomatik olarak keser.",
+    "points": [
+      "L_min, vücuttaki biyolojik triyaj gibidir: hipotermi anında kan el parmaklarına değil, kalp ve beyne yönlendirilir.",
+      "Tier 1 (temiz içme suyu, acil sağlık klinikleri, temel ev ısıtması) anayasal olarak dokunulmazdır.",
+      "Tier 2 (temel gıda ulaşımı, temel iletişim ağları) tamponlanmış rezervlerden karşılanır.",
+      "Tier 3 (süs havuzları, lüks üretim, özel eğlence tesisleri) kriz geçene kadar anında ve otomatik olarak kapatılır."
+    ],
+    "keywords": [
+      "biyolojik triyaj",
+      "enerji krizi",
+      "kaynak dağıtımı",
+      "insani öncelik",
+      "kısıtlama yönetimi"
+    ]
+  },
+  "QA-THERM-03": {
+    "id": "QA-THERM-03",
+    "question": "Heretic's Commons (Aykırıların Ortaklığı) nedir ve neden gezegen enerjisinin %7'si buna ayrılmıştır?",
+    "verdict": "ÇÖZÜLDÜ: Yüksek riskli, alışılmadık ve muhalif fikirler için garanti altına alınmış enerji",
+    "lead": "Bürokratik durgunluğu ve uyumu önlemek için, mevcut tüm ekserjinin %7'si anayasal olarak alışılmadık araştırmalar için ayrılmıştır.",
+    "points": [
+      "Hiçbir ana akım komite veya akademik uzlaşı, Heretic's Commons'a erişimi veto edemez.",
+      "Garip teorilere (soğuk füzyon, radikal solarpunk tarımı, sınır fizik) sahip yenilikçiler, engellenmemiş laboratuvar süresi ve materyalleri alırlar.",
+      "Bu, paradigmanın asla novel keşifleri reddeden dogmatik ve katı bir bürokrasiye dönüşmemesini sağlar.",
+      "Bir deney başarısız olursa kişisel mali yıkım yoktur; başarılı olursa, açık plan tüm insanlığın yararına sunulur."
+    ],
+    "keywords": [
+      "aykırıların ortaklığı",
+      "radikal inovasyon",
+      "bilimsel özgürlük",
+      "enerji rezervi",
+      "paradigma değişimi"
+    ]
+  },
+  "QA-THERM-04": {
+    "id": "QA-THERM-04",
+    "question": "O.N.E., itibari para birimleriyle enfekte olmadan yabancı ülkelerle ticareti nasıl yürütür?",
+    "verdict": "ÇÖZÜLDÜ: Para birimi spekülasyonuna karşı rastgele tamponlarla fiziksel takas merkezi",
+    "lead": "Dış Ticaret Arayüzü, devlet ihracatı ile gerekli dış malları satın alırken, iç yurttaşları yabancı para birimi oyunlarından korur.",
+    "points": [
+      "Yabancı itibari para birimleri (USD, EUR) O.N.E. toprakları içinde asla dolaşmayan, toksik dış emtialar olarak kabul edilir.",
+      "Dış Ticaret Arayüzü (ETI), tek yönlü fiziksel bir zar görevi görür: ihracat fazlasıyla yabancı özel makineleri satın alır.",
+      "Rastgeleleştirilmiş işlem uzlaşma pencereleri, yüksek frekanslı algoritmik tüccarların borsa tamponuna saldırmasını engeller.",
+      "O.N.E. içindeki yurttaşlar, uluslararası döviz volatilitesinden tamamen ayrıştırılmış koşulsuz intifa (usufruct) hakkından yararlanır."
+    ],
+    "keywords": [
+      "dış ticaret",
+      "para birimi izolasyonu",
+      "intifa hakkı",
+      "takas merkezi",
+      "ekonomik güvenlik"
+    ]
+  },
+  "QA-THERM-05": {
+    "id": "QA-THERM-05",
+    "question": "Bireylerin stok yapmasını ve yasadışı karaborsa başlatmasını ne engeller?",
+    "verdict": "ÇÖZÜLDÜ: Kıt para birimi jetonlarının yokluğu ve evrensel açık erişim",
+    "lead": "Karaborsalar yapay kıtlık ve nakit para üzerinde gelişir; herkesin gıdaya, araçlara ve barınmaya zaten ücretsiz erişimi olduğunda istifçiliğin bir anlamı kalmaz.",
+    "points": [
+      "Mahalle ortak depo merkezlerinden herkesin ücretsiz alabildiği bir şeyi yeniden satamazsınız.",
+      "İstiflenecek itibari para birimi olmadığında, 1.000 çuval tahıl biriktirmek sadece haşere çeker ve sosyal olarak ayıplanır.",
+      "Açık telemetri ve araç paylaşım kayıtları, makro ölçekli sermaye ekipmanlarını takip eder, bu da gizli fabrika alanları oluşturmayı imkansız kılar.",
+      "Hediyeleşme, kişisel takas ve el yapımı sanat eserlerinin yaratıcı değişimi tamamen serbesttir: sadece yağmacı sömürü imkansızdır."
+    ],
+    "keywords": [
+      "karaborsa karşıtlığı",
+      "istifçilik",
+      "açık erişim",
+      "sosyal paylaşım",
+      "ekonomik eşitlik"
+    ]
+  },
+  "QA-JUST-01": {
+    "id": "QA-JUST-01",
+    "question": "O.N.E., polis veya hapishaneler olmaksızın şiddet yanlısı suçlular, katiller veya psikopatlarla nasıl başa çıkar?",
+    "verdict": "ÇÖZÜLDÜ: Somatik yatıştırma, insani sığınaklarda fiziksel ayrıştırma ve psikiyatrik bakım",
+    "lead": "O.N.E. beton kafesleri ve cezalandırıcı işkenceyi kaldırır; ani ve ölümcül tehlike arz eden bireyler, güvenli ve terapötik sığınaklara fiziksel olarak nakledilir.",
+    "points": [
+      "Kafesler, cezalandırıcı hücre hapsi ve idam cezası, 'Sınıf 0' Anayasal Değişmezleri gereği sonsuza dek yasaklanmıştır.",
+      "Birisi ciddi bir şiddet eyleminde bulunduğunda, eğitimli ve silahsız Barış Loncaları, mağdurları korumak için faili fiziksel olarak ayırır.",
+      "Failler, tam tıbbi bakımın sağlandığı farklı biyobölgelerdeki özel terapötik iyileştirme sığınaklarına yerleştirilir.",
+      "Eski sistemdeki suçların %90'ı yoksulluk, uyuşturucu savaşları ve borçtan kaynaklandığı için, şiddet içerikli suç oranları hızla düşer."
+    ],
+    "keywords": [
+      "adalet",
+      "rehabilitasyon",
+      "güvenlik",
+      "anayasallık",
+      "sınıf 0"
+    ]
+  },
+  "QA-JUST-02": {
+    "id": "QA-JUST-02",
+    "question": "O.N.E. neden silahlı polis güçlerini ve bireysel ateşli silahları yasaklar?",
+    "verdict": "ÇÖZÜLDÜ: Toplu kinetik katliam araçlarının ve silahlı devlet terörünün kaldırılması",
+    "lead": "Militarize polis güçleri devlet ve kurumsal mülkiyeti şiddet yoluyla korur; O.N.E., silahlı polisi silahsız çatışma yatıştırıcılarla değiştirir.",
+    "points": [
+      "Tabancalar, saldırı silahları ve balistik ateşli silahların sivil ve kamusal yaşamda bulunması anayasal olarak yasaktır.",
+      "Sivil Barış Loncaları; şiddet içermeyen dövüş sanatları, somatik yatıştırma ve psikiyatrik arabuluculuk eğitimi alırlar.",
+      "Anlaşmazlıklar çıktığında, arabulucular panik anında şüphelileri vurmak için dolu silahlarla gelmezler.",
+      "Toplum, zararın kabul edildiği, iyileştirildiği ve telafi edildiği onarıcı adalet çemberlerine güvenir."
+    ],
+    "keywords": [
+      "silahsızlanma",
+      "barış loncası",
+      "şiddetsizlik",
+      "toplumsal güvenlik"
+    ]
+  },
+  "QA-JUST-03": {
+    "id": "QA-JUST-03",
+    "question": "Birisi başkasına zarar verdiğinde veya eşyalarına hasar verdiğinde, mağdurlar nasıl bir adalet veya tazminat alır?",
+    "verdict": "ÇÖZÜLDÜ: Ortak havuzlardan gerçek maddi tazminat ve psikolojik iyileşme",
+    "lead": "Eski mahkemelerde mağdurlar hiçbir şey almazken suçlular hapiste çürür; O.N.E.'de ise toplum, hasar gören eşyaları derhal karşılar ve iyileşmeye aracılık eder.",
+    "points": [
+      "Hasar gören her türlü kişisel eşya, havza ortak envanterinden hiçbir ücret talep edilmeden derhal değiştirilir veya onarılır.",
+      "Mağdurlara anında tıbbi, psikolojik ve yaşam alanı desteği sağlanır.",
+      "Zarara neden olan kişi, telafi etmek için topluluk rehberliğinde onarıcı hizmetlerde çalışır.",
+      "Odak noktası intikam değil; gerçek iyileşme, hesap verebilirlik ve tekrarın önlenmesidir."
+    ],
+    "keywords": [
+      "tazminat",
+      "onarıcı adalet",
+      "iyileşme",
+      "ortak kaynaklar"
+    ]
+  },
+  "QA-JUST-04": {
+    "id": "QA-JUST-04",
+    "question": "Polis yokken linç gruplarının veya sokak adaletinin oluşması nasıl engellenir?",
+    "verdict": "ÇÖZÜLDÜ: Hızlı yatıştırma kordonları ve linç şiddetinin kesin yasaklanması",
+    "lead": "Vigilantizm (kendi adaletini sağlama), 'Sınıf 0' Değişmezleri'nin açık bir ihlalidir: Barış Loncaları, misilleme amaçlı şiddeti önlemek için fiziksel olarak araya girer.",
+    "points": [
+      "Misilleme amaçlı şiddet, linç ve halk mahkemeleri, 1.2. Madde gereği anayasal olarak geçersizdir.",
+      "Barış Loncası hızlı müdahale ekipleri, kalabalığı dağıtmak ve sanıkları korumak için ölümcül olmayan koruyucu kalkanlar kullanır.",
+      "Suçlanan bireyler derhal bölge sınırları dışındaki tarafsız bir kura (sortition) sığınağına götürülür.",
+      "Objektif demarkik (halk yönetimi) inceleme meclisleri, duygusal tutkuların yatışmasını ve ardından onarıcı görüşmelerin başlamasını sağlar."
+    ],
+    "keywords": [
+      "linç önleme",
+      "kura ile yönetim",
+      "hukuki güvenlik",
+      "sosyal düzen"
+    ]
+  },
+  "QA-JUST-05": {
+    "id": "QA-JUST-05",
+    "question": "O.N.E., ev içi şiddet ve istismar mağdurlarını hanelerin içinde nasıl korur?",
+    "verdict": "ÇÖZÜLDÜ: Anında şartsız sığınma, hızlı ayrıştırma ve toplumsal koruma",
+    "lead": "Kapitalist toplumda istismarcılar, mağdurları finansal bağımlılık nedeniyle tuzağa düşürür; O.N.E.'de ise mağdurlar doğumdan itibaren bağımsız barınma ve hayatta kalma garantisine sahiptir.",
+    "points": [
+      "Finansal istismar imkansızdır: Hiç kimse banka hesaplarınızı kontrol edemez, yiyeceğinizi kesemez veya sağlık hizmetinizi elinizden alamaz.",
+      "Her mahallede 7/24 bakım ve topluluk mutfakları içeren özel 'Anlık Sığınak' yerleri bulunur.",
+      "Mağdurlar, boşanma mahkemesi evraklarını beklemeden diledikleri yeni ve bağımsız bir eve anında geçebilirler.",
+      "İstismarcı bireyler haneden kalıcı olarak uzaklaştırılır ve zorunlu onarıcı davranış programlarına yerleştirilir."
+    ],
+    "keywords": [
+      "ev içi şiddet",
+      "koruma",
+      "sığınma hakkı",
+      "finansal özgürlük"
+    ]
+  },
+  "QA-EDU-01": {
+    "id": "QA-EDU-01",
+    "question": "O.N.E. neden 7 yaşına kadar çocukların tablet ve akıllı telefon kullanmasını kısıtlar?",
+    "verdict": "ÇÖZÜLDÜ: Genç beyinlerin dikkat düzensizliğinden ve duyusal atrofiden korunması",
+    "lead": "Ticari teknoloji şirketleri küçük çocuklar için bağımlılık yapıcı ekranlar tasarlar; O.N.E. dokunsal doğayı, müziği, mekansal oyunu ve sinir sistemi sağlığını önceler.",
+    "points": [
+      "Nörobiyoloji, 0-7 yaş arasının duyusal-motor entegrasyonu, 3D mekansal farkındalık ve insani bağ kurma için kritik dönem olduğunu kanıtlar.",
+      "Erken çocukluk dönemi; toprak, ağaçlar, ahşap işleme araçları, kil, müzik aletleri ve ölçülmemiş açık hava oyunlarına odaklanır.",
+      "Erken dijital etkileşim; dopaminerjik tükenmişliğe, kaygıya ve parçalanmış dikkat sürelerine yol açar.",
+      "Çocuklar, gerçek insan akranlarıyla derin sinir sistemi dayanıklılığı ve duygusal ortak düzenleme yetisi geliştirir."
+    ],
+    "keywords": [
+      "çocuk gelişimi",
+      "nörobiyoloji",
+      "dijital kısıtlama",
+      "eğitim"
+    ]
+  },
+  "QA-EDU-02": {
+    "id": "QA-EDU-02",
+    "question": "Epistemik Hijyen nedir ve çocuklara eleştirel düşünme nasıl öğretilir?",
+    "verdict": "ÇÖZÜLDÜ: Ne düşünüleceğini değil, nasıl düşünüleceğini öğretmek: manipülasyon ve hataları tespit etme",
+    "lead": "Standart testler için ezber yapmak yerine, çocuklar bilişsel önyargıları tespit etme, duygusal manipülasyonları fark etme ve kanıta değer verme konusunda eğitilirler.",
+    "points": [
+      "Öğrenciler bilimsel yöntemi, olasılık hesaplarını, belirsizliği, bilişsel taraflılıktan arınmayı ve biçimsel mantık hatalarını öğrenirler.",
+      "Günlük Sokratik çemberler; saygılı tartışmayı, varsayımları sorgulamayı ve karşıt görüşleri dinlemeyi teşvik eder.",
+      "Çocuklar, bir konuşmacının onları manipüle etmek için korku, yanlış ikilemler veya karizmatik hileler kullandığını ayırt etmeyi öğrenirler.",
+      "Bu, siyasi propaganda ve komplo histerisine karşı tamamen bağışık bir yetişkin yurttaş topluluğu oluşturur."
+    ],
+    "keywords": [
+      "epistemik hijyen",
+      "eleştirel düşünme",
+      "bilişsel önyargı",
+      "mantık"
+    ]
+  },
+  "QA-EDU-03": {
+    "id": "QA-EDU-03",
+    "question": "İlk 1.000 Gün İskelesi nedir ve O.N.E. yeni ebeveynleri nasıl destekler?",
+    "verdict": "ÇÖZÜLDÜ: Yeni ebeveynler için tam çalışma muafiyeti ve 24 saat toplumsal destek",
+    "lead": "Güvenli ve sağlıklı bebekler yetiştirmek, medeniyetin en temel işi olarak kabul edilir: yeni ebeveynler tüm bakım görevlerinden muaf tutulur.",
+    "points": [
+      "Yeni ebeveynler, çocuğun ilk 1.000 günü boyunca rotasyonel bakım nöbetlerinden tam ve sorgusuz sualsiz muaf tutulur.",
+      "Evrensel ebeveynlik desteği, çekirdek ailenin yorucu izolasyonunu kırar: toplumsal kreşler sıcak ve deneyimli bir destek sağlar.",
+      "Eğitimli doğum eboları, emzirme koçları ve yemek loncaları; sıcak besinleri ve yardımı doğrudan eve getirir.",
+      "Bebeklerde sağlıklı sinir sistemleri, travma geçirmiş, kaygılı veya şiddet eğilimli yetişkinlerin ortaya çıkmasını engeller."
+    ],
+    "keywords": [
+      "ebeveynlik",
+      "ilk 1000 gün",
+      "toplumsal destek",
+      "bakım"
+    ]
+  },
+  "QA-EDU-04": {
+    "id": "QA-EDU-04",
+    "question": "O.N.E.'de üniversiteler, araştırma enstitüleri ve yüksek öğrenim nasıl işler?",
+    "verdict": "ÇÖZÜLDÜ: %100 ücretsiz yüksek öğrenim, akran değerlendirmesi ve uygulamalı laboratuvar çıraklığı",
+    "lead": "Yüksek öğrenim açık bir kamu yararıdır: herkes borçlanmadan veya kurumsal ticarileşmeye maruz kalmadan tıp, kuantum bilişim veya felsefe okuyabilir.",
+    "points": [
+      "Sıfır öğrenim ücreti, sıfır ders kitabı ödeme duvarı ve sıfır avcı öğrenci kredisi.",
+      "Standart rekabetçi sıralamanın yerini; portföy ustalığı, bilimsel akran değerlendirmesi ve pratik laboratuvar projeleri alır.",
+      "Gençler 13 yaşında lonca çıraklığına başlar ve kıdemli araştırmacılarla birlikte gerçek ekolojik ve endüstriyel sorunlar üzerinde çalışırlar.",
+      "Bilimsel keşifler, açık 'copyfarleft' lisansları altında tüm dünyaya aittir."
+    ],
+    "keywords": [
+      "yüksek öğrenim",
+      "açık bilim",
+      "çıraklık",
+      "eğitim hakkı"
+    ]
+  },
+  "QA-EDU-05": {
+    "id": "QA-EDU-05",
+    "question": "Aileler çocuklarına evde eğitim verebilir mi veya kültürel gelenekleri aktarabilir mi?",
+    "verdict": "ÇÖZÜLDÜ: Şiddet içermediği ve bedensel bütünlük korunduğu sürece evde eğitim özgürlüğü",
+    "lead": "Aileler; çocukların şiddetten korunması şartıyla evde eğitim vermekte, dilleri aktarmakta ve kültürel mirası kutlamakta tamamen özgürdür.",
+    "points": [
+      "Ebeveynler; evde eğitim, kooperatif toplum okulu veya orman çıraklığı arasında seçim yapma konusunda egemen özerkliğe sahiptir.",
+      "Yerel diller, bölgesel lehçeler ve tarihsel bilgiler aktif olarak desteklenir ve belgelenir.",
+      "Tek dokunulmaz temel: Çocuklar fiziksel şiddete, bedensel cezaya veya tıbbi ihmale maruz bırakılamaz.",
+      "Topluluk bilim laboratuvarları, spor alanları ve sanat atölyeleri, evde eğitim gören çocuklar için her zaman açıktır."
+    ],
+    "keywords": [
+      "evde eğitim",
+      "kültürel miras",
+      "özerklik",
+      "çocuk hakları"
+    ]
+  },
+  "QA-SCI-01": {
+    "id": "QA-SCI-01",
+    "question": "Patentler ve fikri mülkiyet kârları olmadan, pahalı tıbbi tedaviler ve kanser araştırmaları nasıl finanse edilecek?",
+    "verdict": "ÇÖZÜLDÜ: Garantili laboratuvar kaynakları, açık küresel iş birliği ve sıfır ilaç fiyatı istismarı",
+    "lead": "İlaç devleri AR-GE'den çok reklam ve hisse geri alımlarına harcama yapıyor; O.N.E.'da bilim insanlarının garantili laboratuvarları vardır ve buluşlarını açıkça paylaşırlar.",
+    "points": [
+      "Bilgi, kimyasal formüller ve genetik kod rakip değildir: tıbbi bir taslağı kopyalamak sıfır fiziksel enerji gerektirir.",
+      "Tıbbi araştırmacılar garantili yaşam standartlarına, en modern biyoreaktörlere ve yapay zeka modelleme kümelerine sahiptir.",
+      "Gizli patent portföyleri yoktur: Detroit'teki bir laboratuvar bir tedavi bulduğunda, Tokyo ve São Paulo'daki bilim insanları bunu saatler içinde sentezleyebilir.",
+      "Hiçbir insan; insülin, kanser ilacı veya aşıdan, kurumsal tekel fiyatlarını karşılayamadığı için mahrum bırakılmaz."
+    ],
+    "keywords": [
+      "tıbbi araştırma",
+      "açık bilim",
+      "ilaç sektörü",
+      "patent karşıtlığı",
+      "sağlık hakkı"
+    ]
+  },
+  "QA-SCI-02": {
+    "id": "QA-SCI-02",
+    "question": "Gelişmiş yarı iletken çipler ve işlemciler, tescilli kurumsal araç zincirleri olmadan üretilebilir mi?",
+    "verdict": "ÇÖZÜLDÜ: Heterojen açık RISC mimarileri, çeşitli araç zincirleri ve topluluk litografisi",
+    "lead": "Kapalı tescilli silikon, arka kapıları ve planlı eskitmeyi gizler; O.N.E., küresel topluluklar tarafından denetlenen şeffaf, çoklu ISA işlemciler inşa eder.",
+    "points": [
+      "Tüm işlemci komut setleri, herkese açık doğrulanabilir maske tasarımlarına sahip açık silikon (RISC-V, OpenPower) tabanlıdır.",
+      "Çiftli Derleme (DDC), hiçbir gizli derleyici arka kapısının heterojen araç zincirleri arasında var olamamasını sağlar.",
+      "Kritik altyapı düğümleri, birbirinden bağımsız döküm hatlarında üretilen üçlü modüler yedekli çipler kullanır.",
+      "Topluluk fab-laboratuvarları, yüksek saflıktaki silikonu geri dönüştürür ve yerel olarak dayanıklı 28nm-65nm endüstriyel düğümler üretir."
+    ],
+    "keywords": [
+      "açık kaynak donanım",
+      "RISC-V",
+      "yarı iletken",
+      "donanım şeffaflığı",
+      "üretim"
+    ]
+  },
+  "QA-SCI-03": {
+    "id": "QA-SCI-03",
+    "question": "Uzay teleskopları, füzyon reaktörleri veya Mars görevleri gibi dev projeler, özel milyarderler veya devlet imparatorlukları olmadan gerçekleşebilir mi?",
+    "verdict": "ÇÖZÜLDÜ: Askeri savunma bütçelerinden kurtarılmış küresel gezegensel bilimsel iş birliği",
+    "lead": "İnsanlığın en büyük bilimsel başarıları (James Webb, CERN, İnsan Genomu) kamusal iş birlikleriydi; O.N.E. bunu küresel ölçeğe taşır.",
+    "points": [
+      "Balistik füzeler, düzenli ordular ve finansal spekülasyonlar için harcanan trilyonlar olmadan, gezegensel mühendislik kapasitesi muazzamdır.",
+      "Tüm kıtalardaki bilim insanları; hesaplama kümelerini, radyo astronomi dizilerini ve fırlatma tesislerini özgürce birleştirir.",
+      "Uzay görevleri, milyarderlerin uzay turizmi zevklerine değil, gerçek astrofizik ve gezegensel savunmaya odaklanır.",
+      "Açık mühendislik depoları, milyonlarca amatör astronomun ve yapıcının anlamlı kod ve telemetriye katkıda bulunmasını sağlar."
+    ],
+    "keywords": [
+      "uzay araştırmaları",
+      "bilimsel iş birliği",
+      "dev projeler",
+      "gezegen mühendisliği",
+      "uzay savunması"
+    ]
+  },
+  "QA-SCI-04": {
+    "id": "QA-SCI-04",
+    "question": "O.N.E., haydut laboratuvarların ölümcül patojenler veya tehlikeli yapay zeka sentezlemesini nasıl önler?",
+    "verdict": "ÇÖZÜLDÜ: Gerçek zamanlı hava boşluğu doğrulama, eşik sentez anahtarları ve katı biyogüvenlik sınırları",
+    "lead": "Ölümcül biyolojik silahlar ve kontrolsüz işlev kazanımı araştırmaları, Sınıf 0 Değişmezlerin ihlalidir: otomatik gen sentezleyiciler çok taraflı fiziksel eşik anahtarları gerektirir.",
+    "points": [
+      "Sentetik DNA yazıcıları, kısıtlı viral suşları sentezlemek için çok havzalı eşik kriptografik anahtarlar (t-MPC) gerektirir.",
+      "Biyolojik güvenlik protokolleri donanım mantığına gömülüdür: yazıcılar, ölümcül dizi imzaları algıladığında fiziksel olarak tetiklenir ve kapanır.",
+      "Savaş amaçlı tehlikeli işlev kazanımı patojen araştırmaları kalıcı olarak insanlığın hayatta kalmasına karşı işlenmiş bir suç olarak sınıflandırılır.",
+      "Haydut biyoteknoloji şirketleri için özel risk sermayesi getirisi olmadığından, gizli patojenler geliştirme ekonomik teşviki ortadan kalkar."
+    ],
+    "keywords": [
+      "biyogüvenlik",
+      "yapay zeka güvenliği",
+      "sentetik biyoloji",
+      "Sınıf 0 Değişmez",
+      "denetim"
+    ]
+  },
+  "QA-SCI-05": {
+    "id": "QA-SCI-05",
+    "question": "Kendi adımla yazılım yazabilir, film çekebilir, resim yapabilir veya müzik yayınlayabilir miyim?",
+    "verdict": "ÇÖZÜLDÜ: Mutlak manevi yazarlık hakları, sanatsal özerklik ve ücretsiz yaratıcı araçlar",
+    "lead": "Yaratıcı eserleriniz üzerinde kalıcı manevi atıf hakkına sahipsiniz; sadece telif hakkını sanatı insan kültüründen esirgemek için kullanamazsınız.",
+    "points": [
+      "Adınız; kodunuza, romanlarınıza, şarkılarınıza ve resimlerinize kalıcı olarak bağlıdır: manevi yazarlık devredilemez.",
+      "Sanatçılar garantili yaşam standartlarına ve stüdyo alanlarına sahiptir: ruhunuzu reklam ajanslarına asla satmak zorunda kalmazsınız.",
+      "Açık müzik arşivleri ve dijital kütüphaneler, ödeme duvarları veya abonelik ücretleri olmadan her insanın erişimine açıktır.",
+      "Yaratıcı remiksleme ve kültürel evrim, kurumsal eğlence holdingleri tarafından dava edilmek yerine kutlanır."
+    ],
+    "keywords": [
+      "yaratıcılık",
+      "manevi haklar",
+      "kültürel ortak",
+      "sanatsal özgürlük",
+      "yazarlık"
+    ]
+  },
+  "QA-REL-01": {
+    "id": "QA-REL-01",
+    "question": "Dini topluluklar O.N.E.'da kiliseler, camiler ve tapınaklar sürdürebilir mi?",
+    "verdict": "ÇÖZÜLDÜ: Tam ibadet özgürlüğü ve kutsal mekan intifa hakkı",
+    "lead": "İnanç, dua ve ruhani ibadet kutsal kişisel ve toplumsal özgürlüklerdir: topluluklar kutsal mekanları üzerinde tam bir intifa hakkına (usufruct) sahiptir.",
+    "points": [
+      "Din ve ruhani uygulama özgürlüğü, Sınıf 0 Değişmez bir haktır: hiçbir seküler devlet dini ibadeti yasaklayamaz.",
+      "Kiliseler, camiler, tapınaklar ve meditasyon merkezleri, toplumsal kültürel sığınaklar olarak tanınan intifa haklarına sahiptir.",
+      "Ruhani cemaatler emlak vergisi veya ticari hizmet bedeli ödemezler.",
+      "Dini çeşitlilik ve yerel ruhani gelenekler, zulme veya zorunlu sekülerleşmeye karşı korunur."
+    ],
+    "keywords": [
+      "din özgürlüğü",
+      "intifa hakkı",
+      "ibadethane",
+      "inanç",
+      "Sınıf 0 Değişmez"
+    ]
+  },
+  "QA-REL-02": {
+    "id": "QA-REL-02",
+    "question": "Büyük tarihi katedral, tapınak veya anıtlar para olmadan enerji ve ısınma alabilir mi?",
+    "verdict": "ÇÖZÜLDÜ: Havza meclisleri tarafından onaylanan kültürel miras ekserji tahsisleri",
+    "lead": "Tarihi kutsal mimari, paylaşılan insan mirası olarak kabul edilir: temel koruma ve toplumsal ısınma, yerel kura konseyleri tarafından tahsis edilir.",
+    "points": [
+      "Havza kura konseyleri, kutsal kültürel binalar için temel termal enerji ve aydınlatma tahsislerini müzakere eder.",
+      "Cemaatler, kutsal mekanlarını korumak, süpürmek ve bakımını yapmak için aktif olarak gönüllü loncalar örgütler.",
+      "Hiçbir antik katedral veya tarihi cami, ödenmemiş borçlar nedeniyle özel lüks otel geliştiricilerine açık artırmayla satılamaz.",
+      "Özel bayram günleri ve kutsal kutlamalar, genişletilmiş mevsimlik enerji kotaları alır."
+    ],
+    "keywords": [
+      "kültürel miras",
+      "kura",
+      "ekserji",
+      "kaynak tahsisi",
+      "tarihi eser"
+    ]
+  },
+  "QA-REL-03": {
+    "id": "QA-REL-03",
+    "question": "Dini bir tarikat zorla evlilik, şiddetli disiplin dayatabilir mi veya üyeleri kendi istekleri dışında tutabilir mi?",
+    "verdict": "ÇÖZÜLDÜ: Koşulsuz çıkış hakkı ve fiziksel zorlamaya karşı tam yasak",
+    "lead": "Dini inanç tamamen özgürdür; fiziksel zorlama, zorla evlilik, çocuk istismarı ve rehin alma kesinlikle anayasaya aykırıdır.",
+    "points": [
+      "Her insanın herhangi bir dini gruptan, aileden veya tarikattan istediği an ayrılma koşulsuz, devredilemez bir hakkı vardır.",
+      "Zorla evlilikler, namus şiddeti ve fiziksel istismar, Sınıf 0 Değişmezleri ihlal eder ve derhal Barış Loncası müdahalesini tetikler.",
+      "Her vatandaşın bağımsız garantili barınma ve gıda hakkı olduğu için, tarikat liderleri üyeleri tuzağa düşürmek için açlığı veya evsizliği kullanamaz.",
+      "Çocukların bedensel bütünlüğü ve şiddetten uzak olma hakları, tüm inançlarda tartışılmazdır."
+    ],
+    "keywords": [
+      "çıkış hakkı",
+      "şiddete karşı",
+      "insan hakları",
+      "tarikat",
+      "Sınıf 0 Değişmez"
+    ]
+  },
+  "QA-REL-04": {
+    "id": "QA-REL-04",
+    "question": "Dini aileler çocuklarına kutsal kitap, inanç ve etik öğretebilir mi?",
+    "verdict": "ÇÖZÜLDÜ: Ebeveynler evde ve ibadethanelerde kutsal kitap ve ruhani değerleri öğretmekte özgürdür",
+    "lead": "Ebeveynler ve inanç toplulukları, çocuklarına teolojik değerleri, kutsal metinleri ve ruhani ritüelleri öğretmekte özgürdür.",
+    "points": [
+      "Kiliseler ve camiler; pazar okulları, Kur'an kursları, yeşivalar ve Budist meditasyon sınıflarını özgürce yürütebilir.",
+      "Devlet otoritelerinin dua dikte etme, kutsal metinleri sansürleme veya ruhani ziyafetleri yasaklama gücü sıfırdır.",
+      "Çocuklar ayrıca dengeli ve özerk bir bakış açısı sağlamak için açık topluluk kütüphanelerine ve bilim atölyelerine erişebilir.",
+      "Ruhani gelişim, devlet zoruyla değil, gönüllü sevgi ve topluluk bağlarıyla beslenir."
+    ],
+    "keywords": [
+      "eğitim hakkı",
+      "dini eğitim",
+      "aile özerkliği",
+      "inanç",
+      "ruhsal gelişim"
+    ]
+  },
+  "QA-REL-05": {
+    "id": "QA-REL-05",
+    "question": "Polis olmadan, gruplar arasındaki tarihi mezhepsel çatışmaları ve dini şiddeti ne önler?",
+    "verdict": "ÇÖZÜLDÜ: Toplam silahsızlanma, dinler arası konseyler ve paylaşılan ekolojik karşılıklı bağımlılık",
+    "lead": "Dini savaşlar tarihsel olarak toprak ve petrol için savaşan siyasi liderler tarafından körüklenmiştir; O.N.E.'da silahlar kaldırılmıştır ve topluluklar yaşam desteğini paylaşır.",
+    "points": [
+      "Mezhepsel milisleri silahlandıracak hiçbir ateşli silah ve ağır silah yoktur: dini gruplar kinetik iç savaşlar yürütemez.",
+      "Tüm inançlar aynı su boru hatlarını, güneş enerjisi dizilerini ve tıp kliniklerini paylaşır: karşılıklı hayatta kalma günlük iş birliğini gerektirir.",
+      "Dinler Arası Mutabakatlar, büyükleri ve liderleri düzenli kura arabuluculuk çemberlerinde bir araya getirir.",
+      "Yaşayan gezegene duyulan ekolojik saygı, çeşitli ruhani gelenekleri paylaşılan bir sorumlulukta birleştirir."
+    ],
+    "keywords": [
+      "silahsızlanma",
+      "barış",
+      "ekolojik bağımlılık",
+      "dinler arası",
+      "çatışma çözümü"
+    ]
+  },
+  "QA-RIG-01": {
+    "id": "QA-RIG-01",
+    "question": "LGBTQ+ bireyler, cinsiyet kimliği ve cinsel azınlıklar için hangi açık anayasal korumalar mevcuttur?",
+    "verdict": "ÇÖZÜLDÜ: Mutlak bedensel özerklik, tam cinsiyet onayı ve tacizden korunma",
+    "lead": "Bedeniniz, cinsiyet kimliğiniz ve özel hayatınız sizin egemen kişisel alanınızdır: ayrımcılık, suç sayma ve taciz kesinlikle anayasaya aykırıdır.",
+    "points": [
+      "Madde 1.2, mutlak ve dokunulmaz bir 'Sınıf 0 Anayasal Değişmez' olarak tam bedensel ve somatik kendi kaderini tayin hakkını garanti eder.",
+      "Cinsiyet uyum süreci, psikolojik destek ve üreme özerkliği, hiçbir ücret ödenmeksizin koşulsuz olarak garanti altına alınmıştır.",
+      "Hiçbir kilise, devlet, konsey veya komşunun, rıza gösteren yetişkinlerin ilişkilerini veya cinsiyet ifadelerini denetleme yasal yetkisi yoktur.",
+      "Nefret temelli taciz, Sivil Barış Loncaları tarafından derhal koruyucu topluluk müdahalesini tetikler."
+    ],
+    "keywords": [
+      "cinsel kimlik",
+      "bedensel özerklik",
+      "LGBTQ hakları",
+      "anayasal koruma",
+      "Sınıf 0 Değişmez"
+    ]
+  },
+  "QA-RIG-02": {
+    "id": "QA-RIG-02",
+    "question": "O.N.E. sisteminde ırkçılık, etnik profilleme veya ırksal ayrımcılığın sürmesi ne ile engellenir?",
+    "verdict": "ÇÖZÜLDÜ: Silahlı ırkçı polis teşkilatının kaldırılması, eşit kaynaklar ve çeşitli kurayla seçim (sortition)",
+    "lead": "Kurumsal ırkçılık silahlı polis devriyeleri ve ekonomik yoksullukla sürdürülür; O.N.E. her ikisini de kaldırır ve her kökenden birey için eşit doğuştan hakları garanti eder.",
+    "points": [
+      "Mahalle sokaklarında Siyahi, esmer veya azınlık vatandaşları durdurup arayan veya profilleme yapan silahlı polis gücü yoktur.",
+      "Evrensel koşulsuz intifa hakkı (usufruct), hiçbir ırksal azınlığın sefalete mahkûm edilmemesini veya kaliteli sağlık hizmetinden mahrum bırakılmamasını sağlar.",
+      "Kriptografik kurayla seçim (sortition), kamu konseylerinin, seçim bölgeleriyle oynamaksızın topluluğun gerçek demografik çeşitliliğini yansıtmasını sağlar.",
+      "Yerli kültürler ve tarihsel olarak ezilmiş halklar, toprak intifa hakkı ve kültürel özerklik konusunda öncelikli telafi hakkına sahiptir."
+    ],
+    "keywords": [
+      "ırkçılıkla mücadele",
+      "intifa hakkı",
+      "kurayla seçim",
+      "eşitlik",
+      "sosyal adalet"
+    ]
+  },
+  "QA-RIG-03": {
+    "id": "QA-RIG-03",
+    "question": "O.N.E. bireyleri aşı olmaya veya istemsiz tıbbi müdahalelere zorlayabilir mi?",
+    "verdict": "ÇÖZÜLDÜ: Mutlak bedensel bütünlük: zorunlu tıbbi müdahale veya dayatma yoktur",
+    "lead": "Bedensel dokularınız yalnızca size aittir: hiçbir konsey veya kamu kurumu, bilgilendirilmiş rızanız dışında bedeninize enjeksiyon yapamaz, ilaç veremez veya ameliyat edemez.",
+    "points": [
+      "Bilgilendirilmiş ve gönüllü rıza, mutlak bir 'Sınıf 0 Değişmez' ilkedir: zorunlu aşılar ve tıbbi baskı kesinlikle anayasaya aykırıdır.",
+      "Halk sağlığı; otoriter polis zorbalığına değil, radikal şeffaflığa, açık bilimsel verilere ve gönüllü güvene dayanır.",
+      "Bulaşıcı hastalık salgınları sırasında topluluklar, gönüllü izolasyon sığınaklarını, yüksek verimli havalandırmayı ve açık hava filtrelerini kullanır.",
+      "Sağlık çalışanları asla baskıcı güç kullanmaz, yalnızca şefkatli danışmanlık hizmeti sunar."
+    ],
+    "keywords": [
+      "bedensel bütünlük",
+      "tıbbi özgürlük",
+      "bilgilendirilmiş rıza",
+      "halk sağlığı",
+      "Sınıf 0 Değişmez"
+    ]
+  },
+  "QA-RIG-04": {
+    "id": "QA-RIG-04",
+    "question": "Otistik, engelli ve nöroçeşitli bireyler O.N.E. sisteminde nasıl desteklenir?",
+    "verdict": "ÇÖZÜLDÜ: Dahili evrensel fiziksel erişilebilirlik, duyusal sessiz odalar ve kişiye özel bakım",
+    "lead": "Kapitalizm, kurumsal kâr üretemeyen herkesi dışlar; O.N.E. tüm nörotipler için onurlu bir yaşam tabanı ve ergonomik ortamlar garanti eder.",
+    "points": [
+      "Kamu mimarisi; her sivil merkezde basamaksız evrensel erişimi, işitsel-dokunsal yolları ve duyusal dostu sessiz odaları zorunlu kılar.",
+      "Otistik, DEHB'li ve nöroçeşitli bireyler, sosyal damgalamaya uğramadan duyusal dekompresyon alanlarıyla desteklenir.",
+      "Tam zamanlı bakım yardımcılarına zengin toplumsal kaynaklar sağlanır, böylece bakım verenlerin tükenmişlik yaşaması engellenir.",
+      "Ağır engeli olan bireyler, barınma, beslenme ve kişiye özel yardımcı teknolojiler üzerinde tam, koşulsuz intifa hakkına sahiptir."
+    ],
+    "keywords": [
+      "nöroçeşitlilik",
+      "engelli hakları",
+      "erişilebilirlik",
+      "intifa hakkı",
+      "bakım hizmetleri"
+    ]
+  },
+  "QA-RIG-05": {
+    "id": "QA-RIG-05",
+    "question": "Bir bölge O.N.E.'e geçtiğinde mevcut miras sistemindeki hapishanelerde tutulan insanlar ne olacak?",
+    "verdict": "ÇÖZÜLDÜ: Düzenli hapishane tasfiyesi, travma dekompresyon sığınakları ve mesleki entegrasyon",
+    "lead": "Kitlesel hapsetme dönemi sona erer: şiddet içermeyen uyuşturucu ve mülkiyet suçluları doğrudan toplum konutlarına kabul edilir; şiddet içeren suçlular terapötik iyileşme sürecinden geçer.",
+    "points": [
+      "Eski mahkumların %80'inden fazlası (uyuşturucu suçları, yoksulluk kaynaklı suçlar, kefalet ödeyememe gibi) derhal af alır ve intifa hakkına sahip evlere yerleşir.",
+      "Dekompresyon iyileştirme evleri, eski mahkumların hapishane hücre hapsi travmalarından kurtulmalarına yardımcı olur.",
+      "Meslek loncaları; robotik, organik tarım ve ahşap işçiliği öğreterek bireyin onurunu ve amacını yeniden kazanmasını sağlar.",
+      "Aktif şiddet eğilimi gösteren az sayıdaki birey, kafes veya şiddet olmadan, güvenli terapötik sığınaklarda bakım altına alınır."
+    ],
+    "keywords": [
+      "dekarserasyon",
+      "rehabilitasyon",
+      "intifa hakkı",
+      "af",
+      "terapötik sığınak"
+    ]
+  },
+  "QA-DEF-01": {
+    "id": "QA-DEF-01",
+    "question": "İltica Ödülü (Defection Bounty) nedir ve O.N.E. işgalci orduları ve paralı askerleri nasıl etkisiz hale getirir?",
+    "verdict": "ÇÖZÜLDÜ: İşgalci askerlere ömür boyu sığınma, ev ve borç silme imkanı sunulması",
+    "lead": "Genç askerleri kanlı yıpratma savaşlarında katletmek yerine O.N.E. şu açık teklifi yayınlar: silahını bırak, sana ömür boyu bir ev verelim ve borçlarını silelim.",
+    "points": [
+      "Çoğu asker ve paralı asker, yalnızca faturalarını ödemek, ailelerini doyurmak ve borçtan kaçmak için savaşır.",
+      "O.N.E., cephe hattı boyunca hemen koşulsuz siyasi sığınma hakkı sunan, engellenemez bir mesaj yayınlar.",
+      "Sınırı geçen askerler ömür boyu barınma ve sağlık hizmeti alır; eski kapitalist borçları ticaret tamponu aracılığıyla tasfiye edilir.",
+      "Askerlerin saldırı tüfekleri ve zırhlı araçları, açık indüksiyon fırınlarında eritilerek rüzgar türbini parçalarına ve tarım traktörlerine dönüştürülür."
+    ],
+    "keywords": [
+      "iltica ödülü",
+      "borç silme",
+      "savaş karşıtlığı",
+      "askeri tasfiye",
+      "sığınma hakkı"
+    ]
+  },
+  "QA-DEF-02": {
+    "id": "QA-DEF-02",
+    "question": "Düzenli ordular olmadan O.N.E. hipersonik füzelere, hava saldırılarına veya zırhlı tümenlere karşı nasıl savunma yapar?",
+    "verdict": "ÇÖZÜLDÜ: Kirpi stratejisi: otomatik nokta savunma durdurucuları ve fethedilemez hedef",
+    "lead": "Dikenleri boğazına takılmadan bir kirpiyi fethedemezsiniz: otomatik durdurucular gelen mühimmatı vurur, ademi merkeziyetçi yapı ise ele geçirilecek merkezi bir hedef bırakmaz.",
+    "points": [
+      "O.N.E., yalnızca gelen roketleri, dronları ve topçu ateşini durdurmak üzere programlanmış otonom kinetik ve yönlendirilmiş enerji savunma sistemlerini korur.",
+      "Ele geçirilecek merkezi bir parlamento, merkez bankası kasası veya ulusal başkent yoktur: toplum tamamen ademi merkeziyetçidir.",
+      "Kritik su vanaları ve mikro şebekeler saldırı anında mekanik olarak ayrılır, bu da düşmanca bir ele geçirmeyi teknik olarak imkansız kılar.",
+      "Bir alanı fethetmek parasal bir ganimet veya çalınacak petrol rezervi sağlamaz; halk ise ücretli emeği reddeden iş birliği yapmaz bir tavır sergiler."
+    ],
+    "keywords": [
+      "kirpi stratejisi",
+      "savunma",
+      "otonom sistemler",
+      "ademi merkeziyet",
+      "güvenlik"
+    ]
+  },
+  "QA-DEF-03": {
+    "id": "QA-DEF-03",
+    "question": "Bugünün dünyasından şiddetli, felaket bir küresel savaşı tetiklemeden O.N.E.'e nasıl ulaşırız?",
+    "verdict": "ÇÖZÜLDÜ: Eski kapitalist Titanik (Yol A) batarken cankurtaran sandallarını (Yol B) inşa etmek",
+    "lead": "Başkenti basıp giyotin kurmanıza gerek yok: çökmekte olan fiat sistemiyle yan yana yerel güneş enerjisi mikro şebekeleri, topluluk arazi vakıfları ve açık fab-lab'lar inşa edersiniz.",
+    "points": [
+      "Yol A; hiperenflasyon, ödenemez borçlar ve çürüyen altyapı ile boğuşan ölümlü miras kapitalist ekonomidir.",
+      "Yol B; her mahallede, depoda ve havzada barışçıl bir şekilde büyüyen açık termodinamik müşterektir.",
+      "Eski şirketler iflas ettikçe, çalışanlar ve vatandaşlar terk edilmiş fabrikaları 'adversarial possession' (yasal işgal) yoluyla geri alır ve atölyelere dönüştürür.",
+      "İnsanlar borçtan ve ücretli emekten vazgeçerek, eski sistemi itaat etmeyerek barışçıl bir şekilde erimesine neden olur."
+    ],
+    "keywords": [
+      "geçiş stratejisi",
+      "yerel üretim",
+      "topluluk vakıfları",
+      "ekonomik dönüşüm",
+      "Yol B"
+    ]
+  },
+  "QA-DEF-04": {
+    "id": "QA-DEF-04",
+    "question": "Sıradan bir vatandaş grubu küresel anlaşmaları beklemeden yarın bir O.N.E. topluluk düğümü başlatabilir mi?",
+    "verdict": "ÇÖZÜLDÜ: Evet: bir topluluk arazi vakfı kurun, güneş enerjisini birleştirin ve kurayla seçim ile yönetin",
+    "lead": "Başkanın imzasına ihtiyacınız yok: 15 komşu araziyi birleştirebilir, şebeke dışı güneş enerjisi ve bahçeler kurabilir ve hemen O.N.E. yönetimini benimseyebilir.",
+    "points": [
+      "Her grup, konutları spekülatif piyasadan kalıcı olarak çıkarmak için yasal bir Topluluk Arazi Vakfı (CLT) kurabilir.",
+      "Fiziksel hizmet özerkliği kazanmak için açık kaynaklı çatı güneş enerjisi mikro şebekeleri ve yağmur suyu hasat sistemleri kurun.",
+      "Mahalle kararlarını, siyasi tartışmalar yerine %75 mutabakat ile rotasyonel kurayla seçim (sortition) meclisleri kullanarak alın.",
+      "O.N.E. Anayasası, dünyadaki herhangi bir mahallede çalışmaya hazır açık kaynaklı bir koddur."
+    ],
+    "keywords": [
+      "topluluk inşası",
+      "kendi kendine yetme",
+      "kurayla seçim",
+      "yerel yönetim",
+      "arazi vakfı"
+    ]
+  },
+  "QA-DEF-05": {
+    "id": "QA-DEF-05",
+    "question": "O.N.E. göçü, ulusal sınırları ve milyonlarca iklim mültecisini nasıl yönetir?",
+    "verdict": "ÇÖZÜLDÜ: Evrensel hareket özgürlüğü, açık göç koridorları ve karşılama merkezleri",
+    "lead": "Ulusal sınırlar, sömürge mülkiyetini korumak için haritalara çizilmiş yapay çizgilerdir; O.N.E.'de ekolojik felaketten kaçan her insan, barınak ve gıda ile karşılanır.",
+    "points": [
+      "Biyosfer boyunca karasal göç özgürlüğü, dokunulmaz bir biyolojik insan hakkıdır.",
+      "Gelen mülteciler sefil gözaltı kamplarına tıkılmaz veya denizde boğulmaya terk edilmez: karşılama merkezleri derhal barınak ve tıbbi yardım sağlar.",
+      "Yeni gelenler, zengin kültürel bakış açılarını ve becerilerini paylaşarak havza üretim ağlarına entegre edilir.",
+      "Geniş çaplı gezegensel yeniden ağaçlandırma ve merkezi olmayan güneş enerjisi şebekeleri, yerel ekolojileri aşırı yüklemeden nüfusları absorbe eder."
+    ],
+    "keywords": [
+      "göç özgürlüğü",
+      "iklim mültecileri",
+      "sınırların kalkması",
+      "evrensel insan hakları",
+      "karşılama merkezleri"
+    ]
+  }
+}

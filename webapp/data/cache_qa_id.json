@@ -1,0 +1,952 @@
+{
+  "QA-HOUS-01": {
+    "id": "QA-HOUS-01",
+    "question": "Dapatkah komunitas, dewan, atau komite menyita rumah saya?",
+    "verdict": "TERJAWAB: Usufrue (hak pakai) seumur hidup yang mutlak tanpa pengusiran",
+    "lead": "Tidak ada yang dapat mengusir Anda atau menyita rumah Anda: usufrue pribadi adalah hak konstitusional dasar seumur hidup yang tidak dapat diganggu gugat.",
+    "points": [
+      "Rumah utama dan ruang tinggal pribadi Anda dilindungi oleh Invarian Konstitusional Kelas 0: pengusiran dari tempat tinggal adalah tindakan yang sangat inkonstitusional.",
+      "Tidak ada hipotek, pajak properti, atau pembayaran sewa: Anda tidak akan kehilangan tempat tinggal karena kesulitan keuangan.",
+      "Tempat tinggal diakui sebagai kebutuhan biologis yang tidak dapat dinegosiasikan, bukan komoditas keuangan yang dapat diperdagangkan.",
+      "Dewan komunitas tidak memiliki wewenang untuk menetapkan ulang rumah yang dihuni tanpa persetujuan penghuninya."
+    ],
+    "keywords": [
+      "usufrue perumahan",
+      "hak tempat tinggal",
+      "invarian kelas 0",
+      "tanpa pengusiran",
+      "hak milik pribadi"
+    ]
+  },
+  "QA-HOUS-02": {
+    "id": "QA-HOUS-02",
+    "question": "Apa yang memotivasi seseorang untuk merawat rumah atau memperbaiki atap tanpa adanya ekuitas pasar?",
+    "verdict": "TERJAWAB: Kebanggaan tempat tinggal, bahan bangunan gratis, dan dukungan serikat",
+    "lead": "Anda merawat rumah Anda karena Anda dan orang yang Anda cintai tinggal di dalamnya, didukung oleh bahan bangunan gratis dan serikat alat khusus.",
+    "points": [
+      "Manusia secara alami merawat tempat tinggal mereka ketika terbebas dari tekanan sewa dan utang.",
+      "Isolasi kelas tinggi, panel surya, dan perlengkapan atap didistribusikan tanpa biaya moneter dari gudang fabrikasi daerah aliran sungai.",
+      "Serikat pemeliharaan lokal menyediakan tenaga kerja kolaboratif yang terampil dan alat diagnostik untuk perbaikan struktural.",
+      "Saat pindah ke bioregion baru, Anda melepas usufrue dalam kondisi baik tanpa utang spekulatif atau penalti penutupan."
+    ],
+    "keywords": [
+      "pemeliharaan rumah",
+      "serikat pekerja",
+      "fabrikasi komunitas",
+      "tanggung jawab tempat tinggal",
+      "bioregion"
+    ]
+  },
+  "QA-HOUS-03": {
+    "id": "QA-HOUS-03",
+    "question": "Apakah saya masih bisa memiliki barang pribadi seperti alat, pakaian, mobil, atau perahu?",
+    "verdict": "TERJAWAB: Benda pribadi sakral dan alat pribadi dilindungi sepenuhnya",
+    "lead": "O.N.E. secara tegas membedakan barang pribadi dari properti pribadi yang bersifat memonopoli: barang pribadi Anda adalah milik Anda sepenuhnya.",
+    "points": [
+      "Pakaian, komputer, buku, warisan, kerajinan tangan, dan alat musik Anda diklasifikasikan sebagai benda pribadi yang intim.",
+      "Kendaraan transit pribadi (sepeda, e-bike kargo, perahu) tetap berada di bawah hak pakai eksklusif Anda.",
+      "Yang dihapuskan adalah kepemilikan absente: Anda tidak dapat memiliki seluruh pabrik, akuifer, atau 50 apartemen untuk memungut sewa dari orang lain.",
+      "Alat-alat seni dan kerajinan individu secara konstitusional dijamin untuk tetap bersama pengrajinnya."
+    ],
+    "keywords": [
+      "kepemilikan pribadi",
+      "barang pribadi",
+      "anti-monopoli",
+      "hak milik alat",
+      "kebebasan individu"
+    ]
+  },
+  "QA-HOUS-04": {
+    "id": "QA-HOUS-04",
+    "question": "Bisakah saya mewariskan rumah, kebun, atau barang pribadi kepada anak-anak saya?",
+    "verdict": "TERJAWAB: Kelangsungan rumah pribadi untuk keluarga dan transfer warisan",
+    "lead": "Jika anak-anak atau pasangan Anda tinggal bersama Anda, mereka tetap memiliki hak hunian yang berkelanjutan; barang pribadi berpindah langsung kepada orang yang Anda cintai.",
+    "points": [
+      "Anggota keluarga yang berbagi tempat tinggal aktif mewarisi usufrue yang tidak terputus setelah orang tua meninggal.",
+      "Barang pribadi, alat kerajinan, karya seni, dan warisan keluarga berpindah sesuai keinginan pribadi Anda tanpa pajak warisan.",
+      "Usufrue tempat tinggal yang kosong dari mendiang yang tidak diklaim oleh penghuni bersama yang masih hidup akan dikembalikan ke kolam bersama daerah aliran sungai.",
+      "Kekaisaran keuangan dinasti antargenerasi dan dinasti tuan tanah absente diakhiri secara permanen."
+    ],
+    "keywords": [
+      "warisan keluarga",
+      "hak hunian",
+      "usufrue berkelanjutan",
+      "transfer aset",
+      "kepemilikan pribadi"
+    ]
+  },
+  "QA-HOUS-05": {
+    "id": "QA-HOUS-05",
+    "question": "Bagaimana O.N.E. menangani rumah yang ditinggalkan atau perjalanan jarak jauh?",
+    "verdict": "TERJAWAB: Penyangga perjalanan yang murah hati dan realokasi komunitas untuk situs terlantar",
+    "lead": "Anda bebas bepergian untuk penelitian, seni, atau eksplorasi dengan rumah Anda yang tetap terjaga untuk Anda; ruang terlantar yang ditinggalkan diperbarui untuk orang lain.",
+    "points": [
+      "Ketidakhadiran jangka panjang untuk studi, cuti panjang, atau pengasuhan (hingga 24 bulan) didaftarkan untuk mencegah pipa membeku.",
+      "Sebuah rumah tidak pernah dinyatakan ditinggalkan selama hak pakai atau pengaturan pengasuhan tetap aktif.",
+      "Struktur yang benar-benar ditinggalkan dan tidak terawat diperiksa oleh dewan lingkungan melalui pengundian (sortition) dan dipugar sebagai perumahan publik.",
+      "Tidak ada pengembang real estat swasta yang dapat membiarkan rumah sengaja kosong untuk memicu kelangkaan buatan."
+    ],
+    "keywords": [
+      "perjalanan bebas",
+      "pengundian dewan",
+      "realokasi perumahan",
+      "pengaturan absensi",
+      "anti-spekulasi"
+    ]
+  },
+  "QA-WORK-01": {
+    "id": "QA-WORK-01",
+    "question": "Siapa yang membersihkan selokan, membuang sampah, dan melakukan pekerjaan berbahaya jika tidak ada upah tenaga kerja?",
+    "verdict": "TERJAWAB: Robotika agresif, giliran kerja bersama yang singkat, dan penghargaan sosial",
+    "lead": "Daripada memaksa orang miskin melakukan pekerjaan berbahaya dengan ancaman kelaparan, O.N.E. mengotomatiskan pekerjaan kotor dan membagi sisanya dalam giliran kerja ringan.",
+    "points": [
+      "Prioritas utama lab fabrikasi terbuka adalah merekayasa robot otonom dan pembersih pipa untuk tugas limbah, sampah, dan toksik.",
+      "Tugas manual yang tersisa dibagikan di antara semua warga yang mampu dalam giliran kerja singkat beberapa jam per bulan.",
+      "Relawan yang mengambil giliran kerja berat menerima pengakuan sosial tertinggi, perbedaan rekan kehormatan, dan prioritas untuk barang diskresioner.",
+      "Orang tua baru (1.000 hari pertama), siswa selama masa intensif, dan pengasuh penuh waktu sepenuhnya kebal dari tugas fisik berat."
+    ],
+    "keywords": [
+      "otomasi robotik",
+      "giliran kerja",
+      "pekerjaan sosial",
+      "tanggung jawab bersama",
+      "kebebasan kerja"
+    ]
+  },
+  "QA-WORK-02": {
+    "id": "QA-WORK-02",
+    "question": "Mengapa profesional berketerampilan tinggi seperti dokter bedah atau insinyur mau bekerja tanpa gaji tinggi?",
+    "verdict": "TERJAWAB: Panggilan, rasa hormat sosial tertinggi, bebas utang pendidikan, dan lab mutakhir",
+    "lead": "Dokter bedah dan insinyur menekuni bidang mereka karena semangat dan penguasaan, bukan untuk membayar pinjaman sekolah kedokteran atau margin keuntungan rumah sakit.",
+    "points": [
+      "Pendidikan kedokteran, residensi bedah, dan sekolah teknik 100% gratis dan terbuka bagi siapa saja dengan bakat yang tulus.",
+      "Dokter bedah berpraktik tanpa giliran kerja 80 jam tanpa tidur, ancaman hukum malpraktik, atau administrasi penagihan.",
+      "Insinyur memiliki akses tanpa batas ke perangkat keras sumber terbuka, lab fabrikasi canggih, dan kolaborasi tanpa NDA korporat.",
+      "Prestise sosial sejati, pengakuan rekan, dan pemenuhan vokasi yang mendalam menggantikan kompensasi moneter yang abstrak."
+    ],
+    "keywords": [
+      "motivasi vokasi",
+      "pendidikan gratis",
+      "prestig sosial",
+      "kolaborasi insinyur",
+      "penguasaan keahlian"
+    ]
+  },
+  "QA-WORK-03": {
+    "id": "QA-WORK-03",
+    "question": "Apa yang terjadi pada pemalas yang bersikeras menolak berkontribusi apa pun?",
+    "verdict": "TERJAWAB: Kelangsungan hidup biologis tetap dijamin; kuota kemewahan dan diskresioner dibekukan",
+    "lead": "Tidak ada yang kelaparan, kehilangan tempat tinggal, atau dipenjara karena menolak; namun, akses ke kemewahan diskresioner, alat khusus, dan perjalanan ditangguhkan.",
+    "points": [
+      "Di bawah Invarian Kelas 0, setiap manusia menerima kelangsungan hidup Tingkat 1 tanpa syarat: air bersih, nutrisi, tempat tinggal, dan perawatan medis.",
+      "Penolakan terus-menerus untuk berkontribusi pada tugas giliran kerja dasar mengakibatkan penangguhan alokasi diskresioner Tingkat 3.",
+      "Anda tidak dapat mengakses slot transit antarkontinental, lab penelitian berenergi tinggi, fabrikasi mewah, atau kolam budaya komunitas.",
+      "Gesekan sosial alami dan keinginan manusia untuk hubungan rekan menyelesaikan ketidakterlibatan kronis tanpa kekerasan atau penjara."
+    ],
+    "keywords": [
+      "jaminan kelangsungan hidup",
+      "kontribusi sosial",
+      "jatah diskresioner",
+      "kehidupan komunitas",
+      "invarian kelas 0"
+    ]
+  },
+  "QA-WORK-04": {
+    "id": "QA-WORK-04",
+    "question": "Bukankah pemeliharaan bersama yang wajib hanyalah kerja paksa seperti di gulag Soviet?",
+    "verdict": "TERJAWAB: Kebebasan somatik total, nol kamp kerja paksa, dan manajemen mandiri warga",
+    "lead": "Komunisme Soviet menggunakan polisi, paspor internal, dan gulag untuk memaksakan kuota; O.N.E. melarang kerja paksa, polisi, dan penjara selamanya.",
+    "points": [
+      "Pasal 1.2 secara konstitusional melarang kerja paksa, wajib militer, dan pemenjaraan fisik.",
+      "Giliran kerja pemeliharaan rata-rata kurang dari 5 hingga 7 jam per bulan bagi warga biasa, bukan 60 jam per minggu dari eksploitasi pabrik yang melelahkan.",
+      "Anda dapat memilih, menukar, menjadwalkan, atau mengusulkan penggantian robotik untuk tugas pemeliharaan apa pun.",
+      "Tidak ada birokrasi partai pusat (Gosplan) yang mendikte target produksi: dewan daerah aliran sungai lokal mengatur diri mereka sendiri."
+    ],
+    "keywords": [
+      "anti-kerja paksa",
+      "kebebasan somatik",
+      "manajemen mandiri",
+      "tanpa penjara",
+      "desentralisasi"
+    ]
+  },
+  "QA-WORK-05": {
+    "id": "QA-WORK-05",
+    "question": "Bisakah saya berganti karier atau menjelajahi seni kapan pun saya mau?",
+    "verdict": "TERJAWAB: Transisi karier tanpa hambatan, pembelajaran seumur hidup, dan lokakarya terbuka",
+    "lead": "Karena kelangsungan hidup Anda tidak terikat pada bos, Anda dapat berganti bidang, mempelajari seni baru, atau bergabung dengan serikat penelitian pada tahap kehidupan apa pun.",
+    "points": [
+      "Anda tidak pernah terkunci dalam pekerjaan yang dibenci hanya untuk mempertahankan asuransi kesehatan atau membayar sewa bulan depan.",
+      "Semua serikat (astronomi, pertukangan kayu, bioteknologi, musik, pertanian) menawarkan magang terbuka dan mandiri.",
+      "Warisan Heretik (Heretic's Commons) menjamin akses ke lab dan bahan untuk eksperimen eksplorasi non-komersial.",
+      "Kreativitas manusia berkembang saat terbebas dari kelelahan jiwa akibat perbudakan upah."
+    ],
+    "keywords": [
+      "transisi karier",
+      "pembelajaran seumur hidup",
+      "warisan heretik",
+      "eksplorasi kreatif",
+      "kebebasan vokasi"
+    ]
+  },
+  "QA-DEM-01": {
+    "id": "QA-DEM-01",
+    "question": "Mengapa menggunakan lotre acak (sortition) daripada memilih politisi?",
+    "verdict": "SELESAI: Sortition menghapus kampanye politik, suap oligarki, dan partai korup",
+    "lead": "Pemilihan umum secara tak terelakkan menciptakan oligarki politik dari kaum elit yang kaya dan karismatik; sortition memilih perwakilan nyata dari warga sehari-hari.",
+    "points": [
+      "Pemilu membutuhkan sumbangan kampanye besar, kontrol media, dan demagogi karismatik, yang langsung mengarah pada korupsi.",
+      "Lotre kriptografis acak memilih orang tua, guru, perawat, dan mekanik biasa, yang mencerminkan keragaman komunitas yang sesungguhnya.",
+      "Masa jabatan singkat (12-24 bulan) dengan rotasi wajib: tidak ada karier politik permanen atau pintu putar pelobi.",
+      "Warga berunding dengan arahan ilmiah independen alih-alih disiplin perintah partai."
+    ],
+    "keywords": [
+      "sortition",
+      "lotre warga",
+      "demokrasi langsung",
+      "anti-oligarki",
+      "kriptografi"
+    ]
+  },
+  "QA-DEM-02": {
+    "id": "QA-DEM-02",
+    "question": "Bukankah kolam lotre acak akan merusak infrastruktur kritis seperti pembangkit nuklir karena ketidaktahuan teknis?",
+    "verdict": "SELESAI: Pembagian ketat antara penasihat teknik dan dewan nilai sipil",
+    "lead": "Warga acak tidak merancang turbin atau batang reaktor: kelompok epistemik bersertifikat menyediakan model teknis; dewan memutuskan prioritas komunitas.",
+    "points": [
+      "Ilmuwan bersertifikat, ahli hidrologi, dan fisikawan membentuk Kelompok Kerja Epistemik untuk merumuskan pilihan teknik yang layak.",
+      "Perlindungan krusial: pakar teknis memegang peran penasihat yang ketat dan tidak memiliki hak suara untuk mencegah tirani teknokratis.",
+      "Pakar secara hukum diwajibkan menerjemahkan model termodinamika yang kompleks menjadi pilihan kompromi yang mudah diakses.",
+      "Dewan warga menimbang nilai kemanusiaan dan ekologi (misal: kecepatan transit vs pelestarian lahan basah), bukan kalkulus matematis."
+    ],
+    "keywords": [
+      "teknokrasi",
+      "kelompok epistemik",
+      "pengambilan keputusan",
+      "infrastruktur",
+      "tanggung jawab sipil"
+    ]
+  },
+  "QA-DEM-03": {
+    "id": "QA-DEM-03",
+    "question": "Bagaimana sistem pemungutan suara menghentikan demagog karismatik yang lantang membajak dewan?",
+    "verdict": "SELESAI: Penyaringan matematis berpasangan menghilangkan pengganggu yang mempolarisasi",
+    "lead": "Tidak seperti pemungutan suara pluralitas sederhana di mana minoritas agresif 30% dapat mendominasi, Condorcet mengadu setiap opsi satu lawan satu.",
+    "points": [
+      "Dalam pemungutan suara Condorcet, sebuah opsi menang hanya jika ia mengalahkan setiap alternatif dalam perbandingan langsung.",
+      "Pengganggu karismatik dengan 30% pendukung fanatik akan ditolak secara matematis jika 70% lainnya menempatkan proposal mereka sebagai pilihan terakhir.",
+      "Surat suara rahasia dan jeda pendinginan mencegah kepribadian agresif mengintimidasi anggota dewan yang lebih tenang.",
+      "Keputusan membutuhkan kuota super mayoritas (75%), memaksa konsensus konstruktif di atas polarisasi beracun."
+    ],
+    "keywords": [
+      "pemungutan suara condorcet",
+      "demagogi",
+      "konsensus",
+      "anti-polarisasi",
+      "matematika pemilu"
+    ]
+  },
+  "QA-DEM-04": {
+    "id": "QA-DEM-04",
+    "question": "Apakah saya dipaksa bertugas di dewan jika nama saya ditarik?",
+    "verdict": "SELESAI: Hak tanpa syarat untuk menolak dan penundaan terjadwal",
+    "lead": "Tidak ada orang yang dipaksa menjadi pejabat sipil di bawah ancaman: Anda dapat menolak tanpa hukuman atau menunda layanan Anda ke waktu yang lebih sesuai.",
+    "points": [
+      "Otonomi tubuh fisik (Pasal 1.2) secara ketat melarang wajib militer politik.",
+      "Pengasuh, individu yang sedang berduka, pelajar, atau mereka yang sedang sakit dapat mengajukan penundaan segera tanpa pertanyaan.",
+      "Jika Anda menolak, mesin sortition kriptografis secara instan menarik warga pengganti dari kolam terdaftar.",
+      "Layanan disertai dengan bantuan fisik penuh, penitipan anak, dan akomodasi hidup yang nyaman untuk mempermudah partisipasi."
+    ],
+    "keywords": [
+      "otonomi",
+      "hak menolak",
+      "tugas sipil",
+      "sukarela",
+      "kesejahteraan partisipan"
+    ]
+  },
+  "QA-DEM-05": {
+    "id": "QA-DEM-05",
+    "question": "Apa yang menghentikan kepentingan luar atau kartel menyuap anggota dewan warga?",
+    "verdict": "SELESAI: Anonimitas kriptografis, tanpa uang, dan musyawarah buta",
+    "lead": "Anda tidak dapat menyuap seseorang ketika Anda tidak tahu siapa yang duduk di dewan sampai mereka hadir, dan uang tidak lagi ada untuk membeli pengaruh.",
+    "points": [
+      "Identitas anggota dewan disegel dengan kriptografi ambang batas zero-knowledge sampai sesi dimulai di ruang tertutup.",
+      "Karena uang fiat pribadi dihapuskan, tidak ada rekening bank luar negeri atau mata uang spekulatif yang bisa ditawarkan.",
+      "Anggota dewan memilih secara anonim pada terminal kriptografis sirkuit tertutup, membuat verifikasi suap mustahil bagi penyuap.",
+      "Durasi dewan yang singkat membuat pembentukan jaringan pengaruh permanen secara matematis tidak layak."
+    ],
+    "keywords": [
+      "anti-suap",
+      "anonimitas",
+      "zero-knowledge",
+      "keamanan sistem",
+      "transparansi"
+    ]
+  },
+  "QA-THERM-01": {
+    "id": "QA-THERM-01",
+    "question": "Tanpa uang, seperti apa saldo pribadi atau layar ponsel?",
+    "verdict": "SELESAI: Pengukur kesehatan biofisik sebagai pengganti token utang abstrak",
+    "lead": "Bukan saldo bank yang mencemaskan, antarmuka Anda menampilkan cadangan daerah aliran sungai, kapasitas energi bersih, dan token diskresioner pribadi.",
+    "points": [
+      "Tidak ada biaya bank, peringatan cerukan, bunga kartu kredit, atau tagihan hipotek: kecemasan finansial dihapuskan.",
+      "Layar menampilkan status hidup bioregion Anda: tingkat akuifer, cadangan jaringan terbarukan, dan prakiraan panen.",
+      "Anda melihat kuota diskresioner Tingkat 3 pribadi untuk memesan komponen lab fabrikasi khusus atau memesan perjalanan cepat.",
+      "Antarmuka melacak kelimpahan fisik dan batas ekologi alih-alih utang finansial majemuk."
+    ],
+    "keywords": [
+      "ekonomi biofisik",
+      "antarmuka pengguna",
+      "kesejahteraan ekologis",
+      "pasca-uang",
+      "sumber daya"
+    ]
+  },
+  "QA-THERM-02": {
+    "id": "QA-THERM-02",
+    "question": "Bagaimana O.N.E. memutuskan siapa yang mendapatkan air atau listrik selama krisis energi ekstrem atau kekeringan?",
+    "verdict": "SELESAI: Triase biologis melindungi kelangsungan hidup manusia sebelum fasilitas mewah",
+    "lead": "Di bawah kapitalisme, orang kaya menjaga rumah mereka tetap dingin sementara orang miskin kedinginan; di O.N.E., algoritma secara otomatis memotong kemewahan sebelum kehidupan manusia.",
+    "points": [
+      "L_min adalah seperti triase biologis dalam tubuh: saat hipotermia terjadi, darah mengalir ke jantung dan otak, bukan ke ujung jari.",
+      "Tingkat 1 (air minum bersih, klinik medis darurat, pemanas rumah dasar) adalah prinsip konstitusional yang tidak dapat diganggu gugat.",
+      "Tingkat 2 (transit makanan inti, jaringan komunikasi dasar) dipelihara dari cadangan penyangga.",
+      "Tingkat 3 (air mancur, fabrikasi mewah, fasilitas rekreasi pribadi) dilepaskan secara instan dan otomatis sampai krisis berlalu."
+    ],
+    "keywords": [
+      "triase",
+      "prioritas energi",
+      "hak hidup",
+      "manajemen krisis",
+      "inviolable"
+    ]
+  },
+  "QA-THERM-03": {
+    "id": "QA-THERM-03",
+    "question": "Apa itu Heretic's Commons dan mengapa 7% energi planet dicadangkan untuk itu?",
+    "verdict": "SELESAI: Energi terjamin untuk ide berisiko tinggi, tidak konvensional, dan pembangkang",
+    "lead": "Untuk mencegah stagnasi birokrasi dan konformisme, 7% dari semua eksergi yang tersedia dicadangkan secara konstitusional untuk penelitian tidak konvensional.",
+    "points": [
+      "Tidak ada komite arus utama atau konsensus akademik yang dapat memveto akses ke Heretic's Commons.",
+      "Inovator dengan teori aneh (fusi dingin, pertanian solarpunk radikal, fisika pinggiran) menerima waktu lab dan bahan tanpa hambatan.",
+      "Ini memastikan paradigma tidak pernah berubah menjadi birokrasi dogmatis dan kaku yang menolak penemuan baru.",
+      "Jika eksperimen gagal, tidak ada kehancuran finansial pribadi; jika berhasil, cetak biru terbuka menguntungkan seluruh umat manusia."
+    ],
+    "keywords": [
+      "heretic's commons",
+      "inovasi",
+      "penelitian radikal",
+      "kebebasan intelektual",
+      "eksergi"
+    ]
+  },
+  "QA-THERM-04": {
+    "id": "QA-THERM-04",
+    "question": "Bagaimana O.N.E. melakukan perdagangan dengan negara asing tanpa terinfeksi mata uang fiat?",
+    "verdict": "SELESAI: Clearinghouse fisik dengan penyangga acak terhadap spekulasi mata uang",
+    "lead": "Antarmuka Perdagangan Eksternal membeli barang asing yang diperlukan menggunakan ekspor negara, sambil mengisolasi warga internal dari permainan mata uang asing.",
+    "points": [
+      "Mata uang fiat asing (USD, EUR) diperlakukan secara ketat sebagai komoditas eksternal beracun, tidak pernah beredar di dalam wilayah O.N.E.",
+      "Antarmuka Perdagangan Eksternal (ETI) bertindak sebagai membran fisik satu arah: ia membeli mesin asing khusus dengan surplus ekspor.",
+      "Jendela penyelesaian transaksi acak mencegah pedagang algoritmik frekuensi tinggi menyerang penyangga pertukaran.",
+      "Di dalam O.N.E., warga menikmati usufruto tanpa syarat yang benar-benar terlepas dari volatilitas valuta asing internasional."
+    ],
+    "keywords": [
+      "perdagangan eksternal",
+      "usufruto",
+      "isolasi fiat",
+      "clearinghouse",
+      "stabilitas ekonomi"
+    ]
+  },
+  "QA-THERM-05": {
+    "id": "QA-THERM-05",
+    "question": "Apa yang menghentikan individu menimbun persediaan dan memulai pasar gelap ilegal?",
+    "verdict": "SELESAI: Absennya token moneter langka dan ketersediaan terbuka universal",
+    "lead": "Pasar gelap berkembang karena kelangkaan buatan dan uang tunai; ketika setiap orang sudah memiliki akses gratis ke makanan, alat, dan perumahan, penimbunan tidak masuk akal.",
+    "points": [
+      "Anda tidak dapat menjual kembali apa yang sudah bisa diambil siapa pun secara gratis di gudang komunitas lingkungan.",
+      "Tanpa mata uang fiat untuk ditimbun, mengumpulkan 1.000 karung gandum hanya akan mengundang hama dan rasa malu sosial.",
+      "Telemetri terbuka dan registri berbagi alat melacak peralatan modal makroskopis, membuat penutupan pabrik rahasia menjadi mustahil.",
+      "Pemberian hadiah, perdagangan pribadi, dan barter kreatif seni buatan tangan sepenuhnya diizinkan: hanya eksploitasi predator yang mustahil."
+    ],
+    "keywords": [
+      "anti-penimbunan",
+      "ekonomi kelimpahan",
+      "pasar gelap",
+      "akses terbuka",
+      "koperasi"
+    ]
+  },
+  "QA-JUST-01": {
+    "id": "QA-JUST-01",
+    "question": "Bagaimana O.N.E. menangani penjahat kekerasan, pembunuh, atau psikopat tanpa polisi atau penjara?",
+    "verdict": "TERPECAHKAN: De-eskalasi somatik, pemisahan fisik di suaka manusiawi, dan perawatan psikiatris",
+    "lead": "O.N.E. menghapuskan jeruji besi dan penyiksaan hukuman; individu yang menimbulkan bahaya mematikan segera dipindahkan secara fisik ke suaka terapeutik yang aman.",
+    "points": [
+      "Penjara, pengurungan isolasi hukuman, dan hukuman mati dilarang selamanya di bawah Invarian Kelas 0 Konstitusional.",
+      "Ketika seseorang melakukan kekerasan serius, Peace Guild yang terlatih dan tidak bersenjata memisahkan pelaku secara fisik untuk melindungi korban.",
+      "Pelaku dipindahkan ke suaka pemulihan terapeutik khusus di bioregion terpisah dengan perawatan medis lengkap.",
+      "Karena 90% kejahatan lama didorong oleh kemiskinan, perang narkoba, dan utang, tingkat kejahatan kekerasan turun drastis."
+    ],
+    "keywords": [
+      "keadilan restoratif",
+      "suaka terapeutik",
+      "invarian kelas 0",
+      "Peace Guild",
+      "tanpa penjara"
+    ]
+  },
+  "QA-JUST-02": {
+    "id": "QA-JUST-02",
+    "question": "Mengapa O.N.E. melarang pasukan polisi bersenjata dan senjata api pribadi?",
+    "verdict": "TERPECAHKAN: Penghapusan alat pembantaian kinetik massal dan teror negara bersenjata",
+    "lead": "Pasukan polisi militeristik melindungi properti negara dan korporasi melalui kekerasan; O.N.E. mengganti polisi bersenjata dengan mediator de-eskalasi konflik yang tidak bersenjata.",
+    "points": [
+      "Pistol, senjata serbu, dan senjata api balistik dilarang secara konstitusional dari kehidupan sipil dan publik domestik.",
+      "Civic Peace Guild dilatih dalam seni bela diri non-kekerasan, de-eskalasi somatik, dan mediasi psikiatris.",
+      "Ketika perselisihan muncul, mediator tidak datang dengan senjata terisi untuk menembak tersangka dalam momen kepanikan.",
+      "Masyarakat mengandalkan lingkaran keadilan restoratif di mana kerugian diakui, disembuhkan, dan diperbaiki."
+    ],
+    "keywords": [
+      "pelucutan senjata",
+      "de-eskalasi konflik",
+      "keadilan restoratif",
+      "non-kekerasan",
+      "lingkaran keadilan"
+    ]
+  },
+  "QA-JUST-03": {
+    "id": "QA-JUST-03",
+    "question": "Keadilan atau restitusi apa yang diterima korban ketika seseorang menyakiti mereka atau merusak barang milik mereka?",
+    "verdict": "TERPECAHKAN: Restitusi material nyata dari kumpulan sumber daya bersama dan penyembuhan psikologis",
+    "lead": "Di pengadilan lama, korban tidak mendapatkan apa-apa sementara pelaku membusuk di penjara; di O.N.E., masyarakat segera mengganti barang yang rusak dan memediasi penyembuhan.",
+    "points": [
+      "Setiap harta benda pribadi yang rusak segera diganti atau diperbaiki tanpa biaya dari inventaris sumber daya bersama (watershed commons).",
+      "Korban diberikan dukungan medis, psikologis, dan suaka tempat tinggal segera.",
+      "Orang yang menyebabkan kerugian bekerja di bawah bimbingan masyarakat untuk melakukan layanan restoratif sebagai ganti rugi.",
+      "Fokusnya adalah pada penyembuhan sejati, akuntabilitas, dan pencegahan terulangnya kejadian daripada balas dendam."
+    ],
+    "keywords": [
+      "restitusi",
+      "commons",
+      "pemulihan",
+      "akuntabilitas",
+      "kesejahteraan korban"
+    ]
+  },
+  "QA-JUST-04": {
+    "id": "QA-JUST-04",
+    "question": "Apa yang mencegah massa main hakim sendiri atau keadilan jalanan terbentuk tanpa polisi?",
+    "verdict": "TERPECAHKAN: Kordon de-eskalasi cepat dan larangan ketat kekerasan massa",
+    "lead": "Main hakim sendiri adalah pelanggaran eksplisit terhadap Invarian Kelas 0: Peace Guild secara fisik berdiri di antara massa untuk mencegah kekerasan balasan.",
+    "points": [
+      "Kekerasan balasan, main hakim sendiri, dan peradilan massa tidak sah secara konstitusional menurut Pasal 1.2.",
+      "Kelompok tanggap cepat Peace Guild mengerahkan perisai pelindung non-letal untuk membubarkan kerumunan dan melindungi orang yang dituduh.",
+      "Individu yang dituduh segera dikawal ke suaka lotre warga (sortition) yang netral di seberang garis distrik.",
+      "Majelis pencari fakta demarkis objektif memastikan emosi mereda sebelum musyawarah restoratif dimulai."
+    ],
+    "keywords": [
+      "sortition",
+      "invarian kelas 0",
+      "demarki",
+      "pencegahan massa",
+      "peradilan netral"
+    ]
+  },
+  "QA-JUST-05": {
+    "id": "QA-JUST-05",
+    "question": "Bagaimana O.N.E. melindungi korban kekerasan dalam rumah tangga dan pelecehan di dalam rumah?",
+    "verdict": "TERPECAHKAN: Perumahan suaka instan tanpa syarat, pemisahan cepat, dan perlindungan komunal",
+    "lead": "Dalam masyarakat kapitalis, pelaku pelecehan menjebak korban karena ketergantungan finansial; di O.N.E., korban memiliki perumahan mandiri dan jaminan kelangsungan hidup sejak lahir.",
+    "points": [
+      "Pelecehan finansial tidak mungkin terjadi: tidak ada pasangan yang bisa mengontrol rekening bank Anda, memutus akses makanan, atau mengambil layanan kesehatan Anda.",
+      "Setiap lingkungan memelihara suaka Tempat Perlindungan Segera yang nyaman dengan perawatan 24/7 dan dapur umum.",
+      "Korban dapat segera berpindah ke rumah mandiri baru pilihan mereka tanpa harus menunggu dokumen pengadilan perceraian.",
+      "Individu yang melakukan pelecehan dikeluarkan secara permanen dari rumah tangga dan ditempatkan dalam program perilaku restoratif wajib."
+    ],
+    "keywords": [
+      "perlindungan korban",
+      "suaka komunal",
+      "mandiri finansial",
+      "kesejahteraan domestik",
+      "anti-pelecehan"
+    ]
+  },
+  "QA-EDU-01": {
+    "id": "QA-EDU-01",
+    "question": "Mengapa O.N.E. membatasi tablet dan ponsel pintar untuk anak kecil hingga usia 7 tahun?",
+    "verdict": "TERPECAHKAN: Melindungi otak muda dari disregulasi perhatian dan atrofi sensorik",
+    "lead": "Perusahaan teknologi komersial mendesain layar adiktif untuk balita; O.N.E. memprioritaskan alam taktil, musik, permainan spasial, dan kesehatan sistem saraf.",
+    "points": [
+      "Neurobiologi membuktikan bahwa usia 0-7 adalah jendela kritis untuk integrasi sensorik-motorik, kesadaran spasial 3D, dan keterikatan manusia.",
+      "Masa kanak-kanak awal berfokus pada tanah, pohon, alat kayu, tanah liat, instrumen musik, dan permainan luar ruangan yang bebas.",
+      "Imersi digital prematur menyebabkan kelelahan dopaminergik, kecemasan, dan rentang perhatian yang terfragmentasi.",
+      "Anak-anak mengembangkan ketahanan sistem saraf yang mendalam dan ko-regulasi emosional dengan teman sebaya manusia yang nyata."
+    ],
+    "keywords": [
+      "kesehatan saraf",
+      "pendidikan dini",
+      "neurobiologi",
+      "tumbuh kembang",
+      "anti-layar"
+    ]
+  },
+  "QA-EDU-02": {
+    "id": "QA-EDU-02",
+    "question": "Apa itu Kebersihan Epistemik dan bagaimana anak-anak diajarkan untuk berpikir kritis?",
+    "verdict": "TERPECAHKAN: Mengajarkan cara berpikir, bukan apa yang harus dipikirkan: mendeteksi manipulasi dan kesesatan logika",
+    "lead": "Alih-alih hafalan untuk tes standar, anak-anak dilatih untuk mendeteksi bias kognitif, menemukan manipulasi emosional, dan menghargai bukti.",
+    "points": [
+      "Siswa menguasai metode ilmiah, probabilitas, ketidakpastian, debiasing kognitif, dan kesesatan logika formal.",
+      "Lingkaran Sokratik harian mendorong debat yang menghormati, mempertanyakan asumsi, dan mendengarkan sudut pandang lawan.",
+      "Anak-anak belajar mengidentifikasi kapan seorang pembicara menggunakan ketakutan, dikotomi palsu, atau trik karismatik untuk memanipulasi mereka.",
+      "Ini menciptakan warga dewasa yang sepenuhnya kebal terhadap propaganda politik dan histeria konspirasi."
+    ],
+    "keywords": [
+      "kebersihan epistemik",
+      "berpikir kritis",
+      "bias kognitif",
+      "logika formal",
+      "debat sokratik"
+    ]
+  },
+  "QA-EDU-03": {
+    "id": "QA-EDU-03",
+    "question": "Apa itu Perancah 1.000 Hari Pertama dan bagaimana O.N.E. mendukung orang tua baru?",
+    "verdict": "TERPECAHKAN: Imunitas kerja penuh bagi orang tua baru dan bantuan komunal sepanjang waktu",
+    "lead": "Membesarkan bayi yang aman dan sehat diakui sebagai pekerjaan dasar tertinggi peradaban: orang tua baru dilindungi dari semua tugas pemeliharaan.",
+    "points": [
+      "Orang tua baru menerima imunitas lengkap dan tidak dipertanyakan dari giliran kerja pemeliharaan untuk 1.000 hari pertama anak.",
+      "Pengasuhan bersama universal memecah isolasi keluarga inti yang melelahkan: tempat penitipan anak komunal memberikan dukungan yang hangat dan berpengalaman.",
+      "Doula kelahiran terlatih, pelatih laktasi, dan perkumpulan juru masak membawa nutrisi hangat dan bantuan langsung ke rumah tangga.",
+      "Sistem saraf yang sehat pada bayi mencegah munculnya orang dewasa yang trauma, cemas, atau kasar."
+    ],
+    "keywords": [
+      "1000 hari pertama",
+      "dukungan orang tua",
+      "pengasuhan komunal",
+      "imunitas kerja",
+      "kesejahteraan bayi"
+    ]
+  },
+  "QA-EDU-04": {
+    "id": "QA-EDU-04",
+    "question": "Bagaimana universitas, institut penelitian, dan pendidikan tinggi beroperasi di O.N.E.?",
+    "verdict": "TERPECAHKAN: Pendidikan tinggi gratis 100%, tinjauan sejawat, dan magang laboratorium langsung",
+    "lead": "Pendidikan tinggi adalah barang publik terbuka: siapa pun bisa belajar kedokteran, komputasi kuantum, atau filsafat tanpa utang atau komersialisasi korporat.",
+    "points": [
+      "Tanpa biaya kuliah, tanpa paywall buku teks, dan tanpa pinjaman mahasiswa yang predator.",
+      "Peringkat kompetitif standar digantikan oleh penguasaan portofolio, tinjauan sejawat ilmiah, dan proyek laboratorium praktis.",
+      "Remaja memasuki magang serikat pada usia 13 tahun, bekerja bersama peneliti senior pada masalah ekologis dan industri nyata.",
+      "Penemuan ilmiah menjadi milik seluruh dunia di bawah lisensi copyfarleft terbuka."
+    ],
+    "keywords": [
+      "pendidikan gratis",
+      "akses terbuka",
+      "magang serikat",
+      "copyfarleft",
+      "riset kolaboratif"
+    ]
+  },
+  "QA-EDU-05": {
+    "id": "QA-EDU-05",
+    "question": "Bisakah keluarga mendidik anak-anak mereka di rumah atau menanamkan tradisi budaya?",
+    "verdict": "TERPECAHKAN: Kebebasan pendidikan rumah asalkan non-kekerasan dan integritas tubuh dijunjung tinggi",
+    "lead": "Keluarga sepenuhnya bebas untuk melakukan homeschooling, menularkan bahasa, dan merayakan warisan budaya, selama anak-anak dilindungi dari kekerasan.",
+    "points": [
+      "Orang tua memiliki otonomi berdaulat untuk memilih pembelajaran rumah, sekolah komunitas koperasi, atau magang hutan.",
+      "Bahasa pribumi, dialek regional, dan sejarah lokal secara aktif dibina dan didokumentasikan.",
+      "Satu-satunya dasar yang tidak dapat diganggu gugat: anak-anak tidak boleh mengalami kekerasan fisik, hukuman badan, atau pengabaian medis.",
+      "Laboratorium sains komunitas, lapangan olahraga, dan atelier seni tetap terbuka untuk anak-anak homeschooling setiap saat."
+    ],
+    "keywords": [
+      "homeschooling",
+      "otonomi keluarga",
+      "warisan budaya",
+      "integritas tubuh",
+      "pendidikan bebas"
+    ]
+  },
+  "QA-SCI-01": {
+    "id": "QA-SCI-01",
+    "question": "Tanpa paten dan keuntungan hak kekayaan intelektual, siapa yang akan mendanai penyembuhan medis yang mahal dan penelitian kanker?",
+    "verdict": "TERPECAHKAN: Jaminan sumber daya laboratorium, kolaborasi global terbuka, dan nol praktik penetapan harga farmasi yang mencekik",
+    "lead": "Raksasa farmasi menghabiskan lebih banyak uang untuk iklan dan pembelian kembali saham daripada untuk R&D; dalam O.N.E., ilmuwan memiliki laboratorium yang terjamin dan berbagi penemuan secara terbuka.",
+    "points": [
+      "Informasi, rumus kimia, dan kode genetik bersifat non-rival: menyalin cetak biru medis tidak membutuhkan energi fisik.",
+      "Peneliti medis menerima jaminan kebutuhan dasar hidup, bioreaktor canggih, dan klaster pemodelan AI.",
+      "Tidak ada portofolio paten rahasia: ketika sebuah laboratorium di Detroit menemukan obat, ilmuwan di Tokyo dan São Paulo dapat mensintesisnya dalam hitungan jam.",
+      "Tidak ada manusia yang pernah ditolak aksesnya terhadap suntikan insulin, obat kanker, atau vaksin hanya karena mereka tidak mampu membayar harga monopoli korporasi."
+    ],
+    "keywords": [
+      "riset medis terbuka",
+      "farmasi gratis",
+      "sains kolaboratif",
+      "kesehatan sebagai hak",
+      "riset tanpa paten"
+    ]
+  },
+  "QA-SCI-02": {
+    "id": "QA-SCI-02",
+    "question": "Dapatkah chip semikonduktor dan prosesor canggih dibuat tanpa rantai alat milik perusahaan?",
+    "verdict": "TERPECAHKAN: Arsitektur RISC terbuka yang heterogen, rantai alat yang beragam, dan litografi komunitas",
+    "lead": "Silikon tertutup milik perusahaan menyembunyikan pintu belakang dan obsolesensi terencana; O.N.E. membangun prosesor multi-ISA yang transparan dan diaudit oleh komunitas global.",
+    "points": [
+      "Semua set instruksi prosesor didasarkan pada silikon terbuka (RISC-V, OpenPower) dengan desain topeng yang dapat diverifikasi publik.",
+      "Diverse Double-Compilation (DDC) memastikan tidak ada pintu belakang kompilator tersembunyi yang dapat bertahan di seluruh rantai alat yang heterogen.",
+      "Node infrastruktur kritis menggunakan chip redundan triple-modular yang diproduksi di jalur pengecoran yang berbeda.",
+      "Fab-lab komunitas mendaur ulang silikon kemurnian tinggi dan memproduksi node industri 28nm-65nm yang tahan lama secara lokal."
+    ],
+    "keywords": [
+      "silikon terbuka",
+      "RISC-V",
+      "perangkat keras transparan",
+      "manufaktur komunitas",
+      "keamanan siber"
+    ]
+  },
+  "QA-SCI-03": {
+    "id": "QA-SCI-03",
+    "question": "Bisakah megaproyek seperti teleskop ruang angkasa, reaktor fusi, atau misi Mars terjadi tanpa miliarder swasta atau kekaisaran negara?",
+    "verdict": "TERPECAHKAN: Kerjasama ilmiah planet global yang dibebaskan dari anggaran pertahanan militer",
+    "lead": "Pencapaian ilmiah terbesar umat manusia (James Webb, CERN, Human Genome) adalah kolaborasi publik; O.N.E. meningkatkan skala ini secara global.",
+    "points": [
+      "Tanpa triliunan yang terbuang untuk rudal balistik, tentara tetap, dan spekulasi keuangan, kapasitas rekayasa planet menjadi sangat besar.",
+      "Ilmuwan di semua benua menggabungkan klaster komputasi, array astronomi radio, dan fasilitas peluncuran secara bebas.",
+      "Misi luar angkasa berfokus pada astrofisika asli dan pertahanan planet, bukan perjalanan wisata ruang angkasa miliarder yang sia-sia.",
+      "Repositori rekayasa terbuka memungkinkan jutaan astronom amatir dan pembuat untuk berkontribusi pada kode dan telemetri yang bermakna."
+    ],
+    "keywords": [
+      "sains global",
+      "eksplorasi ruang angkasa",
+      "rekayasa planet",
+      "kerjasama sains",
+      "tanpa militerisme"
+    ]
+  },
+  "QA-SCI-04": {
+    "id": "QA-SCI-04",
+    "question": "Bagaimana O.N.E. mencegah laboratorium nakal mensintesis patogen mematikan atau AI berbahaya?",
+    "verdict": "TERPECAHKAN: Verifikasi air-gap real-time, kunci sintesis ambang batas, dan batas keamanan hayati yang ketat",
+    "lead": "Senjata biologis mematikan dan penelitian gain-of-function yang tidak terkendali adalah pelanggaran Invarian Kelas 0: pensintesis gen otomatis memerlukan kunci ambang batas fisik multi-pihak.",
+    "points": [
+      "Pencetak DNA sintetis memerlukan kunci kriptografi ambang batas multi-watershed (t-MPC) untuk mensintesis strain virus terlarang.",
+      "Protokol keamanan biologis disematkan ke dalam logika perangkat keras: pencetak secara fisik berhenti dan mati saat mendeteksi tanda urutan mematikan.",
+      "Penelitian patogen gain-of-function yang berbahaya untuk peperangan diklasifikasikan secara permanen sebagai kejahatan terhadap kelangsungan hidup manusia.",
+      "Karena tidak ada keuntungan modal ventura swasta untuk bioteknologi nakal, insentif ekonomi untuk mengembangkan patogen rahasia akan hilang."
+    ],
+    "keywords": [
+      "keamanan hayati",
+      "Invarian Kelas 0",
+      "kriptografi aman",
+      "bioteknologi bertanggung jawab",
+      "pencegahan senjata biologi"
+    ]
+  },
+  "QA-SCI-05": {
+    "id": "QA-SCI-05",
+    "question": "Bisakah saya menulis perangkat lunak, membuat film, melukis, atau merilis musik atas nama saya sendiri?",
+    "verdict": "TERPECAHKAN: Hak kepenulisan moral absolut, otonomi artistik, dan alat kreatif gratis",
+    "lead": "Anda memegang atribusi moral permanen atas karya kreatif Anda; Anda hanya tidak dapat menggunakan hak cipta untuk menahan seni dari budaya manusia.",
+    "points": [
+      "Nama Anda terlampir secara permanen pada kode, novel, lagu, dan lukisan Anda: kepenulisan moral tidak dapat dicabut.",
+      "Seniman menerima jaminan kebutuhan dasar hidup dan ruang studio: Anda tidak perlu menjual jiwa Anda ke agensi iklan komersial.",
+      "Arsip musik terbuka dan perpustakaan digital dapat diakses oleh setiap anak manusia tanpa paywall atau biaya berlangganan.",
+      "Remix kreatif dan evolusi budaya dirayakan alih-alih dituntut oleh konglomerat hiburan korporasi."
+    ],
+    "keywords": [
+      "hak moral penulis",
+      "otonomi artistik",
+      "kreativitas terbuka",
+      "budaya bebas",
+      "atribusi karya"
+    ]
+  },
+  "QA-REL-01": {
+    "id": "QA-REL-01",
+    "question": "Bisakah komunitas agama memelihara gereja, masjid, dan kuil di O.N.E.?",
+    "verdict": "TERPECAHKAN: Kebebasan beribadah penuh dan usufruto tempat suci",
+    "lead": "Iman, doa, dan ibadah spiritual adalah kebebasan pribadi dan komunal yang sakral: komunitas memegang hak usufruto penuh atas ruang suci mereka.",
+    "points": [
+      "Kebebasan beragama dan praktik spiritual adalah Invarian Kelas 0 yang tidak dapat diganggu gugat: tidak ada negara sekuler yang dapat melarang ibadah agama.",
+      "Gereja, masjid, kuil, dan pusat meditasi menerima hak usufruto yang diakui sebagai tempat suci budaya komunal.",
+      "Jemaat spiritual tidak membayar pajak properti atau biaya utilitas komersial.",
+      "Keberagaman agama dan tradisi spiritual asli dilindungi terhadap persekusi atau sekularisasi paksa."
+    ],
+    "keywords": [
+      "kebebasan beragama",
+      "usufruto ruang suci",
+      "Invarian Kelas 0",
+      "hak beribadah",
+      "perlindungan budaya"
+    ]
+  },
+  "QA-REL-02": {
+    "id": "QA-REL-02",
+    "question": "Bagaimana katedral, kuil, atau monumen bersejarah yang besar menerima energi dan pemanas tanpa uang?",
+    "verdict": "TERPECAHKAN: Alokasi eksergi warisan budaya yang disepakati oleh dewan daerah aliran sungai",
+    "lead": "Arsitektur suci bersejarah diakui sebagai warisan bersama manusia: pelestarian dasar dan pemanas komunal dialokasikan oleh dewan undian (sortition) lokal.",
+    "points": [
+      "Dewan undian daerah aliran sungai bermusyawarah tentang alokasi energi termal dasar dan pencahayaan untuk bangunan budaya sakral.",
+      "Jemaat secara aktif mengorganisir serikat sukarelawan untuk memelihara, membersihkan, dan merawat ruang suci mereka.",
+      "Tidak ada katedral kuno atau masjid bersejarah yang akan dilelang kepada pengembang hotel mewah swasta karena utang yang belum dibayar.",
+      "Hari raya khusus dan perayaan suci menerima kuota energi musiman tambahan."
+    ],
+    "keywords": [
+      "warisan budaya",
+      "alokasi energi",
+      "dewan undian",
+      "pelestarian monumen",
+      "pemeliharaan komunitas"
+    ]
+  },
+  "QA-REL-03": {
+    "id": "QA-REL-03",
+    "question": "Dapatkah sekte agama memaksakan pernikahan, disiplin kekerasan, atau menahan anggota di luar kehendak mereka?",
+    "verdict": "TERPECAHKAN: Hak tanpa syarat untuk keluar dan larangan total terhadap paksaan fisik",
+    "lead": "Keyakinan agama sepenuhnya bebas; paksaan fisik, pernikahan paksa, pelecehan anak, dan penyanderaan secara ketat tidak konstitusional.",
+    "points": [
+      "Setiap manusia memiliki hak tanpa syarat dan tidak dapat dicabut untuk meninggalkan kelompok agama, keluarga, atau sekte mana pun kapan saja.",
+      "Pernikahan paksa, kekerasan kehormatan, dan pelecehan fisik melanggar Invarian Kelas 0 dan memicu intervensi Peace Guild segera.",
+      "Karena setiap warga negara memiliki jaminan perumahan dan makanan independen, pemimpin sekte tidak dapat menggunakan kelaparan atau tunawisma untuk menjebak anggota.",
+      "Integritas tubuh anak-anak dan kebebasan dari kekerasan tidak dapat dinegosiasikan di semua kepercayaan."
+    ],
+    "keywords": [
+      "hak keluar sekte",
+      "larangan paksaan fisik",
+      "perlindungan anak",
+      "kebebasan individu",
+      "invarian konstitusional"
+    ]
+  },
+  "QA-REL-04": {
+    "id": "QA-REL-04",
+    "question": "Bisakah orang tua religius mengajarkan kitab suci, iman, dan etika kepada anak-anak mereka?",
+    "verdict": "TERPECAHKAN: Orang tua bebas mengajarkan kitab suci dan nilai spiritual di rumah serta di pusat ibadah",
+    "lead": "Orang tua dan komunitas iman bebas menanamkan nilai-nilai teologis, kitab suci, dan ritual spiritual kepada anak-anak mereka.",
+    "points": [
+      "Gereja dan masjid dapat mengoperasikan sekolah Minggu, studi Quran, yeshiva, dan kelas meditasi Buddha dengan bebas.",
+      "Otoritas negara tidak memiliki kekuatan untuk mendikte doa, menyensor teks suci, atau melarang perayaan spiritual.",
+      "Anak-anak juga memiliki akses ke perpustakaan komunitas terbuka dan lokakarya sains untuk memastikan perspektif yang seimbang dan otonom.",
+      "Pertumbuhan spiritual dipupuk melalui kasih sayang sukarela dan koneksi komunitas, bukan penegakan negara."
+    ],
+    "keywords": [
+      "pendidikan religius",
+      "kebebasan orang tua",
+      "transmisi iman",
+      "hak pendidikan",
+      "otonomi keluarga"
+    ]
+  },
+  "QA-REL-05": {
+    "id": "QA-REL-05",
+    "question": "Tanpa polisi, apa yang mencegah permusuhan sektarian historis dan kekerasan agama antar kelompok?",
+    "verdict": "TERPECAHKAN: Pelucutan senjata total, dewan antar-iman, dan saling ketergantungan ekologis",
+    "lead": "Perang agama secara historis didorong oleh pemimpin politik yang memperebutkan tanah dan minyak; di O.N.E., senjata dihapuskan dan komunitas berbagi pendukung kehidupan.",
+    "points": [
+      "Tidak ada senjata api dan senjata berat untuk mempersenjatai milisi sektarian: faksi agama tidak dapat mengobarkan perang saudara kinetik.",
+      "Semua keyakinan berbagi pipa air, array surya, dan klinik medis yang sama: kelangsungan hidup bersama memerlukan kerja sama harian.",
+      "Perjanjian Antar-Iman mempertemukan para tetua dan pemimpin dalam lingkaran mediasi undian (sortition) secara rutin.",
+      "Penghormatan ekologis terhadap planet yang hidup menyatukan berbagai tradisi spiritual dalam kepengurusan bersama."
+    ],
+    "keywords": [
+      "tanpa kekerasan",
+      "mediasi antar-iman",
+      "pelucutan senjata",
+      "kerjasama ekologis",
+      "perdamaian komunitas"
+    ]
+  },
+  "QA-RIG-01": {
+    "id": "QA-RIG-01",
+    "question": "Perlindungan konstitusional apa yang secara eksplisit ada bagi kelompok LGBTQ+, identitas gender, dan minoritas seksual?",
+    "verdict": "TERJAWAB: Otonomi tubuh somatik mutlak, afirmasi gender penuh, dan perlindungan dari pelecehan",
+    "lead": "Tubuh, identitas gender, dan kehidupan pribadi Anda adalah domain kedaulatan pribadi Anda: diskriminasi, kriminalisasi, dan pelecehan secara tegas inkonstitusional.",
+    "points": [
+      "Pasal 1.2 menjamin penentuan nasib sendiri secara somatik dan fisik yang lengkap sebagai Invarian Konstitusional Kelas 0 yang tidak dapat diganggu gugat.",
+      "Perawatan kesehatan yang mengafirmasi gender, perawatan psikologis, dan otonomi reproduksi dijamin tanpa syarat dengan biaya nol.",
+      "Tidak ada gereja, negara, dewan, atau tetangga yang memiliki kekuatan hukum untuk mengatur hubungan orang dewasa yang konsensual atau ekspresi gender.",
+      "Pelecehan kebencian memicu intervensi perlindungan komunitas segera oleh Serikat Perdamaian Sipil."
+    ],
+    "keywords": [
+      "otonomi tubuh",
+      "hak LGBTQ",
+      "afirmasi gender",
+      "hak asasi manusia",
+      "kebebasan sipil"
+    ]
+  },
+  "QA-RIG-02": {
+    "id": "QA-RIG-02",
+    "question": "Apa yang mencegah rasisme, pemrofilan etnis, atau diskriminasi rasial terus berlanjut di O.N.E.?",
+    "verdict": "TERJAWAB: Penghapusan polisi bersenjata rasis, sumber daya setara, dan lotre warga (sortition) yang beragam",
+    "lead": "Rasisme institusional dipertahankan melalui patroli polisi bersenjata dan kemiskinan ekonomi; O.N.E. menghapus keduanya dan menjamin hak kelahiran yang setara bagi setiap warisan.",
+    "points": [
+      "Nol pasukan polisi bersenjata yang melakukan penggeledahan atau pemrofilan terhadap warga kulit hitam, cokelat, atau minoritas di jalan-jalan lingkungan.",
+      "Usufruct (hak guna usaha/pakai) universal tanpa syarat menjamin bahwa tidak ada minoritas rasial yang terjebak dalam kemelaratan atau ditolak akses layanan kesehatan berkualitas.",
+      "Lotre warga kriptografis memastikan dewan publik mencerminkan keragaman demografis komunitas yang sebenarnya tanpa manipulasi batas wilayah.",
+      "Budaya pribumi dan masyarakat yang tertindas secara historis menerima prioritas pemulihan usufruct tanah dan otonomi budaya."
+    ],
+    "keywords": [
+      "anti-rasisme",
+      "keadilan rasial",
+      "usufruct",
+      "sortition",
+      "keadilan ekonomi"
+    ]
+  },
+  "QA-RIG-03": {
+    "id": "QA-RIG-03",
+    "question": "Bisakah O.N.E. memaksa individu untuk menerima vaksin atau menjalani perawatan medis yang tidak diinginkan?",
+    "verdict": "TERJAWAB: Integritas tubuh mutlak: nol intervensi medis paksaan atau mandat",
+    "lead": "Jaringan tubuh Anda adalah milik Anda sepenuhnya: tidak ada dewan atau badan publik yang boleh menyuntik, memberi obat, atau mengoperasi tubuh Anda tanpa persetujuan yang diinformasikan.",
+    "points": [
+      "Persetujuan yang diinformasikan dan sukarela adalah Invarian Kelas 0 yang mutlak: suntikan paksa dan koersi medis secara tegas inkonstitusional.",
+      "Kesehatan masyarakat mengandalkan transparansi radikal, data ilmiah terbuka, dan kepercayaan sukarela, bukan mandat polisi otoriter.",
+      "Selama wabah penyakit menular, komunitas menggunakan tempat perlindungan isolasi sukarela, ventilasi efisiensi tinggi, dan penyaring udara terbuka.",
+      "Pekerja kesehatan menawarkan konseling penuh kasih, tidak pernah menggunakan kekuatan paksaan."
+    ],
+    "keywords": [
+      "integritas tubuh",
+      "persetujuan medis",
+      "hak kesehatan",
+      "bioetika",
+      "otonomi pribadi"
+    ]
+  },
+  "QA-RIG-04": {
+    "id": "QA-RIG-04",
+    "question": "Bagaimana individu autis, penyandang disabilitas, dan neurodivergen didukung di O.N.E.?",
+    "verdict": "TERJAWAB: Aksesibilitas fisik universal bawaan, ruang hening sensorik, dan perawatan yang disesuaikan",
+    "lead": "Kapitalisme membuang siapa pun yang tidak dapat menghasilkan laba perusahaan; O.N.E. menjamin dasar kehidupan bermartabat penuh dan lingkungan ergonomis bagi semua neurotipe.",
+    "points": [
+      "Arsitektur publik mewajibkan akses universal bebas hambatan, jalur taktil auditori, dan ruang hening ramah sensorik di setiap pusat sipil.",
+      "Individu autis, ADHD, dan neurodivergen didukung dengan ruang dekompresi sensorik tanpa stigmatisasi sosial.",
+      "Pendamping perawatan penuh waktu disediakan dengan sumber daya komunal yang kaya, memastikan pemberi perawatan tidak pernah mengalami kelelahan.",
+      "Penyandang disabilitas berat memegang hak usufruct penuh dan tanpa syarat atas perumahan, nutrisi, dan teknologi bantu yang disesuaikan."
+    ],
+    "keywords": [
+      "neurodiversitas",
+      "aksesibilitas",
+      "disabilitas",
+      "inklusi sosial",
+      "usufruct"
+    ]
+  },
+  "QA-RIG-05": {
+    "id": "QA-RIG-05",
+    "question": "Apa yang terjadi pada orang-orang yang saat ini dikurung di penjara warisan ketika suatu wilayah beralih ke O.N.E.?",
+    "verdict": "TERJAWAB: Dekarkerasasi teratur, tempat perlindungan dekompresi trauma, dan integrasi vokasi",
+    "lead": "Penahanan massal berakhir: pelanggar narkoba dan properti non-kekerasan langsung disambut ke perumahan komunitas; pelanggar kekerasan beralih melalui penyembuhan terapeutik.",
+    "points": [
+      "Lebih dari 80% tahanan warisan (pelanggaran narkoba, kejahatan kemiskinan, ketidakmampuan membayar jaminan) menerima amnesti segera dan rumah usufruct penuh.",
+      "Pondok penyembuhan dekompresi membantu mantan narapidana sembuh dari trauma psikologis akibat isolasi penjara.",
+      "Serikat vokasi mengajarkan robotika praktis, pertanian organik, dan pertukangan untuk memulihkan martabat dan tujuan.",
+      "Segelintir individu dengan kecenderungan kekerasan aktif dirawat di tempat perlindungan terapeutik yang aman tanpa sangkar atau kebrutalan."
+    ],
+    "keywords": [
+      "dekarkerasasi",
+      "rehabilitasi",
+      "keadilan restoratif",
+      "amnesti",
+      "pemulihan martabat"
+    ]
+  },
+  "QA-DEF-01": {
+    "id": "QA-DEF-01",
+    "question": "Apa itu Defection Bounty dan bagaimana O.N.E. menetralkan tentara penyerang dan tentara bayaran?",
+    "verdict": "TERJAWAB: Menawarkan tentara penyerang suaka seumur hidup, rumah, dan penghapusan utang",
+    "lead": "Alih-alih membantai tentara muda dalam perang atrisi yang berdarah, O.N.E. menyiarkan tawaran terbuka: letakkan senjatamu, dan kami beri kamu rumah seumur hidup serta hapus utangmu.",
+    "points": [
+      "Kebanyakan tentara dan tentara bayaran berperang hanya karena mereka membutuhkan gaji untuk membayar cicilan, memberi makan keluarga, dan melunasi utang.",
+      "O.N.E. menyiarkan pesan yang tidak dapat diblokir melintasi garis depan yang menawarkan suaka politik tanpa syarat segera.",
+      "Tentara yang menyeberang menerima perumahan seumur hidup, perawatan medis, dan utang kapitalis warisan mereka diselesaikan melalui penyangga perdagangan.",
+      "Senapan serbu dan kendaraan lapis baja mereka dilebur dalam tungku induksi terbuka menjadi bagian turbin angin dan traktor pertanian."
+    ],
+    "keywords": [
+      "defection bounty",
+      "suaka politik",
+      "penghapusan utang",
+      "pasifisme",
+      "demiliterisasi"
+    ]
+  },
+  "QA-DEF-02": {
+    "id": "QA-DEF-02",
+    "question": "Tanpa tentara tetap, bagaimana O.N.E. bertahan melawan rudal hipersonik, serangan udara, atau divisi lapis baja?",
+    "verdict": "TERJAWAB: Strategi landak: pencegat pertahanan titik otomatis dan nol target penaklukan",
+    "lead": "Anda tidak bisa menaklukkan landak tanpa tersedak durinya: pencegat otomatis menembak jatuh amunisi yang masuk, sementara desentralisasi tidak menyisakan target pusat.",
+    "points": [
+      "O.N.E. memelihara pertahanan titik kinetik dan energi terarah otonom yang diprogram secara ketat untuk mencegat roket, drone, dan artileri yang masuk.",
+      "Tidak ada parlemen pusat, brankas bank sentral, atau ibu kota nasional untuk direbut: masyarakat sepenuhnya terdesentralisasi.",
+      "Katup air kritis dan jaringan listrik mikro terlepas secara mekanis saat serangan, membuat pengambilalihan paksa secara teknis mustahil.",
+      "Menaklukkan suatu area tidak menghasilkan jarahan moneter, tidak ada cadangan minyak untuk dicuri, dan populasi yang tidak kooperatif yang menolak kerja upahan."
+    ],
+    "keywords": [
+      "pertahanan diri",
+      "desentralisasi",
+      "keamanan siber",
+      "otonomi pertahanan",
+      "strategi landak"
+    ]
+  },
+  "QA-DEF-03": {
+    "id": "QA-DEF-03",
+    "question": "Bagaimana kita mencapai O.N.E. dari dunia hari ini tanpa memicu perang global yang penuh kekerasan dan bencana?",
+    "verdict": "TERJAWAB: Membangun sekoci (Jalur B) sementara Titanic kapitalis warisan (Jalur A) tenggelam",
+    "lead": "Anda tidak menyerbu ibu kota atau memasang guillotine: Anda membangun jaringan listrik mikro surya lokal, perwalian tanah komunitas, dan fab-lab terbuka tepat di samping sistem fiat yang gagal.",
+    "points": [
+      "Jalur A adalah ekonomi kapitalis warisan yang sekarat, dilanda hiperinflasi, utang yang tidak dapat dibayar, dan infrastruktur yang membusuk.",
+      "Jalur B adalah sarana umum termodinamika terbuka yang tumbuh secara damai di setiap lingkungan, gudang, dan daerah aliran sungai.",
+      "Ketika perusahaan lama bangkrut, pekerja dan warga merebut kembali pabrik yang ditinggalkan melalui pendudukan adversatif dan mengubahnya menjadi bengkel.",
+      "Orang-orang hanya berjalan pergi dari utang dan kerja upahan, membuat sistem lama kelaparan akan kepatuhan manusia sampai sistem itu bubar secara damai."
+    ],
+    "keywords": [
+      "transisi sistem",
+      "ekonomi terbuka",
+      "pembangunan komunitas",
+      "ketahanan lokal",
+      "kedaulatan rakyat"
+    ]
+  },
+  "QA-DEF-04": {
+    "id": "QA-DEF-04",
+    "question": "Bisakah sekelompok warga biasa memulai node komunitas O.N.E. besok tanpa menunggu perjanjian global?",
+    "verdict": "TERJAWAB: Ya: bentuk perwalian tanah komunitas, kumpulkan tenaga surya, dan operasikan dengan lotre warga",
+    "lead": "Anda tidak perlu tanda tangan presiden: 15 tetangga bisa mengumpulkan tanah, menyiapkan tenaga surya off-grid dan kebun, serta mengadopsi tata kelola O.N.E. sekarang juga.",
+    "points": [
+      "Setiap kelompok dapat membentuk Community Land Trust (CLT) hukum untuk secara permanen menghapus rumah tinggal dari pasar spekulatif.",
+      "Terapkan jaringan listrik mikro surya atap sumber terbuka dan sistem pemanenan air untuk mendapatkan otonomi utilitas fisik.",
+      "Lakukan keputusan lingkungan menggunakan majelis lotre rotasi dengan konsensus 75% alih-alih perdebatan politik.",
+      "Konstitusi O.N.E. adalah kode sumber terbuka yang siap dijalankan di lingkungan mana pun di Bumi."
+    ],
+    "keywords": [
+      "Community Land Trust",
+      "tata kelola lokal",
+      "kedaulatan energi",
+      "demokrasi partisipatif",
+      "pemberdayaan warga"
+    ]
+  },
+  "QA-DEF-05": {
+    "id": "QA-DEF-05",
+    "question": "Bagaimana O.N.E. menangani imigrasi, perbatasan nasional, dan jutaan pengungsi iklim?",
+    "verdict": "TERJAWAB: Kebebasan bergerak universal, koridor migrasi terbuka, dan pusat penyambutan",
+    "lead": "Perbatasan nasional adalah garis buatan yang digambar di peta untuk melindungi properti kolonial; di O.N.E., setiap manusia yang melarikan diri dari bencana ekologis disambut dengan tempat tinggal dan makanan.",
+    "points": [
+      "Kebebasan migrasi terestrial melintasi biosfer adalah hak asasi manusia biologis yang tidak dapat diganggu gugat.",
+      "Pengungsi yang datang tidak digiring ke kamp penahanan yang kumuh atau ditenggelamkan di laut: pusat penerimaan menyediakan tempat tinggal dan bantuan medis segera.",
+      "Pendatang baru diintegrasikan ke dalam jaringan produksi daerah aliran sungai, menyumbangkan perspektif budaya dan keterampilan mereka yang kaya.",
+      "Reboisasi planet secara besar-besaran dan jaringan surya terdesentralisasi menyerap populasi tanpa membebani ekologi lokal secara berlebihan."
+    ],
+    "keywords": [
+      "kebebasan bergerak",
+      "pengungsi iklim",
+      "hak asasi manusia",
+      "migrasi",
+      "solidaritas global"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "templates": [
+    {
+      "pattern": "Como a O.N.E. se protege contra {topic} sob estresse?",
+      "title": "Teste de estresse sistêmico em {topic}",
+      "verdict": "RESOLVIDO: Intertravamentos constitucionais resilientes protegem {topic}"
+    },
+    {
+      "pattern": "Existe alguma exceção às regras sobre {topic} durante emergências?",
+      "title": "Verificação de isenção de emergência para {topic}",
+      "verdict": "RESOLVIDO: Os Invariantes de Classe 0 permanecem imutáveis mesmo em emergências"
+    },
+    {
+      "pattern": "Qual é o impacto civilizatório de longo prazo de {topic}?",
+      "title": "Viabilidade evolutiva de longo prazo de {topic}",
+      "verdict": "RESOLVIDO: Equilíbrio sustentável alcançado sem acumulação de capital"
+    },
+    {
+      "pattern": "Como os cidadãos comuns auditam e inspecionam {topic}?",
+      "title": "Protocolo de auditoria demárquica para {topic}",
+      "verdict": "RESOLVIDO: Telemetria aberta transparente e inspeções por sorteio cidadão"
+    },
+    {
+      "pattern": "O que acontece se os conselhos locais discordarem sobre {topic}?",
+      "title": "Resolução dialética inter-bacias hidrográficas sobre {topic}",
+      "verdict": "RESOLVIDO: Assembleias federadas biorregionais e mediação de Condorcet"
+    }
+  ],
+  "topics": {
+    "housing": [
+      "usufruto residencial",
+      "distribuição de materiais de construção",
+      "ferramentas de artesanato pessoal",
+      "continuidade do habitat",
+      "habitações desocupadas"
+    ],
+    "work": [
+      "tarefas rotativas",
+      "motivação científica",
+      "recusa de participação",
+      "coordenação ergonômica",
+      "transições de guildas"
+    ],
+    "demarchy": [
+      "júris de sorteio",
+      "grupos de trabalho epistêmicos",
+      "limiares de consenso",
+      "direitos de recusa cidadã",
+      "anonimato do júri"
+    ],
+    "thermodynamics": [
+      "medidores de recursos pessoais",
+      "triagem energética L_min",
+      "os 7% do Commons do Herético",
+      "interface de comércio exterior",
+      "buffers anti-arbitragem"
+    ],
+    "justice": [
+      "santuários restaurativos",
+      "ausência de armas de fogo",
+      "restituição à vítima",
+      "cordões anti-linchamento",
+      "proteção de refúgios íntimos"
+    ],
+    "education": [
+      "estágios de desenvolvimento infantil",
+      "currículo de higiene epistêmica",
+      "apoio aos primeiros 1.000 dias",
+      "academias de universidade aberta",
+      "direitos de educação domiciliar"
+    ],
+    "science": [
+      "abolição de patentes médicas",
+      "cadeias de ferramentas de silício abertas",
+      "megaciência planetária",
+      "síntese genética de biossegurança",
+      "autoria moral de direitos autorais"
+    ],
+    "religion": [
+      "santuários de culto sagrado",
+      "preservação energética de catedrais",
+      "desescalada sectária",
+      "educação teológica",
+      "concordatas inter-religiosas"
+    ],
+    "rights": [
+      "autonomia somática LGBTQ+",
+      "igualdade biofísica universal",
+      "medicina não coercitiva",
+      "acessibilidade universal",
+      "integração pós-penal"
+    ],
+    "defense": [
+      "recompensa por deserção para soldados",
+      "defesa de ponto porco-espinho",
+      "roteiro de via dupla",
+      "criação de nós locais",
+      "corredores de migração abertos"
+    ]
+  }
+}

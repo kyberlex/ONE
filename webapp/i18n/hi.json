@@ -1,0 +1,528 @@
+{
+  "lang_name": "हिन्दी",
+  "nav": {
+    "overview": "सिंहावलोकन",
+    "constitution": "संविधान",
+    "roadmap": "रोडमैप",
+    "challenge": "चुनौती अखाड़ा",
+    "thrillers": "उपन्यास",
+    "simulator": "🎮 लिविंग गेम ↗",
+    "stewards": "Co-Stewards",
+    "benchmark": "AI Benchmark"
+  },
+  "hero": {
+    "tag": "उत्तर-श्रम सभ्यता के लिए खुला खाका",
+    "title_part1": "जब मशीनें सारा काम करती हैं,",
+    "title_part2": "मानवता पृथ्वी को विरासत में पाती है।",
+    "subtitle": "आर्टिफिशियल इंटेलिजेंस और रोबोटिक्स वेतनभोगी श्रम को हमेशा के लिए समाप्त कर रहे हैं। कॉर्पोरेट तकनीकी-सामंतवाद में गिरने के बजाय, <strong>Open Networked Earth (O.N.E.)</strong> स्वचालन को मानवीय मुक्ति में बदलता है: भोजन, आवास, ऊर्जा और स्वास्थ्य सेवा हर जीवित व्यक्ति के लिए बिना शर्त गारंटीकृत — पेशेवर राजनेताओं के बजाय आम नागरिकों की लॉटरी सभाओं द्वारा शासित।",
+    "btn_primer": "त्वरित गाइड (3 मिनट)",
+    "btn_constitution": "संविधान का अन्वेषण करें",
+    "btn_novels": "उपन्यास पढ़ें (मुफ़्त ई-बुक्स)",
+    "btn_simulator": "O-ASIS MMO खेलें ↗",
+    "btn_discover": "Discover O.N.E. →",
+    "btn_stewards": "Build (Co-Steward)"
+  },
+  "features": {
+    "survival_title": "सार्वभौमिक जीवन सुरक्षा",
+    "survival_desc": "भोजन, आवास, स्वास्थ्य और ऊर्जा जन्म से बिना शर्त अधिकार के रूप में गारंटीकृत",
+    "housing_title": "किराया-मुक्त आवास",
+    "housing_desc": "आजीवन उपभोग अधिकार (Usufruct); बेदखली और सट्टेबाजी पूरी तरह प्रतिबंधित",
+    "sortition_title": "लॉटरी द्वारा लोकतंत्र",
+    "sortition_desc": "सांख्यिकीय यादृच्छिक चयन द्वारा चुने गए आम नागरिक; शून्य पेशेवर राजनेता",
+    "commons_title": "यांत्रिक प्रचुरता",
+    "commons_desc": "स्वायत्त रोबोटिक्स और सौर माइक्रोग्रिड पूरी मानवता की साझा सार्वजनिक विरासत"
+  },
+  "gateway": {
+    "tag": "O.N.E. को समझें",
+    "heading": "व्यवस्था को गहराई से जानने के चार मार्ग",
+    "step1_tag": "चरण 1 • अंतर्ज्ञान",
+    "step1_title": "मूल बात समझें",
+    "step1_desc": "3 मिनट का त्वरित विवरण कि पूंजीवाद और साम्यवाद दोनों क्यों विफल रहे, और O.N.E. बिना पैसे या राजनेताओं के समाज कैसे चलाता है।",
+    "step1_link": "सिंहावलोकन खोलें →",
+    "step2_tag": "चरण 2 • वास्तुकला",
+    "step2_title": "संविधान जांचें",
+    "step2_desc": "अहिंसक, ऊष्मागतिक संविधान के सभी 66 अनुच्छेदों को पढ़ें: सोर्टिशन, उपभोग अधिकार और सुधारात्मक न्याय के नियम।",
+    "step2_link": "संविधान देखें →",
+    "step3_tag": "चरण 3 • परीक्षण",
+    "step3_title": "चुनौती दें",
+    "step3_desc": "अपने सबसे कठिन सवालों से हमारे AI का परीक्षण करें: \"अगर कोई काम न करे तो?\", \"खर्च कौन देगा?\", या \"क्या लॉटरी में धांधली हो सकती है?\"",
+    "step3_link": "चुनौती अखाड़े में प्रवेश करें →",
+    "step4_tag": "चरण 4 • मानवीय पहलू",
+    "step4_title": "गाथा का अनुभव करें",
+    "step4_desc": "उच्च-तनाव थ्रिलर गाथा: डेट्रायट, स्विस आल्प्स और जिनेवा में नए साझा संसाधनों की रक्षा करने वाले आम लोगों की कहानी।",
+    "step4_link": "मानचित्र और ई-बुक्स देखें →"
+  },
+  "synoptic": {
+    "title": "Open Networked Earth कैसे कार्य करता है",
+    "subtitle": "एक स्पष्ट मार्गदर्शिका कि पुराने आर्थिक नियम क्यों टूट रहे हैं, पिछली प्रणालियाँ क्यों विफल रहीं, और उत्तर-श्रम विश्व में धन और राजनेताओं का स्थान क्या लेता है।",
+    "banner_tag": "सक्रिय ऊष्मागतिक साझा संसाधन",
+    "banner_title": "शोषण के बिना भौतिक प्रचुरता",
+    "banner_desc": "स्वच्छ सौर अवसंरचना, स्वायत्त कृषि रोवर और पुनर्योजी सार्वजनिक उद्यान — मानवता को वेतन गुलामी से हमेशा के लिए मुक्त करते हैं।",
+    "tab_postwork": "⚡ 1. उत्तर-श्रम क्रांति",
+    "tab_failures": "🏛️ 2. पुरानी प्रणालियों की विफलता",
+    "tab_pillars": "🛡️ 3. चार मौलिक स्तंभ",
+    "tab_roadmap": "🌱 4. व्यावहारिक संक्रमण रोडमैप"
+  },
+  "primer_content": {
+    "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    1. आसन्न उत्तर-श्रम वास्तविकता: स्वचालन सब कुछ क्यों बदल देता है\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    हजारों वर्षों से मानव सभ्यता एक कठोर नियम के अधीन रही है: <em>\"जो काम नहीं करेगा, वह भोजन नहीं पाएगा।\"</em>\n    ह्यूमनॉइड रोबोटिक्स, स्वायत्त मशीनें और जनरेटिव एआई इस समीकरण को हमेशा के लिए तोड़ रहे हैं। जब मशीनें शून्य सीमांत लागत पर कृषि, निर्माण, परिवहन, ऊर्जा और स्वास्थ्य सेवा संभालती हैं, तो मानव अस्तित्व को वेतनभोगी श्रम से पूरी तरह अलग किया जाना चाहिए।\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ डिफ़ॉल्ट भयावह परिदृश्य: तकनीकी-सामंतवाद</h4>\n      <p>वर्तमान बाजार नियमों के तहत, तकनीकी एकाधिकार पूरे स्वचालित कार्यबल पर कब्जा कर लेते हैं। अरबों लोग \"बेरोजगार\" घोषित हो जाते हैं, आजीविका खो बैठते हैं और अत्यधिक गरीबी में धकेल दिए जाते हैं, जबकि धन मुट्ठी भर कॉरपोरेट कुलीनों के हाथों में केंद्रित हो जाता है।</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 O.N.E. मॉडल: मशीनों द्वारा मुक्ति</h4>\n      <p>स्वचालन की उत्पादक शक्ति को संपूर्ण मानवता की अविभाज्य साझा विरासत घोषित किया गया है। मशीनों का श्रम मनुष्य को कठिन परिश्रम, अभाव और वेतन गुलामी से मुक्त करता है, जिससे भोजन, आवास और ऊर्जा जन्मसिद्ध अधिकार बन जाते हैं।</p>\n    </div>\n  </div>\n</div>",
+    "failures": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    2. पिछले चार सभ्यतागत मॉडल क्यों विफल रहे\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:20px;\">\n    इतिहास के दौरान, मानवता ने समाज को व्यवस्थित करने के चार प्रमुख तरीकों का प्रयोग किया। उनमें से कोई भी स्थायी शांति, न्याय या पारिस्थितिक संतुलन नहीं दे सका:\n  </p>\n  <div class=\"model-comparison\">\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">1. धार्मिक धर्मतंत्र</div>\n      <div class=\"model-status red\">विफल</div>\n      <div style=\"color:var(--text-muted);\">धर्मयुद्ध, पाखंडी हठधर्मिता और भय तथा अपराधबोध से विवेक को नियंत्रित करने वाला पुरोहित वर्ग।</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">2. सामंतवाद</div>\n      <div class=\"model-status red\">विफल</div>\n      <div style=\"color:var(--text-muted);\">भूमि पर \"ईश्वरीय अधिकार\" का दावा करने वाले वंशानुगत सम्राट, जिन्होंने तलवार के बल पर जनता को दास बनाए रखा।</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">3. राज्य साम्यवाद</div>\n      <div class=\"model-status red\">विफल</div>\n      <div style=\"color:var(--text-muted);\">निजी भूस्वामियों की जगह पार्टी नौकरशाही, केंद्रीय योजना का पक्षाघात और जेल शिविरों का आतंक।</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">4. वित्तीय पूंजीवाद</div>\n      <div class=\"model-status red\">विफल</div>\n      <div style=\"color:var(--text-muted);\">चक्रवृद्धि ब्याज, घातीय ऋण, आवश्यक वस्तुओं की कृत्रिम कमी और ग्रह का विनाशकारी पारिस्थितिक नरसंहार।</div>\n    </div>\n  </div>\n  <div class=\"primer-feature-card\" style=\"margin-top:20px; border-color:rgba(16, 185, 129, 0.4); background:rgba(16, 185, 129, 0.06);\">\n    <h4 style=\"color:var(--accent-emerald);\">✨ पाँचवाँ मार्ग: Open Networked Earth (O.N.E.)</h4>\n    <p style=\"color:var(--text-secondary);\">न कॉरपोरेट शोषण, न राज्य की तानाशाही: भूमि किराए के बिना उपभोग अधिकार की कस्टडी, पेशेवर राजनेताओं के बिना लॉटरी नागरिक सभाएं, और बिना मुद्रा के गारंटीकृत जीवन।</p>\n  </div>\n</div>",
+    "pillars": "<div class=\"primer-tab-pane\">\n  <div style=\"display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;\">\n    <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin:0;\">\n      3. O.N.E. के चार मुख्य संवैधानिक स्तंभ\n    </h3>\n    <a href=\"#constitution\" class=\"btn btn-secondary\" style=\"display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; padding:8px 16px;\">\n      <span>📜 संविधान पर जाएं</span>\n      <span>→</span>\n    </a>\n  </div>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4>⚡ 1. जीवन का आवश्यक आधार (मुद्रा-रहित समाज)</h4>\n      <p>पृथ्वी पर जन्म लेने वाले प्रत्येक व्यक्ति को शुद्ध जल, पौष्टिक भोजन, सम्मानजनक आवास, संपूर्ण चिकित्सा और स्वच्छ ऊर्जा का आजीवन अधिकार है। जीवन कभी भी सौदेबाजी की वस्तु नहीं है।</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🏡 2. उपभोग अधिकार के रूप में संपत्ति (Usufruct)</h4>\n      <p>व्यक्तिगत उपयोग की वस्तुएं (कपड़े, उपकरण, किताबें) स्थायी रूप से सुरक्षित हैं। पारिवारिक आवास आजीवन उपभोग अधिकार के तहत सुरक्षित है। सट्टेबाजी, किराया और बेदखली पूरी तरह प्रतिबंधित हैं।</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🎲 3. सांख्यिकीय लॉटरी द्वारा लोकतंत्र (Sortition)</h4>\n      <p>चुनाव धनबल, अवसरवाद और जनोत्तेजक भाषणों को बढ़ावा देते हैं। सार्वजनिक निर्णय लॉटरी द्वारा चुनी गई नागरिक सभाओं को सौंपे जाते हैं, जिन्हें स्वतंत्र विशेषज्ञ पैनल सलाह देते हैं।</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🌿 4. ऊष्मागतिक सीमाएं (Thermodynamics)</h4>\n      <p>एक सीमित ग्रह पर असीमित घातीय वृद्धि गणितीय आत्महत्या है। वास्तविक आर्थिक लेखांकन सीधे भौतिक इकाइयों (किलोवाट-घंटे, लीटर पानी, मिट्टी की उर्वरता) में मापा जाता है।</p>\n    </div>\n  </div>\n</div>",
+    "roadmap": "<div class=\"primer-tab-pane\">\n  <div style=\"display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:12px;\">\n    <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin:0;\">\n      4. संक्रमण रोडमैप: हम वहां कैसे पहुंचते हैं\n    </h3>\n    <a href=\"#roadmap\" class=\"btn btn-secondary\" style=\"display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; padding:8px 16px;\">\n      <span>🌱 रोडमैप देखें</span>\n      <span>→</span>\n    </a>\n  </div>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:20px;\">\n    हम वैश्विक पतन या हिंसक क्रांति की प्रतीक्षा नहीं करते। O.N.E. एक <strong>समन्वित दोहरी रणनीति</strong> के माध्यम से आगे बढ़ता है: पुरानी व्यवस्था के समाप्त होने के दौरान आज ही नए साझा साधन निर्मित करना।\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🇨🇭 1. कानूनी ढाल (स्विस एसोसिएशन)</h4>\n      <p>स्विस सिविल कोड के तहत एक स्वायत्त स्विस एसोसिएशन (Verein) के रूप में शुरुआत, जिसमें बिना पूंजी और गोपनीयता के साथ साझा संपत्तियों की सुरक्षा होती है।</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🌱 2. जैव-क्षेत्रीय बीज नोड्स</h4>\n      <p>केवल तीन लोग मिलकर कम्युनिटी लैंड ट्रस्ट (CLT), खाद्य वन या विकेंद्रीकृत माइक्रोग्रिड स्थापित कर सकते हैं।</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🤝 3. अहिंसक नागरिक रूपांतरण</h4>\n      <p>निहत्थे शांति गिल्ड सैन्यीकृत पुलिस की जगह संवाद आधारित मध्यस्थता करते हैं; पुराने ऋण एक सार्वभौमिक महा-माफी (जुबली) द्वारा समाप्त होते हैं।</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🌍 4. ग्रहीय बेसिन फेडरेशन</h4>\n      <p>नदी बेसिन परिषदें महाद्वीपीय कक्षों में एकजुट होती हैं, जो राष्ट्र-राज्यों की भू-राजनीतिक प्रतिद्वंद्विता को पारिस्थितिक सहयोग से बदल देती हैं।</p>\n    </div>\n  </div>\n</div>"
+  },
+  "const": {
+    "title": "O.N.E. का जीवंत संविधान",
+    "subtitle": "अहिंसक और ऊष्मागतिक कानून के 10 अध्याय। अनुच्छेदों को पढ़ें, मुख्य शब्द खोजें या प्रमाणित पीडीएफ/ईपब डाउनलोड करें।",
+    "search_placeholder": "खोजें (उदा. 'उपभोग अधिकार', 'लॉटरी', 'आवास', 'जल', 'मुद्रा')...",
+    "expand_all": "सभी विस्तृत करें",
+    "collapse_all": "सभी संक्षिप्त करें",
+    "download_epub": "संविधान डाउनलोड (EPUB)",
+    "download_pdf": "संविधान डाउनलोड (PDF)",
+    "tab_all": "सभी अध्याय",
+    "tab_chap": "अध्याय",
+    "chapter_label": "अध्याय",
+    "article_singular": "अनुच्छेद",
+    "article_plural": "अनुच्छेद",
+    "no_results": "आपके खोज मानदंडों से मेल खाने वाला कोई लेख नहीं मिला।",
+    "badge_available": "पूर्ण एवं उपलब्ध"
+  },
+  "roadmap": {
+    "title": "एक स्वायत्त बीज नोड का निर्माण कैसे करें",
+    "desc": "भूमि को गैर-व्यावसायिक बनाने, माइक्रोग्रिड स्थापित करने और ऋण-मुक्त ऊष्मागतिक स्वतंत्रता प्राप्त करने के लिए व्यावहारिक फील्ड हैंडबुक।",
+    "shield_title": "वास्तविक दुनिया में परखी गई वास्तुकला",
+    "shield_subtitle": "53 वास्तविक कानूनी मुकदमों, वित्तीय नाकाबंदी और जब्ती के प्रयासों के खिलाफ प्रमाणित सुरक्षा।",
+    "archetype_common": "🇬🇧 कॉमन लॉ",
+    "archetype_civil": "🇪🇺 सिविल लॉ",
+    "archetype_customary": "🇲🇽 पारंपरिक साझा भूमि",
+    "sys1_title": "कानूनी ढाल और संपत्ति सुरक्षा",
+    "sys1_desc": "निष्क्रिय भूमि स्वामित्व को परिचालन सहकारी गतिविधियों से पूरी तरह अलग रखता है।",
+    "sys1_item1": "<strong>इकाई A (सामुदायिक भूमि ट्रस्ट CLT):</strong> भूमि का स्थायी स्वामित्व रखता है, जिसे बेचना, गिरवी रखना या कर्ज लेना कानूनी रूप से वर्जित है।",
+    "sys1_item2": "<strong>इकाई B (परिचालन सहकारी समिति):</strong> कार्यशालाएं और उत्पादन चलाती है तथा सभी बाहरी वाणिज्यिक जोखिम झेलती है।",
+    "sys1_item3": "<strong>वियोज्य चल संपत्ति:</strong> मॉड्यूलर घर और सौर संयंत्र चल संपत्ति के रूप में पंजीकृत होते हैं, जो भूमि जब्ती से सुरक्षित रहते हैं।",
+    "sys1_item4": "<strong>ज़ोनिंग रक्षा और एस्क्रो फंड:</strong> मोबाइल हाउसिंग मानकों और नगर निगम गारंटी जमा के माध्यम से बिल्डिंग कोड अनुपालन।",
+    "sys2_title": "मानव श्रम और समन्वय",
+    "sys2_desc": "धन के बिना भी कौशल की कमी, घरेलू जिम्मेदारियों के असंतुलन और तनाव को समाप्त करता है।",
+    "sys2_item1": "<strong>अनिवार्य चयापचय योगदान:</strong> भोजन उत्पादन, मरम्मत या रसोई के लिए प्रति सप्ताह 5-7 घंटे का अनिवार्य शारीरिक योगदान।",
+    "sys2_item2": "<strong>स्तरीय प्रशिक्षुता जोड़ी:</strong> 400V हाई-वोल्टेज और ऊंचाई पर कार्य केवल अनुभवी और शिक्षार्थी की 2-सदस्यीय जोड़ी में होता है।",
+    "sys2_item3": "<strong>कैस्टेल मैकेनिकल इंटरलॉक:</strong> उपकरण सुरक्षा कोड या सॉफ्टवेयर द्वारा नहीं, बल्कि भौतिक मैकेनिकल चाबियों से नियंत्रित होती है।",
+    "sys2_item4": "<strong>सहकारी सुरक्षित आश्रय कानून:</strong> आंतरिक पारस्परिक सहायता को व्यावसायिक रोजगार न मानकर कानूनी सुरक्षा दी जाती है।",
+    "sys3_title": "आर्थिक सेतु (बाहरी फिएट मध्यस्थता)",
+    "sys3_desc": "वैश्विक संक्रमण तक संपत्ति करों और माइक्रोचिप्स की खरीद के लिए आवश्यक बाहरी मुद्रा जुटाता है।",
+    "sys3_item1": "<strong>सीमित बाहरी परामर्श:</strong> कुशल सदस्य बाहरी दुनिया को निश्चित सीमा के भीतर अपनी पेशेवर सेवाएं प्रदान करते हैं।",
+    "sys3_item2": "<strong>50% अग्रिम भुगतान नियम:</strong> बाहरी ग्राहकों से किसी भी वित्तीय नुकसान या ऋण जोखिम को रोकने का नियम।",
+    "sys3_item3": "<strong>पृथक कंप्यूट माइक्रो-ऐरे:</strong> अतिरिक्त सौर ऊर्जा से दूरस्थ ज्ञान-कार्य के सर्वर बिना कार्बन उत्सर्जन के संचालित होते हैं।",
+    "sys3_item4": "<strong>मुद्रा-मुक्त आंतरिक आश्रय:</strong> नोड के अंदर फिएट मुद्रा या वाणिज्यिक लेन-देन पूरी तरह से प्रतिबंधित है।",
+    "sys4_title": "ऊष्मागतिक जीवन रक्षा प्रणाली",
+    "sys4_desc": "अत्यधिक ठंड, ग्रिड ब्लैकआउट और सूखे के दौरान भी सभी निवासियों के जीवित रहने की पूर्ण गारंटी।",
+    "sys4_item1": "<strong>40,000L जलाशय + 48V डीसी बाईपास:</strong> पंप बंद होने पर भी प्राकृतिक गुरुत्वाकर्षण द्वारा निरंतर पेयजल आपूर्ति।",
+    "sys4_item2": "<strong>48V LFP बैटरी बंकर:</strong> सर्दियों में स्वचालित हीटिंग और गर्मियों में निष्क्रिय कूलिंग से लैस लिथियम बैटरी बैंक।",
+    "sys4_item3": "<strong>180-दिवसीय कैलोरी भंडार:</strong> सीलबंद अनाज, दालें और ताजे अंकुरित बीजों की दैनिक पोषक आपूर्ति।",
+    "sys4_item4": "<strong>50 m² थर्मल कोर (-30°C सुरक्षा):</strong> रॉकेट मास हीटर से गर्म होने वाला सुपर-इंसुलेटेड आपातकालीन आश्रय।",
+    "config_tag": "⚡ इंटरैक्टिव नोड कैलकुलेटर",
+    "config_title": "अपने बीज नोड को कॉन्फ़िगर करें",
+    "config_subtitle": "अपनी कानूनी प्रणाली और लक्षित समुदाय का आकार चुनकर इंजीनियरिंग आवश्यकताओं की गणना करें।",
+    "config_label_arch": "1. कानूनी प्रणाली का प्रकार",
+    "config_btn_common": "🇬🇧 कॉमन लॉ (US/UK/CA/AU)",
+    "config_btn_civil": "🇪🇺 सिविल लॉ (EU/CH/भारत)",
+    "config_btn_customary": "🇲🇽 पारंपरिक साझा भूमि (कृषि समुदाय)",
+    "config_label_scale": "2. समुदाय का आकार",
+    "config_scale_5": "5 संस्थापक (चरण 0: मूल कोर)",
+    "config_scale_15": "15 अग्रणी (चरण 1: गाँव)",
+    "config_scale_35": "35 निवासी (पूर्ण माइक्रो-नोड)",
+    "stepper_tag": "फ़ील्ड ब्लूप्रिंट",
+    "stepper_title": "कार्यान्वयन के 4 चरण (0 से 15 वर्ष)",
+    "stepper_desc": "विस्तृत इंजीनियरिंग प्रोटोकॉल देखने और दस्तावेज़ डाउनलोड करने के लिए चरणों पर क्लिक करें।",
+    "quickstart_text": "<strong>⚡ क्या आपको त्वरित फ़ील्ड सारांश चाहिए?</strong> 2-पृष्ठ की पॉकेट हैंडबुक देखें।",
+    "quickstart_btn": "पॉकेट फ़ील्ड हैंडबुक (.md)",
+    "quickstart_dl": "⬇️ डाउनलोड (.md)",
+    "step_0": "चरण 0: कानूनी स्थापना और भूमि",
+    "step_1": "चरण 1: जीवन रक्षा कोर और खाद्य वन",
+    "step_2": "चरण 2: फैब-लैब और उत्पादन उपकरण",
+    "step_3": "चरण 3: बेसिन फेडरेशन का निर्माण",
+    "qa_tag": "व्यावहारिक बाधाएं और समाधान",
+    "qa_title": "वास्तविक दुनिया की बाधाओं का समाधान",
+    "qa_desc": "बिल्डिंग कोड, बाहरी ऋण और कानूनी विवादों को हल करने के परखे हुए तरीके।",
+    "q1_question": "🏛️ यदि स्थानीय अधिकारी हमारे आवासों पर अवैध निर्माण का नोटिस लगा दें तो?",
+    "q1_answer": "<strong>चल संपत्ति कानूनी रक्षा:</strong> आवास मॉड्यूल पहियों पर निर्मित होते हैं और त्वरित-वियोज्य प्लग से जुड़े होते हैं। कानूनी रूप से ये अचल भवन नहीं बल्कि पंजीकृत चल संपत्तियां हैं, जिससे भवन निर्माण कोड की बाध्यता नहीं रहती।",
+    "q2_question": "📉 यदि कोई बाहरी व्यापारिक अनुबंध विफल हो जाए तो क्या भूमि जब्त हो सकती है?",
+    "q2_answer": "<strong>दोहरी सुरक्षा ढाल:</strong> भूमि और मुख्य संपत्तियां निष्क्रिय लैंड ट्रस्ट (CLT) में सुरक्षित हैं। वे परिचालन सहकारी संस्था से पूरी तरह अलग हैं, इसलिए ऋणदाता भूमि पर कोई दावा नहीं कर सकते।",
+    "q3_question": "💻 यदि अधिक आय वाले पेशेवर सदस्य बर्तन धोने या खेती करने से इनकार करें तो?",
+    "q3_answer": "<strong>अनिवार्य चयापचय योगदान:</strong> प्रति सप्ताह 5-7 घंटे का शारीरिक श्रम सभी के लिए अनिवार्य है। कोई भी पद या बाहरी प्रतिष्ठा समुदाय के अस्तित्व श्रम से छूट नहीं दिला सकती।",
+    "q4_question": "❄️ यदि तापमान -30°C तक गिर जाए और सौर ऊर्जा 3 सप्ताह के लिए बंद हो जाए तो?",
+    "q4_answer": "<strong>थर्मल कोर रक्षा:</strong> समुदाय 50 m² के अत्यधिक इंसुलेटेड थर्मल कोर में स्थानांतरित हो जाता है, जो उच्च दक्षता वाले रॉकेट मास हीटर और गुरुत्वाकर्षण जल आपूर्ति से सुरक्षित रहता है।",
+    "pillar_1": "प्रणाली I",
+    "pillar_2": "प्रणाली II",
+    "pillar_3": "प्रणाली III",
+    "pillar_4": "प्रणाली IV",
+    "badge_0": "वर्ष 0",
+    "badge_1": "वर्ष 1-3",
+    "badge_2": "वर्ष 3-7",
+    "badge_3": "वर्ष 7-15"
+  },
+  "roadmap_config": {
+    "tag_legal": "1. कानूनी इकाई संरचना",
+    "desc_operating": "परिचालन इकाई:",
+    "desc_debt": "शून्य-असुरक्षित ऋण नियम भूमि संपत्ति को वाणिज्यिक देनदारियों से पूरी तरह सुरक्षित रखता है।",
+    "tag_zoning": "2. ज़ोनिंग और भूमि रक्षा",
+    "tag_capital": "3. पूंजी निर्माण",
+    "tag_water": "4. जल संप्रभुता",
+    "tag_battery": "5. 48V LFP बैटरी बैंक",
+    "tag_food": "6. 180-दिवसीय कैलोरी सुरक्षा",
+    "archetypes": {
+      "common_law": {
+        "name": "कॉमन लॉ (यूएस / यूके / कनाडा / ऑस्ट्रेलिया)",
+        "entity_a": "501(c)(3) सामुदायिक भूमि ट्रस्ट (CLT)",
+        "entity_b": "श्रमिक सहकारी समिति (LLC)",
+        "capital": "ब्याज-मुक्त प्रीपेड उपभोग अधिकार प्रमाण पत्र",
+        "zoning": "प्रमाणित मोबाइल हाउसिंग प्लेटफॉर्म (चल संपत्ति)",
+        "escrow": "12-माह का कानूनी रक्षा और कर फंड",
+        "statutory_defense": "UCC § 9-604 के तहत दिवालियापन से सुरक्षित चल संपत्ति"
+      },
+      "civil_law": {
+        "name": "सिविल लॉ (यूरोप / स्विट्जरलैंड / भारत)",
+        "entity_a": "गैर-लाभकारी ट्रस्ट / स्विस एसोसिएशन (Verein)",
+        "entity_b": "उत्पादक सहकारी समिति / सामाजिक उद्यम",
+        "capital": "परोपकारी अनुदान और ब्याज-मुक्त सदस्य योगदान",
+        "zoning": "कृषि निर्माण मानक और पंजीकृत मॉड्यूलर इकाइयां",
+        "escrow": "नगरपालिका अनुपालन गारंटी जमा",
+        "statutory_defense": "पंजीकृत आजीवन उपभोग अधिकार (Usufruct)"
+      },
+      "customary_commons": {
+        "name": "पारंपरिक साझा भूमि और स्वदेशी क्षेत्र",
+        "entity_a": "अहस्तांतरणीय सामुदायिक ग्राम भूमि",
+        "entity_b": "सामुदायिक उत्पादक समूह / कृषि संघ",
+        "capital": "पारस्परिक सहायता कोष और बीज बैंक",
+        "zoning": "स्थानीय पारंपरिक पारिस्थितिक निर्माण विधियां",
+        "escrow": "ग्राम बुजुर्ग परिषद और पारस्परिक गारंटी",
+        "statutory_defense": "अंतरराष्ट्रीय स्वदेशी अधिकार सम्मेलन (ILO 169)"
+      }
+    },
+    "scales": {
+      "5": {
+        "water": "40,000L जलाशय + बोरवेल",
+        "water_desc": "भूमिगत गैर-फ्रीजिंग जल भंडार और गुरुत्वाकर्षण पाइपलाइन",
+        "battery": "15 kWh LFP बैंक (48V)",
+        "battery_desc": "थर्मल प्रबंधन से युक्त इंसुलेटेड बैटरी रैक",
+        "food": "180 दिनों का सुरक्षित कैलोरी भंडार",
+        "food_desc": "सीलबंद अनाज और दालें तथा दैनिक अंकुरित बीज प्रणाली",
+        "land": "0.8 हेक्टेयर"
+      },
+      "15": {
+        "water": "120,000L + प्राकृतिक झरना",
+        "water_desc": "द्वि-स्तरीय निस्पंदन और गुरुत्वाकर्षण वितरण नेटवर्क",
+        "battery": "45 kWh LFP बैंक",
+        "battery_desc": "औद्योगिक मानक BMS सुरक्षा से लैस बैटरी बैंक",
+        "food": "180 दिन का भंडार + बारहमासी ग्रीनहाउस",
+        "food_desc": "कंदमूल और किण्वित खाद्य पदार्थों का उत्पादन",
+        "land": "2.4 हेक्टेयर"
+      },
+      "35": {
+        "water": "300,000L + वर्षा जल जलाशय",
+        "water_desc": "अग्निशामक हाइड्रेंट युक्त लूप गुरुत्वाकर्षण जल नेटवर्क",
+        "battery": "120 kWh LFP + लघु जलविद्युत संयंत्र",
+        "battery_desc": "लघु जलविद्युत टर्बाइन से जुड़ा 400V 3-फेज ग्रिड",
+        "food": "पूर्णतः आत्मनिर्भर बारहमासी खाद्य वन",
+        "food_desc": "बागवानी, मुर्गीपालन और 1 वर्ष का सूखा राशन",
+        "land": "6.0 हेक्टेयर"
+      }
+    }
+  },
+  "roadmap_stepper": {
+    "btn_view_stage": "चरण का ब्लूप्रिंट देखें",
+    "btn_download": "⬇️ डाउनलोड (.md)"
+  },
+  "challenge": {
+    "title": "\"O.N.E. की परीक्षा लें\"",
+    "desc": "हमने इस संविधान को वित्तीय संकटों, कानूनी हमलों, कार्य-त्याग और आंतरिक कलह के खिलाफ O-ASIS सिम्युलेटर में 6 दौर के तनाव परीक्षणों से गुजारा है। सामान्य प्रश्नों पर क्लिक करें या अपना सबसे कठिन सवाल पूछें।",
+    "quick_label": "सर्वाधिक परीक्षित आपत्तियां:",
+    "chip_work": "1. बिना वेतन मजदूरी: हमें भोजन कौन देगा?",
+    "chip_work_query": "यदि लोग काम करने से मना कर दें तो क्या होगा? O.N.E. में भोजन कौन उगाएगा और नालियों की सफाई कौन करेगा?",
+    "chip_money": "2. बिना पैसे: निर्माण कार्य का खर्च कौन उठाएगा?",
+    "chip_money_query": "बिना मुद्रा या टैक्स के अस्पताल, पुल और रेल बुनियादी ढांचे का वित्तपोषण कौन करेगा?",
+    "chip_prisons": "4. बिना जेल: हिंसक अपराधों से कैसे निपटें?",
+    "chip_prisons_query": "सशस्त्र पुलिस और जेलों के बिना हिंसक अपराधों और मनोविकृति से कैसे निपटा जाता है?",
+    "chip_lottery": "लॉटरी में हेरफेर?",
+    "chip_lottery_query": "क्या धनी लोग या जनोत्तेजक नेता लॉटरी द्वारा चुनी गई नागरिक सभाओं में हेरफेर नहीं कर सकते?",
+    "chip_communism": "क्या यह साम्यवाद है?",
+    "chip_communism_query": "O.N.E. बीसवीं सदी के असफल राज्य साम्यवाद से किस प्रकार भिन्न है?",
+    "sidebar_title": "सत्यापित विरोधी हमले के परिदृश्य",
+    "input_placeholder": "अपनी सबसे तीखी आपत्ति दर्ज करें (उदा. 'सभाओं में भ्रष्टाचार कैसे रोका जाए?')",
+    "btn_send": "परीक्षण करें",
+    "label_probe": "विरोधी हमले की जांच",
+    "label_adjudicator": "O-ASIS सांविधानिक अधिनिर्णायक",
+    "label_inquiry": "संदेहवादी का मुख्य प्रश्न",
+    "label_resolution": "संवैधानिक समाधान:",
+    "chip_property": "3. बिना निजी संपत्ति: क्या मेरा घर छीन लिया जाएगा?",
+    "chip_property_query": "निजी संपत्ति के बिना, क्या कोई मेरे घर या निजी सामान पर कब्जा कर सकता है?",
+    "chip_politics": "5. बिना राजनेताओं के: शासन कौन करेगा?",
+    "chip_politics_query": "चुने हुए राजनेताओं के बिना लॉटरी शासन व्यवस्था में सत्ता पर भ्रष्ट लोगों का कब्जा कैसे रोका जाएगा?",
+    "chip_patents": "6. बिना पेटेंट: नई खोज और आविष्कार कौन करेगा?",
+    "chip_patents_query": "पेटेंट या कॉपीराइट के बिना चिकित्सा अनुसंधान और जटिल तकनीक में नवाचार कौन करेगा?",
+    "chip_army": "7. बिना सेना: सैन्य आक्रमण से सुरक्षा कैसे होगी?",
+    "chip_army_query": "बिना स्थायी सेना या राष्ट्रीय सीमाओं के किसी विदेशी सैन्य आक्रमण को कैसे रोका जाएगा?",
+    "chip_ussr": "8. बाज़ार के बिना: क्या यह साम्यवाद है?",
+    "chip_ussr_query": "O.N.E. 20वीं सदी के राज्य साम्यवाद और अधिनायकवादी शासन से कैसे भिन्न है?",
+    "chip_capitalism": "9. क्या यह पूंजीवाद है? क्या मैं व्यवसाय शुरू कर सकता हूँ?",
+    "chip_capitalism_query": "क्या मैं पूंजीवाद के बिना उद्यम, कार्यशाला या व्यक्तिगत परियोजनाएं शुरू कर सकता हूँ?",
+    "chip_education": "10. शिक्षा: स्कूल कैसे काम करते हैं?",
+    "chip_education_query": "बिना ट्यूशन फीस या मानकीकृत परीक्षाओं के स्कूल, विश्वविद्यालय और बाल विकास कैसे संचालित होते हैं?",
+    "chip_religion": "11. धर्म: क्या पूजा और धार्मिक स्थलों की स्वतंत्रता है?",
+    "chip_religion_query": "क्या धर्म, मंदिर और आध्यात्मिक विश्वास संरक्षित हैं या दबाए जाते हैं?",
+    "chip_discrimination": "12. भेदभाव: नस्लवाद और LGBTQ+ अधिकार?",
+    "chip_discrimination_query": "अल्पसंख्यकों को नस्लवाद, लैंगिक भेदभाव और उत्पीड़न से कैसे बचाया जाता है?"
+  },
+  "books": {
+    "title": "ग्रह की महाकाव्य गाथा",
+    "desc": "महान विचार तब दिलों पर राज करते हैं जब वे भावनाओं को छूते हैं। O.N.E. को छह परस्पर जुड़े हुए घटनास्थलों के माध्यम से महसूस करें: 78° N पर ध्रुवीय भूमिगत शुरुआत से लेकर जिनेवा अभिसरण तक, एक रोमांचक तकनीकी-राजनीतिक थ्रिलर में।",
+    "chart_tag": "इंटरैक्टिव विश्व चार्ट",
+    "chart_title": "गाथा के छह घटनास्थल",
+    "chart_desc": "किसी भी घटनास्थल का विवरण देखने और पुस्तक डाउनलोड करने के लिए मानचित्र पर क्लिक करें।",
+    "btn_epub": "EPUB डाउनलोड",
+    "btn_pdf": "PDF डाउनलोड",
+    "status_complete": "पूर्ण एवं डाउनलोड के लिए उपलब्ध",
+    "tag": "इंटरैक्टिव विश्व चार्ट और महाकाव्य थ्रिलर गाथा",
+    "map_vol0": "खंड 0: स्वालबार्ड",
+    "map_vol1": "खंड 1: डेट्रायट",
+    "map_vol2": "खंड 2: आल्प्स",
+    "map_vol3": "खंड 3: अमेज़न",
+    "map_vol4": "खंड 4: मलक्का",
+    "map_vol5": "खंड 5: जिनेवा",
+    "btn_coming_soon": "जल्द आ रहा है",
+    "status_coming_soon": "अनुवाद जारी"
+  },
+  "volume_details": {
+    "vol0": {
+      "title": "उत्पत्ति: स्वालबार्ड की चिंगारी",
+      "subtitle": "खंड 0: ध्रुवीय भूमिगत • 78° उत्तरी अक्षांश",
+      "theater": "स्वालबार्ड / वैश्विक",
+      "core_theme": "बीज वॉल्ट में एयर-गैप एन्क्रिप्शन, गुप्त ऑप्टिकल नेटवर्क और सैद्धांतिक जागरण।",
+      "hook": "डेट्रायट के विद्रोह से पहले, संविधान की वास्तुकला आर्कटिक चट्टान में गढ़ी गई थी।"
+    },
+    "vol1": {
+      "title": "ग्राउंड ज़ीरो: डेलरे प्रोटोकॉल",
+      "subtitle": "खंड 1: उत्तरी अमेरिका • डेट्रायट / विंडसर",
+      "theater": "उत्तरी अमेरिका",
+      "core_theme": "खंडहर कारखानों का रूपांतरण, बेदखली का 48 घंटे का काउंटडाउन और लॉटरी आधारित नागरिक सभा।",
+      "hook": "जब हुक्मरान हथियार लेकर आए, तो डेलरे ने थर्मोडायनामिक्स और लॉटरी के नियमों से जवाब दिया।"
+    },
+    "vol2": {
+      "title": "अल्पाइन गढ़",
+      "subtitle": "खंड 2: ट्रांसअल्पाइन यूरोप • वैले और टिसिनो",
+      "theater": "ट्रांसअल्पाइन यूरोप",
+      "core_theme": "उच्च-ऊंचाई वाली जल विद्युत पाइपलाइनों की रक्षा, हिमस्खलन अवरोध और कैंटोनल साझा महासंघ।",
+      "hook": "उन्होंने बिजली काटने के लिए निजी सेना भेजी; लेकिन पहाड़ों ने जनता का साथ चुना।"
+    },
+    "vol3": {
+      "title": "अग्नि की नदी",
+      "subtitle": "खंड 3: अमेज़न बेसिन और एंडीज",
+      "theater": "अमेज़ोनिया और एंडीज",
+      "core_theme": "जल निकासी बेसिन की सुरक्षा, रासायनिक ड्रोन की जब्ती और स्वदेशी साझा उपयोग संधियां।",
+      "hook": "नदी किसी कंपनी की निजी संपत्ति नहीं है: यह पूरे महाद्वीप की जीवनदायिनी रक्त-प्रणाली है।"
+    },
+    "vol4": {
+      "title": "समुद्री खाई",
+      "subtitle": "खंड 4: मलक्का जलडमरूमध्य और यूरेशिया",
+      "theater": "दक्षिण पूर्व एशिया और भारत-प्रशांत",
+      "core_theme": "बंदरगाहों की एल्गोरिथम नाकाबंदी, कंटेनर बैरिकेड्स और पानी के नीचे ऑप्टिकल फाइबर की पुनर्बहाली।",
+      "hook": "दस हज़ार मालवाहक जहाज रुक गए जब मजदूरों ने पैसे को ठुकरा कर जहाजों को साझा संपत्ति घोषित किया।"
+    },
+    "vol5": {
+      "title": "अभिसरण शिखर सम्मेलन",
+      "subtitle": "खंड 5: जिनेवा कैंटन • भूमंडलीय संकल्प",
+      "theater": "जिनेवा / वैश्विक",
+      "core_theme": "संप्रभु ऋण का पूर्ण उन्मूलन, सार्वभौमिक ऋण मुक्ति (महा-जुबली) और पहला वैश्विक लॉटरी सम्मेलन।",
+      "hook": "पुरानी दुनिया का सारा कर्ज़ एक ही दोपहर में हवा हो गया: मानवता रोशनी में दाखिल हुई।"
+    }
+  },
+  "modal": {
+    "title": "फ़ील्ड ब्लूप्रिंट और संचालन हैंडबुक",
+    "download_md": "⬇️ .md डाउनलोड करें",
+    "close": "ब्लूप्रिंट बंद करें (Esc)"
+  },
+  "footer": {
+    "line1": "OPEN NETWORKED EARTH (O.N.E.) • Copyfarleft मुक्त उपभोग अधिकार समझौते • शून्य व्यक्तिगत कॉपीराइट",
+    "line2": "Origin Main के साथ सिंक्रनाइज़ निर्धारक मल्टी-एजेंट इंजन • आधिकारिक संविधान v2.0-अनुसमर्थित"
+  },
+  "roadmap_phases": [
+    {
+      "title": "चरण 0: कानूनी नींव और भूमि की अहस्तांतरणीयता",
+      "badge": "वर्ष 0 • कानूनी ढाल",
+      "desc": "सामग्री पहुंचने से पहले भूमि को सुरक्षित करना। जब तक दो-स्तरीय कानूनी ढाल पंजीकृत नहीं हो जाती, कोई आवास नहीं बनाया जाता।",
+      "milestones": [
+        {
+          "label": "कानूनी ढाल",
+          "title": "दो-स्तरीय पृथक्करण",
+          "text": "निष्क्रिय लैंड ट्रस्ट (CLT) और परिचालन सहकारी समिति की स्थापना, जिसमें शून्य ऋण देनदारी का नियम हो।"
+        },
+        {
+          "label": "उपभोग अधिकार",
+          "title": "99-वर्षीय उपभोग समझौता",
+          "text": "सट्टेबाजी और जब्ती के खिलाफ भूमि की रक्षा के लिए पंजीकृत गैर-बंधक उपभोग अधिकार विलेख।"
+        },
+        {
+          "label": "जल संप्रभुता",
+          "title": "गुरुत्वाकर्षण बोरवेल और परीक्षण",
+          "text": "भूजल सर्वेक्षण, प्राथमिक गहरे बोरवेल की ड्रिलिंग और 40,000 लीटर का भूमिगत जलाशय निर्माण।"
+        }
+      ]
+    },
+    {
+      "title": "चरण 1: जीवन रक्षा कोर और खाद्य संप्रभुता",
+      "badge": "वर्ष 1–3 • जैविक आत्मनिर्भरता",
+      "desc": "स्थायी निवासियों के पहले समूह के लिए आवश्यक पोषण और ऊर्जा स्वतंत्रता हासिल करना।",
+      "milestones": [
+        {
+          "label": "थर्मल कोर",
+          "title": "50 m² सुरक्षित मॉड्यूल",
+          "text": "रॉकेट मास हीटर से लैस अत्यधिक इंसुलेटेड आश्रय, जो शून्य बिजली पर भी अत्यधिक ठंड में सुरक्षित रखता है।"
+        },
+        {
+          "label": "माइक्रोग्रिड 48V",
+          "title": "सौर ऊर्जा और LFP बैटरी बैंक",
+          "text": "सुरक्षित लिथियम फेरो-फॉस्फेट बैटरी और कैस्टेल मैकेनिकल इंटरलॉक के साथ 8 kW का सौर संयंत्र।"
+        },
+        {
+          "label": "कृषि-पारिस्थितिकी",
+          "title": "बारहमासी बगीचा और भंडारण",
+          "text": "उच्च उपज वाली क्यारियां, फलदार वृक्षारोपण और 180 दिनों के आवश्यक भोजन का भूमिगत सुरक्षित भंडारण।"
+        }
+      ]
+    },
+    {
+      "title": "चरण 2: फैब-लैब, उपकरण और आर्थिक सेतु",
+      "badge": "वर्ष 3–7 • खुली कार्यशाला",
+      "desc": "धातु, लकड़ी और इलेक्ट्रॉनिक्स मशीनरी स्थापित करना और बाहरी समाज के साथ सीमित आर्थिक सेतु जोड़ना।",
+      "milestones": [
+        {
+          "label": "मैकेनिकल वर्कशॉप",
+          "title": "सीएनसी मिलिंग और वेल्डिंग",
+          "text": "स्थानीय पुर्जों के निर्माण के लिए 400V 3-फेज सौर ग्रिड से संचालित सीएनसी मिलिंग और वेल्डिंग मशीनें।"
+        },
+        {
+          "label": "आर्थिक सेतु",
+          "title": "बाहरी परामर्श सेवाएं (ETI)",
+          "text": "भूमि करों और आवश्यक इलेक्ट्रॉनिक्स के भुगतान के लिए प्रति सप्ताह अधिकतम 15 घंटे की विशेषज्ञ सेवाएं।"
+        },
+        {
+          "label": "जैव प्रयोगशाला",
+          "title": "जल और मिट्टी परीक्षण लैब",
+          "text": "जल स्वच्छता और मिट्टी के सूक्ष्मजीवों के स्वास्थ्य की निगरानी के लिए इन-हाउस स्पेक्ट्रोमेट्री और परीक्षण।"
+        }
+      ]
+    },
+    {
+      "title": "चरण 3: नदी बेसिन फेडरेशन और साझा संसाधन",
+      "badge": "वर्ष 7–15 • जैव-क्षेत्रीय नेटवर्क",
+      "desc": "3 से 5 पड़ोसी बीज नोड्स को जोड़कर एक क्षेत्रीय पारिस्थितिक और उत्पादन संघ बनाना, जिससे बाहरी निर्भरता समाप्त हो।",
+      "milestones": [
+        {
+          "label": "मेश रेडियो नेटवर्क",
+          "title": "एन्क्रिप्टेड LoRa संचार",
+          "text": "समुदायों के बीच वायरलेस संचार और डेटा साझा करने के लिए स्वतंत्र रेडियो फ्रीक्वेंसी नेटवर्क।"
+        },
+        {
+          "label": "ऊष्मागतिक विनिमय",
+          "title": "मुद्रा-रहित प्रत्यक्ष व्यापार",
+          "text": "ऊर्जा (kWh), बीज और मशीन-समय का भौतिक इकाइयों में 1:1 प्रत्यक्ष आदान-प्रदान, बिना किसी पैसे के।"
+        },
+        {
+          "label": "पूर्ण स्वतंत्रता",
+          "title": "पूर्ण अवसंरचनात्मक संप्रभुता",
+          "text": "केंद्रीय बिजली और पानी की आपूर्ति से पूर्ण वियोजन, जिससे सच्ची सामुदायिक स्वतंत्रता स्थापित होती है।"
+        }
+      ]
+    }
+  ],
+  "oasis_showcase": {
+    "badge": "🎮 LIVING THERMODYNAMIC SANDBOX & MMO",
+    "title_part1": "Experience the Post-Labor Commons in",
+    "title_part2": "O-ASIS Dual-Track",
+    "desc": "Test the constitution with your own hands. Build autonomous solarpunk eco-villages, balance real Leontief physics across 4 physical flows (⚡ kWh, 💧 Liters, 🥗 Calories, 💻 Compute), deliberate on civic crises via Athenian citizen juries, and resist the predatory Legacy Financial AI in a 100% serverless P2P mesh.",
+    "feat1_title": "Closed-Loop Thermodynamics",
+    "feat1_desc": "Real energy, battery degradation, rainwater harvesting, closed-loop hydroponics and circular FabLab material recycling.",
+    "feat2_title": "Demarchic Sortition Juries",
+    "feat2_desc": "Citizen assemblies chosen by lot in strict odd parity to arbitrate community dilemmas and ratify confederal case-law precedents.",
+    "feat3_title": "Dual-Track Physical Bridge",
+    "feat3_desc": "In-game triumphs directly unlock verified, real-world 3D printable .STL open hardware and Home Assistant automations.",
+    "btn_launch": "Launch O-ASIS Simulator (Browser 60 FPS) ↗",
+    "btn_handbook": "Download Player Field Manual (PDF) ↗"
+  },
+  "hero_video": {
+    "badge": "Civilizational Prologue • 2m 10s",
+    "title": "From 100,000 Years of Warfare to Machine Emancipation",
+    "desc": "Watch the visual prologue illustrating human history from territorial warfare to machine-driven emancipation."
+  },
+  "contrast": {
+    "tag": "Civilizational Operating Systems",
+    "title": "Track A vs. Track B: The Civilizational Fork",
+    "desc": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
+    "track_a_badge": "Track A • Legacy Default",
+    "track_a_title": "Techno-Feudal Extraction",
+    "track_a_desc": "Monopolized automation, perpetual debt, and speculative rentierism.",
+    "track_a_item1_title": "Conditional Survival:",
+    "track_a_item1_desc": "Basic food, shelter, and care gated behind disappearing wage labor.",
+    "track_a_item2_title": "Allodial Land Speculation:",
+    "track_a_item2_desc": "Predatory landlordism, compounding rents, and algorithmic evictions.",
+    "track_a_item3_title": "Billionaire Oligarchy:",
+    "track_a_item3_desc": "Corporate lobbying, partisan theater, and manufactured consent.",
+    "track_a_item4_title": "Carceral Coercion:",
+    "track_a_item4_desc": "Militarized policing and punitive retribution protecting property over life.",
+    "track_a_item5_title": "Thermodynamic Ecocide:",
+    "track_a_item5_desc": "Infinite exponential compound growth on a strictly finite biosphere.",
+    "track_b_badge": "Track B • Open Networked Earth",
+    "track_b_title": "Universal Usufruct & Demarchy",
+    "track_b_desc": "Machines work for the commons; humanity inherits guaranteed survival and self-governance.",
+    "track_b_item1_title": "Unconditional Birthright:",
+    "track_b_item1_desc": "Food, housing, healthcare, clean water & energy guaranteed for life.",
+    "track_b_item2_title": "Dynamic Usufruct:",
+    "track_b_item2_desc": "Protected personal dwellings; zero rent, zero speculation, zero landlordism.",
+    "track_b_item3_title": "Statistical Sortition:",
+    "track_b_item3_desc": "Citizen juries drawn by lot in strict odd parity; zero career politicians.",
+    "track_b_item4_title": "Restorative Peace Guilds:",
+    "track_b_item4_desc": "De-escalation, conflict mediation, and root-cause civic restoration.",
+    "track_b_item5_title": "Thermodynamic Exergy Limits:",
+    "track_b_item5_desc": "Physical accounting in kWh, liters, and topsoil health—not debt-fiat."
+  },
+  "stewards": {
+    "tag": "Phase 0 Genesis Hardening",
+    "title": "Call for Co-Stewards & Domain Critics",
+    "desc": "Open Networked Earth is built on open peer production. Before the Living Constitution is permanently deposited under Swiss Civil Law (ZGB Art. 80 ff.), our foundational pillars must be stress-tested through adversarial peer review. We are actively seeking our <strong>Priority 0 Media Co-Steward</strong> and technical domain builders to harden the architecture against entropy.",
+    "p0_badge": "Pillar 0 • Strategic Inversion",
+    "badge_priority": "🔥 Priority 0 • Active Search",
+    "badge_seeking_cofounder": "Seeking Co-Founder",
+    "badge_seeking": "Open for Co-Steward",
+    "badge_active": "Actives: 1",
+    "p0_title": "Media, Storytelling & Community Co-Steward",
+    "label_target_profile": "Target Profile:",
+    "p0_role": "Open-source comms activist, Solarpunk/Commons creator, independent podcaster, video storyteller, or community builder.",
+    "label_mandate": "The Mandate & Strategic Goal:",
+    "p0_doubt": "Eliminate the solo-creator bottleneck by taking operational co-ownership of public storytelling, YouTube/Shorts video distribution, Reddit/X dialogue, and leading the outreach campaign to seat the remaining technical domain builders. If you believe a post-labor civilization needs a powerful cultural voice, this is the co-founding role.",
+    "p0_btn_cta": "Join Media Dialectic (#13) →",
+    "p0_btn_email": "Apply Directly via Email →",
+    "p1_num": "Pillar 1",
+    "p1_title": "Economy & Thermodynamic Balances",
+    "label_domain": "Domain:",
+    "p1_role": "Ecological / Heterodox Economics, Leontief Input-Output",
+    "label_doubt": "Open Dialectic & Doubt:",
+    "p1_doubt": "Can money-less thermodynamic accounting completely replace market price discovery and Gosplan bureaucracy without supply shortages or rationing?",
+    "p1_btn_cta": "Join Economic Dialectic (#9) →",
+    "p2_num": "Pillar 2",
+    "p2_title": "Governance, Law & Dynamic Usufruct",
+    "p2_role": "Commons Jurisprudence, Demarchy / Sortition, Swiss Civil Law",
+    "p2_doubt": "Are demarchic sortition lotteries mathematically immune to lobbying and oligarchic capture? Does Swiss Association (Verein) law provide bulletproof shielding?",
+    "p2_btn_cta": "Join Legal Dialectic (#10) →",
+    "p3_num": "Pillar 3",
+    "p3_title": "Simulation & Scientific Sandbox",
+    "p3_role": "Julia Discrete-Event Co-Simulation (SIMONE), Agents.jl & MTBF Wear",
+    "p3_doubt": "Validating the single-village Julia prototype, stock-and-flow ODE docking tests, and multiscale biophysical solver decoupling. Additional co-stewards actively sought.",
+    "p3_btn_cta": "Join Simulation Dialectic (#11) →",
+    "p4_num": "Pillar 4",
+    "p4_title": "Habitat & Open-Hardware Resilience",
+    "p4_role": "Microgrids, Home Assistant Zigbee/MQTT, CNC Timber Cassettes",
+    "p4_doubt": "Do Modular Habitat Units (MHU) and open-hardware microgrids withstand real-world 40-year thermal cycles and catastrophic grid disconnection?",
+    "p4_btn_cta": "Join Habitat Dialectic (#12) →",
+    "cta_title": "Ready to Build or Break O.N.E.?",
+    "cta_desc": "Whether you want to co-steward a foundational pillar or act as an independent critic hunting thermodynamic and nomothetic edge cases, your contribution directly hardens the Genesis Block.",
+    "btn_all_discussions": "💬 View All Discussions on GitHub",
+    "btn_contact": "✉️ Contact Kyberlex (kyberlex@proton.me)"
+  }
+}

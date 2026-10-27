@@ -1,0 +1,101 @@
+{
+  "templates": [
+    {
+      "pattern": "Wie schützt O.N.E. unter Belastung gegen {topic}?",
+      "title": "Systemischer Stresstest für {topic}",
+      "verdict": "GELÖST: Widerstandsfähige verfassungsrechtliche Verzahnungen schützen {topic}"
+    },
+    {
+      "pattern": "Gibt es während Notfällen eine Ausnahme für die Regeln zu {topic}?",
+      "title": "Prüfung von Notfallausnahmen für {topic}",
+      "verdict": "GELÖST: Klasse-0-Invarianten bleiben selbst in Notfällen unveränderlich"
+    },
+    {
+      "pattern": "Was ist der langfristige zivilisatorische Einfluss von {topic}?",
+      "title": "Langfristige evolutionäre Lebensfähigkeit von {topic}",
+      "verdict": "GELÖST: Nachhaltiges Gleichgewicht ohne Kapitalakkumulation erreicht"
+    },
+    {
+      "pattern": "Wie auditieren und inspizieren gewöhnliche Bürger {topic}?",
+      "title": "Demarchisches Audit-Protokoll für {topic}",
+      "verdict": "GELÖST: Transparente offene Telemetrie und Inspektionen durch Losverfahren-Bürger"
+    },
+    {
+      "pattern": "Was passiert, wenn lokale Räte sich bezüglich {topic} uneinig sind?",
+      "title": "Inter-Wasserscheiden-Dialektik-Resolution zu {topic}",
+      "verdict": "GELÖST: Bioregionale föderale Versammlungen und Condorcet-Mediation"
+    }
+  ],
+  "topics": {
+    "housing": [
+      "Wohn-Nießbrauch",
+      "Verteilung von Baumaterialien",
+      "persönliche Handwerkswerkzeuge",
+      "Habitat-Kontinuität",
+      "unbewohnte Unterkünfte"
+    ],
+    "work": [
+      "rotierende Pflichten",
+      "wissenschaftliche Motivation",
+      "Verweigerung der Teilnahme",
+      "ergonomische Koordination",
+      "Gilden-Übergänge"
+    ],
+    "demarchy": [
+      "Losverfahren-Jurys",
+      "epistemische Arbeitsgruppen",
+      "Konsensschwellen",
+      "Recht auf Ablehnung für Bürger",
+      "Anonymität der Jury"
+    ],
+    "thermodynamics": [
+      "persönliche Ressourcenmesser",
+      "L_min-Energie-Triage",
+      "die 7% Heretic's Commons",
+      "Außenhandelsschnittstelle",
+      "Anti-Arbitrage-Puffer"
+    ],
+    "justice": [
+      "restaurative Zufluchtsorte",
+      "Abwesenheit von Schusswaffen",
+      "Wiedergutmachung für Opfer",
+      "Anti-Lynchjustiz-Kordons",
+      "Schutz intimer Rückzugsorte"
+    ],
+    "education": [
+      "Stufen der kindlichen Entwicklung",
+      "Lehrplan zur epistemischen Hygiene",
+      "Unterstützung der ersten 1.000 Tage",
+      "offene akademische Universitäten",
+      "Rechte auf Heimunterricht"
+    ],
+    "science": [
+      "Abschaffung medizinischer Patente",
+      "offene Silizium-Toolchains",
+      "planetare Megawissenschaft",
+      "Biosicherheits-Gensynthese",
+      "moralische Urheberschaft"
+    ],
+    "religion": [
+      "heilige Kultstätten",
+      "Bewahrung der Kathedralen-Energie",
+      "sektiererische Deeskalation",
+      "theologische Bildung",
+      "interreligiöse Konkordate"
+    ],
+    "rights": [
+      "somatische LGBTQ+-Autonomie",
+      "universelle biophysikalische Gleichheit",
+      "nicht-erzwungene Medizin",
+      "universelle Barrierefreiheit",
+      "post-penale Integration"
+    ],
+    "defense": [
+      "Überlauf-Kopfgeld für Soldaten",
+      "Stachelschwein-Punktverteidigung",
+      "der duale Pfad",
+      "lokale Knotenschaffung",
+      "offene Migrationskorridore"
+    ]
+  }
+}

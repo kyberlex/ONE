@@ -1,0 +1,101 @@
+{
+  "templates": [
+    {
+      "pattern": "O.N.E., stres altında {topic} konusuna karşı nasıl koruma sağlar?",
+      "title": "{topic} üzerine sistemik stres testi",
+      "verdict": "ÇÖZÜLDÜ: Dayanıklı anayasal kilitler {topic} konusunu korumaktadır"
+    },
+    {
+      "pattern": "Acil durumlarda {topic} hakkındaki kuralların herhangi bir istisnası var mıdır?",
+      "title": "{topic} için acil durum muafiyet kontrolü",
+      "verdict": "ÇÖZÜLDÜ: Sınıf 0 Değişmezleri acil durumlarda dahi değiştirilemez"
+    },
+    {
+      "pattern": "{topic} konusunun uzun vadeli medeniyet etkisi nedir?",
+      "title": "{topic} konusunun uzun vadeli evrimsel sürdürülebilirliği",
+      "verdict": "ÇÖZÜLDÜ: Sermaye birikimi olmaksızın sürdürülebilir denge sağlandı"
+    },
+    {
+      "pattern": "Sıradan vatandaşlar {topic} konusunu nasıl denetler ve teftiş eder?",
+      "title": "{topic} için demarşik denetim protokolü",
+      "verdict": "ÇÖZÜLDÜ: Şeffaf açık telemetri ve vatandaş kura ile seçim (sortition) denetimleri"
+    },
+    {
+      "pattern": "Yerel konseyler {topic} konusunda anlaşmazlığa düşerse ne olur?",
+      "title": "{topic} üzerine havzalar arası diyalektik çözümleme",
+      "verdict": "ÇÖZÜLDÜ: Biyobölgesel federe meclisler ve Condorcet arabuluculuğu"
+    }
+  ],
+  "topics": {
+    "housing": [
+      "yerleşim intifa hakkı",
+      "yapı malzemeleri dağıtımı",
+      "kişisel zanaat araçları",
+      "yaşam alanı sürekliliği",
+      "boş konutlar"
+    ],
+    "work": [
+      "rotasyonel işler",
+      "bilimsel motivasyon",
+      "katılım reddi hakkı",
+      "ergonomik koordinasyon",
+      "lonca geçişleri"
+    ],
+    "demarchy": [
+      "kura ile seçim (sortition) jürileri",
+      "epistemik çalışma grupları",
+      "uzlaşı eşikleri",
+      "vatandaş çekilme hakları",
+      "jüri anonimliği"
+    ],
+    "thermodynamics": [
+      "kişisel kaynak sayaçları",
+      "L_min enerji triyajı",
+      "yüzde 7'lik Heretik Müşterekler",
+      "dış ticaret arayüzü",
+      "arbitraj karşıtı tamponlar"
+    ],
+    "justice": [
+      "onarıcı sığınaklar",
+      "ateşli silahların yokluğu",
+      "mağdur tazmini",
+      "linç önleme kordonları",
+      "özel sığınak koruması"
+    ],
+    "education": [
+      "çocuk gelişim evreleri",
+      "epistemik hijyen müfredatı",
+      "ilk 1.000 gün desteği",
+      "açık üniversite akademileri",
+      "evde eğitim hakları"
+    ],
+    "science": [
+      "tıbbi patentlerin ilgası",
+      "açık silikon araç zincirleri",
+      "gezegen ölçekli mega-bilim",
+      "biyogüvenlik gen sentezi",
+      "ahlaki telif yazarlığı"
+    ],
+    "religion": [
+      "kutsal ibadet alanları",
+      "katedral enerji muhafazası",
+      "mezhepsel gerilim azaltma",
+      "teolojik eğitim",
+      "dinler arası mutabakatlar"
+    ],
+    "rights": [
+      "LGBTQ+ somatik özerkliği",
+      "evrensel biyofiziksel eşitlik",
+      "zorunlu olmayan tıp",
+      "evrensel erişilebilirlik",
+      "ceza sonrası entegrasyon"
+    ],
+    "defense": [
+      "işgalci askerler için iltica ödeneği",
+      "kirpi noktası savunması",
+      "çift hatlı yol haritası",
+      "yerel düğüm oluşturma",
+      "açık göç koridorları"
+    ]
+  }
+}

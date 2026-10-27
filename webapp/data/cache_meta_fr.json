@@ -1,0 +1,101 @@
+{
+  "templates": [
+    {
+      "pattern": "Comment l'O.N.E. se protège-t-elle contre {topic} sous contrainte ?",
+      "title": "Test de stress systémique sur {topic}",
+      "verdict": "RÉSOLU : Des interverrouillages constitutionnels résilients protègent {topic}"
+    },
+    {
+      "pattern": "Existe-t-il une exception aux règles sur {topic} en cas d'urgence ?",
+      "title": "Vérification des exemptions d'urgence pour {topic}",
+      "verdict": "RÉSOLU : Les invariants de classe 0 restent immuables même en cas d'urgence"
+    },
+    {
+      "pattern": "Quel est l'impact civilisationnel à long terme de {topic} ?",
+      "title": "Viabilité évolutionnaire à long terme de {topic}",
+      "verdict": "RÉSOLU : Équilibre durable atteint sans accumulation de capital"
+    },
+    {
+      "pattern": "Comment les citoyens ordinaires auditent-ils et inspectent-ils {topic} ?",
+      "title": "Protocole d'audit démarchique pour {topic}",
+      "verdict": "RÉSOLU : Télémétrie ouverte transparente et inspections par tirage au sort citoyen"
+    },
+    {
+      "pattern": "Que se passe-t-il si les conseils locaux sont en désaccord sur {topic} ?",
+      "title": "Résolution dialectique inter-bassin versant sur {topic}",
+      "verdict": "RÉSOLU : Assemblées fédérées biorégionales et médiation de Condorcet"
+    }
+  ],
+  "topics": {
+    "housing": [
+      "usufrut résidentiel",
+      "distribution des matériaux de construction",
+      "outils d'artisanat personnel",
+      "continuité de l'habitat",
+      "logements inoccupés"
+    ],
+    "work": [
+      "tâches rotatives",
+      "motivation scientifique",
+      "refus de participer",
+      "coordination ergonomique",
+      "transitions de guilde"
+    ],
+    "demarchy": [
+      "jurys par tirage au sort",
+      "groupes de travail épistémiques",
+      "seuils de consensus",
+      "droits de récusation citoyenne",
+      "anonymat du jury"
+    ],
+    "thermodynamics": [
+      "compteurs de ressources personnelles",
+      "triage énergétique L_min",
+      "les 7% du Bien commun hérétique",
+      "interface de commerce extérieur",
+      "tampons anti-arbitrage"
+    ],
+    "justice": [
+      "sanctuaires restaurateurs",
+      "absence d'armes à feu",
+      "restitution aux victimes",
+      "cordons anti-lynchage",
+      "protection des refuges intimes"
+    ],
+    "education": [
+      "stades du développement de l'enfant",
+      "programme d'hygiène épistémique",
+      "soutien aux 1 000 premiers jours",
+      "académies universitaires ouvertes",
+      "droits à l'instruction en famille"
+    ],
+    "science": [
+      "abolition des brevets médicaux",
+      "chaînes d'outils silicium ouvertes",
+      "mégascience planétaire",
+      "synthèse génétique de biosécurité",
+      "paternité morale du droit d'auteur"
+    ],
+    "religion": [
+      "sanctuaires de culte sacré",
+      "préservation énergétique des cathédrales",
+      "désescalade sectaire",
+      "éducation théologique",
+      "concordats interconfessionnels"
+    ],
+    "rights": [
+      "autonomie somatique LGBTQ+",
+      "égalité biophysique universelle",
+      "médecine non coercitive",
+      "accessibilité universelle",
+      "intégration post-pénale"
+    ],
+    "defense": [
+      "prime de défection pour les soldats",
+      "défense ponctuelle en porc-épic",
+      "feuille de route à double voie",
+      "création de nœuds locaux",
+      "corridors de migration ouverts"
+    ]
+  }
+}

@@ -1,0 +1,464 @@
+[
+  {
+    "number": "I",
+    "title": "BAŞLANGIÇ VE DEVREDİLEMEZ İNSAN HAKLARI BİLDİRGESİ",
+    "articles": [
+      {
+        "id": "Article 1.1",
+        "title": "Biyosferik Müşterekler İlkesi",
+        "full_title": "Article 1.1: Biyosferik Müşterekler İlkesi",
+        "text": "Dünya biyosferi, tüm canlı türlerinin ortak ve bölünemez mirasıdır. Hiçbir tüzel veya gerçek kişi atmosferi, tatlı suları, okyanusları veya biyolojik çeşitliliği mülk edinemez, ipotek edemez veya tahrip edemez. Her türlü kullanım ancak ekolojik dengeyi gözetmek koşuluyla intifa esasına tabidir."
+      },
+      {
+        "id": "Article 1.2",
+        "title": "Dokunulmaz Beden ve Kişisel Egemenlik",
+        "full_title": "Article 1.2: Dokunulmaz Beden ve Kişisel Egemenlik",
+        "text": "Her insanın bedensel bütünlüğü, zihinsel mahremiyeti ve kişisel özerkliği mutlak ve dokunulmazdır. Bireyler hiçbir ekonomik, biyometrik, algoritmik veya siyasi zorlamaya tabi tutulamaz; zorunlu beden müdahalesi veya gözetim uygulanamaz."
+      },
+      {
+        "id": "Article 1.3",
+        "title": "Evrensel Hayatta Kalma Tabanı",
+        "full_title": "Article 1.3: Evrensel Hayatta Kalma Tabanı",
+        "text": "Her birey, piyasa mekanizmalarından veya emeğin metalaştırılmasından bağımsız olarak; temiz su, sağlıklı gıda, güvenli barınma, yenilenebilir enerji, sağlık hizmetleri ve bilgiye sınırsız erişim hakkına doğuştan sahiptir. Bu haklar hiçbir borç, yükümlülük veya tasarruf gerekçesiyle kısıtlanamaz."
+      },
+      {
+        "id": "Article 1.4",
+        "title": "Devredilemez Sivil Özgürlükler ve Epistemik Özgürlük",
+        "full_title": "Article 1.4: Devredilemez Sivil Özgürlükler ve Epistemik Özgürlük",
+        "text": "Düşünce, vicdan, bilimsel araştırma, sanatsal ifade ve iletişim özgürlüğü hiçbir kurum veya algoritma tarafından kısıtlanamaz. Şifreli iletişim, kişisel mahremiyet ve sansürsüz bilgi edinme devredilemez anayasal haklardır."
+      },
+      {
+        "id": "Article 1.5",
+        "title": "Çit Çekme ve Tekelleşme Karşıtı İlke",
+        "full_title": "Article 1.5: Çit Çekme ve Tekelleşme Karşıtı İlke",
+        "text": "Bilgi, tohum, genetik kod, yazılım ve temel teknolojilerin patentlenmesi veya yapay engellerle sınırlandırılması (çit çekme) kesin olarak yasaktır. İnsanlığın bilgi mirası herkesin erişimine açık ortak bir zenginliktir."
+      },
+      {
+        "id": "Article 1.6",
+        "title": "Ekolojik Yükümlülük ve Kuşaklararası Emanet",
+        "full_title": "Article 1.6: Ekolojik Yükümlülük ve Kuşaklararası Emanet",
+        "text": "Mevcut kuşaklar, biyosferin ve kaynakların sahibi değil, gelecek kuşaklara devretmekle yükümlü geçici koruyucularıdır. Toprak, hava ve su kaynakları, geri döndürülemez bir tahribata yol açmayacak şekilde özenle yönetilmelidir."
+      },
+      {
+        "id": "Article 1.7",
+        "title": "Mutlak Hakların Üstünlüğü ve Korunması",
+        "full_title": "Article 1.7: Mutlak Hakların Üstünlüğü ve Korunması",
+        "text": "Bu Bölümde yer alan temel haklar hiçbir olağanüstü hal, kriz, savaş veya meclis kararıyla askıya alınamaz, daraltılamaz veya feshedilemez. Bu haklara yönelik her türlü saldırı meşru direnme hakkını doğurur."
+      }
+    ]
+  },
+  {
+    "number": "II",
+    "title": "MÜLKİYETİN VE HAKİMİYETİN YAPISÖKÜMÜ: İNTİFA HUKUKU",
+    "articles": [
+      {
+        "id": "Article 2.1",
+        "title": "Gıyabi Mülkiyetin Kaldırılması ve Hakimiyetin Yapısökümü",
+        "full_title": "Article 2.1: Gıyabi Mülkiyetin Kaldırılması ve Hakimiyetin Yapısökümü",
+        "text": "Terk edilmiş veya kullanılmayan topraklar, fabrikalar ve konutlar üzerindeki hak iddiaları ile spekülatif mülkiyet (dominium) hukuken geçersiz kılınmıştır. Hak sahipliği yalnızca fiili, faydalı ve toplumsal kullanıma (intifa) dayanır."
+      },
+      {
+        "id": "Article 2.2",
+        "title": "Mülkiyet ve Müştereklerin Üçlü Sınıflandırması",
+        "full_title": "Article 2.2: Mülkiyet ve Müştereklerin Üçlü Sınıflandırması",
+        "text": "Varlıklar üç kesin kategoriye ayrılır: (1) Kişisel eşyalar ve özel mahremiyet alanı; (2) Topluluğun ortak kullanımındaki intifa malları; (3) Biyosferik müşterekler. Birinci kategori dokunulmazdır; ikinci ve üçüncü kategoriler satılamaz, devredilemez ve metalaştırılamaz."
+      },
+      {
+        "id": "Article 2.3",
+        "title": "Dokunulmaz Barınma Güvencesi ve Tahliye Yasağı",
+        "full_title": "Article 2.3: Dokunulmaz Barınma Güvencesi ve Tahliye Yasağı",
+        "text": "Her bireyin ve ailenin barındığı konut dokunulmazdır. Hiçbir koşulda, hiçbir borç veya gerekçeyle bir kimse yaşadığı evden zorla tahliye edilemez; barınma hakkı mutlak güvence altındadır."
+      },
+      {
+        "id": "Article 2.4",
+        "title": "Tarımsal Alanların ve Üretim Araçlarının İdaresi",
+        "full_title": "Article 2.4: Tarımsal Alanların ve Üretim Araçlarının İdaresi",
+        "text": "Tarımsal araziler ve üretim tesisleri, onları bizzat işleten emekçilerin ve yerel toplulukların ortak intifa idaresindedir. Toprak ve makineler finansal spekülasyon konusu yapılamaz."
+      },
+      {
+        "id": "Article 2.5",
+        "title": "Ortak Miras Barınakları ve Konumsal Varlıklar",
+        "full_title": "Article 2.5: Ortak Miras Barınakları ve Konumsal Varlıklar",
+        "text": "Tarihi yapılar, doğal rezervler, su kaynakları ve nadir konumsal zenginlikler ortak miras koruması altındadır. Bunlar hiçbir zümrenin ayrıcalıklı tasarrufuna bırakılamaz."
+      },
+      {
+        "id": "Article 2.6",
+        "title": "İntifa Hakkı İhtilafları ve Meclis Eşikleri",
+        "full_title": "Article 2.6: İntifa Hakkı İhtilafları ve Meclis Eşikleri",
+        "text": "İntifa haklarına dair anlaşmazlıklar yerel halk meclislerinde ve onarıcı adalet kurullarında çözülür. Kararlar ticari karlılık yerine toplumsal fayda ve ekolojik uyum gözetilerek alınır."
+      }
+    ]
+  },
+  {
+    "number": "III",
+    "title": "BİYOFİZİKSEL GERÇEKLİK VE TERMODİNAMİK KAYNAK MUHASEBESİ",
+    "articles": [
+      {
+        "id": "Article 3.1",
+        "title": "Gezegensel Sınırlar ve Biyofiziksel Kısıtlar Aksiomu",
+        "full_title": "Article 3.1: Gezegensel Sınırlar ve Biyofiziksel Kısıtlar Aksiomu",
+        "text": "Gezegenin biyofiziksel taşıma kapasitesi ve termodinamik dengesi tüm ekonomik faaliyetlerin nihai sınırıdır. Üretim ve tüketim modelleri doğanın yenilenme hızına uyumlu olmak zorundadır."
+      },
+      {
+        "id": "Article 3.2",
+        "title": "Termodinamik İntifa Muhasebesi ve Karbon Bütçeleri",
+        "full_title": "Article 3.2: Termodinamik İntifa Muhasebesi ve Karbon Bütçeleri",
+        "text": "Tüm kaynak tahsisleri ve enerji kullanımları parasal değerlerle değil, gerçek termodinamik maliyetler, ekolojik ayak izi ve karbon kısıtları üzerinden hesaplanır."
+      },
+      {
+        "id": "Article 3.3",
+        "title": "Müşterek Döngüsel Malzeme ve Ayrışma Standartları",
+        "full_title": "Article 3.3: Müşterek Döngüsel Malzeme ve Ayrışma Standartları",
+        "text": "Üretilen tüm araç ve ürünlerin malzeme bileşenleri açıkça belgelenmeli; sökülebilir, dönüştürülebilir ve çevreye zararsız olacak biçimde tasarlanmalıdır. Planlı eskitme kesinlikle yasaktır."
+      },
+      {
+        "id": "Article 3.4",
+        "title": "Ekosistem Yenilenmesi ve Toprak Koruma Şartı",
+        "full_title": "Article 3.4: Ekosistem Yenilenmesi ve Toprak Koruma Şartı",
+        "text": "Tarım ve sanayi faaliyetleri toprak mikrobiyolojisini, tatlı su döngülerini ve tozlayıcı popülasyonlarını korumakla yükümlüdür. Sentetik zehirlerin ve kalıcı kimyasalların yayılımı engellenir."
+      },
+      {
+        "id": "Article 3.5",
+        "title": "Stratejik Kaynak Rezervleri ve 36 Aylık Koruma Kalkanı",
+        "full_title": "Article 3.5: Stratejik Kaynak Rezervleri ve 36 Aylık Koruma Kalkanı",
+        "text": "Her biyobölge; gıda, tıbbi malzeme, temel enerji ve teknik yedek parçalarda en az 36 aylık bağımsız dayanıklılık rezervini muhafaza etmekle yükümlüdür."
+      },
+      {
+        "id": "Article 3.6",
+        "title": "Kayıp Ekosistemlerin Yeniden Vahşileştirilmesi Mandası",
+        "full_title": "Article 3.6: Kayıp Ekosistemlerin Yeniden Vahşileştirilmesi Mandası",
+        "text": "Bozulmuş ekosistemlerin, kurutulmuş sulak alanların ve tahrip edilmiş ormanların yeniden yabanileştirilmesi ve biyolojik onarımı anayasal bir önceliktir."
+      }
+    ]
+  },
+  {
+    "number": "IV",
+    "title": "KURA İLE YÖNETİM: DEMARŞİK YÖNETİŞİM MİMARİSİ",
+    "articles": [
+      {
+        "id": "Article 4.1",
+        "title": "Temsiliyet Bozulmalarının Önlenmesi ve Kura İlkesi",
+        "full_title": "Article 4.1: Temsiliyet Bozulmalarının Önlenmesi ve Kura İlkesi",
+        "text": "Para, medya tekeli ve profesyonel kariyerizmin yol açtığı siyasi yozlaşmayı engellemek amacıyla, tüm kamu yönetim kurulları kura yoluyla (sortition/demarşi) seçilir."
+      },
+      {
+        "id": "Article 4.2",
+        "title": "Demarşik Meclislerin Yapısı, Görev Süresi ve Rotasyon",
+        "full_title": "Article 4.2: Demarşik Meclislerin Yapısı, Görev Süresi ve Rotasyon",
+        "text": "Yurttaş meclisleri, toplumun tüm kesimlerini demografik olarak yansıtan kura ile belirlenmiş üyelerden oluşur. Görev süreleri sınırlıdır, üyeler düzenli olarak rotasyona tabi tutulur."
+      },
+      {
+        "id": "Article 4.3",
+        "title": "Zaman Sınırları, Karar Mekanizmaları ve 5 Dakikalık Soğuma",
+        "full_title": "Article 4.3: Zaman Sınırları, Karar Mekanizmaları ve 5 Dakikalık Soğuma",
+        "text": "Meclis oturumlarında kararlar derinlemesine müzakereyle alınır. Yoğun gerginlik veya panik anlarında 5 dakikalık zorunlu soğuma araları uygulanır; aceleci veya manipülatif oylamalar yasaktır."
+      },
+      {
+        "id": "Article 4.4",
+        "title": "Baskı Altında Oylama Yasağı ve Fiziksel Bütünlük Güvencesi",
+        "full_title": "Article 4.4: Baskı Altında Oylama Yasağı ve Fiziksel Bütünlük Güvencesi",
+        "text": "Meclis üyeleri üzerinde herhangi bir lobicilik, şantaj, rüşvet veya fiziki baskı kurulması suçtur. Oylamalar bireysel vicdan ve kamusal çıkar doğrultusunda özgürce gerçekleştirilir."
+      },
+      {
+        "id": "Article 4.5",
+        "title": "Yurttaş Denetimi ve Meclis Geri Çağırma Mekanizmaları",
+        "full_title": "Article 4.5: Yurttaş Denetimi ve Meclis Geri Çağırma Mekanizmaları",
+        "text": "Tüm meclis kararları ve oturumları şeffaf bir biçimde halkın denetimine açıktır. Topluluk üyeleri, kurallara uymayan temsilcileri görevden alma ve meclisi yeniden kuraya tabi tutma hakkına sahiptir."
+      }
+    ]
+  },
+  {
+    "number": "V",
+    "title": "ZORUNLU FİZİKSEL EMEK, BAKIM VE KUŞAKLARARASI DEVAMLILIK",
+    "articles": [
+      {
+        "id": "Article 5.1",
+        "title": "Toplumsal Bakım ve Zorunlu Emek Evrenselliği",
+        "full_title": "Article 5.1: Toplumsal Bakım ve Zorunlu Emek Evrenselliği",
+        "text": "Toplumun fiziksel bekası için gereken temel işler (temizlik, altyapı bakımı, tarım, atık yönetimi) ayrıcalıksız tüm yetkin yurttaşlar arasında adil ve dönüşümlü olarak paylaşılır."
+      },
+      {
+        "id": "Article 5.2",
+        "title": "Bakım Emeği, Çocuk Gelişimi ve Yaşlı Desteği",
+        "full_title": "Article 5.2: Bakım Emeği, Çocuk Gelişimi ve Yaşlı Desteği",
+        "text": "Çocuk bakımı, hasta ve yaşlı refakati, duygusal dayanışma ve bakım emeği, toplumun en saygın ve temel üretken katkısı olarak kabul edilir ve tam toplumsal destek görür."
+      },
+      {
+        "id": "Article 5.3",
+        "title": "Çalışma Saatlerinin İntifa Esasına Göre Azaltılması",
+        "full_title": "Article 5.3: Çalışma Saatlerinin İntifa Esasına Göre Azaltılması",
+        "text": "Faydasız bürokratik işlerin tasfiyesi ve üretim araçlarının ortak kullanımıyla birlikte bireylerin zorunlu çalışma süresi asgari düzeye indirilir; serbest zaman genişletilir."
+      },
+      {
+        "id": "Article 5.4",
+        "title": "Tehlikeli ve Ağır İşlerin Rotasyonu ve Otomasyonu",
+        "full_title": "Article 5.4: Tehlikeli ve Ağır İşlerin Rotasyonu ve Otomasyonu",
+        "text": "İnsan sağlığına zararlı, riskli veya ağır işler ivedilikle otomatikleştirilir. Otomasyon sağlanana kadar bu işler gönüllülük, yüksek rotasyon ve azami güvenlik önlemleriyle yürütülür."
+      },
+      {
+        "id": "Article 5.5",
+        "title": "Kuşaklararası Dayanışma ve Mirasın Kamusallığı",
+        "full_title": "Article 5.5: Kuşaklararası Dayanışma ve Mirasın Kamusallığı",
+        "text": "Hiçbir aile veya zümre servet, unvan veya iktidar imtiyazı devredemez. Bireylerin vefatı halinde intifa kullanımındaki ortak varlıklar topluluk havuzuna geri döner."
+      },
+      {
+        "id": "Article 5.6",
+        "title": "Özerk Bireysel Zaman ve Kendini Gerçekleştirme Hakkı",
+        "full_title": "Article 5.6: Özerk Bireysel Zaman ve Kendini Gerçekleştirme Hakkı",
+        "text": "Her yurttaş; düşünme, yaratma, dinlenme, felsefe ve sanatla uğraşma hakkına sahiptir. Bireyin değeri ürettiği piyasa artığıyla değil, varoluşsal bütünlüğüyle ölçülür."
+      }
+    ]
+  },
+  {
+    "number": "VI",
+    "title": "DAĞITIK ALTYAPI, MİKRO ŞEBEKELER VE ANALOG DAYANIKLILIK",
+    "articles": [
+      {
+        "id": "Article 6.1",
+        "title": "Merkeziyetçi Olmayan Dağıtık Altyapı Mimarisi",
+        "full_title": "Article 6.1: Merkeziyetçi Olmayan Dağıtık Altyapı Mimarisi",
+        "text": "Elektrik, su, ısı ve haberleşme sistemleri tek bir merkeze veya dış güce bağımlı olmayacak şekilde yerel, dağıtık ve otonom ağlar biçiminde yapılandırılır."
+      },
+      {
+        "id": "Article 6.2",
+        "title": "Yedekli ve Dayanıklı Mikro Şebekeler Standardı",
+        "full_title": "Article 6.2: Yedekli ve Dayanıklı Mikro Şebekeler Standardı",
+        "text": "Mikro şebekeler birincil şebekeden bağımsız olarak çalışabilmeli; güneş, rüzgar, mikro-hidro ve jeotermal gibi yerel yenilenebilir kaynaklarla kesintisiz beslenmelidir."
+      },
+      {
+        "id": "Article 6.3",
+        "title": "Karanlık Gökyüzü Protokolü ve Analog Manuel Kontrol",
+        "full_title": "Article 6.3: Karanlık Gökyüzü Protokolü ve Analog Manuel Kontrol",
+        "text": "Karanlık Gökyüzü Protokolü uyarınca, tüm hayati altyapılar dijital ağların çökmesi veya siber saldırı durumunda elle çalıştırılabilir mekanik ve analog kontrol sistemlerine sahip olmalıdır."
+      },
+      {
+        "id": "Article 6.4",
+        "title": "Hayati Kaynakların Ağdan Bağımsız İşletim Güvencesi",
+        "full_title": "Article 6.4: Hayati Kaynakların Ağdan Bağımsız İşletim Güvencesi",
+        "text": "İçme suyu depoları, tahıl siloları ve acil durum merkezleri internet bağlantısı veya merkezi sunucular olmadan da en az 120 saat boyunca kesintisiz hizmet verecek şekilde tasarlanır."
+      },
+      {
+        "id": "Article 6.5",
+        "title": "Yerel Üretim, Tersine Mühendislik ve Onarım Hakkı",
+        "full_title": "Article 6.5: Yerel Üretim, Tersine Mühendislik ve Onarım Hakkı",
+        "text": "Yurttaşların ve atölyelerin kullandıkları alet ve cihazları tamir etme, modifiye etme ve parçalarını tersine mühendislikle yeniden üretme hakkı engellenemez."
+      },
+      {
+        "id": "Article 6.6",
+        "title": "Ortak Donanım Depoları ve Toplumsal Fabrikasyon",
+        "full_title": "Article 6.6: Ortak Donanım Depoları ve Toplumsal Fabrikasyon",
+        "text": "Her mahallede açık kaynaklı donanım kütüphaneleri, ortak işleme atölyeleri (fab-lab) ve takım tezgahları halkın ücretsiz kullanımına sunulur."
+      }
+    ]
+  },
+  {
+    "number": "VII",
+    "title": "AÇIK DERLEYİCİ BÜTÜNLÜĞÜ VE KODUN DEMOKRATİKLEŞMESİ",
+    "articles": [
+      {
+        "id": "Article 7.1",
+        "title": "Açık Derleyici Bütünlüğü ve Şeffaf Kod İlkesi",
+        "full_title": "Article 7.1: Açık Derleyici Bütünlüğü ve Şeffaf Kod İlkesi",
+        "text": "Kamu altyapısında, iletişimde ve yönetimde kullanılan tüm yazılımların kaynak kodları bütünüyle açık ve herkes tarafından incelenebilir olmak zorundadır."
+      },
+      {
+        "id": "Article 7.2",
+        "title": "Kara Kutu Yapay Zeka ve Özerk Silah Yasağı",
+        "full_title": "Article 7.2: Kara Kutu Yapay Zeka ve Özerk Silah Yasağı",
+        "text": "İnsan hayatı hakkında ölüm-kalım kararı veren, cezalandırıcı nitelikteki veya otonom silah sistemlerine dayalı kapalı kutu yapay zekaların geliştirilmesi ve kullanılması yasaktır."
+      },
+      {
+        "id": "Article 7.3",
+        "title": "Çok Katmanlı Bağımsız Donanım Doğrulaması",
+        "full_title": "Article 7.3: Çok Katmanlı Bağımsız Donanım Doğrulaması",
+        "text": "Kritik donanımların mikroişlemcileri farklı üreticilerin tasarımlarıyla çapraz doğrulamadan geçirilir; tedarik zincirindeki donanımsal arka kapılara ve truva atlarına karşı korunur."
+      },
+      {
+        "id": "Article 7.4",
+        "title": "Algoritmik Şeffaflık ve Toplumsal Denetim Hakkı",
+        "full_title": "Article 7.4: Algoritmik Şeffaflık ve Toplumsal Denetim Hakkı",
+        "text": "Toplumun kaynak dağıtımında yardımcı olarak yararlanılan tüm algoritma ve modeller açık tartışmaya ve yurttaş denetimine tabi tutulur."
+      },
+      {
+        "id": "Article 7.5",
+        "title": "Veri Müşterekleri ve Özel Veri Toplama Yasağı",
+        "full_title": "Article 7.5: Veri Müşterekleri ve Özel Veri Toplama Yasağı",
+        "text": "Yurttaşların kişisel davranış verilerinin ticarileştirilmesi, gözetim profillemesi yapılması veya rızasız merkezi sunucularda toplanması yasaktır."
+      },
+      {
+        "id": "Article 7.6",
+        "title": "Kritik Altyapı Kodlarının Bağımsız İncelenmesi",
+        "full_title": "Article 7.6: Kritik Altyapı Kodlarının Bağımsız İncelenmesi",
+        "text": "Kritik güvenlik denetimleri bağımsız yerel ve küresel sivil bilişim kurulları tarafından düzenli olarak gerçekleştirilir ve sonuçları kamuoyuyla paylaşılır."
+      }
+    ]
+  },
+  {
+    "number": "VIII",
+    "title": "KAMU GÜVENLİĞİ, SAVUNMA CAYDIRICILIĞI VE ONARICI ADALET",
+    "articles": [
+      {
+        "id": "Article 8.1",
+        "title": "Kolluk Kuvvetlerinin Dönüştürülmesi ve Silahsız Güvenlik",
+        "full_title": "Article 8.1: Kolluk Kuvvetlerinin Dönüştürülmesi ve Silahsız Güvenlik",
+        "text": "Militarize edilmiş polis teşkilatları ve paramiliter yapılar lağvedilmiştir. Kamu düzeni, mahalle sakinlerinden oluşan silahsız, eğitimli ve barışçıl güvenlik ağlarınca sağlanır."
+      },
+      {
+        "id": "Article 8.2",
+        "title": "Onarıcı Adalet Heyetleri ve Toplumsal İyileşme",
+        "full_title": "Article 8.2: Onarıcı Adalet Heyetleri ve Toplumsal İyileşme",
+        "text": "Suç ve uyuşmazlıklar intikamcı cezalar yerine zarar gören tarafın mağduriyetini gidermeyi, tarafları uzlaştırmayı ve toplumsal dokuyu onarmayı amaçlayan onarıcı adaletle çözülür."
+      },
+      {
+        "id": "Article 8.3",
+        "title": "Şiddetsiz Müdahale ve Defansif Caydırıcılık",
+        "full_title": "Article 8.3: Şiddetsiz Müdahale ve Defansif Caydırıcılık",
+        "text": "Toplumsal savunma; öldürücü olmayan taktikler, sivil direnç, fiziksel barikatlar ve çatışmasızlaştırma ilkeleri üzerine kuruludur."
+      },
+      {
+        "id": "Article 8.4",
+        "title": "Toplumsal Savunma ve Saldırmazlık İlkesi",
+        "full_title": "Article 8.4: Toplumsal Savunma ve Saldırmazlık İlkesi",
+        "text": "Topluluklar hiçbir dış bölgeye saldıramaz veya işgal harekatına girişemez; askeri yapılanma yalnızca sınırların ve müştereklerin savunulması amacıyla meşru müdafaa ile sınırlıdır."
+      },
+      {
+        "id": "Article 8.5",
+        "title": "Gözaltı Yasağı ve Mutlak Beden Dokunulmazlığı",
+        "full_title": "Article 8.5: Gözaltı Yasağı ve Mutlak Beden Dokunulmazlığı",
+        "text": "Hiçbir yurttaş keyfi olarak alıkonulamaz, gizli sorgulamalara veya fiziksel/psikolojik işkenceye maruz bırakılamaz. Bireysel özgürlük esastır."
+      },
+      {
+        "id": "Article 8.6",
+        "title": "Cezaevlerinin Tasfiyesi ve Onarıcı Güvenlik Ağları",
+        "full_title": "Article 8.6: Cezaevlerinin Tasfiyesi ve Onarıcı Güvenlik Ağları",
+        "text": "Kişileri tecrit eden kapalı cezaevleri kademeli olarak kapatılır; bireylerin topluma yeniden kazandırılması açık rehabilitasyon ve üretim merkezleri aracılığıyla sağlanır."
+      }
+    ]
+  },
+  {
+    "number": "IX",
+    "title": "GEÇİŞ GEÇİTLERİ: SERMAYE ÇEVRİLMESİNDEN MÜŞTEREKLERE",
+    "articles": [
+      {
+        "id": "Article 9.1",
+        "title": "Sermaye Çevrilmesinin Tasfiyesi ve Kamusallaştırma",
+        "full_title": "Article 9.1: Sermaye Çevrilmesinin Tasfiyesi ve Kamusallaştırma",
+        "text": "Müşterek kaynakları gasp eden, doğayı talan eden veya kamu varlıklarını elinde tutan tekellerin mülkiyet iddiaları iptal edilir; bu varlıklar halk meclislerinin ortak intifasına devredilir."
+      },
+      {
+        "id": "Article 9.2",
+        "title": "Borçların Feshi ve Finansal Parazitliğin Önlenmesi",
+        "full_title": "Article 9.2: Borçların Feshi ve Finansal Parazitliğin Önlenmesi",
+        "text": "Finansal sermayenin borçlandırma mekanizmalarıyla yarattığı haksız borçlar, faiz yükleri ve spekülatif senetler tek taraflı olarak feshedilir."
+      },
+      {
+        "id": "Article 9.3",
+        "title": "Müştereklere Dönüşüm Süreci ve Adil Telafi",
+        "full_title": "Article 9.3: Müştereklere Dönüşüm Süreci ve Adil Telafi",
+        "text": "Geçiş sürecinde üretim ve dağıtımın aksamaması için çalışanlar işletmelerin yönetimini doğrudan devralır; temel ihtiyaçların lojistiği kesintisiz sürdürülür."
+      },
+      {
+        "id": "Article 9.4",
+        "title": "Çokuluslu Tekellerin Tasfiyesi ve Yerelleştirme",
+        "full_title": "Article 9.4: Çokuluslu Tekellerin Tasfiyesi ve Yerelleştirme",
+        "text": "Küresel şirketlerin yerel kaynaklar üzerindeki imtiyazları sonlandırılır; üretim tesisleri bölgesel gereksinimlere hizmet edecek şekilde yeniden yapılandırılır."
+      },
+      {
+        "id": "Article 9.5",
+        "title": "Hızlı Geçiş Güvenceleri ve Tedarik Kesintisizliği",
+        "full_title": "Article 9.5: Hızlı Geçiş Güvenceleri ve Tedarik Kesintisizliği",
+        "text": "Geçiş evresinde hiçbir yurttaşın temel gıda, su ve elektrik erişiminin kesilmesine izin verilmez; acil durum lojistik protokolleri yürürlüğe konur."
+      },
+      {
+        "id": "Article 9.6",
+        "title": "Ekonomik Sabotaja Karşı Savunma ve Müşterek Koruma",
+        "full_title": "Article 9.6: Ekonomik Sabotaja Karşı Savunma ve Müşterek Koruma",
+        "text": "Müşterekleşme sürecine karşı girişilecek ekonomik ambargo, spekülatif sabotaj veya fiziki saldırılara karşı meclisler ortak savunma ve dayanışma kalkanı oluşturur."
+      }
+    ]
+  },
+  {
+    "number": "X",
+    "title": "BİYOBÖLGESEL HAVZA FEDERASYONLARI VE GEZEGENSEL ANLAŞMA",
+    "articles": [
+      {
+        "id": "Article 10.1",
+        "title": "Biyobölgesel Havza Sınırları ve Doğal Topografya",
+        "full_title": "Article 10.1: Biyobölgesel Havza Sınırları ve Doğal Topografya",
+        "text": "Siyasi sınırlar; yapay ulusal sınırlardan ziyade su havzaları, dağ silsileleri, ormanlar ve nehir vadileri gibi doğal biyobölgesel topografyaya göre yeniden tanımlanır."
+      },
+      {
+        "id": "Article 10.2",
+        "title": "Havza Konseyleri ve Doğal Sınır Yönetişimi",
+        "full_title": "Article 10.2: Havza Konseyleri ve Doğal Sınır Yönetişimi",
+        "text": "Aynı nehir havzasını ve ekosistemi paylaşan topluluklar, suyun ve toprağın korunması için ortaklaşa Havza Konseyleri kurarak federatif bir birlik oluştururlar."
+      },
+      {
+        "id": "Article 10.3",
+        "title": "Gezegensel İklim Anlaşması ve Ekolojik Denge",
+        "full_title": "Article 10.3: Gezegensel İklim Anlaşması ve Ekolojik Denge",
+        "text": "Tüm biyobölgeler, gezegensel atmosferi, okyanus akıntılarını ve iklim dengesini korumayı amaçlayan Küresel Biyosfer Paktı'na eşit olarak taraftır."
+      },
+      {
+        "id": "Article 10.4",
+        "title": "Sınırlar Ötesi Kaynak Eşitliği ve Dayanışma",
+        "full_title": "Article 10.4: Sınırlar Ötesi Kaynak Eşitliği ve Dayanışma",
+        "text": "Zengin doğal kaynaklara sahip bölgeler diğer bölgelerin temel yaşam ihtiyaçlarına dayanışma çerçevesinde destek verir; kaynak tekelciliği kesin olarak men edilir."
+      },
+      {
+        "id": "Article 10.5",
+        "title": "Yerli Halkların Hakları ve Kadim Bilgeliğin Korunması",
+        "full_title": "Article 10.5: Yerli Halkların Hakları ve Kadim Bilgeliğin Korunması",
+        "text": "Yerli toplulukların tarihsel yurtları, özerklikleri ve doğayla uyumlu geleneksel bilgi birikimleri en yüksek anayasal koruma altındadır."
+      },
+      {
+        "id": "Article 10.6",
+        "title": "Gezegensel Barış ve Biyosferik Bütünlük Taahhüdü",
+        "full_title": "Article 10.6: Gezegensel Barış ve Biyosferik Bütünlük Taahhüdü",
+        "text": "Gezegen üzerindeki tüm halklar ve biyobölgeler; ebedi barışı tesis etmeyi, silahlanmayı sona erdirmeyi ve Dünya'nın canlı dokusunu kutsal bilerek korumayı taahhüt eder."
+      }
+    ]
+  },
+  {
+    "number": "XI",
+    "title": "GÖKSEL MÜŞTEREKLER VE GEZEGENLER ARASI FEDERASYON (OPEN NETWORKED SOL — O.N.S.)",
+    "articles": [
+      {
+        "id": "Article 11.1",
+        "title": "Güneş Müşterekleri ve Göksel Mülkiyetin Kaldırılması (Patrimonium Solis)",
+        "full_title": "Article 11.1 — Güneş Müşterekleri ve Göksel Mülkiyetin Kaldırılması (Patrimonium Solis)",
+        "text": "1. Uzay boşluğu, gök cisimleri, asteroitler, Lagrange noktaları (L1–L5) ve yörüngeler bölünmez güneş müşterekleridir (Patrimonium Solis).\n2. Open Networked Sol (O.N.S.) kapsamında ulusal ilhak, şirket mülkiyeti ve yörünge spekülasyonu ebediyen yasaklanmıştır.\n3. Çıkarılan madenler, aktif gözetim ve açık kaynak paylaşımı şartına bağlı intifa hakkı (usufruct) kapsamındadır."
+      },
+      {
+        "id": "Article 11.2",
+        "title": "Mühendislik Ürünü Metabolik Zarf ve Kapalı Döngü Taşıma Kapasitesi",
+        "full_title": "Article 11.2 — Mühendislik Ürünü Metabolik Zarf ve Kapalı Döngü Taşıma Kapasitesi",
+        "text": "1. Dünya dışında temel ekolojik birim Kapalı Ekolojik Yaşam Destek Sistemi'dir (CELSS).\n2. Su (H2O), azot (N2), karbon (C) ve fosfor (P) stokları mutlak termodinamik sınırlardır.\n3. Taşıma kapasitesi, devridaim verimliliği ve radyatör ısı dağılımı (W/m²) ile ölçülür."
+      },
+      {
+        "id": "Article 11.3",
+        "title": "Değişmez Atmosferik Egemenlik ve Despotizm Karşıtı Kilit",
+        "full_title": "Article 11.3 — Değişmez Atmosferik Egemenlik ve Despotizm Karşıtı Kilit",
+        "text": "1. Atmosfer bileşimi ve içme suyu, devredilemez 1. Seviye yaşam haklarıdır.\n2. Yaşam desteği metalaştırılamaz veya emek karşılığı şantaj olarak kullanılamaz (Madde 1.2).\n3. Tüm yaşam alanları müdahale edilebilir manuel mekanik bypass hatlarına sahip olmalıdır.\n4. Metabolik Ayrışma: Onarıcı adalet süreçlerinde (Madde 5.2) asla hava kesintisi uygulanamaz veya boşluğa atma cezası verilemez."
+      },
+      {
+        "id": "Article 11.4",
+        "title": "Termodinamik Astrodinamik: Kütle, Ekserji ve Hız Bütçeleri",
+        "full_title": "Article 11.4 — Termodinamik Astrodinamik: Kütle, Ekserji ve Hız Bütçeleri",
+        "text": "1. Gezegenler arası lojistik fiziksel durum vektörüyle yürütülür: x = [Ekserji (kWh), Kuru kütle (kg), Uçucu madde (L), Δv (km/s)].\n2. İtici yakıt ve delta-V (Δv) sınırlı kamu kaynaklarıdır.\n3. Vakum dökümhaneleri ve güneş yoğunlaştırıcıları Seviye 2-A bölünmez ortak sermayedir."
+      },
+      {
+        "id": "Article 11.5",
+        "title": "Işık Konisi İkincilliği ve Eşzamansız Kura Demarşisi",
+        "full_title": "Article 11.5 — Işık Konisi İkincilliği ve Eşzamansız Kura Demarşisi",
+        "text": "1. Işık hızı gecikmesi nedeniyle 'Işık Konisi İkincilliği' esastır: yerel yaşam alanı tam iç özerkliğe sahiptir.\n2. Tek sayılı kura meclisleri: CELSS Konseyleri (15–101), Gezegen Odaları (301) ve 90 günlük dönemlerle Güneş Müşterekleri Meclisi (1.001)."
+      },
+      {
+        "id": "Article 11.6",
+        "title": "Kinetik Saldırmazlık, Gezegensel Koruma ve Kılıçların Saban Demiri Yapılması",
+        "full_title": "Article 11.6 — Kinetik Saldırmazlık, Gezegensel Koruma ve Kılıçların Saban Demiri Yapılması",
+        "text": "1. Yaşam alanlarına kinetik kütle yönlendirmek kitlesel saldırı sayılır (Madde 8.1).\n2. Asteroit rota değişiklikleri BFT radar ağlarıyla doğrulanmalıdır.\n3. 'Kılıçların Saban Demiri Yapılması' (Gladii in vomeres) ilkesi gereğince eski gemi gövdeleri su kalkanlarına ve radyatörlere dönüştürülür."
+      }
+    ]
+  }
+]

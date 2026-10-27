@@ -1,0 +1,528 @@
+{
+  "lang_name": "Türkçe",
+  "nav": {
+    "overview": "Genel Bakış",
+    "constitution": "Anayasa",
+    "roadmap": "Yol Haritası",
+    "challenge": "Meydan Okuma",
+    "thrillers": "Romanlar",
+    "simulator": "🎮 Living Game ↗",
+    "stewards": "Co-Stewards",
+    "benchmark": "AI Benchmark"
+  },
+  "hero": {
+    "tag": "Çalışma Sonrası Bir Medeniyet İçin Açık Taslak",
+    "title_part1": "Makineler işi yaptığında,",
+    "title_part2": "insanlık Dünya'yı miras alır.",
+    "subtitle": "Yapay zeka ve robotik, ücretli emeği sonsuza dek ortadan kaldırıyor. Kurumsal tekno-feodalizme teslim olmak yerine, <strong>Open Networked Earth (O.N.E.)</strong> otomasyonu insanın özgürleşmesine dönüştürüyor: gıda, barınma, enerji ve sağlık, politikacılar yerine kurayla seçilen halk meclisleri tarafından yönetilerek doğan herkese koşulsuz bir hak olarak garanti edilir.",
+    "btn_primer": "Hızlı Kılavuz (3 dk)",
+    "btn_constitution": "Anayasayı Keşfet",
+    "btn_novels": "Romanları Oku (Ücretsiz E-kitap)",
+    "btn_simulator": "O-ASIS MMO Oyna ↗",
+    "btn_discover": "Discover O.N.E. →",
+    "btn_stewards": "Build (Co-Steward)"
+  },
+  "features": {
+    "survival_title": "Evrensel Yaşam Güvencesi",
+    "survival_desc": "Koşulsuz doğum hakkı olarak gıda, barınma, sağlık ve enerji güvencesi",
+    "housing_title": "Kirasız Konut Güvencesi",
+    "housing_desc": "Korumalı intifa (usufruct) hakkı; spekülatif tahliye ve rant sıfır",
+    "sortition_title": "Kurayla Yönetilen Demokrasi",
+    "sortition_desc": "İstatistiki kurayla seçilen sıradan yurttaşlar; sıfır profesyonel siyasetçi",
+    "commons_title": "Mekanik Bolluk",
+    "commons_desc": "Özerk robotik ve güneş enerjili mikro şebekeler insanlığın ortak mirası"
+  },
+  "gateway": {
+    "tag": "O.N.E.'ı Keşfet",
+    "heading": "Sistemi Anlamanın Dört Yolu",
+    "step1_tag": "Adım 1 • Sezgi",
+    "step1_title": "Özü Kavrayın",
+    "step1_desc": "Kapitalizm ve komünizmin neden çöktüğünü ve O.N.E.'ın para veya siyasetçiler olmadan toplumsal koordinasyonu nasıl sağladığını anlatan 3 dakikalık görsel kılavuz.",
+    "step1_link": "Genel Bakışı Aç →",
+    "step2_tag": "Adım 2 • Mimari",
+    "step2_title": "Yasayı İnceleyin",
+    "step2_desc": "66 maddelik cezalandırıcı olmayan ve termodinamik anayasayı inceleyin: kurayla yönetim, intifa hakkı ve onarıcı adalet ilkeleri.",
+    "step2_link": "Anayasayı Keşfet →",
+    "step3_tag": "Adım 3 • Sınama",
+    "step3_title": "Meydan Okuyun",
+    "step3_desc": "Diyalektik yapay zekamızı en zor sorularla sınayın: 'Kimse çalışmak istemezse ne olur?', 'Maliyeti kim karşılar?' veya 'Kura hileli olabilir mi?'",
+    "step3_link": "Meydan Okuma Arenasına Girin →",
+    "step4_tag": "Adım 4 • Duygu",
+    "step4_title": "Hikayeyi Yaşayın",
+    "step4_desc": "Yüksek gerilimli küresel roman serisi: Detroit, İsviçre Alpleri ve Cenevre'de yeni ortak varlıkları savunan sıradan insanların mücadelesi.",
+    "step4_link": "Haritayı ve Kitapları Aç →"
+  },
+  "synoptic": {
+    "title": "Open Networked Earth Nasıl Çalışır?",
+    "subtitle": "Sade bir dille rehber: eski ekonomik kuralların neden çöktüğü, geçmiş sistemlerin nerede başarısız olduğu ve çalışma sonrası dünyada para ile siyasetçilerin yerini neyin aldığı.",
+    "banner_tag": "Eylem Halindeki Termodinamik Ortaklık",
+    "banner_title": "Sömürüsüz Maddi Bolluk",
+    "banner_desc": "İnsanlığı ücretli kölelikten kurtaran temiz güneş mimarisi, özerk tarım robotları ve topluluk biyolojik gıda bahçeleri.",
+    "tab_postwork": "⚡ 1. Çalışma Sonrası Dönüm Noktası",
+    "tab_failures": "🏛️ 2. Geçmiş Sistemler Neden Çöktü",
+    "tab_pillars": "🛡️ 3. Dört Temel Sütun",
+    "tab_roadmap": "🌱 4. Geçiş Yol Haritası"
+  },
+  "primer_content": {
+    "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    1. Kaçınılmaz Çalışma Sonrası Gerçeklik: Otomasyon Neden Her Şeyi Değiştiriyor\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    Binlerce yıl boyunca insan uygarlığı değişmez bir demir kanunla işledi: <em>\"Çalışmayan, yemek yiyemez.\"</em>\n    İnsansı robotlar, otonom makineler ve üretken yapay zeka bu denklemi sonsuza kadar kırıyor. Makineler tarımı,\n    inşaatı, lojistiği, enerji üretimini ve sağlık hizmetlerini sıfıra yakın marjinal maliyetle gerçekleştirdiğinde, insanın hayatta kalması ücretli istihdamdan koparılmalıdır.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ Varsayılan Distopya: Tekno-Feodalizm</h4>\n      <p>Mevcut piyasa kuralları altında, teknoloji tekelleri otomatik iş gücünün tümüne sahip olur. Milyarlarca insan \"istihdam edilemez\" hale gelir, maaşlarından mahrum bırakılır ve aşırı güvencesizliğe itilirken, servet bir avuç şirket oligarkının elinde toplanır.</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 O.N.E. Taslağı: Mekanik Özgürleşme</h4>\n      <p>Otomasyonun üretici gücü tüm insanlığın ortak mirası ilan edilir. Makine emeği insanları ağır işlerden, yoksulluktan ve ücret köleliğinden kurtarır; gıda, barınma ve enerjiyi doğuştan gelen koşulsuz haklara dönüştürür.</p>\n    </div>\n  </div>\n</div>",
+    "failures": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    2. Önceki Medeniyet Modelleri Neden Başarısız Oldu\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:20px;\">\n    Tarih boyunca insanlık dört ana toplumsal işletim sistemini denedi. Bunların hiçbiri kalıcı barış, adalet veya ekolojik denge sağlayamadı:\n  </p>\n  <div class=\"model-comparison\">\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">1. Dini Teokrasi</div>\n      <div class=\"model-status red\">Başarısız</div>\n      <div style=\"color:var(--text-muted);\">Kutsal savaşlar, engizisyon dogmatizmi ve vicdanları suçluluk ve doğaüstü korkuyla denetleyen ruhban hiyerarşileri.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">2. Feodalizm</div>\n      <div class=\"model-status red\">Başarısız</div>\n      <div style=\"color:var(--text-muted);\">Toprağı \"ilahi hak\" iddiasıyla mülk edinen veraset monarşileri, halkı kılıç zoruyla toprağa bağlı köleliğe mahkum etti.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">3. Devlet Komünizmi</div>\n      <div class=\"model-status red\">Başarısız</div>\n      <div style=\"color:var(--text-muted);\">Özel mülk sahiplerinin yerini parti bürokrasisi aldı; merkezi planlama felci ve cezaevi terörü doğdu.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">4. Serbest Piyasa Kapitalizmi</div>\n      <div class=\"model-status red\">Başarısız</div>\n      <div style=\"color:var(--text-muted);\">Temel insani ihtiyaçlar metalaştırıldı, biyosfer pervasızca tüketildi ve kaçınılmaz kurumsal tekno-feodalizme varıldı.</div>\n    </div>\n    <div class=\"model-box success\">\n      <div class=\"model-name\">5. O.N.E. (Open Networked Earth)</div>\n      <div class=\"model-status green\">Sürdürülebilir Çözüm</div>\n      <div style=\"color:var(--text-muted);\">Kurayla seçilen temsil meclisleri (sortition), intifa hakkı (usufruct), fiziksel enerji muhasebesi şeffaflığı ve parasız yaşam güvencesi.</div>\n    </div>\n  </div>\n</div>",
+    "pillars": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    3. O.N.E. Medeniyetini Taşıyan Dört Temel Sütun\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    Open Networked Earth, hukuki ve termodinamik olarak test edilmiş dört kurumsal buluş üzerine inşa edilmiştir:\n  </p>\n  <div class=\"pillar-cards\">\n    <div class=\"pillar-card\">\n      <div class=\"pillar-icon\">🏡</div>\n      <h4>1. Mülkiyetin Tasfiyesi ve İntifa Hakkı</h4>\n      <p>Toprak, su kaynakları ve kritik altyapı üzerindeki özel mülkiyet ebediyen kaldırılır. Her birey, tahliye ve ev sahibi rantından azade biçimde konutunda ömür boyu dokunulmaz kullanım hakkına sahiptir.</p>\n    </div>\n    <div class=\"pillar-card\">\n      <div class=\"pillar-icon\">⚖️</div>\n      <h4>2. Kurayla Demokrasi (Sortition)</h4>\n      <p>Parlamentolar ve profesyonel siyasetçilerin yerini istatistiki kurayla belirlenen yurttaş meclisleri alır; sermaye oligarklarının seçim manipülasyonu son bulur.</p>\n    </div>\n    <div class=\"pillar-card\">\n      <div class=\"pillar-icon\">⚡</div>\n      <h4>3. Termodinamik Sınırlar ve Parasız Düzen</h4>\n      <p>Finansal spekülasyon ve faiz rantı tamamen kaldırılır. Üretim koordinasyonu doğrudan fiziksel enerji birimlerine dayanır: kilovatsaat, litre temiz su ve biyosfer taşıma kapasitesi.</p>\n    </div>\n    <div class=\"pillar-card\">\n      <div class=\"pillar-icon\">🛡️</div>\n      <h4>4. Onarıcı ve Cezalandırıcı Olmayan Adalet</h4>\n      <p>Silahlı polis teşkilatı ve kitlesel cezaevleri kaldırılır. Anlaşmazlıklar fiziksel tazminat, toplumsal yaraların sarılması ve barışçıl ayrılmaya dayanan onarıcı meclislerce çözülür.</p>\n    </div>\n  </div>\n</div>",
+    "roadmap": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    4. 15 Yıllık Pratik Geçiş Yol Haritası\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    O.N.E. merkezi hükümetlerin iznine veya kanlı çatışmalara dayanmaz. Sistem bugün bağımsız biyobölgesel tohum düğümleri ağı kurularak hayata geçirilir:\n  </p>\n  <div class=\"roadmap-preview-steps\">\n    <div class=\"preview-step\">\n      <div class=\"step-num\">Aşama 0</div>\n      <h4>Hukuk ve Toprak (Yıl 0)</h4>\n      <p>Kar amacı gütmeyen topluluk arazi vakıfları (CLT) kurularak topraklar banka ipoteği ve emlak spekülasyonundan kalıcı olarak kurtarılır.</p>\n    </div>\n    <div class=\"preview-step\">\n      <div class=\"step-num\">Aşama 1</div>\n      <h4>Yaşam Çekirdeği ve Gıda (Yıl 1–3)</h4>\n      <p>48V DC ada güneş şebekeleri, cazibeli su depoları ve 15–35 kişinin kalori ihtiyacını karşılayan polikültür gıda bahçeleri kurulur.</p>\n    </div>\n    <div class=\"preview-step\">\n      <div class=\"step-num\">Aşama 2</div>\n      <h4>Fab-Lab Üretim Atölyesi (Yıl 3–7)</h4>\n      <p>CNC tezgahları ve 3D yazıcılarla itibari para kullanmadan yerel yedek parça, invertör ve tarım aletleri imalatı başlatılır.</p>\n    </div>\n    <div class=\"preview-step\">\n      <div class=\"step-num\">Aşama 3</div>\n      <h4>Havza Federasyonu (Yıl 7–15)</h4>\n      <p>Yüzlerce tohum düğümü, su havzasını merkeziyetçi bürokrasi olmadan yöneten özerk bir biyobölgesel federasyon çatısında birleşir.</p>\n    </div>\n  </div>\n</div>"
+  },
+  "const": {
+    "title": "O.N.E. Yaşayan Anayasası",
+    "subtitle": "On bölümden oluşan kodlanmış cezalandırıcı olmayan ve termodinamik hukuk. Maddeleri inceleyin veya onaylı baskıları indirin.",
+    "search_placeholder": "Anahtar kelimeleri arayın (örn: 'su', 'konut', 'kura', 'silah', 'enerji')...",
+    "expand_all": "Tümünü Genişlet",
+    "collapse_all": "Tümünü Daralt",
+    "download_epub": "Anayasa (EPUB)",
+    "download_pdf": "Anayasa (PDF)",
+    "tab_all": "Tüm Bölümler",
+    "tab_chap": "Bölüm",
+    "chapter_label": "BÖLÜM",
+    "article_singular": "Madde",
+    "article_plural": "Maddeler",
+    "no_results": "Aramanızla eşleşen anayasa maddesi bulunamadı.",
+    "badge_available": "Tam ve Mevcut"
+  },
+  "roadmap": {
+    "title": "Özerk Bir Tohum Düğümü Nasıl İnşa Edilir",
+    "desc": "Pratik adım adım rehber: arazinin metalaşmaktan çıkarılması, mikro şebekelerin kurulması ve borçsuz termodinamik özerklik.",
+    "shield_title": "Sahada Kanıtlanmış Mimari",
+    "shield_subtitle": "53 dava, finansal abluka ve zorla el koyma girişimine karşı denetlenmiştir.",
+    "archetype_common": "🇬🇧 Common Law",
+    "archetype_civil": "🇪🇺 Kıta Avrupası Hukuku",
+    "archetype_customary": "🇲🇽 Geleneksel Hukuk",
+    "sys1_title": "Hukuki Zırh ve Varlık Kilitleme",
+    "sys1_desc": "Pasif arazi mülkiyeti ile operasyonel kooperatif faaliyetlerinin birbirinden mutlak ayrımı.",
+    "sys1_item1": "<strong>A Kuruluşu (Pasif Arazi Vakfı CLT):</strong> Toprağın mülkiyetini elinde tutar; satış, borçlanma ve ipotek ebediyen yasaktır.",
+    "sys1_item2": "<strong>B Kuruluşu (İşletme Kooperatifi):</strong> Üretimi, tarımı ve atölyeleri yönetir, dış hukuki riskleri üstlenir.",
+    "sys1_item3": "<strong>Demonte Edilebilir Taşınır Varlıklar:</strong> Modüler konutlar ve enerji üniteleri haczedilemez menkul mal olarak tescil edilir.",
+    "sys1_item4": "<strong>İmar Uyumu ve Emanet Güvencesi:</strong> Taşınabilir yapı standartları ve teminat fonlarıyla imar mevzuatına tam uyum.",
+    "sys2_title": "İnsan Emeği ve Koordinasyon",
+    "sys2_desc": "Para kullanmadan uzmanlık tıkanıklıklarını, tükenmişliği ve rant kollamayı önleme.",
+    "sys2_item1": "<strong>Koşulsuz Metabolik Katkı:</strong> Hasat, bakım veya mutfak için haftada 5–7 saat fiziksel emek katkısı.",
+    "sys2_item2": "<strong>Kademe 0 İkili Güvenlik Protokolü:</strong> 400V elektrik ve yüksekte çalışma kesinlikle usta-çırak çiftleriyle yapılır.",
+    "sys2_item3": "<strong>Castell Mekanik Kilitleri:</strong> Makine güvenliği dijital yazılımla değil, sıralı fiziksel anahtarlarla sağlanır.",
+    "sys2_item4": "<strong>Kooperatif Hukuku Koruması:</strong> İç imecenin ticari istihdam sayılmasını önleyen yasal iş birliği kalkanı.",
+    "sys3_title": "Ekonomik Köprü (Dış Arbitraj)",
+    "sys3_desc": "Tam küresel geçişe kadar arazi vergileri ve mikroelektronik alımı için itibari para üretimi.",
+    "sys3_item1": "<strong>Kotalı Dış Danışmanlık:</strong> Nitelikli topluluk üyeleri sıkı saat kotalarıyla dış piyasaya hizmet sunar.",
+    "sys3_item2": "<strong>%50 Ön Ödeme Kuralı:</strong> Dış müşterilerle vadeli alacak veya borç bağımlılığına asla girilmez.",
+    "sys3_item3": "<strong>Yalıtılmış Hesaplama Kümesi:</strong> Uzaktan çalışma sunucuları iç güneş enerjisi fazlasıyla beslenir.",
+    "sys3_item4": "<strong>Parasız İç Yaşam Alanı:</strong> Topluluk sınırları içinde resmi para birimlerinin dolaşımı kesinlikle yasaktır.",
+    "sys4_title": "Termodinamik Yaşam Desteği",
+    "sys4_desc": "Kutup soğuklarında, elektrik kesintilerinde ve kuraklıkta topluluğun hayatta kalma garantisi.",
+    "sys4_item1": "<strong>40.000 L Depo + 48V Cazibeli By-pass:</strong> Pompa enerjisi olmadan kendi cazibesiyle akan yeraltı temiz su rezervi.",
+    "sys4_item2": "<strong>48V LFP Batarya Sığınağı:</strong> Kışın otomatik ısıtılan, yazın pasif soğutulan lityum demir fosfat bataryalar.",
+    "sys4_item3": "<strong>180 Günlük Kuru Kalori Rezervi:</strong> Tahıl, baklagil ve vitamin filizlendiricilerden oluşan hava sızdırmaz stok.",
+    "sys4_item4": "<strong>50 m² Termal Çekirdek (-30°C):</strong> Acil durumlarda roket sobayla ısıtılan yüksek yalıtımlı sığınak.",
+    "config_tag": "⚡ Etkileşimli Düğüm Yapılandırıcı",
+    "config_title": "Biyobölgesel Tohum Düğümünüzü Yapılandırın",
+    "config_subtitle": "Yargı bölgesini ve hedeflenen nüfus ölçeğini seçin.",
+    "config_label_arch": "1. Yargı Bölgesi Hukuki Arketipi",
+    "config_btn_common": "🇬🇧 Common Law (ABD/İngiltere/Kanada/Avustralya)",
+    "config_btn_civil": "🇪🇺 Kıta Hukuku (AB/İsviçre/Latin Amerika)",
+    "config_btn_customary": "🇲🇽 Geleneksel Hukuk (Tarımsal Topluluklar)",
+    "config_label_scale": "2. Tohum Topluluğu Ölçeği",
+    "config_scale_5": "5 Kurucu (Aşama 0: Çekirdek)",
+    "config_scale_15": "15 Öncü (Aşama 1: Köy)",
+    "config_scale_35": "35 Sakin (Tam Mikro Düğüm)",
+    "stepper_tag": "Saha Mühendisliği Taslakları",
+    "stepper_title": "4 Pratik Dağıtım Aşaması (0–15 Yıl)",
+    "stepper_desc": "Mühendislik protokollerini incelemek ve belgeleri indirmek için aşamalara tıklayın.",
+    "quickstart_text": "<strong>⚡ Hızlı bir özete mi ihtiyacınız var?</strong> İki sayfalık saha manifestosunu okuyun.",
+    "quickstart_btn": "Cep Saha Kılavuzu (.md)",
+    "quickstart_dl": "⬇️ İndir (.md)",
+    "step_0": "Aşama 0: Hukuki Başlangıç ve Toprak",
+    "step_1": "Aşama 1: Yaşam Çekirdeği ve Gıda",
+    "step_2": "Aşama 2: Fab-Lab ve Üretim Araçları",
+    "step_3": "Aşama 3: Havza Federasyonu",
+    "badge_0": "Yıl 0",
+    "badge_1": "Yıl 1-3",
+    "badge_2": "Yıl 3-7",
+    "badge_3": "Yıl 7-15",
+    "pillar_1": "Sistem I",
+    "pillar_2": "Sistem II",
+    "pillar_3": "Sistem III",
+    "pillar_4": "Sistem IV",
+    "qa_tag": "Sahadaki Pratik Engeller ve Çözümler",
+    "qa_title": "Gerçek Dünyadaki Engelleri Aşmak",
+    "qa_desc": "Tohum düğümü ekiplerinin belediye imar tebligatlarını, alacaklı davalarını, fiziksel iş yükü yorgunluğunu ve dondurucu kutup soğuklarını nasıl aştığı.",
+    "q1_question": "🏛️ İlçe imar müfettişleri modüler evlerimizi ve kuru tuvaletlerimizi mühürlemeye kalkarsa ne olur?",
+    "q1_answer": "<strong>Hukuki Savunma Stratejisi:</strong> Yaşam alanları kalıcı temel üzerine değil, karayolu onaylı taşınabilir şasiler ve modüler yapılar üzerine kurulur. Gri su kapalı devre biyolojik filtrelerle arıtılır. Belediye güvence fonu ($15.000), doğrudan mühürlemeyi önleyerek idari uyum tahkimi sağlar.",
+    "q2_question": "📉 Dışarıdan bir müşteri iflas eder ve bir makine tedarikçisi 180.000 dolarlık dava açarsa ne olur?",
+    "q2_answer": "<strong>İkili Kalkan Eylemde:</strong> Sözleşmeyi imzalayan İşletme Kooperatifi (B Kuruluşu) gerekirse sınırlı sorumlulukla yeniden yapılandırmaya gider. Toprak, su kuyuları ve güneş bataryaları ise ömür boyu haczedilemez intifa şerhi taşıyan Arazi Vakfı'na (A Kuruluşu) ait olduğundan alacaklılarca asla haczedilemez.",
+    "q3_question": "💻 Yüksek gelirli yazılımcı üyeler fiziksel temizlik veya tarım işlerini yapmayı reddederse ne olur?",
+    "q3_answer": "<strong>Müzakere Edilemez Metabolik Taban:</strong> Her yetişkin üye haftada 5–7 saat fiziksel emek (hasat, onarım veya mutfak) vermek zorundadır. Dijital uzmanlık kimseye fiziksel emekten muafiyet tanımaz. Sürekli reddetme durumu onarıcı arabuluculuk meclisince çözülür.",
+    "q4_question": "❄️ Kış sıcaklıkları art arda 3 hafta boyunca -30°C'ye düşerse ne olur?",
+    "q4_answer": "<strong>Termodinamik Çekirdek Direnci:</strong> Topluluk, dış elektriğe bağımlı olmayan yüksek verimli roket sobayla ısıtılan ve toprakla korunan 50 m²'lik süper yalıtımlı çekirdek sığınağa çekilir. LFP bataryalar pasif jeotermal ısı koruması altındadır."
+  },
+  "roadmap_config": {
+    "tag_legal": "Hukuki Yapı ve Varlık Koruması",
+    "desc_operating": "İşletme kooperatifi tüm operasyonel faaliyetleri yürütür ve dış riskleri üstlenir.",
+    "desc_debt": "Arazi ebediyen borç ve ipotekten arındırılmıştır.",
+    "tag_zoning": "İmar ve Yapı Standartları Uyumu",
+    "tag_capital": "Gereken Başlangıç Sermayesi",
+    "tag_water": "Özerk Temiz Su Kapasitesi",
+    "tag_battery": "Batarya Enerji Depolama Kapasitesi",
+    "tag_food": "Gıda Öz-Yeterlilik Düzeyi",
+    "archetypes": {
+      "common_law": {
+        "name": "Common Law (ABD / İngiltere / Kanada / Avustralya)",
+        "entity_a": "501(c)(3) Community Land Trust (CLT)",
+        "entity_b": "Çalışanlara Ait İşletme Kooperatifi (LLC / ULCAA)",
+        "capital": "Reves v. Ernst & Young tüketici intifa muafiyeti kapsamında ön ödemeli ortaklık senetleri ($500–$2.500)",
+        "zoning": "ANSI A119.5 Park Modeli Modüler Yapılar / Karayolu onaylı taşınabilir şasiler",
+        "escrow": "Belediye Kamu Düzeni İmar Uyum Teminatı ($15.000)",
+        "statutory_defense": "Tescilli 99 yıllık zemin kirası intifa sözleşmesi (UCC § 9-604)"
+      },
+      "civil_law": {
+        "name": "Kıta Hukuku (Kıta Avrupası / İsviçre / Latin Amerika)",
+        "entity_a": "Gemeinnützige Stiftung (ZGB Art. 80 / BGB kamu yararına vakıf)",
+        "entity_b": "Betriebsgenossenschaft / Verein (İşletme Kooperatifi / Dernek)",
+        "capital": "Şartsız hibe ve bağışlar (Schenkungen) + faizsiz üye katılım payları",
+        "zoning": "Mevcut tarımsal yapıların korunması (Bestandsschutz) + mobil modüller",
+        "escrow": "Belediye Çevre ve İmar Güvence Depozitosu (Zustandsstörer)",
+        "statutory_defense": "Tapuya şerh edilmiş intifa hakkı (ZGB Art. 745) ile cebri icra engeli"
+      },
+      "customary_commons": {
+        "name": "Geleneksel ve Tarımsal Ortak Varlıklar",
+        "entity_a": "Devredilemez Ejido / TCO Topluluk Arazisi (RAN tescilli)",
+        "entity_b": "Sociedad de Solidaridad Social (SSS) / Tarımsal Üretim Birliği",
+        "capital": "Topluluk İmece Döner Dayanışma Fonu (Fondo Rotatorio)",
+        "zoning": "Geleneksel yerel ekolojik yapı teknikleri (kerpiç/ahşap/taş)",
+        "escrow": "Topluluk İhtiyar Heyeti Hakemliği + ortak acil durum fonu",
+        "statutory_defense": "Anayasal tarımsal koruma anlaşmaları (ILO 169 Sayılı Sözleşme)"
+      }
+    },
+    "scales": {
+      "5": {
+        "water": "40.000 L Yeraltı Su Deposu",
+        "water_desc": "Donmaya dayanıklı yeraltı sarnıcı + 48V DC derin kuyu bypass pompası",
+        "battery": "15 kWh 48V LFP Batarya Sığınağı",
+        "battery_desc": "Pasif jeotermal toprak borularıyla iklimlendirilen yalıtımlı batarya odası",
+        "food": "180 Günlük Dondurularak Kurutulmuş ve Filizlendirilebilir Stok",
+        "food_desc": "Hava sızdırmaz baklagil ve tahıl depoları + günlük taze filizlendirme",
+        "land": "0,8 Hektar (2,0 Dönüm)"
+      },
+      "15": {
+        "water": "120.000 L İkili Sarnıç Dizisi",
+        "water_desc": "Kum ve UV filtreli, cazibeli çift hatlı su dağıtım şebekesi",
+        "battery": "45 kWh 48V LFP Mikro Şebeke",
+        "battery_desc": "Kritik olmayan yükleri otomatik kapatan çift invertör yedekliliği",
+        "food": "180 Günlük Köy Kileri ve Derin Kök Sebze Mahzenleri",
+        "food_desc": "Yoğun teraslanmış tarımsal ormancılık + 4 mevsim biyokütle serası",
+        "land": "2,6 Hektar (6,5 Dönüm)"
+      },
+      "35": {
+        "water": "300.000 L Cazibeli Toprak Rezervuarı",
+        "water_desc": "Elektrik gerektirmeyen, kaynak suyuyla sürekli beslenen doğal su göleti",
+        "battery": "120 kWh 48V/400V 3-Fazlı Endüstriyel Çekirdek",
+        "battery_desc": "Mikro hidroelektrik destekli endüstriyel AC bağlantılı mikro şebeke",
+        "food": "Yıl Boyu Üreten Biyobölgesel Polikültür Ağaç Kanopisi",
+        "food_desc": "Çok katmanlı çok yıllık agroekosistem + soğuk sebze saklama mahzenleri",
+        "land": "6,0 Hektar (15,0 Dönüm)"
+      }
+    }
+  },
+  "roadmap_stepper": {
+    "btn_view_stage": "Bu Aşamanın Protokolünü İncele",
+    "btn_download": "⬇️ Aşama Belgesini İndir (.md)"
+  },
+  "challenge": {
+    "title": "O.N.E. Diyalektik Yapay Zeka Sınama Arenası",
+    "desc": "Anayasanın ve termodinamik mantığımızın krizlere karşı direncini O-ASIS Nomotetik Hakimi ile gerçek senaryolarda test edin.",
+    "quick_label": "Sık Sorulan Kritik Sorular:",
+    "chip_work": "1. ÜCRETLİ EMEK OLMADAN: Bizi kim doyuracak?",
+    "chip_work_query": "İnsanlar çalışmayı reddederse ne olur? O.N.E. içinde gıdayı kim üretecek, kanalizasyonu kim temizleyecek?",
+    "chip_money": "2. PARA OLMADAN: Altyapıyı kim ödeyecek?",
+    "chip_money_query": "Vergi veya para olmadan hastaneleri, raylı sistemleri ve altyapıyı kim finanse edecek?",
+    "chip_prisons": "4. HAPİSHANE OLMADAN: Şiddet suçları nasıl önlenir?",
+    "chip_prisons_query": "Silahlı polis ve hapishaneler olmadan şiddet suçları ve suiistimaller nasıl yönetilir?",
+    "chip_lottery": "Kura manipüle edilebilir mi?",
+    "chip_lottery_query": "Yurttaş meclislerinin rastgele kura (sortition) çekimi çıkar gruplarınca rüşvet veya hileyle etkilenebilir mi?",
+    "chip_communism": "Sovyet komünizminden farkı ne?",
+    "chip_communism_query": "O.N.E. neden baskıcı bir bürokrasiye dönüşen Sovyet komünizminin yeni bir tekrarı değildir?",
+    "sidebar_title": "Sınama Parametreleri",
+    "input_placeholder": "Sisteme yönelik bir soru veya kriz senaryosu yazın...",
+    "btn_send": "Soruyu Gönder",
+    "label_probe": "SALDIRI VE SINAMA SORUSU",
+    "label_adjudicator": "O-ASIS NOMOTETİK HAKİMİ",
+    "label_inquiry": "SORGU:",
+    "label_resolution": "ANAYASAL ÇÖZÜM:",
+    "chip_property": "3. ÖZEL MÜLKİYET OLMADAN: Evime ne olacak?",
+    "chip_property_query": "Özel mülkiyet olmadan birisi evimi veya kişisel eşyalarımı zorla alabilir mi?",
+    "chip_politics": "5. SİYASETÇİ OLMADAN: Kim yönetecek?",
+    "chip_politics_query": "Seçilmiş siyasetçiler olmadan kura ile yönetim sistemi demagogların gücü ele geçirmesini nasıl engeller?",
+    "chip_patents": "6. PATENT OLMADAN: Kim yenilik yapacak?",
+    "chip_patents_query": "Patent veya telif tekeli olmadan tıp araştırmaları ve karmaşık teknolojilere kim öncülük eder?",
+    "chip_army": "7. ORDU OLMADAN: Askeri istilalar?",
+    "chip_army_query": "Düzenli ordu veya sınırlar olmadan yabancı bir askeri işgal gücünü ne durduracak?",
+    "chip_ussr": "8. PAZAR YOK: Bu komünizm mi?",
+    "chip_ussr_query": "O.N.E. 20. yüzyıl devlet komünizminden ve otoriter rejimlerden nasıl ayrılır?",
+    "chip_capitalism": "9. BU KAPİTALİZM Mİ? Kendi işimi kurabilir miyim?",
+    "chip_capitalism_query": "Kapitalizm olmadan bir girişim, atölye veya kişisel proje başlatabilir miyim?",
+    "chip_education": "10. EĞİTİM: Okullar nasıl çalışır?",
+    "chip_education_query": "Öğrenim ücreti veya standart sınavlar olmadan okullar, üniversiteler ve çocuk eğitimi nasıl yürütülür?",
+    "chip_religion": "11. DİN: İbadet ve ibadethaneler serbest mi?",
+    "chip_religion_query": "Dinler, ibadethaneler ve manevi inançlar korunuyor mu yoksa baskı altında mı?",
+    "chip_discrimination": "12. AYRIMCILIK: Irkçılık ve LGBTQ+ hakları?",
+    "chip_discrimination_query": "Azınlıklar ırkçılık, cinsiyet ayrımcılığı ve baskıdan nasıl korunur?"
+  },
+  "books": {
+    "title": "O.N.E. Roman Serisi: Dünyanın Altı Sahnesi",
+    "desc": "Gezegenin altı farklı noktasında yeni bir medeniyetin doğumunu anlatan yüksek tansiyonlu kurgusal gerilim destanı.",
+    "chart_tag": "Altı Sahnenin Etkileşimli Haritası",
+    "chart_title": "Dünya Çapındaki Mücadelenin İzleri",
+    "chart_desc": "Her cildin özetini, ana temalarını ve vurucu alıntılarını okumak için haritadaki işaretçilere tıklayın.",
+    "btn_epub": "E-Kitap İndir (EPUB)",
+    "btn_pdf": "Belge İndir (PDF)",
+    "status_complete": "Tam Metin Hazır",
+    "tag": "RESMİ GERİLİM SÜLALESİ",
+    "map_vol0": "Svalbard (78° K) • Tohumun Doğuşu",
+    "map_vol1": "Detroit ve Windsor • Endüstriyel Direniş",
+    "map_vol2": "İsviçre Alpleri • Hidroelektrik Kuşatması",
+    "map_vol3": "Amazon Havzası • Su ve Orman Egemenliği",
+    "map_vol4": "Malakka Boğazı • Serbest Deniz Koridoru",
+    "map_vol5": "Cenevre • Nihai Kurucu Duruşma",
+    "btn_coming_soon": "Yakında",
+    "status_coming_soon": "Çevirisi Sürüyor"
+  },
+  "volume_details": {
+    "vol0": {
+      "title": "Başlangıç: Svalbard Kıvılcımı",
+      "subtitle": "Cilt 0: Kutup Yeraltı • 78° K",
+      "theater": "Svalbard / Küresel",
+      "core_theme": "Kutup tohum ambarında fiziki yalıtımlı şifreleme, gizli optik ağ ve ideolojik uyanış.",
+      "hook": "Detroit ayaklanmadan önce sistemin mimarisi derin kutup kayalıklarında dövüldü."
+    },
+    "vol1": {
+      "title": "Sıfır Noktası: Delray Protokolü",
+      "subtitle": "Cilt 1: Kuzey Amerika • Detroit / Windsor",
+      "theater": "Kuzey Amerika",
+      "core_theme": "Terk edilmiş otomobil fabrikasının dönüşümü, 48 saatlik tahliye geri sayımı ve kura meclisi.",
+      "hook": "Silahlı özel güvenlik güçleri tahliyeye geldiğinde Delray termodinamik yasaları ve kurayla yanıt verdi."
+    },
+    "vol2": {
+      "title": "Alp Dağları Kalesi",
+      "subtitle": "Cilt 2: Transalpin Avrupa • Valais ve Ticino",
+      "theater": "Transalpin Avrupa",
+      "core_theme": "Yüksek irtifa hidroelektrik boru hatlarının savunması, çığ bariyerleri ve kanton ortak varlıkları.",
+      "hook": "Elektriği kesmek için paralı asker gönderdiler; dağlar halkın yanında yer aldı."
+    },
+    "vol3": {
+      "title": "Ateş Nehri",
+      "subtitle": "Cilt 3: Amazon Havzası ve And Dağları",
+      "theater": "Amazon ve Andlar",
+      "core_theme": "Nehir havzası savunması, zehirli ilaçlama dronlarının engellenmesi ve yerli intifa sözleşmeleri.",
+      "hook": "Bu nehir özel mülk değildir: koskoca bir kıtanın dolaşım sistemidir."
+    },
+    "vol4": {
+      "title": "Deniz Boğazı Kalkanı",
+      "subtitle": "Cilt 4: Malakka Boğazı ve Avrasya",
+      "theater": "Güneydoğu Asya ve Hint-Pasifik",
+      "core_theme": "Limanların algoritmik boykotu, konteyner barikatları ve denizaltı fiber optik kablolarının onarımı.",
+      "hook": "Liman işçileri parayı reddedip ortak varlık ilan edince on bin kargo gemisi denizde durdu."
+    },
+    "vol5": {
+      "title": "Nihai Konverjans Zirvesi",
+      "subtitle": "Cilt 5: Cenevre Kantonu • Gezegensel Sözleşme",
+      "theater": "Cenevre / Küresel",
+      "core_theme": "Egemen borçların tasfiyesi, küresel büyük borç affı ve kurayla seçilen ilk dünya kongresi.",
+      "hook": "Eski düzen çöktü. Cenevre Gölü kıyısında yeni bir insanlık şafağı doğuyor."
+    }
+  },
+  "modal": {
+    "title": "AŞAMA TASLAĞI VE SAHA KILAVUZU",
+    "download_md": "⬇️ İndir (.md)",
+    "close": "Kılavuzu Kapat (Esc)"
+  },
+  "footer": {
+    "line1": "OPEN NETWORKED EARTH (O.N.E.) • Copyfarleft Açık İntifa Sözleşmesi • Sıfır Mutlak Telif Hakkı",
+    "line2": "Deterministik Çok Ajanlı Motor Origin Main ile Senkronize • Kanonik Anayasa v2.0-ONAYLANDI"
+  },
+  "roadmap_phases": [
+    {
+      "title": "Aşama 0: Hukuk ve Toprak",
+      "badge": "Yıl 0 • Başlangıç",
+      "desc": "Çift kuruluşlu varlık kilitlerini kurmak, araziyi kalıcı intifa sözleşmesiyle edinmek ve şebeke dışı izinleri almak.",
+      "milestones": [
+        {
+          "label": "Hukuki Zırh",
+          "title": "İkili Kuruluş Ayrımı",
+          "text": "Pasif Arazi Vakfı (A Kuruluşu) ile işletmeci çalışan kooperatifini (B Kuruluşu) hukuki riskleri mutlak ayırarak kurmak."
+        },
+        {
+          "label": "Toprak Güvenliği",
+          "title": "99 Yıllık İntifa Tapusu",
+          "text": "Arazinin spekülatif satışını, bölünerek miras bırakılmasını veya borç ipoteğini ebediyen yasaklayan tescil işlemi."
+        },
+        {
+          "label": "Su Hakları",
+          "title": "Cazibeli Hat ve Kuyu İzni",
+          "text": "Doğal hidrostatik eğimi belirlemek, derin su kuyusunu açmak ve pompasız acil su by-pass vanalarını monte etmek."
+        }
+      ]
+    },
+    {
+      "title": "Aşama 1: Yaşam Çekirdeği ve Gıda",
+      "badge": "Yıl 1–3 • Temel",
+      "desc": "48V DC ada şebekesini kurmak, toprak korumalı termal sığınağı inşa etmek ve polikültür gıda bahçesini devreye almak.",
+      "milestones": [
+        {
+          "label": "Termal Çekirdek",
+          "title": "50 m² Kış Mikro Bölgesi",
+          "text": "Biyokütle roket sobası ve toprak ısısıyla korunan, yüksek yalıtımlı acil durum sığınağını inşa etmek."
+        },
+        {
+          "label": "DC Mikro Şebeke",
+          "title": "15–45 kWh LFP Batarya Bankı",
+          "text": "Soğuk hava şarj korumalı 48V DC güç hattını kurmak ve kritik olmayan yükleri otomatik kesen sistemi bağlamak."
+        },
+        {
+          "label": "Toprak İyileştirme",
+          "title": "180 Günlük Agroekolojik Kiler",
+          "text": "Yoğun biyolojik bahçe yatakları açmak, çok yıllık meyve ağaçları dikmek ve yeraltı kök sebze kilerini hazırlamak."
+        }
+      ]
+    },
+    {
+      "title": "Aşama 2: Fab-Lab ve Üretim",
+      "badge": "Yıl 3–7 • Özerklik",
+      "desc": "CNC freze tezgahını, hassas torna tezgahını, 3D baskı atölyesini ve kotalı dış ticaret arayüzünü kurmak.",
+      "milestones": [
+        {
+          "label": "Açık Üretim",
+          "title": "Takım Tezgahı Fab-Lab",
+          "text": "400V 3 fazlı endüstriyel atölyeyi CNC, TIG kaynağı, plazma kesici ve mekanik yedek parça üretimiyle donatmak."
+        },
+        {
+          "label": "Ekonomik Köprü",
+          "title": "Dış Ticaret Arayüzü (ETI)",
+          "text": "Toprak vergilerini ödemek için kotalı teknik danışmanlık hizmetiyle dış dünyadan sınırlı miktarda nakit üretmek."
+        },
+        {
+          "label": "Biyo-Test",
+          "title": "Mikrobiyal Su ve Toprak Laboratuvarı",
+          "text": "İçme suyu saflığını ve toprak mikrobiyomunu sürekli takip etmek için yerel spektrometri ve PCR test ünitesi kurmak."
+        }
+      ]
+    },
+    {
+      "title": "Aşama 3: Havza Federasyonu",
+      "badge": "Yıl 7–15 • Olgunlaşma",
+      "desc": "Birden çok biyobölgesel tohum düğümünü LoRa paket telsiz ağıyla bağlamak ve doğrudan fiziki kaynak takası gerçekleştirmek.",
+      "milestones": [
+        {
+          "label": "Düğümler Arası Ağ",
+          "title": "Havza Federasyonu",
+          "text": "Biyosfer koordinasyonu için 3 ila 5 komşu tohum düğümünü şifreli LoRa telsiz paket ağıyla birbirine bağlamak."
+        },
+        {
+          "label": "Termodinamik Takas",
+          "title": "Leontief-Kantorovich Takası",
+          "text": "Enerji fazlası, makine parçaları ve iş gücünü para olmadan doğrudan kalibre edilmiş fiziki birimlerle takas etmek."
+        },
+        {
+          "label": "Eski Bağları Koparma",
+          "title": "Tam Bağımsızlık",
+          "text": "Dış elektrik şebekesi bağlantısını tamamen keserek yüzde yüz yerel ortak varlık sistemi olarak yaşamak."
+        }
+      ]
+    }
+  ],
+  "oasis_showcase": {
+    "badge": "🎮 LIVING THERMODYNAMIC SANDBOX & MMO",
+    "title_part1": "Experience the Post-Labor Commons in",
+    "title_part2": "O-ASIS Dual-Track",
+    "desc": "Test the constitution with your own hands. Build autonomous solarpunk eco-villages, balance real Leontief physics across 4 physical flows (⚡ kWh, 💧 Liters, 🥗 Calories, 💻 Compute), deliberate on civic crises via Athenian citizen juries, and resist the predatory Legacy Financial AI in a 100% serverless P2P mesh.",
+    "feat1_title": "Closed-Loop Thermodynamics",
+    "feat1_desc": "Real energy, battery degradation, rainwater harvesting, closed-loop hydroponics and circular FabLab material recycling.",
+    "feat2_title": "Demarchic Sortition Juries",
+    "feat2_desc": "Citizen assemblies chosen by lot in strict odd parity to arbitrate community dilemmas and ratify confederal case-law precedents.",
+    "feat3_title": "Dual-Track Physical Bridge",
+    "feat3_desc": "In-game triumphs directly unlock verified, real-world 3D printable .STL open hardware and Home Assistant automations.",
+    "btn_launch": "Launch O-ASIS Simulator (Browser 60 FPS) ↗",
+    "btn_handbook": "Download Player Field Manual (PDF) ↗"
+  },
+  "hero_video": {
+    "badge": "Civilizational Prologue • 2m 10s",
+    "title": "From 100,000 Years of Warfare to Machine Emancipation",
+    "desc": "Watch the visual prologue illustrating human history from territorial warfare to machine-driven emancipation."
+  },
+  "contrast": {
+    "tag": "Civilizational Operating Systems",
+    "title": "Track A vs. Track B: The Civilizational Fork",
+    "desc": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
+    "track_a_badge": "Track A • Legacy Default",
+    "track_a_title": "Techno-Feudal Extraction",
+    "track_a_desc": "Monopolized automation, perpetual debt, and speculative rentierism.",
+    "track_a_item1_title": "Conditional Survival:",
+    "track_a_item1_desc": "Basic food, shelter, and care gated behind disappearing wage labor.",
+    "track_a_item2_title": "Allodial Land Speculation:",
+    "track_a_item2_desc": "Predatory landlordism, compounding rents, and algorithmic evictions.",
+    "track_a_item3_title": "Billionaire Oligarchy:",
+    "track_a_item3_desc": "Corporate lobbying, partisan theater, and manufactured consent.",
+    "track_a_item4_title": "Carceral Coercion:",
+    "track_a_item4_desc": "Militarized policing and punitive retribution protecting property over life.",
+    "track_a_item5_title": "Thermodynamic Ecocide:",
+    "track_a_item5_desc": "Infinite exponential compound growth on a strictly finite biosphere.",
+    "track_b_badge": "Track B • Open Networked Earth",
+    "track_b_title": "Universal Usufruct & Demarchy",
+    "track_b_desc": "Machines work for the commons; humanity inherits guaranteed survival and self-governance.",
+    "track_b_item1_title": "Unconditional Birthright:",
+    "track_b_item1_desc": "Food, housing, healthcare, clean water & energy guaranteed for life.",
+    "track_b_item2_title": "Dynamic Usufruct:",
+    "track_b_item2_desc": "Protected personal dwellings; zero rent, zero speculation, zero landlordism.",
+    "track_b_item3_title": "Statistical Sortition:",
+    "track_b_item3_desc": "Citizen juries drawn by lot in strict odd parity; zero career politicians.",
+    "track_b_item4_title": "Restorative Peace Guilds:",
+    "track_b_item4_desc": "De-escalation, conflict mediation, and root-cause civic restoration.",
+    "track_b_item5_title": "Thermodynamic Exergy Limits:",
+    "track_b_item5_desc": "Physical accounting in kWh, liters, and topsoil health—not debt-fiat."
+  },
+  "stewards": {
+    "tag": "Phase 0 Genesis Hardening",
+    "title": "Call for Co-Stewards & Domain Critics",
+    "desc": "Open Networked Earth is built on open peer production. Before the Living Constitution is permanently deposited under Swiss Civil Law (ZGB Art. 80 ff.), our foundational pillars must be stress-tested through adversarial peer review. We are actively seeking our <strong>Priority 0 Media Co-Steward</strong> and technical domain builders to harden the architecture against entropy.",
+    "p0_badge": "Pillar 0 • Strategic Inversion",
+    "badge_priority": "🔥 Priority 0 • Active Search",
+    "badge_seeking_cofounder": "Seeking Co-Founder",
+    "badge_seeking": "Open for Co-Steward",
+    "badge_active": "Actives: 1",
+    "p0_title": "Media, Storytelling & Community Co-Steward",
+    "label_target_profile": "Target Profile:",
+    "p0_role": "Open-source comms activist, Solarpunk/Commons creator, independent podcaster, video storyteller, or community builder.",
+    "label_mandate": "The Mandate & Strategic Goal:",
+    "p0_doubt": "Eliminate the solo-creator bottleneck by taking operational co-ownership of public storytelling, YouTube/Shorts video distribution, Reddit/X dialogue, and leading the outreach campaign to seat the remaining technical domain builders. If you believe a post-labor civilization needs a powerful cultural voice, this is the co-founding role.",
+    "p0_btn_cta": "Join Media Dialectic (#13) →",
+    "p0_btn_email": "Apply Directly via Email →",
+    "p1_num": "Pillar 1",
+    "p1_title": "Economy & Thermodynamic Balances",
+    "label_domain": "Domain:",
+    "p1_role": "Ecological / Heterodox Economics, Leontief Input-Output",
+    "label_doubt": "Open Dialectic & Doubt:",
+    "p1_doubt": "Can money-less thermodynamic accounting completely replace market price discovery and Gosplan bureaucracy without supply shortages or rationing?",
+    "p1_btn_cta": "Join Economic Dialectic (#9) →",
+    "p2_num": "Pillar 2",
+    "p2_title": "Governance, Law & Dynamic Usufruct",
+    "p2_role": "Commons Jurisprudence, Demarchy / Sortition, Swiss Civil Law",
+    "p2_doubt": "Are demarchic sortition lotteries mathematically immune to lobbying and oligarchic capture? Does Swiss Association (Verein) law provide bulletproof shielding?",
+    "p2_btn_cta": "Join Legal Dialectic (#10) →",
+    "p3_num": "Pillar 3",
+    "p3_title": "Simulation & Scientific Sandbox",
+    "p3_role": "Julia Discrete-Event Co-Simulation (SIMONE), Agents.jl & MTBF Wear",
+    "p3_doubt": "Validating the single-village Julia prototype, stock-and-flow ODE docking tests, and multiscale biophysical solver decoupling. Additional co-stewards actively sought.",
+    "p3_btn_cta": "Join Simulation Dialectic (#11) →",
+    "p4_num": "Pillar 4",
+    "p4_title": "Habitat & Open-Hardware Resilience",
+    "p4_role": "Microgrids, Home Assistant Zigbee/MQTT, CNC Timber Cassettes",
+    "p4_doubt": "Do Modular Habitat Units (MHU) and open-hardware microgrids withstand real-world 40-year thermal cycles and catastrophic grid disconnection?",
+    "p4_btn_cta": "Join Habitat Dialectic (#12) →",
+    "cta_title": "Ready to Build or Break O.N.E.?",
+    "cta_desc": "Whether you want to co-steward a foundational pillar or act as an independent critic hunting thermodynamic and nomothetic edge cases, your contribution directly hardens the Genesis Block.",
+    "btn_all_discussions": "💬 View All Discussions on GitHub",
+    "btn_contact": "✉️ Contact Kyberlex (kyberlex@proton.me)"
+  }
+}

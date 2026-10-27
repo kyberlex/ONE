@@ -1,0 +1,101 @@
+{
+  "templates": [
+    {
+      "pattern": "Bagaimana O.N.E. melindungi dari {topic} di bawah tekanan?",
+      "title": "Uji stres sistemik terhadap {topic}",
+      "verdict": "RESOLVED: Interlock konstitusional yang tangguh melindungi {topic}"
+    },
+    {
+      "pattern": "Apakah ada pengecualian terhadap aturan mengenai {topic} selama keadaan darurat?",
+      "title": "Pemeriksaan pengecualian darurat untuk {topic}",
+      "verdict": "RESOLVED: Invarian Kelas 0 tetap tidak dapat diubah bahkan dalam keadaan darurat"
+    },
+    {
+      "pattern": "Apa dampak peradaban jangka panjang dari {topic}?",
+      "title": "Viabilitas evolusioner jangka panjang dari {topic}",
+      "verdict": "RESOLVED: Ekuilibrium berkelanjutan tercapai tanpa akumulasi modal"
+    },
+    {
+      "pattern": "Bagaimana warga biasa mengaudit dan memeriksa {topic}?",
+      "title": "Protokol audit demarki untuk {topic}",
+      "verdict": "RESOLVED: Telemetri terbuka yang transparan dan inspeksi melalui sortition warga"
+    },
+    {
+      "pattern": "Apa yang terjadi jika dewan lokal tidak sepakat mengenai {topic}?",
+      "title": "Resolusi dialektis antar-daerah aliran sungai mengenai {topic}",
+      "verdict": "RESOLVED: Majelis federasi bioregional dan mediasi Condorcet"
+    }
+  ],
+  "topics": {
+    "housing": [
+      "hak pakai (usufruct) hunian",
+      "distribusi bahan bangunan",
+      "alat kerajinan pribadi",
+      "kontinuitas habitat",
+      "tempat tinggal yang tidak berpenghuni"
+    ],
+    "work": [
+      "tugas rotasional",
+      "motivasi ilmiah",
+      "hak untuk menolak berpartisipasi",
+      "koordinasi ergonomis",
+      "transisi gilda"
+    ],
+    "demarchy": [
+      "juri sortition",
+      "kelompok kerja epistemik",
+      "ambang batas konsensus",
+      "hak pengunduran diri warga",
+      "anonimitas juri"
+    ],
+    "thermodynamics": [
+      "meteran sumber daya pribadi",
+      "triase energi L_min",
+      "7% Heretic's Commons",
+      "antarmuka perdagangan luar negeri",
+      "penyangga anti-arbitrase"
+    ],
+    "justice": [
+      "tempat perlindungan restoratif",
+      "ketiadaan senjata api",
+      "restitusi korban",
+      "kordon anti-persekusi",
+      "perlindungan ruang aman pribadi"
+    ],
+    "education": [
+      "tahap perkembangan anak",
+      "kurikulum kebersihan epistemik",
+      "dukungan 1.000 hari pertama",
+      "akademi universitas terbuka",
+      "hak pendidikan mandiri (homeschooling)"
+    ],
+    "science": [
+      "penghapusan paten medis",
+      "rantai alat silikon terbuka",
+      "ilmu pengetahuan skala planet",
+      "sintesis gen keamanan hayati",
+      "kepengarangan hak cipta moral"
+    ],
+    "religion": [
+      "tempat ibadah suci",
+      "pelestarian energi katedral",
+      "de-eskalasi sektarian",
+      "pendidikan teologis",
+      "konkordat antar-iman"
+    ],
+    "rights": [
+      "otonomi somatik LGBTQ+",
+      "kesetaraan biofisik universal",
+      "pengobatan non-koersif",
+      "aksesibilitas universal",
+      "integrasi pasca-hukuman"
+    ],
+    "defense": [
+      "bonus pembelotan (defection bounty) bagi tentara",
+      "pertahanan titik landak (porcupine point defense)",
+      "peta jalan jalur ganda",
+      "penciptaan node lokal",
+      "koridor migrasi terbuka"
+    ]
+  }
+}

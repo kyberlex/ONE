@@ -1,0 +1,22 @@
+{
+  "last_updated": "2026-09-19T12:03:15.000000",
+  "status": "standby_waiting_window",
+  "total_languages": 14,
+  "completed_languages": [
+    "en",
+    "it",
+    "es",
+    "pt",
+    "zh",
+    "hi"
+  ],
+  "in_progress_language": "ru",
+  "current_item": {
+    "vol": "vol2",
+    "lang": "ru",
+    "chapter": "vol2_ch27_ru.md"
+  },
+  "total_chapters_target": 3976,
+  "total_chapters_completed": 1839,
+  "percentage": 46.3
+}

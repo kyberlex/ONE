@@ -1,0 +1,528 @@
+{
+  "lang_name": "中文",
+  "nav": {
+    "overview": "概述",
+    "constitution": "宪法",
+    "roadmap": "路线图",
+    "challenge": "辨析竞技场",
+    "thrillers": "小说",
+    "simulator": "🎮 生态模拟游戏 ↗",
+    "stewards": "Co-Stewards",
+    "benchmark": "AI Benchmark"
+  },
+  "hero": {
+    "tag": "后劳作时代文明的开源蓝图",
+    "title_part1": "当机器承担劳动，",
+    "title_part2": "人类继承地球。",
+    "subtitle": "人工智能与机器人技术正在彻底终结雇佣劳动。<strong>开放网络地球（O.N.E.）</strong>拒绝滑向科技寡头的数字封建主义，将自动化转化为全人类的解放：向每个人无条件保障食物、居所、能源与医疗——由普通公民抽签组成的陪审团进行治理，而非职业政客。",
+    "btn_primer": "3分钟极简指南",
+    "btn_constitution": "探索宪法",
+    "btn_novels": "阅读小说（免费电子书）",
+    "btn_simulator": "进入 O-ASIS MMO ↗",
+    "btn_discover": "Discover O.N.E. →",
+    "btn_stewards": "Build (Co-Steward)"
+  },
+  "features": {
+    "survival_title": "普遍生存底线",
+    "survival_desc": "水、食物、住所、医疗与能源为无条件的人类与生俱来的权利",
+    "housing_title": "无租金家园",
+    "housing_desc": "受法律保护的用益物权；彻底消除投机性强拆与房东剥削",
+    "sortition_title": "抽签民主制",
+    "sortition_desc": "通过统计抽签遴选普通公民行使立法裁决权；零职业政客",
+    "commons_title": "机器共有繁荣",
+    "commons_desc": "自主自动化技术与太阳能微电网作为人类共同公共遗产"
+  },
+  "gateway": {
+    "tag": "探索 O.N.E.",
+    "heading": "开启探索的四大途径",
+    "step1_tag": "第 1 步 • 建立直觉",
+    "step1_title": "直观理解",
+    "step1_desc": "3分钟极简视觉导读：为何资本主义与指令集权双双溃败，以及 O.N.E. 如何在无货币、无职业政客的前提下精密协调人类社会。",
+    "step1_link": "打开总览导读 →",
+    "step2_tag": "第 2 步 • 宪法架构",
+    "step2_title": "深度审视",
+    "step2_desc": "查阅全部66条非监禁、热力学宪法条款：统计抽签制公民大会、排他性用益物权与恢复性司法正义。",
+    "step2_link": "查阅完整宪法 →",
+    "step3_tag": "第 3 步 • 对抗检验",
+    "step3_title": "发起质询",
+    "step3_desc": "用最严苛的质疑向辩证AI发起压力测试：“如果无人劳作怎么办？”、“谁来出资？”或“派系能否操纵抽签大会？”",
+    "step3_link": "进入 O.N.E. 挑战擂台 →",
+    "step4_tag": "第 4 步 • 人性共鸣",
+    "step4_title": "沉浸纪实",
+    "step4_desc": "高压张力的政治悬疑史诗小说：跟随普通民众在底特律废墟、阿尔卑斯高山与日内瓦前线坚守新生态公地。",
+    "step4_link": "探索世界地图与电子书 →"
+  },
+  "synoptic": {
+    "title": "开放网络地球的运作机制",
+    "subtitle": "通俗易懂的系统说明：为什么旧的经济法则正在崩溃，过去的制度为何失败，以及在后劳作时代用什么取代金钱与政客。",
+    "banner_tag": "实践中的热力学公地",
+    "banner_title": "没有剥削的真实丰裕",
+    "banner_desc": "清洁太阳能架构、自主农耕巡检机器人与公共生态农场，使人类彻底摆脱对雇佣薪资的依附。",
+    "tab_postwork": "⚡ 1. 后劳作时代转型",
+    "tab_failures": "🏛️ 2. 过去制度的破产",
+    "tab_pillars": "🛡️ 3. 四大核心支柱",
+    "tab_roadmap": "🌱 4. 落地过渡路线图"
+  },
+  "primer_content": {
+    "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    1. 迫在眉睫的后劳作现实：为何自动化将颠覆一切\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    数千年来，人类文明始终运行在一条铁律之下：<em>“不劳动者不得食。”</em>\n    人形具身机器人、全自主机械与生成式人工智能正在彻底粉碎这道公式。当机械以接近零的边际成本接管农业、建筑、运输、能源生成与医疗保障时，人类的生存必须彻底与雇佣劳动脱钩。\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ 默认的反乌托邦困境：技术封建主义</h4>\n      <p>在现有市场规则下，科技巨头将垄断自动化劳动力。数十亿普通人将被打上“失去受雇价值”的标签，被剥夺工资来源并陷入赤贫，而全部生产力财富将迅速集中在极少数寡头手中。</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 O.N.E. 解决方案：机械大解放</h4>\n      <p>自动化的全部生产潜能被宣告为全人类共同继承之遗产。机器的劳动将人类从苦役、贫困与工资奴役中彻底赎买出来，使粮食、住房与能源成为全人类与生俱来的无条件权利。</p>\n    </div>\n  </div>\n</div>",
+    "failures": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    2. 历史上的四种文明组织模型为何尽皆溃败\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:20px;\">\n    纵观人类历史，文明曾先后试验了四种宏观社会操作系统。然而，没有任何一种能够带来持久的和平、正义或生态平衡：\n  </p>\n  <div class=\"model-comparison\">\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">1. 神权教条主义</div>\n      <div class=\"model-status red\">溃败</div>\n      <div style=\"color:var(--text-muted);\">宗教圣战、教条异端审判与教阶官僚，以超自然恐惧与负罪感禁锢心灵。</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">2. 封建君主制</div>\n      <div class=\"model-status red\">溃败</div>\n      <div style=\"color:var(--text-muted);\">世袭君王依“君权神授”霸占土地，以武力皮鞭将亿万农奴死死禁锢于庄园。</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">3. 国家指令集权</div>\n      <div class=\"model-status red\">溃败</div>\n      <div style=\"color:var(--text-muted);\">私人地主被特权党政官僚取代，中央指令计划全面瘫痪，伴生严酷牢狱管控。</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">4. 债务金融资本</div>\n      <div class=\"model-status red\">溃败</div>\n      <div style=\"color:var(--text-muted);\">复利债务滚雪球、人为制造生存物资稀缺，导致毁灭性的全球生态浩劫。</div>\n    </div>\n  </div>\n  <div class=\"primer-feature-card\" style=\"margin-top:20px; border-color:rgba(16, 185, 129, 0.4); background:rgba(16, 185, 129, 0.06);\">\n    <h4 style=\"color:var(--accent-emerald);\">✨ 第五条道路：Open Networked Earth (O.N.E.)</h4>\n    <p style=\"color:var(--text-secondary);\">既非资本掠夺，亦非国家极权：实行无土地租金的用益物权托管、无职业政客的统计抽签制公民大会，以及摆脱法币奴役的按需生存保障。</p>\n  </div>\n</div>",
+    "pillars": "<div class=\"primer-tab-pane\">\n  <div style=\"display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;\">\n    <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin:0;\">\n      3. O.N.E. 的四大基石宪政原则\n    </h3>\n    <a href=\"#constitution\" class=\"btn btn-secondary\" style=\"display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; padding:8px 16px;\">\n      <span>📜 查阅宪法正文</span>\n      <span>→</span>\n    </a>\n  </div>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4>⚡ 1. 绝对生存底线（无货币社会）</h4>\n      <p>地球上出生的每一个人，皆享有终身不可剥夺的纯净饮水、均衡营养、现代住房、全面医疗与清洁电力的天赋权利。生理生存决不可沦为利益交换之筹码。</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🏡 2. 产权即用益托管（反地产投机）</h4>\n      <p>个人专属生活用品（衣物、工具、书籍）获永久绝对保护。家庭住宅享有终身排他性占有用益物权。房地产金融投机、营利性出租与强制驱逐被彻底废止。</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🎲 3. 统计学随机抽签民主（抽签制）</h4>\n      <p>金钱选举不可避免导致财阀俘获、政客投机与民粹煽动。公共决策全面交付抽签产生的公民大会：如同陪审团一般由常人担任，并由独立竞争之专家组提供技术论证。</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🌿 4. 生态物理㶲守恒极限</h4>\n      <p>有限星球上的无限指数增长是数学自杀。真实经济核算直接以热力学物理度量（千瓦时、升水、表土再生量）结算，彻底废除虚构债务纸币记账。</p>\n    </div>\n  </div>\n</div>",
+    "roadmap": "<div class=\"primer-tab-pane\">\n  <div style=\"display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:12px;\">\n    <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin:0;\">\n      4. 秩序过渡路线图：我们如何抵达彼岸\n    </h3>\n    <a href=\"#roadmap\" class=\"btn btn-secondary\" style=\"display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; padding:8px 16px;\">\n      <span>🌱 查阅实操路线图</span>\n      <span>→</span>\n    </a>\n  </div>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:20px;\">\n    我们无需坐以待毙等待全球崩溃，亦不呼唤暴力流血革命。O.N.E. 遵循<strong>双轨交织过渡战略</strong>：在旧体制金融与治理逐渐失效之际，同步营建极具韧性的微观新公地。\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🇨🇭 1. 法律防火墙（瑞士协会构架）</h4>\n      <p>依《瑞士民法典》第60条设立自主演进型协会（Verein），依法托管开放开源知识产权与共有资产，免除最低资本门槛并彻底保护创始成员隐私。</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🌱 2. 小流域生境种子节点</h4>\n      <p>仅需三人，即可依托 O.N.E. 开源宪政公约设立本地社区土地信托（CLT）、互助食物森林或离网光储微电网。</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🤝 3. 非暴力市政公民重构</h4>\n      <p>去武装化的公民调解公会以恢复性司法替代武装警力对立；旧体系商业债务通过全球大赦禧年一次性彻底出清。</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🌍 4. 全球小流域生态联邦</h4>\n      <p>小流域水系自治委员会逐级自下而上联合为大洲级院厅，以生态水文与热力学资源协同彻底取代民族国家地缘零和博弈。</p>\n    </div>\n  </div>\n</div>"
+  },
+  "const": {
+    "title": "O.N.E. 现行活体宪法",
+    "subtitle": "非监禁性、基于热力学平衡的十章成文法典。浏览条款、检索要点或下载已验证的完整文档。",
+    "search_placeholder": "搜索关键词（如：'用益权'、'抽签'、'能源'、'住所'）...",
+    "expand_all": "全部展开",
+    "collapse_all": "全部收起",
+    "download_epub": "宪法 (EPUB)",
+    "download_pdf": "宪法 (PDF)",
+    "tab_all": "All Chapters",
+    "tab_chap": "Chap",
+    "chapter_label": "CHAPTER",
+    "article_singular": "Article",
+    "article_plural": "Articles",
+    "no_results": "没有找到符合您检索条件的宪法条款。",
+    "badge_available": "完整且可用"
+  },
+  "roadmap": {
+    "title": "如何构建自主种子节点",
+    "desc": "面向建设者与工程师的落地实操手册：合法实现土地非商品化、建立离网生命支持、组织无雇佣无老板的劳动，并在现代社会中确立经济主权。",
+    "shield_title": "经受严苛现实考验的架构",
+    "shield_subtitle": "针对53种法律、财务与工程失效模式进行了审查 • 零单点故障（RSV-1: 0）",
+    "archetype_common": "🇬🇧 普通法系",
+    "archetype_civil": "🇪🇺 大陆法系",
+    "archetype_customary": "🇲🇽 传统习惯法公地",
+    "sys1_title": "法律护甲与资产锁定",
+    "sys1_desc": "将静态土地信托与商业运营严格隔离，使土地免受债务、税收与行政查封影响：",
+    "sys1_item1": "<strong>实体 A（静态土地信托）：</strong> 不可撤销的资产锁定，零商业经营，零债务，零抵押。",
+    "sys1_item2": "<strong>实体 B（运营合作社）：</strong> 在<em>零无担保债务</em>铁律下承担外部商业交易风险。",
+    "sys1_item3": "<strong>可拆卸动产条款（UCC § 9-604 / ZGB 677）：</strong> 工具设备归使用者动产，土地永不可查封。",
+    "sys1_item4": "<strong>规划防御与托管资金：</strong> 道路合规移动底盘 + 12个月市政合规法律防御准备金。",
+    "sys2_title": "人类协作与劳动平衡",
+    "sys2_desc": "根除技能垄断、脏活推诿、阶级特权与创始人过度劳累：",
+    "sys2_item1": "<strong>不可豁免的代谢劳动底线：</strong> 每名成年人每周必须承担5-7小时基础生物劳作（烹饪、卫生、樵采）。",
+    "sys2_item2": "<strong>零级师徒配对制度：</strong> 400V电网、深井水泵及法律事务必须由一名熟练工搭配一名学徒。",
+    "sys2_item3": "<strong>卡斯特尔机械联锁钥匙：</strong> 通过物理联锁顺序，杜绝电弧闪络及水泵空转损坏。",
+    "sys2_item4": "<strong>非雇佣互助安全港：</strong> 内部劳作定性为社员间互助协作，击退外部劳动法工资索赔。",
+    "sys3_title": "经济桥梁（外部贸易仲裁 ETI）",
+    "sys3_desc": "通过脑力自由职业为节点赚取缴纳地产税及购买芯片所需的法币：",
+    "sys3_item1": "<strong>封顶式脑力外包：</strong> 外部商业计费时间每人每周严格限制在15-20小时以内。",
+    "sys3_item2": "<strong>50%预付款首付规则：</strong> 外部合同强制收取50%定金，配备90天商业应急储备金。",
+    "sys3_item3": "<strong>物理隔离的计算工作站：</strong> 电脑与通讯设备由独立的2.5 kW / 10 kWh太阳能电源供电。",
+    "sys3_item4": "<strong>无货币化内部圣所：</strong> 节点内部禁止任何法定货币流通；食物、住房与水完全免费。",
+    "sys4_title": "热力学核心生命保障",
+    "sys4_desc": "在遭遇极地涡旋极端严寒、电网全黑断电或供应链封锁时保障生存：",
+    "sys4_item1": "<strong>40,000升防冻地窖储水池：</strong> 地下防冻水箱 + 配备48V直流直连旁路开关的深井泵。",
+    "sys4_item2": "<strong>48V磷酸铁锂电池储能库：</strong> BMS低温自动限流（15°C以下≤0.15C，0°C以下禁充）防止枝晶短路。",
+    "sys4_item3": "<strong>180天干散货热量储备：</strong> 密闭谷物豆类地下储存，配合每日发芽工艺（维生素C提升600%）。",
+    "sys4_item4": "<strong>50平米极端御寒核心（-30°C）：</strong> 结合加拿大地下地热导管的超保温地下庇护所。",
+    "config_tag": "⚡ 交互式工程参数配置器",
+    "config_title": "配置您的生物区域种子节点",
+    "config_subtitle": "选择您的司法管辖区与社区规模，系统将实时计算工程与法律指标。",
+    "config_label_arch": "1. 法律管辖架构",
+    "config_btn_common": "🇬🇧 普通法系（美/英/加/澳）",
+    "config_btn_civil": "🇪🇺 大陆法系（中/欧/德/法）",
+    "config_btn_customary": "🇲🇽 传统习惯公地（农林社区）",
+    "config_label_scale": "2. 社区初始规模",
+    "config_scale_5": "5位发起人（阶段0 核心）",
+    "config_scale_15": "15名拓荒者（阶段1 村落）",
+    "config_scale_35": "35名常住居民（完整节点）",
+    "stepper_tag": "实战施工蓝图",
+    "stepper_title": "分阶段脱钩四大里程碑（第0年至第15年）",
+    "stepper_desc": "点击各阶段查看工程指标、物资设备清单并下载实地蓝图文档。",
+    "quickstart_text": "<strong>⚡ 需要快速纵览？</strong> 请参阅包含10步检查清单的 ",
+    "quickstart_btn": "2页袖珍实操手册 (.md)",
+    "quickstart_dl": "⬇️ 下载文档 (.md)",
+    "step_0": "阶段0: 法律设立与土地取得",
+    "step_1": "阶段1: 生存核心与食物保障",
+    "step_2": "阶段2: 开源工坊与机床复制",
+    "step_3": "阶段3: 流域公地网络联盟",
+    "qa_tag": "现实工程阻碍与解决方案",
+    "qa_title": "化解现实障碍与对抗",
+    "qa_desc": "种子节点团队如何解决市政建筑违规传票、债权人恶意诉讼与严冬极寒考验。",
+    "q1_question": "🏛️ 如果市政建筑检查员以违规为由查封微型房屋与生态干厕怎么办？",
+    "q1_answer": "<strong>法律抗辩策略：</strong> 居住单元采用带车检手续的合规底盘（ANSI A119.5标准）。在物权法上定性为<em>可拆卸动产</em>而非永久附着建筑物。实体B常备12个月诉讼抗辩基金，在不牵涉实体A土地所有权的前提下解决行政纠纷。",
+    "q2_question": "📉 如果外部外包客户违约破产，供应商起诉索赔100万怎么办？",
+    "q2_answer": "<strong>双层实体防护屏障：</strong> 运营合作社（B）独立承担商业破产风险，土地信托（A）完全隔离。破产法院依法驳回人格混同申请。债权人仅能扣押车间内放置在移动基座上的机床，绝无权拍卖土地或查封水电路核心设施。",
+    "q3_question": "💻 如果高收入的软件工程师拒绝参与体力劳动和打扫卫生怎么办？",
+    "q3_answer": "<strong>不可豁免的代谢底线：</strong> 任何成年成员每周必须完成5-7小时基础生物劳作（做饭、保洁、供水维护）。该义务绝不允许用金钱购买代劳，亦不能用写代码时间冲抵，以此彻底杜绝官僚阶层的产生。",
+    "q4_question": "❄️ 如果遭遇零下30度的极端寒潮持续三周该如何维生？",
+    "q4_answer": "<strong>热力学核心韧性：</strong> 全员撤入50平米的半地下热力核心舱，依靠被动地热管与超厚保温层御寒。储能电池受BMS低温策略保护，180天储备粮完全保障营养。",
+    "pillar_1": "System I",
+    "pillar_2": "System II",
+    "pillar_3": "System III",
+    "pillar_4": "System IV",
+    "badge_0": "Yr 0",
+    "badge_1": "Yrs 1-3",
+    "badge_2": "Yrs 3-7",
+    "badge_3": "Yrs 7-15"
+  },
+  "roadmap_config": {
+    "tag_legal": "1. 法人实体与法律架构",
+    "desc_operating": "运营主体：",
+    "desc_debt": "“通用零无担保债务”公约彻底阻断商业运营债务波及土地信托。",
+    "tag_zoning": "2. 规划许可与用地抗辩",
+    "tag_capital": "3. 资金筹措与资本沉淀",
+    "tag_water": "4. 水资源自主权",
+    "tag_battery": "5. 48V LFP 磷酸铁锂电池组",
+    "tag_food": "6. 180天应急热量储备",
+    "archetypes": {
+      "common_law": {
+        "name": "普通法系（美国 / 英国 / 加拿大 / 澳大利亚）",
+        "entity_a": "501(c)(3) 社区土地信托 (CLT)",
+        "entity_b": "工人所有制合作社 (LLC / ULCAA)",
+        "capital": "预付费消费券（$500–$2,500，受 Reves v. Ernst & Young 用益豁免保护）",
+        "zoning": "ANSI A119.5 认证房车 / 具备快速断开接头的公路合法底盘（动产属性）",
+        "escrow": "12个月市政合规与法规抗辩保证金账户",
+        "statutory_defense": "UCC § 9-604 可拆卸动产工装 + 10年租赁摊销（依据 11 U.S.C. § 548 破产撤销抗辩）"
+      },
+      "civil_law": {
+        "name": "民法法系（中国大陆 / 欧陆 / 瑞士）",
+        "entity_a": "非营利公益基金会 / 集体土地托管实体",
+        "entity_b": "劳动群众集体所有制合作社 / 运营协会",
+        "capital": "非偿还性公益捐赠 + 免受金融牌照限制的预付费技能培训券",
+        "zoning": "既有农业建筑既得权益保护 + 符合环保防渗标准的蓄水与排污设施",
+        "escrow": "市政规划争议专项提存准备金（阻断连带民事责任）",
+        "statutory_defense": "登记设立之不可撤销用益物权与建设用地使用权（破产隔离保护）"
+      },
+      "customary_commons": {
+        "name": "传统习惯法与集体共有土地（公地）",
+        "entity_a": "不可转让集体所有的公有土地 / 社区公社",
+        "entity_b": "互助生产合作社 / 农业生产公社",
+        "capital": "社区循环互助资金池 + 农作物远期实物换领协议",
+        "zoning": "传统生土与木构夯筑建筑（受习惯法及传统建筑豁免保护）",
+        "escrow": "长者调解委员会 + 共有应急粮食种子储备",
+        "statutory_defense": "国际原住民权利公约（ILO 169）及宪法级农业集体土地防查封条款"
+      }
+    },
+    "scales": {
+      "5": {
+        "water": "40,000L 地下水窖 + 深水井",
+        "water_desc": "40,000L 防冻地下蓄水池 + 48V 直流蓄电池手动旁路深井泵",
+        "battery": "15 kWh 48V LFP 地下储能仓",
+        "battery_desc": "隔热蓄能仓 + BMS 低温充电自控 + 地埋风管地热调温",
+        "food": "180天干粮储备",
+        "food_desc": "密闭大宗谷物与豆类 + 每日轮转酶促发芽催化盘（提供超高维生素）",
+        "land": "0.8 公顷（约 12 亩）"
+      },
+      "15": {
+        "water": "120,000L 双水池系统 + 备用水井",
+        "water_desc": "双重重力自流蓄水池 + 机械砂滤与 24V 紫外线消毒模块",
+        "battery": "45 kWh 48V LFP 微电网",
+        "battery_desc": "工业级机柜储能 + 逆变器冗余 + 非关键负荷自动切除接触器",
+        "food": "15人规模 180天储备地窖",
+        "food_desc": "梯田式高密生态林耕 + 恒温地下根茎储藏窖",
+        "land": "2.5 公顷（约 38 亩）"
+      },
+      "35": {
+        "water": "300,000L 自然地表蓄水湖",
+        "water_desc": "泉水自流连续汇水池 + 零电力自然静水压供水网",
+        "battery": "120 kWh 48V/400V 三相核心电网",
+        "battery_desc": "交流耦合工业微电网 + 微型水力常态基荷支撑",
+        "food": "小流域四季多层立体生态森林",
+        "food_desc": "多年生复合农林果园 + 恒温发酵与低温储藏岩洞",
+        "land": "6 公顷（约 90 亩）"
+      }
+    }
+  },
+  "roadmap_stepper": {
+    "btn_view_stage": "📐 查看阶段 {stage} 现场实操工程蓝图",
+    "btn_download": "⬇️ 下载实操蓝图 (.md)"
+  },
+  "challenge": {
+    "title": "“尝试击垮 O.N.E.”",
+    "desc": "我们使用对抗性AI对本宪法进行了6轮严苛的红队压力测试，模拟了银行挤兑、经济封锁、巨额跨国诉讼与群体违约。点击常见问题或输入您最尖锐的质疑。",
+    "quick_label": "常测质疑论点：",
+    "chip_work": "1. 没有雇佣劳动：谁来供养我们？",
+    "chip_work_query": "如果人们拒绝工作怎么办？在O.N.E.中谁来提供食物、烘烤面包和维护下水道？",
+    "chip_money": "2. 没有货币：谁来为此买单？",
+    "chip_money_query": "在没有货币和税收的情况下，谁来资助基础设施、医院和交通？",
+    "chip_prisons": "4. 没有监狱：暴力犯罪如何处置？",
+    "chip_prisons_query": "在没有武装警察和监狱的情况下，如何应对暴力犯罪、虐待和精神疾患？",
+    "chip_lottery": "操纵抽签？",
+    "chip_lottery_query": "煽动家或亿万富翁是否能够通过金钱渗透操纵抽签公民大会？",
+    "chip_communism": "这是共产主义吗？",
+    "chip_communism_query": "O.N.E. 与20世纪传统的国家社会主义/中央集权计划经济有何本质区别？",
+    "sidebar_title": "已验证的红队攻击场景",
+    "input_placeholder": "提出您最犀利的质疑（如：'如何防止集会腐败？'）...",
+    "btn_send": "发起质询",
+    "label_probe": "对抗性压力攻击探测",
+    "label_adjudicator": "O-ASIS 宪政裁决引擎",
+    "label_inquiry": "怀疑论者核心质询",
+    "label_resolution": "宪法级工程决议：",
+    "chip_property": "3. 没有私有产权：我的房屋归谁？",
+    "chip_property_query": "没有私有制，有人能强占我的住所或个人生活用品吗？",
+    "chip_politics": "5. 没有职业政客：谁来治理？",
+    "chip_politics_query": "在没有民选政客的情况下，轮换抽签制如何防止煽动者篡夺权力？",
+    "chip_patents": "6. 没有专利权：谁来进行创新？",
+    "chip_patents_query": "没有专利或版权垄断，谁来研发药物和复杂科技？",
+    "chip_army": "7. 没有常备军：如何抵御军事侵略？",
+    "chip_army_query": "在没有常备军队或国家边境的情况下，如何阻止外部武装势力的军事入侵？",
+    "chip_ussr": "8. 没有市场：这是共产主义吗？",
+    "chip_ussr_query": "O.N.E.与20世纪的国家共产主义和极权体制有何根本区别？",
+    "chip_capitalism": "9. 这是资本主义吗？我可以创业吗？",
+    "chip_capitalism_query": "在没有资本主义的情况下，我可以开办工坊、企业或开展个人项目吗？",
+    "chip_education": "10. 教育体系：学校如何运作？",
+    "chip_education_query": "在没有学费和标准化考试的情况下，学校、大学和儿童教育如何运作？",
+    "chip_religion": "11. 宗教信仰：教堂和信仰自由吗？",
+    "chip_religion_query": "宗教、教堂和精神信仰是受到保护还是受到压制？",
+    "chip_discrimination": "12. 消除歧视：种族主义与LGBTQ+权利？",
+    "chip_discrimination_query": "少数群体如何免受种族主义、性别歧视和压迫？"
+  },
+  "books": {
+    "title": "全球史诗小说",
+    "desc": "宏大的思想只有在叩击心灵时才能被深刻感知。跨越北纬78度极地暗室、四大洲起义直至日内瓦大汇合的全景六部曲。跌宕起伏的科技法理惊悚史诗。",
+    "chart_tag": "交互式世界星图",
+    "chart_title": "史诗的六大历史剧场",
+    "chart_desc": "点击地图上的光标即可查看对应战区的叙事背景并下载完整电子书。",
+    "btn_epub": "下载 EPUB",
+    "btn_pdf": "下载 PDF",
+    "status_complete": "全卷完结 • 现已开放下载",
+    "tag": "全景互动世界图表与宏大悬疑史诗巨著",
+    "map_vol0": "VOL 0: SVALBARD",
+    "map_vol1": "VOL 1: DETROIT",
+    "map_vol2": "VOL 2: ALPS",
+    "map_vol3": "VOL 3: AMAZON",
+    "map_vol4": "VOL 4: MALACCA",
+    "map_vol5": "VOL 5: GENEVA",
+    "btn_coming_soon": "即将推出",
+    "status_coming_soon": "翻译中"
+  },
+  "volume_details": {
+    "vol0": {
+      "title": "创世纪：斯瓦尔巴火种",
+      "subtitle": "第0卷：极地潜行 • 北纬78°",
+      "theater": "斯瓦尔巴 / 全球",
+      "core_theme": "种子库物理隔离加密、隐秘光纤网部署与理论觉醒。",
+      "hook": "在底特律觉醒之前，新文明的制度框架已在北极玄武岩中铸就。"
+    },
+    "vol1": {
+      "title": "爆心投影：德尔雷协议",
+      "subtitle": "第1卷：北美战场 • 底特律 / 温莎",
+      "theater": "北美",
+      "core_theme": "废弃厂房技术改造、48小时法庭强拆倒计时与抽签制公民大会。",
+      "hook": "当法警持枪上门，德尔雷以不可动摇的物理定律与抽签法则作答。"
+    },
+    "vol2": {
+      "title": "阿尔卑斯堡垒",
+      "subtitle": "第2卷：跨阿尔卑斯欧洲 • 瓦莱与提契诺",
+      "theater": "跨阿尔卑斯欧洲",
+      "core_theme": "高山水电压力引水钢管保卫战、防雪崩屏障与州际公地联邦。",
+      "hook": "他们派出武装雇佣军切断水电；而雪山最终选择了人民。"
+    },
+    "vol3": {
+      "title": "烈焰之河",
+      "subtitle": "第3卷：亚马逊流域与安第斯",
+      "theater": "亚马逊与安第斯",
+      "core_theme": "全流域生态水系保卫、农药喷洒无人机空中拦截与原住民用益公约。",
+      "hook": "大河不是任何巨头的私产：它是整片大陆的循环生命血脉。"
+    },
+    "vol4": {
+      "title": "深海海沟",
+      "subtitle": "第4卷：马六甲海峡与欧亚航线",
+      "theater": "东南亚与印太",
+      "core_theme": "港口算法封锁反制、集装箱防线与海底光缆物理夺回。",
+      "hook": "万艘万吨货轮停航：当工人们拒绝法币并将巨轮宣告为共有公地。"
+    },
+    "vol5": {
+      "title": "会聚峰会",
+      "subtitle": "第5卷：日内瓦州 • 全球公约",
+      "theater": "日内瓦 / 全球",
+      "core_theme": "主权债务全面清零、普世大赦禧年与全球首届抽签制公民大会。",
+      "hook": "旧世界万亿债务在一个下午彻底化为乌有：人类迈入解放之光。"
+    }
+  },
+  "modal": {
+    "title": "现场实操工程蓝图与操作手册",
+    "download_md": "⬇️ 下载 .md 文档",
+    "close": "关闭蓝图 (Esc)"
+  },
+  "footer": {
+    "line1": "OPEN NETWORKED EARTH (O.N.E.) • Copyfarleft 开源用益契约 • 零绝对垄断版权",
+    "line2": "确定性多智能体引擎已同步至 Origin Main • 正典宪法 v2.0-已批准"
+  },
+  "roadmap_phases": [
+    {
+      "title": "阶段 0：法权锁死与土地不可转让公约",
+      "badge": "第 0 年 • 法律装甲设立",
+      "desc": "在任何施工机械进场前完成土地资产防火墙。双层法权盾牌未在官方完成法定登记前，严禁开工建设任何永久居所。",
+      "milestones": [
+        {
+          "label": "法权装甲",
+          "title": "双实体彻底破产隔离",
+          "text": "设立被动型土地信托（实体 A）与运营型工人合作社（实体 B），实行独立账目与绝对零跨实体连带责任。"
+        },
+        {
+          "label": "土地防卫",
+          "title": "99年不可撤销用益权公约",
+          "text": "完成不可撤销用益物权备案登记，依法永久杜绝投机转售、抵押贷款及外部商业司法查封。"
+        },
+        {
+          "label": "水利权测绘",
+          "title": "重力水头勘测与深井许可",
+          "text": "完成自然地形静水压高程测绘，钻探第一口深井并架设停电工况下仍可自流的应急旁路管线。"
+        }
+      ]
+    },
+    {
+      "title": "阶段 1：维生核心与食物主权缓冲带",
+      "badge": "第 1–3 年 • 生物学生存基线",
+      "desc": "部署 48V 直流微电网、地温掩体式 50㎡ 越冬核心舱及高密多年生食物森林。",
+      "milestones": [
+        {
+          "label": "热能核心",
+          "title": "50㎡ 极寒越冬掩体区",
+          "text": "建造超绝热半覆土式微区，结合地热风管系统，单靠建筑本身蓄热质量抵御 -30°C 极寒气流。"
+        },
+        {
+          "label": "直流微电网",
+          "title": "15–45 kWh 磷酸铁锂电池组",
+          "text": "部署具备低温充电限制逻辑的 48V 直流母线，并配置防误触误操作的卡斯特尔机械联锁钥匙。"
+        },
+        {
+          "label": "土壤再生",
+          "title": "180天生态农业储备库",
+          "text": "建立深层松土生态菜畦、多年生干果经济林及蚯蚓堆肥活性微生物循环体系。"
+        }
+      ]
+    },
+    {
+      "title": "阶段 2：开源制造工坊、机具自给与经济桥梁",
+      "badge": "第 3–7 年 • 工具主权与代谢闭环",
+      "desc": "投产数控铣削、精密车床加工、开源电路板雕刻，并开辟面向外部社会的专家智力咨询离线桥梁。",
+      "milestones": [
+        {
+          "label": "开源机具",
+          "title": "自给型机械制造车间",
+          "text": "投产数控等离子切割机、金属车床与氩弧焊机，全部脱机运行于开源 LinuxCNC/FreeCAD 架构。"
+        },
+        {
+          "label": "经济桥梁",
+          "title": "专家认知服务外溢（ETI）",
+          "text": "向外部社会提供限量高附加值工程咨询（每周每人不超过 15 小时），获取缴纳法定土地税费所需之法币。"
+        },
+        {
+          "label": "生化检测",
+          "title": "水质生物化验与发酵工程",
+          "text": "建立水体微生物安全与重金属离线检测站，建立非转基因传统农作物种子基因库。"
+        }
+      ]
+    },
+    {
+      "title": "阶段 3：小流域生态联邦与主权公地完全自给",
+      "badge": "第 7–15 年 • 生物大区网络互联",
+      "desc": "自主生物大区公地通过长距离无线网状网（Mesh）与基于物理热力学做功的实物互换实现完全脱钩互联。",
+      "milestones": [
+        {
+          "label": "网状无线电",
+          "title": "小流域自治联邦网络",
+          "text": "通过加密 LoRa 数据分组无线电连接 3 至 5 个邻近微型节点，组建重型农机与加工设备共享公社。"
+        },
+        {
+          "label": "热力学互换",
+          "title": "列昂惕夫-坎托罗维奇实物交换",
+          "text": "不依赖法币金融中介，根据有效㶲（千瓦时）、工时与种子品级直接进行物理做功能量等价置换。"
+        },
+        {
+          "label": "彻底脱钩",
+          "title": "完全基础设施孤岛主权",
+          "text": "旧体制商业公用电网与水网完全物理切断，或仅作为常态不通电的冷备用第三级应急通道保留。"
+        }
+      ]
+    }
+  ],
+  "oasis_showcase": {
+    "badge": "🎮 LIVING THERMODYNAMIC SANDBOX & MMO",
+    "title_part1": "Experience the Post-Labor Commons in",
+    "title_part2": "O-ASIS Dual-Track",
+    "desc": "Test the constitution with your own hands. Build autonomous solarpunk eco-villages, balance real Leontief physics across 4 physical flows (⚡ kWh, 💧 Liters, 🥗 Calories, 💻 Compute), deliberate on civic crises via Athenian citizen juries, and resist the predatory Legacy Financial AI in a 100% serverless P2P mesh.",
+    "feat1_title": "Closed-Loop Thermodynamics",
+    "feat1_desc": "Real energy, battery degradation, rainwater harvesting, closed-loop hydroponics and circular FabLab material recycling.",
+    "feat2_title": "Demarchic Sortition Juries",
+    "feat2_desc": "Citizen assemblies chosen by lot in strict odd parity to arbitrate community dilemmas and ratify confederal case-law precedents.",
+    "feat3_title": "Dual-Track Physical Bridge",
+    "feat3_desc": "In-game triumphs directly unlock verified, real-world 3D printable .STL open hardware and Home Assistant automations.",
+    "btn_launch": "Launch O-ASIS Simulator (Browser 60 FPS) ↗",
+    "btn_handbook": "Download Player Field Manual (PDF) ↗"
+  },
+  "hero_video": {
+    "badge": "Civilizational Prologue • 2m 10s",
+    "title": "From 100,000 Years of Warfare to Machine Emancipation",
+    "desc": "Watch the visual prologue illustrating human history from territorial warfare to machine-driven emancipation."
+  },
+  "contrast": {
+    "tag": "Civilizational Operating Systems",
+    "title": "Track A vs. Track B: The Civilizational Fork",
+    "desc": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
+    "track_a_badge": "Track A • Legacy Default",
+    "track_a_title": "Techno-Feudal Extraction",
+    "track_a_desc": "Monopolized automation, perpetual debt, and speculative rentierism.",
+    "track_a_item1_title": "Conditional Survival:",
+    "track_a_item1_desc": "Basic food, shelter, and care gated behind disappearing wage labor.",
+    "track_a_item2_title": "Allodial Land Speculation:",
+    "track_a_item2_desc": "Predatory landlordism, compounding rents, and algorithmic evictions.",
+    "track_a_item3_title": "Billionaire Oligarchy:",
+    "track_a_item3_desc": "Corporate lobbying, partisan theater, and manufactured consent.",
+    "track_a_item4_title": "Carceral Coercion:",
+    "track_a_item4_desc": "Militarized policing and punitive retribution protecting property over life.",
+    "track_a_item5_title": "Thermodynamic Ecocide:",
+    "track_a_item5_desc": "Infinite exponential compound growth on a strictly finite biosphere.",
+    "track_b_badge": "Track B • Open Networked Earth",
+    "track_b_title": "Universal Usufruct & Demarchy",
+    "track_b_desc": "Machines work for the commons; humanity inherits guaranteed survival and self-governance.",
+    "track_b_item1_title": "Unconditional Birthright:",
+    "track_b_item1_desc": "Food, housing, healthcare, clean water & energy guaranteed for life.",
+    "track_b_item2_title": "Dynamic Usufruct:",
+    "track_b_item2_desc": "Protected personal dwellings; zero rent, zero speculation, zero landlordism.",
+    "track_b_item3_title": "Statistical Sortition:",
+    "track_b_item3_desc": "Citizen juries drawn by lot in strict odd parity; zero career politicians.",
+    "track_b_item4_title": "Restorative Peace Guilds:",
+    "track_b_item4_desc": "De-escalation, conflict mediation, and root-cause civic restoration.",
+    "track_b_item5_title": "Thermodynamic Exergy Limits:",
+    "track_b_item5_desc": "Physical accounting in kWh, liters, and topsoil health—not debt-fiat."
+  },
+  "stewards": {
+    "tag": "Phase 0 Genesis Hardening",
+    "title": "Call for Co-Stewards & Domain Critics",
+    "desc": "Open Networked Earth is built on open peer production. Before the Living Constitution is permanently deposited under Swiss Civil Law (ZGB Art. 80 ff.), our foundational pillars must be stress-tested through adversarial peer review. We are actively seeking our <strong>Priority 0 Media Co-Steward</strong> and technical domain builders to harden the architecture against entropy.",
+    "p0_badge": "Pillar 0 • Strategic Inversion",
+    "badge_priority": "🔥 Priority 0 • Active Search",
+    "badge_seeking_cofounder": "Seeking Co-Founder",
+    "badge_seeking": "Open for Co-Steward",
+    "badge_active": "Actives: 1",
+    "p0_title": "Media, Storytelling & Community Co-Steward",
+    "label_target_profile": "Target Profile:",
+    "p0_role": "Open-source comms activist, Solarpunk/Commons creator, independent podcaster, video storyteller, or community builder.",
+    "label_mandate": "The Mandate & Strategic Goal:",
+    "p0_doubt": "Eliminate the solo-creator bottleneck by taking operational co-ownership of public storytelling, YouTube/Shorts video distribution, Reddit/X dialogue, and leading the outreach campaign to seat the remaining technical domain builders. If you believe a post-labor civilization needs a powerful cultural voice, this is the co-founding role.",
+    "p0_btn_cta": "Join Media Dialectic (#13) →",
+    "p0_btn_email": "Apply Directly via Email →",
+    "p1_num": "Pillar 1",
+    "p1_title": "Economy & Thermodynamic Balances",
+    "label_domain": "Domain:",
+    "p1_role": "Ecological / Heterodox Economics, Leontief Input-Output",
+    "label_doubt": "Open Dialectic & Doubt:",
+    "p1_doubt": "Can money-less thermodynamic accounting completely replace market price discovery and Gosplan bureaucracy without supply shortages or rationing?",
+    "p1_btn_cta": "Join Economic Dialectic (#9) →",
+    "p2_num": "Pillar 2",
+    "p2_title": "Governance, Law & Dynamic Usufruct",
+    "p2_role": "Commons Jurisprudence, Demarchy / Sortition, Swiss Civil Law",
+    "p2_doubt": "Are demarchic sortition lotteries mathematically immune to lobbying and oligarchic capture? Does Swiss Association (Verein) law provide bulletproof shielding?",
+    "p2_btn_cta": "Join Legal Dialectic (#10) →",
+    "p3_num": "Pillar 3",
+    "p3_title": "Simulation & Scientific Sandbox",
+    "p3_role": "Julia Discrete-Event Co-Simulation (SIMONE), Agents.jl & MTBF Wear",
+    "p3_doubt": "Validating the single-village Julia prototype, stock-and-flow ODE docking tests, and multiscale biophysical solver decoupling. Additional co-stewards actively sought.",
+    "p3_btn_cta": "Join Simulation Dialectic (#11) →",
+    "p4_num": "Pillar 4",
+    "p4_title": "Habitat & Open-Hardware Resilience",
+    "p4_role": "Microgrids, Home Assistant Zigbee/MQTT, CNC Timber Cassettes",
+    "p4_doubt": "Do Modular Habitat Units (MHU) and open-hardware microgrids withstand real-world 40-year thermal cycles and catastrophic grid disconnection?",
+    "p4_btn_cta": "Join Habitat Dialectic (#12) →",
+    "cta_title": "Ready to Build or Break O.N.E.?",
+    "cta_desc": "Whether you want to co-steward a foundational pillar or act as an independent critic hunting thermodynamic and nomothetic edge cases, your contribution directly hardens the Genesis Block.",
+    "btn_all_discussions": "💬 View All Discussions on GitHub",
+    "btn_contact": "✉️ Contact Kyberlex (kyberlex@proton.me)"
+  }
+}

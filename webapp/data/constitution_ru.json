@@ -1,0 +1,404 @@
+[
+  {
+    "number": "I",
+    "title": "ПРЕАМБУЛА И НЕОТЧУЖДАЕМЫЙ БИЛЛЬ О ПРАВАХ",
+    "articles": [
+      {
+        "id": "Article 1.1",
+        "title": "Аксиома биосферных общих благ",
+        "text": "1. Планетарная биосфера — включающая атмосферу, глобальный гидрологический цикл, плодородные почвы, океанические системы, солнечную радиацию и накопленный массив научных и культурных знаний человечества — представляет собой неделимое общее достояние всех живых существ.\n2. Никакая часть биосферных общих благ не может быть обращена в спекулятивную частную собственность, коммодифицирована для извлечения финансовой ренты или подчинена государственному территориальному огораживанию.\n3. Право на любые физические или интеллектуальные ресурсы существует исключительно в форме узуфрукта: защищенного права владения, использования и получения плодов при условии активного проживания, регенеративного ухода и сохранения их целостности для будущих поколений."
+      },
+      {
+        "id": "Article 1.2",
+        "title": "Неотчуждаемый личный и телесный суверенитет",
+        "text": "1. Каждый человек обладает абсолютным и безусловным суверенитетом над своим биологическим, физическим и когнитивным субстратом.\n2. Принудительное генетическое вмешательство, недобровольная биометрическая слежка, неврологический мониторинг, фармакологическое манипулирование и физическое насилие навсегда запрещены как структурные посягательства на целостность личности.\n3. Каждый человек сохраняет неотъемлемое право на телесную автономию, неприкосновенность частной жизни и ментальное убежище. Никакие чрезвычайные положения или административные приказы не могут нарушить физический или психологический субстрат человека."
+      },
+      {
+        "id": "Article 1.3",
+        "title": "Универсальный порог выживания",
+        "text": "1. Каждый житель с рождения обладает неотчуждаемым правом на жизненно необходимое обеспечение, полностью отвязанным от наемного труда, рыночного обмена, долгов или идеологической лояльности.\n2. Безусловный универсальный порог включает:\n   * Чистую питьевую воду сертифицированного биологического качества;\n   * Здоровое, сбалансированное ежедневное питание необходимой калорийности;\n   * Безопасное, защищенное от непогоды жилье;\n   * Полную первичную, профилактическую и экстренную медицинскую помощь;\n   * Необходимые квоты энергии для отопления, охлаждения и приготовления пищи;\n   * Свободный доступ к открытой базе знаний, культуре и инструментам производства.\n   При дефиците ресурсов биологическое выживание неприкосновенно и регулируется Лексикографическим оператором витальности (ст. 3.1.5)."
+      },
+      {
+        "id": "Article 1.4",
+        "title": "Неотчуждаемые гражданские свободы и эпистемическая свобода",
+        "text": "1. Every individual and association possesses unconditional freedom of thought, conscience, speech, peaceful assembly, voluntary association, and cultural expression.\n2. No civic council, assembly, or digital infrastructure may censor peaceful dissent, suppress contrarian inquiry, or mandate orthodox belief.\n3. To preserve evolutionary adaptability, seven percent (7%) of all fabrication facilities, compute, and laboratories are reserved as a Heretic’s Commons for speculative research without peer gatekeeping. Access is allocated via rotational sortition requiring in-situ physical actuation and non-transferable cryptographic tokens. Where multi-stage synthesis requires continuous biological incubation or annealing, deterministic Process Continuity Locks prevent premature slot termination without human proxy trading. Consumed high-entropy reagents schedule equivalent regenerative feedstock inputs. Under Execution-Equals-Publication, physical actuation commits generative instructions to public repositories under Copyfarleft covenants. Outbound physical transfers require mass-balanced provenance certificates verified by telemetry. Research into synthetic self-replicating lethal pathogens, mass neurological agents, or radiological weapons is categorically barred. Synthesis hardware incorporates hardwired cryptographic firmware interlocks permanently inhibiting physical transcription of verified pathogen sequences. Disabling these interlocks constitutes a crime against biospheric continuity."
+      },
+      {
+        "id": "Article 1.5",
+        "title": "Принцип анти-огораживания",
+        "text": "1. Any legal title, financial contract, or administrative device that attempts to re-privatize essential life-support commons, resurrect absentee landlordism, or extract monopoly rents from human necessity is null, void, and recognized as structural aggression against society.\n2. Scientific discoveries, biological genetics, computational algorithms, and mechanical tool designs are universal public goods, permanently exempt from monopolistic patents, intellectual property claims, and proprietary restrictions."
+      },
+      {
+        "id": "Article 1.6",
+        "title": "Экологический долг и межпоколенческая опека",
+        "text": "1. Every user of the planetary commons incurs an inescapable duty of biophysical stewardship. Human metabolisms must operate within the circular regenerative boundaries and thermodynamic carrying capacity of local watersheds and the global biosphere.\n2. The deliberate poisoning of ecosystems, the exhaustion of non-renewable aquifers, and the irreversible destruction of biological habitats constitute crimes against planetary continuity.\n3. Non-human living systems and regional biomes hold intrinsic standing under law (*Jus Biosphaerae*), defended before civic assemblies by designated human guardians drawn by lot."
+      },
+      {
+        "id": "Article 1.7",
+        "title": "Верховенство и нерушимость фундаментальных прав",
+        "text": "1. The rights, liberties, and baselines defined in this Chapter are structural constitutional invariants.\n2. No assembly, referendum, state of exception, or qualified supermajority may suspend, diminish, or alienate the provisions of this Bill of Rights. Any decree, enactment, or agreement contrary to this Chapter is void *ab initio*."
+      }
+    ]
+  },
+  {
+    "number": "II",
+    "title": "ДЕКОНСТРУКЦИЯ СОБСТВЕННОСТИ И ПРАВО УЗУФРУКТА",
+    "articles": [
+      {
+        "id": "Article 2.1",
+        "title": "Отмена абсентеистской собственности и деконструкция владения",
+        "text": "1. The legacy legal doctrine of absolute private ownership (*dominium*)—the unilateral right to exploit, hoard, neglect, or destroy finite earthly assets—is permanently abolished across Open Networked Earth (O.N.E.).\n2. Title to land, water bodies, agricultural belts, natural biomes, and industrial manufacturing machinery exists exclusively as usufruct: a conditional right of active beneficial utility, continuous presence, and ecological stewardship.\n3. Title divorced from active occupancy and social utility is legally non-existent. Any tract of land, residential dwelling, or productive facility left abandoned or held for passive speculation returns immediately to the jurisdiction of the local commons. Foreign writs of execution, private equity mortgages, and investor-state arbitral awards (e.g., from the International Centre for Settlement of Investment Disputes [ICSID]) asserted against domestic usufruct holdings are null, void, and unenforceable ab initio under lex loci rei sitae."
+      },
+      {
+        "id": "Article 2.2",
+        "title": "Трехчастная классификация общих благ и имущества",
+        "text": "To secure inviolable personal liberty while prohibiting monopolistic exploitation, all material assets are categorized into three mutually exclusive juridical classes:\n1. **Inviolable Personal Possessions:** Personal attire, domestic furnishings, artistic works, intimate items, private tools of craft, and personal computational interfaces. These remain under the absolute, permanent sovereignty of the individual and can never be expropriated, collectivized, or reassigned by any civic assembly.\n2. **Protected Possessory Usufruct:** Primary dwellings, domestic plots, family homesteads, and small-scale artisanal workshops actively inhabited and maintained. Held under perpetual, non-market covenants modeled on the Community Land Trust (CLT) framework, possessory usufruct grants inviolable domestic privacy, hereditary succession of occupancy among active co-inhabitants, and complete immunity from market foreclosure or rent extraction.\n3. **Federated Commons Usufruct:** Watersheds, aquifers, forests, mineral deposits, energy grids, transport corridors, industrial fabrication centers, hospitals, and communication backbones. These constitute indivisible commons held in perpetual trust for current and future generations, administered by municipal sortition councils and dedicated operational guilds."
+      },
+      {
+        "id": "Article 2.3",
+        "title": "Неотчуждаемая жилищная безопасность и абсолютный запрет выселений",
+        "text": "1. Secure residential shelter is an inalienable human right. The eviction or displacement of any person into homelessness or destitution is a structural crime and is unconstitutional.\n2. Residential landlordism, speculative property holding, and monetary rent extraction are legally null and void.\n3. Where structural hazards, environmental remediation, or irreconcilable interpersonal domestic crises necessitate physical relocation, disputes shall be adjudicated by a Local Mediation Panel composed of three (3) sortition-selected citizens.\n4. In non-fault administrative, environmental, or hazard relocations, no transfer may be executed until the community has secured an equivalent or superior dwelling satisfying the physiological, accessibility, and social requirements of the affected inhabitants. Where downscaled relocation is mandated under Article 5.2 due to persistent, unexcused refusal of civic labor reciprocity, secure subsistence shelter fulfilling all Tier 1 biological baselines remains unconditionally guaranteed."
+      },
+      {
+        "id": "Article 2.4",
+        "title": "Опека над сельскохозяйственными землями и средствами производства",
+        "text": "1. Arable topsoil, marine nurseries, and industrial production facilities cannot be bought, sold, mortgaged, or leased for monetary profit.\n2. Farmland is allocated to agroecological collectives, family cultivators, and agrarian trusts based on bioregional nutritional requirements and verified regenerative husbandry.\n3. Cultivators hold multi-generational usufructuary tenure so long as soil organic health, watershed stability, and biodiversity are preserved. Persistent ecological poisoning or abandonment of cultivation triggers review by the Bioregional Citizen Assembly; upon verified breach of ecological stewardship, tenure is transferred to willing regenerative custodians."
+      },
+      {
+        "id": "Article 2.5",
+        "title": "Заповедники общего наследия и позиционные блага",
+        "text": "1. Geographically unique or ecologically sensitive positional assets—including coastal headlands, pristine riverbanks, alpine crests, and historical sanctuaries—can never be enclosed as exclusive private estates.\n2. Permanent private residential construction along pristine shorelines or ecological sanctuaries is prohibited.\n3. Access to temporary residential retreats within positional sanctuaries is administered through transparent civic sortition: rotational sabbatical retreats open to all citizens, research fellowships for scientific and artistic contributors, and equitable public visitation. No lineage or administrative official may establish permanent private dominion over planetary beauty."
+      },
+      {
+        "id": "Article 2.6",
+        "title": "Разрешение споров об узуфрукте и ассамблейные пороги",
+        "text": "1. Boundary adjustments and municipal rezonings are deliberated openly before sortition bodies in strict odd-number parity:\n   * Neighborhood land-use adjustments: adjudicated by Neighborhood Sortition Councils comprising fifteen (15) citizens by a sixty percent (60%) qualified majority.\n   * Bioregional industrial zoning and watershed easements: adjudicated by Bioregional Citizen Assemblies comprising one hundred and one (101) delegates by a sixty percent (60%) qualified majority.\n2. Any extraordinary decree revoking or modifying possessory usufruct for imperative public infrastructure requires an unyielding seventy-five percent (75%) constitutional supermajority of the seated assembly, coupled with mandatory provision of prior equivalent housing, full physical restitution, and unanimous consent of the Local Mediation Panel."
+      }
+    ]
+  },
+  {
+    "number": "III",
+    "title": "БИОФИЗИЧЕСКАЯ РЕАЛЬНОСТЬ И ТЕРМОДИНАМИЧЕСКИЙ УЧЕТ РЕСУРСОВ",
+    "articles": [
+      {
+        "id": "Article 3.1",
+        "title": "Термодинамический предел и демонетизация общих ресурсов",
+        "text": "1. Economic coordination, industrial metabolism, and resource distribution across Open Networked Earth (O.N.E.) are grounded strictly in thermodynamics and ecological mass balance.\n2. Financial fiat, compound debt, and speculative prices are stripped of legal standing as claims on the commons.\n3. Accounting measures exergy in kilowatt-hours (kWh), dry mass in kilograms (kg), water in liters (L), and circular cycle times.\n4. Physical thermodynamics defines the ceiling: no collective may budget or consume resources beyond verified replenishment rates of local watersheds and the biosphere.\n5. Allocations employ dynamic input-output matrices minimizing baseline deviations via convex optimization: $\\min (x - x_{\text{baseline}})^T W (x - x_{\text{baseline}})$. The diagonal tensor  = \\operatorname{diag}(w_{\text{survival}}, w_{\text{sanitation}}, w_{\text{grid}}, w_{\text{upkeep}}, w_{\text{discretionary}})$ is governed by abiotic criticality and decay half-life. Under multi-vector deficits (water, phosphorus, rare catalysts), the Thermodynamic Lexicographic Viability Operator ($\\mathcal{L}_{\\min}$) enforces somatic survival over infrastructural upkeep across all dimensions, collapsing non-metabolic allocations along their durability gradient before quadratic solvers execute. Manual weight tampering during active epochs is barred."
+      },
+      {
+        "id": "Article 3.2",
+        "title": "Абсолютный запрет ростовщичества, спекуляций и сложного процента",
+        "text": "1. Contracts or algorithms requiring compound interest, debt bondage, or derivative speculation are void.\n2. Credit exists solely as exergy, material, and machine time allocations for verified infrastructure, maintenance, or ecological restoration.\n3. No debt may compound, no dwelling may be pledged as collateral, and project failure shall never cause personal destitution or baseline loss."
+      },
+      {
+        "id": "Article 3.3",
+        "title": "Трехуровневая демократическая иерархия потребностей",
+        "text": "Resource dispatch adheres strictly to the Constitutional Hierarchy of Needs:\n1. **Tier 1 (Vital Biological Baseline):** Absolute priority for universal survival: potable water, nutritious food, resilient shelter, climate regulation, and comprehensive healthcare.\n2. **Tier 2 (Civic Maintenance and Infrastructure):** Operational upkeep of water treatment, microgrids, transit, communication networks, hospitals, and repair fab-labs.\n3. **Tier 3 (Decentralized Discretionary Surplus and Open Fab-Labs):** Cultural creation, craft, specialized tooling, and exploratory science. Surpluses are distributed via quadratic preference voting and participatory lot rosters in communal Open Fab-Labs. Access requires in-situ non-delegable presence tokens. To neutralize proxy-queuing and shadow commercial rent-seeking without somatic surveillance: (a) all toolpaths, code, and bio-sequences loaded into Tier 3 machinery enter the Common Heritage under Copyfarleft covenants, with subtractive swarf and scrap returned to verified circular recycling balances to prevent covert material hoarding; (b) consecutive slot draws incur sortition entropy decay; and (c) firmware caps run-lengths, restricting tools to prototyping and communal repair.\n4. **Tier 2-A Indivisible Capital Goods Buffer:** Upstream industrial assets—pyrometallurgy, silicon purification, lithography, and heavy machine tooling—are indivisible social capital. Capital depreciation reserves must be fully restored before releasing surplus for Tier 3 fabrication."
+      },
+      {
+        "id": "Article 3.4",
+        "title": "Биорегиональная емкость среды и телеметрия без слежки",
+        "text": "1. Human extraction and manufacturing are bounded by watershed Ecological Carrying Capacity (ECC).\n2. Public sensor arrays monitor non-personal abiotic variables: aquifer recharge, river discharge, soil carbon, biomass, grid load, and thermal dissipation.\n3. Telemetry hardware must employ open-architecture industrial controllers (e.g., open-hardware Programmable Logic Controllers [PLCs]) with bit-for-bit verifiable, deterministic firmware.\n4. Invariant Privacy Mandate: Telemetry is strictly confined to abiotic metrics. Algorithmic surveillance, biometric tracking, facial recognition, or consumption profiling of individuals is an absolute constitutional crime."
+      },
+      {
+        "id": "Article 3.5",
+        "title": "Стратегические физические резервы и нелинейная стойкость",
+        "text": "1. To ensure anti-fragility against nonlinear disruptions, droughts, storms, and epidemics, each bioregion maintains Strategic Physical Reserves.\n2. Reserves comprise: (a) biological staples: grains, seeds, medical inventories, and water sustaining residents for twelve to twenty-four (12–24) months; and (b) high-entropy technical capital: standardized power semiconductors, reverse-osmosis membranes, vacuum switchgear, and transformer cores sustaining islanded microgrids for at least thirty-six (36) months. In symmetric inter-basin emergencies (Article 10.3.1), reserves transition dynamically to a Shared Metabolic Equilibrium Protocol, equalizing surviving supply days across federated basins without breaching donor baseline survival.\n3. Strategic reserves cannot be alienated, financialized, exported for fiat currency, or liquidated during non-emergency periods."
+      },
+      {
+        "id": "Article 3.6",
+        "title": "Аудиторский учет, ассамблейный паритет и пороги решений",
+        "text": "1. Thermodynamic balance sheets are public and audited continuously by sortition assemblies in strict odd-number parity:\n   * Neighborhood utility monitoring: governed by Neighborhood Sortition Councils comprising fifteen (15) citizens.\n   * Bioregional exergy dispatch and strategic reserves: governed by Bioregional Citizen Assemblies comprising one hundred and one (101) delegates.\n2. Graduated Deliberative Thresholds:\n   * **Dynamic Pro-Rata Biophysical Scaling Protocol:** Under normative capacity, Tier 1 is non-negotiable. Catastrophic capacity loss below aggregate baseline ({\text{real}} < \\sum B_{\text{Tier1}}$) deterministically triggers uniform pro-rata scaling: $\u0007lpha = C_{\text{real}} / \\sum B_{\text{Tier1}} < 1.0$, applying identically across 100% of the population. Solver divergence past three hundred (300) seconds engages safe-mode lexicographic dispatch, freezing Tier 3 to preserve Tier 1 flows. Within twelve (12) hours, an emergency Sortition Assembly (101 delegates for bioregions; 301 for continents) audits telemetry and directs capital conversion. Caste triage is a crime against Chapter I.\n   * **75% Constitutional Supermajority:** Required to alter constitutional accounting formulas, reserve rules, or capital classifications.\n   * **60% Qualified Majority:** Required for five-year bioregional infrastructural energy budgets and Tier 3 discretionary allocations.\n   * **50%+1 Simple Majority:** Permitted solely for procedural motions and emergency mobilization of Strategic Physical Reserves during certified natural disasters, carrying a mandatory thirty (30) day sunset review."
+      }
+    ]
+  },
+  {
+    "number": "IV",
+    "title": "УПРАВЛЕНИЕ ПО ЖРЕБИЮ: ДЕМАРХИЧЕСКАЯ АРХИТЕКТУРА",
+    "articles": [
+      {
+        "id": "Article 4.1",
+        "title": "Принцип жеребьевки (демархия) и ликвидация олигархии",
+        "text": "1. All sovereign legislative, deliberative, and constitutional authority across Open Networked Earth (O.N.E.) emanates exclusively from assemblies of citizens chosen by statistically stratified random lottery (sortition).\n2. Professional electoral party politics, private campaign financing, corporate lobbying, and permanent parliamentary classes are permanently abolished as structural vectors of oligarchic capture.\n3. The formation, financing, or operation of partisan political factions, electoral action committees, or clandestine lobbying syndicates constitutes a structural assault on the civic commons and is legally void.\n4. Governance is restored to its fundamental democratic foundation: collective deliberation among social equals selected by lot, devoid of monetary leverage, patron-client dependencies, or careerist entrenchment."
+      },
+      {
+        "id": "Article 4.2",
+        "title": "Многоуровневая ассамблейная архитектура и нечетный паритет",
+        "text": "Deliberative authority is structured through concentric citizen chambers matched to bioregional scales. To permanently prevent mathematical ties, factional deadlock, and artificial parity splits, every deliberative body maintains strict odd-number parity:\n1. **Local Mediation Panels:** Three (3) citizens, serving three-month mandates, dedicated to immediate neighborhood conflict resolution, domestic safety, and housing restitution.\n2. **Neighborhood Sortition Councils:** Fifteen (15) citizens, serving six-month mandates, responsible for localized commons maintenance, public utility oversight, and communal facilities.\n3. **Bioregional Citizen Assemblies:** One hundred and one (101) delegates, serving one-year staggered mandates, governing watershed ecological balances, industrial zoning, and inter-node agreements.\n4. **Continental Governance Chambers:** Three hundred and one (301) citizens, serving eighteen-month staggered mandates, coordinating continental transport backbones, ecological regeneration corridors, and macro-balances.\n5. **Global Commons Assembly:** One thousand and one (1,001) citizens, serving two-year staggered mandates, establishing planetary thermodynamic boundaries, ratifying cross-continental covenants, and safeguarding constitutional invariants."
+      },
+      {
+        "id": "Article 4.3",
+        "title": "Стратифицированная выборка, универсальная служба и ротация",
+        "text": "1. Jurors for all sortition bodies are selected from universal civic registers through open cryptographic and mechanical lotteries, stratified across age, gender, and geography.\n2. Civic service by lot is a universal prerogative and inviolable duty. Citizens summoned receive complete release from routine labor, guaranteed domestic support replacement, and full life-support allocations.\n3. Sortition Continuity: Assembly cohorts are renewed in quarterly tranches (one-fourth cohort renewal every ninety-one [91] days) to prevent epistemic severance and institutional memory collapse. Outgoing delegates spend their final thirty (30) days in non-voting pedagogical mentoring roles. Consecutive terms in the same tier are prohibited; every completed mandate requires a mandatory hiatus equal to twice the duration served.\n4. Prevention of Shadow Bureaucracies: Assembly facilitators and scribes serve on strictly temporary, rotating contracts. Administrative staff are barred from framing agendas or filtering citizen inquiries. Sortition delegates hold direct authority over inquiry formulation."
+      },
+      {
+        "id": "Article 4.4",
+        "title": "Состязательный перевод, эпистемический паритет и пороги предосторожности",
+        "text": "1. Sortition jurors deliberate as the sovereign ethical conscience of the commons. Technical advisors and engineers serve strictly in an evidentiary, non-voting capacity.\n2. Tripartite Epistemic Working Groups: Specialized data, thermodynamic models, and algorithmic balance projections are translated into transparent scenarios by rotating working groups consisting of: (a) one-third domain scientists selected via rotating sortition from Global Scholastic Guilds; (b) one-third lay delegates drawn randomly from the Demarchic Assembly; and (c) one-third adversarial verifiers designated under the Heretic’s Commons (Article 1.4) charged with stress-testing dynamic assumptions. Permanent institutional modeling bodies are prohibited; all modeling code and computational weights must run on open deterministic nodes.\n3. Intelligibility and Subordination Mandate: Technical panels bear the duty to articulate models into plain-language scenarios before public sittings. Epistemic working groups possess zero legislative veto, hold no voting bloc within assemblies, and are structurally barred from assuming allocative governance or altering baseline constraint weights during deliberative deadlocks.\n4. Precautionary Invariant and Byzantine Validation: Where models indicate imminent risk of crossing planetary boundaries, the Precautionary Principle (*In dubio pro natura et vita*) takes precedence. Automated precautionary suspensions of production require independent confirmation via Byzantine Fault Tolerant (BFT) multi-modal sensor telemetry (coupling galvanic, thermal, and optical metrics). Contested anomalies or sensor divergence shall not freeze operational infrastructure; systems revert immediately to safe-state baseline parameters while a seventy-two (72) hour physical ground-truth audit is executed. Where sudden hydrological or exergy flow diversions threaten acute downstream metabolic shock, the ground-truth audit is expedited to twelve (12) hours before an emergency Local Mediation Panel (3 citizens) to prevent asymmetric inter-basin damage."
+      },
+      {
+        "id": "Article 4.5",
+        "title": "Протоколы совещания и ступенчатые пороги голосования",
+        "text": "Deliberative assemblies vote exclusively through graduated thresholds:\n1. **75% Constitutional Supermajority:** Required exclusively for structural amendments to this Constitution, alterations of Invariant Rights, declarations of de-commodification, or modifications to the biological survival baseline.\n2. **60% Qualified Majority:** Required for multi-year bioregional plans, foundational resource allocations, inter-watershed treaties, and general regulatory statutes. Rejection votes are null unless sponsored by a recognized minority of at least fifteen (15) delegates and accompanied by a thermodynamically certified alternative plan. If an assembly deadlocks on two successive ballots separated by fourteen (14) days, it initiates deterministic Condorcet rank-choice optimization across verified plans. If deadlock persists past sixty (60) days, an auxiliary Synthesis Jury of one hundred and one (101) citizens resolves the dispute within fourteen (14) days via simple majority (50%+1) run-off between the top two Condorcet finalists. Allocations continue uninterrupted under preceding empirical telemetry baselines, explicitly barring safe-mode triage.\n3. **50%+1 Simple Majority:** Permitted exclusively for routine procedural motions and emergency disaster responses carrying an automatic, unextendable thirty (30) day sunset clause."
+      }
+    ]
+  },
+  {
+    "number": "V",
+    "title": "НЕОБХОДИМЫЙ ФИЗИЧЕСКИЙ ТРУД, ЗАБОТА И МЕЖПОКОЛЕНЧЕСКОЕ ВЫЖИВАНИЕ",
+    "articles": [
+      {
+        "id": "Article 5.1",
+        "title": "Общее обслуживание, ротация смен и эргономические коэффициенты",
+        "text": "1. Human civilization rests upon material upkeep. To eliminate exploited underclasses and hereditary castes, essential non-automated maintenance—sanitation, toxic recycling, soil regeneration, seasonal harvesting—constitutes a shared responsibility distributed through rotational rosters across able-bodied adults.\n2. Labor is de-commodified: human effort can neither be bought, rented, traded, nor subordinated through wage contracts or debt extortion.\n3. Ergonomic Multipliers and Kinetic Metabolic Floor: Arduous or hazardous tasks carry certified ergonomic time multipliers of 3x–5x against baseline obligations and sabbatical allocations. Unstaffed shifts scale through unpredictable Dutch matching intervals and inter-watershed pooling to prevent holdouts. Under emergency biophysical contractions (Article 3.6.2), somatic metabolic replenishment for active Class-A maintenance ({\\text{kinetic}}$) is quarantined from pro-rata reductions, ensuring physical workers do not suffer physiological exhaustion relative to baseline recipients. Unstaffed nodes after three cycles are throttled until automation deploys.\n4. The Full Automation Trajectory: The strategic objective of O.N.E. is progressive automation of all arduous, hazardous, and repetitive labor through open robotics. Rotational labor is recognized as a transitional necessity; as automation expands, mandatory shifts systematically contract toward zero."
+      },
+      {
+        "id": "Article 5.2",
+        "title": "Инвариант взаимности и ступенчатые непенитенциарные санкции",
+        "text": "1. The biological baseline of survival—clean water, daily caloric nutrition, shelter, and medical care—is an inalienable birthright, permanently immune to administrative revocation or labor compulsion.\n2. Membership in a self-governing community implies a binding duty of mutual material aid. Persistent refusal of assigned shifts without medical cause triggers an automated, four-stage progressive rebalancing:\n   * *Stage One:* Direct civic notification, transparent peer audit, and labor-capability reassessment before a Local Mediation Panel (3 citizens);\n   * *Stage Two:* Suspension of elective surplus claims (Tier 3 fab-lab queues, high-latency travel credits, specialized tooling) while baseline survival flows remain untouched;\n   * *Stage Three:* Suspension of political sortition rights and disqualification from holding deliberative civic office;\n   * *Stage Four:* Revocation of possessory usufruct over high-throughput communal assets and spatial assignment to an individual Tier 1 Baseline Accommodation. If physical relocation is refused, execution proceeds via non-kinetic Metabolic Decoupling: communal utility matrices (three-phase power, surplus compute, workshop loops) are rerouted around the asset perimeter to incoming stewards, while the occupied footprint is clamped to an autonomous Tier 1 Survival capsule providing inviolable water, calories, climate regulation, and connectivity. Somatic force, kinetic eviction, and carceral detention are unconstitutional.\n3. Immediate Reintegration Invariant: Full civic standing, sortition eligibility, and Tier 3 access are restored ipso jure the moment the citizen resumes scheduled reciprocity contributions."
+      },
+      {
+        "id": "Article 5.3",
+        "title": "Эмпирическое детское воспитание и нейроразвивающая целостность",
+        "text": "1. Education within the commons is anchored strictly in replicated empirical science, developmental neurobiology, and sensory-motor prepared environments, barring ideological indoctrination and standardized testing cartels.\n2. Educational Triad:\n   * *Ages 0 to 7 (Physical Reality & Motor Foundation):* Anchored in tactile nature, soil cultivation, geometry, music, and unmeasured play, preventing attentional dysregulation linked to premature digital abstraction;\n   * *Ages 7 to 13 (Epistemic Hygiene & Dialectics):* Systematic instruction in cognitive de-biasing, statistical uncertainty, dynamic feedback systems, and Socratic dialogue;\n   * *Ages 13+ (Guild Apprenticeship & Mastery):* Integration into active research, agricultural, and fabrication collectives alongside mentors, establishing competence through peer-reviewed contribution."
+      },
+      {
+        "id": "Article 5.4",
+        "title": "Эмпирическое родительское просвещение и совместная забота",
+        "text": "1. Rearing future generations requires specialized cognitive and somatic preparation. Bioregional communities establish Parenting Formation Commons rooted in attachment neurobiology, nervous system co-regulation, and the conscious deconstruction of intergenerational trauma scripts.\n2. The Alloparenting Practicum: As a universal civic prerequisite, young adults complete practical rotations in communal nurseries under experienced mentors, mastering pediatric first aid, sleep architecture, and somatic calming.\n3. The First 1,000 Days Scaffolding: Communal habitats embed postpartum caregivers directly within residential circles, guaranteeing twenty-four-hour relief, nourishment, and liberation from productive civic duties for new parents."
+      },
+      {
+        "id": "Article 5.5",
+        "title": "Эмпирическая нейромедицина и этиологическое психическое здоровье",
+        "text": "1. Symptom-checklist taxonomies and profit-driven chemical sedation are permanently abolished. Mental health is stewarded through empirical neuro-medicine, environmental de-pathologization, and etiology-based diagnostics.\n2. Nervous system distress is treated primarily as a biological response to environmental stress, resolved through communitarian security, autonomy, and nature access.\n3. Clinical Intervention: Persistent psychiatric suffering is investigated through non-invasive biomarkers: neuro-inflammatory screening, endocrine profiling, and gut-brain metabolic analysis, strictly excluding continuous surveillance telemetry. Therapies prioritize curative neuroplasticity, somatic trauma release, and supervised restorative modalities. Human neurodiversity is protected as an evolutionary asset, never blunted for conformity.\n4. Epistemic Protection: Therapeutic methods remain subject to continuous empirical falsifiability and open clinical audit under the Heretic’s Commons framework."
+      },
+      {
+        "id": "Article 5.6",
+        "title": "Иммунитет опекунов и управление по жребию",
+        "text": "1. Childcare, early education, elder accompaniment, and somatic nursing constitute the supreme productive foundations of society. Any citizen actively engaged in daily family or community caregiving fulfills their civic reciprocity obligations ipso jure, receiving full exemption from rotational physical maintenance shifts.\n2. Intimidation Safeguards and Diagnostic Standards: Contested caregiver declarations rely on objective dependent-to-caregiver demographic verification ratios and certified diagnostic etiologies. Disputes are adjudicated not by immediate neighbors, but by a blind-drawn, cross-watershed Sortition Panel of fifteen (15) citizens convened from outside the registrant residential cluster, insulating jurors from clan capture, kin gaming, and inter-basin friction. Structural revisions to labor multipliers or educational standards require a seventy-five percent (75%) qualified supermajority vote of the seated Bioregional Citizen Assembly (101 delegates)."
+      }
+    ]
+  },
+  {
+    "number": "VI",
+    "title": "РАСПРЕДЕЛЕННАЯ ИНФРАСТРУКТУРА, МИКРОСЕТИ И АНАЛОГОВАЯ СТОЙКОСТЬ",
+    "articles": [
+      {
+        "id": "Article 6.1",
+        "title": "Мандат автономности микросетей и автономная защита",
+        "text": "1. Every municipal habitat and bioregional node within Open Networked Earth (O.N.E.) must engineer and maintain physical infrastructure capable of complete islanded self-sufficiency.\n2. Thirty-Day Islanded Autonomy: In catastrophic macro-grid disruptions or external logistical severance, every node shall independently sustain Tier 1 life support—potable water filtration, domestic thermal regulation, medical refrigeration, and baseline nutritional preparation—for a mandatory minimum of thirty (30) consecutive days.\n3. Autonomic Protective Reflexes vs. Deliberative Allocation: Infrastructure control is bifurcated into Deliberative Allocation Logic and Autonomic Protective Reflexes. Sub-second stabilization—droop response, virtual inertia, overcurrent trips, and fluid transient mitigation (hydraulic accumulators, surge valves damping Joukowsky pressure spikes)—executes via deterministic analog circuitry or mechanical interlocks operating below one second. In water networks, gravity gradients are preserved via stepped break-pressure tanks and floating intake decanters; under emergency rationing, volumetric dispatch operates via batch-cycled timed head retention rather than steady-state aperture throttling, eliminating Darcy-Weisbach siphon breaks at high-elevation nodes. Autonomic loops cannot alter macro entitlements.\n4. Single-point systemic dependencies on external centralized cartels or fragile long-distance transmission grids are unconstitutional."
+      },
+      {
+        "id": "Article 6.2",
+        "title": "Распределенная модульная энергетика и термодинамика сетей",
+        "text": "1. Primary energy generation across all nodes is decentralized, modular, and grounded exclusively in renewable biophysical sources: distributed Photovoltaic (PV) arrays, micro-hydroelectric turbines, modular wind generators, and localized biomass digestion.\n2. Stationary electrical storage is restricted to non-toxic, long-duration, fire-safe architectures (e.g., Lithium Iron Phosphate [LFP] chemistry, sodium-ion cells, or mechanical gravity and flow reservoirs), eliminating reliance on toxic chemistry and scarce mineral monopolies.\n3. Power distribution architectures are engineered for minimal thermodynamic entropy, utilizing localized Direct Current (DC) microgrid buses for direct coupling between generation arrays, chemical storage banks, and high-draw industrial drives, alongside resilient, high-efficiency Alternating Current (AC) distribution where spatial distance and standardized machinery require it."
+      },
+      {
+        "id": "Article 6.3",
+        "title": "Общие блага открытого производства и универсальная ремонтопригодность",
+        "text": "1. Productive capacity and mechanical repair capabilities are distributed across municipal fabrication commons and neighborhood workshops.\n2. Every bioregional node maintains equipped workshops containing standardized digital fabrication and machine-tool arrays (e.g., Computer Numerical Control [CNC] mills, precision lathes, cutting tables, induction forges, and additive fabricators) dedicated to infrastructure repair. In islanded Black-Sky operations, additive systems are authorized to deploy parameterized runtime rheology toolpaths to accommodate viscosity variations in recycled polymer and scrap metal feedstocks, exempting physical feed-rate compensation from static compile bans while maintaining open hardware designs.\n3. Industrial automation systems and Programmable Logic Controllers (PLCs) execute transparent, open-hardware machine code. To prevent sensor spoofing and actuator fatigue, protective tripping requires triple-modular redundancy with two-of-three (2-of-3) plausibility voting across orthogonal physical domains (thermal, pressure, galvanic) utilizing non-identical sensor micro-architectures with hard analog cooldown hysteresis.\n4. Blueprints and schematics constitute universal public commons. Planned obsolescence, cryptographic vendor lock-in, and proprietary software encumbrances on mechanical tools and spare parts are legally void."
+      },
+      {
+        "id": "Article 6.4",
+        "title": "Распределенная телекоммуникационная сеть и мультиспектральные каналы",
+        "text": "1. Digital communications infrastructure is organized as a decentralized, resilient commons maintained directly by the population.\n2. Public networks operate through decentralized mesh architectures. To guarantee anti-fragility against electromagnetic interference, physical severance, or atmospheric degradation, nodes maintain multi-vector transmission redundancy (localized wireless mesh topologies, line-of-sight optical transceivers, directional microwave relays, sub-gigahertz telemetry, and buried quartz fiber waveguides).\n3. Atmospheric attenuation, radio-frequency denial, or optical scattering automatically triggers hardwired underground galvanic-pulse signaling pathways to maintain metabolic telemetry across inter-communal nodes.\n4. Network routing protocols are self-healing, encrypted end-to-end, and structurally immune to centralized packet inspection."
+      },
+      {
+        "id": "Article 6.5",
+        "title": "Протокол Black-Sky, механические блокировки и холодный запуск",
+        "text": "1. To ensure human survival against severe electromagnetic pulses, geomagnetic storms, and microelectronic collapse, all life-support networks incorporate non-electronic mechanical overrides under the Black-Sky Protocol.\n2. Cold-Start and Passive Synchrocheck Interlocks: Tier 1 recovery of electrical generation and life-support commons following total grid collapse shall be executable via human muscle-power, stored mechanical potential, or unassisted black-start prime movers, independent of microprocessors or external communications. To prevent catastrophic mechanical shearing or inverter destruction from human neuromuscular reaction time limits, closing onto energized alternating-current lines is physically governed by passive, non-programmable mechanical synchrocheck solenoids, analog dark-lamp permissives, or DC-decoupled bus couplings.\n3. Islanded Resynchronization Sequence: Reconnection of islanded microgrids to the regional backbone proceeds via zero-voltage dead-bus energization or self-synchronizing asynchronous direct-current interties, decoupling manual timing from electromagnetic phase alignment.\n4. Analog hydraulic regulators, gravity-fed aqueducts, and durable printed engineering archives shall be preserved and inspected at certified intervals."
+      },
+      {
+        "id": "Article 6.6",
+        "title": "Управление инфраструктурой, паритет и пороги решений",
+        "text": "1. Distributed networks are administered openly under sortition oversight in strict odd-number parity:\n   * Neighborhood utility oversight: governed by Neighborhood Sortition Councils comprising fifteen (15) citizens by a sixty percent (60%) qualified majority.\n   * Bioregional grid interties, aqueducts, and backbones: directed by Bioregional Citizen Assemblies comprising one hundred and one (101) delegates.\n2. Graduated Decision Thresholds:\n   * **75% Constitutional Supermajority:** Required to decommission critical life-support assets or transfer common infrastructure.\n   * **60% Qualified Majority:** Required to approve regional grid interconnections, water transfer treaties, or five-year infrastructural plans.\n   * **50%+1 Simple Majority:** Permitted solely for emergency load shedding, protective system decoupling, or immediate disaster repairs, carrying an automatic thirty (30) day sunset review."
+      }
+    ]
+  },
+  {
+    "number": "VII",
+    "title": "ЦЕЛОСТНОСТЬ ОТКРЫТОГО КОМПИЛЯТОРА И ДЕМОКРАТИЗАЦИЯ КОДА",
+    "articles": [
+      {
+        "id": "Article 7.1",
+        "title": "Аксиома несуверенного кода и детерминированные блокировки",
+        "text": "1. Software, algorithmic models, computational compilers, and automated systems within Open Networked Earth (O.N.E.) are non-sovereign administrative instruments, permanently subordinate to human conscience and democratic sortition assemblies.\n2. The delegation of legislative drafting, judicial sentencing, biophysical resource rationing, or coercive restraint to autonomous algorithms, neural models, or artificial agents is an absolute constitutional nullity.\n3. Code shall never act as law. Computational engines serve solely as open logistical mirrors executing human-mandated allocations.\n4. Deterministic Physical Interlocks vs. Autonomous Governance: Automated feedback loops embedded within localized machinery are strictly limited to direct, closed-loop physical asset protection (e.g., governor valves, breaker trips, thermal switches, anti-cavitation throttling) engineered with calibrated analog anti-hunting hysteresis and cycle-rate limiters to eliminate resonant actuator fatigue. Such mechanisms constitute deterministic engineering safeties, not sovereign rationing. They must operate on hardwired, mathematically verifiable logic devoid of heuristic learning weights. Protective action shall never curtail net delivery of Tier 1 survival goods, requiring instantaneous parallel actuation of passive gravity-fed bypass lines backed by minimum one-hundred-twenty (120) hour conditioned local physical reserves."
+      },
+      {
+        "id": "Article 7.2",
+        "title": "Абсолютный запрет проприетарного ПО в общественных системах",
+        "text": "1. The deployment or execution of closed-source, obfuscated, proprietary, or trade-secret software across public administration, infrastructure telemetry, manufacturing commons, microgrids, or communication backbones is permanently prohibited.\n2. All operating systems, compilers, cryptographic libraries, database structures, and firmware embedded within industrial automation controllers (e.g., Programmable Logic Controllers [PLCs]) or microprocessors must reside in the public domain, free of Intellectual Property (IP) encumbrances, software patents, and commercial licensing locks.\n3. Any legal instrument, contract, or digital rights lock attempting to re-impose proprietary software monopolies within the commons is legally null and void."
+      },
+      {
+        "id": "Article 7.3",
+        "title": "Бит-в-бит воспроизводимость и диверсифицированная двойная компиляция",
+        "text": "1. To permanently eliminate covert backdoors, compiler-level subversion, and hidden surveillance modules, every executable binary running on public life-support infrastructure must achieve deterministic, bit-for-bit binary reproducibility from verified, human-readable source code.\n2. Foundational kernels, cryptographic libraries, and industrial controller firmware must undergo deterministic diverse verification across independent open-source toolchains and heterogeneous microarchitectures (e.g., Diverse Double-Compilation [DDC]). DDC enforces compiler trust and semantic Abstract Syntax Tree (AST) equivalence across targets, rather than cross-Instruction Set Architecture (ISA) hash identity.\n3. Public repositories shall maintain decentralized build records. If binary non-reproducibility from public source trees is verified across independent builder attestations, the unverified distribution is barred; running systems deterministically execute an automated, bumpless safe-mode reversion to the preceding authenticated, immutable baseline ($B_0$)."
+      },
+      {
+        "id": "Article 7.4",
+        "title": "Пороговое разделение ключей, небиометрическая аутентификация",
+        "text": "1. No individual engineer, programming guild, bioregional node, or administrative council may hold unilateral administrative root keys or master cryptographic access over public commons networks.\n2. Root certificates, network configuration signing keys, and microgrid coordination tokens are permanently fragmented via cryptographic secret-sharing protocols (e.g., Threshold Multi-Party Computation [t-MPC]) into shares distributed among demographically stratified sortition assemblies across multiple watersheds.\n3. Separation of Reflexive Physics from Deliberative Governance: Deliberative sortition assemblies possess absolute sovereignty over macro-biophysical budgets, operational envelopes, and code deployments. However, the Precautionary Suspension Protocol shall not mechanically sever hardwired sub-second physical and thermodynamic protective trips designed exclusively to prevent physical destruction of apparatus. Protective trip events that isolate physical commons trigger immediate sortition notice. To prevent cognitive exhaustion of sortition jurors and t-MPC networks during out-of-band acoustic or electromagnetic sensor spoofing, recurring trip petitions are batched for consolidated demarchic review within twenty-four (24) hours while passive physical bypasses sustain core Tier 1 flows.\n4. Civic participation, petitioning, and sortition registry access rely on non-biometric, cryptographic proof of unique personhood (e.g., Zero-Knowledge Proof-of-Personhood [ZK-PoP]), verifying living human individuality without harvesting biometric traits, facial imagery, or personal identity data."
+      },
+      {
+        "id": "Article 7.5",
+        "title": "Гражданский мандат деэзотеризации и аудит общественных алгоритмов",
+        "text": "1. To prevent the emergence of an unelected software priesthood, all public algorithmic specifications, allocation rules, and compiler toolchains must maintain comprehensive, human-readable documentation.\n2. Technical guilds bear the mandatory obligation to provide functional plain-language architectural summaries, open-source test suites, and interactive sandboxes demonstrating that algorithms conform strictly to constitutional baselines.\n3. Nullity of Esoteric Obscurity: Any algorithmic distribution formula, allocation routine, or governance protocol that is deliberately obfuscated, mathematically concealed, or proven by independent adversarial auditors to resist functional comprehension by ordinary citizens is constitutionally void and barred from execution on common infrastructure."
+      },
+      {
+        "id": "Article 7.6",
+        "title": "Непрерывные состязательные симуляции, паритет и пороги решений",
+        "text": "1. Deliberative assemblies shall permanently endow independent, public red-team bounties with dedicated computational exergy and material support, conducting continuous adversarial penetration testing to discover security vulnerabilities, covert backdoors, and centralization vectors.\n2. Digital commons oversight is administered in strict odd-number parity:\n   * Neighborhood interface oversight: governed by Neighborhood Sortition Councils comprising fifteen (15) citizens.\n   * Bioregional code repositories and industrial firmware standards: directed by Bioregional Citizen Assemblies comprising one hundred and one (101) delegates.\n3. Graduated Decision Thresholds:\n   * **75% Constitutional Supermajority:** Required to deprecate foundational cryptographic standards or alter core open-source compilation invariants.\n   * **60% Qualified Majority:** Required for bioregional software releases and major infrastructural code adoptions.\n   * **50%+1 Simple Majority:** Permitted solely for emergency cryptographic key rotations, rapid software patch deployments, or defensive network isolations during active cyber-intrusions, subject to an automatic thirty (30) day sunset review."
+      }
+    ]
+  },
+  {
+    "number": "VIII",
+    "title": "ОБЩЕСТВЕННАЯ БЕЗОПАСНОСТЬ, ОБОРОНИТЕЛЬНОЕ СДЕРЖИВАНИЕ И ВОССТАНОВИТЕЛЬНОЕ ПРАВОСУДИЕ",
+    "articles": [
+      {
+        "id": "Article 8.1",
+        "title": "Упразднение милитаризованной полиции, гильдии мира и сдерживание",
+        "text": "1. Militarized policing is permanently abolished across Open Networked Earth (O.N.E.). Stockpiling firearms, munitions, or chemical agents by civic personnel is unconstitutional.\n2. Civic Peace Guilds and Infrastructure Defense Cohorts: Public peace is stewarded by unarmed Civic Peace Guilds chosen by sortition, trained in de-escalation. If armed infiltration or sabotage of Class-A metabolic conduits occurs, sortition-selected Defense Cohorts deploy non-ballistic directed-energy interdiction within compromised conduits, expiring upon containment. Captured infiltrators are remanded to non-punitive stabilization suites under Article 8.4.\n3. Universal Weapon Ban: Designing, manufacturing, or compiling lethal weaponry and combat robotics is categorically prohibited to humans and machines alike.\n4. Graduated Escalatory Defense Framework: Defensive kinetic and electronic counter-measures sealed in subterranean redoubts operate under a strict tri-tier threshold:\n   * *Tier 1 (Sub-Threshold Interception):* Automated non-kinetic electronic soft-kill and directed RF disruption against uncrewed or stand-off threats targeting Class-A infrastructure, authorized by a sixty percent (60%) localized sortition quorum;\n   * *Tier 2 (Active Counter-Battery Point Defense):* Defensive hard-kill point interception upon verified kinetic impact on life support, authorized by a seventy percent (70%) sortition quorum;\n   * *Tier 3 (Black-Sky Autonomous Area Denial):* Full autonomous point defense against hypersonic or coordinated saturation sieges, triggered upon multi-sensor confirmation verified by an eighty percent (80%) regional sortition consensus, or automatically if communications are severed by total physical denial.\n   Defensive systems are strictly reactionary; to extinguish persistent sieges, proportional counter-battery suppression against verified firing platforms—including defilade targets engaged via Trajectory-Constrained Counter-Defilade Systems (TCCDS) with immutable abort limits—is authorized without territorial annexation. Defensive point-escort covers inter-basin mutual aid convoys (Article 10.4.4). Under subterranean galvanic isolation, cross-watershed forensic proofs (Article 8.4.3) are attested via Succinct Deterministic Verification Proofs (SDVPs) under 1,024 bits. Upon planetary unification, platforms are dismantled under Swords into Plowshares (*Gladii in vomeres*)."
+      },
+      {
+        "id": "Article 8.2",
+        "title": "Пространственная безопасность среды и неинвазивная телеметрия",
+        "text": "1. Public safety is embedded in spatial architecture: daylight sightlines, elimination of entrapment zones, and physical machinery interlocks triggering kinetic shutdowns upon human approach.\n2. Ambient telemetry is strictly ephemeral: edge sensors process acoustics solely to detect physical impacts or structural fractures, purging non-trauma data every five hundred (500) milliseconds. Public sensors shall never record speech nor compile biometric registries."
+      },
+      {
+        "id": "Article 8.3",
+        "title": "Хартия суверенитета потерпевших и приоритет восстановления",
+        "text": "1. Justice centers upon the autonomy, recovery, and dignity of the harmed party. Victims hold an inalienable right to decline restorative dialogue without loss of care.\n2. Spatial Non-Proximity: In physical violence or severe boundary violations, the burden of relocation falls upon the transgressor. The harmed person retains undisturbed tenure; the transgressor is reassigned outside the transit radius.\n3. Somatic Restitution: The community guarantees immediate trauma therapy and material restitution to the harmed party prior to allocating resources toward transgressor rehabilitation."
+      },
+      {
+        "id": "Article 8.4",
+        "title": "Трехуровневая восстановительная лестница и опора на факты",
+        "text": "Harms are resolved sequentially through Fact-Centric Inquiry (*Inquisitio Facti*), barring rhetorical oratory:\n1. **Stage 1 (Direct Sitting):** Facilitated dialogue before an unarmed mediator to negotiate voluntary restitution.\n2. **Stage 2 (Community Restorative Circle):** Facilitated dialogue before peers and witnesses, culminating in binding covenants.\n3. **Stage 3 (Citizen Arbitration Tribunal):** Binding adjudication by fifteen (15) citizens chosen by sortition from adjacent districts. Jurisdiction is restricted to verifiable physical harms—assault, somatic violation, enclosure, or ecological poisoning. Forensic evidence must undergo mandatory double-blind re-examination by a facility drawn by lot from a non-contiguous watershed.\n4. Usufruct Disputes: Revocation of usufruct or execution of Metabolic Decoupling (Articles 2.3.5, 5.2.2) falls under the exclusive jurisdiction of the Bioregional Usufruct Tribunal (15 sortition jurors from unrelated wards) ensuring strict structural impartiality."
+      },
+      {
+        "id": "Article 8.5",
+        "title": "Custodia Civilis Territorialis и запрет тюремного принуждения",
+        "text": "1. Incarceration, punitive cages, solitary confinement, tracking shackles, and forced kinetic displacements are permanently abolished. Public enforcement operates solely upon resource flows, civic privileges, physical perimeter redesign, metabolic clamping (Article 2.3.5), and spatial routing, never upon somatic integrity.\n2. Custodia Civilis Territorialis: Where severe predatory violence resists stabilization, restraint occurs strictly as *Custodia Civilis Territorialis* within comfortable residential suites with open gardens, private rooms, nutritious meals, and medical care. Sensory deprivation and punitive isolation are banned. If hostile external sieges sever transit bypass corridors, cantons activate demilitarized humanitarian transfers and decentralized chemical precursor reserves (e.g., for water filtration membranes) to eliminate metabolic drain on the thirty-day baseline survival reserve.\n3. Procedural Guarantees: Protective detention requires sortition confirmation (15 citizens) within seventy-two (72) hours, assisted by an Invariants Guardian (*Custos Jurium*). Custodial status requires mandatory biannual review by a new sortition jury (15 citizens) under a sixty percent (60%) qualified majority."
+      },
+      {
+        "id": "Article 8.6",
+        "title": "Судебный ассамблейный паритет и пороги решений",
+        "text": "1. Adjudications maintain strict odd parity: Local Panels comprise three (3) citizens; Neighborhood Tribunals comprise fifteen (15) citizens; Bioregional Chambers comprise one hundred and one (101) delegates.\n2. Graduated Adjudicative Thresholds:\n   * **75% Constitutional Supermajority:** Required to amend procedural protections or modify fundamental rights definitions.\n   * **60% Qualified Majority:** Required for the issuance or renewal of a Custodia Civilis Territorialis decree.\n   * **50%+1 Simple Majority:** Permitted solely for immediate seventy-two-hour protective detention following active violence in flagrante delicto.\n3. The Right of Peaceful Exit: Every person retains the inalienable right to depart the bioregion unhindered with personal possessions, free from pursuit."
+      }
+    ]
+  },
+  {
+    "number": "IX",
+    "title": "ПЕРЕХОДНЫЙ МОСТ: ОТ КАПИТАЛИСТИЧЕСКОГО ОГОРАЖИВАНИЯ К ОБЩИНАМ",
+    "articles": [
+      {
+        "id": "Article 9.1",
+        "title": "Двухканальное соглашение и параллельные системы жизнеобеспечения",
+        "text": "1. The transition from capital enclosure to planetary commons proceeds via the Dual-Track Handshake.\n2. Rather than violent rupture, autonomous nodes deploy open infrastructure, Community Land Trusts (CLTs), and mutual aid (Track B) to construct resilient life support while the speculative market (Track A) unravels under ecological and debt crises.\n3. As legacy systems fail, populations migrate into the commons, which expands by offering verified life support outside commodity circuits."
+      },
+      {
+        "id": "Article 9.2",
+        "title": "Защитные правовые экраны, приобретательная давность и блокировка активов",
+        "text": "1. To protect emerging commons enclaves against corporate predatory lawfare and speculative foreclosure within legacy jurisdictions, commons assets are anchored in asset-locked trusts perpetually insulated from commercial sale, mortgage, or financial division.\n2. Abandoned industrial brownfields, neglected farmland, and vacant residential properties within declining jurisdictions are reclaimed into public usufruct via adverse possession, common heritage easements, and emergency public health declarations.\n3. Corporate patents, trade secrets, and monopolistic Intellectual Property (IP) claims over essential medicines, renewable energy schematics, and mechanical tools are declared public usufruct and immediately published to open-source hardware repositories."
+      },
+      {
+        "id": "Article 9.3",
+        "title": "Интерфейс внешней торговли (ETI) и буфер демонетизации",
+        "text": "1. To procure essential non-local industrial commodities, specialized microelectronics, and advanced medicines from legacy jurisdictions without re-introducing monetary inequality internally, bioregional federations operate an External Trade Interface (ETI).\n2. The internal metabolism of Open Networked Earth (O.N.E.) maintains absolute demonetization: zero fiat currency, speculative debt, or market-based price mechanisms operate within the commons.\n3. Outward commercial interactions are quarantined within the ETI, prioritizing direct bilateral barter and physical bills-of-lading for certified priority precursors (rare elements, medical compounds, tooling). Outbound maritime hulls operate under the sovereign flag of O.N.E. registered with genuine-link usufruct credentials under international law. Consignments carry Cryptographic Usufruct Provenance Certificates (CUPC) attesting to zero debt, non-liability under legacy liens, and direct communal origin, shielding cargoes from foreign admiralty in rem arrests. Any legacy fiat received cannot be accumulated, hypothecated, or lent at interest; to eliminate external front-running, fiat holdings are liquidated within an unpredictable, entropy-dispersed temporal window executed via decentralized Time-Weighted Average Clearing (TWAC) governed by local cryptographic entropy beacons."
+      },
+      {
+        "id": "Article 9.4",
+        "title": "Асимметричное сдерживание, награды за переход и отказ в инфраструктуре",
+        "text": "1. O.N.E. rejects the formation of expeditionary standing armies, offensive conscription, and mercenary forces. Territorial integrity against external armed aggression, corporate syndicates, or warlord predation is maintained through the Doctrine of Total Asymmetric Dissuasion: decentralized civil resistance, passive spatial fortification, logistical denial, and active cognitive subversion.\n2. Strategic Dispersal and Hardened Survival: Critical food inventories, energy banks, and medical reserves are physically dispersed into reinforced, subterranean modular caches across all micro-watersheds, permanently eliminating single-point targets for aerial bombardment, drone interdiction, or naval blockades.\n3. The Defection Bounty and Civil Asylum Protocol: Against hostile armed personnel, the commons deploys continuous asymmetrical defection incentives. Any soldier, officer, or contractor who lays down functional arms, refuses offensive orders, or sabotages hostile operations is guaranteed immediate political asylum, lifelong Tier 1 biological security, unencumbered dwelling tenure, and total legal cancellation of external debt obligations for themselves and their family.\n4. The Swords into Plowshares (*Gladii in vomeres*) Protocol: All surrendered, captured, or decommissioned armaments, armored chassis, and munitions within the territory are permanently dismantled and smelted in public foundries, converting ballistic metals into wind turbine shafts, agricultural implements, and structural building frames.\n5. Non-Lethal Denial and Cryptographic Poison Pills: Operating in defensive synergy with the subterranean kinetic interdiction perimeters of Article 8.1, critical microgrids, manufacturing arrays, and digital repositories maintain an extreme backstop defended by distributed threshold cryptographic keys (e.g., via Threshold Multi-Party Computation [t-MPC]). In the event of armed physical occupation breaching outer deterrents, sortition authorities execute a distributed key sever that permanently deactivates high-tier industrial and computational functionality without cutting off basic domestic water and heating, depriving the aggressor of all logistical and financial value."
+      },
+      {
+        "id": "Article 9.5",
+        "title": "Всеобщий юбилей долгов и преобразование активов банкротов",
+        "text": "1. Defaulted industrial production centers, bankrupt distribution hubs, and abandoned utility grids are systematically expropriated into municipal commons trusts.\n2. All compound-interest debts, predatory residential mortgages, and financial liens held by legacy institutions against personal dwellings and life-support infrastructure are abolished through comprehensive, unencumbered Debt Jubilees.\n3. Reclaimed manufacturing plants are re-engineered with open-architecture industrial automation systems (e.g., open-hardware Programmable Logic Controllers [PLCs]) and modular machine tools for circular metallurgical recycling, agricultural machinery repair, and localized civic utility."
+      },
+      {
+        "id": "Article 9.6",
+        "title": "Управление переходным периодом, паритет и пороги решений",
+        "text": "1. All legal trusts, external trade operations, and phase transitions are governed transparently by sortition bodies in strict odd-number parity: Local Mediation Panels (3), Neighborhood Councils (15), and Bioregional Assemblies (101).\n2. Graduated Decision Thresholds:\n   * **75% Constitutional Supermajority:** Required to enact universal Debt Jubilees, authorize involuntary industrial asset conversions, or ratify formal phase-gate advancements.\n   * **60% Qualified Majority:** Required for annual ETI trade budgets and regional mutual-aid compacts with adjacent transitional nodes.\n   * **50%+1 Simple Majority:** Permitted solely for defensive non-lethal interdiction and rapid supply adjustments during acute external embargos, subject to mandatory thirty (30) day legislative review."
+      }
+    ]
+  },
+  {
+    "number": "X",
+    "title": "БИОРЕГИОНАЛЬНАЯ ФЕДЕРАЦИЯ БАССЕЙНОВ И ПЛАНЕТАРНЫЙ ПАКТ",
+    "articles": [
+      {
+        "id": "Article 10.1",
+        "title": "Речной бассейн как первичная единица и биорегиональная субсидиарность",
+        "text": "1. Westphalian frontiers, colonial partitions, and sovereign territorial enclosures are permanently abolished across Open Networked Earth (O.N.E.).\n2. The foundational political unit of human organization is the natural Bioregional Watershed, delineated by hydrological catchment basins, mountain ranges, aquifer flows, and coastal interfaces.\n3. Governance adheres strictly to the principle of Bioregional Subsidiarity: every civic, technological, and agricultural decision is resolved at the lowest ecological scale possible—from the neighborhood micro-basin to the valley council.\n4. Higher-tier assemblies possess zero jurisdiction to override local autonomy, save for actions that export physical pollution, breach inter-basin aquifer stability, or violate invariant human rights."
+      },
+      {
+        "id": "Article 10.2",
+        "title": "Экологическая правосубъектность и защита видов (Jus Biosphaerae)",
+        "text": "1. Major river systems, ancient forests, coastal wetlands, and subterranean aquifers are recognized as Juridical Persons (*Personae Biologicae*) possessing the inalienable right to exist, flow, regenerate, and maintain thermodynamic balance under *Jus Biosphaerae*.\n2. Natural biomes cannot be owned, leased, severed, or commodified.\n3. In all assemblies, the rights of non-human biomes and future generations are defended by Guardians of the Biosphere (*Curatores Biosphaerae*), composed of sortition-selected citizens sitting alongside rotating field naturalists. Guardians hold standing to initiate injunctions and demand assembly reviews against extractive projects threatening biospheric continuity."
+      },
+      {
+        "id": "Article 10.3",
+        "title": "Физическая взаимность между бассейнами и антикартельные пакты",
+        "text": "1. Inter-bioregional trade proceeds through bilateral and multilateral physical resource compacts, operating without financial speculation, debt instruments, or currency exchange.\n2. Basins endowed with mineral deposits, seasonal solar abundance, or hydrological surpluses exchange physical exergy, circular refined metals, and specialized equipment directly on open thermodynamic ledgers.\n3. Hoarding critical life-support resources, forming extractive cartels, or imposing upstream hydrological cutoffs triggers automatic Systemic Decoupling (*Disiunctio Reticularis*): immediate suspension of inter-basin optical backbones, federated electrical interties, and transit access to rare materials and advanced medical buffers, enforcing biophysical compliance through non-violent material isolation. All logistics routing and allocations remain auditable across open mesh telemetry."
+      },
+      {
+        "id": "Article 10.4",
+        "title": "Термодинамическая свобода передвижения и пределы емкости среды",
+        "text": "1. Every human being holds an inalienable right to travel, visit, and seek refuge across the planetary commons. Passports, border fences, visa checkpoints, and armed border patrols are permanently barred under constitutional law.\n2. To safeguard local biomes from thermodynamic overshoot, long-term residential integration is guided by transparent Ecological Carrying Capacity (ECC) telemetry:\n   * **Green Status (Equilibrium):** The basin absorbs incoming residents freely, granting immediate residential usufruct and civic assembly enrollment.\n   * **Amber Status (Dynamic Buffer):** The basin approaches seasonal carrying thresholds; permanent residential allocation prioritizes family reunification, specialized labor requests, and voluntary infrastructure expansion.\n   * **Red Status (Carrying Ceiling):** The basin has reached physical thermodynamic limits; permanent residential tenure creation is paused until regional carrying capacity expands.\n3. Inviolable Sanctuary Guarantee: Under no circumstances shall any human being face armed pushback, physical interdiction, or involuntary deportation. Even under Red Status, all travelers retain unconditional access to hospitality pavilions, clean water, wholesome food, emergency medical care, and safe transit.\n4. Mandatory Federal Rebalancing and Transit Bypass for Red-Status Basins: When a watershed is forced into emergency Red Status due to sudden climate shocks or catastrophic refugee inflows, adjacent Green and Amber basins incur a binding constitutional obligation to activate mutual-aid logistics corridors, absorbing arrival flows and deploying modular desalination, portable microgrids, and mobile vertical medical hubs to relieve local carrying capacity. Where physical arrivals exceed the instantaneous thermodynamic life-support ceiling of a Red-Status basin’s hospitality infrastructure, the Continental Governance Chamber triggers the Immediate Transit Bypass Protocol: high-speed rail and maritime transit corridors are placed under automated priority dispatch to transport arriving populations across the saturated zone into designated Reception Nodes within contiguous Green and Amber watersheds, fully financed as a federal obligation."
+      },
+      {
+        "id": "Article 10.5",
+        "title": "Опека над планетарным достоянием и атмосферные инварианты",
+        "text": "1. The global atmosphere, the oceanic commons, the cryosphere, and the electromagnetic spectrum constitute the indivisible planetary life-support heritage of all living organisms.\n2. Unilateral geoengineering interventions, persistent atmospheric aerosol spraying, and large-scale oceanic chemical seeding are strictly prohibited.\n3. Planetary earth-system stabilization programs may only be authorized to avert acute, multi-species catastrophic tipping points, requiring the affirmative consent of every affected watershed and a seventy-five percent (75%) qualified supermajority vote of the Global Commons Assembly."
+      },
+      {
+        "id": "Article 10.6",
+        "title": "Федеративная архитектура по жребию, нечетный паритет и Всемирный пакт",
+        "text": "1. The federated structure of O.N.E. links local catchments to the planetary whole through layered sortition assemblies convened in strict odd-number parity:\n   * Local Mediation Panels: three (3) citizens;\n   * Neighborhood Sortition Councils: fifteen (15) citizens;\n   * Bioregional Citizen Assemblies: one hundred and one (101) delegates;\n   * Continental Governance Chambers: three hundred and one (301) citizens;\n   * Global Commons Assembly: one thousand and one (1,001) citizens.\n2. Decision Thresholds:\n   * **75% Constitutional Supermajority:** Required to alter planetary biophysical boundaries, admit new federated bioregions, or enact emergency Earth-system stabilization protocols.\n   * **60% Qualified Majority:** Required to ratify multilateral inter-basin resource corridors and long-term continental infrastructure compacts.\n   * **50%+1 Simple Majority:** Permitted solely for emergency disaster relief mobilization and seasonal transit schedules, subject to a thirty (30) day mandatory review.\n3. Through this Universal Covenant, all federated bioregions pledge mutual solidarity, perpetual peace, and common stewardship for the flourishing of Earth and all its descendants."
+      }
+    ]
+  },
+  {
+    "number": "XI",
+    "title": "НЕБЕСНЫЕ ОБЩИННЫЕ РЕСУРСЫ И МЕЖПЛАНЕТНАЯ ФЕДЕРАЦИЯ (OPEN NETWORKED SOL — O.N.S.)",
+    "articles": [
+      {
+        "id": "Article 11.1",
+        "title": "Солнечные общинные ресурсы и отмена небесного владения (Patrimonium Solis)",
+        "full_title": "Article 11.1 — Солнечные общинные ресурсы и отмена небесного владения (Patrimonium Solis)",
+        "text": "1. Космическое пространство, небесные тела, астероиды, точки Лагранжа (L1–L5) и орбиты составляют неделимое достояние человечества (Patrimonium Solis).\n2. Национальная аннексия, корпоративный суверенитет и спекуляция орбитальными позициями запрещены в Open Networked Sol (O.N.S.).\n3. Добытые ресурсы переходят в активный узуфрукт с обязательной публикацией технологий в Открытых Коммунах."
+      },
+      {
+        "id": "Article 11.2",
+        "title": "Инженерные метаболические оболочки и замкнутая несущая способность",
+        "full_title": "Article 11.2 — Инженерные метаболические оболочки и замкнутая несущая способность",
+        "text": "1. Базовой ячейкой является Замкнутая экологическая система жизнеобеспечения (CELSS).\n2. Баланс летучих веществ (H2O, N2, C, P) образует абсолютный физический предел.\n3. Несущая способность рассчитывается по эффективности рециркуляции и рассеиванию тепла радиаторами (Вт/м²)."
+      },
+      {
+        "id": "Article 11.3",
+        "title": "Инвариантный атмосферный суверенитет и защита от деспотизма",
+        "full_title": "Article 11.3 — Инвариантный атмосферный суверенитет и защита от деспотизма",
+        "text": "1. Воздушная смесь (21% O2, 78% N2) и вода — неотчуждаемые права Уровня 1.\n2. Запрещена монетизация воздуха или использование систем жизнеобеспечения для принуждения (Ст. 1.2).\n3. Системы контроля должны иметь аналоговые механические клапаны с ручным доступом.\n4. Метаболическое разделение: Правосудие (Ст. 5.2) не вправе отключать жизнеобеспечение или изгонять в вакуум."
+      },
+      {
+        "id": "Article 11.4",
+        "title": "Термодинамическая астродинамика: балансы массы, эксергии и скорости",
+        "full_title": "Article 11.4 — Термодинамическая астродинамика: балансы массы, эксергии и скорости",
+        "text": "1. Учет ведется по вектору: x = [E_эксергия (кВт·ч), m_сухая (кг), V_летучие (л), Δv (км/с)].\n2. Рабочее тело и характеристическая скорость (Δv) признаются ограниченными общинными ресурсами.\n3. Вакуумные плавильни и солнечные концентраторы составляют неделимый фонд Уровня 2-A."
+      },
+      {
+        "id": "Article 11.5",
+        "title": "Субсидиарность светового конуса и асинхронная демархия",
+        "full_title": "Article 11.5 — Субсидиарность светового конуса и асинхронная демархия",
+        "text": "1. Вследствие задержек радиосигнала действует Субсидиарность светового конуса: полная локальная автономия.\n2. Нечетные советы: CELSS (15–101), Планетарные палаты (301), Ассамблея Солнечных Коммун (1001) с 90-дневными эпохами."
+      },
+      {
+        "id": "Article 11.6",
+        "title": "Кинетическое ненападение, планетарная защита и мечи на орала",
+        "full_title": "Article 11.6 — Кинетическое ненападение, планетарная защита и мечи на орала",
+        "text": "1. Направление кинетических масс на поселения квалифицируется как массовая агрессия (Ст. 8.1).\n2. Коррекции орбит требуют византийски-отказоустойчивого (BFT) радарного контроля.\n3. Списанные двигатели и корпуса переплавляются в радиаторы и защитные водяные экраны (Gladii in vomeres)."
+      }
+    ]
+  }
+]

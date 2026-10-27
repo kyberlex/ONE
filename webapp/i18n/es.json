@@ -1,0 +1,528 @@
+{
+  "lang_name": "Español",
+  "nav": {
+    "overview": "Resumen",
+    "constitution": "Constitución",
+    "roadmap": "Hoja de Ruta",
+    "challenge": "Arena Epistémica",
+    "thrillers": "Novelas",
+    "simulator": "🎮 Living Game ↗",
+    "stewards": "Co-Stewards",
+    "benchmark": "AI Benchmark"
+  },
+  "hero": {
+    "tag": "El Plan Abierto para una Civilización Post-Labor",
+    "title_part1": "Cuando las máquinas hacen el trabajo,",
+    "title_part2": "la humanidad hereda la Tierra.",
+    "subtitle": "La Inteligencia Artificial y la robótica eliminan el trabajo asalariado para siempre. En lugar de caer en el tecno-feudalismo corporativo, <strong>Open Networked Earth (O.N.E.)</strong> convierte la automatización en emancipación humana: alimento, vivienda, energía y sanidad garantizados para todos — gobernados por jurados ciudadanos por sorteo, no por políticos.",
+    "btn_primer": "Guía Rápida (3 min)",
+    "btn_constitution": "Explorar Constitución",
+    "btn_novels": "Leer Novelas (Ebooks gratis)",
+    "btn_simulator": "Jugar O-ASIS MMO ↗",
+    "btn_discover": "Discover O.N.E. →",
+    "btn_stewards": "Build (Co-Steward)"
+  },
+  "features": {
+    "survival_title": "Supervivencia Universal",
+    "survival_desc": "Comida, techo, salud y energía como derechos incondicionales de nacimiento",
+    "housing_title": "Hogares Sin Alquiler",
+    "housing_desc": "Tenencia protegida en usufructo; cero desahucios especulativos o rentismo",
+    "sortition_title": "Democracia por Sorteo",
+    "sortition_desc": "Ciudadanos comunes elegidos por sorteo estadístico; cero políticos",
+    "commons_title": "Abundancia Mecánica",
+    "commons_desc": "Tecnología autónoma y microrredes solares como patrimonio común público"
+  },
+  "gateway": {
+    "tag": "Explorar O.N.E.",
+    "heading": "Cuatro Formas de Empezar",
+    "step1_tag": "Paso 1 • Intuición",
+    "step1_title": "Comprender",
+    "step1_desc": "Un desglose visual de 3 minutos sobre el fracaso de capitalismo y comunismo, y cómo O.N.E. coordina sin dinero ni políticos.",
+    "step1_link": "Abrir Resumen →",
+    "step2_tag": "Paso 2 • La Arquitectura",
+    "step2_title": "Inspeccionar",
+    "step2_desc": "Explore los 66 artículos de derecho termodinámico no carcelario: asambleas por sorteo, tenencia en usufructo y justicia restaurativa.",
+    "step2_link": "Buscar en Constitución →",
+    "step3_tag": "Paso 3 • La Prueba",
+    "step3_title": "Desafiar",
+    "step3_desc": "Ponga a prueba a nuestra IA con sus objeciones más duras: \"¿Y si nadie trabaja?\", \"¿Quién paga?\", \"¿Se puede manipular el sorteo?\"",
+    "step3_link": "Entrar a la Arena →",
+    "step4_tag": "Paso 4 • El Corazón",
+    "step4_title": "Experimentar",
+    "step4_desc": "La saga thriller de alto voltaje: personas comunes defendiendo los nuevos bienes comunes en Detroit, los Alpes y Ginebra.",
+    "step4_link": "Ver Mapa y Ebooks →"
+  },
+  "synoptic": {
+    "title": "Cómo Funciona Open Networked Earth",
+    "subtitle": "Una guía clara sobre la caída de las viejas reglas económicas y qué sustituye al dinero y a los políticos en la transición post-labor.",
+    "banner_tag": "Bienes Comunes Termodinámicos en Acción",
+    "banner_title": "Abundancia Sin Explotación",
+    "banner_desc": "Arquitectura solar limpia, robots agrícolas autónomos y huertos de regeneración comunitaria que liberan a la humanidad del salario.",
+    "tab_postwork": "⚡ 1. El Giro Post-Labor",
+    "tab_failures": "🏛️ 2. El Fracaso del Pasado",
+    "tab_pillars": "🛡️ 3. Los 4 Pilares",
+    "tab_roadmap": "🌱 4. La Hoja de Ruta"
+  },
+  "primer_content": {
+    "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    1. La Inminente Realidad Post-Labor: Por qué la Automatización lo Cambia Todo\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    Durante milenios, la civilización humana funcionó bajo una ley de hierro: <em>«Quien no trabaja, no come».</em>\n    La robótica humanoide, la maquinaria autónoma y la inteligencia artificial generativa rompen esta ecuación para siempre. Cuando las máquinas asumen la agricultura, la construcción, el transporte, la generación energética y la sanidad a coste marginal prácticamente nulo, la supervivencia humana debe desvincularse del empleo asalariado.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ El Escenario Distópico por Defecto: Tecno-Feudalismo</h4>\n      <p>Bajo las reglas del mercado actual, los monopolios tecnológicos se adueñan de toda la fuerza laboral automatizada. Miles de millones de personas son declaradas «inempleables», perdiendo sus ingresos y hundiéndose en la precariedad mientras la riqueza se acumula en un puñado de oligarcas corporativos.</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 El Modelo O.N.E.: Emancipación Mecánica</h4>\n      <p>El poder productivo de la automatización se proclama patrimonio común de toda la humanidad. El trabajo de las máquinas libera a los seres humanos de la fatiga, la miseria y la servidumbre salarial, convirtiendo el alimento, la vivienda y la energía en derechos de nacimiento incondicionales.</p>\n    </div>\n  </div>\n</div>",
+    "failures": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    2. Por qué los Modelos de Civilización Previos Fracasaron\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:20px;\">\n    A lo largo de la historia, la humanidad experimentó con cuatro sistemas operativos de convivencia. Ninguno logró garantizar una paz duradera, equidad o equilibrio ecológico:\n  </p>\n  <div class=\"model-comparison\">\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">1. Teocracia Religiosa</div>\n      <div class=\"model-status red\">Fracasada</div>\n      <div style=\"color:var(--text-muted);\">Guerras santas, dogmatismo inquisitorial y jerarquías eclesiásticas gobernando mediante el miedo y la culpa sobrenatural.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">2. Feudalismo</div>\n      <div class=\"model-status red\">Fracasado</div>\n      <div style=\"color:var(--text-muted);\">Monarquías hereditarias dueñas de la tierra por «derecho divino», sometiendo a las poblaciones a la servidumbre mediante la espada.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">3. Comunismo de Estado</div>\n      <div class=\"model-status red\">Fracasado</div>\n      <div style=\"color:var(--text-muted);\">Los terratenientes privados fueron sustituidos por la burocracia del partido, la parálisis de la planificación central y el terror penal.</div>\n    </div>\n    <div class=\"model-box failed\">\n      <div class=\"model-name\">4. Capitalismo Financiero</div>\n      <div class=\"model-status red\">Fracasado</div>\n      <div style=\"color:var(--text-muted);\">Interés compuesto, deuda exponencial, escasez artificial de bienes vitales y un ecocidio planetario destructivo.</div>\n    </div>\n  </div>\n  <div class=\"primer-feature-card\" style=\"margin-top:20px; border-color:rgba(16, 185, 129, 0.4); background:rgba(16, 185, 129, 0.06);\">\n    <h4 style=\"color:var(--accent-emerald);\">✨ La Quinta Vía: Open Networked Earth (O.N.E.)</h4>\n    <p style=\"color:var(--text-secondary);\">Ni explotación corporativa ni tiranía estatal: custodia en usufructo sin renta sobre la tierra, asambleas por sorteo estadístico sin políticos profesionales y subsistencia incondicional sin dinero fiduciario.</p>\n  </div>\n</div>",
+    "pillars": "<div class=\"primer-tab-pane\">\n  <div style=\"display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;\">\n    <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin:0;\">\n      3. Los Cuatro Pilares Constitucionales de O.N.E.\n    </h3>\n    <a href=\"#constitution\" class=\"btn btn-secondary\" style=\"display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; padding:8px 16px;\">\n      <span>📜 Ir a la Constitución</span>\n      <span>→</span>\n    </a>\n  </div>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4>⚡ 1. El Suelo Vital de Subsistencia (Sociedad Sin Dinero)</h4>\n      <p>Toda persona nacida en la Tierra tiene el derecho inalienable y vitalicio al agua pura, nutrición sana, vivienda digna, salud integral y energía limpia. La supervivencia biológica jamás se somete a negociación comercial.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🏡 2. Propiedad como Custodia en Usufructo</h4>\n      <p>Los bienes de uso personal (ropa, herramientas, libros) están protegidos permanentemente. Las viviendas familiares se disfrutan en usufructo vitalicio. La especulación inmobiliaria, los alquileres lucrativos y los desahucios quedan estrictamente prohibidos.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🎲 3. Democracia por Sorteo Estadístico (Sortición)</h4>\n      <p>Las elecciones alimentan la compra de voluntades por élites económicas y la demagogia. Las decisiones públicas se encomiendan a asambleas sorteadas: ciudadanos corrientes como en un jurado popular, asistidos por paneles de expertos independientes.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4>🌿 4. Límites Termodinámicos de la Exergía</h4>\n      <p>El crecimiento exponencial infinito en un planeta finito es un suicidio matemático. La contabilidad de la economía real se mide directamente en magnitudes físicas (kilovatios-hora, litros de agua, regeneración del suelo), no en deuda monetaria ficticia.</p>\n    </div>\n  </div>\n</div>",
+    "roadmap": "<div class=\"primer-tab-pane\">\n  <div style=\"display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:12px;\">\n    <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin:0;\">\n      4. La Hoja de Ruta de Transición: Cómo Llegamos Allí\n    </h3>\n    <a href=\"#roadmap\" class=\"btn btn-secondary\" style=\"display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; padding:8px 16px;\">\n      <span>🌱 Ir a la Hoja de Ruta</span>\n      <span>→</span>\n    </a>\n  </div>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:20px;\">\n    No esperamos al colapso mundial ni llamamos a una insurrección violenta. O.N.E. avanza mediante una <strong>estrategia dual coordinada</strong>: construir hoy los nuevos bienes comunes resilientes mientras el viejo sistema se agota.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🇨🇭 1. Blindaje Jurídico (Asociación Suiza)</h4>\n      <p>Constitución como Asociación Suiza autónoma (Art. 60 y ss. CC suizo) para custodiar propiedad intelectual abierta y activos colectivos, sin capital mínimo y con plena privacidad de sus miembros.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🌱 2. Nodos Semilla Biorregionales</h4>\n      <p>Bastan tres personas para crear un Fideicomiso de Tierras Comunitarias (CLT), un bosque de alimentos de ayuda mutua o una microrred utilizando los pactos de gobernanza abierta de O.N.E.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🤝 3. Reconversión Cívica No Violenta</h4>\n      <p>Gremios de paz desarmados sustituyen a las policías militarizadas mediante mediación restaurativa; las deudas del viejo sistema son canceladas mediante un jubileo universal.</p>\n    </div>\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-cyan);\">🌍 4. Federación Planetaria de Cuencas</h4>\n      <p>Los consejos de cuenca hidrográfica se federan en cámaras continentales, reemplazando las rivalidades de los estados-nación por una coordinación ecológica y termodinámica.</p>\n    </div>\n  </div>\n</div>"
+  },
+  "const": {
+    "title": "La Constitución Viva de O.N.E.",
+    "subtitle": "Diez capítulos de derecho codificado termodinámico no carcelario. Explore los artículos, busque cláusulas o descargue los PDF verificados.",
+    "search_placeholder": "Buscar términos (p. ej. 'agua', 'vivienda', 'sorteo', 'energía')...",
+    "expand_all": "Expandir Todo",
+    "collapse_all": "Colapsar Todo",
+    "download_epub": "Constitución (EPUB)",
+    "download_pdf": "Constitución (PDF)",
+    "tab_all": "All Chapters",
+    "tab_chap": "Chap",
+    "chapter_label": "CHAPTER",
+    "article_singular": "Article",
+    "article_plural": "Articles",
+    "no_results": "Ningún artículo coincide con los criterios de búsqueda.",
+    "badge_available": "Completa y Disponible"
+  },
+  "roadmap": {
+    "title": "Construir un Nodo Semilla Autónomo",
+    "desc": "Un manual operativo paso a paso: desmercantilizar la tierra legalmente, asegurar funciones vitales fuera de red, organizar el trabajo sin jefes y lograr soberanía económica.",
+    "shield_title": "Arquitectura Real Probada en Campo",
+    "shield_subtitle": "Auditada contra 53 fallos legales, financieros y mecánicos • Cero puntos únicos de fallo (RSV-1: 0)",
+    "archetype_common": "🇬🇧 Common Law",
+    "archetype_civil": "🇪🇺 Derecho Civil",
+    "archetype_customary": "🇲🇽 Usos y Costumbres Agrarias",
+    "sys1_title": "Blindaje Legal y Bloqueo de Activos",
+    "sys1_desc": "Separa el suelo pasivo del riesgo comercial para blindar la tierra de embargos e impuestos:",
+    "sys1_item1": "<strong>Entidad A (Fideicomiso de Tierra Pasivo):</strong> Bloqueo patrimonial inmutable, cero negocio, cero deudas, cero hipotecas.",
+    "sys1_item2": "<strong>Entidad B (Cooperativa Operativa):</strong> Asume el riesgo comercial bajo la regla estricta de <em>Cero Deuda No Garantizada</em>.",
+    "sys1_item3": "<strong>Bienes Muebles Desmontables (UCC § 9-604 / ZGB 677):</strong> Herramientas son propiedad del inquilino; la tierra es inembargable.",
+    "sys1_item4": "<strong>Defensa Urbanística y Reserva:</strong> Módulos móviles con homologación vial ANSI A119.5 + reserva de 12 meses para litigios.",
+    "sys2_title": "Trabajo Humano y Armonía",
+    "sys2_desc": "Elimina cuellos de botella de habilidades, desidia en tareas, clases sociales y agotamiento:",
+    "sys2_item1": "<strong>Piso Metabólico Obligatorio:</strong> 5–7 hrs/sem de tareas biológicas (cocina, letrinas, leña) para cada adulto.",
+    "sys2_item2": "<strong>Parejas de Aprendizaje Nivel 0:</strong> Redes de 400V, pozos profundos y temas legales exigen experto + aprendiz.",
+    "sys2_item3": "<strong>Enclavamientos Mecánicos Castell:</strong> Secuencias de llave física que impiden arcos eléctricos y cavitación de bombas.",
+    "sys2_item4": "<strong>Marco Cooperativo Protegido:</strong> Tareas internas reguladas como ayuda mutua asociativa sin relación laboral asalariada.",
+    "sys3_title": "Puente Económico (Arbitraje ETI)",
+    "sys3_desc": "Genera dinero fiat para impuestos y tecnología mediante consultoría cognitiva sin quemar al equipo:",
+    "sys3_item1": "<strong>Límite de Consultoría Externa:</strong> Máximo 15–20 horas facturables semanales para proteger la vida comunitaria.",
+    "sys3_item2": "<strong>Regla del 50% de Anticipo:</strong> Contratos externos con 50% de entrada respaldados por reserva a 90 días.",
+    "sys3_item3": "<strong>Red Informática Desacoplada:</strong> Puestos y radioenlaces alimentados por búfer solar aislado de 2.5 kW / 10 kWh.",
+    "sys3_item4": "<strong>Santuario Doméstico Sin Dinero:</strong> Cero moneda fiat circula dentro; alimento, agua y hogar son incondicionales.",
+    "sys4_title": "Soporte Vital Termodinámico",
+    "sys4_desc": "Garantiza la supervivencia durante vórtices polares, apagones masivos y cortes de suministros:",
+    "sys4_item1": "<strong>Cisterna 40.000L con By-pass 48V DC:</strong> Tanque subterráneo antihielo + bomba de pozo con desvío a batería 48V.",
+    "sys4_item2": "<strong>Bóveda de Baterías LFP 48V:</strong> Limitación automática BMS en frío (≤0.15C bajo 15°C; 0C bajo cero) contra dendritas.",
+    "sys4_item3": "<strong>Reserva Calórica de 180 Días:</strong> Granos y legumbres sellados con germinación diaria (+600% Vitamina C).",
+    "sys4_item4": "<strong>Núcleo Térmico de 50 m² (-30°C):</strong> Zona refugio superaislada con pozos canadienses bajo tierra.",
+    "config_tag": "⚡ Configurador Interactivo",
+    "config_title": "Configure su Nodo Semilla Biorregional",
+    "config_subtitle": "Seleccione su marco legal y escala poblacional para ver las especificaciones exactas.",
+    "config_label_arch": "1. Arquetipo Jurídico",
+    "config_btn_common": "🇬🇧 Common Law (EE. UU./Reino Unido)",
+    "config_btn_civil": "🇪🇺 Derecho Civil (España/Latam/UE)",
+    "config_btn_customary": "🇲🇽 Bienes Comunales Agrarios",
+    "config_label_scale": "2. Escala Inicial",
+    "config_scale_5": "5 Fundadores (Fase 0 Núcleo)",
+    "config_scale_15": "15 Pioneros (Fase 1 Aldea)",
+    "config_scale_35": "35 Residentes (Nodo Completo)",
+    "stepper_tag": "Planos de Campo Operativos",
+    "stepper_title": "Las 4 Fases de Implementación (Años 0 a 15)",
+    "stepper_desc": "Consulte hitos de ingeniería, especificaciones de equipo y descargue guías operativas.",
+    "quickstart_text": "<strong>⚡ ¿Necesita una guía rápida?</strong> Lea la lista de 10 pasos en el ",
+    "quickstart_btn": "Manual de Bolsillo de 2 Páginas (.md)",
+    "quickstart_dl": "⬇️ Descargar (.md)",
+    "step_0": "Fase 0: Constitución Legal y Suelo",
+    "step_1": "Fase 1: Núcleo Vital y Alimento",
+    "step_2": "Fase 2: Fab-Lab y Herramientas",
+    "step_3": "Fase 3: Federación de Cuenca",
+    "qa_tag": "Obstáculos Reales y Soluciones",
+    "qa_title": "Superando Desafíos en el Terreno",
+    "qa_desc": "Cómo nuestros equipos resuelven inspecciones municipales, demandas de acreedores y frío polar extremo.",
+    "q1_question": "🏛️ ¿Qué pasa si inspectores municipales clausuran las cabañas y baños secos?",
+    "q1_answer": "<strong>Defensa Jurídica:</strong> Los habitáculos usan chasis móviles homologados viales (ANSI A119.5). Se consideran <em>bienes muebles desmontables</em> no sujetos al código residencial estándar. La Entidad B mantiene 12 meses de reserva legal para impugnar sin afectar el título de tierra de la Entidad A.",
+    "q2_question": "📉 ¿Qué pasa si un cliente quiebra y un proveedor nos demanda por 180.000 €?",
+    "q2_answer": "<strong>El Escudo en Dos Niveles:</strong> La cooperativa (B) absorbe la insolvencia comercial mientras el Fideicomiso (A) queda blindado. Los acreedores solo pueden embargar maquinaria sobre bancadas desmontables, sin derecho alguno sobre la tierra ni sobre la red de agua o luz.",
+    "q3_question": "💻 ¿Qué pasa si los programadores con altos ingresos rechazan hacer tareas manuales?",
+    "q3_answer": "<strong>Piso Metabólico No Negociable:</strong> Cada adulto debe cumplir 5 a 7 hrs/semana de labores biológicas indispensables (cocina, saneamiento). No se puede comprar ni compensar con horas de software, evitando clases privilegiadas.",
+    "q4_question": "❄️ ¿Qué pasa si la temperatura cae a -30°C durante 3 semanas consecutivas?",
+    "q4_answer": "<strong>Resiliencia del Núcleo Térmico:</strong> El nodo se repliega en el Núcleo Térmico de 50 m², semienterrado y aislado con pozos geotérmicos canadienses. Las baterías LFP son protegidas por BMS y calor residual.",
+    "pillar_1": "System I",
+    "pillar_2": "System II",
+    "pillar_3": "System III",
+    "pillar_4": "System IV",
+    "badge_0": "Yr 0",
+    "badge_1": "Yrs 1-3",
+    "badge_2": "Yrs 3-7",
+    "badge_3": "Yrs 7-15"
+  },
+  "roadmap_config": {
+    "tag_legal": "1. Estructura Legal de la Entidad",
+    "desc_operating": "Operando a través de:",
+    "desc_debt": "La regla de Cero Deuda No Garantizada impide que los pasivos comerciales afecten al Land Trust.",
+    "tag_zoning": "2. Defensa Urbanística y del Suelo",
+    "tag_capital": "3. Formación de Capital",
+    "tag_water": "4. Soberanía Hídrica",
+    "tag_battery": "5. Banco de Baterías 48V LFP",
+    "tag_food": "6. Reserva Calórica de 180 Días",
+    "archetypes": {
+      "common_law": {
+        "name": "Common Law (EE. UU. / Reino Unido / Canadá / Australia)",
+        "entity_a": "501(c)(3) Community Land Trust (CLT)",
+        "entity_b": "Cooperativa de Trabajadores (LLC / ULCAA)",
+        "capital": "Vales de consumo prepagados ($500–$2.500) bajo exención de usufructo Reves v. Ernst & Young",
+        "zoning": "Casas móviles homologadas ANSI A119.5 Park Model RVs con desconexión rápida (bienes muebles)",
+        "escrow": "Fondo de reserva de 12 meses para indemnización municipal y defensa legal",
+        "statutory_defense": "Bienes muebles industriales UCC § 9-604 + amortización de arrendamiento a 10 años (REPV bajo 11 U.S.C. § 548)"
+      },
+      "civil_law": {
+        "name": "Derecho Civil (Europa Continental / Suiza / España / Latinoamérica)",
+        "entity_a": "Gemeinnützige Stiftung / Fundación de Interés Público",
+        "entity_b": "Cooperativa de Trabajo Asociado y Producción",
+        "capital": "Donaciones filantrópicas a fondo perdido + vales educativos prepagados exentos de regulación bancaria",
+        "zoning": "Estructuras agrícolas consolidadas (Bestandsschutz / masías) + depósitos homologados DIBt",
+        "escrow": "Fondo de cumplimiento urbanístico municipal (escudo de responsabilidad patrimonial)",
+        "statutory_defense": "Canon de arrendamiento de superficie registrado con contraprestación real frente a quiebras"
+      },
+      "customary_commons": {
+        "name": "Usos y Costumbres Tradicionales y Tierras Comunales",
+        "entity_a": "Tierras Comunales Inalienables / Ejido Registrado",
+        "entity_b": "Sociedad de Solidaridad Social (SSS) / Cooperativa Agropecuaria Comunal",
+        "capital": "Fondo Rotatorio Comunitario de Ayuda Mutua + contratos de cosecha a término",
+        "zoning": "Construcción tradicional vernácula (adobe y tapial) bajo excepciones de tenencia consuetudinaria",
+        "escrow": "Consejo de ancianos mediadores y reserva solidaria comunitaria",
+        "statutory_defense": "Tratados internacionales de derechos indígenas (Convenio OIT 169) y protección agraria constitucional"
+      }
+    },
+    "scales": {
+      "5": {
+        "water": "Cisterna de 40.000 L + Pozo",
+        "water_desc": "40.000 L subterráneos anticongelantes con bypass manual a batería de 48V CC",
+        "battery": "Banco LFP de 15 kWh (48V)",
+        "battery_desc": "Búnker de baterías aislado con regulación térmica pasiva y protección BMS",
+        "food": "180 Días de Reservas",
+        "food_desc": "Legumbres y cereales sellados con bandejas diarias de germinación enzimática",
+        "land": "0,8 hectáreas"
+      },
+      "15": {
+        "water": "Cisterna de 120.000 L + Doble Pozo",
+        "water_desc": "Doble depósito por gravedad con filtración mecánica de arena y UV",
+        "battery": "Microred LFP de 45 kWh (48V)",
+        "battery_desc": "Baterías industriales con redundancia de inversores y desconexión selectiva de cargas",
+        "food": "Despensa para 15 Personas (180 Días)",
+        "food_desc": "Agroforestería biointensiva en terrazas + almacenamiento subterráneo",
+        "land": "2,5 hectáreas"
+      },
+      "35": {
+        "water": "Reservorio de Tierra de 300.000 L",
+        "water_desc": "Estanque de retención alimentado por manantial con carga hidrostática sin electricidad",
+        "battery": "Núcleo Trifásico de 120 kWh (48V / 400V)",
+        "battery_desc": "Microred industrial acoplada en CA con base microhidroeléctrica",
+        "food": "Autonomía Anual de Cuenca",
+        "food_desc": "Policultivo perenne multiextrato + cámaras subterráneas de fermentación y frío",
+        "land": "6 hectáreas"
+      }
+    }
+  },
+  "roadmap_stepper": {
+    "btn_view_stage": "📐 Ver Proyecto de Campo de la Fase {stage}",
+    "btn_download": "⬇️ Descargar Proyecto (.md)"
+  },
+  "challenge": {
+    "title": "«Ponga a Prueba O.N.E.»",
+    "desc": "Sometimos esta constitución a 6 rondas de simulaciones de ataque con IA. Haga clic en una objeción frecuente o plantee su pregunta más difícil.",
+    "quick_label": "Objeciones Más Probadas:",
+    "chip_work": "1. SIN TRABAJO: ¿Quién nos da de comer?",
+    "chip_work_query": "¿Qué pasa si la gente se niega a trabajar? ¿Quién produce comida o limpia las alcantarillas?",
+    "chip_money": "2. SIN DINERO: ¿Quién paga las obras?",
+    "chip_money_query": "¿Quién financia hospitales, transporte e infraestructuras sin dinero ni impuestos?",
+    "chip_prisons": "4. SIN PRISIONES: ¿Los criminales violentos?",
+    "chip_prisons_query": "¿Cómo se manejan los crímenes violentos y abusos sin policía armada ni prisiones?",
+    "chip_lottery": "¿Manipular el Sorteo?",
+    "chip_lottery_query": "¿Pueden demagogos o millonarios comprar las asambleas por sorteo?",
+    "chip_communism": "¿Es Comunismo?",
+    "chip_communism_query": "¿En qué se diferencia O.N.E. del comunismo de estado soviético?",
+    "sidebar_title": "Escenarios de Ataque Verificados",
+    "input_placeholder": "Escriba su objeción más dura...",
+    "btn_send": "Comprobar",
+    "label_probe": "SONDA DE ATAQUE ADVERSARIO",
+    "label_adjudicator": "JUEZ NOMOTÉTICO O-ASIS",
+    "label_inquiry": "CONSULTA DEL VISITANTE ESCÉPTICO",
+    "label_resolution": "Resolución Constitucional:",
+    "chip_property": "3. SIN PROPIEDAD: ¿Mi casa?",
+    "chip_property_query": "¿Sin propiedad privada, alguien puede apoderarse de mi hogar o pertenencias personales?",
+    "chip_politics": "5. SIN POLÍTICOS: ¿Quién manda?",
+    "chip_politics_query": "¿Sin políticos electos, cómo funciona el sorteo rotativo sin que demagogos tomen el poder?",
+    "chip_patents": "6. SIN PATENTES: ¿Quién inventa?",
+    "chip_patents_query": "¿Sin patentes ni copyright, quién investiga fármacos o tecnologías complejas?",
+    "chip_army": "7. SIN EJÉRCITOS: ¿Invasiones armadas?",
+    "chip_army_query": "¿Qué impide que un ejército invasor o un cártel extranjero ataque los nodos de O.N.E.?",
+    "chip_ussr": "8. SIN MERCADO: ¿Es comunismo?",
+    "chip_ussr_query": "¿En qué se diferencia O.N.E. del comunismo de estado y de los regímenes autoritarios?",
+    "chip_capitalism": "9. ¿ES CAPITALISMO? ¿Se puede emprender?",
+    "chip_capitalism_query": "¿Puedo abrir un negocio, iniciar un proyecto o emprender sin capitalismo?",
+    "chip_education": "10. EDUCACIÓN: ¿Cómo funcionan las escuelas?",
+    "chip_education_query": "¿Cómo funcionan las escuelas, universidades y la educación infantil sin matrículas ni exámenes estandarizados?",
+    "chip_religion": "11. RELIGIÓN: ¿Son libres los cultos e iglesias?",
+    "chip_religion_query": "¿Están protegidas o reprimidas las religiones, iglesias y creencias espirituales?",
+    "chip_discrimination": "12. DISCRIMINACIÓN: ¿Racismo y derechos LGBTQ+?",
+    "chip_discrimination_query": "¿Cómo se protege a las minorías frente al racismo, la discriminación sexual y las violaciones de derechos?"
+  },
+  "books": {
+    "title": "La Saga Planetaria",
+    "desc": "Las grandes ideas conquistan las mentes cuando emocionan en el corazón. Viva O.N.E. en seis frentes interconectados en un trepidante thriller geopolítico de liberación humana.",
+    "chart_tag": "Mapa Mundial Interactivo",
+    "chart_title": "Los Seis Teatros de la Saga",
+    "chart_desc": "Haga clic en un faro para ver la novela y descargar el volumen.",
+    "btn_epub": "Descargar EPUB",
+    "btn_pdf": "Descargar PDF",
+    "status_complete": "Completo y Disponible",
+    "tag": "Mapa Mundial Interactivo y Saga Épica de Suspense",
+    "map_vol0": "VOL 0: SVALBARD",
+    "map_vol1": "VOL 1: DETROIT",
+    "map_vol2": "VOL 2: ALPS",
+    "map_vol3": "VOL 3: AMAZON",
+    "map_vol4": "VOL 4: MALACCA",
+    "map_vol5": "VOL 5: GENEVA",
+    "btn_coming_soon": "Próximamente",
+    "status_coming_soon": "En traducción"
+  },
+  "volume_details": {
+    "vol0": {
+      "title": "Génesis: La Chispa de Svalbard",
+      "subtitle": "Volumen 0: Resistencia Polar • 78° N",
+      "theater": "Svalbard / Ámbito Global",
+      "core_theme": "Cifrado con aislamiento físico en la bóveda de semillas, red óptica encubierta y despertar ideológico.",
+      "hook": "Antes de que Detroit se levantara, la arquitectura se forjó en la roca ártica."
+    },
+    "vol1": {
+      "title": "Punto Cero: El Protocolo Delray",
+      "subtitle": "Volumen 1: Norteamérica • Detroit / Windsor",
+      "theater": "Norteamérica",
+      "core_theme": "Conversión de naves industriales, cuenta atrás de 48 horas para el desahucio y asamblea por sorteo.",
+      "hook": "Cuando los alguaciles llegaron con armas, Delray respondió con las leyes de la física y el sorteo."
+    },
+    "vol2": {
+      "title": "El Reducto Alpino",
+      "subtitle": "Volumen 2: Europa Transalpina • Valais y Tesino",
+      "theater": "Europa Transalpina",
+      "core_theme": "Defensa de tuberías forzadas en altura, barreras de aludes y federación de bienes comunes cantonales.",
+      "hook": "Enviaron mercenarios privados para cortar la energía hidroeléctrica; las montañas eligieron al pueblo."
+    },
+    "vol3": {
+      "title": "Río de Fuego",
+      "subtitle": "Volumen 3: Cuenca Amazónica y Andes",
+      "theater": "Amazonía y Andes",
+      "core_theme": "Defensa de la cuenca hídrica, interceptación de drones con glifosato y pactos de usufructo indígena.",
+      "hook": "El río no es propiedad privada: es el sistema circulatorio del continente entero."
+    },
+    "vol4": {
+      "title": "La Fosa Marítima",
+      "subtitle": "Volumen 4: Estrecho de Malaca y Eurasia",
+      "theater": "Sudeste Asiático e Indo-Pacífico",
+      "core_theme": "Bloqueo algorítmico de puertos, barricadas con contenedores y restauración de cables submarinos.",
+      "hook": "Diez mil cargueros se detienen cuando los trabajadores rechazan el dinero y los declaran bienes comunes."
+    },
+    "vol5": {
+      "title": "La Cumbre de Convergencia",
+      "subtitle": "Volumen 5: Cantón de Ginebra • El Pacto Planetario",
+      "theater": "Ginebra / Global",
+      "core_theme": "Disolución de deudas soberanas, gran jubileo universal y el primer congreso mundial por sorteo.",
+      "hook": "Las deudas del viejo mundo se esfumaron en una sola tarde: la humanidad entró en la luz."
+    }
+  },
+  "modal": {
+    "title": "PROYECTO OPERATIVO Y MANUAL DE CAMPO",
+    "download_md": "⬇️ Descargar .md",
+    "close": "Cerrar Proyecto (Esc)"
+  },
+  "footer": {
+    "line1": "OPEN NETWORKED EARTH (O.N.E.) • Pactos de Usufructo Abierto Copyfarleft • Cero Copyright Alodial",
+    "line2": "Motor Multi-Agente Determinista Sincronizado con Origin Main • Constitución Canónica v2.0-RATIFICADA"
+  },
+  "roadmap_phases": [
+    {
+      "title": "Fase 0: Fundación Legal e Inalienabilidad de la Tierra",
+      "badge": "Año 0 • Blindaje Legal",
+      "desc": "Blindar la tierra antes de instalar maquinaria. No se construye ningún alojamiento hasta formalizar e inscribir el escudo jurídico de dos niveles.",
+      "milestones": [
+        {
+          "label": "Blindaje Legal",
+          "title": "Segregación en Dos Entidades",
+          "text": "Constitución del Land Trust pasivo y la cooperativa operativa con cuentas bancarias separadas y cero deuda cruzada."
+        },
+        {
+          "label": "Seguridad de la Tierra",
+          "title": "Título de Usufructo a 99 Años",
+          "text": "Pactos inalienables de usufructo que impiden la reventa especulativa, hipotecas o embargos externos."
+        },
+        {
+          "label": "Soberanía Hídrica",
+          "title": "Nivelación por Gravedad y Pozo",
+          "text": "Estudio topográfico hidroestático, perforación del pozo principal e instalación de línea bypass pasiva."
+        }
+      ]
+    },
+    {
+      "title": "Fase 1: Núcleo Vital y Soberanía Alimentaria",
+      "badge": "Años 1–3 • Autosuficiencia Biológica",
+      "desc": "Desplegar microredes de 48V CC, núcleos térmicos enterrados y huertos forestales perennes biointensivos.",
+      "milestones": [
+        {
+          "label": "Núcleo Térmico",
+          "title": "Zona Térmica de 50 m²",
+          "text": "Construcción semienterrada superaislada con pozos canadienses que resiste -30°C con masa pasiva."
+        },
+        {
+          "label": "Microred CC",
+          "title": "Baterías LFP de 15–45 kWh",
+          "text": "Bus de 48V CC con control BMS de carga en frío e interbloqueos mecánicos Castell inviolables."
+        },
+        {
+          "label": "Regeneración del Suelo",
+          "title": "Despensa Agroecológica de 180 Días",
+          "text": "Bancales biointensivos, frutales perennes y ciclos de compostaje microbiológico activo."
+        }
+      ]
+    },
+    {
+      "title": "Fase 2: Fab-Lab, Herramientas y Puente Económico",
+      "badge": "Años 3–7 • Autonomía Mecánica",
+      "desc": "Instalar fresado CNC, torno de precisión, fabricación de placas electrónicas y consultoría cognitiva ETI.",
+      "milestones": [
+        {
+          "label": "Herramientas Abiertas",
+          "title": "Taller Mecánico Fab-Lab",
+          "text": "Fresadora CNC, torno mecánico y corte por plasma controlados por LinuxCNC de código abierto 100% desconectado."
+        },
+        {
+          "label": "Puente Económico",
+          "title": "Consultoría Cognitiva ETI",
+          "text": "Contratos externos especializados con tope de horas (máx. 15h/sem) para cubrir impuestos en moneda fiat."
+        },
+        {
+          "label": "Laboratorio Bioquímico",
+          "title": "Análisis de Aguas y Fermentación",
+          "text": "Control microbiológico riguroso de aguas, banco de semillas no transgénicas e integridad biológica."
+        }
+      ]
+    },
+    {
+      "title": "Fase 3: Federación de Cuenca y Bienes Comunes Soberanos",
+      "badge": "Años 7–15 • Red Biorregional",
+      "desc": "Bienes comunes biorregionales autónomos interconectados mediante red inalámbrica mesh y trueque termodinámico físico.",
+      "milestones": [
+        {
+          "label": "Red Mesh de Nodos",
+          "title": "Federación de Cuenca",
+          "text": "De 3 a 5 micro-nodos vecinos enlazados por radio LoRa y cooperativas de maquinaria compartida."
+        },
+        {
+          "label": "Intercambios Termodinámicos",
+          "title": "Comercio Leontief-Kantoróvich",
+          "text": "Intercambio no monetario de exergía, horas de máquina y semillas sin intermediación de dinero bancario."
+        },
+        {
+          "label": "Desconexión Total",
+          "title": "Soberanía de Red Completa",
+          "text": "Líneas de suministro exterior desconectadas o mantenidas exclusivamente como respaldo de emergencia."
+        }
+      ]
+    }
+  ],
+  "oasis_showcase": {
+    "badge": "🎮 LIVING THERMODYNAMIC SANDBOX & MMO",
+    "title_part1": "Experience the Post-Labor Commons in",
+    "title_part2": "O-ASIS Dual-Track",
+    "desc": "Test the constitution with your own hands. Build autonomous solarpunk eco-villages, balance real Leontief physics across 4 physical flows (⚡ kWh, 💧 Liters, 🥗 Calories, 💻 Compute), deliberate on civic crises via Athenian citizen juries, and resist the predatory Legacy Financial AI in a 100% serverless P2P mesh.",
+    "feat1_title": "Closed-Loop Thermodynamics",
+    "feat1_desc": "Real energy, battery degradation, rainwater harvesting, closed-loop hydroponics and circular FabLab material recycling.",
+    "feat2_title": "Demarchic Sortition Juries",
+    "feat2_desc": "Citizen assemblies chosen by lot in strict odd parity to arbitrate community dilemmas and ratify confederal case-law precedents.",
+    "feat3_title": "Dual-Track Physical Bridge",
+    "feat3_desc": "In-game triumphs directly unlock verified, real-world 3D printable .STL open hardware and Home Assistant automations.",
+    "btn_launch": "Launch O-ASIS Simulator (Browser 60 FPS) ↗",
+    "btn_handbook": "Download Player Field Manual (PDF) ↗"
+  },
+  "hero_video": {
+    "badge": "Civilizational Prologue • 2m 10s",
+    "title": "From 100,000 Years of Warfare to Machine Emancipation",
+    "desc": "Watch the visual prologue illustrating human history from territorial warfare to machine-driven emancipation."
+  },
+  "contrast": {
+    "tag": "Civilizational Operating Systems",
+    "title": "Track A vs. Track B: The Civilizational Fork",
+    "desc": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
+    "track_a_badge": "Track A • Legacy Default",
+    "track_a_title": "Techno-Feudal Extraction",
+    "track_a_desc": "Monopolized automation, perpetual debt, and speculative rentierism.",
+    "track_a_item1_title": "Conditional Survival:",
+    "track_a_item1_desc": "Basic food, shelter, and care gated behind disappearing wage labor.",
+    "track_a_item2_title": "Allodial Land Speculation:",
+    "track_a_item2_desc": "Predatory landlordism, compounding rents, and algorithmic evictions.",
+    "track_a_item3_title": "Billionaire Oligarchy:",
+    "track_a_item3_desc": "Corporate lobbying, partisan theater, and manufactured consent.",
+    "track_a_item4_title": "Carceral Coercion:",
+    "track_a_item4_desc": "Militarized policing and punitive retribution protecting property over life.",
+    "track_a_item5_title": "Thermodynamic Ecocide:",
+    "track_a_item5_desc": "Infinite exponential compound growth on a strictly finite biosphere.",
+    "track_b_badge": "Track B • Open Networked Earth",
+    "track_b_title": "Universal Usufruct & Demarchy",
+    "track_b_desc": "Machines work for the commons; humanity inherits guaranteed survival and self-governance.",
+    "track_b_item1_title": "Unconditional Birthright:",
+    "track_b_item1_desc": "Food, housing, healthcare, clean water & energy guaranteed for life.",
+    "track_b_item2_title": "Dynamic Usufruct:",
+    "track_b_item2_desc": "Protected personal dwellings; zero rent, zero speculation, zero landlordism.",
+    "track_b_item3_title": "Statistical Sortition:",
+    "track_b_item3_desc": "Citizen juries drawn by lot in strict odd parity; zero career politicians.",
+    "track_b_item4_title": "Restorative Peace Guilds:",
+    "track_b_item4_desc": "De-escalation, conflict mediation, and root-cause civic restoration.",
+    "track_b_item5_title": "Thermodynamic Exergy Limits:",
+    "track_b_item5_desc": "Physical accounting in kWh, liters, and topsoil health—not debt-fiat."
+  },
+  "stewards": {
+    "tag": "Phase 0 Genesis Hardening",
+    "title": "Call for Co-Stewards & Domain Critics",
+    "desc": "Open Networked Earth is built on open peer production. Before the Living Constitution is permanently deposited under Swiss Civil Law (ZGB Art. 80 ff.), our foundational pillars must be stress-tested through adversarial peer review. We are actively seeking our <strong>Priority 0 Media Co-Steward</strong> and technical domain builders to harden the architecture against entropy.",
+    "p0_badge": "Pillar 0 • Strategic Inversion",
+    "badge_priority": "🔥 Priority 0 • Active Search",
+    "badge_seeking_cofounder": "Seeking Co-Founder",
+    "badge_seeking": "Open for Co-Steward",
+    "badge_active": "Actives: 1",
+    "p0_title": "Media, Storytelling & Community Co-Steward",
+    "label_target_profile": "Target Profile:",
+    "p0_role": "Open-source comms activist, Solarpunk/Commons creator, independent podcaster, video storyteller, or community builder.",
+    "label_mandate": "The Mandate & Strategic Goal:",
+    "p0_doubt": "Eliminate the solo-creator bottleneck by taking operational co-ownership of public storytelling, YouTube/Shorts video distribution, Reddit/X dialogue, and leading the outreach campaign to seat the remaining technical domain builders. If you believe a post-labor civilization needs a powerful cultural voice, this is the co-founding role.",
+    "p0_btn_cta": "Join Media Dialectic (#13) →",
+    "p0_btn_email": "Apply Directly via Email →",
+    "p1_num": "Pillar 1",
+    "p1_title": "Economy & Thermodynamic Balances",
+    "label_domain": "Domain:",
+    "p1_role": "Ecological / Heterodox Economics, Leontief Input-Output",
+    "label_doubt": "Open Dialectic & Doubt:",
+    "p1_doubt": "Can money-less thermodynamic accounting completely replace market price discovery and Gosplan bureaucracy without supply shortages or rationing?",
+    "p1_btn_cta": "Join Economic Dialectic (#9) →",
+    "p2_num": "Pillar 2",
+    "p2_title": "Governance, Law & Dynamic Usufruct",
+    "p2_role": "Commons Jurisprudence, Demarchy / Sortition, Swiss Civil Law",
+    "p2_doubt": "Are demarchic sortition lotteries mathematically immune to lobbying and oligarchic capture? Does Swiss Association (Verein) law provide bulletproof shielding?",
+    "p2_btn_cta": "Join Legal Dialectic (#10) →",
+    "p3_num": "Pillar 3",
+    "p3_title": "Simulation & Scientific Sandbox",
+    "p3_role": "Julia Discrete-Event Co-Simulation (SIMONE), Agents.jl & MTBF Wear",
+    "p3_doubt": "Validating the single-village Julia prototype, stock-and-flow ODE docking tests, and multiscale biophysical solver decoupling. Additional co-stewards actively sought.",
+    "p3_btn_cta": "Join Simulation Dialectic (#11) →",
+    "p4_num": "Pillar 4",
+    "p4_title": "Habitat & Open-Hardware Resilience",
+    "p4_role": "Microgrids, Home Assistant Zigbee/MQTT, CNC Timber Cassettes",
+    "p4_doubt": "Do Modular Habitat Units (MHU) and open-hardware microgrids withstand real-world 40-year thermal cycles and catastrophic grid disconnection?",
+    "p4_btn_cta": "Join Habitat Dialectic (#12) →",
+    "cta_title": "Ready to Build or Break O.N.E.?",
+    "cta_desc": "Whether you want to co-steward a foundational pillar or act as an independent critic hunting thermodynamic and nomothetic edge cases, your contribution directly hardens the Genesis Block.",
+    "btn_all_discussions": "💬 View All Discussions on GitHub",
+    "btn_contact": "✉️ Contact Kyberlex (kyberlex@proton.me)"
+  }
+}
