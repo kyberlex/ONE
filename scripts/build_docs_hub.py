@@ -4,8 +4,9 @@ build_docs_hub.py — O.N.E. Interactive Platform Hub Builder (Agent H1 & H3)
 
 Compiles both 'game/' (Living Commons Game) and 'sim/app/' (O-ASIS Epistemic Sandbox),
 assembles the unified Subpath Hub in 'docs/' (with root launcher, /game/, and /sim/),
-embeds the Bioregional Watershed Explorer as the Step 1 Macro-Planetary Gateway,
-cleans up legacy CNAME redirects, ensures .nojekyll, and validates Class-0 Zero-Leak OpSec.
+embeds the Bioregional Watershed Explorer reusing the real satellite Earth map from sim/
+(with dual discrete zoom levels: ZOOM = WORLD and ZOOM = REGION), cleans up legacy CNAMEs,
+ensures .nojekyll, and validates Class-0 Zero-Leak OpSec.
 
 Author: Kyberlex <kyberlex@proton.me>
 License: AGPL-3.0-or-later
@@ -53,7 +54,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
   <style>
     :root {
       --bg-dark: #040907;
-      --bg-card: rgba(8, 20, 16, 0.75);
+      --bg-card: rgba(8, 20, 16, 0.78);
       --border-card: rgba(52, 211, 153, 0.22);
       --border-hover: rgba(52, 211, 153, 0.6);
       --accent-emerald: #10b981;
@@ -199,8 +200,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
 
     .hero-intro {
       text-align: center;
-      max-width: 820px;
-      margin-bottom: 40px;
+      max-width: 840px;
+      margin-bottom: 38px;
     }
 
     .hero-pill {
@@ -303,7 +304,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       color: var(--text-muted);
       font-size: 0.94rem;
       line-height: 1.55;
-      max-width: 760px;
+      max-width: 780px;
       margin: 0 auto;
     }
 
@@ -333,7 +334,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       flex-wrap: wrap;
     }
 
@@ -372,6 +373,12 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       box-shadow: 0 0 12px rgba(6, 182, 212, 0.2);
     }
 
+    .we-view-status-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .we-count-badge {
       font-size: 0.76rem;
       color: #64748b;
@@ -392,7 +399,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 14px;
       overflow: hidden;
-      min-height: 420px;
+      min-height: 440px;
       display: flex;
       flex-direction: column;
     }
@@ -413,39 +420,66 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       align-items: center;
       justify-content: space-between;
       pointer-events: none;
+      gap: 12px;
     }
 
     .we-hint {
       font-size: 0.72rem;
-      color: #64748b;
-      background: rgba(2, 6, 5, 0.75);
-      padding: 4px 10px;
+      color: #cbd5e1;
+      background: rgba(2, 6, 5, 0.85);
+      padding: 5px 12px;
       border-radius: 6px;
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(52, 211, 153, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .we-overlay-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      pointer-events: auto;
     }
 
     .we-canvas-btn {
-      pointer-events: auto;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(4, 12, 10, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       color: #cbd5e1;
-      font-size: 0.74rem;
+      font-size: 0.76rem;
       font-weight: 600;
-      padding: 4px 10px;
+      padding: 5px 11px;
       border-radius: 6px;
       cursor: pointer;
       transition: all 0.2s ease;
+      backdrop-filter: blur(6px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
     }
 
     .we-canvas-btn:hover {
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(16, 185, 129, 0.2);
+      border-color: rgba(52, 211, 153, 0.5);
       color: #fff;
+    }
+
+    .we-canvas-btn.active {
+      background: rgba(6, 182, 212, 0.22);
+      border-color: #22d3ee;
+      color: #22d3ee;
+    }
+
+    .we-sep {
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 0.8rem;
     }
 
     /* Inspector HUD */
     .we-hud {
-      background: rgba(4, 12, 10, 0.65);
+      background: rgba(4, 12, 10, 0.7);
       border: 1px solid rgba(52, 211, 153, 0.18);
       border-radius: 14px;
       padding: 22px 20px;
@@ -456,7 +490,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
     }
 
     .we-hud-top {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .we-hud-tag-row {
@@ -464,6 +498,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       align-items: center;
       justify-content: space-between;
       margin-bottom: 10px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
     .we-hud-tag {
@@ -475,6 +511,17 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       padding: 3px 8px;
       border-radius: 4px;
       border: 1px solid rgba(52, 211, 153, 0.25);
+    }
+
+    .we-hud-zoom-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #22d3ee;
+      background: rgba(6, 182, 212, 0.1);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(6, 182, 212, 0.3);
     }
 
     .we-hud-status {
@@ -511,14 +558,14 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       font-size: 0.85rem;
       line-height: 1.5;
       color: var(--text-muted);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .we-metrics {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 8px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .we-metric-item {
@@ -549,11 +596,11 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       background: rgba(16, 185, 129, 0.06);
       border: 1px solid rgba(16, 185, 129, 0.2);
       border-radius: 8px;
-      padding: 9px 12px;
+      padding: 8px 12px;
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .we-node-icon {
@@ -566,7 +613,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
     }
 
     .we-node-title {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       color: #34d399;
       text-transform: uppercase;
       font-weight: 600;
@@ -576,6 +623,32 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       font-size: 0.84rem;
       font-weight: 600;
       color: #fff;
+    }
+
+    /* Fly-to Focus Action */
+    .we-focus-btn {
+      width: 100%;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      color: #22d3ee;
+      padding: 9px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      transition: all 0.2s ease;
+    }
+
+    .we-focus-btn:hover {
+      background: rgba(6, 182, 212, 0.24);
+      color: #fff;
+      border-color: #22d3ee;
+      transform: translateY(-1px);
     }
 
     /* Action buttons */
@@ -589,9 +662,9 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 14px;
+      padding: 9px 14px;
       border-radius: 8px;
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.2s ease;
@@ -628,7 +701,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         grid-template-columns: 1fr;
       }
       .we-canvas-box {
-        min-height: 340px;
+        min-height: 360px;
       }
     }
 
@@ -964,7 +1037,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       </h2>
       <p class="hero-desc">
         Experience the physical transition to a post-scarcity, moneyless civilization.
-        Explore Earth's living watersheds, settle a solarpunk village from the ground up,
+        Explore Earth's living watersheds on authentic satellite relief, settle a solarpunk village from the ground up,
         or audit the macroscopic thermodynamic balances and constitutional demarchy.
       </p>
     </div>
@@ -980,8 +1053,9 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         </div>
         <h3 class="we-title">Bioregional Watershed Explorer</h3>
         <p class="we-desc">
-          The biophysical Earth mapped by natural hydrological catchments and living biomes rather than armed national frontiers.
-          Select any sovereign watershed (<em>Jus Biosphaerae</em>) to inspect its thermodynamic carrying capacity before launching the Sandbox or Game.
+          The biophysical Earth rendered from authentic planetary satellite topography (reused directly from O-ASIS).
+          Explore natural hydrological catchments and living biomes without armed national frontiers.
+          Switch smoothly between <strong>World View</strong> and <strong>Region Focus</strong> to inspect local carrying capacities.
         </p>
       </div>
 
@@ -996,8 +1070,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
             <button class="we-chip" data-biome="riverine">🌊 Major River Deltas</button>
             <button class="we-chip" data-biome="arid">☀️ Arid / Oasis</button>
           </div>
-          <div class="we-count-badge" id="weCountBadge">
-            14 Sovereign Basins Mapped
+          <div class="we-view-status-row">
+            <div class="we-count-badge" id="weCountBadge">
+              14 Sovereign Basins Mapped
+            </div>
           </div>
         </div>
 
@@ -1005,12 +1081,19 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         <div class="we-grid">
           <!-- Canvas Viewport Area -->
           <div class="we-canvas-box">
-            <canvas id="watershedCanvas" width="900" height="430"></canvas>
+            <canvas id="watershedCanvas" width="900" height="440"></canvas>
             <div class="we-canvas-overlay">
-              <div class="we-hint">
-                <span>🖱️ Hover to highlight • Click to inspect • Real-time hydrodynamic flow</span>
+              <div class="we-hint" id="weHintText">
+                <span>🌐 World View • Click basin to zoom into Bioregion</span>
               </div>
-              <button class="we-canvas-btn" id="weBtnReset" title="Reset View">↺ Reset</button>
+              <div class="we-overlay-controls">
+                <button class="we-canvas-btn active" id="btnModeWorld" title="Planetary World View">🌐 World</button>
+                <button class="we-canvas-btn" id="btnModeRegion" title="Bioregional Focus View">🔍 Region</button>
+                <span class="we-sep">|</span>
+                <button class="we-canvas-btn" id="btnZoomIn" title="Zoom In">+</button>
+                <button class="we-canvas-btn" id="btnZoomOut" title="Zoom Out">−</button>
+                <button class="we-canvas-btn" id="weBtnReset" title="Reset View">↺</button>
+              </div>
             </div>
           </div>
 
@@ -1019,6 +1102,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
             <div class="we-hud-top">
               <div class="we-hud-tag-row">
                 <span class="we-hud-tag" id="hudBasinTag">BASIN-EUR-04</span>
+                <span class="we-hud-zoom-badge" id="hudZoomBadge">ZOOM: WORLD</span>
                 <span class="we-hud-status">JUS BIOSPHAERAE</span>
               </div>
               <h4 class="we-hud-title" id="hudBasinName">Po Valley & Western Alpine Arc</h4>
@@ -1056,6 +1140,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
                   <span class="we-node-val" id="hudNodeName">Val di Susa Watershed Node (34 Pioneers)</span>
                 </div>
               </div>
+
+              <button class="we-focus-btn" id="btnFocusBasin">
+                <span>🔍 Fly to Bioregion View</span>
+              </button>
             </div>
 
             <!-- Action CTAs -->
@@ -1198,27 +1286,24 @@ LAUNCHER_HTML = """<!DOCTYPE html>
   </footer>
 
   <!-- =====================================================================
-       CLIENT-SIDE INTERACTIVE ENGINE: BIOREGIONAL WATERSHED CANVAS (60 FPS)
+       CLIENT-SIDE INTERACTIVE ENGINE: REAL SATELLITE CARTOGRAPHY (SIM REUSE)
+       Discrete Zoom Levels: ZOOM = WORLD (1.0x) and ZOOM = REGION (4.5x)
        ===================================================================== -->
   <script>
     (function () {
-      // 1. Continental Boundaries (Simplified Vector Outlines)
-      const CONTINENTS = [
-        // North America
-        [[-168, 65], [-140, 70], [-120, 72], [-95, 75], [-80, 68], [-60, 48], [-70, 42], [-75, 35], [-80, 25], [-90, 20], [-98, 25], [-105, 20], [-110, 30], [-124, 40], [-125, 50], [-140, 60], [-168, 65]],
-        // South America
-        [[-75, 11], [-60, 8], [-50, 0], [-35, -5], [-38, -15], [-45, -23], [-55, -35], [-65, -50], [-72, -54], [-75, -45], [-72, -30], [-78, -10], [-80, -2], [-75, 11]],
-        // Eurasia
-        [[-9, 36], [0, 42], [10, 45], [25, 40], [35, 32], [50, 25], [60, 25], [70, 20], [80, 15], [90, 22], [105, 20], [105, 10], [115, 5], [120, 22], [122, 35], [130, 42], [140, 50], [160, 60], [170, 65], [140, 72], [100, 75], [60, 70], [40, 65], [25, 70], [15, 60], [5, 55], [-5, 50], [-9, 43], [-9, 36]],
-        // Africa
-        [[-17, 15], [-5, 35], [10, 37], [25, 32], [32, 30], [35, 28], [43, 12], [51, 10], [45, 0], [40, -10], [35, -25], [28, -34], [18, -34], [12, -20], [8, 4], [-10, 5], [-17, 15]],
-        // Australia
-        [[114, -22], [122, -15], [135, -12], [142, -11], [150, -22], [153, -28], [150, -37], [140, -38], [130, -32], [118, -35], [114, -22]],
-        // Greenland
-        [[-55, 60], [-40, 60], [-20, 70], [-20, 82], [-50, 83], [-60, 76], [-55, 60]],
-      ];
+      // 1. Canonical Planetary Watersheds Dataset (Aligned with Web Mercator EPSG:3857)
+      const MAP_SIZE = 2048; // Size of base satellite raster world_low.webp
 
-      // 2. Canonical Planetary Watersheds Dataset
+      // Web Mercator projection: [lon, lat] -> [worldX, worldY] in [0, 2048]
+      function toWorldPx(lon, lat) {
+        const x = ((lon + 180.0) / 360.0) * MAP_SIZE;
+        const latClamped = Math.max(-85.051128, Math.min(85.051128, lat));
+        const latRad = latClamped * Math.PI / 180.0;
+        const mercY = Math.log(Math.tan(Math.PI / 4.0 + latRad / 2.0));
+        const y = (0.5 - mercY / (2.0 * Math.PI)) * MAP_SIZE;
+        return [x, y];
+      }
+
       const WATERSHEDS = [
         {
           id: "basin-po",
@@ -1235,12 +1320,13 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           nodeName: "Val di Susa Watershed Node (34 Pioneers)",
           simParam: "po-valley",
           gameParam: "alpine",
-          center: [9.5, 45.0],
-          polygon: [[5.5, 44.0], [7.0, 46.2], [10.5, 46.5], [13.2, 46.0], [12.5, 44.5], [10.0, 44.0], [8.0, 44.2], [5.5, 44.0]],
+          center: [9.5, 45.1],
+          zoomLevel: 5.5,
+          polygon: [[6.5, 44.1], [6.8, 45.9], [9.8, 46.5], [12.6, 46.5], [13.0, 45.4], [12.4, 44.7], [9.6, 44.3], [7.4, 44.2], [6.5, 44.1]],
           rivers: [
-            [[7.0, 45.1], [8.5, 45.1], [10.0, 45.0], [12.4, 44.9]], // Po main
-            [[8.0, 45.8], [8.5, 45.2]], // Ticino
-            [[10.8, 46.0], [11.5, 45.4], [12.3, 45.1]] // Adige
+            [[7.0, 44.7], [7.7, 45.1], [8.6, 45.1], [9.7, 45.1], [11.5, 45.0], [12.4, 44.9]],
+            [[8.6, 46.1], [8.9, 45.6], [9.0, 45.2]],
+            [[10.5, 46.7], [11.1, 46.1], [11.3, 45.5], [12.3, 45.1]]
           ]
         },
         {
@@ -1259,9 +1345,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           simParam: "rhine-meuse",
           gameParam: "riverine",
           center: [7.5, 50.5],
+          zoomLevel: 4.8,
           polygon: [[4.0, 52.0], [6.0, 53.5], [10.0, 52.0], [9.5, 47.5], [7.0, 47.5], [4.5, 49.5], [4.0, 52.0]],
           rivers: [
-            [[8.5, 47.5], [7.6, 49.0], [7.2, 50.3], [6.0, 51.8], [4.4, 51.9]],
+            [[9.5, 46.8], [8.6, 47.6], [7.6, 48.6], [7.7, 50.0], [7.0, 50.8], [6.0, 51.8], [4.2, 51.9]],
             [[5.5, 49.8], [6.0, 50.6], [7.0, 51.4]]
           ]
         },
@@ -1281,11 +1368,12 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           simParam: "amazon",
           gameParam: "rainforest",
           center: [-60.0, -3.5],
+          zoomLevel: 2.8,
           polygon: [[-78.0, -2.0], [-72.0, 2.0], [-60.0, 3.0], [-50.0, 0.0], [-48.0, -5.0], [-52.0, -14.0], [-65.0, -18.0], [-76.0, -10.0], [-78.0, -2.0]],
           rivers: [
-            [[-73.0, -4.5], [-65.0, -3.8], [-58.0, -3.1], [-50.5, -0.5]],
-            [[-56.0, -9.0], [-55.0, -5.0], [-54.5, -2.5]],
-            [[-63.0, -10.0], [-60.0, -6.0], [-58.5, -3.5]]
+            [[-73.5, -4.5], [-65.0, -3.2], [-58.5, -2.8], [-51.0, -0.2]],
+            [[-56.0, -9.0], [-55.0, -5.5], [-54.8, -2.4]],
+            [[-65.0, -10.0], [-60.0, -5.5], [-58.7, -3.4]]
           ]
         },
         {
@@ -1304,6 +1392,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           simParam: "great-lakes",
           gameParam: "temperate",
           center: [-83.0, 44.5],
+          zoomLevel: 3.6,
           polygon: [[-92.0, 48.0], [-84.0, 49.0], [-76.0, 47.0], [-74.0, 43.0], [-80.0, 41.0], [-88.0, 41.5], [-92.0, 44.0], [-92.0, 48.0]],
           rivers: [
             [[-89.0, 47.5], [-84.5, 45.8], [-82.5, 43.5], [-76.0, 44.0], [-71.0, 47.0]]
@@ -1324,7 +1413,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           nodeName: "Cascadia Bio-Fab Node",
           simParam: "cascadia",
           gameParam: "alpine",
-          center: [-121.0, 46.5],
+          center: [-120.0, 46.5],
+          zoomLevel: 4.4,
           polygon: [[-124.5, 49.0], [-117.0, 51.5], [-112.0, 48.0], [-111.0, 42.5], [-118.0, 42.0], [-124.0, 43.0], [-124.5, 49.0]],
           rivers: [
             [[-117.0, 50.0], [-118.5, 47.5], [-120.0, 46.0], [-124.0, 46.2]],
@@ -1346,7 +1436,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           nodeName: "Atacama Solar Oasis (22 Pioneers)",
           simParam: "atacama",
           gameParam: "arid",
-          center: [-69.0, -23.5],
+          center: [-68.5, -23.5],
+          zoomLevel: 5.2,
           polygon: [[-70.5, -20.0], [-67.0, -20.5], [-66.5, -26.0], [-70.0, -26.5], [-70.5, -20.0]],
           rivers: [
             [[-67.5, -22.0], [-68.5, -23.5]],
@@ -1368,7 +1459,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           nodeName: "Kisangani Agro-Forestry Cooperative",
           simParam: "congo",
           gameParam: "rainforest",
-          center: [21.0, 0.0],
+          center: [21.0, -1.0],
+          zoomLevel: 3.2,
           polygon: [[12.0, 4.0], [22.0, 5.0], [30.0, 2.0], [31.0, -8.0], [25.0, -12.0], [17.0, -10.0], [12.0, -4.0], [12.0, 4.0]],
           rivers: [
             [[28.0, -2.0], [25.0, 0.5], [20.0, 1.5], [16.0, -1.0], [12.3, -6.0]],
@@ -1390,7 +1482,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           nodeName: "Nubian Permaculture Cooperative",
           simParam: "nile",
           gameParam: "riverine",
-          center: [31.5, 18.0],
+          center: [31.5, 16.0],
+          zoomLevel: 3.2,
           polygon: [[29.0, 31.5], [33.5, 31.5], [37.0, 15.0], [36.0, 5.0], [30.0, -2.0], [28.0, 6.0], [27.0, 22.0], [29.0, 31.5]],
           rivers: [
             [[31.5, 0.0], [31.5, 10.0], [32.5, 15.5], [31.0, 24.0], [31.2, 31.0]]
@@ -1412,6 +1505,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           simParam: "rojava",
           gameParam: "arid",
           center: [42.0, 34.0],
+          zoomLevel: 4.5,
           polygon: [[36.0, 38.5], [41.0, 39.5], [47.0, 35.0], [48.5, 30.5], [44.0, 30.0], [38.0, 32.5], [36.0, 38.5]],
           rivers: [
             [[38.0, 38.0], [40.5, 35.5], [44.0, 32.5], [48.0, 30.5]],
@@ -1433,7 +1527,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           nodeName: "Punjab Glacial Melt Irrigation Commons",
           simParam: "indus",
           gameParam: "alpine",
-          center: [72.0, 30.0],
+          center: [71.5, 30.0],
+          zoomLevel: 4.2,
           polygon: [[71.0, 36.5], [78.0, 35.0], [77.0, 30.0], [71.0, 24.0], [67.0, 25.0], [68.0, 32.0], [71.0, 36.5]],
           rivers: [
             [[76.0, 35.0], [72.5, 32.0], [70.5, 28.5], [67.5, 24.5]]
@@ -1454,7 +1549,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           nodeName: "Kerala Agro-Forestry Node",
           simParam: "kerala",
           gameParam: "rainforest",
-          center: [76.5, 10.5],
+          center: [76.0, 10.5],
+          zoomLevel: 5.6,
           polygon: [[74.5, 14.5], [76.0, 14.5], [77.5, 9.5], [77.0, 8.0], [75.5, 9.5], [74.5, 14.5]],
           rivers: [
             [[76.5, 12.0], [75.8, 11.5]],
@@ -1477,6 +1573,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           simParam: "yangtze",
           gameParam: "riverine",
           center: [112.0, 30.0],
+          zoomLevel: 3.5,
           polygon: [[92.0, 33.0], [105.0, 33.0], [121.0, 32.0], [120.0, 28.0], [112.0, 25.0], [103.0, 26.0], [95.0, 29.0], [92.0, 33.0]],
           rivers: [
             [[96.0, 33.0], [104.0, 30.5], [112.0, 30.0], [121.5, 31.5]]
@@ -1497,7 +1594,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           nodeName: "Barwon Solar & Sand Aquifer Storage",
           simParam: "murray-darling",
           gameParam: "arid",
-          center: [145.0, -32.0],
+          center: [144.0, -32.0],
+          zoomLevel: 3.8,
           polygon: [[140.0, -28.0], [148.0, -26.0], [151.0, -32.0], [148.0, -37.0], [140.0, -36.0], [138.0, -34.0], [140.0, -28.0]],
           rivers: [
             [[149.0, -29.0], [144.0, -32.0], [141.0, -34.0], [139.0, -35.5]],
@@ -1520,6 +1618,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           simParam: "baltic",
           gameParam: "temperate",
           center: [22.0, 60.0],
+          zoomLevel: 3.8,
           polygon: [[12.0, 56.0], [16.0, 64.0], [26.0, 68.0], [32.0, 62.0], [30.0, 54.0], [19.0, 54.0], [12.0, 56.0]],
           rivers: [
             [[24.0, 66.0], [21.5, 62.0]],
@@ -1528,7 +1627,25 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         }
       ];
 
-      // 3. Canvas 2D Engine State
+      // Convert all watershed polygons & rivers into precalculated Web Mercator pixels
+      WATERSHEDS.forEach(b => {
+        b.centerPx = toWorldPx(b.center[0], b.center[1]);
+        b.polygonPx = b.polygon.map(([lon, lat]) => toWorldPx(lon, lat));
+        b.riversPx = b.rivers.map(r => r.map(([lon, lat]) => toWorldPx(lon, lat)));
+      });
+
+      // 2. Real Earth Satellite Map Assets (Reused from sim/)
+      const earthImgLow = new Image();
+      earthImgLow.src = "./assets/map/world_low.webp";
+      let currentEarthImg = earthImgLow;
+
+      const earthImgHigh = new Image();
+      earthImgHigh.src = "./assets/map/world_high.webp";
+      earthImgHigh.onload = () => {
+        currentEarthImg = earthImgHigh;
+      };
+
+      // 3. Canvas 2D Engine State & Camera
       const canvas = document.getElementById("watershedCanvas");
       if (!canvas) return;
       const ctx = canvas.getContext("2d");
@@ -1540,35 +1657,57 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       let activeFilter = "all";
       let particles = [];
 
-      // Projection: Equirectangular [lon, lat] -> [canvas x, canvas y]
-      function project(lon, lat) {
-        const x = ((lon + 180) / 360) * width;
-        const y = ((82 - lat) / 142) * height;
-        return [x, y];
+      // Camera: world coordinates (0-2048) and zoom factor
+      // At zoom 1.0, the world map height is fitted to canvas height
+      const worldCenter = toWorldPx(10, 20); // Atlantic / Europe / Equator center
+      const camera = { x: worldCenter[0], y: worldCenter[1], zoom: 1.0 };
+      const targetCamera = { x: worldCenter[0], y: worldCenter[1], zoom: 1.0 };
+      let zoomMode = "WORLD"; // 'WORLD' or 'REGION'
+
+      function getBaseScale() {
+        return (height / MAP_SIZE) * 1.08;
+      }
+
+      function getScale() {
+        return getBaseScale() * camera.zoom;
+      }
+
+      function worldToScreen(wx, wy) {
+        const scale = getScale();
+        const sx = width / 2.0 + (wx - camera.x) * scale;
+        const sy = height / 2.0 + (wy - camera.y) * scale;
+        return [sx, sy];
+      }
+
+      function screenToWorld(sx, sy) {
+        const scale = getScale();
+        const wx = camera.x + (sx - width / 2.0) / scale;
+        const wy = camera.y + (sy - height / 2.0) / scale;
+        return [wx, wy];
       }
 
       function resizeCanvas() {
         const rect = canvas.getBoundingClientRect();
         const dpr = window.devicePixelRatio || 1;
         width = rect.width || 900;
-        height = rect.height || 430;
+        height = rect.height || 440;
         canvas.width = width * dpr;
         canvas.height = height * dpr;
         ctx.scale(dpr, dpr);
       }
 
-      // Initialize flow particles along river arteries
+      // Initialize flow particles along river arteries in world pixels
       function initParticles() {
         particles = [];
         WATERSHEDS.forEach((b) => {
-          b.rivers.forEach((river, rIdx) => {
+          b.riversPx.forEach((river) => {
             const count = Math.max(2, Math.floor(river.length * 1.5));
             for (let i = 0; i < count; i++) {
               particles.push({
                 basinId: b.id,
                 river: river,
                 progress: Math.random(),
-                speed: 0.003 + Math.random() * 0.004,
+                speed: 0.003 + Math.random() * 0.005,
                 color: b.biome === 'rainforest' ? '#10b981' : (b.biome === 'arid' ? '#f59e0b' : '#06b6d4')
               });
             }
@@ -1576,7 +1715,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         });
       }
 
-      // Point in polygon test
+      // Point in polygon test (executed in world pixel space)
       function isPointInPoly(pt, poly) {
         const [x, y] = pt;
         let inside = false;
@@ -1587,6 +1726,46 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           if (intersect) inside = !inside;
         }
         return inside;
+      }
+
+      function updateZoomBadge() {
+        const badge = document.getElementById("hudZoomBadge");
+        const modeWorldBtn = document.getElementById("btnModeWorld");
+        const modeRegBtn = document.getElementById("btnModeRegion");
+        const focusBtn = document.getElementById("btnFocusBasin");
+        const hintText = document.getElementById("weHintText");
+
+        if (targetCamera.zoom > 1.8) {
+          zoomMode = "REGION";
+          if (badge) badge.textContent = "ZOOM: REGION (BIOREGIONAL FOCUS)";
+          if (modeWorldBtn) modeWorldBtn.classList.remove("active");
+          if (modeRegBtn) modeRegBtn.classList.add("active");
+          if (focusBtn) focusBtn.innerHTML = "<span>🌐 Zoom Out to Planetary View</span>";
+          if (hintText) hintText.innerHTML = "<span>🔍 Region Focus • Drag to pan • Scroll to zoom</span>";
+        } else {
+          zoomMode = "WORLD";
+          if (badge) badge.textContent = "ZOOM: WORLD (PLANETARY)";
+          if (modeWorldBtn) modeWorldBtn.classList.add("active");
+          if (modeRegBtn) modeRegBtn.classList.remove("active");
+          if (focusBtn) focusBtn.innerHTML = "<span>🔍 Fly to Bioregion View</span>";
+          if (hintText) hintText.innerHTML = "<span>🌐 World View • Click basin to zoom into Bioregion</span>";
+        }
+      }
+
+      function setViewWorld() {
+        const wc = toWorldPx(10, 20);
+        targetCamera.x = wc[0];
+        targetCamera.y = wc[1];
+        targetCamera.zoom = 1.0;
+        updateZoomBadge();
+      }
+
+      function setViewRegion(b) {
+        if (!b) return;
+        targetCamera.x = b.centerPx[0];
+        targetCamera.y = b.centerPx[1];
+        targetCamera.zoom = b.zoomLevel || 4.5;
+        updateZoomBadge();
       }
 
       // Update Inspector HUD Panel
@@ -1609,138 +1788,147 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         if (gameBtn) gameBtn.href = `./game/?bioregion=${b.gameParam}`;
       }
 
-      // Drawing Loop
+      // Drawing Loop (60 FPS with Camera Lerping & River Flow)
       function draw() {
+        // 1. Smooth Camera Lerp
+        camera.x += (targetCamera.x - camera.x) * 0.09;
+        camera.y += (targetCamera.y - camera.y) * 0.09;
+        camera.zoom += (targetCamera.zoom - camera.zoom) * 0.09;
+
         ctx.clearRect(0, 0, width, height);
 
-        // 1. Dark Ocean Canvas Base
-        ctx.fillStyle = "#030806";
+        // 2. Base Dark Oceanic Fill
+        ctx.fillStyle = "#020705";
         ctx.fillRect(0, 0, width, height);
 
-        // 2. Graticule Lat/Lon Grid lines
-        ctx.strokeStyle = "rgba(255, 255, 255, 0.03)";
+        // 3. Draw Real Earth Satellite Map (with horizontal wraparound)
+        const scale = getScale();
+        const imgScreenW = MAP_SIZE * scale;
+        const imgScreenH = MAP_SIZE * scale;
+        const imgScreenX = width / 2.0 - camera.x * scale;
+        const imgScreenY = height / 2.0 - camera.y * scale;
+
+        if (currentEarthImg && currentEarthImg.complete) {
+          ctx.drawImage(currentEarthImg, imgScreenX, imgScreenY, imgScreenW, imgScreenH);
+          // Horizontal wrapping for seamless planetary panning
+          if (imgScreenX > 0) {
+            ctx.drawImage(currentEarthImg, imgScreenX - imgScreenW, imgScreenY, imgScreenW, imgScreenH);
+          }
+          if (imgScreenX + imgScreenW < width) {
+            ctx.drawImage(currentEarthImg, imgScreenX + imgScreenW, imgScreenY, imgScreenW, imgScreenH);
+          }
+        }
+
+        // 4. Subtle Ambient Vignette & Graticule
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.04)";
         ctx.lineWidth = 1;
         for (let lon = -150; lon <= 180; lon += 30) {
-          const [x1] = project(lon, 80);
+          const [gx] = worldToScreen(toWorldPx(lon, 0)[0], 0);
           ctx.beginPath();
-          ctx.moveTo(x1, 0);
-          ctx.lineTo(x1, height);
-          ctx.stroke();
-        }
-        for (let lat = -60; lat <= 80; lat += 30) {
-          const [, y1] = project(0, lat);
-          ctx.beginPath();
-          ctx.moveTo(0, y1);
-          ctx.lineTo(width, y1);
+          ctx.moveTo(gx, 0);
+          ctx.lineTo(gx, height);
           ctx.stroke();
         }
 
-        // Equator
-        const [, eqY] = project(0, 0);
-        ctx.strokeStyle = "rgba(52, 211, 153, 0.08)";
-        ctx.lineWidth = 1;
-        ctx.setLineDash([4, 4]);
-        ctx.beginPath();
-        ctx.moveTo(0, eqY);
-        ctx.lineTo(width, eqY);
-        ctx.stroke();
-        ctx.setLineDash([]);
-
-        // 3. Draw Continental Outlines
-        ctx.fillStyle = "#0b1713";
-        ctx.strokeStyle = "rgba(52, 211, 153, 0.15)";
-        ctx.lineWidth = 1;
-        CONTINENTS.forEach(poly => {
-          ctx.beginPath();
-          poly.forEach(([lon, lat], idx) => {
-            const [x, y] = project(lon, lat);
-            if (idx === 0) ctx.moveTo(x, y);
-            else ctx.lineTo(x, y);
-          });
-          ctx.closePath();
-          ctx.fill();
-          ctx.stroke();
-        });
-
-        // 4. Draw Watershed Basins
+        // 5. Draw Watershed Basins on Real Satellite Relief
         WATERSHEDS.forEach(b => {
           const isSelected = selectedBasin && selectedBasin.id === b.id;
           const isHovered = hoveredBasin && hoveredBasin.id === b.id;
           const matchesFilter = activeFilter === "all" || b.biome === activeFilter;
 
-          // Convert boundary polygon
-          const canvasPoly = b.polygon.map(([lon, lat]) => project(lon, lat));
+          // Convert polygon to screen coordinates
+          const screenPoly = b.polygonPx.map(([wx, wy]) => worldToScreen(wx, wy));
 
           ctx.beginPath();
-          canvasPoly.forEach(([x, y], idx) => {
-            if (idx === 0) ctx.moveTo(x, y);
-            else ctx.lineTo(x, y);
+          screenPoly.forEach(([sx, sy], idx) => {
+            if (idx === 0) ctx.moveTo(sx, sy);
+            else ctx.lineTo(sx, sy);
           });
           ctx.closePath();
 
-          // Biome coloring
-          let fillColor = "rgba(52, 211, 153, 0.08)";
-          let strokeColor = "rgba(52, 211, 153, 0.3)";
+          // Biophilic tints overlaid on real terrain
+          let fillColor = "rgba(52, 211, 153, 0.12)";
+          let strokeColor = "rgba(52, 211, 153, 0.4)";
 
           if (b.biome === "alpine") {
-            fillColor = "rgba(6, 182, 212, 0.12)";
-            strokeColor = "rgba(6, 182, 212, 0.4)";
+            fillColor = "rgba(6, 182, 212, 0.16)";
+            strokeColor = "rgba(6, 182, 212, 0.55)";
           } else if (b.biome === "rainforest") {
-            fillColor = "rgba(16, 185, 129, 0.14)";
-            strokeColor = "rgba(16, 185, 129, 0.5)";
+            fillColor = "rgba(16, 185, 129, 0.18)";
+            strokeColor = "rgba(16, 185, 129, 0.65)";
           } else if (b.biome === "arid") {
-            fillColor = "rgba(245, 158, 11, 0.12)";
-            strokeColor = "rgba(245, 158, 11, 0.45)";
+            fillColor = "rgba(245, 158, 11, 0.16)";
+            strokeColor = "rgba(245, 158, 11, 0.55)";
           } else if (b.biome === "riverine") {
-            fillColor = "rgba(14, 165, 233, 0.14)";
-            strokeColor = "rgba(14, 165, 233, 0.5)";
+            fillColor = "rgba(14, 165, 233, 0.16)";
+            strokeColor = "rgba(14, 165, 233, 0.6)";
           }
 
           if (!matchesFilter) {
-            fillColor = "rgba(255, 255, 255, 0.02)";
-            strokeColor = "rgba(255, 255, 255, 0.06)";
+            fillColor = "rgba(0, 0, 0, 0.45)";
+            strokeColor = "rgba(255, 255, 255, 0.08)";
           }
 
           if (isHovered || isSelected) {
-            fillColor = isSelected ? "rgba(52, 211, 153, 0.28)" : "rgba(6, 182, 212, 0.22)";
+            fillColor = isSelected ? "rgba(52, 211, 153, 0.32)" : "rgba(6, 182, 212, 0.25)";
             strokeColor = isSelected ? "#34d399" : "#22d3ee";
             ctx.shadowColor = strokeColor;
-            ctx.shadowBlur = 14;
+            ctx.shadowBlur = isSelected ? 18 : 10;
           }
 
           ctx.fillStyle = fillColor;
           ctx.fill();
           ctx.strokeStyle = strokeColor;
-          ctx.lineWidth = isSelected ? 2 : (isHovered ? 1.5 : 1);
+          ctx.lineWidth = isSelected ? 2.5 : (isHovered ? 2 : 1.2);
           ctx.stroke();
           ctx.shadowBlur = 0;
 
-          // River network lines inside basin
-          b.rivers.forEach(river => {
+          // River network veins overlaid on real valleys
+          b.riversPx.forEach(river => {
             if (river.length < 2) return;
             ctx.beginPath();
-            river.forEach(([lon, lat], idx) => {
-              const [rx, ry] = project(lon, lat);
+            river.forEach(([wx, wy], idx) => {
+              const [rx, ry] = worldToScreen(wx, wy);
               if (idx === 0) ctx.moveTo(rx, ry);
               else ctx.lineTo(rx, ry);
             });
-            ctx.strokeStyle = (isHovered || isSelected) ? "rgba(34, 211, 238, 0.85)" : "rgba(34, 211, 238, 0.45)";
-            ctx.lineWidth = isSelected ? 1.8 : 1.2;
+            ctx.strokeStyle = (isHovered || isSelected) ? "rgba(34, 211, 238, 0.95)" : "rgba(34, 211, 238, 0.6)";
+            ctx.lineWidth = isSelected ? 2.2 : (isHovered ? 1.6 : 1.2);
             ctx.stroke();
           });
 
           // Seed Node beacon marker
-          const [cx, cy] = project(b.center[0], b.center[1]);
+          const [cx, cy] = worldToScreen(b.centerPx[0], b.centerPx[1]);
           ctx.beginPath();
-          ctx.arc(cx, cy, isSelected ? 5 : 3.5, 0, Math.PI * 2);
+          ctx.arc(cx, cy, isSelected ? 6 : 4, 0, Math.PI * 2);
           ctx.fillStyle = isSelected ? "#34d399" : (isHovered ? "#22d3ee" : "#f59e0b");
           ctx.shadowColor = ctx.fillStyle;
-          ctx.shadowBlur = isSelected ? 12 : 6;
+          ctx.shadowBlur = isSelected ? 16 : 8;
           ctx.fill();
           ctx.shadowBlur = 0;
+
+          // Pulsing halo when selected
+          if (isSelected) {
+            const pulse = (Date.now() % 2000) / 2000;
+            ctx.beginPath();
+            ctx.arc(cx, cy, 6 + pulse * 14, 0, Math.PI * 2);
+            ctx.strokeStyle = `rgba(52, 211, 153, ${0.8 - pulse * 0.8})`;
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+          }
+
+          // Node label visible when zoomed into Region view
+          if (camera.zoom > 2.2 && (isSelected || isHovered)) {
+            ctx.font = "600 11px 'Inter', sans-serif";
+            ctx.fillStyle = "#ffffff";
+            ctx.shadowColor = "rgba(0,0,0,0.9)";
+            ctx.shadowBlur = 6;
+            ctx.fillText(b.name, cx + 10, cy + 4);
+            ctx.shadowBlur = 0;
+          }
         });
 
-        // 5. Draw Animated River Flow Particles
+        // 6. Draw Animated River Flow Particles
         particles.forEach(p => {
           p.progress += p.speed;
           if (p.progress >= 1) p.progress = 0;
@@ -1748,7 +1936,6 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           const r = p.river;
           if (r.length < 2) return;
 
-          // Interpolate position along segmented river
           const totalSegments = r.length - 1;
           const segProgress = p.progress * totalSegments;
           const segIdx = Math.floor(segProgress);
@@ -1757,17 +1944,17 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           const p0 = r[segIdx];
           const p1 = r[Math.min(segIdx + 1, totalSegments)];
 
-          const lon = p0[0] + (p1[0] - p0[0]) * segFraction;
-          const lat = p0[1] + (p1[1] - p0[1]) * segFraction;
-          const [px, py] = project(lon, lat);
+          const wx = p0[0] + (p1[0] - p0[0]) * segFraction;
+          const wy = p0[1] + (p1[1] - p0[1]) * segFraction;
+          const [px, py] = worldToScreen(wx, wy);
 
           const isBasinActive = (selectedBasin && selectedBasin.id === p.basinId) || (hoveredBasin && hoveredBasin.id === p.basinId);
 
           ctx.beginPath();
-          ctx.arc(px, py, isBasinActive ? 2.5 : 1.5, 0, Math.PI * 2);
+          ctx.arc(px, py, isBasinActive ? 3.0 : 1.8, 0, Math.PI * 2);
           ctx.fillStyle = isBasinActive ? "#38bdf8" : p.color;
           ctx.shadowColor = ctx.fillStyle;
-          ctx.shadowBlur = 8;
+          ctx.shadowBlur = 10;
           ctx.fill();
           ctx.shadowBlur = 0;
         });
@@ -1775,17 +1962,42 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         requestAnimationFrame(draw);
       }
 
-      // Event Listeners: Mouse Move & Click
-      canvas.addEventListener("mousemove", (e) => {
+      // Event Listeners: Mouse Move, Drag-Pan, Wheel Zoom & Click
+      let isDragging = false;
+      let dragStart = { x: 0, y: 0 };
+      let cameraStart = { x: 0, y: 0 };
+      let hasDragged = false;
+
+      canvas.addEventListener("mousedown", (e) => {
+        if (e.button !== 0) return;
+        isDragging = true;
+        hasDragged = false;
+        dragStart = { x: e.clientX, y: e.clientY };
+        cameraStart = { x: targetCamera.x, y: targetCamera.y };
+        canvas.style.cursor = "grabbing";
+      });
+
+      window.addEventListener("mousemove", (e) => {
+        if (isDragging) {
+          const dx = e.clientX - dragStart.x;
+          const dy = e.clientY - dragStart.y;
+          if (Math.abs(dx) > 3 || Math.abs(dy) > 3) hasDragged = true;
+
+          const scale = getScale();
+          targetCamera.x = cameraStart.x - dx / scale;
+          targetCamera.y = cameraStart.y - dy / scale;
+          return;
+        }
+
         const rect = canvas.getBoundingClientRect();
         const mouseX = e.clientX - rect.left;
         const mouseY = e.clientY - rect.top;
+        const [wx, wy] = screenToWorld(mouseX, mouseY);
 
         let found = null;
         for (let i = WATERSHEDS.length - 1; i >= 0; i--) {
           const b = WATERSHEDS[i];
-          const canvasPoly = b.polygon.map(([lon, lat]) => project(lon, lat));
-          if (isPointInPoly([mouseX, mouseY], canvasPoly)) {
+          if (isPointInPoly([wx, wy], b.polygonPx)) {
             found = b;
             break;
           }
@@ -1795,24 +2007,67 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         canvas.style.cursor = found ? "pointer" : "crosshair";
       });
 
-      canvas.addEventListener("mouseleave", () => {
-        hoveredBasin = null;
+      window.addEventListener("mouseup", () => {
+        if (isDragging) {
+          isDragging = false;
+          canvas.style.cursor = hoveredBasin ? "pointer" : "crosshair";
+        }
       });
 
       canvas.addEventListener("click", (e) => {
+        if (hasDragged) return; // Ignore click if user was panning
+
         const rect = canvas.getBoundingClientRect();
         const mouseX = e.clientX - rect.left;
         const mouseY = e.clientY - rect.top;
+        const [wx, wy] = screenToWorld(mouseX, mouseY);
 
         for (let i = WATERSHEDS.length - 1; i >= 0; i--) {
           const b = WATERSHEDS[i];
-          const canvasPoly = b.polygon.map(([lon, lat]) => project(lon, lat));
-          if (isPointInPoly([mouseX, mouseY], canvasPoly)) {
+          if (isPointInPoly([wx, wy], b.polygonPx)) {
             selectedBasin = b;
             updateHUD(b);
+            // Smoothly fly to region view
+            setViewRegion(b);
             break;
           }
         }
+      });
+
+      canvas.addEventListener("wheel", (e) => {
+        e.preventDefault();
+        const zoomDelta = e.deltaY < 0 ? 1.18 : 0.82;
+        targetCamera.zoom = Math.max(1.0, Math.min(8.0, targetCamera.zoom * zoomDelta));
+        updateZoomBadge();
+      }, { passive: false });
+
+      // Focus Bioregion / Zoom Out Button in HUD
+      const focusBtn = document.getElementById("btnFocusBasin");
+      if (focusBtn) {
+        focusBtn.addEventListener("click", () => {
+          if (zoomMode === "WORLD") {
+            setViewRegion(selectedBasin);
+          } else {
+            setViewWorld();
+          }
+        });
+      }
+
+      // Discrete Zoom Mode Buttons in Canvas Overlay
+      const btnWorld = document.getElementById("btnModeWorld");
+      const btnRegion = document.getElementById("btnModeRegion");
+      if (btnWorld) btnWorld.addEventListener("click", () => setViewWorld());
+      if (btnRegion) btnRegion.addEventListener("click", () => setViewRegion(selectedBasin));
+
+      const btnZIn = document.getElementById("btnZoomIn");
+      const btnZOut = document.getElementById("btnZoomOut");
+      if (btnZIn) btnZIn.addEventListener("click", () => {
+        targetCamera.zoom = Math.min(8.0, targetCamera.zoom * 1.35);
+        updateZoomBadge();
+      });
+      if (btnZOut) btnZOut.addEventListener("click", () => {
+        targetCamera.zoom = Math.max(1.0, targetCamera.zoom / 1.35);
+        updateZoomBadge();
       });
 
       // Filter Chips handler
@@ -1823,12 +2078,12 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           chip.classList.add("active");
           activeFilter = chip.getAttribute("data-biome");
 
-          // Auto-select first matching basin if current doesn't match
           if (activeFilter !== "all" && selectedBasin.biome !== activeFilter) {
             const firstMatch = WATERSHEDS.find(b => b.biome === activeFilter);
             if (firstMatch) {
               selectedBasin = firstMatch;
               updateHUD(firstMatch);
+              if (zoomMode === "REGION") setViewRegion(firstMatch);
             }
           }
 
@@ -1848,6 +2103,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           selectedBasin = WATERSHEDS[0];
           hoveredBasin = null;
           updateHUD(selectedBasin);
+          setViewWorld();
           document.getElementById("weCountBadge").textContent = `${WATERSHEDS.length} Sovereign Basins Mapped`;
         });
       }
@@ -1857,6 +2113,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       resizeCanvas();
       initParticles();
       updateHUD(selectedBasin);
+      updateZoomBadge();
       requestAnimationFrame(draw);
     })();
   </script>
@@ -1954,7 +2211,7 @@ def build_all(quick_mode=False):
     # Write Launcher Hub index.html
     hub_html_path = DOCS_DIR / "index.html"
     hub_html_path.write_text(LAUNCHER_HTML, encoding="utf-8")
-    print(f"  [✓] Wrote Solarpunk Launcher Hub (with Watershed Explorer): {hub_html_path}")
+    print(f"  [✓] Wrote Solarpunk Launcher Hub (with Real Earth Satellite Map): {hub_html_path}")
 
     # Copy brand assets to docs/ root for the Launcher
     for logo_name in [
@@ -1974,7 +2231,7 @@ def build_all(quick_mode=False):
     print("\n" + "=" * 70)
     print(" [✓] DOCS SUBPATH HUB SUCCESSFULLY BUILT & CERTIFIED CLEAN!")
     print(f"     Root Launcher : {DOCS_DIR / 'index.html'} -> https://kyberlex.github.io/ONE/")
-    print(f"     Watershed Hub : Integrated in Root Launcher (Step 1 Macro-Gateway)")
+    print(f"     Watershed Hub : Real Earth Satellite Relief (ZOOM = WORLD & ZOOM = REGION)")
     print(f"     Commons Game  : {docs_game / 'index.html'} -> https://kyberlex.github.io/ONE/game/")
     print(f"     O-ASIS Sandbox: {docs_sim / 'index.html'} -> https://kyberlex.github.io/ONE/sim/")
     print("=" * 70)
