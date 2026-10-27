@@ -1,0 +1,1985 @@
+#!/usr/bin/env python3
+"""
+build_docs_hub.py — O.N.E. Interactive Platform Hub Builder (Agent H1 & H3)
+
+Compiles both 'game/' (Living Commons Game) and 'sim/app/' (O-ASIS Epistemic Sandbox),
+assembles the unified Subpath Hub in 'docs/' (with root launcher, /game/, and /sim/),
+embeds the Bioregional Watershed Explorer as the Step 1 Macro-Planetary Gateway,
+cleans up legacy CNAME redirects, ensures .nojekyll, and validates Class-0 Zero-Leak OpSec.
+
+Author: Kyberlex <kyberlex@proton.me>
+License: AGPL-3.0-or-later
+"""
+
+import os
+import sys
+import re
+import shutil
+import subprocess
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DOCS_DIR = REPO_ROOT / "docs"
+GAME_DIR = REPO_ROOT / "game"
+GAME_DIST = GAME_DIR / "dist"
+SIM_APP_DIR = REPO_ROOT / "sim" / "app"
+SIM_DIST = SIM_APP_DIR / "dist"
+
+FORBIDDEN_PATTERNS = [
+    (re.compile(r"\brudy\b", re.IGNORECASE), "Personal name"),
+    (re.compile(r"\bfederici\b", re.IGNORECASE), "Personal surname"),
+    (re.compile(r"/Users/[a-zA-Z0-9_-]+/", re.IGNORECASE), "Workstation directory path '/Users/...'"),
+    (re.compile(r"192\.168\.\d{1,3}\.\d{1,3}"), "Private LAN IP telemetry '192.168.x.x'"),
+    (re.compile(r"[a-zA-Z0-9._%+-]+@(?!proton\.me|one-earth|surge)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", re.IGNORECASE), "Non-pseudonymous personal email address"),
+]
+
+BINARY_EXTENSIONS = {
+    ".png", ".jpg", ".jpeg", ".webp", ".ico", ".bin", ".woff", ".woff2",
+    ".ttf", ".eot", ".mp4", ".webm", ".m4a", ".wav", ".svg", ".json"
+}
+
+
+LAUNCHER_HTML = """<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>O.N.E. • The Living Interactive Platform (Watershed Explorer, Commons Game & O-ASIS)</title>
+  <meta name="description" content="Open Networked Earth Interactive Hub: Explore the planet by bioregional watersheds, experience the Living Commons Game, and audit the macroscopic O-ASIS thermodynamic sandbox." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #040907;
+      --bg-card: rgba(8, 20, 16, 0.75);
+      --border-card: rgba(52, 211, 153, 0.22);
+      --border-hover: rgba(52, 211, 153, 0.6);
+      --accent-emerald: #10b981;
+      --accent-emerald-glow: rgba(16, 185, 129, 0.4);
+      --accent-amber: #f59e0b;
+      --accent-cyan: #06b6d4;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.04) 0%, transparent 60%);
+      background-attachment: fixed;
+    }
+
+    /* Ambient animated solar grid backdrop */
+    .ambient-grid {
+      position: fixed;
+      inset: 0;
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Top Navigation Header */
+    header {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(16px);
+      background: rgba(4, 9, 7, 0.65);
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.5));
+    }
+
+    .brand-text h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 40%, #a7f3d0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-text p {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--accent-emerald);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .nav-btn-highlight {
+      border-color: rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.08);
+    }
+
+    .nav-btn-highlight:hover {
+      border-color: #34d399;
+      color: #fff;
+      background: rgba(16, 185, 129, 0.2);
+    }
+
+    /* Main Container */
+    main {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      max-width: 1240px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 44px 24px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-intro {
+      text-align: center;
+      max-width: 820px;
+      margin-bottom: 40px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: #34d399;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* =====================================================================
+       BIOREGIONAL WATERSHED EXPLORER (STEP 1: MACRO-PLANETARY GATEWAY)
+       ===================================================================== */
+    .watershed-explorer-section {
+      width: 100%;
+      max-width: 1120px;
+      margin-bottom: 48px;
+    }
+
+    .we-header {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .we-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: #22d3ee;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .we-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22d3ee;
+      box-shadow: 0 0 8px #22d3ee;
+      animation: pulseDot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 0.4; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.3); }
+    }
+
+    .we-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .we-title span {
+      background: linear-gradient(135deg, #22d3ee 0%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .we-desc {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.55;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* Main Explorer Card */
+    .we-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      padding: 24px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .we-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.6), rgba(52, 211, 153, 0.6), transparent);
+    }
+
+    /* Toolbar & Filter Chips */
+    .we-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .we-chips-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .we-chip {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #94a3b8;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .we-chip:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .we-chip.active {
+      color: #22d3ee;
+      background: rgba(6, 182, 212, 0.12);
+      border-color: rgba(6, 182, 212, 0.4);
+      box-shadow: 0 0 12px rgba(6, 182, 212, 0.2);
+    }
+
+    .we-count-badge {
+      font-size: 0.76rem;
+      color: #64748b;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* 2-Column Grid: Canvas Viewport & Inspector HUD */
+    .we-grid {
+      display: grid;
+      grid-template-columns: 1.65fr 1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .we-canvas-box {
+      position: relative;
+      background: #020605;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      overflow: hidden;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #watershedCanvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+      cursor: crosshair;
+    }
+
+    .we-canvas-overlay {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      right: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+
+    .we-hint {
+      font-size: 0.72rem;
+      color: #64748b;
+      background: rgba(2, 6, 5, 0.75);
+      padding: 4px 10px;
+      border-radius: 6px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .we-canvas-btn {
+      pointer-events: auto;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      font-size: 0.74rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .we-canvas-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    /* Inspector HUD */
+    .we-hud {
+      background: rgba(4, 12, 10, 0.65);
+      border: 1px solid rgba(52, 211, 153, 0.18);
+      border-radius: 14px;
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .we-hud-top {
+      margin-bottom: 16px;
+    }
+
+    .we-hud-tag-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .we-hud-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #34d399;
+      background: rgba(52, 211, 153, 0.12);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(52, 211, 153, 0.25);
+    }
+
+    .we-hud-status {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #f59e0b;
+      text-transform: uppercase;
+      background: rgba(245, 158, 11, 0.1);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+    }
+
+    .we-hud-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .we-hud-biome {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: #22d3ee;
+      margin-bottom: 12px;
+    }
+
+    .we-hud-desc {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .we-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .we-metric-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+
+    .we-metric-k {
+      display: block;
+      font-size: 0.68rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    .we-metric-v {
+      display: block;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .we-node-box {
+      background: rgba(16, 185, 129, 0.06);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 8px;
+      padding: 9px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .we-node-icon {
+      font-size: 1.1rem;
+    }
+
+    .we-node-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .we-node-title {
+      font-size: 0.7rem;
+      color: #34d399;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .we-node-val {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* Action buttons */
+    .we-actions-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .we-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .we-cta-sim {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
+    }
+
+    .we-cta-sim:hover {
+      background: rgba(245, 158, 11, 0.25);
+      border-color: rgba(245, 158, 11, 0.6);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .we-cta-game {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+    }
+
+    .we-cta-game:hover {
+      background: rgba(16, 185, 129, 0.25);
+      border-color: rgba(16, 185, 129, 0.6);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 900px) {
+      .we-grid {
+        grid-template-columns: 1fr;
+      }
+      .we-canvas-box {
+        min-height: 340px;
+      }
+    }
+
+    /* Dual Experience Showcase Grid */
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      width: 100%;
+      max-width: 1120px;
+      margin-bottom: 48px;
+    }
+
+    .exp-card {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      padding: 36px 32px;
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+    }
+
+    .exp-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.5), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .exp-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 24px -6px var(--accent-emerald-glow);
+    }
+
+    .exp-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Amber theme for sandbox card */
+    .exp-card.card-sandbox {
+      border-color: rgba(245, 158, 11, 0.2);
+    }
+
+    .exp-card.card-sandbox:hover {
+      border-color: rgba(245, 158, 11, 0.6);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 24px -6px rgba(245, 158, 11, 0.35);
+    }
+
+    .exp-card.card-sandbox::before {
+      background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.6), transparent);
+    }
+
+    .card-top {
+      margin-bottom: 24px;
+    }
+
+    .card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .badge-game {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-sandbox {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.55;
+      margin-bottom: 22px;
+    }
+
+    .card-pills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .card-pill-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+    }
+
+    .card-pill-icon {
+      font-size: 1rem;
+      width: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn-launch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px 24px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-launch-game {
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      box-shadow: 0 4px 18px rgba(16, 185, 129, 0.35);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+    }
+
+    .btn-launch-game:hover {
+      box-shadow: 0 6px 24px rgba(16, 185, 129, 0.55);
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+    }
+
+    .btn-launch-sandbox {
+      background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+      box-shadow: 0 4px 18px rgba(245, 158, 11, 0.35);
+      border: 1px solid rgba(251, 191, 36, 0.4);
+    }
+
+    .btn-launch-sandbox:hover {
+      box-shadow: 0 6px 24px rgba(245, 158, 11, 0.55);
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+    }
+
+    .card-meta-notes {
+      font-size: 0.76rem;
+      color: #64748b;
+      text-align: center;
+    }
+
+    /* Cross-Resource Showcase Bar */
+    .resource-band {
+      width: 100%;
+      max-width: 1120px;
+      background: rgba(8, 20, 16, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 24px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(14px);
+    }
+
+    .resource-band-text h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+
+    .resource-band-text p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .resource-band-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .res-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .res-link:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 24px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      color: #64748b;
+      font-size: 0.82rem;
+      backdrop-filter: blur(10px);
+      background: rgba(4, 9, 7, 0.8);
+    }
+
+    footer a {
+      color: var(--accent-emerald);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design (Mobile Portrait & Landscape) */
+    @media (max-width: 900px) {
+      header {
+        padding: 14px 20px;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .header-nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .resource-band {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+      }
+      .resource-band-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.85rem;
+      }
+      .exp-card {
+        padding: 24px 20px;
+      }
+      .card-title {
+        font-size: 1.45rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient-grid"></div>
+
+  <!-- Header Navigation -->
+  <header>
+    <a href="https://one-commons.github.io" class="brand-wrap" title="Visit Open Networked Earth (O.N.E.) Master Portal">
+      <img src="./one-logo-white.svg" alt="O.N.E. Logo" class="brand-logo" />
+      <div class="brand-text">
+        <h1>O.N.E. PLATFORM</h1>
+        <p>Open Networked Earth</p>
+      </div>
+    </a>
+
+    <nav class="header-nav">
+      <a href="https://one-commons.github.io" class="nav-btn nav-btn-highlight" target="_blank" rel="noopener noreferrer">
+        🌐 Master Portal ↗
+      </a>
+      <a href="https://one-commons.github.io#constitution" class="nav-btn" target="_blank" rel="noopener noreferrer">
+        📜 Constitution ↗
+      </a>
+      <a href="https://one-commons.github.io#books" class="nav-btn" target="_blank" rel="noopener noreferrer">
+        📚 Ebooks ↗
+      </a>
+      <a href="https://github.com/kyberlex/ONE" class="nav-btn" target="_blank" rel="noopener noreferrer">
+        💻 GitHub ↗
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Experience Selector -->
+  <main>
+    <div class="hero-intro">
+      <div class="hero-pill">
+        <span>✨ The Living Interactive Platform</span>
+      </div>
+      <h2 class="hero-title">
+        Choose your gateway into <span>Open Networked Earth</span>
+      </h2>
+      <p class="hero-desc">
+        Experience the physical transition to a post-scarcity, moneyless civilization.
+        Explore Earth's living watersheds, settle a solarpunk village from the ground up,
+        or audit the macroscopic thermodynamic balances and constitutional demarchy.
+      </p>
+    </div>
+
+    <!-- =====================================================================
+         STEP 1: BIOREGIONAL WATERSHED EXPLORER (MACRO-PLANETARY GATEWAY)
+         ===================================================================== -->
+    <section class="watershed-explorer-section" id="watershedExplorer">
+      <div class="we-header">
+        <div class="we-pill">
+          <span class="we-pill-dot"></span>
+          <span>🌍 Step 1: Macro-Planetary Exploration</span>
+        </div>
+        <h3 class="we-title">Bioregional Watershed Explorer</h3>
+        <p class="we-desc">
+          The biophysical Earth mapped by natural hydrological catchments and living biomes rather than armed national frontiers.
+          Select any sovereign watershed (<em>Jus Biosphaerae</em>) to inspect its thermodynamic carrying capacity before launching the Sandbox or Game.
+        </p>
+      </div>
+
+      <div class="we-card">
+        <!-- Filter Toolbar -->
+        <div class="we-toolbar">
+          <div class="we-chips-wrap" id="weFilterChips">
+            <button class="we-chip active" data-biome="all">🌐 All Bioregions</button>
+            <button class="we-chip" data-biome="alpine">⛰️ Alpine / Headwaters</button>
+            <button class="we-chip" data-biome="temperate">🌲 Temperate / Plains</button>
+            <button class="we-chip" data-biome="rainforest">🌴 Tropical Rainforest</button>
+            <button class="we-chip" data-biome="riverine">🌊 Major River Deltas</button>
+            <button class="we-chip" data-biome="arid">☀️ Arid / Oasis</button>
+          </div>
+          <div class="we-count-badge" id="weCountBadge">
+            14 Sovereign Basins Mapped
+          </div>
+        </div>
+
+        <!-- 2-Column Canvas + Inspector Grid -->
+        <div class="we-grid">
+          <!-- Canvas Viewport Area -->
+          <div class="we-canvas-box">
+            <canvas id="watershedCanvas" width="900" height="430"></canvas>
+            <div class="we-canvas-overlay">
+              <div class="we-hint">
+                <span>🖱️ Hover to highlight • Click to inspect • Real-time hydrodynamic flow</span>
+              </div>
+              <button class="we-canvas-btn" id="weBtnReset" title="Reset View">↺ Reset</button>
+            </div>
+          </div>
+
+          <!-- Inspector HUD -->
+          <aside class="we-hud" id="weHud">
+            <div class="we-hud-top">
+              <div class="we-hud-tag-row">
+                <span class="we-hud-tag" id="hudBasinTag">BASIN-EUR-04</span>
+                <span class="we-hud-status">JUS BIOSPHAERAE</span>
+              </div>
+              <h4 class="we-hud-title" id="hudBasinName">Po Valley & Western Alpine Arc</h4>
+              <div class="we-hud-biome">
+                <span id="hudBiomeIcon">⛰️</span>
+                <span id="hudBiomeText">Alpine Headwaters & Alluvial Plain</span>
+              </div>
+              <p class="we-hud-desc" id="hudBasinDesc">
+                Glacial runoff from the Western Alps feeds the fertile Po plain before discharging into the Northern Adriatic. Primary zone for alpine micro-hydro, gravity water conduits, and resilient chestnut agroforestry.
+              </p>
+
+              <div class="we-metrics">
+                <div class="we-metric-item">
+                  <span class="we-metric-k">Catchment Area</span>
+                  <span class="we-metric-v" id="hudMetricArea">74,970 km²</span>
+                </div>
+                <div class="we-metric-item">
+                  <span class="we-metric-k">Avg Discharge</span>
+                  <span class="we-metric-v" id="hudMetricDischarge">1,540 m³/s</span>
+                </div>
+                <div class="we-metric-item">
+                  <span class="we-metric-k">Exergy Vector</span>
+                  <span class="we-metric-v" id="hudMetricExergy">Micro-Hydro + Solar</span>
+                </div>
+                <div class="we-metric-item">
+                  <span class="we-metric-k">Demarchic Jury</span>
+                  <span class="we-metric-v" id="hudMetricDemarchy">101 Citizens (Odd)</span>
+                </div>
+              </div>
+
+              <div class="we-node-box">
+                <span class="we-node-icon">🏡</span>
+                <div class="we-node-info">
+                  <span class="we-node-title">Canonical O.N.E. Node</span>
+                  <span class="we-node-val" id="hudNodeName">Val di Susa Watershed Node (34 Pioneers)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action CTAs -->
+            <div class="we-actions-row">
+              <a href="./sim/?basin=po-valley" class="we-cta we-cta-sim" id="hudLaunchSim">
+                <span>🔬 Stress-Test in O-ASIS Sandbox</span>
+                <span>➔</span>
+              </a>
+              <a href="./game/?bioregion=alpine" class="we-cta we-cta-game" id="hudLaunchGame">
+                <span>🎮 Settle Node in Commons Game</span>
+                <span>➔</span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         STEPS 2 & 3: DUAL DEEP ENGINES (GAME & SANDBOX)
+         ===================================================================== -->
+    <div class="experience-grid">
+
+      <!-- Card 1: Living Commons Game -->
+      <article class="exp-card card-game">
+        <div class="card-top">
+          <div class="card-badge badge-game">
+            <span>🎮 Step 2: Micro-Habitat Experience</span>
+          </div>
+          <h3 class="card-title">Living Commons Game</h3>
+          <p class="card-desc">
+            A bottom-up, longitudinal settlement builder. Found your node with 3 pioneers and a camper van, 
+            place biophilic modules along real hydrological and solar contours, balance the 14h chore pool, 
+            and experience moneyless dynamic usufruct in a living 60 FPS canvas world.
+          </p>
+
+          <div class="card-pills-list">
+            <div class="card-pill-item">
+              <span class="card-pill-icon">🚐</span>
+              <span><strong>Camper Van Genesis:</strong> Siting, solar noon vectors & water flumes</span>
+            </div>
+            <div class="card-pill-item">
+              <span class="card-pill-icon">☀️</span>
+              <span><strong>Thermodynamic Balances:</strong> Conserved energy, water, crops & compute</span>
+            </div>
+            <div class="card-pill-item">
+              <span class="card-pill-icon">📋</span>
+              <span><strong>Labor Emancipation:</strong> 14h/week chore pool & weekend pizza feast</span>
+            </div>
+            <div class="card-pill-item">
+              <span class="card-pill-icon">📡</span>
+              <span><strong>P2P Mesh Network:</strong> Local-first Reticulum & sister node trade</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="./game/" class="btn-launch btn-launch-game" id="btnLaunchGame" title="Launch O.N.E. Living Commons Game">
+            <span>Launch Living Commons Game</span>
+            <span>➔</span>
+          </a>
+          <p class="card-meta-notes">Browser 60 FPS Canvas 2D • Procedural Audio • WebRTC Multi-Device</p>
+        </div>
+      </article>
+
+      <!-- Card 2: O-ASIS Thermodynamic Sandbox -->
+      <article class="exp-card card-sandbox">
+        <div class="card-top">
+          <div class="card-badge badge-sandbox">
+            <span>🔬 Step 3: Meso-Governance Cockpit</span>
+          </div>
+          <h3 class="card-title">O-ASIS Epistemic Sandbox</h3>
+          <p class="card-desc">
+            A macroscopic engineering simulator and formal stress-testing cockpit. 
+            Audit closed-loop Leontief input-output matrices, Athenian sortition assemblies in odd parity 
+            (75% qualified supermajority), and stress-test the Living Constitution against banking debt & systemic shocks.
+          </p>
+
+          <div class="card-pills-list">
+            <div class="card-pill-item">
+              <span class="card-pill-icon">⚡</span>
+              <span><strong>Leontief Input-Output:</strong> Rigorous 4-balance physical conservation</span>
+            </div>
+            <div class="card-pill-item">
+              <span class="card-pill-icon">🏛️</span>
+              <span><strong>Demarchic Sortition Juries:</strong> Odd parity juries & 75% consensus</span>
+            </div>
+            <div class="card-pill-item">
+              <span class="card-pill-icon">🛡️</span>
+              <span><strong>Red Team AI:</strong> Adversarial stress-tests against financial extraction</span>
+            </div>
+            <div class="card-pill-item">
+              <span class="card-pill-icon">🛠️</span>
+              <span><strong>Dual-Track Bridge:</strong> Real 3D CAD (.STL) & Home Assistant YAML</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="./sim/" class="btn-launch btn-launch-sandbox" id="btnLaunchSandbox" title="Launch O-ASIS Epistemic Sandbox">
+            <span>Launch O-ASIS Sandbox</span>
+            <span>➔</span>
+          </a>
+          <p class="card-meta-notes">Systemic Cockpit • Leontief Thermodynamics • Athenian Sortition</p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Secondary Resource Showcase Band -->
+    <div class="resource-band">
+      <div class="resource-band-text">
+        <h3>Civilizational Blueprints & Open Knowledge</h3>
+        <p>All virtual simulations correspond to legally sound jurisprudence and verified open hardware.</p>
+      </div>
+
+      <div class="resource-band-links">
+        <a href="https://one-commons.github.io#constitution" class="res-link" target="_blank" rel="noopener noreferrer">
+          📜 Living Constitution
+        </a>
+        <a href="https://one-commons.github.io#blueprints" class="res-link" target="_blank" rel="noopener noreferrer">
+          🛠️ 3D CAD Blueprints
+        </a>
+        <a href="https://one-commons.github.io#books" class="res-link" target="_blank" rel="noopener noreferrer">
+          📚 6-Volume Fiction
+        </a>
+        <a href="https://github.com/kyberlex/ONE/discussions" class="res-link" target="_blank" rel="noopener noreferrer">
+          💬 Dialectic Forum
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Canonical Footer -->
+  <footer>
+    <p>
+      <strong>Open Networked Earth (O.N.E.)</strong> • 100% Free & Open Knowledge (<a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener noreferrer">AGPL-3.0</a>) • 
+      Maintained under persona <strong>Kyberlex</strong> (<a href="mailto:kyberlex@proton.me">kyberlex@proton.me</a>) • Zero Microtransactions & Zero Speculation
+    </p>
+  </footer>
+
+  <!-- =====================================================================
+       CLIENT-SIDE INTERACTIVE ENGINE: BIOREGIONAL WATERSHED CANVAS (60 FPS)
+       ===================================================================== -->
+  <script>
+    (function () {
+      // 1. Continental Boundaries (Simplified Vector Outlines)
+      const CONTINENTS = [
+        // North America
+        [[-168, 65], [-140, 70], [-120, 72], [-95, 75], [-80, 68], [-60, 48], [-70, 42], [-75, 35], [-80, 25], [-90, 20], [-98, 25], [-105, 20], [-110, 30], [-124, 40], [-125, 50], [-140, 60], [-168, 65]],
+        // South America
+        [[-75, 11], [-60, 8], [-50, 0], [-35, -5], [-38, -15], [-45, -23], [-55, -35], [-65, -50], [-72, -54], [-75, -45], [-72, -30], [-78, -10], [-80, -2], [-75, 11]],
+        // Eurasia
+        [[-9, 36], [0, 42], [10, 45], [25, 40], [35, 32], [50, 25], [60, 25], [70, 20], [80, 15], [90, 22], [105, 20], [105, 10], [115, 5], [120, 22], [122, 35], [130, 42], [140, 50], [160, 60], [170, 65], [140, 72], [100, 75], [60, 70], [40, 65], [25, 70], [15, 60], [5, 55], [-5, 50], [-9, 43], [-9, 36]],
+        // Africa
+        [[-17, 15], [-5, 35], [10, 37], [25, 32], [32, 30], [35, 28], [43, 12], [51, 10], [45, 0], [40, -10], [35, -25], [28, -34], [18, -34], [12, -20], [8, 4], [-10, 5], [-17, 15]],
+        // Australia
+        [[114, -22], [122, -15], [135, -12], [142, -11], [150, -22], [153, -28], [150, -37], [140, -38], [130, -32], [118, -35], [114, -22]],
+        // Greenland
+        [[-55, 60], [-40, 60], [-20, 70], [-20, 82], [-50, 83], [-60, 76], [-55, 60]],
+      ];
+
+      // 2. Canonical Planetary Watersheds Dataset
+      const WATERSHEDS = [
+        {
+          id: "basin-po",
+          tag: "BASIN-EUR-04",
+          name: "Po Valley & Western Alpine Arc",
+          biome: "alpine",
+          biomeIcon: "⛰️",
+          biomeName: "Alpine Headwaters & Alluvial Plain",
+          desc: "Glacial runoff from the Western Alps feeds the fertile Po plain before discharging into the Northern Adriatic. Primary zone for alpine micro-hydro, gravity water conduits, and resilient chestnut agroforestry.",
+          area: "74,970 km²",
+          discharge: "1,540 m³/s",
+          exergy: "Micro-Hydro + Solar",
+          demarchy: "101 Citizens (Odd)",
+          nodeName: "Val di Susa Watershed Node (34 Pioneers)",
+          simParam: "po-valley",
+          gameParam: "alpine",
+          center: [9.5, 45.0],
+          polygon: [[5.5, 44.0], [7.0, 46.2], [10.5, 46.5], [13.2, 46.0], [12.5, 44.5], [10.0, 44.0], [8.0, 44.2], [5.5, 44.0]],
+          rivers: [
+            [[7.0, 45.1], [8.5, 45.1], [10.0, 45.0], [12.4, 44.9]], // Po main
+            [[8.0, 45.8], [8.5, 45.2]], // Ticino
+            [[10.8, 46.0], [11.5, 45.4], [12.3, 45.1]] // Adige
+          ]
+        },
+        {
+          id: "basin-rhine",
+          tag: "BASIN-EUR-01",
+          name: "Rhine-Meuse-Danube Corridor",
+          biome: "riverine",
+          biomeIcon: "🌊",
+          biomeName: "Temperate Oceanic Riverine Delta",
+          desc: "Continental European river network connecting the Alps to the North Sea. Dense industrial conversion zone focused on circular steel reuse, inland electric barge corridors, and shared riparian commons.",
+          area: "185,000 km²",
+          discharge: "2,900 m³/s",
+          exergy: "Industrial Bio-Fab + River Hydro",
+          demarchy: "301 Citizens (Odd)",
+          nodeName: "Rhineland Industrial Conversion Commons",
+          simParam: "rhine-meuse",
+          gameParam: "riverine",
+          center: [7.5, 50.5],
+          polygon: [[4.0, 52.0], [6.0, 53.5], [10.0, 52.0], [9.5, 47.5], [7.0, 47.5], [4.5, 49.5], [4.0, 52.0]],
+          rivers: [
+            [[8.5, 47.5], [7.6, 49.0], [7.2, 50.3], [6.0, 51.8], [4.4, 51.9]],
+            [[5.5, 49.8], [6.0, 50.6], [7.0, 51.4]]
+          ]
+        },
+        {
+          id: "basin-amazon",
+          tag: "BASIN-SAM-01",
+          name: "Amazon Basin & Tapajós Sanctuary",
+          biome: "rainforest",
+          biomeIcon: "🌴",
+          biomeName: "Equatorial Rainforest Biosphere",
+          desc: "The planetary thermodynamic lung. Over 20% of the world's river discharge to the ocean. Fully protected under inviolable Jus Biosphaerae against ranching deforestation, mining concessions, and dams.",
+          area: "6,915,000 km²",
+          discharge: "209,000 m³/s",
+          exergy: "Megadiverse Biomass + Solar",
+          demarchy: "301 Citizens (Odd)",
+          nodeName: "Tapajós Agro-Ecological Sanctuary",
+          simParam: "amazon",
+          gameParam: "rainforest",
+          center: [-60.0, -3.5],
+          polygon: [[-78.0, -2.0], [-72.0, 2.0], [-60.0, 3.0], [-50.0, 0.0], [-48.0, -5.0], [-52.0, -14.0], [-65.0, -18.0], [-76.0, -10.0], [-78.0, -2.0]],
+          rivers: [
+            [[-73.0, -4.5], [-65.0, -3.8], [-58.0, -3.1], [-50.5, -0.5]],
+            [[-56.0, -9.0], [-55.0, -5.0], [-54.5, -2.5]],
+            [[-63.0, -10.0], [-60.0, -6.0], [-58.5, -3.5]]
+          ]
+        },
+        {
+          id: "basin-greatlakes",
+          tag: "BASIN-NAM-02",
+          name: "Great Lakes & Laurentian Basin",
+          biome: "temperate",
+          biomeIcon: "🌲",
+          biomeName: "Laurentian Mixed Forest & Freshwater",
+          desc: "Holding 21% of the world's surface fresh water. Anchored by the regenerated post-industrial fablabs of Detroit Delray, combining high-yield vertical greenhouses, thermal microgrids, and lake water cooling.",
+          area: "1,344,000 km²",
+          discharge: "16,800 m³/s",
+          exergy: "Freshwater Reservoir + Wind",
+          demarchy: "101 Citizens (Odd)",
+          nodeName: "Detroit Delray Commons (28 Pioneers)",
+          simParam: "great-lakes",
+          gameParam: "temperate",
+          center: [-83.0, 44.5],
+          polygon: [[-92.0, 48.0], [-84.0, 49.0], [-76.0, 47.0], [-74.0, 43.0], [-80.0, 41.0], [-88.0, 41.5], [-92.0, 44.0], [-92.0, 48.0]],
+          rivers: [
+            [[-89.0, 47.5], [-84.5, 45.8], [-82.5, 43.5], [-76.0, 44.0], [-71.0, 47.0]]
+          ]
+        },
+        {
+          id: "basin-cascadia",
+          tag: "BASIN-NAM-01",
+          name: "Cascadia & Columbia Catchment",
+          biome: "alpine",
+          biomeIcon: "⛰️",
+          biomeName: "Temperate Coastal Rainforest",
+          desc: "Rugged Pacific maritime slopes with dense Douglas fir canopies and abundant run-of-river headwaters. Pioneer base for modular timber architecture (WikiHouse), open hardware CNC machining, and salmon corridor restoration.",
+          area: "668,000 km²",
+          discharge: "7,500 m³/s",
+          exergy: "Run-of-River Hydro + Coastal Wind",
+          demarchy: "101 Citizens (Odd)",
+          nodeName: "Cascadia Bio-Fab Node",
+          simParam: "cascadia",
+          gameParam: "alpine",
+          center: [-121.0, 46.5],
+          polygon: [[-124.5, 49.0], [-117.0, 51.5], [-112.0, 48.0], [-111.0, 42.5], [-118.0, 42.0], [-124.0, 43.0], [-124.5, 49.0]],
+          rivers: [
+            [[-117.0, 50.0], [-118.5, 47.5], [-120.0, 46.0], [-124.0, 46.2]],
+            [[-114.0, 44.0], [-117.0, 46.0]]
+          ]
+        },
+        {
+          id: "basin-atacama",
+          tag: "BASIN-SAM-03",
+          name: "Atacama Endorheic Basin & Altiplano",
+          biome: "arid",
+          biomeIcon: "☀️",
+          biomeName: "Hyper-Arid High-Altitude Plateau",
+          desc: "The highest solar irradiance region on Earth (2,800 kWh/m²/yr). Completely closed endorheic drainage with specialized atmospheric water harvesting (Camanchaca nets) and decentralized high-yield solar smelting.",
+          area: "105,000 km²",
+          discharge: "0 m³/s (Endorheic)",
+          exergy: "Concentrated Solar + Geothermal",
+          demarchy: "15 Citizens (Odd)",
+          nodeName: "Atacama Solar Oasis (22 Pioneers)",
+          simParam: "atacama",
+          gameParam: "arid",
+          center: [-69.0, -23.5],
+          polygon: [[-70.5, -20.0], [-67.0, -20.5], [-66.5, -26.0], [-70.0, -26.5], [-70.5, -20.0]],
+          rivers: [
+            [[-67.5, -22.0], [-68.5, -23.5]],
+            [[-69.5, -25.0], [-68.8, -23.8]]
+          ]
+        },
+        {
+          id: "basin-congo",
+          tag: "BASIN-AFR-01",
+          name: "Congo Basin Equatorial Peatlands",
+          biome: "rainforest",
+          biomeIcon: "🌴",
+          biomeName: "Equatorial Rainforest & Peat Swamps",
+          desc: "The central freshwater heart of the African continent. Massive carbon sequestration in Cuvette Centrale peatlands. Non-extractive agroforestry cooperatives and decentralized micro-hydro water turbines.",
+          area: "4,014,000 km²",
+          discharge: "41,000 m³/s",
+          exergy: "Hydro Potential + Biomass",
+          demarchy: "301 Citizens (Odd)",
+          nodeName: "Kisangani Agro-Forestry Cooperative",
+          simParam: "congo",
+          gameParam: "rainforest",
+          center: [21.0, 0.0],
+          polygon: [[12.0, 4.0], [22.0, 5.0], [30.0, 2.0], [31.0, -8.0], [25.0, -12.0], [17.0, -10.0], [12.0, -4.0], [12.0, 4.0]],
+          rivers: [
+            [[28.0, -2.0], [25.0, 0.5], [20.0, 1.5], [16.0, -1.0], [12.3, -6.0]],
+            [[22.0, -5.0], [19.0, -2.0]]
+          ]
+        },
+        {
+          id: "basin-nile",
+          tag: "BASIN-AFR-02",
+          name: "Nilotic Riverine & Sudd Catchment",
+          biome: "riverine",
+          biomeIcon: "🌊",
+          biomeName: "Alluvial Riverine & Sudd Wetlands",
+          desc: "The longest river corridor on the planet, flowing northward from Lake Victoria across arid landscapes. Managed under strict upstream-downstream ecological solidarity covenants without geopolitical water blockades.",
+          area: "3,254,000 km²",
+          discharge: "2,830 m³/s",
+          exergy: "Solar Irrigation + Alluvial Silt",
+          demarchy: "101 Citizens (Odd)",
+          nodeName: "Nubian Permaculture Cooperative",
+          simParam: "nile",
+          gameParam: "riverine",
+          center: [31.5, 18.0],
+          polygon: [[29.0, 31.5], [33.5, 31.5], [37.0, 15.0], [36.0, 5.0], [30.0, -2.0], [28.0, 6.0], [27.0, 22.0], [29.0, 31.5]],
+          rivers: [
+            [[31.5, 0.0], [31.5, 10.0], [32.5, 15.5], [31.0, 24.0], [31.2, 31.0]]
+          ]
+        },
+        {
+          id: "basin-rojava",
+          tag: "BASIN-MEA-01",
+          name: "Fertile Crescent / Tigris-Euphrates",
+          biome: "arid",
+          biomeIcon: "☀️",
+          biomeName: "Semi-Arid Steppe & Alluvial Plain",
+          desc: "Historic cradle of agriculture transitioning into cooperative direct democracy. Solar-powered low-pressure drip irrigation, communal seed banks, and non-state municipal self-management.",
+          area: "765,000 km²",
+          discharge: "1,400 m³/s",
+          exergy: "Solar Radiation + Drip Irrigation",
+          demarchy: "101 Citizens (Odd)",
+          nodeName: "Rojava Agro-Ecological Node",
+          simParam: "rojava",
+          gameParam: "arid",
+          center: [42.0, 34.0],
+          polygon: [[36.0, 38.5], [41.0, 39.5], [47.0, 35.0], [48.5, 30.5], [44.0, 30.0], [38.0, 32.5], [36.0, 38.5]],
+          rivers: [
+            [[38.0, 38.0], [40.5, 35.5], [44.0, 32.5], [48.0, 30.5]],
+            [[41.0, 38.5], [44.0, 34.0], [47.5, 31.5]]
+          ]
+        },
+        {
+          id: "basin-indus",
+          tag: "BASIN-SAS-01",
+          name: "Indus Glacial Runoff & Punjab Basin",
+          biome: "alpine",
+          biomeIcon: "⛰️",
+          biomeName: "Himalayan Glacial Runoff to Sea",
+          desc: "High-altitude glacial headwaters feeding one of the most productive agricultural breadbaskets on Earth. Cooperative water allocation treaties replace nation-state conflicts with shared gravity channels.",
+          area: "1,120,000 km²",
+          discharge: "6,600 m³/s",
+          exergy: "Himalayan Glacial Seep + Gravity Canal",
+          demarchy: "101 Citizens (Odd)",
+          nodeName: "Punjab Glacial Melt Irrigation Commons",
+          simParam: "indus",
+          gameParam: "alpine",
+          center: [72.0, 30.0],
+          polygon: [[71.0, 36.5], [78.0, 35.0], [77.0, 30.0], [71.0, 24.0], [67.0, 25.0], [68.0, 32.0], [71.0, 36.5]],
+          rivers: [
+            [[76.0, 35.0], [72.5, 32.0], [70.5, 28.5], [67.5, 24.5]]
+          ]
+        },
+        {
+          id: "basin-kerala",
+          tag: "BASIN-SAS-02",
+          name: "Western Ghats & Malabar Catchment",
+          biome: "rainforest",
+          biomeIcon: "🌴",
+          biomeName: "Tropical Monsoon Moist Forest",
+          desc: "Multi-tiered tropical agroforestry (coconut, black pepper, medicinal herbs) receiving heavy seasonal monsoon rains. World pioneer in village-level participatory budgeting, community health, and watershed decentralization.",
+          area: "160,000 km²",
+          discharge: "3,200 m³/s",
+          exergy: "Monsoon Cascade + Agro-Ecology",
+          demarchy: "101 Citizens (Odd)",
+          nodeName: "Kerala Agro-Forestry Node",
+          simParam: "kerala",
+          gameParam: "rainforest",
+          center: [76.5, 10.5],
+          polygon: [[74.5, 14.5], [76.0, 14.5], [77.5, 9.5], [77.0, 8.0], [75.5, 9.5], [74.5, 14.5]],
+          rivers: [
+            [[76.5, 12.0], [75.8, 11.5]],
+            [[77.0, 10.0], [76.2, 9.8]]
+          ]
+        },
+        {
+          id: "basin-yangtze",
+          tag: "BASIN-EAS-01",
+          name: "Yangtze & Southern River Commons",
+          biome: "riverine",
+          biomeIcon: "🌊",
+          biomeName: "Subtropical Wetland & Canal Network",
+          desc: "Enormous alluvial freshwater network spanning the Tibetan Plateau to Shanghai. De-industrialized ecological buffer zones restore the river porpoise while maintaining high-density clean aquaculture.",
+          area: "1,800,000 km²",
+          discharge: "30,000 m³/s",
+          exergy: "Inland Canal Corridors + Hydro",
+          demarchy: "301 Citizens (Odd)",
+          nodeName: "Dongting Ecological Lake Commons",
+          simParam: "yangtze",
+          gameParam: "riverine",
+          center: [112.0, 30.0],
+          polygon: [[92.0, 33.0], [105.0, 33.0], [121.0, 32.0], [120.0, 28.0], [112.0, 25.0], [103.0, 26.0], [95.0, 29.0], [92.0, 33.0]],
+          rivers: [
+            [[96.0, 33.0], [104.0, 30.5], [112.0, 30.0], [121.5, 31.5]]
+          ]
+        },
+        {
+          id: "basin-murray",
+          tag: "BASIN-OCE-01",
+          name: "Murray-Darling Basin",
+          biome: "arid",
+          biomeIcon: "☀️",
+          biomeName: "Semi-Arid Inland Drainage Basin",
+          desc: "Australia's primary food bowl facing severe drought and salinity shocks. Re-engineered with deep sand aquifer storage, cultural Indigenous burning protocols, and large-scale solar micro-grids.",
+          area: "1,061,000 km²",
+          discharge: "767 m³/s",
+          exergy: "Solar Storage + Managed Aquifer Recharge",
+          demarchy: "101 Citizens (Odd)",
+          nodeName: "Barwon Solar & Sand Aquifer Storage",
+          simParam: "murray-darling",
+          gameParam: "arid",
+          center: [145.0, -32.0],
+          polygon: [[140.0, -28.0], [148.0, -26.0], [151.0, -32.0], [148.0, -37.0], [140.0, -36.0], [138.0, -34.0], [140.0, -28.0]],
+          rivers: [
+            [[149.0, -29.0], [144.0, -32.0], [141.0, -34.0], [139.0, -35.5]],
+            [[146.0, -36.0], [142.0, -34.5]]
+          ]
+        },
+        {
+          id: "basin-baltic",
+          tag: "BASIN-EUR-02",
+          name: "Baltic Taiga & Boreal Peatland Catchment",
+          biome: "temperate",
+          biomeIcon: "🌲",
+          biomeName: "Boreal Taiga & Peatland Sink",
+          desc: "Glaciated Northern European catchment surrounded by continuous-cover boreal timber commons and coastal wind streams. Key node for timber prefabrication and district heating bio-reactors.",
+          area: "1,700,000 km²",
+          discharge: "15,000 m³/s",
+          exergy: "Wind Corridors + Certified Timber Commons",
+          demarchy: "101 Citizens (Odd)",
+          nodeName: "Nordic Bio-Mass Resilience Cluster",
+          simParam: "baltic",
+          gameParam: "temperate",
+          center: [22.0, 60.0],
+          polygon: [[12.0, 56.0], [16.0, 64.0], [26.0, 68.0], [32.0, 62.0], [30.0, 54.0], [19.0, 54.0], [12.0, 56.0]],
+          rivers: [
+            [[24.0, 66.0], [21.5, 62.0]],
+            [[28.0, 58.0], [24.0, 57.0]]
+          ]
+        }
+      ];
+
+      // 3. Canvas 2D Engine State
+      const canvas = document.getElementById("watershedCanvas");
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+
+      let width = canvas.width;
+      let height = canvas.height;
+      let hoveredBasin = null;
+      let selectedBasin = WATERSHEDS[0]; // Po Valley default
+      let activeFilter = "all";
+      let particles = [];
+
+      // Projection: Equirectangular [lon, lat] -> [canvas x, canvas y]
+      function project(lon, lat) {
+        const x = ((lon + 180) / 360) * width;
+        const y = ((82 - lat) / 142) * height;
+        return [x, y];
+      }
+
+      function resizeCanvas() {
+        const rect = canvas.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+        width = rect.width || 900;
+        height = rect.height || 430;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.scale(dpr, dpr);
+      }
+
+      // Initialize flow particles along river arteries
+      function initParticles() {
+        particles = [];
+        WATERSHEDS.forEach((b) => {
+          b.rivers.forEach((river, rIdx) => {
+            const count = Math.max(2, Math.floor(river.length * 1.5));
+            for (let i = 0; i < count; i++) {
+              particles.push({
+                basinId: b.id,
+                river: river,
+                progress: Math.random(),
+                speed: 0.003 + Math.random() * 0.004,
+                color: b.biome === 'rainforest' ? '#10b981' : (b.biome === 'arid' ? '#f59e0b' : '#06b6d4')
+              });
+            }
+          });
+        });
+      }
+
+      // Point in polygon test
+      function isPointInPoly(pt, poly) {
+        const [x, y] = pt;
+        let inside = false;
+        for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+          const xi = poly[i][0], yi = poly[i][1];
+          const xj = poly[j][0], yj = poly[j][1];
+          const intersect = ((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+          if (intersect) inside = !inside;
+        }
+        return inside;
+      }
+
+      // Update Inspector HUD Panel
+      function updateHUD(b) {
+        if (!b) return;
+        document.getElementById("hudBasinTag").textContent = b.tag;
+        document.getElementById("hudBasinName").textContent = b.name;
+        document.getElementById("hudBiomeIcon").textContent = b.biomeIcon;
+        document.getElementById("hudBiomeText").textContent = b.biomeName;
+        document.getElementById("hudBasinDesc").textContent = b.desc;
+        document.getElementById("hudMetricArea").textContent = b.area;
+        document.getElementById("hudMetricDischarge").textContent = b.discharge;
+        document.getElementById("hudMetricExergy").textContent = b.exergy;
+        document.getElementById("hudMetricDemarchy").textContent = b.demarchy;
+        document.getElementById("hudNodeName").textContent = b.nodeName;
+
+        const simBtn = document.getElementById("hudLaunchSim");
+        const gameBtn = document.getElementById("hudLaunchGame");
+        if (simBtn) simBtn.href = `./sim/?basin=${b.simParam}`;
+        if (gameBtn) gameBtn.href = `./game/?bioregion=${b.gameParam}`;
+      }
+
+      // Drawing Loop
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+
+        // 1. Dark Ocean Canvas Base
+        ctx.fillStyle = "#030806";
+        ctx.fillRect(0, 0, width, height);
+
+        // 2. Graticule Lat/Lon Grid lines
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.03)";
+        ctx.lineWidth = 1;
+        for (let lon = -150; lon <= 180; lon += 30) {
+          const [x1] = project(lon, 80);
+          ctx.beginPath();
+          ctx.moveTo(x1, 0);
+          ctx.lineTo(x1, height);
+          ctx.stroke();
+        }
+        for (let lat = -60; lat <= 80; lat += 30) {
+          const [, y1] = project(0, lat);
+          ctx.beginPath();
+          ctx.moveTo(0, y1);
+          ctx.lineTo(width, y1);
+          ctx.stroke();
+        }
+
+        // Equator
+        const [, eqY] = project(0, 0);
+        ctx.strokeStyle = "rgba(52, 211, 153, 0.08)";
+        ctx.lineWidth = 1;
+        ctx.setLineDash([4, 4]);
+        ctx.beginPath();
+        ctx.moveTo(0, eqY);
+        ctx.lineTo(width, eqY);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // 3. Draw Continental Outlines
+        ctx.fillStyle = "#0b1713";
+        ctx.strokeStyle = "rgba(52, 211, 153, 0.15)";
+        ctx.lineWidth = 1;
+        CONTINENTS.forEach(poly => {
+          ctx.beginPath();
+          poly.forEach(([lon, lat], idx) => {
+            const [x, y] = project(lon, lat);
+            if (idx === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+          });
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+        });
+
+        // 4. Draw Watershed Basins
+        WATERSHEDS.forEach(b => {
+          const isSelected = selectedBasin && selectedBasin.id === b.id;
+          const isHovered = hoveredBasin && hoveredBasin.id === b.id;
+          const matchesFilter = activeFilter === "all" || b.biome === activeFilter;
+
+          // Convert boundary polygon
+          const canvasPoly = b.polygon.map(([lon, lat]) => project(lon, lat));
+
+          ctx.beginPath();
+          canvasPoly.forEach(([x, y], idx) => {
+            if (idx === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+          });
+          ctx.closePath();
+
+          // Biome coloring
+          let fillColor = "rgba(52, 211, 153, 0.08)";
+          let strokeColor = "rgba(52, 211, 153, 0.3)";
+
+          if (b.biome === "alpine") {
+            fillColor = "rgba(6, 182, 212, 0.12)";
+            strokeColor = "rgba(6, 182, 212, 0.4)";
+          } else if (b.biome === "rainforest") {
+            fillColor = "rgba(16, 185, 129, 0.14)";
+            strokeColor = "rgba(16, 185, 129, 0.5)";
+          } else if (b.biome === "arid") {
+            fillColor = "rgba(245, 158, 11, 0.12)";
+            strokeColor = "rgba(245, 158, 11, 0.45)";
+          } else if (b.biome === "riverine") {
+            fillColor = "rgba(14, 165, 233, 0.14)";
+            strokeColor = "rgba(14, 165, 233, 0.5)";
+          }
+
+          if (!matchesFilter) {
+            fillColor = "rgba(255, 255, 255, 0.02)";
+            strokeColor = "rgba(255, 255, 255, 0.06)";
+          }
+
+          if (isHovered || isSelected) {
+            fillColor = isSelected ? "rgba(52, 211, 153, 0.28)" : "rgba(6, 182, 212, 0.22)";
+            strokeColor = isSelected ? "#34d399" : "#22d3ee";
+            ctx.shadowColor = strokeColor;
+            ctx.shadowBlur = 14;
+          }
+
+          ctx.fillStyle = fillColor;
+          ctx.fill();
+          ctx.strokeStyle = strokeColor;
+          ctx.lineWidth = isSelected ? 2 : (isHovered ? 1.5 : 1);
+          ctx.stroke();
+          ctx.shadowBlur = 0;
+
+          // River network lines inside basin
+          b.rivers.forEach(river => {
+            if (river.length < 2) return;
+            ctx.beginPath();
+            river.forEach(([lon, lat], idx) => {
+              const [rx, ry] = project(lon, lat);
+              if (idx === 0) ctx.moveTo(rx, ry);
+              else ctx.lineTo(rx, ry);
+            });
+            ctx.strokeStyle = (isHovered || isSelected) ? "rgba(34, 211, 238, 0.85)" : "rgba(34, 211, 238, 0.45)";
+            ctx.lineWidth = isSelected ? 1.8 : 1.2;
+            ctx.stroke();
+          });
+
+          // Seed Node beacon marker
+          const [cx, cy] = project(b.center[0], b.center[1]);
+          ctx.beginPath();
+          ctx.arc(cx, cy, isSelected ? 5 : 3.5, 0, Math.PI * 2);
+          ctx.fillStyle = isSelected ? "#34d399" : (isHovered ? "#22d3ee" : "#f59e0b");
+          ctx.shadowColor = ctx.fillStyle;
+          ctx.shadowBlur = isSelected ? 12 : 6;
+          ctx.fill();
+          ctx.shadowBlur = 0;
+        });
+
+        // 5. Draw Animated River Flow Particles
+        particles.forEach(p => {
+          p.progress += p.speed;
+          if (p.progress >= 1) p.progress = 0;
+
+          const r = p.river;
+          if (r.length < 2) return;
+
+          // Interpolate position along segmented river
+          const totalSegments = r.length - 1;
+          const segProgress = p.progress * totalSegments;
+          const segIdx = Math.floor(segProgress);
+          const segFraction = segProgress - segIdx;
+
+          const p0 = r[segIdx];
+          const p1 = r[Math.min(segIdx + 1, totalSegments)];
+
+          const lon = p0[0] + (p1[0] - p0[0]) * segFraction;
+          const lat = p0[1] + (p1[1] - p0[1]) * segFraction;
+          const [px, py] = project(lon, lat);
+
+          const isBasinActive = (selectedBasin && selectedBasin.id === p.basinId) || (hoveredBasin && hoveredBasin.id === p.basinId);
+
+          ctx.beginPath();
+          ctx.arc(px, py, isBasinActive ? 2.5 : 1.5, 0, Math.PI * 2);
+          ctx.fillStyle = isBasinActive ? "#38bdf8" : p.color;
+          ctx.shadowColor = ctx.fillStyle;
+          ctx.shadowBlur = 8;
+          ctx.fill();
+          ctx.shadowBlur = 0;
+        });
+
+        requestAnimationFrame(draw);
+      }
+
+      // Event Listeners: Mouse Move & Click
+      canvas.addEventListener("mousemove", (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+
+        let found = null;
+        for (let i = WATERSHEDS.length - 1; i >= 0; i--) {
+          const b = WATERSHEDS[i];
+          const canvasPoly = b.polygon.map(([lon, lat]) => project(lon, lat));
+          if (isPointInPoly([mouseX, mouseY], canvasPoly)) {
+            found = b;
+            break;
+          }
+        }
+
+        hoveredBasin = found;
+        canvas.style.cursor = found ? "pointer" : "crosshair";
+      });
+
+      canvas.addEventListener("mouseleave", () => {
+        hoveredBasin = null;
+      });
+
+      canvas.addEventListener("click", (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+
+        for (let i = WATERSHEDS.length - 1; i >= 0; i--) {
+          const b = WATERSHEDS[i];
+          const canvasPoly = b.polygon.map(([lon, lat]) => project(lon, lat));
+          if (isPointInPoly([mouseX, mouseY], canvasPoly)) {
+            selectedBasin = b;
+            updateHUD(b);
+            break;
+          }
+        }
+      });
+
+      // Filter Chips handler
+      const chips = document.querySelectorAll(".we-chip");
+      chips.forEach(chip => {
+        chip.addEventListener("click", () => {
+          chips.forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+          activeFilter = chip.getAttribute("data-biome");
+
+          // Auto-select first matching basin if current doesn't match
+          if (activeFilter !== "all" && selectedBasin.biome !== activeFilter) {
+            const firstMatch = WATERSHEDS.find(b => b.biome === activeFilter);
+            if (firstMatch) {
+              selectedBasin = firstMatch;
+              updateHUD(firstMatch);
+            }
+          }
+
+          const matchedCount = activeFilter === "all" ? WATERSHEDS.length : WATERSHEDS.filter(b => b.biome === activeFilter).length;
+          document.getElementById("weCountBadge").textContent = `${matchedCount} Sovereign Basins Mapped`;
+        });
+      });
+
+      // Reset Button handler
+      const resetBtn = document.getElementById("weBtnReset");
+      if (resetBtn) {
+        resetBtn.addEventListener("click", () => {
+          activeFilter = "all";
+          chips.forEach(c => c.classList.remove("active"));
+          const allChip = document.querySelector('.we-chip[data-biome="all"]');
+          if (allChip) allChip.classList.add("active");
+          selectedBasin = WATERSHEDS[0];
+          hoveredBasin = null;
+          updateHUD(selectedBasin);
+          document.getElementById("weCountBadge").textContent = `${WATERSHEDS.length} Sovereign Basins Mapped`;
+        });
+      }
+
+      // Initial Setup
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+      initParticles();
+      updateHUD(selectedBasin);
+      requestAnimationFrame(draw);
+    })();
+  </script>
+</body>
+</html>
+"""
+
+
+def run_command(cmd, cwd=None):
+    cmd_str = " ".join(cmd) if isinstance(cmd, list) else cmd
+    print(f"[*] Running: {cmd_str}")
+    res = subprocess.run(cmd, cwd=cwd, shell=isinstance(cmd, str), capture_output=True, text=True)
+    if res.returncode != 0:
+        print(f"[!] Command failed (code {res.returncode}):\n{res.stderr}")
+        sys.exit(res.returncode)
+    return res.stdout
+
+
+def audit_for_leaks(target_dir):
+    print(f"[*] Auditing {target_dir} for Class-0 Zero-Leak violations...")
+    violations = []
+    scanned_count = 0
+    for root, dirs, files in os.walk(target_dir):
+        if ".git" in dirs:
+            dirs.remove(".git")
+        for fname in files:
+            fpath = Path(root) / fname
+            if fpath.suffix.lower() in BINARY_EXTENSIONS:
+                continue
+            scanned_count += 1
+            try:
+                content = fpath.read_text(encoding="utf-8", errors="ignore")
+                for pat, desc in FORBIDDEN_PATTERNS:
+                    m = pat.search(content)
+                    if m:
+                        violations.append((fpath.relative_to(target_dir), desc, m.group(0)))
+            except Exception as e:
+                print(f"[!] Warning reading {fpath}: {e}")
+
+    if violations:
+        print(f"[ABORT] Detected {len(violations)} OpSec leak violations:")
+        for rel_path, desc, match in violations:
+            print(f"  - {rel_path}: {desc} -> '{match}'")
+        sys.exit(1)
+    print(f"[✓] Scanned {scanned_count} text files cleanly. Zero identity leaks detected.")
+
+
+def build_all(quick_mode=False):
+    print("=" * 70)
+    print(" [O.N.E. HUB BUILDER] Compiling Game & Sandbox for GitHub Pages (docs/)")
+    print("=" * 70)
+
+    docs_game = DOCS_DIR / "game"
+    docs_sim = DOCS_DIR / "sim"
+
+    if quick_mode and docs_game.exists() and docs_sim.exists():
+        print("\n--- Quick Mode Active: Preserving existing compiled game/ and sim/ in docs/ ---")
+    else:
+        # 1. Build game/
+        print("\n--- 1. Building game/ (one-game) ---")
+        run_command("npm run build", cwd=GAME_DIR)
+
+        # 2. Build sim/app/
+        print("\n--- 2. Building sim/app/ (o-asis-dual-track) ---")
+        run_command("npm run build", cwd=SIM_APP_DIR)
+
+        # 3. Setup docs directory structure
+        print("\n--- 3. Assembling docs/ Subpath Hub ---")
+        DOCS_DIR.mkdir(parents=True, exist_ok=True)
+
+        if docs_game.exists():
+            shutil.rmtree(docs_game)
+        if docs_sim.exists():
+            shutil.rmtree(docs_sim)
+
+        # Copy game/dist into docs/game/
+        print("  [>] Copying game/dist/ -> docs/game/...")
+        shutil.copytree(GAME_DIST, docs_game)
+
+        # Copy sim/app/dist into docs/sim/
+        print("  [>] Copying sim/app/dist/ -> docs/sim/...")
+        shutil.copytree(SIM_DIST, docs_sim)
+
+    # Remove any CNAME file in docs/, docs/game/, docs/sim/
+    for cname_candidate in [DOCS_DIR / "CNAME", docs_game / "CNAME", docs_sim / "CNAME"]:
+        if cname_candidate.exists():
+            print(f"  [x] Removing legacy CNAME: {cname_candidate}")
+            cname_candidate.unlink()
+
+    # Ensure .nojekyll in docs/
+    nojekyll = DOCS_DIR / ".nojekyll"
+    nojekyll.touch()
+    print("  [✓] docs/.nojekyll confirmed.")
+
+    # Write Launcher Hub index.html
+    hub_html_path = DOCS_DIR / "index.html"
+    hub_html_path.write_text(LAUNCHER_HTML, encoding="utf-8")
+    print(f"  [✓] Wrote Solarpunk Launcher Hub (with Watershed Explorer): {hub_html_path}")
+
+    # Copy brand assets to docs/ root for the Launcher
+    for logo_name in [
+        "one-logo-white.svg", "one-logo.svg", "one-logo.png",
+        "one-logo-glow.png", "favicon.svg", "icons.svg"
+    ]:
+        src_logo = REPO_ROOT / "webapp" / logo_name
+        if not src_logo.exists():
+            src_logo = SIM_APP_DIR / "public" / logo_name
+        if src_logo.exists():
+            shutil.copy2(src_logo, DOCS_DIR / logo_name)
+
+    # 4. Run Agent H0 Zero-Leak Audit
+    print("\n--- 4. Pre-Flight Zero-Leak OpSec Audit ---")
+    audit_for_leaks(DOCS_DIR)
+
+    print("\n" + "=" * 70)
+    print(" [✓] DOCS SUBPATH HUB SUCCESSFULLY BUILT & CERTIFIED CLEAN!")
+    print(f"     Root Launcher : {DOCS_DIR / 'index.html'} -> https://kyberlex.github.io/ONE/")
+    print(f"     Watershed Hub : Integrated in Root Launcher (Step 1 Macro-Gateway)")
+    print(f"     Commons Game  : {docs_game / 'index.html'} -> https://kyberlex.github.io/ONE/game/")
+    print(f"     O-ASIS Sandbox: {docs_sim / 'index.html'} -> https://kyberlex.github.io/ONE/sim/")
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    is_quick = "--quick" in sys.argv or "--launcher-only" in sys.argv
+    build_all(quick_mode=is_quick)
