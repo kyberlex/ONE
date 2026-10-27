@@ -5,8 +5,7 @@ build_docs_hub.py — O.N.E. Interactive Platform Hub Builder (Agent H1 & H3)
 Compiles both 'game/' (Living Commons Game) and 'sim/app/' (O-ASIS Epistemic Sandbox),
 assembles the unified Subpath Hub in 'docs/' (with root launcher, /game/, and /sim/),
 embeds the Bioregional Watershed Explorer reusing the real satellite Earth map from sim/
-(with dual discrete zoom levels: ZOOM = WORLD and ZOOM = REGION), cleans up legacy CNAMEs,
-ensures .nojekyll, and validates Class-0 Zero-Leak OpSec.
+with strict zero-jumping fixed box dimensions and non-redundant single action buttons.
 
 Author: Kyberlex <kyberlex@proton.me>
 License: AGPL-3.0-or-later
@@ -385,12 +384,12 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       font-family: 'JetBrains Mono', monospace;
     }
 
-    /* 2-Column Grid: Canvas Viewport & Inspector HUD */
+    /* 2-Column Grid: Fixed 460px Height (Zero Jumping) */
     .we-grid {
       display: grid;
       grid-template-columns: 1.65fr 1fr;
       gap: 22px;
-      align-items: stretch;
+      align-items: start;
     }
 
     .we-canvas-box {
@@ -399,7 +398,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 14px;
       overflow: hidden;
-      min-height: 440px;
+      height: 460px;
+      max-height: 460px;
       display: flex;
       flex-direction: column;
     }
@@ -436,53 +436,41 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       gap: 6px;
     }
 
-    .we-overlay-controls {
-      display: flex;
-      align-items: center;
-      gap: 6px;
+    /* The EXACTLY ONE Zoom Button */
+    .we-zoom-toggle {
       pointer-events: auto;
-    }
-
-    .we-canvas-btn {
-      background: rgba(4, 12, 10, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #cbd5e1;
-      font-size: 0.76rem;
-      font-weight: 600;
-      padding: 5px 11px;
-      border-radius: 6px;
+      background: rgba(4, 12, 10, 0.9);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      color: #22d3ee;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 8px;
       cursor: pointer;
       transition: all 0.2s ease;
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(8px);
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      min-width: 28px;
+      gap: 6px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
     }
 
-    .we-canvas-btn:hover {
-      background: rgba(16, 185, 129, 0.2);
-      border-color: rgba(52, 211, 153, 0.5);
-      color: #fff;
-    }
-
-    .we-canvas-btn.active {
-      background: rgba(6, 182, 212, 0.22);
+    .we-zoom-toggle:hover {
+      background: rgba(6, 182, 212, 0.25);
       border-color: #22d3ee;
-      color: #22d3ee;
+      color: #fff;
+      transform: translateY(-1px);
     }
 
-    .we-sep {
-      color: rgba(255, 255, 255, 0.2);
-      font-size: 0.8rem;
-    }
-
-    /* Inspector HUD */
+    /* Inspector HUD: Strict Fixed 460px Height (Zero Jumping) */
     .we-hud {
       background: rgba(4, 12, 10, 0.7);
       border: 1px solid rgba(52, 211, 153, 0.18);
       border-radius: 14px;
-      padding: 22px 20px;
+      padding: 20px;
+      height: 460px;
+      max-height: 460px;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -490,21 +478,22 @@ LAUNCHER_HTML = """<!DOCTYPE html>
     }
 
     .we-hud-top {
-      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
     }
 
     .we-hud-tag-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       gap: 8px;
       flex-wrap: wrap;
     }
 
     .we-hud-tag {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 700;
       color: #34d399;
       background: rgba(52, 211, 153, 0.12);
@@ -515,7 +504,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
 
     .we-hud-zoom-badge {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
+      font-size: 0.66rem;
       font-weight: 700;
       color: #22d3ee;
       background: rgba(6, 182, 212, 0.1);
@@ -525,7 +514,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
     }
 
     .we-hud-status {
-      font-size: 0.68rem;
+      font-size: 0.66rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       color: #f59e0b;
@@ -538,46 +527,57 @@ LAUNCHER_HTML = """<!DOCTYPE html>
 
     .we-hud-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       font-weight: 700;
       line-height: 1.25;
       color: #fff;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
+      min-height: 2.8rem;
+      display: flex;
+      align-items: center;
     }
 
     .we-hud-biome {
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #22d3ee;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
+    /* Calibrated constant 3-line description height (Zero Jumping) */
     .we-hud-desc {
-      font-size: 0.85rem;
-      line-height: 1.5;
+      font-size: 0.82rem;
+      line-height: 1.48;
       color: var(--text-muted);
-      margin-bottom: 14px;
+      height: 60px;
+      min-height: 60px;
+      max-height: 60px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin-bottom: 12px;
     }
 
     .we-metrics {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-      margin-bottom: 14px;
+      gap: 7px;
+      margin-bottom: 12px;
     }
 
     .we-metric-item {
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 8px;
-      padding: 8px 10px;
+      padding: 6px 9px;
     }
 
     .we-metric-k {
       display: block;
-      font-size: 0.68rem;
+      font-size: 0.64rem;
       color: #64748b;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -586,7 +586,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
 
     .we-metric-v {
       display: block;
-      font-size: 0.86rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: #e2e8f0;
       font-family: 'JetBrains Mono', monospace;
@@ -596,15 +596,15 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       background: rgba(16, 185, 129, 0.06);
       border: 1px solid rgba(16, 185, 129, 0.2);
       border-radius: 8px;
-      padding: 8px 12px;
+      padding: 7px 10px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 14px;
+      gap: 8px;
+      margin-bottom: 8px;
     }
 
     .we-node-icon {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     .we-node-info {
@@ -613,87 +613,56 @@ LAUNCHER_HTML = """<!DOCTYPE html>
     }
 
     .we-node-title {
-      font-size: 0.68rem;
+      font-size: 0.64rem;
       color: #34d399;
       text-transform: uppercase;
       font-weight: 600;
     }
 
     .we-node-val {
-      font-size: 0.84rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    /* Fly-to Focus Action */
-    .we-focus-btn {
-      width: 100%;
-      background: rgba(6, 182, 212, 0.12);
-      border: 1px solid rgba(6, 182, 212, 0.35);
-      color: #22d3ee;
-      padding: 9px 14px;
+    /* Target Dispatch Banner (Replaces redundant buttons in HUD) */
+    .we-dispatch-badge {
+      background: rgba(6, 182, 212, 0.08);
+      border: 1px solid rgba(6, 182, 212, 0.25);
       border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
+      padding: 9px 12px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 12px;
-      transition: all 0.2s ease;
+      gap: 10px;
     }
 
-    .we-focus-btn:hover {
-      background: rgba(6, 182, 212, 0.24);
-      color: #fff;
-      border-color: #22d3ee;
-      transform: translateY(-1px);
+    .we-dispatch-icon {
+      font-size: 1.1rem;
     }
 
-    /* Action buttons */
-    .we-actions-row {
+    .we-dispatch-info {
       display: flex;
       flex-direction: column;
-      gap: 8px;
     }
 
-    .we-cta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 9px 14px;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
+    .we-dispatch-sub {
+      font-size: 0.64rem;
+      color: #22d3ee;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
     }
 
-    .we-cta-sim {
-      background: rgba(245, 158, 11, 0.12);
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      color: #fbbf24;
+    .we-dispatch-main {
+      font-size: 0.78rem;
+      color: #e2e8f0;
     }
 
-    .we-cta-sim:hover {
-      background: rgba(245, 158, 11, 0.25);
-      border-color: rgba(245, 158, 11, 0.6);
+    .we-dispatch-main strong {
       color: #fff;
-      transform: translateY(-1px);
-    }
-
-    .we-cta-game {
-      background: rgba(16, 185, 129, 0.12);
-      border: 1px solid rgba(16, 185, 129, 0.35);
-      color: #34d399;
-    }
-
-    .we-cta-game:hover {
-      background: rgba(16, 185, 129, 0.25);
-      border-color: rgba(16, 185, 129, 0.6);
-      color: #fff;
-      transform: translateY(-1px);
     }
 
     @media (max-width: 900px) {
@@ -701,11 +670,16 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         grid-template-columns: 1fr;
       }
       .we-canvas-box {
-        min-height: 360px;
+        height: 360px;
+        max-height: 360px;
+      }
+      .we-hud {
+        height: auto;
+        max-height: none;
       }
     }
 
-    /* Dual Experience Showcase Grid */
+    /* Dual Experience Showcase Grid (The ONLY 2 Launch Buttons on Page) */
     .experience-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -883,6 +857,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       text-align: center;
     }
 
+    .card-meta-notes strong {
+      color: #94a3b8;
+    }
+
     /* Cross-Resource Showcase Bar */
     .resource-band {
       width: 100%;
@@ -1055,7 +1033,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         <p class="we-desc">
           The biophysical Earth rendered from authentic planetary satellite topography (reused directly from O-ASIS).
           Explore natural hydrological catchments and living biomes without armed national frontiers.
-          Switch smoothly between <strong>World View</strong> and <strong>Region Focus</strong> to inspect local carrying capacities.
+          Select a bioregion to configure the Living Commons Game and O-ASIS Sandbox below.
         </p>
       </div>
 
@@ -1077,27 +1055,23 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           </div>
         </div>
 
-        <!-- 2-Column Canvas + Inspector Grid -->
+        <!-- 2-Column Canvas + Inspector Grid (Fixed Constant 460px Height: Zero Jumping) -->
         <div class="we-grid">
           <!-- Canvas Viewport Area -->
           <div class="we-canvas-box">
-            <canvas id="watershedCanvas" width="900" height="440"></canvas>
+            <canvas id="watershedCanvas" width="900" height="460"></canvas>
             <div class="we-canvas-overlay">
               <div class="we-hint" id="weHintText">
-                <span>🌐 World View • Click basin to zoom into Bioregion</span>
+                <span>🌐 Click basin to select • Drag to pan</span>
               </div>
-              <div class="we-overlay-controls">
-                <button class="we-canvas-btn active" id="btnModeWorld" title="Planetary World View">🌐 World</button>
-                <button class="we-canvas-btn" id="btnModeRegion" title="Bioregional Focus View">🔍 Region</button>
-                <span class="we-sep">|</span>
-                <button class="we-canvas-btn" id="btnZoomIn" title="Zoom In">+</button>
-                <button class="we-canvas-btn" id="btnZoomOut" title="Zoom Out">−</button>
-                <button class="we-canvas-btn" id="weBtnReset" title="Reset View">↺</button>
-              </div>
+              <!-- EXACTLY ONE ZOOM BUTTON -->
+              <button class="we-zoom-toggle" id="btnZoomToggle" title="Toggle between World View and Region Focus">
+                🔍 Focus Bioregion
+              </button>
             </div>
           </div>
 
-          <!-- Inspector HUD -->
+          <!-- Inspector HUD (Fixed Height, Calibrated Typography, Zero Redundancy) -->
           <aside class="we-hud" id="weHud">
             <div class="we-hud-top">
               <div class="we-hud-tag-row">
@@ -1111,7 +1085,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
                 <span id="hudBiomeText">Alpine Headwaters & Alluvial Plain</span>
               </div>
               <p class="we-hud-desc" id="hudBasinDesc">
-                Glacial runoff from the Western Alps feeds the fertile Po plain before discharging into the Northern Adriatic. Primary zone for alpine micro-hydro, gravity water conduits, and resilient chestnut agroforestry.
+                Glacial runoff from the Western Alps feeds the fertile Po plain before discharging into the Northern Adriatic. Primary zone for alpine micro-hydro, gravity water conduits, and agroforestry.
               </p>
 
               <div class="we-metrics">
@@ -1140,22 +1114,15 @@ LAUNCHER_HTML = """<!DOCTYPE html>
                   <span class="we-node-val" id="hudNodeName">Val di Susa Watershed Node (34 Pioneers)</span>
                 </div>
               </div>
-
-              <button class="we-focus-btn" id="btnFocusBasin">
-                <span>🔍 Fly to Bioregion View</span>
-              </button>
             </div>
 
-            <!-- Action CTAs -->
-            <div class="we-actions-row">
-              <a href="./sim/?basin=po-valley" class="we-cta we-cta-sim" id="hudLaunchSim">
-                <span>🔬 Stress-Test in O-ASIS Sandbox</span>
-                <span>➔</span>
-              </a>
-              <a href="./game/?bioregion=alpine" class="we-cta we-cta-game" id="hudLaunchGame">
-                <span>🎮 Settle Node in Commons Game</span>
-                <span>➔</span>
-              </a>
+            <!-- Clean Target Dispatch Banner (Replaces redundant buttons in HUD) -->
+            <div class="we-dispatch-badge">
+              <span class="we-dispatch-icon">🎯</span>
+              <div class="we-dispatch-info">
+                <span class="we-dispatch-sub">Bioregion Configured</span>
+                <span class="we-dispatch-main">Launch in <strong>Commons Game</strong> or <strong>Sandbox</strong> below ↓</span>
+              </div>
             </div>
           </aside>
         </div>
@@ -1164,10 +1131,11 @@ LAUNCHER_HTML = """<!DOCTYPE html>
 
     <!-- =====================================================================
          STEPS 2 & 3: DUAL DEEP ENGINES (GAME & SANDBOX)
+         THE ONLY 2 LAUNCH BUTTONS ON THE PAGE
          ===================================================================== -->
     <div class="experience-grid">
 
-      <!-- Card 1: Living Commons Game -->
+      <!-- Card 1: Living Commons Game (THE 1 BUTTON TO OPEN GAME) -->
       <article class="exp-card card-game">
         <div class="card-top">
           <div class="card-badge badge-game">
@@ -1201,15 +1169,15 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         </div>
 
         <div class="card-actions">
-          <a href="./game/" class="btn-launch btn-launch-game" id="btnLaunchGame" title="Launch O.N.E. Living Commons Game">
+          <a href="./game/?bioregion=alpine" class="btn-launch btn-launch-game" id="btnLaunchGame" title="Launch O.N.E. Living Commons Game">
             <span>Launch Living Commons Game</span>
             <span>➔</span>
           </a>
-          <p class="card-meta-notes">Browser 60 FPS Canvas 2D • Procedural Audio • WebRTC Multi-Device</p>
+          <p class="card-meta-notes" id="gameTargetNote">Selected Bioregion: <strong>Po Valley & Western Alpine Arc</strong></p>
         </div>
       </article>
 
-      <!-- Card 2: O-ASIS Thermodynamic Sandbox -->
+      <!-- Card 2: O-ASIS Thermodynamic Sandbox (THE 1 BUTTON TO OPEN SIM) -->
       <article class="exp-card card-sandbox">
         <div class="card-top">
           <div class="card-badge badge-sandbox">
@@ -1243,11 +1211,11 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         </div>
 
         <div class="card-actions">
-          <a href="./sim/" class="btn-launch btn-launch-sandbox" id="btnLaunchSandbox" title="Launch O-ASIS Epistemic Sandbox">
+          <a href="./sim/?basin=po-valley" class="btn-launch btn-launch-sandbox" id="btnLaunchSandbox" title="Launch O-ASIS Epistemic Sandbox">
             <span>Launch O-ASIS Sandbox</span>
             <span>➔</span>
           </a>
-          <p class="card-meta-notes">Systemic Cockpit • Leontief Thermodynamics • Athenian Sortition</p>
+          <p class="card-meta-notes" id="simTargetNote">Selected Catchment: <strong>Po Valley & Western Alpine Arc</strong></p>
         </div>
       </article>
 
@@ -1287,11 +1255,11 @@ LAUNCHER_HTML = """<!DOCTYPE html>
 
   <!-- =====================================================================
        CLIENT-SIDE INTERACTIVE ENGINE: REAL SATELLITE CARTOGRAPHY (SIM REUSE)
-       Discrete Zoom Levels: ZOOM = WORLD (1.0x) and ZOOM = REGION (4.5x)
+       - Strict Single Action Controls (1 Zoom Button, 1 Sim Button, 1 Game Button)
+       - Fixed 460px Box Height (Zero Jumping on Bioregion Change)
        ===================================================================== -->
   <script>
     (function () {
-      // 1. Canonical Planetary Watersheds Dataset (Aligned with Web Mercator EPSG:3857)
       const MAP_SIZE = 2048; // Size of base satellite raster world_low.webp
 
       // Web Mercator projection: [lon, lat] -> [worldX, worldY] in [0, 2048]
@@ -1304,6 +1272,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         return [x, y];
       }
 
+      // Canonical Planetary Watersheds Dataset with calibrated 3-line descriptions
       const WATERSHEDS = [
         {
           id: "basin-po",
@@ -1312,7 +1281,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "alpine",
           biomeIcon: "⛰️",
           biomeName: "Alpine Headwaters & Alluvial Plain",
-          desc: "Glacial runoff from the Western Alps feeds the fertile Po plain before discharging into the Northern Adriatic. Primary zone for alpine micro-hydro, gravity water conduits, and resilient chestnut agroforestry.",
+          desc: "Glacial runoff from the Western Alps feeds the fertile Po plain before discharging into the Northern Adriatic. Primary zone for alpine micro-hydro, gravity water conduits, and agroforestry.",
           area: "74,970 km²",
           discharge: "1,540 m³/s",
           exergy: "Micro-Hydro + Solar",
@@ -1336,10 +1305,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "riverine",
           biomeIcon: "🌊",
           biomeName: "Temperate Oceanic Riverine Delta",
-          desc: "Continental European river network connecting the Alps to the North Sea. Dense industrial conversion zone focused on circular steel reuse, inland electric barge corridors, and shared riparian commons.",
+          desc: "European river network connecting the Alps to the North Sea. Dense industrial conversion zone focused on circular steel reuse, electric barge corridors, and shared riparian commons.",
           area: "185,000 km²",
           discharge: "2,900 m³/s",
-          exergy: "Industrial Bio-Fab + River Hydro",
+          exergy: "Bio-Fab + River Hydro",
           demarchy: "301 Citizens (Odd)",
           nodeName: "Rhineland Industrial Conversion Commons",
           simParam: "rhine-meuse",
@@ -1359,10 +1328,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "rainforest",
           biomeIcon: "🌴",
           biomeName: "Equatorial Rainforest Biosphere",
-          desc: "The planetary thermodynamic lung. Over 20% of the world's river discharge to the ocean. Fully protected under inviolable Jus Biosphaerae against ranching deforestation, mining concessions, and dams.",
+          desc: "Planetary thermodynamic lung. Over 20% of global river discharge to oceans. Inviolable Jus Biosphaerae protection against deforestation, industrial concessions, and destructive mega-dams.",
           area: "6,915,000 km²",
           discharge: "209,000 m³/s",
-          exergy: "Megadiverse Biomass + Solar",
+          exergy: "Megadiverse Biomass",
           demarchy: "301 Citizens (Odd)",
           nodeName: "Tapajós Agro-Ecological Sanctuary",
           simParam: "amazon",
@@ -1383,10 +1352,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "temperate",
           biomeIcon: "🌲",
           biomeName: "Laurentian Mixed Forest & Freshwater",
-          desc: "Holding 21% of the world's surface fresh water. Anchored by the regenerated post-industrial fablabs of Detroit Delray, combining high-yield vertical greenhouses, thermal microgrids, and lake water cooling.",
+          desc: "Holding 21% of the world surface liquid fresh water. Anchored by the regenerated fablabs of Detroit Delray, combining high-yield greenhouses, microgrids, and lake water cooling.",
           area: "1,344,000 km²",
           discharge: "16,800 m³/s",
-          exergy: "Freshwater Reservoir + Wind",
+          exergy: "Freshwater Lake + Wind",
           demarchy: "101 Citizens (Odd)",
           nodeName: "Detroit Delray Commons (28 Pioneers)",
           simParam: "great-lakes",
@@ -1405,10 +1374,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "alpine",
           biomeIcon: "⛰️",
           biomeName: "Temperate Coastal Rainforest",
-          desc: "Rugged Pacific maritime slopes with dense Douglas fir canopies and abundant run-of-river headwaters. Pioneer base for modular timber architecture (WikiHouse), open hardware CNC machining, and salmon corridor restoration.",
+          desc: "Pacific maritime slopes with dense fir canopies and abundant run-of-river headwaters. Base for modular timber architecture, open hardware CNC machining, and salmon corridor restoration.",
           area: "668,000 km²",
           discharge: "7,500 m³/s",
-          exergy: "Run-of-River Hydro + Coastal Wind",
+          exergy: "Run-of-River + Wind",
           demarchy: "101 Citizens (Odd)",
           nodeName: "Cascadia Bio-Fab Node",
           simParam: "cascadia",
@@ -1428,10 +1397,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "arid",
           biomeIcon: "☀️",
           biomeName: "Hyper-Arid High-Altitude Plateau",
-          desc: "The highest solar irradiance region on Earth (2,800 kWh/m²/yr). Completely closed endorheic drainage with specialized atmospheric water harvesting (Camanchaca nets) and decentralized high-yield solar smelting.",
+          desc: "Highest solar irradiance on Earth (2,800 kWh/m²/yr). Completely closed endorheic drainage with atmospheric water harvesting nets and decentralized high-yield solar thermal smelting.",
           area: "105,000 km²",
           discharge: "0 m³/s (Endorheic)",
-          exergy: "Concentrated Solar + Geothermal",
+          exergy: "Solar + Geothermal",
           demarchy: "15 Citizens (Odd)",
           nodeName: "Atacama Solar Oasis (22 Pioneers)",
           simParam: "atacama",
@@ -1451,10 +1420,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "rainforest",
           biomeIcon: "🌴",
           biomeName: "Equatorial Rainforest & Peat Swamps",
-          desc: "The central freshwater heart of the African continent. Massive carbon sequestration in Cuvette Centrale peatlands. Non-extractive agroforestry cooperatives and decentralized micro-hydro water turbines.",
+          desc: "Central freshwater heart of the African continent with massive peatland carbon storage. Non-extractive agroforestry cooperatives and decentralized micro-hydro water turbines.",
           area: "4,014,000 km²",
           discharge: "41,000 m³/s",
-          exergy: "Hydro Potential + Biomass",
+          exergy: "Hydro + Peat Biomass",
           demarchy: "301 Citizens (Odd)",
           nodeName: "Kisangani Agro-Forestry Cooperative",
           simParam: "congo",
@@ -1474,10 +1443,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "riverine",
           biomeIcon: "🌊",
           biomeName: "Alluvial Riverine & Sudd Wetlands",
-          desc: "The longest river corridor on the planet, flowing northward from Lake Victoria across arid landscapes. Managed under strict upstream-downstream ecological solidarity covenants without geopolitical water blockades.",
+          desc: "Planetary river corridor flowing northward from Lake Victoria across arid landscapes. Managed under strict upstream-downstream ecological covenants without water blockades.",
           area: "3,254,000 km²",
           discharge: "2,830 m³/s",
-          exergy: "Solar Irrigation + Alluvial Silt",
+          exergy: "Solar Irrigation + Silt",
           demarchy: "101 Citizens (Odd)",
           nodeName: "Nubian Permaculture Cooperative",
           simParam: "nile",
@@ -1496,10 +1465,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "arid",
           biomeIcon: "☀️",
           biomeName: "Semi-Arid Steppe & Alluvial Plain",
-          desc: "Historic cradle of agriculture transitioning into cooperative direct democracy. Solar-powered low-pressure drip irrigation, communal seed banks, and non-state municipal self-management.",
+          desc: "Historic cradle of agriculture transitioning into cooperative direct democracy. Solar-powered low-pressure drip irrigation, communal seed banks, and municipal self-management.",
           area: "765,000 km²",
           discharge: "1,400 m³/s",
-          exergy: "Solar Radiation + Drip Irrigation",
+          exergy: "Solar Drip Irrigation",
           demarchy: "101 Citizens (Odd)",
           nodeName: "Rojava Agro-Ecological Node",
           simParam: "rojava",
@@ -1519,10 +1488,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "alpine",
           biomeIcon: "⛰️",
           biomeName: "Himalayan Glacial Runoff to Sea",
-          desc: "High-altitude glacial headwaters feeding one of the most productive agricultural breadbaskets on Earth. Cooperative water allocation treaties replace nation-state conflicts with shared gravity channels.",
+          desc: "Glacial headwaters feeding a vital agricultural breadbasket. Cooperative water allocation treaties replace nation-state conflicts with shared gravity channels.",
           area: "1,120,000 km²",
           discharge: "6,600 m³/s",
-          exergy: "Himalayan Glacial Seep + Gravity Canal",
+          exergy: "Glacial Melt + Gravity Canals",
           demarchy: "101 Citizens (Odd)",
           nodeName: "Punjab Glacial Melt Irrigation Commons",
           simParam: "indus",
@@ -1541,10 +1510,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "rainforest",
           biomeIcon: "🌴",
           biomeName: "Tropical Monsoon Moist Forest",
-          desc: "Multi-tiered tropical agroforestry (coconut, black pepper, medicinal herbs) receiving heavy seasonal monsoon rains. World pioneer in village-level participatory budgeting, community health, and watershed decentralization.",
+          desc: "Multi-tiered tropical agroforestry receiving heavy seasonal monsoon rains. World pioneer in village-level participatory budgeting, community health, and watershed decentralization.",
           area: "160,000 km²",
           discharge: "3,200 m³/s",
-          exergy: "Monsoon Cascade + Agro-Ecology",
+          exergy: "Monsoon Agroforestry",
           demarchy: "101 Citizens (Odd)",
           nodeName: "Kerala Agro-Forestry Node",
           simParam: "kerala",
@@ -1564,10 +1533,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "riverine",
           biomeIcon: "🌊",
           biomeName: "Subtropical Wetland & Canal Network",
-          desc: "Enormous alluvial freshwater network spanning the Tibetan Plateau to Shanghai. De-industrialized ecological buffer zones restore the river porpoise while maintaining high-density clean aquaculture.",
+          desc: "Enormous freshwater network spanning the Tibetan Plateau to Shanghai. De-industrialized ecological buffer zones restore the river porpoise while maintaining clean aquaculture.",
           area: "1,800,000 km²",
           discharge: "30,000 m³/s",
-          exergy: "Inland Canal Corridors + Hydro",
+          exergy: "Inland Canals + Hydro",
           demarchy: "301 Citizens (Odd)",
           nodeName: "Dongting Ecological Lake Commons",
           simParam: "yangtze",
@@ -1586,10 +1555,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "arid",
           biomeIcon: "☀️",
           biomeName: "Semi-Arid Inland Drainage Basin",
-          desc: "Australia's primary food bowl facing severe drought and salinity shocks. Re-engineered with deep sand aquifer storage, cultural Indigenous burning protocols, and large-scale solar micro-grids.",
+          desc: "Vital food bowl facing severe drought and salinity shocks. Re-engineered with deep sand aquifer storage, cultural Indigenous burning protocols, and large-scale solar micro-grids.",
           area: "1,061,000 km²",
           discharge: "767 m³/s",
-          exergy: "Solar Storage + Managed Aquifer Recharge",
+          exergy: "Solar + Sand Aquifers",
           demarchy: "101 Citizens (Odd)",
           nodeName: "Barwon Solar & Sand Aquifer Storage",
           simParam: "murray-darling",
@@ -1609,10 +1578,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           biome: "temperate",
           biomeIcon: "🌲",
           biomeName: "Boreal Taiga & Peatland Sink",
-          desc: "Glaciated Northern European catchment surrounded by continuous-cover boreal timber commons and coastal wind streams. Key node for timber prefabrication and district heating bio-reactors.",
+          desc: "Glaciated catchment surrounded by continuous-cover boreal timber commons and coastal wind streams. Key node for timber prefabrication and district heating bio-reactors.",
           area: "1,700,000 km²",
           discharge: "15,000 m³/s",
-          exergy: "Wind Corridors + Certified Timber Commons",
+          exergy: "Wind + Timber Commons",
           demarchy: "101 Citizens (Odd)",
           nodeName: "Nordic Bio-Mass Resilience Cluster",
           simParam: "baltic",
@@ -1657,8 +1626,6 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       let activeFilter = "all";
       let particles = [];
 
-      // Camera: world coordinates (0-2048) and zoom factor
-      // At zoom 1.0, the world map height is fitted to canvas height
       const worldCenter = toWorldPx(10, 20); // Atlantic / Europe / Equator center
       const camera = { x: worldCenter[0], y: worldCenter[1], zoom: 1.0 };
       const targetCamera = { x: worldCenter[0], y: worldCenter[1], zoom: 1.0 };
@@ -1690,7 +1657,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         const rect = canvas.getBoundingClientRect();
         const dpr = window.devicePixelRatio || 1;
         width = rect.width || 900;
-        height = rect.height || 440;
+        height = rect.height || 460;
         canvas.width = width * dpr;
         canvas.height = height * dpr;
         ctx.scale(dpr, dpr);
@@ -1728,27 +1695,22 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         return inside;
       }
 
-      function updateZoomBadge() {
+      // Updates the SINGLE Zoom Button and Zoom Status Badge
+      function updateZoomState() {
         const badge = document.getElementById("hudZoomBadge");
-        const modeWorldBtn = document.getElementById("btnModeWorld");
-        const modeRegBtn = document.getElementById("btnModeRegion");
-        const focusBtn = document.getElementById("btnFocusBasin");
+        const toggleBtn = document.getElementById("btnZoomToggle");
         const hintText = document.getElementById("weHintText");
 
         if (targetCamera.zoom > 1.8) {
           zoomMode = "REGION";
-          if (badge) badge.textContent = "ZOOM: REGION (BIOREGIONAL FOCUS)";
-          if (modeWorldBtn) modeWorldBtn.classList.remove("active");
-          if (modeRegBtn) modeRegBtn.classList.add("active");
-          if (focusBtn) focusBtn.innerHTML = "<span>🌐 Zoom Out to Planetary View</span>";
-          if (hintText) hintText.innerHTML = "<span>🔍 Region Focus • Drag to pan • Scroll to zoom</span>";
+          if (badge) badge.textContent = "ZOOM: REGION";
+          if (toggleBtn) toggleBtn.innerHTML = "<span>🌐 World View</span>";
+          if (hintText) hintText.innerHTML = "<span>🔍 Region Focus • Drag to pan</span>";
         } else {
           zoomMode = "WORLD";
-          if (badge) badge.textContent = "ZOOM: WORLD (PLANETARY)";
-          if (modeWorldBtn) modeWorldBtn.classList.add("active");
-          if (modeRegBtn) modeRegBtn.classList.remove("active");
-          if (focusBtn) focusBtn.innerHTML = "<span>🔍 Fly to Bioregion View</span>";
-          if (hintText) hintText.innerHTML = "<span>🌐 World View • Click basin to zoom into Bioregion</span>";
+          if (badge) badge.textContent = "ZOOM: WORLD";
+          if (toggleBtn) toggleBtn.innerHTML = "<span>🔍 Focus Bioregion</span>";
+          if (hintText) hintText.innerHTML = "<span>🌐 World View • Click basin to focus</span>";
         }
       }
 
@@ -1757,7 +1719,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         targetCamera.x = wc[0];
         targetCamera.y = wc[1];
         targetCamera.zoom = 1.0;
-        updateZoomBadge();
+        updateZoomState();
       }
 
       function setViewRegion(b) {
@@ -1765,10 +1727,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         targetCamera.x = b.centerPx[0];
         targetCamera.y = b.centerPx[1];
         targetCamera.zoom = b.zoomLevel || 4.5;
-        updateZoomBadge();
+        updateZoomState();
       }
 
-      // Update Inspector HUD Panel
+      // Update Inspector HUD Panel & Update the ONLY 2 Launch Buttons below
       function updateHUD(b) {
         if (!b) return;
         document.getElementById("hudBasinTag").textContent = b.tag;
@@ -1782,26 +1744,31 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         document.getElementById("hudMetricDemarchy").textContent = b.demarchy;
         document.getElementById("hudNodeName").textContent = b.nodeName;
 
-        const simBtn = document.getElementById("hudLaunchSim");
-        const gameBtn = document.getElementById("hudLaunchGame");
-        if (simBtn) simBtn.href = `./sim/?basin=${b.simParam}`;
+        // Dynamically configure the 2 Primary Launch Buttons below
+        const gameBtn = document.getElementById("btnLaunchGame");
+        const gameNote = document.getElementById("gameTargetNote");
         if (gameBtn) gameBtn.href = `./game/?bioregion=${b.gameParam}`;
+        if (gameNote) gameNote.innerHTML = `Selected Bioregion: <strong>${b.name}</strong>`;
+
+        const simBtn = document.getElementById("btnLaunchSandbox");
+        const simNote = document.getElementById("simTargetNote");
+        if (simBtn) simBtn.href = `./sim/?basin=${b.simParam}`;
+        if (simNote) simNote.innerHTML = `Selected Catchment: <strong>${b.name}</strong>`;
       }
 
       // Drawing Loop (60 FPS with Camera Lerping & River Flow)
       function draw() {
-        // 1. Smooth Camera Lerp
         camera.x += (targetCamera.x - camera.x) * 0.09;
         camera.y += (targetCamera.y - camera.y) * 0.09;
         camera.zoom += (targetCamera.zoom - camera.zoom) * 0.09;
 
         ctx.clearRect(0, 0, width, height);
 
-        // 2. Base Dark Oceanic Fill
+        // Base Dark Oceanic Fill
         ctx.fillStyle = "#020705";
         ctx.fillRect(0, 0, width, height);
 
-        // 3. Draw Real Earth Satellite Map (with horizontal wraparound)
+        // Draw Real Earth Satellite Map (with horizontal wraparound)
         const scale = getScale();
         const imgScreenW = MAP_SIZE * scale;
         const imgScreenH = MAP_SIZE * scale;
@@ -1810,7 +1777,6 @@ LAUNCHER_HTML = """<!DOCTYPE html>
 
         if (currentEarthImg && currentEarthImg.complete) {
           ctx.drawImage(currentEarthImg, imgScreenX, imgScreenY, imgScreenW, imgScreenH);
-          // Horizontal wrapping for seamless planetary panning
           if (imgScreenX > 0) {
             ctx.drawImage(currentEarthImg, imgScreenX - imgScreenW, imgScreenY, imgScreenW, imgScreenH);
           }
@@ -1819,7 +1785,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           }
         }
 
-        // 4. Subtle Ambient Vignette & Graticule
+        // Ambient Graticule
         ctx.strokeStyle = "rgba(255, 255, 255, 0.04)";
         ctx.lineWidth = 1;
         for (let lon = -150; lon <= 180; lon += 30) {
@@ -1830,13 +1796,12 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           ctx.stroke();
         }
 
-        // 5. Draw Watershed Basins on Real Satellite Relief
+        // Draw Watershed Basins on Real Satellite Relief
         WATERSHEDS.forEach(b => {
           const isSelected = selectedBasin && selectedBasin.id === b.id;
           const isHovered = hoveredBasin && hoveredBasin.id === b.id;
           const matchesFilter = activeFilter === "all" || b.biome === activeFilter;
 
-          // Convert polygon to screen coordinates
           const screenPoly = b.polygonPx.map(([wx, wy]) => worldToScreen(wx, wy));
 
           ctx.beginPath();
@@ -1846,7 +1811,6 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           });
           ctx.closePath();
 
-          // Biophilic tints overlaid on real terrain
           let fillColor = "rgba(52, 211, 153, 0.12)";
           let strokeColor = "rgba(52, 211, 153, 0.4)";
 
@@ -1883,7 +1847,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           ctx.stroke();
           ctx.shadowBlur = 0;
 
-          // River network veins overlaid on real valleys
+          // River network veins
           b.riversPx.forEach(river => {
             if (river.length < 2) return;
             ctx.beginPath();
@@ -1928,7 +1892,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           }
         });
 
-        // 6. Draw Animated River Flow Particles
+        // Draw Animated River Flow Particles
         particles.forEach(p => {
           p.progress += p.speed;
           if (p.progress >= 1) p.progress = 0;
@@ -2015,7 +1979,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       });
 
       canvas.addEventListener("click", (e) => {
-        if (hasDragged) return; // Ignore click if user was panning
+        if (hasDragged) return;
 
         const rect = canvas.getBoundingClientRect();
         const mouseX = e.clientX - rect.left;
@@ -2027,24 +1991,16 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           if (isPointInPoly([wx, wy], b.polygonPx)) {
             selectedBasin = b;
             updateHUD(b);
-            // Smoothly fly to region view
             setViewRegion(b);
             break;
           }
         }
       });
 
-      canvas.addEventListener("wheel", (e) => {
-        e.preventDefault();
-        const zoomDelta = e.deltaY < 0 ? 1.18 : 0.82;
-        targetCamera.zoom = Math.max(1.0, Math.min(8.0, targetCamera.zoom * zoomDelta));
-        updateZoomBadge();
-      }, { passive: false });
-
-      // Focus Bioregion / Zoom Out Button in HUD
-      const focusBtn = document.getElementById("btnFocusBasin");
-      if (focusBtn) {
-        focusBtn.addEventListener("click", () => {
+      // EXACTLY ONE Zoom Button Handler (Toggles World <-> Region)
+      const zoomToggleBtn = document.getElementById("btnZoomToggle");
+      if (zoomToggleBtn) {
+        zoomToggleBtn.addEventListener("click", () => {
           if (zoomMode === "WORLD") {
             setViewRegion(selectedBasin);
           } else {
@@ -2052,23 +2008,6 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           }
         });
       }
-
-      // Discrete Zoom Mode Buttons in Canvas Overlay
-      const btnWorld = document.getElementById("btnModeWorld");
-      const btnRegion = document.getElementById("btnModeRegion");
-      if (btnWorld) btnWorld.addEventListener("click", () => setViewWorld());
-      if (btnRegion) btnRegion.addEventListener("click", () => setViewRegion(selectedBasin));
-
-      const btnZIn = document.getElementById("btnZoomIn");
-      const btnZOut = document.getElementById("btnZoomOut");
-      if (btnZIn) btnZIn.addEventListener("click", () => {
-        targetCamera.zoom = Math.min(8.0, targetCamera.zoom * 1.35);
-        updateZoomBadge();
-      });
-      if (btnZOut) btnZOut.addEventListener("click", () => {
-        targetCamera.zoom = Math.max(1.0, targetCamera.zoom / 1.35);
-        updateZoomBadge();
-      });
 
       // Filter Chips handler
       const chips = document.querySelectorAll(".we-chip");
@@ -2092,28 +2031,12 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         });
       });
 
-      // Reset Button handler
-      const resetBtn = document.getElementById("weBtnReset");
-      if (resetBtn) {
-        resetBtn.addEventListener("click", () => {
-          activeFilter = "all";
-          chips.forEach(c => c.classList.remove("active"));
-          const allChip = document.querySelector('.we-chip[data-biome="all"]');
-          if (allChip) allChip.classList.add("active");
-          selectedBasin = WATERSHEDS[0];
-          hoveredBasin = null;
-          updateHUD(selectedBasin);
-          setViewWorld();
-          document.getElementById("weCountBadge").textContent = `${WATERSHEDS.length} Sovereign Basins Mapped`;
-        });
-      }
-
       // Initial Setup
       window.addEventListener("resize", resizeCanvas);
       resizeCanvas();
       initParticles();
       updateHUD(selectedBasin);
-      updateZoomBadge();
+      updateZoomState();
       requestAnimationFrame(draw);
     })();
   </script>
@@ -2211,7 +2134,7 @@ def build_all(quick_mode=False):
     # Write Launcher Hub index.html
     hub_html_path = DOCS_DIR / "index.html"
     hub_html_path.write_text(LAUNCHER_HTML, encoding="utf-8")
-    print(f"  [✓] Wrote Solarpunk Launcher Hub (with Real Earth Satellite Map): {hub_html_path}")
+    print(f"  [✓] Wrote Solarpunk Launcher Hub (Clean Zero-Jumping Layout): {hub_html_path}")
 
     # Copy brand assets to docs/ root for the Launcher
     for logo_name in [
@@ -2231,7 +2154,7 @@ def build_all(quick_mode=False):
     print("\n" + "=" * 70)
     print(" [✓] DOCS SUBPATH HUB SUCCESSFULLY BUILT & CERTIFIED CLEAN!")
     print(f"     Root Launcher : {DOCS_DIR / 'index.html'} -> https://kyberlex.github.io/ONE/")
-    print(f"     Watershed Hub : Real Earth Satellite Relief (ZOOM = WORLD & ZOOM = REGION)")
+    print(f"     Watershed Hub : Real Earth Satellite Relief (Zero Jumping & Minimalist UI)")
     print(f"     Commons Game  : {docs_game / 'index.html'} -> https://kyberlex.github.io/ONE/game/")
     print(f"     O-ASIS Sandbox: {docs_sim / 'index.html'} -> https://kyberlex.github.io/ONE/sim/")
     print("=" * 70)
