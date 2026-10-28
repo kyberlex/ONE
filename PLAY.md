@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://one-oasis.surge.sh" target="_blank" rel="noopener noreferrer">
-    <img src="spread/videos/oasis_showcase_preview.gif" alt="O-ASIS Dual-Track Living Thermodynamic Sandbox" width="100%" style="max-width: 820px; border-radius: 8px; border: 1px solid #10b981;" />
+    <img src="assets/preview/oasis_showcase_preview.gif" alt="O-ASIS Dual-Track Living Thermodynamic Sandbox" width="100%" style="max-width: 820px; border-radius: 8px; border: 1px solid #10b981;" />
   </a>
 </p>
 

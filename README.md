@@ -102,11 +102,10 @@ This public repository contains the complete canonical constitutional charter, c
 │   ├── constitutional_attack_challenges.md # Proof-of-Immunity matrix across 7 attack vectors
 │   ├── sim_resolutions_qa.md         # Living case-law register ([STATUS: SIMULATION_HYPOTHESIS])
 │   └── github_discussions_rfcs.md    # Deliberation RFC templates for community ratification
-├── spread/                           # MEDIA & VISUAL ASSETS
-│   ├── screenshots/                  # High-resolution simulation screenshots
-│   └── videos/                       # Animated gameplay showcases & previews
-├── assets/                           # ARCHITECTURAL & CONSTITUTIONAL VECTOR DIAGRAMS
-│   └── diagrams/                     # Standalone SVG schematics and visual specs
+├── assets/                           # ARCHITECTURAL DIAGRAMS & MEDIA ASSETS
+│   ├── diagrams/                     # Standalone SVG schematics and visual specs
+│   ├── preview/                      # Animated gameplay showcases & previews
+│   └── screenshots/                  # High-resolution simulation screenshots
 ├── docs/                             # WEB APPLICATION MIRROR (GITHUB PAGES)
 ├── scripts/                          # PUBLIC AUTOMATION & RELAY SCRIPTS
 │   ├── anchor_world_snapshot.py      # On-chain / immutable snapshot anchor
@@ -163,7 +162,7 @@ Launch the live thermodynamic resilience MMO without any installation:
 
 <p align="center">
   <a href="https://one-oasis.surge.sh" target="_blank" rel="noopener noreferrer">
-    <img src="spread/videos/oasis_showcase_preview.gif" alt="O-ASIS Dual-Track Living Thermodynamic Sandbox" width="100%" style="max-width: 820px; border-radius: 8px; border: 1px solid #10b981;" />
+    <img src="assets/preview/oasis_showcase_preview.gif" alt="O-ASIS Dual-Track Living Thermodynamic Sandbox" width="100%" style="max-width: 820px; border-radius: 8px; border: 1px solid #10b981;" />
   </a>
 </p>
 

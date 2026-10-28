@@ -37,7 +37,6 @@ __pycache__/
 *$py.class
 
 # Local Workstation Staging & Internal Media (Kept in private master repo 'one')
-spread/
 bible/
 notes/
 log/
