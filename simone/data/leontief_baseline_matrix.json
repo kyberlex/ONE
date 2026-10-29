@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "document_id": "simone/data/leontief_baseline_matrix.json",
+    "version": "0.2.0",
+    "author": "Kyberlex <kyberlex@proton.me>",
+    "license": "AGPL-3.0-or-later",
+    "pillar_alignment": "Pillar 1 (Biophysical & Leontief Economics) + Pillar 3 (Simone.jl)",
+    "description": "Physical 4-sector Leontief input-output matrix A, final Tier-1 biological subsistence demand d (N=300 village), Weibull MTBF asset degradation parameters, and non-monetary lexicographic allocation priorities (L_min)."
+  },
+  "sectors": [
+    {
+      "index": 1,
+      "id": "exergy_kwh",
+      "name": "Clean Electrical & Thermal Exergy",
+      "unit": "kWh/day",
+      "lexicographic_tier": 1
+    },
+    {
+      "index": 2,
+      "id": "water_liters",
+      "name": "Potable & Agricultural Water Catchment",
+      "unit": "L/day",
+      "lexicographic_tier": 1
+    },
+    {
+      "index": 3,
+      "id": "biomass_kcal",
+      "name": "Nutrient-Dense Caloric Biomass",
+      "unit": "kcal/day",
+      "lexicographic_tier": 1
+    },
+    {
+      "index": 4,
+      "id": "compute_fab_hours",
+      "name": "Open-Hardware FabLab & Telemetry Compute",
+      "unit": "core_or_machine_hours/day",
+      "lexicographic_tier": 2
+    }
+  ],
+  "technical_coefficients_matrix_A": {
+    "comment": "A[i][j] = units of physical resource i required directly to produce 1 unit of resource j. Spectral radius rho(A) < 1 guarantees Hawkins-Simon thermodynamic viability.",
+    "rows": [
+      [0.08, 0.002, 0.0005, 0.25],
+      [0.15, 0.04, 0.012, 0.05],
+      [0.0, 0.0, 0.06, 0.0],
+      [0.01, 0.0002, 0.0001, 0.05]
+    ]
+  },
+  "tier1_final_demand_per_capita_day": {
+    "exergy_kwh": 5.0,
+    "water_liters": 150.0,
+    "biomass_kcal": 2500.0,
+    "compute_fab_hours": 2.0
+  },
+  "weibull_mtbf_parameters": {
+    "solar_mppt_inverter": { "shape_k": 2.4, "scale_lambda_hours": 65000.0, "preventive_maintenance_interval_hours": 4380.0 },
+    "borehole_water_pump": { "shape_k": 2.1, "scale_lambda_hours": 42000.0, "preventive_maintenance_interval_hours": 2190.0 },
+    "aeroponic_dosing_manifold": { "shape_k": 1.8, "scale_lambda_hours": 28000.0, "preventive_maintenance_interval_hours": 1460.0 },
+    "cnc_spindle_bearing": { "shape_k": 2.8, "scale_lambda_hours": 18000.0, "preventive_maintenance_interval_hours": 1000.0 }
+  }
+}
+

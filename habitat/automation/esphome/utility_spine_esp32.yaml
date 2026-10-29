@@ -1,0 +1,116 @@
+# ==============================================================================
+# O.N.E. HABITAT — ESPHOME UTILITY SPINE CONTROLLER FIRMWARE
+# File: habitat/automation/esphome/utility_spine_esp32.yaml
+# Author: Kyberlex <kyberlex@proton.me>
+# License: AGPL-3.0-or-later (Class-0 Non-Commercial Open Hardware)
+# Target Hardware: Olimex ESP32-POE-ISO (Wired Ethernet, Zero Wi-Fi Required)
+# ==============================================================================
+
+esphome:
+  name: mhu-utility-spine-01
+  friendly_name: "O.N.E. MHU Utility Spine Controller"
+  comment: "Zero-Cloud Abiotic Telemetry & 48V DC Load-Shedding Node"
+
+esp32:
+  board: esp32-poe-iso
+  framework:
+    type: esp-idf
+
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO17_OUT
+  phy_addr: 0
+  power_pin: GPIO12
+
+# Local API & OTA only — zero external cloud brokers
+api:
+  reboot_timeout: 0s
+
+ota:
+  - platform: esphome
+
+logger:
+  level: INFO
+
+i2c:
+  sda: GPIO13
+  scl: GPIO16
+  scan: true
+  id: bus_abiotic
+
+sensor:
+  # 1. Sensirion SCD41 Photoacoustic CO2, Temp & Humidity (Abiotic Air Quality)
+  - platform: scd4x
+    i2c_id: bus_abiotic
+    address: 0x62
+    co2:
+      name: "MHU Indoor CO2 ppm"
+      id: mhu_indoor_co2_ppm
+    temperature:
+      name: "MHU Indoor Temperature C"
+      id: mhu_indoor_temp_c
+    humidity:
+      name: "MHU Indoor Relative Humidity"
+      id: mhu_indoor_rh_pct
+    update_interval: 30s
+
+  # 2. 48V DC Bus Voltage & Current Shunt (INA226)
+  - platform: ina226
+    i2c_id: bus_abiotic
+    address: 0x40
+    shunt_resistance: 0.002 ohm
+    max_current: 50.0 A
+    bus_voltage:
+      name: "MHU 48V DC Bus Voltage"
+      id: mhu_dc_bus_voltage_v
+      on_value_range:
+        # Autonomous local MCU hardware fail-safe even if Home Assistant is offline:
+        - below: 45.2
+          then:
+            - switch.turn_off: mhu_tier2_hvac_relay
+    current:
+      name: "MHU 48V DC Bus Current"
+    power:
+      name: "MHU 48V DC Bus Power W"
+    update_interval: 5s
+
+  # 3. Waterproof Ultrasonic Potable Cistern Level Sensor (JSN-SR04T)
+  - platform: ultrasonic
+    trigger_pin: GPIO32
+    echo_pin: GPIO35
+    name: "MHU Potable Cistern Level Pct"
+    id: mhu_cistern_level_pct
+    update_interval: 60s
+    filters:
+      - lambda: |-
+          // Convert distance in meters (0.20m full .. 2.00m empty) to 0..100%
+          float pct = (2.00f - x) / 1.80f * 100.0f;
+          if (pct < 0.0f) return 0.0f;
+          if (pct > 100.0f) return 100.0f;
+          return pct;
+    unit_of_measurement: "%"
+
+switch:
+  # Tier 2 Non-Critical HVAC / Heat Pump Contactor (Shed below 25% SoC)
+  - platform: gpio
+    pin: GPIO14
+    name: "MHU Tier 2 HVAC Relay"
+    id: mhu_tier2_hvac_relay
+    restore_mode: RESTORE_DEFAULT_ON
+
+  # Tier 3 Workshop / Auxiliary Contactor (Shed below 50% SoC)
+  - platform: gpio
+    pin: GPIO15
+    name: "MHU Tier 3 Workshop Relay"
+    id: mhu_tier3_workshop_relay
+    restore_mode: RESTORE_DEFAULT_ON
+
+  # Motorized 3-Way Greywater Reed-Bed Diverter Valve
+  - platform: gpio
+    pin: GPIO4
+    name: "MHU Greywater Diverter Valve"
+    id: mhu_greywater_diverter
+    restore_mode: ALWAYS_OFF
+

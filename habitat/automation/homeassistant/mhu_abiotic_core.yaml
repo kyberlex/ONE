@@ -1,0 +1,122 @@
+# ==============================================================================
+# O.N.E. HABITAT — HOME ASSISTANT ABIOTIC CORE PACKAGE
+# File: habitat/automation/homeassistant/mhu_abiotic_core.yaml
+# Author: Kyberlex <kyberlex@proton.me>
+# License: AGPL-3.0-or-later (Class-0 Non-Commercial Open Hardware)
+# Spec Reference: habitat/SENSOR_TOPOLOGY_HOME_ASSISTANT.md
+#
+# Description:
+# 100% local, zero-cloud Home Assistant automation package for the Modular
+# Habitat Unit (MHU) Utility Spine. Implements:
+#   1. 3-Tier 48V DC Microgrid Load-Shedding (30-Day Islanded Survival)
+#   2. Passivhaus Enthalpic HRV Demand-Controlled Ventilation (CO2 & VOC)
+#   3. Potable Cistern & Greywater Reed-Bed Frost/Overflow Protection
+# ==============================================================================
+
+homeassistant:
+  customize:
+    sensor.mhu_battery_soc_pct:
+      friendly_name: "MHU 48V LFP Battery SoC"
+      icon: mdi:battery-heart-variant
+    sensor.mhu_indoor_co2_ppm:
+      friendly_name: "MHU Indoor CO2 Concentration (Abiotic)"
+      icon: mdi:molecule-co2
+    sensor.mhu_cistern_level_pct:
+      friendly_name: "MHU Potable Cistern Volume"
+      icon: mdi:storage-tank
+
+input_select:
+  mhu_exergy_mode:
+    name: "MHU Microgrid Exergy State"
+    options:
+      - NORMAL_ABUNDANCE
+      - CONSERVATION_WATCH
+      - ISLAND_SURVIVAL
+    initial: NORMAL_ABUNDANCE
+    icon: mdi:transmission-tower
+
+template:
+  - sensor:
+      - name: "MHU Estimated Island Autonomy Days"
+        unit_of_measurement: "days"
+        state: >
+          {% set soc = states('sensor.mhu_battery_soc_pct') | float(50) %}
+          {% set usable_kwh = (soc / 100.0) * 15.0 %}
+          {% set daily_load = 0.45 if is_state('input_select.mhu_exergy_mode', 'ISLAND_SURVIVAL') else 1.80 %}
+          {{ (usable_kwh / daily_load) | round(1) }}
+
+automation:
+  # ----------------------------------------------------------------------------
+  # 1. 48V DC MICROGRID PRIORITY LOAD-SHEDDING (25% SoC SURVIVAL THRESHOLD)
+  # ----------------------------------------------------------------------------
+  - id: mhu_dc_microgrid_shed_tier2_below_25_soc
+    alias: "[O.N.E. MHU] Enter Island Survival Mode (< 25% SoC)"
+    description: "Sheds Tier 2 HVAC/Aux loads when 48V LFP battery drops below 25% SoC, preserving 30-day Tier 1 life support."
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.mhu_battery_soc_pct
+        below: 25
+        for:
+          minutes: 2
+    action:
+      - service: switch.turn_off
+        target:
+          entity_id:
+            - switch.mhu_tier2_hvac_relay
+            - switch.mhu_tier3_workshop_relay
+      - service: input_select.select_option
+        target:
+          entity_id: input_select.mhu_exergy_mode
+        data:
+          option: ISLAND_SURVIVAL
+
+  - id: mhu_dc_microgrid_restore_above_40_soc
+    alias: "[O.N.E. MHU] Restore Normal Abundance Mode (> 40% SoC)"
+    description: "Re-engages Tier 2 R290 Heat Pump after hysteresis recovery above 40% SoC."
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.mhu_battery_soc_pct
+        above: 40
+        for:
+          minutes: 5
+    action:
+      - service: switch.turn_on
+        target:
+          entity_id: switch.mhu_tier2_hvac_relay
+      - service: input_select.select_option
+        target:
+          entity_id: input_select.mhu_exergy_mode
+        data:
+          option: NORMAL_ABUNDANCE
+
+  # ----------------------------------------------------------------------------
+  # 2. PASSIVHAUS ENTHALPIC HRV DEMAND-CONTROLLED VENTILATION (CO2 & VOC)
+  # ----------------------------------------------------------------------------
+  - id: mhu_passivhaus_hrv_co2_boost
+    alias: "[O.N.E. MHU] Enthalpic HRV Boost on Elevated CO2 (> 1000 ppm)"
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.mhu_indoor_co2_ppm
+        above: 1000
+    action:
+      - service: fan.set_percentage
+        target:
+          entity_id: fan.mhu_enthalpic_hrv
+        data:
+          percentage: 85
+
+  - id: mhu_passivhaus_hrv_baseline_trickle
+    alias: "[O.N.E. MHU] Enthalpic HRV Return to Passivhaus Trickle (< 750 ppm)"
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.mhu_indoor_co2_ppm
+        below: 750
+        for:
+          minutes: 10
+    action:
+      - service: fan.set_percentage
+        target:
+          entity_id: fan.mhu_enthalpic_hrv
+        data:
+          percentage: 35
+

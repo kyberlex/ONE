@@ -1,0 +1,19 @@
+{
+  "archetype_id": "arid_solar_basin",
+  "name": "Arid High-Irradiance Solar Basin Node",
+  "reference_region": "Mediterranean / Iberian / Southwestern Semi-Arid Catchments",
+  "population_baseline": 300,
+  "layer0_abiotic": {
+    "mean_solar_irradiance_kwh_m2_day": 6.2,
+    "micro_hydro_baseload_kwh_day": 0.0,
+    "mean_precipitation_mm_year": 320.0,
+    "darcy_aquifer_transmissivity_m2_day": 35.0,
+    "winter_heating_degree_days": 950
+  },
+  "carrying_capacity_ecc": {
+    "max_sustainable_population": 340,
+    "minimum_water_reserve_days": 90,
+    "minimum_caloric_reserve_days": 180
+  }
+}
+

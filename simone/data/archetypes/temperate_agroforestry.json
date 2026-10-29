@@ -1,0 +1,19 @@
+{
+  "archetype_id": "temperate_agroforestry",
+  "name": "Temperate Alluvial Agroforestry Node",
+  "reference_region": "Central European / Great Lakes / Loess Plains",
+  "population_baseline": 300,
+  "layer0_abiotic": {
+    "mean_solar_irradiance_kwh_m2_day": 3.9,
+    "micro_hydro_baseload_kwh_day": 220.0,
+    "mean_precipitation_mm_year": 820.0,
+    "darcy_aquifer_transmissivity_m2_day": 140.0,
+    "winter_heating_degree_days": 2650
+  },
+  "carrying_capacity_ecc": {
+    "max_sustainable_population": 550,
+    "minimum_water_reserve_days": 40,
+    "minimum_caloric_reserve_days": 180
+  }
+}
+

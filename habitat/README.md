@@ -1,7 +1,8 @@
-# **O.N.E. HABITAT & BIOREGIONAL INFRASTRUCTURE**
+# **O.N.E. HABITAT & BIOREGIONAL INFRASTRUCTURE (`habitat/`)**
 
-> **Canonical Engineering & Architectural Specifications for Passive Modular Dwellings and Regenerative Urbanism.**  
+> **Canonical Engineering, Open-BIM CAD & Automation Packages for Passive Modular Dwellings and Regenerative Urbanism.**  
 > **Author Persona:** Kyberlex (`kyberlex@proton.me`) | **Repository:** [`https://github.com/kyberlex/ONE`](https://github.com/kyberlex/ONE)  
+> **Pillar Alignment:** **Pillar 4A** (Open-BIM & Timber Architect) & **Pillar 4B** (Smart-Home & Microgrid Specialist)  
 > **License:** GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later) & Open Knowledge Commons.
 
 ---
@@ -12,26 +13,59 @@ The **Habitat** directory establishes the real-world physical and architectural 
 
 Human settlement within O.N.E. operates across two interconnected fractal scales:
 
-1. **Micro-Scale (The Resilient Dwelling):** The **Modular Habitat Unit (MHU)** fulfills the unconditional Tier 1 Biological Baseline (Article 1.3, Article 2.3) through open-source CNC timber chassis, Passivhaus thermal envelopes, centralized utility spines, and standardized ground docking interfaces.
+1. **Micro-Scale (The Resilient Dwelling):** The **Modular Habitat Unit (MHU)** fulfills the unconditional Tier 1 Biological Baseline (Article 1.3, Article 2.3) through open-source CNC timber nodal gussets paired with standard C24 lumber, Passivhaus thermal envelopes ($U = 0.118\text{ W/m}^2\text{K}$), centralized utility spines, and standardized ground docking interfaces.
 2. **Macro-Scale (The Regenerative Metropolis):** The **Urban Scaling & Transition Blueprint** provides the structural, infrastructural, and demarchic methodology for retrofitting existing legacy cities into federated bioregional commons without destructive tabula rasa demolitions.
 
 ---
 
-## 2. Directory Index
+## 2. Repository Layout & Engineering Deliverables
 
-| Document | Scale | Primary Standards & Toolchains | Focus |
-| :--- | :--- | :--- | :--- |
-| [`MHU_MODULAR_HABITAT_UNIT.md`](MHU_MODULAR_HABITAT_UNIT.md) | Canonical Seed-Node Dwelling | [WikiHouse](https://www.wikihouse.cc), [FreeCAD](https://www.freecad.org), [BlenderBIM / IFC4](https://blenderbim.org), [Eurocode 5 (EN 1995-1-1)](https://www.phd.eng.br/wp-content/uploads/2015/12/en.1995.1.1.2004.pdf), [OpenStructures](https://openstructures.net), [OpenPLC](https://openplcproject.com), [Home Assistant](https://www.home-assistant.io) | **Modular Habitat Unit (Open Chassis):** Hybrid digital timber chassis combining standard C24 studs with CNC plywood nodal gussets (54% structural savings, <4% scrap), Passivhaus envelope ($U < 0.12\text{ W/m}^2\text{K}$), decoupled 50mm MEP service cavity, dry helical screw foundation, and standardized 800x800mm ground docking interface (380V/48V DC, dual grey/black drainage). |
-| [`URBAN_SCALING_TRANSITION.md`](URBAN_SCALING_TRANSITION.md) | Neighborhood to Bioregional Metropolis ($10^4 - 10^6+$ pop) | [Superilles Barcelona](https://ajuntament.barcelona.cat/superilles/en/), [Energiesprong](https://energiesprong.org), [Habraken Open Building](https://www.open-building.org), [BlenderBIM](https://blenderbim.org), [QGIS](https://qgis.org), [Meshtastic](https://meshtastic.org) | The Five Pillars: Superblocks (pedestrianization & de-paving), industrialized deep thermal facade retrofitting, multi-story open building infill, hydrological river daylighting, cellular DC microgrids with 30-day islanding autonomy, and demarchic sortition assemblies in odd parity. |
+```
+habitat/
+├── README.md                                 # Directory index & contributor guide
+├── MHU_MODULAR_HABITAT_UNIT.md               # Core MHU structural & Eurocode 5 specification
+├── PASSIVHAUS_ENERGY_SYSTEMS.md              # Hygrothermal U-value audit & 380V/48V DC microgrid spec
+├── SENSOR_TOPOLOGY_HOME_ASSISTANT.md         # Zero-cloud abiotic telemetry & 800x800mm Utility Spine pinout
+├── URBAN_SCALING_TRANSITION.md               # Metropolitan transition (Superblocks, Energiesprong, Open Building)
+├── cad/                                      # [Track 4A] Parametric FreeCAD macros & 2D CNC DXF files
+│   ├── generate_mhu_gusset.FCMacro           # Parametric C24 + 18mm birch nodal gusset generator & EC5 solver
+│   └── mhu_nodal_gusset_18mm.dxf             # R2010 2D CNC router toolpath sheet (with Ø 6.4mm dog-bone reliefs)
+├── automation/                               # [Track 4B] Local Home Assistant & ESPHome firmware configs
+│   ├── homeassistant/
+│   │   └── mhu_abiotic_core.yaml             # 48V DC load-shedding (<25% SoC) & Passivhaus HRV CO2 automation
+│   └── esphome/
+│       └── utility_spine_esp32.yaml          # Olimex ESP32-POE-ISO firmware (SCD41 CO2, INA226 48V shunt, ultrasonic)
+├── bom/                                      # Machine-readable Bill of Materials & Leontief cost tables
+│   └── mhu_bom_6_levels.csv                  # Complete 6-level BOM (MHU Open Chassis vs. WikiHouse Skylark)
+└── renders/                                  # Architectural & CAD visual references
+    ├── mhu_nodal_gusset_freecad_render.png   # 4-Viewport FreeCAD technical sheet & Eurocode 5 audit
+    ├── mhu_isometric_cutaway.jpg             # MHU Passivhaus cutaway visualization
+    └── urban_superblock_transition.jpg       # Bioregional urban retrofit visualization
+```
 
 ---
 
-## 3. Inviolable Design Invariants
+## 3. Specification & File Index
+
+| Path | Track | Primary Standards & Toolchains | Description |
+| :--- | :--- | :--- | :--- |
+| [`MHU_MODULAR_HABITAT_UNIT.md`](MHU_MODULAR_HABITAT_UNIT.md) | 4A + 4B | FreeCAD, BlenderBIM IFC4, Eurocode 5 (EN 1995-1-1), OpenStructures | Hybrid digital timber chassis combining standard C24 studs with 18mm CNC birch nodal gussets (54% structural savings, <4% scrap) and decoupled 50mm service cavity. |
+| [`PASSIVHAUS_ENERGY_SYSTEMS.md`](PASSIVHAUS_ENERGY_SYSTEMS.md) | 4A + 4B | Passivhaus Institut (PHI), IEC 60364-7-712 | Layer-by-layer hygrothermal resistance table ($U = 0.118\text{ W/m}^2\text{K}$) and 380V/48V DC cellular microgrid single-line schematic with 30-day islanded autonomy. |
+| [`SENSOR_TOPOLOGY_HOME_ASSISTANT.md`](SENSOR_TOPOLOGY_HOME_ASSISTANT.md) | 4B | Home Assistant, ESPHome, OpenPLC, RS485 Modbus | Abiotic-only sensor register (zero cameras/microphones), $800 \times 800\text{ mm}$ ground docking chamber pinout, and hardware fail-safe defaults. |
+| [`URBAN_SCALING_TRANSITION.md`](URBAN_SCALING_TRANSITION.md) | Urban | Superilles, Energiesprong, Habraken Open Building | Five-pillar methodology for retrofitting $10^4 - 10^6+$ pop cities into federated bioregional commons. |
+| [`cad/generate_mhu_gusset.FCMacro`](cad/generate_mhu_gusset.FCMacro) | 4A | FreeCAD 0.21+ (`Part`), Python 3, `ezdxf` | Parametric generator for the double-shear M12 bolted nodal joint, outputting 3D solids, `.dxf` CNC sheets, and Johansen shear capacity ($F_{v,Rk} = 54.55\text{ kN}$). |
+| [`automation/homeassistant/mhu_abiotic_core.yaml`](automation/homeassistant/mhu_abiotic_core.yaml) | 4B | Home Assistant Core | Local automation package governing 3-tier 48V DC battery load-shedding and demand-controlled enthalpic HRV ventilation. |
+| [`automation/esphome/utility_spine_esp32.yaml`](automation/esphome/utility_spine_esp32.yaml) | 4B | ESPHome (`esp-idf`), Olimex ESP32-POE-ISO | Wired Ethernet microcontroller configuration reading $\text{I}^2\text{C}$ SCD41 $\text{CO}_2$, INA226 48V shunt, and ultrasonic cistern level with local hardware cutout. |
+| [`bom/mhu_bom_6_levels.csv`](bom/mhu_bom_6_levels.csv) | 4A + 4B | CSV / Open-BIM Cost Schedule | Machine-readable 6-level Bill of Materials (€72,690 Tier A self-build total for $54\text{ m}^2$ module). |
+
+---
+
+## 4. Inviolable Design Invariants
 
 All habitat designs and blueprints within this repository adhere strictly to the **7 Inviolable Class-0 Constraints**:
 
 * **Non-Commercial Purity (Class-0):** Zero proprietary software, zero paywalls, zero closed BIM schemas.
 * **Universal Usufruct:** Abolition of absentee real estate speculation. Built on non-permanent, reversible dry foundations (helical piles/ballast) or reclaimed into municipal Commons Trusts.
-* **Thermodynamic Conservation:** Passivhaus energy conservation, closed-loop local material flows (Data-In, Data-Out metabolism), short-loop metallurgical recycling.
-* **Biometric Privacy:** Abiotic telemetry only (CO2, VOC, humidity, temperature). Zero continuous audio capture or biometric tracking.
-* **Universal Accessibility & Barrier-Free Design:** 100% of dwelling chassis are wheelchair-accessible by default (ISO 21542 / DIN 18040-2). Zero-step continuous finished floor plane, modular reversible ramps, ≥ 900 mm clear doorways, Ø 1500 mm turning circles, roll-in showers, and reinforced cavedio backing for modular grab bars.
+* **Thermodynamic Conservation:** Passivhaus energy conservation, closed-loop local material flows, short-loop metallurgical recycling.
+* **Biometric Privacy:** Abiotic telemetry only ($\text{CO}_2$, VOC, humidity, temperature). Zero continuous audio capture or biometric tracking.
+* **Universal Accessibility & Barrier-Free Design:** 100% of dwelling chassis are wheelchair-accessible by default (ISO 21542 / DIN 18040-2). Zero-step continuous finished floor plane, modular reversible ramps, $\ge 900\text{ mm}$ clear doorways, $\varnothing 1500\text{ mm}$ turning circles, roll-in showers, and reinforced cavedio backing for modular grab bars.
