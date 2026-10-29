@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T22:49:42.400174",
+  "generated_at": "2026-10-29T10:23:32.793214",
   "total_ui_keys": 378,
   "languages": [
     {
@@ -90,87 +90,87 @@
     },
     "fr": {
       "total": 378,
-      "translated": 366,
-      "identical_to_en": 12,
+      "translated": 369,
+      "identical_to_en": 9,
       "missing": 0,
-      "pct": 96.8
+      "pct": 97.6
     },
     "de": {
       "total": 378,
-      "translated": 364,
-      "identical_to_en": 14,
+      "translated": 367,
+      "identical_to_en": 11,
       "missing": 0,
-      "pct": 96.3
+      "pct": 97.1
     },
     "es": {
       "total": 378,
-      "translated": 367,
-      "identical_to_en": 11,
+      "translated": 370,
+      "identical_to_en": 8,
       "missing": 0,
-      "pct": 97.1
+      "pct": 97.9
     },
     "pt": {
       "total": 378,
-      "translated": 367,
-      "identical_to_en": 11,
+      "translated": 370,
+      "identical_to_en": 8,
       "missing": 0,
-      "pct": 97.1
+      "pct": 97.9
     },
     "zh": {
       "total": 378,
-      "translated": 371,
-      "identical_to_en": 7,
+      "translated": 374,
+      "identical_to_en": 4,
       "missing": 0,
-      "pct": 98.1
+      "pct": 98.9
     },
     "ja": {
       "total": 378,
-      "translated": 371,
-      "identical_to_en": 7,
+      "translated": 374,
+      "identical_to_en": 4,
       "missing": 0,
-      "pct": 98.1
+      "pct": 98.9
     },
     "ko": {
       "total": 378,
-      "translated": 370,
-      "identical_to_en": 8,
+      "translated": 373,
+      "identical_to_en": 5,
       "missing": 0,
-      "pct": 97.9
+      "pct": 98.7
     },
     "hi": {
       "total": 378,
-      "translated": 370,
-      "identical_to_en": 8,
+      "translated": 373,
+      "identical_to_en": 5,
       "missing": 0,
-      "pct": 97.9
+      "pct": 98.7
     },
     "ar": {
       "total": 378,
-      "translated": 370,
-      "identical_to_en": 8,
+      "translated": 373,
+      "identical_to_en": 5,
       "missing": 0,
-      "pct": 97.9
+      "pct": 98.7
     },
     "ru": {
       "total": 378,
-      "translated": 371,
-      "identical_to_en": 7,
+      "translated": 374,
+      "identical_to_en": 4,
       "missing": 0,
-      "pct": 98.1
+      "pct": 98.9
     },
     "id": {
-      "total": 378,
-      "translated": 366,
-      "identical_to_en": 12,
-      "missing": 0,
-      "pct": 96.8
-    },
-    "tr": {
       "total": 378,
       "translated": 369,
       "identical_to_en": 9,
       "missing": 0,
       "pct": 97.6
+    },
+    "tr": {
+      "total": 378,
+      "translated": 372,
+      "identical_to_en": 6,
+      "missing": 0,
+      "pct": 98.4
     }
   },
   "datasets_stats": {
@@ -699,88 +699,88 @@
       "composite_pct": 99.4
     },
     "fr": {
-      "ui_pct": 96.8,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 98.7
-    },
-    "de": {
-      "ui_pct": 96.3,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 98.5
-    },
-    "es": {
-      "ui_pct": 97.1,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 98.8
-    },
-    "pt": {
-      "ui_pct": 97.1,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 98.8
-    },
-    "zh": {
-      "ui_pct": 98.1,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 99.2
-    },
-    "ja": {
-      "ui_pct": 98.1,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 99.2
-    },
-    "ko": {
-      "ui_pct": 97.9,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 99.2
-    },
-    "hi": {
-      "ui_pct": 97.9,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 99.2
-    },
-    "ar": {
-      "ui_pct": 97.9,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 99.2
-    },
-    "ru": {
-      "ui_pct": 98.1,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 99.2
-    },
-    "id": {
-      "ui_pct": 96.8,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 98.7
-    },
-    "tr": {
       "ui_pct": 97.6,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
       "composite_pct": 99.0
+    },
+    "de": {
+      "ui_pct": 97.1,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 98.8
+    },
+    "es": {
+      "ui_pct": 97.9,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 99.2
+    },
+    "pt": {
+      "ui_pct": 97.9,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 99.2
+    },
+    "zh": {
+      "ui_pct": 98.9,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 99.6
+    },
+    "ja": {
+      "ui_pct": 98.9,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 99.6
+    },
+    "ko": {
+      "ui_pct": 98.7,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 99.5
+    },
+    "hi": {
+      "ui_pct": 98.7,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 99.5
+    },
+    "ar": {
+      "ui_pct": 98.7,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 99.5
+    },
+    "ru": {
+      "ui_pct": 98.9,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 99.6
+    },
+    "id": {
+      "ui_pct": 97.6,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 99.0
+    },
+    "tr": {
+      "ui_pct": 98.4,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 99.4
     }
   },
   "key_details": [
@@ -6982,7 +6982,7 @@
     {
       "key": "stewards.badge_active",
       "section": "stewards",
-      "en_val": "Actives: 1",
+      "en_val": "🔥 Priority Lead Search",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7150,22 +7150,22 @@
     {
       "key": "stewards.desc",
       "section": "stewards",
-      "en_val": "Open Networked Earth is built on open peer production. Before the Living Constitution is permanently deposited under Swiss Civil Law (ZGB Art. 80 ff.), our foundational pillars must be stress-tested through adversarial peer review. We are actively seeking our <strong>Priority 0 Media Co-Steward</strong> and technical domain builders to harden the architecture against entropy.",
+      "en_val": "Open Networked Earth is built on open peer production. Before the Living Constitution is permanently deposited under Swiss Civil Law (ZGB Art. 80 ff.), our foundational pillars must be stress-tested through adversarial peer review. We are actively seeking our <strong>Priority 0 Community & DevRel Co-Steward</strong> and technical domain builders to harden the architecture against entropy.",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
-        "fr": "IDENTICAL_TO_EN",
-        "de": "IDENTICAL_TO_EN",
-        "es": "IDENTICAL_TO_EN",
-        "pt": "IDENTICAL_TO_EN",
-        "zh": "IDENTICAL_TO_EN",
-        "ja": "IDENTICAL_TO_EN",
-        "ko": "IDENTICAL_TO_EN",
-        "hi": "IDENTICAL_TO_EN",
-        "ar": "IDENTICAL_TO_EN",
-        "ru": "IDENTICAL_TO_EN",
-        "id": "IDENTICAL_TO_EN",
-        "tr": "IDENTICAL_TO_EN"
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
       }
     },
     {
@@ -7276,7 +7276,7 @@
     {
       "key": "stewards.p0_btn_cta",
       "section": "stewards",
-      "en_val": "Join Media Dialectic (#13) →",
+      "en_val": "Join Community Dialectic (#13) →",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7318,7 +7318,7 @@
     {
       "key": "stewards.p0_doubt",
       "section": "stewards",
-      "en_val": "Eliminate the solo-creator bottleneck by taking operational co-ownership of public storytelling, YouTube/Shorts video distribution, Reddit/X dialogue, and leading the outreach campaign to seat the remaining technical domain builders. If you believe a post-labor civilization needs a powerful cultural voice, this is the co-founding role.",
+      "en_val": "Eliminate the solo-creator bottleneck by taking operational co-ownership of r/OpenNetworkedEarth, scheduling the prepared post pipeline, managing comment triage, and actively recruiting technical Co-Stewards across Julia, FreeCAD, and Home Assistant ecosystems.",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7339,7 +7339,7 @@
     {
       "key": "stewards.p0_role",
       "section": "stewards",
-      "en_val": "Open-source comms activist, Solarpunk/Commons creator, independent podcaster, video storyteller, or community builder.",
+      "en_val": "Open-source community manager, FOSS DevRel, technical recruiter, Solarpunk/Commons community organizer.",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7360,7 +7360,7 @@
     {
       "key": "stewards.p0_title",
       "section": "stewards",
-      "en_val": "Media, Storytelling & Community Co-Steward",
+      "en_val": "Community Manager, DevRel & Technical Headhunter",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7402,7 +7402,7 @@
     {
       "key": "stewards.p1_doubt",
       "section": "stewards",
-      "en_val": "Can money-less thermodynamic accounting completely replace market price discovery and Gosplan bureaucracy without supply shortages or rationing?",
+      "en_val": "Calibrating closed-loop Leontief input-output matrices, the lexicographic viability operator (L_min), and multi-vector abiotic stress tests directly inside Simone.jl.",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7444,7 +7444,7 @@
     {
       "key": "stewards.p1_role",
       "section": "stewards",
-      "en_val": "Ecological / Heterodox Economics, Leontief Input-Output",
+      "en_val": "Ecological / Heterodox Economics, Leontief Input-Output Calibration",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7465,7 +7465,7 @@
     {
       "key": "stewards.p1_title",
       "section": "stewards",
-      "en_val": "Economy & Thermodynamic Balances",
+      "en_val": "Biophysical & Leontief Economics",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7507,7 +7507,7 @@
     {
       "key": "stewards.p2_doubt",
       "section": "stewards",
-      "en_val": "Are demarchic sortition lotteries mathematically immune to lobbying and oligarchic capture? Does Swiss Association (Verein) law provide bulletproof shielding?",
+      "en_val": "Validating demarchic sortition state machines (Layer 3 of Simone.jl), conducting the 2nd adversarial stress-test on the Living Constitution, and drafting Foundation ONE statutes under Swiss Civil Law (ZGB Art. 80 ff.).",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7549,28 +7549,28 @@
     {
       "key": "stewards.p2_role",
       "section": "stewards",
-      "en_val": "Commons Jurisprudence, Demarchy / Sortition, Swiss Civil Law",
+      "en_val": "Odd-Parity Sortition Assemblies, Dynamic Usufruct, Swiss Foundation Law",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
-        "fr": "IDENTICAL_TO_EN",
-        "de": "IDENTICAL_TO_EN",
-        "es": "IDENTICAL_TO_EN",
-        "pt": "IDENTICAL_TO_EN",
-        "zh": "IDENTICAL_TO_EN",
-        "ja": "IDENTICAL_TO_EN",
-        "ko": "IDENTICAL_TO_EN",
-        "hi": "IDENTICAL_TO_EN",
-        "ar": "IDENTICAL_TO_EN",
-        "ru": "IDENTICAL_TO_EN",
-        "id": "IDENTICAL_TO_EN",
-        "tr": "IDENTICAL_TO_EN"
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
       }
     },
     {
       "key": "stewards.p2_title",
       "section": "stewards",
-      "en_val": "Governance, Law & Dynamic Usufruct",
+      "en_val": "Governance, Demarchy & Swiss Law",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7612,7 +7612,7 @@
     {
       "key": "stewards.p3_doubt",
       "section": "stewards",
-      "en_val": "Validating the single-village Julia prototype, stock-and-flow ODE docking tests, and multiscale biophysical solver decoupling. Additional co-stewards actively sought.",
+      "en_val": "Leading the 4-layer co-simulation engine in Julia (biophysics, Leontief logistics, psychometrics, sortition demarchy) to validate constitutional invariants before the Swiss Foundation Genesis Lock.",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7654,28 +7654,28 @@
     {
       "key": "stewards.p3_role",
       "section": "stewards",
-      "en_val": "Julia Discrete-Event Co-Simulation (SIMONE), Agents.jl & MTBF Wear",
+      "en_val": "Julia Discrete-Event Systems Modeling (Agents.jl, DiffEq, MTBF Wear)",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
-        "fr": "IDENTICAL_TO_EN",
-        "de": "IDENTICAL_TO_EN",
-        "es": "IDENTICAL_TO_EN",
-        "pt": "IDENTICAL_TO_EN",
-        "zh": "IDENTICAL_TO_EN",
-        "ja": "IDENTICAL_TO_EN",
-        "ko": "IDENTICAL_TO_EN",
-        "hi": "IDENTICAL_TO_EN",
-        "ar": "IDENTICAL_TO_EN",
-        "ru": "IDENTICAL_TO_EN",
-        "id": "IDENTICAL_TO_EN",
-        "tr": "IDENTICAL_TO_EN"
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
       }
     },
     {
       "key": "stewards.p3_title",
       "section": "stewards",
-      "en_val": "Simulation & Scientific Sandbox",
+      "en_val": "Scientific Co-Simulation (Simone.jl)",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7717,7 +7717,7 @@
     {
       "key": "stewards.p4_doubt",
       "section": "stewards",
-      "en_val": "Do Modular Habitat Units (MHU) and open-hardware microgrids withstand real-world 40-year thermal cycles and catastrophic grid disconnection?",
+      "en_val": "Translating MHU specifications into real engineering files: 4A delivers parametric 3D models (.FCStd/.ifc), CNC cutting sheets (.dxf), and Eurocode 5 calculations; 4B delivers zero-cloud Home Assistant/ESPHome .yaml packages, DC microgrid schematics, and Utility Spine BOM.",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7759,7 +7759,7 @@
     {
       "key": "stewards.p4_role",
       "section": "stewards",
-      "en_val": "Microgrids, Home Assistant Zigbee/MQTT, CNC Timber Cassettes",
+      "en_val": "4A (FreeCAD/BlenderBIM Timber Architecture) + 4B (Home Assistant/ESPHome YAML)",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7780,7 +7780,7 @@
     {
       "key": "stewards.p4_title",
       "section": "stewards",
-      "en_val": "Habitat & Open-Hardware Resilience",
+      "en_val": "Physical Habitat & Microgrid Infrastructure",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",

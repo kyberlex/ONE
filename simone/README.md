@@ -21,7 +21,7 @@ Conventional economic models collapse under realistic friction because they trea
 
 ## **II. The Axtell Single-Village Docking Architecture**
 
-Proposed by Co-Steward Rainer Rodrigues ([GitHub Discussion #11](https://github.com/kyberlex/ONE/discussions/11)), development adheres to rigorous alignment between aggregate mathematics and micro-agent simulations:
+Originally proposed as a Phase 1 docking baseline by contributor Rainer Rodrigues ([GitHub Discussion #11](https://github.com/kyberlex/ONE/discussions/11)), development adheres to rigorous alignment between aggregate mathematics and micro-agent simulations:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -98,10 +98,17 @@ julia --project=simone -e 'using Pkg; Pkg.test()'
 
 * **License:** GNU Affero General Public License v3.0 or later ([AGPL-3.0-or-later](../../LICENSE)).
 * **Architectural Authority:** Kyberlex ([`kyberlex@proton.me`](mailto:kyberlex@proton.me))
-* **Technical Lead & Co-Steward:** Rainer Rodrigues ([`@rainerrodrigues`](https://github.com/rainerrodrigues))
-* **Scientific Review:** Community feedback is coordinated via [GitHub Discussion #11](https://github.com/kyberlex/ONE/discussions/11) and [JuliaLang Discourse Topic #140143](https://discourse.julialang.org).
+* **Lead Technical Co-Steward (Pillar 3):** 🔍 **OPEN POSITION (Actively Seeking Lead Co-Steward & Scientific Modelers)** — See [GitHub Discussion #11](https://github.com/kyberlex/ONE/discussions/11).
+* **Phase 1 Contributor (Docking Proposal):** Rainer Rodrigues ([`@rainerrodrigues`](https://github.com/rainerrodrigues))
+* **Scientific Review & Dialectic:** Community feedback is coordinated via [GitHub Discussion #11](https://github.com/kyberlex/ONE/discussions/11) and [JuliaLang Discourse Topic #140143](https://discourse.julialang.org).
 
-> [!NOTE]
-> **Open Co-Steward Mandate for Rainer Rodrigues (`@rainerrodrigues`):**  
-> This initial scaffolding represents a working baseline prepared to kickstart your proposed *Single-Village Docking Strategy* ([Discussion #11](https://github.com/kyberlex/ONE/discussions/11)). **Please feel completely free to alter, refactor, reorganize, or replace any part of this layout, file hierarchy, module names, or dependency choices** if you believe an alternative setup is better suited for idiomatic Julia, numerical performance, or scientific clarity. You have full architectural freedom on the `Simone.jl` codebase.
+> [!IMPORTANT]
+> ### 🔬 **Call for Lead Technical Co-Steward & Multi-Layer Modelers (`Simone.jl`)**
+> `Simone.jl` is the empirical backbone of Open Networked Earth. **Foundation ONE will only be chartered under Swiss Civil Law (ZGB Art. 80 ff.) AFTER the Living Constitution is simulated at the highest possible fidelity** across all 4 layers specified in [`simone-specs.md`](simone-specs.md):
+> 1. **Layer 0 (Biophysical/Abiotic):** Groundwater hydrology (Darcy flow), soil N-P-K depletion, thermodynamic solar/wind flux.
+> 2. **Layer 1 (Technical-Productive / Leontief):** Inter-industry mass/energy input-output matrices, Weibull MTBF component wear, and non-monetary lexicographic allocation ($L_{\min}$). *(Anchored directly to **Pillar 1: Biophysical Economics**)*.
+> 3. **Layer 2 (Psychometrics & Heterogeneous Agents):** HEXACO-H personality variance, Dunbar scale limits, informal reciprocity, and labor burnout.
+> 4. **Layer 3 (Institutional State Machines):** Odd-parity sortition assemblies, demarchic juries, and constitutional case law. *(Anchored directly to **Pillar 2: Governance & Sortition**)*.
+> 
+> The position of **Lead Technical Co-Steward (Pillar 3)** is **open and top priority**. We are actively seeking experienced Julia systems modelers and scientific developers (`DifferentialEquations.jl`, `Agents.jl`, `ModelingToolkit.jl`) to take co-leadership of the package.
 
