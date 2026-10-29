@@ -60,3 +60,4 @@
 * [ ] **Automated Test Added:** Unit test in `simone/test/` or `habitat/test_habitat_specs.py` verifying the patch.
 * [ ] **Monte Carlo Confirmation:** 10,000 runs in `Simone.jl` confirming stability.
 * [ ] **Genesis Lock Hash Updated:** Target article SHA-256 updated.
+

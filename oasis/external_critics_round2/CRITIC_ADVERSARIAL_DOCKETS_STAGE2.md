@@ -46,3 +46,4 @@
 * **Target:** `habitat/schematics/microgrid_electrical_spec.md` and `habitat/automation/esphome/bms_modbus_rtu_stub.yaml`.
 * **Vulnerability Hypothesis:** In the event that the ESP32 microcontroller crashes, hangs in a loop, or RS485 communication is severed, charging current could continue to flow into frozen cells ($< 2^\circ\text{C}$).
 * **Proof Requirement:** Confirmation that the hardware bimetallic mechanical contactor `K1` is wired in series with the charger enable loop, guaranteeing physical open-circuit cutoff regardless of software state.
+

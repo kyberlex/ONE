@@ -62,3 +62,4 @@ Critics are not asked to endorse O.N.E.; their explicit mandate is: **"Read or r
 | :--- | :--- |
 | [`CRITIC_ADVERSARIAL_DOCKETS_STAGE2.md`](CRITIC_ADVERSARIAL_DOCKETS_STAGE2.md) | Active tracking board for dockets `SIM-QA-10` through `SIM-QA-15+`. |
 | [`TEMPLATE_CRITIC_DOCKET.md`](TEMPLATE_CRITIC_DOCKET.md) | Standardized markdown template for submitting adversarial vulnerability reports. |
+

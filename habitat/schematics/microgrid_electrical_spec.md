@@ -63,3 +63,4 @@ The MHU rejects continuous AC-DC-AC conversion cycles, capturing a **12% to 18% 
 Charging LiFePO4 cells at or below freezing temperatures causes irreversible lithium metal plating on the graphite anode, inducing internal micro-shorts and catastrophic thermal runaway risk:
 1. **Primary Firmware Interlock (`esphome/bms_modbus_rtu_stub.yaml`):** The ESP32 continuously polls BMS thermistor registers `TEMP_CELL_MIN`. If $T \le 2.0^\circ\text{C}$, the charging control signal is set to `0.0A`.
 2. **Secondary Hardware Analog Lockout:** Contactor `K1` coil power is routed in series through a bimetallic thermal switch rated for contact break at $+2^\circ\text{C} \pm 1^\circ\text{C}$. Even in the event of complete software microcontroller failure, **charge current is physically cut**.
+
