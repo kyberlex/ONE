@@ -62,7 +62,7 @@ ALLOWED_IDENTICAL_TOKENS = {
     "15 kWh", "48V", "BMS", "O.N.E.", "O-ASIS", "SIMONE", "WikiHouse",
     "Common Law", "Civil Law", "Svalbard", "Detroit", "Geneva", "Malacca",
     "Amazon", "Alps", "Tor", "Surge", "GitHub", "Copyfarleft", "AGPL-3.0",
-    "NotebookLM", "Google"
+    "NotebookLM", "Google", "Gemini", "ChatGPT", "Claude", "Grok", "System", "Constitution", "Article", "Architecture"
 }
 
 
@@ -73,7 +73,7 @@ def is_allowed_identical(text):
     if len(s) <= 3:
         return True
     for token in ALLOWED_IDENTICAL_TOKENS:
-        if token in s:
+        if token.lower() in s.lower():
             return True
     return False
 

@@ -25,7 +25,14 @@
   "video": {
     "badge": "Architectural Explainer • 8 Minutes",
     "title": "Why Money Dies When Energy Becomes Abundant",
-    "desc": "Watch the complete architectural walkthrough explaining how machine abundance, thermodynamic usufruct, and sortition juries replace wage slavery and debt-fiat."
+    "desc": "Watch the complete architectural walkthrough explaining how machine abundance, thermodynamic usufruct, and sortition juries replace wage slavery and debt-fiat.",
+    "tag_floor": "⚡ Thermodynamic Floor",
+    "tag_zero_mc": "🤖 Zero-Marginal Cost",
+    "tag_sortition": "🏛️ Sortition Commons",
+    "tag_media": "🌐 Decentralized Media",
+    "btn_archive": "Archive.org Mirror",
+    "btn_mp4": "Direct MP4 (68MB)",
+    "btn_torrent": "BitTorrent (.torrent)"
   },
   "features": {
     "survival_title": "Universal Survival",
@@ -282,7 +289,9 @@
     "chip_religion_query": "Are religions, churches, and spiritual beliefs protected or suppressed by the state?",
     "chip_discrimination": "12. DISCRIMINATION: Racism & LGBTQ+ Rights?",
     "chip_discrimination_query": "How are minorities protected from racism, racial profiling, LGBTQ+ discrimination, and bigotry?",
-    "notebooklm_hint": "Prefer querying Google's full multimodal AI?"
+    "notebooklm_hint": "Prefer querying Google's full multimodal AI?",
+    "footer_prompt": "Found an unaddressed edge case or want to propose an amendment?",
+    "footer_link": "Join the Open Research Frontiers & RFCs on GitHub Discussions"
   },
   "books": {
     "title": "The Planetary Saga",
@@ -301,7 +310,11 @@
     "map_vol4": "VOL 4: MALACCA",
     "map_vol5": "VOL 5: GENEVA",
     "btn_coming_soon": "Coming Soon",
-    "status_coming_soon": "In Translation"
+    "status_coming_soon": "In Translation",
+    "phase_all": "🌐 All Theaters",
+    "phase_act1": "❄️ Act I: Genesis",
+    "phase_act2": "⚡ Act II: 4 Frontlines (Parallel)",
+    "phase_act3": "🏛️ Act III: Convergence"
   },
   "volume_details": {
     "vol0": {
@@ -458,7 +471,11 @@
     "feat3_title": "Dual-Track Physical Bridge",
     "feat3_desc": "In-game triumphs directly unlock verified, real-world 3D printable .STL open hardware and Home Assistant automations.",
     "btn_launch": "Launch Interactive Platform (Hub) ↗",
-    "btn_handbook": "Download Player Field Manual (PDF) ↗"
+    "btn_handbook": "Download Player Field Manual (PDF) ↗",
+    "btn_play_game": "🎮 Play Commons Game ↗",
+    "badge_foss": "✨ 100% Free & Open Source (AGPL-3.0)",
+    "badge_notokens": "🔒 Zero Microtransactions & Zero Tokens",
+    "badge_p2p": "🌐 Serverless P2P WebRTC Multi-Device"
   },
   "hero_video": {
     "badge": "Civilizational Prologue • 2m 10s",
@@ -538,13 +555,57 @@
     "cta_title": "Ready to Build or Break O.N.E.?",
     "cta_desc": "Whether you want to co-steward a foundational pillar or act as an independent critic hunting thermodynamic and nomothetic edge cases, your contribution directly hardens the Genesis Block.",
     "btn_all_discussions": "💬 View All Discussions on GitHub",
-    "btn_contact": "✉️ Contact Kyberlex (kyberlex@proton.me)"
+    "btn_contact": "✉️ Contact Kyberlex (kyberlex@proton.me)",
+    "badge_priority_lead": "🔥 Priority Lead Search"
   },
   "benchmark": {
     "tag": "⚡ Independent Multi-Agent Evaluation",
     "title": "\"When Wage Labor Hits Zero, Who Survives?\"",
     "desc": "We submitted an identical, blind political-economy benchmark to four leading frontier artificial intelligences: <strong>Google Gemini</strong>, <strong>OpenAI ChatGPT</strong>, <strong>Anthropic Claude</strong>, and <strong>xAI Grok</strong>: evaluate six civilizational architectures strictly through the lens of an automated steady-state civilization where marginal labor costs reach zero (<em>MC<sub>L</sub> → 0</em>).",
     "consensus_title": "4-Lab Consensus Scorecard: Steady-State Post-Work Index",
-    "consensus_desc": "Independent cross-evaluation across 6 dimensions: Autonomy, Ecology, Scarcity Allocation, Anti-Oligarchy, Innovation, Zero-Labor Coherence"
+    "consensus_desc": "Independent cross-evaluation across 6 dimensions: Autonomy, Ecology, Scarcity Allocation, Anti-Oligarchy, Innovation, Zero-Labor Coherence",
+    "th_arch": "Architecture",
+    "th_consensus": "4-AI Consensus",
+    "th_gemini": "Gemini",
+    "th_chatgpt": "ChatGPT",
+    "th_claude": "Claude",
+    "th_grok": "Grok",
+    "th_feasibility": "Transition Feasibility",
+    "row1_title": "Open Networked Earth (O.N.E.)",
+    "row1_sub": "Universal Usufruct • Sortition Demarchy • Thermodynamic Exergy",
+    "row2_title": "Ostrom-Style Commons",
+    "row2_sub": "Polycentric Common-Pool Resources (CPRs)",
+    "row3_title": "Cooperative Market Socialism",
+    "row3_sub": "Worker-Owned Equity • Competitive Markets",
+    "row4_title": "Nordic Social Democracy",
+    "row4_sub": "Universal Welfare • Tripartite Bargaining • Tax Redistribution",
+    "row5_title": "Centralized State Socialism",
+    "row5_sub": "State Monopoly • Gosplan Cybernetics • Physical Plans",
+    "row6_title": "Neoliberal / Free-Market",
+    "row6_sub": "Corporate Assets • Price-Clearing • Compound GDP Growth",
+    "paradox_badge": "⚡ THE INVERSE TRANSITION LAW",
+    "paradox_desc": "All four AI models diagnosed an exact <strong>inverse relationship</strong> between steady-state viability and transition feasibility: architectures engineered for zero-labor abundance (O.N.E. @ 8.13) face maximal friction (2.5/10) against legacy property and debt regimes. Conversely, capitalism transitions effortlessly (9.0/10) because firing workers maximizes short-term profit, even though it destroys aggregate demand and collapses the macroeconomy.",
+    "methodology_note": "Full methodology, prompt transcript & engine specifications (Gemini 3.8 Flash Extended Reasoning, ChatGPT, Claude 3.5 Sonnet, Grok) documented in <a href=\"https://github.com/kyberlex/ONE/blob/main/AI_BENCHMARK_POST_WORK.md\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--primary); text-decoration: underline;\">AI_BENCHMARK_POST_WORK.md ↗</a>",
+    "c1_tag": "Mathematical Proof",
+    "c1_title": "Why Social Democracy Dies With Wages",
+    "c1_desc": "Both Gemini and ChatGPT derived the macroeconomic identity of the sovereign welfare budget:",
+    "c1_b1": "<strong>Wage Collapse:</strong> 60%–75% of Nordic revenues derive from labor taxes (<em>t<sub>w</sub> · W</em>) and worker consumption. Under full automation, <code>W → 0 ⇒ t<sub>w</sub> · W = 0</code>.",
+    "c1_b2": "<strong>The Negative VAT Loop:</strong> Without wages, consumption is funded by state UBI (<em>C = U</em>). Taxing this via VAT (<em>t<sub>c</sub> ≈ 25%</em>) yields: <code>Net = t<sub>c</sub> · U - U = -(1 - t<sub>c</sub>)U</code>. The state burns money on every transfer.",
+    "c1_b3": "<strong>The Capital Squeeze:</strong> Competitive zero-marginal-cost production drives economic profits toward zero (<code>Π → 0</code>), rendering capital taxes insufficient or causing capital flight.",
+    "c2_tag": "The 2/10 Transition Paradox",
+    "c2_title": "Why Collapse Defaults to Techno-Feudalism",
+    "c2_desc": "When automation displaces labor before governments can deploy UBI, the legacy system experiences cascading paralysis:",
+    "c2_b1": "<strong>Debt Deflation:</strong> Widespread mortgage defaults freeze retail banking. Quantitative easing protects bank reserves but leaves citizens insolvent.",
+    "c2_b2": "<strong>Court Paralysis:</strong> Housing courts drown in eviction filings, forcing emergency moratoria that freeze the property market in legal limbo.",
+    "c2_b3": "<strong>Platform Sovereignty:</strong> Unmanaged power vacuums do <em>not</em> become solarpunk commons. Owners of automated infrastructure step in as private sovereigns, offering food and shelter in exchange for biometric tracking and algorithmic servitude.",
+    "c3_tag": "The O.N.E. Invariant",
+    "c3_title": "Pre-Configured Physical Lifeboats",
+    "c3_desc": "Because spontaneous collapse defaults to corporate feudalism, O.N.E. pre-positions physical seed nodes today:",
+    "c3_b1": "<strong>Unanimous 10/10 Ecology:</strong> Direct physical Leontief exergy accounting (joules, liters, kg) anchors societal metabolism within biospheric carrying capacities.",
+    "c3_b2": "<strong>Demarchic Assemblies:</strong> Statistical sortition (odd parity: 3, 15, 101, 301, 1001) prevents careerist corruption, lobbying cartels, and AI technocracy.",
+    "c3_b3": "<strong>Dual-Track Handshake:</strong> Stage 0–3 seed nodes (CLTs, Passivhaus MHU modules, 48V microgrids, open fab-labs) built inside existing law stand ready to absorb displaced humanity when debt-fiat freezes.",
+    "btn_read_full": "📄 Read Full Benchmark on GitHub ↗",
+    "btn_test_sandbox": "🔬 Test in O-ASIS Sandbox ↗",
+    "btn_join_forum": "💬 Join the Dialectic RFC Forum ↗"
   }
 }

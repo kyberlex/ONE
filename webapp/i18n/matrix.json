@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-29T11:59:23.655864",
-  "total_ui_keys": 389,
+  "generated_at": "2026-10-29T13:30:39.023721",
+  "total_ui_keys": 450,
   "languages": [
     {
       "code": "en",
@@ -75,102 +75,102 @@
   ],
   "ui_stats": {
     "en": {
-      "total": 389,
-      "translated": 389,
+      "total": 450,
+      "translated": 450,
       "identical_to_en": 0,
       "missing": 0,
       "pct": 100.0
     },
     "it": {
-      "total": 389,
-      "translated": 383,
-      "identical_to_en": 6,
+      "total": 450,
+      "translated": 438,
+      "identical_to_en": 12,
       "missing": 0,
-      "pct": 98.5
+      "pct": 97.3
     },
     "fr": {
-      "total": 389,
-      "translated": 383,
-      "identical_to_en": 6,
+      "total": 450,
+      "translated": 437,
+      "identical_to_en": 13,
       "missing": 0,
-      "pct": 98.5
+      "pct": 97.1
     },
     "de": {
-      "total": 389,
-      "translated": 381,
-      "identical_to_en": 8,
+      "total": 450,
+      "translated": 436,
+      "identical_to_en": 14,
       "missing": 0,
-      "pct": 97.9
+      "pct": 96.9
     },
     "es": {
-      "total": 389,
-      "translated": 386,
-      "identical_to_en": 3,
+      "total": 450,
+      "translated": 441,
+      "identical_to_en": 9,
       "missing": 0,
-      "pct": 99.2
+      "pct": 98.0
     },
     "pt": {
-      "total": 389,
-      "translated": 384,
-      "identical_to_en": 5,
+      "total": 450,
+      "translated": 439,
+      "identical_to_en": 11,
+      "missing": 0,
+      "pct": 97.6
+    },
+    "zh": {
+      "total": 450,
+      "translated": 444,
+      "identical_to_en": 6,
       "missing": 0,
       "pct": 98.7
     },
-    "zh": {
-      "total": 389,
-      "translated": 388,
-      "identical_to_en": 1,
-      "missing": 0,
-      "pct": 99.7
-    },
     "ja": {
-      "total": 389,
-      "translated": 388,
-      "identical_to_en": 1,
+      "total": 450,
+      "translated": 443,
+      "identical_to_en": 7,
       "missing": 0,
-      "pct": 99.7
+      "pct": 98.4
     },
     "ko": {
-      "total": 389,
-      "translated": 388,
-      "identical_to_en": 1,
+      "total": 450,
+      "translated": 443,
+      "identical_to_en": 7,
       "missing": 0,
-      "pct": 99.7
+      "pct": 98.4
     },
     "hi": {
-      "total": 389,
-      "translated": 388,
-      "identical_to_en": 1,
+      "total": 450,
+      "translated": 443,
+      "identical_to_en": 7,
       "missing": 0,
-      "pct": 99.7
+      "pct": 98.4
     },
     "ar": {
-      "total": 389,
-      "translated": 388,
-      "identical_to_en": 1,
+      "total": 450,
+      "translated": 443,
+      "identical_to_en": 7,
       "missing": 0,
-      "pct": 99.7
+      "pct": 98.4
     },
     "ru": {
-      "total": 389,
-      "translated": 388,
-      "identical_to_en": 1,
+      "total": 450,
+      "translated": 443,
+      "identical_to_en": 7,
       "missing": 0,
-      "pct": 99.7
+      "pct": 98.4
     },
     "id": {
-      "total": 389,
-      "translated": 385,
-      "identical_to_en": 4,
+      "total": 450,
+      "translated": 440,
+      "identical_to_en": 10,
       "missing": 0,
-      "pct": 99.0
+      "pct": 97.8
     },
     "tr": {
-      "total": 389,
-      "translated": 386,
-      "identical_to_en": 3,
+      "total": 450,
+      "translated": 441,
+      "identical_to_en": 9,
       "missing": 0,
-      "pct": 99.2
+      "pct": 98.0
     }
   },
   "datasets_stats": {
@@ -692,98 +692,539 @@
       "composite_pct": 100.0
     },
     "it": {
-      "ui_pct": 98.5,
+      "ui_pct": 97.3,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.4
+      "composite_pct": 98.9
     },
     "fr": {
-      "ui_pct": 98.5,
+      "ui_pct": 97.1,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.4
+      "composite_pct": 98.8
     },
     "de": {
-      "ui_pct": 97.9,
+      "ui_pct": 96.9,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 98.8
+    },
+    "es": {
+      "ui_pct": 98.0,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
       "composite_pct": 99.2
     },
-    "es": {
-      "ui_pct": 99.2,
+    "pt": {
+      "ui_pct": 97.6,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.7
+      "composite_pct": 99.0
     },
-    "pt": {
+    "zh": {
       "ui_pct": 98.7,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
       "composite_pct": 99.5
     },
-    "zh": {
-      "ui_pct": 99.7,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 99.9
-    },
     "ja": {
-      "ui_pct": 99.7,
+      "ui_pct": 98.4,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.9
+      "composite_pct": 99.4
     },
     "ko": {
-      "ui_pct": 99.7,
+      "ui_pct": 98.4,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.9
+      "composite_pct": 99.4
     },
     "hi": {
-      "ui_pct": 99.7,
+      "ui_pct": 98.4,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.9
+      "composite_pct": 99.4
     },
     "ar": {
-      "ui_pct": 99.7,
+      "ui_pct": 98.4,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.9
+      "composite_pct": 99.4
     },
     "ru": {
-      "ui_pct": 99.7,
+      "ui_pct": 98.4,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.9
+      "composite_pct": 99.4
     },
     "id": {
-      "ui_pct": 99.0,
+      "ui_pct": 97.8,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.6
+      "composite_pct": 99.1
     },
     "tr": {
-      "ui_pct": 99.2,
+      "ui_pct": 98.0,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.7
+      "composite_pct": 99.2
     }
   },
   "key_details": [
+    {
+      "key": "benchmark.btn_join_forum",
+      "section": "benchmark",
+      "en_val": "💬 Join the Dialectic RFC Forum ↗",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.btn_read_full",
+      "section": "benchmark",
+      "en_val": "📄 Read Full Benchmark on GitHub ↗",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.btn_test_sandbox",
+      "section": "benchmark",
+      "en_val": "🔬 Test in O-ASIS Sandbox ↗",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c1_b1",
+      "section": "benchmark",
+      "en_val": "<strong>Wage Collapse:</strong> 60%–75% of Nordic revenues derive from labor taxes (<em>t<sub>w</sub> · W</em>) and worker consumption. Under full automation, <code>W → 0 ⇒ t<sub>w</sub> · W = 0</code>.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c1_b2",
+      "section": "benchmark",
+      "en_val": "<strong>The Negative VAT Loop:</strong> Without wages, consumption is funded by state UBI (<em>C = U</em>). Taxing this via VAT (<em>t<sub>c</sub> ≈ 25%</em>) yields: <code>Net = t<sub>c</sub> · U - U = -(1 - t<sub>c</sub>)U</code>. The state burns money on every transfer.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c1_b3",
+      "section": "benchmark",
+      "en_val": "<strong>The Capital Squeeze:</strong> Competitive zero-marginal-cost production drives economic profits toward zero (<code>Π → 0</code>), rendering capital taxes insufficient or causing capital flight.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c1_desc",
+      "section": "benchmark",
+      "en_val": "Both Gemini and ChatGPT derived the macroeconomic identity of the sovereign welfare budget:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c1_tag",
+      "section": "benchmark",
+      "en_val": "Mathematical Proof",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c1_title",
+      "section": "benchmark",
+      "en_val": "Why Social Democracy Dies With Wages",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c2_b1",
+      "section": "benchmark",
+      "en_val": "<strong>Debt Deflation:</strong> Widespread mortgage defaults freeze retail banking. Quantitative easing protects bank reserves but leaves citizens insolvent.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c2_b2",
+      "section": "benchmark",
+      "en_val": "<strong>Court Paralysis:</strong> Housing courts drown in eviction filings, forcing emergency moratoria that freeze the property market in legal limbo.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c2_b3",
+      "section": "benchmark",
+      "en_val": "<strong>Platform Sovereignty:</strong> Unmanaged power vacuums do <em>not</em> become solarpunk commons. Owners of automated infrastructure step in as private sovereigns, offering food and shelter in exchange for biometric tracking and algorithmic servitude.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c2_desc",
+      "section": "benchmark",
+      "en_val": "When automation displaces labor before governments can deploy UBI, the legacy system experiences cascading paralysis:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c2_tag",
+      "section": "benchmark",
+      "en_val": "The 2/10 Transition Paradox",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c2_title",
+      "section": "benchmark",
+      "en_val": "Why Collapse Defaults to Techno-Feudalism",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c3_b1",
+      "section": "benchmark",
+      "en_val": "<strong>Unanimous 10/10 Ecology:</strong> Direct physical Leontief exergy accounting (joules, liters, kg) anchors societal metabolism within biospheric carrying capacities.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c3_b2",
+      "section": "benchmark",
+      "en_val": "<strong>Demarchic Assemblies:</strong> Statistical sortition (odd parity: 3, 15, 101, 301, 1001) prevents careerist corruption, lobbying cartels, and AI technocracy.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c3_b3",
+      "section": "benchmark",
+      "en_val": "<strong>Dual-Track Handshake:</strong> Stage 0–3 seed nodes (CLTs, Passivhaus MHU modules, 48V microgrids, open fab-labs) built inside existing law stand ready to absorb displaced humanity when debt-fiat freezes.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c3_desc",
+      "section": "benchmark",
+      "en_val": "Because spontaneous collapse defaults to corporate feudalism, O.N.E. pre-positions physical seed nodes today:",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c3_tag",
+      "section": "benchmark",
+      "en_val": "The O.N.E. Invariant",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.c3_title",
+      "section": "benchmark",
+      "en_val": "Pre-Configured Physical Lifeboats",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
     {
       "key": "benchmark.consensus_desc",
       "section": "benchmark",
@@ -848,6 +1289,321 @@
       }
     },
     {
+      "key": "benchmark.methodology_note",
+      "section": "benchmark",
+      "en_val": "Full methodology, prompt transcript & engine specifications (Gemini 3.8 Flash Extended Reasoning, ChatGPT, Claude 3.5 Sonnet, Grok) documented in <a href=\"https://github.com/kyberlex/ONE/blob/main/AI_BENCHMARK_POST_WORK.md\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--primary); text-decoration: underline;\">AI_BENCHMARK_POST_WORK.md ↗</a>",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.paradox_badge",
+      "section": "benchmark",
+      "en_val": "⚡ THE INVERSE TRANSITION LAW",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.paradox_desc",
+      "section": "benchmark",
+      "en_val": "All four AI models diagnosed an exact <strong>inverse relationship</strong> between steady-state viability and transition feasibility: architectures engineered for zero-labor abundance (O.N.E. @ 8.13) face maximal friction (2.5/10) against legacy property and debt regimes. Conversely, capitalism transitions effortlessly (9.0/10) because firing workers maximizes short-term profit, even though it destroys aggregate demand and collapses the macroeconomy.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.row1_sub",
+      "section": "benchmark",
+      "en_val": "Universal Usufruct • Sortition Demarchy • Thermodynamic Exergy",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.row1_title",
+      "section": "benchmark",
+      "en_val": "Open Networked Earth (O.N.E.)",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "IDENTICAL_TO_EN",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "TRANSLATED",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "benchmark.row2_sub",
+      "section": "benchmark",
+      "en_val": "Polycentric Common-Pool Resources (CPRs)",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.row2_title",
+      "section": "benchmark",
+      "en_val": "Ostrom-Style Commons",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.row3_sub",
+      "section": "benchmark",
+      "en_val": "Worker-Owned Equity • Competitive Markets",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.row3_title",
+      "section": "benchmark",
+      "en_val": "Cooperative Market Socialism",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.row4_sub",
+      "section": "benchmark",
+      "en_val": "Universal Welfare • Tripartite Bargaining • Tax Redistribution",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.row4_title",
+      "section": "benchmark",
+      "en_val": "Nordic Social Democracy",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.row5_sub",
+      "section": "benchmark",
+      "en_val": "State Monopoly • Gosplan Cybernetics • Physical Plans",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.row5_title",
+      "section": "benchmark",
+      "en_val": "Centralized State Socialism",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.row6_sub",
+      "section": "benchmark",
+      "en_val": "Corporate Assets • Price-Clearing • Compound GDP Growth",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.row6_title",
+      "section": "benchmark",
+      "en_val": "Neoliberal / Free-Market",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
       "key": "benchmark.tag",
       "section": "benchmark",
       "en_val": "⚡ Independent Multi-Agent Evaluation",
@@ -866,6 +1622,153 @@
         "ru": "TRANSLATED",
         "id": "TRANSLATED",
         "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.th_arch",
+      "section": "benchmark",
+      "en_val": "Architecture",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.th_chatgpt",
+      "section": "benchmark",
+      "en_val": "ChatGPT",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "IDENTICAL_TO_EN",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "benchmark.th_claude",
+      "section": "benchmark",
+      "en_val": "Claude",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "IDENTICAL_TO_EN",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "benchmark.th_consensus",
+      "section": "benchmark",
+      "en_val": "4-AI Consensus",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.th_feasibility",
+      "section": "benchmark",
+      "en_val": "Transition Feasibility",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.th_gemini",
+      "section": "benchmark",
+      "en_val": "Gemini",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "IDENTICAL_TO_EN",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
+      "key": "benchmark.th_grok",
+      "section": "benchmark",
+      "en_val": "Grok",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "IDENTICAL_TO_EN",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
       }
     },
     {
@@ -1145,6 +2048,90 @@
       "key": "books.map_vol5",
       "section": "books",
       "en_val": "VOL 5: GENEVA",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "books.phase_act1",
+      "section": "books",
+      "en_val": "❄️ Act I: Genesis",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "books.phase_act2",
+      "section": "books",
+      "en_val": "⚡ Act II: 4 Frontlines (Parallel)",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "books.phase_act3",
+      "section": "books",
+      "en_val": "🏛️ Act III: Convergence",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "books.phase_all",
+      "section": "books",
+      "en_val": "🌐 All Theaters",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -1859,6 +2846,48 @@
       "key": "challenge.desc",
       "section": "challenge",
       "en_val": "We put this constitution through 6 rounds of ruthless AI adversarial red-teaming simulating bank runs, economic sabotage, corporate lawfare, and civic defection. Click a quick question or enter your hardest objection below.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "challenge.footer_link",
+      "section": "challenge",
+      "en_val": "Join the Open Research Frontiers & RFCs on GitHub Discussions",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "challenge.footer_prompt",
+      "section": "challenge",
+      "en_val": "Found an unaddressed edge case or want to propose an amendment?",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -4208,6 +5237,69 @@
       }
     },
     {
+      "key": "oasis_showcase.badge_foss",
+      "section": "oasis_showcase",
+      "en_val": "✨ 100% Free & Open Source (AGPL-3.0)",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "oasis_showcase.badge_notokens",
+      "section": "oasis_showcase",
+      "en_val": "🔒 Zero Microtransactions & Zero Tokens",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "oasis_showcase.badge_p2p",
+      "section": "oasis_showcase",
+      "en_val": "🌐 Serverless P2P WebRTC Multi-Device",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
       "key": "oasis_showcase.btn_handbook",
       "section": "oasis_showcase",
       "en_val": "Download Player Field Manual (PDF) ↗",
@@ -4232,6 +5324,27 @@
       "key": "oasis_showcase.btn_launch",
       "section": "oasis_showcase",
       "en_val": "Launch Interactive Platform (Hub) ↗",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "oasis_showcase.btn_play_game",
+      "section": "oasis_showcase",
+      "en_val": "🎮 Play Commons Game ↗",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7169,6 +8282,27 @@
       }
     },
     {
+      "key": "stewards.badge_priority_lead",
+      "section": "stewards",
+      "en_val": "🔥 Priority Lead Search",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
       "key": "stewards.badge_seeking",
       "section": "stewards",
       "en_val": "Open for Co-Steward",
@@ -8282,9 +9416,156 @@
       }
     },
     {
+      "key": "video.btn_archive",
+      "section": "video",
+      "en_val": "Archive.org Mirror",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "video.btn_mp4",
+      "section": "video",
+      "en_val": "Direct MP4 (68MB)",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "video.btn_torrent",
+      "section": "video",
+      "en_val": "BitTorrent (.torrent)",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "IDENTICAL_TO_EN",
+        "fr": "IDENTICAL_TO_EN",
+        "de": "IDENTICAL_TO_EN",
+        "es": "IDENTICAL_TO_EN",
+        "pt": "IDENTICAL_TO_EN",
+        "zh": "IDENTICAL_TO_EN",
+        "ja": "IDENTICAL_TO_EN",
+        "ko": "IDENTICAL_TO_EN",
+        "hi": "IDENTICAL_TO_EN",
+        "ar": "IDENTICAL_TO_EN",
+        "ru": "IDENTICAL_TO_EN",
+        "id": "IDENTICAL_TO_EN",
+        "tr": "IDENTICAL_TO_EN"
+      }
+    },
+    {
       "key": "video.desc",
       "section": "video",
       "en_val": "Watch the complete architectural walkthrough explaining how machine abundance, thermodynamic usufruct, and sortition juries replace wage slavery and debt-fiat.",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "video.tag_floor",
+      "section": "video",
+      "en_val": "⚡ Thermodynamic Floor",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "video.tag_media",
+      "section": "video",
+      "en_val": "🌐 Decentralized Media",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "video.tag_sortition",
+      "section": "video",
+      "en_val": "🏛️ Sortition Commons",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "video.tag_zero_mc",
+      "section": "video",
+      "en_val": "🤖 Zero-Marginal Cost",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",

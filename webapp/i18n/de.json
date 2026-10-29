@@ -25,7 +25,14 @@
   "video": {
     "badge": "Architektonischer Überblick • 8 Minuten",
     "title": "Warum Geld stirbt, wenn Energie im Überfluss vorhanden ist",
-    "desc": "Sehen Sie die vollständige architektonische Gesamtschau, die darlegt, wie maschineller Überfluss, thermodynamischer Nießbrauch und Losjurys Lohnsklaverei und schuldbasiertes Fiatgeld ablösen."
+    "desc": "Sehen Sie die vollständige architektonische Gesamtschau, die darlegt, wie maschineller Überfluss, thermodynamischer Nießbrauch und Losjurys Lohnsklaverei und schuldbasiertes Fiatgeld ablösen.",
+    "tag_floor": "⚡ Thermodynamischer Mindeststandard",
+    "tag_zero_mc": "🤖 Grenzkosten Null",
+    "tag_sortition": "🏛️ Allmende durch Losverfahren",
+    "tag_media": "🌐 Dezentrale Medien",
+    "btn_archive": "Archive.org Spiegel",
+    "btn_mp4": "Direktes MP4 (68MB)",
+    "btn_torrent": "BitTorrent (.torrent)"
   },
   "features": {
     "survival_title": "Universelles Überleben",
@@ -282,7 +289,9 @@
     "chip_religion_query": "Werden Religionen, Kirchen und persönliche Überzeugungen geschützt oder unterdrückt?",
     "chip_discrimination": "12. DISKRIMINIERUNG: Rassismus & LGBTQ+-Rechte?",
     "chip_discrimination_query": "Wie werden Minderheiten vor Rassismus, sexueller Diskriminierung und Vorurteilen geschützt?",
-    "notebooklm_hint": "Möchten Sie lieber Googles vollständige multimodale KI befragen?"
+    "notebooklm_hint": "Möchten Sie lieber Googles vollständige multimodale KI befragen?",
+    "footer_prompt": "Haben Sie einen unbehandelten Grenzfall gefunden oder möchten Sie ein Amendment vorschlagen?",
+    "footer_link": "Beteiligen Sie sich an den Open Research Frontiers & RFCs auf GitHub Discussions"
   },
   "books": {
     "title": "Die Planetare Saga",
@@ -301,7 +310,11 @@
     "map_vol4": "BAND 4: MALAKKA",
     "map_vol5": "BAND 5: GENF",
     "btn_coming_soon": "Demnächst",
-    "status_coming_soon": "In Übersetzung"
+    "status_coming_soon": "In Übersetzung",
+    "phase_all": "🌐 Alle Schauplätze",
+    "phase_act1": "❄️ Akt I: Genesis",
+    "phase_act2": "⚡ Akt II: 4 parallele Fronten",
+    "phase_act3": "🏛️ Akt III: Genfer Konvergenz"
   },
   "volume_details": {
     "vol0": {
@@ -458,7 +471,11 @@
     "feat3_title": "Zweigleisige Physische Brücke",
     "feat3_desc": "Spielerfolge schalten direkt verifizierte, reale 3D-druckbare .STL-Open-Hardware und Home-Assistant-Automatisierungen frei.",
     "btn_launch": "Launch O-ASIS Simulator (Browser 60 FPS) ↗",
-    "btn_handbook": "Spieler-Handbuch herunterladen (PDF) ↗"
+    "btn_handbook": "Spieler-Handbuch herunterladen (PDF) ↗",
+    "btn_play_game": "🎮 Commons Game spielen ↗",
+    "badge_foss": "✨ 100% Freie & Open-Source-Software (AGPL-3.0)",
+    "badge_notokens": "🔒 Null Mikrotransaktionen & Null Token",
+    "badge_p2p": "🌐 Serverlose P2P-WebRTC-Mesh für alle Geräte"
   },
   "hero_video": {
     "badge": "Zivilisatorischer Prolog • 2 Min. 10 Sek.",
@@ -538,13 +555,57 @@
     "cta_title": "Bereit, O.N.E. mitzubauen oder auf die Probe zu stellen?",
     "cta_desc": "Ganz gleich, ob Sie einen Grundpfeiler mitverwalten oder als unabhängiger Kritiker thermodynamische und nomothetische Grenzfälle aufspüren möchten: Ihr Beitrag härtet unmittelbar den Genesis-Block.",
     "btn_all_discussions": "💬 Alle Diskussionen auf GitHub ansehen",
-    "btn_contact": "✉️ Kyberlex kontaktieren (kyberlex@proton.me)"
+    "btn_contact": "✉️ Kyberlex kontaktieren (kyberlex@proton.me)",
+    "badge_priority_lead": "🔥 Prioritäre Suche nach Leitung"
   },
   "benchmark": {
     "tag": "⚡ Unabhängige Multi-Agenten-Evaluation",
     "title": "„Wenn Lohnarbeit gegen Null fällt: Wer überlebt?“",
     "desc": "Wir haben vier führenden Grenz-KIs (Google Gemini, OpenAI ChatGPT, Anthropic Claude und xAI Grok) ein identisches, blindes politökonomisches Benchmark vorgelegt: Evaluieren Sie sechs Zivilisationsarchitekturen streng durch die Brille einer automatisierten Steady-State-Zivilisation, in der die Grenzkosten der Arbeit gegen Null fallen (<em>MC<sub>L</sub> → 0</em>).",
     "consensus_title": "4-Lab-Konsens-Scorecard: Steady-State Post-Work Index",
-    "consensus_desc": "Unabhängige Kreuz-Evaluation über 6 Dimensionen: Autonomie, Ökologie, Knappheitsallokation, Anti-Oligarchie, Innovation, Post-Labor-Kohärenz"
+    "consensus_desc": "Unabhängige Kreuz-Evaluation über 6 Dimensionen: Autonomie, Ökologie, Knappheitsallokation, Anti-Oligarchie, Innovation, Post-Labor-Kohärenz",
+    "th_arch": "Architektur",
+    "th_consensus": "4-KI-Konsens",
+    "th_gemini": "Gemini",
+    "th_chatgpt": "ChatGPT",
+    "th_claude": "Claude",
+    "th_grok": "Grok",
+    "th_feasibility": "Übergangsfähigkeit",
+    "row1_title": "Open Networked Earth (O.N.E.)",
+    "row1_sub": "Universeller Nießbrauch • Demarchie durch Los • Thermodynamische Exergie",
+    "row2_title": "Ostrom-Allmenden",
+    "row2_sub": "Polyzentrische Gemeingüter-Ressourcen (CPRs)",
+    "row3_title": "Kooperativer Marktsozialismus",
+    "row3_sub": "Arbeitereigentum • Wettbewerbsmärkte",
+    "row4_title": "Nordische Sozialdemokratie",
+    "row4_sub": "Universelle Wohlfahrt • Dreiparteien-Verhandlung • Steuerumverteilung",
+    "row5_title": "Zentraler Staatssozialismus",
+    "row5_sub": "Staatsmonopol • Gosplan-Kybernetik • Physische Pläne",
+    "row6_title": "Neoliberal / Freier Markt",
+    "row6_sub": "Konzernvermögen • Preisausgleich • Zinseszins-BIP-Wachstum",
+    "paradox_badge": "⚡ DAS GESETZ DER INVERSEN TRANSITION",
+    "paradox_desc": "Alle vier KI-Modelle diagnostizierten ein exakt <strong>inverses Verhältnis</strong> zwischen Steady-State-Lebensfähigkeit und Übergangs-Machbarkeit: Architekturen, die für post-laborale Fülle entwickelt wurden (O.N.E. mit 8,13), stoßen auf maximalen Widerstand (2,5/10) alter Eigentums- und Schuldensysteme. Umgekehrt gelingt dem Kapitalismus der Übergang mühelos (9,0/10), weil Entlassungen den kurzfristigen Profit maximieren – obwohl dies die Gesamtnachfrage vernichtet und die Makroökonomie kollabieren lässt.",
+    "methodology_note": "Vollständige Methodik, Prompt-Transkripte und Modellspezifikationen (Gemini 3.8 Flash Extended Reasoning, ChatGPT, Claude 3.5 Sonnet, Grok) dokumentiert in <a href=\"https://github.com/kyberlex/ONE/blob/main/AI_BENCHMARK_POST_WORK.md\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--primary); text-decoration: underline;\">AI_BENCHMARK_POST_WORK.md ↗</a>",
+    "c1_tag": "Mathematischer Beweis",
+    "c1_title": "Warum die Sozialdemokratie mit den Löhnen stirbt",
+    "c1_desc": "Sowohl Gemini als auch ChatGPT leiteten die makroökonomische Identität des staatlichen Wohlfahrtsbudgets her:",
+    "c1_b1": "<strong>Lohnkollaps:</strong> 60%–75% der nordischen Staatseinnahmen stammen aus Lohnsteuern (<em>t<sub>w</sub> · W</em>) und Arbeiterkonsum. Bei Vollautomatisierung gilt: <code>W → 0 ⇒ t<sub>w</sub> · W = 0</code>.",
+    "c1_b2": "<strong>Die negative MwSt.-Schleife:</strong> Ohne Löhne wird der Konsum durch staatliches Grundeinkommen (<em>C = U</em>) finanziert. Wird dieses mit Mehrwertsteuer (<em>t<sub>c</sub> ≈ 25%</em>) belegt, ergibt sich: <code>Netto = t<sub>c</sub> · U - U = -(1 - t<sub>c</sub>)U</code>. Der Staat verbrennt bei jedem Transfer Geld.",
+    "c1_b3": "<strong>Die Kapitalklemme:</strong> Wettbewerb bei Grenzkosten von null drückt wirtschaftliche Gewinne gegen null (<code>Π → 0</code>), wodurch Kapitalsteuern unzureichend werden oder Kapitalflucht ausgelöst wird.",
+    "c2_tag": "Das 2/10-Übergangsparadoxon",
+    "c2_title": "Warum der Zusammenbruch in Techno-Feudalismus mündet",
+    "c2_desc": "Wenn Automatisierung menschliche Arbeit verdrängt, bevor Regierungen ein Grundeinkommen etablieren können, erleidet das Altsystem eine Kaskadenlähmung:",
+    "c2_b1": "<strong>Schuldendeflation:</strong> Massenhafte Kreditausfälle frieren das Bankwesen ein. Quantitative Lockerung rettet Bankreserven, lässt Bürger jedoch insolvent zurück.",
+    "c2_b2": "<strong>Gerichtslähmung:</strong> Räumungsklagen überfluten Gerichte und erzwingen Notmoratorien, die den Immobilienmarkt im Rechtsvakuum erstarren lassen.",
+    "c2_b3": "<strong>Plattform-Souveränität:</strong> Unregulierte Machtvakua werden <em>nicht</em> zu Solarpunk-Allmenden. Betreiber automatisierter Infrastruktur treten als Privatsouveräne auf und bieten Nahrung und Obdach gegen biometrische Überwachung und algorithmischen Frondienst.",
+    "c3_tag": "Die O.N.E.-Invariante",
+    "c3_title": "Vorkonfigurierte physische Rettungsboote",
+    "c3_desc": "Weil ein spontaner Zusammenbruch zwangsläufig im Konzernfeudalismus endet, positioniert O.N.E. schon heute physische Saaten-Knoten:",
+    "c3_b1": "<strong>Einstimmig 10/10 Ökologie:</strong> Direkte physische Leontief-Exergiebilanzierung (Joule, Liter, kg) verankert den Gesellschaftsstoffwechsel strikt innerhalb der planetaren Grenzen.",
+    "c3_b2": "<strong>Demarchische Versammlungen:</strong> Statistische Auslosung (strikte ungerade Parität: 3, 15, 101, 301, 1001) verhindert Karrieredünkel, Lobbykartelle und KI-Technokratie.",
+    "c3_b3": "<strong>Dual-Track-Brücke:</strong> Innerhalb bestehender Gesetze errichtete Stufe-0–3-Knoten (Massivholz-CLTs, Passivhaus-MHU-Module, 48V-Mikronetze, offene FabLabs) stehen bereit, freigesetzte Menschen aufzunehmen, sobald das Schuldgeldsystem einfriert.",
+    "btn_read_full": "📄 Vollständigen Benchmark auf GitHub lesen ↗",
+    "btn_test_sandbox": "🔬 Im O-ASIS-Sandbox testen ↗",
+    "btn_join_forum": "💬 Dem dialektischen RFC-Forum beitreten ↗"
   }
 }

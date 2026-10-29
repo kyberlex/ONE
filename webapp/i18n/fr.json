@@ -25,7 +25,14 @@
   "video": {
     "badge": "Présentation architecturale • 8 minutes",
     "title": "Pourquoi la monnaie disparaît lorsque l'énergie devient abondante",
-    "desc": "Découvrez la visite architecturale complète expliquant comment l'abondance machinique, l'usufruit thermodynamique et les jurys désignés par tirage au sort remplacent le salariat et la monnaie-dette fiduciaire."
+    "desc": "Découvrez la visite architecturale complète expliquant comment l'abondance machinique, l'usufruit thermodynamique et les jurys désignés par tirage au sort remplacent le salariat et la monnaie-dette fiduciaire.",
+    "tag_floor": "⚡ Plancher Thermodynamique",
+    "tag_zero_mc": "🤖 Coût Marginal Zéro",
+    "tag_sortition": "🏛️ Communs par Tirage au Sort",
+    "tag_media": "🌐 Médias Décentralisés",
+    "btn_archive": "Miroir Archive.org",
+    "btn_mp4": "MP4 Direct (68Mo)",
+    "btn_torrent": "BitTorrent (.torrent)"
   },
   "features": {
     "survival_title": "Survie Universelle",
@@ -282,7 +289,9 @@
     "chip_religion_query": "Les religions, églises et croyances spirituelles sont-elles protégées ou réprimées ?",
     "chip_discrimination": "12. DISCRIMINATION : Racisme et droits LGBTQ+ ?",
     "chip_discrimination_query": "Comment les minorités sont-elles protégées contre le racismo, la discrimination sexuelle et l'oppression ?",
-    "notebooklm_hint": "Vous préférez interroger directement l'IA multimodale de Google ?"
+    "notebooklm_hint": "Vous préférez interroger directement l'IA multimodale de Google ?",
+    "footer_prompt": "Vous avez repéré un cas limite ou souhaitez proposer un amendement ?",
+    "footer_link": "Rejoignez les Frontières de Recherche Ouvertes & RFC sur GitHub Discussions"
   },
   "books": {
     "title": "La Saga Planétaire",
@@ -301,7 +310,11 @@
     "map_vol4": "VOL 4 : MALACCA",
     "map_vol5": "VOL 5 : GENÈVE",
     "btn_coming_soon": "Bientôt disponible",
-    "status_coming_soon": "En cours de traduction"
+    "status_coming_soon": "En cours de traduction",
+    "phase_all": "🌐 Tous les Théâtres",
+    "phase_act1": "❄️ Acte I : Genèse",
+    "phase_act2": "⚡ Acte II : 4 Fronts Parallèles",
+    "phase_act3": "🏛️ Acte III : Convergence de Genève"
   },
   "volume_details": {
     "vol0": {
@@ -458,7 +471,11 @@
     "feat3_title": "Pont physique à double voie",
     "feat3_desc": "Les victoires dans le jeu débloquent directement du matériel libre .STL vérifié, imprimable en 3D dans le monde réel, ainsi que des automatisations Home Assistant.",
     "btn_launch": "Launch O-ASIS Simulator (Browser 60 FPS) ↗",
-    "btn_handbook": "Télécharger le manuel de terrain du joueur (PDF) ↗"
+    "btn_handbook": "Télécharger le manuel de terrain du joueur (PDF) ↗",
+    "btn_play_game": "🎮 Jouer au Commons Game ↗",
+    "badge_foss": "✨ 100% Libre & Open Source (AGPL-3.0)",
+    "badge_notokens": "🔒 Zéro Microtransaction & Zéro Jeton",
+    "badge_p2p": "🌐 P2P WebRTC sans serveur multi-appareils"
   },
   "hero_video": {
     "badge": "Prologue civilisationnel • 2m 10s",
@@ -538,13 +555,57 @@
     "cta_title": "Prêt à bâtir ou à éprouver O.N.E. ?",
     "cta_desc": "Que vous souhaitiez assurer la co-intendance d'un pilier fondateur ou agir en tant que critique indépendant traquant les cas limites thermodynamiques et nomothétiques, votre contribution consolide directement le Bloc Genesis.",
     "btn_all_discussions": "💬 Voir toutes les discussions sur GitHub",
-    "btn_contact": "✉️ Contacter Kyberlex (kyberlex@proton.me)"
+    "btn_contact": "✉️ Contacter Kyberlex (kyberlex@proton.me)",
+    "badge_priority_lead": "🔥 Recherche Prioritaire Responsable"
   },
   "benchmark": {
     "tag": "⚡ Évaluation Indépendante Multi-Agents",
     "title": "« Quand le travail salarié tombe à zéro, qui survit ? »",
     "desc": "Nous avons soumis un benchmark identique et à l'aveugle à quatre intelligences artificielles de pointe : <strong>Google Gemini</strong>, <strong>OpenAI ChatGPT</strong>, <strong>Anthropic Claude</strong> et <strong>xAI Grok</strong> : évaluer six architectures civilisationnelles à travers le prisme d'une civilisation automatisée à état stationnaire où le coût marginal du travail atteint zéro (<em>MC<sub>L</sub> → 0</em>).",
     "consensus_title": "Scorecard de Consensus des 4 Labos : Indice Post-Travail Stationnaire",
-    "consensus_desc": "Évaluation croisée indépendante sur 6 dimensions : Autonomie, Écologie, Allocation de rareté, Anti-oligarchie, Innovation, Cohérence zéro travail"
+    "consensus_desc": "Évaluation croisée indépendante sur 6 dimensions : Autonomie, Écologie, Allocation de rareté, Anti-oligarchie, Innovation, Cohérence zéro travail",
+    "th_arch": "Architecture",
+    "th_consensus": "Consensus 4-IA",
+    "th_gemini": "Gemini",
+    "th_chatgpt": "ChatGPT",
+    "th_claude": "Claude",
+    "th_grok": "Grok",
+    "th_feasibility": "Faisabilité de Transition",
+    "row1_title": "Open Networked Earth (O.N.E.)",
+    "row1_sub": "Usufruit Universel • Démarchie par Tirage au Sort • Exergie Thermodynamique",
+    "row2_title": "Communs à la Ostrom",
+    "row2_sub": "Ressources Communes Polycentriques (CPRs)",
+    "row3_title": "Socialisme de Marché Coopératif",
+    "row3_sub": "Capital Détenu par les Travailleurs • Marchés Compétitifs",
+    "row4_title": "Social-démocratie Nordique",
+    "row4_sub": "Protection Sociale Universelle • Négociation Tripartite • Redistribution Fiscale",
+    "row5_title": "Socialisme d'État Centralisé",
+    "row5_sub": "Monopole d'État • Cybernétique du Gosplan • Plans Physiques",
+    "row6_title": "Néolibéral / Libre Marché",
+    "row6_sub": "Actifs d'Entreprise • Équilibre des Prix • Croissance Composée du PIB",
+    "paradox_badge": "⚡ LA LOI DE TRANSITION INVERSE",
+    "paradox_desc": "Les quatre modèles d'IA ont diagnostiqué une <strong>relation inverse</strong> exacte entre viabilité stationnaire et faisabilité de transition : les architectures conçues pour l'abondance sans travail (O.N.E. à 8,13) font face à une friction maximale (2,5/10) contre les régimes de propriété et de dette hérités. À l'inverse, le capitalisme transite sans effort (9,0/10) car licencier maximise le profit à court terme, bien que cela détruise la demande globale et effondre l'économie.",
+    "methodology_note": "Méthodologie complète, retranscriptions et spécifications documentées dans <a href=\"https://github.com/kyberlex/ONE/blob/main/AI_BENCHMARK_POST_WORK.md\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--primary); text-decoration: underline;\">AI_BENCHMARK_POST_WORK.md ↗</a>",
+    "c1_tag": "Preuve Mathématique",
+    "c1_title": "Pourquoi la social-démocratie meurt avec les salaires",
+    "c1_desc": "Gemini et ChatGPT ont tous deux établi l'identité macroéconomique du budget souverain de l'État-providence :",
+    "c1_b1": "<strong>Effondrement Salarial :</strong> 60% à 75% des recettes fiscales proviennent des taxes sur le travail (<em>t<sub>w</sub> · W</em>) et de la consommation des employés. Sous automatisation totale, <code>W → 0 ⇒ t<sub>w</sub> · W = 0</code>.",
+    "c1_b2": "<strong>La Boucle Négative de la TVA :</strong> Sans salaires, la consommation est financée par le revenu universel de l'État (<em>C = U</em>). Taxer ceci par la TVA (<em>t<sub>c</sub> ≈ 25%</em>) donne : <code>Net = t<sub>c</sub> · U - U = -(1 - t<sub>c</sub>)U</code>. L'État brûle des fonds à chaque versement.",
+    "c1_b3": "<strong>L'Étau du Capital :</strong> La production concurrentielle à coût marginal nul réduit les profits économiques à zéro (<code>Π → 0</code>), rendant les impôts sur le capital insuffisants ou provoquant la fuite des capitaux.",
+    "c2_tag": "Le Paradoxe de Transition 2/10",
+    "c2_title": "Pourquoi l'effondrement bascule en techno-féodalisme",
+    "c2_desc": "Quand l'automatisation supprime le travail avant que les États ne déploient un revenu universel, l'ancien système subit une paralysie en chaîne :",
+    "c2_b1": "<strong>Déflation de la Dette :</strong> Les défauts hypothécaires de masse paralysent la banque de détail. L'assouplissement quantitatif protège les réserves bancaires mais laisse les citoyens insolvables.",
+    "c2_b2": "<strong>Paralysie Judiciaire :</strong> Les tribunaux sont submergés par les expulsions, forçant des moratoires d'urgence qui figent l'immobilier dans un flou juridique total.",
+    "c2_b3": "<strong>Souveraineté de Plateforme :</strong> Le vide de pouvoir <em>ne devient pas</em> un bien commun solarpunk. Les propriétaires d'infrastructures automatisées s'érigent en souverains privés, troquant nourriture et abri contre surveillance biométrique et servitude algorithmique.",
+    "c3_tag": "L'Invariant O.N.E.",
+    "c3_title": "Canots de sauvetage physiques préconfigurés",
+    "c3_desc": "L'effondrement spontané conduisant au féodalisme corporatif, O.N.E. prépositionne dès aujourd'hui des nœuds semences physiques :",
+    "c3_b1": "<strong>Écologie Unanime 10/10 :</strong> La comptabilité exergétique Leontief directe (joules, litres, kg) ancre le métabolisme sociétal dans les limites biosphériques.",
+    "c3_b2": "<strong>Assemblées Démarchiques :</strong> Le tirage au sort statistique (parité impaire stricte : 3, 15, 101, 301, 1001) élimine la corruption carriériste et la technocratie de l'IA.",
+    "c3_b3": "<strong>Passerelle Dual-Track :</strong> Les nœuds semences de stades 0 à 3 (CLT, modules Passivhaus MHU, microréseaux 48V, fab-labs ouverts) bâtis sous la loi actuelle sont prêts à accueillir l'humanité déracinée.",
+    "btn_read_full": "📄 Lire le benchmark complet sur GitHub ↗",
+    "btn_test_sandbox": "🔬 Tester dans le bac à sable O-ASIS ↗",
+    "btn_join_forum": "💬 Rejoindre le forum dialectique RFC ↗"
   }
 }

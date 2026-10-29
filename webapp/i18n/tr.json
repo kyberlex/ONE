@@ -25,7 +25,14 @@
   "video": {
     "badge": "Mimari Anlatım • 8 Dakika",
     "title": "Enerji Bollaştığında Para Neden Ölür?",
-    "desc": "Makine bolluğunun, termodinamik intifa hakkının ve kura usulü jürilerin; ücretli köleliğin ve borca dayalı itibari paranın yerini nasıl aldığını açıklayan kapsamlı mimari incelemeyi izleyin."
+    "desc": "Makine bolluğunun, termodinamik intifa hakkının ve kura usulü jürilerin; ücretli köleliğin ve borca dayalı itibari paranın yerini nasıl aldığını açıklayan kapsamlı mimari incelemeyi izleyin.",
+    "tag_floor": "⚡ Termodinamik Taban",
+    "tag_zero_mc": "🤖 Sıfır Marjinal Maliyet",
+    "tag_sortition": "🏛️ Kura ile Yönetilen Müşterekler",
+    "tag_media": "🌐 Merkeziyetsiz Medya",
+    "btn_archive": "Archive.org Aynası",
+    "btn_mp4": "Doğrudan MP4 İndir (68MB)",
+    "btn_torrent": "BitTorrent (.torrent)"
   },
   "features": {
     "survival_title": "Evrensel Yaşam Güvencesi",
@@ -282,7 +289,9 @@
     "chip_religion_query": "Dinler, ibadethaneler ve manevi inançlar korunuyor mu yoksa baskı altında mı?",
     "chip_discrimination": "12. AYRIMCILIK: Irkçılık ve LGBTQ+ hakları?",
     "chip_discrimination_query": "Azınlıklar ırkçılık, cinsiyet ayrımcılığı ve baskıdan nasıl korunur?",
-    "notebooklm_hint": "Google'ın tam çok modlu yapay zekâsını sorgulamayı mı tercih edersiniz?"
+    "notebooklm_hint": "Google'ın tam çok modlu yapay zekâsını sorgulamayı mı tercih edersiniz?",
+    "footer_prompt": "Ele alınmamış bir uç durum mu buldunuz veya bir değişiklik mi önermek istiyorsunuz?",
+    "footer_link": "GitHub Discussions'ta Açık Araştırma Alanlarına ve RFC'lere Katılın"
   },
   "books": {
     "title": "O.N.E. Roman Serisi: Dünyanın Altı Sahnesi",
@@ -301,7 +310,11 @@
     "map_vol4": "Malakka Boğazı • Serbest Deniz Koridoru",
     "map_vol5": "Cenevre • Nihai Kurucu Duruşma",
     "btn_coming_soon": "Yakında",
-    "status_coming_soon": "Çevirisi Sürüyor"
+    "status_coming_soon": "Çevirisi Sürüyor",
+    "phase_all": "🌐 Tüm Sahalar",
+    "phase_act1": "❄️ Perde I: Yaratılış",
+    "phase_act2": "⚡ Perde II: 4 Paralel Cephe",
+    "phase_act3": "🏛️ Perde III: Cenevre Buluşması"
   },
   "volume_details": {
     "vol0": {
@@ -458,7 +471,11 @@
     "feat3_title": "Çift Kulvarlı Fiziksel Köprü",
     "feat3_desc": "Oyun içi başarılar; doğrulanmış, gerçek dünyada 3D yazdırılabilir .STL açık kaynaklı donanımlarının ve Home Assistant otomasyonlarının kilidini doğrudan açar.",
     "btn_launch": "Launch O-ASIS Simulator (Browser 60 FPS) ↗",
-    "btn_handbook": "Oyuncu Saha Kılavuzunu İndir (PDF) ↗"
+    "btn_handbook": "Oyuncu Saha Kılavuzunu İndir (PDF) ↗",
+    "btn_play_game": "🎮 Commons Oyununu Başlat ↗",
+    "badge_foss": "✨ %100 Özgür ve Açık Kaynak (AGPL-3.0)",
+    "badge_notokens": "🔒 Sıfır Mikro İşlem ve Sıfır Kripto Belirteç",
+    "badge_p2p": "🌐 Sunucusuz P2P WebRTC Ağı"
   },
   "hero_video": {
     "badge": "Uygarlık Proloğu • 2 dk 10 sn",
@@ -538,13 +555,57 @@
     "cta_title": "O.N.E.'ı inşa etmeye veya sınırlarını test etmeye hazır mısınız?",
     "cta_desc": "İster temel bir sütuna eş-emanetçilik yapmak isteyin, ister termodinamik ve nomotetik uç durumları sorgulayan bağımsız bir eleştirmen olun; katkınız Genesis Block'u doğrudan tahkim eder.",
     "btn_all_discussions": "💬 GitHub'daki Tüm Tartışmaları Görüntüle",
-    "btn_contact": "✉️ Kyberlex ile İletişime Geçin (kyberlex@proton.me)"
+    "btn_contact": "✉️ Kyberlex ile İletişime Geçin (kyberlex@proton.me)",
+    "badge_priority_lead": "🔥 Öncelikli Lider Arayışı"
   },
   "benchmark": {
     "tag": "⚡ Bağımsız Çoklu-Ajan Değerlendirmesi",
     "title": "“Ücretli Emek Sıfıra İndiğinde Kim Hayatta Kalır?”",
     "desc": "Dört öncü yapay zekaya (Google Gemini, OpenAI ChatGPT, Anthropic Claude ve xAI Grok) özdeş ve kör bir politik-iktisat testi sunduk: marjinal emek maliyetlerinin sıfıra ulaştığı (<em>MC<sub>L</sub> → 0</em>) otomatikleştirilmiş kararlı durum uygarlığı merceğinden altı uygarlık mimarisini değerlendirin.",
     "consensus_title": "4-Laboratuvar Konsensüs Puan Tablosu: Kararlı Durum İş-Sonrası Endeksi",
-    "consensus_desc": "6 boyutta bağımsız çapraz değerlendirme: Özerklik, Ekoloji, Kıtlık Tahsisi, Anti-Oligarşi, İnovasyon, Sıfır Emek Tutarlılığı"
+    "consensus_desc": "6 boyutta bağımsız çapraz değerlendirme: Özerklik, Ekoloji, Kıtlık Tahsisi, Anti-Oligarşi, İnovasyon, Sıfır Emek Tutarlılığı",
+    "th_arch": "Yönetişim Mimarisi",
+    "th_consensus": "4-Yapay Zeka Konsensüsü",
+    "th_gemini": "Gemini",
+    "th_chatgpt": "ChatGPT",
+    "th_claude": "Claude",
+    "th_grok": "Grok",
+    "th_feasibility": "Geçiş Yapılabilirliği",
+    "row1_title": "Open Networked Earth (O.N.E.)",
+    "row1_sub": "Evrensel İntifa • Kura Demokrasisi • Termodinamik Ekserji",
+    "row2_title": "Ostrom Modeli Müşterekler",
+    "row2_sub": "Çok Merkezli Ortak Havuz Kaynakları (CPRs)",
+    "row3_title": "Kooperatif Piyasa Sosyalizmi",
+    "row3_sub": "İşçi Sahipliğinde Özkaynak • Rekabetçi Piyasalar",
+    "row4_title": "İskandinav Sosyal Demokrasisi",
+    "row4_sub": "Evrensel Refah • Üçlü Müzakere • Vergi Yeniden Dağıtımı",
+    "row5_title": "Merkezi Devlet Sosyalizmi",
+    "row5_sub": "Devlet Tekeli • Gosplan Sibernetiği • Fiziksel Planlar",
+    "row6_title": "Neoliberal / Serbest Piyasa",
+    "row6_sub": "Kurumsal Varlıklar • Fiyat Takası • Bileşik GSYİH Büyümesi",
+    "paradox_badge": "⚡ TERSİNE GEÇİŞ YASASI",
+    "paradox_desc": "Dört yapay zeka modelinin tümü, kararlı durum uygulanabilirliği ile geçiş yapılabilirliği arasında kesin bir <strong>ters ilişki</strong> tespit etti: Emeksiz bolluk için tasarlanan modeller (O.N.E. @ 8.13), eski mülkiyet ve borç rejimlerine karşı maksimum sürtünmeyle (2.5/10) karşılaşır. Aksine kapitalizm, işçileri kovmak kısa vadeli kârı maksimize ettiği için zahmetsizce geçiş yapar (9.0/10); ancak bu durum toplam talebi yok ederek makroekonomiyi çökertir.",
+    "methodology_note": "Ayrıntılı metodoloji, komut dökümleri ve model özellikleri <a href=\"https://github.com/kyberlex/ONE/blob/main/AI_BENCHMARK_POST_WORK.md\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--primary); text-decoration: underline;\">AI_BENCHMARK_POST_WORK.md ↗</a> belgesinde yer almaktadır.",
+    "c1_tag": "Matematiksel Kanıt",
+    "c1_title": "Sosyal Demokrasi Neden Ücretlerle Birlikte Yok Olur",
+    "c1_desc": "Hem Gemini hem de ChatGPT egemen refah bütçesinin makroekonomik özdeşliğini türetti:",
+    "c1_b1": "<strong>Ücret Çöküşü:</strong> İskandinav gelirlerinin %60–%75'i emek vergilerinden (<em>t<sub>w</sub> · W</em>) ve işçi tüketiminden gelir. Tam otomasyonda, <code>W → 0 ⇒ t<sub>w</sub> · W = 0</code> olur.",
+    "c1_b2": "<strong>Negatif KDV Döngüsü:</strong> Ücretler olmadan tüketim, devlet UBI'si (<em>C = U</em>) ile finanse edilir. Buna KDV (<em>t<sub>c</sub> ≈ %25</em>) uygulanması: <code>Net = -(1 - t<sub>c</sub>)U</code> sonucunu verir. Devlet her transferde para tüketir.",
+    "c1_b3": "<strong>Sermaye Sıkışması:</strong> Sıfır marjinal maliyetli rekabetçi üretim ekonomik kârı sıfıra (<code>Π → 0</code>) yaklaştırarak sermaye vergilerini yetersiz kılar veya sermaye kaçışına yol açar.",
+    "c2_tag": "2/10 Geçiş Paradoksu",
+    "c2_title": "Çöküş Neden Tekno-Feodalizmle Sonuçlanır",
+    "c2_desc": "Otomasyon, hükümetler temel gelir dağıtamadan emeği yerinden ettiğinde, eski sistem kademeli bir felç yaşar:",
+    "c2_b1": "<strong>Borç Deflasyonu:</strong> Yaygın ipotek temerrütleri bireysel bankacılığı dondurur. Parasal genişleme banka rezervlerini korur ancak vatandaşları iflas etmiş halde bırakır.",
+    "c2_b2": "<strong>Yargı Felci:</strong> Tahliye davaları mahkemeleri kilitler ve konut piyasasını yasal bir belirsizliğe sürükleyen acil durum moratoryumlarını zorunlu kılar.",
+    "c2_b3": "<strong>Platform Egemenliği:</strong> Yönetilmeyen güç boşlukları solarpunk müştereklerine <em>dönüşmez</em>. Otomatik altyapı sahipleri özel egemenler olarak devreye girerek biyometrik takip ve algoritmik kölelik karşılığında gıda ve barınak sunar.",
+    "c3_tag": "O.N.E. Değişmezi",
+    "c3_title": "Önceden Yapılandırılmış Fiziksel Cankurtaran Sandalları",
+    "c3_desc": "Kendiliğinden çöküş kurumsal feodalizme yol açtığı için O.N.E. bugün fiziksel tohum düğümlerini konuşlandırır:",
+    "c3_b1": "<strong>Oybirliğiyle 10/10 Ekoloji:</strong> Doğrudan fiziksel Leontief ekserji muhasebesi (jul, litre, kg) toplumsal metabolizmayı biyosfer sınırları içine sabitler.",
+    "c3_b2": "<strong>Demarkik Meclisler:</strong> İstatistiksel kura seçimi (kesin tekil sayı paritesi: 3, 15, 101, 301, 1001) kariyerist yolsuzluğu, lobi kartellerini ve yapay zeka teknokrasisini engeller.",
+    "c3_b3": "<strong>Çift Hat Köprüsü:</strong> Mevcut yasalar çerçevesinde inşa edilen Aşama 0–3 tohum düğümleri (CLT'ler, Passivhaus MHU modülleri, 48V mikro şebekeler, açık fab-lab'ler) borç-para sistemi çöktüğünde yerinden edilen insanları kabul etmeye hazırdır.",
+    "btn_read_full": "📄 Tüm Raporu GitHub'da Oku ↗",
+    "btn_test_sandbox": "🔬 O-ASIS Kum Havuzunda Dene ↗",
+    "btn_join_forum": "💬 RFC Forumuna Katıl ↗"
   }
 }

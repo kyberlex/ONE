@@ -25,7 +25,14 @@
   "video": {
     "badge": "체계 해설 • 8분",
     "title": "에너지가 풍요로워질 때 화폐가 소멸하는 이유",
-    "desc": "기계적 풍요, 열역학적 사용수익권, 추첨제 배심원이 어떻게 임금 노예제와 부채 기반 명목화폐를 대체하는지 설명하는 완전한 체계적 해설을 시청하십시오."
+    "desc": "기계적 풍요, 열역학적 사용수익권, 추첨제 배심원이 어떻게 임금 노예제와 부채 기반 명목화폐를 대체하는지 설명하는 완전한 체계적 해설을 시청하십시오.",
+    "tag_floor": "⚡ 열역학적 최저선",
+    "tag_zero_mc": "🤖 한계비용 제로",
+    "tag_sortition": "🏛️ 추첨제 커먼즈",
+    "tag_media": "🌐 탈중앙화 미디어",
+    "btn_archive": "Archive.org 미러",
+    "btn_mp4": "직접 다운로드 MP4 (68MB)",
+    "btn_torrent": "BitTorrent (.torrent)"
   },
   "features": {
     "survival_title": "보편적 생존권",
@@ -282,7 +289,9 @@
     "chip_religion_query": "종교, 교회 및 영적 신념은 보호받습니까, 억압받습니까?",
     "chip_discrimination": "12. 차별 금지: 인종차별과 LGBTQ+ 권리?",
     "chip_discrimination_query": "소수자는 인종차별, 성차별 및 억압으로부터 어떻게 보호받습니까?",
-    "notebooklm_hint": "Google의 전체 멀티모달 AI에 질의하시겠습니까?"
+    "notebooklm_hint": "Google의 전체 멀티모달 AI에 질의하시겠습니까?",
+    "footer_prompt": "누락된 경계 사례를 발견했거나 개정안을 제안하고 싶으신가요?",
+    "footer_link": "GitHub Discussions에서 오픈 리서치 및 RFC 토론에 참여하세요"
   },
   "books": {
     "title": "행성적 대서사시",
@@ -301,7 +310,11 @@
     "map_vol4": "4권: 말라카",
     "map_vol5": "5권: 제네바",
     "btn_coming_soon": "출시 예정",
-    "status_coming_soon": "번역 중"
+    "status_coming_soon": "번역 중",
+    "phase_all": "🌐 모든 전구",
+    "phase_act1": "❄️ 제1막: 창세기",
+    "phase_act2": "⚡ 제2막: 4대 평행 전선",
+    "phase_act3": "🏛️ 제3막: 제네바 수렴"
   },
   "volume_details": {
     "vol0": {
@@ -458,7 +471,11 @@
     "feat3_title": "이원적 물리 가교",
     "feat3_desc": "게임 내 성과는 실제 세계에서 검증된 3D 프린팅 가능 .STL 오픈 하드웨어 및 Home Assistant 자동화를 즉시 해금합니다.",
     "btn_launch": "Launch O-ASIS Simulator (Browser 60 FPS) ↗",
-    "btn_handbook": "플레이어 현장 지침서 (PDF) 다운로드 ↗"
+    "btn_handbook": "플레이어 현장 지침서 (PDF) 다운로드 ↗",
+    "btn_play_game": "🎮 Commons Game 플레이 ↗",
+    "badge_foss": "✨ 100% 자유 오픈소스 (AGPL-3.0)",
+    "badge_notokens": "🔒 마이크로트랜잭션 및 토큰 제로",
+    "badge_p2p": "🌐 무서버 P2P WebRTC 멀티 디바이스"
   },
   "hero_video": {
     "badge": "문명적 프롤로그 • 2분 10초",
@@ -538,13 +555,57 @@
     "cta_title": "O.N.E.을 함께 구축하거나 한계를 시험할 준비가 되셨습니까?",
     "cta_desc": "핵심 기둥의 공동 스튜어드로 참여하든, 열역학적·규범적 한계 사례(edge case)를 파고드는 독립 비평가로 활동하든, 여러분의 기여는 제네시스 블록(Genesis Block)을 더욱 견고하게 단련합니다.",
     "btn_all_discussions": "💬 GitHub 토론 전체 보기",
-    "btn_contact": "✉️ Kyberlex 문의 (kyberlex@proton.me)"
+    "btn_contact": "✉️ Kyberlex 문의 (kyberlex@proton.me)",
+    "badge_priority_lead": "🔥 리드 총괄 우선 영입"
   },
   "benchmark": {
     "tag": "⚡ 독립 멀티에이전트 평가",
     "title": "“임금 노동이 0이 될 때, 누가 살아남는가?”",
     "desc": "우리는 4대 프론티어 인공지능(Google Gemini, OpenAI ChatGPT, Anthropic Claude, xAI Grok)에 동일한 블라인드 정치경제 벤치마크를 제출했습니다: 노동의 한계비용이 0에 도달하는 자동화된 정상상태 문명의 렌즈를 통해 6가지 문명 체계를 엄격히 평가하라.",
     "consensus_title": "4개 랩 합의 스코어카드: 정상상태 탈노동 지수",
-    "consensus_desc": "6개 차원에 걸친 독립 교차 평가: 자율성, 생태성, 희소성 배분, 반과두제, 혁신성, 노동 제로 일관성"
+    "consensus_desc": "6개 차원에 걸친 독립 교차 평가: 자율성, 생태성, 희소성 배분, 반과두제, 혁신성, 노동 제로 일관성",
+    "th_arch": "거버넌스 체계",
+    "th_consensus": "4대 AI 합의 점수",
+    "th_gemini": "Gemini",
+    "th_chatgpt": "ChatGPT",
+    "th_claude": "Claude",
+    "th_grok": "Grok",
+    "th_feasibility": "전환 타당성",
+    "row1_title": "Open Networked Earth (O.N.E.)",
+    "row1_sub": "보편적 용익권 • 추첨제 민주주의 • 열역학적 엑서지",
+    "row2_title": "오스트롬형 커먼즈",
+    "row2_sub": "다중심 공동 자원 풀 (CPRs)",
+    "row3_title": "협동조합형 시장사회주의",
+    "row3_sub": "노동자 소유 지분 • 경쟁적 시장",
+    "row4_title": "북유럽형 사회민주주의",
+    "row4_sub": "보편적 복지 • 3자 합의 협상 • 조세 재분배",
+    "row5_title": "중앙집권적 국가사회주의",
+    "row5_sub": "국가 독점 • 고스플란 사이버네틱스 • 실물 계획",
+    "row6_title": "신자유주의 / 자유시장",
+    "row6_sub": "기업 자산 • 가격 청산 • 복리 GDP 성장",
+    "paradox_badge": "⚡ 역전환의 법칙",
+    "paradox_desc": "4개 AI 모델 모두 정상상태 생존 가능성과 전환 타당성 사이에 정확한 <strong>역상관관계</strong>가 있음을 진단했습니다: 노동 없는 풍요를 위해 설계된 체계(O.N.E.: 8.13점)는 기존의 사유재산 및 부채 체제에 대해 최대의 마찰(2.5/10)을 겪습니다. 반대로 자본주의는 노동자 해고가 단기 이윤을 극대화하기 때문에 손쉽게 전환(9.0/10)되지만, 총수요를 파괴하여 거시경제를 붕괴시킵니다.",
+    "methodology_note": "전체 방법론, 프롬프트 기록 및 모델 사양은 <a href=\"https://github.com/kyberlex/ONE/blob/main/AI_BENCHMARK_POST_WORK.md\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--primary); text-decoration: underline;\">AI_BENCHMARK_POST_WORK.md ↗</a>에 수록되어 있습니다.",
+    "c1_tag": "수학적 증명",
+    "c1_title": "사회민주주의가 임금과 함께 소멸하는 이유",
+    "c1_desc": "Gemini와 ChatGPT 모두 주권 복지 예산의 거시경제 항등식을 도출했습니다:",
+    "c1_b1": "<strong>임금 붕괴:</strong> 북유럽 세수의 60%–75%는 노동 소득세(<em>t<sub>w</sub> · W</em>)와 노동자 소비에서 발생합니다. 전면 자동화 시, <code>W → 0 ⇒ t<sub>w</sub> · W = 0</code>이 됩니다.",
+    "c1_b2": "<strong>부가가치세 역순환:</strong> 임금이 사라지면 소비는 국가가 지급하는 기본소득(<em>C = U</em>)으로 충당됩니다. 여기에 부가세(<em>t<sub>c</sub> ≈ 25%</em>)를 부과하면: <code>순수입 = t<sub>c</sub> · U - U = -(1 - t<sub>c</sub>)U</code>가 되어 국가는 이전지출마다 자금을 소진합니다.",
+    "c1_b3": "<strong>자본 수탈 한계:</strong> 한계비용 제로의 경쟁적 생산은 경제적 이윤을 제로(<code>Π → 0</code>)로 수렴시켜 자본 과세가 불가능해지거나 자본 유출을 초래합니다.",
+    "c2_tag": "2/10 전환의 역설",
+    "c2_title": "체제 붕괴가 테크노 봉건제로 귀결되는 이유",
+    "c2_desc": "정부가 기본소득을 확립하기 전에 자동화가 일자리를 대체하면 기존 시스템은 연쇄 마비에 직면합니다:",
+    "c2_b1": "<strong>부채 디플레이션:</strong> 광범위한 모기지 채무불이행으로 소매 금융이 마비됩니다. 양적완화는 은행 지급준비금을 방어하지만 시민들은 파산 상태로 남습니다.",
+    "c2_b2": "<strong>사법 마비:</strong> 강제퇴거 소송이 주택 법원을 마비시켜 비상 유예 조치를 강제하고 부동산 시장을 법적 공백에 가둡니다.",
+    "c2_b3": "<strong>플랫폼 주권:</strong> 관리되지 않은 권력의 공백은 솔라펑크 커먼즈가 <em>되지 않습니다</em>. 자동화 인프라 소유주들이 사적 군주로 개입하여 생체 인식 추적과 알고리즘 복종의 대가로 의식주를 제공합니다.",
+    "c3_tag": "O.N.E. 불변 원칙",
+    "c3_title": "사전 배치된 물리적 구명정",
+    "c3_desc": "자발적 붕괴는 기업 봉건제로 귀결되기 때문에 O.N.E.은 오늘날 이미 물리적 씨앗 노드를 사전 배치합니다:",
+    "c3_b1": "<strong>만장일치 10/10 생태 점수:</strong> 직접적인 물리적 레온티에프 엑서지 회계(줄, 리터, kg)가 사회적 대사를 생태계 수용력 내에 확고히 고정합니다.",
+    "c3_b2": "<strong>추첨제 민주 의회:</strong> 통계적 추첨제(엄격한 홀수 정원: 3, 15, 101, 301, 1001)로 직업 정치인의 부패, 로비 카르텔, AI 기술관료 독재를 방지합니다.",
+    "c3_b3": "<strong>이중 트랙 연계:</strong> 현행 법체계 내에서 구축된 0~3단계 씨앗 노드(CLT 구조, 패시브하우스 MHU, 48V 마이크로그리드, 오픈 팹랩)가 법정화폐 경제가 동결될 때 인류를 수용할 준비를 갖추고 있습니다.",
+    "btn_read_full": "📄 GitHub에서 벤치마크 전체 읽기 ↗",
+    "btn_test_sandbox": "🔬 O-ASIS 샌드박스에서 검증하기 ↗",
+    "btn_join_forum": "💬 RFC 변증법 포럼 참여 ↗"
   }
 }

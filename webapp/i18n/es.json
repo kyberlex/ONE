@@ -25,7 +25,14 @@
   "video": {
     "badge": "Explicación arquitectónica • 8 minutos",
     "title": "Por qué muere el dinero cuando la energía se vuelve abundante",
-    "desc": "Vea el recorrido arquitectónico completo que explica cómo la abundancia maquínica, el usufructo termodinámico y los jurados por sorteo reemplazan la esclavitud salarial y el dinero fiduciario basado en deuda."
+    "desc": "Vea el recorrido arquitectónico completo que explica cómo la abundancia maquínica, el usufructo termodinámico y los jurados por sorteo reemplazan la esclavitud salarial y el dinero fiduciario basado en deuda.",
+    "tag_floor": "⚡ Mínimo Termodinámico",
+    "tag_zero_mc": "🤖 Coste Marginal Cero",
+    "tag_sortition": "🏛️ Bienes Comunes por Sorteo",
+    "tag_media": "🌐 Medios Descentralizados",
+    "btn_archive": "Espejo Archive.org",
+    "btn_mp4": "MP4 Directo (68MB)",
+    "btn_torrent": "BitTorrent (.torrent)"
   },
   "features": {
     "survival_title": "Supervivencia Universal",
@@ -282,7 +289,9 @@
     "chip_religion_query": "¿Están protegidas o reprimidas las religiones, iglesias y creencias espirituales?",
     "chip_discrimination": "12. DISCRIMINACIÓN: ¿Racismo y derechos LGBTQ+?",
     "chip_discrimination_query": "¿Cómo se protege a las minorías frente al racismo, la discriminación sexual y las violaciones de derechos?",
-    "notebooklm_hint": "¿Prefiere consultar la IA multimodal completa de Google?"
+    "notebooklm_hint": "¿Prefiere consultar la IA multimodal completa de Google?",
+    "footer_prompt": "¿Ha encontrado un caso límite o desea proponer una enmienda?",
+    "footer_link": "Únase a las Fronteras de Investigación Abiertas y RFCs en GitHub Discussions"
   },
   "books": {
     "title": "La Saga Planetaria",
@@ -301,7 +310,11 @@
     "map_vol4": "VOL 4: MALACA",
     "map_vol5": "VOL 5: GINEBRA",
     "btn_coming_soon": "Próximamente",
-    "status_coming_soon": "En traducción"
+    "status_coming_soon": "En traducción",
+    "phase_all": "🌐 Todos los Teatros",
+    "phase_act1": "❄️ Acto I: Génesis",
+    "phase_act2": "⚡ Acto II: 4 Frentes Paralelos",
+    "phase_act3": "🏛️ Acto III: Convergencia"
   },
   "volume_details": {
     "vol0": {
@@ -458,7 +471,11 @@
     "feat3_title": "Puente físico de doble vía",
     "feat3_desc": "Los triunfos en el juego desbloquean directamente hardware abierto verificado en .STL imprimible en 3D en el mundo real y automatizaciones para Home Assistant.",
     "btn_launch": "Launch O-ASIS Simulator (Browser 60 FPS) ↗",
-    "btn_handbook": "Descargar manual de campo del jugador (PDF) ↗"
+    "btn_handbook": "Descargar manual de campo del jugador (PDF) ↗",
+    "btn_play_game": "🎮 Jugar Commons Game ↗",
+    "badge_foss": "✨ 100% Libre y Código Abierto (AGPL-3.0)",
+    "badge_notokens": "🔒 Cero Microtransacciones y Cero Tokens",
+    "badge_p2p": "🌐 P2P WebRTC sin Servidor Multi-Dispositivo"
   },
   "hero_video": {
     "badge": "Prólogo civilizatorio • 2m 10s",
@@ -538,13 +555,57 @@
     "cta_title": "¿Listo para construir o poner a prueba O.N.E.?",
     "cta_desc": "Tanto si desea co-custodiar un pilar fundacional como actuar como un crítico independiente a la caza de casos límite termodinámicos y nomotéticos, su contribución fortalece directamente el Bloque Génesis.",
     "btn_all_discussions": "💬 Ver todas las discusiones en GitHub",
-    "btn_contact": "✉️ Contactar con Kyberlex (kyberlex@proton.me)"
+    "btn_contact": "✉️ Contactar con Kyberlex (kyberlex@proton.me)",
+    "badge_priority_lead": "🔥 Búsqueda Prioritaria de Líder"
   },
   "benchmark": {
     "tag": "⚡ Evaluación Independiente Multi-Agente",
     "title": "«Cuando el trabajo asalariado llega a cero, ¿quién sobrevive?»",
     "desc": "Sometimos un benchmark idéntico y a ciegas a cuatro inteligencias artificiales de frontera: <strong>Google Gemini</strong>, <strong>OpenAI ChatGPT</strong>, <strong>Anthropic Claude</strong> y <strong>xAI Grok</strong>: evaluar seis arquitecturas civilizatorias bajo la perspectiva de una civilización estacionaria automatizada donde el coste marginal del trabajo alcanza cero (<em>MC<sub>L</sub> → 0</em>).",
     "consensus_title": "Puntuación de Consenso de 4 Laboratorios: Índice Post-Trabajo Estacionario",
-    "consensus_desc": "Evaluación cruzada independiente en 6 dimensiones: Autonomía, Ecología, Asignación de escasez, Anti-oligarquía, Innovación, Coherencia sin trabajo"
+    "consensus_desc": "Evaluación cruzada independiente en 6 dimensiones: Autonomía, Ecología, Asignación de escasez, Anti-oligarquía, Innovación, Coherencia sin trabajo",
+    "th_arch": "Arquitectura",
+    "th_consensus": "Consenso 4-IA",
+    "th_gemini": "Gemini",
+    "th_chatgpt": "ChatGPT",
+    "th_claude": "Claude",
+    "th_grok": "Grok",
+    "th_feasibility": "Viabilidad de Transición",
+    "row1_title": "Open Networked Earth (O.N.E.)",
+    "row1_sub": "Usufructo Universal • Demarquía por Sorteo • Exergía Termodinámica",
+    "row2_title": "Bienes Comunes estilo Ostrom",
+    "row2_sub": "Recursos de Uso Común Policéntricos (CPRs)",
+    "row3_title": "Socialismo de Mercado Cooperativo",
+    "row3_sub": "Capital Propiedad de los Trabajadores • Mercados Competitivos",
+    "row4_title": "Socialdemocracia Nórdica",
+    "row4_sub": "Bienestar Universal • Negociación Tripartita • Redistribución Fiscal",
+    "row5_title": "Socialismo de Estado Centralizado",
+    "row5_sub": "Monopolio Estatal • Cibernética Gosplan • Planes Físicos",
+    "row6_title": "Neoliberal / Libre Mercado",
+    "row6_sub": "Activos Corporativos • Vaciado de Precios • Crecimiento Compuesto del PIB",
+    "paradox_badge": "⚡ LA LEY DE TRANSICIÓN INVERSA",
+    "paradox_desc": "Los cuatro modelos de IA diagnosticaron una <strong>relación inversa</strong> exacta entre la viabilidad en estado estacionario y la factibilidad de transición: las arquitecturas diseñadas para la abundancia sin empleo (O.N.E. con 8.13) afrontan la máxima fricción (2.5/10) contra los regímenes heredados de propiedad y deuda. Por el contrario, el capitalismo transiciona sin esfuerzo (9.0/10) porque despedir trabajadores maximiza el beneficio a corto plazo, aun destruyendo la demanda agregada y colapsando la macroeconomía.",
+    "methodology_note": "Metodología completa, transcripción de prompts y especificaciones de modelos (Gemini 3.8 Flash Extended Reasoning, ChatGPT, Claude 3.5 Sonnet, Grok) documentadas en <a href=\"https://github.com/kyberlex/ONE/blob/main/AI_BENCHMARK_POST_WORK.md\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--primary); text-decoration: underline;\">AI_BENCHMARK_POST_WORK.md ↗</a>",
+    "c1_tag": "Demostración Matemática",
+    "c1_title": "Por qué la socialdemocracia muere con los salarios",
+    "c1_desc": "Tanto Gemini como ChatGPT derivaron la identidad macroeconómica del presupuesto soberano de bienestar:",
+    "c1_b1": "<strong>Colapso Salarial:</strong> El 60%–75% de los ingresos nórdicos proviene de impuestos laborales (<em>t<sub>w</sub> · W</em>) y consumo obrero. Bajo automatización total, <code>W → 0 ⇒ t<sub>w</sub> · W = 0</code>.",
+    "c1_b2": "<strong>El Bucle Negativo del IVA:</strong> Sin salarios, el consumo se financia con Renta Básica estatal (<em>C = U</em>). Gravarlo mediante IVA (<em>t<sub>c</sub> ≈ 25%</em>) genera: <code>Neto = t<sub>c</sub> · U - U = -(1 - t<sub>c</sub>)U</code>. El Estado destruye dinero en cada transferencia.",
+    "c1_b3": "<strong>La Contracción de Capital:</strong> La producción competitiva con coste marginal cero reduce los beneficios económicos a cero (<code>Π → 0</code>), haciendo que los impuestos al capital sean insuficientes o provoquen fuga de capitales.",
+    "c2_tag": "La Paradoja de Transición 2/10",
+    "c2_title": "Por qué el colapso desemboca en tecno-feudalismo",
+    "c2_desc": "Cuando la automatización desplaza el trabajo antes de que los gobiernos puedan aplicar la RBU, el sistema heredado sufre una parálisis en cascada:",
+    "c2_b1": "<strong>Deflación de Deuda:</strong> Los impagos masivos de hipotecas congelan la banca minorista. La expansión cuantitativa protege las reservas bancarias pero deja insolventes a los ciudadanos.",
+    "c2_b2": "<strong>Parálisis Judicial:</strong> Los tribunales de vivienda se saturan de demandas de desahucio, forzando moratorias de emergencia que congelan el mercado inmobiliario en un limbo legal.",
+    "c2_b3": "<strong>Soberanía de Plataforma:</strong> Los vacíos de poder sin gestionar <em>no</em> se convierten en bienes comunes solarpunk. Los propietarios de infraestructura automatizada asumen el rol de soberanos privados, ofreciendo comida y cobijo a cambio de rastreo biométrico y servidumbre algorítmica.",
+    "c3_tag": "El Invariante O.N.E.",
+    "c3_title": "Botes salvavidas físicos preconfigurados",
+    "c3_desc": "Dado que el colapso espontáneo deriva en feudalismo corporativo, O.N.E. preubica nodos semilla físicos hoy mismo:",
+    "c3_b1": "<strong>Ecología Unánime 10/10:</strong> La contabilidad física directa de exergía Leontief (julios, litros, kg) ancla el metabolismo social dentro de los límites biofísicos del planeta.",
+    "c3_b2": "<strong>Asambleas Demárquicas:</strong> El sorteo estadístico (paridad impar: 3, 15, 101, 301, 1001) impide la corrupción arribista, los cárteles de cabildeo y la tecnocracia de IA.",
+    "c3_b3": "<strong>Enlace Vía Dual:</strong> Nodos semilla en fases 0–3 (CLTs, módulos MHU Passivhaus, microrredes de 48V, fab-labs abiertos) construidos bajo el marco legal actual están listos para absorber a la humanidad desplazada cuando el dinero-deuda se congele.",
+    "btn_read_full": "📄 Leer Benchmark Completo en GitHub ↗",
+    "btn_test_sandbox": "🔬 Probar en el Sandbox O-ASIS ↗",
+    "btn_join_forum": "💬 Unirse al Foro Dialéctico RFC ↗"
   }
 }

@@ -1713,8 +1713,12 @@
     const volSubtitle = locVol.subtitle || vol.subtitle;
     const volBlurb = locVol.blurb || vol.blurb;
 
+    const epubLabel = state.translations?.books?.btn_epub || 'Download EPUB';
+    const pdfLabel = state.translations?.books?.btn_pdf || 'Download PDF';
+    const actTag = locVol.act || meta.act || "SAGA BRIEFING";
+
     if (elements.briefingActBadge) {
-      elements.briefingActBadge.textContent = meta.act || "SAGA BRIEFING";
+      elements.briefingActBadge.textContent = actTag;
       elements.briefingActBadge.style.borderColor = meta.accent || "var(--accent-cyan)";
       elements.briefingActBadge.style.color = meta.accent || "var(--accent-cyan)";
     }
@@ -1737,11 +1741,11 @@
       elements.briefingActions.innerHTML = `
         <a href="${res.url}" class="btn btn-primary" download="${res.filename}" target="_blank" rel="noopener noreferrer">
           <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-          Download EPUB
+          ${epubLabel}
         </a>
         <a href="assets/ebooks/${pdfFilename}" class="btn btn-secondary" download="${pdfFilename}" target="_blank" rel="noopener noreferrer">
           <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-          Download PDF
+          ${pdfLabel}
         </a>
       `;
     }
@@ -1754,6 +1758,9 @@
 
     elements.briefingModal.classList.add('open');
     elements.briefingModal.classList.add('active');
+    const modalBody = elements.briefingModal.querySelector('.briefing-modal-body');
+    if (modalBody) modalBody.scrollTop = 0;
+    if (elements.briefingModalContainer) elements.briefingModalContainer.scrollTop = 0;
     document.body.style.overflow = 'hidden';
   }
 
@@ -1771,6 +1778,7 @@
 
   window.openVideoBriefing = openVideoBriefing;
   window.closeVideoBriefing = closeVideoBriefing;
+  window.setLanguage = setLanguage;
 
   function applyEarthMapPhase(phase) {
     const nodes = document.querySelectorAll('.map-node');

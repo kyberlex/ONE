@@ -25,7 +25,14 @@
   "video": {
     "badge": "架构解析 • 8 分钟",
     "title": "为何当能源富足时，货币终将消亡",
-    "desc": "观看完整的系统架构解析，阐释机器充裕、热力学用益权与抽签陪审制如何彻底取代雇佣奴役与债务法币。"
+    "desc": "观看完整的系统架构解析，阐释机器充裕、热力学用益权与抽签陪审制如何彻底取代雇佣奴役与债务法币。",
+    "tag_floor": "⚡ 热力学底线",
+    "tag_zero_mc": "🤖 零边际成本",
+    "tag_sortition": "🏛️ 抽签公地",
+    "tag_media": "🌐 去中心化传播",
+    "btn_archive": "Archive.org 镜像",
+    "btn_mp4": "直接下载 MP4 (68MB)",
+    "btn_torrent": "BitTorrent (.torrent)"
   },
   "features": {
     "survival_title": "普遍生存底线",
@@ -282,7 +289,9 @@
     "chip_religion_query": "宗教、教堂和精神信仰是受到保护还是受到压制？",
     "chip_discrimination": "12. 消除歧视：种族主义与LGBTQ+权利？",
     "chip_discrimination_query": "少数群体如何免受种族主义、性别歧视和压迫？",
-    "notebooklm_hint": "更倾向于向 Google 完整多模态 AI 提问？"
+    "notebooklm_hint": "更倾向于向 Google 完整多模态 AI 提问？",
+    "footer_prompt": "发现了未覆盖的边界案例或希望提出修正案？",
+    "footer_link": "加入 GitHub Discussions 上的开放前沿研究与征求意见稿 (RFC)"
   },
   "books": {
     "title": "全球史诗小说",
@@ -301,7 +310,11 @@
     "map_vol4": "卷 4：马六甲",
     "map_vol5": "卷 5：日内瓦",
     "btn_coming_soon": "即将推出",
-    "status_coming_soon": "翻译中"
+    "status_coming_soon": "翻译中",
+    "phase_all": "🌐 全部战区",
+    "phase_act1": "❄️ 第一幕：创世纪",
+    "phase_act2": "⚡ 第二幕：四大平行前线",
+    "phase_act3": "🏛️ 第三幕：日内瓦汇聚"
   },
   "volume_details": {
     "vol0": {
@@ -458,7 +471,11 @@
     "feat3_title": "双轨实体桥接",
     "feat3_desc": "游戏内的成就可直接解锁经检验的现实世界 3D 打印 .STL 开源硬件与 Home Assistant 自动化方案。",
     "btn_launch": "Launch O-ASIS Simulator (Browser 60 FPS) ↗",
-    "btn_handbook": "下载玩家实地手册 (PDF) ↗"
+    "btn_handbook": "下载玩家实地手册 (PDF) ↗",
+    "btn_play_game": "🎮 运行公地游戏 ↗",
+    "badge_foss": "✨ 100% 自由开源 (AGPL-3.0)",
+    "badge_notokens": "🔒 零微交易与零代币",
+    "badge_p2p": "🌐 无服务器 P2P WebRTC 多端联机"
   },
   "hero_video": {
     "badge": "文明序幕 • 2分10秒",
@@ -538,13 +555,57 @@
     "cta_desc": "无论您是希望共同管护核心基石，还是作为独立批判者探查热力学与律则性的边界极端特例，您的贡献都将直接加固创世区块（Genesis Block）。",
     "btn_all_discussions": "💬 在 GitHub 查看所有讨论",
     "btn_contact": "✉️ 联系 Kyberlex (kyberlex@proton.me)",
-    "badge_seeking_builders": "招募 2 位构建者（4A + 4B）"
+    "badge_seeking_builders": "招募 2 位构建者（4A + 4B）",
+    "badge_priority_lead": "🔥 优先招聘领军人"
   },
   "benchmark": {
     "tag": "⚡ 独立多智能体联合基准测试",
     "title": "“当雇佣劳动归零时，谁能生存？”",
     "desc": "我们向四大前沿人工智能实验室提交了完全相同的盲评政治经济基准测试：<strong>Google Gemini</strong>、<strong>OpenAI ChatGPT</strong>、<strong>Anthropic Claude</strong> 和 <strong>xAI Grok</strong>：严格从边际劳动成本归零 (<em>MC<sub>L</sub> → 0</em>) 的自动化稳态文明视角，评估六种文明治理架构。",
     "consensus_title": "四实验室共识计分卡：稳态后工作时代指数",
-    "consensus_desc": "跨六个维度的独立交叉评估：自主性、生态性、稀缺性配置、反寡头、创新力、零劳动力连贯性"
+    "consensus_desc": "跨六个维度的独立交叉评估：自主性、生态性、稀缺性配置、反寡头、创新力、零劳动力连贯性",
+    "th_arch": "治理架构",
+    "th_consensus": "四AI综合共识",
+    "th_gemini": "Gemini",
+    "th_chatgpt": "ChatGPT",
+    "th_claude": "Claude",
+    "th_grok": "Grok",
+    "th_feasibility": "过渡可行性",
+    "row1_title": "开放网络地球 (O.N.E.)",
+    "row1_sub": "普惠用益权 • 抽签民主制 • 热力学有效能",
+    "row2_title": "奥斯特罗姆式公地",
+    "row2_sub": "多中心公共池塘资源 (CPRs)",
+    "row3_title": "合作市场社会主义",
+    "row3_sub": "劳动者所有股权 • 竞争性市场",
+    "row4_title": "北欧社会民主主义",
+    "row4_sub": "普遍福利 • 三方协商 • 税收再分配",
+    "row5_title": "中央集权国家社会主义",
+    "row5_sub": "国家垄断 • 国家计委控制论 • 实物计划",
+    "row6_title": "新自由主义 / 自由市场",
+    "row6_sub": "企业资产 • 价格出清 • 复合GDP增长",
+    "paradox_badge": "⚡ 逆向过渡定律",
+    "paradox_desc": "全部四款人工智能模型一致诊断出稳态生存能力与过渡可行性之间存在精确的<strong>逆相关关系</strong>：专为零劳动丰裕度设计的治理架构（O.N.E. 评分为 8.13）在面对传统产权与债务体制时承受最大阻力（2.5/10）。相反，资本主义能够毫不费力地完成过渡（9.0/10），因为解雇工人能够在短期内使利润最大化，即使这样做会彻底摧毁总需求并导致宏观经济崩溃。",
+    "methodology_note": "完整方法论、提示词记录与模型规格（Gemini 3.8 Flash Extended Reasoning、ChatGPT、Claude 3.5 Sonnet、Grok）详见 <a href=\"https://github.com/kyberlex/ONE/blob/main/AI_BENCHMARK_POST_WORK.md\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--primary); text-decoration: underline;\">AI_BENCHMARK_POST_WORK.md ↗</a>",
+    "c1_tag": "数学证明",
+    "c1_title": "为什么社会民主主义会随工资一同消亡",
+    "c1_desc": "Gemini 与 ChatGPT 共同推导出了主权福利预算的宏观经济恒等式：",
+    "c1_b1": "<strong>工资崩溃：</strong> 北欧国家 60%–75% 的财政收入来自劳动税（<em>t<sub>w</sub> · W</em>）和工人消费。在全面自动化下，<code>W → 0 ⇒ t<sub>w</sub> · W = 0</code>。",
+    "c1_b2": "<strong>增值税负向循环：</strong> 在失去工资后，消费完全由国家发放的全民基本收入（UBI，<em>C = U</em>）支撑。通过增值税（<em>t<sub>c</sub> ≈ 25%</em>）征税将导致：<code>净收益 = t<sub>c</sub> · U - U = -(1 - t<sub>c</sub>)U</code>。国家在每次转移支付中都在净亏损资金。",
+    "c1_b3": "<strong>资本挤压：</strong> 零边际成本的竞争性生产使经济利润趋近于零（<code>Π → 0</code>），导致资本税源枯竭或引发资本外逃。",
+    "c2_tag": "2/10 过渡悖论",
+    "c2_title": "为什么崩溃必然倒向科技封建主义",
+    "c2_desc": "当自动化在政府能够有效部署 UBI 之前淘汰劳动力时，旧体制将经历连锁瘫痪：",
+    "c2_b1": "<strong>债务通缩：</strong> 大规模房贷违约冻结零售银行业。量化宽松政策保护了银行储备金，却让普通公民陷入彻底破产。",
+    "c2_b2": "<strong>司法瘫痪：</strong> 房屋法院被驱逐申请淹没，迫使政府出台紧急延期法令，使房地产市场陷入法律僵局。",
+    "c2_b3": "<strong>平台主权：</strong> 无序的权力真空<em>不会</em>自发变成太阳朋克公地。自动化基础设施的所有者将以私人主权者的身份介入，以生物识别追踪和算法劳役为代价提供基本食宿。",
+    "c3_tag": "O.N.E. 核心不变量",
+    "c3_title": "预先配置的物理诺亚方舟",
+    "c3_desc": "因为自发崩溃必然沦为企业封建主义，O.N.E. 在当下即预先部署物理种子节点：",
+    "c3_b1": "<strong>一致全票 10/10 生态评分：</strong> 直接的物理列昂惕夫有效能核算（焦耳、升、千克）将社会代谢严格锚定在生物圈承载力之内。",
+    "c3_b2": "<strong>抽签民主议会：</strong> 统计学抽签制（严格奇数编制：3、15、101、301、1001）从机制上杜绝职业政客腐败、游说集团与 AI 技术官僚垄断。",
+    "c3_b3": "<strong>双轨握手落地：</strong> 在现有法律框架内建成的阶段 0–3 种子节点（正交胶合木建筑、被动房 MHU 模块、48V 微电网、开源微工厂）随时准备在法定债务货币冻结时接纳被流离的人类。",
+    "btn_read_full": "📄 在 GitHub 阅读完整评测报告 ↗",
+    "btn_test_sandbox": "🔬 在 O-ASIS 沙盒中测试 ↗",
+    "btn_join_forum": "💬 加入辩证 RFC 讨论区 ↗"
   }
 }

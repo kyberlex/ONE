@@ -25,7 +25,14 @@
   "video": {
     "badge": "アーキテクチャ解説 • 8分",
     "title": "エネルギーが潤沢になるとき、なぜ貨幣は死を迎えるのか",
-    "desc": "機械による豊潤、熱力学的使用収益権、そして抽籤陪審制がいかにして賃金奴隷制と債務型法定通貨を代替するのか、その完全な全体構想の解説をご覧ください。"
+    "desc": "機械による豊潤、熱力学的使用収益権、そして抽籤陪審制がいかにして賃金奴隷制と債務型法定通貨を代替するのか、その完全な全体構想の解説をご覧ください。",
+    "tag_floor": "⚡ 熱力学的フロア",
+    "tag_zero_mc": "🤖 限界費用ゼロ",
+    "tag_sortition": "🏛️ くじ引きコモンズ",
+    "tag_media": "🌐 分散型メディア",
+    "btn_archive": "Archive.org ミラー",
+    "btn_mp4": "直接 MP4 (68MB)",
+    "btn_torrent": "BitTorrent (.torrent)"
   },
   "features": {
     "survival_title": "普遍的生存権",
@@ -282,7 +289,9 @@
     "chip_religion_query": "宗教、教会、精神的な信仰は保護されますか、それとも抑圧されますか？",
     "chip_discrimination": "12. 差別撤廃：人種差別とLGBTQ+の権利？",
     "chip_discrimination_query": "少数派は人種差別や性差別、抑圧からどのように守られますか？",
-    "notebooklm_hint": "Googleの本格的なマルチモーダルAIへの直接質問をご希望ですか？"
+    "notebooklm_hint": "Googleの本格的なマルチモーダルAIへの直接質問をご希望ですか？",
+    "footer_prompt": "未対応のケースや改善案の提案をお持ちですか？",
+    "footer_link": "GitHub DiscussionsのオープンリサーチとRFCに参加"
   },
   "books": {
     "title": "地球規模の長編サガ",
@@ -301,7 +310,11 @@
     "map_vol4": "VOL 4: マラッカ",
     "map_vol5": "VOL 5: ジュネーブ",
     "btn_coming_soon": "近日公開",
-    "status_coming_soon": "翻訳中"
+    "status_coming_soon": "翻訳中",
+    "phase_all": "🌐 全ての戦区",
+    "phase_act1": "❄️ 第I幕：創世",
+    "phase_act2": "⚡ 第II幕：4つの平行前線",
+    "phase_act3": "🏛️ 第III幕：ジュネーブの収束"
   },
   "volume_details": {
     "vol0": {
@@ -458,7 +471,11 @@
     "feat3_title": "二重軌道型フィジカル・ブリッジ",
     "feat3_desc": "ゲーム内での達成成果が、現実世界で検証済みの3Dプリント可能な.STLオープンハードウェアやHome Assistant自動化設定を直接解放します。",
     "btn_launch": "Launch O-ASIS Simulator (Browser 60 FPS) ↗",
-    "btn_handbook": "プレイヤー・フィールドマニュアル（PDF）をダウンロード ↗"
+    "btn_handbook": "プレイヤー・フィールドマニュアル（PDF）をダウンロード ↗",
+    "btn_play_game": "🎮 Commons Gameを起動 ↗",
+    "badge_foss": "✨ 100% 自由・オープンソース (AGPL-3.0)",
+    "badge_notokens": "🔒 マイクロトランザクション・トークンなし",
+    "badge_p2p": "🌐 サーバーレス P2P WebRTC マルチデバイス"
   },
   "hero_video": {
     "badge": "文明のプロローグ • 2分10秒",
@@ -538,13 +555,57 @@
     "cta_desc": "基盤となる支柱を共同スチュワードとして担うにせよ、熱力学的・規範論的なエッジケースを追究する独立した批評家として参画するにせよ、あなたの貢献はジェネシスブロックを直接的に堅牢化します。",
     "btn_all_discussions": "💬 GitHubでディスカッション一覧を見る",
     "btn_contact": "✉️ Kyberlexへ連絡 (kyberlex@proton.me)",
-    "badge_seeking_builders": "2名のビルダーを募集中 (4A + 4B)"
+    "badge_seeking_builders": "2名のビルダーを募集中 (4A + 4B)",
+    "badge_priority_lead": "🔥 リード優先募集"
   },
   "benchmark": {
     "tag": "⚡ 独立系マルチエージェント評価",
     "title": "「賃金労働がゼロになったとき、誰が生き残るか？」",
     "desc": "私たちは4つの主要フロンティアAI（Google Gemini、OpenAI ChatGPT、Anthropic Claude、xAI Grok）に同一のブラインド政治経済ベンチマークを提示しました：労働の限界費用がゼロ（<em>MC<sub>L</sub> → 0</em>）に達した自動化定常文明の視点から、6つの文明アーキテクチャを厳格に評価せよ。",
     "consensus_title": "4大AI研究所コンセンサス・スコアカード：定常ポストワーク指数",
-    "consensus_desc": "6つの次元における独立クロス評価：自律性、生態系、希少性配分、反寡頭制、革新性、ゼロ労働整合性"
+    "consensus_desc": "6つの次元における独立クロス評価：自律性、生態系、希少性配分、反寡頭制、革新性、ゼロ労働整合性",
+    "th_arch": "統治アーキテクチャ",
+    "th_consensus": "4大AI合意スコア",
+    "th_gemini": "Gemini",
+    "th_chatgpt": "ChatGPT",
+    "th_claude": "Claude",
+    "th_grok": "Grok",
+    "th_feasibility": "移行実現可能性",
+    "row1_title": "Open Networked Earth (O.N.E.)",
+    "row1_sub": "普遍的用益権 • くじ引き民主主義 • 熱力学エクセルギー",
+    "row2_title": "オストロム型コモンズ",
+    "row2_sub": "多中心型共有資源 (CPRs)",
+    "row3_title": "協同組合型市場社会主義",
+    "row3_sub": "労働者所有株式 • 競争的市場",
+    "row4_title": "北欧型社会民主主義",
+    "row4_sub": "普遍的福祉 • 三者合意形成 • 税による再分配",
+    "row5_title": "中央集権的国家社会主義",
+    "row5_sub": "国家独占 • ゴスプランサイバネティクス • 物的計画",
+    "row6_title": "新自由主義 / 自由市場",
+    "row6_sub": "企業資産 • 価格均衡 • 複利GDP成長",
+    "paradox_badge": "⚡ 逆移行の法則",
+    "paradox_desc": "4つのAIモデルすべてが、定常生存可能性と移行の実現可能性の間に厳密な<strong>逆相関関係</strong>を診断しました：労働ゼロの豊かさのために設計された構造（O.N.E.：8.13）は、従来の所有権および債務体制に対して最大の摩擦（2.5/10）を受けます。逆に、資本主義は労働者の解雇が短期的な利益を最大化するため難なく移行します（9.0/10）が、総需要を破壊してマクロ経済を崩壊させます。",
+    "methodology_note": "詳細な手法、プロンプト、モデル仕様は <a href=\"https://github.com/kyberlex/ONE/blob/main/AI_BENCHMARK_POST_WORK.md\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--primary); text-decoration: underline;\">AI_BENCHMARK_POST_WORK.md ↗</a> に記録されています。",
+    "c1_tag": "数学的証明",
+    "c1_title": "なぜ社会民主主義は賃金と共に死ぬのか",
+    "c1_desc": "GeminiとChatGPTは主権的福祉予算のマクロ経済恒等式を導出しました：",
+    "c1_b1": "<strong>賃金崩壊：</strong> 北欧諸国の税収の60%〜75%は労働税（<em>t<sub>w</sub> · W</em>）と労働者消費に依存しています。完全自動化下では、<code>W → 0 ⇒ t<sub>w</sub> · W = 0</code> となります。",
+    "c1_b2": "<strong>負の付加価値税ループ：</strong> 賃金がなくなると、消費は国家のUBI（<em>C = U</em>）で賄われます。これに付加価値税（<em>t<sub>c</sub> ≈ 25%</em>）を課すと：<code>純収支 = t<sub>c</sub> · U - U = -(1 - t<sub>c</sub>)U</code> となり、給付ごとに国家の資金が失われます。",
+    "c1_b3": "<strong>資本の圧搾：</strong> 限界費用ゼロの競争生産により経済的利益はゼロ（<code>Π → 0</code>）に近づき、資本課税が機能しなくなるか資本逃避を引き起こします。",
+    "c2_tag": "2/10 移行の逆説",
+    "c2_title": "なぜ崩壊はテクノ封建制へと帰結するのか",
+    "c2_desc": "政府がUBIを整える前に自動化が雇用を奪うと、旧体制は連鎖的な麻痺に陥ります：",
+    "c2_b1": "<strong>債務デフレ：</strong> 広範囲な住宅ローン不履行が銀行業務を凍結。量的緩和は銀行準備金を保護しますが、市民を破産させたまま放置します。",
+    "c2_b2": "<strong>裁判所の麻痺：</strong> 立ち退き訴訟が住宅裁判所を圧迫し、緊急モラトリアムを余儀なくされ、不動産市場は法の空白に凍結されます。",
+    "c2_b3": "<strong>プラットフォーム主権：</strong> 権力の空白はソーラーパンクコモンズには<em>なりません</em>。自動化インフラの所有者が私的主権者として介入し、生体認証監視とアルゴリズムへの隷属と引き換えに食料と住まいを提供します。",
+    "c3_tag": "O.N.E.の不変原則",
+    "c3_title": "事前配置された物理的救命艇",
+    "c3_desc": "自発的な崩壊が企業封建制に直結するため、O.N.E.は現在すでに物理的シードノードを事前配置しています：",
+    "c3_b1": "<strong>満場一致の10/10生態スコア：</strong> レオンチェフ・エクセルギー直接物理会計（ジュール、リットル、kg）が、社会の代謝を生態圏の許容量内に固定します。",
+    "c3_b2": "<strong>くじ引き代議員集会：</strong> 統計的くじ引き（厳格な奇数比率：3、15、101、301、1001）により、職業政治家の腐敗、ロビー活動、AIテクノクラシーを防ぎます。",
+    "c3_b3": "<strong>デュアルトラック連携：</strong> 現行法の枠組み内で建設されたステージ0〜3のシードノード（CLT木造、Passivhaus MHU、48Vマイクログリッド、オープンFabLab）が、不換紙幣経済が凍結した際に人々を受け入れる準備を整えています。",
+    "btn_read_full": "📄 GitHubでベンチマーク全文を読む ↗",
+    "btn_test_sandbox": "🔬 O-ASISサンドボックスで検証 ↗",
+    "btn_join_forum": "💬 RFCフォーラムに参加 ↗"
   }
 }
