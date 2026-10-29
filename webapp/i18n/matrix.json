@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-29T10:23:32.793214",
-  "total_ui_keys": 378,
+  "generated_at": "2026-10-29T11:06:20.536471",
+  "total_ui_keys": 379,
   "languages": [
     {
       "code": "en",
@@ -75,99 +75,99 @@
   ],
   "ui_stats": {
     "en": {
-      "total": 378,
-      "translated": 378,
+      "total": 379,
+      "translated": 379,
       "identical_to_en": 0,
       "missing": 0,
       "pct": 100.0
     },
     "it": {
-      "total": 378,
-      "translated": 372,
+      "total": 379,
+      "translated": 373,
       "identical_to_en": 6,
       "missing": 0,
       "pct": 98.4
     },
     "fr": {
-      "total": 378,
-      "translated": 369,
+      "total": 379,
+      "translated": 370,
       "identical_to_en": 9,
       "missing": 0,
       "pct": 97.6
     },
     "de": {
-      "total": 378,
-      "translated": 367,
+      "total": 379,
+      "translated": 368,
       "identical_to_en": 11,
       "missing": 0,
       "pct": 97.1
     },
     "es": {
-      "total": 378,
-      "translated": 370,
-      "identical_to_en": 8,
+      "total": 379,
+      "translated": 373,
+      "identical_to_en": 6,
       "missing": 0,
-      "pct": 97.9
+      "pct": 98.4
     },
     "pt": {
-      "total": 378,
-      "translated": 370,
+      "total": 379,
+      "translated": 371,
       "identical_to_en": 8,
       "missing": 0,
       "pct": 97.9
     },
     "zh": {
-      "total": 378,
-      "translated": 374,
+      "total": 379,
+      "translated": 375,
       "identical_to_en": 4,
       "missing": 0,
       "pct": 98.9
     },
     "ja": {
-      "total": 378,
-      "translated": 374,
+      "total": 379,
+      "translated": 375,
       "identical_to_en": 4,
       "missing": 0,
       "pct": 98.9
     },
     "ko": {
-      "total": 378,
-      "translated": 373,
-      "identical_to_en": 5,
+      "total": 379,
+      "translated": 375,
+      "identical_to_en": 4,
       "missing": 0,
-      "pct": 98.7
+      "pct": 98.9
     },
     "hi": {
-      "total": 378,
-      "translated": 373,
-      "identical_to_en": 5,
+      "total": 379,
+      "translated": 375,
+      "identical_to_en": 4,
       "missing": 0,
-      "pct": 98.7
+      "pct": 98.9
     },
     "ar": {
-      "total": 378,
-      "translated": 373,
-      "identical_to_en": 5,
+      "total": 379,
+      "translated": 375,
+      "identical_to_en": 4,
       "missing": 0,
-      "pct": 98.7
+      "pct": 98.9
     },
     "ru": {
-      "total": 378,
-      "translated": 374,
+      "total": 379,
+      "translated": 375,
       "identical_to_en": 4,
       "missing": 0,
       "pct": 98.9
     },
     "id": {
-      "total": 378,
-      "translated": 369,
-      "identical_to_en": 9,
+      "total": 379,
+      "translated": 372,
+      "identical_to_en": 7,
       "missing": 0,
-      "pct": 97.6
+      "pct": 98.2
     },
     "tr": {
-      "total": 378,
-      "translated": 372,
+      "total": 379,
+      "translated": 373,
       "identical_to_en": 6,
       "missing": 0,
       "pct": 98.4
@@ -713,11 +713,11 @@
       "composite_pct": 98.8
     },
     "es": {
-      "ui_pct": 97.9,
+      "ui_pct": 98.4,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.2
+      "composite_pct": 99.4
     },
     "pt": {
       "ui_pct": 97.9,
@@ -741,25 +741,25 @@
       "composite_pct": 99.6
     },
     "ko": {
-      "ui_pct": 98.7,
+      "ui_pct": 98.9,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.5
+      "composite_pct": 99.6
     },
     "hi": {
-      "ui_pct": 98.7,
+      "ui_pct": 98.9,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.5
+      "composite_pct": 99.6
     },
     "ar": {
-      "ui_pct": 98.7,
+      "ui_pct": 98.9,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.5
+      "composite_pct": 99.6
     },
     "ru": {
       "ui_pct": 98.9,
@@ -769,11 +769,11 @@
       "composite_pct": 99.6
     },
     "id": {
-      "ui_pct": 97.6,
+      "ui_pct": 98.2,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.0
+      "composite_pct": 99.3
     },
     "tr": {
       "ui_pct": 98.4,
@@ -940,7 +940,7 @@
         "it": "IDENTICAL_TO_EN",
         "fr": "TRANSLATED",
         "de": "TRANSLATED",
-        "es": "IDENTICAL_TO_EN",
+        "es": "TRANSLATED",
         "pt": "IDENTICAL_TO_EN",
         "zh": "TRANSLATED",
         "ja": "TRANSLATED",
@@ -961,7 +961,7 @@
         "it": "IDENTICAL_TO_EN",
         "fr": "TRANSLATED",
         "de": "TRANSLATED",
-        "es": "IDENTICAL_TO_EN",
+        "es": "TRANSLATED",
         "pt": "IDENTICAL_TO_EN",
         "zh": "TRANSLATED",
         "ja": "TRANSLATED",
@@ -3948,10 +3948,10 @@
         "zh": "TRANSLATED",
         "ja": "TRANSLATED",
         "ko": "TRANSLATED",
-        "hi": "IDENTICAL_TO_EN",
-        "ar": "IDENTICAL_TO_EN",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
         "ru": "TRANSLATED",
-        "id": "IDENTICAL_TO_EN",
+        "id": "TRANSLATED",
         "tr": "TRANSLATED"
       }
     },
@@ -7043,6 +7043,27 @@
       }
     },
     {
+      "key": "stewards.badge_seeking_builders",
+      "section": "stewards",
+      "en_val": "Seeking 2 Builders (4A + 4B)",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
       "key": "stewards.badge_seeking_cofounder",
       "section": "stewards",
       "en_val": "Seeking Co-Founder",
@@ -7185,7 +7206,7 @@
         "hi": "TRANSLATED",
         "ar": "TRANSLATED",
         "ru": "TRANSLATED",
-        "id": "IDENTICAL_TO_EN",
+        "id": "TRANSLATED",
         "tr": "TRANSLATED"
       }
     },
@@ -7433,7 +7454,7 @@
         "pt": "TRANSLATED",
         "zh": "TRANSLATED",
         "ja": "TRANSLATED",
-        "ko": "IDENTICAL_TO_EN",
+        "ko": "TRANSLATED",
         "hi": "TRANSLATED",
         "ar": "TRANSLATED",
         "ru": "TRANSLATED",
