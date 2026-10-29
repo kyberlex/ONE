@@ -1,0 +1,170 @@
+solid mhu_wetroom_core_iso21542
+  facet normal 0 0 -1
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 2400.0 0.0 0.0
+      vertex 2400.0 2400.0 0.0
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 2400.0 2400.0 0.0
+      vertex 0.0 2400.0 0.0
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 0.0 0.0 100.0
+      vertex 2400.0 2400.0 100.0
+      vertex 2400.0 0.0 100.0
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 0.0 0.0 100.0
+      vertex 0.0 2400.0 100.0
+      vertex 2400.0 2400.0 100.0
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 2400.0 0.0 100.0
+      vertex 2400.0 0.0 0.0
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 0.0 100.0
+      vertex 2400.0 0.0 100.0
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 0.0 2400.0 0.0
+      vertex 2400.0 2400.0 0.0
+      vertex 2400.0 2400.0 100.0
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 0.0 2400.0 0.0
+      vertex 2400.0 2400.0 100.0
+      vertex 0.0 2400.0 100.0
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 2400.0 0.0
+      vertex 0.0 2400.0 100.0
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 2400.0 100.0
+      vertex 0.0 0.0 100.0
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 2400.0 0.0 0.0
+      vertex 2400.0 0.0 100.0
+      vertex 2400.0 2400.0 100.0
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 2400.0 0.0 0.0
+      vertex 2400.0 2400.0 100.0
+      vertex 2400.0 2400.0 0.0
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 1600.0 1600.0 100.0
+      vertex 2400.0 1600.0 100.0
+      vertex 2400.0 2400.0 100.0
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 1600.0 1600.0 100.0
+      vertex 2400.0 2400.0 100.0
+      vertex 1600.0 2400.0 100.0
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 1600.0 1600.0 2500.0
+      vertex 2400.0 2400.0 2500.0
+      vertex 2400.0 1600.0 2500.0
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 1600.0 1600.0 2500.0
+      vertex 1600.0 2400.0 2500.0
+      vertex 2400.0 2400.0 2500.0
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 1600.0 1600.0 100.0
+      vertex 2400.0 1600.0 2500.0
+      vertex 2400.0 1600.0 100.0
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 1600.0 1600.0 100.0
+      vertex 1600.0 1600.0 2500.0
+      vertex 2400.0 1600.0 2500.0
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 1600.0 2400.0 100.0
+      vertex 2400.0 2400.0 100.0
+      vertex 2400.0 2400.0 2500.0
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 1600.0 2400.0 100.0
+      vertex 2400.0 2400.0 2500.0
+      vertex 1600.0 2400.0 2500.0
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 1600.0 1600.0 100.0
+      vertex 1600.0 2400.0 100.0
+      vertex 1600.0 2400.0 2500.0
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 1600.0 1600.0 100.0
+      vertex 1600.0 2400.0 2500.0
+      vertex 1600.0 1600.0 2500.0
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 2400.0 1600.0 100.0
+      vertex 2400.0 1600.0 2500.0
+      vertex 2400.0 2400.0 2500.0
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 2400.0 1600.0 100.0
+      vertex 2400.0 2400.0 2500.0
+      vertex 2400.0 2400.0 100.0
+    endloop
+  endfacet
+endsolid mhu_wetroom_core_iso21542

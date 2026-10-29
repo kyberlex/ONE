@@ -29,19 +29,35 @@ habitat/
 ├── SENSOR_TOPOLOGY_HOME_ASSISTANT.md         # Zero-cloud abiotic telemetry & 800x800mm Utility Spine pinout
 ├── URBAN_SCALING_TRANSITION.md               # Metropolitan transition (Superblocks, Energiesprong, Open Building)
 ├── cad/                                      # [Track 4A] Parametric FreeCAD macros, 3D STL meshes & 2D CNC DXF files
+│   ├── export_mhu_ifc4.py                    # ISO 16739-1 (IFC4) Open-BIM STEP exporter for 3-bay timber frame
+│   ├── mhu_portal_frame_3bay.ifc             # Native IFC4 model (FreeCAD / BlenderBIM / Bonsai ready)
 │   ├── generate_mhu_gusset.FCMacro           # Parametric C24 + 18mm birch nodal gusset generator & EC5 solver
 │   ├── generate_helical_pile_docking.FCMacro # S355 Helical Pile Flange & 800x800mm Utility Spine Docking CAD
+│   ├── generate_mhu_portal_frame.FCMacro     # 3-Bay (54 m²) full portal frame macro & EC5 bending solver
+│   ├── generate_wetroom_core_iso21542.FCMacro# Accessible bathroom & Utility Spine docking macro (ISO 21542 / DIN 18040-2)
 │   ├── mhu_nodal_gusset_18mm.dxf             # R2010 2D CNC router toolpath sheet (with Ø 6.4mm dog-bone reliefs)
 │   ├── mhu_nodal_gusset_18mm.stl             # 3D STL assembly of C24 timber + 18mm birch nodal gusset (browser 3D viewer)
 │   ├── helical_pile_docking_flange_s355.dxf  # R2010 2D cutting/drilling template for S355 flange & 800x800mm Utility Spine
-│   └── helical_pile_docking_flange_s355.stl  # 3D STL model of S355 helical pile flange, U-saddle & termite shield
+│   ├── helical_pile_docking_flange_s355.stl  # 3D STL model of S355 helical pile flange, U-saddle & termite shield
+│   ├── mhu_portal_frame_3bay.dxf             # Structural elevation & layout DXF for 3-bay portal frame
+│   ├── mhu_portal_frame_3bay.stl             # 3D STL model of the complete 3-bay portal frame assembly
+│   ├── mhu_wetroom_core_iso21542.dxf         # 2D DXF plan view of accessible wet-room & utility spine docking
+│   └── mhu_wetroom_core_iso21542.stl         # 3D STL solid of accessible wet-room floor cassette & vertical riser
 ├── automation/                               # [Track 4B] Local Home Assistant & ESPHome firmware configs
 │   ├── homeassistant/
 │   │   ├── mhu_abiotic_core.yaml             # 48V DC load-shedding (<25% SoC) & Passivhaus HRV CO2 automation
 │   │   └── mhu_water_loop.yaml               # Potable cistern drought lock & greywater reed-bed frost diversion
-│   └── esphome/
-│       ├── utility_spine_esp32.yaml          # Olimex ESP32-POE-ISO firmware (SCD41 CO2, INA226 48V shunt, ultrasonic)
-│       └── bms_modbus_rtu_stub.yaml          # RS485 Modbus RTU 16S LFP BMS & <2°C cold-charge lockout starter stub
+│   ├── esphome/
+│   │   ├── utility_spine_esp32.yaml          # Olimex ESP32-POE-ISO firmware (SCD41 CO2, INA226 48V shunt, ultrasonic)
+│   │   └── bms_modbus_rtu_stub.yaml          # RS485 Modbus RTU 16S LFP BMS & <2°C cold-charge lockout starter stub
+│   └── modbus/
+│       └── lfp_bms_modbus_registers.json     # 16S LFP BMS RS485 register map (Seplos / JK / LibreSolar)
+├── hygrothermal/                             # Passivhaus Glaser / WUFI condensation audit
+│   ├── glaser_audit_5_biomes.py              # Automated Glaser method audit script across 5 seed biomes
+│   └── glaser_audit_report.md                # Quantitative condensation verification report (ISO 13788)
+├── schematics/                               # Electrical microgrid schematics
+│   ├── microgrid_380v_48v_single_line.svg    # Single-line schematic for 380V inter-node DC + 48V domestic bus
+│   └── microgrid_electrical_spec.md          # Earthing, arc-fault, and galvanically isolated DC specifications
 ├── bom/                                      # Machine-readable Bill of Materials & Leontief cost tables
 │   └── mhu_bom_6_levels.csv                  # Complete 6-level BOM (MHU Open Chassis vs. WikiHouse Skylark)
 ├── renders/                                  # Architectural & CAD visual references

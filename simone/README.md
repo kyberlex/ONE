@@ -53,15 +53,26 @@ Only when docking succeeds are behavioral variance, illness cascades, and sortit
 ```
 simone/
 ├── Project.toml              # Package definition, registered Julia dependencies
+├── Manifest.toml             # Pinned reproducible dependency graph
 ├── README.md                 # Scientific overview, docking discipline, quickstart
+├── ODD_PROTOCOL.md           # Formal Overview, Design concepts & Details specification
 ├── simone-specs.md           # Formal multi-layer systems engineering specification
 ├── TODO.md                   # Engineering taskboard & Single-Village roadmap
+├── benchmarks/
+│   └── benchmark_solvers.jl  # Stiff ODE benchmark: Tsit5 vs Rodas5P vs Rosenbrock23
 ├── data/
 │   ├── leontief_baseline_matrix.json # 4x4 physical Leontief I-O baseline (N = 300)
+│   ├── leontief_12sector_matrix.json # 12-sector disaggregated Hawkins-Simon matrix
+│   ├── sample_rea_events.json        # Elohim epr-rea FlowEvent JSON sample streams
+│   ├── calibration_sources.md        # Academic and empirical data calibration citations
 │   └── archetypes/                   # 5 Orthogonal Seed Node datasets (NODE-01 to NODE-05)
 ├── examples/
 │   ├── run_single_village_docking.jl      # Quickstart ODE vs ABM Axtell docking runner
-│   └── run_orthogonal_seed_nodes_audit.jl # 5-biome abiotic shock & Leontief L_min runner
+│   ├── run_orthogonal_seed_nodes_audit.jl # 5-biome abiotic shock & Leontief L_min runner
+│   ├── run_full_4layer_year.jl            # Integrated 365-day 4-layer co-simulation runner
+│   ├── run_lmin_drought_stress_test.jl    # Pillar 1: 90-day drought & L_min allocation stress-test
+│   ├── run_sybil_sortition_attack.jl      # Pillar 2: Sybil / factional capture Monte Carlo
+│   └── run_hexaco_tipping_point.jl        # Pillar 3: HEXACO-H psychometric tipping point sweep
 ├── src/
 │   ├── Simone.jl             # Main module entrypoint & API exports
 │   ├── aggregate_ode.jl      # Model A: Continuous stock-flow ODE system
@@ -70,7 +81,8 @@ simone/
 │   ├── layer0_abiotic.jl     # Layer 0: Darcy hydrology & abiotic substrate
 │   ├── layer1_leontief.jl    # Layer 1: Leontief I-O, L_min & Weibull MTBF (Pillar 1)
 │   ├── layer2_psychometrics.jl # Layer 2: HEXACO-H & bounded rationality (Pillar 3)
-│   └── layer3_sortition.jl   # Layer 3: Odd-parity sortition & 75% rule (Pillar 2)
+│   ├── layer3_sortition.jl   # Layer 3: Odd-parity sortition & 75% rule (Pillar 2)
+│   └── rea_adapter.jl        # P2P event-stream deserializer for Elohim REA events
 └── test/
     ├── runtests.jl           # Top-level test runner
     ├── test_conservation.jl  # Leontief physical mass & energy balance invariants

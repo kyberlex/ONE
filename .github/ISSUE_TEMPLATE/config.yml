@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "Community Dialectic & General Questions"
+    url: "https://github.com/kyberlex/one/discussions"
+    about: "For open questions, debates, novel reviews, and community networking, please join our Discussions forum."
+  - name: "Live Epistemic Red-Team Challenge"
+    url: "https://open-networked-earth.surge.sh/#challenge"
+    about: "Interrogate the 46 Articles and O-ASIS simulation logs in real-time on the live edge platform."

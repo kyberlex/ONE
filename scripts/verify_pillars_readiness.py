@@ -96,7 +96,13 @@ def audit_simone_pillar():
     # Verify code files
     for fname in ["rea_adapter.jl", "Simone.jl"]:
         assert os.path.isfile(os.path.join(REPO_ROOT, "simone", "src", fname))
-    assert os.path.isfile(os.path.join(REPO_ROOT, "simone", "examples", "run_full_4layer_year.jl"))
+    for exname in [
+        "run_full_4layer_year.jl",
+        "run_lmin_drought_stress_test.jl",
+        "run_sybil_sortition_attack.jl",
+        "run_hexaco_tipping_point.jl",
+    ]:
+        assert os.path.isfile(os.path.join(REPO_ROOT, "simone", "examples", exname)), f"Missing simone/examples/{exname}"
     assert os.path.isfile(os.path.join(REPO_ROOT, "simone", "benchmarks", "benchmark_solvers.jl"))
 
     print("    [PASS] Simone 12-Sector Leontief Hawkins-Simon, REA adapter, and benchmarks verified.")
@@ -121,7 +127,7 @@ def audit_oasis_critics_round2():
 
 def audit_stewards_hub():
     """Verifies stewards/ directory files and cross-links."""
-    print("--> [5/5] Auditing Stewards Hub & Compacts...")
+    print("--> [5/7] Auditing Stewards Hub & Compacts...")
     stewards_dir = os.path.join(REPO_ROOT, "stewards")
     expected_files = [
         "CALL_FOR_CO_STEWARDS.md",
@@ -130,18 +136,33 @@ def audit_stewards_hub():
         "CRITIC_BRIEFING_PACK.md",
         "ROSTER_AND_LEDGER.md",
         "OPEN_SOURCE_GRANTS_KIT.md",
+        "FIRST_PR_PLAYBOOK.md",
         "README.md",
     ]
     for ef in expected_files:
         assert os.path.isfile(os.path.join(stewards_dir, ef)), f"Missing stewards/{ef}"
 
-    print(f"    [PASS] All {len(expected_files)} Stewards Compacts and Briefing documents intact.")
+    print(f"    [PASS] All {len(expected_files)} Stewards Compacts, Playbooks, and Briefings intact.")
 
 
 def audit_foundation_pillar():
-    """Verifies Foundation and Verein Bootstrap kit files."""
-    print("--> [6/6] Auditing Pillar 2 & Foundation/Verein Kit (foundation/verein_bootstrap/)...")
-    v_dir = os.path.join(REPO_ROOT, "foundation", "verein_bootstrap")
+    """Verifies Foundation, Tax Ruling, Cross-Border and Verein Bootstrap kit files."""
+    print("--> [6/7] Auditing Pillar 2 & Foundation/Verein Kit (foundation/)...")
+    f_dir = os.path.join(REPO_ROOT, "foundation")
+    expected_f_files = [
+        "README.md",
+        "statutes_foundation_one.md",
+        "legal_framework.md",
+        "PRE_CLEARANCE_CHECKLIST_ESA.md",
+        "USUFRUCT_COVENANT_TEMPLATE.md",
+        "SORTITION_PROTOCOL_SPEC.md",
+        "CANTONAL_TAX_RULING_REQUEST_DE_EN.md",
+        "CROSS_BORDER_SEED_NODE_CHARTER.md",
+    ]
+    for ff in expected_f_files:
+        assert os.path.isfile(os.path.join(f_dir, ff)), f"Missing foundation/{ff}"
+
+    v_dir = os.path.join(f_dir, "verein_bootstrap")
     expected_verein_files = [
         "README.md",
         "VEREIN_STATUTES_BILINGUAL_DE_EN.md",
@@ -151,7 +172,35 @@ def audit_foundation_pillar():
     ]
     for vf in expected_verein_files:
         assert os.path.isfile(os.path.join(v_dir, vf)), f"Missing foundation/verein_bootstrap/{vf}"
-    print(f"    [PASS] All {len(expected_verein_files)} Swiss Verein bootstrap and banking files verified.")
+    print(f"    [PASS] All {len(expected_f_files) + len(expected_verein_files)} Foundation, Tax Ruling, and Verein files verified.")
+
+
+def audit_roadmap_pillar():
+    """Verifies roadmap blueprints and metabolic sizing calculator."""
+    print("--> [7/7] Auditing Roadmap & Seed Node Metabolic Calculator (roadmap/)...")
+    r_dir = os.path.join(REPO_ROOT, "roadmap")
+    assert os.path.isfile(os.path.join(r_dir, "README.md")), "Missing roadmap/README.md"
+    assert os.path.isfile(os.path.join(r_dir, "roadmap.md")), "Missing roadmap/roadmap.md"
+    assert os.path.isfile(os.path.join(r_dir, "SEED_NODE_SIZING_MATRIX.md")), "Missing roadmap/SEED_NODE_SIZING_MATRIX.md"
+    assert os.path.isfile(os.path.join(r_dir, "calculate_seed_node_metabolism.py")), "Missing roadmap/calculate_seed_node_metabolism.py"
+
+    bp_dir = os.path.join(r_dir, "blueprints")
+    for bp in [
+        "SEED_NODE_CANDIDATE_REGISTRY.md",
+        "SEED_NODE_QUICKSTART_HANDBOOK.md",
+        "STAGE_0_LEGAL_INCEPTION_BLUEPRINT.md",
+        "STAGE_1_SURVIVAL_CORE_BLUEPRINT.md",
+        "STAGE_2_FABLAB_METABOLIC_BLUEPRINT.md",
+        "STAGE_3_WATERSHED_FEDERATION_BLUEPRINT.md",
+    ]:
+        assert os.path.isfile(os.path.join(bp_dir, bp)), f"Missing roadmap/blueprints/{bp}"
+
+    # Run quick metabolic verification check
+    calc_script = os.path.join(r_dir, "calculate_seed_node_metabolism.py")
+    res = subprocess.run([sys.executable, calc_script, "--pop", "50", "--biome", "NODE-01"], capture_output=True, text=True)
+    assert res.returncode == 0, f"Metabolic calculator failed: {res.stderr}"
+
+    print("    [PASS] Roadmap blueprints and parametric metabolic calculator verified.")
 
 
 def main():
@@ -165,6 +214,7 @@ def main():
         audit_oasis_critics_round2()
         audit_stewards_hub()
         audit_foundation_pillar()
+        audit_roadmap_pillar()
         print("=" * 70)
         print("ALL CO-STEWARD & PILLARS AUDIT CHECKS PASSED SUCCESSFULLY [100% READY]")
         print("=" * 70)

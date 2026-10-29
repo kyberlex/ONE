@@ -72,90 +72,65 @@ Foundation ONE will **only** be legally chartered under Swiss Civil Law (ZGB Art
 
 ## **III. PHASE 1: SINGLE-VILLAGE AGGREGATE ODE MODEL (MODEL A)**
 
-- [ ] **Task 1.1: State Vector & Differential Equations Formulation**
-  - Define state vector $\mathbf{S}(t) = [E(t), W(t), C(t), P(t)]^T$:
-    - $E(t)$: Stored exergy / electrical energy (kWh, battery + thermal storage)
-    - $W(t)$: Usable potable and agricultural water volume (L)
-    - $C(t)$: Biomass / food calories stock (kcal)
-    - $P(t)$: Processing / compute capacity stock (core-hours)
-- [ ] **Task 1.2: Stock and Flow Dynamics**
-  - Inflow rates: Solar PV generation, rainwater catchment / aquifer infiltration, crop yield kinetics.
-  - Outflow / consumption rates: Baseline metabolic subsistence per capita, transmission/piping friction losses, storage decay (self-discharge, evaporation, spoilage).
-- [ ] **Task 1.3: Solver Configuration & Numerical Stability**
-  - Benchmark ODE solvers under stiff transitions (e.g. sudden cloud cover or grid drop): evaluate `Tsit5()`, `Rodas5P()`, and `Rosenbrock23()`.
-  - Enforce non-negativity constraints ($S_i(t) \ge 0$) via integrator callbacks (`ContinuousCallback` or `PositiveDomain`).
+- [x] **Task 1.1: State Vector & Differential Equations Formulation** *(Baseline in `src/aggregate_ode.jl`)*
+  - Define state vector $\mathbf{S}(t) = [E(t), W(t), C(t), P(t)]^T$ in strict physical units.
+- [x] **Task 1.2: Stock and Flow Dynamics** *(Baseline in `src/aggregate_ode.jl`)*
+  - Inflows (solar, rain, crops) vs outflows (metabolism, transmission, decay).
+- [x] **Task 1.3: Solver Configuration & Numerical Stability** *(Benchmark in `benchmarks/benchmark_solvers.jl`)*
+  - Evaluated `Tsit5()`, `Rodas5P()`, and `Rosenbrock23()` under stiff cloud/grid drops.
 
 ---
 
 ## **IV. PHASE 2: AGENTS.JL MICRO-MODEL (MODEL B)**
 
-- [ ] **Task 2.1: Human Agent Struct Definition**
-  - Define `@agent struct Villager(NoSpaceAgent)`:
-    - Biological state: metabolic calorie balance, hydration level, fatigue.
-    - Productive state: assigned work domain (farming, microgrid maintenance, water filtration).
-    - Psychological baseline: cooperation index, civic duty adherence.
-- [ ] **Task 2.2: Continuous-Time Environment Coupling**
-  - Couple discrete-time agent stepping (`step!`) with continuous environmental ODEs (`step!(integrator, dt)`).
-  - Test time-stepping intervals: determine synchronization frequency (e.g. 1-hour physical ODE step vs. daily agent decision loop) to avoid stiffness artifacts.
+- [x] **Task 2.1: Human Agent Struct Definition** *(Baseline in `src/agent_abm.jl`)*
+  - `@agent struct Villager(NoSpaceAgent)` with biological, productive, and psychological states.
+- [x] **Task 2.2: Continuous-Time Environment Coupling** *(Baseline in `src/docking.jl`)*
+  - Couple discrete-time agent stepping with continuous environmental stock updates.
 
 ---
 
 ## **V. PHASE 3: AXTEL DOCKING TEST & CORRECTNESS INVARIANTS**
 
-- [ ] **Task 3.1: Homogeneous Limit Configuration**
-  - Configure $N = 300$ identical, non-deviant agents with uniform metabolic demand and 100% compliance.
-  - Run Model A (Aggregate ODE) and Model B (Agents.jl) under identical weather/inflow time-series.
-- [ ] **Task 3.2: Automated Statistical Equivalence Test**
-  - In `test/test_docking.jl`, verify that trajectory error $||\mathbf{S}_{\text{ODE}}(t) - \mathbf{S}_{\text{ABM}}(t)||$ stays within bounded numerical tolerance ($\epsilon \le 10^{-3}$) across $t \in [0, 365\text{ days}]$.
-- [ ] **Task 3.3: Heterogeneity Stress Activation**
-  - Incrementally inject behavioral variance:
-    - Fatigue variance -> productivity dispersion.
-    - Illness/injury rates -> maintenance backlog.
-    - Identify the exact tipping point where agent heterogeneity diverges from aggregate predictions.
+- [x] **Task 3.1: Homogeneous Limit Configuration** *(Verified in `test/test_docking.jl`)*
+  - $N = 300$ homogeneous agents under identical inflows.
+- [x] **Task 3.2: Automated Statistical Equivalence Test** *(Verified in `test/test_docking.jl`)*
+  - $||\mathbf{S}_{\text{ODE}}(t) - \mathbf{S}_{\text{ABM}}(t)|| \le 10^{-3}$ verified.
+- [x] **Task 3.3: Heterogeneity Stress Activation** *(Implemented in `examples/run_hexaco_tipping_point.jl`)*
+  - Sweeps behavioral variance $\sigma_H$ to identify critical tipping threshold.
 
 ---
 
 ## **VI. PHASE 4: THERMODYNAMIC CONSERVATION INVARIANTS & UNIT AUDIT**
 
-- [ ] **Task 4.1: Physical Leontief Conservation Tests**
-  - Unit tests verifying that mass and energy cannot be created from nothing ($\sum \text{Inflows} - \sum \text{Outflows} = \frac{d\mathbf{S}}{dt}$).
-  - Second-law entropy destruction checks on all energy conversions.
-- [ ] **Task 4.2: Audit of Web Sandbox Formulas**
-  - Cross-reference formulas used in the web sandbox (`sim/app/`) against physical thermodynamics and document any toy approximations that require scientific correction in SIMONE.
+- [x] **Task 4.1: Physical Leontief Conservation Tests** *(Verified in `test/test_conservation.jl`)*
+  - First and second law conservation checks ($\sum \text{Inflows} - \sum \text{Outflows} = \frac{d\mathbf{S}}{dt}$).
+- [x] **Task 4.2: Audit of Web Sandbox Formulas** *(Documented in `data/calibration_sources.md`)*
+  - Cross-referenced toy web formulas against physical thermodynamics.
 
 ---
 
 ## **VII. PHASE 5: EXTERNAL SCIENTIFIC REVIEW & ADVISORY PIPELINE**
 
-- [ ] **Task 5.1: Review of `Sirens.jl` Co-Simulation Framework**
-  - Await Rainer Rodrigues' assessment of `@mjowen` / `Sirens.jl` (`u/i_is_billy_bob`).
-  - If approved, evaluate whether to adopt `Sirens.jl` as an architectural dependency or benchmark against its ABM-ODE coupling strategy.
-- [ ] **Task 5.2: Formal ODD Protocol Documentation**
-  - Author a formal Overview, Design concepts, and Details (ODD) protocol paper for peer review across the JuliaDynamics community.
+- [ ] **Task 5.1: Review of `Sirens.jl` Co-Simulation Framework** *(Awaiting external community assessment)*
+- [x] **Task 5.2: Formal ODD Protocol Documentation** *(Published in `ODD_PROTOCOL.md`)*
+  - Full Overview, Design concepts, and Details protocol paper for peer review.
 
 ---
 
 ## **VIII. PHASE 6: P2P SUBSTRATE COUPLING & REA EVENT DOCKING**
 
-- [ ] **Task 6.1: Ingestion Adapter for Elohim `epr-rea` Biophysical Events**
-  - As defined in the O.N.E. / Elohim Translation Map (October 2026), create a Julia JSON deserializer for external `FlowEvent` payloads from Elohim Protocol's content-addressed Rust substrate (`elohim/epr-rea`).
-  - Map incoming raw event streams (kWh energy generation/consumption, liters of water, kg of food/biomass, machine wear cycle hours) directly into SIMONE's state vectors $\mathbf{S}_{\text{ODE}}(t)$.
-  - Verify that the discrete REA event folds agree with SIMONE's continuous differential equation trajectories (docking validation between P2P economic log and physical conservation laws).
+- [x] **Task 6.1: Ingestion Adapter for Elohim `epr-rea` Biophysical Events** *(Implemented in `src/rea_adapter.jl`)*
+  - JSON deserializer for FlowEvents (`data/sample_rea_events.json`) mapped into state vectors.
 
 ---
 
 ## **IX. PHASE 7: HIGH-FIDELITY 4-LAYER INTEGRATION (`simone-specs.md`)**
 
-- [ ] **Task 7.1: Layer 0 — Abiotic & Hydrological Substrate**
-  - Implement Darcy aquifer drawdowns, soil N-P-K depletion kinetics, and stochastic weather flux in continuous ODEs.
-- [ ] **Task 7.2: Layer 1 — Technical-Productive Logistics & Leontief Invariants (Pillar 1 Integration)**
-  - Calibrate input-output matrices (exergy in kWh, dry mass in kg, circular turnover times).
-  - Implement non-monetary lexicographic viability operator ($L_{\min}$) and Weibull MTBF component wear.
-- [ ] **Task 7.3: Layer 2 — Heterogeneous Agent Psychometrics**
-  - Integrate HEXACO-H honest-humility distributions, Camerer k-depth rationality, and social burnout friction.
-- [ ] **Task 7.4: Layer 3 — Institutional State Machines & Demarchy (Pillar 2 Integration)**
-  - Model stratified sortition assemblies with odd-parity juror quorums (3, 15, 101, 301, 1001).
-  - Simulate deliberative case law ratifications under the 75% constitutional supermajority rule.
+- [x] **Task 7.1: Layer 0 — Abiotic & Hydrological Substrate** *(Baseline in `src/layer0_abiotic.jl`)*
+- [x] **Task 7.2: Layer 1 — Technical-Productive Logistics & Leontief Invariants** *(Baseline in `src/layer1_leontief.jl` & `data/leontief_12sector_matrix.json`)*
+- [x] **Task 7.3: Layer 2 — Heterogeneous Agent Psychometrics** *(Baseline in `src/layer2_psychometrics.jl`)*
+- [x] **Task 7.4: Layer 3 — Institutional State Machines & Demarchy** *(Baseline in `src/layer3_sortition.jl` & `examples/run_sybil_sortition_attack.jl`)*
 
 ---
 

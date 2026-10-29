@@ -19,6 +19,8 @@ While [`bible/ONE NETWORKED EARTH (O.N.E.).md`](../bible/ONE%20NETWORKED%20EARTH
 roadmap/
 ├── README.md                                        # Master directory index & stage navigation
 ├── roadmap.md                                       # Macro civilizational transition roadmap (R-ASIS verified)
+├── SEED_NODE_SIZING_MATRIX.md                       # Biophysical scaling & CapEx matrix across 5 biomes (N=15..300)
+├── calculate_seed_node_metabolism.py                # Parametric CLI calculator for PV, LFP, water, land & sortition
 └── blueprints/                                      # Actionable field manuals for physical Seed Nodes
     ├── SEED_NODE_CANDIDATE_REGISTRY.md              # The 5 Orthogonal Climatic Testbeds (NODE-01 to NODE-05)
     ├── SEED_NODE_QUICKSTART_HANDBOOK.md             # 10-step founder startup checklist & anti-fragile rules

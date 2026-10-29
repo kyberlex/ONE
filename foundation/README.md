@@ -31,6 +31,10 @@ This directory holds the corporate, fiduciary, and legal blueprints required to 
   - Standard statutory ground lease / *Nutzniessung* / *Baurecht* instrument enforcing the 4th Class-0 Invariant (*"Use It or Lose It"*), 180-day abandonment reversion, and 365-day Sabbatical Lock protection.
 - [`SORTITION_PROTOCOL_SPEC.md`](SORTITION_PROTOCOL_SPEC.md) — **Demarchic Sortition & 75% Supermajority Protocol Specification**
   - 5-stage deliberative state machine, RFC 9381 VRF cryptographic lottery, strict odd-parity quorums (3, 15, 101, 301, 1,001), and juror cognitive unburdening rules coupled to [`simone/src/layer3_sortition.jl`](../simone/src/layer3_sortition.jl).
+- [`CANTONAL_TAX_RULING_REQUEST_DE_EN.md`](CANTONAL_TAX_RULING_REQUEST_DE_EN.md) — **Swiss Cantonal Advance Tax-Exemption Ruling Request (*Steuerbefreiungsgesuch*)**
+  - Standalone bilingual (German authoritative / English canonical) petition to Cantonal Tax Administrations under DBG Art. 56 lit. g / StHG Art. 23 Abs. 1 lit. f for unconditional tax-exempt status.
+- [`CROSS_BORDER_SEED_NODE_CHARTER.md`](CROSS_BORDER_SEED_NODE_CHARTER.md) — **Cross-Border Seed Node Affiliation Charter**
+  - Standard statutory affiliation covenant connecting pioneer community land trusts and cooperatives outside Switzerland (EU, UK, USA, LatAm) to the Swiss *Foundation ONE* perpetual asset lock and usufruct covenants.
 
 ---
 

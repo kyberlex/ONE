@@ -37,6 +37,7 @@ def test_cad_macros_and_exports():
     gusset_mod = load_macro_module("mhu_gusset", os.path.join(cad_dir, "generate_mhu_gusset.FCMacro"))
     docking_mod = load_macro_module("helical_docking", os.path.join(cad_dir, "generate_helical_pile_docking.FCMacro"))
     portal_mod = load_macro_module("portal_frame", os.path.join(cad_dir, "generate_mhu_portal_frame.FCMacro"))
+    wetroom_mod = load_macro_module("wetroom_core", os.path.join(cad_dir, "generate_wetroom_core_iso21542.FCMacro"))
 
     ec5 = gusset_mod.compute_eurocode5_shear_capacity()
     assert ec5["F_v_Rk_node_kN"] >= 50.0, f"EC5 nodal shear too low: {ec5['F_v_Rk_node_kN']} kN < 50 kN"
@@ -51,6 +52,9 @@ def test_cad_macros_and_exports():
         f"Portal frame EC5 bending failure: {portal}"
     )
 
+    wetroom = wetroom_mod.compute_accessibility_audit()
+    assert wetroom["status"] == "PASS", f"Wetroom accessibility audit failure: {wetroom}"
+
     required_cad_files = [
         "mhu_nodal_gusset_18mm.dxf",
         "mhu_nodal_gusset_18mm.stl",
@@ -58,6 +62,9 @@ def test_cad_macros_and_exports():
         "helical_pile_docking_flange_s355.stl",
         "mhu_portal_frame_3bay.dxf",
         "mhu_portal_frame_3bay.stl",
+        "mhu_portal_frame_3bay.ifc",
+        "mhu_wetroom_core_iso21542.dxf",
+        "mhu_wetroom_core_iso21542.stl",
     ]
     for fname in required_cad_files:
         fpath = os.path.join(cad_dir, fname)

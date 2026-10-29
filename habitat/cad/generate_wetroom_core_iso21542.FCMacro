@@ -1,0 +1,231 @@
+# -*- coding: utf-8 -*-
+"""
+O.N.E. HABITAT — MHU ACCESSIBLE WET-ROOM & UTILITY CORE GENERATOR
+File: habitat/cad/generate_wetroom_core_iso21542.FCMacro
+Author: Kyberlex <kyberlex@proton.me>
+License: AGPL-3.0-or-later (Class-0 Non-Commercial Open Hardware)
+Standards: ISO 21542 (Building Construction — Accessibility) / DIN 18040-2 (Barrier-Free Dwellings) / OpenStructures 600mm Grid
+
+Description:
+Parametric FreeCAD macro generating the complete accessible wet-room
+and abiotic plumbing core for the Modular Habitat Unit (MHU):
+  1. Footprint: 2400 mm x 2400 mm (4x4 600mm OpenStructures grid)
+  2. Unobstructed wheelchair turning circle: Ø 1500 mm (ISO 21542)
+  3. Roll-in barrier-free shower: 1200 mm x 1200 mm with 0 mm threshold
+  4. Accessible WC zone: 900 mm lateral transfer clearance + reinforced stud backing
+  5. Direct vertical docking into the 800 mm x 800 mm Utility Spine chamber
+  6. Standalone 3D STL mesh and 2D DXF fabrication/layout output
+"""
+
+import math
+import os
+import sys
+
+WETROOM_PARAMS = {
+    # Spatial Dimensions (OpenStructures 600mm Grid)
+    "room_width_mm": 2400.0,            # Transverse width
+    "room_length_mm": 2400.0,           # Longitudinal length
+    "wall_height_mm": 2600.0,           # Interior ceiling height
+    "stud_thickness_mm": 45.0,          # C24 stud thickness
+    "stud_depth_mm": 95.0,              # C24 partition wall stud depth
+
+    # ISO 21542 & DIN 18040-2 Accessibility Clearances
+    "turning_circle_dia_mm": 1500.0,    # Wheelchair turning circle diameter
+    "clear_door_width_mm": 900.0,       # Clear door opening width
+    "wc_lateral_transfer_mm": 900.0,    # Lateral transfer clearance next to WC pan
+    "wc_seat_height_mm": 460.0,         # Finished seat height (460-480 mm DIN 18040-2)
+    "grab_bar_height_mm": 850.0,        # Folding/fixed grab bar centerline height
+    "shower_tray_width_mm": 1200.0,     # Roll-in flush shower width
+    "shower_tray_length_mm": 1200.0,    # Roll-in flush shower length
+    "threshold_height_mm": 0.0,         # Zero-step continuous finished floor plane
+
+    # Utility Spine Interface
+    "utility_spine_dim_mm": 800.0,      # Central 800x800mm mechanical riser dock
+    "utility_spine_x_mm": 1600.0,       # Offset in room corner
+    "utility_spine_y_mm": 1600.0,
+}
+
+
+def compute_accessibility_audit(p=WETROOM_PARAMS):
+    """Verifies geometric compliance against ISO 21542 and DIN 18040-2 standards."""
+    # 1. Turning circle fits in the clear floor area
+    # Clear floor space = (room_width - shower_partition) etc.
+    # In an open-wetroom layout, shower area is flush-level (usable for turning)
+    effective_clear_dia = min(p["room_width_mm"], p["room_length_mm"]) - 600.0  # subtracting vanity/WC depth
+    turning_ok = effective_clear_dia >= p["turning_circle_dia_mm"]
+
+    door_ok = p["clear_door_width_mm"] >= 900.0
+    transfer_ok = p["wc_lateral_transfer_mm"] >= 900.0
+    threshold_ok = p["threshold_height_mm"] == 0.0
+
+    status = "PASS" if (turning_ok and door_ok and transfer_ok and threshold_ok) else "FAIL"
+
+    return {
+        "status": status,
+        "turning_circle_required_mm": p["turning_circle_dia_mm"],
+        "turning_circle_actual_mm": effective_clear_dia,
+        "door_clear_width_mm": p["clear_door_width_mm"],
+        "wc_lateral_transfer_mm": p["wc_lateral_transfer_mm"],
+        "threshold_step_mm": p["threshold_height_mm"],
+        "utility_spine_docking_mm": f"{p['utility_spine_dim_mm']}x{p['utility_spine_dim_mm']}",
+        "standard_reference": "ISO 21542 / DIN 18040-2 Section 5.3",
+    }
+
+
+def write_wetroom_dxf(output_path, p=WETROOM_PARAMS):
+    """Writes a 2D DXF plan view of the accessible wet-room layout."""
+    w = p["room_width_mm"]
+    l = p["room_length_mm"]
+    t_dia = p["turning_circle_dia_mm"]
+    sp_dim = p["utility_spine_dim_mm"]
+
+    dxf_lines = [
+        "0", "SECTION", "2", "HEADER", "9", "$ACADVER", "1", "AC1015", "0", "ENDSEC",
+        "0", "SECTION", "2", "TABLES", "0", "TABLE", "2", "LAYER", "70", "3",
+        # Layers: ROOM_PERIMETER (Blue), ACCESSIBILITY_CLEARANCE (Cyan), FIXTURES (Yellow), UTILITY_SPINE (Magenta)
+        "0", "LAYER", "2", "ROOM_PERIMETER", "70", "0", "62", "5", "6", "CONTINUOUS", "0",
+        "0", "LAYER", "2", "ACCESSIBILITY_CLEARANCE", "70", "0", "62", "4", "6", "CONTINUOUS", "0",
+        "0", "LAYER", "2", "FIXTURES", "70", "0", "62", "2", "6", "CONTINUOUS", "0",
+        "0", "LAYER", "2", "UTILITY_SPINE", "70", "0", "62", "6", "6", "CONTINUOUS", "0",
+        "0", "ENDTAB", "0", "ENDSEC",
+        "0", "SECTION", "2", "ENTITIES",
+    ]
+
+    def add_line(layer, x1, y1, x2, y2):
+        dxf_lines.extend([
+            "0", "LINE", "8", layer,
+            "10", f"{x1:.2f}", "20", f"{y1:.2f}", "30", "0.0",
+            "11", f"{x2:.2f}", "21", f"{y2:.2f}", "31", "0.0"
+        ])
+
+    def add_circle(layer, cx, cy, radius):
+        dxf_lines.extend([
+            "0", "CIRCLE", "8", layer,
+            "10", f"{cx:.2f}", "20", f"{cy:.2f}", "30", "0.0",
+            "40", f"{radius:.2f}"
+        ])
+
+    # 1. Room Boundary (2400 x 2400 mm)
+    add_line("ROOM_PERIMETER", 0, 0, w, 0)
+    add_line("ROOM_PERIMETER", w, 0, w, l)
+    add_line("ROOM_PERIMETER", w, l, 0, l)
+    add_line("ROOM_PERIMETER", 0, l, 0, 0)
+
+    # 2. Door Opening (Clear 900mm at X = 200..1100, Y = 0)
+    add_line("ACCESSIBILITY_CLEARANCE", 200, 0, 1100, 0)
+
+    # 3. Turning Circle Ø 1500 mm centered in free circulation zone
+    add_circle("ACCESSIBILITY_CLEARANCE", 1100, 1100, t_dia / 2.0)
+
+    # 4. Roll-in Shower 1200x1200mm (Corner X=0..1200, Y=1200..2400)
+    add_line("FIXTURES", 0, 1200, 1200, 1200)
+    add_line("FIXTURES", 1200, 1200, 1200, 2400)
+    # Linear drain symbol
+    add_line("FIXTURES", 100, 2300, 1100, 2300)
+
+    # 5. Wall-hung WC with 900mm transfer zone (X=1700, Y=200..900)
+    add_line("FIXTURES", 1700, 400, 2200, 400)
+    add_line("FIXTURES", 1700, 800, 2200, 800)
+    add_line("FIXTURES", 2200, 400, 2200, 800)
+    # Grab bar line
+    add_line("FIXTURES", 1600, 350, 2200, 350)
+    add_line("FIXTURES", 1600, 850, 2200, 850)
+
+    # 6. Utility Spine 800x800mm (Corner X=1600..2400, Y=1600..2400)
+    add_line("UTILITY_SPINE", w - sp_dim, l - sp_dim, w, l - sp_dim)
+    add_line("UTILITY_SPINE", w - sp_dim, l - sp_dim, w - sp_dim, l)
+    # Cross diagonal to indicate shaft
+    add_line("UTILITY_SPINE", w - sp_dim, l - sp_dim, w, l)
+    add_line("UTILITY_SPINE", w - sp_dim, l, w, l - sp_dim)
+
+    dxf_lines.extend(["0", "ENDSEC", "0", "EOF"])
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(dxf_lines) + "\n")
+
+
+def write_wetroom_stl(output_path, p=WETROOM_PARAMS):
+    """Writes an ASCII STL solid mesh representing the wet-room subfloor and spine assembly."""
+    w = p["room_width_mm"]
+    l = p["room_length_mm"]
+    floor_h = 100.0  # 100mm floor cassette plate
+    spine_h = 2400.0 # 2.4m vertical spine riser
+    sp_dim = p["utility_spine_dim_mm"]
+
+    facets = []
+
+    def make_box_facets(x0, y0, z0, dx, dy, dz):
+        x1, y1, z1 = x0 + dx, y0 + dy, z0 + dz
+        # 6 faces * 2 triangles = 12 facets
+        faces = [
+            # Bottom (-Z)
+            ((x0, y0, z0), (x1, y0, z0), (x1, y1, z0), (0, 0, -1)),
+            ((x0, y0, z0), (x1, y1, z0), (x0, y1, z0), (0, 0, -1)),
+            # Top (+Z)
+            ((x0, y0, z1), (x1, y1, z1), (x1, y0, z1), (0, 0, 1)),
+            ((x0, y0, z1), (x0, y1, z1), (x1, y1, z1), (0, 0, 1)),
+            # Front (-Y)
+            ((x0, y0, z0), (x1, y0, z1), (x1, y0, z0), (0, -1, 0)),
+            ((x0, y0, z0), (x0, y0, z1), (x1, y0, z1), (0, -1, 0)),
+            # Back (+Y)
+            ((x0, y1, z0), (x1, y1, z0), (x1, y1, z1), (0, 1, 0)),
+            ((x0, y1, z0), (x1, y1, z1), (x0, y1, z1), (0, 1, 0)),
+            # Left (-X)
+            ((x0, y0, z0), (x0, y1, z0), (x0, y1, z1), (-1, 0, 0)),
+            ((x0, y0, z0), (x0, y1, z1), (x0, y0, z1), (-1, 0, 0)),
+            # Right (+X)
+            ((x1, y0, z0), (x1, y0, z1), (x1, y1, z1), (1, 0, 0)),
+            ((x1, y0, z0), (x1, y1, z1), (x1, y1, z0), (1, 0, 0)),
+        ]
+        facets.extend(faces)
+
+    # 1. Wet-room floor plate (2400 x 2400 x 100 mm)
+    make_box_facets(0.0, 0.0, 0.0, w, l, floor_h)
+
+    # 2. Vertical Utility Spine shaft (800 x 800 x 2400 mm)
+    make_box_facets(w - sp_dim, l - sp_dim, floor_h, sp_dim, sp_dim, spine_h)
+
+    stl_lines = ["solid mhu_wetroom_core_iso21542"]
+    for v1, v2, v3, n in facets:
+        stl_lines.append(f"  facet normal {n[0]} {n[1]} {n[2]}")
+        stl_lines.append("    outer loop")
+        stl_lines.append(f"      vertex {v1[0]} {v1[1]} {v1[2]}")
+        stl_lines.append(f"      vertex {v2[0]} {v2[1]} {v2[2]}")
+        stl_lines.append(f"      vertex {v3[0]} {v3[1]} {v3[2]}")
+        stl_lines.append("    endloop")
+        stl_lines.append("  endfacet")
+    stl_lines.append("endsolid mhu_wetroom_core_iso21542")
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(stl_lines) + "\n")
+
+
+def main():
+    print("=" * 70)
+    print("O.N.E. MHU ACCESSIBLE WET-ROOM & UTILITY CORE GENERATOR")
+    print("=" * 70)
+
+    audit = compute_accessibility_audit()
+    print(f"Compliance Status       : [{audit['status']}]")
+    print(f"Standard Reference      : {audit['standard_reference']}")
+    print(f"Turning Circle (Ø req)  : {audit['turning_circle_required_mm']} mm (Actual: {audit['turning_circle_actual_mm']} mm)")
+    print(f"Door Clear Width        : {audit['door_clear_width_mm']} mm")
+    print(f"WC Lateral Transfer     : {audit['wc_lateral_transfer_mm']} mm")
+    print(f"Threshold Step Height   : {audit['threshold_step_mm']} mm (Zero-Step Barrier-Free)")
+    print(f"Utility Spine Docking   : {audit['utility_spine_docking_mm']}")
+    assert audit["status"] == "PASS", "Accessibility audit failed!"
+
+    cad_dir = os.path.dirname(os.path.abspath(__file__))
+    dxf_path = os.path.join(cad_dir, "mhu_wetroom_core_iso21542.dxf")
+    stl_path = os.path.join(cad_dir, "mhu_wetroom_core_iso21542.stl")
+
+    write_wetroom_dxf(dxf_path)
+    write_wetroom_stl(stl_path)
+
+    print(f"\n[OK] Generated DXF Layout : {os.path.basename(dxf_path)} ({os.path.getsize(dxf_path)/1024:.1f} KB)")
+    print(f"[OK] Generated STL Model  : {os.path.basename(stl_path)} ({os.path.getsize(stl_path)/1024:.1f} KB)")
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()

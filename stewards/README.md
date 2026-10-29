@@ -25,6 +25,7 @@ Every file in `stewards/` is designed so that any incoming domain practitioner, 
 | [`CRITIC_BRIEFING_PACK.md`](CRITIC_BRIEFING_PACK.md) | **Senior External Critics (Adversarial Peer Review)** | High-density 30-minute audit guide (*"Read/run this, tell us where it breaks"*) mapping exact equations, Julia files, constitutional clauses, and CAD/YAML specs for adversarial stress-testing. |
 | [`ROSTER_AND_LEDGER.md`](ROSTER_AND_LEDGER.md) | **All Contributors & Public Audit** | Live registry of active Co-Stewards, Phase 1 Contributors, Open Collaborators, and External Critics, tracking progress toward the Swiss Foundation Genesis Lock. |
 | [`OPEN_SOURCE_GRANTS_KIT.md`](OPEN_SOURCE_GRANTS_KIT.md) | **Co-Stewards & Collaborators (Pillars 1–4)** | Ready-to-submit non-commercial R&D grant templates (NLnet NGI Zero Commons Fund, NumFOCUS/Julia Grants, Prototype Fund) to fund Co-Steward engineering with 0% commercial compromises. |
+| [`FIRST_PR_PLAYBOOK.md`](FIRST_PR_PLAYBOOK.md) | **All First-Time Contributors** | Step-by-step 15-minute quickstart guide for cloning, running local test gates, picking a PoW task, and submitting your first Pull Request. |
 
 ---
 

@@ -54,7 +54,6 @@ synoptic.md
 one-logo.png
 *.csv
 !habitat/bom/*.csv
-.github/ISSUE_TEMPLATE/
 .github/workflows/check_constitution.yml
 oasis/legacy_high_capital_assets.md
 
