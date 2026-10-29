@@ -1,0 +1,29 @@
+{
+  "archetype_id": "node02_montane_andes",
+  "seed_node_code": "NODE-02",
+  "name": "Subtropical High-Altitude Montane Basin (Andean Ecuador)",
+  "koppen_class": "Cwb",
+  "reference_region": "Southern Ecuadorian Sierra: Azuay / Loja / Vilcabamba (1800-2200m ASL)",
+  "population_baseline": 300,
+  "layer0_abiotic": {
+    "mean_solar_irradiance_kwh_m2_day": 5.3,
+    "micro_hydro_baseload_kwh_day": 850.0,
+    "mean_precipitation_mm_year": 980.0,
+    "darcy_aquifer_transmissivity_m2_day": 140.0,
+    "winter_heating_degree_days": 950,
+    "diurnal_temperature_delta_c": 22.0
+  },
+  "village_params": {
+    "solar_daily_kwh": 2100.0,
+    "rain_daily_l": 58000.0,
+    "daily_harvest_kcal": 950000.0,
+    "daily_compute_core_hours": 3600.0,
+    "water_evap_loss_rate_day": 0.0025
+  },
+  "carrying_capacity_ecc": {
+    "max_sustainable_population": 500,
+    "minimum_water_reserve_days": 60,
+    "minimum_caloric_reserve_days": 180
+  }
+}
+

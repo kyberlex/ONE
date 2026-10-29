@@ -47,3 +47,84 @@ Before submitting the draft Public Deed (*Öffentliche Stiftungsurkunde*, Part B
    - Execute the Public Deed before a Swiss Notary, attaching the SHA-256 verified Living Constitution as **Statutory Annex I**.
    - File for registration in the Cantonal Commercial Register (*Handelsregister*) and assumption of supervision by the *ESA*.
 
+---
+
+## **4. Template: Phase 0 *Swiss Verein* Founding Assembly Minutes (*Gründungsprotokoll gemäss ZGB Art. 60 ff.*)**
+
+Prior to the CHF 50,000 notarial incorporation of the *Stiftung*, the Founding Co-Stewards (Pillars 0–4) may immediately constitute the zero-capital **Association Open Networked Earth (*Verein O.N.E.*)** under ZGB Art. 60 ff. by executing the following founding resolution:
+
+```text
+================================================================================
+GRÜNDUNGSPROTOKOLL / MINUTES OF THE FOUNDING ASSEMBLY
+VEREIN OPEN NETWORKED EARTH (O.N.E.) — Pursuant to Swiss Civil Code (ZGB Art. 60 ff.)
+================================================================================
+Date / Time : [YYYY-MM-DD], [HH:MM] UTC (Executed via Cryptographic Remote Assembly)
+Statutory Seat: [Zürich / Bern / Zug], Switzerland
+
+1. ATTENDANCE & ODD-PARITY FOUNDING QUORUM
+   The following Founding Co-Stewards assemble to constitute the Verein:
+   - [Seat 1 — Architectural Founder]: Kyberlex (kyberlex@proton.me)
+   - [Seat 2 — Pillar 1 Co-Steward (Biophysical Economics)]: [Name / Handle]
+   - [Seat 3 — Pillar 2 Co-Steward (Governance & Law)]     : [Name / Handle]
+   - [Seat 4 — Pillar 3 Co-Steward (Simone.jl Simulation)] : [Name / Handle]
+   - [Seat 5 — Pillar 4 Co-Steward (Habitat & Microgrid)]  : [Name / Handle]
+   (Total seated members: 5 — Strict Odd-Number Parity verified.)
+
+2. RESOLUTION 1: INCORPORATION & ADOPTION OF ARTICLES (VEREINSSTATUTEN)
+   By unanimous (100% >= 75% supermajority) vote, the Founders hereby establish the
+   non-profit association "Verein Open Networked Earth (O.N.E.)" pursuant to Art. 60 ff.
+   of the Swiss Civil Code (ZGB) and adopt the Articles of Association set forth in
+   `foundation/legal_framework.md`.
+
+3. RESOLUTION 2: CLASS-0 NON-COMMERCIAL PURITY & ASSET LOCK
+   The Verein operates 100% free of commercial monetization, token sales, or equity distribution.
+   All intellectual property is irrevocably licensed under AGPL-3.0-or-later and CC-BY-SA 4.0.
+   All accumulated donations and grants are held in fiduciary escrow for transfer to
+   "Stiftung Open Networked Earth (Foundation ONE)" upon completion of the Genesis Lock.
+
+4. RESOLUTION 3: ELECTION OF THE INITIAL ODD-PARITY COMMITTEE (VORSTAND)
+   The above 5 Founding Co-Stewards are elected to the honorary (pro bono) Committee
+   (Vorstand) with collective signatory power pursuant to the 75% supermajority rule.
+================================================================================
+```
+
+---
+
+## **5. Template: *Vorprüfung* Cover Letter to the Federal Foundation Supervisory Authority (*ESA*)**
+
+```text
+An die Eidgenössische Stiftungsaufsicht (ESA)
+Generalsekretariat EDI
+Inselgasse 1, 3003 Bern, Schweiz
+
+Betrifft: Gesuch um Vorprüfung der Stiftungsurkunde und Statuten
+          «Stiftung Open Networked Earth (Foundation ONE)»
+
+Sehr geehrte Damen und Herren,
+
+wir unterbreiten Ihnen hiermit im Namen der Stiftergruppe den Entwurf der öffentlichen
+Stiftungsurkunde sowie der Stiftungsstatuten der gemeinnützigen «Stiftung Open Networked
+Earth (Foundation ONE)» (Beilage 1: `statutes_foundation_one.md`, Teil B) zur unverbindlichen
+Vorprüfung vor der öffentlichen Beurkundung.
+
+Die Stiftung verfolgt ausschliesslich gemeinnützige Zwecke im Bereich der quelloffenen
+Wissenschaft (biophysikalische Co-Simulation `Simone.jl`), der ökologischen Passivhaus-
+Holzbauarchitektur (`habitat/`) sowie der gemeinnützigen Boden- und Siedlungsverwaltung
+nach dem Prinzip der unentgeltlichen Nutzniessung (ZGB Art. 80 ff.).
+
+Insbesondere bitten wir um Bestätigung der Aufsichtsfähigkeit folgender Bestimmungen:
+  1. Art. 2 & 3 (Zweck und unwiderrufliche Vermögensbindung / Non-Commercial Purity);
+  2. Art. 5 (Ungerade Mitgliederzahl des Stiftungsrats von 3, 5 oder 7 Mitgliedern,
+     75%-Qualifiziertes Mehr sowie ehrenamtliche Mandatsausübung);
+  3. Art. 5 Abs. 6 (Subsidiäre Ersatzwahl durch den Schwesterverein zur Vermeidung
+     eines Organmangels gemäss ZGB Art. 83d);
+  4. Art. 13 Abs. 4 (Hinterlegung des Statutarischen Verfassungsanhangs I).
+
+Für Ihre Prüfung und Ihre Rückmeldung danken wir Ihnen im Voraus bestens.
+
+Mit freundlichen Grüssen,
+Die Gründungskuratorinnen und Gründungskuratoren (Founding Co-Stewards)
+Foundation Open Networked Earth (O.N.E.)
+```
+
+

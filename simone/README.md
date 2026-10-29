@@ -56,15 +56,26 @@ simone/
 ├── README.md                 # Scientific overview, docking discipline, quickstart
 ├── simone-specs.md           # Formal multi-layer systems engineering specification
 ├── TODO.md                   # Engineering taskboard & Single-Village roadmap
+├── data/
+│   ├── leontief_baseline_matrix.json # 4x4 physical Leontief I-O baseline (N = 300)
+│   └── archetypes/                   # 5 Orthogonal Seed Node datasets (NODE-01 to NODE-05)
+├── examples/
+│   ├── run_single_village_docking.jl      # Quickstart ODE vs ABM Axtell docking runner
+│   └── run_orthogonal_seed_nodes_audit.jl # 5-biome abiotic shock & Leontief L_min runner
 ├── src/
 │   ├── Simone.jl             # Main module entrypoint & API exports
 │   ├── aggregate_ode.jl      # Model A: Continuous stock-flow ODE system
 │   ├── agent_abm.jl          # Model B: Discrete-agent model via Agents.jl
-│   └── docking.jl            # Axtell docking benchmark and error metrics
+│   ├── docking.jl            # Axtell docking benchmark and error metrics
+│   ├── layer0_abiotic.jl     # Layer 0: Darcy hydrology & abiotic substrate
+│   ├── layer1_leontief.jl    # Layer 1: Leontief I-O, L_min & Weibull MTBF (Pillar 1)
+│   ├── layer2_psychometrics.jl # Layer 2: HEXACO-H & bounded rationality (Pillar 3)
+│   └── layer3_sortition.jl   # Layer 3: Odd-parity sortition & 75% rule (Pillar 2)
 └── test/
     ├── runtests.jl           # Top-level test runner
     ├── test_conservation.jl  # Leontief physical mass & energy balance invariants
-    └── test_docking.jl       # Statistical equivalence tests (Model A vs Model B)
+    ├── test_docking.jl       # Statistical equivalence tests (Model A vs Model B)
+    └── test_layers.jl        # Unit tests for Layers 0-3 and 5 Seed Node archetypes
 ```
 
 ---

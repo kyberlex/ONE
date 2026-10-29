@@ -2,18 +2,23 @@ using Test
 using Simone
 
 @testset "4-Layer Constitutional & Biophysical Modules (Layers 0-3)" begin
-    # Layer 0: Abiotic Darcy Aquifer Step
+    # Layer 0: Abiotic Darcy Aquifer Step, Soil N-P-K & Drought Shock
     p_abio = AbioticSubstrateParams()
     next_aq = darcy_aquifer_step(1.0e6, 10000.0, 2000.0, p_abio)
     @test next_aq > 1.0e6
+    @test soil_nitrogen_step(180.0, 0.5, p_abio) > 179.9
+    @test abiotic_drought_shock_multiplier(200.0; shock_start=180.0, shock_duration=60.0, severity=0.4) ≈ 0.6
 
-    # Layer 1: Leontief Gross Output & Lexicographic Operator (Pillar 1)
+    # Layer 1: Leontief Gross Output, Hawkins-Simon & Lexicographic Operator (Pillar 1)
     A = [
         0.08  0.002 0.0005 0.25;
         0.15  0.04  0.012  0.05;
         0.0   0.0   0.06   0.0;
         0.01  0.0002 0.0001 0.05
     ]
+    hs = check_hawkins_simon(A)
+    @test hs.viable == true
+    @test hs.spectral_radius < 1.0
     d = [1500.0, 45000.0, 750000.0, 600.0]
     x = solve_leontief_gross_output(A, d)
     @test all(x .>= d)
@@ -45,5 +50,18 @@ using Simone
     res_fail = evaluate_supermajority_vote(75, 101)
     @test res_pass.ratified == true
     @test res_fail.ratified == false
+
+    # Verify all 5 Orthogonal Seed Node archetype JSON datasets
+    arch_dir = joinpath(@__DIR__, "..", "data", "archetypes")
+    for nf in [
+        "node01_oceanic_galicia.json",
+        "node02_montane_andes.json",
+        "node03_tropical_monsoon.json",
+        "node04_equatorial_rift.json",
+        "node05_continental_ozarks.json"
+    ]
+        fpath = joinpath(arch_dir, nf)
+        @test isfile(fpath)
+    end
 end
 

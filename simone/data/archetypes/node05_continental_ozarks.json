@@ -1,0 +1,29 @@
+{
+  "archetype_id": "node05_continental_ozarks",
+  "seed_node_code": "NODE-05",
+  "name": "4-Season Severe Continental Karst Ridge (North American Ozarks)",
+  "koppen_class": "Dfa/Cfa",
+  "reference_region": "Missouri / Arkansas Ozark Plateau Unzoned Ridges (350-650m ASL)",
+  "population_baseline": 300,
+  "layer0_abiotic": {
+    "mean_solar_irradiance_kwh_m2_day": 4.4,
+    "micro_hydro_baseload_kwh_day": 540.0,
+    "mean_precipitation_mm_year": 1120.0,
+    "darcy_aquifer_transmissivity_m2_day": 150.0,
+    "winter_heating_degree_days": 3850,
+    "extreme_winter_design_temp_c": -30.0
+  },
+  "village_params": {
+    "solar_daily_kwh": 1800.0,
+    "rain_daily_l": 64000.0,
+    "daily_harvest_kcal": 910000.0,
+    "daily_compute_core_hours": 3600.0,
+    "water_evap_loss_rate_day": 0.002
+  },
+  "carrying_capacity_ecc": {
+    "max_sustainable_population": 480,
+    "minimum_water_reserve_days": 60,
+    "minimum_caloric_reserve_days": 180
+  }
+}
+

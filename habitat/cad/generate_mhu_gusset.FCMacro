@@ -387,6 +387,82 @@ def build_freecad_mhu_node(p=MHU_NODE_PARAMS):
     return doc
 
 
+def _stl_add_box(facets, x0, x1, y0, y1, z0, z1):
+    """Appends 12 triangles (6 rectangular faces) of an axis-aligned 3D box to facets list."""
+    v = [
+        (x0, y0, z0), (x1, y0, z0), (x1, y1, z0), (x0, y1, z0),
+        (x0, y0, z1), (x1, y0, z1), (x1, y1, z1), (x0, y1, z1),
+    ]
+    faces = [
+        ((0, 0, -1), (0, 2, 1), (0, 3, 2)),
+        ((0, 0, 1),  (4, 5, 6), (4, 6, 7)),
+        ((0, -1, 0), (0, 1, 5), (0, 5, 4)),
+        ((0, 1, 0),  (3, 7, 6), (3, 6, 2)),
+        ((-1, 0, 0), (0, 4, 7), (0, 7, 3)),
+        ((1, 0, 0),  (1, 2, 6), (1, 6, 5)),
+    ]
+    for n, t1, t2 in faces:
+        facets.append((n, v[t1[0]], v[t1[1]], v[t1[2]]))
+        facets.append((n, v[t2[0]], v[t2[1]], v[t2[2]]))
+
+
+def _stl_add_cylinder_y(facets, cx, cz, radius, y0, y1, segments=16):
+    """Appends a Y-axis cylinder (e.g., M12 bolt pin / washerboss) to facets list."""
+    for i in range(segments):
+        a0 = 2.0 * math.pi * i / segments
+        a1 = 2.0 * math.pi * (i + 1) / segments
+        x0, z0 = cx + radius * math.cos(a0), cz + radius * math.sin(a0)
+        x1, z1 = cx + radius * math.cos(a1), cz + radius * math.sin(a1)
+        nx, nz = math.cos(0.5 * (a0 + a1)), math.sin(0.5 * (a0 + a1))
+        facets.append(((nx, 0.0, nz), (x0, y0, z0), (x1, y0, z1), (x1, y1, z1)))
+        facets.append(((nx, 0.0, nz), (x0, y0, z0), (x1, y1, z1), (x0, y1, z0)))
+        facets.append(((0.0, -1.0, 0.0), (cx, y0, cz), (x1, y0, z1), (x0, y0, z0)))
+        facets.append(((0.0, 1.0, 0.0), (cx, y1, cz), (x0, y1, z0), (x1, y1, z1)))
+
+
+def export_mhu_node_stl(stl_path, p=MHU_NODE_PARAMS):
+    """Exports a standalone 3D ASCII STL model of the MHU Hybrid Timber-Gusset Node for browser 3D preview."""
+    facets = []
+    w_stud = p["stud_width"]
+    t_stud = p["stud_thickness"]
+    l_stud = p["stud_length"]
+    l_plate = p["plate_length"]
+    w_gus = p["gusset_width"]
+    h_gus = p["gusset_height"]
+    t_gus = p["gusset_thickness"]
+    tenon_d = p["tenon_depth"]
+
+    # 1. C24 Horizontal Sole Plate (split around central mortise pocket)
+    _stl_add_box(facets, -l_plate / 2.0, -w_stud / 2.0, -t_stud / 2.0, t_stud / 2.0, -w_stud, 0.0)
+    _stl_add_box(facets, w_stud / 2.0, l_plate / 2.0, -t_stud / 2.0, t_stud / 2.0, -w_stud, 0.0)
+    _stl_add_box(facets, -w_stud / 2.0, w_stud / 2.0, -t_stud / 2.0, t_stud / 2.0, -w_stud, -tenon_d)
+
+    # 2. C24 Vertical Stud (45x195mm engaging 45mm tenon pocket)
+    _stl_add_box(facets, -w_stud / 2.0, w_stud / 2.0, -t_stud / 2.0, t_stud / 2.0, -tenon_d, l_stud - tenon_d)
+
+    # 3. Front & Back 18mm CNC Birch Plywood Nodal Gussets
+    _stl_add_box(facets, -w_gus / 2.0, w_gus / 2.0, t_stud / 2.0, t_stud / 2.0 + t_gus, -120.0, -120.0 + h_gus)
+    _stl_add_box(facets, -w_gus / 2.0, w_gus / 2.0, -t_stud / 2.0 - t_gus, -t_stud / 2.0, -120.0, -120.0 + h_gus)
+
+    # 4. 8x M12 Grade 8.8 Through-Bolts & Washers
+    y_span = t_stud / 2.0 + t_gus + 6.0
+    for (bx, bz) in BOLT_COORDS_XZ:
+        _stl_add_cylinder_y(facets, bx, bz, p["m12_bolt_dia"] / 2.0, -y_span, y_span, segments=12)
+
+    with open(stl_path, "w", encoding="utf-8") as f:
+        f.write("solid ONE_MHU_Nodal_Gusset_18mm\n")
+        for (nx, ny, nz), v0, v1, v2 in facets:
+            f.write(f"  facet normal {nx:.4f} {ny:.4f} {nz:.4f}\n")
+            f.write("    outer loop\n")
+            f.write(f"      vertex {v0[0]:.3f} {v0[1]:.3f} {v0[2]:.3f}\n")
+            f.write(f"      vertex {v1[0]:.3f} {v1[1]:.3f} {v1[2]:.3f}\n")
+            f.write(f"      vertex {v2[0]:.3f} {v2[1]:.3f} {v2[2]:.3f}\n")
+            f.write("    endloop\n")
+            f.write("  endfacet\n")
+        f.write("endsolid ONE_MHU_Nodal_Gusset_18mm\n")
+    return stl_path
+
+
 if __name__ == "__main__":
     ec5 = compute_eurocode5_shear_capacity()
     print("=== O.N.E. MHU EUROCODE 5 (EN 1995-1-1) NODAL GUSSET AUDIT ===")
@@ -398,6 +474,7 @@ if __name__ == "__main__":
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     dxf_out = os.path.join(script_dir, "mhu_nodal_gusset_18mm.dxf")
+    stl_out = os.path.join(script_dir, "mhu_nodal_gusset_18mm.stl")
     png_out = os.path.abspath(os.path.join(script_dir, "..", "renders", "mhu_nodal_gusset_freecad_render.png"))
 
     try:
@@ -405,6 +482,12 @@ if __name__ == "__main__":
         print(f"[OK] Exported CNC DXF cutting sheet: {os.path.basename(dxf_out)}")
     except Exception as e:
         print(f"[WARN] DXF export skipped: {e}")
+
+    try:
+        export_mhu_node_stl(stl_out)
+        print(f"[OK] Exported 3D STL mesh: {os.path.basename(stl_out)}")
+    except Exception as e:
+        print(f"[WARN] STL export skipped: {e}")
 
     try:
         render_freecad_quad_sheet(png_out)

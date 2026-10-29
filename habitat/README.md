@@ -23,24 +23,32 @@ Human settlement within O.N.E. operates across two interconnected fractal scales
 ```
 habitat/
 ├── README.md                                 # Directory index & contributor guide
+├── CONTRIBUTING_4A_4B.md                     # Onboarding, Open-BIM standards & PoW tasks for Co-Stewards 4A & 4B
 ├── MHU_MODULAR_HABITAT_UNIT.md               # Core MHU structural & Eurocode 5 specification
 ├── PASSIVHAUS_ENERGY_SYSTEMS.md              # Hygrothermal U-value audit & 380V/48V DC microgrid spec
 ├── SENSOR_TOPOLOGY_HOME_ASSISTANT.md         # Zero-cloud abiotic telemetry & 800x800mm Utility Spine pinout
 ├── URBAN_SCALING_TRANSITION.md               # Metropolitan transition (Superblocks, Energiesprong, Open Building)
-├── cad/                                      # [Track 4A] Parametric FreeCAD macros & 2D CNC DXF files
+├── cad/                                      # [Track 4A] Parametric FreeCAD macros, 3D STL meshes & 2D CNC DXF files
 │   ├── generate_mhu_gusset.FCMacro           # Parametric C24 + 18mm birch nodal gusset generator & EC5 solver
-│   └── mhu_nodal_gusset_18mm.dxf             # R2010 2D CNC router toolpath sheet (with Ø 6.4mm dog-bone reliefs)
+│   ├── generate_helical_pile_docking.FCMacro # S355 Helical Pile Flange & 800x800mm Utility Spine Docking CAD
+│   ├── mhu_nodal_gusset_18mm.dxf             # R2010 2D CNC router toolpath sheet (with Ø 6.4mm dog-bone reliefs)
+│   ├── mhu_nodal_gusset_18mm.stl             # 3D STL assembly of C24 timber + 18mm birch nodal gusset (browser 3D viewer)
+│   ├── helical_pile_docking_flange_s355.dxf  # R2010 2D cutting/drilling template for S355 flange & 800x800mm Utility Spine
+│   └── helical_pile_docking_flange_s355.stl  # 3D STL model of S355 helical pile flange, U-saddle & termite shield
 ├── automation/                               # [Track 4B] Local Home Assistant & ESPHome firmware configs
 │   ├── homeassistant/
-│   │   └── mhu_abiotic_core.yaml             # 48V DC load-shedding (<25% SoC) & Passivhaus HRV CO2 automation
+│   │   ├── mhu_abiotic_core.yaml             # 48V DC load-shedding (<25% SoC) & Passivhaus HRV CO2 automation
+│   │   └── mhu_water_loop.yaml               # Potable cistern drought lock & greywater reed-bed frost diversion
 │   └── esphome/
-│       └── utility_spine_esp32.yaml          # Olimex ESP32-POE-ISO firmware (SCD41 CO2, INA226 48V shunt, ultrasonic)
+│       ├── utility_spine_esp32.yaml          # Olimex ESP32-POE-ISO firmware (SCD41 CO2, INA226 48V shunt, ultrasonic)
+│       └── bms_modbus_rtu_stub.yaml          # RS485 Modbus RTU 16S LFP BMS & <2°C cold-charge lockout starter stub
 ├── bom/                                      # Machine-readable Bill of Materials & Leontief cost tables
 │   └── mhu_bom_6_levels.csv                  # Complete 6-level BOM (MHU Open Chassis vs. WikiHouse Skylark)
-└── renders/                                  # Architectural & CAD visual references
-    ├── mhu_nodal_gusset_freecad_render.png   # 4-Viewport FreeCAD technical sheet & Eurocode 5 audit
-    ├── mhu_isometric_cutaway.jpg             # MHU Passivhaus cutaway visualization
-    └── urban_superblock_transition.jpg       # Bioregional urban retrofit visualization
+├── renders/                                  # Architectural & CAD visual references
+│   ├── mhu_nodal_gusset_freecad_render.png   # 4-Viewport FreeCAD technical sheet & Eurocode 5 audit
+│   ├── mhu_exterior_concept.jpg              # MHU Passivhaus exterior visualization
+│   └── mhu_interior_axonometric.jpg          # MHU interior axonometric layout
+└── test_habitat_specs.py                     # Zero-dependency automated CAD, BOM & Privacy verification suite
 ```
 
 ---
@@ -54,8 +62,11 @@ habitat/
 | [`SENSOR_TOPOLOGY_HOME_ASSISTANT.md`](SENSOR_TOPOLOGY_HOME_ASSISTANT.md) | 4B | Home Assistant, ESPHome, OpenPLC, RS485 Modbus | Abiotic-only sensor register (zero cameras/microphones), $800 \times 800\text{ mm}$ ground docking chamber pinout, and hardware fail-safe defaults. |
 | [`URBAN_SCALING_TRANSITION.md`](URBAN_SCALING_TRANSITION.md) | Urban | Superilles, Energiesprong, Habraken Open Building | Five-pillar methodology for retrofitting $10^4 - 10^6+$ pop cities into federated bioregional commons. |
 | [`cad/generate_mhu_gusset.FCMacro`](cad/generate_mhu_gusset.FCMacro) | 4A | FreeCAD 0.21+ (`Part`), Python 3, `ezdxf` | Parametric generator for the double-shear M12 bolted nodal joint, outputting 3D solids, `.dxf` CNC sheets, and Johansen shear capacity ($F_{v,Rk} = 54.55\text{ kN}$). |
+| [`cad/generate_helical_pile_docking.FCMacro`](cad/generate_helical_pile_docking.FCMacro) | 4A | FreeCAD 0.21+ (`Part`), Eurocode 3, ISO 1461 | Parametric S355 helical pile cap flange, termite barrier collar, and $800 \times 800\text{ mm}$ Utility Spine ground docking frame with geotechnical bearing audit. |
 | [`automation/homeassistant/mhu_abiotic_core.yaml`](automation/homeassistant/mhu_abiotic_core.yaml) | 4B | Home Assistant Core | Local automation package governing 3-tier 48V DC battery load-shedding and demand-controlled enthalpic HRV ventilation. |
+| [`automation/homeassistant/mhu_water_loop.yaml`](automation/homeassistant/mhu_water_loop.yaml) | 4B | Home Assistant Core | Closed-loop potable cistern drought rationing ($<20\%$) and subsurface greywater reed-bed pulse dosing with $-30^\circ\text{C}$ polar vortex frost diversion. |
 | [`automation/esphome/utility_spine_esp32.yaml`](automation/esphome/utility_spine_esp32.yaml) | 4B | ESPHome (`esp-idf`), Olimex ESP32-POE-ISO | Wired Ethernet microcontroller configuration reading $\text{I}^2\text{C}$ SCD41 $\text{CO}_2$, INA226 48V shunt, and ultrasonic cistern level with local hardware cutout. |
+| [`CONTRIBUTING_4A_4B.md`](CONTRIBUTING_4A_4B.md) | 4A + 4B | FreeCAD, BlenderBIM IFC4, ESPHome, KiCad | Technical onboarding guide, CNC layer standards, and modular Proof-of-Work tasks for Track 4A and Track 4B Co-Stewards. |
 | [`bom/mhu_bom_6_levels.csv`](bom/mhu_bom_6_levels.csv) | 4A + 4B | CSV / Open-BIM Cost Schedule | Machine-readable 6-level Bill of Materials (€72,690 Tier A self-build total for $54\text{ m}^2$ module). |
 
 ---

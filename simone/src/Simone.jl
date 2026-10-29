@@ -27,11 +27,11 @@ export initialize_village_abm, step_village_abm!
 export run_docking_benchmark, DockingResult
 
 # 4-Layer Architecture Exports
-export AbioticSubstrateParams, darcy_aquifer_step
-export solve_leontief_gross_output, lexicographic_allocate, weibull_hazard_rate
-export PsychometricProfile, civic_contribution_propensity
-export VALID_SORTITION_QUORUMS, CONSTITUTIONAL_SUPERMAJORITY
-export verify_odd_parity_quorum, evaluate_supermajority_vote
+export AbioticSubstrateParams, darcy_aquifer_step, soil_nitrogen_step, abiotic_drought_shock_multiplier
+export check_hawkins_simon, solve_leontief_gross_output, lexicographic_allocate, weibull_hazard_rate, weibull_survival_prob
+export PsychometricProfile, civic_contribution_propensity, update_agent_fatigue
+export VALID_SORTITION_QUORUMS, CONSTITUTIONAL_SUPERMAJORITY, SortitionProposalState
+export verify_odd_parity_quorum, evaluate_supermajority_vote, draw_stratified_odd_jury
 
 include("aggregate_ode.jl")
 include("agent_abm.jl")

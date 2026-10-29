@@ -19,6 +19,12 @@ This directory holds the corporate, fiduciary, and legal blueprints required to 
   - Land acquisition protocols for seed micro-nodes (navigating Swiss BGBB rural land rules, *Baurecht*, and cross-border subsidiaries in Italy/France/USA).
   - Author privacy and collective imprint attribution model.
   - Ready-to-use Swiss *Verein Statuten* (Articles of Association) template.
+- [`PRE_CLEARANCE_CHECKLIST_ESA.md`](PRE_CLEARANCE_CHECKLIST_ESA.md) — **Swiss Federal Foundation Supervisory Authority (*ESA*) Pre-Clearance Checklist**
+  - Step-by-step procedural checklist for filing the draft deed with the *Eidgenössische Stiftungsaufsicht (ESA)* and Cantonal Tax Administration (*Steuerverwaltung*).
+- [`USUFRUCT_COVENANT_TEMPLATE.md`](USUFRUCT_COVENANT_TEMPLATE.md) — **Dynamic Usufruct & Sabbatical Lock Ground-Use Covenant**
+  - Standard statutory ground lease / *Nutzniessung* / *Baurecht* instrument enforcing the 4th Class-0 Invariant (*"Use It or Lose It"*), 180-day abandonment reversion, and 365-day Sabbatical Lock protection.
+- [`SORTITION_PROTOCOL_SPEC.md`](SORTITION_PROTOCOL_SPEC.md) — **Demarchic Sortition & 75% Supermajority Protocol Specification**
+  - 5-stage deliberative state machine, RFC 9381 VRF cryptographic lottery, strict odd-parity quorums (3, 15, 101, 301, 1,001), and juror cognitive unburdening rules coupled to [`simone/src/layer3_sortition.jl`](../simone/src/layer3_sortition.jl).
 
 ---
 

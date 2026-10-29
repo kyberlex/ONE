@@ -18,7 +18,7 @@ level,category,component_id,component_name,specification_standard,quantity,unit,
 5,Interior Infill & Service Cavity,L5-02,Interior Wall & Ceiling Linings (15mm Fermacell / Breathable Clay),Fire-Rated & Hygroscopic Buffering,1,lot,3600.00,3600.00,3400.00,200.00,Includes 18mm plywood grab-bar backing in wet core
 5,Interior Infill & Service Cavity,L5-03,Dry Subfloor Screed Elements & Natural Linoleum/Wood Flooring,Zero-Step Continuous Floor Plane,54,m2,51.85,2800.00,2800.00,0.00,Wheelchair-accessible Ø 1500mm turning clearances
 6,MEP & 800x800mm Utility Spine,L6-01,Core Plant (Enthalpic HRV + R290 Heat Pump + 48V 15kWh LFP + ESP32),Plug-and-Play Utility Spine Module,1,core,10500.00,10500.00,10500.00,0.00,Pre-assembled vertical mechanical core
-6,MEP & 800x800mm Utility Spine,L6-02,Piping, Conduits & Cabling (PEX Potable, 48V DC Bus, Cat6A),Clipped in 50mm Service Cavity,1,lot,2200.00,2200.00,2600.00,-400.00,Linear surface runs before lining closure
+6,MEP & 800x800mm Utility Spine,L6-02,"Piping, Conduits & Cabling (PEX Potable / 48V DC Bus / Cat6A)",Clipped in 50mm Service Cavity,1,lot,2200.00,2200.00,2600.00,-400.00,Linear surface runs before lining closure
 6,MEP & 800x800mm Utility Spine,L6-03,Airtightness Grommets & Perimeter Seals,EPDM Multi-Cable Dock Seals,1,lot,240.00,240.00,1600.00,-1360.00,Eliminates 80+ internal cassette penetrations
 6,MEP & 800x800mm Utility Spine,L6-04,Certified MEP On-Site Hookup & Commissioning Labor,40 Trade Hours @ 50 EUR/h,40,hours,50.00,2000.00,6000.00,-4000.00,66.7% reduction in on-site trade labor
 6,MEP & 800x800mm Utility Spine,L6-05,Blower Door Remediation Reserve (n50 <= 0.45 h-1),Passivhaus Pressurization Audit,1,test,0.00,0.00,800.00,-800.00,Continuous membrane never pierced by trades

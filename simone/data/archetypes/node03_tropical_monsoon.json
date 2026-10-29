@@ -1,0 +1,29 @@
+{
+  "archetype_id": "node03_tropical_monsoon",
+  "seed_node_code": "NODE-03",
+  "name": "Tropical Monsoon Highland Commons (Northern Thailand / Laos)",
+  "koppen_class": "Am",
+  "reference_region": "Southeast Asian Monsoon Highlands (600-1100m ASL)",
+  "population_baseline": 300,
+  "layer0_abiotic": {
+    "mean_solar_irradiance_kwh_m2_day": 4.9,
+    "micro_hydro_baseload_kwh_day": 650.0,
+    "mean_precipitation_mm_year": 1850.0,
+    "darcy_aquifer_transmissivity_m2_day": 195.0,
+    "winter_heating_degree_days": 120,
+    "mean_relative_humidity_pct": 92.0
+  },
+  "village_params": {
+    "solar_daily_kwh": 1950.0,
+    "rain_daily_l": 82000.0,
+    "daily_harvest_kcal": 1020000.0,
+    "daily_compute_core_hours": 3600.0,
+    "water_evap_loss_rate_day": 0.003
+  },
+  "carrying_capacity_ecc": {
+    "max_sustainable_population": 550,
+    "minimum_water_reserve_days": 60,
+    "minimum_caloric_reserve_days": 180
+  }
+}
+

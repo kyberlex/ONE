@@ -1,0 +1,114 @@
+# ==============================================================================
+# O.N.E. HABITAT — HOME ASSISTANT CLOSED-LOOP WATER & BIOFILTRATION PACKAGE
+# File: habitat/automation/homeassistant/mhu_water_loop.yaml
+# Author: Kyberlex <kyberlex@proton.me>
+# License: AGPL-3.0-or-later (Class-0 Non-Commercial Open Hardware)
+# Spec Reference: habitat/SENSOR_TOPOLOGY_HOME_ASSISTANT.md & STAGE_1_SURVIVAL_CORE_BLUEPRINT.md
+#
+# Description:
+# 100% local, zero-cloud Home Assistant automation package governing the MHU's
+# hydrological cycle across all 5 Orthogonal Seed Nodes:
+#   1. Potable Cistern Minimum 45-Day Survival Reserve Protection (< 20% throttling)
+#   2. UV-C Sterilization Lamp Interlock on Potable Draw Flow
+#   3. Subsurface Greywater Reed-Bed Dosing & Frost Bypass Interlock (NODE-05 -30°C)
+# ==============================================================================
+
+homeassistant:
+  customize:
+    sensor.mhu_cistern_level_pct:
+      friendly_name: "MHU Potable Cistern Level (%)"
+      icon: mdi:water-percent
+    sensor.mhu_greywater_sump_level_pct:
+      friendly_name: "MHU Greywater Biofilter Sump (%)"
+      icon: mdi:water-sync
+    sensor.mhu_reedbed_substrate_temp_c:
+      friendly_name: "MHU Subsurface Reed-Bed Temperature (°C)"
+      icon: mdi:thermometer-water
+    binary_sensor.mhu_uvc_lamp_fault:
+      friendly_name: "MHU 48V UV-C Sterilizer Fault"
+      icon: mdi:lightbulb-alert
+
+input_boolean:
+  mhu_drought_rationing_active:
+    name: "MHU Tier 1 Hydrological Conservation Lock"
+    initial: false
+    icon: mdi:water-alert
+
+automation:
+  # ----------------------------------------------------------------------------
+  # 1. POTABLE CISTERN DROUGHT LOCK (< 20% VOLUME -> SHED IRRIGATION & AUX)
+  # ----------------------------------------------------------------------------
+  - id: mhu_water_drought_lock_below_20_pct
+    alias: "[O.N.E. MHU Water] Engage Tier 1 Hydrological Lock (< 20% Cistern)"
+    description: "Closes external irrigation solenoid valves when potable cistern drops below 20%, preserving drinking/cooking baseline."
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.mhu_cistern_level_pct
+        below: 20
+        for:
+          minutes: 5
+    action:
+      - service: switch.turn_off
+        target:
+          entity_id:
+            - switch.mhu_outdoor_irrigation_valve
+            - switch.mhu_aux_washdown_valve
+      - service: input_boolean.turn_on
+        target:
+          entity_id: input_boolean.mhu_drought_rationing_active
+
+  - id: mhu_water_drought_restore_above_35_pct
+    alias: "[O.N.E. MHU Water] Release Hydrological Lock (> 35% Cistern)"
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.mhu_cistern_level_pct
+        above: 35
+        for:
+          minutes: 15
+    action:
+      - service: input_boolean.turn_off
+        target:
+          entity_id: input_boolean.mhu_drought_rationing_active
+      - service: switch.turn_on
+        target:
+          entity_id: switch.mhu_outdoor_irrigation_valve
+
+  # ----------------------------------------------------------------------------
+  # 2. GREYWATER REED-BED PULSE DOSING & POLAR VORTEX FROST INTERLOCK (NODE-05)
+  # ----------------------------------------------------------------------------
+  - id: mhu_greywater_reedbed_pulse_dose
+    alias: "[O.N.E. MHU Water] Greywater Reed-Bed Batch Dosing (> 80% Sump)"
+    description: "Pumps pre-filtered greywater to subsurface root-zone reed bed only if substrate temperature is above +2.0°C."
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.mhu_greywater_sump_level_pct
+        above: 80
+    condition:
+      - condition: numeric_state
+        entity_id: sensor.mhu_reedbed_substrate_temp_c
+        above: 2.0
+    action:
+      - service: switch.turn_on
+        target:
+          entity_id: switch.mhu_48v_greywater_dosing_pump
+      - delay:
+          minutes: 4
+      - service: switch.turn_off
+        target:
+          entity_id: switch.mhu_48v_greywater_dosing_pump
+
+  - id: mhu_greywater_frost_diversion_interlock
+    alias: "[O.N.E. MHU Water] Sub-Zero Frost Diversion Valve (< 1.5°C Reed Bed)"
+    description: "Diverts greywater via insulated below-frost-line leach pit during polar vortex freeze events (NODE-05)."
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.mhu_reedbed_substrate_temp_c
+        below: 1.5
+    action:
+      - service: switch.turn_off
+        target:
+          entity_id: switch.mhu_48v_greywater_dosing_pump
+      - service: switch.turn_on
+        target:
+          entity_id: switch.mhu_deep_frost_bypass_valve
+

@@ -1,0 +1,132 @@
+# ==============================================================================
+# O.N.E. HABITAT — 48V LFP BMS MODBUS RTU & COLD-CHARGE INTERLOCK (STARTER STUB)
+# File: habitat/automation/esphome/bms_modbus_rtu_stub.yaml
+# Author: Kyberlex <kyberlex@proton.me>
+# Pillar Alignment: Pillar 4B (Smart-Home & Microgrid Specialist — PoW 4B-1)
+# License: AGPL-3.0-or-later (Class-0 Non-Commercial Open Hardware)
+#
+# PURPOSE FOR INCOMING CO-STEWARD 4B:
+# This file provides the pre-wired RS485 Modbus RTU hardware pinout and safety
+# interlock scaffolding for integrating open-source 16S LiFePO4 (51.2V nominal)
+# Battery Management Systems (LibreSolar / Seplos / JK-BMS Modbus protocol) into
+# the Olimex ESP32-POE-ISO Utility Spine controller.
+#
+# OPEN PROOF-OF-WORK TASK (PoW 4B-1):
+#   1. Complete the `modbus_controller` register sensors for individual cell
+#      delta voltage (mV) and MOSFET temperature.
+#   2. Implement the multi-stage charging current derating curve between
+#      +5.0 °C and +2.0 °C (preventing lithium plating in NODE-02 Andes &
+#      NODE-05 Polar Vortex biomes).
+# ==============================================================================
+
+substitutions:
+  node_name: "mhu-bms-modbus-spine"
+  friendly_name: "MHU 48V LFP BMS Modbus Controller"
+  # Safety thresholds (Hard Invariants per PASSIVHAUS_ENERGY_SYSTEMS.md)
+  lfp_min_charge_temp_c: "2.0"
+  lfp_derate_charge_temp_c: "5.0"
+  lfp_max_cell_temp_c: "50.0"
+  lfp_uvp_cutoff_v: "44.8"       # 2.80V per cell * 16S
+  lfp_ovp_cutoff_v: "57.6"       # 3.60V per cell * 16S
+
+# RS485 Transceiver (ISO3082 / MAX485 isolated module on Olimex UEXT connector)
+uart:
+  id: rs485_bms_bus
+  tx_pin: GPIO04
+  rx_pin: GPIO36
+  baud_rate: 9600
+  stop_bits: 1
+  parity: NONE
+
+modbus:
+  id: modbus_bms_hub
+  uart_id: rs485_bms_bus
+  flow_control_pin: GPIO12       # DE/RE direction control pin
+
+modbus_controller:
+  - id: lfp_pack_primary
+    address: 0x01
+    modbus_id: modbus_bms_hub
+    update_interval: 5s
+    command_throttle: 50ms
+
+sensor:
+  # 1. Pack Total Voltage (Register 0x0000, unsigned 16-bit, scale 0.01V)
+  - platform: modbus_controller
+    modbus_controller_id: lfp_pack_primary
+    name: "${friendly_name} Pack Voltage"
+    id: bms_pack_voltage_v
+    register_type: holding
+    address: 0x0000
+    unit_of_measurement: "V"
+    value_type: U_WORD
+    accuracy_decimals: 2
+    filters:
+      - multiply: 0.01
+
+  # 2. Pack Current (Register 0x0001, signed 16-bit, scale 0.01A; +Charge / -Discharge)
+  - platform: modbus_controller
+    modbus_controller_id: lfp_pack_primary
+    name: "${friendly_name} Pack Current"
+    id: bms_pack_current_a
+    register_type: holding
+    address: 0x0001
+    unit_of_measurement: "A"
+    value_type: S_WORD
+    accuracy_decimals: 2
+    filters:
+      - multiply: 0.01
+
+  # 3. Pack State of Charge SoC (Register 0x0002, unsigned 16-bit, scale 0.1%)
+  - platform: modbus_controller
+    modbus_controller_id: lfp_pack_primary
+    name: "${friendly_name} State of Charge"
+    id: bms_pack_soc_pct
+    register_type: holding
+    address: 0x0002
+    unit_of_measurement: "%"
+    value_type: U_WORD
+    accuracy_decimals: 1
+    filters:
+      - multiply: 0.1
+
+  # 4. Lowest Cell Temperature (Register 0x0005, signed 16-bit, scale 0.1 °C)
+  # CRITICAL SAFETY SENSOR: Drives sub-zero LFP charge lockout below +2.0 °C
+  - platform: modbus_controller
+    modbus_controller_id: lfp_pack_primary
+    name: "${friendly_name} Minimum Cell Temperature"
+    id: bms_min_cell_temp_c
+    register_type: holding
+    address: 0x0005
+    unit_of_measurement: "°C"
+    value_type: S_WORD
+    accuracy_decimals: 1
+    filters:
+      - multiply: 0.1
+    on_value:
+      then:
+        - if:
+            condition:
+              lambda: 'return x < 2.0;'
+            then:
+              - logger.log:
+                  level: ERROR
+                  format: "COLD LFP LOCKOUT: Cell temp %.1f C < 2.0 C! Opening charge contactor."
+                  args: ['x']
+              - switch.turn_off: lfp_charge_enable_contactor
+
+  # TODO(PoW-4B-1): Add Modbus sensors for:
+  #   - Register 0x0006: Maximum Cell Voltage (mV) & Minimum Cell Voltage (mV)
+  #   - Register 0x0008: Cell Delta Imbalance (mV) with alert threshold > 50mV
+  #   - Register 0x000A: Cycle Count (for SIMONE Weibull MTBF degradation coupling)
+
+switch:
+  # Hardware Charge Contactor (Series-wired with physical 2.0 °C bimetallic NC thermostat)
+  - platform: gpio
+    name: "${friendly_name} Charge Enable Contactor"
+    id: lfp_charge_enable_contactor
+    pin:
+      number: GPIO15
+      inverted: false
+    restore_mode: RESTORE_DEFAULT_OFF
+

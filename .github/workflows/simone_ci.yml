@@ -1,0 +1,44 @@
+name: Simone.jl Scientific Co-Simulation CI
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'simone/**'
+      - '.github/workflows/simone_ci.yml'
+  pull_request:
+    paths:
+      - 'simone/**'
+      - '.github/workflows/simone_ci.yml'
+  workflow_dispatch:
+
+jobs:
+  test-simone:
+    name: Simone.jl Conservation & Docking Suite (Julia ${{ matrix.version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        version:
+          - '1.10'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Julia ${{ matrix.version }}
+        uses: julia-actions/setup-julia@v2
+        with:
+          version: ${{ matrix.version }}
+
+      - name: Cache Julia packages
+        uses: julia-actions/cache@v2
+
+      - name: Instantiate and test Simone.jl
+        working-directory: simone
+        run: |
+          julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.test()'
+
+      - name: Run 5 Orthogonal Seed Nodes Audit Example
+        run: |
+          julia --project=simone simone/examples/run_orthogonal_seed_nodes_audit.jl
+

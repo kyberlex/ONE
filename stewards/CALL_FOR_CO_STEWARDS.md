@@ -86,10 +86,10 @@
 
 ### **Pillar 4 Deep-Dive: Physical Habitat, Open-BIM & Microgrid Infrastructure**
 
-* **Strategic Rationale (The Reality Gap in `habitat/`):**
-  - Today in `habitat/` we have codified architectural specifications (`MHU_MODULAR_HABITAT_UNIT.md`, `PASSIVHAUS_ENERGY_SYSTEMS.md`, `SENSOR_TOPOLOGY_HOME_ASSISTANT.md`) but **zero native parametric CAD models (`.FCStd`, `.ifc`, `.dxf`, `.stl`) and zero deployment `.yaml` configuration files**.
-  - Kyberlex provides the architectural framework, biophysical equations, and legal covenants, but will **not** draw the timber joinery in FreeCAD nor write the Home Assistant YAML automation packages.
-  - To turn O.N.E. into buildable reality, we are seeking **2 hands-on builder profiles** to populate and maintain `habitat/`:
+* **Strategic Rationale (Scaling the Baseline in `habitat/`):**
+  - Today in `habitat/` we have codified architectural specifications (`MHU_MODULAR_HABITAT_UNIT.md`, `PASSIVHAUS_ENERGY_SYSTEMS.md`, `SENSOR_TOPOLOGY_HOME_ASSISTANT.md`) along with our initial baseline engineering starter kit: parametric FreeCAD scripts and CNC sheets (`habitat/cad/`), zero-cloud Home Assistant and ESPHome packages (`habitat/automation/`), and the 6-level Bill of Materials (`habitat/bom/mhu_bom_6_levels.csv`).
+  - Kyberlex provides the architectural framework, biophysical equations, legal covenants, and reference baseline modules, while empowering dedicated domain builders to expand the full Open-BIM and microgrid library.
+  - To scale O.N.E. into a complete, field-certified construction and automation suite across all 5 orthogonal seed biomes, we are seeking **2 hands-on builder profiles** to lead and expand `habitat/`:
 
 * **Co-Steward 4A — Open-BIM & Timber Architect (`FreeCAD` / `BlenderBIM IFC4` / `Eurocode 5`):**
   - **Mandate & Deliverables in `habitat/`:**

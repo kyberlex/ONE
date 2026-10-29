@@ -1,0 +1,29 @@
+{
+  "archetype_id": "node04_equatorial_rift",
+  "seed_node_code": "NODE-04",
+  "name": "Equatorial Subhumid Highland Plateau (East African Rift Valley)",
+  "koppen_class": "Cwb/Aw",
+  "reference_region": "Western Kenya / Southern Tanzania Highlands (1600-2100m ASL)",
+  "population_baseline": 300,
+  "layer0_abiotic": {
+    "mean_solar_irradiance_kwh_m2_day": 6.2,
+    "micro_hydro_baseload_kwh_day": 320.0,
+    "mean_precipitation_mm_year": 820.0,
+    "darcy_aquifer_transmissivity_m2_day": 115.0,
+    "winter_heating_degree_days": 200,
+    "mean_relative_humidity_pct": 58.0
+  },
+  "village_params": {
+    "solar_daily_kwh": 2450.0,
+    "rain_daily_l": 52000.0,
+    "daily_harvest_kcal": 890000.0,
+    "daily_compute_core_hours": 3600.0,
+    "water_evap_loss_rate_day": 0.004
+  },
+  "carrying_capacity_ecc": {
+    "max_sustainable_population": 450,
+    "minimum_water_reserve_days": 90,
+    "minimum_caloric_reserve_days": 180
+  }
+}
+
