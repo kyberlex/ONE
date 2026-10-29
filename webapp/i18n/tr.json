@@ -18,7 +18,9 @@
     "btn_primer": "Hızlı Kılavuz (3 dk)",
     "btn_video": "Açıklayıcı Videoyu İzle (8 dk)",
     "btn_constitution": "Anayasayı Keşfet",
-    "btn_novels": "Romanları Oku (Ücretsiz E-kitap)"
+    "btn_novels": "Romanları Oku (Ücretsiz E-kitap)",
+    "btn_discover": "O.N.E.'ı Keşfet →",
+    "btn_stewards": "Birlikte İnşa Et (Co-Steward)"
   },
   "video": {
     "badge": "Mimari Anlatım • 8 Dakika",
@@ -64,7 +66,10 @@
     "tab_postwork": "⚡ 1. Çalışma Sonrası Dönüm Noktası",
     "tab_failures": "🏛️ 2. Geçmiş Sistemler Neden Çöktü",
     "tab_pillars": "🛡️ 3. Dört Temel Sütun",
-    "tab_roadmap": "🌱 4. Geçiş Yol Haritası"
+    "tab_roadmap": "🌱 4. Geçiş Yol Haritası",
+    "charter_badge": "Uygarlık Şartı",
+    "charter_tag": "Kanonik Yönetici Özeti",
+    "charter_text": "Open Networked Earth (O.N.E.) çerçevesi; evrensel intifa hakkı, termodinamik muhasebe ve kura ile yönetim ilkelerine dayanan post-kapitalist küresel bir anayasa kurar — borca dayalı finansal sömürüyü kişisel mülkiyetin sıkı korunmasıyla değiştirir. Her bireye dokunulmaz bedensel egemenlik ve koşulsuz bir hayatta kalma temeli garanti eder: temiz su, besleyici gıda, dayanıklı barınak ve sağlık hizmeti."
   },
   "primer_content": {
     "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    1. Kaçınılmaz Çalışma Sonrası Gerçeklik: Otomasyon Neden Her Şeyi Değiştiriyor\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    Binlerce yıl boyunca insan uygarlığı değişmez bir demir kanunla işledi: <em>\"Çalışmayan, yemek yiyemez.\"</em>\n    İnsansı robotlar, otonom makineler ve üretken yapay zeka bu denklemi sonsuza kadar kırıyor. Makineler tarımı,\n    inşaatı, lojistiği, enerji üretimini ve sağlık hizmetlerini sıfıra yakın marjinal maliyetle gerçekleştirdiğinde, insanın hayatta kalması ücretli istihdamdan koparılmalıdır.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ Varsayılan Distopya: Tekno-Feodalizm</h4>\n      <p>Mevcut piyasa kuralları altında, teknoloji tekelleri otomatik iş gücünün tümüne sahip olur. Milyarlarca insan \"istihdam edilemez\" hale gelir, maaşlarından mahrum bırakılır ve aşırı güvencesizliğe itilirken, servet bir avuç şirket oligarkının elinde toplanır.</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 O.N.E. Taslağı: Mekanik Özgürleşme</h4>\n      <p>Otomasyonun üretici gücü tüm insanlığın ortak mirası ilan edilir. Makine emeği insanları ağır işlerden, yoksulluktan ve ücret köleliğinden kurtarır; gıda, barınma ve enerjiyi doğuştan gelen koşulsuz haklara dönüştürür.</p>\n    </div>\n  </div>\n</div>",
@@ -463,7 +468,7 @@
   "contrast": {
     "tag": "Uygarlık İşletim Sistemleri",
     "title": "Kulvar A ve Kulvar B: Uygarlık Yol Ayrımı",
-    "desc": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
+    "desc": "Emeğin marjinal maliyeti sıfıra ulaştığında, eski sistem yapısal felç yaşar. O.N.E. termodinamik çıkış yolunu sunar.",
     "track_a_badge": "Kulvar A • Geleneksel Varsayılan",
     "track_a_title": "Tekno-Feodal Sömürü",
     "track_a_desc": "Tekelleştirilmiş otomasyon, bitmek bilmeyen borç ve spekülatif rantçılık.",
@@ -530,9 +535,16 @@
     "p4_role": "4A (FreeCAD/BlenderBIM Ahşap Mimarisi) + 4B (Home Assistant/ESPHome YAML)",
     "p4_doubt": "MHU şartnamelerini somut mühendislik dosyalarına dönüştürmek: 4A parametrik 3B modelleri (.FCStd/.ifc), CNC kesim tablolarını (.dxf) ve Eurocode 5 hesaplamalarını sunar; 4B ise sıfır-bulut (zero-cloud) Home Assistant/ESPHome .yaml paketlerini, DC mikroşebeke şemalarını ve Hizmet Omurgası malzeme listesini (BOM) sunar.",
     "p4_btn_cta": "Habitat Diyalektiğine Katılın (#12) →",
-    "cta_title": "Ready to Build or Break O.N.E.?",
+    "cta_title": "O.N.E.'ı inşa etmeye veya sınırlarını test etmeye hazır mısınız?",
     "cta_desc": "İster temel bir sütuna eş-emanetçilik yapmak isteyin, ister termodinamik ve nomotetik uç durumları sorgulayan bağımsız bir eleştirmen olun; katkınız Genesis Block'u doğrudan tahkim eder.",
-    "btn_all_discussions": "💬 View All Discussions on GitHub",
+    "btn_all_discussions": "💬 GitHub'daki Tüm Tartışmaları Görüntüle",
     "btn_contact": "✉️ Kyberlex ile İletişime Geçin (kyberlex@proton.me)"
+  },
+  "benchmark": {
+    "tag": "⚡ Bağımsız Çoklu-Ajan Değerlendirmesi",
+    "title": "“Ücretli Emek Sıfıra İndiğinde Kim Hayatta Kalır?”",
+    "desc": "Dört öncü yapay zekaya (Google Gemini, OpenAI ChatGPT, Anthropic Claude ve xAI Grok) özdeş ve kör bir politik-iktisat testi sunduk: marjinal emek maliyetlerinin sıfıra ulaştığı (<em>MC<sub>L</sub> → 0</em>) otomatikleştirilmiş kararlı durum uygarlığı merceğinden altı uygarlık mimarisini değerlendirin.",
+    "consensus_title": "4-Laboratuvar Konsensüs Puan Tablosu: Kararlı Durum İş-Sonrası Endeksi",
+    "consensus_desc": "6 boyutta bağımsız çapraz değerlendirme: Özerklik, Ekoloji, Kıtlık Tahsisi, Anti-Oligarşi, İnovasyon, Sıfır Emek Tutarlılığı"
   }
 }

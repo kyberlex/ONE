@@ -18,7 +18,9 @@
     "btn_primer": "Guia Rápido (3 min)",
     "btn_video": "Ver Vídeo Explicativo (8 min)",
     "btn_constitution": "Explorar Constituição",
-    "btn_novels": "Ler Romances (Ebooks grátis)"
+    "btn_novels": "Ler Romances (Ebooks grátis)",
+    "btn_discover": "Descobrir O.N.E. →",
+    "btn_stewards": "Construir (Co-Steward)"
   },
   "video": {
     "badge": "Explicativo Arquitetural • 8 Minutos",
@@ -64,7 +66,10 @@
     "tab_postwork": "⚡ 1. A Virada Post-Labor",
     "tab_failures": "🏛️ 2. O Fracasso do Passado",
     "tab_pillars": "🛡️ 3. Os 4 Pilares Centrais",
-    "tab_roadmap": "🌱 4. O Roteiro de Transição"
+    "tab_roadmap": "🌱 4. O Roteiro de Transição",
+    "charter_badge": "Carta Civilizatória",
+    "charter_tag": "Síntese Executiva Canônica",
+    "charter_text": "O quadro de Open Networked Earth (O.N.E.) institui uma constituição global pós-capitalista enraizada no usufruto universal, contabilidade termodinâmica e governança por sorteio — substituindo a extração financeira por dívida enquanto protege estritamente os bens pessoais. Garante a cada indivíduo soberania corporal inviolável e uma linha de base incondicional de sobrevivência: água potável, nutrição saudável, abrigo resiliente e saúde pública. A governança planetária é coordenada por assembleias sorteadas em estrita paridade ímpar, eliminando políticos profissionais."
   },
   "primer_content": {
     "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    1. A Iminente Realidade Post-Labor: Por que a Automação Muda Tudo\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    Por milênios, a civilização humana operou sob uma lei de ferro: <em>\"Quem não trabalha, não come.\"</em>\n    A robótica humanoide, a maquinaria autônoma e a IA generativa estão quebrando essa equação para sempre. Quando as máquinas assumem a agricultura, construção, transporte, geração de energia e saúde a custo marginal quase zero, a sobrevivência humana precisa ser desvinculada do emprego assalariado.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ O Cenário Distópico Padrão: Tecno-Feudalismo</h4>\n      <p>Sob as regras de mercado atuais, os monopólios de tecnologia tornam-se donos de toda a força de trabalho automatizada. Bilhões de pessoas tornam-se \"inempregáveis\", privadas de salário e empurradas para a extrema precariedade enquanto a riqueza se concentra em um punhado de oligarcas corporativos.</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 O Modelo O.N.E.: Emancipação Mecânica</h4>\n      <p>O poder produtivo da automação é proclamado patrimônio comum de toda a humanidade. O trabalho das máquinas liberta os seres humanos da labuta exaustiva, da miséria e da servidão do salário, transformando alimento, moradia e energia em direitos incondicionais de nascimento.</p>\n    </div>\n  </div>\n</div>",
@@ -463,7 +468,7 @@
   "contrast": {
     "tag": "Sistemas Operativos Civilizacionais",
     "title": "Via A vs. Via B: A Bifurcação Civilizacional",
-    "desc": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
+    "desc": "Quando o custo marginal do trabalho atinge zero, o sistema legado entra em paralisia estrutural. O.N.E. fornece a saída termodinâmica.",
     "track_a_badge": "Via A • Padrão Herdado",
     "track_a_title": "Extração Tecnofeudal",
     "track_a_desc": "Automação monopolizada, dívida perpétua e rentismo especulativo.",
@@ -530,9 +535,16 @@
     "p4_role": "4A (Arquitetura em Madeira em FreeCAD/BlenderBIM) + 4B (Home Assistant/ESPHome YAML)",
     "p4_doubt": "Traduzir as especificações de MHU em ficheiros de engenharia reais: o 4A fornece modelos 3D paramétricos (.FCStd/.ifc), esquemas de corte CNC (.dxf) e cálculos Eurocódigo 5; o 4B fornece pacotes .yaml de Home Assistant/ESPHome de nuvem zero, esquemas de microrrede DC e BOM para o Eixo de Serviços Técnicos (Utility Spine).",
     "p4_btn_cta": "Aderir à Dialética do Habitat (#12) →",
-    "cta_title": "Ready to Build or Break O.N.E.?",
+    "cta_title": "Pronto para construir ou testar os limites de O.N.E.?",
     "cta_desc": "Quer pretenda ser co-guardião de um pilar fundamental ou atuar como um crítico independente à caça de casos limite termodinâmicos e nomotéticos, a sua contribuição robustece diretamente o Bloco Genesis.",
-    "btn_all_discussions": "💬 View All Discussions on GitHub",
+    "btn_all_discussions": "💬 Ver todas as discussões no GitHub",
     "btn_contact": "✉️ Contactar Kyberlex (kyberlex@proton.me)"
+  },
+  "benchmark": {
+    "tag": "⚡ Avaliação Independente Multi-Agente",
+    "title": "«Quando o trabalho assalariado chega a zero, quem sobrevive?»",
+    "desc": "Submetemos uma avaliação cega e idêntica a quatro inteligências artificiais de fronteira: <strong>Google Gemini</strong>, <strong>OpenAI ChatGPT</strong>, <strong>Anthropic Claude</strong> e <strong>xAI Grok</strong>: avaliar seis arquiteturas civilizatórias através da lente de uma sociedade automatizada e estacionária onde os custos marginais do trabalho atingem zero (<em>MC<sub>L</sub> → 0</em>).",
+    "consensus_title": "Placar de Consenso de 4 Laboratórios: Índice Pós-Trabalho Estacionário",
+    "consensus_desc": "Avaliação cruzada independente em 6 dimensões: Autonomia, Ecologia, Alocação de escassez, Anti-oligarquia, Inovação, Coerência sem trabalho"
   }
 }

@@ -18,7 +18,9 @@
     "btn_primer": "Guida Rapida (3 min)",
     "btn_video": "Guarda Video (8 min)",
     "btn_constitution": "Esplora la Costituzione",
-    "btn_novels": "Leggi i Romanzi (Ebook gratuiti)"
+    "btn_novels": "Leggi i Romanzi (Ebook gratuiti)",
+    "btn_discover": "Scopri O.N.E. →",
+    "btn_stewards": "Costruisci (Co-Steward)"
   },
   "video": {
     "badge": "Video Architetturale • 8 Minuti",
@@ -64,7 +66,10 @@
     "tab_postwork": "⚡ 1. La Transizione Post-Labor",
     "tab_failures": "🏛️ 2. Perché i Sistemi Passati Hanno Fallito",
     "tab_pillars": "🛡️ 3. I 4 Pilastri Fondamentali",
-    "tab_roadmap": "🌱 4. La Tabella di Marcia della Transizione"
+    "tab_roadmap": "🌱 4. La Tabella di Marcia della Transizione",
+    "charter_badge": "Carta Civilizzatrice",
+    "charter_tag": "Sintesi Esecutiva Canonica",
+    "charter_text": "Il framework di Open Networked Earth (O.N.E.) istituisce una costituzione globale post-capitalista fondata su usufrutto universale, contabilità termodinamica e demarchia per sorteggio — sostituendo l'estrazione finanziaria basata sul debito con la rigorosa tutela dei beni personali. Garantisce a ogni individuo l'inviolabile sovranità corporea e una soglia incondizionata di sopravvivenza: acqua pura, cibo nutriente, alloggio resiliente e assistenza sanitaria. La governance planetaria è coordinata tramite assemblee sorteggiate stratificate in parità rigorosamente dispari, eliminando politici di professione e oligarchie elettorali. Le risorse fisiche sono gestite come beni comuni federati entro le capacità di carico biofisiche, abilitate da hardware open-source e verifica peer-to-peer. Infine, O.N.E. fornisce un ponte transitorio concreto verso una federazione planetaria pacifica e ad alta tecnologia radicata nell'equilibrio termodinamico e nella custodia ecologica."
   },
   "primer_content": {
     "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:#fff; margin-bottom:12px;\">\n    1. L'Imminente Realtà Post-Labor: Perché l'Automazione Cambia Tutto\n  </h3>\n  <p style=\"font-size:1.05rem; color:#cbd5e1; line-height:1.7; margin-bottom:24px;\">\n    Per millenni la civiltà umana ha funzionato secondo una legge ferrea: <em>\"Chi non lavora non mangia.\"</em>\n    La robotica umanoide, i macchinari autonomi e l'IA generativa stanno spezzando per sempre questa equazione. Quando le macchine gestiscono agricoltura, edilizia, trasporti, energia e sanità a costo marginale quasi nullo, la sopravvivenza umana deve essere slegata dall'impiego.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ Lo Scenario Distopico Predefinito: Il Tecno-Feudalesimo</h4>\n      <p>Sotto le attuali regole di mercato, i monopoli tecnologici possiedono l'intera forza lavoro automatizzata. Miliardi di persone diventano \"inoccupabili\", private di stipendio e spinte nella precarietà estrema, mentre la ricchezza si accentra in pochissimi oligarchi.</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 Il Modello O.N.E.: La Liberazione Meccanica</h4>\n      <p>Il potere produttivo dell'automazione viene proclamato patrimonio comune di tutta l'umanità. Il lavoro delle macchine riscatta gli esseri umani dalla fatica, dalla povertà e dalla servitù del salario, trasformando cibo, casa ed energia in diritti di nascita gratuiti.</p>\n    </div>\n  </div>\n</div>",
@@ -463,7 +468,7 @@
   "contrast": {
     "tag": "Sistemi Operativi di Civiltà",
     "title": "Binario A vs. Binario B: Il Bivio di Civiltà",
-    "desc": "Quando il costo marginale del lavoro tocca lo zero, il sistema ereditario affronta la paralisi strutturale. O.N.E. offre la via d'uscita termodinamica.",
+    "desc": "Quando il costo marginale del lavoro tocca lo zero, il sistema legacy affronta una paralisi strutturale. O.N.E. fornisce la via d'uscita termodinamica.",
     "track_a_badge": "Binario A • Il Default Ereditario",
     "track_a_title": "Estrazione Tecno-Feudale",
     "track_a_desc": "Automazione monopolizzata, debito perpetuo e rendite parassitarie.",
@@ -532,7 +537,14 @@
     "p4_btn_cta": "Partecipa alla Dialettica Habitat (#12) →",
     "cta_title": "Pronto a costruire o a testare i limiti di O.N.E.?",
     "cta_desc": "Che tu voglia co-custodire un pilastro fondamentale o agire da critico indipendente a caccia di casi limite termodinamici e nomotetici, il tuo contributo blinda direttamente il Blocco di Genesi.",
-    "btn_all_discussions": "💬 Tutte le Discussioni su GitHub",
+    "btn_all_discussions": "💬 Guarda tutte le discussioni su GitHub",
     "btn_contact": "✉️ Contatta Kyberlex (kyberlex@proton.me)"
+  },
+  "benchmark": {
+    "tag": "⚡ Valutazione Indipendente Multi-Agente",
+    "title": "\"Quando il lavoro salariato tocca lo zero, chi sopravvive?\"",
+    "desc": "Abbiamo sottoposto un benchmark politico-economico cieco e identico a quattro intelligenze artificiali di frontiera: <strong>Google Gemini</strong>, <strong>OpenAI ChatGPT</strong>, <strong>Anthropic Claude</strong> e <strong>xAI Grok</strong>: valutare sei architetture di civiltà attraverso la lente di una società stazionaria e automatizzata in cui i costi marginali del lavoro scendono a zero (<em>MC<sub>L</sub> → 0</em>).",
+    "consensus_title": "Tabellone di Consenso 4-Lab: Indice Post-Lavoro Stazionario",
+    "consensus_desc": "Valutazione incrociata indipendente su 6 dimensioni: Autonomia, Ecologia, Allocazione della scarsità, Anti-oligarchia, Innovazione, Coerenza a lavoro zero"
   }
 }

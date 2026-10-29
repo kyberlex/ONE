@@ -27,9 +27,8 @@
 ---
 
 > [!IMPORTANT]
->
-> ### 🤝 **Seeking Co-Stewards across the 5 Pillars (Genesis Quorum)**
-> Exploring the codebase or modeling the post-labor transition? We are actively seeking technical builders and civic co-stewards across:
+> ### 🤝 **Call for Co-Stewards, Collaborators & Critics (1 Lead + Open Collaborators + ≥1 Senior Critic per Pillar)**
+> Exploring the codebase? Before the Swiss Foundation Genesis Lock, each pillar seeks **1 Lead Co-Steward**, **open Collaborators**, and **at least 1 top-tier External Critic**:
 >
 > - **Pillar 0:** Open-Source Community Manager, DevRel & Technical Headhunter
 > - **Pillar 1:** Biophysical & Leontief Economics (`Simone.jl` input-output calibration)
@@ -166,7 +165,6 @@ A constitution that requires perfect human beings is a childish utopia. O.N.E. o
 ## **III. Quickstart: Experience the Simulation**
 
 ### **1. Play Online (Instant In-Browser)**
-
 Launch the live thermodynamic resilience MMO without any installation:  
 
 <p align="center">
@@ -178,7 +176,6 @@ Launch the live thermodynamic resilience MMO without any installation:
 👉 **[Open O-ASIS Living Sandbox (one-oasis.surge.sh)](https://one-oasis.surge.sh)**
 
 ### **2. Run Locally in Development Mode**
-
 You can also run the Living Web Sandbox locally in your browser:
 
 ```bash
@@ -200,9 +197,9 @@ Visit `http://localhost:5173` to explore the living thermodynamic sandbox.
 ## **IV. The Institutional Legal Shield: Foundation ONE (`foundation/`)**
 
 To interface with the legacy financial and statutory system without corrupting the post-monetary commons, O.N.E. operates a **Two-Tier Defensive Legal Shield** grounded in Swiss civil law (ZGB Art. 80–89bis):
-- **Entity A: Foundation ONE (*Stiftung*):** The "ownerless sovereign vault" holding inalienable land titles and canonical IP, bound by a perpetual asset lock (*Vermögensbindung*), odd-number board parity (3 to 7 trustees), pro bono governance (*Ehrenamtlichkeit*), and an exclusive monopoly on legacy commercial derivative licensing (e.g. streaming options, industrial dual-licensing).
-- **Entity B: The Operational Sister Body (Swiss *Verein* / Local Co-ops):** The democratic membership entity managing day-to-day community chores, education, and mutual aid under revocable usufruct charters.
-- **Temporary Legal Exoskeleton:** The Foundation is explicitly temporary; under ZGB Art. 88, it dissolves upon planetary unification, devolving all assets directly to the Global Usufruct Commons Confederation.
+* **Entity A: Foundation ONE (*Stiftung*):** The "ownerless sovereign vault" holding inalienable land titles and canonical IP, bound by a perpetual asset lock (*Vermögensbindung*), odd-number board parity (3 to 7 trustees), pro bono governance (*Ehrenamtlichkeit*), and an exclusive monopoly on legacy commercial derivative licensing (e.g. streaming options, industrial dual-licensing).
+* **Entity B: The Operational Sister Body (Swiss *Verein* / Local Co-ops):** The democratic membership entity managing day-to-day community chores, education, and mutual aid under revocable usufruct charters.
+* **Temporary Legal Exoskeleton:** The Foundation is explicitly temporary; under ZGB Art. 88, it dissolves upon planetary unification, devolving all assets directly to the Global Usufruct Commons Confederation.
 
 👉 **Official Statutes & Notarial Deed:** [`foundation/statutes_foundation_one.md`](foundation/statutes_foundation_one.md) | **Legal Blueprint:** [`foundation/legal_framework.md`](foundation/legal_framework.md) | **Overview:** [`foundation/README.md`](foundation/README.md)
 
@@ -212,17 +209,17 @@ To interface with the legacy financial and statutory system without corrupting t
 
 We do not ask for blind belief. O.N.E. has been subjected to rigorous multi-agent adversarial stress-testing simulating institutional capture, cartels, resource hoarding, sensor tampering, and supply disruptions:
 
-- **Proof-of-Immunity Matrix:** Review formal mathematical defenses against 7 classic adversarial attack vectors in [`oasis/constitutional_attack_challenges.md`](oasis/constitutional_attack_challenges.md).
-- **Operational Case-Law:** Inspect tested systemic edge-cases and sortition resolutions in [`oasis/sim_resolutions_qa.md`](oasis/sim_resolutions_qa.md).
-- **Community Deliberation RFCs:** Explore formal proposals ready for sortition deliberation in [`oasis/github_discussions_rfcs.md`](oasis/github_discussions_rfcs.md).
+* **Proof-of-Immunity Matrix:** Review formal mathematical defenses against 7 classic adversarial attack vectors in [`oasis/constitutional_attack_challenges.md`](oasis/constitutional_attack_challenges.md).
+* **Operational Case-Law:** Inspect tested systemic edge-cases and sortition resolutions in [`oasis/sim_resolutions_qa.md`](oasis/sim_resolutions_qa.md).
+* **Community Deliberation RFCs:** Explore formal proposals ready for sortition deliberation in [`oasis/github_discussions_rfcs.md`](oasis/github_discussions_rfcs.md).
 
 ---
 
 ## **VI. Verification & Dialectic Tools**
 
-- **Live AI Challenge Arena:** Test your hardest objections against the 46 Canonical Articles in real-time at [one-commons.github.io/#challenge](https://one-commons.github.io/#challenge) *(Mirror: [open-networked-earth.surge.sh/#challenge](https://open-networked-earth.surge.sh/#challenge))*.
-- **Google NotebookLM Deep-Dive:** Query the multimodal knowledge base and listen to the conversational audio podcast at [NotebookLM O.N.E. Suite](https://notebooklm.google.com/notebook/8a979273-c4b6-4288-b55b-4cb75fad95a0).
-- **The Thriller Series:** Read the 15-language literary saga dramatizing the real-world friction of the transition at [one-commons.github.io/#books](https://one-commons.github.io/#books) *(Mirror: [open-networked-earth.surge.sh/#books](https://open-networked-earth.surge.sh/#books))*.
+* **Live AI Challenge Arena:** Test your hardest objections against the 46 Canonical Articles in real-time at [one-commons.github.io/#challenge](https://one-commons.github.io/#challenge) *(Mirror: [open-networked-earth.surge.sh/#challenge](https://open-networked-earth.surge.sh/#challenge))*.
+* **Google NotebookLM Deep-Dive:** Query the multimodal knowledge base and listen to the conversational audio podcast at [NotebookLM O.N.E. Suite](https://notebooklm.google.com/notebook/8a979273-c4b6-4288-b55b-4cb75fad95a0).
+* **The Thriller Series:** Read the 15-language literary saga dramatizing the real-world friction of the transition at [one-commons.github.io/#books](https://one-commons.github.io/#books) *(Mirror: [open-networked-earth.surge.sh/#books](https://open-networked-earth.surge.sh/#books))*.
 
 ---
 
@@ -230,9 +227,9 @@ We do not ask for blind belief. O.N.E. has been subjected to rigorous multi-agen
 
 O.N.E. is an evolving civilizational architecture. If you discover unmodeled frictions, supply-chain edge cases, or wish to propose mathematical or constitutional refinements:
 
-- Join the **[GitHub Discussions Forum](https://github.com/kyberlex/ONE/discussions)**.
-- Review formal submission guidelines in **[`CONTRIBUTING.md`](CONTRIBUTING.md)**.
-- All interactions are strictly governed by our **[`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)** (Zero commercial solicitation, zero cryptocurrency schemes, and respectful Socratic inquiry).
+* Join the **[GitHub Discussions Forum](https://github.com/kyberlex/ONE/discussions)**.
+* Review formal submission guidelines in **[`CONTRIBUTING.md`](CONTRIBUTING.md)**.
+* All interactions are strictly governed by our **[`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)** (Zero commercial solicitation, zero cryptocurrency schemes, and respectful Socratic inquiry).
 
 ---
 

@@ -18,7 +18,9 @@
     "btn_primer": "3-Minuten-Leitfaden",
     "btn_video": "Erklärvideo ansehen (8 Min.)",
     "btn_constitution": "Verfassung erkunden",
-    "btn_novels": "Romane lesen (Gratis E-Books)"
+    "btn_novels": "Romane lesen (Gratis E-Books)",
+    "btn_discover": "O.N.E. Entdecken →",
+    "btn_stewards": "Mitbauen (Co-Steward)"
   },
   "video": {
     "badge": "Architektonischer Überblick • 8 Minuten",
@@ -64,7 +66,10 @@
     "tab_postwork": "⚡ 1. Der Post-Labor-Wandel",
     "tab_failures": "🏛️ 2. Warum frühere Systeme scheiterten",
     "tab_pillars": "🛡️ 3. Die 4 Grundpfeiler",
-    "tab_roadmap": "🌱 4. Der Übergangsfahrplan"
+    "tab_roadmap": "🌱 4. Der Übergangsfahrplan",
+    "charter_badge": "Zivilisatorische Charta",
+    "charter_tag": "Kanonische Führungssynthese",
+    "charter_text": "Das Rahmenwerk von Open Networked Earth (O.N.E.) begründet eine postkapitalistische globale Verfassung, die auf universellem Nießbrauch, thermodynamischer Bilanzierung und Losdemokratie basiert — und schuldenbasierte Finanzextraktion durch strikten Schutz persönlicher Besitztümer ersetzt. Es garantiert jedem Individuum unantastbare körperliche Souveränität und eine bedingungslose Überlebensbasis: sauberes Wasser, nährstoffreiche Nahrung, resilienten Wohnraum und medizinische Versorgung. Die planetare Steuerung erfolgt durch geschichtete Losversammlungen in strikt ungerader Parität, wodurch Berufspolitiker und Wahloligarchien beseitigt werden. Physische Ressourcen werden als föderierte Allmenden innerhalb biophysikalischer Belastungsgrenzen verwaltet, gestützt auf Open-Source-Hardware und Peer-to-Peer-Verifikation. Letztlich bietet O.N.E. eine handlungsfähige Übergangsbrücke zu einer friedlichen, hochtechnologischen planetaren Föderation im thermodynamischen Gleichgewicht."
   },
   "primer_content": {
     "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    1. Die Bevorstehende Post-Labor-Realität: Warum Automatisierung Alles Verändert\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    Seit Jahrtausenden unterliegt die menschliche Zivilisation einem eisernen Gesetz: <em>„Wer nicht arbeitet, soll auch nicht essen.“</em>\n    Humanoide Robotik, autonome Maschinen und generative KI brechen diese Formel für immer. Wenn Maschinen Landwirtschaft, Bauwesen, Logistik, Energieerzeugung und Gesundheitsversorgung zu Grenzkosten nahe null übernehmen, muss das menschliche Überleben von Lohnarbeit entkoppelt werden.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ Das Dystopische Standardszenario: Techno-Feudalismus</h4>\n      <p>Unter den aktuellen Marktregeln monopolisieren Tech-Konzerne die gesamte automatisierte Arbeitskraft. Milliarden Menschen werden als „unvermittelbar“ eingestuft, verlieren ihr Einkommen und verarmen, während der Wohlstand sich bei einer Handvoll Oligarchen bündelt.</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 Das O.N.E.-Modell: Maschinelle Befreiung</h4>\n      <p>Die Produktivkraft der Automatisierung wird zum unteilbaren Gemeinerbe der gesamten Menschheit erklärt. Die Arbeit der Maschinen befreit den Menschen von Plackerei, Not und Lohnknechtschaft und macht Nahrung, Wohnraum und Energie zu bedingungslosen Geburtsrechten.</p>\n    </div>\n  </div>\n</div>",
@@ -463,7 +468,7 @@
   "contrast": {
     "tag": "Zivilisatorische Betriebssysteme",
     "title": "Pfad A vs. Pfad B: Die zivilisatorische Weggabelung",
-    "desc": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
+    "desc": "Wenn die Grenzkosten der Arbeit gegen Null fallen, erleidet das alte System eine strukturelle Lähmung. O.N.E. bietet die thermodynamische Ausfahrt.",
     "track_a_badge": "Pfad A • Das Altsystem",
     "track_a_title": "Techno-feudale Extraktion",
     "track_a_desc": "Monopolisierte Automation, ewige Verschuldung und spekulatives Rentiertum.",
@@ -530,9 +535,16 @@
     "p4_role": "4A (FreeCAD/BlenderBIM-Holzarchitektur) + 4B (Home Assistant/ESPHome-YAML)",
     "p4_doubt": "Überführung von MHU-Spezifikationen in reale Konstruktionsdateien: 4A liefert parametrische 3D-Modelle (.FCStd/.ifc), CNC-Schnittpläne (.dxf) und Eurocode-5-Berechnungen; 4B liefert cloudfreie Home Assistant/ESPHome-.yaml-Pakete, DC-Microgrid-Schaltpläne und die Utility-Spine-Stückliste (BOM).",
     "p4_btn_cta": "Der Habitatdialektik beitreten (#12) →",
-    "cta_title": "Ready to Build or Break O.N.E.?",
+    "cta_title": "Bereit, O.N.E. mitzubauen oder auf die Probe zu stellen?",
     "cta_desc": "Ganz gleich, ob Sie einen Grundpfeiler mitverwalten oder als unabhängiger Kritiker thermodynamische und nomothetische Grenzfälle aufspüren möchten: Ihr Beitrag härtet unmittelbar den Genesis-Block.",
-    "btn_all_discussions": "💬 View All Discussions on GitHub",
+    "btn_all_discussions": "💬 Alle Diskussionen auf GitHub ansehen",
     "btn_contact": "✉️ Kyberlex kontaktieren (kyberlex@proton.me)"
+  },
+  "benchmark": {
+    "tag": "⚡ Unabhängige Multi-Agenten-Evaluation",
+    "title": "„Wenn Lohnarbeit gegen Null fällt: Wer überlebt?“",
+    "desc": "Wir haben vier führenden Grenz-KIs (Google Gemini, OpenAI ChatGPT, Anthropic Claude und xAI Grok) ein identisches, blindes politökonomisches Benchmark vorgelegt: Evaluieren Sie sechs Zivilisationsarchitekturen streng durch die Brille einer automatisierten Steady-State-Zivilisation, in der die Grenzkosten der Arbeit gegen Null fallen (<em>MC<sub>L</sub> → 0</em>).",
+    "consensus_title": "4-Lab-Konsens-Scorecard: Steady-State Post-Work Index",
+    "consensus_desc": "Unabhängige Kreuz-Evaluation über 6 Dimensionen: Autonomie, Ökologie, Knappheitsallokation, Anti-Oligarchie, Innovation, Post-Labor-Kohärenz"
   }
 }

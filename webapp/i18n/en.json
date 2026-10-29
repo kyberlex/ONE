@@ -18,7 +18,9 @@
     "btn_primer": "3-Minute Primer",
     "btn_video": "Watch Explainer (8 min)",
     "btn_constitution": "Explore Constitution",
-    "btn_novels": "Read Thrillers (Free Ebooks)"
+    "btn_novels": "Read Thrillers (Free Ebooks)",
+    "btn_discover": "Discover O.N.E. →",
+    "btn_stewards": "Build (Co-Steward)"
   },
   "video": {
     "badge": "Architectural Explainer • 8 Minutes",
@@ -64,7 +66,10 @@
     "tab_postwork": "⚡ 1. The Post-Labor Transition",
     "tab_failures": "🏛️ 2. Why Past Systems Failed",
     "tab_pillars": "🛡️ 3. The 4 Core Pillars",
-    "tab_roadmap": "🌱 4. The Transition Roadmap"
+    "tab_roadmap": "🌱 4. The Transition Roadmap",
+    "charter_badge": "Civilizational Charter",
+    "charter_tag": "Canonical Executive Synthesis",
+    "charter_text": "The Open Networked Earth (O.N.E.) framework establishes a post-capitalist global constitution rooted in universal usufruct, thermodynamic accounting, and sortition governance—replacing debt-based financial extraction while strictly protecting personal possessions. It guarantees every individual invariant bodily sovereignty and an unconditioned baseline of survival: clean water, nutrient-dense food, resilient shelter, and healthcare. Planetary governance is coordinated through stratified sortition assemblies in strict odd-number parity, eliminating career politicians and electoral oligarchies. Physical resources are managed as federated commons within biophysical carrying capacities, powered by open-source hardware and peer-to-peer verification. Ultimately, O.N.E. provides an actionable transitional bridge toward a peaceful, high-technology planetary federation grounded in thermodynamic balance and ecological stewardship."
   },
   "primer_content": {
     "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:#fff; margin-bottom:12px;\">\n    1. The Imminent Post-Labor Reality: Why Automation Changes Everything\n  </h3>\n  <p style=\"font-size:1.05rem; color:#cbd5e1; line-height:1.7; margin-bottom:24px;\">\n    For thousands of years, human civilization operated on the iron rule: <em>\"He who does not work, neither shall he eat.\"</em> \n    Humanoid robotics, autonomous machinery, and generative AI are breaking that equation forever. When machines perform farming, \n    construction, transportation, energy generation, and healthcare at near-zero marginal cost, human survival must be decoupled from employment.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ The Dystopian Default: Techno-Feudalism</h4>\n      <p>Under current market rules, tech monopolies own the automated labor force. Billions become \"unemployable,\" stripped of wages, and forced into extreme precarity while wealth concentrates into a handful of corporate oligarchs.</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 The O.N.E. Blueprint: Machine Liberation</h4>\n      <p>The productive power of automation is declared the common heritage of all humanity. Machine labor frees human beings from drudgery, poverty, and wage servitude—making food, shelter, and energy free birthrights.</p>\n    </div>\n  </div>\n</div>",
@@ -534,5 +539,12 @@
     "cta_desc": "Whether you want to co-steward a foundational pillar or act as an independent critic hunting thermodynamic and nomothetic edge cases, your contribution directly hardens the Genesis Block.",
     "btn_all_discussions": "💬 View All Discussions on GitHub",
     "btn_contact": "✉️ Contact Kyberlex (kyberlex@proton.me)"
+  },
+  "benchmark": {
+    "tag": "⚡ Independent Multi-Agent Evaluation",
+    "title": "\"When Wage Labor Hits Zero, Who Survives?\"",
+    "desc": "We submitted an identical, blind political-economy benchmark to four leading frontier artificial intelligences: <strong>Google Gemini</strong>, <strong>OpenAI ChatGPT</strong>, <strong>Anthropic Claude</strong>, and <strong>xAI Grok</strong>: evaluate six civilizational architectures strictly through the lens of an automated steady-state civilization where marginal labor costs reach zero (<em>MC<sub>L</sub> → 0</em>).",
+    "consensus_title": "4-Lab Consensus Scorecard: Steady-State Post-Work Index",
+    "consensus_desc": "Independent cross-evaluation across 6 dimensions: Autonomy, Ecology, Scarcity Allocation, Anti-Oligarchy, Innovation, Zero-Labor Coherence"
   }
 }

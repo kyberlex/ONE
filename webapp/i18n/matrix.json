@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-29T11:06:20.536471",
-  "total_ui_keys": 379,
+  "generated_at": "2026-10-29T11:59:23.655864",
+  "total_ui_keys": 389,
   "languages": [
     {
       "code": "en",
@@ -75,102 +75,102 @@
   ],
   "ui_stats": {
     "en": {
-      "total": 379,
-      "translated": 379,
+      "total": 389,
+      "translated": 389,
       "identical_to_en": 0,
       "missing": 0,
       "pct": 100.0
     },
     "it": {
-      "total": 379,
-      "translated": 373,
+      "total": 389,
+      "translated": 383,
       "identical_to_en": 6,
       "missing": 0,
-      "pct": 98.4
+      "pct": 98.5
     },
     "fr": {
-      "total": 379,
-      "translated": 370,
-      "identical_to_en": 9,
-      "missing": 0,
-      "pct": 97.6
-    },
-    "de": {
-      "total": 379,
-      "translated": 368,
-      "identical_to_en": 11,
-      "missing": 0,
-      "pct": 97.1
-    },
-    "es": {
-      "total": 379,
-      "translated": 373,
+      "total": 389,
+      "translated": 383,
       "identical_to_en": 6,
       "missing": 0,
-      "pct": 98.4
+      "pct": 98.5
     },
-    "pt": {
-      "total": 379,
-      "translated": 371,
+    "de": {
+      "total": 389,
+      "translated": 381,
       "identical_to_en": 8,
       "missing": 0,
       "pct": 97.9
     },
-    "zh": {
-      "total": 379,
-      "translated": 375,
-      "identical_to_en": 4,
+    "es": {
+      "total": 389,
+      "translated": 386,
+      "identical_to_en": 3,
       "missing": 0,
-      "pct": 98.9
+      "pct": 99.2
+    },
+    "pt": {
+      "total": 389,
+      "translated": 384,
+      "identical_to_en": 5,
+      "missing": 0,
+      "pct": 98.7
+    },
+    "zh": {
+      "total": 389,
+      "translated": 388,
+      "identical_to_en": 1,
+      "missing": 0,
+      "pct": 99.7
     },
     "ja": {
-      "total": 379,
-      "translated": 375,
-      "identical_to_en": 4,
+      "total": 389,
+      "translated": 388,
+      "identical_to_en": 1,
       "missing": 0,
-      "pct": 98.9
+      "pct": 99.7
     },
     "ko": {
-      "total": 379,
-      "translated": 375,
-      "identical_to_en": 4,
+      "total": 389,
+      "translated": 388,
+      "identical_to_en": 1,
       "missing": 0,
-      "pct": 98.9
+      "pct": 99.7
     },
     "hi": {
-      "total": 379,
-      "translated": 375,
-      "identical_to_en": 4,
+      "total": 389,
+      "translated": 388,
+      "identical_to_en": 1,
       "missing": 0,
-      "pct": 98.9
+      "pct": 99.7
     },
     "ar": {
-      "total": 379,
-      "translated": 375,
-      "identical_to_en": 4,
+      "total": 389,
+      "translated": 388,
+      "identical_to_en": 1,
       "missing": 0,
-      "pct": 98.9
+      "pct": 99.7
     },
     "ru": {
-      "total": 379,
-      "translated": 375,
-      "identical_to_en": 4,
+      "total": 389,
+      "translated": 388,
+      "identical_to_en": 1,
       "missing": 0,
-      "pct": 98.9
+      "pct": 99.7
     },
     "id": {
-      "total": 379,
-      "translated": 372,
-      "identical_to_en": 7,
+      "total": 389,
+      "translated": 385,
+      "identical_to_en": 4,
       "missing": 0,
-      "pct": 98.2
+      "pct": 99.0
     },
     "tr": {
-      "total": 379,
-      "translated": 373,
-      "identical_to_en": 6,
+      "total": 389,
+      "translated": 386,
+      "identical_to_en": 3,
       "missing": 0,
-      "pct": 98.4
+      "pct": 99.2
     }
   },
   "datasets_stats": {
@@ -692,98 +692,203 @@
       "composite_pct": 100.0
     },
     "it": {
-      "ui_pct": 98.4,
+      "ui_pct": 98.5,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
       "composite_pct": 99.4
     },
     "fr": {
-      "ui_pct": 97.6,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 99.0
-    },
-    "de": {
-      "ui_pct": 97.1,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 98.8
-    },
-    "es": {
-      "ui_pct": 98.4,
+      "ui_pct": 98.5,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
       "composite_pct": 99.4
     },
-    "pt": {
+    "de": {
       "ui_pct": 97.9,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
       "composite_pct": 99.2
     },
-    "zh": {
-      "ui_pct": 98.9,
+    "es": {
+      "ui_pct": 99.2,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.6
+      "composite_pct": 99.7
+    },
+    "pt": {
+      "ui_pct": 98.7,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 99.5
+    },
+    "zh": {
+      "ui_pct": 99.7,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 99.9
     },
     "ja": {
-      "ui_pct": 98.9,
+      "ui_pct": 99.7,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.6
+      "composite_pct": 99.9
     },
     "ko": {
-      "ui_pct": 98.9,
+      "ui_pct": 99.7,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.6
+      "composite_pct": 99.9
     },
     "hi": {
-      "ui_pct": 98.9,
+      "ui_pct": 99.7,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.6
+      "composite_pct": 99.9
     },
     "ar": {
-      "ui_pct": 98.9,
+      "ui_pct": 99.7,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.6
+      "composite_pct": 99.9
     },
     "ru": {
-      "ui_pct": 98.9,
+      "ui_pct": 99.7,
+      "const_pct": 100.0,
+      "qa_pct": 100.0,
+      "ebooks_pct": 100.0,
+      "composite_pct": 99.9
+    },
+    "id": {
+      "ui_pct": 99.0,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
       "composite_pct": 99.6
     },
-    "id": {
-      "ui_pct": 98.2,
-      "const_pct": 100.0,
-      "qa_pct": 100.0,
-      "ebooks_pct": 100.0,
-      "composite_pct": 99.3
-    },
     "tr": {
-      "ui_pct": 98.4,
+      "ui_pct": 99.2,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.4
+      "composite_pct": 99.7
     }
   },
   "key_details": [
+    {
+      "key": "benchmark.consensus_desc",
+      "section": "benchmark",
+      "en_val": "Independent cross-evaluation across 6 dimensions: Autonomy, Ecology, Scarcity Allocation, Anti-Oligarchy, Innovation, Zero-Labor Coherence",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.consensus_title",
+      "section": "benchmark",
+      "en_val": "4-Lab Consensus Scorecard: Steady-State Post-Work Index",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.desc",
+      "section": "benchmark",
+      "en_val": "We submitted an identical, blind political-economy benchmark to four leading frontier artificial intelligences: <strong>Google Gemini</strong>, <strong>OpenAI ChatGPT</strong>, <strong>Anthropic Claude</strong>, and <strong>xAI Grok</strong>: evaluate six civilizational architectures strictly through the lens of an automated steady-state civilization where marginal labor costs reach zero (<em>MC<sub>L</sub> → 0</em>).",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.tag",
+      "section": "benchmark",
+      "en_val": "⚡ Independent Multi-Agent Evaluation",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "benchmark.title",
+      "section": "benchmark",
+      "en_val": "\"When Wage Labor Hits Zero, Who Survives?\"",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
     {
       "key": "books.btn_coming_soon",
       "section": "books",
@@ -2366,18 +2471,18 @@
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
-        "fr": "IDENTICAL_TO_EN",
-        "de": "IDENTICAL_TO_EN",
-        "es": "IDENTICAL_TO_EN",
-        "pt": "IDENTICAL_TO_EN",
-        "zh": "IDENTICAL_TO_EN",
-        "ja": "IDENTICAL_TO_EN",
-        "ko": "IDENTICAL_TO_EN",
-        "hi": "IDENTICAL_TO_EN",
-        "ar": "IDENTICAL_TO_EN",
-        "ru": "IDENTICAL_TO_EN",
-        "id": "IDENTICAL_TO_EN",
-        "tr": "IDENTICAL_TO_EN"
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
       }
     },
     {
@@ -3578,6 +3683,27 @@
       }
     },
     {
+      "key": "hero.btn_discover",
+      "section": "hero",
+      "en_val": "Discover O.N.E. →",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
       "key": "hero.btn_novels",
       "section": "hero",
       "en_val": "Read Thrillers (Free Ebooks)",
@@ -3623,6 +3749,27 @@
       "key": "hero.btn_simulator",
       "section": "hero",
       "en_val": "Play & Simulate (Hub) ↗",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "hero.btn_stewards",
+      "section": "hero",
+      "en_val": "Build (Co-Steward)",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -7091,18 +7238,18 @@
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
-        "fr": "IDENTICAL_TO_EN",
-        "de": "IDENTICAL_TO_EN",
-        "es": "IDENTICAL_TO_EN",
-        "pt": "IDENTICAL_TO_EN",
-        "zh": "IDENTICAL_TO_EN",
-        "ja": "IDENTICAL_TO_EN",
-        "ko": "IDENTICAL_TO_EN",
-        "hi": "IDENTICAL_TO_EN",
-        "ar": "IDENTICAL_TO_EN",
-        "ru": "IDENTICAL_TO_EN",
-        "id": "IDENTICAL_TO_EN",
-        "tr": "IDENTICAL_TO_EN"
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
       }
     },
     {
@@ -7154,18 +7301,18 @@
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
-        "fr": "IDENTICAL_TO_EN",
-        "de": "IDENTICAL_TO_EN",
-        "es": "IDENTICAL_TO_EN",
-        "pt": "IDENTICAL_TO_EN",
-        "zh": "IDENTICAL_TO_EN",
-        "ja": "IDENTICAL_TO_EN",
-        "ko": "IDENTICAL_TO_EN",
-        "hi": "IDENTICAL_TO_EN",
-        "ar": "IDENTICAL_TO_EN",
-        "ru": "IDENTICAL_TO_EN",
-        "id": "IDENTICAL_TO_EN",
-        "tr": "IDENTICAL_TO_EN"
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
       }
     },
     {
@@ -7907,6 +8054,69 @@
       "key": "synoptic.banner_title",
       "section": "synoptic",
       "en_val": "Abundance Without Exploitation",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "synoptic.charter_badge",
+      "section": "synoptic",
+      "en_val": "Civilizational Charter",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "synoptic.charter_tag",
+      "section": "synoptic",
+      "en_val": "Canonical Executive Synthesis",
+      "statuses": {
+        "en": "CANONICAL",
+        "it": "TRANSLATED",
+        "fr": "TRANSLATED",
+        "de": "TRANSLATED",
+        "es": "TRANSLATED",
+        "pt": "TRANSLATED",
+        "zh": "TRANSLATED",
+        "ja": "TRANSLATED",
+        "ko": "TRANSLATED",
+        "hi": "TRANSLATED",
+        "ar": "TRANSLATED",
+        "ru": "TRANSLATED",
+        "id": "TRANSLATED",
+        "tr": "TRANSLATED"
+      }
+    },
+    {
+      "key": "synoptic.charter_text",
+      "section": "synoptic",
+      "en_val": "The Open Networked Earth (O.N.E.) framework establishes a post-capitalist global constitution rooted in universal usufruct, thermodynamic accounting, and sortition governance—replacing debt-based financial extraction while strictly protecting personal possessions. It guarantees every individual invariant bodily sovereignty and an unconditioned baseline of survival: clean water, nutrient-dense food, resilient shelter, and healthcare. Planetary governance is coordinated through stratified sortition assemblies in strict odd-number parity, eliminating career politicians and electoral oligarchies. Physical resources are managed as federated commons within biophysical carrying capacities, powered by open-source hardware and peer-to-peer verification. Ultimately, O.N.E. provides an actionable transitional bridge toward a peaceful, high-technology planetary federation grounded in thermodynamic balance and ecological stewardship.",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",

@@ -18,7 +18,9 @@
     "btn_primer": "요약 가이드 (3분)",
     "btn_video": "설명 영상 시청 (8분)",
     "btn_constitution": "헌법 전문 탐색",
-    "btn_novels": "소설 읽기 (무료 전자책)"
+    "btn_novels": "소설 읽기 (무료 전자책)",
+    "btn_discover": "O.N.E. 탐색하기 →",
+    "btn_stewards": "함께 구축하기 (Co-Steward)"
   },
   "video": {
     "badge": "체계 해설 • 8분",
@@ -64,7 +66,10 @@
     "tab_postwork": "⚡ 1. 탈(脫)노동 대전환",
     "tab_failures": "🏛️ 2. 과거 시스템의 파탄",
     "tab_pillars": "🛡️ 3. 4대 기본 주춧돌",
-    "tab_roadmap": "🌱 4. 현실적 전환 로드맵"
+    "tab_roadmap": "🌱 4. 현실적 전환 로드맵",
+    "charter_badge": "문명 헌장",
+    "charter_tag": "정전 핵심 요약",
+    "charter_text": "오픈 네트워크 어스(O.N.E.) 프레임워크는 보편적 용익권, 열역학적 회계, 추첨제 민주주의에 기반한 탈자본주의 글로벌 헌법을 확립합니다. 부채 기반 금융 착취를 종식하고 개인 소유물을 엄격히 보호하면서, 모든 개인에게 침해할 수 없는 신체적 주권과 무조건적 생존 기반(깨끗한 물, 풍부한 영양의 음식, 회복력 있는 주거, 의료)을 보장합니다."
   },
   "primer_content": {
     "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    1. 다가오는 탈(脫)노동 현실: 자동화가 모든 것을 바꾸는 이유\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    수천 년 동안 인류 문명은 <em>\"일하지 않는 자는 먹지도 말라\"</em>는 철칙 아래 지배되어 왔습니다.\n    휴머노이드 로봇공학, 자율 기계, 생성형 AI는 이 공식을 영원히 해체하고 있습니다. 기계가 농업, 건설, 물류, 발전, 의료를 한계비용 제로에 가깝게 수행할 때, 인간의 생존은 임금 노동으로부터 완전히 분리되어야 합니다.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ 방치 시 도래할 기본 디스토피아: 테크노 봉건제</h4>\n      <p>현재의 시장 규칙 아래서는 소수의 빅테크 독점 기업이 자동화된 노동력 전체를 사유화합니다. 수십억 명의 인류가 '고용 불가능'으로 낙인찍혀 임금을 잃고 극심한 생존 위기에 내몰리는 반면, 부는 극소수 과두 기업에 집중됩니다.</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 O.N.E. 대안 모델: 기계적 인류 해방</h4>\n      <p>자동화의 생산 역량은 전 인류의 불가분한 공동 유산으로 선언됩니다. 기계의 노동은 인간을 고역, 빈곤, 임금 노예 상태에서 해방시켜, 식량, 주거, 에너지를 태어난 모든 사람의 무조건적인 천부적 권리로 전환합니다.</p>\n    </div>\n  </div>\n</div>",
@@ -463,7 +468,7 @@
   "contrast": {
     "tag": "문명 운영체제",
     "title": "트랙 A 대 트랙 B: 문명의 갈림길",
-    "desc": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
+    "desc": "노동의 한계비용이 0에 도달하면 기존 체제는 구조적 마비에 직면합니다. O.N.E.는 열역학적 탈출구를 제공합니다.",
     "track_a_badge": "트랙 A • 기존의 기본 경로",
     "track_a_title": "테크노 봉건적 수탈",
     "track_a_desc": "독점된 자동화, 영구적 부채, 그리고 투기적 지대 추구.",
@@ -530,9 +535,16 @@
     "p4_role": "4A (FreeCAD/BlenderBIM 목재 건축) + 4B (Home Assistant/ESPHome YAML)",
     "p4_doubt": "MHU 사양을 실제 엔지니어링 파일로 구현: 4A는 파라메트릭 3D 모델(.FCStd/.ifc), CNC 절단 도면(.dxf), Eurocode 5 구조 계산서를 제공하며, 4B는 제로 클라우드 Home Assistant/ESPHome .yaml 패키지, DC 마이크로그리드 회로도, 유틸리티 스파인(Utility Spine) BOM을 완성합니다.",
     "p4_btn_cta": "주거 변증법 참여 (#12) →",
-    "cta_title": "Ready to Build or Break O.N.E.?",
+    "cta_title": "O.N.E.을 함께 구축하거나 한계를 시험할 준비가 되셨습니까?",
     "cta_desc": "핵심 기둥의 공동 스튜어드로 참여하든, 열역학적·규범적 한계 사례(edge case)를 파고드는 독립 비평가로 활동하든, 여러분의 기여는 제네시스 블록(Genesis Block)을 더욱 견고하게 단련합니다.",
-    "btn_all_discussions": "💬 View All Discussions on GitHub",
+    "btn_all_discussions": "💬 GitHub 토론 전체 보기",
     "btn_contact": "✉️ Kyberlex 문의 (kyberlex@proton.me)"
+  },
+  "benchmark": {
+    "tag": "⚡ 독립 멀티에이전트 평가",
+    "title": "“임금 노동이 0이 될 때, 누가 살아남는가?”",
+    "desc": "우리는 4대 프론티어 인공지능(Google Gemini, OpenAI ChatGPT, Anthropic Claude, xAI Grok)에 동일한 블라인드 정치경제 벤치마크를 제출했습니다: 노동의 한계비용이 0에 도달하는 자동화된 정상상태 문명의 렌즈를 통해 6가지 문명 체계를 엄격히 평가하라.",
+    "consensus_title": "4개 랩 합의 스코어카드: 정상상태 탈노동 지수",
+    "consensus_desc": "6개 차원에 걸친 독립 교차 평가: 자율성, 생태성, 희소성 배분, 반과두제, 혁신성, 노동 제로 일관성"
   }
 }

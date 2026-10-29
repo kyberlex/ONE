@@ -18,7 +18,9 @@
     "btn_primer": "3分でわかる入門",
     "btn_video": "解説動画を視聴 (8分)",
     "btn_constitution": "憲法を探索する",
-    "btn_novels": "小説を読む（無料電子書籍）"
+    "btn_novels": "小説を読む（無料電子書籍）",
+    "btn_discover": "O.N.E. を探求する →",
+    "btn_stewards": "共に築く (Co-Steward)"
   },
   "video": {
     "badge": "アーキテクチャ解説 • 8分",
@@ -64,7 +66,10 @@
     "tab_postwork": "⚡ 1. 脱労働への大転換",
     "tab_failures": "🏛️ 2. 過去の体制の失敗",
     "tab_pillars": "🛡️ 3. 4つの核心原則",
-    "tab_roadmap": "🌱 4. 移行ロードマップ"
+    "tab_roadmap": "🌱 4. 移行ロードマップ",
+    "charter_badge": "文明憲章",
+    "charter_tag": "規範的エグゼクティブサマリー",
+    "charter_text": "オープン・ネットワークド・アース（O.N.E.）の枠組みは、普遍的用益権、熱力学会計、くじ引き民主主義に根ざしたポスト資本主義の地球憲法を確立します。負債に基づく金融収奪を廃し、私的所有物を厳格に保護しながら、すべての人に不可侵の身体的主権と無条件の生存基盤（清潔な水、栄養価の高い食料、強靭な住居、医療）を保証します。"
   },
   "primer_content": {
     "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    1. 迫り来るポスト労働の現実：なぜ自動化がすべてを一変させるのか\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    人類は何千年もの間、<em>「働かざる者、食うべからず」</em>という鉄の掟に従って生きてきました。\n    ヒト型ロボット、自律機械、生成AIはこの方程式を永遠に打ち砕きます。機械が農業、建築、物流、発電、医療を限界費用ほぼゼロで担う時、人間の生存は賃金雇用から完全に切り離されなければなりません。\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ 放置された場合の悪夢：テクノ封建制</h4>\n      <p>現行の市場原理のままでは、巨大IT資本が自動化された労働力全体を独占します。数十億人の人間が「雇用不能」として賃金を奪われ、極度の生活不安に叩き落とされる一方、富は一握りの巨大寡頭資本へと集中します。</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 O.N.E. のモデル：機械による人間解放</h4>\n      <p>自動化の生産力は全人類の共有財産であると宣言されます。機械の労働が人間を苦役、貧困、賃金隷属から解き放ち、食糧、住居、エネルギーを誰もが生まれながらに持つ無条件の権利へと変貌させます。</p>\n    </div>\n  </div>\n</div>",
@@ -463,7 +468,7 @@
   "contrast": {
     "tag": "文明のオペレーティングシステム",
     "title": "トラックA 対 トラックB：文明の分岐点",
-    "desc": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
+    "desc": "労働の限界費用がゼロに達したとき、旧来のシステムは構造的麻痺に陥ります。O.N.E. は熱力学的な出口を提供します。",
     "track_a_badge": "トラックA • 旧来のデフォルト",
     "track_a_title": "テクノ封建主義的搾取",
     "track_a_desc": "独占された自動化、永続的な負債、そして投機的な不労所得収奪。",
@@ -529,10 +534,17 @@
     "p4_role": "4A (FreeCAD/BlenderBIM 木造建築) ＋ 4B (Home Assistant/ESPHome YAML)",
     "p4_doubt": "MHU（移動式居住ユニット）仕様を実際のエンジニアリングファイルへと変換する：4A はパラメトリック3Dモデル（.FCStd/.ifc）、CNC加工シート（.dxf）、およびユーロコード5（Eurocode 5）構造計算書を提供し、4B は完全ローカル仕様（zero-cloud）の Home Assistant/ESPHome .yaml パッケージ、DCマイクログリッド配線図、およびユーティリティ・スパイン（Utility Spine）の部品表（BOM）を提供する。",
     "p4_btn_cta": "ハビタット対話（#12）に参加 →",
-    "cta_title": "Ready to Build or Break O.N.E.?",
+    "cta_title": "O.N.E. を共に築き、あるいはその限界を試す準備はできましたか？",
     "cta_desc": "基盤となる支柱を共同スチュワードとして担うにせよ、熱力学的・規範論的なエッジケースを追究する独立した批評家として参画するにせよ、あなたの貢献はジェネシスブロックを直接的に堅牢化します。",
-    "btn_all_discussions": "💬 View All Discussions on GitHub",
+    "btn_all_discussions": "💬 GitHubでディスカッション一覧を見る",
     "btn_contact": "✉️ Kyberlexへ連絡 (kyberlex@proton.me)",
     "badge_seeking_builders": "2名のビルダーを募集中 (4A + 4B)"
+  },
+  "benchmark": {
+    "tag": "⚡ 独立系マルチエージェント評価",
+    "title": "「賃金労働がゼロになったとき、誰が生き残るか？」",
+    "desc": "私たちは4つの主要フロンティアAI（Google Gemini、OpenAI ChatGPT、Anthropic Claude、xAI Grok）に同一のブラインド政治経済ベンチマークを提示しました：労働の限界費用がゼロ（<em>MC<sub>L</sub> → 0</em>）に達した自動化定常文明の視点から、6つの文明アーキテクチャを厳格に評価せよ。",
+    "consensus_title": "4大AI研究所コンセンサス・スコアカード：定常ポストワーク指数",
+    "consensus_desc": "6つの次元における独立クロス評価：自律性、生態系、希少性配分、反寡頭制、革新性、ゼロ労働整合性"
   }
 }

@@ -49,7 +49,7 @@ To ensure long-term resilience and protect against burnout, stewardship is gover
 
 ### **ARTICLE III: CO-FOUNDER GOVERNANCE & STATUTORY PARITY**
 
-1. **The 3-Steward Quorum:** Pillar 0 governance is vested in a 3-steward peer quorum. The Community Co-Steward holds equal voting parity with the architectural founder on all matters of public communication, community policy, and steward seating.
+1. **Co-Steward Parity & Open Collaborators:** Pillar 0 is led by 1 Lead Co-Steward supported by open Collaborators. The Community Co-Steward holds equal voting parity with the architectural founder on all matters of public communication, community policy, and steward onboarding.
 2. **Swiss Foundation Deposit:** Upon statutory incorporation of Foundation ONE under Swiss Civil Law (ZGB Art. 80 ff.), the Pillar 0 Co-Steward is registered as a founding statutory co-steward.
 3. **Non-Commercial Purity (Class-0 Hard Constraint):** O.N.E. is 100% free software and public domain commons. Zero tokens, zero crypto speculation, zero paywalls, zero monetization. Neither the founder nor the stewards may extract private profit from the public commons.
 

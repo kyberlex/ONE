@@ -18,7 +18,9 @@
     "btn_primer": "3分钟极简指南",
     "btn_video": "观看架构解析（8 分钟）",
     "btn_constitution": "探索宪法",
-    "btn_novels": "阅读小说（免费电子书）"
+    "btn_novels": "阅读小说（免费电子书）",
+    "btn_discover": "探索 O.N.E. →",
+    "btn_stewards": "共同建设 (Co-Steward)"
   },
   "video": {
     "badge": "架构解析 • 8 分钟",
@@ -64,7 +66,10 @@
     "tab_postwork": "⚡ 1. 后劳作时代转型",
     "tab_failures": "🏛️ 2. 过去制度的破产",
     "tab_pillars": "🛡️ 3. 四大核心支柱",
-    "tab_roadmap": "🌱 4. 落地过渡路线图"
+    "tab_roadmap": "🌱 4. 落地过渡路线图",
+    "charter_badge": "文明宪章",
+    "charter_tag": "规范执行综述",
+    "charter_text": "开放网络地球 (O.N.E.) 框架确立了后资本主义全球宪章，根植于普惠用益权、热力学核算与抽签民主制——以严格保护个人财产取代基于债务的金融掠夺。它保障每个人不可侵犯的身体主权和无条件生存底线：清洁水、营养食物、韧性住所与医疗保健。行星级治理通过严格奇数编制的分层抽签议会进行协调，消除职业政客与选举寡头。"
   },
   "primer_content": {
     "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    1. 迫在眉睫的后劳作现实：为何自动化将颠覆一切\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    数千年来，人类文明始终运行在一条铁律之下：<em>“不劳动者不得食。”</em>\n    人形具身机器人、全自主机械与生成式人工智能正在彻底粉碎这道公式。当机械以接近零的边际成本接管农业、建筑、运输、能源生成与医疗保障时，人类的生存必须彻底与雇佣劳动脱钩。\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ 默认的反乌托邦困境：技术封建主义</h4>\n      <p>在现有市场规则下，科技巨头将垄断自动化劳动力。数十亿普通人将被打上“失去受雇价值”的标签，被剥夺工资来源并陷入赤贫，而全部生产力财富将迅速集中在极少数寡头手中。</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 O.N.E. 解决方案：机械大解放</h4>\n      <p>自动化的全部生产潜能被宣告为全人类共同继承之遗产。机器的劳动将人类从苦役、贫困与工资奴役中彻底赎买出来，使粮食、住房与能源成为全人类与生俱来的无条件权利。</p>\n    </div>\n  </div>\n</div>",
@@ -463,7 +468,7 @@
   "contrast": {
     "tag": "文明操作系统",
     "title": "轨道 A 对比轨道 B：文明的分岔路口",
-    "desc": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
+    "desc": "当边际劳动力成本归零时，旧体制陷入结构性瘫痪。O.N.E. 提供了符合热力学定律的平稳过渡方案。",
     "track_a_badge": "轨道 A • 旧序默认路径",
     "track_a_title": "技术封建式榨取",
     "track_a_desc": "垄断化自动化、永续债务与投机性寻租主义。",
@@ -529,10 +534,17 @@
     "p4_role": "4A（FreeCAD/BlenderBIM 木结构建筑）+ 4B（Home Assistant/ESPHome YAML）",
     "p4_doubt": "将 MHU 规范转化为实际工程文件：4A 交付参数化 3D 模型（.FCStd/.ifc）、CNC 切割图纸（.dxf）和欧洲规范 5（Eurocode 5）结构验算；4B 交付零云端 Home Assistant/ESPHome .yaml 软件包、直流微电网原理图及市政管线枢纽（Utility Spine）物料清单（BOM）。",
     "p4_btn_cta": "参与生境辩证探讨 (#12) →",
-    "cta_title": "Ready to Build or Break O.N.E.?",
+    "cta_title": "准备好共同建设或检验 O.N.E. 的极限了吗？",
     "cta_desc": "无论您是希望共同管护核心基石，还是作为独立批判者探查热力学与律则性的边界极端特例，您的贡献都将直接加固创世区块（Genesis Block）。",
-    "btn_all_discussions": "💬 View All Discussions on GitHub",
+    "btn_all_discussions": "💬 在 GitHub 查看所有讨论",
     "btn_contact": "✉️ 联系 Kyberlex (kyberlex@proton.me)",
     "badge_seeking_builders": "招募 2 位构建者（4A + 4B）"
+  },
+  "benchmark": {
+    "tag": "⚡ 独立多智能体联合基准测试",
+    "title": "“当雇佣劳动归零时，谁能生存？”",
+    "desc": "我们向四大前沿人工智能实验室提交了完全相同的盲评政治经济基准测试：<strong>Google Gemini</strong>、<strong>OpenAI ChatGPT</strong>、<strong>Anthropic Claude</strong> 和 <strong>xAI Grok</strong>：严格从边际劳动成本归零 (<em>MC<sub>L</sub> → 0</em>) 的自动化稳态文明视角，评估六种文明治理架构。",
+    "consensus_title": "四实验室共识计分卡：稳态后工作时代指数",
+    "consensus_desc": "跨六个维度的独立交叉评估：自主性、生态性、稀缺性配置、反寡头、创新力、零劳动力连贯性"
   }
 }

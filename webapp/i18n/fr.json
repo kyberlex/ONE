@@ -18,7 +18,9 @@
     "btn_primer": "Guide Rapide (3 min)",
     "btn_video": "Voir la vidéo explicative (8 min)",
     "btn_constitution": "Explorer la Constitution",
-    "btn_novels": "Lire les Romans (Ebooks gratuits)"
+    "btn_novels": "Lire les Romans (Ebooks gratuits)",
+    "btn_discover": "Découvrir O.N.E. →",
+    "btn_stewards": "Construire (Co-Steward)"
   },
   "video": {
     "badge": "Présentation architecturale • 8 minutes",
@@ -64,7 +66,10 @@
     "tab_postwork": "⚡ 1. La Transition Post-Labor",
     "tab_failures": "🏛️ 2. L'Échec des Modèles Passés",
     "tab_pillars": "🛡️ 3. Les 4 Piliers Fondamentaux",
-    "tab_roadmap": "🌱 4. La Feuille de Route"
+    "tab_roadmap": "🌱 4. La Feuille de Route",
+    "charter_badge": "Charte Civilisationnelle",
+    "charter_tag": "Synthèse Exécutive Canonique",
+    "charter_text": "Le cadre d'Open Networked Earth (O.N.E.) établit une constitution mondiale post-capitaliste fondée sur l'usufruit universel, la comptabilité thermodynamique et la démarchie par tirage au sort — remplaçant l'extraction financière par la dette tout en protégeant strictement les biens personnels. Il garantit à chaque individu une souveraineté corporelle inviolable et une base de survie inconditionnelle : eau pure, alimentation saine, logement résilient et soins de santé. La gouvernance planétaire est assurée par des assemblées tirées au sort en parité impaire stricte, éliminant les politiciens professionnels. Les ressources physiques sont gérées comme des communs fédérés respectant les limites biophysiques, soutenus par du matériel libre et une vérification de pair à pair."
   },
   "primer_content": {
     "postwork": "<div class=\"primer-tab-pane\">\n  <h3 style=\"font-family:var(--font-heading); font-size:1.6rem; color:var(--text-main); margin-bottom:12px;\">\n    1. L'Imminente Réalité Post-Labor : Pourquoi l'Automatisation Change Tout\n  </h3>\n  <p style=\"font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;\">\n    Pendant des millénaires, la civilisation humaine s'est pliée à une loi d'airain : <em>« Celui qui ne travaille pas ne mange pas. »</em>\n    La robotique humanoïde, les machines autonomes et l'IA générative brisent définitivement cette contrainte. Lorsque l'agriculture, le bâtiment, les transports, l'énergie et la santé sont assurés à coût marginal quasi nul, la survie humaine doit être dissociée du travail salarié.\n  </p>\n  <div class=\"primer-grid\">\n    <div class=\"primer-feature-card\">\n      <h4 style=\"color:var(--accent-rose);\">⚠️ Le Scénario Dystopique par Défaut : Le Techno-Féodalisme</h4>\n      <p>Sous les règles actuelles du marché, les monopoles technologiques s'approprient la totalité des forces de travail automatisées. Des milliards d'individus deviennent « inemployables », privés de salaire et plongés dans la précarité pendant que la richesse se concentre entre les mains d'une poignée d'oligarques.</p>\n    </div>\n    <div class=\"primer-feature-card\" style=\"border-color:rgba(16, 185, 129, 0.35);\">\n      <h4 style=\"color:var(--accent-emerald);\">🌱 Le Modèle O.N.E. : L'Émancipation Mécanique</h4>\n      <p>La puissance productive des machines est déclarée patrimoine commun inaliénable de l'humanité. Le travail automatisé libère l'être humain du labeur exténuant, de la misère et du salariat forcé, faisant de l'alimentation, du logement et de l'énergie des droits de naissance inconditionnels.</p>\n    </div>\n  </div>\n</div>",
@@ -463,7 +468,7 @@
   "contrast": {
     "tag": "Systèmes d'exploitation civilisationnels",
     "title": "Voie A vs Voie B : la bifurcation civilisationnelle",
-    "desc": "When marginal labor costs hit zero, the legacy system faces structural paralysis. O.N.E. provides the thermodynamic off-ramp.",
+    "desc": "Lorsque le coût marginal du travail atteint zéro, le système hérité subit une paralysie structurelle. O.N.E. offre l'échappatoire thermodynamique.",
     "track_a_badge": "Voie A • Modèle hérité par défaut",
     "track_a_title": "Extraction techno-féodale",
     "track_a_desc": "Automatisation monopolisée, dette perpétuelle et rentiérisme spéculatif.",
@@ -530,9 +535,16 @@
     "p4_role": "4A (Architecture bois FreeCAD/BlenderBIM) + 4B (YAML Home Assistant/ESPHome)",
     "p4_doubt": "Traduire les spécifications de l'UMH en véritables dossiers d'ingénierie : 4A produit les modèles paramétriques 3D (.FCStd/.ifc), les plans de découpe CNC (.dxf) et les calculs Eurocode 5 ; 4B fournit les paquets .yaml Home Assistant/ESPHome zéro-cloud, les schémas de microréseau DC et la nomenclature (BOM) de la colonne technique (Utility Spine).",
     "p4_btn_cta": "Rejoindre la Dialectique de l'Habitat (#12) →",
-    "cta_title": "Ready to Build or Break O.N.E.?",
+    "cta_title": "Prêt à bâtir ou à éprouver O.N.E. ?",
     "cta_desc": "Que vous souhaitiez assurer la co-intendance d'un pilier fondateur ou agir en tant que critique indépendant traquant les cas limites thermodynamiques et nomothétiques, votre contribution consolide directement le Bloc Genesis.",
-    "btn_all_discussions": "💬 View All Discussions on GitHub",
+    "btn_all_discussions": "💬 Voir toutes les discussions sur GitHub",
     "btn_contact": "✉️ Contacter Kyberlex (kyberlex@proton.me)"
+  },
+  "benchmark": {
+    "tag": "⚡ Évaluation Indépendante Multi-Agents",
+    "title": "« Quand le travail salarié tombe à zéro, qui survit ? »",
+    "desc": "Nous avons soumis un benchmark identique et à l'aveugle à quatre intelligences artificielles de pointe : <strong>Google Gemini</strong>, <strong>OpenAI ChatGPT</strong>, <strong>Anthropic Claude</strong> et <strong>xAI Grok</strong> : évaluer six architectures civilisationnelles à travers le prisme d'une civilisation automatisée à état stationnaire où le coût marginal du travail atteint zéro (<em>MC<sub>L</sub> → 0</em>).",
+    "consensus_title": "Scorecard de Consensus des 4 Labos : Indice Post-Travail Stationnaire",
+    "consensus_desc": "Évaluation croisée indépendante sur 6 dimensions : Autonomie, Écologie, Allocation de rareté, Anti-oligarchie, Innovation, Cohérence zéro travail"
   }
 }
