@@ -63,5 +63,27 @@ using Simone
         fpath = joinpath(arch_dir, nf)
         @test isfile(fpath)
     end
+
+    # Verify 12-Sector Leontief matrix and REA Adapter (Tasks 1.1 & 6.1)
+    matrix12_path = joinpath(@__DIR__, "..", "data", "leontief_12sector_matrix.json")
+    @test isfile(matrix12_path)
+
+    events_path = joinpath(@__DIR__, "..", "data", "sample_rea_events.json")
+    @test isfile(events_path)
+
+    # REA FlowEvent structure and folding
+    sample_events = [
+        REAFlowEvent("e1", 1.0, :produce, :exergy_kwh, 100.0, "pv", "battery"),
+        REAFlowEvent("e2", 2.0, :consume, :exergy_kwh, 30.0, "battery", "home"),
+        REAFlowEvent("e3", 3.0, :produce, :water_liters, 500.0, "weir", "tank"),
+        REAFlowEvent("e4", 4.0, :consume, :water_liters, 200.0, "tank", "irrigation"),
+    ]
+    deltas = fold_rea_events(sample_events)
+    @test deltas[:exergy_kwh] ≈ 70.0
+    @test deltas[:water_liters] ≈ 300.0
+
+    ode_match = Dict(:exergy_kwh => 68.0, :water_liters => 295.0, :biomass_kcal => 0.0, :compute_fab_hours => 0.0)
+    reconciled, errors = reconcile_rea_with_ode_delta(sample_events, ode_match; tolerance_pct=5.0)
+    @test reconciled == true
 end
 

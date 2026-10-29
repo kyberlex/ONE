@@ -1,0 +1,89 @@
+{
+  "protocol": "VALUEFLOWS_REA_ELOHIM_EPR",
+  "version": "1.0.0",
+  "node_id": "NODE-01-GALICIA-SEED",
+  "time_window_hours": 24.0,
+  "events": [
+    {
+      "event_id": "ev-001",
+      "timestamp_hour": 1.5,
+      "action": "produce",
+      "resource": "exergy_kwh",
+      "quantity": 120.5,
+      "provider_id": "solar_pv_array_alpha",
+      "receiver_id": "central_lfp_battery_storage"
+    },
+    {
+      "event_id": "ev-002",
+      "timestamp_hour": 4.0,
+      "action": "produce",
+      "resource": "water_liters",
+      "quantity": 4500.0,
+      "provider_id": "gravity_catchment_weir",
+      "receiver_id": "main_potable_cistern"
+    },
+    {
+      "event_id": "ev-003",
+      "timestamp_hour": 7.5,
+      "action": "consume",
+      "resource": "water_liters",
+      "quantity": 3800.0,
+      "provider_id": "main_potable_cistern",
+      "receiver_id": "community_kitchen_and_hygiene"
+    },
+    {
+      "event_id": "ev-004",
+      "timestamp_hour": 11.0,
+      "action": "consume",
+      "resource": "exergy_kwh",
+      "quantity": 95.0,
+      "provider_id": "central_lfp_battery_storage",
+      "receiver_id": "fablab_cnc_and_pumps"
+    },
+    {
+      "event_id": "ev-005",
+      "timestamp_hour": 14.0,
+      "action": "produce",
+      "resource": "biomass_kcal",
+      "quantity": 780000.0,
+      "provider_id": "agroforestry_swale_field",
+      "receiver_id": "cold_fermentation_store"
+    },
+    {
+      "event_id": "ev-006",
+      "timestamp_hour": 18.0,
+      "action": "consume",
+      "resource": "biomass_kcal",
+      "quantity": 750000.0,
+      "provider_id": "cold_fermentation_store",
+      "receiver_id": "village_metabolic_nutrition"
+    },
+    {
+      "event_id": "ev-007",
+      "timestamp_hour": 20.0,
+      "action": "produce",
+      "resource": "compute_fab_hours",
+      "quantity": 48.0,
+      "provider_id": "solar_edge_compute_cluster",
+      "receiver_id": "mesh_telemetry_registry"
+    },
+    {
+      "event_id": "ev-008",
+      "timestamp_hour": 22.0,
+      "action": "consume",
+      "resource": "compute_fab_hours",
+      "quantity": 42.0,
+      "provider_id": "mesh_telemetry_registry",
+      "receiver_id": "environmental_kalman_filters"
+    },
+    {
+      "event_id": "ev-009",
+      "timestamp_hour": 23.5,
+      "action": "wear",
+      "resource": "compute_fab_hours",
+      "quantity": 1.2,
+      "provider_id": "cnc_spindle_bearing",
+      "receiver_id": "entropy_wear_accumulator"
+    }
+  ]
+}

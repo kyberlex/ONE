@@ -1,0 +1,111 @@
+{
+  "protocol": "MODBUS_RTU_RS485",
+  "baud_rate": 9600,
+  "data_bits": 8,
+  "parity": "None",
+  "stop_bits": 1,
+  "slave_id": 1,
+  "target_hardware": "16S LiFePO4 Battery Management System (BMS)",
+  "standard": "IEC 62619 / Class-0 Open Hardware Substrate",
+  "author": "Kyberlex <kyberlex@proton.me>",
+  "license": "AGPL-3.0-or-later",
+  "zero_biometrics_declaration": "This telemetry register map is strictly restricted to abiotic electrical and thermal physics. No camera, audio, or biometric telemetry registers are permitted.",
+  "registers": [
+    {
+      "address": 40001,
+      "name": "PACK_VOLTAGE_CV",
+      "type": "uint16",
+      "scale": 0.01,
+      "unit": "V",
+      "description": "Total battery pack voltage (Nominal 51.2V, 44.0V - 58.4V range)"
+    },
+    {
+      "address": 40002,
+      "name": "PACK_CURRENT_DA",
+      "type": "int16",
+      "scale": 0.1,
+      "unit": "A",
+      "description": "Battery pack current (Positive = Charging, Negative = Discharging)"
+    },
+    {
+      "address": 40003,
+      "name": "STATE_OF_CHARGE",
+      "type": "uint16",
+      "scale": 0.1,
+      "unit": "%",
+      "description": "Estimated State of Charge based on Coulomb counting and OCV"
+    },
+    {
+      "address": 40004,
+      "name": "STATE_OF_HEALTH",
+      "type": "uint16",
+      "scale": 0.1,
+      "unit": "%",
+      "description": "State of Health based on cumulative cycle throughput"
+    },
+    {
+      "address": 40005,
+      "name": "TEMP_CELL_MIN",
+      "type": "int16",
+      "scale": 0.1,
+      "unit": "°C",
+      "description": "Minimum cell temperature. Triggers hardware charge lockout if <= 2.0°C"
+    },
+    {
+      "address": 40006,
+      "name": "TEMP_CELL_MAX",
+      "type": "int16",
+      "scale": 0.1,
+      "unit": "°C",
+      "description": "Maximum cell temperature. Triggers over-temperature cutoff if >= 55.0°C"
+    },
+    {
+      "address": 40007,
+      "name": "TEMP_MOSFET",
+      "type": "int16",
+      "scale": 0.1,
+      "unit": "°C",
+      "description": "Power MOSFET heat-sink temperature"
+    },
+    {
+      "address": 40008,
+      "name": "CYCLES_COUNT",
+      "type": "uint16",
+      "scale": 1,
+      "unit": "cycles",
+      "description": "Cumulative full equivalent charge/discharge cycles"
+    },
+    {
+      "address": 40010,
+      "name": "ALARM_STATUS_WORD_1",
+      "type": "uint16",
+      "scale": 1,
+      "unit": "bitfield",
+      "description": "Bit 0: Cell OVP, Bit 1: Cell UVP, Bit 2: Pack OVP, Bit 3: Pack UVP, Bit 4: Charge OTP, Bit 5: Charge UTP (Cryo lockout), Bit 6: Discharge OTP, Bit 7: Overcurrent Charge"
+    },
+    {
+      "address": 40011,
+      "name": "BALANCING_STATUS_WORD",
+      "type": "uint16",
+      "scale": 1,
+      "unit": "bitfield",
+      "description": "Bits 0-15: Individual active balancing state for cells 1 through 16"
+    },
+    {
+      "address": 40020,
+      "name": "CELL_01_VOLTAGE",
+      "type": "uint16",
+      "scale": 0.001,
+      "unit": "V",
+      "description": "Individual cell 01 voltage (mV precision)"
+    },
+    {
+      "address": 40035,
+      "name": "CELL_16_VOLTAGE",
+      "type": "uint16",
+      "scale": 0.001,
+      "unit": "V",
+      "description": "Individual cell 16 voltage (mV precision)"
+    }
+  ]
+}

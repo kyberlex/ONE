@@ -33,6 +33,9 @@ export PsychometricProfile, civic_contribution_propensity, update_agent_fatigue
 export VALID_SORTITION_QUORUMS, CONSTITUTIONAL_SUPERMAJORITY, SortitionProposalState
 export verify_odd_parity_quorum, evaluate_supermajority_vote, draw_stratified_odd_jury
 
+# P2P REA Event Substrate Exports (Task 6.1)
+export REAFlowEvent, parse_rea_event, fold_rea_events, reconcile_rea_with_ode_delta
+
 include("aggregate_ode.jl")
 include("agent_abm.jl")
 include("docking.jl")
@@ -40,5 +43,6 @@ include("layer0_abiotic.jl")
 include("layer1_leontief.jl")
 include("layer2_psychometrics.jl")
 include("layer3_sortition.jl")
+include("rea_adapter.jl")
 
 end # module Simone

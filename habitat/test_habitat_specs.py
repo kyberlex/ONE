@@ -36,6 +36,7 @@ def test_cad_macros_and_exports():
     cad_dir = os.path.join(HABITAT_DIR, "cad")
     gusset_mod = load_macro_module("mhu_gusset", os.path.join(cad_dir, "generate_mhu_gusset.FCMacro"))
     docking_mod = load_macro_module("helical_docking", os.path.join(cad_dir, "generate_helical_pile_docking.FCMacro"))
+    portal_mod = load_macro_module("portal_frame", os.path.join(cad_dir, "generate_mhu_portal_frame.FCMacro"))
 
     ec5 = gusset_mod.compute_eurocode5_shear_capacity()
     assert ec5["F_v_Rk_node_kN"] >= 50.0, f"EC5 nodal shear too low: {ec5['F_v_Rk_node_kN']} kN < 50 kN"
@@ -45,11 +46,18 @@ def test_cad_macros_and_exports():
         f"Helical pile safety factor below 2.0: {pile}"
     )
 
+    portal = portal_mod.compute_portal_frame_kinematics()
+    assert portal["ec5_status"] == "PASS" and portal["knee_bending_utilization"] < 1.0, (
+        f"Portal frame EC5 bending failure: {portal}"
+    )
+
     required_cad_files = [
         "mhu_nodal_gusset_18mm.dxf",
         "mhu_nodal_gusset_18mm.stl",
         "helical_pile_docking_flange_s355.dxf",
         "helical_pile_docking_flange_s355.stl",
+        "mhu_portal_frame_3bay.dxf",
+        "mhu_portal_frame_3bay.stl",
     ]
     for fname in required_cad_files:
         fpath = os.path.join(cad_dir, fname)
@@ -57,7 +65,8 @@ def test_cad_macros_and_exports():
         assert os.path.getsize(fpath) > 1000, f"CAD export unexpectedly small (<1KB): {fname}"
 
     print(f"[PASS] Track 4A CAD & Structural Audit: F_v,Rk = {ec5['F_v_Rk_node_kN']} kN, "
-          f"Pile SF = {pile['geotech_safety_factor']}x, 4 DXF/STL artifacts verified.")
+          f"Pile SF = {pile['geotech_safety_factor']}x, Portal Bent Util = {portal['knee_bending_utilization']*100:.1f}%, "
+          f"{len(required_cad_files)} DXF/STL artifacts verified.")
 
 
 def test_bom_integrity():
@@ -122,12 +131,46 @@ def test_automation_biometric_and_cloud_purity():
           "(100% local, zero cameras/microphones, zero cloud URLs).")
 
 
+def test_hygrothermal_glaser():
+    """Runs the ISO 13788 Glaser hygrothermal audit on the 5 orthogonal biomes."""
+    glaser_path = os.path.join(HABITAT_DIR, "hygrothermal", "glaser_audit_5_biomes.py")
+    assert os.path.isfile(glaser_path), f"Missing {glaser_path}"
+    glaser_mod = load_macro_module("glaser_audit", glaser_path)
+    results = [glaser_mod.run_glaser_check_for_biome(b) for b in glaser_mod.BIOMES]
+    assert len(results) == 5, f"Expected 5 biomes, got {len(results)}"
+    for r in results:
+        assert not r["condensation"], f"Condensation failure in {r['biome_id']}: {r}"
+    print(f"[PASS] Hygrothermal Glaser Audit: 5 orthogonal biomes verified condensation-free.")
+
+
+def test_electrical_and_modbus_specs():
+    """Verifies single-line schematic SVG, microgrid spec, and Modbus RTU register mapping."""
+    import json
+    schem_svg = os.path.join(HABITAT_DIR, "schematics", "microgrid_380v_48v_single_line.svg")
+    schem_md = os.path.join(HABITAT_DIR, "schematics", "microgrid_electrical_spec.md")
+    modbus_json = os.path.join(HABITAT_DIR, "automation", "modbus", "lfp_bms_modbus_registers.json")
+
+    assert os.path.isfile(schem_svg), "Missing microgrid_380v_48v_single_line.svg"
+    assert os.path.isfile(schem_md), "Missing microgrid_electrical_spec.md"
+    assert os.path.isfile(modbus_json), "Missing lfp_bms_modbus_registers.json"
+
+    with open(modbus_json, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert len(data["registers"]) >= 10, "BMS Modbus registers count too low"
+    # Ensure low temperature cutoff register exists
+    cryo = next((r for r in data["registers"] if r["name"] == "TEMP_CELL_MIN"), None)
+    assert cryo is not None, "Missing TEMP_CELL_MIN cryo lockout register"
+    print(f"[PASS] Microgrid & Modbus Audit: Single-line SVG, electrical spec, and {len(data['registers'])} registers verified.")
+
+
 if __name__ == "__main__":
     print("=== O.N.E. HABITAT AUTOMATED SPECIFICATION AUDIT ===")
     try:
         test_cad_macros_and_exports()
         test_bom_integrity()
         test_automation_biometric_and_cloud_purity()
+        test_hygrothermal_glaser()
+        test_electrical_and_modbus_specs()
         print("=== ALL HABITAT VERIFICATION CHECKS PASSED ===")
     except AssertionError as err:
         print(f"[FAIL] {err}", file=sys.stderr)

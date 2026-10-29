@@ -1,0 +1,1346 @@
+solid mhu_portal_frame_3bay
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 0.00 0.00
+      vertex 195.00 0.00 0.00
+      vertex 195.00 45.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 0.00 0.00
+      vertex 195.00 45.00 0.00
+      vertex 0.00 45.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 0.00 2700.00
+      vertex 195.00 45.00 2700.00
+      vertex 195.00 0.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 0.00 2700.00
+      vertex 0.00 45.00 2700.00
+      vertex 195.00 45.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 0.00 0.00
+      vertex 0.00 0.00 2700.00
+      vertex 195.00 0.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 0.00 0.00
+      vertex 195.00 0.00 2700.00
+      vertex 195.00 0.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 45.00 0.00
+      vertex 195.00 45.00 2700.00
+      vertex 0.00 45.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 45.00 0.00
+      vertex 0.00 45.00 2700.00
+      vertex 0.00 45.00 0.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 0.00 0.00
+      vertex 0.00 45.00 0.00
+      vertex 0.00 45.00 2700.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 0.00 0.00
+      vertex 0.00 45.00 2700.00
+      vertex 0.00 0.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 0.00 0.00
+      vertex 195.00 0.00 2700.00
+      vertex 195.00 45.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 0.00 0.00
+      vertex 195.00 45.00 2700.00
+      vertex 195.00 45.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 5805.00 0.00 0.00
+      vertex 6000.00 0.00 0.00
+      vertex 6000.00 45.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 5805.00 0.00 0.00
+      vertex 6000.00 45.00 0.00
+      vertex 5805.00 45.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 5805.00 0.00 2700.00
+      vertex 6000.00 45.00 2700.00
+      vertex 6000.00 0.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 5805.00 0.00 2700.00
+      vertex 5805.00 45.00 2700.00
+      vertex 6000.00 45.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 0.00 0.00
+      vertex 5805.00 0.00 2700.00
+      vertex 6000.00 0.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 0.00 0.00
+      vertex 6000.00 0.00 2700.00
+      vertex 6000.00 0.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 45.00 0.00
+      vertex 6000.00 45.00 2700.00
+      vertex 5805.00 45.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 45.00 0.00
+      vertex 5805.00 45.00 2700.00
+      vertex 5805.00 45.00 0.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 0.00 0.00
+      vertex 5805.00 45.00 0.00
+      vertex 5805.00 45.00 2700.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 0.00 0.00
+      vertex 5805.00 45.00 2700.00
+      vertex 5805.00 0.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 0.00 0.00
+      vertex 6000.00 0.00 2700.00
+      vertex 6000.00 45.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 0.00 0.00
+      vertex 6000.00 45.00 2700.00
+      vertex 6000.00 45.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 0.00 0.00
+      vertex 6000.00 0.00 0.00
+      vertex 6000.00 45.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 0.00 0.00
+      vertex 6000.00 45.00 0.00
+      vertex 0.00 45.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 0.00 195.00
+      vertex 6000.00 45.00 195.00
+      vertex 6000.00 0.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 0.00 195.00
+      vertex 0.00 45.00 195.00
+      vertex 6000.00 45.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 0.00 0.00
+      vertex 0.00 0.00 195.00
+      vertex 6000.00 0.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 0.00 0.00
+      vertex 6000.00 0.00 195.00
+      vertex 6000.00 0.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 45.00 0.00
+      vertex 6000.00 45.00 195.00
+      vertex 0.00 45.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 45.00 0.00
+      vertex 0.00 45.00 195.00
+      vertex 0.00 45.00 0.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 0.00 0.00
+      vertex 0.00 45.00 0.00
+      vertex 0.00 45.00 195.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 0.00 0.00
+      vertex 0.00 45.00 195.00
+      vertex 0.00 0.00 195.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 0.00 0.00
+      vertex 6000.00 0.00 195.00
+      vertex 6000.00 45.00 195.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 0.00 0.00
+      vertex 6000.00 45.00 195.00
+      vertex 6000.00 45.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 195.00 0.00 2505.00
+      vertex 5805.00 0.00 2505.00
+      vertex 5805.00 45.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 195.00 0.00 2505.00
+      vertex 5805.00 45.00 2505.00
+      vertex 195.00 45.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 195.00 0.00 2700.00
+      vertex 5805.00 45.00 2700.00
+      vertex 5805.00 0.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 195.00 0.00 2700.00
+      vertex 195.00 45.00 2700.00
+      vertex 5805.00 45.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 0.00 2505.00
+      vertex 195.00 0.00 2700.00
+      vertex 5805.00 0.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 0.00 2505.00
+      vertex 5805.00 0.00 2700.00
+      vertex 5805.00 0.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 45.00 2505.00
+      vertex 5805.00 45.00 2700.00
+      vertex 195.00 45.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 45.00 2505.00
+      vertex 195.00 45.00 2700.00
+      vertex 195.00 45.00 2505.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 0.00 2505.00
+      vertex 195.00 45.00 2505.00
+      vertex 195.00 45.00 2700.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 0.00 2505.00
+      vertex 195.00 45.00 2700.00
+      vertex 195.00 0.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 0.00 2505.00
+      vertex 5805.00 0.00 2700.00
+      vertex 5805.00 45.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 0.00 2505.00
+      vertex 5805.00 45.00 2700.00
+      vertex 5805.00 45.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 3000.00 0.00
+      vertex 195.00 3000.00 0.00
+      vertex 195.00 3045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 3000.00 0.00
+      vertex 195.00 3045.00 0.00
+      vertex 0.00 3045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 3000.00 2700.00
+      vertex 195.00 3045.00 2700.00
+      vertex 195.00 3000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 3000.00 2700.00
+      vertex 0.00 3045.00 2700.00
+      vertex 195.00 3045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 3000.00 0.00
+      vertex 0.00 3000.00 2700.00
+      vertex 195.00 3000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 3000.00 0.00
+      vertex 195.00 3000.00 2700.00
+      vertex 195.00 3000.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 3045.00 0.00
+      vertex 195.00 3045.00 2700.00
+      vertex 0.00 3045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 3045.00 0.00
+      vertex 0.00 3045.00 2700.00
+      vertex 0.00 3045.00 0.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 3000.00 0.00
+      vertex 0.00 3045.00 0.00
+      vertex 0.00 3045.00 2700.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 3000.00 0.00
+      vertex 0.00 3045.00 2700.00
+      vertex 0.00 3000.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 3000.00 0.00
+      vertex 195.00 3000.00 2700.00
+      vertex 195.00 3045.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 3000.00 0.00
+      vertex 195.00 3045.00 2700.00
+      vertex 195.00 3045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 5805.00 3000.00 0.00
+      vertex 6000.00 3000.00 0.00
+      vertex 6000.00 3045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 5805.00 3000.00 0.00
+      vertex 6000.00 3045.00 0.00
+      vertex 5805.00 3045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 5805.00 3000.00 2700.00
+      vertex 6000.00 3045.00 2700.00
+      vertex 6000.00 3000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 5805.00 3000.00 2700.00
+      vertex 5805.00 3045.00 2700.00
+      vertex 6000.00 3045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 3000.00 0.00
+      vertex 5805.00 3000.00 2700.00
+      vertex 6000.00 3000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 3000.00 0.00
+      vertex 6000.00 3000.00 2700.00
+      vertex 6000.00 3000.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 3045.00 0.00
+      vertex 6000.00 3045.00 2700.00
+      vertex 5805.00 3045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 3045.00 0.00
+      vertex 5805.00 3045.00 2700.00
+      vertex 5805.00 3045.00 0.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 3000.00 0.00
+      vertex 5805.00 3045.00 0.00
+      vertex 5805.00 3045.00 2700.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 3000.00 0.00
+      vertex 5805.00 3045.00 2700.00
+      vertex 5805.00 3000.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 3000.00 0.00
+      vertex 6000.00 3000.00 2700.00
+      vertex 6000.00 3045.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 3000.00 0.00
+      vertex 6000.00 3045.00 2700.00
+      vertex 6000.00 3045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 3000.00 0.00
+      vertex 6000.00 3000.00 0.00
+      vertex 6000.00 3045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 3000.00 0.00
+      vertex 6000.00 3045.00 0.00
+      vertex 0.00 3045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 3000.00 195.00
+      vertex 6000.00 3045.00 195.00
+      vertex 6000.00 3000.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 3000.00 195.00
+      vertex 0.00 3045.00 195.00
+      vertex 6000.00 3045.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 3000.00 0.00
+      vertex 0.00 3000.00 195.00
+      vertex 6000.00 3000.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 3000.00 0.00
+      vertex 6000.00 3000.00 195.00
+      vertex 6000.00 3000.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 3045.00 0.00
+      vertex 6000.00 3045.00 195.00
+      vertex 0.00 3045.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 3045.00 0.00
+      vertex 0.00 3045.00 195.00
+      vertex 0.00 3045.00 0.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 3000.00 0.00
+      vertex 0.00 3045.00 0.00
+      vertex 0.00 3045.00 195.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 3000.00 0.00
+      vertex 0.00 3045.00 195.00
+      vertex 0.00 3000.00 195.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 3000.00 0.00
+      vertex 6000.00 3000.00 195.00
+      vertex 6000.00 3045.00 195.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 3000.00 0.00
+      vertex 6000.00 3045.00 195.00
+      vertex 6000.00 3045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 195.00 3000.00 2505.00
+      vertex 5805.00 3000.00 2505.00
+      vertex 5805.00 3045.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 195.00 3000.00 2505.00
+      vertex 5805.00 3045.00 2505.00
+      vertex 195.00 3045.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 195.00 3000.00 2700.00
+      vertex 5805.00 3045.00 2700.00
+      vertex 5805.00 3000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 195.00 3000.00 2700.00
+      vertex 195.00 3045.00 2700.00
+      vertex 5805.00 3045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 3000.00 2505.00
+      vertex 195.00 3000.00 2700.00
+      vertex 5805.00 3000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 3000.00 2505.00
+      vertex 5805.00 3000.00 2700.00
+      vertex 5805.00 3000.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 3045.00 2505.00
+      vertex 5805.00 3045.00 2700.00
+      vertex 195.00 3045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 3045.00 2505.00
+      vertex 195.00 3045.00 2700.00
+      vertex 195.00 3045.00 2505.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 3000.00 2505.00
+      vertex 195.00 3045.00 2505.00
+      vertex 195.00 3045.00 2700.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 3000.00 2505.00
+      vertex 195.00 3045.00 2700.00
+      vertex 195.00 3000.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 3000.00 2505.00
+      vertex 5805.00 3000.00 2700.00
+      vertex 5805.00 3045.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 3000.00 2505.00
+      vertex 5805.00 3045.00 2700.00
+      vertex 5805.00 3045.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 6000.00 0.00
+      vertex 195.00 6000.00 0.00
+      vertex 195.00 6045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 6000.00 0.00
+      vertex 195.00 6045.00 0.00
+      vertex 0.00 6045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 6000.00 2700.00
+      vertex 195.00 6045.00 2700.00
+      vertex 195.00 6000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 6000.00 2700.00
+      vertex 0.00 6045.00 2700.00
+      vertex 195.00 6045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 6000.00 0.00
+      vertex 0.00 6000.00 2700.00
+      vertex 195.00 6000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 6000.00 0.00
+      vertex 195.00 6000.00 2700.00
+      vertex 195.00 6000.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 6045.00 0.00
+      vertex 195.00 6045.00 2700.00
+      vertex 0.00 6045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 6045.00 0.00
+      vertex 0.00 6045.00 2700.00
+      vertex 0.00 6045.00 0.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 6000.00 0.00
+      vertex 0.00 6045.00 0.00
+      vertex 0.00 6045.00 2700.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 6000.00 0.00
+      vertex 0.00 6045.00 2700.00
+      vertex 0.00 6000.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 6000.00 0.00
+      vertex 195.00 6000.00 2700.00
+      vertex 195.00 6045.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 6000.00 0.00
+      vertex 195.00 6045.00 2700.00
+      vertex 195.00 6045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 5805.00 6000.00 0.00
+      vertex 6000.00 6000.00 0.00
+      vertex 6000.00 6045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 5805.00 6000.00 0.00
+      vertex 6000.00 6045.00 0.00
+      vertex 5805.00 6045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 5805.00 6000.00 2700.00
+      vertex 6000.00 6045.00 2700.00
+      vertex 6000.00 6000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 5805.00 6000.00 2700.00
+      vertex 5805.00 6045.00 2700.00
+      vertex 6000.00 6045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 6000.00 0.00
+      vertex 5805.00 6000.00 2700.00
+      vertex 6000.00 6000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 6000.00 0.00
+      vertex 6000.00 6000.00 2700.00
+      vertex 6000.00 6000.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 6045.00 0.00
+      vertex 6000.00 6045.00 2700.00
+      vertex 5805.00 6045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 6045.00 0.00
+      vertex 5805.00 6045.00 2700.00
+      vertex 5805.00 6045.00 0.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 6000.00 0.00
+      vertex 5805.00 6045.00 0.00
+      vertex 5805.00 6045.00 2700.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 6000.00 0.00
+      vertex 5805.00 6045.00 2700.00
+      vertex 5805.00 6000.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 6000.00 0.00
+      vertex 6000.00 6000.00 2700.00
+      vertex 6000.00 6045.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 6000.00 0.00
+      vertex 6000.00 6045.00 2700.00
+      vertex 6000.00 6045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 6000.00 0.00
+      vertex 6000.00 6000.00 0.00
+      vertex 6000.00 6045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 6000.00 0.00
+      vertex 6000.00 6045.00 0.00
+      vertex 0.00 6045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 6000.00 195.00
+      vertex 6000.00 6045.00 195.00
+      vertex 6000.00 6000.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 6000.00 195.00
+      vertex 0.00 6045.00 195.00
+      vertex 6000.00 6045.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 6000.00 0.00
+      vertex 0.00 6000.00 195.00
+      vertex 6000.00 6000.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 6000.00 0.00
+      vertex 6000.00 6000.00 195.00
+      vertex 6000.00 6000.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 6045.00 0.00
+      vertex 6000.00 6045.00 195.00
+      vertex 0.00 6045.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 6045.00 0.00
+      vertex 0.00 6045.00 195.00
+      vertex 0.00 6045.00 0.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 6000.00 0.00
+      vertex 0.00 6045.00 0.00
+      vertex 0.00 6045.00 195.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 6000.00 0.00
+      vertex 0.00 6045.00 195.00
+      vertex 0.00 6000.00 195.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 6000.00 0.00
+      vertex 6000.00 6000.00 195.00
+      vertex 6000.00 6045.00 195.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 6000.00 0.00
+      vertex 6000.00 6045.00 195.00
+      vertex 6000.00 6045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 195.00 6000.00 2505.00
+      vertex 5805.00 6000.00 2505.00
+      vertex 5805.00 6045.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 195.00 6000.00 2505.00
+      vertex 5805.00 6045.00 2505.00
+      vertex 195.00 6045.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 195.00 6000.00 2700.00
+      vertex 5805.00 6045.00 2700.00
+      vertex 5805.00 6000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 195.00 6000.00 2700.00
+      vertex 195.00 6045.00 2700.00
+      vertex 5805.00 6045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 6000.00 2505.00
+      vertex 195.00 6000.00 2700.00
+      vertex 5805.00 6000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 6000.00 2505.00
+      vertex 5805.00 6000.00 2700.00
+      vertex 5805.00 6000.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 6045.00 2505.00
+      vertex 5805.00 6045.00 2700.00
+      vertex 195.00 6045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 6045.00 2505.00
+      vertex 195.00 6045.00 2700.00
+      vertex 195.00 6045.00 2505.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 6000.00 2505.00
+      vertex 195.00 6045.00 2505.00
+      vertex 195.00 6045.00 2700.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 6000.00 2505.00
+      vertex 195.00 6045.00 2700.00
+      vertex 195.00 6000.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 6000.00 2505.00
+      vertex 5805.00 6000.00 2700.00
+      vertex 5805.00 6045.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 6000.00 2505.00
+      vertex 5805.00 6045.00 2700.00
+      vertex 5805.00 6045.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 9000.00 0.00
+      vertex 195.00 9000.00 0.00
+      vertex 195.00 9045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 9000.00 0.00
+      vertex 195.00 9045.00 0.00
+      vertex 0.00 9045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 9000.00 2700.00
+      vertex 195.00 9045.00 2700.00
+      vertex 195.00 9000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 9000.00 2700.00
+      vertex 0.00 9045.00 2700.00
+      vertex 195.00 9045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 9000.00 0.00
+      vertex 0.00 9000.00 2700.00
+      vertex 195.00 9000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 9000.00 0.00
+      vertex 195.00 9000.00 2700.00
+      vertex 195.00 9000.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 9045.00 0.00
+      vertex 195.00 9045.00 2700.00
+      vertex 0.00 9045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 9045.00 0.00
+      vertex 0.00 9045.00 2700.00
+      vertex 0.00 9045.00 0.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 9000.00 0.00
+      vertex 0.00 9045.00 0.00
+      vertex 0.00 9045.00 2700.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 9000.00 0.00
+      vertex 0.00 9045.00 2700.00
+      vertex 0.00 9000.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 9000.00 0.00
+      vertex 195.00 9000.00 2700.00
+      vertex 195.00 9045.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 9000.00 0.00
+      vertex 195.00 9045.00 2700.00
+      vertex 195.00 9045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 5805.00 9000.00 0.00
+      vertex 6000.00 9000.00 0.00
+      vertex 6000.00 9045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 5805.00 9000.00 0.00
+      vertex 6000.00 9045.00 0.00
+      vertex 5805.00 9045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 5805.00 9000.00 2700.00
+      vertex 6000.00 9045.00 2700.00
+      vertex 6000.00 9000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 5805.00 9000.00 2700.00
+      vertex 5805.00 9045.00 2700.00
+      vertex 6000.00 9045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 9000.00 0.00
+      vertex 5805.00 9000.00 2700.00
+      vertex 6000.00 9000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 9000.00 0.00
+      vertex 6000.00 9000.00 2700.00
+      vertex 6000.00 9000.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 9045.00 0.00
+      vertex 6000.00 9045.00 2700.00
+      vertex 5805.00 9045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 9045.00 0.00
+      vertex 5805.00 9045.00 2700.00
+      vertex 5805.00 9045.00 0.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 9000.00 0.00
+      vertex 5805.00 9045.00 0.00
+      vertex 5805.00 9045.00 2700.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 9000.00 0.00
+      vertex 5805.00 9045.00 2700.00
+      vertex 5805.00 9000.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 9000.00 0.00
+      vertex 6000.00 9000.00 2700.00
+      vertex 6000.00 9045.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 9000.00 0.00
+      vertex 6000.00 9045.00 2700.00
+      vertex 6000.00 9045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 9000.00 0.00
+      vertex 6000.00 9000.00 0.00
+      vertex 6000.00 9045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 0.00 9000.00 0.00
+      vertex 6000.00 9045.00 0.00
+      vertex 0.00 9045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 9000.00 195.00
+      vertex 6000.00 9045.00 195.00
+      vertex 6000.00 9000.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 0.00 9000.00 195.00
+      vertex 0.00 9045.00 195.00
+      vertex 6000.00 9045.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 9000.00 0.00
+      vertex 0.00 9000.00 195.00
+      vertex 6000.00 9000.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 9000.00 0.00
+      vertex 6000.00 9000.00 195.00
+      vertex 6000.00 9000.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 9045.00 0.00
+      vertex 6000.00 9045.00 195.00
+      vertex 0.00 9045.00 195.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 9045.00 0.00
+      vertex 0.00 9045.00 195.00
+      vertex 0.00 9045.00 0.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 9000.00 0.00
+      vertex 0.00 9045.00 0.00
+      vertex 0.00 9045.00 195.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 0.00 9000.00 0.00
+      vertex 0.00 9045.00 195.00
+      vertex 0.00 9000.00 195.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 9000.00 0.00
+      vertex 6000.00 9000.00 195.00
+      vertex 6000.00 9045.00 195.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 6000.00 9000.00 0.00
+      vertex 6000.00 9045.00 195.00
+      vertex 6000.00 9045.00 0.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 195.00 9000.00 2505.00
+      vertex 5805.00 9000.00 2505.00
+      vertex 5805.00 9045.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 1.0000e+00
+    outer loop
+      vertex 195.00 9000.00 2505.00
+      vertex 5805.00 9045.00 2505.00
+      vertex 195.00 9045.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 195.00 9000.00 2700.00
+      vertex 5805.00 9045.00 2700.00
+      vertex 5805.00 9000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 0.0000e+00 -1.0000e+00
+    outer loop
+      vertex 195.00 9000.00 2700.00
+      vertex 195.00 9045.00 2700.00
+      vertex 5805.00 9045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 9000.00 2505.00
+      vertex 195.00 9000.00 2700.00
+      vertex 5805.00 9000.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 1.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 9000.00 2505.00
+      vertex 5805.00 9000.00 2700.00
+      vertex 5805.00 9000.00 2505.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 9045.00 2505.00
+      vertex 5805.00 9045.00 2700.00
+      vertex 195.00 9045.00 2700.00
+    endloop
+  endfacet
+  facet normal 0.0000e+00 -1.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 9045.00 2505.00
+      vertex 195.00 9045.00 2700.00
+      vertex 195.00 9045.00 2505.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 9000.00 2505.00
+      vertex 195.00 9045.00 2505.00
+      vertex 195.00 9045.00 2700.00
+    endloop
+  endfacet
+  facet normal 1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 195.00 9000.00 2505.00
+      vertex 195.00 9045.00 2700.00
+      vertex 195.00 9000.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 9000.00 2505.00
+      vertex 5805.00 9000.00 2700.00
+      vertex 5805.00 9045.00 2700.00
+    endloop
+  endfacet
+  facet normal -1.0000e+00 0.0000e+00 0.0000e+00
+    outer loop
+      vertex 5805.00 9000.00 2505.00
+      vertex 5805.00 9045.00 2700.00
+      vertex 5805.00 9045.00 2505.00
+    endloop
+  endfacet
+endsolid mhu_portal_frame_3bay

@@ -1,6 +1,12 @@
 # Antigravity IDE & Agent Internal Protocols (NEVER PUSHED TO GITHUB)
 AGENTS.md
 AGENTS.*.md
+TODAY.md
+TODO.md
+TODAY.*.md
+TODO.*.md
+archive/legacy_agents/
+scripts/.i18n_hashes.json
 .agents/
 .gemini/
 brain/
@@ -59,4 +65,5 @@ scripts/*
 !scripts/feedback_relay_apps_script.js
 !scripts/snapshot_relay_apps_script.js
 !scripts/sync_webapp_i18n.py
+!scripts/verify_pillars_readiness.py
 

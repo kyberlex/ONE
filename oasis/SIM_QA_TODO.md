@@ -14,13 +14,17 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 
 ---
 
-## **ACTIVE PIPELINE BOARD**
+## **ACTIVE PIPELINE BOARD (ROUND 2: EXTERNAL SENIOR CRITICS — PRE-GENESIS LOCK)**
 
-*(No active pending dockets. All 9 empirical edge cases and systemic stress-tests have been resolved and merged into the Living Constitution).*
+*(Active dockets for Phase III adversarial peer review. Detailed briefs in [`oasis/external_critics_round2/CRITIC_ADVERSARIAL_DOCKETS_STAGE2.md`](external_critics_round2/CRITIC_ADVERSARIAL_DOCKETS_STAGE2.md) and [`stewards/CRITIC_BRIEFING_PACK.md`](../stewards/CRITIC_BRIEFING_PACK.md)).*
 
-| ID | Title | Domain | Target Articles | Stage | Active Agent / Next Action |
+| ID | Title | Domain Pillar | Target Articles / Code | Stage | Active Reviewer / Next Action |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| *None* | *All active dockets merged* | — | — | `[STAGE 4: CANONICAL_MERGE]` | Pipeline clear |
+| **`SIM-QA-10`** | Hawkins-Simon Viability Under Resource Embargo | **Pillar 1** (Econ) | `simone/data/leontief_12sector_matrix.json`<br>Art. 3.1.5 | `[STAGE 1: HYPOTHESIS]` | Input-Output Critic Review |
+| **`SIM-QA-11`** | Demarchic Sortition Jury DoS / Exhaustion Attack | **Pillar 2** (Law) | `simone/src/layer3_sortition.jl`<br>Art. 4.2 | `[STAGE 1: HYPOTHESIS]` | Demarchy / Sortition Critic Review |
+| **`SIM-QA-12`** | High-Stiffness Numerical Solver Discontinuity Divergence | **Pillar 3** (Simone) | `simone/benchmarks/benchmark_solvers.jl` | `[STAGE 1: HYPOTHESIS]` | SciML / JuliaDynamics Review |
+| **`SIM-QA-13`** | Vapor Barrier Puncture & Hygrothermal Drying Buffer | **Pillar 4A** (CAD) | `habitat/hygrothermal/glaser_audit_5_biomes.py` | `[STAGE 1: HYPOTHESIS]` | Passivhaus Physics Review |
+| **`SIM-QA-14`** | BMS Contactor Welding & Lithium Cryo Plating Plunge | **Pillar 4B** (Microgrid) | `habitat/schematics/microgrid_electrical_spec.md` | `[STAGE 1: HYPOTHESIS]` | DC Microgrid Safety Review |
 
 ---
 
