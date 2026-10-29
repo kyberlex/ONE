@@ -95,3 +95,4 @@ end
 if abspath(PROGRAM_FILE) == @__FILE__
     run_sortition_attack_audit()
 end
+

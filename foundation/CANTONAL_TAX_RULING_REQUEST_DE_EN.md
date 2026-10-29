@@ -84,3 +84,4 @@ The organization satisfies all four cumulative criteria established by the Swiss
 - **Non-Commercial Altruism:** Strict zero-profit operations with no commercial trading, no financial dividends, and no private enrichment.
 - **Honorary Board Service (*Ehrenamtlichkeit*):** All trustees and executive committee members serve pro bono without compensation or director fees.
 - **Irrevocable Asset Lock (*Vermögensbindung*):** In the event of liquidation, all remaining assets must devolve irrevocably to another tax-exempt non-profit entity based in Switzerland.
+
