@@ -36,7 +36,7 @@ def audit_zero_leak_opsec():
     ]
 
     scanned_count = 0
-    target_dirs = ["stewards", "habitat", "simone", "oasis", "roadmap"]
+    target_dirs = ["stewards", "habitat", "simone", "oasis", "roadmap", "foundation"]
 
     for tdir in target_dirs:
         abs_tdir = os.path.join(REPO_ROOT, tdir)
@@ -138,6 +138,22 @@ def audit_stewards_hub():
     print(f"    [PASS] All {len(expected_files)} Stewards Compacts and Briefing documents intact.")
 
 
+def audit_foundation_pillar():
+    """Verifies Foundation and Verein Bootstrap kit files."""
+    print("--> [6/6] Auditing Pillar 2 & Foundation/Verein Kit (foundation/verein_bootstrap/)...")
+    v_dir = os.path.join(REPO_ROOT, "foundation", "verein_bootstrap")
+    expected_verein_files = [
+        "README.md",
+        "VEREIN_STATUTES_BILINGUAL_DE_EN.md",
+        "FOUNDING_ASSEMBLY_MINUTES_DE_EN.md",
+        "BANKING_ABS_AND_OPSEC_DOSSIER.md",
+        "FIDUCIARY_TRUSTEE_MANDATE_TEMPLATE.md",
+    ]
+    for vf in expected_verein_files:
+        assert os.path.isfile(os.path.join(v_dir, vf)), f"Missing foundation/verein_bootstrap/{vf}"
+    print(f"    [PASS] All {len(expected_verein_files)} Swiss Verein bootstrap and banking files verified.")
+
+
 def main():
     print("=" * 70)
     print("O.N.E. CO-STEWARDS & PILLARS INFRASTRUCTURE AUDIT GATE")
@@ -148,6 +164,7 @@ def main():
         audit_simone_pillar()
         audit_oasis_critics_round2()
         audit_stewards_hub()
+        audit_foundation_pillar()
         print("=" * 70)
         print("ALL CO-STEWARD & PILLARS AUDIT CHECKS PASSED SUCCESSFULLY [100% READY]")
         print("=" * 70)
@@ -158,3 +175,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
