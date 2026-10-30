@@ -33,6 +33,14 @@ export PsychometricProfile, civic_contribution_propensity, update_agent_fatigue
 export VALID_SORTITION_QUORUMS, CONSTITUTIONAL_SUPERMAJORITY, SortitionProposalState
 export verify_odd_parity_quorum, evaluate_supermajority_vote, draw_stratified_odd_jury
 
+# Art. 3.1.6 Tier 1 Autarkic Closure & matrix-aware L_min (SIM-QA-10 follow-up)
+export leontief_inverse, load_leontief_model, autarkic_closure_audit
+
+# Art. 4.3.5 / OL-9 Petition Intake & Art. 5.2.3 universal eligibility (SIM-QA-11 follow-up)
+export eligible_sortition_pool, Petition, petition_intake, draw_triage_panel, BeaconRNG
+export petition_cosigners_required, petition_fast_lane_threshold, quadratic_endorsement_cost, max_affordable_endorsements
+export ENDORSEMENT_TOKENS_PER_QUARTER, PETITION_POOL_EXPIRY_WEEKS, TRIAGE_PANEL_SIZE
+
 # P2P REA Event Substrate Exports (Task 6.1)
 export REAFlowEvent, parse_rea_event, fold_rea_events, reconcile_rea_with_ode_delta
 

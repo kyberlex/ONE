@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "document_id": "simone/data/leontief_14sector_matrix.json",
+    "version": "2.0.0-AUTARKIC-CLOSURE",
+    "supersedes": "simone/data/leontief_12sector_matrix.json (v1.0.0, kept frozen as the audited input of SIM-QA-10)",
+    "author": "Kyberlex <kyberlex@proton.me>",
+    "license": "AGPL-3.0-or-later",
+    "pillar_alignment": "Pillar 1 (Biophysical & Leontief Economics) + Pillar 3 (Simone.jl)",
+    "constitutional_targets": "Art. 3.1.5 (L_min), Art. 3.1.6 (Tier 1 Autarkic Closure), Art. 3.3 (Tier 1 basket), Art. 3.5.2 (reserves follow audit gaps)",
+    "calibration_status": "ILLUSTRATIVE — uncalibrated. Rows/columns 0-11 are copied unchanged from v1 (no documented provenance). Sectors 12-13, the import-dependence vector, the installed-capacity vector and the primary-resource block are new ILLUSTRATIVE scenario values. See simone/data/calibration_sources.md section 5.",
+    "description": "14-sector physical Leontief input-output model for one N = 300 node. Changes vs v1 (SIM-QA-10 follow-ups): shelter (structural timber) re-tagged Tier 1 per Art. 3.3; new Tier 1 primary healthcare sector; new Tier 3 discretionary sector; import-dependence vector; installed capacity vector; local primary-resource coefficients and ceilings; reserve form per sector for Art. 3.5.2. Hawkins-Simon values are recomputed by the test suite, not trusted from this file."
+  },
+  "sectors": [
+    { "index": 0, "id": "exergy_elec_kwh", "name": "Clean Electrical Exergy", "unit": "kWh", "lexicographic_tier": 1, "reserve_form": "redundant_capacity" },
+    { "index": 1, "id": "thermal_heat_kwh", "name": "District Thermal Heating/Cooling", "unit": "kWh", "lexicographic_tier": 1, "reserve_form": "redundant_capacity" },
+    { "index": 2, "id": "water_potable_l", "name": "Potable Drinking & Hygiene Water", "unit": "L", "lexicographic_tier": 1, "reserve_form": "redundant_capacity" },
+    { "index": 3, "id": "water_agri_l", "name": "Agricultural Irrigation & Aquaponics Water", "unit": "L", "lexicographic_tier": 1, "reserve_form": "redundant_capacity" },
+    { "index": 4, "id": "food_staple_kcal", "name": "Staple Grains & Legumes", "unit": "kcal", "lexicographic_tier": 1, "reserve_form": "storable_stock" },
+    { "index": 5, "id": "food_fresh_kg", "name": "Fresh Vegetables & High-Vitamin Produce", "unit": "kg", "lexicographic_tier": 1, "reserve_form": "redundant_capacity" },
+    { "index": 6, "id": "timber_structural_kg", "name": "Shelter: C24 Structural Timber & Birch Plywood (re-tagged Tier 1, Art. 3.3)", "unit": "kg", "lexicographic_tier": 1, "reserve_form": "storable_stock" },
+    { "index": 7, "id": "basalt_mineral_kg", "name": "Basalt Composite & Recycled S355 Steel", "unit": "kg", "lexicographic_tier": 2, "reserve_form": "storable_stock" },
+    { "index": 8, "id": "electronics_compute_ch", "name": "Telemetry Microcontrollers & Cluster Compute", "unit": "core_hours", "lexicographic_tier": 2, "reserve_form": "spare_parts" },
+    { "index": 9, "id": "fablab_machining_h", "name": "FabLab CNC Router & 3D Printing Run Time", "unit": "machine_hours", "lexicographic_tier": 2, "reserve_form": "spare_parts" },
+    { "index": 10, "id": "circular_scrap_kg", "name": "Circular Secondary Materials & Compost Feedstock", "unit": "kg", "lexicographic_tier": 2, "reserve_form": "storable_stock" },
+    { "index": 11, "id": "preventive_maint_h", "name": "Preventive Diagnostic & Mechanical Maintenance Labor", "unit": "person_hours", "lexicographic_tier": 1, "reserve_form": "redundant_capacity" },
+    { "index": 12, "id": "healthcare_care_h", "name": "Primary Healthcare, Nursing & Essential Pharmaceuticals", "unit": "care_hours", "lexicographic_tier": 1, "reserve_form": "storable_stock" },
+    { "index": 13, "id": "discretionary_t3_h", "name": "Tier 3 Discretionary Cultural & Exploratory Fabrication", "unit": "project_hours", "lexicographic_tier": 3, "reserve_form": "none" }
+  ],
+  "technical_coefficients_matrix_A": {
+    "dimensions": [14, 14],
+    "comment": "Column j represents direct physical inputs required to produce 1 unit of gross output j. Block [0:11, 0:11] is identical to v1. Columns 12-13 are ILLUSTRATIVE. Rows 12-13 are zero (healthcare and Tier 3 output are not inputs to other sectors), so rho(A) is unchanged from v1.",
+    "rows": [
+      [0.03, 0.28, 0.002, 0.0005, 0.00008, 0.20, 0.08, 1.60, 0.02, 1.50, 0.15, 0.0, 2.5, 0.8],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 1.20, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 1.5, 0.3],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.50, 60.0, 2.0],
+      [0.0, 0.0, 0.0, 0.0, 0.35, 20.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 150.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.05, 0.4],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.05, 0.0, 0.0, 0.02, 0.15],
+      [0.001, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.00, 0.0, 0.10, 0.5, 0.3],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.008, 0.0, 0.05, 0.25],
+      [0.0, 0.0, 0.0, 0.0, 0.0002, 0.05, 0.0, 0.35, 0.0, 0.0, 0.0, 0.0, 0.2, 0.3],
+      [0.0001, 0.0001, 0.00005, 0.00002, 0.0001, 0.02, 0.005, 0.01, 0.0005, 0.05, 0.002, 0.0, 0.05, 0.02],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    ]
+  },
+  "per_capita_daily_final_demand": {
+    "comment": "Final demand per person per day. Entries 0-11 copied from v1 'per_capita_daily_tier1_baseline' (note: v1 mixes tiers despite the key name). healthcare_care_h and discretionary_t3_h are ILLUSTRATIVE.",
+    "population_n": 300,
+    "exergy_elec_kwh": 4.5,
+    "thermal_heat_kwh": 3.8,
+    "water_potable_l": 50.0,
+    "water_agri_l": 450.0,
+    "food_staple_kcal": 2100.0,
+    "food_fresh_kg": 0.85,
+    "timber_structural_kg": 0.15,
+    "basalt_mineral_kg": 0.08,
+    "electronics_compute_ch": 1.5,
+    "fablab_machining_h": 0.25,
+    "circular_scrap_kg": 1.20,
+    "preventive_maint_h": 0.40,
+    "healthcare_care_h": 0.05,
+    "discretionary_t3_h": 0.50
+  },
+  "import_dependence_m": {
+    "comment": "ILLUSTRATIVE — uncalibrated. Fraction of each sector's installed capacity that cannot operate when external inputs are zero (imported consumables, parts, reagents). Sectors 0-11 reuse the SIM-QA-10 'central' scenario assumption; 12-13 are new assumptions. Used by autarkic_closure_audit: c_local = installed_capacity .* (1 .- m).",
+    "exergy_elec_kwh": 0.40,
+    "thermal_heat_kwh": 0.30,
+    "water_potable_l": 0.20,
+    "water_agri_l": 0.20,
+    "food_staple_kcal": 0.30,
+    "food_fresh_kg": 0.30,
+    "timber_structural_kg": 0.10,
+    "basalt_mineral_kg": 0.80,
+    "electronics_compute_ch": 0.95,
+    "fablab_machining_h": 0.60,
+    "circular_scrap_kg": 0.00,
+    "preventive_maint_h": 0.00,
+    "healthcare_care_h": 0.60,
+    "discretionary_t3_h": 0.50
+  },
+  "installed_capacity_per_day": {
+    "comment": "ILLUSTRATIVE — uncalibrated. Maximum gross output per day of the installed local capital stock (N = 300), set at roughly 1.25 x baseline gross output x = (I-A)^-1 d and rounded. Not derived from any surveyed site.",
+    "exergy_elec_kwh": 3400.0,
+    "thermal_heat_kwh": 1900.0,
+    "water_potable_l": 20000.0,
+    "water_agri_l": 465000.0,
+    "food_staple_kcal": 830000.0,
+    "food_fresh_kg": 320.0,
+    "timber_structural_kg": 130.0,
+    "basalt_mineral_kg": 65.0,
+    "electronics_compute_ch": 800.0,
+    "fablab_machining_h": 150.0,
+    "circular_scrap_kg": 720.0,
+    "preventive_maint_h": 265.0,
+    "healthcare_care_h": 19.0,
+    "discretionary_t3_h": 190.0
+  },
+  "primary_resources": {
+    "comment": "ILLUSTRATIVE — order-of-magnitude only, uncalibrated. Local primary resource use r = R x must stay within the renewable ceiling (Art. 3.1.4). Coefficients: raw water drawn per unit output; land occupied per unit of daily output (typical temperate yields: ~1,000 kcal/m2/yr staples, ~3 kg/m2/yr vegetables, ~2.25 t/ha/yr timber increment).",
+    "resources": [
+      { "id": "renewable_water_l", "unit": "L/day", "ceiling_per_day": 450000.0,
+        "coefficients": { "water_potable_l": 1.15, "water_agri_l": 1.0 } },
+      { "id": "arable_land_m2", "unit": "m2 occupied", "ceiling_per_day": 300000.0,
+        "coefficients": { "food_staple_kcal": 0.365, "food_fresh_kg": 122.0 } },
+      { "id": "woodland_m2", "unit": "m2 occupied", "ceiling_per_day": 200000.0,
+        "coefficients": { "timber_structural_kg": 1623.0 } }
+    ]
+  }
+}
+

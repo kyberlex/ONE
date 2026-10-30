@@ -10,7 +10,12 @@ This register records empirical friction, systemic edge-cases, and tested operat
 To ensure non-autocratic, rigorous governance, every entry carries an explicit epistemological status:
 * `[STATUS: SIMULATION_HYPOTHESIS]` — Empirically observed and resolved in the local game simulation; proposed for community review.
 * `[STATUS: OASIS_STRESS_TESTED]` — Audited by adversarial AI engines (Red Team) against exploit vectors and thermodynamic conservation.
+* `[STATUS: CANONICAL_MERGED]` — Purple Patch integrated into the canonical Living Constitution during Phase 0 (Genesis Architectural Hardening); still subject to post-Genesis sortition ratification.
+* `[STATUS: RED_WINS_WITHDRAWN]` — The Red Team prevailed: the tested provision is withdrawn or narrowed instead of patched. A docket may legitimately close this way.
 * `[STATUS: COMMUNITY_SORTITION_RATIFIED]` — Formally reviewed and ratified by a randomly drawn citizen sortition jury on [`github.com/kyberlex/ONE/discussions`](https://github.com/kyberlex/ONE/discussions).
+
+> [!IMPORTANT]
+> **Data Provenance Notice (added 2026-10-30):** Quantitative results in the "Telemetric / Simulation / Field Validation" sections of SIM-QA-01 to SIM-QA-09 come from the O-ASIS game engine (`sim/`) and from AI-generated adversarial sessions. They are **synthetic and illustrative**, not empirical measurements, and were not produced by calibrated, reproducible SIMONE runs. From SIM-QA-10 onward, every quantitative claim must link a reproducible script and results file (see `simone/benchmarks/`).
 
 ---
 
@@ -18,22 +23,28 @@ To ensure non-autocratic, rigorous governance, every entry carries an explicit e
 
 | ID | Title | Domain | Status | Target Articles |
 | :--- | :--- | :--- | :--- | :--- |
-| **`SIM-QA-01`** | Quorum Scaling & Demarchic Viability for Emerging Nodes (< 50 Pop) | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` | Art. 4.2.1, Art. 4.2.2, Art. 4.5, Art. 5.1 |
-| **`SIM-QA-02`** | Dual-Tier Tool Boundary: Civic Tool Libraries vs. Inviolable Personal Craft Gear | Property / Usufruct Commons | `[STATUS: OASIS_STRESS_TESTED]` | Art. 2.2.1, Art. 2.2.3, Art. 3.2 |
-| **`SIM-QA-03`** | Ecological Sensor Integrity: ZK-Telemetry Proofs & Analog Citizen Ground-Truthing | Telemetry / Biophysics | `[STATUS: OASIS_STRESS_TESTED]` | Art. 3.4.2, Art. 3.4.3, Art. 3.4.5, Art. 7.2 |
-| **`SIM-QA-04`** | Cryptographic Anti-Brokerage for High-Demand FabLab Queues | Usufruct / FabLabs | `[STATUS: OASIS_STRESS_TESTED]` | Art. 1.4, Art. 2.1.2, Art. 2.2.3, Art. 3.3.3 |
-| **`SIM-QA-05`** | Codification of Civic Rescue, Firefighting & Disaster Response Guilds | Public Safety / Disaster Resilience | `[STATUS: OASIS_STRESS_TESTED]` | Art. 5.1.3, Art. 8.1.2, Art. 8.2, Art. 10.4.4 |
+| **`SIM-QA-01`** | Quorum Scaling & Demarchic Viability for Emerging Nodes (< 50 Pop) | Governance / Sortition | `[STATUS: CANONICAL_MERGED]` | Art. 4.2.1, Art. 4.2.2, Art. 4.5, Art. 5.1 |
+| **`SIM-QA-02`** | Dual-Tier Tool Boundary: Civic Tool Libraries vs. Inviolable Personal Craft Gear | Property / Usufruct Commons | `[STATUS: CANONICAL_MERGED]` | Art. 2.2.1, Art. 2.2.3, Art. 3.2 |
+| **`SIM-QA-03`** | Ecological Sensor Integrity: ZK-Telemetry Proofs & Analog Citizen Ground-Truthing | Telemetry / Biophysics | `[STATUS: CANONICAL_MERGED]` | Art. 3.4.2, Art. 3.4.3, Art. 3.4.5, Art. 7.2 |
+| **`SIM-QA-04`** | Cryptographic Anti-Brokerage for High-Demand FabLab Queues | Usufruct / FabLabs | `[STATUS: CANONICAL_MERGED]` | Art. 1.4, Art. 2.1.2, Art. 2.2.3, Art. 3.3.3 |
+| **`SIM-QA-05`** | Codification of Civic Rescue, Firefighting & Disaster Response Guilds | Public Safety / Disaster Resilience | `[STATUS: CANONICAL_MERGED]` | Art. 5.1.3, Art. 8.1.2, Art. 8.2, Art. 10.4.4 |
 | **`SIM-QA-06`** | Transformation of Legacy High-Capital Industrial Assets, Hyperscale Compute & Metropolises | Heavy Industry / Usufruct / Urban Metabolism | `[STATUS: CANONICAL_MERGED]` | Art. 2.2, Art. 3.3.4, Art. 6.2, Art. 7.4, Art. 10.3 |
 | **`SIM-QA-07`** | Active Solar Management via Reversible $L_1$ Lagrange Sunshade vs. Chemical Terrestrial Geoengineering | Planetary Climate / Celestial Commons / Geoengineering | `[STATUS: CANONICAL_MERGED]` | Art. 10.5, Art. 11.1 |
 | **`SIM-QA-08`** | Deep-Space Defensive Realism: Distributed Kinetic & Laser Immune System vs. Ballistic Mass-Velocity Threats | Astrodynamics / Deep-Space Defense / Game Theory | `[STATUS: CANONICAL_MERGED]` | Art. 11.6 |
 | **`SIM-QA-09`** | Autonomous AI & Robotic Swarm Aggression: Hard Galvanic Air-Gaps, Directed-Energy Point Defense & Non-Somatic Countermeasures | Autonomous Warfare / Cyber-Physical Defense / Asymmetric Resilience | `[STATUS: CANONICAL_MERGED]` | Art. 6.5, Art. 8.1.4 |
+| **`SIM-QA-10`** | Hawkins-Simon Viability Under Resource Embargo | Biophysical Economics | `[STATUS: CANONICAL_MERGED]` (RED_WINS) | Art. 3.1.5, 3.1.6, 3.5.2 |
+| **`SIM-QA-11`** | Demarchic Sortition Jury DoS / Exhaustion Attack | Sortition / Law | `[STATUS: CANONICAL_MERGED]` (RED_WINS → patch INCONCLUSIVE) | Art. 4.2.1, 4.3.4, 4.3.5 |
+| **`SIM-QA-15`** | Internal Coherence Audit — Contradictions Between Canonical Articles | Constitutional Coherence | `[STATUS: CANONICAL_MERGED]` | Art. 2.6.2, 4.1.3, 4.2.1, 4.5, 4.6, 5.2, 7.1.2, 8.1.3–4, 10.5.3 |
+| **`SIM-QA-16`** | Demographic Inversion ("Silver Tsunami") Before Full Automation | Labor / Demography | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 5.1, 5.6, 10.3, 10.4 |
+| **`SIM-QA-17`** | Organic Law Separation — Restoring Technological Neutrality | Drafting Invariants | `[STATUS: CANONICAL_MERGED]` | Art. 1.4.3, 3.3.3, 6.2–6.4, 8.1.4, 8.2.2, 10.5.3, 10.6.4, Ch. XI |
 
 ---
 
 ## **SIM-QA-01: Quorum Scaling & Demarchic Viability for Emerging Nodes (< 50 Pop)**
 
 * **Date Recorded:** 2026-09-22  
-* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]`  
+* **Date Merged:** 2026-10-05  
+* **Epistemic Status:** `[STATUS: CANONICAL_MERGED]` (Integrated into Living Constitution Arts. 4.2.1, 4.2.2)  
 * **Originating Settlement:** Detroit Delray Commons (Starting Pop: 28)  
 * **Constitutional Articles:** [`Art. 4.2.1`](../bible/chapters/chapter_04.md), [`Art. 4.2.2`](../bible/chapters/chapter_04.md), [`Art. 4.5`](../bible/chapters/chapter_04.md), [`Art. 5.1`](../bible/chapters/chapter_05.md)
 
@@ -72,7 +83,8 @@ The simulation implements the **Principle of Demarchic Subsidiarity Scale**:
 ## **SIM-QA-02: Dual-Tier Tool Boundary: Civic Tool Libraries vs. Inviolable Personal Craft Gear**
 
 * **Date Recorded:** 2026-09-23  
-* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]`  
+* **Date Merged:** 2026-10-05  
+* **Epistemic Status:** `[STATUS: CANONICAL_MERGED]` (Integrated into Living Constitution Art. 2.2.1)  
 * **Originating Context:** Urban apartment block & low-capital seed node field dynamics (Tbilisi/Georgia working-class housing dialogue)  
 * **Constitutional Articles:** [`Art. 2.2.1`](../bible/chapters/chapter_02.md), [`Art. 2.2.3`](../bible/chapters/chapter_02.md), [`Art. 3.2`](../bible/chapters/chapter_03.md)
 
@@ -114,7 +126,8 @@ The node operating protocol establishes an explicit, objective boundary between 
 ## **SIM-QA-03: Ecological Sensor Integrity: ZK-Telemetry Proofs & Analog Citizen Ground-Truthing**
 
 * **Date Recorded:** 2026-09-26  
-* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]`  
+* **Date Merged:** 2026-10-05  
+* **Epistemic Status:** `[STATUS: CANONICAL_MERGED]` (Integrated into Living Constitution Arts. 3.4.3, 3.4.5)  
 * **Originating Context:** Operational Edge-Case OP-01 (Sensor Telemetry Drift & Ground-Truthing)  
 * **Constitutional Articles:** [`Art. 3.4.2`](../bible/chapters/chapter_03.md), [`Art. 3.4.3`](../bible/chapters/chapter_03.md), [`Art. 7.2`](../bible/chapters/chapter_07.md)
 
@@ -139,7 +152,8 @@ While Article 3.4.3 mandates open-hardware Programmable Logic Controllers (PLCs)
 ## **SIM-QA-04: Cryptographic Anti-Brokerage for High-Demand FabLab Queues**
 
 * **Date Recorded:** 2026-09-26  
-* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]`  
+* **Date Merged:** 2026-10-05  
+* **Epistemic Status:** `[STATUS: CANONICAL_MERGED]` (Integrated into Living Constitution Arts. 1.4, 3.3.3)  
 * **Originating Context:** Operational Edge-Case OP-02 (Inelastic FabLab Queuing)  
 * **Constitutional Articles:** [`Art. 1.4`](../bible/chapters/chapter_01.md), [`Art. 2.1.2`](../bible/chapters/chapter_02.md), [`Art. 2.2.3`](../bible/chapters/chapter_02.md), [`Art. 3.3.3`](../bible/chapters/chapter_03.md)
 
@@ -165,7 +179,8 @@ While real estate, land, and housing are perpetually de-commodified under dynami
 ## **SIM-QA-05: Codification of Civic Rescue, Firefighting & Disaster Response Guilds**
 
 * **Date Recorded:** 2026-10-05  
-* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]`  
+* **Date Merged:** 2026-10-05  
+* **Epistemic Status:** `[STATUS: CANONICAL_MERGED]` (Integrated into Living Constitution Arts. 5.1.3, 8.1.2)  
 * **Originating Context:** Habitat Resiliency Modeling & Operational Analysis of Chapter VIII (Public Safety vs. Physical Entropy Asymmetry)  
 * **Constitutional Articles:** [`Art. 5.1.3`](../bible/chapters/chapter_05.md), [`Art. 8.1.2`](../bible/chapters/chapter_08.md), [`Art. 8.2`](../bible/chapters/chapter_08.md), [`Art. 10.4.4`](../bible/chapters/chapter_10.md)
 
@@ -373,3 +388,174 @@ However, when aggressive factions or dying legacy corporate/state entities deplo
 
 
 
+---
+
+## **SIM-QA-15: Internal Coherence Audit — Contradictions Between Canonical Articles**
+
+* **Date Recorded:** 2026-10-30  
+* **Epistemic Status:** `[STATUS: CANONICAL_MERGED]` (Merged 2026-10-30)  
+* **Originating Context:** Cross-model constitutional review (two independent AI reviews compared). The defects listed below were found by quoting the text, not by simulation.  
+* **Constitutional Articles:** Arts. 2.6.2, 4.1.3, 4.2.1, 4.5, 4.6 (new), 5.2, 7.1.2, 8.1.3, 8.1.4, 10.5.3, 11.1.1
+
+### **1. The Friction (Textual Contradictions)**
+1. **Weapons (A):** Art. 8.1.3 bans combat robotics "to humans and machines alike", but Art. 8.1.4 authorizes autonomous interception platforms and a "Standoff Counter-Strike". Art. 7.1.2 also voids the delegation of "coercive physical restraint" to autonomous agents.
+2. **Threshold drift (B):** Art. 10.5.3 introduces a 66% threshold outside the canonical 75 / 60 / 50%+1 ladder.
+3. **Small-panel arithmetic (C):** in a 3-person panel, 75% means unanimity, so Art. 2.6.2 ("unanimous consent of the Local Mediation Panel") hands an unappealable veto to a single citizen. No rounding rule existed for any assembly size.
+4. **Survival vs. sanction (D):** Art. 5.2.2 conditioned sortition rights and dwelling tenure on labor reciprocity. Art. 1.3.3 forbids leveraging survival for "labor extraction", and Art. 4.3.2 calls civic service an "inviolable" prerogative.
+5. **No interpreter (E):** many clauses declare acts "void *ab initio*", but no body was empowered to make that declaration.
+6. **Association (F):** Art. 4.1.3 voids political "factions", which collides with the freedom of voluntary association in Art. 1.4.1.
+
+### **2. Adversarial Stress-Test (RED)**
+* **RED-3 (roster capture):** a faction controlling shift rosters assigns dissidents impossible duties. They "refuse" their shifts, lose sortition eligibility, and are disenfranchised legally. Clause D is a working disenfranchisement machine.
+* **RED-1 (single-veto lock):** one captured panelist blocks critical infrastructure indefinitely under Art. 2.6.2.
+* **RED-4 (narrative attack):** critics quote 8.1.3 against 8.1.4 to show that the "non-violent" constitution authorizes autonomous strikes. The contradiction is publicly verifiable.
+
+### **3. Purple Patch (Merged)**
+* **A:**
+  * Art. 7.1.2 voids delegating *coercive force against persons* to machines; intercepting uncrewed machines is not coercion of persons.
+  * Art. 8.1.3 bans weapons *intended to kill or injure persons*, with the single exception of Art. 8.1.4.
+  * Art. 8.1.4: autonomous engagement only against inbound projectiles and uncrewed machines, never persons or crewed vehicles. Standoff action is narrowed to the *non-lethal disablement of uncrewed launch and control infrastructure*.
+* **B:** Art. 10.5.3 now requires 75% of the Global Commons Assembly, concurred by a majority of Continental Chambers, each by 60%.
+* **C:**
+  * New Art. 4.5.4 (Threshold Arithmetic): the smallest whole number of votes reaching the share of *seated* members.
+  * Art. 4.2.1 spells out 2-of-3 and 3-of-3.
+  * Art. 2.6.2: the panel *certifies* restitution, and a refusal is appealable to a 15-citizen blind panel.
+* **D:** `[RED_WINS — PROVISION WITHDRAWN]` Suspension of sortition rights is deleted. Political rights are never conditioned on labor (Art. 5.2.3). Relocation is replaced by reassignment of floor area *above* the Tier 1 shelter baseline only.
+* **E:** new Art. 4.6, the Constitutional Review Jury (*Custodes Constitutionis*):
+  * single-case jury of 101 citizens from non-party watersheds;
+  * 60% to declare an act void;
+  * *in dubio pro persona* for Chapter I;
+  * one appeal to a fresh jury of 301;
+  * the jury may never draft or amend law.
+* **F:** Art. 4.1.3 protects association and advocacy, but voids any financing, nomination, instruction, or reward of sortition delegates.
+
+### **4. Open Questions**
+1. Should Review Jury rulings carry binding precedent or only persuasive weight?
+2. Is 60% the right bar for nullity, given that nullity protects minorities (arguably a lower bar should suffice)?
+
+---
+
+## **SIM-QA-16: Demographic Inversion ("Silver Tsunami") Before Full Automation**
+
+* **Date Recorded:** 2026-10-30  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Registered only; no stress-test run yet)  
+* **Originating Context:** Cross-model constitutional review  
+* **Constitutional Articles:** Arts. 5.1, 5.2, 5.6, 10.3, 10.4
+
+### **1. The Friction**
+* Art. 5.1 distributes non-automated maintenance across able-bodied adults. Art. 5.6 exempts active caregivers *ipso jure*. Art. 5.1.4 promises that physical shifts contract toward zero as automation spreads, but sets no timeline.
+* In an aging node (e.g. more than 60% of residents beyond heavy-shift capacity, plus their caregivers), the residual able-bodied cohort may face shift loads that collapse into burnout or emigration. This happens before the automation curve can compensate.
+
+### **2. Preliminary Red Vectors (to be tested)**
+* **RED-2 (exemption cascade):** caregiving exemptions grow with the elderly population. The obligation then concentrates on a shrinking cohort and creates a de facto laboring caste, which Art. 5.1.1 prohibits.
+* **RED-1 (exit spiral):** young adults migrate to younger Green-status basins (Art. 10.4), which accelerates the inversion.
+
+### **3. Hypotheses to Test**
+* An inter-basin labor-and-automation reciprocity compact under Art. 10.3.
+* A ceiling on the per-capita weekly shift load that triggers mandatory automation priority in Tier 2-A allocation.
+* Recognition of partial-capacity contributions by older residents (e.g. supervision, teaching, ground-truthing squads).
+
+**Next action:** quantify with the SIMONE agent-based layer (age-structured cohorts × shift demand × automation adoption curve).
+
+---
+
+## **SIM-QA-17: Organic Law Separation — Restoring Technological Neutrality**
+
+* **Date Recorded:** 2026-10-30  
+* **Epistemic Status:** `[STATUS: CANONICAL_MERGED]` (Merged 2026-10-30; Annex at [`ORGANIC_LAW_ANNEX.md`](../ORGANIC_LAW_ANNEX.md))  
+* **Originating Context:** Drafting-invariant audit against [`constitution-engine` SKILL](../.agents/skills/constitution-engine/SKILL.md) invariants 5–7 (De-Sci-Fi Filter, Separation of Concerns, Technological Neutrality)  
+* **Draft Annex:** [`ORGANIC_LAW_ANNEX.md`](../ORGANIC_LAW_ANNEX.md)
+
+### **1. The Friction**
+The canonical text had absorbed product-level engineering detail, much of it during SIM-QA-07/08/09:
+* lithium-iron-phosphate chemistry;
+* proprietary-brand radio protocols;
+* "DNA/RNA printers" with cryptographic firmware;
+* a 15-minute slot forfeit;
+* a 500 ms purge interval;
+* microwave weapon types;
+* L1 trim tabs with 14-day and 36-month timers;
+* 15° laser blinders;
+* atmospheric percentages.
+
+Detail placed in Chapter I is shielded by Art. 1.7 from *any* future amendment. Engineering parameters would therefore be frozen permanently.
+
+### **2. Adversarial Stress-Test (RED)**
+* **RED-5 (obsolescence lock):** a better storage chemistry or a safer biosecurity method becomes legally second-class, because replacing the named technology requires a 75% constitutional amendment, or is impossible in Chapter I.
+* **RED-4 (credibility attack):** specific, unsourced engineering claims (e.g. "harmless" microwave exposure) give critics an easy factual target that discredits the whole charter.
+
+### **3. Purple Patch (Merged)**
+* The Constitution keeps only functional requirements, at Arts. 1.4.3, 3.3.3, 3.5.2, 6.2.2, 6.3.2, 6.4.2, 8.1.4, 8.2.2, 10.5.3, 11.1.1, 11.3.1, 11.4.3 and 11.6.2.
+* The parameters move to the Organic Law Annex (OL-1 to OL-8), which is amendable by 60%, subject to a ratchet rule (it may never weaken a guarantee) and reviewable under Art. 4.6. The Annex is anchored by new Art. 10.6.4.
+* Unverified quantitative claims are carried into the Annex labelled `PROVISIONAL — UNVERIFIED`.
+
+---
+
+## **SIM-QA-10: Hawkins-Simon Viability Under Resource Embargo**
+
+* **Date Recorded:** 2026-10-28 (Round 2 docket)  
+* **Stress-Tested:** 2026-10-30  
+* **Epistemic Status:** `[STATUS: CANONICAL_MERGED]` (Merged 2026-10-30) — Verdict **`RED_WINS`**  
+* **Constitutional Articles:** Arts. 3.1.5, 3.1.6 (new), 3.5.2  
+* **Reproducible Evidence:** [`simone/benchmarks/sim_qa_10_embargo.jl`](../simone/benchmarks/sim_qa_10_embargo.jl) → [`results`](../simone/benchmarks/results/sim_qa_10_embargo_results.md)
+
+### **1. Findings (computed, deterministic)**
+1. **Hawkins-Simon passes, but is uninformative.**
+   * 12-sector matrix: ρ(A) = 0.1523, det(I−A) = 0.9541, all leading minors > 0, (I−A)⁻¹ ≥ 0.
+   * The docket's proof requirement (x ≥ 0 under a 50% input cut) holds for *any* non-negative A with ρ < 1. **It cannot fail, so it proves nothing about embargo resilience.**
+2. **An embargo cannot be represented in the data.** The matrix has no import row, no primary-resource row and no capacity vector. Modeled as capacity loss, the maximum embargo depth at which Tier 1 is still fully met swings with assumed spare capacity and import dependence:
+   * **e\* = 0** with no spare capacity;
+   * **e\* = 0.667** with 25% spare capacity (central import scenario);
+   * **e\* = 1.0** with Tier-1 sectors fully autarkic.
+
+   In short, the result depends on parameters that do not exist in the repository.
+3. **Art. 3.5 reserves as written do not close the gap.** Stocks of grain and staples bridge none of the infeasible cases. The binding gaps are district heat, water and fresh produce, which cannot be stored at that scale.
+4. **Data and model defects:**
+   * no Tier 3 sector and no healthcare sector;
+   * shelter tagged Tier 2, contrary to Art. 3.3;
+   * the coded `lexicographic_allocate` ignores intermediate demand and under-counts Tier-1 needs by 1.3–2.8×;
+   * the 12-sector coefficients have no documented source.
+
+### **2. Purple Patch (Merged)**
+* **New Art. 3.1.6, Tier 1 Autarkic Closure:** an annual public audit must show that every sector directly or indirectly supplying Tier 1 needs (including shelter and healthcare) can meet full Tier 1 demand from local primary resources and installed capacity alone, with external inputs set to zero, at a published reserve margin.
+* **Art. 3.5.2 (rewritten):** reserves are composed according to the audit's gaps: storable stocks, plus spare parts and consumables, plus *redundant productive capacity* for goods that cannot be stored.
+
+### **3. Engineering Follow-Ups (SIMONE)**
+1. Add import and primary-resource rows and a sector capacity vector to the matrix.
+2. Add Tier 3 and healthcare sectors, and retag shelter as Tier 1.
+3. Make L_min operate on (I−A)⁻¹, not on final demand alone.
+4. Document a source for every coefficient in `simone/data/calibration_sources.md`.
+
+---
+
+## **SIM-QA-11: Demarchic Sortition Jury DoS / Exhaustion Attack**
+
+* **Date Recorded:** 2026-10-28 (Round 2 docket)  
+* **Stress-Tested:** 2026-10-30  
+* **Epistemic Status:** `[STATUS: CANONICAL_MERGED]` (Merged 2026-10-30) — Verdict on prior text **`RED_WINS`**; patch **`INCONCLUSIVE`** (holds in an uncalibrated synthetic model; recalibration required).  
+* **Constitutional Articles:** Arts. 4.2.1, 4.3.4, 4.3.5 (new)  
+* **Reproducible Evidence:** [`simone/benchmarks/sim_qa_11_petition_dos.py`](../simone/benchmarks/sim_qa_11_petition_dos.py) → [`results`](../simone/benchmarks/results/sim_qa_11_petition_dos_results.md) (`--reps 400 --seed 20261030`; synthetic, uncalibrated)
+
+### **1. Red-Team Findings Against the Current Text**
+1. **No petition-intake procedure exists.** Art. 4.3.4 gives delegates direct agenda authority. Jurors must therefore either screen everything (exhaustion) or drop petitions at their own discretion, which invites censorship challenges under Art. 1.4.2.
+2. **Flooding by a coordinated faction is not blocked.** The faction ban in Art. 4.1.3 cannot be enforced without surveillance of association, which conflicts with Art. 1.4. The defense has to be procedural (see SIM-QA-15-F).
+3. **Provocatio spam in nodes under 50 is not blocked.** The "unconditional" right of appeal has no standing or joinder rule, so the load is exported to other watersheds.
+4. **Synthetic model** (300 adults, council of 15, 3 dockets/week):
+   * Under the current text, a 5% faction drives the share of good-faith petitions heard within 8 weeks down from 99.7% to 2.0%.
+   * Jurors exceed 15 h/week in every week of the year.
+
+### **2. Purple Patch (Merged)**
+* **New Art. 4.3.5, Petition Intake and Deliberative Capacity:**
+  * publication on the civic register is never filtered;
+  * agenda placement needs co-endorsement by a fixed share of constituents;
+  * every person holds an equal endorsement allowance, never conditioned on labor, conduct, or opinion;
+  * agenda slots per session are finite and filled by a public lottery weighted by distinct support;
+  * a 3-citizen Triage Panel drawn by lot checks form and merges duplicates, and never judges merit.
+* **Art. 4.2.1:** Provocatio belongs to every *party* to a ruling, and appeals against the same ruling are joined.
+* **Operational parameters** go to Organic Law OL-9 (quadratic attention tokens, co-signature thresholds, slot budgets, triage rules).
+
+### **3. Residual Weakness (Honest Limits)**
+* With the full defense, burnout disappears in every run, and good-faith petitions heard within 8 weeks reach 72.8–79.9%.
+* However, a fully mobilized 20% faction still takes about 50% of agenda slots. The defense converts exhaustion into a capped, roughly proportional tax on agenda time; it does not eliminate it.
+* The defense depends on Zero-Knowledge Proof-of-Personhood holding at scale, which is unproven.
+* **Separate docket recommended:** in 3-person panels, a single hostile panelist can force a plebiscite on every 75% matter. The probability that at least one faction member is seated is 0.14 / 0.27 / 0.49 for factions of 5 / 10 / 20%.

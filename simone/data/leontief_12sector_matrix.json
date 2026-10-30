@@ -2,6 +2,7 @@
   "metadata": {
     "document_id": "simone/data/leontief_12sector_matrix.json",
     "version": "1.0.0-HIGH-FIDELITY",
+    "status": "FROZEN — audited input of SIM-QA-10 (kept unchanged for reproducibility). Superseded by simone/data/leontief_14sector_matrix.json (v2: shelter re-tagged Tier 1, healthcare and Tier 3 sectors, import-dependence, installed capacity, primary resources). Coefficients have no documented provenance: ILLUSTRATIVE — uncalibrated.",
     "author": "Kyberlex <kyberlex@proton.me>",
     "license": "AGPL-3.0-or-later",
     "pillar_alignment": "Pillar 1 (Biophysical & Leontief Economics) + Pillar 3 (Simone.jl)",
