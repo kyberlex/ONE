@@ -2214,7 +2214,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
 
       // Update Inspector HUD Panel & Dual Launch Buttons (Human & Crystal Clear)
       function updateHUD(b = selectedBasin) {
-        if (!b) return;
+        const bSafe = b || selectedBasin || WATERSHEDS[0];
+        if (!bSafe) return;
 
         const auditToggle = document.getElementById("weAuditToggle");
         const bottleneckCard = document.getElementById("hudBottleneckCard");
@@ -2240,6 +2241,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         const v4 = document.getElementById("hudMetricVal4");
         const s4 = document.getElementById("hudMetricSub4");
 
+        const biomeIconEl = document.getElementById("hudBiomeIcon");
+        const biomeTextEl = document.getElementById("hudBiomeText");
+        const nodeNameEl = document.getElementById("hudNodeName");
+
         [v1, v2, v3, v4].forEach(el => {
           if (el) el.classList.remove("val-track-a", "val-track-b");
         });
@@ -2247,41 +2252,41 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         if (!currentBlock) {
           // 🌐 WATERSHED MACRO VIEW
           if (statusEl) statusEl.textContent = "NATURAL COMMONS";
-          if (tagEl) tagEl.textContent = b.tag;
-          if (titleEl) titleEl.textContent = b.name;
-          document.getElementById("hudBiomeIcon").textContent = b.biomeIcon;
-          document.getElementById("hudBiomeText").textContent = b.biomeName;
-          if (descEl) descEl.textContent = b.desc;
+          if (tagEl) tagEl.textContent = bSafe.tag;
+          if (titleEl) titleEl.textContent = bSafe.name;
+          if (biomeIconEl) biomeIconEl.textContent = bSafe.biomeIcon || "🏞️";
+          if (biomeTextEl) biomeTextEl.textContent = bSafe.biomeName || "Bioregional Commons";
+          if (descEl) descEl.textContent = bSafe.desc;
 
           if (auditToggle) auditToggle.style.display = "none";
           if (bottleneckCard) bottleneckCard.style.display = "none";
           if (nodeBox) nodeBox.style.display = "flex";
 
           if (l1) l1.textContent = "Catchment Area";
-          if (v1) v1.textContent = b.area;
+          if (v1) v1.textContent = bSafe.area;
           if (s1) s1.textContent = "Natural river basin";
 
           if (l2) l2.textContent = "River Flow";
-          if (v2) v2.textContent = b.discharge;
+          if (v2) v2.textContent = bSafe.discharge;
           if (s2) s2.textContent = "Average water discharge";
 
           if (l3) l3.textContent = "Renewable Source";
-          if (v3) v3.textContent = b.exergy;
+          if (v3) v3.textContent = bSafe.exergy;
           if (s3) s3.textContent = "Clean regional energy";
 
           if (l4) l4.textContent = "Demarchic Assembly";
-          if (v4) v4.textContent = b.demarchy;
+          if (v4) v4.textContent = bSafe.demarchy;
           if (s4) s4.textContent = "Random citizen sortition";
 
-          document.getElementById("hudNodeName").textContent = b.nodeName;
+          if (nodeNameEl) nodeNameEl.textContent = bSafe.nodeName || "Watershed Node";
         } else {
           // 🏢 NEIGHBORHOOD COMMONS AUDIT (Clear Human Before/After)
           const blk = currentBlock;
           if (statusEl) statusEl.textContent = "NEIGHBORHOOD AUDIT";
           if (tagEl) tagEl.textContent = `${blk.name.split('—')[0].trim().toUpperCase()} • ${blk.units} HOMES`;
           if (titleEl) titleEl.textContent = "What if this block was self-sufficient?";
-          document.getElementById("hudBiomeIcon").textContent = blk.flag || "🏢";
-          document.getElementById("hudBiomeText").textContent = `${blk.name} • ${blk.units} homes • ${blk.roofArea_m2.toLocaleString()} m² of roofs`;
+          if (biomeIconEl) biomeIconEl.textContent = blk.flag || "🏢";
+          if (biomeTextEl) biomeTextEl.textContent = `${blk.name} • ${blk.units} homes • ${blk.roofArea_m2.toLocaleString()} m² of roofs`;
           if (descEl) descEl.textContent = "See what this real neighborhood pays today to banks and energy corporations vs what it produces for free when operating as a self-sufficient community.";
 
           if (auditToggle) auditToggle.style.display = "flex";
@@ -2342,13 +2347,13 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         // Configure Dual Launch Buttons
         const gameBtn = document.getElementById("btnLaunchGame");
         const gameNote = document.getElementById("gameTargetNote");
-        if (gameBtn) gameBtn.href = `./game/?bioregion=${b.gameParam}`;
-        if (gameNote) gameNote.innerHTML = `Selected: <strong>${currentBlock ? currentBlock.name : b.name}</strong>`;
+        if (gameBtn && bSafe) gameBtn.href = `./game/?bioregion=${bSafe.gameParam || 'alpine'}`;
+        if (gameNote && bSafe) gameNote.innerHTML = `Selected: <strong>${currentBlock ? currentBlock.name : bSafe.name}</strong>`;
 
         const simBtn = document.getElementById("btnLaunchSandbox");
         const simNote = document.getElementById("simTargetNote");
-        if (simBtn) simBtn.href = `./sim/?basin=${b.simParam}`;
-        if (simNote) simNote.innerHTML = `Selected: <strong>${currentBlock ? currentBlock.name : b.name}</strong>`;
+        if (simBtn && bSafe) simBtn.href = `./sim/?basin=${bSafe.simParam || 'po-valley'}`;
+        if (simNote && bSafe) simNote.innerHTML = `Selected: <strong>${currentBlock ? currentBlock.name : bSafe.name}</strong>`;
       }
 
       // Level 4: Tactical High-Resolution Orthophoto & Real Rooftop Audit Renderer
@@ -2356,12 +2361,13 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         if (!blk || alpha <= 0.005) return;
 
         ctx.save();
-
-        // 1. Solid opaque base fill to GUARANTEE zero bleed-through of planetary satellite map
-        ctx.fillStyle = "#020705";
-        ctx.fillRect(0, 0, width, height);
-
         ctx.globalAlpha = Math.min(1.0, Math.max(0.0, alpha));
+
+        // 1. Base fill when fully zoomed in to guarantee contrast
+        if (alpha >= 0.98) {
+          ctx.fillStyle = "#020705";
+          ctx.fillRect(0, 0, width, height);
+        }
 
         // 2. Real High-Resolution Aerial Orthophoto of the Neighborhood
         const orthoImg = blockImages[blk.id];
@@ -2458,10 +2464,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           ctx.moveTo(sbX, sbY);
           ctx.lineTo(sbX + sbW, sbY);
           ctx.moveTo(sbX, sbY - 4);
-          ctx.lineTo(sbX + sbY + 4);
+          ctx.lineTo(sbX, sbY + 4);
           ctx.moveTo(sbX + sbW / 2, sbY - 3);
           ctx.lineTo(sbX + sbW / 2, sbY + 3);
-          ctx.moveTo(sbX + sbW - 4);
+          ctx.moveTo(sbX + sbW, sbY - 4);
           ctx.lineTo(sbX + sbW, sbY + 4);
           ctx.stroke();
 
@@ -2737,60 +2743,67 @@ LAUNCHER_HTML = """<!DOCTYPE html>
 
       // Drawing Loop (60 FPS with Camera Lerping & Smooth Deterministic Altitude Transition)
       function draw() {
-        camera.x += (targetCamera.x - camera.x) * 0.085;
-        camera.y += (targetCamera.y - camera.y) * 0.085;
-        camera.zoom += (targetCamera.zoom - camera.zoom) * 0.085;
+        try {
+          camera.x += (targetCamera.x - camera.x) * 0.085;
+          camera.y += (targetCamera.y - camera.y) * 0.085;
+          camera.zoom += (targetCamera.zoom - camera.zoom) * 0.085;
 
-        // Smoothly interpolate transition factor between Satellite (0.0) and Urban (1.0)
-        urbanMix += (targetUrbanMix - urbanMix) * 0.075;
-        if (Math.abs(urbanMix - targetUrbanMix) < 0.001) urbanMix = targetUrbanMix;
+          // Smoothly interpolate transition factor between Satellite (0.0) and Urban (1.0)
+          urbanMix += (targetUrbanMix - urbanMix) * 0.075;
+          if (Math.abs(urbanMix - targetUrbanMix) < 0.001) urbanMix = targetUrbanMix;
 
-        ctx.clearRect(0, 0, width, height);
+          ctx.clearRect(0, 0, width, height);
 
-        const blk = currentBlock || activeLastBlock;
+          const blk = currentBlock || activeLastBlock;
 
-        if (urbanMix <= 0.005) {
-          // 1. Pure Satellite Map View (World or Region)
-          ctx.fillStyle = "#020705";
-          ctx.fillRect(0, 0, width, height);
-          drawSatelliteBaseMap();
-        } else if (urbanMix >= 0.995 && blk) {
-          // 2. Pure Tactical City Blueprint View
-          renderTacticalNeighborhoodBlueprint(blk, 1.0);
-        } else if (blk) {
-          // 3. Cinematic Optical Fake Zoom Dive (Continuous Transition between Region and City)
-          ctx.fillStyle = "#020705";
-          ctx.fillRect(0, 0, width, height);
-
-          // Phase A: Underlying Satellite Map zooming toward target city dot
-          if (urbanMix < 0.8) {
-            ctx.save();
-            ctx.globalAlpha = Math.max(0, 1.0 - urbanMix * 1.25);
+          if (urbanMix <= 0.005) {
+            // 1. Pure Satellite Map View (World or Region)
+            activeLastBlock = null;
+            ctx.fillStyle = "#020705";
+            ctx.fillRect(0, 0, width, height);
             drawSatelliteBaseMap();
+          } else if (urbanMix >= 0.995 && blk) {
+            // 2. Pure Tactical City Blueprint View
+            renderTacticalNeighborhoodBlueprint(blk, 1.0);
+          } else if (blk) {
+            // 3. Cinematic Optical Fake Zoom Dive (Continuous Transition between Region and City)
+            ctx.fillStyle = "#020705";
+            ctx.fillRect(0, 0, width, height);
 
-            // Tactical targeting crosshairs on city beacon
-            const [cx, cy] = worldToScreen(blk.centerPx[0], blk.centerPx[1]);
-            const targetPulse = (Math.sin(performance.now() * 0.01) + 1) * 0.5;
-            ctx.strokeStyle = "rgba(52, 211, 153, 0.8)";
-            ctx.lineWidth = 1.5;
-            ctx.beginPath();
-            ctx.arc(cx, cy, 18 + (1.0 - urbanMix) * 28 + targetPulse * 4, 0, Math.PI * 2);
-            ctx.stroke();
-            ctx.restore();
-          }
+            // Phase A: Underlying Satellite Map zooming toward target city dot
+            if (urbanMix < 0.85) {
+              ctx.save();
+              ctx.globalAlpha = Math.max(0, 1.0 - urbanMix * 1.15);
+              drawSatelliteBaseMap();
 
-          // Phase B: High-res urban orthophoto expanding down from flight altitude
-          if (urbanMix > 0.05) {
-            const orthoAlpha = Math.min(1.0, (urbanMix - 0.05) / 0.95);
-            renderTacticalNeighborhoodBlueprint(blk, orthoAlpha);
+              // Tactical targeting crosshairs on city beacon
+              if (blk.centerPx) {
+                const [cx, cy] = worldToScreen(blk.centerPx[0], blk.centerPx[1]);
+                const targetPulse = (Math.sin(performance.now() * 0.01) + 1) * 0.5;
+                ctx.strokeStyle = "rgba(52, 211, 153, 0.8)";
+                ctx.lineWidth = 1.5;
+                ctx.beginPath();
+                ctx.arc(cx, cy, 18 + (1.0 - urbanMix) * 28 + targetPulse * 4, 0, Math.PI * 2);
+                ctx.stroke();
+              }
+              ctx.restore();
+            }
+
+            // Phase B: High-res urban orthophoto expanding down from flight altitude
+            if (urbanMix > 0.05) {
+              const orthoAlpha = Math.min(1.0, (urbanMix - 0.05) / 0.95);
+              renderTacticalNeighborhoodBlueprint(blk, orthoAlpha);
+            }
+          } else {
+            ctx.fillStyle = "#020705";
+            ctx.fillRect(0, 0, width, height);
+            drawSatelliteBaseMap();
           }
-        } else {
-          ctx.fillStyle = "#020705";
-          ctx.fillRect(0, 0, width, height);
-          drawSatelliteBaseMap();
+        } catch (err) {
+          console.error("Watershed Explorer draw error:", err);
+        } finally {
+          requestAnimationFrame(draw);
         }
-
-        requestAnimationFrame(draw);
       }
 
       // Event Listeners: Mouse Move, Drag-Pan & Click
@@ -2861,6 +2874,9 @@ LAUNCHER_HTML = """<!DOCTYPE html>
             return;
           }
         }
+
+        // When in tactical city view, clicks on the aerial photo do not trigger background basin switches
+        if (zoomMode === "URBAN") return;
 
         const [wx, wy] = screenToWorld(mouseX, mouseY);
 
