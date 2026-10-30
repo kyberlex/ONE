@@ -509,9 +509,9 @@ LAUNCHER_HTML = """<!DOCTYPE html>
     }
 
     .we-zoom-btn:disabled {
-      color: #475569;
+      color: #64748b;
       cursor: not-allowed;
-      opacity: 0.35;
+      opacity: 0.45;
     }
 
     .we-zoom-info-badge {
@@ -1990,7 +1990,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       }
 
       // Urban Blocks Benchmark Dataset (Milestone 1.1 & 1.4)
-      const URBAN_BLOCKS = [{"id": "milan-loreto", "name": "Milan — Loreto / NoLo Block", "basinId": "basin-po", "city": "Milan, Italy", "flag": "🇮🇹", "center": [9.2185, 45.488], "bbox": [9.215, 45.486, 9.222, 45.49], "typology": "Dense 5-6 storey perimeter courtyard block", "units": 164, "inhabitants": 380, "roofArea_m2": 4850, "bioclimatic": {"solar_annual_kwh_m2": 1320, "solar_jan_kwh_m2": 38, "precip_annual_mm": 940}, "legacy_financial": {"monthly_rent_eur": 1250, "grid_elec_eur_kwh": 0.32, "elec_demand_kwh_unit_yr": 2400, "water_eur_m3": 2.1, "water_demand_m3_capita_yr": 55, "drain_30y_eur": 79000000, "drain_30y_label": "€79.0M"}, "audit_thermodynamics": {"epv_mwh_yr": 841, "rain_liters_yr": 3875150, "rain_label": "3.88M L/yr", "cistern_autonomy_days": 68, "wcr_jan": 0.28, "wcr_jan_pct": "28%"}, "bottleneck": {"title": "Critical Winter Insolation Deficit (Jan WCR: 28%)", "desc": "January solar insolation leaves a 72% heating deficit. Mandates Passivhaus envelope retrofits (U < 0.12 W/m²K) and 48V DC bus Tier-2 load-shedding states.", "action": "Passivhaus retrofits + 48V DC bus shedding", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=po-valley"}, "polygons": [[[9.2165, 45.4892], [9.2205, 45.4892], [9.2205, 45.4886], [9.2165, 45.4886], [9.2165, 45.4892]], [[9.2165, 45.4886], [9.2173, 45.4886], [9.2173, 45.4868], [9.2165, 45.4868], [9.2165, 45.4886]], [[9.2197, 45.4886], [9.2205, 45.4886], [9.2205, 45.4868], [9.2197, 45.4868], [9.2197, 45.4886]], [[9.2165, 45.4868], [9.2205, 45.4868], [9.2205, 45.4862], [9.2165, 45.4862], [9.2165, 45.4868]], [[9.218, 45.4878], [9.219, 45.4878], [9.219, 45.4872], [9.218, 45.4872], [9.218, 45.4878]]], "streets": {"north": "Viale Monza", "south": "Via dei Transiti", "west": "Via Padova", "east": "Via Andrea Costa"}, "dimensions": {"width_m": 180, "length_m": 140, "courtyard_m": "85m × 55m", "wings": 4}, "tacticalPolygon": [[0.3525, 0.6536], [0.4756, 0.082], [0.8311, 0.168]]}, {"id": "zurich-hardbrucke", "name": "Zurich — Hardbrücke / Industriequartier", "basinId": "basin-rhine", "city": "Zurich, Switzerland", "flag": "🇨🇭", "center": [8.5175, 47.3875], "bbox": [8.514, 47.3855, 8.521, 47.3895], "typology": "Industrial conversion & mixed residential cooperative block", "units": 142, "inhabitants": 310, "roofArea_m2": 5600, "bioclimatic": {"solar_annual_kwh_m2": 1180, "solar_jan_kwh_m2": 28, "precip_annual_mm": 1080}, "legacy_financial": {"monthly_rent_eur": 2100, "grid_elec_eur_kwh": 0.28, "elec_demand_kwh_unit_yr": 2600, "water_eur_m3": 2.4, "water_demand_m3_capita_yr": 50, "drain_30y_eur": 111800000, "drain_30y_label": "€111.8M"}, "audit_thermodynamics": {"epv_mwh_yr": 868, "rain_liters_yr": 5140800, "rain_label": "5.14M L/yr", "cistern_autonomy_days": 110, "wcr_jan": 0.22, "wcr_jan_pct": "22%"}, "bottleneck": {"title": "Severe Winter Deficit & Thermal Peak (Jan WCR: 22%)", "desc": "Altiplano overcast conditions create a 78% January exergy gap. Requires Limmat heat-pump coupling and seasonal water thermal buffer storage.", "action": "District water heat exchange + seasonal storage", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=rhine-meuse"}, "polygons": [[[8.515, 47.389], [8.5195, 47.389], [8.5195, 47.3882], [8.515, 47.3882], [8.515, 47.389]], [[8.515, 47.3882], [8.516, 47.3882], [8.516, 47.3865], [8.515, 47.3865], [8.515, 47.3882]], [[8.5185, 47.3882], [8.5195, 47.3882], [8.5195, 47.3865], [8.5185, 47.3865], [8.5185, 47.3882]], [[8.515, 47.3865], [8.5195, 47.3865], [8.5195, 47.3858], [8.515, 47.3858], [8.515, 47.3865]], [[8.5168, 47.3876], [8.5178, 47.3876], [8.5178, 47.387], [8.5168, 47.387], [8.5168, 47.3876]]], "streets": {"north": "Hardstrasse", "south": "Geroldstrasse", "west": "Zahnradstrasse", "east": "Pfingstweidstrasse"}, "dimensions": {"width_m": 190, "length_m": 150, "courtyard_m": "90m × 60m", "wings": 4}, "tacticalPolygon": [[0.32, 0.38], [0.67, 0.35], [0.7, 0.64], [0.35, 0.67]]}, {"id": "madrid-lavapies", "name": "Madrid — Lavapiés Superblock", "basinId": "basin-po", "city": "Madrid, Spain", "flag": "🇪🇸", "center": [-3.702, 40.4095], "bbox": [-3.7055, 40.4075, -3.6985, 40.4115], "typology": "High-density corrala courtyard urban superblock", "units": 195, "inhabitants": 440, "roofArea_m2": 5100, "bioclimatic": {"solar_annual_kwh_m2": 1820, "solar_jan_kwh_m2": 75, "precip_annual_mm": 420}, "legacy_financial": {"monthly_rent_eur": 1100, "grid_elec_eur_kwh": 0.26, "elec_demand_kwh_unit_yr": 2500, "water_eur_m3": 1.9, "water_demand_m3_capita_yr": 50, "drain_30y_eur": 82500000, "drain_30y_label": "€82.5M"}, "audit_thermodynamics": {"epv_mwh_yr": 1219, "rain_liters_yr": 1820700, "rain_label": "1.82M L/yr", "cistern_autonomy_days": 28, "wcr_jan": 0.54, "wcr_jan_pct": "54%"}, "bottleneck": {"title": "Severe Hydrological Stress & Drought (28 Days Autonomy)", "desc": "Arid summer regime limits rainwater buffer to 28 days. Mandates closed-loop greywater reed bed recycling and atmospheric condenser arrays.", "action": "Greywater reed beds + atmospheric condensers", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=po-valley"}, "polygons": [[[-3.704, 40.4108], [-3.7, 40.4108], [-3.7, 40.41], [-3.704, 40.41], [-3.704, 40.4108]], [[-3.704, 40.41], [-3.7032, 40.41], [-3.7032, 40.4085], [-3.704, 40.4085], [-3.704, 40.41]], [[-3.7008, 40.41], [-3.7, 40.41], [-3.7, 40.4085], [-3.7008, 40.4085], [-3.7008, 40.41]], [[-3.704, 40.4085], [-3.7, 40.4085], [-3.7, 40.4078], [-3.704, 40.4078], [-3.704, 40.4085]]], "streets": {"north": "Calle de Lavapiés", "south": "Calle de Sombrerete", "west": "Calle de la Fe", "east": "Calle de Argumosa"}, "dimensions": {"width_m": 170, "length_m": 160, "courtyard_m": "75m × 65m", "wings": 4}, "tacticalPolygon": [[0.4544, 0.4063], [0.6041, 0.6136], [0.3275, 0.7619], [0.1963, 0.5527]]}, {"id": "berlin-kreuzberg", "name": "Berlin — Kreuzberg Courtyard Block", "basinId": "basin-baltic", "city": "Berlin, Germany", "flag": "🇩🇪", "center": [13.418, 52.499], "bbox": [13.414, 52.4965, 13.422, 52.5015], "typology": "Gründerzeit perimeter block with dual inner courtyards", "units": 178, "inhabitants": 390, "roofArea_m2": 5400, "bioclimatic": {"solar_annual_kwh_m2": 1050, "solar_jan_kwh_m2": 22, "precip_annual_mm": 570}, "legacy_financial": {"monthly_rent_eur": 1350, "grid_elec_eur_kwh": 0.38, "elec_demand_kwh_unit_yr": 2400, "water_eur_m3": 2.3, "water_demand_m3_capita_yr": 52, "drain_30y_eur": 92800000, "drain_30y_label": "€92.8M"}, "audit_thermodynamics": {"epv_mwh_yr": 745, "rain_liters_yr": 2616300, "rain_label": "2.62M L/yr", "cistern_autonomy_days": 45, "wcr_jan": 0.18, "wcr_jan_pct": "18%"}, "bottleneck": {"title": "Critical Winter Solar Insolation Void (Jan WCR: 18%)", "desc": "Northern latitude leads to an 82% winter energy gap. Requires external vacuum insulation panels and district bio-pellet CHP cogeneration.", "action": "Vacuum insulation panels + district CHP backup", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=baltic"}, "polygons": [[[13.4155, 52.5005], [13.4205, 52.5005], [13.4205, 52.4998], [13.4155, 52.4998], [13.4155, 52.5005]], [[13.4155, 52.4998], [13.4165, 52.4998], [13.4165, 52.498], [13.4155, 52.498], [13.4155, 52.4998]], [[13.4195, 52.4998], [13.4205, 52.4998], [13.4205, 52.498], [13.4195, 52.498], [13.4195, 52.4998]], [[13.4155, 52.498], [13.4205, 52.498], [13.4205, 52.4972], [13.4155, 52.4972], [13.4155, 52.498]], [[13.4175, 52.4995], [13.4185, 52.4995], [13.4185, 52.4985], [13.4175, 52.4985], [13.4175, 52.4995]]], "streets": {"north": "Oranienstraße", "south": "Naunynstraße", "west": "Adalbertstraße", "east": "Mariannenstraße"}, "dimensions": {"width_m": 200, "length_m": 160, "courtyard_m": "Dual Courtyards (85m × 50m)", "wings": 5}, "tacticalPolygon": [[0.32, 0.47], [0.72, 0.46], [0.71, 0.73], [0.31, 0.74]]}, {"id": "london-hackney", "name": "London — Hackney Mixed Terrace Block", "basinId": "basin-rhine", "city": "London, United Kingdom", "flag": "🇬🇧", "center": [-0.0555, 51.5465], "bbox": [-0.059, 51.5445, -0.052, 51.5485], "typology": "Victorian terrace & light industrial conversion cluster", "units": 130, "inhabitants": 290, "roofArea_m2": 4200, "bioclimatic": {"solar_annual_kwh_m2": 1020, "solar_jan_kwh_m2": 24, "precip_annual_mm": 620}, "legacy_financial": {"monthly_rent_eur": 1850, "grid_elec_eur_kwh": 0.34, "elec_demand_kwh_unit_yr": 2500, "water_eur_m3": 2.2, "water_demand_m3_capita_yr": 52, "drain_30y_eur": 90900000, "drain_30y_label": "€90.9M"}, "audit_thermodynamics": {"epv_mwh_yr": 563, "rain_liters_yr": 2213400, "rain_label": "2.21M L/yr", "cistern_autonomy_days": 51, "wcr_jan": 0.2, "wcr_jan_pct": "20%"}, "bottleneck": {"title": "High Uninsulated Brick Transmission (Jan WCR: 20%)", "desc": "Uninsulated solid brick envelopes waste 64% of heating energy. Mandates internal breathable wood-fiber insulation and air-source heat pumps.", "action": "Internal wood-fiber insulation + heat pumps", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=rhine-meuse"}, "polygons": [[[-0.058, 51.5478], [-0.0535, 51.5478], [-0.0535, 51.5472], [-0.058, 51.5472], [-0.058, 51.5478]], [[-0.058, 51.5468], [-0.0535, 51.5468], [-0.0535, 51.5462], [-0.058, 51.5462], [-0.058, 51.5468]], [[-0.058, 51.5458], [-0.0535, 51.5458], [-0.0535, 51.5452], [-0.058, 51.5452], [-0.058, 51.5458]]], "streets": {"north": "Mare Street", "south": "Well Street", "west": "Tudor Road", "east": "Terrace Road"}, "dimensions": {"width_m": 160, "length_m": 130, "courtyard_m": "65m × 45m", "wings": 3}, "tacticalPolygon": [[0.35, 0.4], [0.68, 0.37], [0.65, 0.68], [0.32, 0.71]]}, {"id": "austin-east", "name": "Austin — East Austin Low-Rise Cluster", "basinId": "basin-cascadia", "city": "Austin, United States", "flag": "🇺🇸", "center": [-97.7225, 30.2625], "bbox": [-97.7265, 30.26, -97.7185, 30.265], "typology": "Subtropical low-rise mixed courtyard & workshop infill", "units": 110, "inhabitants": 240, "roofArea_m2": 4900, "bioclimatic": {"solar_annual_kwh_m2": 1750, "solar_jan_kwh_m2": 82, "precip_annual_mm": 870}, "legacy_financial": {"monthly_rent_eur": 1600, "grid_elec_eur_kwh": 0.15, "elec_demand_kwh_unit_yr": 5000, "water_eur_m3": 1.8, "water_demand_m3_capita_yr": 60, "drain_30y_eur": 66700000, "drain_30y_label": "€66.7M"}, "audit_thermodynamics": {"epv_mwh_yr": 1126, "rain_liters_yr": 3623550, "rain_label": "3.62M L/yr", "cistern_autonomy_days": 100, "wcr_jan": 0.65, "wcr_jan_pct": "65%"}, "bottleneck": {"title": "Extreme Summer Thermal Cooling Peak (AC Grid Load)", "desc": "Summer cooling load exceeds winter heating by 320%. Mandates high-albedo cool roofs, external solar brise-soleil and nocturnal radiative night flushing.", "action": "Cool-roof albedo + passive brise-soleil", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=cascadia"}, "polygons": [[[-97.725, 30.264], [-97.72, 30.264], [-97.72, 30.2632], [-97.725, 30.2632], [-97.725, 30.264]], [[-97.725, 30.2625], [-97.7215, 30.2625], [-97.7215, 30.2618], [-97.725, 30.2618], [-97.725, 30.2625]], [[-97.725, 30.2612], [-97.72, 30.2612], [-97.72, 30.2605], [-97.725, 30.2605], [-97.725, 30.2612]]], "streets": {"north": "East 6th Street", "south": "East 5th Street", "west": "Chicon Street", "east": "Comal Street"}, "dimensions": {"width_m": 150, "length_m": 140, "courtyard_m": "70m × 60m", "wings": 3}, "tacticalPolygon": [[0.34, 0.38], [0.68, 0.39], [0.67, 0.68], [0.33, 0.67]]}, {"id": "detroit-corktown", "name": "Detroit — Corktown Infill Block", "basinId": "basin-greatlakes", "city": "Detroit, United States", "flag": "🇺🇸", "center": [-83.0685, 42.3315], "bbox": [-83.0725, 42.329, -83.0645, 42.334], "typology": "Post-industrial brick warehouse & infill timber housing", "units": 125, "inhabitants": 275, "roofArea_m2": 5200, "bioclimatic": {"solar_annual_kwh_m2": 1290, "solar_jan_kwh_m2": 36, "precip_annual_mm": 850}, "legacy_financial": {"monthly_rent_eur": 1200, "grid_elec_eur_kwh": 0.2, "elec_demand_kwh_unit_yr": 3500, "water_eur_m3": 2.1, "water_demand_m3_capita_yr": 55, "drain_30y_eur": 57700000, "drain_30y_label": "€57.7M"}, "audit_thermodynamics": {"epv_mwh_yr": 881, "rain_liters_yr": 3757000, "rain_label": "3.76M L/yr", "cistern_autonomy_days": 91, "wcr_jan": 0.25, "wcr_jan_pct": "25%"}, "bottleneck": {"title": "Continental Sub-Zero Freezing & Cistern Risk (Jan WCR: 25%)", "desc": "Deep winter frost requires earth-sheltered subterranean cistern thermal insulation and triple-pane krypton-filled glazing envelopes.", "action": "Subterranean earth-sheltered cisterns + triple-pane", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=great-lakes"}, "polygons": [[[-83.071, 42.333], [-83.066, 42.333], [-83.066, 42.3322], [-83.071, 42.3322], [-83.071, 42.333]], [[-83.071, 42.3315], [-83.067, 42.3315], [-83.067, 42.3308], [-83.071, 42.3308], [-83.071, 42.3315]], [[-83.071, 42.3302], [-83.066, 42.3302], [-83.066, 42.3295], [-83.071, 42.3295], [-83.071, 42.3302]]], "streets": {"north": "Michigan Avenue", "south": "Bagley Street", "west": "Trumbull Street", "east": "Rosa Parks Blvd"}, "dimensions": {"width_m": 180, "length_m": 150, "courtyard_m": "80m × 65m", "wings": 3}, "tacticalPolygon": [[0.32, 0.37], [0.69, 0.38], [0.68, 0.68], [0.31, 0.67]]}, {"id": "tokyo-setagaya", "name": "Tokyo — Setagaya Dense Residential Fabric", "basinId": "basin-yangtze", "city": "Tokyo, Japan", "flag": "🇯🇵", "center": [139.6535, 35.6465], "bbox": [139.65, 35.644, 139.657, 35.649], "typology": "High-density micro-lot residential & shared rooftop alley", "units": 160, "inhabitants": 320, "roofArea_m2": 4600, "bioclimatic": {"solar_annual_kwh_m2": 1360, "solar_jan_kwh_m2": 70, "precip_annual_mm": 1530}, "legacy_financial": {"monthly_rent_eur": 1450, "grid_elec_eur_kwh": 0.29, "elec_demand_kwh_unit_yr": 2350, "water_eur_m3": 2.0, "water_demand_m3_capita_yr": 50, "drain_30y_eur": 88000000, "drain_30y_label": "€88.0M"}, "audit_thermodynamics": {"epv_mwh_yr": 822, "rain_liters_yr": 5982300, "rain_label": "5.98M L/yr", "cistern_autonomy_days": 125, "wcr_jan": 0.42, "wcr_jan_pct": "42%"}, "bottleneck": {"title": "Monsoonal Rain Peak & High Summer Humidity", "desc": "Heavy precipitation creates urban runoff surges. Mandates bioretention swales, high-volume detention retention tanks, and desiccant dehumidification.", "action": "Bioretention swales + desiccant cooling", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=yangtze"}, "polygons": [[[139.6515, 35.648], [139.6555, 35.648], [139.6555, 35.6472], [139.6515, 35.6472], [139.6515, 35.648]], [[139.6515, 35.6468], [139.6555, 35.6468], [139.6555, 35.646], [139.6515, 35.646], [139.6515, 35.6468]], [[139.6515, 35.6455], [139.6555, 35.6455], [139.6555, 35.6447], [139.6515, 35.6447], [139.6515, 35.6455]]], "streets": {"north": "Setagaya-dori", "south": "Taishido Lane", "west": "Sangenjaya Alley", "east": "Karasuyama Way"}, "dimensions": {"width_m": 140, "length_m": 130, "courtyard_m": "50m × 45m", "wings": 4}, "tacticalPolygon": [[0.36, 0.38], [0.68, 0.4], [0.65, 0.7], [0.33, 0.68]]}];
+      const URBAN_BLOCKS = [{"id": "milan-loreto", "name": "Milan — Loreto / NoLo Block", "basinId": "basin-po", "city": "Milan, Italy", "flag": "🇮🇹", "center": [9.2185, 45.488], "bbox": [9.215, 45.486, 9.222, 45.49], "typology": "Dense 5-6 storey perimeter courtyard block", "units": 164, "inhabitants": 380, "roofArea_m2": 4850, "bioclimatic": {"solar_annual_kwh_m2": 1320, "solar_jan_kwh_m2": 38, "precip_annual_mm": 940}, "legacy_financial": {"monthly_rent_eur": 1250, "grid_elec_eur_kwh": 0.32, "elec_demand_kwh_unit_yr": 2400, "water_eur_m3": 2.1, "water_demand_m3_capita_yr": 55, "drain_30y_eur": 79000000, "drain_30y_label": "€79.0M"}, "audit_thermodynamics": {"epv_mwh_yr": 841, "rain_liters_yr": 3875150, "rain_label": "3.88M L/yr", "cistern_autonomy_days": 68, "wcr_jan": 0.28, "wcr_jan_pct": "28%"}, "bottleneck": {"title": "Critical Winter Insolation Deficit (Jan WCR: 28%)", "desc": "January solar insolation leaves a 72% heating deficit. Mandates Passivhaus envelope retrofits (U < 0.12 W/m²K) and 48V DC bus Tier-2 load-shedding states.", "action": "Passivhaus retrofits + 48V DC bus shedding", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=po-valley"}, "polygons": [[[9.2165, 45.4892], [9.2205, 45.4892], [9.2205, 45.4886], [9.2165, 45.4886], [9.2165, 45.4892]], [[9.2165, 45.4886], [9.2173, 45.4886], [9.2173, 45.4868], [9.2165, 45.4868], [9.2165, 45.4886]], [[9.2197, 45.4886], [9.2205, 45.4886], [9.2205, 45.4868], [9.2197, 45.4868], [9.2197, 45.4886]], [[9.2165, 45.4868], [9.2205, 45.4868], [9.2205, 45.4862], [9.2165, 45.4862], [9.2165, 45.4868]], [[9.218, 45.4878], [9.219, 45.4878], [9.219, 45.4872], [9.218, 45.4872], [9.218, 45.4878]]], "streets": {"north": "Viale Monza", "south": "Via dei Transiti", "west": "Via Padova", "east": "Via Andrea Costa"}, "dimensions": {"width_m": 180, "length_m": 140, "courtyard_m": "85m × 55m", "wings": 4}, "tacticalPolygon": [[0.386, 0.648], [0.488, 0.145], [0.818, 0.26]]}, {"id": "zurich-hardbrucke", "name": "Zurich — Hardbrücke / Industriequartier", "basinId": "basin-rhine", "city": "Zurich, Switzerland", "flag": "🇨🇭", "center": [8.5175, 47.3875], "bbox": [8.514, 47.3855, 8.521, 47.3895], "typology": "Industrial conversion & mixed residential cooperative block", "units": 142, "inhabitants": 310, "roofArea_m2": 5600, "bioclimatic": {"solar_annual_kwh_m2": 1180, "solar_jan_kwh_m2": 28, "precip_annual_mm": 1080}, "legacy_financial": {"monthly_rent_eur": 2100, "grid_elec_eur_kwh": 0.28, "elec_demand_kwh_unit_yr": 2600, "water_eur_m3": 2.4, "water_demand_m3_capita_yr": 50, "drain_30y_eur": 111800000, "drain_30y_label": "€111.8M"}, "audit_thermodynamics": {"epv_mwh_yr": 868, "rain_liters_yr": 5140800, "rain_label": "5.14M L/yr", "cistern_autonomy_days": 110, "wcr_jan": 0.22, "wcr_jan_pct": "22%"}, "bottleneck": {"title": "Severe Winter Deficit & Thermal Peak (Jan WCR: 22%)", "desc": "Altiplano overcast conditions create a 78% January exergy gap. Requires Limmat heat-pump coupling and seasonal water thermal buffer storage.", "action": "District water heat exchange + seasonal storage", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=rhine-meuse"}, "polygons": [[[8.515, 47.389], [8.5195, 47.389], [8.5195, 47.3882], [8.515, 47.3882], [8.515, 47.389]], [[8.515, 47.3882], [8.516, 47.3882], [8.516, 47.3865], [8.515, 47.3865], [8.515, 47.3882]], [[8.5185, 47.3882], [8.5195, 47.3882], [8.5195, 47.3865], [8.5185, 47.3865], [8.5185, 47.3882]], [[8.515, 47.3865], [8.5195, 47.3865], [8.5195, 47.3858], [8.515, 47.3858], [8.515, 47.3865]], [[8.5168, 47.3876], [8.5178, 47.3876], [8.5178, 47.387], [8.5168, 47.387], [8.5168, 47.3876]]], "streets": {"north": "Hardstrasse", "south": "Geroldstrasse", "west": "Zahnradstrasse", "east": "Pfingstweidstrasse"}, "dimensions": {"width_m": 190, "length_m": 150, "courtyard_m": "90m × 60m", "wings": 4}, "tacticalPolygon": [[0.32, 0.38], [0.67, 0.35], [0.7, 0.64], [0.35, 0.67]]}, {"id": "madrid-lavapies", "name": "Madrid — Lavapiés Superblock", "basinId": "basin-po", "city": "Madrid, Spain", "flag": "🇪🇸", "center": [-3.702, 40.4095], "bbox": [-3.7055, 40.4075, -3.6985, 40.4115], "typology": "High-density corrala courtyard urban superblock", "units": 195, "inhabitants": 440, "roofArea_m2": 5100, "bioclimatic": {"solar_annual_kwh_m2": 1820, "solar_jan_kwh_m2": 75, "precip_annual_mm": 420}, "legacy_financial": {"monthly_rent_eur": 1100, "grid_elec_eur_kwh": 0.26, "elec_demand_kwh_unit_yr": 2500, "water_eur_m3": 1.9, "water_demand_m3_capita_yr": 50, "drain_30y_eur": 82500000, "drain_30y_label": "€82.5M"}, "audit_thermodynamics": {"epv_mwh_yr": 1219, "rain_liters_yr": 1820700, "rain_label": "1.82M L/yr", "cistern_autonomy_days": 28, "wcr_jan": 0.54, "wcr_jan_pct": "54%"}, "bottleneck": {"title": "Severe Hydrological Stress & Drought (28 Days Autonomy)", "desc": "Arid summer regime limits rainwater buffer to 28 days. Mandates closed-loop greywater reed bed recycling and atmospheric condenser arrays.", "action": "Greywater reed beds + atmospheric condensers", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=po-valley"}, "polygons": [[[-3.704, 40.4108], [-3.7, 40.4108], [-3.7, 40.41], [-3.704, 40.41], [-3.704, 40.4108]], [[-3.704, 40.41], [-3.7032, 40.41], [-3.7032, 40.4085], [-3.704, 40.4085], [-3.704, 40.41]], [[-3.7008, 40.41], [-3.7, 40.41], [-3.7, 40.4085], [-3.7008, 40.4085], [-3.7008, 40.41]], [[-3.704, 40.4085], [-3.7, 40.4085], [-3.7, 40.4078], [-3.704, 40.4078], [-3.704, 40.4085]]], "streets": {"north": "Calle de Lavapiés", "south": "Calle de Sombrerete", "west": "Calle de la Fe", "east": "Calle de Argumosa"}, "dimensions": {"width_m": 170, "length_m": 160, "courtyard_m": "75m × 65m", "wings": 4}, "tacticalPolygon": [[0.4544, 0.4063], [0.6041, 0.6136], [0.3275, 0.7619], [0.1963, 0.5527]]}, {"id": "berlin-kreuzberg", "name": "Berlin — Kreuzberg Courtyard Block", "basinId": "basin-baltic", "city": "Berlin, Germany", "flag": "🇩🇪", "center": [13.418, 52.499], "bbox": [13.414, 52.4965, 13.422, 52.5015], "typology": "Gründerzeit perimeter block with dual inner courtyards", "units": 178, "inhabitants": 390, "roofArea_m2": 5400, "bioclimatic": {"solar_annual_kwh_m2": 1050, "solar_jan_kwh_m2": 22, "precip_annual_mm": 570}, "legacy_financial": {"monthly_rent_eur": 1350, "grid_elec_eur_kwh": 0.38, "elec_demand_kwh_unit_yr": 2400, "water_eur_m3": 2.3, "water_demand_m3_capita_yr": 52, "drain_30y_eur": 92800000, "drain_30y_label": "€92.8M"}, "audit_thermodynamics": {"epv_mwh_yr": 745, "rain_liters_yr": 2616300, "rain_label": "2.62M L/yr", "cistern_autonomy_days": 45, "wcr_jan": 0.18, "wcr_jan_pct": "18%"}, "bottleneck": {"title": "Critical Winter Solar Insolation Void (Jan WCR: 18%)", "desc": "Northern latitude leads to an 82% winter energy gap. Requires external vacuum insulation panels and district bio-pellet CHP cogeneration.", "action": "Vacuum insulation panels + district CHP backup", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=baltic"}, "polygons": [[[13.4155, 52.5005], [13.4205, 52.5005], [13.4205, 52.4998], [13.4155, 52.4998], [13.4155, 52.5005]], [[13.4155, 52.4998], [13.4165, 52.4998], [13.4165, 52.498], [13.4155, 52.498], [13.4155, 52.4998]], [[13.4195, 52.4998], [13.4205, 52.4998], [13.4205, 52.498], [13.4195, 52.498], [13.4195, 52.4998]], [[13.4155, 52.498], [13.4205, 52.498], [13.4205, 52.4972], [13.4155, 52.4972], [13.4155, 52.498]], [[13.4175, 52.4995], [13.4185, 52.4995], [13.4185, 52.4985], [13.4175, 52.4985], [13.4175, 52.4995]]], "streets": {"north": "Oranienstraße", "south": "Naunynstraße", "west": "Adalbertstraße", "east": "Mariannenstraße"}, "dimensions": {"width_m": 200, "length_m": 160, "courtyard_m": "Dual Courtyards (85m × 50m)", "wings": 5}, "tacticalPolygon": [[0.32, 0.47], [0.72, 0.46], [0.71, 0.73], [0.31, 0.74]]}, {"id": "london-hackney", "name": "London — Hackney Mixed Terrace Block", "basinId": "basin-rhine", "city": "London, United Kingdom", "flag": "🇬🇧", "center": [-0.0555, 51.5465], "bbox": [-0.059, 51.5445, -0.052, 51.5485], "typology": "Victorian terrace & light industrial conversion cluster", "units": 130, "inhabitants": 290, "roofArea_m2": 4200, "bioclimatic": {"solar_annual_kwh_m2": 1020, "solar_jan_kwh_m2": 24, "precip_annual_mm": 620}, "legacy_financial": {"monthly_rent_eur": 1850, "grid_elec_eur_kwh": 0.34, "elec_demand_kwh_unit_yr": 2500, "water_eur_m3": 2.2, "water_demand_m3_capita_yr": 52, "drain_30y_eur": 90900000, "drain_30y_label": "€90.9M"}, "audit_thermodynamics": {"epv_mwh_yr": 563, "rain_liters_yr": 2213400, "rain_label": "2.21M L/yr", "cistern_autonomy_days": 51, "wcr_jan": 0.2, "wcr_jan_pct": "20%"}, "bottleneck": {"title": "High Uninsulated Brick Transmission (Jan WCR: 20%)", "desc": "Uninsulated solid brick envelopes waste 64% of heating energy. Mandates internal breathable wood-fiber insulation and air-source heat pumps.", "action": "Internal wood-fiber insulation + heat pumps", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=rhine-meuse"}, "polygons": [[[-0.058, 51.5478], [-0.0535, 51.5478], [-0.0535, 51.5472], [-0.058, 51.5472], [-0.058, 51.5478]], [[-0.058, 51.5468], [-0.0535, 51.5468], [-0.0535, 51.5462], [-0.058, 51.5462], [-0.058, 51.5468]], [[-0.058, 51.5458], [-0.0535, 51.5458], [-0.0535, 51.5452], [-0.058, 51.5452], [-0.058, 51.5458]]], "streets": {"north": "Mare Street", "south": "Well Street", "west": "Tudor Road", "east": "Terrace Road"}, "dimensions": {"width_m": 160, "length_m": 130, "courtyard_m": "65m × 45m", "wings": 3}, "tacticalPolygon": [[0.35, 0.4], [0.68, 0.37], [0.65, 0.68], [0.32, 0.71]]}, {"id": "austin-east", "name": "Austin — East Austin Low-Rise Cluster", "basinId": "basin-cascadia", "city": "Austin, United States", "flag": "🇺🇸", "center": [-97.7225, 30.2625], "bbox": [-97.7265, 30.26, -97.7185, 30.265], "typology": "Subtropical low-rise mixed courtyard & workshop infill", "units": 110, "inhabitants": 240, "roofArea_m2": 4900, "bioclimatic": {"solar_annual_kwh_m2": 1750, "solar_jan_kwh_m2": 82, "precip_annual_mm": 870}, "legacy_financial": {"monthly_rent_eur": 1600, "grid_elec_eur_kwh": 0.15, "elec_demand_kwh_unit_yr": 5000, "water_eur_m3": 1.8, "water_demand_m3_capita_yr": 60, "drain_30y_eur": 66700000, "drain_30y_label": "€66.7M"}, "audit_thermodynamics": {"epv_mwh_yr": 1126, "rain_liters_yr": 3623550, "rain_label": "3.62M L/yr", "cistern_autonomy_days": 100, "wcr_jan": 0.65, "wcr_jan_pct": "65%"}, "bottleneck": {"title": "Extreme Summer Thermal Cooling Peak (AC Grid Load)", "desc": "Summer cooling load exceeds winter heating by 320%. Mandates high-albedo cool roofs, external solar brise-soleil and nocturnal radiative night flushing.", "action": "Cool-roof albedo + passive brise-soleil", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=cascadia"}, "polygons": [[[-97.725, 30.264], [-97.72, 30.264], [-97.72, 30.2632], [-97.725, 30.2632], [-97.725, 30.264]], [[-97.725, 30.2625], [-97.7215, 30.2625], [-97.7215, 30.2618], [-97.725, 30.2618], [-97.725, 30.2625]], [[-97.725, 30.2612], [-97.72, 30.2612], [-97.72, 30.2605], [-97.725, 30.2605], [-97.725, 30.2612]]], "streets": {"north": "East 6th Street", "south": "East 5th Street", "west": "Chicon Street", "east": "Comal Street"}, "dimensions": {"width_m": 150, "length_m": 140, "courtyard_m": "70m × 60m", "wings": 3}, "tacticalPolygon": [[0.34, 0.38], [0.68, 0.39], [0.67, 0.68], [0.33, 0.67]]}, {"id": "detroit-corktown", "name": "Detroit — Corktown Infill Block", "basinId": "basin-greatlakes", "city": "Detroit, United States", "flag": "🇺🇸", "center": [-83.0685, 42.3315], "bbox": [-83.0725, 42.329, -83.0645, 42.334], "typology": "Post-industrial brick warehouse & infill timber housing", "units": 125, "inhabitants": 275, "roofArea_m2": 5200, "bioclimatic": {"solar_annual_kwh_m2": 1290, "solar_jan_kwh_m2": 36, "precip_annual_mm": 850}, "legacy_financial": {"monthly_rent_eur": 1200, "grid_elec_eur_kwh": 0.2, "elec_demand_kwh_unit_yr": 3500, "water_eur_m3": 2.1, "water_demand_m3_capita_yr": 55, "drain_30y_eur": 57700000, "drain_30y_label": "€57.7M"}, "audit_thermodynamics": {"epv_mwh_yr": 881, "rain_liters_yr": 3757000, "rain_label": "3.76M L/yr", "cistern_autonomy_days": 91, "wcr_jan": 0.25, "wcr_jan_pct": "25%"}, "bottleneck": {"title": "Continental Sub-Zero Freezing & Cistern Risk (Jan WCR: 25%)", "desc": "Deep winter frost requires earth-sheltered subterranean cistern thermal insulation and triple-pane krypton-filled glazing envelopes.", "action": "Subterranean earth-sheltered cisterns + triple-pane", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=great-lakes"}, "polygons": [[[-83.071, 42.333], [-83.066, 42.333], [-83.066, 42.3322], [-83.071, 42.3322], [-83.071, 42.333]], [[-83.071, 42.3315], [-83.067, 42.3315], [-83.067, 42.3308], [-83.071, 42.3308], [-83.071, 42.3315]], [[-83.071, 42.3302], [-83.066, 42.3302], [-83.066, 42.3295], [-83.071, 42.3295], [-83.071, 42.3302]]], "streets": {"north": "Michigan Avenue", "south": "Bagley Street", "west": "Trumbull Street", "east": "Rosa Parks Blvd"}, "dimensions": {"width_m": 180, "length_m": 150, "courtyard_m": "80m × 65m", "wings": 3}, "tacticalPolygon": [[0.32, 0.37], [0.69, 0.38], [0.68, 0.68], [0.31, 0.67]]}, {"id": "tokyo-setagaya", "name": "Tokyo — Setagaya Dense Residential Fabric", "basinId": "basin-yangtze", "city": "Tokyo, Japan", "flag": "🇯🇵", "center": [139.6535, 35.6465], "bbox": [139.65, 35.644, 139.657, 35.649], "typology": "High-density micro-lot residential & shared rooftop alley", "units": 160, "inhabitants": 320, "roofArea_m2": 4600, "bioclimatic": {"solar_annual_kwh_m2": 1360, "solar_jan_kwh_m2": 70, "precip_annual_mm": 1530}, "legacy_financial": {"monthly_rent_eur": 1450, "grid_elec_eur_kwh": 0.29, "elec_demand_kwh_unit_yr": 2350, "water_eur_m3": 2.0, "water_demand_m3_capita_yr": 50, "drain_30y_eur": 88000000, "drain_30y_label": "€88.0M"}, "audit_thermodynamics": {"epv_mwh_yr": 822, "rain_liters_yr": 5982300, "rain_label": "5.98M L/yr", "cistern_autonomy_days": 125, "wcr_jan": 0.42, "wcr_jan_pct": "42%"}, "bottleneck": {"title": "Monsoonal Rain Peak & High Summer Humidity", "desc": "Heavy precipitation creates urban runoff surges. Mandates bioretention swales, high-volume detention retention tanks, and desiccant dehumidification.", "action": "Bioretention swales + desiccant cooling", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=yangtze"}, "polygons": [[[139.6515, 35.648], [139.6555, 35.648], [139.6555, 35.6472], [139.6515, 35.6472], [139.6515, 35.648]], [[139.6515, 35.6468], [139.6555, 35.6468], [139.6555, 35.646], [139.6515, 35.646], [139.6515, 35.6468]], [[139.6515, 35.6455], [139.6555, 35.6455], [139.6555, 35.6447], [139.6515, 35.6447], [139.6515, 35.6455]]], "streets": {"north": "Setagaya-dori", "south": "Taishido Lane", "west": "Sangenjaya Alley", "east": "Karasuyama Way"}, "dimensions": {"width_m": 140, "length_m": 130, "courtyard_m": "50m × 45m", "wings": 4}, "tacticalPolygon": [[0.36, 0.38], [0.68, 0.4], [0.65, 0.7], [0.33, 0.68]]}];
 
       // Pre-calculate Web Mercator projection coordinates for Urban Blocks
       URBAN_BLOCKS.forEach(block => {
@@ -2045,7 +2045,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
       }
 
       let activeLastBlock = null;
-      let exitingBlock = null;
+      let urbanMix = 0.0; // 0.0 = Satellite World/Region, 1.0 = Tactical Urban Orthophoto
+      let targetUrbanMix = 0.0;
 
       // Single Unified Location Scope Selector: World, Basin, City
       function populateScopeSelectors() {
@@ -2118,8 +2119,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
 
       function setViewWorld() {
         zoomMode = "WORLD";
-        if (currentBlock) exitingBlock = currentBlock;
         currentBlock = null;
+        targetUrbanMix = 0.0;
         targetCamera.x = worldCenter[0];
         targetCamera.y = worldCenter[1];
         targetCamera.zoom = 1.0;
@@ -2131,8 +2132,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         if (!b) return;
         zoomMode = "REGION";
         selectedBasin = b;
-        if (currentBlock) exitingBlock = currentBlock;
         currentBlock = null;
+        targetUrbanMix = 0.0;
         targetCamera.x = b.centerPx[0];
         targetCamera.y = b.centerPx[1];
         targetCamera.zoom = b.zoomLevel || 3.8;
@@ -2142,8 +2143,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
 
       function setBasinOverview() {
         zoomMode = "REGION";
-        if (currentBlock) exitingBlock = currentBlock;
         currentBlock = null;
+        targetUrbanMix = 0.0;
         if (selectedBasin) {
           targetCamera.x = selectedBasin.centerPx[0];
           targetCamera.y = selectedBasin.centerPx[1];
@@ -2158,7 +2159,9 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         if (!blk) return;
         zoomMode = "URBAN";
         currentBlock = blk;
-        exitingBlock = null;
+        activeLastBlock = blk;
+        targetUrbanMix = 1.0;
+
         const parentBasin = WATERSHEDS.find(b => b.id === blk.basinId);
         if (parentBasin) selectedBasin = parentBasin;
 
@@ -2369,9 +2372,9 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           imgH = orthoImg.naturalHeight;
         }
 
-        // Cover canvas preserving aspect ratio + optical fake zoom effect
+        // Cover canvas preserving aspect ratio + optical fake zoom dive (starts at 1.35x and dives to 1.0x)
         const baseScale = Math.max(width / imgW, height / imgH);
-        const opticalZoom = 1.0 + Math.pow(1.0 - alpha, 2) * 0.3;
+        const opticalZoom = 1.0 + Math.pow(1.0 - alpha, 2) * 0.35;
         const scale = baseScale * opticalZoom;
         const dw = imgW * scale;
         const dh = imgH * scale;
@@ -2396,9 +2399,10 @@ LAUNCHER_HTML = """<!DOCTYPE html>
 
         const isTrackB = currentTrack === "B";
         const primaryColor = isTrackB ? "#34d399" : "#f87171";
-        const fillColor = isTrackB ? "rgba(16, 185, 129, 0.22)" : "rgba(239, 68, 68, 0.22)";
+        const strokeColor = isTrackB ? "#10b981" : "#ef4444";
+        const fillColor = isTrackB ? "rgba(16, 185, 129, 0.42)" : "rgba(239, 68, 68, 0.42)";
 
-        // 3. Vector Polygon Adapted to the Real Urban Block Photo (Milestone 1.4)
+        // 3. Vector Polygon Adapted to the Real Urban Block Photo (Calibrated & High Visibility)
         const poly = blk.tacticalPolygon || [
           [0.32, 0.35], [0.68, 0.35], [0.68, 0.68], [0.32, 0.68]
         ];
@@ -2406,15 +2410,13 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         // Map normalized coordinates [u, v] to canvas screen coordinates
         const screenPts = poly.map(pt => [dx + pt[0] * dw, dy + pt[1] * dh]);
 
-        if (alpha > 0.2) {
-          const polyAlpha = Math.min(1.0, (alpha - 0.2) / 0.8);
+        if (alpha > 0.15) {
           ctx.save();
-          ctx.globalAlpha = alpha * polyAlpha;
-          ctx.strokeStyle = primaryColor;
+          ctx.strokeStyle = strokeColor;
           ctx.fillStyle = fillColor;
-          ctx.lineWidth = 2.5;
-          ctx.shadowColor = primaryColor;
-          ctx.shadowBlur = 12;
+          ctx.lineWidth = 3.0;
+          ctx.shadowColor = strokeColor;
+          ctx.shadowBlur = 14;
 
           ctx.beginPath();
           screenPts.forEach((pt, idx) => {
@@ -2425,20 +2427,23 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           ctx.fill();
           ctx.stroke();
 
-          // Subtle tactical vertex accent nodes
-          ctx.fillStyle = primaryColor;
+          // High-visibility tactile corner vertex markers
           ctx.shadowBlur = 6;
           screenPts.forEach(pt => {
             ctx.beginPath();
-            ctx.arc(pt[0], pt[1], 3.5, 0, Math.PI * 2);
+            ctx.arc(pt[0], pt[1], 4.5, 0, Math.PI * 2);
+            ctx.fillStyle = "#ffffff";
             ctx.fill();
+            ctx.strokeStyle = strokeColor;
+            ctx.lineWidth = 2.0;
+            ctx.stroke();
           });
           ctx.restore();
         }
 
         // 4. Clean Architectural Metric Scale Bar at Bottom-Right (100m)
-        if (alpha > 0.5) {
-          const uiAlpha = Math.min(1.0, (alpha - 0.5) / 0.5);
+        if (alpha > 0.4) {
+          const uiAlpha = Math.min(1.0, (alpha - 0.4) / 0.6);
           ctx.save();
           ctx.globalAlpha = alpha * uiAlpha;
 
@@ -2476,8 +2481,8 @@ LAUNCHER_HTML = """<!DOCTYPE html>
           const headerY = 16;
 
           ctx.fillStyle = "rgba(2, 6, 5, 0.88)";
-          ctx.strokeStyle = primaryColor;
-          ctx.lineWidth = 1;
+          ctx.strokeStyle = strokeColor;
+          ctx.lineWidth = 1.2;
           ctx.beginPath();
           if (ctx.roundRect) {
             ctx.roundRect(headerX, headerY, headerW, headerH, 6);
@@ -2730,35 +2735,59 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         });
       }
 
-      // Drawing Loop (60 FPS with Camera Lerping & Strict Level Separation: Zero Overlapping Images)
+      // Drawing Loop (60 FPS with Camera Lerping & Smooth Deterministic Altitude Transition)
       function draw() {
         camera.x += (targetCamera.x - camera.x) * 0.085;
         camera.y += (targetCamera.y - camera.y) * 0.085;
         camera.zoom += (targetCamera.zoom - camera.zoom) * 0.085;
 
+        // Smoothly interpolate transition factor between Satellite (0.0) and Urban (1.0)
+        urbanMix += (targetUrbanMix - urbanMix) * 0.075;
+        if (Math.abs(urbanMix - targetUrbanMix) < 0.001) urbanMix = targetUrbanMix;
+
         ctx.clearRect(0, 0, width, height);
 
-        const activeBlock = currentBlock || (camera.zoom >= 4.8 ? exitingBlock : null);
-        if (camera.zoom < 4.8) exitingBlock = null;
+        const blk = currentBlock || activeLastBlock;
 
-        if (activeBlock && camera.zoom >= 4.8) {
-          // Tactical City View (Strict Separation: Satellite map is completely shut off here)
-          const alpha = Math.min(1.0, (camera.zoom - 4.8) / 1.4);
-          renderTacticalNeighborhoodBlueprint(activeBlock, alpha);
-        } else {
-          // World or Bioregional Basin View
+        if (urbanMix <= 0.005) {
+          // 1. Pure Satellite Map View (World or Region)
+          ctx.fillStyle = "#020705";
+          ctx.fillRect(0, 0, width, height);
+          drawSatelliteBaseMap();
+        } else if (urbanMix >= 0.995 && blk) {
+          // 2. Pure Tactical City Blueprint View
+          renderTacticalNeighborhoodBlueprint(blk, 1.0);
+        } else if (blk) {
+          // 3. Cinematic Optical Fake Zoom Dive (Continuous Transition between Region and City)
           ctx.fillStyle = "#020705";
           ctx.fillRect(0, 0, width, height);
 
-          // If transitioning near altitude threshold (4.2 - 4.8), fade satellite base map smoothly
-          if (camera.zoom > 4.2) {
+          // Phase A: Underlying Satellite Map zooming toward target city dot
+          if (urbanMix < 0.8) {
             ctx.save();
-            ctx.globalAlpha = Math.max(0, (4.8 - camera.zoom) / 0.6);
+            ctx.globalAlpha = Math.max(0, 1.0 - urbanMix * 1.25);
             drawSatelliteBaseMap();
+
+            // Tactical targeting crosshairs on city beacon
+            const [cx, cy] = worldToScreen(blk.centerPx[0], blk.centerPx[1]);
+            const targetPulse = (Math.sin(performance.now() * 0.01) + 1) * 0.5;
+            ctx.strokeStyle = "rgba(52, 211, 153, 0.8)";
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.arc(cx, cy, 18 + (1.0 - urbanMix) * 28 + targetPulse * 4, 0, Math.PI * 2);
+            ctx.stroke();
             ctx.restore();
-          } else {
-            drawSatelliteBaseMap();
           }
+
+          // Phase B: High-res urban orthophoto expanding down from flight altitude
+          if (urbanMix > 0.05) {
+            const orthoAlpha = Math.min(1.0, (urbanMix - 0.05) / 0.95);
+            renderTacticalNeighborhoodBlueprint(blk, orthoAlpha);
+          }
+        } else {
+          ctx.fillStyle = "#020705";
+          ctx.fillRect(0, 0, width, height);
+          drawSatelliteBaseMap();
         }
 
         requestAnimationFrame(draw);
