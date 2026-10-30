@@ -2058,7 +2058,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         WATERSHEDS.forEach(b => {
           const opt = document.createElement("option");
           opt.value = b.id;
-          opt.textContent = `${b.flag || '🏞️'} ${b.name}`;
+          opt.textContent = b.name;
           selBasin.appendChild(opt);
         });
 
@@ -2066,7 +2066,7 @@ LAUNCHER_HTML = """<!DOCTYPE html>
         URBAN_BLOCKS.forEach(c => {
           const opt = document.createElement("option");
           opt.value = c.id;
-          opt.textContent = `${c.flag || '🏢'} ${c.name}`;
+          opt.textContent = `${c.flag ? c.flag + ' ' : ''}${c.name}`;
           selCity.appendChild(opt);
         });
 
