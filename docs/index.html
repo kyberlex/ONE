@@ -524,18 +524,13 @@
       margin-bottom: 8px;
     }
 
-    /* Block Selector Pills Strip (Milestone 1.4) */
+    /* Block Selector Pills Strip (Milestone 1.4: Multi-line Wrap & Region Filtering) */
     .we-block-pills {
       display: flex;
       align-items: center;
-      gap: 5px;
-      overflow-x: auto;
-      padding-bottom: 6px;
-      margin-bottom: 8px;
-      scrollbar-width: none;
-    }
-    .we-block-pills::-webkit-scrollbar {
-      display: none;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
     }
 
     .we-block-pill {
@@ -555,6 +550,29 @@
       user-select: none;
     }
 
+    .we-block-pill.all-toggle {
+      border-style: dashed;
+      color: #94a3b8;
+    }
+
+    .we-block-pill.all-toggle:hover {
+      color: #38bdf8;
+      border-color: #38bdf8;
+    }
+
+    .we-pill-hint {
+      font-size: 0.66rem;
+      color: #64748b;
+      font-style: italic;
+      padding: 3px 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
     .we-block-pill:hover {
       background: rgba(52, 211, 153, 0.12);
       border-color: rgba(52, 211, 153, 0.35);
@@ -568,19 +586,13 @@
       box-shadow: 0 0 10px rgba(52, 211, 153, 0.25);
     }
 
-    /* Calibrated description height */
+    /* Clean readable description height (zero vertical clipping) */
     .we-hud-desc {
       font-size: 0.78rem;
-      line-height: 1.42;
+      line-height: 1.45;
       color: var(--text-muted);
-      height: 44px;
-      min-height: 44px;
-      max-height: 44px;
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      margin-bottom: 8px;
+      min-height: 38px;
+      margin-bottom: 10px;
     }
 
     /* Interactive Track Toggle: [ Track A: Debt Extraction ] vs [ Track B: O.N.E. Usufruct ] */
@@ -717,34 +729,7 @@
       color: #cbd5e1;
     }
 
-    .we-bottleneck-actions {
-      display: flex;
-      gap: 6px;
-      margin-top: 2px;
-      flex-wrap: wrap;
-    }
 
-    .we-btn-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 0.62rem;
-      font-weight: 700;
-      color: #fff;
-      background: rgba(245, 158, 11, 0.18);
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      padding: 3px 7px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .we-btn-cta:hover {
-      background: rgba(245, 158, 11, 0.35);
-      border-color: #fbbf24;
-      color: #fff;
-      transform: translateY(-1px);
-    }
 
     .we-node-box {
       background: rgba(16, 185, 129, 0.06);
@@ -1181,13 +1166,11 @@
       <div class="we-header">
         <div class="we-pill">
           <span class="we-pill-dot"></span>
-          <span>🌍 Step 1: Macro-Planetary Exploration</span>
+          <span>🌍 Step 1: Explore &amp; Audit</span>
         </div>
-        <h3 class="we-title">Bioregional Watershed Explorer</h3>
+        <h3 class="we-title">Living Earth &amp; Urban Commons Explorer</h3>
         <p class="we-desc">
-          The biophysical Earth rendered from authentic planetary satellite topography (reused directly from O-ASIS).
-          Explore natural hydrological catchments and living biomes without armed national frontiers.
-          Select a bioregion to configure the Living Commons Game and O-ASIS Sandbox below.
+          Select a bioregion to configure the simulations below, or audit real neighborhoods to discover how post-scarcity housing, rooftop solar, and rainwater autonomy replace predatory utility debt.
         </p>
       </div>
 
@@ -1229,90 +1212,83 @@
           <aside class="we-hud" id="weHud">
             <div class="we-hud-top">
               <div class="we-hud-tag-row">
-                <span class="we-hud-tag" id="hudBasinTag">BASIN-EUR-04</span>
-                <span class="we-hud-zoom-badge" id="hudZoomBadge">ZOOM: WORLD</span>
-                <span class="we-hud-status" id="hudStatus">JUS BIOSPHAERAE</span>
-              </div>
-              <h4 class="we-hud-title" id="hudBasinName">Po Valley &amp; Western Alpine Arc</h4>
-              <div class="we-hud-biome">
-                <span id="hudBiomeIcon">⛰️</span>
-                <span id="hudBiomeText">Alpine Headwaters &amp; Alluvial Plain</span>
+                <span class="we-hud-tag" id="hudBasinTag">MILAN // URBAN AUDIT</span>
+                <span class="we-hud-zoom-badge" id="hudZoomBadge">ROOFTOP VIEW</span>
+                <span class="we-hud-status" id="hudStatus">COMMONS AUDIT</span>
               </div>
 
-              <!-- Block Selector Pills Strip (Milestone 1.4) -->
-              <div class="we-block-pills" id="weBlockPills" title="Select Urban Audit Preset or Basin Overview">
-                <!-- Dynamically generated pills -->
+              <h4 class="we-hud-title" id="hudBasinName">What if this block was self-sufficient?</h4>
+              <div class="we-hud-biome">
+                <span id="hudBiomeIcon">🏢</span>
+                <span id="hudBiomeText">Milan (Loreto / NoLo) • 164 homes • 4,850 m² of rooftops</span>
+              </div>
+
+              <!-- City Selector Pills -->
+              <div class="we-block-pills" id="weBlockPills" title="Select a city to audit or view watershed">
+                <!-- Dynamically populated -->
               </div>
 
               <p class="we-hud-desc" id="hudBasinDesc">
-                Glacial runoff from the Western Alps feeds the fertile Po plain before discharging into the Northern Adriatic. Primary zone for alpine micro-hydro, gravity water conduits, and agroforestry.
+                Compare what this real neighborhood pays today in rent and utility bills versus what it would produce for free if managed as an open commons.
               </p>
 
-              <!-- Interactive Track Toggle: [ Track A: Debt Extraction ] vs [ Track B: O.N.E. Usufruct ] -->
-              <div class="we-audit-toggle" id="weAuditToggle" style="display: none;">
-                <button type="button" class="we-toggle-btn active-track-a" id="btnTrackA">Track A: Debt Extraction</button>
-                <button type="button" class="we-toggle-btn" id="btnTrackB">Track B: O.N.E. Usufruct</button>
+              <!-- Human Comparison Toggle: Today vs With O.N.E. -->
+              <div class="we-audit-toggle" id="weAuditToggle">
+                <button type="button" class="we-toggle-btn active-track-a" id="btnTrackA">🔴 Today (Rent &amp; Bills)</button>
+                <button type="button" class="we-toggle-btn" id="btnTrackB">🟢 With O.N.E. (Free Commons)</button>
               </div>
 
-              <!-- 4 Calibrated Telemetry Metrics with Dynamic Roll-up -->
+              <!-- 4 Plain-Language Human Telemetry Cards -->
               <div class="we-metrics" id="weMetrics">
                 <div class="we-metric-item">
-                  <span class="we-metric-k" id="hudMetricLabel1">Catchment Area</span>
-                  <span class="we-metric-v" id="hudMetricVal1">74,970 km²</span>
-                  <span class="we-metric-sub" id="hudMetricSub1">Planetary Hydrology</span>
+                  <span class="we-metric-k" id="hudMetricLabel1">30-Year Drain</span>
+                  <span class="we-metric-v" id="hudMetricVal1">€79 Million</span>
+                  <span class="we-metric-sub" id="hudMetricSub1">Paid by 164 families</span>
                 </div>
                 <div class="we-metric-item">
-                  <span class="we-metric-k" id="hudMetricLabel2">Avg Discharge</span>
-                  <span class="we-metric-v" id="hudMetricVal2">1,540 m³/s</span>
-                  <span class="we-metric-sub" id="hudMetricSub2">River Confluence</span>
+                  <span class="we-metric-k" id="hudMetricLabel2">Monthly Housing</span>
+                  <span class="we-metric-v" id="hudMetricVal2">€1,250 / mo</span>
+                  <span class="we-metric-sub" id="hudMetricSub2">Average per family</span>
                 </div>
                 <div class="we-metric-item">
-                  <span class="we-metric-k" id="hudMetricLabel3">Exergy Vector</span>
-                  <span class="we-metric-v" id="hudMetricVal3">Micro-Hydro + Solar</span>
-                  <span class="we-metric-sub" id="hudMetricSub3">Renewable Potential</span>
+                  <span class="we-metric-k" id="hudMetricLabel3">Electric Grid Bills</span>
+                  <span class="we-metric-v" id="hudMetricVal3">€126k / yr</span>
+                  <span class="we-metric-sub" id="hudMetricSub3">Paid to power companies</span>
                 </div>
                 <div class="we-metric-item">
-                  <span class="we-metric-k" id="hudMetricLabel4">Demarchic Jury</span>
-                  <span class="we-metric-v" id="hudMetricVal4">101 Citizens (Odd)</span>
-                  <span class="we-metric-sub" id="hudMetricSub4">Constitutional Quorum</span>
+                  <span class="we-metric-k" id="hudMetricLabel4">Water Bills</span>
+                  <span class="we-metric-v" id="hudMetricVal4">€48k / yr</span>
+                  <span class="we-metric-sub" id="hudMetricSub4">While rain floods sewers</span>
                 </div>
               </div>
 
-              <!-- Engineering Bottleneck Card (Urban Block mode) -->
-              <div class="we-bottleneck-card" id="hudBottleneckCard" style="display: none;">
+              <!-- Winter Reality Check Card (Simple & Honest) -->
+              <div class="we-bottleneck-card" id="hudBottleneckCard">
                 <div class="we-bottleneck-head">
                   <span id="hudBottleneckIcon">⚠️</span>
-                  <span id="hudBottleneckTitle">Critical Winter Solar Deficit (Jan WCR: 28%)</span>
+                  <span id="hudBottleneckTitle">Winter Challenge (72% Jan Deficit)</span>
                 </div>
                 <div class="we-bottleneck-desc" id="hudBottleneckDesc">
-                  January solar insolation leaves a 72% heating deficit. Mandates Passivhaus envelope retrofits (U &lt; 0.12 W/m²K) and 48V DC bus Tier-2 load-shedding states.
-                </div>
-                <div class="we-bottleneck-actions">
-                  <a href="https://github.com/kyberlex/ONE/tree/main/habitat" target="_blank" rel="noopener noreferrer" class="we-btn-cta" id="hudCtaHabitat">
-                    🛠️ Habitat Open Hardware
-                  </a>
-                  <a href="./sim/?basin=po-valley" class="we-btn-cta" id="hudCtaSim">
-                    🔬 O-ASIS Stress-Test
-                  </a>
+                  Winter sun covers only 28% of heat. Solved with Passivhaus insulation &amp; 48V microgrids — zero fossil fuels.
                 </div>
               </div>
 
-              <!-- Canonical Node Box (Watershed mode) -->
-              <div class="we-node-box" id="hudNodeBox">
+              <!-- Canonical Node Box (Watershed mode only) -->
+              <div class="we-node-box" id="hudNodeBox" style="display: none;">
                 <span class="we-node-icon">🏡</span>
                 <div class="we-node-info">
                   <span class="we-node-title">Canonical O.N.E. Node</span>
-                  <span class="we-node-val" id="hudNodeName">Val di Susa Watershed Node (34 Pioneers)</span>
+                  <span class="we-node-val" id="hudNodeName">Val di Susa Pioneer Node (34 Citizens)</span>
                 </div>
               </div>
             </div>
 
-            <!-- Clean Target Dispatch Banner (Replaces redundant buttons in HUD) -->
+            <!-- Single Clean Dispatch Banner -->
             <div class="we-dispatch-badge">
               <span class="we-dispatch-icon">🎯</span>
               <div class="we-dispatch-info">
-                <span class="we-dispatch-sub">Bioregion Configured</span>
-                <span class="we-dispatch-main">Launch in <strong>Commons Game</strong> or <strong>Sandbox</strong> below ↓</span>
+                <span class="we-dispatch-sub">Ready to explore?</span>
+                <span class="we-dispatch-main">Experience this bioregion in the <strong>Game</strong> or <strong>Sandbox</strong> below ↓</span>
               </div>
             </div>
           </aside>
@@ -1888,12 +1864,20 @@
       }
 
       // Urban Blocks Benchmark Dataset (Milestone 1.1 & 1.4)
-      const URBAN_BLOCKS = [{"id": "milan-loreto", "name": "Milan — Loreto / NoLo Block", "basinId": "basin-po", "city": "Milan, Italy", "flag": "🇮🇹", "center": [9.2185, 45.488], "bbox": [9.215, 45.486, 9.222, 45.49], "typology": "Dense 5-6 storey perimeter courtyard block", "units": 164, "inhabitants": 380, "roofArea_m2": 4850, "bioclimatic": {"solar_annual_kwh_m2": 1320, "solar_jan_kwh_m2": 38, "precip_annual_mm": 940}, "legacy_financial": {"monthly_rent_eur": 1250, "grid_elec_eur_kwh": 0.32, "elec_demand_kwh_unit_yr": 2400, "water_eur_m3": 2.1, "water_demand_m3_capita_yr": 55, "drain_30y_eur": 79000000, "drain_30y_label": "€79.0M"}, "audit_thermodynamics": {"epv_mwh_yr": 841, "rain_liters_yr": 3875150, "rain_label": "3.88M L/yr", "cistern_autonomy_days": 68, "wcr_jan": 0.28, "wcr_jan_pct": "28%"}, "bottleneck": {"title": "Critical Winter Insolation Deficit (Jan WCR: 28%)", "desc": "January solar insolation leaves a 72% heating deficit. Mandates Passivhaus envelope retrofits (U < 0.12 W/m²K) and 48V DC bus Tier-2 load-shedding states.", "action": "Passivhaus retrofits + 48V DC bus shedding", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=po-valley"}, "polygons": [[[9.2165, 45.4892], [9.2205, 45.4892], [9.2205, 45.4886], [9.2165, 45.4886], [9.2165, 45.4892]], [[9.2165, 45.4886], [9.2173, 45.4886], [9.2173, 45.4868], [9.2165, 45.4868], [9.2165, 45.4886]], [[9.2197, 45.4886], [9.2205, 45.4886], [9.2205, 45.4868], [9.2197, 45.4868], [9.2197, 45.4886]], [[9.2165, 45.4868], [9.2205, 45.4868], [9.2205, 45.4862], [9.2165, 45.4862], [9.2165, 45.4868]], [[9.218, 45.4878], [9.219, 45.4878], [9.219, 45.4872], [9.218, 45.4872], [9.218, 45.4878]]]}, {"id": "zurich-hardbrucke", "name": "Zurich — Hardbrücke / Industriequartier", "basinId": "basin-rhine", "city": "Zurich, Switzerland", "flag": "🇨🇭", "center": [8.5175, 47.3875], "bbox": [8.514, 47.3855, 8.521, 47.3895], "typology": "Industrial conversion & mixed residential cooperative block", "units": 142, "inhabitants": 310, "roofArea_m2": 5600, "bioclimatic": {"solar_annual_kwh_m2": 1180, "solar_jan_kwh_m2": 28, "precip_annual_mm": 1080}, "legacy_financial": {"monthly_rent_eur": 2100, "grid_elec_eur_kwh": 0.28, "elec_demand_kwh_unit_yr": 2600, "water_eur_m3": 2.4, "water_demand_m3_capita_yr": 50, "drain_30y_eur": 111800000, "drain_30y_label": "€111.8M"}, "audit_thermodynamics": {"epv_mwh_yr": 868, "rain_liters_yr": 5140800, "rain_label": "5.14M L/yr", "cistern_autonomy_days": 110, "wcr_jan": 0.22, "wcr_jan_pct": "22%"}, "bottleneck": {"title": "Severe Winter Deficit & Thermal Peak (Jan WCR: 22%)", "desc": "Altiplano overcast conditions create a 78% January exergy gap. Requires Limmat heat-pump coupling and seasonal water thermal buffer storage.", "action": "District water heat exchange + seasonal storage", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=rhine-meuse"}, "polygons": [[[8.515, 47.389], [8.5195, 47.389], [8.5195, 47.3882], [8.515, 47.3882], [8.515, 47.389]], [[8.515, 47.3882], [8.516, 47.3882], [8.516, 47.3865], [8.515, 47.3865], [8.515, 47.3882]], [[8.5185, 47.3882], [8.5195, 47.3882], [8.5195, 47.3865], [8.5185, 47.3865], [8.5185, 47.3882]], [[8.515, 47.3865], [8.5195, 47.3865], [8.5195, 47.3858], [8.515, 47.3858], [8.515, 47.3865]], [[8.5168, 47.3876], [8.5178, 47.3876], [8.5178, 47.387], [8.5168, 47.387], [8.5168, 47.3876]]]}, {"id": "madrid-lavapies", "name": "Madrid — Lavapiés Superblock", "basinId": "basin-po", "city": "Madrid, Spain", "flag": "🇪🇸", "center": [-3.702, 40.4095], "bbox": [-3.7055, 40.4075, -3.6985, 40.4115], "typology": "High-density corrala courtyard urban superblock", "units": 195, "inhabitants": 440, "roofArea_m2": 5100, "bioclimatic": {"solar_annual_kwh_m2": 1820, "solar_jan_kwh_m2": 75, "precip_annual_mm": 420}, "legacy_financial": {"monthly_rent_eur": 1100, "grid_elec_eur_kwh": 0.26, "elec_demand_kwh_unit_yr": 2500, "water_eur_m3": 1.9, "water_demand_m3_capita_yr": 50, "drain_30y_eur": 82500000, "drain_30y_label": "€82.5M"}, "audit_thermodynamics": {"epv_mwh_yr": 1219, "rain_liters_yr": 1820700, "rain_label": "1.82M L/yr", "cistern_autonomy_days": 28, "wcr_jan": 0.54, "wcr_jan_pct": "54%"}, "bottleneck": {"title": "Severe Hydrological Stress & Drought (28 Days Autonomy)", "desc": "Arid summer regime limits rainwater buffer to 28 days. Mandates closed-loop greywater reed bed recycling and atmospheric condenser arrays.", "action": "Greywater reed beds + atmospheric condensers", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=po-valley"}, "polygons": [[[-3.704, 40.4108], [-3.7, 40.4108], [-3.7, 40.41], [-3.704, 40.41], [-3.704, 40.4108]], [[-3.704, 40.41], [-3.7032, 40.41], [-3.7032, 40.4085], [-3.704, 40.4085], [-3.704, 40.41]], [[-3.7008, 40.41], [-3.7, 40.41], [-3.7, 40.4085], [-3.7008, 40.4085], [-3.7008, 40.41]], [[-3.704, 40.4085], [-3.7, 40.4085], [-3.7, 40.4078], [-3.704, 40.4078], [-3.704, 40.4085]]]}, {"id": "berlin-kreuzberg", "name": "Berlin — Kreuzberg Courtyard Block", "basinId": "basin-baltic", "city": "Berlin, Germany", "flag": "🇩🇪", "center": [13.418, 52.499], "bbox": [13.414, 52.4965, 13.422, 52.5015], "typology": "Gründerzeit perimeter block with dual inner courtyards", "units": 178, "inhabitants": 390, "roofArea_m2": 5400, "bioclimatic": {"solar_annual_kwh_m2": 1050, "solar_jan_kwh_m2": 22, "precip_annual_mm": 570}, "legacy_financial": {"monthly_rent_eur": 1350, "grid_elec_eur_kwh": 0.38, "elec_demand_kwh_unit_yr": 2400, "water_eur_m3": 2.3, "water_demand_m3_capita_yr": 52, "drain_30y_eur": 92800000, "drain_30y_label": "€92.8M"}, "audit_thermodynamics": {"epv_mwh_yr": 745, "rain_liters_yr": 2616300, "rain_label": "2.62M L/yr", "cistern_autonomy_days": 45, "wcr_jan": 0.18, "wcr_jan_pct": "18%"}, "bottleneck": {"title": "Critical Winter Solar Insolation Void (Jan WCR: 18%)", "desc": "Northern latitude leads to an 82% winter energy gap. Requires external vacuum insulation panels and district bio-pellet CHP cogeneration.", "action": "Vacuum insulation panels + district CHP backup", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=baltic"}, "polygons": [[[13.4155, 52.5005], [13.4205, 52.5005], [13.4205, 52.4998], [13.4155, 52.4998], [13.4155, 52.5005]], [[13.4155, 52.4998], [13.4165, 52.4998], [13.4165, 52.498], [13.4155, 52.498], [13.4155, 52.4998]], [[13.4195, 52.4998], [13.4205, 52.4998], [13.4205, 52.498], [13.4195, 52.498], [13.4195, 52.4998]], [[13.4155, 52.498], [13.4205, 52.498], [13.4205, 52.4972], [13.4155, 52.4972], [13.4155, 52.498]], [[13.4175, 52.4995], [13.4185, 52.4995], [13.4185, 52.4985], [13.4175, 52.4985], [13.4175, 52.4995]]]}, {"id": "london-hackney", "name": "London — Hackney Mixed Terrace Block", "basinId": "basin-rhine", "city": "London, United Kingdom", "flag": "🇬🇧", "center": [-0.0555, 51.5465], "bbox": [-0.059, 51.5445, -0.052, 51.5485], "typology": "Victorian terrace & light industrial conversion cluster", "units": 130, "inhabitants": 290, "roofArea_m2": 4200, "bioclimatic": {"solar_annual_kwh_m2": 1020, "solar_jan_kwh_m2": 24, "precip_annual_mm": 620}, "legacy_financial": {"monthly_rent_eur": 1850, "grid_elec_eur_kwh": 0.34, "elec_demand_kwh_unit_yr": 2500, "water_eur_m3": 2.2, "water_demand_m3_capita_yr": 52, "drain_30y_eur": 90900000, "drain_30y_label": "€90.9M"}, "audit_thermodynamics": {"epv_mwh_yr": 563, "rain_liters_yr": 2213400, "rain_label": "2.21M L/yr", "cistern_autonomy_days": 51, "wcr_jan": 0.2, "wcr_jan_pct": "20%"}, "bottleneck": {"title": "High Uninsulated Brick Transmission (Jan WCR: 20%)", "desc": "Uninsulated solid brick envelopes waste 64% of heating energy. Mandates internal breathable wood-fiber insulation and air-source heat pumps.", "action": "Internal wood-fiber insulation + heat pumps", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=rhine-meuse"}, "polygons": [[[-0.058, 51.5478], [-0.0535, 51.5478], [-0.0535, 51.5472], [-0.058, 51.5472], [-0.058, 51.5478]], [[-0.058, 51.5468], [-0.0535, 51.5468], [-0.0535, 51.5462], [-0.058, 51.5462], [-0.058, 51.5468]], [[-0.058, 51.5458], [-0.0535, 51.5458], [-0.0535, 51.5452], [-0.058, 51.5452], [-0.058, 51.5458]]]}, {"id": "austin-east", "name": "Austin — East Austin Low-Rise Cluster", "basinId": "basin-cascadia", "city": "Austin, United States", "flag": "🇺🇸", "center": [-97.7225, 30.2625], "bbox": [-97.7265, 30.26, -97.7185, 30.265], "typology": "Subtropical low-rise mixed courtyard & workshop infill", "units": 110, "inhabitants": 240, "roofArea_m2": 4900, "bioclimatic": {"solar_annual_kwh_m2": 1750, "solar_jan_kwh_m2": 82, "precip_annual_mm": 870}, "legacy_financial": {"monthly_rent_eur": 1600, "grid_elec_eur_kwh": 0.15, "elec_demand_kwh_unit_yr": 5000, "water_eur_m3": 1.8, "water_demand_m3_capita_yr": 60, "drain_30y_eur": 66700000, "drain_30y_label": "€66.7M"}, "audit_thermodynamics": {"epv_mwh_yr": 1126, "rain_liters_yr": 3623550, "rain_label": "3.62M L/yr", "cistern_autonomy_days": 100, "wcr_jan": 0.65, "wcr_jan_pct": "65%"}, "bottleneck": {"title": "Extreme Summer Thermal Cooling Peak (AC Grid Load)", "desc": "Summer cooling load exceeds winter heating by 320%. Mandates high-albedo cool roofs, external solar brise-soleil and nocturnal radiative night flushing.", "action": "Cool-roof albedo + passive brise-soleil", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=cascadia"}, "polygons": [[[-97.725, 30.264], [-97.72, 30.264], [-97.72, 30.2632], [-97.725, 30.2632], [-97.725, 30.264]], [[-97.725, 30.2625], [-97.7215, 30.2625], [-97.7215, 30.2618], [-97.725, 30.2618], [-97.725, 30.2625]], [[-97.725, 30.2612], [-97.72, 30.2612], [-97.72, 30.2605], [-97.725, 30.2605], [-97.725, 30.2612]]]}, {"id": "detroit-corktown", "name": "Detroit — Corktown Infill Block", "basinId": "basin-greatlakes", "city": "Detroit, United States", "flag": "🇺🇸", "center": [-83.0685, 42.3315], "bbox": [-83.0725, 42.329, -83.0645, 42.334], "typology": "Post-industrial brick warehouse & infill timber housing", "units": 125, "inhabitants": 275, "roofArea_m2": 5200, "bioclimatic": {"solar_annual_kwh_m2": 1290, "solar_jan_kwh_m2": 36, "precip_annual_mm": 850}, "legacy_financial": {"monthly_rent_eur": 1200, "grid_elec_eur_kwh": 0.2, "elec_demand_kwh_unit_yr": 3500, "water_eur_m3": 2.1, "water_demand_m3_capita_yr": 55, "drain_30y_eur": 57700000, "drain_30y_label": "€57.7M"}, "audit_thermodynamics": {"epv_mwh_yr": 881, "rain_liters_yr": 3757000, "rain_label": "3.76M L/yr", "cistern_autonomy_days": 91, "wcr_jan": 0.25, "wcr_jan_pct": "25%"}, "bottleneck": {"title": "Continental Sub-Zero Freezing & Cistern Risk (Jan WCR: 25%)", "desc": "Deep winter frost requires earth-sheltered subterranean cistern thermal insulation and triple-pane krypton-filled glazing envelopes.", "action": "Subterranean earth-sheltered cisterns + triple-pane", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=great-lakes"}, "polygons": [[[-83.071, 42.333], [-83.066, 42.333], [-83.066, 42.3322], [-83.071, 42.3322], [-83.071, 42.333]], [[-83.071, 42.3315], [-83.067, 42.3315], [-83.067, 42.3308], [-83.071, 42.3308], [-83.071, 42.3315]], [[-83.071, 42.3302], [-83.066, 42.3302], [-83.066, 42.3295], [-83.071, 42.3295], [-83.071, 42.3302]]]}, {"id": "tokyo-setagaya", "name": "Tokyo — Setagaya Dense Residential Fabric", "basinId": "basin-yangtze", "city": "Tokyo, Japan", "flag": "🇯🇵", "center": [139.6535, 35.6465], "bbox": [139.65, 35.644, 139.657, 35.649], "typology": "High-density micro-lot residential & shared rooftop alley", "units": 160, "inhabitants": 320, "roofArea_m2": 4600, "bioclimatic": {"solar_annual_kwh_m2": 1360, "solar_jan_kwh_m2": 70, "precip_annual_mm": 1530}, "legacy_financial": {"monthly_rent_eur": 1450, "grid_elec_eur_kwh": 0.29, "elec_demand_kwh_unit_yr": 2350, "water_eur_m3": 2.0, "water_demand_m3_capita_yr": 50, "drain_30y_eur": 88000000, "drain_30y_label": "€88.0M"}, "audit_thermodynamics": {"epv_mwh_yr": 822, "rain_liters_yr": 5982300, "rain_label": "5.98M L/yr", "cistern_autonomy_days": 125, "wcr_jan": 0.42, "wcr_jan_pct": "42%"}, "bottleneck": {"title": "Monsoonal Rain Peak & High Summer Humidity", "desc": "Heavy precipitation creates urban runoff surges. Mandates bioretention swales, high-volume detention retention tanks, and desiccant dehumidification.", "action": "Bioretention swales + desiccant cooling", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=yangtze"}, "polygons": [[[139.6515, 35.648], [139.6555, 35.648], [139.6555, 35.6472], [139.6515, 35.6472], [139.6515, 35.648]], [[139.6515, 35.6468], [139.6555, 35.6468], [139.6555, 35.646], [139.6515, 35.646], [139.6515, 35.6468]], [[139.6515, 35.6455], [139.6555, 35.6455], [139.6555, 35.6447], [139.6515, 35.6447], [139.6515, 35.6455]]]}];
+      const URBAN_BLOCKS = [{"id": "milan-loreto", "name": "Milan — Loreto / NoLo Block", "basinId": "basin-po", "city": "Milan, Italy", "flag": "🇮🇹", "center": [9.2185, 45.488], "bbox": [9.215, 45.486, 9.222, 45.49], "typology": "Dense 5-6 storey perimeter courtyard block", "units": 164, "inhabitants": 380, "roofArea_m2": 4850, "bioclimatic": {"solar_annual_kwh_m2": 1320, "solar_jan_kwh_m2": 38, "precip_annual_mm": 940}, "legacy_financial": {"monthly_rent_eur": 1250, "grid_elec_eur_kwh": 0.32, "elec_demand_kwh_unit_yr": 2400, "water_eur_m3": 2.1, "water_demand_m3_capita_yr": 55, "drain_30y_eur": 79000000, "drain_30y_label": "€79.0M"}, "audit_thermodynamics": {"epv_mwh_yr": 841, "rain_liters_yr": 3875150, "rain_label": "3.88M L/yr", "cistern_autonomy_days": 68, "wcr_jan": 0.28, "wcr_jan_pct": "28%"}, "bottleneck": {"title": "Critical Winter Insolation Deficit (Jan WCR: 28%)", "desc": "January solar insolation leaves a 72% heating deficit. Mandates Passivhaus envelope retrofits (U < 0.12 W/m²K) and 48V DC bus Tier-2 load-shedding states.", "action": "Passivhaus retrofits + 48V DC bus shedding", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=po-valley"}, "polygons": [[[9.2165, 45.4892], [9.2205, 45.4892], [9.2205, 45.4886], [9.2165, 45.4886], [9.2165, 45.4892]], [[9.2165, 45.4886], [9.2173, 45.4886], [9.2173, 45.4868], [9.2165, 45.4868], [9.2165, 45.4886]], [[9.2197, 45.4886], [9.2205, 45.4886], [9.2205, 45.4868], [9.2197, 45.4868], [9.2197, 45.4886]], [[9.2165, 45.4868], [9.2205, 45.4868], [9.2205, 45.4862], [9.2165, 45.4862], [9.2165, 45.4868]], [[9.218, 45.4878], [9.219, 45.4878], [9.219, 45.4872], [9.218, 45.4872], [9.218, 45.4878]]], "streets": {"north": "Viale Monza", "south": "Via dei Transiti", "west": "Via Padova", "east": "Via Andrea Costa"}, "dimensions": {"width_m": 180, "length_m": 140, "courtyard_m": "85m × 55m", "wings": 4}}, {"id": "zurich-hardbrucke", "name": "Zurich — Hardbrücke / Industriequartier", "basinId": "basin-rhine", "city": "Zurich, Switzerland", "flag": "🇨🇭", "center": [8.5175, 47.3875], "bbox": [8.514, 47.3855, 8.521, 47.3895], "typology": "Industrial conversion & mixed residential cooperative block", "units": 142, "inhabitants": 310, "roofArea_m2": 5600, "bioclimatic": {"solar_annual_kwh_m2": 1180, "solar_jan_kwh_m2": 28, "precip_annual_mm": 1080}, "legacy_financial": {"monthly_rent_eur": 2100, "grid_elec_eur_kwh": 0.28, "elec_demand_kwh_unit_yr": 2600, "water_eur_m3": 2.4, "water_demand_m3_capita_yr": 50, "drain_30y_eur": 111800000, "drain_30y_label": "€111.8M"}, "audit_thermodynamics": {"epv_mwh_yr": 868, "rain_liters_yr": 5140800, "rain_label": "5.14M L/yr", "cistern_autonomy_days": 110, "wcr_jan": 0.22, "wcr_jan_pct": "22%"}, "bottleneck": {"title": "Severe Winter Deficit & Thermal Peak (Jan WCR: 22%)", "desc": "Altiplano overcast conditions create a 78% January exergy gap. Requires Limmat heat-pump coupling and seasonal water thermal buffer storage.", "action": "District water heat exchange + seasonal storage", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=rhine-meuse"}, "polygons": [[[8.515, 47.389], [8.5195, 47.389], [8.5195, 47.3882], [8.515, 47.3882], [8.515, 47.389]], [[8.515, 47.3882], [8.516, 47.3882], [8.516, 47.3865], [8.515, 47.3865], [8.515, 47.3882]], [[8.5185, 47.3882], [8.5195, 47.3882], [8.5195, 47.3865], [8.5185, 47.3865], [8.5185, 47.3882]], [[8.515, 47.3865], [8.5195, 47.3865], [8.5195, 47.3858], [8.515, 47.3858], [8.515, 47.3865]], [[8.5168, 47.3876], [8.5178, 47.3876], [8.5178, 47.387], [8.5168, 47.387], [8.5168, 47.3876]]], "streets": {"north": "Hardstrasse", "south": "Geroldstrasse", "west": "Zahnradstrasse", "east": "Pfingstweidstrasse"}, "dimensions": {"width_m": 190, "length_m": 150, "courtyard_m": "90m × 60m", "wings": 4}}, {"id": "madrid-lavapies", "name": "Madrid — Lavapiés Superblock", "basinId": "basin-po", "city": "Madrid, Spain", "flag": "🇪🇸", "center": [-3.702, 40.4095], "bbox": [-3.7055, 40.4075, -3.6985, 40.4115], "typology": "High-density corrala courtyard urban superblock", "units": 195, "inhabitants": 440, "roofArea_m2": 5100, "bioclimatic": {"solar_annual_kwh_m2": 1820, "solar_jan_kwh_m2": 75, "precip_annual_mm": 420}, "legacy_financial": {"monthly_rent_eur": 1100, "grid_elec_eur_kwh": 0.26, "elec_demand_kwh_unit_yr": 2500, "water_eur_m3": 1.9, "water_demand_m3_capita_yr": 50, "drain_30y_eur": 82500000, "drain_30y_label": "€82.5M"}, "audit_thermodynamics": {"epv_mwh_yr": 1219, "rain_liters_yr": 1820700, "rain_label": "1.82M L/yr", "cistern_autonomy_days": 28, "wcr_jan": 0.54, "wcr_jan_pct": "54%"}, "bottleneck": {"title": "Severe Hydrological Stress & Drought (28 Days Autonomy)", "desc": "Arid summer regime limits rainwater buffer to 28 days. Mandates closed-loop greywater reed bed recycling and atmospheric condenser arrays.", "action": "Greywater reed beds + atmospheric condensers", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=po-valley"}, "polygons": [[[-3.704, 40.4108], [-3.7, 40.4108], [-3.7, 40.41], [-3.704, 40.41], [-3.704, 40.4108]], [[-3.704, 40.41], [-3.7032, 40.41], [-3.7032, 40.4085], [-3.704, 40.4085], [-3.704, 40.41]], [[-3.7008, 40.41], [-3.7, 40.41], [-3.7, 40.4085], [-3.7008, 40.4085], [-3.7008, 40.41]], [[-3.704, 40.4085], [-3.7, 40.4085], [-3.7, 40.4078], [-3.704, 40.4078], [-3.704, 40.4085]]], "streets": {"north": "Calle de Lavapiés", "south": "Calle de Sombrerete", "west": "Calle de la Fe", "east": "Calle de Argumosa"}, "dimensions": {"width_m": 170, "length_m": 160, "courtyard_m": "75m × 65m", "wings": 4}}, {"id": "berlin-kreuzberg", "name": "Berlin — Kreuzberg Courtyard Block", "basinId": "basin-baltic", "city": "Berlin, Germany", "flag": "🇩🇪", "center": [13.418, 52.499], "bbox": [13.414, 52.4965, 13.422, 52.5015], "typology": "Gründerzeit perimeter block with dual inner courtyards", "units": 178, "inhabitants": 390, "roofArea_m2": 5400, "bioclimatic": {"solar_annual_kwh_m2": 1050, "solar_jan_kwh_m2": 22, "precip_annual_mm": 570}, "legacy_financial": {"monthly_rent_eur": 1350, "grid_elec_eur_kwh": 0.38, "elec_demand_kwh_unit_yr": 2400, "water_eur_m3": 2.3, "water_demand_m3_capita_yr": 52, "drain_30y_eur": 92800000, "drain_30y_label": "€92.8M"}, "audit_thermodynamics": {"epv_mwh_yr": 745, "rain_liters_yr": 2616300, "rain_label": "2.62M L/yr", "cistern_autonomy_days": 45, "wcr_jan": 0.18, "wcr_jan_pct": "18%"}, "bottleneck": {"title": "Critical Winter Solar Insolation Void (Jan WCR: 18%)", "desc": "Northern latitude leads to an 82% winter energy gap. Requires external vacuum insulation panels and district bio-pellet CHP cogeneration.", "action": "Vacuum insulation panels + district CHP backup", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=baltic"}, "polygons": [[[13.4155, 52.5005], [13.4205, 52.5005], [13.4205, 52.4998], [13.4155, 52.4998], [13.4155, 52.5005]], [[13.4155, 52.4998], [13.4165, 52.4998], [13.4165, 52.498], [13.4155, 52.498], [13.4155, 52.4998]], [[13.4195, 52.4998], [13.4205, 52.4998], [13.4205, 52.498], [13.4195, 52.498], [13.4195, 52.4998]], [[13.4155, 52.498], [13.4205, 52.498], [13.4205, 52.4972], [13.4155, 52.4972], [13.4155, 52.498]], [[13.4175, 52.4995], [13.4185, 52.4995], [13.4185, 52.4985], [13.4175, 52.4985], [13.4175, 52.4995]]], "streets": {"north": "Oranienstraße", "south": "Naunynstraße", "west": "Adalbertstraße", "east": "Mariannenstraße"}, "dimensions": {"width_m": 200, "length_m": 160, "courtyard_m": "Dual Courtyards (85m × 50m)", "wings": 5}}, {"id": "london-hackney", "name": "London — Hackney Mixed Terrace Block", "basinId": "basin-rhine", "city": "London, United Kingdom", "flag": "🇬🇧", "center": [-0.0555, 51.5465], "bbox": [-0.059, 51.5445, -0.052, 51.5485], "typology": "Victorian terrace & light industrial conversion cluster", "units": 130, "inhabitants": 290, "roofArea_m2": 4200, "bioclimatic": {"solar_annual_kwh_m2": 1020, "solar_jan_kwh_m2": 24, "precip_annual_mm": 620}, "legacy_financial": {"monthly_rent_eur": 1850, "grid_elec_eur_kwh": 0.34, "elec_demand_kwh_unit_yr": 2500, "water_eur_m3": 2.2, "water_demand_m3_capita_yr": 52, "drain_30y_eur": 90900000, "drain_30y_label": "€90.9M"}, "audit_thermodynamics": {"epv_mwh_yr": 563, "rain_liters_yr": 2213400, "rain_label": "2.21M L/yr", "cistern_autonomy_days": 51, "wcr_jan": 0.2, "wcr_jan_pct": "20%"}, "bottleneck": {"title": "High Uninsulated Brick Transmission (Jan WCR: 20%)", "desc": "Uninsulated solid brick envelopes waste 64% of heating energy. Mandates internal breathable wood-fiber insulation and air-source heat pumps.", "action": "Internal wood-fiber insulation + heat pumps", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=rhine-meuse"}, "polygons": [[[-0.058, 51.5478], [-0.0535, 51.5478], [-0.0535, 51.5472], [-0.058, 51.5472], [-0.058, 51.5478]], [[-0.058, 51.5468], [-0.0535, 51.5468], [-0.0535, 51.5462], [-0.058, 51.5462], [-0.058, 51.5468]], [[-0.058, 51.5458], [-0.0535, 51.5458], [-0.0535, 51.5452], [-0.058, 51.5452], [-0.058, 51.5458]]], "streets": {"north": "Mare Street", "south": "Well Street", "west": "Tudor Road", "east": "Terrace Road"}, "dimensions": {"width_m": 160, "length_m": 130, "courtyard_m": "65m × 45m", "wings": 3}}, {"id": "austin-east", "name": "Austin — East Austin Low-Rise Cluster", "basinId": "basin-cascadia", "city": "Austin, United States", "flag": "🇺🇸", "center": [-97.7225, 30.2625], "bbox": [-97.7265, 30.26, -97.7185, 30.265], "typology": "Subtropical low-rise mixed courtyard & workshop infill", "units": 110, "inhabitants": 240, "roofArea_m2": 4900, "bioclimatic": {"solar_annual_kwh_m2": 1750, "solar_jan_kwh_m2": 82, "precip_annual_mm": 870}, "legacy_financial": {"monthly_rent_eur": 1600, "grid_elec_eur_kwh": 0.15, "elec_demand_kwh_unit_yr": 5000, "water_eur_m3": 1.8, "water_demand_m3_capita_yr": 60, "drain_30y_eur": 66700000, "drain_30y_label": "€66.7M"}, "audit_thermodynamics": {"epv_mwh_yr": 1126, "rain_liters_yr": 3623550, "rain_label": "3.62M L/yr", "cistern_autonomy_days": 100, "wcr_jan": 0.65, "wcr_jan_pct": "65%"}, "bottleneck": {"title": "Extreme Summer Thermal Cooling Peak (AC Grid Load)", "desc": "Summer cooling load exceeds winter heating by 320%. Mandates high-albedo cool roofs, external solar brise-soleil and nocturnal radiative night flushing.", "action": "Cool-roof albedo + passive brise-soleil", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=cascadia"}, "polygons": [[[-97.725, 30.264], [-97.72, 30.264], [-97.72, 30.2632], [-97.725, 30.2632], [-97.725, 30.264]], [[-97.725, 30.2625], [-97.7215, 30.2625], [-97.7215, 30.2618], [-97.725, 30.2618], [-97.725, 30.2625]], [[-97.725, 30.2612], [-97.72, 30.2612], [-97.72, 30.2605], [-97.725, 30.2605], [-97.725, 30.2612]]], "streets": {"north": "East 6th Street", "south": "East 5th Street", "west": "Chicon Street", "east": "Comal Street"}, "dimensions": {"width_m": 150, "length_m": 140, "courtyard_m": "70m × 60m", "wings": 3}}, {"id": "detroit-corktown", "name": "Detroit — Corktown Infill Block", "basinId": "basin-greatlakes", "city": "Detroit, United States", "flag": "🇺🇸", "center": [-83.0685, 42.3315], "bbox": [-83.0725, 42.329, -83.0645, 42.334], "typology": "Post-industrial brick warehouse & infill timber housing", "units": 125, "inhabitants": 275, "roofArea_m2": 5200, "bioclimatic": {"solar_annual_kwh_m2": 1290, "solar_jan_kwh_m2": 36, "precip_annual_mm": 850}, "legacy_financial": {"monthly_rent_eur": 1200, "grid_elec_eur_kwh": 0.2, "elec_demand_kwh_unit_yr": 3500, "water_eur_m3": 2.1, "water_demand_m3_capita_yr": 55, "drain_30y_eur": 57700000, "drain_30y_label": "€57.7M"}, "audit_thermodynamics": {"epv_mwh_yr": 881, "rain_liters_yr": 3757000, "rain_label": "3.76M L/yr", "cistern_autonomy_days": 91, "wcr_jan": 0.25, "wcr_jan_pct": "25%"}, "bottleneck": {"title": "Continental Sub-Zero Freezing & Cistern Risk (Jan WCR: 25%)", "desc": "Deep winter frost requires earth-sheltered subterranean cistern thermal insulation and triple-pane krypton-filled glazing envelopes.", "action": "Subterranean earth-sheltered cisterns + triple-pane", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=great-lakes"}, "polygons": [[[-83.071, 42.333], [-83.066, 42.333], [-83.066, 42.3322], [-83.071, 42.3322], [-83.071, 42.333]], [[-83.071, 42.3315], [-83.067, 42.3315], [-83.067, 42.3308], [-83.071, 42.3308], [-83.071, 42.3315]], [[-83.071, 42.3302], [-83.066, 42.3302], [-83.066, 42.3295], [-83.071, 42.3295], [-83.071, 42.3302]]], "streets": {"north": "Michigan Avenue", "south": "Bagley Street", "west": "Trumbull Street", "east": "Rosa Parks Blvd"}, "dimensions": {"width_m": 180, "length_m": 150, "courtyard_m": "80m × 65m", "wings": 3}}, {"id": "tokyo-setagaya", "name": "Tokyo — Setagaya Dense Residential Fabric", "basinId": "basin-yangtze", "city": "Tokyo, Japan", "flag": "🇯🇵", "center": [139.6535, 35.6465], "bbox": [139.65, 35.644, 139.657, 35.649], "typology": "High-density micro-lot residential & shared rooftop alley", "units": 160, "inhabitants": 320, "roofArea_m2": 4600, "bioclimatic": {"solar_annual_kwh_m2": 1360, "solar_jan_kwh_m2": 70, "precip_annual_mm": 1530}, "legacy_financial": {"monthly_rent_eur": 1450, "grid_elec_eur_kwh": 0.29, "elec_demand_kwh_unit_yr": 2350, "water_eur_m3": 2.0, "water_demand_m3_capita_yr": 50, "drain_30y_eur": 88000000, "drain_30y_label": "€88.0M"}, "audit_thermodynamics": {"epv_mwh_yr": 822, "rain_liters_yr": 5982300, "rain_label": "5.98M L/yr", "cistern_autonomy_days": 125, "wcr_jan": 0.42, "wcr_jan_pct": "42%"}, "bottleneck": {"title": "Monsoonal Rain Peak & High Summer Humidity", "desc": "Heavy precipitation creates urban runoff surges. Mandates bioretention swales, high-volume detention retention tanks, and desiccant dehumidification.", "action": "Bioretention swales + desiccant cooling", "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat", "sim_link": "./sim/?basin=yangtze"}, "polygons": [[[139.6515, 35.648], [139.6555, 35.648], [139.6555, 35.6472], [139.6515, 35.6472], [139.6515, 35.648]], [[139.6515, 35.6468], [139.6555, 35.6468], [139.6555, 35.646], [139.6515, 35.646], [139.6515, 35.6468]], [[139.6515, 35.6455], [139.6555, 35.6455], [139.6555, 35.6447], [139.6515, 35.6447], [139.6515, 35.6455]]], "streets": {"north": "Setagaya-dori", "south": "Taishido Lane", "west": "Sangenjaya Alley", "east": "Karasuyama Way"}, "dimensions": {"width_m": 140, "length_m": 130, "courtyard_m": "50m × 45m", "wings": 4}}];
 
       // Pre-calculate Web Mercator projection coordinates for Urban Blocks
       URBAN_BLOCKS.forEach(block => {
         block.centerPx = toWorldPx(block.center[0], block.center[1]);
         block.polygonsPx = block.polygons.map(poly => poly.map(pt => toWorldPx(pt[0], pt[1])));
+      });
+
+      // Pre-load High-Resolution Local Orthophoto Patches (Level 4 Tactical View)
+      const blockImages = {};
+      URBAN_BLOCKS.forEach(b => {
+        const img = new Image();
+        img.src = `assets/blocks/${b.id}.webp`;
+        blockImages[b.id] = img;
       });
 
       // Inspector HUD State
@@ -1934,7 +1918,9 @@
         activeAnimations[elementId] = requestAnimationFrame(step);
       }
 
-      // Renders Block Selector Pills
+      let showAllCities = false;
+
+      // Renders Block Selector Pills (Filtered to Active Bioregion + Expandable to All)
       function renderBlockSelectorPills() {
         const container = document.getElementById("weBlockPills");
         if (!container) return;
@@ -1944,38 +1930,98 @@
         const basinPill = document.createElement("button");
         basinPill.type = "button";
         basinPill.className = `we-block-pill ${!currentBlock ? 'active' : ''}`;
-        basinPill.innerHTML = `<span>🌐</span> <span>Basin Overview</span>`;
+        const basinLabel = selectedBasin ? `${selectedBasin.name.split(' ')[0]} Basin` : "Basin Overview";
+        basinPill.innerHTML = `<span>🌐</span> <span>${basinLabel}</span>`;
+        basinPill.title = selectedBasin ? `View full ${selectedBasin.name} watershed` : "View bioregion";
         basinPill.addEventListener("click", () => {
+          showAllCities = false;
           setBasinOverview();
         });
         container.appendChild(basinPill);
 
-        // 8 Urban Blocks Pills
-        URBAN_BLOCKS.forEach(blk => {
-          const pill = document.createElement("button");
-          pill.type = "button";
-          const isAct = currentBlock && currentBlock.id === blk.id;
-          pill.className = `we-block-pill ${isAct ? 'active' : ''}`;
-          pill.innerHTML = `<span>${blk.flag || '🏢'}</span> <span>${blk.name.split('—')[0].trim()}</span>`;
-          pill.title = blk.name;
-          pill.addEventListener("click", () => {
-            setUrbanBlock(blk.id);
+        // Filter blocks belonging to the currently active bioregion
+        const regionBlocks = selectedBasin 
+          ? URBAN_BLOCKS.filter(blk => blk.basinId === selectedBasin.id)
+          : [];
+
+        if (showAllCities) {
+          // Expanded: Show all 8 cities
+          URBAN_BLOCKS.forEach(blk => {
+            const pill = document.createElement("button");
+            pill.type = "button";
+            const isAct = currentBlock && currentBlock.id === blk.id;
+            pill.className = `we-block-pill ${isAct ? 'active' : ''}`;
+            pill.innerHTML = `<span>${blk.flag || '🏢'}</span> <span>${blk.name.split('—')[0].trim()}</span>`;
+            pill.title = `${blk.name} (${blk.city})`;
+            pill.addEventListener("click", () => {
+              showAllCities = false;
+              setUrbanBlock(blk.id);
+            });
+            container.appendChild(pill);
           });
-          container.appendChild(pill);
-        });
+
+          // Collapse back to region
+          const closePill = document.createElement("button");
+          closePill.type = "button";
+          closePill.className = "we-block-pill all-toggle";
+          closePill.innerHTML = `<span>↩️</span> <span>Region Only</span>`;
+          closePill.title = "Show only cities in selected region";
+          closePill.addEventListener("click", () => {
+            showAllCities = false;
+            renderBlockSelectorPills();
+          });
+          container.appendChild(closePill);
+        } else {
+          // Region Focus: Show ONLY cities belonging to chosen region
+          if (regionBlocks.length > 0) {
+            regionBlocks.forEach(blk => {
+              const pill = document.createElement("button");
+              pill.type = "button";
+              const isAct = currentBlock && currentBlock.id === blk.id;
+              pill.className = `we-block-pill ${isAct ? 'active' : ''}`;
+              pill.innerHTML = `<span>${blk.flag || '🏢'}</span> <span>${blk.name.split('—')[0].trim()}</span>`;
+              pill.title = `${blk.name} (${blk.city})`;
+              pill.addEventListener("click", () => {
+                setUrbanBlock(blk.id);
+              });
+              container.appendChild(pill);
+            });
+          } else {
+            // Rural / Pioneer Commons note for basins without high-density presets
+            const hint = document.createElement("span");
+            hint.className = "we-pill-hint";
+            hint.innerHTML = `<span>🏕️</span> <span>Rural / Pioneer Node</span>`;
+            container.appendChild(hint);
+          }
+
+          // Expand button to view all cities across the world
+          const allBtn = document.createElement("button");
+          allBtn.type = "button";
+          allBtn.className = "we-block-pill all-toggle";
+          allBtn.innerHTML = `<span>🌍</span> <span>All Cities (8)</span>`;
+          allBtn.title = "Browse benchmark urban blocks across all bioregions";
+          allBtn.addEventListener("click", () => {
+            showAllCities = true;
+            renderBlockSelectorPills();
+          });
+          container.appendChild(allBtn);
+        }
       }
+
+      let urbanAlpha = 0.0;
 
       function setUrbanBlock(blockId) {
         const blk = URBAN_BLOCKS.find(x => x.id === blockId);
         if (!blk) return;
         currentBlock = blk;
+        showAllCities = false;
         const parentBasin = WATERSHEDS.find(b => b.id === blk.basinId);
         if (parentBasin) selectedBasin = parentBasin;
 
         zoomMode = "URBAN";
         targetCamera.x = blk.centerPx[0];
         targetCamera.y = blk.centerPx[1];
-        targetCamera.zoom = 22.0;
+        targetCamera.zoom = 6.0;
 
         renderBlockSelectorPills();
         updateHUD();
@@ -2040,7 +2086,7 @@
         updateZoomState();
       }
 
-      // Update Inspector HUD Panel & Dual Launch Buttons
+      // Update Inspector HUD Panel & Dual Launch Buttons (Human & Crystal Clear)
       function updateHUD(b = selectedBasin) {
         if (!b) return;
 
@@ -2048,6 +2094,9 @@
         const bottleneckCard = document.getElementById("hudBottleneckCard");
         const nodeBox = document.getElementById("hudNodeBox");
         const statusEl = document.getElementById("hudStatus");
+        const tagEl = document.getElementById("hudBasinTag");
+        const titleEl = document.getElementById("hudBasinName");
+        const descEl = document.getElementById("hudBasinDesc");
 
         const l1 = document.getElementById("hudMetricLabel1");
         const v1 = document.getElementById("hudMetricVal1");
@@ -2066,19 +2115,17 @@
         const s4 = document.getElementById("hudMetricSub4");
 
         [v1, v2, v3, v4].forEach(el => {
-          if (el) {
-            el.classList.remove("val-track-a", "val-track-b");
-          }
+          if (el) el.classList.remove("val-track-a", "val-track-b");
         });
 
         if (!currentBlock) {
-          // WATERSHED MACRO VIEW
-          if (statusEl) statusEl.textContent = "JUS BIOSPHAERAE";
-          document.getElementById("hudBasinTag").textContent = b.tag;
-          document.getElementById("hudBasinName").textContent = b.name;
+          // 🌐 WATERSHED MACRO VIEW
+          if (statusEl) statusEl.textContent = "NATURAL COMMONS";
+          if (tagEl) tagEl.textContent = b.tag;
+          if (titleEl) titleEl.textContent = b.name;
           document.getElementById("hudBiomeIcon").textContent = b.biomeIcon;
           document.getElementById("hudBiomeText").textContent = b.biomeName;
-          document.getElementById("hudBasinDesc").textContent = b.desc;
+          if (descEl) descEl.textContent = b.desc;
 
           if (auditToggle) auditToggle.style.display = "none";
           if (bottleneckCard) bottleneckCard.style.display = "none";
@@ -2086,98 +2133,263 @@
 
           if (l1) l1.textContent = "Catchment Area";
           if (v1) v1.textContent = b.area;
-          if (s1) s1.textContent = "Planetary Hydrology";
+          if (s1) s1.textContent = "Natural river basin";
 
-          if (l2) l2.textContent = "Avg Discharge";
+          if (l2) l2.textContent = "River Flow";
           if (v2) v2.textContent = b.discharge;
-          if (s2) s2.textContent = "River Confluence";
+          if (s2) s2.textContent = "Average water discharge";
 
-          if (l3) l3.textContent = "Exergy Vector";
+          if (l3) l3.textContent = "Renewable Source";
           if (v3) v3.textContent = b.exergy;
-          if (s3) s3.textContent = "Renewable Potential";
+          if (s3) s3.textContent = "Clean regional energy";
 
-          if (l4) l4.textContent = "Demarchic Jury";
+          if (l4) l4.textContent = "Demarchic Assembly";
           if (v4) v4.textContent = b.demarchy;
-          if (s4) s4.textContent = "Constitutional Quorum";
+          if (s4) s4.textContent = "Random citizen sortition";
 
           document.getElementById("hudNodeName").textContent = b.nodeName;
         } else {
-          // URBAN BLOCK AUDIT VIEW (Milestones 1.1 - 1.4)
+          // 🏢 NEIGHBORHOOD COMMONS AUDIT (Clear Human Before/After)
           const blk = currentBlock;
-          if (statusEl) statusEl.textContent = "COMMONS AUDIT";
-          document.getElementById("hudBasinTag").textContent = `${b.tag} // URBAN AUDIT`;
-          document.getElementById("hudBasinName").textContent = blk.name;
+          if (statusEl) statusEl.textContent = "NEIGHBORHOOD AUDIT";
+          if (tagEl) tagEl.textContent = `${blk.name.split('—')[0].trim().toUpperCase()} • ${blk.units} HOMES`;
+          if (titleEl) titleEl.textContent = "What if this block was self-sufficient?";
           document.getElementById("hudBiomeIcon").textContent = blk.flag || "🏢";
-          document.getElementById("hudBiomeText").textContent = `${blk.typology} • ${blk.units} Units • ${blk.roofArea_m2.toLocaleString()} m² Roof`;
-          document.getElementById("hudBasinDesc").textContent = `Autonomous urban block audit. Evaluating Passivhaus thermal envelope retrofits, N-type TOPCon solar exergy, and rainwater closed-loop cistern resilience.`;
+          document.getElementById("hudBiomeText").textContent = `${blk.name} • ${blk.units} homes • ${blk.roofArea_m2.toLocaleString()} m² of roofs`;
+          if (descEl) descEl.textContent = "See what this real neighborhood pays today to banks and energy corporations vs what it produces for free when operating as a self-sufficient community.";
 
           if (auditToggle) auditToggle.style.display = "flex";
           if (bottleneckCard) bottleneckCard.style.display = "flex";
           if (nodeBox) nodeBox.style.display = "none";
 
-          // Populate Bottleneck Card
+          // Winter Reality Check Card (Concise & Punchy)
           const bTitle = document.getElementById("hudBottleneckTitle");
           const bDesc = document.getElementById("hudBottleneckDesc");
-          const bSim = document.getElementById("hudCtaSim");
-          if (bTitle) bTitle.textContent = blk.bottleneck.title;
-          if (bDesc) bDesc.textContent = blk.bottleneck.desc;
-          if (bSim) bSim.href = blk.bottleneck.sim_link;
+          if (bTitle) bTitle.textContent = `Winter Challenge (${100 - Math.round(blk.audit_thermodynamics.wcr_jan * 100)}% Jan Deficit)`;
+          if (bDesc) bDesc.textContent = `Winter sun covers only ${Math.round(blk.audit_thermodynamics.wcr_jan * 100)}% of heat. Solved with Passivhaus insulation & 48V microgrids — zero fossil fuels.`;
 
           if (currentTrack === "A") {
-            // TRACK A: DEBT EXTRACTION
+            // 🔴 TODAY: THE DEBT MACHINE
             [v1, v2, v3, v4].forEach(el => el && el.classList.add("val-track-a"));
 
-            if (l1) l1.textContent = "30-Year Wealth Drain";
+            if (l1) l1.textContent = "30-Year Drain";
             const drainMil = blk.legacy_financial.drain_30y_eur / 1000000;
-            animateNumericValue("hudMetricVal1", drainMil, "€", "M Extracted", 750);
-            if (s1) s1.textContent = "Compound Rent & Interest";
+            animateNumericValue("hudMetricVal1", drainMil, "€", " Million", 750);
+            if (s1) s1.textContent = `Paid by ${blk.units} families in rent & bills`;
 
-            if (l2) l2.textContent = "Monthly Rent/Mortgage";
+            if (l2) l2.textContent = "Monthly Rent / Mortgage";
             animateNumericValue("hudMetricVal2", blk.legacy_financial.monthly_rent_eur, "€", " / month", 750);
-            if (s2) s2.textContent = "Per Housing Unit";
+            if (s2) s2.textContent = "Average cost per home";
 
-            if (l3) l3.textContent = "Commercial Grid Bill";
+            if (l3) l3.textContent = "Electric Power Bills";
             const elecCostYear = Math.round(blk.legacy_financial.grid_elec_eur_kwh * blk.legacy_financial.elec_demand_kwh_unit_yr * blk.units / 1000);
             animateNumericValue("hudMetricVal3", elecCostYear, "€", "k / year", 750);
-            if (s3) s3.textContent = `€${blk.legacy_financial.grid_elec_eur_kwh}/kWh Tariff`;
+            if (s3) s3.textContent = `Paid to commercial utilities`;
 
-            if (l4) l4.textContent = "Municipal Water Drain";
+            if (l4) l4.textContent = "Municipal Water Bills";
             const waterCostYear = Math.round(blk.legacy_financial.water_eur_m3 * blk.legacy_financial.water_demand_m3_capita_yr * blk.inhabitants / 1000);
             animateNumericValue("hudMetricVal4", waterCostYear, "€", "k / year", 750);
-            if (s4) s4.textContent = `€${blk.legacy_financial.water_eur_m3}/m³ Municipal Rate`;
+            if (s4) s4.textContent = `While rainwater is lost to sewers`;
           } else {
-            // TRACK B: O.N.E. USUFRUCT
+            // 🟢 WITH O.N.E.: THE LIVING COMMONS
             [v1, v2, v3, v4].forEach(el => el && el.classList.add("val-track-b"));
 
-            if (l1) l1.textContent = "Perpetual Housing Cost";
-            if (v1) v1.textContent = "€0 / Perpetual Shelter";
-            if (s1) s1.textContent = "Zero-Debt Dynamic Usufruct";
+            if (l1) l1.textContent = "Housing Cost";
+            if (v1) v1.textContent = "€0 / Perpetual";
+            if (s1) s1.textContent = "Shelter is a human right, not debt";
 
-            if (l2) l2.textContent = "Rooftop Solar Exergy";
+            if (l2) l2.textContent = "Clean Solar Power";
             animateNumericValue("hudMetricVal2", blk.audit_thermodynamics.epv_mwh_yr, "", " MWh / yr", 750);
-            if (s2) s2.textContent = "N-type TOPCon + 48V DC Bus";
+            if (s2) s2.textContent = `Free energy from ${blk.roofArea_m2.toLocaleString()} m² of roofs`;
 
-            if (l3) l3.textContent = "Rainwater Harvesting";
+            if (l3) l3.textContent = "Rainwater Captured";
             const rainMil = blk.audit_thermodynamics.rain_liters_yr / 1000000;
             animateNumericValue("hudMetricVal3", rainMil, "", "M Liters / yr", 750);
-            if (s3) s3.textContent = "EPDM Catchment Runoff";
+            if (s3) s3.textContent = "Clean water diverted from storm drains";
 
-            if (l4) l4.textContent = "Cistern Water Autonomy";
+            if (l4) l4.textContent = "Water Autonomy";
             animateNumericValue("hudMetricVal4", blk.audit_thermodynamics.cistern_autonomy_days, "", " Days Reserves", 750);
-            if (s4) s4.textContent = "150 L/capita/day Resilient Buffer";
+            if (s4) s4.textContent = `For all ${blk.inhabitants} neighbors`;
           }
         }
 
-        // Dynamically configure the 2 Primary Launch Buttons below
+        // Configure Dual Launch Buttons
         const gameBtn = document.getElementById("btnLaunchGame");
         const gameNote = document.getElementById("gameTargetNote");
         if (gameBtn) gameBtn.href = `./game/?bioregion=${b.gameParam}`;
-        if (gameNote) gameNote.innerHTML = `Selected Bioregion: <strong>${b.name}</strong>`;
+        if (gameNote) gameNote.innerHTML = `Selected: <strong>${currentBlock ? currentBlock.name : b.name}</strong>`;
 
         const simBtn = document.getElementById("btnLaunchSandbox");
         const simNote = document.getElementById("simTargetNote");
         if (simBtn) simBtn.href = `./sim/?basin=${b.simParam}`;
-        if (simNote) simNote.innerHTML = `Selected Catchment: <strong>${b.name}</strong>`;
+        if (simNote) simNote.innerHTML = `Selected: <strong>${currentBlock ? currentBlock.name : b.name}</strong>`;
+      }
+      // Level 4: Tactical High-Resolution Orthophoto & Real Rooftop Audit Renderer
+      function renderTacticalNeighborhoodBlueprint(blk, alpha) {
+        if (!blk) return;
+
+        ctx.save();
+
+        // 1. Draw Real High-Resolution Aerial Orthophoto of the Neighborhood
+        const orthoImg = blockImages[blk.id];
+        if (orthoImg && orthoImg.complete && orthoImg.naturalWidth > 0) {
+          ctx.imageSmoothingEnabled = true;
+          ctx.imageSmoothingQuality = "high";
+
+          // Cover fill preserving aspect ratio
+          const imgW = orthoImg.naturalWidth;
+          const imgH = orthoImg.naturalHeight;
+          const scale = Math.max(width / imgW, height / imgH);
+          const dw = imgW * scale;
+          const dh = imgH * scale;
+          const dx = (width - dw) / 2;
+          const dy = (height - dh) / 2;
+
+          ctx.drawImage(orthoImg, dx, dy, dw, dh);
+
+          // Subtle cinematic vignette (keeps real roofs and streets crisp & clear)
+          const vig = ctx.createRadialGradient(width / 2, height / 2, width * 0.35, width / 2, height / 2, width * 0.72);
+          vig.addColorStop(0, "rgba(0, 0, 0, 0.0)");
+          vig.addColorStop(1, "rgba(2, 7, 5, 0.65)");
+          ctx.fillStyle = vig;
+          ctx.fillRect(0, 0, width, height);
+        } else {
+          // Fallback dark canvas
+          ctx.fillStyle = "#020705";
+          ctx.fillRect(0, 0, width, height);
+        }
+
+        const isTrackB = currentTrack === "B";
+        const primaryColor = isTrackB ? "#34d399" : "#f87171";
+        const fillColor = isTrackB ? "rgba(16, 185, 129, 0.20)" : "rgba(239, 68, 68, 0.20)";
+
+        const cx = width / 2;
+        const cy = height / 2 + 10;
+
+        // 2. Vector Rooftop Polygon Tracing (Highlighting the real benchmark block)
+        const bw = 240;
+        const bh = 180;
+        const bLeft = cx - bw / 2;
+        const bTop = cy - bh / 2;
+        const bRight = cx + bw / 2;
+        const bBottom = cy + bh / 2;
+        const dashOffset = -performance.now() * 0.02;
+
+        ctx.save();
+        ctx.strokeStyle = primaryColor;
+        ctx.fillStyle = fillColor;
+        ctx.lineWidth = 2.0;
+        ctx.setLineDash([7, 4]);
+        ctx.lineDashOffset = dashOffset;
+        ctx.shadowColor = primaryColor;
+        ctx.shadowBlur = 10;
+
+        // Trace the perimeter building block with courtyard cutout
+        const wing = 34;
+        ctx.beginPath();
+        ctx.moveTo(bLeft, bTop);
+        ctx.lineTo(bRight, bTop);
+        ctx.lineTo(bRight, bBottom);
+        ctx.lineTo(bLeft, bBottom);
+        ctx.closePath();
+
+        ctx.moveTo(bLeft + wing, bTop + wing);
+        ctx.lineTo(bLeft + wing, bBottom - wing);
+        ctx.lineTo(bRight - wing, bBottom - wing);
+        ctx.lineTo(bRight - wing, bTop + wing);
+        ctx.closePath();
+
+        ctx.fill("evenodd");
+        ctx.stroke();
+        ctx.restore();
+
+        // 3. Precision HUD Targeting Brackets [  ] Framing the Benchmark Block
+        const bPad = 14;
+        const bLen = 18;
+        ctx.strokeStyle = primaryColor;
+        ctx.lineWidth = 2.2;
+        ctx.beginPath();
+        // Top-Left
+        ctx.moveTo(bLeft - bPad, bTop - bPad + bLen);
+        ctx.lineTo(bLeft - bPad, bTop - bPad);
+        ctx.lineTo(bLeft - bPad + bLen, bTop - bPad);
+        // Top-Right
+        ctx.moveTo(bRight + bPad - bLen, bTop - bPad);
+        ctx.lineTo(bRight + bPad, bTop - bPad);
+        ctx.lineTo(bRight + bPad, bTop - bPad + bLen);
+        // Bottom-Left
+        ctx.moveTo(bLeft - bPad, bBottom + bPad - bLen);
+        ctx.lineTo(bLeft - bPad, bBottom + bPad);
+        ctx.lineTo(bLeft - bPad + bLen, bBottom + bPad);
+        // Bottom-Right
+        ctx.moveTo(bRight + bPad - bLen, bBottom + bPad);
+        ctx.lineTo(bRight + bPad, bBottom + bPad);
+        ctx.lineTo(bRight + bPad, bBottom + bPad - bLen);
+        ctx.stroke();
+
+        // 4. Subtle Telemetry Radar Scanline
+        const scanY = bTop + ((performance.now() * 0.08) % bh);
+        ctx.strokeStyle = isTrackB ? "rgba(52, 211, 153, 0.45)" : "rgba(248, 113, 113, 0.45)";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(bLeft - 4, scanY);
+        ctx.lineTo(bRight + 4, scanY);
+        ctx.stroke();
+
+        // 5. Clean Architectural Metric Scale Bar at Bottom-Left (100m)
+        const sbX = 24;
+        const sbY = height - 24;
+        const sbW = 120; // 120px = 100m
+        ctx.strokeStyle = "#ffffff";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(sbX, sbY);
+        ctx.lineTo(sbX + sbW, sbY);
+        ctx.moveTo(sbX, sbY - 4);
+        ctx.lineTo(sbX, sbY + 4);
+        ctx.moveTo(sbX + sbW / 2, sbY - 3);
+        ctx.lineTo(sbX + sbW / 2, sbY + 3);
+        ctx.moveTo(sbX + sbW, sbY - 4);
+        ctx.lineTo(sbX + sbW, sbY + 4);
+        ctx.stroke();
+
+        ctx.font = "600 9px 'JetBrains Mono', monospace";
+        ctx.fillStyle = "#ffffff";
+        ctx.shadowColor = "rgba(0,0,0,0.9)";
+        ctx.shadowBlur = 4;
+        ctx.fillText("0", sbX - 2, sbY - 6);
+        ctx.fillText("50m", sbX + sbW / 2 - 8, sbY - 6);
+        ctx.fillText("100m (SCALE)", sbX + sbW - 14, sbY - 6);
+        ctx.shadowBlur = 0;
+
+        // 6. Minimalist Header Telemetry Badge at Top-Left
+        const headerW = 440;
+        const headerH = 36;
+        const headerX = 20;
+        const headerY = 18;
+
+        ctx.fillStyle = "rgba(2, 6, 5, 0.88)";
+        ctx.strokeStyle = primaryColor;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        if (ctx.roundRect) {
+          ctx.roundRect(headerX, headerY, headerW, headerH, 6);
+        } else {
+          ctx.rect(headerX, headerY, headerW, headerH);
+        }
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.font = "700 11px 'JetBrains Mono', monospace";
+        ctx.fillStyle = primaryColor;
+        ctx.fillText(`TARGET AUDIT: ${blk.name.toUpperCase()}`, headerX + 10, headerY + 15);
+
+        ctx.font = "600 9.5px 'JetBrains Mono', monospace";
+        ctx.fillStyle = "#cbd5e1";
+        const metaText = `${blk.units} HOMES • ${blk.roofArea_m2.toLocaleString()} m² ROOF • ${isTrackB ? blk.audit_thermodynamics.epv_mwh_yr + ' MWh/yr SOLAR EXERGY' : blk.legacy_financial.drain_30y_label + ' 30Y DRAIN'}`;
+        ctx.fillText(metaText, headerX + 10, headerY + 28);
+
+        ctx.restore();
       }
 
       // Drawing Loop (60 FPS with Camera Lerping & River Flow)
@@ -2188,7 +2400,14 @@
 
         ctx.clearRect(0, 0, width, height);
 
-        // Base Dark Oceanic Fill
+        // LEVEL 4 TACTICAL VIEW: If Urban Block is active, render dedicated architectural blueprint
+        if (currentBlock) {
+          renderTacticalNeighborhoodBlueprint(currentBlock, 1.0);
+          requestAnimationFrame(draw);
+          return;
+        }
+
+        // BASE PLANETARY & BIOREGIONAL SATELLITE VIEW (Levels 1 & 2)
         ctx.fillStyle = "#020705";
         ctx.fillRect(0, 0, width, height);
 
@@ -2393,96 +2612,47 @@
           ctx.shadowBlur = 0;
         });
 
-        // 3. Draw Tactical Rooftop Polygons & HUD Brackets when Urban Block is Active (Milestone 1.2)
-        if (currentBlock && currentBlock.polygonsPx) {
-          const isTrackB = currentTrack === "B";
-          const strokeCol = isTrackB ? "#34d399" : "#f87171";
-          const fillCol = isTrackB ? "rgba(16, 185, 129, 0.22)" : "rgba(239, 68, 68, 0.22)";
-          const dashOffset = -performance.now() * 0.015;
+        // 3. Draw City Node Beacons on Planetary Map (Accurate City Pinpoints, Zero 150km Distortion)
+        URBAN_BLOCKS.forEach(blk => {
+          const [cx, cy] = worldToScreen(blk.centerPx[0], blk.centerPx[1]);
+          if (cx >= -40 && cx <= width + 40 && cy >= -40 && cy <= height + 40) {
+            const isCurrent = currentBlock && currentBlock.id === blk.id;
+            const pulse = (Math.sin(performance.now() * 0.005) + 1) * 0.5;
 
-          ctx.save();
-          currentBlock.polygonsPx.forEach(poly => {
-            if (poly.length < 2) return;
             ctx.beginPath();
-            const [startPx, startPy] = worldToScreen(poly[0][0], poly[0][1]);
-            ctx.moveTo(startPx, startPy);
-            for (let i = 1; i < poly.length; i++) {
-              const [px, py] = worldToScreen(poly[i][0], poly[i][1]);
-              ctx.lineTo(px, py);
-            }
-            ctx.closePath();
-            ctx.fillStyle = fillCol;
+            ctx.arc(cx, cy, isCurrent ? 5.5 : 3.5, 0, Math.PI * 2);
+            ctx.fillStyle = isCurrent ? "#34d399" : "#38bdf8";
+            ctx.shadowColor = ctx.fillStyle;
+            ctx.shadowBlur = 8 + pulse * 6;
             ctx.fill();
+            ctx.shadowBlur = 0;
 
-            ctx.strokeStyle = strokeCol;
-            ctx.lineWidth = 2.0;
-            ctx.setLineDash([8, 4]);
-            ctx.lineDashOffset = dashOffset;
+            ctx.beginPath();
+            ctx.arc(cx, cy, (isCurrent ? 9 : 6.5) + pulse * 3.5, 0, Math.PI * 2);
+            ctx.strokeStyle = isCurrent ? "rgba(52, 211, 153, 0.6)" : "rgba(56, 189, 248, 0.35)";
+            ctx.lineWidth = 1;
             ctx.stroke();
-          });
-          ctx.restore();
 
-          // Draw HUD Targeting Corner Brackets around block center
-          const [scx, scy] = worldToScreen(currentBlock.centerPx[0], currentBlock.centerPx[1]);
-          const bSize = Math.max(70, Math.min(180, 50 * (camera.zoom / 10)));
-          const bracketLen = 14;
-
-          ctx.strokeStyle = strokeCol;
-          ctx.lineWidth = 2;
-          ctx.beginPath();
-          // Top-Left
-          ctx.moveTo(scx - bSize, scy - bSize + bracketLen);
-          ctx.lineTo(scx - bSize, scy - bSize);
-          ctx.lineTo(scx - bSize + bracketLen, scy - bSize);
-          // Top-Right
-          ctx.moveTo(scx + bSize - bracketLen, scy - bSize);
-          ctx.lineTo(scx + bSize, scy - bSize);
-          ctx.lineTo(scx + bSize, scy - bSize + bracketLen);
-          // Bottom-Left
-          ctx.moveTo(scx - bSize, scy + bSize - bracketLen);
-          ctx.lineTo(scx - bSize, scy + bSize);
-          ctx.lineTo(scx - bSize + bracketLen, scy + bSize);
-          // Bottom-Right
-          ctx.moveTo(scx + bSize - bracketLen, scy + bSize);
-          ctx.lineTo(scx + bSize, scy + bSize);
-          ctx.lineTo(scx + bSize, scy + bSize - bracketLen);
-          ctx.stroke();
-
-          // Radar scanning line across the targeting box
-          const scanY = scy - bSize + ((performance.now() * 0.06) % (bSize * 2));
-          ctx.strokeStyle = isTrackB ? "rgba(52, 211, 153, 0.45)" : "rgba(239, 68, 68, 0.45)";
-          ctx.lineWidth = 1.5;
-          ctx.beginPath();
-          ctx.moveTo(scx - bSize + 4, scanY);
-          ctx.lineTo(scx + bSize - 4, scanY);
-          ctx.stroke();
-
-          // On-Canvas HUD Telemetry Badge
-          ctx.font = "700 11px 'JetBrains Mono', monospace";
-          const telemetryText = `LOCK: ${currentBlock.name.split('—')[0].trim().toUpperCase()} [${currentBlock.center[1].toFixed(3)}°N, ${currentBlock.center[0].toFixed(3)}°E]`;
-          const subText = `A_ROOF: ${currentBlock.roofArea_m2.toLocaleString()} m² • ${isTrackB ? currentBlock.audit_thermodynamics.epv_mwh_yr + ' MWh/yr PV' : currentBlock.legacy_financial.drain_30y_label + ' 30Y DRAIN'}`;
-
-          ctx.fillStyle = "rgba(4, 12, 10, 0.85)";
-          ctx.strokeStyle = strokeCol;
-          ctx.lineWidth = 1;
-          const boxW = Math.max(ctx.measureText(telemetryText).width, ctx.measureText(subText).width) + 18;
-          const boxH = 38;
-          const boxX = scx - boxW / 2;
-          const boxY = scy - bSize - boxH - 8;
-          ctx.beginPath();
-          if (ctx.roundRect) {
-            ctx.roundRect(boxX, boxY, boxW, boxH, 6);
-          } else {
-            ctx.rect(boxX, boxY, boxW, boxH);
+            // Label visible on region focus
+            if (camera.zoom > 2.0 && urbanAlpha < 0.6) {
+              ctx.font = "600 10px 'JetBrains Mono', monospace";
+              ctx.fillStyle = "#ffffff";
+              ctx.shadowColor = "rgba(0,0,0,0.9)";
+              ctx.shadowBlur = 4;
+              ctx.fillText(`${blk.flag || '🏢'} ${blk.name.split('—')[0].trim()}`, cx + 9, cy + 3);
+              ctx.shadowBlur = 0;
+            }
           }
-          ctx.fill();
-          ctx.stroke();
+        });
 
-          ctx.fillStyle = strokeCol;
-          ctx.fillText(telemetryText, boxX + 9, boxY + 15);
-          ctx.fillStyle = "#cbd5e1";
-          ctx.font = "600 10px 'JetBrains Mono', monospace";
-          ctx.fillText(subText, boxX + 9, boxY + 29);
+        // 4. Smooth Cross-Dissolve to Tactical Neighborhood Blueprint (Level 4 Tactical Rooftop View)
+        const targetAlpha = currentBlock ? 1.0 : 0.0;
+        urbanAlpha += (targetAlpha - urbanAlpha) * 0.12;
+        if (Math.abs(urbanAlpha - targetAlpha) < 0.001) urbanAlpha = targetAlpha;
+
+        if (urbanAlpha > 0.01 && (currentBlock || activeLastBlock)) {
+          const blk = currentBlock || activeLastBlock;
+          renderTacticalNeighborhoodBlueprint(blk, urbanAlpha);
         }
 
         requestAnimationFrame(draw);
@@ -2546,6 +2716,18 @@
         const rect = canvas.getBoundingClientRect();
         const mouseX = e.clientX - rect.left;
         const mouseY = e.clientY - rect.top;
+
+        // Check if user clicked directly on a city beacon pinpoint
+        for (let i = URBAN_BLOCKS.length - 1; i >= 0; i--) {
+          const blk = URBAN_BLOCKS[i];
+          const [cx, cy] = worldToScreen(blk.centerPx[0], blk.centerPx[1]);
+          if (Math.hypot(mouseX - cx, mouseY - cy) <= 15) {
+            showAllCities = false;
+            setUrbanBlock(blk.id);
+            return;
+          }
+        }
+
         const [wx, wy] = screenToWorld(mouseX, mouseY);
 
         for (let i = WATERSHEDS.length - 1; i >= 0; i--) {
@@ -2651,10 +2833,18 @@
       try {
         const urlParams = new URLSearchParams(window.location.search);
         const auditParam = urlParams.get("audit");
+        const basinParam = urlParams.get("basin");
         if (auditParam) {
           const matchBlock = URBAN_BLOCKS.find(b => b.id === auditParam || b.id.includes(auditParam));
           if (matchBlock) {
             setUrbanBlock(matchBlock.id);
+          } else {
+            updateHUD(selectedBasin);
+          }
+        } else if (basinParam) {
+          const matchBasin = WATERSHEDS.find(b => b.id === basinParam || b.id === ("basin-" + basinParam) || b.id.includes(basinParam));
+          if (matchBasin) {
+            setViewRegion(matchBasin);
           } else {
             updateHUD(selectedBasin);
           }

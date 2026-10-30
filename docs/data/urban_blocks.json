@@ -1,10 +1,10 @@
 [
   {
     "id": "milan-loreto",
-    "name": "Milan \u2014 Loreto / NoLo Block",
+    "name": "Milan — Loreto / NoLo Block",
     "basinId": "basin-po",
     "city": "Milan, Italy",
-    "flag": "\ud83c\uddee\ud83c\uddf9",
+    "flag": "🇮🇹",
     "center": [
       9.2185,
       45.488
@@ -31,7 +31,7 @@
       "water_eur_m3": 2.1,
       "water_demand_m3_capita_yr": 55,
       "drain_30y_eur": 79000000,
-      "drain_30y_label": "\u20ac79.0M"
+      "drain_30y_label": "€79.0M"
     },
     "audit_thermodynamics": {
       "epv_mwh_yr": 841,
@@ -43,7 +43,7 @@
     },
     "bottleneck": {
       "title": "Critical Winter Insolation Deficit (Jan WCR: 28%)",
-      "desc": "January solar insolation leaves a 72% heating deficit. Mandates Passivhaus envelope retrofits (U < 0.12 W/m\u00b2K) and 48V DC bus Tier-2 load-shedding states.",
+      "desc": "January solar insolation leaves a 72% heating deficit. Mandates Passivhaus envelope retrofits (U < 0.12 W/m²K) and 48V DC bus Tier-2 load-shedding states.",
       "action": "Passivhaus retrofits + 48V DC bus shedding",
       "habitat_link": "https://github.com/kyberlex/ONE/tree/main/habitat",
       "sim_link": "./sim/?basin=po-valley"
@@ -159,14 +159,26 @@
           45.4878
         ]
       ]
-    ]
+    ],
+    "streets": {
+      "north": "Viale Monza",
+      "south": "Via dei Transiti",
+      "west": "Via Padova",
+      "east": "Via Andrea Costa"
+    },
+    "dimensions": {
+      "width_m": 180,
+      "length_m": 140,
+      "courtyard_m": "85m × 55m",
+      "wings": 4
+    }
   },
   {
     "id": "zurich-hardbrucke",
-    "name": "Zurich \u2014 Hardbr\u00fccke / Industriequartier",
+    "name": "Zurich — Hardbrücke / Industriequartier",
     "basinId": "basin-rhine",
     "city": "Zurich, Switzerland",
-    "flag": "\ud83c\udde8\ud83c\udded",
+    "flag": "🇨🇭",
     "center": [
       8.5175,
       47.3875
@@ -193,7 +205,7 @@
       "water_eur_m3": 2.4,
       "water_demand_m3_capita_yr": 50,
       "drain_30y_eur": 111800000,
-      "drain_30y_label": "\u20ac111.8M"
+      "drain_30y_label": "€111.8M"
     },
     "audit_thermodynamics": {
       "epv_mwh_yr": 868,
@@ -321,14 +333,26 @@
           47.3876
         ]
       ]
-    ]
+    ],
+    "streets": {
+      "north": "Hardstrasse",
+      "south": "Geroldstrasse",
+      "west": "Zahnradstrasse",
+      "east": "Pfingstweidstrasse"
+    },
+    "dimensions": {
+      "width_m": 190,
+      "length_m": 150,
+      "courtyard_m": "90m × 60m",
+      "wings": 4
+    }
   },
   {
     "id": "madrid-lavapies",
-    "name": "Madrid \u2014 Lavapi\u00e9s Superblock",
+    "name": "Madrid — Lavapiés Superblock",
     "basinId": "basin-po",
     "city": "Madrid, Spain",
-    "flag": "\ud83c\uddea\ud83c\uddf8",
+    "flag": "🇪🇸",
     "center": [
       -3.702,
       40.4095
@@ -355,7 +379,7 @@
       "water_eur_m3": 1.9,
       "water_demand_m3_capita_yr": 50,
       "drain_30y_eur": 82500000,
-      "drain_30y_label": "\u20ac82.5M"
+      "drain_30y_label": "€82.5M"
     },
     "audit_thermodynamics": {
       "epv_mwh_yr": 1219,
@@ -461,14 +485,26 @@
           40.4085
         ]
       ]
-    ]
+    ],
+    "streets": {
+      "north": "Calle de Lavapiés",
+      "south": "Calle de Sombrerete",
+      "west": "Calle de la Fe",
+      "east": "Calle de Argumosa"
+    },
+    "dimensions": {
+      "width_m": 170,
+      "length_m": 160,
+      "courtyard_m": "75m × 65m",
+      "wings": 4
+    }
   },
   {
     "id": "berlin-kreuzberg",
-    "name": "Berlin \u2014 Kreuzberg Courtyard Block",
+    "name": "Berlin — Kreuzberg Courtyard Block",
     "basinId": "basin-baltic",
     "city": "Berlin, Germany",
-    "flag": "\ud83c\udde9\ud83c\uddea",
+    "flag": "🇩🇪",
     "center": [
       13.418,
       52.499
@@ -479,7 +515,7 @@
       13.422,
       52.5015
     ],
-    "typology": "Gr\u00fcnderzeit perimeter block with dual inner courtyards",
+    "typology": "Gründerzeit perimeter block with dual inner courtyards",
     "units": 178,
     "inhabitants": 390,
     "roofArea_m2": 5400,
@@ -495,7 +531,7 @@
       "water_eur_m3": 2.3,
       "water_demand_m3_capita_yr": 52,
       "drain_30y_eur": 92800000,
-      "drain_30y_label": "\u20ac92.8M"
+      "drain_30y_label": "€92.8M"
     },
     "audit_thermodynamics": {
       "epv_mwh_yr": 745,
@@ -623,14 +659,26 @@
           52.4995
         ]
       ]
-    ]
+    ],
+    "streets": {
+      "north": "Oranienstraße",
+      "south": "Naunynstraße",
+      "west": "Adalbertstraße",
+      "east": "Mariannenstraße"
+    },
+    "dimensions": {
+      "width_m": 200,
+      "length_m": 160,
+      "courtyard_m": "Dual Courtyards (85m × 50m)",
+      "wings": 5
+    }
   },
   {
     "id": "london-hackney",
-    "name": "London \u2014 Hackney Mixed Terrace Block",
+    "name": "London — Hackney Mixed Terrace Block",
     "basinId": "basin-rhine",
     "city": "London, United Kingdom",
-    "flag": "\ud83c\uddec\ud83c\udde7",
+    "flag": "🇬🇧",
     "center": [
       -0.0555,
       51.5465
@@ -657,7 +705,7 @@
       "water_eur_m3": 2.2,
       "water_demand_m3_capita_yr": 52,
       "drain_30y_eur": 90900000,
-      "drain_30y_label": "\u20ac90.9M"
+      "drain_30y_label": "€90.9M"
     },
     "audit_thermodynamics": {
       "epv_mwh_yr": 563,
@@ -741,14 +789,26 @@
           51.5458
         ]
       ]
-    ]
+    ],
+    "streets": {
+      "north": "Mare Street",
+      "south": "Well Street",
+      "west": "Tudor Road",
+      "east": "Terrace Road"
+    },
+    "dimensions": {
+      "width_m": 160,
+      "length_m": 130,
+      "courtyard_m": "65m × 45m",
+      "wings": 3
+    }
   },
   {
     "id": "austin-east",
-    "name": "Austin \u2014 East Austin Low-Rise Cluster",
+    "name": "Austin — East Austin Low-Rise Cluster",
     "basinId": "basin-cascadia",
     "city": "Austin, United States",
-    "flag": "\ud83c\uddfa\ud83c\uddf8",
+    "flag": "🇺🇸",
     "center": [
       -97.7225,
       30.2625
@@ -775,7 +835,7 @@
       "water_eur_m3": 1.8,
       "water_demand_m3_capita_yr": 60,
       "drain_30y_eur": 66700000,
-      "drain_30y_label": "\u20ac66.7M"
+      "drain_30y_label": "€66.7M"
     },
     "audit_thermodynamics": {
       "epv_mwh_yr": 1126,
@@ -859,14 +919,26 @@
           30.2612
         ]
       ]
-    ]
+    ],
+    "streets": {
+      "north": "East 6th Street",
+      "south": "East 5th Street",
+      "west": "Chicon Street",
+      "east": "Comal Street"
+    },
+    "dimensions": {
+      "width_m": 150,
+      "length_m": 140,
+      "courtyard_m": "70m × 60m",
+      "wings": 3
+    }
   },
   {
     "id": "detroit-corktown",
-    "name": "Detroit \u2014 Corktown Infill Block",
+    "name": "Detroit — Corktown Infill Block",
     "basinId": "basin-greatlakes",
     "city": "Detroit, United States",
-    "flag": "\ud83c\uddfa\ud83c\uddf8",
+    "flag": "🇺🇸",
     "center": [
       -83.0685,
       42.3315
@@ -893,7 +965,7 @@
       "water_eur_m3": 2.1,
       "water_demand_m3_capita_yr": 55,
       "drain_30y_eur": 57700000,
-      "drain_30y_label": "\u20ac57.7M"
+      "drain_30y_label": "€57.7M"
     },
     "audit_thermodynamics": {
       "epv_mwh_yr": 881,
@@ -977,14 +1049,26 @@
           42.3302
         ]
       ]
-    ]
+    ],
+    "streets": {
+      "north": "Michigan Avenue",
+      "south": "Bagley Street",
+      "west": "Trumbull Street",
+      "east": "Rosa Parks Blvd"
+    },
+    "dimensions": {
+      "width_m": 180,
+      "length_m": 150,
+      "courtyard_m": "80m × 65m",
+      "wings": 3
+    }
   },
   {
     "id": "tokyo-setagaya",
-    "name": "Tokyo \u2014 Setagaya Dense Residential Fabric",
+    "name": "Tokyo — Setagaya Dense Residential Fabric",
     "basinId": "basin-yangtze",
     "city": "Tokyo, Japan",
-    "flag": "\ud83c\uddef\ud83c\uddf5",
+    "flag": "🇯🇵",
     "center": [
       139.6535,
       35.6465
@@ -1011,7 +1095,7 @@
       "water_eur_m3": 2.0,
       "water_demand_m3_capita_yr": 50,
       "drain_30y_eur": 88000000,
-      "drain_30y_label": "\u20ac88.0M"
+      "drain_30y_label": "€88.0M"
     },
     "audit_thermodynamics": {
       "epv_mwh_yr": 822,
@@ -1095,6 +1179,18 @@
           35.6455
         ]
       ]
-    ]
+    ],
+    "streets": {
+      "north": "Setagaya-dori",
+      "south": "Taishido Lane",
+      "west": "Sangenjaya Alley",
+      "east": "Karasuyama Way"
+    },
+    "dimensions": {
+      "width_m": 140,
+      "length_m": 130,
+      "courtyard_m": "50m × 45m",
+      "wings": 4
+    }
   }
 ]
