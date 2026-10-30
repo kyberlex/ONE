@@ -16524,19 +16524,12 @@
       "Art. 3.5.2"
     ],
     "verdict_human": "RED TEAM WON — constitution patched: survival must be proven autarkic every year",
-    "verdict_human_it": "HA VINTO IL RED TEAM — costituzione corretta: la sopravvivenza va dimostrata autarchica ogni anno",
     "human_summary": {
       "lead": "The attack exposed a real gap, so we changed the Constitution instead of explaining it away.",
       "points": [
         "The old test could never fail, so it proved nothing about embargoes.",
         "Each bioregion must now show, every year, that it can feed, heat, house and heal everyone with zero imports.",
         "Reserves are planned around the measured gaps, including spare machines for things you cannot store, such as heat."
-      ],
-      "lead_it": "L'attacco ha mostrato una falla reale: abbiamo cambiato la Costituzione invece di giustificarla.",
-      "points_it": [
-        "Il vecchio test non poteva mai fallire, quindi non dimostrava nulla sugli embarghi.",
-        "Ogni bioregione deve ora dimostrare ogni anno di poter nutrire, scaldare, alloggiare e curare tutti senza importazioni.",
-        "Le riserve si pianificano sulle lacune misurate, incluse macchine di scorta per ciò che non si può immagazzinare, come il calore."
       ]
     },
     "category": "thermodynamics",
@@ -16567,19 +16560,12 @@
       "Art. 4.3.5"
     ],
     "verdict_human": "RED TEAM WON — patched; residual risk openly documented",
-    "verdict_human_it": "HA VINTO IL RED TEAM — corretto; rischio residuo dichiarato apertamente",
     "human_summary": {
       "lead": "Anyone can still publish anything, but getting onto the agenda now takes real, equal, non-buyable support.",
       "points": [
         "Each person gets the same small endorsement budget, and spending it on many petitions gets quadratically expensive.",
         "Agenda slots are limited and drawn by public lottery, so volume alone cannot capture the council.",
         "The fix is not perfect: a large organized group still gets a share of agenda time roughly proportional to its size."
-      ],
-      "lead_it": "Chiunque può ancora pubblicare qualsiasi cosa, ma entrare in agenda richiede un sostegno reale, uguale e non comprabile.",
-      "points_it": [
-        "Ognuno ha lo stesso piccolo budget di firme, e usarlo su molte petizioni costa in modo quadratico.",
-        "I posti in agenda sono limitati e assegnati per sorteggio pubblico: il volume da solo non cattura il consiglio.",
-        "La soluzione non è perfetta: un grande gruppo organizzato ottiene ancora una quota di agenda proporzionale alla sua dimensione."
       ]
     },
     "category": "demarchy",
@@ -16615,19 +16601,12 @@
       "Art. 10.5.3"
     ],
     "verdict_human": "RED TEAM WON — one provision withdrawn, eight articles corrected",
-    "verdict_human_it": "HA VINTO IL RED TEAM — una norma ritirata, otto articoli corretti",
     "human_summary": {
       "lead": "When the critics are right, the text changes. Your vote can no longer be taken away for missing work shifts.",
       "points": [
         "Defense machines may only stop incoming machines, never people.",
         "All voting thresholds now follow one consistent ladder with explicit arithmetic.",
         "A citizen jury drawn by lot now decides whether any law or decree violates the Constitution."
-      ],
-      "lead_it": "Quando i critici hanno ragione, il testo cambia. Il tuo voto non può più esserti tolto per turni di lavoro saltati.",
-      "points_it": [
-        "Le macchine di difesa possono fermare solo macchine in arrivo, mai persone.",
-        "Tutte le soglie di voto seguono ora un'unica scala coerente con aritmetica esplicita.",
-        "Una giuria di cittadini sorteggiati decide ora se una legge o un decreto viola la Costituzione."
       ]
     },
     "category": "rights",
@@ -16660,19 +16639,12 @@
       "Art. 10.6.4"
     ],
     "verdict_human": "RED TEAM WON — technology moved to an amendable Organic Law Annex",
-    "verdict_human_it": "HA VINTO IL RED TEAM — la tecnologia passa a un Allegato di Leggi Organiche modificabile",
     "human_summary": {
       "lead": "The Constitution says what must be guaranteed; a separate, easier-to-update annex says which technology does it today.",
       "points": [
         "Better technology can be adopted without a constitutional amendment.",
         "No technical rule can ever lower a constitutional protection.",
         "Unproven numbers are openly marked as provisional."
-      ],
-      "lead_it": "La Costituzione dice cosa va garantito; un allegato separato e più facile da aggiornare dice quale tecnologia lo fa oggi.",
-      "points_it": [
-        "Tecnologie migliori possono essere adottate senza emendare la Costituzione.",
-        "Nessuna norma tecnica può mai abbassare una tutela costituzionale.",
-        "I numeri non dimostrati sono marcati apertamente come provvisori."
       ]
     },
     "category": "science",
