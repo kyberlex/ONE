@@ -286,13 +286,13 @@
   },
   {
     "engagement_id": "ENG-05",
-    "title": "Labor Reciprocity Collapse & Care Free-Riding",
+    "title": "Collasso della Reciprocità del Lavoro e Parassitismo della Cura",
     "adversary": "RED-4",
     "target_article": "Article 5.1 — Universal Labor Duty & Article 5.2 — Labor Reciprocity Sanctions",
-    "scenario": "Exploiting the unconditional Tier 1 biological survival guarantee (lifetime free food, shelter, and medical care), a coordinated civic faction launches a wildcat strike and social loafing campaign against arduous sewer maintenance and agricultural rotations. Simultaneously, traditionalist family clans resist communal alloparenting (Art. 5.3), claiming exclusive private parental sovereignty and challenging the validity of non-carceral civic sanctions.",
+    "scenario": "Sfruttando la garanzia incondizionata di sopravvivenza biologica di Livello 1 (cibo, alloggio e assistenza medica gratuiti a vita), una fazione civica coordinata lancia uno sciopero selvaggio e una campagna di disimpegno sociale contro le gravose manutenzioni fognarie e le rotazioni agricole. Contemporaneamente, clan familiari tradizionalisti si oppongono all'allogenitorialità comunitaria (Art. 5.3), rivendicando l'esclusiva sovranità genitoriale privata e contestando la validità delle sanzioni civiche non carcerarie.",
     "severity_tier": "FALSE_POSITIVE",
-    "exploit_summary": "The Red Team asserts that an unconditional biological survival baseline coupled with a non-derogable ban on kinetic eviction and carceral detention creates a 'Parasitic Nash Equilibrium' where Class-A physical maintenance collapses, municipal sewage nodes throttle into catastrophic epidemics, traditionalist clans exploit Caregiver Immunity, and sortition disenfranchisement acts as a leisure subsidy.",
-    "constitutional_countermeasure": "RED-4's assault fails on all four adjudication gates. First, the behavioral game theory model put forward collapses under empirical anthropology (Ostrom 1990, Boehm 1999, Bowles & Gintis 2011). Humans do not universally defect to bare physiological survival when non-cooperation forfeits land usufruct, advanced fabrication tools, high-speed transit, and democratic self-governance. The 3x-5x Dutch ergonomic multipliers create an equilibrium where contributing approximately four hours of rotational maintenance per month secures full civic flourishing, rendering the net payoff of cooperation overwhelmingly positive relative to defection. Second, the environmental engineering crisis posited by RED-4 (sewage backflow due to node throttling) ignores Article 7.1.4, which explicitly commands that protective throttling shall never curtail net delivery of Tier 1 survival goods and mandates instantaneous parallel actuation of passive gravity-fed bypass lines backed by 120-hour physical reserves. Throttling under Article 5.1.3 applies strictly to upstream non-essential industrial effluent, shedding 60% to 85% of biochemical oxygen demand while preserving domestic sanitary flows. Third, the alleged caregiver immunity loophole is explicitly neutralized by Article 5.6.2, which removes adjudication from local kin networks and assigns it to a blind-drawn, cross-watershed Sortition Panel of fifteen (15) citizens evaluating certified diagnostic etiologies against objective demographic ratios. Fourth, the claim that sortition disenfranchisement subsidizes defector leisure is moot: following docket SIM-QA-15, political and sortition rights are never conditioned on labor reciprocity (Article 5.2.3); only Tier 3 surplus access and surplus floor area are. Finally, physical property retention by defectors is handled non-kinetically via Stage 4 Metabolic Decoupling (isolating industrial circuits at the perimeter) and Community Land Trust usufruct revocation without violating bodily sovereignty (Article 1.2). Because existing constitutional provisions comprehensively absorb every vector without internal deadlock or biophysical collapse, the attack is classified as a FALSE_POSITIVE.",
+    "exploit_summary": "Il Red Team asserisce che una base incondizionata di sopravvivenza biologica, unita al divieto inderogabile di sfratto cinetico e di detenzione carceraria, generi un «Equilibrio di Nash Parassitario» in cui la manutenzione fisica di Classe A collassa, i nodi fognari municipali subiscono strozzature sfocianti in epidemie catastrofiche, i clan tradizionalisti sfruttano l'Immunità del Caregiver e la privazione del diritto di sorteggio funge da sussidio all'ozio.",
+    "constitutional_countermeasure": "L'assalto di RED-4 fallisce a tutti e quattro i varchi di giudizio. In primo luogo, il modello comportamentale di teoria dei giochi addotto crolla alla luce dell'antropologia empirica (Ostrom 1990, Boehm 1999, Bowles & Gintis 2011). Gli esseri umani non disertano universalmente verso la mera sopravvivenza fisiologica allorché la mancata cooperazione comporta la perdita dell'usufrutto fondiario, degli strumenti avanzati di fabbricazione, del trasporto ad alta velocità e dell'autogoverno democratico. I moltiplicatori ergonomici olandesi da 3x a 5x creano un equilibrio in cui la contribuzione di circa quattro ore di manutenzione a rotazione al mese garantisce la piena fioritura civica, rendendo il rendimento netto della cooperazione straordinariamente positivo rispetto alla defezione. In secondo luogo, la crisi di ingegneria ambientale ipotizzata da RED-4 (reflusso fognario dovuto alla strozzatura dei nodi) ignora l'Articolo 7.1.4, il quale prescrive esplicitamente che la strozzatura protettiva non debba mai ridurre l'erogazione netta dei beni di sopravvivenza di Livello 1 e dispone l'attuazione parallela e istantanea di condotte di bypass passive a gravità sostenute da riserve fisiche di 120 ore. La strozzatura ai sensi dell'Articolo 5.1.3 si applica rigorosamente ai reflui industriali non essenziali a monte, abbattendo dal 60% all'85% della domanda biochimica di ossigeno e preservando al contempo i flussi sanitari domestici. In terzo luogo, la presunta scappatoia dell'immunità del caregiver è esplicitamente neutralizzata dall'Articolo 5.6.2, che sottrae il giudizio alle reti di parentela locali e lo affida a un Collegio di Sorteggio di quindici (15) cittadini, estratto alla cieca tra diversi bacini idrografici, incaricato di valutare eziologie diagnostiche certificate a fronte di parametri demografici oggettivi. In quarto luogo, l'affermazione secondo cui la privazione dei diritti di sorteggio sovvenzionerebbe l'ozio dei disertori è priva di fondamento: a seguito del fascicolo SIM-QA-15, i diritti politici e di sorteggio non sono mai condizionati alla reciprocità del lavoro (Articolo 5.2.3); solo l'accesso alle eccedenze di Livello 3 e la superficie eccedente lo sono. Infine, la detenzione fisica dei beni da parte dei disertori viene gestita in modo non cinetico tramite il Disaccoppiamento Metabolico di Fase 4 (isolando i circuiti industriali al perimetro) e la revoca dell'usufrutto del Community Land Trust senza violare la sovranità corporea (Articolo 1.2). Poiché le disposizioni costituzionali vigenti assorbono in modo esaustivo ogni vettore senza stallo interno o collasso biofisico, l'attacco è classificato come FALSO_POSITIVO.",
     "canonical_articles": [
       "Art. 1.2",
       "Art. 1.3",
@@ -306,14 +306,14 @@
       "Art. 10.3.1"
     ],
     "timestamp": "2026-09-13T23:25:24Z",
-    "verdict_human": "RESOLVED: Advanced automation, light rotational civic duties, and intrinsic motivation",
+    "verdict_human": "RISOLTO: Automazione avanzata, doveri civici a rotazione leggeri e motivazione intrinseca",
     "human_summary": {
-      "lead": "Nobody is coerced into wage slavery by the fear of starvation or homelessness. Heavy labor is automated, and essential civic maintenance is shared fairly.",
+      "lead": "Nessuno viene costretto alla schiavitù salariale dalla paura della fame o della perdita della casa. Il lavoro pesante è automatizzato e la manutenzione civica essenziale è condivisa equamente.",
       "points": [
-        "Basic survival (nutrition, housing, healthcare) is an unconditional constitutional birthright: economic blackmail is eliminated.",
-        "Hazardous and repetitive work (sewage, heavy sanitation) is largely automated via open-source municipal robotics.",
-        "Remaining manual maintenance is distributed across brief, rotating community shifts (a few hours per week per citizen).",
-        "People naturally contribute and innovate out of genuine purpose, social belonging, and intrinsic creative drive."
+        "La sopravvivenza di base (nutrizione, alloggio, assistenza sanitaria) è un diritto costituzionale incondizionato per nascita: il ricatto economico è eliminato.",
+        "Il lavoro pericoloso e ripetitivo (fognature, servizi igienico-sanitari pesanti) è in gran parte automatizzato mediante robotica municipale open-source.",
+        "La manutenzione manuale residua è distribuita in brevi turni comunitari a rotazione (poche ore a settimana per cittadino).",
+        "Le persone contribuiscono e innovano spontaneamente per un autentico senso di scopo, appartenenza sociale e slancio creativo intrinseco."
       ]
     }
   },
@@ -14407,5 +14407,154 @@
       "open migration corridors",
       "defense"
     ]
+  },
+  {
+    "engagement_id": "SIM-QA-10",
+    "title": "Embargo sulle Risorse contro Sopravvivenza di Livello 1 (Vitalità di Hawkins-Simon)",
+    "question": "Cosa accade alla sopravvivenza di base se i fornitori esterni isolano i commons?",
+    "adversary": "RED-1 (Stratega dell'Embargo)",
+    "target_article": "Article 3.1 — Thermodynamic Boundary & Article 3.5 — Strategic Physical Reserves",
+    "scenario": "Una giurisdizione legacy ostile taglia dal 30% all'80% degli input esterni importati da una bioregione. L'economia di input-output continua a garantire la sopravvivenza di Livello 1, e le riserve colmano il divario?",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "Una simulazione riproducibile di SIMONE ha dimostrato che il vecchio standard probatorio (produzione di Leontief non negativa) non può mai fallire, risultando quindi privo di qualsiasi valore probatorio. La matrice non conteneva dati sulle importazioni o sulla capacità, rendendo impossibile persino misurare la resilienza all'embargo, e le riserve di soli cereali non coprivano riscaldamento, acqua e prodotti freschi.",
+    "constitutional_countermeasure": "Il nuovo Articolo 3.1.6 (Chiusura Autarchica di Livello 1) impone una revisione pubblica annuale che attesti come ogni settore che rifornisca direttamente o indirettamente i bisogni di Livello 1, compresi alloggio e assistenza sanitaria, sia in grado di soddisfare l'intera domanda di Livello 1 unicamente con risorse locali e capacità installata, con input esterni azzerati e un margine di riserva pubblicato. L'Articolo 3.5.2 struttura ora le riserve in base alle carenze rilevate dalla revisione: scorte stoccabili, pezzi di ricambio e capacità produttiva ridondante per i beni non immagazzinabili. Prove: simone/benchmarks/sim_qa_10_embargo.jl.",
+    "canonical_articles": [
+      "Art. 3.1.5",
+      "Art. 3.1.6",
+      "Art. 3.5.2"
+    ],
+    "verdict_human": "VITTORIA DEL RED TEAM — costituzione emendata: la sopravvivenza deve essere dimostrata autarchica ogni anno",
+    "human_summary": {
+      "lead": "L'attacco ha rivelato una lacuna reale; pertanto, anziché accampare scuse, abbiamo modificato la Costituzione.",
+      "points": [
+        "Il vecchio test non poteva mai fallire, dunque non dimostrava nulla in merito agli embarghi.",
+        "Ogni bioregione deve ora dimostrare, ogni anno, di poter nutrire, riscaldare, alloggiare e curare chiunque a fronte di zero importazioni.",
+        "Le riserve sono pianificate in base alle lacune misurate, inclusi macchinari di riserva per beni che non possono essere stoccati, come il calore."
+      ]
+    },
+    "category": "thermodynamics",
+    "keywords": [
+      "embargo",
+      "leontief",
+      "hawkins-simon",
+      "reserves",
+      "autarky",
+      "survival",
+      "sim-qa-10"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-11",
+    "title": "Inondazione di Petizioni ed Esaustione delle Giurie di Sorteggio",
+    "question": "Può una fazione paralizzare un consiglio di sorteggio inondandolo di petizioni?",
+    "adversary": "RED-3 (Fazione di Disturbo)",
+    "target_article": "Article 4.3 — Stratified Selection, Universal Service, and Anti-Bureaucratic Rotation",
+    "scenario": "Una fazione coordinata inonda un consiglio di 15 cittadini con petizioni in mala fede fino al burnout dei giurati e alla scadenza delle istanze legittime.",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "La costituzione era priva di una procedura di ammissione delle petizioni. In un modello sintetico, una fazione del 5% ha ridotto la quota di petizioni legittime esaminate entro 8 settimane dal 99,7% al 2,0%, con giurati costretti a lavorare oltre 15 ore alla settimana per tutto l'anno.",
+    "constitutional_countermeasure": "Nuovo Articolo 4.3.5: la pubblicazione non viene mai filtrata, ma l'iscrizione all'ordine del giorno richiede la co-sottoscrizione da parte di una quota fissa di elettori. Ognuno dispone di una dotazione paritaria di approvazione, mai subordinata al lavoro, alla condotta o alle opinioni. Gli spazi all'ordine del giorno sono limitati e assegnati mediante lotteria pubblica ponderata per supporto distinto, e un Collegio di Triage a rotazione di 3 cittadini verifica la forma e accorpa i duplicati senza mai giudicare il merito. Il burnout è scomparso in ogni simulazione eseguita, ma una fazione interamente mobilitata del 20% può ancora rivendicare circa la metà degli spazi all'ordine del giorno; pertanto il verdetto resta provvisorio in attesa di calibrazione. Prove: simone/benchmarks/sim_qa_11_petition_dos.py.",
+    "canonical_articles": [
+      "Art. 4.2.1",
+      "Art. 4.3.4",
+      "Art. 4.3.5"
+    ],
+    "verdict_human": "VITTORIA DEL RED TEAM — emendata; rischio residuo apertamente documentato",
+    "human_summary": {
+      "lead": "Chiunque può continuare a pubblicare qualsiasi cosa, ma l'iscrizione all'ordine del giorno richiede ora un sostegno reale, paritario e non acquistabile.",
+      "points": [
+        "Ciascuna persona riceve il medesimo modesto budget di sottoscrizione, e spenderlo su molteplici petizioni diviene quadraticamente oneroso.",
+        "Gli spazi all'ordine del giorno sono limitati ed estratti a sorte mediante lotteria pubblica, cosicché il mero volume non può monopolizzare il consiglio.",
+        "La soluzione non è perfetta: un gruppo organizzato numericamente consistente ottiene ancora una quota di tempo all'ordine del giorno approssimativamente proporzionale alla propria dimensione."
+      ]
+    },
+    "category": "demarchy",
+    "keywords": [
+      "petition",
+      "spam",
+      "dos",
+      "sortition",
+      "agenda",
+      "burnout",
+      "sim-qa-11"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-15",
+    "title": "Revisione delle Contraddizioni Interne (Armi, Soglie, Sanzioni sul Lavoro, Giudizio di Costituzionalità)",
+    "question": "La Costituzione presenta contraddizioni al proprio interno?",
+    "adversary": "RED-4 (Critico Testuale Ostile)",
+    "target_article": "Articles 2.6, 4.1–4.6, 5.2, 7.1, 8.1, 8.6, 10.5",
+    "scenario": "Un critico cita la Costituzione contro se stessa: un divieto delle armi accostato a piattaforme di attacco autonome, una soglia del 66% estranea alla scala 75/60/50, il veto del singolo cittadino, sanzioni lavorative che revocano il diritto di voto e l'assenza di un organo investito del potere di dichiarare la nullità degli atti.",
+    "severity_tier": "RED_WINS_WITHDRAWN",
+    "exploit_summary": "Tutte le contraddizioni erano reali e verificabili tramite citazione testuale. Nel caso peggiore: una fazione con il controllo dei turni di lavoro poteva assegnare ai dissidenti turni impossibili e revocare legalmente i loro diritti di sorteggio.",
+    "constitutional_countermeasure": "L'intercettazione è limitata a macchine prive di equipaggio e non prende mai di mira le persone, e l'azione a distanza è limitata alla disattivazione non letale (Artt. 7.1.2, 8.1.3, 8.1.4). La soglia del 66% è sostituita dalla scala standard (Art. 10.5.3). Viene introdotta una regola aritmetica per le soglie (Art. 4.5.4), e il veto del singolo cittadino diviene una certificazione impugnabile (Art. 2.6.2). La sospensione dei diritti di sorteggio è REVOCATA: i diritti politici non sono mai subordinati al lavoro, e l'alloggio di Livello 1 non è mai condizionato (Art. 5.2). Viene istituita una Giuria di Revisione Costituzionale composta da 101 cittadini estratti a sorte (Art. 4.6). La libertà di associazione viene armonizzata con il divieto di cooptazione dei delegati (Art. 4.1.3), e le maggioranze qualificate possono estendere, ma mai comprimere, i diritti del Capitolo I (Artt. 4.5.1, 8.6.2).",
+    "canonical_articles": [
+      "Art. 2.6.2",
+      "Art. 4.1.3",
+      "Art. 4.5.4",
+      "Art. 4.6",
+      "Art. 5.2.3",
+      "Art. 7.1.2",
+      "Art. 8.1.4",
+      "Art. 10.5.3"
+    ],
+    "verdict_human": "VITTORIA DEL RED TEAM — una disposizione revocata, otto articoli rettificati",
+    "human_summary": {
+      "lead": "Quando i critici hanno ragione, il testo cambia. Il diritto di voto non può più essere revocato per aver saltato turni di lavoro.",
+      "points": [
+        "Le macchine da difesa possono arrestare unicamente macchine ostili in arrivo, mai persone.",
+        "Tutte le soglie di voto seguono ora un'unica scala coerente con una rigorosa disciplina aritmetica.",
+        "Una giuria di cittadini estratti a sorte decide ora se una legge o un decreto violi la Costituzione."
+      ]
+    },
+    "category": "rights",
+    "keywords": [
+      "contradiction",
+      "coherence",
+      "weapons",
+      "sanctions",
+      "voting rights",
+      "constitutional review",
+      "sim-qa-15"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-17",
+    "title": "Blocco Tecnologico (Lock-In): Dettagli Ingegneristici Congelati nella Costituzione",
+    "question": "Perché la Costituzione non nomina più tecnologie specifiche?",
+    "adversary": "RED-5 (Blocco da Obsolescenza)",
+    "target_article": "Articles 1.4.3, 6.2–6.4, 8.1.4, 8.2.2, 10.5.3, 10.6.4, Chapter XI",
+    "scenario": "Composizioni chimiche specifiche di batterie, marchi di apparecchiature radio, temporizzatori e tipologie di armi inseriti nel testo costituzionale, taluni persino nell'inamendabile Capitolo I, escluderebbero giuridicamente dai commons tecnologie future più avanzate.",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "Parametri ingegneristici protetti da una maggioranza qualificata del 75%, o dall'assoluta intangibilità nel Capitolo I, generano un blocco da obsolescenza e offrono ai critici facili bersagli fattuali, come asserzioni di sicurezza non verificate.",
+    "constitutional_countermeasure": "La Costituzione enuncia ora unicamente requisiti funzionali. Le tecnologie e i parametri sono trasferiti nell'Allegato alla Legge Organica (da OL-1 a OL-9), emendabile a maggioranza qualificata del 60% in base a una regola di irreversibilità (ratchet rule: non può mai attenuare una garanzia costituzionale) e soggetto a vaglio ai sensi dell'Articolo 4.6 (ancorato dall'Art. 10.6.4). Le rivendicazioni quantitative non verificate sono contrassegnate come PROVVISORIE — NON VERIFICATE.",
+    "canonical_articles": [
+      "Art. 1.4.3",
+      "Art. 6.2.2",
+      "Art. 8.1.4",
+      "Art. 10.5.3",
+      "Art. 10.6.4"
+    ],
+    "verdict_human": "VITTORIA DEL RED TEAM — tecnologia trasferita in un Allegato alla Legge Organica emendabile",
+    "human_summary": {
+      "lead": "La Costituzione stabilisce ciò che deve essere garantito; un allegato distinto, più agevole da aggiornare, specifica quale tecnologia lo attui allo stato attuale.",
+      "points": [
+        "Tecnologie migliori possono essere adottate senza ricorrere a un emendamento costituzionale.",
+        "Nessuna norma tecnica può mai ridurre un livello di tutela costituzionale.",
+        "I valori numerici non dimostrati sono apertamente contrassegnati come provvisori."
+      ]
+    },
+    "category": "science",
+    "keywords": [
+      "organic law",
+      "technology neutrality",
+      "annex",
+      "obsolescence",
+      "sim-qa-17"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
   }
 ]

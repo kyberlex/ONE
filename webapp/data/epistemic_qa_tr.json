@@ -154,18 +154,34 @@
   },
   {
     "engagement_id": "ENG-05",
-    "title": "Yazılım Tedarik Zinciri ve Derleyici Zehirlenmesi Saldırısı",
-    "scenario": "Kritik belediye yazılımının açık kaynak deposuna zehirli bir yama gizlice sokulur; derleyicinin arka kapı açarak su arıtma tesislerinin kimyasal oranlarını bozması amaçlanır.",
-    "exploit_summary": "Kaynak kod deposuna kötü niyetli ekleme yapılarak arıtma sistemlerinin sabote edilmesi.",
-    "constitutional_countermeasure": "Saldırı derleme hattında yakalandı. Madde 7.1.3 uyarınca uygulanan çoklu bağımsız derleyici doğrulaması ikili dosya uyumsuzluğunu tespit etti. Madde 7.3 gereğince su numuneleri kimyasal analog sensörlerle denetlendi. Madde 1.3 gereği arıtma işlemi güvenli mekanik filtreleme moduna geçirildi.",
-    "verdict_human": "Engellendi: Çapraz derleyici doğrulaması, açık kod şeffaflığı ve analog kimyasal denetim",
+    "title": "Emek Karşılıklılığının Çöküşü ve Bakım Bedavacılığı",
+    "adversary": "RED-4",
+    "target_article": "Article 5.1 — Universal Labor Duty & Article 5.2 — Labor Reciprocity Sanctions",
+    "scenario": "Koşulsuz Kademe 1 biyolojik hayatta kalma güvencesini (ömür boyu ücretsiz gıda, barınma ve tıbbi bakım) istismar eden koordineli bir sivil hizip, meşakkatli kanalizasyon bakımı ve tarımsal rotasyonlara karşı yasadışı bir grev ve sosyal kaytarma kampanyası başlatır. Eş zamanlı olarak gelenekselci aile klanları, münhasır özel ebeveynlik egemenliği iddia ederek ve hapsedici olmayan sivil yaptırımların geçerliliğine itiraz ederek toplumsal ortak ebeveynliğe (Madde 5.3) direnir.",
+    "severity_tier": "FALSE_POSITIVE",
+    "exploit_summary": "Kırmızı Takım, kinetik tahliye ve hapsedici gözaltı üzerindeki askıya alınamaz yasakla birleşen koşulsuz bir biyolojik hayatta kalma taban çizgisinin, Sınıf-A fiziksel bakımın çöktüğü, belediye kanalizasyon düğümlerinin kısıtlanarak felaket boyutunda salgınlara yol açtığı, gelenekselci klanların Bakıcı Dokunulmazlığını istismar ettiği ve Kura Yöntemi (Sortisyon) hak mahrumiyetinin bir boş zaman sübvansiyonu işlevi gördüğü bir 'Parazitik *Nash Dengesi*' yarattığını ileri sürmektedir.",
+    "constitutional_countermeasure": "RED-4'ün saldırısı dört yargılama eşiğinin tamamında başarısız olmaktadır. Birincisi, öne sürülen davranışsal oyun teorisi modeli ampirik antropoloji karşısında çökmektedir (Ostrom 1990, Boehm 1999, Bowles & Gintis 2011). İşbirliği yapmamanın toprak İntifa Hakkı (Usufruct), gelişmiş üretim araçları, yüksek hızlı toplu taşıma ve demokratik özyönetim haklarını kaybettirdiği bir durumda insanlar evrensel olarak yalın fizyolojik hayatta kalma düzeyine kaçış yapmazlar. 3x-5x Felemenk ergonomik çarpanları, ayda yaklaşık dört saatlik dönüşümlü bakım katkısının tam bir sivil refah sağladığı bir denge kurmakta ve işbirliğinin net getirisini kaçışa kıyasla ezici biçimde olumlu kılmaktadır. İkincisi, RED-4 tarafından ortaya atılan çevre mühendisliği krizi (düğüm kısıtlaması nedeniyle kanalizasyon geri tepmesi), koruyucu kısıtlamanın Kademe 1 hayatta kalma mallarının net teslimatını asla azaltmayacağını açıkça emreden ve 120 saatlik fiziksel rezervlerle desteklenen pasif yerçekimi beslemeli baypas hatlarının anlık paralel aktivasyonunu zorunlu kılan Madde 7.1.4'ü göz ardı etmektedir. Madde 5.1.3 uyarınca kısıtlama, münhasıran memba yönündeki zorunlu olmayan endüstriyel atık sulara uygulanır ve evsel sıhhi akışları korurken biyokimyasal oksijen ihtiyacının %60 ila %85'ini bertaraf eder. Üçüncüsü, iddia edilen bakıcı dokunulmazlığı boşluğu, yargı yetkisini yerel akrabalık ağlarından alarak onaylı teşhis etiyolojilerini nesnel demografik oranlara göre değerlendiren, havzalar arası, kura ile belirlenmiş on beş (15) yurttaştan oluşan bir Kura Yöntemi (Sortisyon) Heyetine devreden Madde 5.6.2 ile açıkça etkisizleştirilmiştir. Dördüncüsü, Kura Yöntemi (Sortisyon) hak mahrumiyetinin kaçış yapanların boş zamanını sübvanse ettiği iddiası mesnetsizdir: SIM-QA-15 içtihadını takiben, siyasi ve Kura Yöntemi (Sortisyon) hakları asla emek karşılıklılığına bağlanamaz (Madde 5.2.3); yalnızca Kademe 3 fazlalık erişimi ve fazlalık taban alanı bağlanabilir. Son olarak, kaçış yapanlar tarafından fiziksel mülkün elde tutulması, Aşama 4 Metabolik Ayrıştırma (endüstriyel devrelerin çevrede izole edilmesi) ve bedensel egemenliği ihlal etmeksizin (Madde 1.2) Topluluk Toprak Vakfı (CLT) intifa hakkının iptali yoluyla kinetik olmayan yöntemlerle ele alınır. Mevcut anayasal hükümler her bir vektörü iç kilitlenme veya biyofiziksel çöküş olmaksızın kapsamlı bir şekilde soğurduğundan, saldırı YANLIŞ_POZİTİF (FALSE_POSITIVE) olarak sınıflandırılmıştır.",
+    "canonical_articles": [
+      "Art. 1.2",
+      "Art. 1.3",
+      "Art. 4.3.2",
+      "Art. 5.1.3",
+      "Art. 5.2.2",
+      "Art. 5.4.2",
+      "Art. 5.6.1",
+      "Art. 5.6.2",
+      "Art. 7.1.4",
+      "Art. 10.3.1"
+    ],
+    "timestamp": "2026-09-13T23:25:24Z",
+    "verdict_human": "ÇÖZÜLDÜ: Gelişmiş otomasyon, hafif dönüşümlü sivil görevler ve içsel motivasyon",
     "human_summary": {
-      "lead": "Yazılıma sızdırılan gizli kodlar bağımsız derleyicilerin çapraz kontrolüyle anında fark edilir.",
+      "lead": "Hiç kimse açlık veya evsizlik korkusuyla ücretli köleliğe zorlanmaz. Ağır işler otomatikleştirilmiştir ve temel sivil bakım adil bir şekilde paylaşılır.",
       "points": [
-        "Aynı kaynak kod birbirinden bağımsız üç farklı derleyici tarafından işlenir.",
-        "En ufak bayt farkı alarm verir ve kodun sisteme yüklenmesini engeller.",
-        "Arıtma tesislerinde suyun güvenliği dijital verilere ek olarak analog testlerle sürekli kontrol edilir.",
-        "Acil durumlarda sistem doğrudan mekanik filtreleme moduna geçer."
+        "Temel hayatta kalma (beslenme, barınma, sağlık hizmeti) koşulsuz bir anayasal doğuştan gelen haktır: ekonomik şantaj ortadan kaldırılmıştır.",
+        "Tehlikeli ve tekrarlayan işler (kanalizasyon, ağır temizlik), açık kaynaklı belediye robotiği aracılığıyla büyük ölçüde otomatikleştirilmiştir.",
+        "Kalan manuel bakım, kısa, dönüşümlü topluluk nöbetleri arasında dağıtılır (yurttaş başına haftada birkaç saat).",
+        "İnsanlar gerçek bir amaç duygusu, toplumsal aidiyet ve içsel yaratıcı dürtü ile doğal olarak katkıda bulunur ve yenilik üretir."
       ]
     }
   },
@@ -11527,5 +11543,154 @@
       "açık göç koridorları",
       "qa-defe-349"
     ]
+  },
+  {
+    "engagement_id": "SIM-QA-10",
+    "title": "Kaynak Ambargosu ve Kademe 1 Hayatta Kalma (Hawkins-Simon Uygulanabilirliği)",
+    "question": "Dış tedarikçiler müştereklerin erişimini keserse temel hayatta kalmaya ne olur?",
+    "adversary": "RED-1 (Ambargo Stratejisti)",
+    "target_article": "Article 3.1 — Thermodynamic Boundary & Article 3.5 — Strategic Physical Reserves",
+    "scenario": "Düşman bir geleneksel yetki alanı, bir biyobölgenin ithal ettiği dış girdilerin %30-80'ini keser. Girdi-çıktı ekonomisi Kademe 1 hayatta kalmayı sağlamaya devam edebilir mi ve rezervler bu açığı kapatır mı?",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "Yeniden üretilebilir bir SIMONE simülasyonu, eski kanıt standardının (negatif olmayan Leontief çıktısı) hiçbir zaman başarısız olamayacağını, dolayısıyla hiçbir şeyi kanıtlamadığını göstermiştir. Matriste ithalat veya kapasite verisi bulunmadığından ambargo direnci ölçülememiş ve yalnızca tahıldan oluşan rezervler ısınma, su ve taze ürünleri kapsamamıştır.",
+    "constitutional_countermeasure": "Yeni Madde 3.1.6 (Kademe 1 Otarşik Kapanma), barınma ve sağlık hizmetleri de dahil olmak üzere Kademe 1 ihtiyaçlarını doğrudan veya dolaylı olarak karşılayan her sektörün, sıfır dış girdi ve yayımlanmış bir rezerv marjı ile yalnızca yerel kaynaklardan ve kurulu kapasiteden tam Kademe 1 talebini karşılayabileceğini kanıtlayan yıllık bir kamu denetimini şart koşmaktadır. Madde 3.5.2 artık rezervleri denetim açıklarına göre yapılandırmaktadır: depolanabilir stoklar, yedek parçalar ve depolanamayan mallar için yedekli üretici kapasite. Kanıt: simone/benchmarks/sim_qa_10_embargo.jl.",
+    "canonical_articles": [
+      "Art. 3.1.5",
+      "Art. 3.1.6",
+      "Art. 3.5.2"
+    ],
+    "verdict_human": "KIRMIZI TAKIM KAZANDI — anayasa yamandı: hayatta kalmanın her yıl otarşik olduğu kanıtlanmalıdır",
+    "human_summary": {
+      "lead": "Saldırı gerçek bir açığı ortaya çıkardı, bu yüzden onu geçiştirmek yerine Anayasayı değiştirdik.",
+      "points": [
+        "Eski test hiçbir zaman başarısız olamazdı, bu yüzden ambargolar hakkında hiçbir şey kanıtlamıyordu.",
+        "Her biyobölge artık her yıl sıfır ithalatla herkesi besleyebileceğini, ısıtabileceğini, barındırabileceğini ve iyileştirebileceğini göstermek zorundadır.",
+        "Rezervler, ısı gibi depolanamayan şeyler için yedek makineler de dahil olmak üzere, ölçülen açıklar etrafında planlanır."
+      ]
+    },
+    "category": "thermodynamics",
+    "keywords": [
+      "embargo",
+      "leontief",
+      "hawkins-simon",
+      "reserves",
+      "autarky",
+      "survival",
+      "sim-qa-10"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-11",
+    "title": "Dilekçe Baskını ve Kura Heyeti Tükenmişliği",
+    "question": "Bir hizip, bir kura konseyini dilekçelere boğarak felç edebilir mi?",
+    "adversary": "RED-3 (Taciz ve Sabotaj Hizbi)",
+    "target_article": "Article 4.3 — Stratified Selection, Universal Service, and Anti-Bureaucratic Rotation",
+    "scenario": "Koordineli bir hizip, 15 yurttaştan oluşan bir konseyi, jüri üyeleri tükenene ve iyi niyetli taleplerin süresi dolana kadar kötü niyetli dilekçelere boğar.",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "Anayasanın bir dilekçe kabul usulü yoktu. Sentetik bir modelde, %5'lik bir hizip, 8 hafta içinde dinlenen iyi niyetli dilekçelerin payını %99,7'den %2,0'a düşürmüş ve jüri üyeleri yıl boyunca haftada 15 saatten fazla çalışmıştır.",
+    "constitutional_countermeasure": "Yeni Madde 4.3.5: yayımlama asla filtrelenmez, ancak gündeme alınma seçmenlerin sabit bir payının ortak onayını gerektirir. Herkes, emeğe, davranışa veya görüşe asla bağlanmayan eşit bir onay hakkına sahiptir. Gündem sıraları sınırlıdır ve belirgin destekle ağırlıklandırılmış halka açık kura ile doldurulur; dönüşümlü 3 yurttaştan oluşan bir Ön Eleme Heyeti, esasa asla girmeksizin şekli inceler ve mükerrerleri birleştirir. Tükenmişlik simüle edilen her çalışmada ortadan kalkmıştır, ancak tamamen mobilize olmuş %20'lik bir hizip gündem sıralarının yaklaşık yarısını yine de ele geçirebilir; bu nedenle hüküm, kalibrasyon yapılana kadar geçici kalacaktır. Kanıt: simone/benchmarks/sim_qa_11_petition_dos.py.",
+    "canonical_articles": [
+      "Art. 4.2.1",
+      "Art. 4.3.4",
+      "Art. 4.3.5"
+    ],
+    "verdict_human": "KIRMIZI TAKIM KAZANDI — yamandı; bakiye risk açıkça belgelendi",
+    "human_summary": {
+      "lead": "Herkes hâlâ her şeyi yayımlayabilir, ancak gündeme girmek artık gerçek, eşit ve satın alınamaz bir destek gerektirir.",
+      "points": [
+        "Her kişi aynı küçük onay bütçesini alır ve bunu çok sayıda dilekçeye harcamak karesel olarak pahalı hale gelir.",
+        "Gündem sıraları sınırlıdır ve halka açık kura ile çekilir, bu nedenle tek başına hacim konseyi ele geçiremez.",
+        "Düzeltme mükemmel değildir: büyük ve örgütlü bir grup, gündem süresinden kabaca kendi büyüklüğüyle orantılı bir pay almaya devam eder."
+      ]
+    },
+    "category": "demarchy",
+    "keywords": [
+      "petition",
+      "spam",
+      "dos",
+      "sortition",
+      "agenda",
+      "burnout",
+      "sim-qa-11"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-15",
+    "title": "İç Çelişkiler Denetimi (Silahlar, Eşikler, Emek Yaptırımları, Denetim)",
+    "question": "Anayasa herhangi bir yerde kendisiyle çelişiyor mu?",
+    "adversary": "RED-4 (Düşman Metin Eleştirmeni)",
+    "target_article": "Articles 2.6, 4.1–4.6, 5.2, 7.1, 8.1, 8.6, 10.5",
+    "scenario": "Bir eleştirmen Anayasayı kendisine karşı alıntılar: otonom saldırı platformlarının yanında bir silah yasağı, 75/60/50 merdiveninin dışında %66'lık bir eşik, tek bir yurttaşın vetosu, oy haklarını elinden alan emek yaptırımları ve tasarrufları hükümsüz ilan etme yetkisine sahip hiçbir organın bulunmaması.",
+    "severity_tier": "RED_WINS_WITHDRAWN",
+    "exploit_summary": "Tüm çelişkiler gerçekti ve alıntılarla doğrulanabilirdi. En kötü senaryo: çalışma listelerini kontrol eden bir hizip, muhaliflere imkânsız vardiyalar atayabilir ve Kura Yöntemi (Sortisyon) haklarını yasal olarak ellerinden alabilirdi.",
+    "constitutional_countermeasure": "Müdahale insansız makinelerle sınırlandırılmış olup asla kişileri hedef almaz ve uzaktan müdahale öldürücü olmayan etkisizleştirme ile sınırlıdır (Madde 7.1.2, 8.1.3, 8.1.4). %66 eşiğinin yerini standart merdiven almıştır (Madde 10.5.3). Bir eşik aritmetiği kuralı eklenmiş (Madde 4.5.4) ve tek yurttaş vetosu itiraz edilebilir bir sertifikasyona dönüştürülmüştür (Madde 2.6.2). Kura Yöntemi (Sortisyon) haklarının askıya alınması GERİ ÇEKİLMİŞTİR: siyasi haklar asla emeğe bağlanamaz ve Kademe 1 barınma asla koşula bağlanamaz (Madde 5.2). Kura ile belirlenen 101 yurttaştan oluşan bir Anayasal Denetim Jürisi kurulmuştur (Madde 4.6). Örgütlenme özgürlüğü, delege vesayeti yasağı ile bağdaştırılmıştır (Madde 4.1.3) ve nitelikli çoğunluklar Bölüm I haklarını genişletebilir ancak asla daraltamaz (Madde 4.5.1, 8.6.2).",
+    "canonical_articles": [
+      "Art. 2.6.2",
+      "Art. 4.1.3",
+      "Art. 4.5.4",
+      "Art. 4.6",
+      "Art. 5.2.3",
+      "Art. 7.1.2",
+      "Art. 8.1.4",
+      "Art. 10.5.3"
+    ],
+    "verdict_human": "KIRMIZI TAKIM KAZANDI — bir hüküm geri çekildi, sekiz madde düzeltildi",
+    "human_summary": {
+      "lead": "Eleştirmenler haklı olduğunda metin değişir. İş vardiyalarını kaçırdığınız için oyunuz artık elinizden alınamaz.",
+      "points": [
+        "Savunma makineleri yalnızca gelen makineleri durdurabilir, asla insanları durduramaz.",
+        "Tüm oylama eşikleri artık açık aritmetiğe sahip tutarlı tek bir merdiveni takip etmektedir.",
+        "Kura ile çekilen bir yurttaş jürisi artık herhangi bir yasanın veya kararnamenin Anayasayı ihlal edip etmediğine karar vermektedir."
+      ]
+    },
+    "category": "rights",
+    "keywords": [
+      "contradiction",
+      "coherence",
+      "weapons",
+      "sanctions",
+      "voting rights",
+      "constitutional review",
+      "sim-qa-15"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-17",
+    "title": "Teknolojiye Kilitlenme: Anayasada Dondurulan Mühendislik Detayları",
+    "question": "Anayasa neden artık belirli teknolojilerin adını vermiyor?",
+    "adversary": "RED-5 (Eskime Kilitlenmesi)",
+    "target_article": "Articles 1.4.3, 6.2–6.4, 8.1.4, 8.2.2, 10.5.3, 10.6.4, Chapter XI",
+    "scenario": "Anayasaya, bazıları değiştirilemez Bölüm I'de yer alacak şekilde yazılmış belirli pil kimyaları, telsiz markaları, zamanlayıcılar ve silah türleri, geleceğin daha iyi teknolojisini yasal olarak müştereklerin dışına kilitleyecektir.",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "%75'lik nitelikli çoğunlukla veya Bölüm I'deki mutlak katılıkla korunan mühendislik parametreleri, eskiyerek kilitlenmeye yol açmakta ve eleştirmenlere doğrulanmamış güvenlik iddiaları gibi kolay olgusal hedefler sunmaktadır.",
+    "constitutional_countermeasure": "Anayasa artık yalnızca işlevsel gereklilikleri belirtmektedir. Teknolojiler ve parametreler, bir mandal kuralı uyarınca (anayasal bir güvenceyi asla zayıflatamaz) %60 nitelikli çoğunlukla değiştirilebilen ve Madde 4.6 uyarınca denetlenebilen (Madde 10.6.4 ile çıpalanmış) Organik Kanun Eki'ne (OL-1 ila OL-9) taşınmıştır. Doğrulanmamış nicel iddialar GEÇİCİ — DOĞRULANMAMIŞ olarak etiketlenmiştir.",
+    "canonical_articles": [
+      "Art. 1.4.3",
+      "Art. 6.2.2",
+      "Art. 8.1.4",
+      "Art. 10.5.3",
+      "Art. 10.6.4"
+    ],
+    "verdict_human": "KIRMIZI TAKIM KAZANDI — teknoloji değiştirilebilir bir Organik Kanun Eki'ne taşındı",
+    "human_summary": {
+      "lead": "Anayasa neyin garanti edilmesi gerektiğini belirtir; ayrı, güncellenmesi daha kolay bir ek ise bunu bugün hangi teknolojinin yerine getirdiğini gösterir.",
+      "points": [
+        "Daha iyi teknoloji, bir anayasa değişikliği olmaksızın benimsenebilir.",
+        "Hiçbir teknik kural anayasal bir korumayı asla düşüremez.",
+        "Kanıtlanmamış sayılar açıkça geçici olarak işaretlenir."
+      ]
+    },
+    "category": "science",
+    "keywords": [
+      "organic law",
+      "technology neutrality",
+      "annex",
+      "obsolescence",
+      "sim-qa-17"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
   }
 ]

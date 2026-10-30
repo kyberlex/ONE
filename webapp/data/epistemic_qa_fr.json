@@ -277,13 +277,13 @@
   },
   {
     "engagement_id": "ENG-05",
-    "title": "Crise de Réciprocité du Travail et Parasitisme dans les Soins Communs",
-    "adversary": "RED-5 (Défection Civique et Refus des Tours de Service)",
+    "title": "Effondrement de la réciprocité du travail et comportement de passager clandestin dans les soins",
+    "adversary": "RED-4",
     "target_article": "Article 5.1 — Universal Labor Duty & Article 5.2 — Labor Reciprocity Sanctions",
-    "scenario": "Dans un collectif de 300 personnes, 25 % des membres refusent d'effectuer leurs tours d'entretien du réseau d'égouts, de cuisine et d'aide aux malades, affirmant que l'Article 1.3 leur garantit la vie sans contrepartie.",
+    "scenario": "Exploitant la garantie inconditionnelle de survie biologique de Palier 1 (nourriture, logement et soins médicaux gratuits à vie), une faction civique coordonnée lance une grève sauvage et une campagne de paresse sociale contre la maintenance pénible des égouts et les rotations agricoles. Simultanément, des clans familiaux traditionalistes s'opposent à l'alloparentalité collective (Art. 5.3), revendiquant une souveraineté parentale privée exclusive et contestant la validité des sanctions civiques non carcérales.",
     "severity_tier": "FALSE_POSITIVE",
-    "exploit_summary": "Test de la robustesse du modèle face au parasitisme organisé et à la démobilisation du travail de soin.",
-    "constitutional_countermeasure": "Le problème est résolu par l'Article 5.2 (Invariant de réciprocité et sanctions graduées). L'Article 1.3 préserve l'intégrité biologique de la personne (personne n'est affamé ni jeté à la rue), mais les réfractaires chroniques perdent l'accès aux agréments de Niveau 3 : fab-labs, bibliothèques spécialisées, fêtes et gourmandises, et leur logement est réduit à une chambre simple de subsistance. La réprobation sociale transparente et la perte des privilèges rétablissent l'équilibre sans prisons ni violences policières. L'exploit est un FAUX POSITIF.",
+    "exploit_summary": "L'Équipe Rouge affirme qu'un seuil minimal inconditionnel de survie biologique, couplé à une interdiction indérogeable de l'expulsion cinétique et de la détention carcérale, engendre un « équilibre de Nash parasitaire » dans lequel la maintenance physique de Classe A s'effondre, les nœuds d'assainissement municipaux s'étranglent en épidémies catastrophiques, les clans traditionalistes exploitent l'Immunité des aidants, et la déchéance des droits de tirage au sort opère comme une subvention du loisir.",
+    "constitutional_countermeasure": "L'offensive de RED-4 échoue sur l'ensemble des quatre portes de décision juridictionnelle. Premièrement, le modèle issu de la théorie comportementale des jeux avancé s'effondre face à l'anthropologie empirique (Ostrom 1990, Boehm 1999, Bowles & Gintis 2011). Les êtres humains ne font pas universellement défection au profit de la seule survie physiologique lorsque la non-coopération entraîne la déchéance de l'usufruit foncier, des outils de fabrication de pointe, des transports à grande vitesse et de l'autogouvernance démocratique. Les multiplicateurs ergonomiques hollandais de 3x à 5x créent un équilibre où la contribution d'environ quatre heures de maintenance rotative par mois garantit un plein épanouissement civique, rendant le gain net de la coopération écrasant par rapport à la défection. Deuxièmement, la crise d'ingénierie environnementale postulée par RED-4 (refoulement des eaux usées dû à l'étranglement des nœuds) ignore l'Article 7.1.4, qui prescrit expressément que l'étranglement protecteur ne restreindra jamais la distribution nette des biens de survie de Palier 1 et impose l'actionnement parallèle instantané de conduites de dérivation passives gravitaires soutenues par des réserves matérielles de 120 heures. L'étranglement au titre de l'Article 5.1.3 s'applique strictement aux effluents industriels non essentiels en amont, délestant 60 % à 85 % de la demande biochimique en oxygène tout en préservant les flux sanitaires domestiques. Troisièmement, la prétendue faille d'immunité des aidants est explicitement neutralisée par l'Article 5.6.2, qui soustrait le jugement aux réseaux familiaux locaux pour l'attribuer à un Panel de tirage au sort de quinze (15) citoyens tirés au sort à l'aveugle et issus de différents bassins versants, évaluant les étiologies diagnostiques certifiées au regard de ratios démographiques objectifs. Quatrièmement, l'affirmation selon laquelle la déchéance du tirage au sort subventionnerait le loisir des transfuges est sans objet : suite au dossier SIM-QA-15, les droits politiques et de tirage au sort ne sont jamais conditionnés à la réciprocité du travail (Article 5.2.3) ; seuls le sont l'accès aux surplus de Palier 3 et la superficie de plancher excédentaire. Enfin, la rétention matérielle de biens par des transfuges est traitée de manière non cinétique via le Découplage Métabolique de Stade 4 (isolant les circuits industriels au périmètre) et la révocation de l'usufruit par le Community Land Trust sans violer la souveraineté corporelle (Article 1.2). Les dispositions constitutionnelles existantes absorbant de manière exhaustive chaque vecteur sans blocage interne ni effondrement biophysique, l'attaque est classée comme FALSE_POSITIVE.",
     "canonical_articles": [
       "Art. 1.2",
       "Art. 1.3",
@@ -297,13 +297,14 @@
       "Art. 10.3.1"
     ],
     "timestamp": "2026-09-13T23:25:24Z",
-    "verdict_human": "RÉSOLU : Subsistance garantie, mais suspension des biens discrétionnaires pour les réfractaires",
+    "verdict_human": "RÉSOLU : Automatisation avancée, devoirs civiques rotatifs légers et motivation intrinsèque",
     "human_summary": {
-      "lead": "Personne n'est forcé de travailler sous la menace de la faim, mais ceux qui refusent d'aider à la cuisine ou aux égouts n'ont accès qu'au confort de base, sans les loisirs et ateliers du Niveau 3.",
+      "lead": "Nul n'est contraint au salariat servile par la peur de la faim ou du sans-abrisme. Le travail lourd est automatisé et la maintenance civique essentielle est équitablement partagée.",
       "points": [
-        "Toit et nourriture assurés : Aucune expulsion ni privation des besoins vitaux fondamentaux (Art. 1.3).",
-        "Perte des agréments : Les ateliers, machines et événements récréatifs sont réservés aux coopérants (Art. 5.2).",
-        "Zéro prison : L'équilibre civique se régule par des incitations sociales bienveillantes, sans violence d'État."
+        "La survie fondamentale (nutrition, logement, soins de santé) est un droit de naissance constitutionnel inconditionnel : le chantage économique est éliminé.",
+        "Le travail dangereux et répétitif (égouts, assainissement lourd) est largement automatisé grâce à la robotique municipale en code source ouvert.",
+        "La maintenance manuelle restante est répartie en quarts communautaires courts et tournants (quelques heures par semaine et par citoyen).",
+        "Les individus contribuent et innovent naturellement, animés par un sens réel de leur mission, l'appartenance sociale et un élan créatif intrinsèque."
       ]
     }
   },
@@ -11678,5 +11679,154 @@
       "corridors de migration ouverts",
       "qa-defe-349"
     ]
+  },
+  {
+    "engagement_id": "SIM-QA-10",
+    "title": "Embargo sur les ressources c. survie de Palier 1 (viabilité de Hawkins-Simon)",
+    "question": "Qu'advient-il de la survie fondamentale si des fournisseurs extérieurs coupent les approvisionnements des communs ?",
+    "adversary": "RED-1 (Stratège d'embargo)",
+    "target_article": "Article 3.1 — Thermodynamic Boundary & Article 3.5 — Strategic Physical Reserves",
+    "scenario": "Une juridiction historique hostile coupe de 30 à 80 % des intrants externes importés par une biorégion. L'économie entrées-sorties garantit-elle toujours la survie de Palier 1, et les réserves comblent-elles le déficit ?",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "Une exécution reproductible de SIMONE a démontré que l'ancienne norme de preuve (production non négative de Leontief) ne pouvait jamais échouer, et ne prouvait donc rien. La matrice ne comportait aucune donnée relative aux importations ou à la capacité, de sorte que la résilience aux embargos ne pouvait même pas être mesurée, et les réserves composées exclusivement de céréales ne couvraient ni le chauffage, ni l'eau, ni les produits frais.",
+    "constitutional_countermeasure": "Le nouvel Article 3.1.6 (Clôture autarcique de Palier 1) exige un audit public annuel prouvant que chaque secteur pourvoyant directement ou indirectement aux besoins de Palier 1, y compris le logement et les soins de santé, peut satisfaire l'intégralité de la demande de Palier 1 à partir des seules ressources locales et capacités installées, avec des intrants externes nuls et une marge de réserve publiée. L'Article 3.5.2 compose désormais les réserves en fonction des déficits constatés par l'audit : stocks entreposables, pièces de rechange et capacité de production redondante pour les biens non stockables. Preuve : simone/benchmarks/sim_qa_10_embargo.jl.",
+    "canonical_articles": [
+      "Art. 3.1.5",
+      "Art. 3.1.6",
+      "Art. 3.5.2"
+    ],
+    "verdict_human": "VICTOIRE DE L'ÉQUIPE ROUGE — constitution amendée : la survie doit être prouvée autarcique chaque année",
+    "human_summary": {
+      "lead": "L'attaque a révélé une faille réelle ; nous avons donc modifié la Constitution au lieu de chercher à la justifier.",
+      "points": [
+        "L'ancien test ne pouvait jamais échouer et ne prouvait donc rien face aux embargos.",
+        "Chaque biorégion doit désormais démontrer, chaque année, qu'elle peut nourrir, chauffer, loger et soigner l'ensemble de sa population sans aucune importation.",
+        "Les réserves sont planifiées selon les déficits mesurés, y compris des machines de secours pour ce qui ne peut être stocké, comme le chauffage."
+      ]
+    },
+    "category": "thermodynamics",
+    "keywords": [
+      "embargo",
+      "leontief",
+      "hawkins-simon",
+      "reserves",
+      "autarky",
+      "survival",
+      "sim-qa-10"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-11",
+    "title": "Submersion pétitionnaire et épuisement des jurys de tirage au sort",
+    "question": "Une faction peut-elle paralyser un conseil de tirage au sort en le submergeant de pétitions ?",
+    "adversary": "RED-3 (Faction de malveillance)",
+    "target_article": "Article 4.3 — Stratified Selection, Universal Service, and Anti-Bureaucratic Rotation",
+    "scenario": "Une faction coordonnée submerge un conseil de 15 citoyens de pétitions de mauvaise foi jusqu'à l'épuisement des jurés et l'expiration des requêtes de bonne foi.",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "La constitution ne prévoyait aucune procédure de recevabilité des pétitions. Dans un modèle synthétique, une faction de 5 % a fait chuter la proportion de pétitions de bonne foi examinées sous 8 semaines de 99,7 % à 2,0 %, et les jurés ont travaillé plus de 15 heures par semaine tout au long de l'année.",
+    "constitutional_countermeasure": "Nouvel Article 4.3.5 : la publication n'est jamais filtrée, mais l'inscription à l'ordre du jour requiert le co-parrainage d'une fraction déterminée de mandants. Chacun détient une allocation de parrainage égale, qui n'est jamais conditionnée au travail, à la conduite ou aux opinions. Les créneaux à l'ordre du jour sont limités et attribués par tirage au sort public pondéré selon les soutiens distincts, et un Panel de tri rotatif de 3 citoyens vérifie la forme et fusionne les doublons sans jamais se prononcer sur le fond. L'épuisement a disparu dans chaque simulation, mais une faction mobilisée à 20 % peut encore s'approprier environ la moitié des créneaux de l'ordre du jour, de sorte que le verdict demeure provisoire dans l'attente d'un étalonnage. Preuve : simone/benchmarks/sim_qa_11_petition_dos.py.",
+    "canonical_articles": [
+      "Art. 4.2.1",
+      "Art. 4.3.4",
+      "Art. 4.3.5"
+    ],
+    "verdict_human": "VICTOIRE DE L'ÉQUIPE ROUGE — corrigé ; risque résiduel ouvertement documenté",
+    "human_summary": {
+      "lead": "Chacun peut toujours tout publier, mais l'accès à l'ordre du jour exige désormais un soutien réel, égal et non achetable.",
+      "points": [
+        "Chaque personne reçoit le même budget restreint de parrainage, et son utilisation sur de nombreuses pétitions devient quadratiquement coûteuse.",
+        "Les créneaux de l'ordre du jour sont limités et attribués par tirage au sort public, de sorte que le volume à lui seul ne peut capturer le conseil.",
+        "Le correctif n'est pas parfait : un groupe nombreux et organisé obtient toujours une part du temps de l'ordre du jour approximativement proportionnelle à sa taille."
+      ]
+    },
+    "category": "demarchy",
+    "keywords": [
+      "petition",
+      "spam",
+      "dos",
+      "sortition",
+      "agenda",
+      "burnout",
+      "sim-qa-11"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-15",
+    "title": "Audit des contradictions internes (armes, seuils, sanctions de travail, contrôle de constitutionnalité)",
+    "question": "La Constitution se contredit-elle en quelque point ?",
+    "adversary": "RED-4 (Critique textuel hostile)",
+    "target_article": "Articles 2.6, 4.1–4.6, 5.2, 7.1, 8.1, 8.6, 10.5",
+    "scenario": "Un critique oppose la Constitution à elle-même : une interdiction des armes côtoyant des plateformes de frappe autonomes, un seuil de 66 % extérieur à l'échelonnement 75/60/50, un veto unicitoyen, des sanctions de travail privant du droit de vote, et aucun organe investi du pouvoir de déclarer des actes nuls.",
+    "severity_tier": "RED_WINS_WITHDRAWN",
+    "exploit_summary": "Toutes les contradictions étaient réelles et vérifiables par les textes. Pire cas : une faction contrôlant les plannings de travail pouvait assigner aux dissidents des vacations intenables et les déchoir légalement de leurs droits de tirage au sort.",
+    "constitutional_countermeasure": "L'interception est restreinte aux engins non habités et ne prend jamais pour cible des personnes, et l'action à distance est limitée à la neutralisation non létale (Art. 7.1.2, 8.1.3, 8.1.4). Le seuil de 66 % est remplacé par l'échelonnement standard (Art. 10.5.3). Une règle arithmétique de seuil est ajoutée (Art. 4.5.4), et le veto unicitoyen devient une certification susceptible de recours (Art. 2.6.2). La suspension des droits de tirage au sort est RETIRÉE : les droits politiques ne sont jamais conditionnés au travail, et le logement de Palier 1 n'est jamais conditionné (Art. 5.2). Un Jury de contrôle constitutionnel de 101 citoyens tirés au sort est institué (Art. 4.6). La liberté d'association est harmonisée avec l'interdiction de la capture des délégués (Art. 4.1.3), et les majorités qualifiées peuvent étendre mais jamais restreindre les droits du Chapitre I (Art. 4.5.1, 8.6.2).",
+    "canonical_articles": [
+      "Art. 2.6.2",
+      "Art. 4.1.3",
+      "Art. 4.5.4",
+      "Art. 4.6",
+      "Art. 5.2.3",
+      "Art. 7.1.2",
+      "Art. 8.1.4",
+      "Art. 10.5.3"
+    ],
+    "verdict_human": "VICTOIRE DE L'ÉQUIPE ROUGE — une disposition retirée, huit articles corrigés",
+    "human_summary": {
+      "lead": "Lorsque les critiques ont raison, le texte change. Votre droit de vote ne peut plus vous être retiré pour des absences à des vacations de travail.",
+      "points": [
+        "Les machines de défense ne peuvent neutraliser que des machines assaillantes, jamais des êtres humains.",
+        "Tous les seuils de vote obéissent désormais à un échelonnement cohérent doté d'une arithmétique explicite.",
+        "Un jury citoyen tiré au sort décide désormais de la contrariété éventuelle d'une loi ou d'un décret à la Constitution."
+      ]
+    },
+    "category": "rights",
+    "keywords": [
+      "contradiction",
+      "coherence",
+      "weapons",
+      "sanctions",
+      "voting rights",
+      "constitutional review",
+      "sim-qa-15"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-17",
+    "title": "Verrouillage technologique : détails d'ingénierie figés dans la Constitution",
+    "question": "Pourquoi la Constitution ne mentionne-t-elle plus de technologies spécifiques ?",
+    "adversary": "RED-5 (Verrou d'obsolescence)",
+    "target_article": "Articles 1.4.3, 6.2–6.4, 8.1.4, 8.2.2, 10.5.3, 10.6.4, Chapter XI",
+    "scenario": "La fixation dans la Constitution de chimies de batterie spécifiques, de marques de radio, de temporisateurs et de types d'armes, dont certains au sein du Chapitre I non modifiable, exclurait juridiquement des communs les technologies futures plus performantes.",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "Des paramètres d'ingénierie protégés par une majorité qualifiée de 75 %, ou par un verrouillage absolu au Chapitre I, engendrent un blocage par obsolescence et offrent aux détracteurs des cibles factuelles faciles, telles que des affirmations de sécurité non vérifiées.",
+    "constitutional_countermeasure": "La Constitution n'énonce désormais que des exigences fonctionnelles. Les technologies et paramètres sont transférés à l'Annexe des lois organiques (OL-1 à OL-9), modifiable à la majorité qualifiée de 60 % en vertu d'une règle de cliquet (elle ne peut jamais affaiblir une garantie constitutionnelle) et soumise à contrôle au titre de l'Article 4.6 (sanctuarisé par l'Art. 10.6.4). Les allégations quantitatives non vérifiées sont qualifiées de PROVISOIRE — NON VÉRIFIÉ.",
+    "canonical_articles": [
+      "Art. 1.4.3",
+      "Art. 6.2.2",
+      "Art. 8.1.4",
+      "Art. 10.5.3",
+      "Art. 10.6.4"
+    ],
+    "verdict_human": "VICTOIRE DE L'ÉQUIPE ROUGE — technologies transférées à une Annexe des lois organiques modifiable",
+    "human_summary": {
+      "lead": "La Constitution énonce ce qui doit être garanti ; une annexe distincte, plus aisée à actualiser, précise quelle technologie y pourvoit aujourd'hui.",
+      "points": [
+        "Des technologies plus performantes peuvent être adoptées sans révision constitutionnelle.",
+        "Aucune règle technique ne peut abaisser une protection constitutionnelle.",
+        "Les chiffres non étayés sont explicitement signalés comme provisoires."
+      ]
+    },
+    "category": "science",
+    "keywords": [
+      "organic law",
+      "technology neutrality",
+      "annex",
+      "obsolescence",
+      "sim-qa-17"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
   }
 ]

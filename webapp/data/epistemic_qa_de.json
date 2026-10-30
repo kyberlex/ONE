@@ -277,13 +277,13 @@
   },
   {
     "engagement_id": "ENG-05",
-    "title": "Reziprozitätskrise und Trittbrettfahren bei Gemeinschaftsdiensten",
-    "adversary": "RED-5 (Gemeinschaftsverweigerung bei Pflichtdiensten)",
+    "title": "Zusammenbruch der Arbeitsreziprozität & Trittbrettfahren in der Fürsorge",
+    "adversary": "RED-4",
     "target_article": "Article 5.1 — Universal Labor Duty & Article 5.2 — Labor Reciprocity Sanctions",
-    "scenario": "In einer Siedlung von 300 Bürgern weigern sich 25 %, bei Kanalreinigung, Küche und Krankenpflege mitzuhelfen, mit dem Argument, Art. 1.3 garantiere ihnen das Leben ohne Vorbedingung.",
+    "scenario": "Unter Ausnutzung der bedingungslosen biologischen Überlebensgarantie der Stufe 1 (lebenslange kostenlose Verpflegung, Unterkunft und medizinische Versorgung) initiiert eine koordinierte zivile Faktion einen wilden Streik und eine Kampagne sozialer Trägheit gegen beschwerliche Kanalisationswartungen und landwirtschaftliche Rotationen. Gleichzeitig widersetzen sich traditionalistische Familienclans der gemeinschaftlichen Fremdbetreuung (Art. 5.3), beanspruchen eine ausschließliche private elterliche Souveränität und fechten die Gültigkeit nicht-karzeraler ziviler Sanktionen an.",
     "severity_tier": "FALSE_POSITIVE",
-    "exploit_summary": "Belastungsprobe für das Modell bei organisierter Arbeitsverweigerung in der Basisversorgung.",
-    "constitutional_countermeasure": "Geregelt durch Art. 5.2 (Reziprozität und Stufensanktionen). Das nackte Überleben bleibt geschützt (Art. 1.3), doch Dauerverweigerer verlieren Stufe-3-Privilegien: Zutritt zu Werkstätten, Bibliotheken und Festen ruht, und die Wohnung wird auf ein Basiszimmer umgestellt. Die soziale Ächtung stellt die Balance ohne Gefängnisse wieder her. FALSCH-POSITIV.",
+    "exploit_summary": "Das Red Team behauptet, dass eine bedingungslose biologische Überlebensbasislinie, gekoppelt mit einem unabdingbaren Verbot kinetischer Räumungen und karzeraler Inhaftierungen, ein „parasitäres Nash-Gleichgewicht“ schaffe, in dem die physische Instandhaltung der Klasse A zusammenbreche, kommunale Abwasserknotenpunkte infolge von Drosselungen in katastrophale Epidemien abgleiten, traditionalistische Clans die Fürsorgeimmunität ausnutzen und die Entziehung von Losrechten als Mußesubvention wirke.",
+    "constitutional_countermeasure": "Der Angriff von RED-4 scheitert an allen vier Entscheidungsschranken. Erstens bricht das vorgebrachte verhaltensökonomische Spieltheoriemodell vor der empirischen Anthropologie zusammen (Ostrom 1990, Boehm 1999, Bowles & Gintis 2011). Menschen desertieren nicht universell auf das bloße physiologische Überleben, wenn Nichtkooperation den Nießbrauch an Grund und Boden, fortschrittliche Fertigungswerkzeuge, Hochgeschwindigkeitstransport und demokratische Selbstverwaltung verwirkt. Die 3x- bis 5x-Multiplikatoren des niederländischen Ergonomiemodells schaffen ein Gleichgewicht, in dem ein Beitrag von annähernd vier Stunden rotierender Instandhaltung pro Monat die volle zivilgesellschaftliche Entfaltung sichert, wodurch der Nettonutzen der Kooperation im Verhältnis zur Defektion überwältigend positiv ausfällt. Zweitens ignoriert die von RED-4 postulierte umweltingenieurtechnische Krise (Abwasserrückstau infolge von Knotendrosselungen) Artikel 7.1.4, welcher ausdrücklich gebietet, dass schützende Drosselungen niemals die Nettoauslieferung von Überlebensgütern der Stufe 1 beschneiden dürfen, und die unverzügliche parallele Auslösung passiver, durch Schwerkraft gespeister Bypassleitungen vorschreibt, die durch 120-Stunden-Physischreserven abgesichert sind. Eine Drosselung nach Artikel 5.1.3 findet ausschließlich auf vorgelagerte, nicht-essenzielle Industrieabwässer Anwendung, wodurch 60 % bis 85 % des biochemischen Sauerstoffbedarfs abgebaut werden, während häusliche Sanitärströme unangetastet bleiben. Drittens wird das angebliche Schlupfloch der Fürsorgeimmunität durch Artikel 5.6.2 ausdrücklich neutralisiert, der die Rechtsfindung lokalen Verwandtschaftsnetzwerken entzieht und einem blind ausgelosten, gebietsübergreifenden Losverfahren-Gremium aus fünfzehn (15) Bürgern überträgt, das zertifizierte diagnostische Ätiologien anhand objektiver demografischer Verhältnisse bewertet. Viertens ist die Behauptung, die Entziehung von Losrechten subventioniere die Muße von Defektoren, hinfällig: Gemäß Verfahren SIM-QA-15 sind politische Rechte und Losrechte niemals an Arbeitsreziprozität gekoppelt (Artikel 5.2.3); dies betrifft ausschließlich den Zugang zu Stufe-3-Überschüssen und überschüssiger Wohnfläche. Schließlich wird die Einbehaltung physischen Eigentums durch Defektoren nicht-kinetisch über eine metabolische Entkopplung der Stufe 4 (Isolierung industrieller Kreisläufe an der Peripherie) und den Widerruf des Community Land Trust-Nießbrauchs geregelt, ohne die körperliche Souveränität zu verletzen (Artikel 1.2). Da die bestehenden verfassungsrechtlichen Bestimmungen jeden Vektor ohne inneren Stillstand oder biophysikalischen Kollaps umfassend absorbieren, wird der Angriff als FALSE_POSITIVE eingestuft.",
     "canonical_articles": [
       "Art. 1.2",
       "Art. 1.3",
@@ -297,13 +297,14 @@
       "Art. 10.3.1"
     ],
     "timestamp": "2026-09-13T23:25:24Z",
-    "verdict_human": "GELÖST: Überleben bedingungslos gesichert, aber Entzug von Freizeitluxus bei Dienstverweigerung",
+    "verdict_human": "BEIGELEGT: Fortgeschrittene Automatisierung, leichte rotierende Bürgerpflichten und intrinsische Motivation",
     "human_summary": {
-      "lead": "Niemand wird mit Hunger oder Polizei zur Arbeit gezwungen, aber wer sich weigert anzupacken, muss mit einfacher Unterkunft und ohne Freizeiteinrichtungen auskommen.",
+      "lead": "Niemand wird durch die Furcht vor Hunger oder Obdachlosigkeit in Lohnsklaverei gezwungen. Schwere Arbeit ist automatisiert, und wesentliche zivile Instandhaltungsaufgaben werden gerecht aufgeteilt.",
       "points": [
-        "Niemand verhungert: Nahrung, Wärme und ein Dach über dem Kopf bleiben gesichert (Art. 1.3).",
-        "Keine Freizeitprivilegien: Gemeinschaftswerkstätten und Feste stehen nur Beteiligten offen (Art. 5.2).",
-        "Keine Gefängnisse: Konflikte lösen sich durch soziale Konsequenzen und Vereinbarungen, nicht durch Haft."
+        "Das Grundüberleben (Ernährung, Wohnraum, Gesundheitsversorgung) ist ein bedingungsloses verfassungsmäßiges Geburtsrecht: Wirtschaftliche Erpressung ist beseitigt.",
+        "Gefährliche und repetitive Arbeiten (Kanalisation, schwere Abfallwirtschaft) sind weitgehend über quelloffene kommunale Robotik automatisiert.",
+        "Verbleibende manuelle Instandhaltung wird auf kurze, rotierende Gemeinschaftsschichten verteilt (wenige Stunden pro Woche pro Bürger).",
+        "Menschen bringen sich von Natur aus ein und schaffen Neues aus echtem Sinnempfinden, sozialer Zugehörigkeit und intrinsischem schöpferischem Antrieb."
       ]
     }
   },
@@ -11708,5 +11709,154 @@
       "offene migrationskorridore",
       "qa-defe-349"
     ]
+  },
+  {
+    "engagement_id": "SIM-QA-10",
+    "title": "Ressourcenembargo vs. Stufe-1-Überleben (Hawkins-Simon-Lebensfähigkeit)",
+    "question": "Was geschieht mit dem grundlegenden Überleben, wenn externe Lieferanten die Allmende abschneiden?",
+    "adversary": "RED-1 (Embargo-Stratege)",
+    "target_article": "Article 3.1 — Thermodynamic Boundary & Article 3.5 — Strategic Physical Reserves",
+    "scenario": "Eine feindliche Altrechtsordnung kappt 30–80 % der externen Inputs, die eine Bioregion importiert. Erbringt die Input-Output-Wirtschaft weiterhin das Stufe-1-Überleben, und überbrücken die Reserven die Lücke?",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "Ein reproduzierbarer SIMONE-Lauf zeigte, dass der alte Beweisstandard (nicht-negativer Leontief-Output) niemals fehlschlagen kann und somit nichts bewies. Der Matrix fehlten Import- und Kapazitätsdaten, sodass die Embargoresilienz nicht einmal gemessen werden konnte und reine Getreidereserven Wärme, Wasser und Frischwaren nicht abdeckten.",
+    "constitutional_countermeasure": "Der neue Artikel 3.1.6 (Autarker Verschluss der Stufe 1) verlangt ein jährliches öffentliches Audit, das nachweist, dass jeder Sektor, der direkt oder indirekt Stufe-1-Bedarfe deckt – einschließlich Unterkunft und Gesundheitsversorgung –, die volle Stufe-1-Nachfrage allein aus lokalen Ressourcen und installierter Kapazität decken kann, bei externen Inputs von null und einer veröffentlichten Reservemarge. Artikel 3.5.2 stellt die Reserven nunmehr entsprechend den Auditlücken zusammen: lagerfähige Bestände, Ersatzteile und redundante Produktionskapazitäten für Güter, die nicht gelagert werden können. Evidenz: simone/benchmarks/sim_qa_10_embargo.jl.",
+    "canonical_articles": [
+      "Art. 3.1.5",
+      "Art. 3.1.6",
+      "Art. 3.5.2"
+    ],
+    "verdict_human": "RED TEAM HAT GEWONNEN — Verfassung nachgebessert: Das Überleben muss jedes Jahr als autark nachgewiesen werden",
+    "human_summary": {
+      "lead": "Der Angriff legte eine reale Lücke offen, daher haben wir die Verfassung geändert, statt das Problem wegzuerklären.",
+      "points": [
+        "Die alte Prüfung konnte niemals fehlschlagen, bewies also nichts über Embargos.",
+        "Jede Bioregion muss nun jedes Jahr nachweisen, dass sie alle Menschen ohne jegliche Importe ernähren, wärmen, behausen und medizinisch versorgen kann.",
+        "Reserven werden anhand der gemessenen Lücken geplant, einschließlich Reservemaschinen für Dinge, die nicht gelagert werden können, wie etwa Wärme."
+      ]
+    },
+    "category": "thermodynamics",
+    "keywords": [
+      "embargo",
+      "leontief",
+      "hawkins-simon",
+      "reserves",
+      "autarky",
+      "survival",
+      "sim-qa-10"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-11",
+    "title": "Petitionsüberflutung & Erschöpfung der Losverfahren-Jury",
+    "question": "Kann eine Faktion einen Losverfahren-Rat lahmlegen, indem sie ihn mit Petitionen überflutet?",
+    "adversary": "RED-3 (Griefing-Faktion)",
+    "target_article": "Article 4.3 — Stratified Selection, Universal Service, and Anti-Bureaucratic Rotation",
+    "scenario": "Eine koordinierte Faktion überflutet einen 15-Bürger-Rat mit böswilligen Petitionen, bis die Geschworenen ausbrennen und gutgläubige Anträge verfallen.",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "Die Verfassung enthielt kein Verfahren zur Entgegennahme von Petitionen. In einem synthetischen Modell senkte eine 5-%-Faktion den Anteil der innerhalb von 8 Wochen verhandelten gutgläubigen Petitionen von 99,7 % auf 2,0 %, und die Geschworenen arbeiteten das ganze Jahr über mehr als 15 Stunden pro Woche.",
+    "constitutional_countermeasure": "Neuer Artikel 4.3.5: Die Veröffentlichung wird niemals gefiltert, doch die Aufnahme in die Tagesordnung erfordert die Mitunterzeichnung durch einen festen Anteil der Stimmberechtigten. Jeder besitzt ein gleiches Unterstützungskontingent, das niemals an Arbeit, Verhalten oder Meinung gekoppelt werden darf. Tagesordnungsslots sind begrenzt und werden durch eine nach distinkter Unterstützung gewichtete öffentliche Lotterie vergeben; ein rotierendes 3-Bürger-Triage-Gremium prüft die Form und führt Duplikate zusammen, ohne jemals über die Begründetheit zu urteilen. Das Burnout verschwand in jedem simulierten Lauf, doch eine voll mobilisierte 20-%-Faktion kann immer noch etwa die Hälfte der Tagesordnungsslots beanspruchen, sodass der Befund bis zur Kalibrierung vorläufig bleibt. Evidenz: simone/benchmarks/sim_qa_11_petition_dos.py.",
+    "canonical_articles": [
+      "Art. 4.2.1",
+      "Art. 4.3.4",
+      "Art. 4.3.5"
+    ],
+    "verdict_human": "RED TEAM HAT GEWONNEN — nachgebessert; Restrisiko offen dokumentiert",
+    "human_summary": {
+      "lead": "Jeder kann weiterhin alles veröffentlichen, doch um auf die Tagesordnung zu gelangen, bedarf es nun echter, gleicher, unkäuflicher Unterstützung.",
+      "points": [
+        "Jede Person erhält dasselbe kleine Unterstützungsbudget, und dessen Einsatz auf viele Petitionen wird quadratisch teurer.",
+        "Tagesordnungsslots sind begrenzt und werden per öffentlichem Losverfahren vergeben, sodass Masse allein den Rat nicht kapern kann.",
+        "Die Lösung ist nicht perfekt: Eine große organisierte Gruppe erhält weiterhin einen Anteil an der Beratungszeit, der in etwa ihrer Größe entspricht."
+      ]
+    },
+    "category": "demarchy",
+    "keywords": [
+      "petition",
+      "spam",
+      "dos",
+      "sortition",
+      "agenda",
+      "burnout",
+      "sim-qa-11"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-15",
+    "title": "Prüfung interner Widersprüche (Waffen, Schwellenwerte, Arbeitssanktionen, Normenkontrolle)",
+    "question": "Widerspricht sich die Verfassung an irgendeiner Stelle selbst?",
+    "adversary": "RED-4 (Feindlicher Textkritiker)",
+    "target_article": "Articles 2.6, 4.1–4.6, 5.2, 7.1, 8.1, 8.6, 10.5",
+    "scenario": "Ein Kritiker zitiert die Verfassung gegen sich selbst: ein Waffenverbot neben autonomen Schlagplattformen, ein 66-%-Schwellenwert außerhalb der 75/60/50-Staffelung, ein Veto durch einen einzelnen Bürger, Arbeitssanktionen, die Stimmrechte entziehen, und kein Organ, das befugt ist, Rechtsakte für nichtig zu erklären.",
+    "severity_tier": "RED_WINS_WITHDRAWN",
+    "exploit_summary": "Alle Widersprüche waren real und durch Textzitate belegbar. Schlimmster Fall: Eine Faktion, die Dienstpläne kontrolliert, könnte Dissidenten unzumutbare Schichten zuweisen und ihnen rechtmäßig ihre Losrechte entziehen.",
+    "constitutional_countermeasure": "Das Abfangen wird auf unbemannte Maschinen beschränkt und richtet sich niemals gegen Personen; Distanzmaßnahmen sind auf nicht-tödliche Unbrauchbarmachung beschränkt (Art. 7.1.2, 8.1.3, 8.1.4). Der 66-%-Schwellenwert wird durch die Standardstaffel ersetzt (Art. 10.5.3). Eine Schwellenwert-Arithmetikregel wird hinzugefügt (Art. 4.5.4), und das Ein-Bürger-Veto wird zu einer anfechtbaren Zertifizierung (Art. 2.6.2). Die Aussetzung von Losrechten wird ZURÜCKGENOMMEN: Politische Rechte sind niemals an Arbeitsleistungen gekoppelt, und Unterkünfte der Stufe 1 sind niemals konditioniert (Art. 5.2). Eine aus 101 per Los ermittelten Bürgern bestehende Verfassungsprüfungsjury wird geschaffen (Art. 4.6). Die Vereinigungsfreiheit wird mit dem Verbot der Kaperung von Delegierten in Einklang gebracht (Art. 4.1.3), und Supermajoritäten können die Rechte aus Kapitel I erweitern, aber niemals schmälern (Art. 4.5.1, 8.6.2).",
+    "canonical_articles": [
+      "Art. 2.6.2",
+      "Art. 4.1.3",
+      "Art. 4.5.4",
+      "Art. 4.6",
+      "Art. 5.2.3",
+      "Art. 7.1.2",
+      "Art. 8.1.4",
+      "Art. 10.5.3"
+    ],
+    "verdict_human": "RED TEAM HAT GEWONNEN — eine Bestimmung zurückgenommen, acht Artikel korrigiert",
+    "human_summary": {
+      "lead": "Wenn die Kritiker recht haben, ändert sich der Text. Ihr Stimmrecht kann Ihnen nicht mehr wegen versäumter Arbeitsschichten entzogen werden.",
+      "points": [
+        "Verteidigungsmaschinen dürfen ausschließlich anrückende Maschinen stoppen, niemals Menschen.",
+        "Alle Abstimmungsschwellen folgen nun einer einheitlichen Staffel mit expliziter Arithmetik.",
+        "Eine per Los ausgewählte Bürgerjury entscheidet nun darüber, ob ein Gesetz oder Dekret gegen die Verfassung verstößt."
+      ]
+    },
+    "category": "rights",
+    "keywords": [
+      "contradiction",
+      "coherence",
+      "weapons",
+      "sanctions",
+      "voting rights",
+      "constitutional review",
+      "sim-qa-15"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-17",
+    "title": "Technologie-Lock-in: In der Verfassung festgeschriebene Ingenieursdetails",
+    "question": "Warum nennt die Verfassung keine spezifischen Technologien mehr?",
+    "adversary": "RED-5 (Obsoleszenz-Lock)",
+    "target_article": "Articles 1.4.3, 6.2–6.4, 8.1.4, 8.2.2, 10.5.3, 10.6.4, Chapter XI",
+    "scenario": "Spezifische Batteriechemien, Funkgerätemarken, Zeitgeber und Waffentypen, die in die Verfassung eingeschrieben wurden – einige davon im unabänderlichen Kapitel I –, würden bessere Zukunftstechnologien rechtlich von der Allmende ausschließen.",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "Technische Parameter, die durch eine 75-%-Supermajorität oder durch absolute Bestandsgarantie in Kapitel I geschützt sind, erzeugen einen Obsoleszenz-Lock-in und bieten Kritikern leichte sachliche Angriffsflächen, wie etwa unbestätigte Sicherheitsbehauptungen.",
+    "constitutional_countermeasure": "Die Verfassung formuliert nunmehr ausschließlich funktionale Anforderungen. Technologien und Parameter werden in den Anhang für Organische Gesetze (OL-1 bis OL-9) überführt, der mit einer qualifizierten Mehrheit von 60 % nach einer Sperrklinkenregel änderbar ist (er darf ein verfassungsrechtliches Garantieniveau niemals abschwächen) und nach Artikel 4.6 überprüfbar bleibt (verankert durch Art. 10.6.4). Unverifizierte quantitative Behauptungen werden als VORLÄUFIG — UNVERIFIZIERT gekennzeichnet.",
+    "canonical_articles": [
+      "Art. 1.4.3",
+      "Art. 6.2.2",
+      "Art. 8.1.4",
+      "Art. 10.5.3",
+      "Art. 10.6.4"
+    ],
+    "verdict_human": "RED TEAM HAT GEWONNEN — Technologie in einen änderbaren Anhang für Organische Gesetze überführt",
+    "human_summary": {
+      "lead": "Die Verfassung bestimmt, was garantiert werden muss; ein separater, leichter zu aktualisierender Anhang regelt, welche Technologie dies heute leistet.",
+      "points": [
+        "Bessere Technologien können ohne Verfassungsänderung eingeführt werden.",
+        "Keine technische Vorschrift darf jemals ein verfassungsmäßiges Schutzniveau senken.",
+        "Unbewiesene Zahlenwerte sind offen als vorläufig gekennzeichnet."
+      ]
+    },
+    "category": "science",
+    "keywords": [
+      "organic law",
+      "technology neutrality",
+      "annex",
+      "obsolescence",
+      "sim-qa-17"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
   }
 ]

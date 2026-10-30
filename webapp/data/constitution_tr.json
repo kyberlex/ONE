@@ -1,91 +1,91 @@
 [
   {
     "number": "I",
-    "title": "BAŞLANGIÇ VE DEVREDİLEMEZ İNSAN HAKLARI BİLDİRGESİ",
+    "title": "BAŞLANGIÇ VE DEĞİŞMEZ HAKLAR BİLDİRGESİ",
     "articles": [
       {
         "id": "Article 1.1",
-        "title": "Biyosferik Müşterekler İlkesi",
-        "full_title": "Article 1.1: Biyosferik Müşterekler İlkesi",
-        "text": "Dünya biyosferi, tüm canlı türlerinin ortak ve bölünemez mirasıdır. Hiçbir tüzel veya gerçek kişi atmosferi, tatlı suları, okyanusları veya biyolojik çeşitliliği mülk edinemez, ipotek edemez veya tahrip edemez. Her türlü kullanım ancak ekolojik dengeyi gözetmek koşuluyla intifa esasına tabidir."
+        "title": "Biyosferik Müşterekler Aksiyomu",
+        "full_title": "Article 1.1 — Biyosferik Müşterekler Aksiyomu",
+        "text": "1. Gezegensel biyosfer—atmosferi, küresel hidrolojik döngüyü, ekilebilir üst toprağı, okyanus sistemlerini, güneş radyasyonu akısını ve insanlığın birikmiş bilimsel ve kültürel bilgi mirasını kapsayan haliyle—bütün canlı varlıklara ait bölünmez bir müşterek teşkil eder.\n2. Gezegensel müştereklerin hiçbir parçası özel spekülatif mülkiyete dönüştürülemez, emeksiz finansal rant elde etmek amacıyla metalaştırılamaz veya egemen karasal çevrelenmeye tabi tutulamaz.\n3. Herhangi bir fiziksel veya entelektüel kaynak üzerindeki mülkiyet hakkı yalnızca İntifa Hakkı (Usufruct) olarak mevcuttur: fiilî kullanım, onarıcı bakım ve gelecek nesiller için bütünlüğünün korunması şartına bağlı olarak, bir kaynağı elinde tutma, kullanma ve ondan yararlanma konusunda korunan hak."
       },
       {
         "id": "Article 1.2",
-        "title": "Dokunulmaz Beden ve Kişisel Egemenlik",
-        "full_title": "Article 1.2: Dokunulmaz Beden ve Kişisel Egemenlik",
-        "text": "Her insanın bedensel bütünlüğü, zihinsel mahremiyeti ve kişisel özerkliği mutlak ve dokunulmazdır. Bireyler hiçbir ekonomik, biyometrik, algoritmik veya siyasi zorlamaya tabi tutulamaz; zorunlu beden müdahalesi veya gözetim uygulanamaz."
+        "title": "Değişmez Kişisel ve Bedensel Egemenlik",
+        "full_title": "Article 1.2 — Değişmez Kişisel ve Bedensel Egemenlik",
+        "text": "1. Her insan, kendi biyolojik, fiziksel ve bilişsel temeli üzerinde mutlak ve koşulsuz egemenliğe sahiptir.\n2. Zorlayıcı genetik değişiklik, irade dışı biyometrik takip, nörolojik izleme, farmakolojik manipülasyon ve fiziksel boyunduruk altına alma, kişisel dokunulmazlığın yapısal ihlalleri olarak kalıcı biçimde yasaklanmıştır.\n3. Her birey; bedensel özerklik, özel mahremiyet, zihinsel dokunulmazlık ve şefkatli, baskıdan uzak bir biyolojik terk yönündeki dokunulmaz hakkını muhafaza eder. Hiçbir sivil talimat, kolektif acil durum veya idari kararname, hiçbir bireyin fiziksel veya psikolojik zeminini ihlal edemez."
       },
       {
         "id": "Article 1.3",
-        "title": "Evrensel Hayatta Kalma Tabanı",
-        "full_title": "Article 1.3: Evrensel Hayatta Kalma Tabanı",
-        "text": "Her birey, piyasa mekanizmalarından veya emeğin metalaştırılmasından bağımsız olarak; temiz su, sağlıklı gıda, güvenli barınma, yenilenebilir enerji, sağlık hizmetleri ve bilgiye sınırsız erişim hakkına doğuştan sahiptir. Bu haklar hiçbir borç, yükümlülük veya tasarruf gerekçesiyle kısıtlanamaz."
+        "title": "Evrensel Yaşam İdamesi Tabanı",
+        "full_title": "Article 1.3 — Evrensel Yaşam İdamesi Tabanı",
+        "text": "1. Her mukim; ücretli emekten, piyasa mübadelesinden, borç esaretinden veya ideolojik uyumdan bütünüyle bağımsızlaştırılmış, temel yaşam desteği üzerinde devredilemez bir doğuştan hakka sahiptir.\n2. Bu koşulsuz asgari taban şunları içerir:\n   * Onaylanmış biyolojik saflık kriterlerini karşılayan içme suyu;\n   * Sağlıklı, kalori bakımından yeterli günlük beslenme;\n   * Güvenli, iklime dayanıklı konut barınağı;\n   * Kapsamlı birinci basamak, koruyucu ve acil sağlık hizmetleri;\n   * Evsel ısınma, soğutma ve pişirme için temel enerji tahsisatı;\n   * Bilgi, kültür ve temel aletlerin açık havuzuna sınırsız erişim.\n3. Fiziksel hayatta kalma, hiçbir meclis, kurum veya kolektif tarafından davranışsal koşullandırma, emek sömürüsü veya toplumsal cezalandırma aracı olarak asla bir baskı unsuru haline getirilemez."
       },
       {
         "id": "Article 1.4",
-        "title": "Devredilemez Sivil Özgürlükler ve Epistemik Özgürlük",
-        "full_title": "Article 1.4: Devredilemez Sivil Özgürlükler ve Epistemik Özgürlük",
-        "text": "Düşünce, vicdan, bilimsel araştırma, sanatsal ifade ve iletişim özgürlüğü hiçbir kurum veya algoritma tarafından kısıtlanamaz. Şifreli iletişim, kişisel mahremiyet ve sansürsüz bilgi edinme devredilemez anayasal haklardır."
+        "title": "Değişmez Sivil Özgürlükler ve Epistemik Hürriyet",
+        "full_title": "Article 1.4 — Değişmez Sivil Özgürlükler ve Epistemik Hürriyet",
+        "text": "1. Her birey ve birlik; düşünce, vicdan, ifade, barışçıl toplanma, gönüllü örgütlenme ve kültürel ifade alanlarında koşulsuz özgürlüğe sahiptir.\n2. Hiçbir sivil konsey, meclis veya dijital altyapı; barışçıl muhalefeti sansürleyemez, aykırı soruşturmayı bastıramaz veya ortodoks inancı zorunlu kılamaz.\n3. Evrimsel uyarlanabilirliği korumak ve epistemik durgunluğu önlemek amacıyla, tüm müşterek üretim tesislerinin, bilişimsel bant genişliğinin ve araştırma laboratuvarlarının yüzde yedi (%7) oranındaki dokunulmaz bir payı, akran denetimine ve engellemesine tabi olmaksızın spekülatif, uzlaşma dışı araştırmalar için Sapkının Müşterekleri olarak kalıcı biçimde tahsis edilecektir. Başvuru taleplerinin mevcut kapasiteyi aştığı durumlarda erişim, başvuranlar arasında herhangi bir ideolojik inceleme yapılmaksızın, tamamen şeffaf bir Dönüşümlü Kura Sistemi ile zamansal olarak paylaştırılır. Bu rezerv, dokunulmaz bir biyogüvenlik sınırı taşır: sentetik, kendi kendini kopyalayan ölümcül patojenler, kitlesel nörolojik ajanlar veya radyolojik silahlar üzerine araştırmalar müştereklerden kategorik olarak men edilmiştir. Bu sınırı insani ideolojik gözetim veya algoritmik düşünce polisliği olmaksızın uygulamak üzere, müşterekler genelindeki tüm biyolojik sentezleme donanımları, Organik Yasa Eki'nde belirtildiği üzere, kamusal bir tehlike sicilinde listelenen dizilimlerin kopyalanmasını önleyen, kamuya açık olarak denetlenebilir ve müdahaleyi ifşa eden kilit mekanizmaları içermelidir. Bu kilit mekanizmalarının devre dışı bırakılması veya atlatılması, biyosferik sürekliliğe karşı işlenmiş yapısal bir suç teşkil eder."
       },
       {
         "id": "Article 1.5",
-        "title": "Çit Çekme ve Tekelleşme Karşıtı İlke",
-        "full_title": "Article 1.5: Çit Çekme ve Tekelleşme Karşıtı İlke",
-        "text": "Bilgi, tohum, genetik kod, yazılım ve temel teknolojilerin patentlenmesi veya yapay engellerle sınırlandırılması (çit çekme) kesin olarak yasaktır. İnsanlığın bilgi mirası herkesin erişimine açık ortak bir zenginliktir."
+        "title": "Çevrelenme Karşıtlığı İlkesi",
+        "full_title": "Article 1.5 — Çevrelenme Karşıtlığı İlkesi",
+        "text": "1. Temel yaşam destek müştereklerini yeniden özelleştirmeye, tasarrufu başkasına ait mülk sahipliğini yeniden tesis etmeye veya insan ihtiyaçlarından tekel rantı devşirmeye teşebbüs eden her türlü hukuki mülkiyet senedi, finansal sözleşme veya idari mekanizma hükümsüz ve batıldır; topluma karşı yapısal bir saldırı olarak kabul edilir.\n2. Bilimsel keşifler, biyolojik genetik, bilişimsel algoritmalar ve mekanik araç tasarımları; tekelci patentlerden, fikri mülkiyet iddialarından ve mülkiyet kısıtlamalarından kalıcı olarak muaf tutulan evrensel kamu mallarıdır."
       },
       {
         "id": "Article 1.6",
-        "title": "Ekolojik Yükümlülük ve Kuşaklararası Emanet",
-        "full_title": "Article 1.6: Ekolojik Yükümlülük ve Kuşaklararası Emanet",
-        "text": "Mevcut kuşaklar, biyosferin ve kaynakların sahibi değil, gelecek kuşaklara devretmekle yükümlü geçici koruyucularıdır. Toprak, hava ve su kaynakları, geri döndürülemez bir tahribata yol açmayacak şekilde özenle yönetilmelidir."
+        "title": "Ekolojik Görev ve Kuşaklararası Emanetçilik",
+        "full_title": "Article 1.6 — Ekolojik Görev ve Kuşaklararası Emanetçilik",
+        "text": "1. Gezegensel müştereklerin her kullanıcısı, kaçınılmaz bir biyofiziksel emanetçilik görevi üstlenir. İnsan metabolizmaları, yerel su havzalarının ve küresel biyosferin döngüsel onarıcı sınırları ile termodinamik taşıma kapasitesi dahilinde işlemelidir.\n2. Ekosistemlerin kasıtlı olarak zehirlenmesi, yenilenemeyen akiferlerin tüketilmesi ve biyolojik habitatların geri döndürülemez biçimde yok edilmesi, gezegensel sürekliliğe karşı işlenmiş suçlar teşkil eder.\n3. İnsan dışı canlı sistemler ve bölgesel biyomlar, kura yoluyla belirlenen atanmış insan vasiler tarafından sivil meclisler önünde savunulmak üzere, hukuk nezdinde asli bir dava ehliyetine (*Jus Biosphaerae*) sahiptir."
       },
       {
         "id": "Article 1.7",
-        "title": "Mutlak Hakların Üstünlüğü ve Korunması",
-        "full_title": "Article 1.7: Mutlak Hakların Üstünlüğü ve Korunması",
-        "text": "Bu Bölümde yer alan temel haklar hiçbir olağanüstü hal, kriz, savaş veya meclis kararıyla askıya alınamaz, daraltılamaz veya feshedilemez. Bu haklara yönelik her türlü saldırı meşru direnme hakkını doğurur."
+        "title": "Temel Hakların Önceliği ve Dokunulmazlığı",
+        "full_title": "Article 1.7 — Temel Hakların Önceliği ve Dokunulmazlığı",
+        "text": "1. Bu Bölümde tanımlanan haklar, özgürlükler ve taban ilkeler, yapısal anayasal değişmezlerdir.\n2. Hiçbir meclis, referandum, istisna hali veya nitelikli salt çoğunluk, bu Haklar Bildirgesi'nin hükümlerini askıya alamaz, daraltamaz veya devredemez. Bu Bölüme aykırı her türlü kararname, mevzuat veya anlaşma *ab initio* hükümsüzdür.\n\n---"
       }
     ]
   },
   {
     "number": "II",
-    "title": "MÜLKİYETİN VE HAKİMİYETİN YAPISÖKÜMÜ: İNTİFA HUKUKU",
+    "title": "MÜLKİYETİN DEKONSTRÜKSİYONU VE İNTİFA HAKKI (USUFRUCT) İÇTİHADI",
     "articles": [
       {
         "id": "Article 2.1",
-        "title": "Gıyabi Mülkiyetin Kaldırılması ve Hakimiyetin Yapısökümü",
-        "full_title": "Article 2.1: Gıyabi Mülkiyetin Kaldırılması ve Hakimiyetin Yapısökümü",
-        "text": "Terk edilmiş veya kullanılmayan topraklar, fabrikalar ve konutlar üzerindeki hak iddiaları ile spekülatif mülkiyet (dominium) hukuken geçersiz kılınmıştır. Hak sahipliği yalnızca fiili, faydalı ve toplumsal kullanıma (intifa) dayanır."
+        "title": "Gıyabi Mülkiyetin İlgası ve Dominium'un Dekonstrüksiyonu",
+        "full_title": "Article 2.1 — Gıyabi Mülkiyetin İlgası ve Dominium'un Dekonstrüksiyonu",
+        "text": "1. Mutlak özel mülkiyete (*dominium*)—kısıtlı yeryüzü varlıklarını sömürme, istifleme, ihmal etme veya yok etmeye dair tek taraflı hakka—ilişkin kadim hukuk doktrini, Open Networked Earth (Açık Ağ Bağlantılı Dünya) (O.N.E.) genelinde kalıcı olarak ilga edilmiştir.\n2. Toprak, su kütleleri, tarım kuşakları, doğal biyomlar ve endüstriyel üretim makineleri üzerindeki mülkiyet hakkı, münhasıran bir intifa hakkı (usufruct) olarak mevcuttur: aktif yararlı fayda, kesintisiz mevcudiyet ve ekolojik emanetçilik şartına bağlı bir hak.\n3. Fiili zilyetlik ve toplumsal faydadan koparılmış mülkiyet hakkı hukuken yok hükmündedir. Terk edilmiş veya pasif spekülasyon amacıyla elde tutulan herhangi bir arazi parçası, konut veya üretim tesisi, derhal yerel müştereklerin yargı yetkisine geri döner."
       },
       {
         "id": "Article 2.2",
-        "title": "Mülkiyet ve Müştereklerin Üçlü Sınıflandırması",
-        "full_title": "Article 2.2: Mülkiyet ve Müştereklerin Üçlü Sınıflandırması",
-        "text": "Varlıklar üç kesin kategoriye ayrılır: (1) Kişisel eşyalar ve özel mahremiyet alanı; (2) Topluluğun ortak kullanımındaki intifa malları; (3) Biyosferik müşterekler. Birinci kategori dokunulmazdır; ikinci ve üçüncü kategoriler satılamaz, devredilemez ve metalaştırılamaz."
+        "title": "Malların ve Müştereklerin Üçlü Sınıflandırılması",
+        "full_title": "Article 2.2 — Malların ve Müştereklerin Üçlü Sınıflandırılması",
+        "text": "Dokunulmaz kişisel hürriyeti güvence altına alırken tekelci sömürüyü yasaklamak amacıyla, tüm maddi varlıklar birbirini dışlayan üç hukuki sınıfa ayrılır:\n1. **Dokunulmaz Kişisel Zilyetlikler:** Kişisel giyim, ev eşyaları, sanatsal eserler, mahrem eşyalar, şahsi zanaat aletleri ve kişisel bilişim arayüzleri. Bunlar bireyin mutlak ve kalıcı egemenliği altında kalır; hiçbir sivil meclis tarafından kamulaştırılamaz, kolektifleştirilemez veya başkasına tahsis edilemez.\n   * *İkili Kademe Alet Sınıflandırması (Kişisel Zanaat ile Yurttaş Kütüphanesi Karşılaştırması):* Hem müşterek altyapının özelleştirilmesini hem de zanaatkâr özerkliğinin ihlal edilmesini önlemek amacıyla araç-gereçler iki operasyonel kademeye ayrılmıştır:\n     - *1. Kademe (Kişisel Zanaat Donanımı):* Kişisel ustalıkta aktif olarak kullanılan hassas zanaat aletleri, mesleki icra araçları, yaratıcı enstrümanlar ve bireyselleştirilmiş iş istasyonları. Bunlar dokunulmaz biçimde kişiseldir ve erişim için iki taraflı rıza gerektirir; yedek/fazlalık birimler, özel istifçilik yapmak amacıyla 1. Kademe muafiyeti iddia edemez.\n     - *2. Kademe (Yurttaş Alet Kütüphaneleri):* Mahalle alet kütüphanelerinde ortak intifa hakkı (usufruct) altında tutulan yüksek dayanıklılıklı bakım ekipmanları (darbeli beton matkapları, merdivenler, burgular, havalandırıcılar, basınçlı yıkama makineleri). Ödünç alma işlemleri zamana bağlı ağ (mesh) jetonları altında işler; gönüllü tevdiatlar topluluk bütçesinden karşılanır ve öncelikli rezervasyon hakkı sağlar. İhmal kaynaklı hasarlar, yerel alet loncası gözetiminde rehberli bakım-onarım imece saatleri yoluyla telafi edilir.\n2. **Koruma Altındaki Zilyetlik İntifa Hakkı (Usufruct):** Aktif olarak ikamet edilen ve bakımı yapılan birincil konutlar, ev parselleri, aile çiftlikleri ve küçük ölçekli zanaat atölyeleri. Topluluk Toprak Vakfı (CLT) çerçevesi model alınarak oluşturulan ebedi, piyasa dışı sözleşmeler kapsamında tutulan zilyetlik intifa hakkı; dokunulmaz ev mahremiyeti, aktif birlikte ikamet edenler arasında kalıtsal kullanım hakkı intikali ve piyasa hacizlerinden veya rant gaspından tam muafiyet sağlar.\n3. **Federe Müşterekler İntifa Hakkı (Usufruct):** Su havzaları, akiferler, ormanlar, maden yatakları, enerji şebekeleri, ulaşım koridorları, endüstriyel üretim merkezleri, hastaneler ve iletişim omurgaları. Bunlar, belediye kura yöntemi (sortisyon) konseyleri ve yetkilendirilmiş operasyonel loncalar tarafından idare edilen, mevcut ve gelecek nesiller için daimi bir emanet olarak tutulan bölünmez müşterekleri teşkil eder. Gelişmiş yüksek sermayeli endüstriyel tesisler (yarı iletken litografi fabrikaları, kimyasal sentez kompleksleri, ağır metalurji), bölünmez sosyal sermaye (Kademe 2-A) olarak tanınır; bunların emanetçiliği kura yöntemi (sortisyon) meclisi gözetimi altındaki uzman işçi loncalarına tevdi edilir ve takdiri artı ürün sevkiyatından önce fiziki sermaye amortismanı ile kapalı döngü çevresel geri kazanım hukuken önceliklendirilir."
       },
       {
         "id": "Article 2.3",
-        "title": "Dokunulmaz Barınma Güvencesi ve Tahliye Yasağı",
-        "full_title": "Article 2.3: Dokunulmaz Barınma Güvencesi ve Tahliye Yasağı",
-        "text": "Her bireyin ve ailenin barındığı konut dokunulmazdır. Hiçbir koşulda, hiçbir borç veya gerekçeyle bir kimse yaşadığı evden zorla tahliye edilemez; barınma hakkı mutlak güvence altındadır."
+        "title": "Devredilemez Barınma Güvenliği ve Kesin Tahliye Yasağı",
+        "full_title": "Article 2.3 — Devredilemez Barınma Güvenliği ve Kesin Tahliye Yasağı",
+        "text": "1. Güvenli konut barınması devredilemez bir insan hakkıdır. Herhangi bir kimsenin evsizliğe veya sefalete sürüklenecek şekilde tahliyesi ya da yerinden edilmesi yapısal bir suçtur ve anayasaya aykırıdır.\n2. Konut rantçılığı/ev sahipliği, spekülatif mülk tutma ve parasal kira gaspı hukuken hükümsüz ve batıldır.\n3. Yapısal tehlikelerin, çevresel ıslahın veya uzlaştırılamaz aile içi krizlerin fiziki yer değiştirmeyi zorunlu kıldığı durumlarda uyuşmazlıklar, kura yöntemi (sortisyon) ile seçilmiş üç (3) yurttaştan oluşan bir Yerel Arabuluculuk Heyeti tarafından karara bağlanır.\n4. Etkilenen sakinlerin fizyolojik, erişilebilirlik ve sosyal gereksinimlerini karşılayan eşdeğer veya daha üstün bir konut topluluk tarafından temin edilmedikçe hiçbir nakil işlemi icra edilemez."
       },
       {
         "id": "Article 2.4",
-        "title": "Tarımsal Alanların ve Üretim Araçlarının İdaresi",
-        "full_title": "Article 2.4: Tarımsal Alanların ve Üretim Araçlarının İdaresi",
-        "text": "Tarımsal araziler ve üretim tesisleri, onları bizzat işleten emekçilerin ve yerel toplulukların ortak intifa idaresindedir. Toprak ve makineler finansal spekülasyon konusu yapılamaz."
+        "title": "Ekilebilir Toprağın ve Üretken Varlıkların Emanetçiliği",
+        "full_title": "Article 2.4 — Ekilebilir Toprağın ve Üretken Varlıkların Emanetçiliği",
+        "text": "1. Ekilebilir üst toprak, denizel üreme alanları ve endüstriyel üretim tesisleri parasal kazanç amacıyla satın alınamaz, satılamaz, ipotek edilemez veya kiralanamaz.\n2. Tarım arazileri, biyobölgesel beslenme gereksinimlerine ve doğrulanmış onarıcı tarım uygulamalarına dayalı olarak agroekolojik kolektiflere, aile çiftçilerine ve tarımsal vakıflara tahsis edilir.\n3. Ekiciler, toprağın organik sağlığı, su havzası istikrarı ve biyolojik çeşitlilik korunduğu müddetçe çok nesilli intifa hakkı (usufruct) zilyetliğine sahip olurlar. Süregelen ekolojik zehirleme veya ekimin terk edilmesi, Biyobölgesel Yurttaş Meclisi tarafından inceleme başlatılmasına yol açar; ekolojik emanetçiliğin ihlal edildiği doğrulandığında zilyetlik, bu görevi üstlenmeye istekli onarıcı koruyuculara devredilir."
       },
       {
         "id": "Article 2.5",
-        "title": "Ortak Miras Barınakları ve Konumsal Varlıklar",
-        "full_title": "Article 2.5: Ortak Miras Barınakları ve Konumsal Varlıklar",
-        "text": "Tarihi yapılar, doğal rezervler, su kaynakları ve nadir konumsal zenginlikler ortak miras koruması altındadır. Bunlar hiçbir zümrenin ayrıcalıklı tasarrufuna bırakılamaz."
+        "title": "Ortak Miras Koruma Alanları ve Konumsal Varlıklar",
+        "full_title": "Article 2.5 — Ortak Miras Koruma Alanları ve Konumsal Varlıklar",
+        "text": "1. Coğrafi açıdan benzersiz veya ekolojik açıdan hassas konumsal varlıklar—kıyı burunları, el değmemiş nehir kıyıları, dağ zirveleri ve tarihi koruma alanları dâhil olmak üzere—asla ayrıcalıklı özel mülkler olarak çitle çevrilemez.\n2. El değmemiş kıyı şeritleri veya ekolojik koruma alanları boyunca kalıcı özel konut inşası yasaktır.\n3. Konumsal koruma alanları dâhilindeki geçici konaklama tesislerine erişim, şeffaf sivil kura yöntemi (sortisyon) yoluyla idare edilir: tüm yurttaşlara açık dönüşümlü dinlenme izinleri, bilimsel ve sanatsal katkı sağlayanlar için araştırma bursları ve hakkaniyetli kamusal ziyaretler. Hiçbir soy bağı veya idari yetkili gezegenin güzelliği üzerinde kalıcı özel hâkimiyet kuramaz."
       },
       {
         "id": "Article 2.6",
-        "title": "İntifa Hakkı İhtilafları ve Meclis Eşikleri",
-        "full_title": "Article 2.6: İntifa Hakkı İhtilafları ve Meclis Eşikleri",
-        "text": "İntifa haklarına dair anlaşmazlıklar yerel halk meclislerinde ve onarıcı adalet kurullarında çözülür. Kararlar ticari karlılık yerine toplumsal fayda ve ekolojik uyum gözetilerek alınır."
+        "title": "İntifa Hakkı Uyuşmazlıklarının Yargılanması ve Meclis Eşikleri",
+        "full_title": "Article 2.6 — İntifa Hakkı Uyuşmazlıklarının Yargılanması ve Meclis Eşikleri",
+        "text": "1. Sınır düzenlemeleri ve belediye imar değişiklikleri, kura yöntemi (sortisyon) organları huzurunda mutlak tek sayı eşitliğiyle alenen müzakere edilir:\n   * Mahalle arazi kullanımı düzenlemeleri: on beş (15) yurttaştan oluşan Mahalle Kura Yöntemi (Sortisyon) Konseyleri tarafından yüzde altmış (%60) nitelikli çoğunlukla karara bağlanır.\n   * Biyobölgesel endüstriyel imar ve su havzası irtifak hakları: yüz bir (101) delegeden oluşan Biyobölgesel Yurttaş Meclisleri tarafından yüzde altmış (%60) nitelikli çoğunlukla karara bağlanır.\n2. Zorunlu kamu altyapısı için zilyetlik intifa hakkını (usufruct) iptal eden veya değiştiren herhangi bir olağanüstü kararname; mevcut meclisin tavizsiz yüzde yetmiş beşlik (%75) anayasal nitelikli çoğunluğunun yanı sıra, Yerel Arabuluculuk Heyeti tarafından oybirliğiyle onaylanmış önceden eşdeğer konut temini ve tam fiziki tazminat şartını gerektirir; reddedilen bir onaya karşı, havzalar arası on beş (15) yurttaştan oluşan kör bir heyete itiraz edilebilir.\n\n---"
       }
     ]
   },
@@ -95,369 +95,375 @@
     "articles": [
       {
         "id": "Article 3.1",
-        "title": "Gezegensel Sınırlar ve Biyofiziksel Kısıtlar Aksiomu",
-        "full_title": "Article 3.1: Gezegensel Sınırlar ve Biyofiziksel Kısıtlar Aksiomu",
-        "text": "Gezegenin biyofiziksel taşıma kapasitesi ve termodinamik dengesi tüm ekonomik faaliyetlerin nihai sınırıdır. Üretim ve tüketim modelleri doğanın yenilenme hızına uyumlu olmak zorundadır."
+        "title": "Termodinamik Sınır ve Müştereklerin Paradan Arındırılması",
+        "full_title": "Article 3.1 — Termodinamik Sınır ve Müştereklerin Paradan Arındırılması",
+        "text": "1. Open Networked Earth (Açık Ağ Bağlantılı Dünya) (O.N.E.) genelindeki tüm ekonomik koordinasyon, endüstriyel metabolizma ve kaynak dağıtımı, kesin surette termodinamiğin fiziksel kanunlarına ve ekolojik kütle dengesine dayandırılır.\n2. Soyut finansal itibari para, bileşik borç enstrümanları ve spekülatif fiyat mekanizmaları, biyofiziksel müşterekler üzerindeki hak iddiaları bakımından hukuki geçerliliklerinden arındırılmıştır.\n3. Muhasebe birimleri; kullanılabilir fiziksel ekserji (kWh), kuru madde kütlesi (kg), arıtılmış su hacmi (L) ve döngüsel rejeneratif çevrim süreleridir.\n4. Termodinamik, toplumun müzakere edilemez tavanını belirler: Hiçbir beşerî topluluk, yerel su havzalarının ve biyosferin doğrulanmış yenilenme oranlarının ötesinde kaynak bütçeleyemez, çıkaramaz veya tüketemez.\n5. Çok vektörlü tahsisler, kısıt vektörü ekserji (kWh), kütle (kg) ve jeokimyasal döngüden oluşan merkeziyetsiz dinamik girdi-çıktı (Leontief-Kantorovich) matrislerini kullanır; hiçbir üretim yetkilendirmesi yerel ikame sınırlarını aşamaz.\n6. Kademe 1 Otarkik Kapanma: Yaşayabilirlik, negatif olmayan gayrisafi çıktıdan daha fazlasını gerektirir: Yıllık bir kamu denetimi, barınma ve sağlık hizmetleri dahil olmak üzere Kademe 1 ihtiyaçlarını doğrudan veya dolaylı olarak karşılayan tüm sektörlerin, harici girdiler sıfır olacak şekilde ve yayımlanmış bir ihtiyat payı ile yalnızca yerel kaynaklardan ve kurulu kapasiteden tam Kademe 1 talebini karşıladığını göstermelidir."
       },
       {
         "id": "Article 3.2",
-        "title": "Termodinamik İntifa Muhasebesi ve Karbon Bütçeleri",
-        "full_title": "Article 3.2: Termodinamik İntifa Muhasebesi ve Karbon Bütçeleri",
-        "text": "Tüm kaynak tahsisleri ve enerji kullanımları parasal değerlerle değil, gerçek termodinamik maliyetler, ekolojik ayak izi ve karbon kısıtları üzerinden hesaplanır."
+        "title": "Tefeciliğin, Spekülasyonun ve Bileşik Borçlanmanın Mutlak Surette Yasaklanması",
+        "full_title": "Article 3.2 — Tefeciliğin, Spekülasyonun ve Bileşik Borçlanmanın Mutlak Surette Yasaklanması",
+        "text": "1. Üstel bileşik faiz, borç esareti veya finansal türev spekülasyonu gerektiren her türlü sözleşme, algoritma veya kayıt defteri anayasaya aykırıdır, hükümsüzdür ve uygulanamaz.\n2. Kredi, yalnızca doğrulanmış sivil altyapıya, toplumsal bakıma veya ekolojik restorasyona tahsis edilmiş fiziksel enerjinin, ham maddelerin ve araç-gereç kullanım süresinin planlı idari tahsisi olarak mevcuttur.\n3. Hiçbir borç bileşik faizle katlanamaz; hiçbir müşterek alan, ekosistem veya konut ticari teminat olarak gösterilemez; ve hiçbir proje başarısızlığı kişisel yoksulluk, sözleşmeli kölelik veya İntifa Hakkı (Usufruct) iptali ile sonuçlanamaz."
       },
       {
         "id": "Article 3.3",
-        "title": "Müşterek Döngüsel Malzeme ve Ayrışma Standartları",
-        "full_title": "Article 3.3: Müşterek Döngüsel Malzeme ve Ayrışma Standartları",
-        "text": "Üretilen tüm araç ve ürünlerin malzeme bileşenleri açıkça belgelenmeli; sökülebilir, dönüştürülebilir ve çevreye zararsız olacak biçimde tasarlanmalıdır. Planlı eskitme kesinlikle yasaktır."
+        "title": "Üç Kademeli Demokratik İhtiyaçlar Hiyerarşisi",
+        "full_title": "Article 3.3 — Üç Kademeli Demokratik İhtiyaçlar Hiyerarşisi",
+        "text": "Termodinamik ölçümler beşerî toplumsal değeri değil, fiziksel kısıtları belirler. Tüm kaynak sevkiyatı kesin surette Anayasal İhtiyaçlar Hiyerarşisi'ne bağlıdır:\n1. **Kademe 1 (Hayati Biyolojik Temel):** Evrensel hayatta kalmaya tahsis edilen mutlak, müzakere edilemez öncelik: doğrulanmış içme suyu, sağlıklı günlük beslenme, güvenli konut barınması, evsel ısıtma ve soğutma ile kapsamlı koruyucu ve acil sağlık hizmetleri.\n2. **Kademe 2 (Sivil Bakım ve Ortak Altyapı):** Su arıtma tesislerinin, mikro şebekelerin, toplu taşıma arterlerinin, açık iletişim ağlarının, hastanelerin ve tamir fab-lab'lerinin operasyonel bakımı.\n3. **Kademe 3 (Merkeziyetsiz İhtiyari Fazla ve Açık Fab-Lab Girişimi):** Kültürel üretime, zanaata, uzmanlaşmış enstrümanlara ve keşif amaçlı bilime tahsis edilen kaynaklar. Kademe 3, merkezi bürokrasi veya fiyat kotası olmaksızın işler: Kademe 1 ve 2 güvence altına alındığında, doğrulanmış ekolojik fazlalar karesel tercih sinyallemesi ve katılımcı Fab-Lab zaman çizelgeleri aracılığıyla dağıtılır. Aracılık Karşıtı Değişmez: Yüksek talep gören makine kontenjanları devredilemez, tekrarlanan tekelleşmeye karşı kısıtlanır ve kısa bir ek sürenin ardından kura ile belirlenen yedek üreticilere devredilir; parametreleri Organik Kanun ile tespit edilir. Gizli ticari sömürüyü önlemek amacıyla, İcra-Eşittir-Neşir kuralı geçerlidir: Ortak makinelerde yürütülen tüm takım yolları, G-kodu ve CAM şemaları otomatik olarak açık örgü müştereklerine yayımlanır (Madde 1.4).\n4. **Kademe 2-A Bölünemez Sermaye Malları Tamponu:** Yukarı yönlü endüstriyel varlıklar (pirometalurji, silisyum saflaştırma, litografi, ağır takım tezgahları), Kademe 3 rekabetinden yalıtılmış bölünemez sosyal sermayedir. İhtiyari üretim için fazla serbest bırakılmadan önce sermaye ikame ve amortisman rezervleri yeniden tamamlanmalıdır."
       },
       {
         "id": "Article 3.4",
-        "title": "Ekosistem Yenilenmesi ve Toprak Koruma Şartı",
-        "full_title": "Article 3.4: Ekosistem Yenilenmesi ve Toprak Koruma Şartı",
-        "text": "Tarım ve sanayi faaliyetleri toprak mikrobiyolojisini, tatlı su döngülerini ve tozlayıcı popülasyonlarını korumakla yükümlüdür. Sentetik zehirlerin ve kalıcı kimyasalların yayılımı engellenir."
+        "title": "Biyobölgesel Taşıma Kapasitesi, Telemetri ve Analog Saha Doğrulaması",
+        "full_title": "Article 3.4 — Biyobölgesel Taşıma Kapasitesi, Telemetri ve Analog Saha Doğrulaması",
+        "text": "1. Her su havzası dahilindeki beşerî kaynak çıkarımı ve üretim, havzanın Ekolojik Taşıma Kapasitesi (ECC) ile sınırlandırılmıştır.\n2. Kesintisiz, kamuya açık sensör dizilimleri kişisel olmayan termodinamik değişkenleri izler: Akifer beslenimi, nehir debisi, toprak karbonu, biyokütle birikimi, şebeke yükü ve termal yayılım.\n3. Telemetri donanımı, mülkiyete tabi ikili kod öbeklerini (binary blobs) veya güvenilmeyen yalıtılmış alanları (enclaves) men ederek, bit'i bit'ine doğrulanabilir ürün yazılımına sahip açık donanımlı Programlanabilir Mantıksal Denetleyicileri (PLC) kullanmalıdır.\n4. Değişmez Gizlilik Emri: Sensör ağları kesin surette abiyotik ve makro-ekolojik değişkenlerle sınırlandırılmıştır. Algoritmik gözetim, biyometrik takip veya bireysel hanehalkı profillemesi mutlak bir anayasal suçtur.\n5. Vatandaş Saha Doğrulaması ve Bölünmüş Numune Doğrulaması: Dijital model sapmasını, donanım biyolojik kirlenmesini veya sensör manipülasyonunu önlemek amacıyla, Mahalle Konseyleri düzenli olarak manuel analog aletlerle donatılmış sivil Vatandaş Saha Doğrulama Ekipleri görevlendirir. Denetimler kör bir bölünmüş numune protokolünü takip eder: Mühürlü mükerrer numuneler, bitişik olmayan su havzalarından kura ile seçilen laboratuvarlar tarafından bağımsız olarak doğrulanır ve böylece sibernetik kayıt defterlerinin fiziksel gerçekliğe bağlı kalması temin edilir."
       },
       {
         "id": "Article 3.5",
-        "title": "Stratejik Kaynak Rezervleri ve 36 Aylık Koruma Kalkanı",
-        "full_title": "Article 3.5: Stratejik Kaynak Rezervleri ve 36 Aylık Koruma Kalkanı",
-        "text": "Her biyobölge; gıda, tıbbi malzeme, temel enerji ve teknik yedek parçalarda en az 36 aylık bağımsız dayanıklılık rezervini muhafaza etmekle yükümlüdür."
+        "title": "Stratejik Fiziksel Rezervler ve Doğrusal Olmayan Dirençlilik",
+        "full_title": "Article 3.5 — Stratejik Fiziksel Rezervler ve Doğrusal Olmayan Dirençlilik",
+        "text": "1. Aksamalara, kuraklıklara, güneş fırtınalarına veya salgınlara karşı kırılganlık karşıtı bir yapı sağlamak amacıyla, her biyobölgesel federasyon Stratejik Fiziksel Rezervler bulundurur.\n2. Rezervler, Kademe 1 çıktısını harici girdiler olmaksızın 12–24 ay boyunca sürdürmek üzere; merkeziyetsiz depolanabilir stokları (tahıllar, temel gıdalar, ata tohumları, kritik farmasötikler, enerji depolama), yedek parçaları ve depolanamayan mallar için yedekli kapasiteyi bir araya getirerek Otarkik Kapanma denetimi (Madde 3.1.6) tarafından tespit edilen açıkları takip eder.\n3. Stratejik rezervler spekülatif ticaret için nakde dönüştürülemez, harici itibari para karşılığında ihraç edilemez veya ihtiyari fazlaya aktarılamaz."
       },
       {
         "id": "Article 3.6",
-        "title": "Kayıp Ekosistemlerin Yeniden Vahşileştirilmesi Mandası",
-        "full_title": "Article 3.6: Kayıp Ekosistemlerin Yeniden Vahşileştirilmesi Mandası",
-        "text": "Bozulmuş ekosistemlerin, kurutulmuş sulak alanların ve tahrip edilmiş ormanların yeniden yabanileştirilmesi ve biyolojik onarımı anayasal bir önceliktir."
+        "title": "Denetim, Meclis Eşitliği ve Karar Eşikleri",
+        "full_title": "Article 3.6 — Denetim, Meclis Eşitliği ve Karar Eşikleri",
+        "text": "1. Fiziksel kayıt defterleri ve termodinamik bilançolar kamusaldır, anlaşılır bir dille kaleme alınır ve Kura Yöntemi (Sortisyon) meclisleri tarafından mutlak tek sayı eşitliğiyle kesintisiz olarak incelenir:\n   * Mahalle kamu hizmeti takibi: On beş (15) vatandaştan oluşan Mahalle Kura Yöntemi (Sortisyon) Konseyleri tarafından karara bağlanır.\n   * Biyobölgesel ekserji sevkiyatı ve stratejik rezerv gözetimi: Yüz bir (101) delegeden oluşan Biyobölgesel Vatandaş Meclisleri tarafından yönetilir.\n2. Derecelendirilmiş Müzakere Eşikleri:\n   * **%75 Anayasal Nitelikli Çoğunluk:** Kesin surette kişi başına Kademe 1 hayatta kalma tahsislerini değiştirmek, azaltmak veya yeniden hesaplamak için gereklidir.\n   * **%60 Nitelikli Çoğunluk:** Beş yıllık biyobölgesel altyapısal enerji bütçeleri ve Kademe 3 ihtiyari tahsisleri için gereklidir.\n   * **%50+1 Basit Çoğunluk:** Yalnızca onaylanmış doğal afetler veya ekolojik krizler sırasında Stratejik Fiziksel Rezervlerin derhal seferber edilmesi için izin verilir ve zorunlu bir otuz (30) günlük yürürlükten kalkma incelemesine tabidir.\n\n---"
       }
     ]
   },
   {
     "number": "IV",
-    "title": "KURA İLE YÖNETİM: DEMARŞİK YÖNETİŞİM MİMARİSİ",
+    "title": "KURA İLE YÖNETİŞİM: KURA YÖNTEMİ (SORTİSYON) MİMARİSİ",
     "articles": [
       {
         "id": "Article 4.1",
-        "title": "Temsiliyet Bozulmalarının Önlenmesi ve Kura İlkesi",
-        "full_title": "Article 4.1: Temsiliyet Bozulmalarının Önlenmesi ve Kura İlkesi",
-        "text": "Para, medya tekeli ve profesyonel kariyerizmin yol açtığı siyasi yozlaşmayı engellemek amacıyla, tüm kamu yönetim kurulları kura yoluyla (sortition/demarşi) seçilir."
+        "title": "Kura İlkesi (Demarşi) ve Oligarşinin İlgası",
+        "full_title": "Article 4.1 — Kura İlkesi (Demarşi) ve Oligarşinin İlgası",
+        "text": "1. Tüm egemen yasama, müzakere ve anayasal yetki, münhasıran istatistiksel olarak tabakalandırılmış rastgele kura yöntemi (sortisyon) ile seçilen yurttaş meclislerinden neşet eder.\n2. Seçimli parti siyaseti, kampanya finansmanı, kurumsal lobicilik ve kalıcı parlamenter sınıflar, oligarşik ele geçirmenin vektörleri olarak ilga edilmiştir.\n3. Yurttaşlar örgütlenme ve savunuculuk yapma konusunda özgür kalmaya devam eder (Madde 1.4); ancak hiçbir dernek veya örgüt kura yöntemi (sortisyon) delegelerini finanse edemez, aday gösteremez, onlara talimat veremez veya onları ödüllendiremez; bu tür her türlü eylem hükümsüzdür ve sivil müştereklere karşı yapısal bir saldırı teşkil eder."
       },
       {
         "id": "Article 4.2",
-        "title": "Demarşik Meclislerin Yapısı, Görev Süresi ve Rotasyon",
-        "full_title": "Article 4.2: Demarşik Meclislerin Yapısı, Görev Süresi ve Rotasyon",
-        "text": "Yurttaş meclisleri, toplumun tüm kesimlerini demografik olarak yansıtan kura ile belirlenmiş üyelerden oluşur. Görev süreleri sınırlıdır, üyeler düzenli olarak rotasyona tabi tutulur."
+        "title": "Kademeli Meclis Mimarisi ve Değişmez Tek Sayı Paritesi",
+        "full_title": "Article 4.2 — Kademeli Meclis Mimarisi ve Değişmez Tek Sayı Paritesi",
+        "text": "Müzakere yetkisi, eşitlikleri ve kilitlenmeleri önlemek amacıyla her biri katı bir tek sayı paritesine sahip, biyobölgesel ölçeklerle eşleşen iç içe geçmiş yurttaş meclisleri aracılığıyla yapılandırılır:\n1. **Yerel Arabuluculuk Heyetleri:** Mahalle ihtilafları, aile içi güvenlik ve konut iadesi için üç aylık görev süreleriyle hizmet veren üç (3) yurttaş.\n   * *Gelişmekte Olan Düğümler İçin Yetki İkamesi (Subsidiyarite) Ölçeği (< 50 Nüfus):* Elli (50) kişiden daha az yetişkin sakini olan yeni oluşan yerleşimler, egemen belediye yönetimini Yerel Arabuluculuk Heyetine (3 yurttaş) verir. Klanın ele geçirmesini önlemek amacıyla, hiçbir birinci derece akraba veya hayat arkadaşı aynı anda görev yapamaz. Bir kararın her bir tarafı, havzalar arası on beş (15) yurttaştan oluşan kör bir heyete temyiz (*Provocatio*) hakkına sahiptir; aynı karara karşı yapılan temyizler birleştirilir. Üç kişilik bir heyette oybirliğine ulaşılamayan %75 eşikli bir mesele, aynı eşikle düğümün tüm yetişkin sakinlerinin katıldığı bir plebisite intikal eder.\n2. **Mahalle Kura Yöntemi (Sortisyon) Konseyleri:** Yerel müşterekleri, kamu hizmetlerini ve tesisleri denetleyen, altı aylık görev süreleriyle hizmet veren on beş (15) yurttaş (elli yetişkin sakine ulaşıldığında kendiliğinden tetiklenir).\n3. **Biyobölgesel Yurttaş Meclisleri:** Havza ekolojik dengelerini, sınai imar planlamasını ve düğümler arası anlaşmaları yöneten, bir yıllık kademeli görev süreleriyle hizmet veren yüz bir (101) delege.\n4. **Kıtasal Yönetişim Meclisleri:** Kıtasal omurgaları, onarım koridorlarını ve makro dengeleri koordine eden, on sekiz aylık kademeli görev süreleriyle hizmet veren üç yüz bir (301) yurttaş.\n5. **Küresel Müşterekler Meclisi:** Gezegensel termodinamik sınırları belirleyen ve kıtalararası ahitleri onaylayan, iki yıllık kademeli görev süreleriyle hizmet veren bin bir (1.001) yurttaş."
       },
       {
         "id": "Article 4.3",
-        "title": "Zaman Sınırları, Karar Mekanizmaları ve 5 Dakikalık Soğuma",
-        "full_title": "Article 4.3: Zaman Sınırları, Karar Mekanizmaları ve 5 Dakikalık Soğuma",
-        "text": "Meclis oturumlarında kararlar derinlemesine müzakereyle alınır. Yoğun gerginlik veya panik anlarında 5 dakikalık zorunlu soğuma araları uygulanır; aceleci veya manipülatif oylamalar yasaktır."
+        "title": "Tabakalandırılmış Seçim, Evrensel Hizmet ve Bürokrasi Karşıtı Rotasyon",
+        "full_title": "Article 4.3 — Tabakalandırılmış Seçim, Evrensel Hizmet ve Bürokrasi Karşıtı Rotasyon",
+        "text": "1. Tüm kura yöntemi (sortisyon) organları için jüri üyeleri, açık ve kamuoyu tarafından doğrulanabilir kriptografik ve mekanik kuralar yoluyla evrensel sivil kütüklerden seçilir. Tabakalandırma; yaş, cinsiyet ve coğrafya genelinde nüfusu yansıtır.\n2. Kura ile sivil hizmet, evrensel bir ayrıcalık ve devredilemez bir görevdir. Göreve çağrılan yurttaşlar, rutin emekten tamamen muaf tutulur ve ev içi desteklerinin ikamesi sağlanır.\n3. Yerleşikleşmeyi Önleme Yetkisi: Hiçbir yurttaş aynı kademede ardışık dönemler boyunca görev yapamaz; her görev süresini, kendi süresinin iki katı uzunluğunda bir fasıla takip eder.\n4. Gölge Bürokrasilerin Önlenmesi: Meclis personeli kesinlikle geçici, dönüşümlü sözleşmelerle görev yapar; gündem oluşturmak, yurttaş sorularını filtrelemek veya jüri üyelerini gizlice etkilemek görevden alma ve yargılanmayı gerektiren bir suçtur. Gündem belirleme yetkisi kura yöntemi (sortisyon) delegelerine aittir.\n5. Dilekçe Kabulü ve Müzakere Kapasitesi: Herhangi bir kişi, açık sivil kütükte filtresiz olarak herhangi bir dilekçeyi yayımlayabilir. Gündeme alınması, meclis bileşenlerinin sabit bir oranının ortak desteğini gerektirir; her kişi, asla emek, davranış veya kanaate bağlı kılınmayan, eşit ve periyodik olarak yenilenen bir destek payına sahiptir. Her meclis oturum başına sınırlı sayıda gündem maddesi kontenjanı belirler ve bunlar, farklı desteklere göre ağırlıklandırılmış açık kura ile doldurulur. Kura ile seçilen üç (3) yurttaştan oluşan dönüşümlü bir Ayıklama (Triyaj) Heyeti, özdeş talepleri birleştirir ve esasa asla girmeksizin yalnızca şekli inceler. Parametreler Organik Kanun ile belirlenir."
       },
       {
         "id": "Article 4.4",
-        "title": "Baskı Altında Oylama Yasağı ve Fiziksel Bütünlük Güvencesi",
-        "full_title": "Article 4.4: Baskı Altında Oylama Yasağı ve Fiziksel Bütünlük Güvencesi",
-        "text": "Meclis üyeleri üzerinde herhangi bir lobicilik, şantaj, rüşvet veya fiziki baskı kurulması suçtur. Oylamalar bireysel vicdan ve kamusal çıkar doğrultusunda özgürce gerçekleştirilir."
+        "title": "Çekişmeli Uzman Tanıklığı ve Anlaşılır Karar Alma",
+        "full_title": "Article 4.4 — Çekişmeli Uzman Tanıklığı ve Anlaşılır Karar Alma",
+        "text": "1. Kura yöntemi (sortisyon) jüri üyeleri, müştereklerin ahlaki vicdanı olarak müzakerede bulunur; teknik danışmanlar kesinlikle delil sunma sıfatıyla ve oy hakkı olmaksızın hizmet eder.\n2. Zorunlu Çekişmeli Çapraz Sorgu: Karmaşık tekliflerde, kurumsal hibelerden veya borçtan bağımsız iki bağımsız rakip uzman paneli, açık oturumda birbirlerinin varsayımlarını ve önyargılarını çapraz sorguya tabi tutar.\n3. Pratik Anlaşılırlık Emri: Uzmanlar, modellerini sade bir dille sonuçlara, ödünleşimlere ve başarısızlık senaryolarına tercüme etme yükümlülüğünü taşır.\n4. Epistemik Obstrüksiyon ve İhtiyatilik Değişmezi: Rakip paneller yapay kafa karışıklığı veya kötü niyetli tıkanıklık yaratırsa, meclis İhtiyatilik İlkesini (*In dubio pro natura et vita*) işleterek onayı askıya alır. İhtiyati askıya alma işlemi kesinlikle yeni yapısal müdahalelere uygulanır; onaylanmış rutin bakımı veya kritik yaşam desteğini asla kesintiye uğratamaz. Süregelen kilitlenmeler, komşu olmayan havzalardan gelen bilimsel pratisyenlerden oluşan bir kura yöntemi (sortisyon) heyetine devredilir."
       },
       {
         "id": "Article 4.5",
-        "title": "Yurttaş Denetimi ve Meclis Geri Çağırma Mekanizmaları",
-        "full_title": "Article 4.5: Yurttaş Denetimi ve Meclis Geri Çağırma Mekanizmaları",
-        "text": "Tüm meclis kararları ve oturumları şeffaf bir biçimde halkın denetimine açıktır. Topluluk üyeleri, kurallara uymayan temsilcileri görevden alma ve meclisi yeniden kuraya tabi tutma hakkına sahiptir."
+        "title": "Müzakere Protokolleri ve Derecelendirilmiş Oylama Eşikleri",
+        "full_title": "Article 4.5 — Müzakere Protokolleri ve Derecelendirilmiş Oylama Eşikleri",
+        "text": "Müzakereci meclisler münhasıran derecelendirilmiş eşikler aracılığıyla oy kullanır:\n1. **%75 Anayasal Nitelikli Çoğunluk:** Münhasıran bu Anayasadaki yapısal değişiklikler, Değişmez Hakların genişletilmesi (asla daraltılmaması, Madde 1.7), metalaştırmadan çıkarma ilanları veya biyolojik hayatta kalma taban çizgisine ilişkin değişiklikler için gereklidir.\n2. **%60 Nitelikli Çoğunluk:** Çok yıllı biyobölgesel kalkınma planları, kurucu kaynak tahsisleri, havzalar arası antlaşmalar ve genel düzenleyici yasaların yürürlüğe konulması için gereklidir.\n3. **%50+1 Basit Çoğunluk:** Münhasıran rutin idari takvimlendirme, meclis usul önergeleri ve acil durum afet müdahaleleri için izin verilir. Basit çoğunlukla kabul edilen acil durum kararnameleri, yüzde altmışlık (%60) nitelikli eşik altında sonradan onaylanmayı gerektiren, uzatılamaz otuz (30) günlük otomatik bir yürürlükten kalkma hükmü taşır.\n4. **Eşik Aritmetiği:** Her yüzde eşiği, yalnızca hazır bulunanların değil, görevdeki tüm üyelerin söz konusu payına eşit veya bu payı aşan en küçük tam sayıdaki oyu ifade eder (örneğin 15'in 9'u ve 12'si; 101'in 61'i ve 76'sı)."
+      },
+      {
+        "id": "Article 4.6",
+        "title": "Anayasal Denetim (*Custodes Constitutionis*)",
+        "full_title": "Article 4.6 — Anayasal Denetim (*Custodes Constitutionis*)",
+        "text": "1. Herhangi bir yurttaş, meclis veya Biyosfer Muhafızı, bu Anayasayı ihlal ettiği iddia edilen herhangi bir kanunun, kararnamenin, algoritmanın veya Organik Kanunun denetimi için dilekçe verebilir.\n2. Uyuşmazlığa taraf olmayan havzalardan kura ile çekilen ve Madde 4.4 uyarınca müzakere eden yüz bir (101) yurttaştan oluşan tek davalık bir Anayasal Denetim Jürisi (*Custodes Constitutionis*), Bölüm I kapsamındaki şüpheleri kişi lehine karara bağlayarak yüzde altmışlık (%60) nitelikli çoğunlukla bir tasarrufu hükümsüz kılar. Her bir taraf, üç yüz bir (301) yurttaştan oluşan yeni bir jüriye bir defaya mahsus temyiz başvurusunda bulunabilir.\n3. Denetim jürileri yalnızca uygunluk veya hükümsüzlük beyan eder; kanun taslağı hazırlayamaz veya kanunu değiştiremezler.\n\n---"
       }
     ]
   },
   {
     "number": "V",
-    "title": "ZORUNLU FİZİKSEL EMEK, BAKIM VE KUŞAKLARARASI DEVAMLILIK",
+    "title": "TEMEL FİZİKSEL EMEK, BAKIM VE NESİLLER ARASI BEKA",
     "articles": [
       {
         "id": "Article 5.1",
-        "title": "Toplumsal Bakım ve Zorunlu Emek Evrenselliği",
-        "full_title": "Article 5.1: Toplumsal Bakım ve Zorunlu Emek Evrenselliği",
-        "text": "Toplumun fiziksel bekası için gereken temel işler (temizlik, altyapı bakımı, tarım, atık yönetimi) ayrıcalıksız tüm yetkin yurttaşlar arasında adil ve dönüşümlü olarak paylaşılır."
+        "title": "Ortak Bakım-Onarım, Dönüşümlü Vardiyalar ve Ergonomik Çarpanlar",
+        "full_title": "Article 5.1 — Ortak Bakım-Onarım, Dönüşümlü Vardiyalar ve Ergonomik Çarpanlar",
+        "text": "1. İnsan uygarlığı, maddi temellerinin fiziksel bakım ve idamesine dayanır. Sömürülen alt sınıfları ve ırsî kastları kalıcı olarak ortadan kaldırmak amacıyla, henüz otomatikleştirilemeyen tüm temel bakım-onarım işleri —hıfzıssıhha, toksik geri dönüşüm, üst toprak rejenerasyonu ve mevsimlik hasat— eli ayağı tutan yetişkinler arasında dönüşümlü listeler vasıtasıyla dağıtılan ortak bir yurttaşlık sorumluluğu teşkil eder.\n2. Open Networked Earth (Açık Ağ Bağlantılı Dünya) (O.N.E.) bünyesindeki emek esasen meta olmaktan çıkarılmıştır: İnsan emeği satın alınamaz, kiralanamaz, ticarete konu edilemez; ücret sözleşmeleri ya da borç zoruyla tabi kılınamaz.\n3. Ergonomik Çarpanlar: Ağır veya tehlikeli görevler —fiilî acil kurtarma, yapı ve orman yangını söndürme, toksik ıslah ve set tahkimatı dâhil olmak üzere— temel yurttaşlık yükümlülüklerine karşı 3x–5x oranında onaylanmış ergonomik zaman çarpanları taşır; bu durum gerekli hizmet aralıklarını kısaltır ve robotik otomasyona öncelik verir. Fiilî intikal olmaksızın tehlike teyakkuzunda bekleme, rant arayışına dayalı atıl birikimi önlemek amacıyla kesin olarak taban paritesinden (1.0x) hesaba katılır.\n4. Tam Otomasyon Yörüngesi ve Geçiş Dönemi Yetkisi: O.N.E.'ın stratejik hedefi; açık robotik ve otomatik makineler aracılığıyla tüm ağır, tehlikeli, tekrarlayan ve rutin fiziksel emeğin aşamalı ve eksiksiz biçimde otomatikleştirilmesidir. Dönüşümlü insani fiziksel emek, altyapısal yayılım süresince zorunlu bir geçiş mekanizması olarak kabul edilir; robotik otomasyon genişledikçe, zorunlu fiziksel vardiyalar sistematik olarak sıfıra doğru daralır ve insan varoluşunu bakım verme, ampirik bilim, zanaatkârlık ve ekolojik emanetçilik için özgürleştirir."
       },
       {
         "id": "Article 5.2",
-        "title": "Bakım Emeği, Çocuk Gelişimi ve Yaşlı Desteği",
-        "full_title": "Article 5.2: Bakım Emeği, Çocuk Gelişimi ve Yaşlı Desteği",
-        "text": "Çocuk bakımı, hasta ve yaşlı refakati, duygusal dayanışma ve bakım emeği, toplumun en saygın ve temel üretken katkısı olarak kabul edilir ve tam toplumsal destek görür."
+        "title": "Mütekabiliyet Değişmezi ve Bedavacılığı Önleme Yaptırımları",
+        "full_title": "Article 5.2 — Mütekabiliyet Değişmezi ve Bedavacılığı Önleme Yaptırımları",
+        "text": "1. Biyolojik hayatta kalma tabanı —temiz su, günlük kalorik beslenme, konut barınması ve birincil tıbbi bakım— idari iptale veya çalışma zorlamasına karşı kalıcı olarak muaf, devredilemez bir doğuştan haktır.\n2. Özyönetimli bir topluluğun üyeliği, bağlayıcı bir karşılıklı maddi yardım görevi doğurur. Eli ayağı tutan bir yetişkinin tıbbi bir mazereti olmaksızın kendisine atanan dönüşümlü vardiyaları sistematik olarak reddetmesi durumunda, müdahale cezai/hapis niteliği taşımayan kademeli yaptırımlar yoluyla ilerler:\n   * Tükenmişliği veya gizli engelliliği değerlendirmek üzere bir Yerel Arabuluculuk Heyeti (3 yurttaş) huzuruna zorunlu refakat;\n   * Aşama 3 fazlalık üretimi, gelişmiş bilişim şebekeleri ve havzalar arası transit müştereklerinden tamamen men edilme;\n   * Yalnızca bireyin karşılık vermeyi reddettiği ortak bakım yükleri getirmesi hâlinde ve bir Yerel Arabuluculuk Heyeti tarafından karara bağlanmak şartıyla (Madde 2.3.3), Aşama 1 barınma tabanını aşan konut taban alanının yeniden tahsisi. Tercihen *in situ* olmak üzere, Aşama 1 barınmanın kendisi hiçbir surette şarta bağlanamaz.\n3. Derhâl Yeniden Entegrasyon Değişmezi: Bu tedbirler kesinlikle cezalandırıcı değildir ve sıfır kalıcı yurttaşlık yaftası taşır. Kura Yöntemi (Sortisyon) seçilebilirliği ve siyasi haklar hiçbir zaman emek mütekabiliyetine bağlanamaz. Aşama 3 müştereklerine tam erişim, yurttaşın programlanmış herhangi bir mütekabiliyet vardiyasına veya karşılıklı mutabık kalınan eşdeğer bir yurttaşlık katkısına yeniden başladığı anda *ipso jure* olarak iade edilir."
       },
       {
         "id": "Article 5.3",
-        "title": "Çalışma Saatlerinin İntifa Esasına Göre Azaltılması",
-        "full_title": "Article 5.3: Çalışma Saatlerinin İntifa Esasına Göre Azaltılması",
-        "text": "Faydasız bürokratik işlerin tasfiyesi ve üretim araçlarının ortak kullanımıyla birlikte bireylerin zorunlu çalışma süresi asgari düzeye indirilir; serbest zaman genişletilir."
+        "title": "Ampirik Çocuk Eğitimi ve Nörogelişimsel Bütünlük",
+        "full_title": "Article 5.3 — Ampirik Çocuk Eğitimi ve Nörogelişimsel Bütünlük",
+        "text": "1. Müşterekler dâhilindeki eğitim; geçici pedagojik hevesleri, ideolojik beyin yıkamayı ve standartlaştırılmış test kartellerini kalıcı olarak men ederek, kesin surette tekrarlanmış ampirik bilime, gelişimsel nörobiyolojiye ve kanıtlanmış pedagojik yöntemlere (duyusal-motor hazırlıklı ortamlar dâhil) dayandırılır.\n2. Eğitimsel Üçlü:\n   * *0 ila 7 Yaş (Fiziksel Gerçeklik ve Motor Temel):* Erken dijital soyutlamayla bağlantılı dikkat düzensizliğini önleyerek, münhasıran dokunsal doğaya, toprak işlemeye, fiziksel geometriye, akustik müziğe ve ölçüsüz oyuna dayandırılır;\n   * *7 ila 13 Yaş (Epistemik Hijyen ve Diyalektik):* Sorgulamayı kişisel egodan ayrıştırmak amacıyla bilişsel ön yargılardan arınma, istatistiksel belirsizlik, dinamik geri bildirim sistemleri ve Sokratik diyalog alanlarında sistematik öğretim;\n   * *13+ Yaş (Lonca Çıraklığı ve Ustalık):* Akran denetiminden geçmiş gerçek dünya katkısı yoluyla yetkinlik tesis eden, yetişkin mentörlerin rehberliğinde aktif araştırma, tarım ve üretim kolektiflerine ergen entegrasyonu."
       },
       {
         "id": "Article 5.4",
-        "title": "Tehlikeli ve Ağır İşlerin Rotasyonu ve Otomasyonu",
-        "full_title": "Article 5.4: Tehlikeli ve Ağır İşlerin Rotasyonu ve Otomasyonu",
-        "text": "İnsan sağlığına zararlı, riskli veya ağır işler ivedilikle otomatikleştirilir. Otomasyon sağlanana kadar bu işler gönüllülük, yüksek rotasyon ve azami güvenlik önlemleriyle yürütülür."
+        "title": "Ampirik Ebeveynlik Eğitimi ve Evrensel Alloparenting",
+        "full_title": "Article 5.4 — Ampirik Ebeveynlik Eğitimi ve Evrensel Alloparenting",
+        "text": "1. Gelecek nesilleri yetiştirmek; uzmanlaşmış bilişsel, duygusal ve somatik hazırlık gerektirir. Biyobölgesel topluluklar; bağlanma nörobiyolojisine, sinir sistemi eş-düzenlemesine ve nesiller arası aktarılan kalıtsal travma senaryolarının bilinçli olarak yapısökümüne dayanan kanıta dayalı Ebeveynlik Formasyonu Müşterekleri kurar.\n2. Alloparenting Stajı: Evrensel bir yurttaşlık ön koşulu olarak genç yetişkinler; pediatrik ilk yardım, uyku mimarisi ve bebek somatik sakinleştirmesinde yetkinleşerek, deneyimli mentörlerin gözetiminde toplumsal kreşlerde ve erken çocuk bakımı merkezlerinde uygulamalı rotasyonları tamamlarlar.\n3. İlk 1.000 Gün İskelesi: Toplumsal yaşam alanları, yeni ebeveynler için 24 saatlik dinlenme imkânını, ortaklaşa beslenmeyi ve üretken yurttaşlık görevlerinden tamamen muafiyeti güvence altına alarak lohusa bakıcılarını ve pediatri uzmanlarını doğrudan konut yaşam çevrelerine entegre eder."
       },
       {
         "id": "Article 5.5",
-        "title": "Kuşaklararası Dayanışma ve Mirasın Kamusallığı",
-        "full_title": "Article 5.5: Kuşaklararası Dayanışma ve Mirasın Kamusallığı",
-        "text": "Hiçbir aile veya zümre servet, unvan veya iktidar imtiyazı devredemez. Bireylerin vefatı halinde intifa kullanımındaki ortak varlıklar topluluk havuzuna geri döner."
+        "title": "Ampirik Nörotıp ve Etiyolojik Ruh Sağlığı",
+        "full_title": "Article 5.5 — Ampirik Nörotıp ve Etiyolojik Ruh Sağlığı",
+        "text": "1. Tekelci semptom kontrol listesi taksonomileri ve kâr amaçlı ömür boyu kimyasal sedasyon kalıcı olarak ilga edilmiştir. Ruh sağlığı; ampirik nörotıp, çevresel patolojisizleştirme ve etiyoloji temelli teşhisler vasıtasıyla idare edilir.\n2. Sinir sistemi sıkıntısı (anksiyete, kronik moral bozukluğu, aşırı tetikte olma), öncelikle çevresel strese karşı biyolojik bir tepki olarak ele alınır; komüniter güvenlik, özerklik ve doğaya erişim yoluyla çözülür.\n3. Klinik Müdahale: Süreğen psikiyatrik ızdırap, nesnel biyobelirteçler vasıtasıyla araştırılır: yüksek çözünürlüklü dinamik nöro-telemetri, nöro-enflamatuar tarama, endokrin profilleme ve bağırsak-beyin metabolik analizi. Tedavilerde iyileştirici nöroplastisiteye, somatik travma tahliyesine ve gözetimli nöro-restoratif yöntemlere öncelik verilir. İnsani nöroçeşitlilik, evrimsel bir kazanım olarak korunur; toplumsal uyum uğruna asla kimyasal yollarla köreltilemez.\n4. Epistemik Koruma: Hiçbir tıp loncası veya meclisi, klinik bilim üzerinde dogmatik bir tekel kuramaz; tedavi yöntemleri, Sapkının Müşterekleri çerçevesi kapsamında sürekli ampirik yanlışlanabilirliğe ve açık klinik denetime tabi kalmaya devam eder."
       },
       {
         "id": "Article 5.6",
-        "title": "Özerk Bireysel Zaman ve Kendini Gerçekleştirme Hakkı",
-        "full_title": "Article 5.6: Özerk Bireysel Zaman ve Kendini Gerçekleştirme Hakkı",
-        "text": "Her yurttaş; düşünme, yaratma, dinlenme, felsefe ve sanatla uğraşma hakkına sahiptir. Bireyin değeri ürettiği piyasa artığıyla değil, varoluşsal bütünlüğüyle ölçülür."
+        "title": "Bakım Veren Bağışıklığı ve Kura Yöntemi (Sortisyon) Yönetişimi",
+        "full_title": "Article 5.6 — Bakım Veren Bağışıklığı ve Kura Yöntemi (Sortisyon) Yönetişimi",
+        "text": "1. Çocuk bakımı, erken eğitim, yaşlı refakati ve somatik hasta bakımı, toplumun en üstün üretken temellerini oluşturur. Günlük aile veya topluluk bakımına fiilen iştirak eden her yurttaş, yurttaşlık mütekabiliyeti yükümlülüklerini *ipso jure* yerine getirmiş sayılır ve dönüşümlü fiziksel bakım-onarım vardiyalarından tam muafiyet elde eder.\n2. Görev listesi denetimi, Mahalle Kura Meclisleri (15 yurttaş) tarafından yürütülür. Emek çarpanlarına veya eğitim standartlarına ilişkin yapısal revizyonlar, görevdeki Biyobölgesel Yurttaş Meclisi'nin (101 delege) yüzde yetmiş beşlik (%75) nitelikli oy çokluğunu gerektirir.\n\n---"
       }
     ]
   },
   {
     "number": "VI",
-    "title": "DAĞITIK ALTYAPI, MİKRO ŞEBEKELER VE ANALOG DAYANIKLILIK",
+    "title": "DAĞITIK ALTYAPI, MİKRO ŞEBEKELER VE ANALOG DİRENÇLİLİK",
     "articles": [
       {
         "id": "Article 6.1",
-        "title": "Merkeziyetçi Olmayan Dağıtık Altyapı Mimarisi",
-        "full_title": "Article 6.1: Merkeziyetçi Olmayan Dağıtık Altyapı Mimarisi",
-        "text": "Elektrik, su, ısı ve haberleşme sistemleri tek bir merkeze veya dış güce bağımlı olmayacak şekilde yerel, dağıtık ve otonom ağlar biçiminde yapılandırılır."
+        "title": "Ayrışma Zorunluluğu ve Otuz Günlük Adalanmış Özerklik",
+        "full_title": "Article 6.1 — Ayrışma Zorunluluğu ve Otuz Günlük Adalanmış Özerklik",
+        "text": "1. Open Networked Earth (Açık Ağ Bağlantılı Dünya) bünyesindeki her kentsel yaşam alanı ve biyobölgesel düğüm, tam adalanmış kendi kendine yetebilirlik kapasitesine sahip fiziksel altyapıyı tasarlamak ve sürdürmek zorundadır.\n2. Felaket niteliğindeki makro şebeke kesintileri, aşırı hava olayları veya harici lojistik kopmalar durumunda her düğüm; temel 1. Aşama (Tier 1) yaşam desteğini —içme suyu filtrasyonu, evsel termal regülasyon, tıbbi soğutma ve taban çizgisi besin hazırlığı— zorunlu olarak art arda en az otuz (30) gün boyunca bağımsız şekilde idame ettirecektir.\n3. Harici merkezi kartellere veya kırılgan uzun mesafeli iletim şebekelerine tekil noktalı sistemsel bağımlılıklar getiren kritik belediye kamu hizmetlerinin tasarlanması veya konuşlandırılması anayasaya aykırıdır."
       },
       {
         "id": "Article 6.2",
-        "title": "Yedekli ve Dayanıklı Mikro Şebekeler Standardı",
-        "full_title": "Article 6.2: Yedekli ve Dayanıklı Mikro Şebekeler Standardı",
-        "text": "Mikro şebekeler birincil şebekeden bağımsız olarak çalışabilmeli; güneş, rüzgar, mikro-hidro ve jeotermal gibi yerel yenilenebilir kaynaklarla kesintisiz beslenmelidir."
+        "title": "Modüler Dağıtık Enerji ve Termodinamik Mikro Şebeke Mimarisi",
+        "full_title": "Article 6.2 — Modüler Dağıtık Enerji ve Termodinamik Mikro Şebeke Mimarisi",
+        "text": "1. Tüm düğümlerde birincil enerji üretimi merkeziyetsiz, modüler ve münhasıran yenilenebilir biyofiziksel kaynaklara dayalıdır: dağıtık Fotovoltaik (PV) dizileri, mikro-hidroelektrik türbinleri, modüler rüzgâr jeneratörleri ve yerelleştirilmiş biyokütle sindirimi.\n2. Sabit elektriksel depolama; toksik veya tekelleştirilmiş kıt minerallere bağımlılıktan ari, toksik olmayan, uzun süreli, yangına dayanıklı mimarilerle —elektrokimyasal, mekanik veya termal— sınırlandırılmıştır; şartları karşılayan teknolojiler Organik Kanun Eki'nde listelenmiştir.\n3. Güç dağıtım mimarileri, üretim dizileri, kimyasal depolama bankaları ve yüksek çekişli endüstriyel sürücüler arasında doğrudan kuplaj için yerelleştirilmiş Doğru Akım (DC) mikro şebeke baralarından faydalanmanın yanı sıra, mekânsal mesafe ve standartlaştırılmış makinelerin gerektirdiği yerlerde dirençli, yüksek verimli Dalgalı Akım (AC) dağıtımından yararlanılarak asgari termodinamik entropi için tasarlanır.\n4. Dinamik Ekserji Dengeleme ve Termal Endüstriyel Simbiyoz: Hiper ölçekli hesaplama kümeleri ve ekzotermik kimyasal sentez, dinamik ekserji dengeleyicileri olarak işlev görür: yüksek verimli makine öğrenimi ve ağır simülasyon iş yükleri, 1. Aşama (Tier 1) taban çizgilerini korumak amacıyla yenilenebilir üretim açıklarında anında kısılan kesilebilir termodinamik tamponlar olarak çalışır; yüksek dereceli atık ısı ise belediye bölgesel ısıtma döngülerine ve sera biyokütle döngülerine borularla aktarılır."
       },
       {
         "id": "Article 6.3",
-        "title": "Karanlık Gökyüzü Protokolü ve Analog Manuel Kontrol",
-        "full_title": "Article 6.3: Karanlık Gökyüzü Protokolü ve Analog Manuel Kontrol",
-        "text": "Karanlık Gökyüzü Protokolü uyarınca, tüm hayati altyapılar dijital ağların çökmesi veya siber saldırı durumunda elle çalıştırılabilir mekanik ve analog kontrol sistemlerine sahip olmalıdır."
+        "title": "Açık İmalat Müşterekleri ve Evrensel Onarılabilirlik",
+        "full_title": "Article 6.3 — Açık İmalat Müşterekleri ve Evrensel Onarılabilirlik",
+        "text": "1. Üretken kapasite ve mekanik onarım kabiliyetleri, belediye imalat müşterekleri ve mahalle atölyeleri genelinde dağıtılmıştır.\n2. Her biyobölgesel düğüm; tarımsal, enerjetik ve kamusal altyapıya adanmış standartlaştırılmış eksiltmeli, eklemeli, kesici ve termal imalat ekipmanlarını içeren donanımlı belediye atölyelerini idame ettirecektir.\n3. Takım tezgâhları ve otomatik endüstriyel kontroller, münhasıran şeffaf ve denetlenebilir makine kodunu icra eden açık donanımlı Programlanabilir Mantıksal Denetleyiciler (PLC) aracılığıyla işletilir.\n4. Planlı eskitme, kriptografik sağlayıcıya bağımlılık (vendor lock-in) ve mekanik aletler ile yedek parçalar üzerindeki tescilli yazılım tahditleri yasal olarak hükümsüzdür. Mekanik teknik resimler ve şemalar, yerel bakım ve replikasyon amacıyla herkesin erişimine açık evrensel kamusal müşterekleri teşkil eder."
       },
       {
         "id": "Article 6.4",
-        "title": "Hayati Kaynakların Ağdan Bağımsız İşletim Güvencesi",
-        "full_title": "Article 6.4: Hayati Kaynakların Ağdan Bağımsız İşletim Güvencesi",
-        "text": "İçme suyu depoları, tahıl siloları ve acil durum merkezleri internet bağlantısı veya merkezi sunucular olmadan da en az 120 saat boyunca kesintisiz hizmet verecek şekilde tasarlanır."
+        "title": "Dağıtık Telekomünikasyon Örgüsü ve Optik Koridorlar",
+        "full_title": "Article 6.4 — Dağıtık Telekomünikasyon Örgüsü ve Optik Koridorlar",
+        "text": "1. Dijital iletişim altyapısı, doğrudan halk tarafından idame ettirilen merkeziyetsiz, dirençli bir müşterek olarak düzenlenir.\n2. Kamusal ağlar; yerelleştirilmiş kablosuz örgü (mesh) topolojileri, görüş hattı optik bağlantıları, yönlü röleler ve lisanstan muaf düşük güçlü uzun menzilli radyo telemetrisi aracılığıyla çalışır.\n3. Ağ yönlendirme protokolleri kendi kendini onaran, uçtan uca şifrelenmiş ve merkezi paket incelemesine veya kurumsal telekomünikasyon darboğazlarına yapısal olarak bağışık niteliktedir.\n4. Demiryolu koridorları ve su kemerleri boyunca döşenen yüksek bant genişlikli optik lifler, havza düğümlerini egemen telekomünikasyon bekçileri olmaksızın açık bir gezegensel veri takasına bağlayan açık biyobölgesel omurgaları oluşturur."
       },
       {
         "id": "Article 6.5",
-        "title": "Yerel Üretim, Tersine Mühendislik ve Onarım Hakkı",
-        "full_title": "Article 6.5: Yerel Üretim, Tersine Mühendislik ve Onarım Hakkı",
-        "text": "Yurttaşların ve atölyelerin kullandıkları alet ve cihazları tamir etme, modifiye etme ve parçalarını tersine mühendislikle yeniden üretme hakkı engellenemez."
+        "title": "Kara Gökyüzü Protokolü ve Analog Mekanik Yedek Düzenekler",
+        "full_title": "Article 6.5 — Kara Gökyüzü Protokolü ve Analog Mekanik Yedek Düzenekler",
+        "text": "1. Şiddetli elektromanyetik darbelere, güneş jeomanyetik fırtınalarına ve topyekûn mikroelektronik bozulmaya karşı insanın hayatta kalmasını temin etmek amacıyla, tüm temel yaşam destek ağları Kara Gökyüzü Protokolü kapsamında elektronik olmayan mekanik geçersiz kılma düzeneklerini bünyesinde barındırmalıdır.\n2. Birincil belediye su kapakları, kanalizasyon yönlendirme vanaları, rezervuar dağıtım kanalları, yüksek voltajlı fiziksel izolatörler ve acil tıbbi saklama dolapları; sıfır yazılım, elektrik gücü veya telemetrik girdi gerektiren manuel, insan eliyle çalıştırılabilir kolları ve karşı ağırlıkları muhafaza etmelidir.\n3. Analog hidrolik regülatörler, yerçekimiyle beslenen su kemerleri ile dayanıklı basılı kartografik ve makine mühendisliği arşivleri korunacak ve onaylı aralıklarla sistematik olarak denetlenecektir. Topyekûn elektronik çöküş sırasında manuel işletim kabiliyetinden yoksun herhangi bir kritik yaşam destek tesisi anayasaya aykırıdır ve faaliyet göstermesi yasaktır.\n4. Galvanik Bıçaklı Şalter ve Adalanmış Çekirdek: Yaşamsal öneme sahip belediye sistemleri, siber-fiziksel saldırı esnasında harici geniş alan ağlarını anında kesme kabiliyetine sahip fiziksel galvanik ayırıcı şalterleri içermelidir. İzolasyon, operasyonları yerel, fiziksel olarak yazma korumalı salt okunur denetleyicilerle (ROM) sınırlandırarak dış paket bağımlılığı olmaksızın stokiyometrik metabolik ve çevresel döngüleri sürdürür."
       },
       {
         "id": "Article 6.6",
-        "title": "Ortak Donanım Depoları ve Toplumsal Fabrikasyon",
-        "full_title": "Article 6.6: Ortak Donanım Depoları ve Toplumsal Fabrikasyon",
-        "text": "Her mahallede açık kaynaklı donanım kütüphaneleri, ortak işleme atölyeleri (fab-lab) ve takım tezgahları halkın ücretsiz kullanımına sunulur."
+        "title": "Altyapı Yönetişimi, Eşlik ve Karar Eşikleri",
+        "full_title": "Article 6.6 — Altyapı Yönetişimi, Eşlik ve Karar Eşikleri",
+        "text": "1. Dağıtık ağların planlanması, kurulumu ve fiziksel genişlemesi, kesin tek sayı eşliğinde Kura Yöntemi (Sortisyon) gözetimi altında açıkça yönetilir:\n   * Mahalle kamu hizmeti gözetimi ve atölye rezervasyonları: yüzde altmış (%60) nitelikli çoğunlukla on beş (15) vatandaştan oluşan Mahalle Kura Yöntemi (Sortisyon) Konseyleri tarafından yönetilir.\n   * Biyobölgesel şebeke ara bağlantıları, havza su kemerleri ve optik omurgalar: yüz bir (101) delegeden oluşan Biyobölgesel Yurttaş Meclisleri tarafından yönlendirilir.\n2. Derecelendirilmiş Karar Eşikleri:\n   * **%75 Anayasal Nitelikli Çoğunluk:** Kritik yaşam destek varlıklarının hizmetten çıkarılması veya ortak altyapının devredilmesi için gereklidir.\n   * **%60 Nitelikli Çoğunluk:** Bölgesel şebeke ara bağlantılarının, su transfer antlaşmalarının veya beş yıllık altyapı kalkınma planlarının onaylanması için gereklidir.\n   * **%50+1 Basit Çoğunluk:** Yalnızca acil durum yük atma, koruyucu sistem ayrışması veya acil afet onarımları için izin verilir ve otomatik otuz (30) günlük yürürlükten kalkma (sunset) incelemesine tabidir.\n\n---"
       }
     ]
   },
   {
     "number": "VII",
-    "title": "AÇIK DERLEYİCİ BÜTÜNLÜĞÜ VE KODUN DEMOKRATİKLEŞMESİ",
+    "title": "AÇIK DERLEYİCİ BÜTÜNLÜĞÜ VE KODUN DEMOKRATİKLEŞTİRİLMESİ",
     "articles": [
       {
         "id": "Article 7.1",
-        "title": "Açık Derleyici Bütünlüğü ve Şeffaf Kod İlkesi",
-        "full_title": "Article 7.1: Açık Derleyici Bütünlüğü ve Şeffaf Kod İlkesi",
-        "text": "Kamu altyapısında, iletişimde ve yönetimde kullanılan tüm yazılımların kaynak kodları bütünüyle açık ve herkes tarafından incelenebilir olmak zorundadır."
+        "title": "Egemen Olmayan Kod Aksiyomu ve Algoritmaların Tabiyeti",
+        "full_title": "Article 7.1 — Egemen Olmayan Kod Aksiyomu ve Algoritmaların Tabiyeti",
+        "text": "1. Open Networked Earth (Açık Ağ Bağlantılı Dünya) (O.N.E.) bünyesindeki yazılımlar, algoritmik modeller, sayısal derleyiciler ve otomatik lojistik sistemler, kesin surette egemenliği haiz olmayan idari araçlar olup, daimi olarak insan vicdanına ve demokratik kura yöntemi (sortisyon) meclislerine tabidir.\n2. Yasama taslağı hazırlama, adli hüküm verme, biyofiziksel kaynak tayınlama veya şahıslara karşı herhangi bir cebri kuvvet uygulama yetkisinin otonom algoritmalara, sinirsel modellere veya yapay ajanlara devredilmesi mutlak bir anayasal hükümsüzlüktür. Madde 8.1.4 uyarınca gelen insansız makinelerin ve fırlatılan cisimlerin önceden yetkilendirilmiş şekilde engellenmesi şahıslara yönelik bir cebir teşkil etmez.\n3. Kod asla kanun hükmünde icra edilemez. Sayısal motorlar, yalnızca insanların emrettiği tahsisatları icra eden açık lojistik hizmetkârlar olarak vazife görür.\n4. Makinelerin boyunduruğu altına girme tehlikesini kalıcı olarak ortadan kaldırmak amacıyla, kamusal otomasyon; öznel faillikten, tüzel kişilikten veya egemen statüden yoksun, doğrulanabilir kâhin mimarileriyle sınırlandırılmıştır."
       },
       {
         "id": "Article 7.2",
-        "title": "Kara Kutu Yapay Zeka ve Özerk Silah Yasağı",
-        "full_title": "Article 7.2: Kara Kutu Yapay Zeka ve Özerk Silah Yasağı",
-        "text": "İnsan hayatı hakkında ölüm-kalım kararı veren, cezalandırıcı nitelikteki veya otonom silah sistemlerine dayalı kapalı kutu yapay zekaların geliştirilmesi ve kullanılması yasaktır."
+        "title": "Kamusal Müştereklerde Mülkiyetçi Yazılımların Mutlak Surette Yasaklanması",
+        "full_title": "Article 7.2 — Kamusal Müştereklerde Mülkiyetçi Yazılımların Mutlak Surette Yasaklanması",
+        "text": "1. Kamu idaresi, altyapı telemetrisi, üretim müşterekleri, mikro şebekeler veya iletişim omurgaları genelinde kapalı kaynaklı, gizlenmiş/karartılmış (obfuscated), mülkiyetçi veya ticari sır niteliğindeki yazılımların konuşlandırılması veya çalıştırılması kalıcı olarak yasaklanmıştır.\n2. Bütün işletim sistemleri, derleyiciler, kriptografik kütüphaneler, veri tabanı yapıları ve Programlanabilir Mantıksal Denetleyiciler (PLC'ler) veya mikroişlemciler içine gömülü bellenimler; Fikri Mülkiyet (IP) takyidatlarından, yazılım patentlerinden ve ticari lisans kilitlerinden ari bir şekilde kamu malı (public domain) statüsünde bulunmalıdır.\n3. Müşterekler dahilinde mülkiyetçi yazılım tekellerini yeniden tesis etmeye teşebbüs eden her türlü hukuki tasarruf, sözleşme veya dijital haklar kilidi hukuken hükümsüz ve batıldır."
       },
       {
         "id": "Article 7.3",
-        "title": "Çok Katmanlı Bağımsız Donanım Doğrulaması",
-        "full_title": "Article 7.3: Çok Katmanlı Bağımsız Donanım Doğrulaması",
-        "text": "Kritik donanımların mikroişlemcileri farklı üreticilerin tasarımlarıyla çapraz doğrulamadan geçirilir; tedarik zincirindeki donanımsal arka kapılara ve truva atlarına karşı korunur."
+        "title": "Bitten Bite Deterministik Yeniden Üretilebilirlik ve Deterministik Çeşitlendirilmiş Çift Derleme (DDC)",
+        "full_title": "Article 7.3 — Bitten Bite Deterministik Yeniden Üretilebilirlik ve Deterministik Çeşitlendirilmiş Çift Derleme (DDC)",
+        "text": "1. Gizli arka kapıları, derleyici düzeyindeki yıkıcı faaliyetleri ve gizli gözetleme modüllerini kalıcı olarak ortadan kaldırmak amacıyla, kamusal yaşam destek altyapısı üzerinde çalışan her çalıştırılabilir ikili dosya (binary), doğrulanmış ve insan tarafından okunabilir kaynak koddan deterministik, bitten bite ikili yeniden üretilebilirlik sağlamalıdır.\n2. Temel işletim sistemi çekirdekleri, kriptografik kütüphaneler ve endüstriyel denetleyici bellenimleri; işlevsel olarak bağımsız, açık kaynaklı araç zincirleri ve çeşitli mikroişlemci mikro mimarileri genelinde Deterministik Çeşitlendirilmiş Çift Derleme (DDC) sürecinden geçmelidir.\n3. Kamusal havuzlar, merkeziyetsiz ve kriptografik olarak denetlenebilir inşa kayıtları tutacaktır. Derlenmiş kriptografik özeti (hash), herhangi bir yurttaş düğümü tarafından kamusal kaynak ağaçlarından bağımsız bir şekilde yeniden üretilemeyen her türlü ikili dağıtımın kamusal altyapıdaki yetkisi derhal iptal edilir."
       },
       {
         "id": "Article 7.4",
-        "title": "Algoritmik Şeffaflık ve Toplumsal Denetim Hakkı",
-        "full_title": "Article 7.4: Algoritmik Şeffaflık ve Toplumsal Denetim Hakkı",
-        "text": "Toplumun kaynak dağıtımında yardımcı olarak yararlanılan tüm algoritma ve modeller açık tartışmaya ve yurttaş denetimine tabi tutulur."
+        "title": "Eşik Anahtar Dağıtımı (t-MPC) ve Biyometrik Olmayan Kimlik Doğrulama",
+        "full_title": "Article 7.4 — Eşik Anahtar Dağıtımı (t-MPC) ve Biyometrik Olmayan Kimlik Doğrulama",
+        "text": "1. Hiçbir münferit mühendis, programlama loncası, biyobölgesel düğüm veya idari konsey; kamusal müşterek ağları üzerinde tek taraflı idari kök anahtarları veya ana kriptografik erişim yetkisini elinde bulunduramaz.\n2. Kök sertifikalar, ağ yapılandırma imzalama anahtarları, mikro şebeke koordinasyon belirteçleri ve hiper ölçekli bilgi işlem dizilerine idari erişim; Eşik Çok Partili Hesaplama (t-MPC) vasıtasıyla kalıcı olarak kriptografik paylara bölünerek birden fazla su havzasındaki demografik olarak tabakalandırılmış kura yöntemi (sortisyon) meclisleri arasında dağıtılır; böylece tek noktadan kurumsal, devlete ait veya lonca kaynaklı idari ele geçirme riski ortadan kaldırılır.\n3. Rutin imzalama işlemleri çoklu düğüm mutabakatı gerektirirken, yapısal protokol göçleri egemen kura yöntemi (sortisyon) meclisleri genelinde icra edilen etkileşimli bir eşik töreni gerektirir.\n4. Sivil katılım, dilekçe verme ve kura kütüğüne erişim; biyometrik özellikleri, yüz görüntülerini veya kişisel kimlik verilerini toplamaksızın yaşayan insan bireyselliğini doğrulayan Sıfır Bilgi Kişilik Kanıtı'na (ZK-PoP) dayanır."
       },
       {
         "id": "Article 7.5",
-        "title": "Veri Müşterekleri ve Özel Veri Toplama Yasağı",
-        "full_title": "Article 7.5: Veri Müşterekleri ve Özel Veri Toplama Yasağı",
-        "text": "Yurttaşların kişisel davranış verilerinin ticarileştirilmesi, gözetim profillemesi yapılması veya rızasız merkezi sunucularda toplanması yasaktır."
+        "title": "Sivil Ezoterizmden Arındırma Talimatı ve Kamusal Algoritmaların Denetimi",
+        "full_title": "Article 7.5 — Sivil Ezoterizmden Arındırma Talimatı ve Kamusal Algoritmaların Denetimi",
+        "text": "1. Seçilmemiş bir yazılım ruhban sınıfının ortaya çıkmasını engellemek amacıyla, tüm kamusal algoritmik şartnameler, tahsis kuralları ve derleyici araç zincirleri kapsamlı ve insan tarafından okunabilir belgeler içermelidir.\n2. Teknik loncalar; algoritmaların anayasal esaslara harfiyen uyduğunu gösteren işlevsel, sade dille yazılmış mimari özetler, açık kaynaklı test paketleri ve etkileşimli yalıtılmış alanlar (sandbox) sağlama konusunda mecburi yükümlülük taşır.\n3. Ezoterik Muğlaklığın Hükümsüzlüğü: Kasten anlaşılmaz kılınan (obfuscated), matematiksel olarak gizlenen veya sıradan yurttaşların işlevsel kavrayışına direndiği bağımsız hasmane denetçilerce kanıtlanan her türlü algoritmik dağıtım formülü, tahsis rutini veya yönetişim protokolü anayasal olarak hükümsüzdür ve müşterek altyapıda yürütülmesi yasaktır."
       },
       {
         "id": "Article 7.6",
-        "title": "Kritik Altyapı Kodlarının Bağımsız İncelenmesi",
-        "full_title": "Article 7.6: Kritik Altyapı Kodlarının Bağımsız İncelenmesi",
-        "text": "Kritik güvenlik denetimleri bağımsız yerel ve küresel sivil bilişim kurulları tarafından düzenli olarak gerçekleştirilir ve sonuçları kamuoyuyla paylaşılır."
+        "title": "Kesintisiz Kırmızı Takım İncelemesi, Meclis Eşitliği ve Karar Eşikleri",
+        "full_title": "Article 7.6 — Kesintisiz Kırmızı Takım İncelemesi, Meclis Eşitliği ve Karar Eşikleri",
+        "text": "1. Müzakere meclisleri; güvenlik açıklarını, gizli arka kapıları ve merkezileşme vektörlerini ortaya çıkarmak üzere kesintisiz hasmane sızma testleri yürüten bağımsız, kamusal kırmızı takım ödüllerine tahsisli sayısal ekserji ve maddi destek ile kalıcı olarak kaynak sağlayacaktır.\n2. Dijital müşterekler denetimi, mutlak tek sayı eşitliğiyle yönetilir:\n   * Mahalle arayüzü denetimi: on beş (15) yurttaştan oluşan Mahalle Kura Meclisleri tarafından idare edilir.\n   * Biyobölgesel kod havuzları ve endüstriyel bellenim standartları: yüz bir (101) delegeden oluşan Biyobölgesel Yurttaş Meclisleri tarafından yönetilir.\n3. Dereceli Karar Eşikleri:\n   * **%75 Anayasal Nitelikli Çoğunluk:** Temel kriptografik standartları yürürlükten kaldırmak veya çekirdek açık kaynak derleme değişmezlerini değiştirmek için gereklidir.\n   * **%60 Nitelikli Çoğunluk:** Biyobölgesel yazılım sürümleri ve büyük altyapısal kod kabulleri için gereklidir.\n   * **%50+1 Basit Çoğunluk:** Otomatik otuz (30) günlük bir yürürlükten kalkma (sunset) incelemesine tabi olmak kaydıyla, yalnızca acil kriptografik anahtar rotasyonları, hızlı yazılım yaması konuşlandırmaları veya aktif siber saldırılar sırasındaki savunma amaçlı ağ tecritleri için izin verilir.\n\n---"
       }
     ]
   },
   {
     "number": "VIII",
-    "title": "KAMU GÜVENLİĞİ, SAVUNMA CAYDIRICILIĞI VE ONARICI ADALET",
+    "title": "KAMU GÜVENLİĞİ, SAVUNMA AMAÇLI CAYDIRICILIK VE ONARICI ADALET",
     "articles": [
       {
         "id": "Article 8.1",
-        "title": "Kolluk Kuvvetlerinin Dönüştürülmesi ve Silahsız Güvenlik",
-        "full_title": "Article 8.1: Kolluk Kuvvetlerinin Dönüştürülmesi ve Silahsız Güvenlik",
-        "text": "Militarize edilmiş polis teşkilatları ve paramiliter yapılar lağvedilmiştir. Kamu düzeni, mahalle sakinlerinden oluşan silahsız, eğitimli ve barışçıl güvenlik ağlarınca sağlanır."
+        "title": "Militerleştirilmiş Polisliğin İlgası, Silah Yasağı ve Geçiş Dönemi Savunması",
+        "full_title": "Article 8.1 — Militerleştirilmiş Polisliğin İlgası, Silah Yasağı ve Geçiş Dönemi Savunması",
+        "text": "1. Militerleştirilmiş polislik, Open Networked Earth (Açık Ağ Bağlantılı Dünya) (O.N.E.) genelinde kalıcı olarak ilga edilmiştir. Sivil personel tarafından ateşli silahlar, mühimmat, patlayıcılar veya nöro-tahriş edicilerin stoklanması anayasaya aykırıdır.\n2. Paralı asker sendikaları ve Özel Askeri Şirketler (PMC'ler) yapısal suçlar sayılarak yasaklanmıştır. Kamu güvenliği, işlevsel uzmanlaşma yoluyla idare edilir:\n   * Sivil Barış Loncaları: Kişilerarası arabuluculuk, gerilimi düşürme ve onarıcı travma triyajı alanlarında eğitim almış silahsız uygulayıcılar;\n   * Sivil Kurtarma ve İtfaiye Loncaları: Yapısal ve orman yangınlarıyla mücadele, teknik kurtarma, jeofiziksel afet müdahalesi ve tehlikeli madde muhafazasını yürüten özel hizmet birimleri. Taktik olay komutası kesin bir biçimde fiziksel can güvenliği ile sınırlandırılmıştır; acil durum teçhizatının zor kullanmak amacıyla konuşlandırılması anayasaya aykırıdır. Yirmi dört (24) saati aşan tahliye emirleri, idari tehcirin engellenmesi amacıyla, Yerel Arabuluculuk Heyeti tarafından kura yöntemi (sortisyon) ile yeniden yetkilendirme gerektirir.\n3. Evrensel Silah Yasağı: İnsanları öldürmeyi veya yaralamayı amaçlayan silahların, mühimmatın ya da robotiklerin tasarlanması, imal edilmesi veya derlenmesi, insanlar için de makineler için de kategorik olarak yasaktır. Tek istisna, hiçbir surette insanları hedef alamayacak olan Madde 8.1.4 kapsamındaki geçiş dönemi bedensel olmayan önlemesidir.\n4. Geçiş Dönemi Önleme Savunması: O.N.E.'a küresel gezegensel katılım sağlanana kadar federasyon, yer altı tabyalarında mühürlenmiş savunma amaçlı önleme platformlarını (Erişimi Engelleme/Bölgeden Men Etme - A2/AD) aşağıdaki sınırlandırmalara tabi olarak muhafaza eder:\n   * Taktik Nokta Savunması ve Sürü Karşıtı Arındırma: Platformlar, yalnızca yerel iç sınırlar dahilindeki gelen mermileri ve insansız makineleri otonom olarak engellemek üzere önceden yetkilendirilmiştir; kişiler ve mürettebatlı araçlar asla otonom hedef olamaz. Makinelerin imhası, onarıcı bir hak ehliyeti bulunmayan bedensel olmayan arındırma (*Purgatio Mechanica*) teşkil eder. Meskun veya karma sivil çevrelerde angajman, Organik Kanun Eki'nde belirtildiği üzere, patlayıcı olmayan, iyonlaştırıcı olmayan elektronik müdahale ve pasif yakalama ile sınırlandırılmıştır.\n   * Uzak Mesafeden Etkisiz Hale Getirme: Nihai nokta savunmasının ötesindeki her türlü angajman, insansız fırlatma ve kontrol altyapısının ölümcül olmayan şekilde etkisiz hale getirilmesiyle sınırlıdır ve Biyobölge Meclisi (101 delege) ile Kıta Meclisinin (301 yurttaş) yüzde yetmiş beşlik (%75) çifte anahtarlı yetkilendirmesini gerektirir.\nGezegensel birleşme sağlandığında, tüm savunma platformları sökülür ve Kılıçlardan Saban Demirlerine (*Gladii in vomeres*) uyarınca sivil altyapıya dönüştürülmek üzere eritilir."
       },
       {
         "id": "Article 8.2",
-        "title": "Onarıcı Adalet Heyetleri ve Toplumsal İyileşme",
-        "full_title": "Article 8.2: Onarıcı Adalet Heyetleri ve Toplumsal İyileşme",
-        "text": "Suç ve uyuşmazlıklar intikamcı cezalar yerine zarar gören tarafın mağduriyetini gidermeyi, tarafları uzlaştırmayı ve toplumsal dokuyu onarmayı amaçlayan onarıcı adaletle çözülür."
+        "title": "Ortamsal Mekansal Güvenlik ve Zararsız Telemetri",
+        "full_title": "Article 8.2 — Ortamsal Mekansal Güvenlik ve Zararsız Telemetri",
+        "text": "1. Kamu güvenliği mekânsal mimariye içkindir: koridorlar ve meskenler gün ışığı görüş hatlarını koruyarak tuzak alanlarını ortadan kaldırır. Otomatik makineler, bir insanın yaklaşması durumunda kinetik durdurmayı tetikleyen optik kilit mekanizmaları içerir.\n2. Ortamsal telemetri kesin surette geçicidir: uç mikro röleler, akustiği yalnızca fiziksel darbeleri veya yapısal kırılmaları tespit etmek amacıyla işler ve travma dışı verileri Organik Kanun ile belirlenen saniye altı bir süre içinde siler. Kamusal sensörler hiçbir surette konuşma kaydetmeyecek veya biyometrik kütükler derlemeyecektir."
       },
       {
         "id": "Article 8.3",
-        "title": "Şiddetsiz Müdahale ve Defansif Caydırıcılık",
-        "full_title": "Article 8.3: Şiddetsiz Müdahale ve Defansif Caydırıcılık",
-        "text": "Toplumsal savunma; öldürücü olmayan taktikler, sivil direnç, fiziksel barikatlar ve çatışmasızlaştırma ilkeleri üzerine kuruludur."
+        "title": "Mağdurların Egemenliği ve Onarıcı Öncelik Şartı",
+        "full_title": "Article 8.3 — Mağdurların Egemenliği ve Onarıcı Öncelik Şartı",
+        "text": "1. Adalet; zarar gören tarafın özerkliğini, iyileşmesini ve onurunu merkeze alır. Mağdurlar, hiçbir yaptırımla karşılaşmaksızın onarıcı diyaloğu reddetme konusunda dokunulmaz bir hakka sahiptir.\n2. Mekânsal Yakınlaşmama Değişmezi: Fiziksel şiddet hallerinde, yer değiştirme yükümlülüğü münhasıran ihlali gerçekleştirene aittir. Zarar gören kişi meskenindeki kesintisiz zilyetliğini korur; ihlali gerçekleştiren ise mağdurun seyahat yarıçapının dışına nakledilir.\n3. Bedensel Tazminat: Topluluk, ihlali gerçekleştirenin rehabilitasyonuna kaynak tahsis etmeden önce, derhal travma terapisi ve maddi tazminat sağlanmasını garanti eder."
       },
       {
         "id": "Article 8.4",
-        "title": "Toplumsal Savunma ve Saldırmazlık İlkesi",
-        "full_title": "Article 8.4: Toplumsal Savunma ve Saldırmazlık İlkesi",
-        "text": "Topluluklar hiçbir dış bölgeye saldıramaz veya işgal harekatına girişemez; askeri yapılanma yalnızca sınırların ve müştereklerin savunulması amacıyla meşru müdafaa ile sınırlıdır."
+        "title": "Üç Aşamalı Onarıcı Basamak ve Olgu Odaklı Soruşturma",
+        "full_title": "Article 8.4 — Üç Aşamalı Onarıcı Basamak ve Olgu Odaklı Soruşturma",
+        "text": "Uyuşmazlıklar ve zararlar sıralı olarak çözüme kavuşturulur:\n1. **1. Aşama (Doğrudan Oturum):** Gönüllü tazmini müzakere etmek üzere silahsız bir arabulucu huzurunda yürütülen kolaylaştırılmış diyalog.\n2. **2. Aşama (Topluluk Onarıcı Çemberi):** Bağlayıcı ahitlerle sonuçlanan, şiddetli sürtüşmeleri ele alan kolaylaştırılmış akran diyaloğu.\n3. **3. Aşama (Kura Yöntemiyle Tahkim Mahkemesi):** Olgu Odaklı Soruşturma (*Inquisitio Facti*) yoluyla on beş (15) yurttaştan oluşan bir Yurttaş Mahkemesi tarafından yapılan bağlayıcı yargılama. Çekişmeli mahkeme duruşmaları ilga edilmiştir: yargılamalar kesin surette doğrulanabilir fiziksel delilleri ve açık kayıtları değerlendirir.\n4. **Katı Maddi Kanunilik:** Mahkemeler ideolojik kovuşturmayı hariç tutarak, münhasıran fiziksel saldırı, bedensel ihlal, çitleme veya ekolojik zehirleme üzerinde yargı yetkisine sahiptir. Jüri üyeleri, komşu bölgelerden kura yöntemi (sortisyon) ile seçilir.\n5. **Çift Kör Adli Tıp Denetimi:** 3. Aşamadaki adli tıp telemetrisi, bitişik olmayan bir su havzasından kura ile belirlenen bir tesis tarafından bağımsız olarak denetlenir ve yalnızca açık inceleme altında yeniden üretilebilmesi halinde kabul edilir."
       },
       {
         "id": "Article 8.5",
-        "title": "Gözaltı Yasağı ve Mutlak Beden Dokunulmazlığı",
-        "full_title": "Article 8.5: Gözaltı Yasağı ve Mutlak Beden Dokunulmazlığı",
-        "text": "Hiçbir yurttaş keyfi olarak alıkonulamaz, gizli sorgulamalara veya fiziksel/psikolojik işkenceye maruz bırakılamaz. Bireysel özgürlük esastır."
+        "title": "Custodia Civilis Territorialis ve Dokunulmaz Habeas Corpus",
+        "full_title": "Article 8.5 — Custodia Civilis Territorialis ve Dokunulmaz Habeas Corpus",
+        "text": "1. Hapis cezası, hücre hapsi, cezalandırıcı kafesler ve idam cezası kalıcı olarak ilga edilmiştir.\n2. Custodia Civilis Territorialis: Bir bireyin istikrara kavuşturulmaya direnç gösteren yırtıcı nitelikte şiddet uygulaması halinde, kısıtlama *Custodia Civilis Territorialis* olarak adlandırılır ve açık bahçeleri, besleyici yemekleri ve psikiyatrik bakımı olan gün ışığı alan konut süitlerinde gerçekleşir. Duyusal yoksunluk, kimyasal köreltme ve cezalandırıcı tecrit yasaktır.\n3. Usule İlişkin *Habeas Corpus* Güvenceleri:\n   * Acil durum gözaltısı, yetmiş iki (72) saat içinde kura yöntemiyle (sortisyon) belirlenen heyetin (15 yurttaş) onayını gerektirir; aksi takdirde serbest bırakma zorunludur;\n   * Değişmezler Muhafızı (*Custos Jurium*): Kura yöntemiyle belirlenen bağımsız bir muhafız; bedensel esenliği, ifade suskunluğunu ve suçsuzluğu kanıtlayan telemetriyi korur;\n   * Zorunlu Altı Aylık İnceleme: Muhafaza tedbiri, her yüz seksen (180) günde bir kura yöntemiyle belirlenen yeni bir jüri (15 yurttaş) tarafından yeniden incelenir ve yüzde altmışlık (%60) nitelikli çoğunluk gerektirir."
       },
       {
         "id": "Article 8.6",
-        "title": "Cezaevlerinin Tasfiyesi ve Onarıcı Güvenlik Ağları",
-        "full_title": "Article 8.6: Cezaevlerinin Tasfiyesi ve Onarıcı Güvenlik Ağları",
-        "text": "Kişileri tecrit eden kapalı cezaevleri kademeli olarak kapatılır; bireylerin topluma yeniden kazandırılması açık rehabilitasyon ve üretim merkezleri aracılığıyla sağlanır."
+        "title": "Yargısal Meclis Dengesi ve Karar Eşikleri",
+        "full_title": "Article 8.6 — Yargısal Meclis Dengesi ve Karar Eşikleri",
+        "text": "1. Tüm yargılamalarda kesin tek sayı dengesi gözetilir: Yerel Heyetler üç (3) yurttaştan; Mahalle Mahkemeleri on beş (15) yurttaştan; Biyobölge İnceleme Daireleri yüz bir (101) delegeden oluşur.\n2. Kademeli Yargısal Eşikler:\n   * **%75 Anayasal Nitelikli Çoğunluk:** Bölüm I'in (Madde 1.7) altına asla düşürülemeyecek, ancak güçlendirilebilecek olan usul güvencelerini değiştirmek için gereklidir.\n   * **%60 Nitelikli Çoğunluk:** Bir *Custodia Civilis Territorialis* kararnamesinin çıkarılması veya altı ayda bir yenilenmesi için gereklidir.\n   * **%50+1 Salt Çoğunluk:** Yalnızca suçüstü (*in flagrante delicto*) halindeki aktif şiddeti takiben derhal uygulanan yetmiş iki saatlik koruyucu gözaltı için geçerlidir.\n3. Barışçıl Çıkış Hakkı: Her kişi, kişisel eşyalarıyla birlikte, cezai kovuşturma veya hapsedilme takibinden muaf olarak, engellenmeksizin biyobölgeden ayrılma konusundaki devredilemez hakkını korur."
       }
     ]
   },
   {
     "number": "IX",
-    "title": "GEÇİŞ GEÇİTLERİ: SERMAYE ÇEVRİLMESİNDEN MÜŞTEREKLERE",
+    "title": "GEÇİŞ KÖPRÜSÜ: SERMAYE ÇEVRELEMESİNDEN MÜŞTEREKLERE",
     "articles": [
       {
         "id": "Article 9.1",
-        "title": "Sermaye Çevrilmesinin Tasfiyesi ve Kamusallaştırma",
-        "full_title": "Article 9.1: Sermaye Çevrilmesinin Tasfiyesi ve Kamusallaştırma",
-        "text": "Müşterek kaynakları gasp eden, doğayı talan eden veya kamu varlıklarını elinde tutan tekellerin mülkiyet iddiaları iptal edilir; bu varlıklar halk meclislerinin ortak intifasına devredilir."
+        "title": "Çift Hatlı El Sıkışma ve Paralel Yaşam Destek Sistemleri",
+        "full_title": "Article 9.1 — Çift Hatlı El Sıkışma ve Paralel Yaşam Destek Sistemleri",
+        "text": "1. Sermaye çevrelemesinden ve borca dayalı kıtlıktan gezegensel müştereklere tarihsel geçiş, Çift Hatlı El Sıkışma'nın taammüden tasarlanmış mimarisi vasıtasıyla ilerler.\n2. Şiddet içeren makro kopuşların peşinden gitmek yerine özerk geçiş düğümleri, mevcut spekülatif piyasa ekonomisi (Hat A) ekolojik ve finansal borç krizleri altında çözülürken paralel ve dirençli yaşam destek sistemleri inşa etmek amacıyla açık kaynaklı altyapıyı, Topluluk Toprak Vakıflarını (CLT) ve karşılıklı yardımlaşma ağlarını (Hat B) devreye sokar.\n3. Eski tedarik zincirleri ve kamu hizmetleri çöktükçe nüfuslar, günlük maddi varoluşlarını genişleyen müştereklere taşır. Müşterekler ideolojik zorlama yoluyla değil, meta döngülerinin dışında derhal, doğrulanmış ve güvenilir yaşam desteği sunarak genişler."
       },
       {
         "id": "Article 9.2",
-        "title": "Borçların Feshi ve Finansal Parazitliğin Önlenmesi",
-        "full_title": "Article 9.2: Borçların Feshi ve Finansal Parazitliğin Önlenmesi",
-        "text": "Finansal sermayenin borçlandırma mekanizmalarıyla yarattığı haksız borçlar, faiz yükleri ve spekülatif senetler tek taraflı olarak feshedilir."
+        "title": "Savunmacı Hukuki Kalkanlar, Zilyetlikle İktisap ve Varlık Kilitleri",
+        "full_title": "Article 9.2 — Savunmacı Hukuki Kalkanlar, Zilyetlikle İktisap ve Varlık Kilitleri",
+        "text": "1. Gelişmekte olan müşterekler yerleşim bölgelerini eski yargı alanları dahilindeki şirketlerin yağmacı hukuk savaşlarına ve spekülatif hacizlerine karşı korumak amacıyla müşterek varlıkları; ticari satıştan, ipotekten veya mali taksimden daimi olarak tecrit edilmiş varlık kilitli vakıflara çıpalanır.\n2. Çökmekte olan yargı alanları içerisindeki terk edilmiş endüstriyel kahverengi alanlar, bakımsız tarım arazileri ve boş konut mülkleri; zilyetlikle iktisap (adverse possession), ortak miras irtifakları ve acil halk sağlığı bildirimleri vasıtasıyla kamusal İntifa Hakkına (Usufruct) geri kazandırılır.\n3. Temel ilaçlar, yenilenebilir enerji şemaları ve mekanik aletler üzerindeki şirket patentleri, ticari sırlar ve tekelci Fikri Mülkiyet (IP) iddiaları kamusal İntifa Hakkı (Usufruct) ilan edilir ve derhal açık kaynaklı donanım havuzlarında yayımlanır."
       },
       {
         "id": "Article 9.3",
-        "title": "Müştereklere Dönüşüm Süreci ve Adil Telafi",
-        "full_title": "Article 9.3: Müştereklere Dönüşüm Süreci ve Adil Telafi",
-        "text": "Geçiş sürecinde üretim ve dağıtımın aksamaması için çalışanlar işletmelerin yönetimini doğrudan devralır; temel ihtiyaçların lojistiği kesintisiz sürdürülür."
+        "title": "Harici Ticaret Arayüzü (ETI) ve Para-Dışılaştırma Tamponu",
+        "full_title": "Article 9.3 — Harici Ticaret Arayüzü (ETI) ve Para-Dışılaştırma Tamponu",
+        "text": "1. Biyobölgesel federasyonlar, eski yargı alanlarından temel yerel-olmayan endüstriyel emtiaları, özelleşmiş mikroelektronikleri ve ileri düzey ilaçları iç bünyede parasal eşitsizliği yeniden üretmeksizin tedarik etmek üzere bir Harici Ticaret Arayüzü (ETI) işletir.\n2. Open Networked Earth (Açık Ağ Bağlantılı Dünya) [O.N.E.] bünyesinin iç metabolizması mutlak para-dışılaştırmayı muhafaza eder: Müşterekler dahilinde sıfır itibari para, spekülatif borç veya piyasa temelli fiyat mekanizması işler.\n3. Dışa dönük ticari etkileşimler—örneğin yenilenebilir elektrik fazlasının planlı ihracatı veya uzman mühendislik danışmanlıkları gibi—ETI bünyesinde karantinaya alınır. Yirmi Dört Saatlik Dönüşüm Kuralı uyarınca, tahsil edilen tüm harici itibari para gelirleri; finansal spekülasyonu ve egemen varlıkların dondurulmasını önleyecek biçimde, yirmi dört (24) saat içinde geri dönülemez fiziki tedarik sözleşmelerine, tahsisli emanet hesaplarına veya amortismana tabi olmayan varlıkların, stratejik tahıl rezervlerinin yahut özelleşmiş hammaddelerin doğrudan teslimatına bağlanmalıdır."
       },
       {
         "id": "Article 9.4",
-        "title": "Çokuluslu Tekellerin Tasfiyesi ve Yerelleştirme",
-        "full_title": "Article 9.4: Çokuluslu Tekellerin Tasfiyesi ve Yerelleştirme",
-        "text": "Küresel şirketlerin yerel kaynaklar üzerindeki imtiyazları sonlandırılır; üretim tesisleri bölgesel gereksinimlere hizmet edecek şekilde yeniden yapılandırılır."
+        "title": "Topyekün Asimetrik Caydırma, Taraf Değiştirme Ödülleri ve Endüstriyel Men Etme",
+        "full_title": "Article 9.4 — Topyekün Asimetrik Caydırma, Taraf Değiştirme Ödülleri ve Endüstriyel Men Etme",
+        "text": "1. O.N.E., seferi düzenli orduların, taarruzi zorunlu askerliğin ve paralı asker kuvvetlerinin teşkil edilmesini reddeder. Dış silahlı saldırılara, şirket tröstlerine veya savaş ağası yağmalarına karşı ülkesel bütünlük, Topyekün Asimetrik Caydırma Doktrini vasıtasıyla muhafaza edilir: ademi merkeziyetçi sivil direniş, pasif mekânsal tahkimat, lojistik men etme ve aktif bilişsel yıkım.\n2. Stratejik Dağıtma ve Muhkem Hayatta Kalma: Kritik gıda envanterleri, enerji bankaları ve tıbbi rezervler; hava bombardımanı, insansız hava aracı engellemesi veya deniz ablukaları karşısındaki tekil hedef noktalarını daimi olarak ortadan kaldıracak şekilde, tüm mikro havzalara yayılmış güçlendirilmiş, yer altı modüler depolarına fiziki olarak dağıtılır.\n3. Taraf Değiştirme Ödülü ve Sivil Sığınma Protokolü: Müşterekler, hasım silahlı personele karşı kesintisiz asimetrik taraf değiştirme teşvikleri uygular. Çalışır durumdaki silahlarını bırakan, taarruz emirlerini reddeden veya hasım operasyonları sabote eden her asker, subay veya sözleşmeli personele kendisi ve ailesi için derhal siyasi sığınma, ömür boyu Kademe 1 biyolojik güvenlik, takyidatsız konut zilyetliği ve harici borç yükümlülüklerinin tamamen yasal olarak iptali garanti edilir.\n4. Kılıçtan Saban Demiri Yapma (*Gladii in vomeres*) Protokolü: Bölge dahilinde teslim edilen, ele geçirilen veya hizmet dışı bırakılan tüm silahlar, zırhlı şasiler ve mühimmatlar kamusal dökümhanelerde kalıcı olarak parçalanıp eritilir; böylece balistik metaller rüzgar türbini millerine, tarım aletlerine ve yapısal inşaat iskeletlerine dönüştürülür.\n5. Gayri-Öldürücü Men Etme ve Kriptografik Zehirli Haplar: Madde 8.1'in yer altı kinetik engelleme çevreleriyle savunmacı bir sinerji içinde faaliyet gösteren kritik mikro şebekeler, üretim dizilimleri ve dijital depolar, Eşik Çok Partili Hesaplama (t-MPC) anahtarlarıyla korunan nihai bir emniyet mekanizmasını muhafaza eder. Dış caydırıcıları aşan silahlı bir fiziki işgal durumunda, Kura Yöntemi (Sortisyon) yetkilileri; temel evsel su ve ısınmayı kesmeksizin üst kademe endüstriyel ve işlemsel işlevselliği kalıcı olarak devre dışı bırakan dağıtık bir anahtar koparma işlemi icra ederek saldırganı tüm lojistik ve finansal değerden mahrum bırakır."
       },
       {
         "id": "Article 9.5",
-        "title": "Hızlı Geçiş Güvenceleri ve Tedarik Kesintisizliği",
-        "full_title": "Article 9.5: Hızlı Geçiş Güvenceleri ve Tedarik Kesintisizliği",
-        "text": "Geçiş evresinde hiçbir yurttaşın temel gıda, su ve elektrik erişiminin kesilmesine izin verilmez; acil durum lojistik protokolleri yürürlüğe konur."
+        "title": "Evrensel Borç Jübleleri ve Müflis Varlık Dönüşümü",
+        "full_title": "Article 9.5 — Evrensel Borç Jübleleri ve Müflis Varlık Dönüşümü",
+        "text": "1. Temerrüde düşmüş endüstriyel üretim merkezleri, iflas etmiş dağıtım merkezleri ve terk edilmiş kamu hizmeti şebekeleri sistematik olarak kamulaştırılarak belediye müşterekler vakıflarına devredilir.\n2. Eski kurumlar tarafından kişisel konutlar ve yaşam destek altyapısı üzerinde tutulan tüm bileşik faizli borçlar, yağmacı konut ipotekleri ve mali hacizler; kapsamlı, takyidatsız Borç Jübleleri vasıtasıyla ilga edilir.\n3. Geri kazanılan üretim tesisleri; döngüsel metalurjik geri dönüşüm, tarım makineleri onarımı ve yerelleştirilmiş sivil fayda amacıyla açık kaynaklı Programlanabilir Mantık Denetleyicileri (PLC) ve modüler takım tezgahları ile yeniden tasarlanır."
       },
       {
         "id": "Article 9.6",
-        "title": "Ekonomik Sabotaja Karşı Savunma ve Müşterek Koruma",
-        "full_title": "Article 9.6: Ekonomik Sabotaja Karşı Savunma ve Müşterek Koruma",
-        "text": "Müşterekleşme sürecine karşı girişilecek ekonomik ambargo, spekülatif sabotaj veya fiziki saldırılara karşı meclisler ortak savunma ve dayanışma kalkanı oluşturur."
+        "title": "Geçiş Yönetişimi, Meclis Eşitliği ve Karar Eşikleri",
+        "full_title": "Article 9.6 — Geçiş Yönetişimi, Meclis Eşitliği ve Karar Eşikleri",
+        "text": "1. Tüm hukuki vakıflar, harici ticaret operasyonları ve aşama geçişleri; kesin tek sayı eşitliği dahilindeki Kura Yöntemi (Sortisyon) organları tarafından şeffaf biçimde yönetilir: Yerel Arabuluculuk Heyetleri (3), Mahalle Meclisleri (15) ve Biyobölgesel Meclisler (101).\n2. Kademelendirilmiş Karar Eşikleri:\n   * **%75 Anayasal Nitelikli Çoğunluk:** Evrensel Borç Jüblelerini yürürlüğe koymak, zorunlu endüstriyel varlık dönüşümlerini yetkilendirmek veya resmi aşama-kapısı ilerlemelerini onaylamak için gereklidir.\n   * **%60 Nitelikli Çoğunluk:** Yıllık ETI ticaret bütçeleri ve komşu geçiş düğümleriyle bölgesel karşılıklı yardımlaşma sözleşmeleri için gereklidir.\n   * **%50+1 Basit Çoğunluk:** Yalnızca zorunlu otuz (30) günlük yasama denetimine tabi olmak kaydıyla, savunma amaçlı gayri-öldürücü engelleme ve akut harici ambargolar sırasında hızlı tedarik ayarlamaları için caizdir.\n\n---"
       }
     ]
   },
   {
     "number": "X",
-    "title": "BİYOBÖLGESEL HAVZA FEDERASYONLARI VE GEZEGENSEL ANLAŞMA",
+    "title": "BİYOBÖLGESEL SU HAVZASI FEDERASYONU VE GEZEGENSEL AHİT",
     "articles": [
       {
         "id": "Article 10.1",
-        "title": "Biyobölgesel Havza Sınırları ve Doğal Topografya",
-        "full_title": "Article 10.1: Biyobölgesel Havza Sınırları ve Doğal Topografya",
-        "text": "Siyasi sınırlar; yapay ulusal sınırlardan ziyade su havzaları, dağ silsileleri, ormanlar ve nehir vadileri gibi doğal biyobölgesel topografyaya göre yeniden tanımlanır."
+        "title": "Birincil Egemen Birim Olarak Su Havzası ve Biyobölgesel Yerellik İlkesi",
+        "full_title": "Article 10.1 — Birincil Egemen Birim Olarak Su Havzası ve Biyobölgesel Yerellik İlkesi",
+        "text": "1. Vestfalyan sınır hatları, sömürgeci sınırlar ve egemen karasal çevirmeler kalıcı olarak ilga edilmiştir.\n2. Temel siyasi birim; hidrolojik havzalar, akiferler ve kıyı biyomları ile sınırlandırılmış doğal Biyobölgesel Su Havzasıdır.\n3. Yönetişim Biyobölgesel Yerellik İlkesine tabidir: kararlar, mahalle mikro havzalarından vadi meclislerine kadar mümkün olan en alt ekolojik ölçekte çözüme kavuşturulur.\n4. Üst kademe meclisler; ihraç edilen kirliliği durdurmak, ortak akiferleri korumak veya değişmez hakları savunmak haricinde, yerel özerkliği geçersiz kılacak hiçbir yargı yetkisine sahip değildir."
       },
       {
         "id": "Article 10.2",
-        "title": "Havza Konseyleri ve Doğal Sınır Yönetişimi",
-        "full_title": "Article 10.2: Havza Konseyleri ve Doğal Sınır Yönetişimi",
-        "text": "Aynı nehir havzasını ve ekosistemi paylaşan topluluklar, suyun ve toprağın korunması için ortaklaşa Havza Konseyleri kurarak federatif bir birlik oluştururlar."
+        "title": "Ekolojik Kişilik ve Türler Arası Vasilik (*Jus Biosphaerae*)",
+        "full_title": "Article 10.2 — Ekolojik Kişilik ve Türler Arası Vasilik (*Jus Biosphaerae*)",
+        "text": "1. Başlıca nehir sistemleri, kadim ormanlar, kıyı sulak alanları ve akiferler, *Jus Biosphaerae* kapsamında var olma, akma ve kendini yenileme gibi devredilemez haklara sahip Hukuki Kişilerdir (*Personae Biologicae*). Doğal biyomlar mülk edinilemez, kiralanamaz veya metalaştırılamaz.\n2. Kura Yöntemi (Sortisyon) ile belirlenen vatandaşlar ve dönüşümlü saha doğa bilimcilerinden oluşan Biyosfer Muhafızları (*Curatores Biosphaerae*), tüm meclislerde insan dışı biyomları ve gelecek nesilleri temsil eder; ekolojik sürekliliği tehdit eden projeleri ihtiyati tedbirle durdurma dava ehliyetine sahiptir."
       },
       {
         "id": "Article 10.3",
-        "title": "Gezegensel İklim Anlaşması ve Ekolojik Denge",
-        "full_title": "Article 10.3: Gezegensel İklim Anlaşması ve Ekolojik Denge",
-        "text": "Tüm biyobölgeler, gezegensel atmosferi, okyanus akıntılarını ve iklim dengesini korumayı amaçlayan Küresel Biyosfer Paktı'na eşit olarak taraftır."
+        "title": "Fiziksel Havzalar Arası Mütekabiliyet ve Kartel Karşıtı Paktlar",
+        "full_title": "Article 10.3 — Fiziksel Havzalar Arası Mütekabiliyet ve Kartel Karşıtı Paktlar",
+        "text": "1. Biyobölgeler arası ticaret; finansal spekülasyon, borç enstrümanları veya döviz takası olmaksızın işleyen ikili fiziksel kaynak sözleşmeleri aracılığıyla yürütülür.\n2. Havzalar; fiziksel ekserjiyi, rafine metalleri ve uzmanlaşmış ekipmanları doğrudan açık termodinamik defterler üzerinden takas eder. Yoğun kentsel yığılmalar, ikili sözleşmeler kapsamında uzmanlaşmış metabolik organlar olarak faaliyet gösterir; gıda ve enerji fazlası karşılığında ileri endüstriyel çıktıları ve bilimsel araştırmaları takas eder.\n3. Yaşam destek kaynaklarını istiflemek, karteller oluşturmak veya mansap suyunu kesmek, otomatik Sistemik Ayrışmayı (*Disiunctio Reticularis*) tetikler: mütekabiliyet yeniden tesis edilene kadar havzalar arası şebeke bağlantıları, geçiş koridorları ve gelişmiş tıbbi tamponlar derhal askıya alınır."
       },
       {
         "id": "Article 10.4",
-        "title": "Sınırlar Ötesi Kaynak Eşitliği ve Dayanışma",
-        "full_title": "Article 10.4: Sınırlar Ötesi Kaynak Eşitliği ve Dayanışma",
-        "text": "Zengin doğal kaynaklara sahip bölgeler diğer bölgelerin temel yaşam ihtiyaçlarına dayanışma çerçevesinde destek verir; kaynak tekelciliği kesin olarak men edilir."
+        "title": "Termodinamik Dolaşım Özgürlüğü ve Zorlayıcı Olmayan Taşıma Kapasitesi",
+        "full_title": "Article 10.4 — Termodinamik Dolaşım Özgürlüğü ve Zorlayıcı Olmayan Taşıma Kapasitesi",
+        "text": "1. Her insan, gezegensel müşterekler genelinde seyahat etme, ziyaret etme ve sığınma arama konusunda devredilemez bir hakka sahiptir. Pasaportlar, sınır çitleri, vize kontrol noktaları ve silahlı sınır devriyeleri anayasa hukuku uyarınca kalıcı olarak yasaklanmıştır.\n2. Yerel biyomları termodinamik aşım riskinden korumak amacıyla, uzun vadeli yerleşim entegrasyonu şeffaf Ekolojik Taşıma Kapasitesi (ECC) telemetrisi ile yönlendirilir:\n   * **Yeşil Statü (Denge):** Havza, yeni gelen sakinleri serbestçe kabul eder; derhal konut amaçlı İntifa Hakkı (Usufruct) ve sivil meclis kaydı sağlar.\n   * **Sarı Statü (Dinamik Tampon):** Havza mevsimsel taşıma eşiklerine yaklaşmaktadır; kalıcı yerleşim tahsisi aile birleşimine, uzmanlaşmış iş gücü taleplerine ve gönüllü altyapı genişletilmesine öncelik tanır.\n   * **Kırmızı Statü (Taşıma Tavanı):** Havza fiziksel termodinamik sınırlara ulaşmıştır; bölgesel taşıma kapasitesi genişleyene kadar kalıcı konut zilyetliği tesisi duraklatılır.\n3. Dokunulmaz Sığınak Güvencesi: Hiçbir koşul altında hiçbir insan silahlı geri itme, fiziksel engelleme veya zorla sınır dışı edilme ile karşı karşıya bırakılamaz. Kırmızı Statü altında dahi tüm yolcular; konukseverlik pavyonlarına, temiz suya, sağlıklı gıdaya, acil tıbbi bakıma ve güvenli geçişe koşulsuz erişim hakkını korur.\n4. Kırmızı Statülü Havzalar İçin Zorunlu Federal Yeniden Dengeleme ve Geçiş Baypası: Bir su havzası acil Kırmızı Statüye girdiğinde, komşu Yeşil ve Sarı havzalar modüler tuzdan arındırma, taşınabilir mikro şebekeler ve mobil tıbbi merkezler konuşlandırarak karşılıklı yardım koridorlarını etkinleştirme yönünde bağlayıcı bir yükümlülük taşır. Gelenlerin sayısının yerel konukseverlik altyapısının anlık yaşam destek tavanını aştığı durumlarda, Kıta Meclisi Derhal Geçiş Baypas Protokolünü devreye sokar: yüksek hızlı demiryolu ve deniz geçiş koridorları, gelen nüfusun doymuş bölge üzerinden komşu Yeşil ve Sarı havzalar içindeki belirlenmiş Kabul Düğümlerine taşınmasına öncelik verir."
       },
       {
         "id": "Article 10.5",
-        "title": "Yerli Halkların Hakları ve Kadim Bilgeliğin Korunması",
-        "full_title": "Article 10.5: Yerli Halkların Hakları ve Kadim Bilgeliğin Korunması",
-        "text": "Yerli toplulukların tarihsel yurtları, özerklikleri ve doğayla uyumlu geleneksel bilgi birikimleri en yüksek anayasal koruma altındadır."
+        "title": "Gezegensel Müştereklerin Gözetimi ve Güneş Akısı Regülasyonu",
+        "full_title": "Article 10.5 — Gezegensel Müştereklerin Gözetimi ve Güneş Akısı Regülasyonu",
+        "text": "1. Küresel atmosfer, okyanus müşterekleri, kriyosfer ve elektromanyetik spektrum, tüm canlı organizmaların bölünmez gezegensel yaşam destek mirasını oluşturur.\n2. Kimyasal Jeomühendisliğin Ebediyen Yasaklanması: Tek taraflı atmosferik aerosol enjeksiyonu, stratosferik kükürt yayımı ve okyanusal kimyasal gübreleme, varoluşsal ekokırım tehlikeleri olarak kalıcı olarak yasaklanmıştır.\n3. Geri Döndürülebilir Güneş Akısı Regülasyonu (*Administratio Insolationis*): Kimyasal serpinti olmaksızın kontrolden çıkan iklim devrilme noktalarına karşı koymak amacıyla, derin uzayda konuşlandırılan kimyasal olmayan, geri döndürülebilir optik akı regülasyonu, Madde 11.1 kapsamında bir Sol Müşterekleri tröstü olarak tanınır. Konuşlandırma, Küresel Müşterekler Meclisi'nin (1.001 delege) yüzde yetmiş beşlik (%75) nitelikli çoğunluğunu ve her biri yüzde altmışlık (%60) nitelikli çoğunlukla olmak üzere Kıta Yönetişim Meclislerinin çoğunluğunun onayını gerektirir. Bu tür herhangi bir sistem hata emniyetli (fail-safe) olmalıdır: yetki veya kontrol kaybı durumunda, idari ele geçirmeyi ve sonlandırma şokunu önleyecek şekilde, asla aniden değil, Organik Kanun ile belirlenen çok yıllık bir zaman dilimi içinde kademeli olarak dağılır."
       },
       {
         "id": "Article 10.6",
-        "title": "Gezegensel Barış ve Biyosferik Bütünlük Taahhüdü",
-        "full_title": "Article 10.6: Gezegensel Barış ve Biyosferik Bütünlük Taahhüdü",
-        "text": "Gezegen üzerindeki tüm halklar ve biyobölgeler; ebedi barışı tesis etmeyi, silahlanmayı sona erdirmeyi ve Dünya'nın canlı dokusunu kutsal bilerek korumayı taahhüt eder."
+        "title": "Federal Kura Yöntemi (Sortisyon) Mimarisi, Tek Sayı Eşliği ve Evrensel Ahit",
+        "full_title": "Article 10.6 — Federal Kura Yöntemi (Sortisyon) Mimarisi, Tek Sayı Eşliği ve Evrensel Ahit",
+        "text": "1. O.N.E.'ın federal yapısı, kesin tek sayı eşliğinde toplanan kademeli Kura Yöntemi (Sortisyon) meclisleri aracılığıyla yerel su toplama alanlarını gezegensel bütüne bağlar:\n   * Yerel Arabuluculuk Heyetleri: üç (3) vatandaş;\n   * Mahalle Kura Yöntemi (Sortisyon) Konseyleri: on beş (15) vatandaş;\n   * Biyobölgesel Yurttaş Meclisleri: yüz bir (101) delege;\n   * Kıta Yönetişim Meclisleri: üç yüz bir (301) vatandaş;\n   * Küresel Müşterekler Meclisi: bin bir (1.001) vatandaş.\n2. Karar Eşikleri:\n   * **%75 Anayasal Nitelikli Çoğunluk:** Gezegensel biyofiziksel sınırları değiştirmek, yeni federe biyobölgeleri kabul etmek veya acil Dünya sistemi stabilizasyon protokollerini yürürlüğe koymak için gereklidir.\n   * **%60 Nitelikli Çoğunluk:** Çok taraflı havzalar arası kaynak koridorlarını ve uzun vadeli kıtasal altyapı sözleşmelerini onaylamak için gereklidir.\n   * **%50+1 Basit Çoğunluk:** Yalnızca otuz (30) günlük zorunlu incelemeye tabi olmak kaydıyla, acil afet yardım seferberliği ve mevsimsel geçiş çizelgeleri için izin verilir.\n3. Bu Evrensel Ahit aracılığıyla tüm federe biyobölgeler; Dünya'nın ve onun tüm ardıllarının serpilip gelişmesi adına karşılıklı dayanışma, ebedi barış ve müşterek gözetim taahhüdünde bulunur.\n4. Organik Kanun Eki: Bu Anayasa'nın işlevsel gerekliliklerini uygulayan teknik standartlar, yetkili meclisin yüzde altmışlık (%60) nitelikli çoğunluğu ile kabul edilen ve değiştirilen Organik Kanun Eki'nde kanunlaştırılmıştır. Organik Kanunlar anayasal güvenceleri güçlendirebilir ancak asla zayıflatamaz ve Madde 4.6 kapsamında denetime tabi olmaya devam eder."
       }
     ]
   },
   {
     "number": "XI",
-    "title": "GÖKSEL MÜŞTEREKLER VE GEZEGENLER ARASI FEDERASYON (OPEN NETWORKED SOL — O.N.S.)",
+    "title": "GÖKSEL MÜŞTEREKLER VE GEZEGENLERARASI FEDERASYON",
     "articles": [
       {
         "id": "Article 11.1",
-        "title": "Güneş Müşterekleri ve Göksel Mülkiyetin Kaldırılması (Patrimonium Solis)",
-        "full_title": "Article 11.1 — Güneş Müşterekleri ve Göksel Mülkiyetin Kaldırılması (Patrimonium Solis)",
-        "text": "1. Uzay boşluğu, gök cisimleri, asteroitler, Lagrange noktaları (L1–L5) ve yörüngeler bölünmez güneş müşterekleridir (Patrimonium Solis).\n2. Open Networked Sol (O.N.S.) kapsamında ulusal ilhak, şirket mülkiyeti ve yörünge spekülasyonu ebediyen yasaklanmıştır.\n3. Çıkarılan madenler, aktif gözetim ve açık kaynak paylaşımı şartına bağlı intifa hakkı (usufruct) kapsamındadır."
+        "title": "Sol Müşterekleri ve Göksel Dominium'un (*Patrimonium Solis*) İlgası",
+        "full_title": "Article 11.1 — Sol Müşterekleri ve Göksel Dominium'un (*Patrimonium Solis*) İlgası",
+        "text": "1. Uzay boşluğu, gök cisimleri, asteroitler, kuyruklu yıldızlar, Lagrange denge noktaları ($L_1$–$L_5$) ve yörünge yolları, bölünemez bir göksel müşterek (*Patrimonium Solis*) teşkil eder. Derin uzay güneş akısı regülasyonu (Madde 10.5.3), ticari çitlemeye veya silahlandırılmaya kapalı tutulan bir Sol Müşterekleri emaneti olarak sınıflandırılır.\n2. Ulusal ilhak, kurumsal egemenlik, özel sermaye iddiaları ile gök cisimlerinin veya yörünge slotlarının spekülatif tahsisi, Open Networked Sol (O.N.S.) genelinde kalıcı olarak yasaklanmıştır.\n3. Konumsal avantajlar—kutup uçucu madde kapanları, güneş sırtları, kararlı yörünge irtifaları ve transfer koridorları—asla kiralanamaz, satılamaz veya istiflenemez. Erişim, açık kura yöntemi (sortisyon) listeleri ve fiziksel kenetlenme kuyrukları aracılığıyla yönetilir.\n4. Çıkarılan abiyotik mineraller ve uçucu maddeler, yalnızca aktif vekilharçlık ve yapısal tahliller ile proses takımlarının derhal Açık Müşterekler'e neşredilmesi şartına bağlı zilyetlik temelli İntifa Hakkı (Usufruct) olarak mevcuttur."
       },
       {
         "id": "Article 11.2",
-        "title": "Mühendislik Ürünü Metabolik Zarf ve Kapalı Döngü Taşıma Kapasitesi",
-        "full_title": "Article 11.2 — Mühendislik Ürünü Metabolik Zarf ve Kapalı Döngü Taşıma Kapasitesi",
-        "text": "1. Dünya dışında temel ekolojik birim Kapalı Ekolojik Yaşam Destek Sistemi'dir (CELSS).\n2. Su (H2O), azot (N2), karbon (C) ve fosfor (P) stokları mutlak termodinamik sınırlardır.\n3. Taşıma kapasitesi, devridaim verimliliği ve radyatör ısı dağılımı (W/m²) ile ölçülür."
+        "title": "Mühendislik Ürünü Metabolik Zarflar ve Kapalı Devre Taşıma Kapasitesi",
+        "full_title": "Article 11.2 — Mühendislik Ürünü Metabolik Zarflar ve Kapalı Devre Taşıma Kapasitesi",
+        "text": "1. Dünya biyosferinin ötesinde, insan uygarlığının kurucu siyasi ve ekolojik birimi, doğal hidrolojik havzadan yapay metabolik zarfa dönüşür: Kapalı Ekolojik Yaşam Destek Sistemi (CELSS).\n2. Bir CELSS dâhilinde—ister bir yörünge silindiri, bir ay lav tüpü, bir Mars regolit mahzeni, isterse bir geçiş döngücüsü (cycler) gövdesi içinde konuşlanmış olsun—kütle dengesi mutlak bir termodinamik tavandır. Su ($H_2O$), azot ($N_2$), karbon ($C$) ve fosfor ($P$) uçucu envanterleri; kapalı, değiştirilemez topluluk emanetlerini temsil eder.\n3. Mühendislik ürünü habitatlardaki taşıma kapasitesi telemetrisi; yeniden dolaşım döngüsü verimliliği, uçucu madde sızıntı oranları, yapısal basınç bütünlüğü ve net radyatör termal yayılım kapasitesi ($W/m^2$) ile ölçülür. Yerleşim izinleri ve mekânsal genişlemeler, doğrulanabilir biyofiziksel dengeye kesin surette uymak zorundadır."
       },
       {
         "id": "Article 11.3",
-        "title": "Değişmez Atmosferik Egemenlik ve Despotizm Karşıtı Kilit",
-        "full_title": "Article 11.3 — Değişmez Atmosferik Egemenlik ve Despotizm Karşıtı Kilit",
-        "text": "1. Atmosfer bileşimi ve içme suyu, devredilemez 1. Seviye yaşam haklarıdır.\n2. Yaşam desteği metalaştırılamaz veya emek karşılığı şantaj olarak kullanılamaz (Madde 1.2).\n3. Tüm yaşam alanları müdahale edilebilir manuel mekanik bypass hatlarına sahip olmalıdır.\n4. Metabolik Ayrışma: Onarıcı adalet süreçlerinde (Madde 5.2) asla hava kesintisi uygulanamaz veya boşluğa atma cezası verilemez."
+        "title": "Değişmez Atmosferik Egemenlik ve İstibdat Karşıtı Kilit Mekanizması",
+        "full_title": "Article 11.3 — Değişmez Atmosferik Egemenlik ve İstibdat Karşıtı Kilit Mekanizması",
+        "text": "1. Tüm basınçlı habitatlarda ve transit gemilerinde; fizyolojik olarak güvenli kısmi basınçlarda solunabilir bir atmosfer, içilebilir su, radyasyon sönümlemesi ve termal muhafaza; evrensel, hiçbir surette askıya alınamaz Kademe 1 hayatta kalma haklarını teşkil eder.\n2. Yaşam destek sistemleri hiçbir zaman metalaştırılamaz, emeğe endekslenerek ölçülemez veya davranışsal boyun eğdirme amacıyla silahlaştırılamaz. Bir oksijen veya basınç monopsonisi yaratmak, Madde 1.2 uyarınca varoluşsal bir suçtur.\n3. Çevre kontrol mimarileri, tüm sakinlerin erişimine açık, donanımsal analog mekanik geçersiz kılma düzeneklerini ve kesintisiz pasif baypas hatlarını içermek zorundadır. Hiçbir yazılım algoritması, otomatik kararname veya kura yöntemi (sortisyon) oylaması yaşam destek devrelerini kısamaz.\n4. Uyuşmazlık Çözümünde Metabolik Ayrışma: Yalıtılmış ortamlarda, Madde 5.2 kapsamındaki onarıcı adalet tedbirleri kesin bir metabolik ayrışma altında işletilir. Mütekabiliyet göstermeyen sakinler, isteğe bağlı Kademe 3 takımlarının veya bilgi-işlemsel bant genişliklerinin geçici olarak askıya alınmasıyla karşılaşabilir; ancak hiçbir zaman uzay boşluğuna atılma, biyofiziksel taban çizgilerini kısıtlayan cezai tecrit veya atmosferik karneye bağlama uygulamasıyla karşı karşıya bırakılamaz."
       },
       {
         "id": "Article 11.4",
         "title": "Termodinamik Astrodinamik: Kütle, Ekserji ve Hız Bütçeleri",
         "full_title": "Article 11.4 — Termodinamik Astrodinamik: Kütle, Ekserji ve Hız Bütçeleri",
-        "text": "1. Gezegenler arası lojistik fiziksel durum vektörüyle yürütülür: x = [Ekserji (kWh), Kuru kütle (kg), Uçucu madde (L), Δv (km/s)].\n2. İtici yakıt ve delta-V (Δv) sınırlı kamu kaynaklarıdır.\n3. Vakum dökümhaneleri ve güneş yoğunlaştırıcıları Seviye 2-A bölünmez ortak sermayedir."
+        "text": "1. Gezegenlerarası lojistik ve materyal takasları, itibari para veya finansal borç ile yönetilemez; doğrudan fiziksel girdi-çıktı vektörleri aracılığıyla koordine edilir:\n   $$\\mathbf{x} = [E_{\\text{exergy}}\\ (\\text{kWh}),\\ m_{\\text{dry}}\\ (\\text{kg}),\\ V_{\\text{volatiles}}\\ (\\text{L}),\\ \\Delta v\\ (\\text{km/s})]$$\n2. Reaksiyon kütlesi (itici gaz envanteri) ve kinetik hız değişimleri ($\\Delta v$), sonlu termodinamik müşterek vektörleri olarak tanınır. Gezegensel kütleçekim kuyuları boyunca kütlenin ivmelendirilmesi, federe ağa sağlanan doğrulanabilir fayda ile dengelenmesi gereken fiziksel enerji harcamalarına yol açar.\n3. Ağır sanayi tasfiye ve arıtma tesisleri, sistemsel tedarik darboğazlarını önlemek amacıyla kolektif emanet altında tutulan bölünemez Kademe 2-A ortak varlıklarıdır."
       },
       {
         "id": "Article 11.5",
-        "title": "Işık Konisi İkincilliği ve Eşzamansız Kura Demarşisi",
-        "full_title": "Article 11.5 — Işık Konisi İkincilliği ve Eşzamansız Kura Demarşisi",
-        "text": "1. Işık hızı gecikmesi nedeniyle 'Işık Konisi İkincilliği' esastır: yerel yaşam alanı tam iç özerkliğe sahiptir.\n2. Tek sayılı kura meclisleri: CELSS Konseyleri (15–101), Gezegen Odaları (301) ve 90 günlük dönemlerle Güneş Müşterekleri Meclisi (1.001)."
+        "title": "Işık Konisi Yetki İkamesi ve Asenkron Demarşik Kura Yöntemi (Sortisyon)",
+        "full_title": "Article 11.5 — Işık Konisi Yetki İkamesi ve Asenkron Demarşik Kura Yöntemi (Sortisyon)",
+        "text": "1. Işığın sonlu hızı astronomik mesafeler boyunca gecikmeye yol açtığından, merkezi gezegenlerarası demokrasi fiziksel olarak imkânsızdır. Yönetişim kesin surette Işık Konisi Yetki İkamesi esasına göre yürütülür: Hiçbir uzaktaki meclis, yerel habitat zarfı içinde çözülebilecek kararlar üzerinde yargı yetkisine sahip değildir.\n2. Kura Yöntemi (Sortisyon) Mimarisi:\n   * **Habitat ve CELSS Kura Yöntemi (Sortisyon) Konseyleri (15 ila 101 yurttaş):** Tek sayılı eşitlik dâhilinde iç yaşam, fabrikasyon laboratuvarı (fab-lab) erişimi, mekânsal yerleşim ve dönüşümlü vardiya koordinasyonu üzerinde tam operasyonel egemenliği muhafaza eder.\n   * **Gezegensel ve Sistem Odaları (301 yurttaş):** Bir kütleçekim kuyusu veya yörüngesel alt sistem dâhilindeki bölgesel $\\Delta v$ transit koridorlarını, derin uçucu rezervlerini ve yüksek entropili ergitme lojistiğini koordine eder.\n   * **Sol Müşterekleri Meclisi (1.001 delege):** Asenkron müzakere dönemleri (90 günlük döngüler) üzerinden faaliyet göstererek evrensel anayasal değişmezleri, açık deterministik derleyici araç zincirlerini, genetik tohum bankalarını ve yörüngesel çarpışma önleme protokollerini yürütür.\n3. Çok bölgeli onaylamalar ve uyuşmazlık tahkimleri, gecikmeye toleranslı örgü (mesh) ağlar üzerinden, kriptografik yalnızca-eklenebilir dağıtık defterler vasıtasıyla senkronize edilir."
       },
       {
         "id": "Article 11.6",
-        "title": "Kinetik Saldırmazlık, Gezegensel Koruma ve Kılıçların Saban Demiri Yapılması",
-        "full_title": "Article 11.6 — Kinetik Saldırmazlık, Gezegensel Koruma ve Kılıçların Saban Demiri Yapılması",
-        "text": "1. Yaşam alanlarına kinetik kütle yönlendirmek kitlesel saldırı sayılır (Madde 8.1).\n2. Asteroit rota değişiklikleri BFT radar ağlarıyla doğrulanmalıdır.\n3. 'Kılıçların Saban Demiri Yapılması' (Gladii in vomeres) ilkesi gereğince eski gemi gövdeleri su kalkanlarına ve radyatörlere dönüştürülür."
+        "title": "Kinetik Saldırmazlık, Yörüngesel Bağışıklık Sistemi ve Kılıçların Saban Demiri Yapılması",
+        "full_title": "Article 11.6 — Kinetik Saldırmazlık, Yörüngesel Bağışıklık Sistemi ve Kılıçların Saban Demiri Yapılması",
+        "text": "1. Yüksek kütleli herhangi bir itki sistemi veya yönü değiştirilmiş bir asteroit doğası gereği bir kinetik silah teşkil ettiğinden ($E_k = \\frac{1}{2}mv^2$), meskûn habitatlara, aylara veya Dünya'ya yönelik kasıtlı itki ateşlemeleri, yapısal kütlesel saldırganlık sayılarak Madde 8.1 uyarınca yasaklanmıştır.\n2. Yörüngesel Bağışıklık Sistemi (*Systema Immunitatis Caelestis*): Düzenli askeri güçler olmaksızın balistik çarpışmalara ve başıboş asteroitlere karşı korunmak amacıyla Sol Federasyonu; barış zamanındaki işlevi sivil itki ve yörüngesel enkaz temizliği olan, dağıtık, çift kullanımlı bir engelleme altyapısını muhafaza eder. Her yönlendirilmiş enerji vericisi, meskûn bir gökcismine veya habitata doğrultulduğunda gücü kesen, yazılımdan bağımsız bir donanımsal kilide sahiptir; son safha engelleme, astronomik ışık gecikmesini aşacak şekilde, kura yöntemi (sortisyon) meclisleri tarafından önceden denetlenmiş, önceden derlenmiş deterministik bellenim üzerinde çalışır. Mühendislik parametreleri Organik Kanun Eki'nde sabitlenmiştir.\n3. İzleme Doğrulaması ve Kılıçların Saban Demiri Yapılması: Tüm gezegensel yörüngeler, Bizans Hata Toleranslı (BFT) optik-radar ağları tarafından doğrulanır. Hizmet dışı bırakılan itki kademeleri ve basınç gövdeleri, Kılıçların Saban Demiri Yapılması (*Gladii in vomeres*) kapsamında ortak habitat halkalarına ve termal radyatörlere yeniden eritilmek üzere döngücü (cycler) dökümhanelerine teslim edilir."
       }
     ]
   }

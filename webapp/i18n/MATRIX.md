@@ -1,6 +1,6 @@
 # 🌐 O.N.E. Master Internationalization (i18n) & Translation Matrix
 
-> **Last Audit Generated:** `2026-10-29 13:30:39`  
+> **Last Audit Generated:** `2026-10-30 23:23:16`  
 > **Canon:** English (`en`) is the immutable master source of truth.  
 > **Coverage Model:** Reflects the **100% REAL current state** across UI Shell, Content Datasets, E-Books, and Novel Chapters.
 
@@ -8,20 +8,20 @@
 
 | Flag | Code | Language | Overall Readiness | UI Shell (450 keys) | Constitution (60 arts) | Challenge QA (315) | E-Books (7 ePubs) | Status |
 |:---:|:---:|:---|:---:|:---:|:---:|:---:|:---:|:---|
-| 🇬🇧 | `en` | **English** | **100.0%** | 100.0% (450/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
-| 🇮🇹 | `it` | **Italiano** | **98.9%** | 97.3% (438/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
-| 🇫🇷 | `fr` | **Français** | **98.8%** | 97.1% (437/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
-| 🇩🇪 | `de` | **Deutsch** | **98.8%** | 96.9% (436/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
-| 🇪🇸 | `es` | **Español** | **99.2%** | 98.0% (441/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
-| 🇵🇹 | `pt` | **Português** | **99.0%** | 97.6% (439/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
-| 🇨🇳 | `zh` | **中文** | **99.5%** | 98.7% (444/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
-| 🇯🇵 | `ja` | **日本語** | **99.4%** | 98.4% (443/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
-| 🇰🇷 | `ko` | **한국어** | **99.4%** | 98.4% (443/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
-| 🇮🇳 | `hi` | **हिन्दी** | **99.4%** | 98.4% (443/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
-| 🇸🇦 | `ar` | **العربية** | **99.4%** | 98.4% (443/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
-| 🇷🇺 | `ru` | **Русский** | **99.4%** | 98.4% (443/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
-| 🇮🇩 | `id` | **Bahasa Indonesia** | **99.1%** | 97.8% (440/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
-| 🇹🇷 | `tr` | **Türkçe** | **99.2%** | 98.0% (441/450) | 66/60 | 315/315 | 7/7 | 🟢 Fully Supported |
+| 🇬🇧 | `en` | **English** | **100.0%** | 100.0% (450/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
+| 🇮🇹 | `it` | **Italiano** | **98.9%** | 97.3% (438/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
+| 🇫🇷 | `fr` | **Français** | **98.8%** | 97.1% (437/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
+| 🇩🇪 | `de` | **Deutsch** | **98.8%** | 96.9% (436/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
+| 🇪🇸 | `es` | **Español** | **99.2%** | 98.0% (441/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
+| 🇵🇹 | `pt` | **Português** | **99.0%** | 97.6% (439/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
+| 🇨🇳 | `zh` | **中文** | **99.5%** | 98.7% (444/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
+| 🇯🇵 | `ja` | **日本語** | **99.4%** | 98.4% (443/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
+| 🇰🇷 | `ko` | **한국어** | **99.4%** | 98.4% (443/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
+| 🇮🇳 | `hi` | **हिन्दी** | **99.4%** | 98.4% (443/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
+| 🇸🇦 | `ar` | **العربية** | **99.4%** | 98.4% (443/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
+| 🇷🇺 | `ru` | **Русский** | **99.4%** | 98.4% (443/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
+| 🇮🇩 | `id` | **Bahasa Indonesia** | **99.1%** | 97.8% (440/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
+| 🇹🇷 | `tr` | **Türkçe** | **99.2%** | 98.0% (441/450) | 67/60 | 319/315 | 7/7 | 🟢 Fully Supported |
 
 ---
 

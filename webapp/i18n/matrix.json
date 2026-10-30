@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T13:30:39.023721",
+  "generated_at": "2026-10-30T23:23:16.397336",
   "total_ui_keys": 450,
   "languages": [
     {
@@ -177,14 +177,14 @@
     "en": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -193,14 +193,14 @@
     "it": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -209,14 +209,14 @@
     "fr": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -225,14 +225,14 @@
     "de": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -241,14 +241,14 @@
     "es": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -257,14 +257,14 @@
     "pt": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -273,14 +273,14 @@
     "zh": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -289,14 +289,14 @@
     "ja": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -305,14 +305,14 @@
     "ko": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -321,14 +321,14 @@
     "hi": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -337,14 +337,14 @@
     "ar": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -353,14 +353,14 @@
     "ru": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -369,14 +369,14 @@
     "id": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -385,14 +385,14 @@
     "tr": {
       "constitution": {
         "exists": true,
-        "articles": 66,
+        "articles": 67,
         "target": 60,
         "pct": 100.0,
         "status": "COMPLETE"
       },
       "epistemic_qa": {
         "exists": true,
-        "scenarios": 315,
+        "scenarios": 319,
         "target": 315,
         "pct": 100.0,
         "status": "COMPLETE"
@@ -4420,7 +4420,7 @@
     {
       "key": "gateway.step2_desc",
       "section": "gateway",
-      "en_val": "Browse the 60 articles of non-carceral, thermodynamic constitutional law: sortition lotteries, usufruct tenure, and restorative peace.",
+      "en_val": "Browse the 67 articles of non-carceral, thermodynamic constitutional law: sortition lotteries, usufruct tenure, and restorative peace.",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",

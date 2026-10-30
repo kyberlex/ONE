@@ -277,13 +277,13 @@
   },
   {
     "engagement_id": "ENG-05",
-    "title": "Crisis de Reciprocidad Laboral y Parasitismo en los Cuidados Comunes",
-    "adversary": "RED-5 (Abandono Cívico y Negativa a Turnos de Mantenimiento)",
+    "title": "Colapso de la Reciprocidad Laboral y Parasitismo en los Cuidados",
+    "adversary": "RED-4",
     "target_article": "Article 5.1 — Universal Labor Duty & Article 5.2 — Labor Reciprocity Sanctions",
-    "scenario": "En una comunidad de 300 residentes, el 25 % decide desentenderse de las tareas de alcantarillado, limpieza y apoyo a enfermos, alegando que el Art. 1.3 les asegura la manutención sin condiciones.",
+    "scenario": "Explotando la garantía incondicional de supervivencia biológica de Nivel 1 (alimento, vivienda y atención médica gratuitos de por vida), una facción cívica coordinada lanza una huelga salvaje y una campaña de holgazanería social contra el arduo mantenimiento del alcantarillado y las rotaciones agrícolas. Simultáneamente, clanes familiares tradicionalistas se resisten a la aloparentalidad comunal (Art. 5.3), reclamando una soberanía parental privada exclusiva y desafiando la validez de las sanciones cívicas no carcelarias.",
     "severity_tier": "FALSE_POSITIVE",
-    "exploit_summary": "Prueba de la respuesta social ante el absentismo reiterado y la falta de compromiso en los trabajos básicos.",
-    "constitutional_countermeasure": "La situación se resuelve con el Art. 5.2 (Reciprocidad y sanciones escalonadas). El Art. 1.3 ampara la vida biológica (nadie es expulsado ni pasa hambre), pero los insumisos reiterados pierden el acceso a las ventajas de Nivel 3: talleres fab-lab, bibliotecas especializadas, fiestas y delicatessen, y su vivienda se adapta a un módulo básico. El rechazo vecinal y la pérdida de comodidades restauran la convivencia sin cárceles ni policías. FALSO POSITIVO.",
+    "exploit_summary": "El Equipo Rojo afirma que una base de supervivencia biológica incondicional aunada a una prohibición inderogable del desalojo cinético y de la detención carcelaria engendra un «Equilibrio de Nash Parasitario» donde el mantenimiento físico de Clase A colapsa, los nodos del alcantarillado municipal se estrangulan desembocando en epidemias catastróficas, los clanes tradicionalistas explotan la Inmunidad del Cuidador y la privación del derecho al sorteo actúa como un subsidio al ocio.",
+    "constitutional_countermeasure": "El asalto de RED-4 fracasa en los cuatro filtros de adjudicación. En primer lugar, el modelo conductual de teoría de juegos propuesto colapsa frente a la antropología empírica (Ostrom 1990, Boehm 1999, Bowles & Gintis 2011). Los seres humanos no desertan universalmente hacia la mera supervivencia fisiológica cuando la falta de cooperación conlleva la pérdida del usufructo de la tierra, de herramientas avanzadas de fabricación, del tránsito de alta velocidad y del autogobierno democrático. Los multiplicadores ergonómicos holandeses de 3x-5x crean un equilibrio donde contribuir con aproximadamente cuatro horas de mantenimiento rotativo al mes asegura el pleno florecimiento cívico, haciendo que el rendimiento neto de la cooperación sea abrumadoramente positivo en relación con la deserción. En segundo lugar, la crisis de ingeniería ambiental planteada por RED-4 (reflujo de aguas residuales debido al estrangulamiento de nodos) ignora el Artículo 7.1.4, que ordena explícitamente que el estrangulamiento protector jamás restringirá la entrega neta de bienes de supervivencia de Nivel 1 y exige la activación paralela e instantánea de líneas de desvío pasivas alimentadas por gravedad y respaldadas por reservas físicas de 120 horas. El estrangulamiento en virtud del Artículo 5.1.3 se aplica estrictamente al efluente industrial no esencial aguas arriba, eliminando entre el 60% y el 85% de la demanda bioquímica de oxígeno mientras preserva los flujos sanitarios domésticos. En tercer lugar, la supuesta laguna jurídica de la inmunidad del cuidador queda neutralizada de forma explícita por el Artículo 5.6.2, que sustrae la adjudicación de las redes de parentesco locales y la asigna a un Panel de Sorteo de quince (15) ciudadanos, insaculado a ciegas entre distintas cuencas hidrográficas, que evalúa etiologías diagnósticas certificadas frente a proporciones demográficas objetivas. En cuarto lugar, la afirmación de que la privación del derecho al sorteo subsidia el ocio del desertor resulta improcedente: con arreglo al expediente SIM-QA-15, los derechos políticos y de sorteo jamás se condicionan a la reciprocidad laboral (Artículo 5.2.3); únicamente se condicionan el acceso al excedente de Nivel 3 y la superficie construida excedente. Por último, la retención física de bienes inmuebles por parte de desertores se gestiona de modo no cinético mediante el Desacoplamiento Metabólico de Etapa 4 (aislando los circuitos industriales en el perímetro) y la revocación del usufructo del Fideicomiso de Tierras Comunitarias (CLT) sin vulnerar la soberanía corporal (Artículo 1.2). Dado que las disposiciones constitucionales vigentes absorben integralmente cada vector sin bloqueos internos ni colapso biofísico, el ataque se clasifica como FALSE_POSITIVE.",
     "canonical_articles": [
       "Art. 1.2",
       "Art. 1.3",
@@ -297,13 +297,14 @@
       "Art. 10.3.1"
     ],
     "timestamp": "2026-09-13T23:25:24Z",
-    "verdict_human": "RESUELTO: Supervivencia garantizada, pero suspensión de comodidades y ocio al insumiso",
+    "verdict_human": "RESUELTO: Automatización avanzada, deberes cívicos rotativos ligeros y motivación intrínseca",
     "human_summary": {
-      "lead": "Nadie es obligado a trabajar por hambre o amenaza policial, pero quien rehúsa arrimar el hombro solo tiene derecho a lo básico, sin acceso a los talleres ni al ocio del Nivel 3.",
+      "lead": "Nadie es coaccionado a la esclavitud asalariada por el miedo al hambre o a la falta de vivienda. El trabajo pesado se automatiza y el mantenimiento cívico esencial se distribuye equitativamente.",
       "points": [
-        "Alimento y techo intocables: No hay desahucios ni desamparo vital para nadie (Art. 1.3).",
-        "Fin de los privilegios: Los talleres, máquinas y actividades recreativas son solo para quien colabora (Art. 5.2).",
-        "Cero prisiones: Los conflictos se reconducen con diálogo y convivencia, sin violencia policial."
+        "La supervivencia básica (nutrición, vivienda, atención médica) constituye un derecho de nacimiento constitucional e incondicional: el chantaje económico queda eliminado.",
+        "El trabajo peligroso y repetitivo (alcantarillado, saneamiento pesado) se automatiza ampliamente mediante robótica municipal de código abierto.",
+        "El mantenimiento manual restante se distribuye en turnos comunitarios breves y rotativos (unas pocas horas a la semana por ciudadano).",
+        "Las personas contribuyen e innovan de forma natural movidas por un propósito genuino, el sentido de pertenencia social y un impulso creativo intrínseco."
       ]
     }
   },
@@ -11698,5 +11699,154 @@
       "corredores de migración abierta",
       "qa-defe-349"
     ]
+  },
+  {
+    "engagement_id": "SIM-QA-10",
+    "title": "Embargo de Recursos vs. Supervivencia de Nivel 1 (Viabilidad de Hawkins-Simon)",
+    "question": "¿Qué ocurre con la supervivencia básica si los proveedores externos aíslan los bienes comunes?",
+    "adversary": "RED-1 (Estratega de Embargo)",
+    "target_article": "Article 3.1 — Thermodynamic Boundary & Article 3.5 — Strategic Physical Reserves",
+    "scenario": "Una jurisdicción heredada hostil corta entre el 30% y el 80% de los insumos externos que importa una biorregión. ¿Garantiza aún la economía de insumo-producto la supervivencia de Nivel 1 y logran las reservas salvar la brecha?",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "Una ejecución reproducible de SIMONE demostró que el antiguo estándar de prueba (producción no negativa de Leontief) jamás puede fallar, por lo que no acreditaba nada. La matriz carecía de datos de importación o de capacidad, de modo que ni siquiera se podía evaluar la resiliencia frente a embargos, y las reservas limitadas a granos no cubrían calefacción, agua ni productos frescos.",
+    "constitutional_countermeasure": "El nuevo Artículo 3.1.6 (Cierre Autárquico de Nivel 1) exige una auditoría pública anual que acredite que cada sector que suministra directa o indirectamente necesidades de Nivel 1, incluidos el alojamiento y la atención médica, puede satisfacer la demanda completa de Nivel 1 valiéndose exclusivamente de los recursos locales y de la capacidad instalada, con los insumos externos en cero y un margen de reserva publicado. El Artículo 3.5.2 estructura ahora las reservas en función de las deficiencias detectadas en la auditoría: existencias almacenables, repuestos y capacidad productiva redundante para bienes no susceptibles de almacenamiento. Prueba: simone/benchmarks/sim_qa_10_embargo.jl.",
+    "canonical_articles": [
+      "Art. 3.1.5",
+      "Art. 3.1.6",
+      "Art. 3.5.2"
+    ],
+    "verdict_human": "EL EQUIPO ROJO GANÓ — constitución enmendada: la supervivencia debe demostrarse autárquica cada año",
+    "human_summary": {
+      "lead": "El ataque expuso una deficiencia real, por lo que modificamos la Constitución en lugar de excusarla.",
+      "points": [
+        "La prueba anterior jamás podía fallar, de modo que no demostraba nada con respecto a los embargos.",
+        "Cada biorregión debe ahora demostrar, cada año, que puede alimentar, suministrar calefacción, alojar y sanar a todos sin importación alguna.",
+        "Las reservas se planifican en torno a las deficiencias cuantificadas, incluyendo maquinaria de repuesto para aquello que no puede almacenarse, como el calor."
+      ]
+    },
+    "category": "thermodynamics",
+    "keywords": [
+      "embargo",
+      "leontief",
+      "hawkins-simon",
+      "reserves",
+      "autarky",
+      "survival",
+      "sim-qa-10"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-11",
+    "title": "Inundación de Peticiones y Agotamiento del Jurado de Sorteo",
+    "question": "¿Puede una facción paralizar un consejo de sorteo saturándolo con peticiones?",
+    "adversary": "RED-3 (Facción de Acoso)",
+    "target_article": "Article 4.3 — Stratified Selection, Universal Service, and Anti-Bureaucratic Rotation",
+    "scenario": "Una facción coordinada satura un consejo de 15 ciudadanos con peticiones de mala fe hasta que los miembros del jurado caen en el agotamiento y las solicitudes de buena fe caducan.",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "La constitución carecía de un procedimiento de admisión de peticiones. En un modelo sintético, una facción del 5% redujo la proporción de peticiones de buena fe atendidas en 8 semanas del 99.7% al 2.0%, y los miembros del jurado trabajaron más de 15 horas a la semana durante todo el año.",
+    "constitutional_countermeasure": "Nuevo Artículo 4.3.5: la publicación no se somete jamás a filtrado, pero la inclusión en la orden del día exige el coaval de una proporción determinada de representados. Toda persona ostenta un cupo idéntico de avales, nunca condicionado a su trabajo, conducta u opinión. Las plazas del orden del día son finitas y se asignan mediante lotería pública ponderada por apoyos diferenciados, y un Panel de Selección rotativo de 3 ciudadanos examina la forma y consolida duplicados sin pronunciarse jamás sobre el fondo. El agotamiento quedó neutralizado en cada ejecución simulada, pero una facción plenamente movilizada del 20% aún puede reclamar aproximadamente la mitad de las plazas del orden del día, por lo que el veredicto permanece provisional a resultas de una calibración ulterior. Prueba: simone/benchmarks/sim_qa_11_petition_dos.py.",
+    "canonical_articles": [
+      "Art. 4.2.1",
+      "Art. 4.3.4",
+      "Art. 4.3.5"
+    ],
+    "verdict_human": "EL EQUIPO ROJO GANÓ — enmendada; el riesgo residual queda documentado de forma transparente",
+    "human_summary": {
+      "lead": "Cualquier persona conserva el derecho a publicar cualquier asunto, pero acceder a la orden del día requiere ahora un apoyo real, equitativo y no susceptible de compraventa.",
+      "points": [
+        "Cada individuo recibe idéntica asignación reducida de avales, y comprometerla en múltiples peticiones conlleva un coste cuadrático.",
+        "Las plazas del orden del día son restringidas y se adjudican mediante sorteo público, impidiendo que el mero volumen capture el consejo.",
+        "La subsanación no es absoluta: un colectivo organizado de gran tamaño continúa obteniendo una cuota de deliberación aproximadamente proporcional a su magnitud."
+      ]
+    },
+    "category": "demarchy",
+    "keywords": [
+      "petition",
+      "spam",
+      "dos",
+      "sortition",
+      "agenda",
+      "burnout",
+      "sim-qa-11"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-15",
+    "title": "Auditoría de Contradicciones Internas (Armas, Umbrales, Sanciones Laborales, Revisión)",
+    "question": "¿Incurre la Constitución en contradicción interna en algún punto?",
+    "adversary": "RED-4 (Crítico Textual Hostil)",
+    "target_article": "Articles 2.6, 4.1–4.6, 5.2, 7.1, 8.1, 8.6, 10.5",
+    "scenario": "Un crítico confronta la Constitución citando sus propios preceptos: una prohibición de armas yuxtapuesta a plataformas de ataque autónomas, un umbral del 66% ajeno a la graduación 75/60/50, un veto individualizado reservado a un solo ciudadano, sanciones laborales que despojan del derecho de sufragio y la inexistencia de un órgano facultado para declarar la nulidad de actos normativos.",
+    "severity_tier": "RED_WINS_WITHDRAWN",
+    "exploit_summary": "Todas las contradicciones resultaron ser reales y contrastables mediante cita textual. El supuesto más desfavorable: una facción con control sobre los cuadrantes laborales podría encomendar turnos inasumibles a los disidentes y privarles legalmente de sus derechos de sorteo.",
+    "constitutional_countermeasure": "La interceptación se circunscribe a ingenios no tripulados y no tomará jamás como objetivo a seres humanos, reduciéndose la acción a distancia a la inhabilitación no letal (Arts. 7.1.2, 8.1.3, 8.1.4). El umbral del 66% se reemplaza por la graduación normativa ordinaria (Art. 10.5.3). Se incorpora una regla aritmética para la fijación de umbrales (Art. 4.5.4) y el veto individual se transforma en un trámite de certificación recurrible (Art. 2.6.2). La suspensión de los derechos de sorteo queda REVOCADA: los derechos políticos no se condicionan en ningún caso al trabajo, y el alojamiento de Nivel 1 jamás admite condición (Art. 5.2). Se instituye un Jurado de Revisión Constitucional compuesto por 101 ciudadanos designados por sorteo (Art. 4.6). La libertad de asociación se armoniza con la interdicción de captura de delegados (Art. 4.1.3), y las mayorías cualificadas quedan facultadas para ampliar, pero en ningún caso minorar, los derechos consagrados en el Capítulo I (Arts. 4.5.1, 8.6.2).",
+    "canonical_articles": [
+      "Art. 2.6.2",
+      "Art. 4.1.3",
+      "Art. 4.5.4",
+      "Art. 4.6",
+      "Art. 5.2.3",
+      "Art. 7.1.2",
+      "Art. 8.1.4",
+      "Art. 10.5.3"
+    ],
+    "verdict_human": "EL EQUIPO ROJO GANÓ — un precepto derogado, ocho artículos subsanados",
+    "human_summary": {
+      "lead": "Cuando la crítica es jurídicamente fundada, el texto se reforma. No se le puede retirar el voto por ausentarse de turnos de trabajo.",
+      "points": [
+        "Los ingenios defensivos únicamente pueden neutralizar ingenios agresores, jamás a personas.",
+        "Todos los umbrales de votación se adecuan ahora a una escala sistemática dotada de formulación aritmética explícita.",
+        "Un jurado ciudadano insaculado por sorteo resuelve en adelante si una ley o disposición quebranta la Constitución."
+      ]
+    },
+    "category": "rights",
+    "keywords": [
+      "contradiction",
+      "coherence",
+      "weapons",
+      "sanctions",
+      "voting rights",
+      "constitutional review",
+      "sim-qa-15"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
+  },
+  {
+    "engagement_id": "SIM-QA-17",
+    "title": "Bloqueo Tecnológico: Detalles de Ingeniería Inmovilizados en la Constitución",
+    "question": "¿Por qué la Constitución ya no especifica tecnologías concretas?",
+    "adversary": "RED-5 (Bloqueo por Obsolescencia)",
+    "target_article": "Articles 1.4.3, 6.2–6.4, 8.1.4, 8.2.2, 10.5.3, 10.6.4, Chapter XI",
+    "scenario": "La inclusión en el texto constitucional de formulaciones químicas de baterías, marcas de radiocomunicación, temporizadores y categorías armamentísticas determinadas —algunas de ellas incardinadas en el inmodificable Capítulo I— proscribiría jurídicamente la integración de tecnologías futuras superiores en los bienes comunes.",
+    "severity_tier": "RED_WINS_PATCHED",
+    "exploit_summary": "Los parámetros de ingeniería amparados por una mayoría cualificada del 75%, o petrificados de modo absoluto en el Capítulo I, producen un bloqueo por obsolescencia y ofrecen a los adversarios vulnerabilidades fácticas evidentes, tales como aseveraciones de seguridad no contrastadas.",
+    "constitutional_countermeasure": "La Constitución se limita en adelante a fijar prescripciones funcionales. Las especificaciones tecnológicas y los parámetros operativos se trasladan al Anexo de Ley Orgánica (OL-1 a OL-9), el cual resulta susceptible de enmienda mediante mayoría cualificada del 60% bajo la regla de irreversibilidad o trinquete (jamás podrá mermar una garantía constitucional) y queda sujeto a control de constitucionalidad con arreglo al Artículo 4.6 (anclado en el Art. 10.6.4). Aquellas afirmaciones cuantitativas no verificadas quedan catalogadas como PROVISIONAL — NO VERIFICADO.",
+    "canonical_articles": [
+      "Art. 1.4.3",
+      "Art. 6.2.2",
+      "Art. 8.1.4",
+      "Art. 10.5.3",
+      "Art. 10.6.4"
+    ],
+    "verdict_human": "EL EQUIPO ROJO GANÓ — la tecnología se transfirió a un Anexo de Ley Orgánica reformable",
+    "human_summary": {
+      "lead": "La Constitución estipula las garantías imperativas; un anexo diferenciado y de actualización ágil determina qué soluciones técnicas las satisfacen en el presente.",
+      "points": [
+        "Es posible incorporar tecnología perfeccionada sin necesidad de tramitar una reforma constitucional.",
+        "Ninguna regulación técnica podrá aminorar en modo alguno el nivel de tutela constitucional.",
+        "Aquellos parámetros empíricos carentes de prueba concluyente se consignan explícitamente como provisionales."
+      ]
+    },
+    "category": "science",
+    "keywords": [
+      "organic law",
+      "technology neutrality",
+      "annex",
+      "obsolescence",
+      "sim-qa-17"
+    ],
+    "timestamp": "2026-10-30T21:00:00Z"
   }
 ]
