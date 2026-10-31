@@ -61,7 +61,12 @@ oasis/legacy_high_capital_assets.md
 scripts/*
 !scripts/anchor_world_snapshot.py
 !scripts/build_docs_hub.py
+!scripts/compute_urban_blocks.py
+!scripts/extract_additional_basins.py
+!scripts/extract_all_hydrobasins.py
 !scripts/feedback_relay_apps_script.js
+!scripts/fetch_city_data.py
+!scripts/make_elbe_basin.py
 !scripts/snapshot_relay_apps_script.js
 !scripts/sync_webapp_i18n.py
 !scripts/verify_pillars_readiness.py
