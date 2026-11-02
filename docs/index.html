@@ -1192,7 +1192,26 @@
     .we-assump summary { cursor: pointer; font-weight: 600; color: #e2e8f0; }
     .we-assump-body { margin-top: 8px; line-height: 1.45; max-height: 220px; overflow-y: auto; }
     .we-assump-body code { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #a7f3d0; }
+    .we-assump-body a { color: #38bdf8; text-decoration: underline; }
     .we-assump-body .we-flag { color: #fbbf24; }
+    .we-cta-row { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+    .we-cta-btn { flex: 1; min-width: 135px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(52, 211, 153, 0.4); color: #ecfdf5; font-size: 0.74rem; font-weight: 600; padding: 7px 9px; border-radius: 7px; cursor: pointer; transition: all 0.18s ease; text-align: center; }
+    .we-cta-btn:hover { background: rgba(16, 185, 129, 0.24); border-color: #34d399; }
+    .we-cta-btn.alt { background: rgba(56, 189, 248, 0.11); border-color: rgba(56, 189, 248, 0.38); color: #e0f2fe; }
+    .we-cta-btn.alt:hover { background: rgba(56, 189, 248, 0.22); border-color: #38bdf8; }
+    .we-inline-form { display: none; margin-top: 8px; padding: 10px; background: rgba(2, 6, 23, 0.78); border: 1px solid rgba(52, 211, 153, 0.35); border-radius: 8px; font-size: 0.75rem; color: #cbd5e1; }
+    .we-inline-form.open { display: block; }
+    .we-inline-form label { display: block; font-weight: 600; color: #e2e8f0; margin-bottom: 3px; margin-top: 7px; font-size: 0.72rem; }
+    .we-inline-form label:first-child { margin-top: 0; }
+    .we-inline-form select, .we-inline-form input, .we-inline-form textarea { width: 100%; background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(148, 163, 184, 0.32); border-radius: 5px; color: #f8fafc; padding: 6px 8px; font-size: 0.74rem; font-family: inherit; box-sizing: border-box; }
+    .we-inline-form textarea { resize: vertical; min-height: 52px; }
+    .we-form-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 9px; flex-wrap: wrap; }
+    .we-form-submit { background: #10b981; color: #022c22; border: none; border-radius: 6px; padding: 6px 12px; font-weight: 700; font-size: 0.74rem; cursor: pointer; }
+    .we-form-submit:hover { background: #34d399; }
+    .we-form-links { font-size: 0.69rem; color: #94a3b8; }
+    .we-form-links a { color: #38bdf8; text-decoration: none; }
+    .we-form-links a:hover { text-decoration: underline; }
+    .we-form-status { margin-top: 7px; font-size: 0.73rem; font-weight: 600; color: #34d399; display: none; }
   </style>
 </head>
 <body>
@@ -1365,6 +1384,37 @@
                 <summary>Assumptions, formulas &amp; data sources</summary>
                 <div class="we-assump-body" id="weAssumpBody"></div>
               </details>
+
+              <!-- Community Block Proposal & Parameter Calibration CTA -->
+              <div id="weCommunityCta">
+                <div class="we-cta-row">
+                  <button type="button" class="we-cta-btn" id="btnOpenPropose">📍 Propose a Block in Your City</button>
+                  <button type="button" class="we-cta-btn alt" id="btnOpenChallenge">🔧 Challenge a Number / Join</button>
+                </div>
+                <form class="we-inline-form" id="weInlineForm">
+                  <label for="weFormType">What would you like to submit?</label>
+                  <select id="weFormType" name="entry.576823116">
+                    <option value="Propose a new city block to audit">Propose a new city block to audit</option>
+                    <option value="Challenge / refine a number in an existing block">Challenge / refine a number in an existing block</option>
+                    <option value="Collaborate on O.N.E. (Code / CAD / Local Activism)">Collaborate on O.N.E. (Code / CAD / Local Activism)</option>
+                  </select>
+                  <label for="weFormBlock">City, Neighborhood &amp; Google Maps / OSM link (or 4 bounding streets)</label>
+                  <input type="text" id="weFormBlock" name="entry.1074797178" placeholder="e.g. Berlin Neukölln + Google Maps link" required />
+                  <label for="weFormNotes">Notes, local rent/utility prices, or parameter you are challenging</label>
+                  <textarea id="weFormNotes" name="entry.1791166800" placeholder="e.g. EH55 retrofit demand, local heat network rate, or floor count..."></textarea>
+                  <label for="weFormContact">Your contact (Email or Reddit/GitHub handle — private, to send you the updated model)</label>
+                  <input type="text" id="weFormContact" name="entry.1449222351" placeholder="Email or Reddit / GitHub username" />
+                  <div class="we-form-actions">
+                    <button type="submit" class="we-form-submit" id="weFormSubmitBtn">Send to O.N.E. ➔</button>
+                    <span class="we-form-links">
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLScp4ULb3aKpRNd4HZ8kGJUbYCT3qCIvrPq7S8wrjHI8w6IfUw/viewform" target="_blank" rel="noopener noreferrer">Full Form ↗</a>
+                      •
+                      <a href="https://github.com/kyberlex/ONE/issues" target="_blank" rel="noopener noreferrer">GitHub Issues ↗</a>
+                    </span>
+                  </div>
+                  <div class="we-form-status" id="weFormStatus">✓ Received! We'll run the OpenStreetMap &amp; PVGIS audit and reach out.</div>
+                </form>
+              </div>
 
               <!-- Canonical Node Box (Watershed mode only) -->
               <div class="we-node-box" id="hudNodeBox" style="display: none;">
@@ -2347,7 +2397,7 @@
             const a = MODEL_ASSUMPTIONS[k];
             h += "<li><code>" + esc(k) + "</code> = " + esc(a.value) + " <em>(" + esc(a.status) + ")</em>: " + esc(a.note) + "</li>";
           });
-          h += "</ul><p>" + esc(MODEL_ATTRIBUTION) + " Full code and raw data: <code>scripts/compute_urban_blocks.py</code>, <code>data/osm/PROVENANCE.md</code>.</p>";
+          h += "</ul><p>" + esc(MODEL_ATTRIBUTION) + " Full code and raw data: <a href='https://github.com/kyberlex/ONE/blob/main/scripts/compute_urban_blocks.py' target='_blank' rel='noopener noreferrer'><code>scripts/compute_urban_blocks.py</code></a>, <a href='https://github.com/kyberlex/ONE/blob/main/data/osm/PROVENANCE.md' target='_blank' rel='noopener noreferrer'><code>data/osm/PROVENANCE.md</code></a>.</p>";
           assumpBody.innerHTML = h;
         }
 
@@ -2893,6 +2943,75 @@
           btnTrackB.classList.add("active-track-b");
           btnTrackA.classList.remove("active-track-a");
           updateHUD();
+        });
+      }
+
+      // Community Proposal & Parameter Calibration Form Handlers
+      const btnOpenPropose = document.getElementById("btnOpenPropose");
+      const btnOpenChallenge = document.getElementById("btnOpenChallenge");
+      const weInlineForm = document.getElementById("weInlineForm");
+      const weFormType = document.getElementById("weFormType");
+      const weFormBlock = document.getElementById("weFormBlock");
+      const weFormNotes = document.getElementById("weFormNotes");
+      const weFormStatus = document.getElementById("weFormStatus");
+      const weFormSubmitBtn = document.getElementById("weFormSubmitBtn");
+
+      if (btnOpenPropose && weInlineForm) {
+        btnOpenPropose.addEventListener("click", () => {
+          weInlineForm.classList.add("open");
+          if (weFormType) weFormType.value = "Propose a new city block to audit";
+          if (weFormBlock) {
+            weFormBlock.value = "";
+            weFormBlock.placeholder = "e.g. Berlin Neukölln + Google Maps / OSM link";
+            weFormBlock.focus();
+          }
+          if (weFormStatus) weFormStatus.style.display = "none";
+        });
+      }
+
+      if (btnOpenChallenge && weInlineForm) {
+        btnOpenChallenge.addEventListener("click", () => {
+          weInlineForm.classList.add("open");
+          if (weFormType) weFormType.value = "Challenge / refine a number in an existing block";
+          if (weFormBlock) {
+            weFormBlock.value = currentBlock ? currentBlock.name : (selectedBasin ? selectedBasin.name : "");
+          }
+          if (weFormNotes) weFormNotes.focus();
+          if (weFormStatus) weFormStatus.style.display = "none";
+        });
+      }
+
+      if (weInlineForm) {
+        weInlineForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          if (weFormSubmitBtn) {
+            weFormSubmitBtn.disabled = true;
+            weFormSubmitBtn.textContent = "Sending...";
+          }
+          const formData = new URLSearchParams(new FormData(weInlineForm));
+          try {
+            await fetch("https://docs.google.com/forms/d/e/1FAIpQLScp4ULb3aKpRNd4HZ8kGJUbYCT3qCIvrPq7S8wrjHI8w6IfUw/formResponse", {
+              method: "POST",
+              mode: "no-cors",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: formData.toString()
+            });
+            if (weFormStatus) {
+              weFormStatus.textContent = "✓ Received! We'll run the OpenStreetMap & PVGIS audit and reach out.";
+              weFormStatus.style.display = "block";
+            }
+            if (weFormNotes) weFormNotes.value = "";
+          } catch (err) {
+            if (weFormStatus) {
+              weFormStatus.textContent = "Please use the 'Full Form ↗' link next to the button.";
+              weFormStatus.style.display = "block";
+            }
+          } finally {
+            if (weFormSubmitBtn) {
+              weFormSubmitBtn.disabled = false;
+              weFormSubmitBtn.textContent = "Send to O.N.E. ➔";
+            }
+          }
         });
       }
 
