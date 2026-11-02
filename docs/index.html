@@ -1339,6 +1339,37 @@
                 Compare what this real neighborhood pays today in rent and utility bills versus what it would produce for free if managed as an open commons.
               </p>
 
+              <!-- Community Block Proposal & Parameter Calibration CTA (Above the fold!) -->
+              <div id="weCommunityCta" style="margin-bottom: 10px;">
+                <div class="we-cta-row" style="margin-top: 2px;">
+                  <button type="button" class="we-cta-btn" id="btnOpenPropose">📍 Propose a Block in Your City</button>
+                  <button type="button" class="we-cta-btn alt" id="btnOpenChallenge">🔧 Challenge a Number / Join</button>
+                </div>
+                <form class="we-inline-form" id="weInlineForm">
+                  <label for="weFormType">What would you like to submit?</label>
+                  <select id="weFormType" name="entry.576823116">
+                    <option value="Propose a new city block to audit">Propose a new city block to audit</option>
+                    <option value="Challenge / refine a number in an existing block">Challenge / refine a number in an existing block</option>
+                    <option value="Collaborate on O.N.E. (Code / CAD / Local Activism)">Collaborate on O.N.E. (Code / CAD / Local Activism)</option>
+                  </select>
+                  <label for="weFormBlock">City, Neighborhood &amp; Google Maps / OSM link (or 4 bounding streets)</label>
+                  <input type="text" id="weFormBlock" name="entry.1074797178" placeholder="e.g. Berlin Neukölln + Google Maps link" required />
+                  <label for="weFormNotes">Notes, local rent/utility prices, or parameter you are challenging</label>
+                  <textarea id="weFormNotes" name="entry.1791166800" placeholder="e.g. EH55 retrofit demand, local heat network rate, or floor count..."></textarea>
+                  <label for="weFormContact">Your contact (Email or Reddit/GitHub handle — private, to send you the updated model)</label>
+                  <input type="text" id="weFormContact" name="entry.1449222351" placeholder="Email or Reddit / GitHub username" />
+                  <div class="we-form-actions">
+                    <button type="submit" class="we-form-submit" id="weFormSubmitBtn">Send to O.N.E. ➔</button>
+                    <span class="we-form-links">
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLScp4ULb3aKpRNd4HZ8kGJUbYCT3qCIvrPq7S8wrjHI8w6IfUw/viewform" target="_blank" rel="noopener noreferrer">Full Form ↗</a>
+                      •
+                      <a href="https://github.com/kyberlex/ONE/issues" target="_blank" rel="noopener noreferrer">GitHub Issues ↗</a>
+                    </span>
+                  </div>
+                  <div class="we-form-status" id="weFormStatus">✓ Received! We'll run the OpenStreetMap &amp; PVGIS audit and reach out.</div>
+                </form>
+              </div>
+
               <!-- Human Comparison Toggle: Today vs With O.N.E. -->
               <div class="we-audit-toggle" id="weAuditToggle">
                 <button type="button" class="we-toggle-btn active-track-a" id="btnTrackA">🔴 Today (Rent &amp; Bills)</button>
@@ -1384,37 +1415,6 @@
                 <summary>Assumptions, formulas &amp; data sources</summary>
                 <div class="we-assump-body" id="weAssumpBody"></div>
               </details>
-
-              <!-- Community Block Proposal & Parameter Calibration CTA -->
-              <div id="weCommunityCta">
-                <div class="we-cta-row">
-                  <button type="button" class="we-cta-btn" id="btnOpenPropose">📍 Propose a Block in Your City</button>
-                  <button type="button" class="we-cta-btn alt" id="btnOpenChallenge">🔧 Challenge a Number / Join</button>
-                </div>
-                <form class="we-inline-form" id="weInlineForm">
-                  <label for="weFormType">What would you like to submit?</label>
-                  <select id="weFormType" name="entry.576823116">
-                    <option value="Propose a new city block to audit">Propose a new city block to audit</option>
-                    <option value="Challenge / refine a number in an existing block">Challenge / refine a number in an existing block</option>
-                    <option value="Collaborate on O.N.E. (Code / CAD / Local Activism)">Collaborate on O.N.E. (Code / CAD / Local Activism)</option>
-                  </select>
-                  <label for="weFormBlock">City, Neighborhood &amp; Google Maps / OSM link (or 4 bounding streets)</label>
-                  <input type="text" id="weFormBlock" name="entry.1074797178" placeholder="e.g. Berlin Neukölln + Google Maps link" required />
-                  <label for="weFormNotes">Notes, local rent/utility prices, or parameter you are challenging</label>
-                  <textarea id="weFormNotes" name="entry.1791166800" placeholder="e.g. EH55 retrofit demand, local heat network rate, or floor count..."></textarea>
-                  <label for="weFormContact">Your contact (Email or Reddit/GitHub handle — private, to send you the updated model)</label>
-                  <input type="text" id="weFormContact" name="entry.1449222351" placeholder="Email or Reddit / GitHub username" />
-                  <div class="we-form-actions">
-                    <button type="submit" class="we-form-submit" id="weFormSubmitBtn">Send to O.N.E. ➔</button>
-                    <span class="we-form-links">
-                      <a href="https://docs.google.com/forms/d/e/1FAIpQLScp4ULb3aKpRNd4HZ8kGJUbYCT3qCIvrPq7S8wrjHI8w6IfUw/viewform" target="_blank" rel="noopener noreferrer">Full Form ↗</a>
-                      •
-                      <a href="https://github.com/kyberlex/ONE/issues" target="_blank" rel="noopener noreferrer">GitHub Issues ↗</a>
-                    </span>
-                  </div>
-                  <div class="we-form-status" id="weFormStatus">✓ Received! We'll run the OpenStreetMap &amp; PVGIS audit and reach out.</div>
-                </form>
-              </div>
 
               <!-- Canonical Node Box (Watershed mode only) -->
               <div class="we-node-box" id="hudNodeBox" style="display: none;">
@@ -3030,6 +3030,10 @@
           const matchBlock = URBAN_BLOCKS.find(b => b.id === auditParam || b.id.includes(auditParam));
           if (matchBlock) {
             setUrbanBlock(matchBlock.id);
+            setTimeout(() => {
+              const cardEl = document.querySelector(".we-card");
+              if (cardEl) cardEl.scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 150);
           } else {
             updateHUD(selectedBasin);
           }
