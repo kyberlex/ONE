@@ -1,0 +1,14 @@
+sub_id,subsystem,component_name,architecture_tier,service_life_years,mass_kg,unit_cost_eur,qty,total_eur,fail_safe_mode
+US-01,Hydraulic Core,CW617N Lead-Free Brass Backflow Preventer BA (DN32),50yr_Passive_Analog,50,2.8,145.00,1,145.00,Mechanical differential relief
+US-02,Hydraulic Core,EN 1111 Wax-Element Thermostatic Mixing Valve (<=48C),50yr_Passive_Analog,40,1.4,110.00,1,110.00,Cold-drop shutoff <1.5s
+US-03,Hydraulic Core,Vertical Coaxial Cu-DHP Falling-Film DWHR (54mm x 1600mm),50yr_Passive_Analog,60,14.5,380.00,1,380.00,Zero moving parts passive film
+US-04,Hydraulic Core,PEX-a Radial Home-Run Manifold 8-Port + Quarter-Turn Valves,50yr_Passive_Analog,50,3.2,165.00,1,165.00,Manual lever isolation
+US-05,Hydraulic Core,DN50 Brass 3-Way Greywater Valve + Wax Freeze Actuator,50yr_Passive_Analog,35,2.6,190.00,1,190.00,Spring-return <+2C bypass
+US-06,Electrical Safety,2-Pole High-Voltage DC Switch-Disconnector (1000V/32A),50yr_Passive_Analog,40,1.2,95.00,1,95.00,Mechanical thermal-magnetic trip
+US-07,Electrical Safety,Class-T Current-Limiting Fuse + Holder (200kA AIC),50yr_Passive_Analog,50,0.6,68.00,1,68.00,Irreversible physical element
+US-08,Electrical Safety,Bimetallic Cryo Lockout Switch (+2C Break) + Contactor K1,50yr_Passive_Analog,35,0.9,82.00,1,82.00,Hard series coil break <+2C
+US-09,Enclosure & DIN,800x800mm Fire-Rated Fermacell Chase + 35mm DIN Rails,50yr_Passive_Analog,80,48.0,420.00,1,420.00,Hinged dry tool-free front door
+US-10,Digital Profile 2026,DIN-Rail Telemetry Controller (Olimex ESP32-POE-ISO Ref),10yr_Swappable_DIN,10,0.2,38.00,1,38.00,Unclip & swap on DIN rail
+US-11,Digital Profile 2026,I2C Environmental Sensor Pod (SCD41 CO2 + SHT45 Temp/RH),10yr_Swappable_DIN,10,0.1,54.00,1,54.00,JST-XH plug-and-swap connector
+US-12,Digital Profile 2026,RS485 Modbus RTU Isolated Transceiver + Shunt Interface,10yr_Swappable_DIN,12,0.2,45.00,1,45.00,Galvanically isolated bus
+

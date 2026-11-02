@@ -167,7 +167,27 @@ def test_electrical_and_modbus_specs():
     # Ensure low temperature cutoff register exists
     cryo = next((r for r in data["registers"] if r["name"] == "TEMP_CELL_MIN"), None)
     assert cryo is not None, "Missing TEMP_CELL_MIN cryo lockout register"
-    print(f"[PASS] Microgrid & Modbus Audit: Single-line SVG, electrical spec, and {len(data['registers'])} registers verified.")
+
+    # Verify parametric voltage/copper trade-off calculator & hydronic P&ID
+    tradeoff_mod = load_macro_module(
+        "voltage_tradeoff", os.path.join(HABITAT_DIR, "schematics", "calculate_voltage_copper_tradeoff.py")
+    )
+    table = tradeoff_mod.run_tradeoff_table(power_kw=15.0, distance_m=80.0, max_drop_pct=2.0)
+    assert len(table) == 4 and table[-1]["copper_mass_kg"] < table[0]["copper_mass_kg"] * 0.01
+    assert os.path.isfile(os.path.join(HABITAT_DIR, "schematics", "hydronic_greywater_p_and_id.svg"))
+    assert os.path.isfile(os.path.join(HABITAT_DIR, "schematics", "hydronic_plumbing_spec.md"))
+
+    # Verify multi-biome Eurocode 5 check & Utility Spine BOM
+    ec5_mod = load_macro_module(
+        "ec5_multi_biome", os.path.join(HABITAT_DIR, "hygrothermal", "eurocode5_structural_check.py")
+    )
+    for b in ec5_mod.BIOME_LOAD_CASES:
+        assert ec5_mod.evaluate_biome_ec5(b)["status"] == "PASS"
+
+    bom_val = load_macro_module("validate_bom", os.path.join(HABITAT_DIR, "bom", "validate_bom.py"))
+    bom_val.validate_utility_spine_bom()
+
+    print(f"[PASS] Microgrid & Modbus Audit: Single-line SVG, hydronic P&ID, voltage trade-off, and {len(data['registers'])} registers verified.")
 
 
 if __name__ == "__main__":

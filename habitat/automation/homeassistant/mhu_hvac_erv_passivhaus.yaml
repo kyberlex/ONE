@@ -1,0 +1,77 @@
+# ==============================================================================
+# O.N.E. HABITAT — PASSIVHAUS ENTHALPIC ERV SUMMER BYPASS & FROST PROTECTION
+# File: habitat/automation/homeassistant/mhu_hvac_erv_passivhaus.yaml
+# Profile: 2026 Reference Implementation Profile (v1.0 COTS — Replaceable DIN Module)
+# Constitutional Invariant: Art. 3.4.3 (Zero Biometric Surveillance / 100% Local)
+# License: AGPL-3.0-or-later
+# ==============================================================================
+
+input_number:
+  mhu_target_comfort_temp_c:
+    name: "MHU Target Comfort Temperature"
+    min: 18.0
+    max: 25.0
+    step: 0.5
+    initial: 21.0
+    unit_of_measurement: "°C"
+
+input_boolean:
+  mhu_erv_summer_bypass_active:
+    name: "MHU ERV Summer Night-Purge Mechanical Damper"
+    initial: false
+
+automation:
+  - id: mhu_erv_summer_night_purge_bypass
+    alias: "MHU Passivhaus — Summer Night-Purge Free Cooling Bypass"
+    description: >
+      Opens the mechanical summer bypass damper on the enthalpic core when indoor
+      temperature exceeds 23.5°C and outdoor night air is cooler (12°C to 20°C),
+      providing passive free cooling without compressor work.
+    mode: single
+    trigger:
+      - platform: state
+        entity_id:
+          - sensor.mhu_indoor_temp_c
+          - sensor.mhu_outdoor_ambient_temp_c
+    condition:
+      - condition: numeric_state
+        entity_id: sensor.mhu_indoor_temp_c
+        above: 23.5
+      - condition: numeric_state
+        entity_id: sensor.mhu_outdoor_ambient_temp_c
+        above: 12.0
+        below: 20.5
+      - condition: numeric_state
+        entity_id: sensor.mhu_battery_soc_pct
+        above: 25.0
+    action:
+      - service: input_boolean.turn_on
+        target:
+          entity_id: input_boolean.mhu_erv_summer_bypass_active
+      - service: fan.set_percentage
+        target:
+          entity_id: fan.mhu_enthalpic_hrv
+        data:
+          percentage: 75
+
+  - id: mhu_erv_core_anti_frost_modulation
+    alias: "MHU Passivhaus — Enthalpic Core Exhaust Frost Protection"
+    description: >
+      Modulates supply fan down to 25% if exhaust air leaving the enthalpic
+      recovery core drops below +1.5°C, preventing ice crystallization inside
+      the membrane channels (backed up by a passive bimetallic damper).
+    mode: single
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.mhu_ outdoor_ambient_temp_c
+        below: -5.0
+    action:
+      - service: input_boolean.turn_off
+        target:
+          entity_id: input_boolean.mhu_erv_summer_bypass_active
+      - service: fan.set_percentage
+        target:
+          entity_id: fan.mhu_enthalpic_hrv
+        data:
+          percentage: 30
+

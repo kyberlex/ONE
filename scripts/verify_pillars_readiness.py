@@ -104,8 +104,22 @@ def audit_simone_pillar():
     ]:
         assert os.path.isfile(os.path.join(REPO_ROOT, "simone", "examples", exname)), f"Missing simone/examples/{exname}"
     assert os.path.isfile(os.path.join(REPO_ROOT, "simone", "benchmarks", "benchmark_solvers.jl"))
+    for bscript in [
+        "sim_qa_11_petition_dos.py",
+        "sim_qa_12_stiff_load_shedding.py",
+        "sim_qa_13_vapor_puncture.py",
+        "sim_qa_14_cryo_and_voltage_drop.py",
+    ]:
+        bpath = os.path.join(REPO_ROOT, "simone", "benchmarks", bscript)
+        assert os.path.isfile(bpath), f"Missing benchmark {bscript}"
+        res = subprocess.run([sys.executable, bpath], capture_output=True, text=True)
+        assert res.returncode == 0, f"Benchmark {bscript} failed:\n{res.stderr}\n{res.stdout}"
 
-    print("    [PASS] Simone 12-Sector Leontief Hawkins-Simon, REA adapter, and benchmarks verified.")
+    val_data = os.path.join(REPO_ROOT, "simone", "data", "validate_datasets.py")
+    res_data = subprocess.run([sys.executable, val_data], capture_output=True, text=True)
+    assert res_data.returncode == 0, f"Dataset validation failed:\n{res_data.stderr}"
+
+    print("    [PASS] Simone 12/14-Sector Leontief, REA adapter, and SIM-QA-11..14 benchmarks verified.")
 
 
 def audit_oasis_critics_round2():

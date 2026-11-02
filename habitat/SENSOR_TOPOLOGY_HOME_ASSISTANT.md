@@ -8,11 +8,28 @@
 
 ---
 
-## **1. The Biometric Privacy Invariant (Abiotic Telemetry Only)**
+## **1. The 50–100 Year Longevity Architecture (*Shearing Layers* & Zero-Silicon Survival)**
+
+A timber habitat structure is engineered for **80 to 100+ years**, hydronic plumbing for **30 to 50 years**, whereas microcontrollers (`ESP32`), wireless transceivers (`Zigbee`/`Thread`), and software stacks (`Home Assistant`) have a technological obsolescence or MTBF cycle of **7 to 15 years**.
+
+To prevent short-lived electronics from entombing or dating a century-scale building, the MHU enforces **Stewart Brand's *Shearing Layers* separation** and three non-negotiable rules:
+
+| Shearing Layer | Service Lifespan | MHU Physical Implementation | Replacement & Evolution Rule |
+| :--- | :--- | :--- | :--- |
+| **1. Site & Foundations** | $100+\text{ years}$ | Reversible S355 galvanized helical screw piles | Zero concrete; removable with zero soil destruction. |
+| **2. Structure** | $80-100\text{ years}$ | C24 timber portal frames + 18mm birch nodal gussets | Kept strictly dry and ventilated; zero embedded pipes/wires. |
+| **3. Skin & Envelope** | $40-60\text{ years}$ | Wood-fiber insulation + ventilated rainscreen | Demountable exterior cladding without disturbing structural bays. |
+| **4. Utility Spine & Conduits** | $30-50\text{ years}$ | Accessible $800 \times 800\text{ mm}$ dry inspection shaft + 50mm service cavity | Hinged front panel; all pipes and cable trays open-accessible. |
+| **5. Passive Analog Safety** | $50+\text{ years}$ | Bimetallic thermal switches, thermostatic mixing valves, gravity drains, manual ball valves | **100% Zero-Silicon Survival:** The dwelling remains safe, warm, and habitable even if all microcontrollers are removed. |
+| **6. Digital Telemetry Nodes** | $7-15\text{ years}$ | **2026 Reference Profile (v1.0):** `ESP32` / `RS485` / `Zigbee` / `Home Assistant` on DIN rail | **Plug-and-Swap:** Future Co-Stewards or residents in 2045 or 2075 can unclip the DIN-rail controller and drop in future open hardware in $<10\text{ minutes}$. |
+
+---
+
+## **2. The Biometric Privacy Invariant (Abiotic Telemetry Only)**
 
 In strict compliance with the Living Constitution, the MHU automation stack is **physically incapable of surveillance**:
 * **Zero Microphones / Zero Cameras:** No voice assistants, acoustic arrays, or optical sensors are permitted inside the habitat specification.
-* **Zero Cloud Dependencies:** All sensor polling, PID climate loops, and load-shedding automations execute locally on the Utility Spine controller (`Olimex ESP32-POE-ISO` + local `Home Assistant` / `OpenPLC` instance) over wired RS485 Modbus and local Zigbee/Thread.
+* **Zero Cloud Dependencies:** All sensor polling, PID climate loops, and load-shedding automations execute locally on the replaceable DIN-rail Utility Spine controller (in the **2026 Reference Profile v1.0**: `Olimex ESP32-POE-ISO` + local `Home Assistant` / `OpenPLC` instance) over wired fieldbus (`RS485 Modbus`) or local short-range radio.
 * **Analog Mechanical Overrides:** Every motorized valve and relay includes a manual mechanical bypass handle accessible via the front panel of the Utility Spine.
 
 ---

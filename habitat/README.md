@@ -43,23 +43,32 @@ habitat/
 │   ├── mhu_portal_frame_3bay.stl             # 3D STL model of the complete 3-bay portal frame assembly
 │   ├── mhu_wetroom_core_iso21542.dxf         # 2D DXF plan view of accessible wet-room & utility spine docking
 │   └── mhu_wetroom_core_iso21542.stl         # 3D STL solid of accessible wet-room floor cassette & vertical riser
-├── automation/                               # [Track 4B] Local Home Assistant & ESPHome firmware configs
+├── automation/                               # [Track 4B] 50yr Passive Survival + 2026 Reference Profile (v1.0 COTS)
+│   ├── README.md                             # Shearing Layers (50-100yr timber vs 10yr DIN-rail swappable electronics)
 │   ├── homeassistant/
 │   │   ├── mhu_abiotic_core.yaml             # 48V DC load-shedding (<25% SoC) & Passivhaus HRV CO2 automation
-│   │   └── mhu_water_loop.yaml               # Potable cistern drought lock & greywater reed-bed frost diversion
+│   │   ├── mhu_water_loop.yaml               # Potable cistern drought lock & greywater reed-bed frost diversion
+│   │   └── mhu_hvac_erv_passivhaus.yaml      # Enthalpic ERV summer night-purge bypass & core frost protection
 │   ├── esphome/
 │   │   ├── utility_spine_esp32.yaml          # Olimex ESP32-POE-ISO firmware (SCD41 CO2, INA226 48V shunt, ultrasonic)
 │   │   └── bms_modbus_rtu_stub.yaml          # RS485 Modbus RTU 16S LFP BMS & <2°C cold-charge lockout starter stub
 │   └── modbus/
 │       └── lfp_bms_modbus_registers.json     # 16S LFP BMS RS485 register map (Seplos / JK / LibreSolar)
-├── hygrothermal/                             # Passivhaus Glaser / WUFI condensation audit
+├── hygrothermal/                             # Passivhaus Glaser / WUFI condensation & Eurocode 5 structural checks
 │   ├── glaser_audit_5_biomes.py              # Automated Glaser method audit script across 5 seed biomes
-│   └── glaser_audit_report.md                # Quantitative condensation verification report (ISO 13788)
-├── schematics/                               # Electrical microgrid schematics
+│   ├── glaser_audit_report.md                # Quantitative condensation verification report (ISO 13788)
+│   └── eurocode5_structural_check.py         # Multi-biome EN 1995-1-1 snow/wind/deflection verification script
+├── schematics/                               # Electrical microgrid & hydronic P&ID schematics
 │   ├── microgrid_380v_48v_single_line.svg    # Single-line schematic for 380V inter-node DC + 48V domestic bus
-│   └── microgrid_electrical_spec.md          # Earthing, arc-fault, and galvanically isolated DC specifications
+│   ├── microgrid_electrical_spec.md          # Voltage domain physics (I^2R losses), earthing & isolated DC specs
+│   ├── calculate_voltage_copper_tradeoff.py  # Parametric copper mass & ohmic loss calculator (48V/380V/800V DC/400V AC)
+│   ├── hydronic_greywater_p_and_id.svg       # P&ID schematic for potable water, passive DWHR & greywater reed-bed loop
+│   └── hydronic_plumbing_spec.md             # 50-year zero-silicon hydraulic safety & EN 806 / EN 1111 specification
 ├── bom/                                      # Machine-readable Bill of Materials & Leontief cost tables
-│   └── mhu_bom_6_levels.csv                  # Complete 6-level BOM (MHU Open Chassis vs. WikiHouse Skylark)
+│   ├── README.md                             # WBS 6-level structure & Shearing-Layer longevity guide
+│   ├── mhu_bom_6_levels.csv                  # Complete 6-level BOM (MHU Open Chassis vs. WikiHouse Skylark)
+│   ├── utility_spine_800x800_bom.csv         # 800x800mm Utility Spine BOM (50yr Passive Core vs 10yr Swappable DIN)
+│   └── validate_bom.py                       # Automated BOM cost conservation & shearing-layer validator
 ├── renders/                                  # Architectural & CAD visual references
 │   ├── mhu_nodal_gusset_freecad_render.png   # 4-Viewport FreeCAD technical sheet & Eurocode 5 audit
 │   ├── mhu_exterior_concept.jpg              # MHU Passivhaus exterior visualization
