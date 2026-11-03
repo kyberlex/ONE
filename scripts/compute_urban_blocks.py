@@ -33,7 +33,7 @@ MODEL_FILE = REPO_ROOT / "data" / "urban_blocks_model.json"
 
 # Berlin block was chosen explicitly (best perimeter block with level data); others are
 # selected automatically as the valid block closest to the city centre in urban_blocks.json.
-BLOCK_POINT_OVERRIDE = {"berlin-kreuzberg": (52.5013, 13.4215)}
+BLOCK_POINT_OVERRIDE = {"berlin-kreuzberg": (52.5013, 13.4215), "tadley-uk": (51.345585, -1.144329)}
 REFERENCE_CITY = "berlin-kreuzberg"
 
 RESIDENTIAL_TYPES = {"apartments", "residential", "yes", "house", "terrace", "detached",
@@ -115,10 +115,15 @@ def pick_block(block_id, center, osm_elements, to_m, to_ll):
     return chosen, ins, res, fp, tagged, named
 
 
-def levels_gfa(res):
+def levels_gfa(res, block_id=""):
     tagged = [(g, float(t["building:levels"])) for g, t in res
               if str(t.get("building:levels", "")).replace(".", "", 1).isdigit()]
-    mean_lv = (sum(g.area * lv for g, lv in tagged) / sum(g.area for g, _ in tagged)) if tagged else 1.0
+    if tagged:
+        mean_lv = (sum(g.area * lv for g, lv in tagged) / sum(g.area for g, _ in tagged))
+    elif block_id == "tadley-uk":
+        mean_lv = 2.0
+    else:
+        mean_lv = 1.0
     tagged_ids = {id(g) for g, _ in tagged}
     gfa = sum(g.area * lv for g, lv in tagged)
     gfa += sum(g.area * mean_lv for g, t in res if id(g) not in tagged_ids)
@@ -166,7 +171,7 @@ def main():
         to_ll = Transformer.from_crs(to_m.target_crs, 4326, always_xy=True)
         osm = json.loads((OSM_DIR / f"{s}_raw.json").read_text(encoding="utf-8"))["elements"]
         blk, ins, res, fp, tagged, streets = pick_block(bid, (lon0, lat0), osm, to_m, to_ll)
-        gfa, mean_lv, n_tag = levels_gfa(res)
+        gfa, mean_lv, n_tag = levels_gfa(res, bid)
         kwh_kwp, hdh, rain_days, years = climate(s)
 
         net = gfa * A["net_to_gross_floor"]
@@ -285,10 +290,10 @@ def main():
         lf["drain_30y_label"] = f"€{drain / 1e6:.1f}M"
         b["data_quality"] = {
             "geometry": "OpenStreetMap (ODbL), real footprints",
-            "levels": f"{n_tag}/{len(res)} buildings with declared levels",
+            "levels": f"{n_tag}/{len(res)} buildings with declared levels" if n_tag > 0 else f"estimated {mean_lv:.1f} levels (suburban residential)",
             "homes_inhabitants": "estimated from gross floor area",
             "energy_climate": "PVGIS v5.3 + ERA5, 2015-2020",
-            "financial_inputs": "illustrative, not verified",
+            "financial_inputs": "field reported by resident (Exalyte on Reddit): rent £1,150-£2,073, elec 32p/kWh, gas 8p/kWh" if bid == "tadley-uk" else "illustrative, not verified",
             "heat_demand": "Berlin TABULA reference scaled by degree-hours" if bid != REFERENCE_CITY else "IWU TABULA reference (to verify)",
         }
         b["bottleneck"] = {
