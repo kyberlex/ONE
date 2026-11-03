@@ -33,7 +33,7 @@ MODEL_FILE = REPO_ROOT / "data" / "urban_blocks_model.json"
 
 # Berlin block was chosen explicitly (best perimeter block with level data); others are
 # selected automatically as the valid block closest to the city centre in urban_blocks.json.
-BLOCK_POINT_OVERRIDE = {"berlin-kreuzberg": (52.5013, 13.4215), "tadley-uk": (51.345585, -1.144329)}
+BLOCK_POINT_OVERRIDE = {"berlin-kreuzberg": (52.5013, 13.4215), "tadley-uk": (51.3457284, -1.1427247)}
 REFERENCE_CITY = "berlin-kreuzberg"
 
 RESIDENTIAL_TYPES = {"apartments", "residential", "yes", "house", "terrace", "detached",
@@ -112,6 +112,9 @@ def pick_block(block_id, center, osm_elements, to_m, to_ll):
     for s, t in streets:
         if t.get("name") and s.distance(chosen) < 6 and t["name"] not in named:
             named.append(t["name"])
+    if "Monkswood Crescent" in named:
+        named.remove("Monkswood Crescent")
+        named.insert(0, "Monkswood Crescent")
     return chosen, ins, res, fp, tagged, named
 
 
