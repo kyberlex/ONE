@@ -15385,7 +15385,7 @@
    "levels": "estimated 2.0 levels (suburban residential)",
    "homes_inhabitants": "estimated from gross floor area",
    "energy_climate": "PVGIS v5.3 + ERA5, 2015-2020",
-   "financial_inputs": "field reported by resident (Exalyte on Reddit): rent £1,150-£2,073, elec 32p/kWh, gas 8p/kWh",
+   "financial_inputs": "field reported by local resident (community submission): rent £1,150-£2,073, elec 32p/kWh, gas 8p/kWh",
    "heat_demand": "Berlin TABULA reference scaled by degree-hours"
   },
   "bottleneck": {

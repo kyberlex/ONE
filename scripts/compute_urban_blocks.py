@@ -296,7 +296,7 @@ def main():
             "levels": f"{n_tag}/{len(res)} buildings with declared levels" if n_tag > 0 else f"estimated {mean_lv:.1f} levels (suburban residential)",
             "homes_inhabitants": "estimated from gross floor area",
             "energy_climate": "PVGIS v5.3 + ERA5, 2015-2020",
-            "financial_inputs": "field reported by resident (Exalyte on Reddit): rent £1,150-£2,073, elec 32p/kWh, gas 8p/kWh" if bid == "tadley-uk" else "illustrative, not verified",
+            "financial_inputs": "field reported by local resident (community submission): rent £1,150-£2,073, elec 32p/kWh, gas 8p/kWh" if bid == "tadley-uk" else "illustrative, not verified",
             "heat_demand": "Berlin TABULA reference scaled by degree-hours" if bid != REFERENCE_CITY else "IWU TABULA reference (to verify)",
         }
         b["bottleneck"] = {
