@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-30T23:23:16.397336",
-  "total_ui_keys": 450,
+  "generated_at": "2026-11-04T20:31:32.189394",
+  "total_ui_keys": 440,
   "languages": [
     {
       "code": "en",
@@ -75,99 +75,99 @@
   ],
   "ui_stats": {
     "en": {
-      "total": 450,
-      "translated": 450,
+      "total": 440,
+      "translated": 440,
       "identical_to_en": 0,
       "missing": 0,
       "pct": 100.0
     },
     "it": {
-      "total": 450,
-      "translated": 438,
+      "total": 440,
+      "translated": 428,
       "identical_to_en": 12,
       "missing": 0,
       "pct": 97.3
     },
     "fr": {
-      "total": 450,
-      "translated": 437,
+      "total": 440,
+      "translated": 427,
       "identical_to_en": 13,
       "missing": 0,
-      "pct": 97.1
+      "pct": 97.0
     },
     "de": {
-      "total": 450,
-      "translated": 436,
+      "total": 440,
+      "translated": 426,
       "identical_to_en": 14,
       "missing": 0,
-      "pct": 96.9
+      "pct": 96.8
     },
     "es": {
-      "total": 450,
-      "translated": 441,
+      "total": 440,
+      "translated": 431,
       "identical_to_en": 9,
       "missing": 0,
       "pct": 98.0
     },
     "pt": {
-      "total": 450,
-      "translated": 439,
+      "total": 440,
+      "translated": 429,
       "identical_to_en": 11,
       "missing": 0,
-      "pct": 97.6
+      "pct": 97.5
     },
     "zh": {
-      "total": 450,
-      "translated": 444,
+      "total": 440,
+      "translated": 434,
       "identical_to_en": 6,
       "missing": 0,
-      "pct": 98.7
+      "pct": 98.6
     },
     "ja": {
-      "total": 450,
-      "translated": 443,
+      "total": 440,
+      "translated": 433,
       "identical_to_en": 7,
       "missing": 0,
       "pct": 98.4
     },
     "ko": {
-      "total": 450,
-      "translated": 443,
+      "total": 440,
+      "translated": 433,
       "identical_to_en": 7,
       "missing": 0,
       "pct": 98.4
     },
     "hi": {
-      "total": 450,
-      "translated": 443,
+      "total": 440,
+      "translated": 433,
       "identical_to_en": 7,
       "missing": 0,
       "pct": 98.4
     },
     "ar": {
-      "total": 450,
-      "translated": 443,
+      "total": 440,
+      "translated": 433,
       "identical_to_en": 7,
       "missing": 0,
       "pct": 98.4
     },
     "ru": {
-      "total": 450,
-      "translated": 443,
+      "total": 440,
+      "translated": 433,
       "identical_to_en": 7,
       "missing": 0,
       "pct": 98.4
     },
     "id": {
-      "total": 450,
-      "translated": 440,
+      "total": 440,
+      "translated": 430,
       "identical_to_en": 10,
       "missing": 0,
-      "pct": 97.8
+      "pct": 97.7
     },
     "tr": {
-      "total": 450,
-      "translated": 441,
+      "total": 440,
+      "translated": 431,
       "identical_to_en": 9,
       "missing": 0,
       "pct": 98.0
@@ -699,18 +699,18 @@
       "composite_pct": 98.9
     },
     "fr": {
-      "ui_pct": 97.1,
+      "ui_pct": 97.0,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
       "composite_pct": 98.8
     },
     "de": {
-      "ui_pct": 96.9,
+      "ui_pct": 96.8,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 98.8
+      "composite_pct": 98.7
     },
     "es": {
       "ui_pct": 98.0,
@@ -720,18 +720,18 @@
       "composite_pct": 99.2
     },
     "pt": {
-      "ui_pct": 97.6,
+      "ui_pct": 97.5,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
       "composite_pct": 99.0
     },
     "zh": {
-      "ui_pct": 98.7,
+      "ui_pct": 98.6,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
-      "composite_pct": 99.5
+      "composite_pct": 99.4
     },
     "ja": {
       "ui_pct": 98.4,
@@ -769,7 +769,7 @@
       "composite_pct": 99.4
     },
     "id": {
-      "ui_pct": 97.8,
+      "ui_pct": 97.7,
       "const_pct": 100.0,
       "qa_pct": 100.0,
       "ebooks_pct": 100.0,
@@ -8242,28 +8242,7 @@
     {
       "key": "stewards.badge_active",
       "section": "stewards",
-      "en_val": "🔥 Priority Lead Search",
-      "statuses": {
-        "en": "CANONICAL",
-        "it": "TRANSLATED",
-        "fr": "TRANSLATED",
-        "de": "TRANSLATED",
-        "es": "TRANSLATED",
-        "pt": "TRANSLATED",
-        "zh": "TRANSLATED",
-        "ja": "TRANSLATED",
-        "ko": "TRANSLATED",
-        "hi": "TRANSLATED",
-        "ar": "TRANSLATED",
-        "ru": "TRANSLATED",
-        "id": "TRANSLATED",
-        "tr": "TRANSLATED"
-      }
-    },
-    {
-      "key": "stewards.badge_priority",
-      "section": "stewards",
-      "en_val": "🔥 Priority 0 • Active Search",
+      "en_val": "Contributors: 1",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -8345,27 +8324,6 @@
       }
     },
     {
-      "key": "stewards.badge_seeking_cofounder",
-      "section": "stewards",
-      "en_val": "Seeking Co-Founder",
-      "statuses": {
-        "en": "CANONICAL",
-        "it": "TRANSLATED",
-        "fr": "TRANSLATED",
-        "de": "TRANSLATED",
-        "es": "TRANSLATED",
-        "pt": "TRANSLATED",
-        "zh": "TRANSLATED",
-        "ja": "TRANSLATED",
-        "ko": "TRANSLATED",
-        "hi": "TRANSLATED",
-        "ar": "TRANSLATED",
-        "ru": "TRANSLATED",
-        "id": "TRANSLATED",
-        "tr": "TRANSLATED"
-      }
-    },
-    {
       "key": "stewards.btn_all_discussions",
       "section": "stewards",
       "en_val": "💬 View All Discussions on GitHub",
@@ -8410,7 +8368,7 @@
     {
       "key": "stewards.cta_desc",
       "section": "stewards",
-      "en_val": "Whether you want to co-steward a foundational pillar or act as an independent critic hunting thermodynamic and nomothetic edge cases, your contribution directly hardens the Genesis Block.",
+      "en_val": "Whether you want to co-steward a foundational pillar or act as an independent critic hunting thermodynamic and nomothetic edge cases, your contribution directly hardens the Genesis Block. Open to domain engineers, critics, and open-source community stewards.",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -8452,7 +8410,7 @@
     {
       "key": "stewards.desc",
       "section": "stewards",
-      "en_val": "Open Networked Earth is built on open peer production. Before the Living Constitution is permanently deposited under Swiss Civil Law (ZGB Art. 80 ff.), our foundational pillars must be stress-tested through adversarial peer review. We are actively seeking our <strong>Priority 0 Community & DevRel Co-Steward</strong> and technical domain builders to harden the architecture against entropy.",
+      "en_val": "Open Networked Earth is built on open peer production. Before the Living Constitution is permanently deposited under Swiss Civil Law (ZGB Art. 80 ff.), each pillar seeks <strong>1 Lead Co-Steward</strong>, <strong>open Collaborators</strong>, and <strong>at least 1 senior External Critic</strong> to complete and stress-test the architecture.",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -8495,174 +8453,6 @@
       "key": "stewards.label_doubt",
       "section": "stewards",
       "en_val": "Open Dialectic & Doubt:",
-      "statuses": {
-        "en": "CANONICAL",
-        "it": "TRANSLATED",
-        "fr": "TRANSLATED",
-        "de": "TRANSLATED",
-        "es": "TRANSLATED",
-        "pt": "TRANSLATED",
-        "zh": "TRANSLATED",
-        "ja": "TRANSLATED",
-        "ko": "TRANSLATED",
-        "hi": "TRANSLATED",
-        "ar": "TRANSLATED",
-        "ru": "TRANSLATED",
-        "id": "TRANSLATED",
-        "tr": "TRANSLATED"
-      }
-    },
-    {
-      "key": "stewards.label_mandate",
-      "section": "stewards",
-      "en_val": "The Mandate & Strategic Goal:",
-      "statuses": {
-        "en": "CANONICAL",
-        "it": "TRANSLATED",
-        "fr": "TRANSLATED",
-        "de": "TRANSLATED",
-        "es": "TRANSLATED",
-        "pt": "TRANSLATED",
-        "zh": "TRANSLATED",
-        "ja": "TRANSLATED",
-        "ko": "TRANSLATED",
-        "hi": "TRANSLATED",
-        "ar": "TRANSLATED",
-        "ru": "TRANSLATED",
-        "id": "TRANSLATED",
-        "tr": "TRANSLATED"
-      }
-    },
-    {
-      "key": "stewards.label_target_profile",
-      "section": "stewards",
-      "en_val": "Target Profile:",
-      "statuses": {
-        "en": "CANONICAL",
-        "it": "TRANSLATED",
-        "fr": "TRANSLATED",
-        "de": "TRANSLATED",
-        "es": "TRANSLATED",
-        "pt": "TRANSLATED",
-        "zh": "TRANSLATED",
-        "ja": "TRANSLATED",
-        "ko": "TRANSLATED",
-        "hi": "TRANSLATED",
-        "ar": "TRANSLATED",
-        "ru": "TRANSLATED",
-        "id": "TRANSLATED",
-        "tr": "TRANSLATED"
-      }
-    },
-    {
-      "key": "stewards.p0_badge",
-      "section": "stewards",
-      "en_val": "Pillar 0 • Strategic Inversion",
-      "statuses": {
-        "en": "CANONICAL",
-        "it": "TRANSLATED",
-        "fr": "TRANSLATED",
-        "de": "TRANSLATED",
-        "es": "TRANSLATED",
-        "pt": "TRANSLATED",
-        "zh": "TRANSLATED",
-        "ja": "TRANSLATED",
-        "ko": "TRANSLATED",
-        "hi": "TRANSLATED",
-        "ar": "TRANSLATED",
-        "ru": "TRANSLATED",
-        "id": "TRANSLATED",
-        "tr": "TRANSLATED"
-      }
-    },
-    {
-      "key": "stewards.p0_btn_cta",
-      "section": "stewards",
-      "en_val": "Join Community Dialectic (#13) →",
-      "statuses": {
-        "en": "CANONICAL",
-        "it": "TRANSLATED",
-        "fr": "TRANSLATED",
-        "de": "TRANSLATED",
-        "es": "TRANSLATED",
-        "pt": "TRANSLATED",
-        "zh": "TRANSLATED",
-        "ja": "TRANSLATED",
-        "ko": "TRANSLATED",
-        "hi": "TRANSLATED",
-        "ar": "TRANSLATED",
-        "ru": "TRANSLATED",
-        "id": "TRANSLATED",
-        "tr": "TRANSLATED"
-      }
-    },
-    {
-      "key": "stewards.p0_btn_email",
-      "section": "stewards",
-      "en_val": "Apply Directly via Email →",
-      "statuses": {
-        "en": "CANONICAL",
-        "it": "TRANSLATED",
-        "fr": "TRANSLATED",
-        "de": "TRANSLATED",
-        "es": "TRANSLATED",
-        "pt": "TRANSLATED",
-        "zh": "TRANSLATED",
-        "ja": "TRANSLATED",
-        "ko": "TRANSLATED",
-        "hi": "TRANSLATED",
-        "ar": "TRANSLATED",
-        "ru": "TRANSLATED",
-        "id": "TRANSLATED",
-        "tr": "TRANSLATED"
-      }
-    },
-    {
-      "key": "stewards.p0_doubt",
-      "section": "stewards",
-      "en_val": "Eliminate the solo-creator bottleneck by taking operational co-ownership of r/OpenNetworkedEarth, scheduling the prepared post pipeline, managing comment triage, and actively recruiting technical Co-Stewards across Julia, FreeCAD, and Home Assistant ecosystems.",
-      "statuses": {
-        "en": "CANONICAL",
-        "it": "TRANSLATED",
-        "fr": "TRANSLATED",
-        "de": "TRANSLATED",
-        "es": "TRANSLATED",
-        "pt": "TRANSLATED",
-        "zh": "TRANSLATED",
-        "ja": "TRANSLATED",
-        "ko": "TRANSLATED",
-        "hi": "TRANSLATED",
-        "ar": "TRANSLATED",
-        "ru": "TRANSLATED",
-        "id": "TRANSLATED",
-        "tr": "TRANSLATED"
-      }
-    },
-    {
-      "key": "stewards.p0_role",
-      "section": "stewards",
-      "en_val": "Open-source community manager, FOSS DevRel, technical recruiter, Solarpunk/Commons community organizer.",
-      "statuses": {
-        "en": "CANONICAL",
-        "it": "TRANSLATED",
-        "fr": "TRANSLATED",
-        "de": "TRANSLATED",
-        "es": "TRANSLATED",
-        "pt": "TRANSLATED",
-        "zh": "TRANSLATED",
-        "ja": "TRANSLATED",
-        "ko": "TRANSLATED",
-        "hi": "TRANSLATED",
-        "ar": "TRANSLATED",
-        "ru": "TRANSLATED",
-        "id": "TRANSLATED",
-        "tr": "TRANSLATED"
-      }
-    },
-    {
-      "key": "stewards.p0_title",
-      "section": "stewards",
-      "en_val": "Community Manager, DevRel & Technical Headhunter",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",
@@ -9124,7 +8914,7 @@
     {
       "key": "stewards.title",
       "section": "stewards",
-      "en_val": "Call for Co-Stewards & Domain Critics",
+      "en_val": "Call for Co-Stewards, Collaborators & Domain Critics",
       "statuses": {
         "en": "CANONICAL",
         "it": "TRANSLATED",

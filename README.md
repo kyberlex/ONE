@@ -30,7 +30,6 @@
 > ### 🤝 **Call for Co-Stewards, Collaborators & Critics (1 Lead + Open Collaborators + ≥1 Senior Critic per Pillar)**
 > Exploring the codebase? Before the Swiss Foundation Genesis Lock, each pillar seeks **1 Lead Co-Steward**, **open Collaborators**, and **at least 1 top-tier External Critic**:
 >
-> - **Pillar 0:** Open-Source Community Manager, DevRel & Technical Headhunter
 > - **Pillar 1:** Biophysical & Leontief Economics (`Simone.jl` input-output calibration)
 > - **Pillar 2:** Demarchic Sortition & Swiss Foundation Law (ZGB Art. 80 ff.)
 > - **Pillar 3:** Lead Scientific Co-Simulation Modeler (`Simone.jl` in Julia)

@@ -46,12 +46,12 @@ julia --project=simone -e 'using Pkg; Pkg.instantiate(); Pkg.test()'
 
 ### **Step 1: Pick a Bounded Proof-of-Work (PoW) Task**
 Consult [`stewards/TECHNICAL_PILLARS_COMPACT.md`](TECHNICAL_PILLARS_COMPACT.md) or [`stewards/PILLAR_0_STEWARD_COMPACT.md`](PILLAR_0_STEWARD_COMPACT.md):
-- **Pillar 0:** Community curation, moderation scripts, or developer outreach pipelines.
 - **Pillar 1:** Expand Leontief matrices or stress-test non-monetary $L_{\min}$ rationing.
 - **Pillar 2:** Swiss ZGB legal edge-cases or sortition state machine extensions.
 - **Pillar 3:** Multi-rate stiff solvers, agent heterogeneity, or REA adapter integration.
 - **Pillar 4A:** Parametric FreeCAD macros, IFC4 BIM models, or Glaser hygrothermal audits.
 - **Pillar 4B:** Local Home Assistant / ESPHome configs, Modbus BMS registers, or DC schematics.
+- **Community & Documentation:** Documentation improvements, onboarding guides, or RFC synthesis.
 - **Track B (Senior Critic):** Pick any module from [`stewards/CRITIC_BRIEFING_PACK.md`](CRITIC_BRIEFING_PACK.md) and demonstrate a failure mode!
 
 ### **Step 2: Create a Feature Branch & Implement**

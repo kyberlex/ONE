@@ -26,12 +26,6 @@ Foundation ONE transitions from Phase 0 to formal Swiss notarial incorporation o
 
 ---
 
-### **Pillar 0: Open-Source Community, DevRel & Technical Headhunting**
-* **Lead Co-Steward Seat:** 🔍 **OPEN — PRIORITY 0 SEARCH** ([`PILLAR_0_STEWARD_COMPACT.md`](PILLAR_0_STEWARD_COMPACT.md) | [Discussion #13](https://github.com/kyberlex/ONE/discussions/13))
-* **Open Collaborators:** *Always Open* (Reddit `r/OpenNetworkedEarth` pipeline scheduling, developer scouting, forum triage).
-
----
-
 ### **Pillar 1: Biophysical & Leontief Economics**
 * **Lead Co-Steward Seat:** 🔍 **OPEN** ([`TECHNICAL_PILLARS_COMPACT.md#pillar-1`](TECHNICAL_PILLARS_COMPACT.md) | [Discussion #9](https://github.com/kyberlex/ONE/discussions/9))
 * **Open Collaborators:** *Always Open* (Leontief matrix disaggregation, $L_{\min}$ drought shocks, Weibull circularity).
@@ -60,6 +54,12 @@ Foundation ONE transitions from Phase 0 to formal Swiss notarial incorporation o
 * **Lead Co-Steward Seat 4B (Smart-Home & Microgrid Specialist):** 🔍 **OPEN** ([`TECHNICAL_PILLARS_COMPACT.md#pillar-4`](TECHNICAL_PILLARS_COMPACT.md) | [Discussion #12](https://github.com/kyberlex/ONE/discussions/12))
 * **Open Collaborators:** *Always Open* (FreeCAD `.FCMacro`/`.ifc` assemblies, Eurocode 5 calculations, Home Assistant/ESPHome `.yaml` packages, 380V/48V DC schematics).
 * **External Senior Critics ($\ge 1$ Required):** 🔍 **OPEN** — Target profiles: Passivhaus certifiers, structural timber engineers, off-grid DC microgrid engineers.
+
+---
+
+### **Open-Source Community & Documentation Stewardship**
+* **Community & Documentation Stewards:** 🔍 **OPEN** ([`PILLAR_0_STEWARD_COMPACT.md`](PILLAR_0_STEWARD_COMPACT.md) | [Discussion #13](https://github.com/kyberlex/ONE/discussions/13))
+* **Open Collaborators:** *Always Open* (Contributor onboarding, documentation maintenance, working group coordination, and forum facilitation).
 
 ---
 

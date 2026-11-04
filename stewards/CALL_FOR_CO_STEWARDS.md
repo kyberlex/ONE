@@ -18,15 +18,15 @@
         ┌───────────────────────┴───────────────────────┐
         │                                               │
 ┌───────▼───────────────────────┐       ┌───────────────▼───────────────────┐
-│ PILLAR 0: COMMUNITY / DEVREL  │       │ 4 TECHNICAL PILLARS (BUILDERS)    │
-│ r/OpenNetworkedEarth, DevRel  │       │ 1. Economy (Leontief / Energy)    │
-│ Triage, Technical Headhunting │       │ 2. Governance (Sortition / ZGB)   │
-│ • 1 Lead Co-Steward           │       │ 3. Simulation (SIMONE Julia)      │
-│ • Open Collaborators          │       │ 4. Habitat (4A CAD + 4B YAML)     │
-│ [PHASE 0 PRIORITY 0 SEARCH]   │       │ • 1 Lead Co-Steward per role      │
+│ COMMUNITY & DOCUMENTATION     │       │ 4 TECHNICAL PILLARS (BUILDERS)    │
+│ Open-Source Community         │       │ 1. Economy (Leontief / Energy)    │
+│ Onboarding & Documentation    │       │ 2. Governance (Sortition / ZGB)   │
+│ • Open Community Stewards     │       │ 3. Simulation (SIMONE Julia)      │
+│ • Contributor Triage & Docs   │       │ 4. Habitat (4A CAD + 4B YAML)     │
+│ [OPEN COLLABORATION]          │       │ • 1 Lead Co-Steward per role      │
 └───────┬───────────────────────┘       │ • Open Collaborators (always on)  │
         │                               └───────────────┬───────────────────┘
-        │ drives campaign & recruitment                 │
+        │ supports onboarding & working groups          │
         └───────────────────────┬───────────────────────┘
                                 │ invite, debate & stress-test
                  ┌──────────────▼───────────────┐
@@ -39,15 +39,15 @@
 ### **The 3-Tier Pillar Structure & Anti-Stall Rules:**
 
 1. **1 Active Co-Steward + Open Collaborators + $\ge 1$ Senior Critic per Pillar:**
-   - **Co-Steward (1 per Pillar, plus 4A/4B in Habitat):** A single, high-ownership builder is sufficient to lead each pillar. We do not artificially wait for 15 co-stewards before launching Foundation ONE.
+   - **Co-Steward (1 per Technical Pillar, plus 4A/4B in Habitat):** A single, high-ownership builder is sufficient to lead each pillar. We do not artificially wait for 15 co-stewards before launching Foundation ONE.
    - **Collaborators (Always Open):** Every pillar remains **permanently open to Collaborators** who contribute to specific modules, PRs, CAD files, YAML configurations, or data calibration. Collaborators ensure continuous velocity and provide an immediate succession bench if a Lead Co-Steward slows down.
    - **External Critics ($\ge 1$ Top-Tier Specialist per Domain):** Each technical pillar (1–4) must be stress-tested by at least one top-tier independent domain critic whose mandate is strictly adversarial (*"Read/run this, tell us where it breaks"*).
 2. **The Anti-Stall Rule ("Earned by Delivery, Never Closed on Promises"):**
    - **Entry as Collaborator:** Nobody is appointed Lead Co-Steward upon initial contact or verbal interest alone. Every newcomer starts as a **Collaborator** on a bounded, concrete deliverable.
    - **Promotion by Delivery:** A collaborator becomes the pillar's **Co-Steward** only after demonstrating consistent, real delivery in the repository.
    - **Automatic Re-Opening on Inactivity:** Even when a Co-Steward is seated, collaborator doors stay open. If a Co-Steward goes inactive (>14 days without commits or check-ins), they transition to *Phase 1 Contributor / Collaborator* status and the Lead Co-Steward search remains 100% open.
-3. **Strategic Inversion (Phase 0 Priority 0):**
-   - To eliminate the "Solo Creator Trap", Kyberlex first onboards the **Pillar 0 Co-Steward (Open-Source Community Manager, DevRel & Technical Headhunter)** and collaborators. Pillar 0 takes operational ownership of `r/OpenNetworkedEarth`, post pipeline publishing, comment triage, and active headhunting to seat the builders and critics across Pillars 1–4.
+3. **Open-Source Community & Documentation Stewardship:**
+   - Alongside the 4 core technical pillars, O.N.E. welcomes open-source community and documentation stewards to help maintain contributor onboarding guides, facilitate constructive technical dialogue across GitHub Discussions and community forums, and route domain specialists into the appropriate working groups.
 4. **Outcome-Driven Genesis Lock (Phase 1 Transition to Foundation ONE):**
    - **Foundation ONE is formally incorporated in Switzerland (ZGB Art. 80 ff.)** and the Living Constitution is locked as Statutory Annex I once:
      1. `Simone.jl` (`simone/`) is completed at full fidelity across all 4 layers (`simone-specs.md`);
@@ -58,29 +58,16 @@
 
 ---
 
-## **II. THE CO-STEWARD PILLARS (PHASE 0 ROSTER)**
+## **II. THE 4 CORE TECHNICAL PILLARS (PHASE 0 ROSTER)**
 
 | # | Pillar | Focus / Mandate | Structure & Status | Target Profile |
 | :--- | :--- | :--- | :--- | :--- |
-| **0** | **Community, DevRel & Headhunting** | **Co-moderating `r/OpenNetworkedEarth`, post pipeline publishing, comment triage, and leading technical recruitment campaigns.** | 🔍 **PRIORITY 0 (Seeking 1 Co-Steward + Collaborators)** | Open-source community manager, FOSS DevRel, technical recruiter, Solarpunk/Commons organizer. |
 | **1** | **Biophysical Economics** | **Calibrate Leontief matrices, $L_{\min}$ operator, and abiotic shocks inside `Simone.jl`, leading economic critic reviews.** | 🔍 **Open (Seeking 1 Co-Steward + Collaborators + ≥1 Critic)** | Ecological / heterodox economist, Leontief input-output specialist. |
 | **2** | **Governance & Law** | **Validate sortition state machines (Layer 3 of `Simone.jl`), lead constitutional stress-tests, and draft Foundation statutes.** | 🔍 **Open (Seeking 1 Co-Steward + Collaborators + ≥1 Critic)** | Jurist (commons / Swiss civil law), deliberative democracy / sortition scholar. |
 | **3** | **Scientific Simulation (`Simone.jl`)** | **Lead the 4-layer co-simulation engine in Julia (`Agents.jl` + ODEs) to stress-test the Constitution before Genesis Lock.** | 🔍 **PRIORITY LEAD SEARCH (Seeking 1 Co-Steward + Collaborators [1 Contributor] + ≥1 Critic)** | Complex systems modeler, Julia scientific developer (`DiffEq`/`Agents.jl`). |
 | **4** | **Physical Habitat & Microgrid** | **Produce & maintain real engineering files: 4A (FreeCAD/IFC CAD models & CNC sheets) + 4B (Home Assistant/ESPHome YAML & DC schematics).** | 🔍 **Open (Seeking 4A & 4B Co-Stewards + Collaborators + ≥1 Critic)** | **4A:** Open-BIM & Timber Architect (`FreeCAD`/`BlenderBIM`)<br>**4B:** Smart-Home & Microgrid Specialist (`Home Assistant`/`ESPHome`) |
 
----
-
-### **Pillar 0 Deep-Dive: Open-Source Community Manager, DevRel & Technical Headhunter**
-
-* **Strategic Rationale:** Kyberlex cannot simultaneously maintain the Julia simulation engine, legal constitution, and biophysical models while spending full-time hours managing `r/OpenNetworkedEarth`, publishing post pipelines, answering comments, and hunting for developers. The Pillar 0 Co-Steward team is Kyberlex's primary operational partner to **take over daily community operations and scout the technical builders**.
-* **Core Mandate:**
-  1. **Community Leadership:** Co-moderate `r/OpenNetworkedEarth`, publish the prepared 10-post pipeline, manage organic crossposts, and handle first-level comment triage.
-  2. **Technical Headhunting & DevRel:** Conduct proactive scouting and recruitment across domain hubs (`Julia Discourse`, `OSArch`, `r/FreeCAD`, `Home Assistant`, `INET YSI`) to seat Co-Stewards 1–4 and invite domain Critics.
-  3. **Contributor Onboarding:** Welcome inbound open-source contributors and route domain discussions into GitHub Discussions and working groups.
-  4. **Deploying the Arsenal:** Leverage the completed catalog (10 prepared deep-dive posts, 6 novels, 6 audiobooks on Internet Archive, 8-minute explainer, cinematic trailers, web diorama, and 15-language portal).
-* **Inviolable Constraints:**
-  1. *Non-Commercial Purity (Class-0):* Zero advertising monetization, zero token launches, zero paywalls. Everything is AGPL-3.0 / CC-BY-SA.
-  2. *OpSec & Pseudonymity:* Kyberlex remains strictly anonymous (`kyberlex@proton.me`). The Community Co-Steward can be public-facing or pseudonymous, but never breaches Kyberlex's private workstation identity.
+*(Support Track — **Open-Source Community & Documentation Stewardship:** Open to contributors facilitating contributor onboarding, documentation clarity, and cross-disciplinary working group coordination).*
 
 ---
 
@@ -121,11 +108,11 @@
 * **Emeritus / Retired:** Formally stepped down after completing or handing over active modules.
 
 ### **High-Density Ecosystems of Focus:**
-1. **Pillar 0 (Community, DevRel & Headhunting):** Work on Climate (`#volunteer-board`, `#projects-and-collaborations`), ClimateAction.tech (`#jobs-and-volunteering`), RadicalxChange Discord, Metagov, `r/communitymanagement`, FOSDEM/FOSS community boards, Open Source Design.
-2. **Pillar 1 (Biophysical & Heterodox Economics):** INET YSI (*Young Scholars Initiative* - Sustainability & Ecological Economics WG), ISEE / ESEE Boards, Nate Hagens (*The Great Simplification*), W. Paul Cockshott (*Towards a New Socialism* cybernetic planning).
-3. **Pillar 2 (Governance & Commons Jurisprudence):** Metagov Seminars, Sortition Foundation (Hélène Landemore, Claudia Chwalisz / DemocracyNext), Dark Matter Labs (Indy Johar - territorial usufruct), Swiss Civil Law faculties (UZH / HSG).
-4. **Pillar 3 (Scientific Simulation & SIMONE):** JuliaLang Discourse (`Modelling`), Julia Slack/Zulip (`#agents`, `#sciml`), Sirens.jl network. *(Current status: Seeking 1 Lead Co-Steward + Open Collaborators [1 Phase 1 Contributor] + ≥1 Senior Critic)*.
-5. **Pillar 4 (Habitat & Microgrid Engineering):** WikiHouse Community / OSArch (Discussion #3674), Open Source Ecology (Marcin Jakubowski), Low-Tech Magazine (Kris De Decker), Home Assistant Architecture Forum, Hackaday.
+1. **Pillar 1 (Biophysical & Heterodox Economics):** INET YSI (*Young Scholars Initiative* - Sustainability & Ecological Economics WG), ISEE / ESEE Boards, Nate Hagens (*The Great Simplification*), W. Paul Cockshott (*Towards a New Socialism* cybernetic planning).
+2. **Pillar 2 (Governance & Commons Jurisprudence):** Metagov Seminars, Sortition Foundation (Hélène Landemore, Claudia Chwalisz / DemocracyNext), Dark Matter Labs (Indy Johar - territorial usufruct), Swiss Civil Law faculties (UZH / HSG).
+3. **Pillar 3 (Scientific Simulation & SIMONE):** JuliaLang Discourse (`Modelling`), Julia Slack/Zulip (`#agents`, `#sciml`), Sirens.jl network. *(Current status: Seeking 1 Lead Co-Steward + Open Collaborators [1 Phase 1 Contributor] + ≥1 Senior Critic)*.
+4. **Pillar 4 (Habitat & Microgrid Engineering):** WikiHouse Community / OSArch (Discussion #3674), Open Source Ecology (Marcin Jakubowski), Low-Tech Magazine (Kris De Decker), Home Assistant Architecture Forum, Hackaday.
+5. **Open-Source Community & Documentation Stewardship:** FOSDEM / FOSS community groups, Open Source Design, Metagov, and open-science documentation networks.
 
 ---
 
@@ -141,9 +128,9 @@
 ## **V. LIVE DISCUSSIONS & ADVERSARIAL RFC KITS**
 
 * **Live GitHub Discussions (Announcements & Working Hubs):**
-  * 0. **Community & DevRel:** [Discussion #13 — [Call for Co-Steward] 0. Open-Source Community Manager, DevRel & Technical Headhunter](https://github.com/kyberlex/ONE/discussions/13) *(Active Search — Priority 0: 1 Co-Steward + Collaborators)*
   * 1. **Economy:** [Discussion #9 — [Call for Co-Steward] 1. Biophysical & Leontief Economics](https://github.com/kyberlex/ONE/discussions/9) *(Seeking 1 Co-Steward + Collaborators + ≥1 Senior Critic)*
   * 2. **Governance & Law:** [Discussion #10 — [Call for Co-Steward] 2. Governance, Sortition & Swiss Foundation Law](https://github.com/kyberlex/ONE/discussions/10) *(Seeking 1 Co-Steward + Collaborators + ≥1 Senior Critic)*
   * 3. **Simulation & Scientific Co-Engine:** [Discussion #11 — [Call for Co-Steward] 3. Simulation & Scientific Co-Engine (Simone.jl)](https://github.com/kyberlex/ONE/discussions/11) *(Active Lead Search: 1 Lead Co-Steward + Open Collaborators + ≥1 Senior Critic)*
   * 4. **Energy & Habitat:** [Discussion #12 — [Call for Co-Steward] 4. Decentralized Microgrids & Modular Habitat (MHU)](https://github.com/kyberlex/ONE/discussions/12) *(Seeking 4A Open-BIM Architect & 4B Smart-Home YAML Specialist + Collaborators + ≥1 Senior Critic)*
+  * **Community & Documentation Stewardship:** [Discussion #13 — Open-Source Community & Documentation Stewardship](https://github.com/kyberlex/ONE/discussions/13) *(Open to community & documentation stewards)*
 
