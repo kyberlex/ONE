@@ -1403,6 +1403,15 @@ LAUNCHER_HTML = """<!DOCTYPE html>
                   <textarea id="weFormNotes" name="entry.1791166800" placeholder="e.g. EH55 retrofit demand, local heat network rate, or floor count..."></textarea>
                   <label for="weFormContact">Your contact (Email or Reddit/GitHub handle — private, to send you the updated model)</label>
                   <input type="text" id="weFormContact" name="entry.1449222351" placeholder="Email or Reddit / GitHub username" />
+                  <label for="weFormFoundVia">Where did you find this form?</label>
+                  <input type="text" id="weFormFoundVia" name="entry.1300868167" placeholder="e.g. a Reddit thread, a friend, a search" />
+                  <label for="weFormDelivery">How would you like to get the result?</label>
+                  <select id="weFormDelivery" name="entry.1215984912">
+                    <option value="Reply in the Reddit thread">Reply in the Reddit thread</option>
+                    <option value="Reddit DM">Reddit DM</option>
+                    <option value="Email">Email</option>
+                    <option value="Just publish it, no need to contact me">Just publish it, no need to contact me</option>
+                  </select>
                   <div class="we-form-actions">
                     <button type="submit" class="we-form-submit" id="weFormSubmitBtn">Send to O.N.E. ➔</button>
                     <span class="we-form-links">
