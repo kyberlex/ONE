@@ -74,3 +74,6 @@ scripts/*
 !scripts/sync_webapp_i18n.py
 !scripts/verify_pillars_readiness.py
 
+
+# Simone.jl: Manifest-v1.10.toml is committed (Julia 1.10 LTS); newer Julia versions resolve their own
+simone/Manifest.toml

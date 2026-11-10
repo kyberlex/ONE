@@ -18,7 +18,7 @@ using LinearAlgebra
 using StaticArrays
 using DataFrames
 using JSON3
-using DifferentialEquations
+using OrdinaryDiffEq
 using Agents
 
 export VillageParams, VillageState

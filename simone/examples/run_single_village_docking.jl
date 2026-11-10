@@ -4,7 +4,7 @@
 
 Quick-start executable benchmark for Pillar 3 (Simulation) & Pillar 1 (Economics) collaborators.
 Runs the Axtell (1996) Single-Village Docking Benchmark comparing:
-  - Model A: Continuous-time ODE stock-flow system (`DifferentialEquations.jl`)
+  - Model A: Continuous-time ODE stock-flow system (`OrdinaryDiffEq.jl`)
   - Model B: Discrete micro-agent ABM (`Agents.jl`) in the homogeneous limit (N = 300)
 
 Usage:

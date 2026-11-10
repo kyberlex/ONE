@@ -1,10 +1,39 @@
-# **Simone.jl: Scientific Discrete-Event & Biophysical Co-Simulation Engine**
+# Simone.jl
+
+Two models of the same 300-person village: an aggregate stock-flow model (ODEs, `OrdinaryDiffEq.jl`) and an agent-based model (`Agents.jl`). Both track energy (kWh), water (L), food (kcal) and compute (core-hours). Following the "docking" method of Axtell et al. (1996), the agent model has to reproduce the ODE when every agent is identical. Only after that do we make agents different and look at where, and why, the two models part ways.
+
+**Status:** 0.1.0-dev, research code. Parameters are illustrative and not yet calibrated against real data (see `data/calibration_sources.md`).
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Julia: 1.10+](https://img.shields.io/badge/Julia-1.10+-9558B2.svg)](https://julialang.org)
-[![Docking: Axtell 1996](https://img.shields.io/badge/Docking-Axtell_1996-green.svg)](https://doi.org/10.1007/BF00127394)
+[![Docking: Axtell 1996](https://img.shields.io/badge/Docking-Axtell_1996-green.svg)](https://doi.org/10.1007/BF01299065)
 
-`Simone.jl` is the scientific co-simulation engine for **Open Networked Earth (O.N.E.)**. It provides an empirical, multi-scale computational framework to stress-test post-labor resource allocation, physical mass/energy balances, and demarchic sortition assemblies without relying on neoclassical equilibrium, arbitrary monetary tallies, or ungrounded generative artifacts.
+## Quickstart (Julia 1.10 or newer)
+
+```bash
+git clone https://github.com/kyberlex/ONE
+cd ONE
+julia --project=simone -e 'using Pkg; Pkg.instantiate(); Pkg.test()'
+julia --project=simone simone/examples/run_single_village_docking.jl
+```
+
+The example runs both models for 30 days and prints the final stocks of each, the maximum relative error between them, and PASS if it stays under 2%.
+
+## What is where
+
+- `src/aggregate_ode.jl`: model A, the whole village as a few coupled ODEs
+- `src/agent_abm.jl`: model B, 300 individual agents
+- `src/docking.jl`: runs both and measures the gap
+- `examples/`: runnable scripts (docking, 90-day drought stress test, and more)
+- `test/`: conservation checks (nothing created or lost) and docking tests
+
+## Where help is useful
+
+Small, self-contained issues are tagged [`simone`](https://github.com/kyberlex/ONE/issues?q=is%3Aissue+label%3Asimone). Questions about solver choice, ABM performance or how to compare the two trajectories statistically are all welcome.
+
+## Background
+
+Simone.jl is the simulation engine of Open Networked Earth (O.N.E.), an open-source project that models a village economy in physical units instead of money. The sections below describe the full design.
 
 ---
 
@@ -40,7 +69,7 @@ Originally proposed as a Phase 1 docking baseline by contributor Rainer Rodrigue
 └─────────────────────────────────────────────────────────┘
 ```
 
-1. **Model A (`src/aggregate_ode.jl`):** An aggregate, continuous-time dynamical system (ODEs via `DifferentialEquations.jl`) modeling whole-village inflows (PV solar, precipitation, agricultural harvest) against baseline metabolic consumption, transmission friction, and decay.
+1. **Model A (`src/aggregate_ode.jl`):** An aggregate, continuous-time dynamical system (ODEs via `OrdinaryDiffEq.jl`) modeling whole-village inflows (PV solar, precipitation, agricultural harvest) against baseline metabolic consumption, transmission friction, and decay.
 2. **Model B (`src/agent_abm.jl`):** A discrete agent-based model using `Agents.jl`, where individual villagers possess metabolic, hydration, and duty adherence states.
 3. **Docking Benchmark (`src/docking.jl`):** In the limit of identical, homogeneous agents, Model B's aggregate trajectories must match Model A within numerical tolerance ($||\mathbf{S}_{\text{ODE}}(t) - \mathbf{S}_{\text{ABM}}(t)|| \le \epsilon$).
 
@@ -53,7 +82,7 @@ Only when docking succeeds are behavioral variance, illness cascades, and sortit
 ```
 simone/
 ├── Project.toml              # Package definition, registered Julia dependencies
-├── Manifest.toml             # Pinned reproducible dependency graph
+├── Manifest-v1.10.toml       # Pinned dependency graph for Julia 1.10 (newer versions resolve their own)
 ├── README.md                 # Scientific overview, docking discipline, quickstart
 ├── ODD_PROTOCOL.md           # Formal Overview, Design concepts & Details specification
 ├── simone-specs.md           # Formal multi-layer systems engineering specification
@@ -140,7 +169,7 @@ julia --project=simone simone/examples/run_autarkic_closure_audit.jl
 
 ## **V. Governance, Invariants & Co-Stewardship**
 
-* **License:** GNU Affero General Public License v3.0 or later ([AGPL-3.0-or-later](../../LICENSE)).
+* **License:** GNU Affero General Public License v3.0 or later ([AGPL-3.0-or-later](../LICENSE)).
 * **Architectural Authority:** Kyberlex ([`kyberlex@proton.me`](mailto:kyberlex@proton.me))
 * **Lead Technical Co-Steward (Pillar 3):** 🔍 **OPEN POSITION (Actively Seeking Lead Co-Steward & Scientific Modelers)** — See [GitHub Discussion #11](https://github.com/kyberlex/ONE/discussions/11).
 * **Phase 1 Contributor (Docking Proposal):** Rainer Rodrigues ([`@rainerrodrigues`](https://github.com/rainerrodrigues))

@@ -13,7 +13,7 @@ Evaluates CPU execution time, number of accepted/rejected steps, and non-negativ
 
 using Printf
 using Simone
-using DifferentialEquations
+using OrdinaryDiffEq
 using BenchmarkTools
 
 function benchmark_ode_solvers()
