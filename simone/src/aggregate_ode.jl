@@ -129,16 +129,26 @@ end
 
 """
     solve_aggregate_ode(params::VillageParams, u0::VillageState, tspan::Tuple{Float64, Float64};
-                        solver=Tsit5(), reltol=1e-6, abstol=1e-6, kwargs...)
+                        solver=Tsit5(), reltol=1e-6, abstol=1e-6,
+                        dtmax=params.bound_time_constant_day, kwargs...)
 
 Solves the aggregate single-village ODE model over tspan.
 
 The tolerances are tighter than the OrdinaryDiffEq defaults (1e-3 / 1e-6) because the
 right-hand side has kinks at the stock bounds: with the defaults a stock can overshoot
 its capacity by up to about 1.5%; at 1e-6 the overshoot stays around 1e-6.
+
+The step is also capped at the bound time constant τ. While a stock fills at a constant
+rate the solution is linear, the error estimate is near zero and the adaptive step keeps
+growing; a step much longer than τ can then straddle the capacity kink, with some stages
+filling and others draining, and the embedded error estimate does not notice. Seen with
+Tsit5: battery at 2860.6 kWh, net +330 kWh/day, other stocks full, one 0.72-day step
+ending at 2803.7 kWh instead of 3000 with retcode Success. Steps of at most τ resolve
+the first-order control near the bounds.
 """
 function solve_aggregate_ode(params::VillageParams, u0::VillageState, tspan::Tuple{Float64, Float64};
-                             solver=Tsit5(), reltol=1e-6, abstol=1e-6, kwargs...)
+                             solver=Tsit5(), reltol=1e-6, abstol=1e-6,
+                             dtmax=params.bound_time_constant_day, kwargs...)
     prob = build_aggregate_ode_problem(params, u0, tspan)
-    return solve(prob, solver; reltol=reltol, abstol=abstol, kwargs...)
+    return solve(prob, solver; reltol=reltol, abstol=abstol, dtmax=dtmax, kwargs...)
 end

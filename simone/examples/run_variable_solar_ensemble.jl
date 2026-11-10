@@ -87,12 +87,12 @@ ODE solved one day at a time with that day's solar (reference b; with a constant
 trace this is reference a). On a deficit day the battery only falls, nothing spills,
 so unmet = demand + loss - solar - drawdown.
 """
-function run_ode(base, trace)
+function run_ode(base, trace; kwargs...)
     demand = base.population * base.per_capita_kwh_day
     u = Vector(U0)
     E = zeros(length(trace)); unmet = zeros(length(trace))
     for (d, s) in enumerate(trace)
-        sol = solve_aggregate_ode(with_solar(base, s), VillageState(u), (0.0, 1.0); save_everystep = false)
+        sol = solve_aggregate_ode(with_solar(base, s), VillageState(u), (0.0, 1.0); save_everystep = false, kwargs...)
         unew = sol.u[end]
         if s < demand
             loss = base.battery_loss_rate_day * 0.5 * (u[1] + unew[1])
@@ -106,11 +106,14 @@ end
 
 function run_scenario(base, label, cv, rho, n_max, days, ode_a, unmet_a)
     abm_E = zeros(n_max, days); abm_unmet = zeros(n_max, days)
-    odeb_E = zeros(n_max, days); odeb_unmet = zeros(n_max, days)
+    odeb_E = zeros(n_max, days); odeb_unmet = zeros(n_max, days); solver_err = zeros(n_max)
     for i in 1:n_max
-        trace = solar_trace(Xoshiro(BASE_SEED + i), days, cv, rho)  # same trace i in every scenario seed
+        trace = solar_trace(Xoshiro(BASE_SEED + i), days, cv, rho)  # same seed i in every scenario
         abm_E[i, :], abm_unmet[i, :] = run_abm(base, trace)
         odeb_E[i, :], odeb_unmet[i, :] = run_ode(base, trace)
+        # solver check: the same ODE with a 25x smaller step cap
+        fine, _ = run_ode(base, trace; dtmax = base.bound_time_constant_day / 25)
+        solver_err[i] = maximum(abs.(odeb_E[i, :] .- fine))
     end
 
     cap = base.battery_capacity_kwh
@@ -136,11 +139,11 @@ function run_scenario(base, label, cv, rho, n_max, days, ode_a, unmet_a)
     sa = abm_unmet[:, w] .> 1e-6; sb = odeb_unmet[:, w] .> 0.5
     @printf("  share of run-days ABM short: %.2f%% | ODE(b) short: %.2f%% | runs with >=1 short day: %.1f%%\n",
             100 * mean(sa), 100 * mean(sb), 100 * mean(any(sa; dims = 2)))
-    # The ABM reads demand*dt above the ODE when empty (sampling artefact, see test_bounds.jl).
-    # Larger same-trace deviations are not explained by the step and are counted here.
-    dev = abs.(abm_E[:, w] .- odeb_E[:, w]) .> demand * DT_ABM + 1.0
-    @printf("  run-days with |ABM-ODEb| > demand*dt: %d of %d (%.3f%%), in %d runs\n",
-            count(dev), length(dev), 100 * mean(dev), count(any(dev; dims = 2)))
+    # |ABM-ODEb| is bounded by model differences near the bounds: one ABM step of flow when
+    # empty (see test_bounds.jl), and up to tau * |solar - demand| when the ODE approaches
+    # capacity over tau while the ABM clamps. The solver error below is separate.
+    @printf("  ODE(b) solver error vs dtmax = tau/25: max %.2e kWh over all runs and days\n",
+            maximum(solver_err))
     @printf("  unmet energy, ABM: %.3f%% of demand | ODE(b): %.3f%% | ODE(a): %.3f%%\n",
             100 * mean(abm_unmet[:, w]) / demand, 100 * mean(odeb_unmet[:, w]) / demand,
             100 * mean(unmet_a[w]) / demand)
