@@ -71,11 +71,12 @@ function run_docking_benchmark(
         t_val = t_abm[i]
         u_ode = ode_sol(t_val)
 
-        # Physical capacity clamping
-        val_E = min(params.battery_capacity_kwh, max(0.0, u_ode[1]))
-        val_W = min(params.water_cistern_capacity_l, max(0.0, u_ode[2]))
-        val_C = min(params.caloric_granary_capacity_kcal, max(0.0, u_ode[3]))
-        val_P = min(params.compute_capacity_core_hours, max(0.0, u_ode[4]))
+        # Raw ODE values: the ODE keeps itself inside [0, capacity] (see
+        # `bounded_net_rate`), so no clamping here; any overshoot shows up in the error.
+        val_E = u_ode[1]
+        val_W = u_ode[2]
+        val_C = u_ode[3]
+        val_P = u_ode[4]
 
         push!(ode_E, val_E)
         push!(ode_W, val_W)

@@ -40,13 +40,20 @@ using Simone
     u0_full = VillageState(2000.0, 100000.0, 20000000.0, 2000.0)
     sol_deplete = solve_aggregate_ode(p_deplete, u0_full, (0.0, 10.0))
 
+    # Energy (1500 kWh/day demand) and water (45,000 L/day) run out in about 1.3 and
+    # 2.2 days: they must fall strictly before that, then sit at zero, never below.
+    @test sol_deplete(0.5)[1] < u0_full.energy_kwh
+    @test sol_deplete(1.0)[1] < sol_deplete(0.5)[1]
+    @test sol_deplete(0.5)[2] < u0_full.water_l
+    @test sol_deplete(1.5)[2] < sol_deplete(0.5)[2]
+    @test isapprox(sol_deplete(10.0)[1], 0.0; atol=1e-3)
+    @test isapprox(sol_deplete(10.0)[2], 0.0; atol=1e-3)
+    @test minimum(u[1] for u in sol_deplete.u) >= -1e-3
+    @test minimum(u[2] for u in sol_deplete.u) >= -1e-3
+
+    # Calories (20M kcal, 750k kcal/day) last the whole 10 days: strictly decreasing.
     u_mid = sol_deplete(5.0)
     u_final = sol_deplete(10.0)
-
-    @test u_mid[1] < u0_full.energy_kwh
-    @test u_final[1] < u_mid[1]
-    @test u_mid[2] < u0_full.water_l
-    @test u_final[2] < u_mid[2]
     @test u_mid[3] < u0_full.calories_kcal
     @test u_final[3] < u_mid[3]
 end

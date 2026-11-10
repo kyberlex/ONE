@@ -36,6 +36,12 @@ Base.@kwdef struct VillageParams
     battery_loss_rate_day::Float64 = 0.001        # 0.1% per day self-discharge
     water_evap_loss_rate_day::Float64 = 0.002     # 0.2% per day evaporation
     caloric_spoilage_rate_day::Float64 = 0.0005   # 0.05% per day spoilage
+
+    # Time constant (days) over which a stock can be emptied or filled at the bounds.
+    # Outflow is capped at inflow + stock/τ and inflow at outflow + headroom/τ, so stocks
+    # stay inside [0, capacity] (Sterman, Business Dynamics, "first-order control").
+    # The ABM's per-step clamp is roughly the same rule with τ = dt_abm.
+    bound_time_constant_day::Float64 = 0.05
 end
 
 """
@@ -58,6 +64,27 @@ VillageState(v::AbstractVector{<:Real}) = VillageState(v[1], v[2], v[3], v[4])
 Base.Vector(s::VillageState) = [s.energy_kwh, s.water_l, s.calories_kcal, s.compute_core_hours]
 
 """
+    bounded_net_rate(stock, capacity, inflow, demand, loss, τ)
+
+Net rate of change for one stock that must stay inside `[0, capacity]`.
+
+Outflow (demand plus loss) is capped at what is available: the current inflow plus
+the stock drained over `τ`. Inflow is capped at what fits: the actual outflow plus
+the remaining headroom filled over `τ`. Away from the bounds both caps are inactive
+and the rate is simply `inflow - demand - loss`.
+
+The stock is not clamped inside the formula. If a solver step lands slightly below
+zero, outflow drops to zero and the stock refills at the inflow rate; slightly above
+capacity, inflow drops to zero and the stock drains at the outflow rate. If that flow
+is zero, the stock stays where it is, so a small overshoot never grows.
+"""
+@inline function bounded_net_rate(stock, capacity, inflow, demand, loss, τ)
+    outflow = max(0.0, min(demand + loss, inflow + stock / τ))
+    inflow_used = max(0.0, min(inflow, outflow + (capacity - stock) / τ))
+    return inflow_used - outflow
+end
+
+"""
     village_ode_system!(du, u, p::VillageParams, t)
 
 Differential equations governing the 4 physical stocks:
@@ -65,12 +92,12 @@ dE/dt = Solar - Demand - Loss
 dW/dt = Rain - Demand - Loss
 dC/dt = Harvest - Demand - Loss
 dP/dt = ComputeGen - Demand
+
+Each stock is kept inside `[0, capacity]` by `bounded_net_rate`: an empty stock can
+only pass on what flows into it, and a full stock only accepts what flows out.
 """
 function village_ode_system!(du, u, p::VillageParams, t)
-    E = max(0.0, u[1])
-    W = max(0.0, u[2])
-    C = max(0.0, u[3])
-    P = max(0.0, u[4])
+    τ = p.bound_time_constant_day
 
     # Aggregate consumption demands
     demand_E = p.population * p.per_capita_kwh_day
@@ -78,35 +105,15 @@ function village_ode_system!(du, u, p::VillageParams, t)
     demand_C = p.population * p.per_capita_calories_day
     demand_P = p.population * p.per_capita_compute_core_hours
 
-    # Dissipation / decay
-    loss_E = p.battery_loss_rate_day * E
-    loss_W = p.water_evap_loss_rate_day * W
-    loss_C = p.caloric_spoilage_rate_day * C
+    # Losses are proportional to the stock; a slightly negative solver value gives no loss.
+    loss_E = p.battery_loss_rate_day * max(0.0, u[1])
+    loss_W = p.water_evap_loss_rate_day * max(0.0, u[2])
+    loss_C = p.caloric_spoilage_rate_day * max(0.0, u[3])
 
-    # Net rates
-    net_dE = p.solar_daily_kwh - demand_E - loss_E
-    net_dW = p.rain_daily_l - demand_W - loss_W
-    net_dC = p.daily_harvest_kcal - demand_C - loss_C
-    net_dP = p.daily_compute_core_hours - demand_P
-
-    # Capacity clipping on inflows when full
-    if u[1] >= p.battery_capacity_kwh && net_dE > 0.0
-        net_dE = 0.0
-    end
-    if u[2] >= p.water_cistern_capacity_l && net_dW > 0.0
-        net_dW = 0.0
-    end
-    if u[3] >= p.caloric_granary_capacity_kcal && net_dC > 0.0
-        net_dC = 0.0
-    end
-    if u[4] >= p.compute_capacity_core_hours && net_dP > 0.0
-        net_dP = 0.0
-    end
-
-    du[1] = net_dE
-    du[2] = net_dW
-    du[3] = net_dC
-    du[4] = net_dP
+    du[1] = bounded_net_rate(u[1], p.battery_capacity_kwh, p.solar_daily_kwh, demand_E, loss_E, τ)
+    du[2] = bounded_net_rate(u[2], p.water_cistern_capacity_l, p.rain_daily_l, demand_W, loss_W, τ)
+    du[3] = bounded_net_rate(u[3], p.caloric_granary_capacity_kcal, p.daily_harvest_kcal, demand_C, loss_C, τ)
+    du[4] = bounded_net_rate(u[4], p.compute_capacity_core_hours, p.daily_compute_core_hours, demand_P, 0.0, τ)
     return nothing
 end
 
@@ -121,11 +128,17 @@ function build_aggregate_ode_problem(params::VillageParams, u0::VillageState, ts
 end
 
 """
-    solve_aggregate_ode(params::VillageParams, u0::VillageState, tspan::Tuple{Float64, Float64}; solver=Tsit5(), kwargs...)
+    solve_aggregate_ode(params::VillageParams, u0::VillageState, tspan::Tuple{Float64, Float64};
+                        solver=Tsit5(), reltol=1e-6, abstol=1e-6, kwargs...)
 
 Solves the aggregate single-village ODE model over tspan.
+
+The tolerances are tighter than the OrdinaryDiffEq defaults (1e-3 / 1e-6) because the
+right-hand side has kinks at the stock bounds: with the defaults a stock can overshoot
+its capacity by up to about 1.5%; at 1e-6 the overshoot stays around 1e-6.
 """
-function solve_aggregate_ode(params::VillageParams, u0::VillageState, tspan::Tuple{Float64, Float64}; solver=Tsit5(), kwargs...)
+function solve_aggregate_ode(params::VillageParams, u0::VillageState, tspan::Tuple{Float64, Float64};
+                             solver=Tsit5(), reltol=1e-6, abstol=1e-6, kwargs...)
     prob = build_aggregate_ode_problem(params, u0, tspan)
-    return solve(prob, solver; kwargs...)
+    return solve(prob, solver; reltol=reltol, abstol=abstol, kwargs...)
 end
