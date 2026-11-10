@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "network": "O-ASIS Confederated Mesh",
   "genesis": false,
-  "tick": 241235,
+  "tick": 241243,
   "day": 10052,
-  "timestamp": "2026-11-09T21:52:34Z",
+  "timestamp": "2026-11-10T05:45:05Z",
   "nodes": {
     "node-detroit": {
       "id": "node-detroit",
@@ -22,7 +22,7 @@
       "fiatTreasury": 3250,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 0,
+          "batteryStoredKwh": 350,
           "batteryCapacityKwh": 350
         },
         "water": {
@@ -95,13 +95,13 @@
       "fiatTreasury": 14200,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 10860,
+          "batteryStoredKwh": 11900,
           "batteryCapacityKwh": 12000,
           "solarGenerationKwh": 410,
           "consumptionKwh": 290
         },
         "water": {
-          "cisternStoredL": 52655,
+          "cisternStoredL": 52951,
           "cisternCapacityL": 60000,
           "rainInflowL": 750,
           "consumptionL": 380
@@ -184,13 +184,13 @@
       "fiatTreasury": 9800,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 5520,
+          "batteryStoredKwh": 6560,
           "batteryCapacityKwh": 10000,
           "solarGenerationKwh": 280,
           "consumptionKwh": 310
         },
         "water": {
-          "cisternStoredL": 28205,
+          "cisternStoredL": 28261,
           "cisternCapacityL": 40000,
           "rainInflowL": 350,
           "consumptionL": 280
@@ -273,13 +273,13 @@
       "fiatTreasury": 18000,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 12860,
+          "batteryStoredKwh": 13900,
           "batteryCapacityKwh": 14000,
           "solarGenerationKwh": 620,
           "consumptionKwh": 360
         },
         "water": {
-          "cisternStoredL": 31850,
+          "cisternStoredL": 31770,
           "cisternCapacityL": 65000,
           "rainInflowL": 380,
           "consumptionL": 480
@@ -451,7 +451,7 @@
       "fiatTreasury": 15500,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 11160,
+          "batteryStoredKwh": 9720,
           "batteryCapacityKwh": 12000,
           "solarGenerationKwh": 510,
           "consumptionKwh": 340
@@ -532,5 +532,5 @@
     "author": "Kyberlex <kyberlex@proton.me>",
     "license": "AGPL-3.0-or-later"
   },
-  "thermoConsensusHash": "f377855e4e512c15b3ad16a0ac7987b5952f172bdc3879b97adffca02a35bee1"
+  "thermoConsensusHash": "4405c74d1e1d0d4c1f46c797f8f39a77db3d4d35def2f73e18e8e0648ac352ce"
 }
