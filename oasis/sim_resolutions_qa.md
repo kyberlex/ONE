@@ -39,7 +39,7 @@ To ensure non-autocratic, rigorous governance, every entry carries an explicit e
 | **`SIM-QA-17`** | Organic Law Separation — Restoring Technological Neutrality | Drafting Invariants | `[STATUS: CANONICAL_MERGED]` | Art. 1.4.3, 3.3.3, 6.2–6.4, 8.1.4, 8.2.2, 10.5.3, 10.6.4, Ch. XI |
 | **`SIM-QA-18`** | Refusal of a Sortition Summons — Undefined Procedure | Governance / Sortition | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 4.3.1, 4.3.2, 4.3.3, 5.2.3 |
 | **`SIM-QA-19`** | Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.1.1, 4.2, 4.3.1, 7.4.4 |
-| **`SIM-QA-20`** | Rival Expert Panels — Advocacy Capture and Precautionary Veto | Governance / Epistemics | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 4.4, 8.4.3, OL-9.7 |
+| **`SIM-QA-20`** | Rival Expert Panels — Advocacy Capture and Precautionary Veto | Governance / Epistemics | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.4, 8.4.3, OL-9.7 |
 
 ---
 
@@ -668,9 +668,11 @@ Detail placed in Chapter I is shielded by Art. 1.7 from *any* future amendment. 
 ## **SIM-QA-20: Rival Expert Panels — Advocacy Capture and Precautionary Veto**
 
 * **Date Recorded:** 2026-11-12  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Registered only; no stress-test run yet)  
+* **Stress-Tested:** 2026-11-12 (qualitative O-ASIS red-team pass; no simulation)  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Verdict on current text **`RED_WINS`** on all five vectors; hypotheses H1–H6 hold only with guards, H6 **narrowed**. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged.  
 * **Originating Context:** Maintainer review of Chapter IV  
-* **Constitutional Articles:** Arts. 4.4.1–4.4.4, 8.4.3; Organic Law OL-9.7
+* **Constitutional Articles:** Arts. 4.4.1–4.4.4, 4.6.2, 8.4.3; Organic Law OL-9.7, OL-1.4
+* **Evidence:** reasoning on the text only. No quantitative claim is made; nothing below is empirical.
 
 ### **1. The Friction**
 * Art. 4.1.2 abolishes professional politics, but Art. 4.4.2 stages every complex proposal as a duel between two rival panels. The format rewards advocacy skill. It can bring the professional persuader back in an evidentiary role.
@@ -696,4 +698,39 @@ Detail placed in Chapter I is shielded by Art. 1.7 from *any* future amendment. 
 * **H5, closed deliberation:** final deliberation takes place without experts in the room.
 * **H6, symmetric burden:** inaction is presented as an option with its own stated consequences, so that confusion does not default to one side.
 
-**Next action:** O-ASIS red-team docket (RED-1 to RED-5 against the current text, then against H1–H6). Seek one external critic with field experience of citizens' assemblies. A SIMONE run is possible only for RED-3, and would be synthetic.
+### **4. Stage 2: Red Team Against the Current Text (Art. 4.4)**
+* **RED-1 (nomination capture): `RED_WINS`.** Art. 4.4.2 requires panels to be "independent" but names no selector. Agenda authority rests with delegates (Art. 4.3.4), so either the 15 jurors pick their own witnesses or someone unnamed does. A guild that controls who counts as a practitioner can staff both "rival" panels with people who share its premises. Nothing in Art. 4.1.3 reaches this, because a guild that nominates experts does not nominate *delegates*.
+* **RED-2 (manufactured doubt): `RED_WINS`.** Under Art. 4.4.4, confusion produced by a panel is itself the trigger for withholding approval. Any actor who prefers the status quo on a novel structural intervention needs only a panel that muddies the record. The status quo is not always *pro natura*: replacing a failing levee with a new design is a novel structural intervention. The deadlock fallback hands the decision to a panel of practitioners, which contradicts Art. 4.4.1 (experts never vote).
+* **RED-3 (rhetorical capture): `RED_WINS` (qualitative).** A duel rewards the better advocate. Art. 4.4.3 puts the burden of intelligibility on experts but gives jurors no inquiry powers, so the side that explains more fluently wins regardless of evidence. Magnitude is unknown; the SIMONE Layer 2 run was not done.
+* **RED-4 (false balance): `RED_WINS`.** "Two rival panels" fixes the number of sides at two. A fringe position receives half the floor; a question with three positions is forced into two.
+* **RED-5 (repeat players): `RED_WINS`.** Art. 4.3.3 binds jurors, not witnesses. The same experts can appear in every session at every tier and learn how to steer juries: the professional persuader returns in an evidentiary role.
+* **Coherence defects:** Art. 4.4.2 mandates adversarial cross-examination while Art. 8.4.3 abolishes adversarial trials for Fact-Centric Inquiry. Art. 4.6.2 makes constitutional review juries deliberate "under Article 4.4", and OL-1.4 runs the biosecurity registry on rival testimony, so every defect above propagates to constitutional review and biosecurity.
+
+### **5. Stage 2: Red Team Against the Hypotheses**
+* **H1 (experts by lot, hiatus): `BLUE_HOLDS` with guards.**
+  * Red: the gate moves to register admission. If a guild certifies who enters the register, RED-1 returns one step earlier. *Guard:* admission on published criteria of demonstrated work, open to anyone meeting them; no guild, association or body may gatekeep; admissions logged and reviewable under Art. 4.6.
+  * Red: a random draw reproduces the field's majority and can bury a correct heterodox minority. *Guard:* any party may add declared witnesses (H2), and jurors may call more (H3).
+  * Red: small specialties (four hydrogeologists in a bioregion) cannot carry a hiatus. *Guard:* hiatus per subject matter, with a draw from other bioregions when the local pool is below an Organic Law minimum.
+  * Red: a register is a list of named persons with attributes, in tension with the non-identifying registry of Art. 7.4.4. *Guard:* practitioner registers are voluntary and separate from the civic register.
+* **H2 (evidence before advocacy): `BLUE_HOLDS` only with H3 and H4.** Red: whoever writes the brief frames the question, and framing is what Art. 4.3.4 forbids staff to do. A drawn brief panel is a single point of framing capture unless dissent is annexed in full (H4) and jurors may reject the brief and inquire further (H3).
+* **H3 (juror-led inquiry): `BLUE_HOLDS`.** Aligns Art. 4.4 with Art. 8.4.3. Red: lay questions may be weak, and a facilitator could steer them. Residual: question quality; facilitators remain bound by Art. 4.3.4.
+* **H4 (disagreement map): `BLUE_HOLDS` with guard.** Red: experts can collude on a false consensus, or name an unfalsifiable condition for changing their mind. *Guard:* each member signs individually; a position that names no observation able to change it is recorded as such in the brief.
+* **H5 (closed deliberation): `BLUE_HOLDS` with guard.** Red: without experts present, jurors misremember technical detail. *Guard:* written questions during deliberation, answered on the public record. Deliberation is closed; evidence and answers stay public.
+* **H6 (symmetric burden): `NARROWED`.** Red: a fully symmetric burden repeals the precautionary invariant (*In dubio pro natura et vita*), and a Legacy actor will argue that inaction harms (lost output, lost jobs). Narrowed to: action **and** inaction are both briefed with their consequences, but suspension needs a specific, plausible pathway to irreversible harm that the proposal does not close. Confusion or disagreement alone never suspends. RED-2 must then fabricate a concrete harm pathway, which the evidence panel can check.
+
+### **6. Purple Patch (Proposed)** `[STATUS: SIMULATION_HYPOTHESIS]` — *not merged; canon unchanged*
+Art. 4.4 retitled **"Drawn Expert Evidence and Intelligible Decision-Making"**; 4.4.1 unchanged; 4.4.2–4.4.4 replaced by:
+* **4.4.2 Drawn Evidence Panels:** "On complex proposals, an Evidence Panel is drawn by lot from open practitioner registers, from more than one watershed, free from corporate grants or debt. Registers admit anyone meeting published criteria of demonstrated work; no guild, association or body may gatekeep admission. Practitioner registers are voluntary and separate from the civic register. Experts are bound by the hiatus of Article 4.3.3 for each subject matter."
+* **4.4.3 Practical Intelligibility and Disagreement Map:** "The Evidence Panel files a plain-language brief stating the consequences, trade-offs and failure scenarios of the proposal and of inaction, what its members agree on, where they differ, and which observation would change each member's position. Each member signs individually; dissent is annexed in full."
+* **4.4.4 Juror-Led Inquiry:** "Proponents and opponents then speak as declared parties. Jurors conduct the questioning, may call further witnesses, and deliberate without experts or parties present; written questions during deliberation are answered on the public record. Procedure follows the Fact-Centric Inquiry of Article 8.4.3."
+* **4.4.5 Precautionary Invariant:** "Approval of a novel structural intervention is withheld where the record shows a specific, plausible pathway to irreversible harm to life or ecosystems that the proposal does not close (*In dubio pro natura et vita*). Confusion or disagreement alone never suspends approval. Suspension never interrupts certified routine maintenance or critical life support. Persistent disputes of fact pass to a fresh Evidence Panel from non-contiguous watersheds, which reports; the jurors decide."
+* **Organic Law (proposed, 60%), OL-9.7 extended:** register admission criteria; panel size (provisional: an odd number, at least three (3) per discipline involved); minimum local pool before a cross-bioregion draw (provisional: nine (9) practitioners); hiatus per subject matter; all `PROVISIONAL — UNVERIFIED`.
+* **Consequential (Organic Law, 60%):** OL-1.4 "rival expert testimony (Art. 4.4)" becomes "drawn expert evidence (Art. 4.4)". Art. 4.6.2 needs no change: it already deliberates "under Article 4.4".
+
+### **7. Residual Weaknesses (Honest Limits)**
+* Register admission criteria are now the capture surface. "Demonstrated work" has to be defined without recreating a credential cartel; this is unsolved.
+* The brief still frames the question. Annexed dissent and juror inquiry reduce, but do not remove, framing power.
+* "Specific, plausible pathway to irreversible harm" is a judgment call; a determined actor can still fabricate one, at a higher cost.
+* No evidence of magnitude for any vector. The verdicts are reasoning on the text, not measurements.
+
+**Next action:** one external critic with field experience of citizens' assemblies reviews Sections 4–6. A SIMONE Layer 2 run of RED-3 (persuasion vs evidence weight) under duel vs juror-led formats, labelled synthetic.
