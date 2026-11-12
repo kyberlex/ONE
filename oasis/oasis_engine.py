@@ -75,7 +75,7 @@ class VulnerabilityAudit(BaseModel):
         description="True if a formal statutory amendment is required."
     )
     smart_patch_design_strategy: str = Field(
-        description="If patch_required is true, state the exact surgical, minimal modification strategy (what sentence to amend, how to maintain 600-900 word envelope without bureaucratic bloat). If false, explain why existing text holds."
+        description="If patch_required is true, state the exact surgical, minimal modification strategy (what sentence to amend, how to maintain 600-1,000 word envelope without bureaucratic bloat). If false, explain why existing text holds."
     )
     rationale: str = Field(
         description="Detailed analytical rationale explaining the severity classification and resolution requirements."
@@ -420,7 +420,7 @@ Deliberate thoroughly across all analytical gates:
 1. Physical & Mathematical Soundness: Reject impossible straw-man assumptions that violate mass-energy balances or finite physical constraints.
 2. Cross-Article Systemic Absorption: Check if Ch. I (Axioms), Ch. III (Thermodynamic Lexicographic Viability L_min / pro-rata scaling), Ch. IV (Sortition synthesis juries), Ch. VI (Sub-second analog trips / mechanical overrides), or Ch. X (Bioregional carrying bounds) already passively or procedurally absorb this vector.
 3. Root Cause Classification: Distinguish internal deadlock (SV-2) from operational friction (SV-3), external friction with legacy capital (SV-4), or false positive (FALSE_POSITIVE).
-4. Smart Patch Strategy: Favor passive mechanical invariants, rate limiters, deterministic timeouts, and mathematical hard floors over bureaucratic committees. Respect the 600-900 word envelope.
+4. Smart Patch Strategy: Favor passive mechanical invariants, rate limiters, deterministic timeouts, and mathematical hard floors over bureaucratic committees. Respect the 600-1,000 word envelope.
 Ensure all summary, rationale, and article fields are written strictly in English."""
 
         prompt_history.append({"phase": 4, "agent": "PURPLE-PATCH", "prompt": purple_p4_prompt})
@@ -463,8 +463,8 @@ MANDATORY PATCH SPECIFICATIONS (THE DOCTRINE OF SMART PATCHING):
    - Prefer passive physical invariants (head retention, gravity flow, analog trips), deterministic mathematical constraints (non-bypassable floors, hysteresis deadbands, cycle-rate limiters), and automatic timeout fallbacks (e.g. 72-hour reversion to baseline).
 3. **Strict Concision & Zero-Sum Word Budget:**
    - The target chapter currently contains {current_words} words.
-   - The absolute statutory envelope is STRICTLY 600 to 900 words.
-   - For any clause you introduce, perform a surgical drop-in replacement or trim adjacent redundant phrasing to ensure the chapter remains comfortably within 600-900 words.
+   - The absolute statutory envelope is STRICTLY 600 to 1,000 words.
+   - For any clause you introduce, perform a surgical drop-in replacement or trim adjacent redundant phrasing to ensure the chapter remains comfortably within 600-1,000 words.
 4. **Preserve All 7 Inviolable Invariants:**
    - Odd parity (3, 15, 101, 301, 1001), 75% supermajority, non-carceral restorative justice, expand all acronyms, and technological neutrality (parenthesize specific tech as illustrative examples).
 5. **Format:**
