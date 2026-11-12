@@ -37,6 +37,9 @@ To ensure non-autocratic, rigorous governance, every entry carries an explicit e
 | **`SIM-QA-15`** | Internal Coherence Audit — Contradictions Between Canonical Articles | Constitutional Coherence | `[STATUS: CANONICAL_MERGED]` | Art. 2.6.2, 4.1.3, 4.2.1, 4.5, 4.6, 5.2, 7.1.2, 8.1.3–4, 10.5.3 |
 | **`SIM-QA-16`** | Demographic Inversion ("Silver Tsunami") Before Full Automation | Labor / Demography | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 5.1, 5.6, 10.3, 10.4 |
 | **`SIM-QA-17`** | Organic Law Separation — Restoring Technological Neutrality | Drafting Invariants | `[STATUS: CANONICAL_MERGED]` | Art. 1.4.3, 3.3.3, 6.2–6.4, 8.1.4, 8.2.2, 10.5.3, 10.6.4, Ch. XI |
+| **`SIM-QA-18`** | Refusal of a Sortition Summons — Undefined Procedure | Governance / Sortition | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 4.3.1, 4.3.2, 4.3.3, 5.2.3 |
+| **`SIM-QA-19`** | Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers | Governance / Sortition | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 4.1.1, 4.2, 4.3.1, 7.4.4 |
+| **`SIM-QA-20`** | Rival Expert Panels — Advocacy Capture and Precautionary Veto | Governance / Epistemics | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 4.4, 8.4.3, OL-9.7 |
 
 ---
 
@@ -559,3 +562,108 @@ Detail placed in Chapter I is shielded by Art. 1.7 from *any* future amendment. 
 * However, a fully mobilized 20% faction still takes about 50% of agenda slots. The defense converts exhaustion into a capped, roughly proportional tax on agenda time; it does not eliminate it.
 * The defense depends on Zero-Knowledge Proof-of-Personhood holding at scale, which is unproven.
 * **Separate docket recommended:** in 3-person panels, a single hostile panelist can force a plebiscite on every 75% matter. The probability that at least one faction member is seated is 0.14 / 0.27 / 0.49 for factions of 5 / 10 / 20%.
+
+---
+
+## **SIM-QA-18: Refusal of a Sortition Summons — Undefined Procedure**
+
+* **Date Recorded:** 2026-11-12  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Registered only; no stress-test run yet)  
+* **Originating Context:** Maintainer review of Chapter IV  
+* **Constitutional Articles:** Arts. 4.3.1, 4.3.2, 4.3.3, 5.2.3
+
+### **1. The Friction**
+* Art. 4.3.2 calls civic service by lot an "inviolable duty". Neither the Constitution nor the Organic Law Annex says what happens when a summoned citizen refuses, defers, or drops out, or how the seat is refilled.
+* No sanction is available. Tier 1 is unconditional (Art. 5.2.1) and Art. 5.2.3 states that sortition eligibility and political rights are never conditioned (the earlier sanction was withdrawn under SIM-QA-15, `RED_WINS`).
+* If refusal is simply free, self-selection returns. Voluntary citizens' assemblies report invitation acceptance rates in the low single digits (about 6% on average across 65 assemblies in the OECD database; 4.2% in the Aargau citizens' panel).
+* Small nodes cannot absorb refusals. At 50 adults, a council of 15 with six-month mandates and a twelve-month hiatus (Art. 4.3.3) needs 45 distinct people every 18 months, before counting the Local Mediation Panel and the Triage Panel.
+* Long full-time mandates (18 months, two years) will draw far more refusals than short ones, so the bias grows with the tier.
+
+### **2. Preliminary Red Vectors (to be tested)**
+* **RED-1 (silent self-selection):** refusal correlates with age, care load, or distrust. The seated body still passes the age/gender/geography quotas of Art. 4.3.1 while being skewed on everything else.
+* **RED-2 (strategic refusal):** a faction declines en masse to starve a body of quorum, or accepts en masse while others decline, and captures it without breaking any rule.
+* **RED-3 (excusal gatekeeping):** whoever grants exemptions decides who sits. A panel judging "valid reasons" becomes a selection filter.
+* **RED-4 (coerced juror):** a citizen forced to serve complies maliciously or disengages, which degrades deliberation more than an empty seat.
+
+### **3. Hypotheses to Test**
+* **H1, duty to attend, right to withdraw:** a summoned citizen must attend a short orientation phase and may then withdraw without penalty.
+* **H2, deferral and listed excusals:** one deferral without stated reason; excusal on grounds enumerated in Organic Law (illness, bereavement, non-replaceable care), self-certified, never judged on merit.
+* **H3, stratum-matched alternates:** the same public draw produces ordered alternates per stratum, so a replacement never shifts the composition or the odd parity.
+* **H4, published refusal rates:** refusal and dropout rates are published per stratum. A stratum that refuses well above the others triggers a review of service conditions, never of persons.
+* **H5, shorter mandates at higher tiers:** see SIM-QA-19 H4.
+
+**Next action:** SIMONE Layer 2/3 run with refusal probability as an agent parameter (correlated with age, care load, and HEXACO traits), swept against node size (50, 150, 500 adults). Report the refusal rate at which a 15-seat council cannot be filled under the Art. 4.3.3 hiatus, and the composition drift under H1–H3.
+
+---
+
+## **SIM-QA-19: Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers**
+
+* **Date Recorded:** 2026-11-12  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Registered only; figures below are hand-computed binomials, not yet a reproducible script)  
+* **Originating Context:** Maintainer review of Chapter IV  
+* **Constitutional Articles:** Arts. 4.1.1, 4.2, 4.3.1, 7.4.4
+
+### **1. The Friction**
+* Art. 4.1.1 grounds all authority in "statistically stratified" lottery. For simple random draws, the smaller tiers cannot carry that claim:
+
+| Seats | 95% margin of error | Population 60% in favour, body lacks a simple majority | Population split 50/50, body still reaches 60% | A 10% minority holds no seat |
+| :--- | :--- | :--- | :--- | :--- |
+| 3 | ±57% | 35% | 50% | 73% |
+| 15 | ±25% | 21% | 30% | 21% |
+| 101 | ±10% | 2% | 2% | ~0 |
+| 301 | ±6% | ~0 | ~0 | ~0 |
+| 1,001 | ±3% | ~0 | ~0 | ~0 |
+
+* Bodies of 3 and 15 are juries (impartial because drawn), not samples. Yet Art. 4.2.1 vests "sovereign municipal administration" in a panel of 3 for nodes under 50 adults, and a council of 15 governs local commons.
+* Art. 4.3.1 stratifies on age, gender, and geography only. Fifteen seats cannot carry more strata. Adding criteria needs larger bodies and more personal attributes, which pulls against the non-identifying registry of Art. 7.4.4.
+* At 1,001 seats for the whole planet, one seat stands for roughly eight million people. Small peoples and language groups have an expected seat count below one.
+* Sample size is the smaller problem. Non-response (SIM-QA-18) biases a body of any size.
+
+### **2. Preliminary Red Vectors (to be tested)**
+* **RED-1 (unlucky draw):** a 15-seat council enacts a 60% measure that the constituency rejects, with no recall path short of the next rotation.
+* **RED-2 (small-body capture):** existing SIMONE falsification challenge 2 (a faction of k ≥ 3 capturing 60% of a 15-member council across three rotations).
+* **RED-3 (quota gaming):** with only three strata, a faction concentrated inside one age/gender/geography cell is over-seated by design.
+* **RED-4 (global tokenism):** macro-region quotas at 1,001 seats present continental majorities as planetary consent.
+
+### **3. Hypotheses to Test**
+* **H1, name the function of each tier:** state that the 3- and 15-seat bodies are juries and that representativeness is claimed from 101 seats upward.
+* **H2, whole-node decisions below a size threshold:** under a fixed number of adults (e.g. 150), 60% and 75% matters go to all adult residents, extending the plebiscite rule Art. 4.2.1 already applies to 75% matters in 3-person panels.
+* **H3, recall to a larger jury:** a fixed share of constituents can refer a council decision to a larger single-issue jury drawn for that purpose.
+* **H4, split functions at upper tiers:** a small standing body for agenda and oversight, and large short-term single-issue juries (one to two weeks) for final votes. Larger samples and lower refusal at the same total service load.
+
+**Next action:** commit a reproducible script under `simone/benchmarks/` for the table above (exact binomial, plus finite-population and stratified variants), then run SIMONE challenge 2 with and without H2/H3.
+
+---
+
+## **SIM-QA-20: Rival Expert Panels — Advocacy Capture and Precautionary Veto**
+
+* **Date Recorded:** 2026-11-12  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Registered only; no stress-test run yet)  
+* **Originating Context:** Maintainer review of Chapter IV  
+* **Constitutional Articles:** Arts. 4.4.1–4.4.4, 8.4.3; Organic Law OL-9.7
+
+### **1. The Friction**
+* Art. 4.1.2 abolishes professional politics, but Art. 4.4.2 stages every complex proposal as a duel between two rival panels. The format rewards advocacy skill. It can bring the professional persuader back in an evidentiary role.
+* Internal inconsistency: Art. 8.4.3 abolishes adversarial trials in favour of Fact-Centric Inquiry, while Art. 4.4.2 mandates adversarial cross-examination for policy.
+* The text requires panels to be "independent" and free of grants or debt. It does not say who nominates, selects, or seats them. Sortition of practitioners appears only as the deadlock fallback of Art. 4.4.4.
+* Two panels imply two sides of equal weight, even where the evidence is lopsided or where there are more than two positions.
+* Art. 4.4.4 withholds approval when panels produce confusion. Confusion is therefore a winning strategy for whoever wants to block.
+* Experts have no hiatus rule comparable to Art. 4.3.3, so a standing expert class can form.
+* Empirical reviews of citizens' assemblies find that expert influence acts through framing, deference to authority, and information asymmetry, and is strongest where time is short and expert selection is opaque.
+
+### **2. Preliminary Red Vectors (to be tested)**
+* **RED-1 (nomination capture):** a guild or faction controls who is eligible for either panel, so both "rivals" share the same premises.
+* **RED-2 (manufactured doubt):** one panel deliberately muddies the record to trigger the precautionary suspension of Art. 4.4.4.
+* **RED-3 (rhetorical capture):** the more persuasive panel wins regardless of evidence (SIMONE Layer 2 already models rhetorical capture).
+* **RED-4 (false balance):** a fringe position gains half the floor time by being assigned a panel.
+* **RED-5 (repeat players):** the same experts recur across sessions and tiers and learn to steer jurors.
+
+### **3. Hypotheses to Test**
+* **H1, experts by lot:** panels are drawn from open practitioner registers as the default, with the Art. 4.3.3 hiatus applied to experts.
+* **H2, separate evidence from advocacy:** a drawn panel writes the factual brief. Proponents and opponents speak afterwards, declared as parties.
+* **H3, juror-led inquiry:** jurors conduct the questioning and may call further witnesses, aligning Art. 4.4 with Art. 8.4.3.
+* **H4, disagreement map:** experts must file a joint written statement of what they agree on, where they differ, and which observation would change their position.
+* **H5, closed deliberation:** final deliberation takes place without experts in the room.
+* **H6, symmetric burden:** inaction is presented as an option with its own stated consequences, so that confusion does not default to one side.
+
+**Next action:** O-ASIS red-team docket (RED-1 to RED-5 against the current text, then against H1–H6). Seek one external critic with field experience of citizens' assemblies. A SIMONE run is possible only for RED-3, and would be synthetic.
