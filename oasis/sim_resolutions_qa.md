@@ -38,7 +38,7 @@ To ensure non-autocratic, rigorous governance, every entry carries an explicit e
 | **`SIM-QA-16`** | Demographic Inversion ("Silver Tsunami") Before Full Automation | Labor / Demography | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 5.1, 5.6, 10.3, 10.4 |
 | **`SIM-QA-17`** | Organic Law Separation — Restoring Technological Neutrality | Drafting Invariants | `[STATUS: CANONICAL_MERGED]` | Art. 1.4.3, 3.3.3, 6.2–6.4, 8.1.4, 8.2.2, 10.5.3, 10.6.4, Ch. XI |
 | **`SIM-QA-18`** | Refusal of a Sortition Summons — Undefined Procedure | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.3.1, 4.3.2, 4.3.3, 5.2.3 |
-| **`SIM-QA-19`** | Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.1.1, 4.2, 4.3.1, 7.4.4 |
+| **`SIM-QA-19`** | Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch revised: referral withdrawn, H5 second reading + H6 drawn mandate length) | Art. 4.1.1, 4.2, 4.3.1, 4.3.5, 7.4.4 |
 | **`SIM-QA-20`** | Rival Expert Panels — Advocacy Capture and Precautionary Veto | Governance / Epistemics | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed; H7/H8 addendum NOT_RUN) | Art. 4.4, 7.3, 7.5, 7.6.1, 8.4.3, OL-9.7 |
 | **`SIM-QA-21`** | Governance of Nodes Below the Council Threshold | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (current text and H1 RED_WINS; H2 holds with residuals; patch proposed) | Art. 4.2.1, 4.2.2, 4.3.3, 10.1.3 |
 
@@ -633,10 +633,10 @@ Model: Python stdlib Monte Carlo, not the Julia SIMONE ABM; HEXACO traits not mo
 
 * **Date Recorded:** 2026-11-12  
 * **Stress-Tested:** 2026-11-12  
-* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Verdict on current text **`RED_WINS`** (RED-1, RED-4); RED-3 **`BLUE_HOLDS`**; RED-2 **`NOT_RUN`**. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Verdict on current text **`RED_WINS`** (RED-1, RED-4); RED-3 **`BLUE_HOLDS`**; RED-2 **`NOT_RUN`** (SIMONE challenge 2). Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged. **Revised 2026-11-12 (section 8):** maintainer accepts the Art. 4.1.1 line and the Function of the Tiers paragraph in principle and rejects the referral right; H5 (second reading by a renewed council) **`BLUE_HOLDS` with residuals**, H6 (drawn mandate length) **`BLUE_HOLDS` with residuals**; RED-2 is made worse by H6 at K = 8, so K is raised to 12 in the proposal.  
 * **Originating Context:** Maintainer review of Chapter IV  
-* **Constitutional Articles:** Arts. 4.1.1, 4.2, 4.3.1, 7.4.4  
-* **Reproducible Evidence:** [`simone/benchmarks/sim_qa_19_tier_representativeness.py`](../simone/benchmarks/sim_qa_19_tier_representativeness.py) → [`results`](../simone/benchmarks/results/sim_qa_19_tier_representativeness_results.md) (`--reps 20000 --seed 20261112`; Parts A/B exact, Part C on synthetic strata)
+* **Constitutional Articles:** Arts. 4.1.1, 4.2, 4.3.1, 4.3.5, 7.4.4 (revision: Art. 4.2 mandate lengths; Art. 4.3.3 unchanged)  
+* **Reproducible Evidence:** [`simone/benchmarks/sim_qa_19_tier_representativeness.py`](../simone/benchmarks/sim_qa_19_tier_representativeness.py) → [`results`](../simone/benchmarks/results/sim_qa_19_tier_representativeness_results.md) (`--reps 20000 --seed 20261112`; Parts A/B exact, Part C on synthetic strata); revision: [`sim_qa_19_h5_h6_second_reading.py`](../simone/benchmarks/sim_qa_19_h5_h6_second_reading.py) → [`results`](../simone/benchmarks/results/sim_qa_19_h5_h6_second_reading_results.md) (`--reps 2000 --seed 20261112`; **synthetic, uncalibrated**)
 
 ### **1. The Friction**
 * Art. 4.1.1 grounds all authority in "statistically stratified" lottery. For simple random draws, the smaller tiers cannot carry that claim:
@@ -682,11 +682,13 @@ Model: Python stdlib Monte Carlo, not the Julia SIMONE ABM; HEXACO traits not mo
 * **H3 (recall to a larger jury): `BLUE_HOLDS` with guards.** Red: referral is a relitigation and DoS vector (SIM-QA-11), and a cross-watershed jury deciding local commons breaches subsidiarity. Guards: referral uses the endorsement allowance of Art. 4.3.5; one referral per decision; suspensive only for 60% matters, never for emergency decrees or certified routine maintenance; below 150 adults the referral goes to the whole node, above it to a 101-citizen jury drawn from the same bioregion.
 * **H4 (split functions at upper tiers): `INCONCLUSIVE`, not drafted.** Red: a small standing agenda body is the shadow-bureaucracy risk Art. 4.3.4 forbids, and one-week juries depend more on experts (SIM-QA-20). The claimed lower refusal rests on SIM-QA-18, where it is an assumption. Deferred to roadmap study.
 
-### **6. Purple Patch (Proposed)** `[STATUS: SIMULATION_HYPOTHESIS]` — *not merged; canon unchanged*
-* **Art. 4.1.1 (coherence):** "… emanates exclusively from assemblies of citizens chosen by stratified random lottery (sortition), and from the node plebiscites this Chapter provides."
-* **Art. 4.2 (new closing paragraph), Function of the Tiers:** "Panels of three (3) and councils of fifteen (15) are juries, impartial because drawn, not statistical samples of opinion. Statistical representativeness is claimed only for bodies of one hundred and one (101) or more, and every such claim states its margin of error."
-* **Art. 4.2.2 (addition), Small-Node Safeguards:** "In nodes of fewer than one hundred and fifty (150) adult residents, a 75% matter adopted by the Council takes effect only on ratification by plebiscite of all adult residents at the same threshold. In every node, constituents may once refer a 60% decision of the Council, by the endorsement procedure of Article 4.3.5, to a plebiscite of all adult residents in nodes under one hundred and fifty (150) adults, and otherwise to a single-issue jury of one hundred and one (101) citizens drawn from the same bioregion. Referral suspends the decision until the vote, except emergency decrees and certified routine maintenance. Shares and quorums are fixed by Organic Law."
-* **Organic Law (proposed, 60%):** OL-9.8 referral share (provisional: 5% of constituents); plebiscite threshold counted on votes cast with a turnout quorum (provisional: 50% of adult residents); both `PROVISIONAL — UNVERIFIED`.
+### **6. Purple Patch (Proposed)** `[STATUS: SIMULATION_HYPOTHESIS]` — *not merged; canon unchanged; revised 2026-11-12*
+* **Art. 4.1.1 (coherence), accepted in principle:** "… emanates exclusively from assemblies of citizens chosen by stratified random lottery (sortition), and from the node assemblies and plebiscites this Chapter provides." (Wording aligned with SIM-QA-21.)
+* **Art. 4.2 (new closing paragraph), Function of the Tiers, accepted in principle:** "Panels of three (3) and councils of fifteen (15) are juries, impartial because drawn, not statistical samples of opinion. Statistical representativeness is claimed only for bodies of one hundred and one (101) or more, and every such claim states its margin of error."
+* ~~**Art. 4.2.2 (addition), Small-Node Safeguards** (plebiscite ratification under 150 adults; referral of a 60% decision to a plebiscite or to a jury of 101).~~ **Withdrawn by maintainer decision, 2026-11-12:** a suspensive referral can be used to block decisions. Nodes under 150 adults are covered by SIM-QA-21 (no council there). Replaced by H5 and H6 below.
+* **Art. 4.3.6 (new), Second Reading by a Renewed Council (H5):** "A sixty percent (60%) decision of a Neighborhood Sortition Council may be re-examined once, on request made within thirty (30) days of its adoption by the endorsement procedure of Article 4.3.5. The re-examination is held by the same Council at its first session after the lot has replaced the number of the members who adopted the decision fixed by Organic Law. The decision stays in force meanwhile; only a decision certified irreversible under a closed list of Organic Law waits, and certification is decided within fourteen (14) days by a Local Mediation Panel drawn from outside the node, failing which the decision takes effect. A decision confirmed on second reading cannot be re-examined again; it remains open to repeal by an ordinary new decision. No new body and no plebiscite is created for this. This Article does not apply to bodies of one hundred and one (101) or more, to emergency decrees, or to certified routine maintenance."
+* **Art. 4.2 (amended mandate clauses), Drawn Mandate Length (H6):** in 4.2.1–4.2.5 each fixed mandate becomes "a mandate whose length is drawn within the range fixed by Organic Law for that tier"; and a closing sentence: "The public draw that selects a member also draws the length of the mandate. The length is sealed at the draw by a commitment that anyone can verify once revealed, and is disclosed to the member and to the body at the same time, at a notice fixed by Organic Law (no less than one month, and no less than three months where service exceeds half of a full working week)." Art. 4.3.3 is unchanged: the hiatus is twice the mandate served.
+* **Organic Law (proposed, 60%):** OL-9.9 renewal count K for second reading (**provisional: 12 of 15**; the maintainer's 8 of 15 was tested and gives a faction a better chance of confirming its own decision, see section 8); closed list of irreversible decisions (demolition, felling of mature trees, extraction, irreversible habitat or aquifer change, disposal of a commons asset); mandate ranges per tier (see SIM-QA-18 H7, Sets A/B/C); notice periods. All `PROVISIONAL — UNVERIFIED`.
 
 ### **7. Residual Weaknesses (Honest Limits)**
 * Councils of 15 remain juries. The patch adds correction paths; it does not make a 15-seat body representative.
@@ -695,6 +697,44 @@ Model: Python stdlib Monte Carlo, not the Julia SIMONE ABM; HEXACO traits not mo
 * RED-2 (faction capture over rotations) is still untested.
 
 **Next action:** SIMONE challenge 2 with and without the referral path; external review by a survey statistician.
+
+
+### **8. Revision (2026-11-12): Maintainer Hypotheses H5 and H6, Tested Together** *(synthetic, uncalibrated)*
+**Maintainer decisions:** the Art. 4.1.1 coherence line and the Function of the Tiers paragraph are accepted in principle. The referral right (H3 as drafted) is **not accepted**: it must not be usable to block decisions. It is replaced by:
+* **H5, second reading by a renewed council:** a 60% decision may be re-examined once, on endorsement request (Art. 4.3.5), only by the same council after the lot has replaced at least K of its members (maintainer provisional: 8 of 15). The decision stays in force meanwhile; only decisions certified irreversible wait. A decision confirmed on second reading cannot be re-examined again. No new body, no plebiscite.
+* **H6, drawn mandate length:** the draw also draws the mandate length within a per-tier range (15 seats: 3–6 months), sealed by commit-reveal and disclosed one to two months before the end. Hiatus stays at twice the mandate served (Art. 4.3.3). Bodies renew continuously.
+
+**Measurements** ([results](../simone/benchmarks/results/sim_qa_19_h5_h6_second_reading_results.md); retained members assumed to keep their first vote):
+
+| Measure (15 seats) | Current text (fixed 6 months) | H5 + H6, K = 8 | H5 + H6, K = 12 |
+| :--- | :--- | :--- | :--- |
+| 60% decision on a 50/50 constituency that survives (one reading → second reading) | 30% (no second reading) | 16% | 12% |
+| Well-supported decision (70%) confirmed | 87% (one reading) | 78% | 77% |
+| Wait for second reading: mean / 95th pct (months) | 3.0 / 5.7 (next council, all new) | 2.2 / 3.2 | 3.5 / 4.4 |
+| Smallest node with ≥ 95% of months fully seated, r = 0 / 0.6 / 0.8 | 45 / 70 / 120 | 50 / 60 / 80 | same |
+| Members in their first month: average / worst month | 17% / 99% | 22% / 44% | same |
+| Faction (f = 5–20%) still holds 9 seats at second reading of its own decision | 0.06–0.48 | 0.27–0.66 | 0.14–0.53 |
+| Mean length of a faction majority spell (months) | 6–11 | 1.4–3.1 | same |
+
+*A second reading under fixed mandates is not possible as H5 is written (the whole council changes at once), so the "current text" column for second reading reads as "next council".*
+
+**Red team against H5 + H6:**
+* **RED-1 (unlucky draw): `BLUE_HOLDS`, narrowed.** H5 halves the error of a 15-seat council at K = 8 and cuts it by 60% at K = 12, without suspending anything. Cost: about one well-supported decision in ten is lost at second reading, the price of re-drawing. Residual: anchoring is assumed; real retained members may persuade newcomers (worse) or reconsider (better).
+* **Irreversibility as a blocking lever: `NARROWED`.** If whoever requests the reading can certify "irreversible", every decision waits and H5 becomes the referral veto the maintainer rejected. *Guard:* a closed list in Organic Law; certification by a Local Mediation Panel drawn from outside the node within 14 days, failing which the decision takes effect; one certification request per decision. Maximum delay of an irreversible decision ≈ the K-renewal wait plus 14 days (≈ 4 months at K = 12). Residual: the list's edges will be litigated.
+* **Timing by a faction: `RED_WINS` at K = 8, `NARROWED` at K = 12.** With 7 members retained, a faction that passes a decision while it holds 9 seats confirms it on second reading about half the time, more often than under full renewal; and a faction can itself request the reading to lock the decision against re-examination. Its members also learn their own exit dates 1–2 months ahead, so it can bring a vote when it knows its members will stay. *Guards:* K raised to 12 (wait +1.2 months); the request window is fixed (30 days) and the reading date is set by the rule, not the requester; confirmation bars re-examination only, never an ordinary repeal by a later council. Residual: a faction still gains from retention whenever K < 15.
+* **Unequal burden of drawn lengths: `BLUE_HOLDS` if release is proportional, `RED_WINS` under full-time service.** Under 3–6 months one member may serve twice as long as another. With hiatus twice the mandate served and release proportional to hours (SIM-QA-18 H7), the burden per month is equal; under the current full-release, full-time reading it is not. H6 depends on H7.
+* **Late disclosure under full-time service: `RED_WINS` at full-time tiers.** One to two months' notice is too short to plan a return to work or care after a full-time mandate. *Guard:* notice of at least three months where service exceeds half a working week (drafted above).
+* **H5 at 101 seats and above: `NOT_EXTENDED`.** First-reading error at 101 is already 2.3% (0.1–0.4% after a second reading); the gain is small, upper-tier agendas are heavier and a re-examination right adds petition load (SIM-QA-11). Art. 4.6 constitutional review remains the correction path there.
+* **Small nodes (alignment with SIM-QA-21):** H5 and H6 apply to councils, which under SIM-QA-21 exist only from 150 adults. Nodes below 150 have no council and use the assembly, outside dispute panels and *Provocatio*. The withdrawn Small-Node Safeguards paragraph is not needed.
+* **RED-4 (global tokenism): postponed.** A separate docket on a non-seat channel for small peoples remains recommended (section 7).
+
+**Residual weaknesses (revision):**
+* Any K below 15 lets retained members carry part of the first decision into the second; K = 12 is a compromise between correction and wait, not a fix.
+* The average learning cost rises (22% vs 17% of members in their first month) even though the worst month improves sharply.
+* H6 is only fair if release is proportional to hours served (SIM-QA-18 H7); under full-time service drawn lengths are an unequal burden.
+* The irreversible list and its edges are not drafted.
+
+**Next action:** SIMONE challenge 2 (faction capture over rotations) with H5 + H6 and K = 8 / 12; test non-anchored retained members; draft the Organic Law list of irreversible decisions.
 
 ---
 
