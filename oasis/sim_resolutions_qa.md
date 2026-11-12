@@ -38,7 +38,7 @@ To ensure non-autocratic, rigorous governance, every entry carries an explicit e
 | **`SIM-QA-16`** | Demographic Inversion ("Silver Tsunami") Before Full Automation | Labor / Demography | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 5.1, 5.6, 10.3, 10.4 |
 | **`SIM-QA-17`** | Organic Law Separation — Restoring Technological Neutrality | Drafting Invariants | `[STATUS: CANONICAL_MERGED]` | Art. 1.4.3, 3.3.3, 6.2–6.4, 8.1.4, 8.2.2, 10.5.3, 10.6.4, Ch. XI |
 | **`SIM-QA-18`** | Refusal of a Sortition Summons — Undefined Procedure | Governance / Sortition | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 4.3.1, 4.3.2, 4.3.3, 5.2.3 |
-| **`SIM-QA-19`** | Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers | Governance / Sortition | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 4.1.1, 4.2, 4.3.1, 7.4.4 |
+| **`SIM-QA-19`** | Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.1.1, 4.2, 4.3.1, 7.4.4 |
 | **`SIM-QA-20`** | Rival Expert Panels — Advocacy Capture and Precautionary Veto | Governance / Epistemics | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 4.4, 8.4.3, OL-9.7 |
 
 ---
@@ -599,9 +599,11 @@ Detail placed in Chapter I is shielded by Art. 1.7 from *any* future amendment. 
 ## **SIM-QA-19: Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers**
 
 * **Date Recorded:** 2026-11-12  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Registered only; figures below are hand-computed binomials, not yet a reproducible script)  
+* **Stress-Tested:** 2026-11-12  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Verdict on current text **`RED_WINS`** (RED-1, RED-4); RED-3 **`BLUE_HOLDS`**; RED-2 **`NOT_RUN`**. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged.  
 * **Originating Context:** Maintainer review of Chapter IV  
-* **Constitutional Articles:** Arts. 4.1.1, 4.2, 4.3.1, 7.4.4
+* **Constitutional Articles:** Arts. 4.1.1, 4.2, 4.3.1, 7.4.4  
+* **Reproducible Evidence:** [`simone/benchmarks/sim_qa_19_tier_representativeness.py`](../simone/benchmarks/sim_qa_19_tier_representativeness.py) → [`results`](../simone/benchmarks/results/sim_qa_19_tier_representativeness_results.md) (`--reps 20000 --seed 20261112`; Parts A/B exact, Part C on synthetic strata)
 
 ### **1. The Friction**
 * Art. 4.1.1 grounds all authority in "statistically stratified" lottery. For simple random draws, the smaller tiers cannot carry that claim:
@@ -613,6 +615,8 @@ Detail placed in Chapter I is shielded by Art. 1.7 from *any* future amendment. 
 | 101 | ±10% | 2% | 2% | ~0 |
 | 301 | ±6% | ~0 | ~0 | ~0 |
 | 1,001 | ±3% | ~0 | ~0 | ~0 |
+
+*Verified 2026-11-12: the script reproduces every figure in this table exactly (Part A); no correction was needed. The margin-of-error column is the normal approximation 1.96·√(0.25/n); for 3 seats the exact Clopper-Pearson half-width is ±45%.*
 
 * Bodies of 3 and 15 are juries (impartial because drawn), not samples. Yet Art. 4.2.1 vests "sovereign municipal administration" in a panel of 3 for nodes under 50 adults, and a council of 15 governs local commons.
 * Art. 4.3.1 stratifies on age, gender, and geography only. Fifteen seats cannot carry more strata. Adding criteria needs larger bodies and more personal attributes, which pulls against the non-identifying registry of Art. 7.4.4.
@@ -631,7 +635,33 @@ Detail placed in Chapter I is shielded by Art. 1.7 from *any* future amendment. 
 * **H3, recall to a larger jury:** a fixed share of constituents can refer a council decision to a larger single-issue jury drawn for that purpose.
 * **H4, split functions at upper tiers:** a small standing body for agenda and oversight, and large short-term single-issue juries (one to two weeks) for final votes. Larger samples and lower refusal at the same total service load.
 
-**Next action:** commit a reproducible script under `simone/benchmarks/` for the table above (exact binomial, plus finite-population and stratified variants), then run SIMONE challenge 2 with and without H2/H3.
+### **4. Stage 2: Red-Team Findings Against the Current Text** *(synthetic where stated)*
+* **RED-1 (unlucky draw): `RED_WINS`.** A 15-seat council misreads a 60% constituency (no simple majority) 21% of the time, and adopts a 60% measure on a 50/50 split 30% of the time. Drawing from a finite node barely helps: 17% and 27% at 50 adults, 20% and 29% at 150. No text lets constituents correct an unlucky draw before the next rotation.
+* **Stratification does not rescue small bodies.** With a strong assumed age-opinion gradient (45 / 60 / 78%), proportional age strata cut the RED-1 error by 12% (relative) at 15 seats; quota fill on all three marginals gives 12–18% instead of 17–21%. Age × gender × geography has 18 cells, so at 15 seats Art. 4.3.1 can be met only on marginals.
+* **RED-2 (small-body capture): `NOT_RUN`.** SIMONE challenge 2 needs the Julia ABM and was not run in this pass.
+* **RED-3 (quota gaming): `BLUE_HOLDS` (in this model).** Proportional quotas keep expected seats proportional. A 10% minority concentrated in one zone is slightly better protected by geographic quotas (no seat: 21% → 17% at 15 seats). The risk is variance inside small cells, not systematic over-seating.
+* **RED-4 (global tokenism): `RED_WINS`.** At 1,001 seats (one per 8.1 million), a people of one million has 0.12 expected seats and an 88% chance of no seat; five million, 54%. Seats cannot carry small peoples at this tier.
+* **Coherence defect found:** Art. 4.1.1 says authority emanates *exclusively* from sortition assemblies, while Art. 4.2.1 already sends unresolved 75% matters to a plebiscite.
+
+### **5. Stage 2: Red Team Against the Hypotheses**
+* **H1 (name the function): `BLUE_HOLDS`.** Costless and true. Red: relabeling does not change a single decision, so H1 alone is cosmetic. Kept as the honest basis for H2/H3.
+* **H2 (whole-node decisions below 150): `NARROWED`.** Red: a plebiscite is itself self-selected by turnout (worse than a lottery under non-response, SIM-QA-18), and Art. 4.5.4 counts thresholds against *all seated members*, which no plebiscite can meet. Sending every 60% matter to the whole node also loads it heavily. Narrowed to: 75% matters always ratified by plebiscite in nodes under 150, with threshold counted on votes cast and a turnout quorum in Organic Law.
+* **H3 (recall to a larger jury): `BLUE_HOLDS` with guards.** Red: referral is a relitigation and DoS vector (SIM-QA-11), and a cross-watershed jury deciding local commons breaches subsidiarity. Guards: referral uses the endorsement allowance of Art. 4.3.5; one referral per decision; suspensive only for 60% matters, never for emergency decrees or certified routine maintenance; below 150 adults the referral goes to the whole node, above it to a 101-citizen jury drawn from the same bioregion.
+* **H4 (split functions at upper tiers): `INCONCLUSIVE`, not drafted.** Red: a small standing agenda body is the shadow-bureaucracy risk Art. 4.3.4 forbids, and one-week juries depend more on experts (SIM-QA-20). The claimed lower refusal rests on SIM-QA-18, where it is an assumption. Deferred to roadmap study.
+
+### **6. Purple Patch (Proposed)** `[STATUS: SIMULATION_HYPOTHESIS]` — *not merged; canon unchanged*
+* **Art. 4.1.1 (coherence):** "… emanates exclusively from assemblies of citizens chosen by stratified random lottery (sortition), and from the node plebiscites this Chapter provides."
+* **Art. 4.2 (new closing paragraph), Function of the Tiers:** "Panels of three (3) and councils of fifteen (15) are juries, impartial because drawn, not statistical samples of opinion. Statistical representativeness is claimed only for bodies of one hundred and one (101) or more, and every such claim states its margin of error."
+* **Art. 4.2.2 (addition), Small-Node Safeguards:** "In nodes of fewer than one hundred and fifty (150) adult residents, a 75% matter adopted by the Council takes effect only on ratification by plebiscite of all adult residents at the same threshold. In every node, constituents may once refer a 60% decision of the Council, by the endorsement procedure of Article 4.3.5, to a plebiscite of all adult residents in nodes under one hundred and fifty (150) adults, and otherwise to a single-issue jury of one hundred and one (101) citizens drawn from the same bioregion. Referral suspends the decision until the vote, except emergency decrees and certified routine maintenance. Shares and quorums are fixed by Organic Law."
+* **Organic Law (proposed, 60%):** OL-9.8 referral share (provisional: 5% of constituents); plebiscite threshold counted on votes cast with a turnout quorum (provisional: 50% of adult residents); both `PROVISIONAL — UNVERIFIED`.
+
+### **7. Residual Weaknesses (Honest Limits)**
+* Councils of 15 remain juries. The patch adds correction paths; it does not make a 15-seat body representative.
+* Plebiscites trade sampling error for turnout bias. Their accuracy depends on the non-response problem of SIM-QA-18.
+* RED-4 is unsolved. Seats cannot carry peoples below roughly 10 million at 1,001 seats. **Separate docket recommended:** a non-seat channel for small peoples (guaranteed hearing, consent rights over their own territory under Art. 10.1).
+* RED-2 (faction capture over rotations) is still untested.
+
+**Next action:** SIMONE challenge 2 with and without the referral path; external review by a survey statistician.
 
 ---
 

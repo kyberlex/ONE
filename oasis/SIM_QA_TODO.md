@@ -25,7 +25,7 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 | **`SIM-QA-14`** | BMS Contactor Welding & Lithium Cryo Plating Plunge | **Pillar 4B** (Microgrid) | `habitat/schematics/microgrid_electrical_spec.md` | `[STAGE 1: HYPOTHESIS]` | DC Microgrid Safety Review |
 | **`SIM-QA-16`** | Demographic Inversion ("Silver Tsunami") Before Full Automation | **Pillar 1/2** | Arts. 5.1, 5.6, 10.3, 10.4 | `[STAGE 1: HYPOTHESIS]` | SIMONE age-structured ABM run |
 | **`SIM-QA-18`** | Refusal of a Sortition Summons — Undefined Procedure | **Pillar 2** (Governance) | Arts. 4.3.1, 4.3.2, 4.3.3, 5.2.3 | `[STAGE 1: HYPOTHESIS]` | SIMONE Layer 2/3 run: refusal rate × node size |
-| **`SIM-QA-19`** | Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers | **Pillar 2** (Governance) | Arts. 4.1.1, 4.2, 4.3.1, 7.4.4 | `[STAGE 1: HYPOTHESIS]` | Reproducible binomial script + SIMONE capture challenge 2 |
+| **`SIM-QA-19`** | Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers | **Pillar 2** (Governance) | Arts. 4.1.1, 4.2, 4.3.1, 7.4.4; [`sim_qa_19_tier_representativeness.py`](../simone/benchmarks/sim_qa_19_tier_representativeness.py) | `[STAGE 2: RED_STRESS_TEST]` — **RED_WINS** (RED-1, RED-4); purple patch proposed | Maintainer decision on canon diff; SIMONE challenge 2 (RED-2 not run) |
 | **`SIM-QA-20`** | Rival Expert Panels — Advocacy Capture and Precautionary Veto | **Pillar 2** (Governance) | Arts. 4.4, 8.4.3; OL-9.7 | `[STAGE 1: HYPOTHESIS]` | O-ASIS red-team docket + external deliberation critic |
 
 ---
