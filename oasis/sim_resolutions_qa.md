@@ -1593,3 +1593,36 @@ Method: v1.0 compared with canon section by section; canon and the pre-v2 batch 
 * Chapter I ceiling conflict open.
 
 **Next action:** maintainer decisions on the six lines of section 6, on restorative measures in Organic Law, and on the Chapter I word ceiling; a synthetic review-load estimate using the SIM-QA-11 petition model; one external reader with equality-law experience reviews section 5; alignment with SIM-QA-24 on fellowships and commons halls.
+
+---
+
+## **SIM-QA-24: Lost Provision — Religion and Exit from Collectives**
+
+* **Date Recorded:** 2026-11-13  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS) — opened from the SIM-QA-22 side audit by maintainer decision 2026-11-13; held at Stage 1 until the maintainer says otherwise. Nothing below is red-teamed; vectors and hypotheses are preliminary.  
+* **Originating Context:** SIM-QA-22 side audit (section 7): lost at the 2026-09-11 ratification of the ten-chapter architecture; v1.0 Section VII is mapped by no redline consolidation line ("unmapped"); no recorded decision.  
+* **v1.0 location:** Section VII.1 (lines 397–400): *Rule of Universal Supersedence* (no text, tradition, priesthood or revelation holds judicial standing); *No Territorial or Financial Enclaves* (no religious ownership of territory, capital, civil-law tithes or autonomous civic jurisdictions; worship in common halls under ordinary usufruct reservations); *Inviolable Right of Exit* (no penalty, harassment or blacklisting for leaving a fellowship); *Protection of Youth* (no non-therapeutic physical alteration of children, genital cutting included). Also the overview (line 36) and the comparison table (line 1102).  
+* **Closest current canon:** Art. 1.4.1 (freedom of thought and conscience), 1.4.2 (no mandated orthodox belief), 1.2.2 (no physical subjugation), 1.7.2, 2.1 (no absentee title for anyone), 8.6.3 (exit from a bioregion only). None names religious standing, enclaves, exit from a fellowship or alteration of children.  
+* **Constitutional Articles:** Chapter I, Arts. 1.2, 1.4, 2.1, 2.2, 8.4, 8.6.3; cross-references SIM-QA-23 (religion as a protected ground; fellowships and commons halls), SIM-QA-25 (children).
+* **Not opened with this docket (same v1.0 section):** *Autonomous Voluntary Cultural Covenants* and their Golden Triad (subsidised exit from 14, no bodily battery, ecological limits) and the protection against forced technologisation. Listed here so that no point is dropped silently; they stay in the SIM-QA-22 side audit until the maintainer opens them.
+
+### **1. The Friction**
+* Art. 2.1 bars absentee title for everyone, which covers religious land ownership indirectly; nothing covers a fellowship that pools many usufructs, levies labour hours on members, or runs its own dispute forum for family matters.
+* Art. 1.4.1 protects belief and association but not the person who leaves: shunning, loss of housing in a fellowship's block, loss of access to shared tools or rosters.
+* Nothing bars non-therapeutic alteration of a child that a family's tradition requires; Art. 1.2.2 bars "coercive genetic alteration" and "physical subjugation", which a review jury may or may not read to cover it.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text)*
+* **RED-1, parallel jurisdiction:** a fellowship's own forum rules on marriage, custody or inheritance of usufruct and members comply under social pressure → canon silent; Art. 8.4 Fact-Centric Inquiry is available but not exclusive.
+* **RED-2, enclave by pooling:** members allocate their dwellings, plots and roster hours to a fellowship's plan; a node becomes a religious enclave without any transfer of title → Art. 2.1 is not triggered.
+* **RED-3, retaliation for exit:** a leaver loses housing, work slots and family contact inside the node → no clause names it; Art. 1.3 protects survival, not standing in the community.
+* **RED-4, alteration of children:** a tradition requires a non-therapeutic procedure on infants → unclear under Art. 1.2.2.
+* **RED-5, over-reach:** a rule written against religion only breaches Art. 1.4.1 and the equal-protection ground of SIM-QA-23; a rule that polices shunning in private life reaches into association and intimacy (Art. 1.2.3).
+* **RED-6, mass practice:** a ban on non-therapeutic alteration of children reaches practices held by very large communities (male circumcision); enforcement without surveillance of homes is unclear.
+
+### **3. Preliminary Hypotheses** *(proposed mitigations, untested)*
+* **H0, silence.**
+* **H1, restore v1.0 for religion:** the four points as religious rules.
+* **H2, general rule for every collective, religious or not (technology-neutral):** (a) no text, tradition or association holds standing in public adjudication; (b) no association holds territory, levies on members under public rule, or runs a public jurisdiction; worship and meeting use common halls under ordinary usufruct; (c) leaving any association is free, and no one may lose dwelling, food, tools, rosters or civic standing for leaving; (d) the child's bodily integrity as in SIM-QA-25.
+* **H3, exit guarantee only:** only (c), leaving (a), (b), (d) to existing articles and review.
+
+**Next action:** held at Stage 1 by maintainer decision. When opened: red team H1–H3 against RED-1 to RED-6; align (d) with SIM-QA-25 so that one article carries children's bodily integrity; compression disclosure against the four v1.0 points.
