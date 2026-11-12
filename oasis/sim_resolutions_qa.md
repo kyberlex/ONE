@@ -1503,6 +1503,7 @@ Method: v1.0 compared with canon section by section; canon and the pre-v2 batch 
 * **Dropped by recorded decision (not listed above):** the compiler as proof engine and the exergy gate (methodology purge (a), replaced by Arts. 4.6 and 7.1); automated weapon-proof industry (purge (b) and SIM-QA-17; principle kept in 8.1.3); asteroid mining and planetary defense (purge (c), partly restored as Chapter XI by SIM-QA-07/08); the day-zero unified grid (purge (d), replaced by the Chapter IX dual track); the geoengineering triple-lock (SIM-QA-07, replaced by 10.5); device parameters (moved to the Organic Law Annex by SIM-QA-17).
 * **Unsure:** whether Arts. 4.5, 4.6 and the *Provocatio* of 4.2.1 were meant to replace the v1.0 amendment lattice and appellate ladder (Section VI); nothing records it. The XV and XVI founding-node rules may belong in the foundation documents; neither holds them.
 * **Priority for the maintainer (judgement, not tested):** religion and exit from collectives, equal protection, children's autonomy, and animals are the largest gaps by consequence; each would be its own docket.
+* **Opened 2026-11-13 by maintainer decision:** equal protection as SIM-QA-23 (full pass run), religion and exit as SIM-QA-24, children as SIM-QA-25, sentient animals as SIM-QA-26 (the last three held at Stage 1). The other items of the table are not opened.
 
 ---
 
@@ -1658,3 +1659,36 @@ Method: v1.0 compared with canon section by section; canon and the pre-v2 batch 
 * **H3, Chapter V placement** (with Arts. 5.3–5.4) instead of Chapter I.
 
 **Next action:** held at Stage 1 by maintainer decision. When opened: decide the scope of the corporal-punishment ban (v1.0 founding-node and covenant scope, or every home); red team H1–H3; take over children's bodily integrity from SIM-QA-24 (d); compression disclosure against the v1.0 points.
+
+---
+
+## **SIM-QA-26: Lost Provision — Sentient Animals**
+
+* **Date Recorded:** 2026-11-13  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS) — opened from the SIM-QA-22 side audit by maintainer decision 2026-11-13; held at Stage 1 until the maintainer says otherwise. Nothing below is red-teamed.  
+* **Originating Context:** SIM-QA-22 side audit (section 7): v1.0 Section XII was mapped but the principle did not survive ("compression"); lost at the 2026-09-11 ratification; no recorded decision. The canon never uses the words "animal" or "sentient".  
+* **v1.0 location:** Section XII.3, *Non-Human Sentience, Animal Ethics & The Abolition of Exploitation* (lines 715–737: ban on concentrated feeding operations, industrial slaughter and commercial live transport; sentient animals recognised as persons with bodily integrity and freedom from commodification; total ban on invasive experiments on live animals); Section XII.4 (lines 754–757: companion animals "never chattel property"; end of commercial breeding mills and of breeding for painful deformities).  
+* **Closest current canon:** Art. 1.6.3 (non-human living systems and biomes hold standing, defended by drawn guardians), Art. 1.6.2 (destruction of habitats a crime), Art. 1.1.1 (the biosphere belongs to all living beings). Systems and biomes are protected; individual sentient animals are not.  
+* **Constitutional Articles:** Chapter I (Art. 1.6), Arts. 1.3.2 (nutrition), 1.4.3 (research commons), 3.3 (needs tiers), 10.2.2 (Guardians of the Biosphere); Organic Law OL-1.4 (biosecurity registry).
+* **Not carried, device or sci-fi (methodology purge):** the v1.0 food-system devices (gas fermentation, cultivated meat, vertical aeroponics) and the land-dividend figure; listed so the omission is visible. The principle, not the device, is what this docket opens.
+
+### **1. The Friction**
+* Nothing in canon bars confinement farming, experiments on live animals, or the sale of animals as goods; Art. 1.6.3 protects ecosystems, not individuals.
+* The calorie-sufficient nutrition of Art. 1.3.2 (the 2,200 kcal per day floor of the Tier 1 baseline) depends today on a food system with large animal components; any ban interacts with the survival baseline during transition.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text)*
+* **RED-1, industrial confinement returns** as an efficient route to the calorie floor → nothing bars it.
+* **RED-2, a ban against the floor:** an immediate ban on animal farming breaks nutrition in regions without alternatives (Art. 1.3.2; Leontief balance of Chapter III) → famine risk if the transition is not staged in the roadmap.
+* **RED-3, pastoral and subsistence ways of life:** herding, hunting and fishing communities are hit by rules written for industrial systems (interaction with SIM-QA-23 descent and SIM-QA-24 covenants).
+* **RED-4, research and biosecurity:** a total ban on experiments with live animals collides with vaccine and pathogen work that OL-1.4 and the biosecurity boundary of Art. 1.4.3 rely on, where non-animal methods are not yet adequate; an exception reopens the ban.
+* **RED-5, which animals:** "sentient" needs an evidentiary line (which taxa), which belongs in Organic Law under the replicated-evidence rule; a closed list ages badly, an open test is litigated.
+* **RED-6, companion animals "not property":** in a commons without absentee property, the change has content only as duties (care, no sale for profit, guardianship transfer); otherwise declaratory.
+* **RED-7, culling and restoration:** rewilding and disease control (Art. 1.6, 10.5) sometimes require killing animals; a personhood framing forbids it.
+
+### **3. Preliminary Hypotheses** *(proposed mitigations, untested)*
+* **H0, silence.**
+* **H1, restore v1.0 principles in Art. 1.6:** sentient animals hold standing as individuals; no confinement system that prevents their natural behaviour; no experiment on a live sentient animal; companion animals held under guardianship, never as goods. Any exception (research where no alternative exists; staged transition for food; culling for ecosystem health) would weaken a v1.0 point and must go through the compression disclosure.
+* **H2, principle in canon, stages in the roadmap:** the prohibitions as H1, with the transition (food, research) fixed in the roadmap and the evidentiary line of sentience in Organic Law.
+* **H3, welfare floor only:** a duty to avoid unnecessary suffering, without prohibitions.
+
+**Next action:** held at Stage 1 by maintainer decision. When opened: thermodynamic check of the calorie floor under H1/H2 (SIMONE, synthetic); red team RED-1 to RED-7; compression disclosure against the v1.0 points of XII.3 and XII.4.
