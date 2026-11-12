@@ -1503,3 +1503,93 @@ Method: v1.0 compared with canon section by section; canon and the pre-v2 batch 
 * **Dropped by recorded decision (not listed above):** the compiler as proof engine and the exergy gate (methodology purge (a), replaced by Arts. 4.6 and 7.1); automated weapon-proof industry (purge (b) and SIM-QA-17; principle kept in 8.1.3); asteroid mining and planetary defense (purge (c), partly restored as Chapter XI by SIM-QA-07/08); the day-zero unified grid (purge (d), replaced by the Chapter IX dual track); the geoengineering triple-lock (SIM-QA-07, replaced by 10.5); device parameters (moved to the Organic Law Annex by SIM-QA-17).
 * **Unsure:** whether Arts. 4.5, 4.6 and the *Provocatio* of 4.2.1 were meant to replace the v1.0 amendment lattice and appellate ladder (Section VI); nothing records it. The XV and XVI founding-node rules may belong in the foundation documents; neither holds them.
 * **Priority for the maintainer (judgement, not tested):** religion and exit from collectives, equal protection, children's autonomy, and animals are the largest gaps by consequence; each would be its own docket.
+
+---
+
+## **SIM-QA-23: Lost Provision — Equal Protection**
+
+* **Date Recorded:** 2026-11-13  
+* **Stress-Tested:** 2026-11-13 (qualitative O-ASIS red-team pass on text; measurement `NOT_RUN`)  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — opened at Stage 1 from the SIM-QA-22 side audit (section 7) by maintainer decision 2026-11-13; full pass run the same day by maintainer instruction. Current text (silence) **`RED_WINS`**. H1 (restore the v1.0 invariant word for word) **`RED_WINS`** on three vectors. H3 (open list of grounds) **`NARROWED`**, rejected on review load. H2 (closed grounds, a justification test, indirect effect, no sensitive registers) **`BLUE_HOLDS` with residuals**. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged. Compression disclosure in section 6: two v1.0 points weakened and two not carried, listed for a point-by-point decision. Chapter I word ceiling conflict reported, not resolved.  
+* **Originating Context:** SIM-QA-22 side audit: lost in compression at the 2026-09-11 ratification of the ten-chapter architecture; no recorded decision.  
+* **v1.0 location:** Section VI.1, Class 0 Invariant 1, *The Rawlsian Veil of Ignorance Symmetry Invariant* (line 312: "No rule may introduce demographic, ethnic, or regional legal asymmetries"); Section II.2.C (line 93: rules must be ones a rational actor would endorse without knowing their personal identity, biological health status, cultural heritage or geographic location; lines 91–92: blind symmetry testing of arbiters by permuting demographic labels).  
+* **Closest current canon:** none. Partial: the Preamble ("a perpetual covenant among equals"); Art. 1.3.1 (survival never conditioned on ideological compliance); Art. 1.4 (liberties); Art. 5.2.3 (eligibility never conditioned). Art. 4.3.1 itself draws on age, gender and geography for stratification.  
+* **Constitutional Articles:** Chapter I (new Art. 1.8), Arts. 1.7, 4.3.1, 4.6, 7.4.4, 10.1, 10.4; cross-references SIM-QA-19 (RED-4), SIM-QA-21 (node assemblies), SIM-QA-22 (language), SIM-QA-24 (religion and exit).  
+* **Evidence:** reasoning on the text only. No quantitative claim is made.
+
+### **1. The Friction**
+* The canon has no equality or non-discrimination clause. Chapter I protects listed liberties and the survival baseline, and Art. 1.7 protects those. A rule that treats people differently by sex, descent, religion or origin, without touching a listed liberty or the baseline, has no constitutional bar.
+* The occasions are ordinary: allocation of free dwellings, rosters, admission to registers, settling of newcomers (SIM-QA-21), Tier 3 surplus, access to tools and labs, triage in a crisis (SIM-QA-16).
+* Small bodies decide many of these: an assembly of all adults in a node below 150 (SIM-QA-21 H2) is the setting where a majority can single out a minority by name.
+* Automated allocation can discriminate through a proxy (place of birth, language of filing, household type) without naming any group.
+* Art. 4.6 review resolves doubts "under Chapter I in favor of the person", but without an equality clause there is nothing for the jury to apply.
+
+### **2. Preliminary Red Vectors**
+* **RED-1 (direct targeting):** a node assembly or council adopts a rule that names or plainly describes a group.
+* **RED-2 (proxy):** a neutral criterion chosen because it falls on one group (years of residence for dwellings, fluency for registers).
+* **RED-3 (literal reading against the architecture):** "no regional asymmetry" read against bioregional envelopes, subsidiarity and carrying-capacity admission.
+* **RED-4 (literal reading against protections):** "no demographic asymmetry" read against care, education, ergonomic multipliers, stratification and age thresholds.
+* **RED-5 (review flooding):** every rule draws on some attribute; an open clause lets every rule be challenged (SIM-QA-11).
+* **RED-6 (proof by surveillance):** proving unequal effect needs data on ethnicity or religion, against the non-identifying registry of Art. 7.4.4.
+* **RED-7 (associations):** does the clause bind voluntary fellowships in their membership (SIM-QA-24)?
+
+### **3. Hypotheses to Test**
+* **H0, silence.**
+* **H1, restore v1.0 word for word** as a Chapter I invariant: "No rule may introduce demographic, ethnic, or regional legal asymmetries."
+* **H2, equal protection with closed grounds:** equality before the law; a closed list of grounds; a difference of treatment lawful only where required by a protection, service or condition this Constitution itself sets, or by the physical condition of a place, and no wider; neutral rules with markedly unequal effect reviewed on the same test; no register of sensitive attributes for the purpose.
+* **H3, open list:** as H2, but "on any ground" in place of the list.
+
+### **4. Stage 2: Red Team**
+* **H0: `RED_WINS`** on RED-1 and RED-2. Nothing in canon bars either. Art. 4.1.3 bars instruction of delegates, not the content of their decisions.
+* **H1: `RED_WINS`** on RED-3, RED-4 and RED-5.
+  * *RED-3:* bioregions hold different envelopes, statutes and admission status by design (Arts. 3.4, 10.1, 10.4; OL-10 point 3). Read literally, "no regional legal asymmetry" voids every rule that applies in one watershed and not another, which is the whole of subsidiarity. v1.0 meant persons, not places, but the text does not say so.
+  * *RED-4:* care leave for new parents (Art. 5.4.3), the education triad by age (Art. 5.3.2), ergonomic multipliers (Art. 5.1), adulthood for civic service and stratification by age and gender (Art. 4.3.1) are all demographic distinctions. Read literally, H1 voids them. A clause that voids the protections it exists to serve will be read down by review juries case by case, which leaves its meaning to them.
+  * *RED-5:* "asymmetry" has no test, so every rule touching an attribute is open to review.
+  * H1 holds on RED-1 and RED-6 (it creates no register).
+* **H3: `NARROWED`, rejected.** "Any ground" catches what a list misses (a group not foreseen). Red: residence, usufruct status, adulthood and skill are grounds too, and the architecture rests on them; every allocation becomes reviewable and Art. 4.6 juries of 101 are drawn for each (RED-5, SIM-QA-11). The justification test of H2 would then carry the whole load for every rule in the commons.
+* **H2: `BLUE_HOLDS` with residuals.** Vector by vector:
+  * *RED-1: `BLUE_HOLDS`.* Direct targeting on a listed ground is void unless the test is met, and the test cannot be met by preference.
+  * *RED-2: `NARROWED`.* "Through a criterion chosen to have that effect" reaches intended proxies; the indirect-effect paragraph reaches unintended ones with markedly unequal weight. Red: "markedly" is a judgement; unequal effects below it pass. Residual accepted, since a lower bar re-opens RED-5.
+  * *RED-3: `BLUE_HOLDS`.* The draft says that differences between places that follow their physical condition and carrying capacity are not differences between persons, and protects origin and prior residence as personal grounds. A node may not favour people born there; a basin may close admission under Art. 10.4 for everyone alike.
+  * *RED-4: `BLUE_HOLDS` on text, `NARROWED` in practice.* Differences required by a protection, service or condition this Constitution itself sets are lawful (care, education by age, health, ergonomic adjustment, adulthood, stratification of the lot to mirror the population). Red: only the Constitution's own protections qualify, so a measure enacted in Organic Law to restore participation of an excluded group (the small-peoples channel recommended by SIM-QA-19 RED-4; language-community stratification considered in SIM-QA-22) qualifies only if it is stratification or is placed in canon. *Recorded, not resolved:* whether Organic Law may enact time-limited restorative measures is a maintainer decision; allowing it opens a lobbying route for group privileges, forbidding it closes one tool for small peoples.
+  * *Conflicts between grounds (sex and gender in single-sex shelters; religion against sexual orientation in a fellowship's use of a common hall): `NARROWED`.* The test decides each case: a shelter for survivors of violence is a protection the Constitution sets (domestic safety, Art. 4.2.1), and its rules must be no wider than that requires. Residual: review juries will decide contested cases, and their decisions will not satisfy every side.
+  * *RED-5: `NARROWED`.* A closed list, the justification test and the existing endorsement allowance for petitions (OL-9) limit volume. Red: a disciplined group can still bring one review per rule. Residual: review load is not modelled.
+  * *RED-6: `BLUE_HOLDS`.* No register may record ethnicity, descent, religion or belief, sexual orientation or opinion for this Article. Direct discrimination is proven on the act and the complaint of the person concerned; indirect effect on aggregate evidence that identifies no one. Red: without such data, indirect discrimination against a group no one counts is hard to prove. Accepted: the alternative is a register the canon forbids.
+  * *RED-7: `BLUE_HOLDS`.* The clause binds rules, decisions and allocations of the commons and of public bodies, by any method. A voluntary fellowship remains free in its membership (Art. 1.4.1); it never controls access to dwellings, food, tools or common halls on a listed ground. The detailed line between fellowship and commons belongs to SIM-QA-24.
+  * *Automated allocation (cyberneticist): `BLUE_HOLDS`.* "By any method, human or automated" with the proxy and effect paragraphs covers allocation models; Art. 7.5 already requires them to be comprehensible, so a proxy can be found by reading the method.
+  * *Thermodynamic architect: no effect on flows.* Equal treatment allocates the same flows differently; it creates no matter or energy. The 2,200 kcal floor and Tier 1 already apply to all.
+  * *Ratchet (jurist): `NARROWED`.* Once merged in Chapter I, the list can be extended by 75% (Art. 4.5.1) and never shortened (Art. 1.7). A ground added in error cannot be removed. *Guard:* the list is short and limited to grounds the v1.0 text and the canon already name or imply.
+  * *Foundation law (jurist): `BLUE_HOLDS`.* Swiss foundation law (ZGB Art. 80 ff.) and the federal constitution's own equality article sit easily with an equality clause in the statutes' purpose; no conflict found on the text. *Not verified by counsel.*
+
+### **5. Purple Patch (Proposed)** `[STATUS: SIMULATION_HYPOTHESIS]` — *not merged; canon unchanged*
+* **Art. 1.8 (new), Equal Protection** *(appended after Art. 1.7, so nothing is renumbered; it falls under the primacy of Art. 1.7 as part of this Chapter)*:
+  1. "Every person is equal before this Constitution and before every law, decision and allocation made under it.
+  2. No rule, decision or allocation of the commons, made by an assembly, a panel, an office or any automated method, may treat persons differently, directly or through a criterion chosen to have that effect, on grounds of sex, gender, age, ethnicity or descent, language, religion or belief, origin or prior residence, disability or state of health, sexual orientation, or opinion.
+  3. A difference of treatment is lawful only where a protection, service or condition set by this Constitution requires it, such as care, education by age, health, ergonomic adjustment, adulthood for civic service, or stratification of the lot to mirror the population, and only as far as it requires. Differences between places that follow their physical condition and carrying capacity are not differences between persons.
+  4. A rule neutral on its face that falls with markedly unequal weight on persons who share one of these grounds is reviewed under Article 4.6 by the same test.
+  5. No register may record a person's ethnicity, descent, religion or belief, sexual orientation or opinion for the purpose of this Article. Proof rests on the act, on the complaint of the person concerned, and on aggregate evidence that identifies no one."
+* **Art. 4.6.2 (consequential, none):** review already resolves doubts under Chapter I in favour of the person; Art. 1.8 is applied through it.
+* **Organic Law (proposed, 60%):** standing and form of an equal-protection complaint (any person concerned, or any citizen for a rule that names a group); method for aggregate evidence of unequal effect without identifying persons; publication of review rulings under Art. 1.8 by ground and tier. All `PROVISIONAL — UNVERIFIED`.
+* **Editor:** about 210 words. Chapter I is 840 words now (headings included), so it would rise to about 1,050, above the 600–900 ceiling. **Conflict reported, not resolved:** no point is cut to meet the ceiling (compression disclosure rule). The maintainer decides whether the ceiling is waived for Chapter I, as it was for Chapter V (SIM-QA-22), or which text moves.
+
+### **6. Compression Disclosure** *(binding rule, `bible/methodology.md` III.2b; maintainer decision needed on each line)*
+| v1.0 point (location) | In the patch | Change | Proposed destination |
+| :--- | :--- | :--- | :--- |
+| No demographic legal asymmetry (VI.1, line 312) | Art. 1.8.2 and 1.8.3 | **Weakened:** a difference required by a protection, service or condition the Constitution sets is lawful; v1.0 had no exception. Reason: RED-4. | Keep as drafted, or restore without exception |
+| No ethnic legal asymmetry (VI.1, line 312) | Art. 1.8.2 ("ethnicity or descent") | Kept | — |
+| No regional legal asymmetry (VI.1, line 312) | Art. 1.8.2 ("origin or prior residence") and 1.8.3 last sentence | **Weakened:** regional differences between places are allowed when they follow physical condition and carrying capacity; only persons are protected. Reason: RED-3. | Keep as drafted, or restore as written |
+| Non-amendable Class 0 status (VI.1, line 311) | Chapter I under Art. 1.7 | Kept in the canon's form: amendable only to expand (Art. 4.5.1), never diminished (Art. 1.7) | — |
+| Veil-of-ignorance test for every rule: endorsable without knowing one's identity, health, heritage or location (II.2.C, line 93) | Not carried as a binding test | **Not carried:** a general test without content gives review juries no criterion (RED-5). Its four attributes are carried as grounds (identity → sex, gender, age; health → disability or state of health; heritage → ethnicity, descent, language, religion; location → origin or prior residence). | Interpretive rule for Art. 4.6 juries in Organic Law, or drop; maintainer decides |
+| Blind symmetry testing of arbiters by permuted demographic labels (II.2.C, lines 91–92) | Not carried | **Not carried:** it qualified arbiters of a Guardian Assembly that the canon does not have; a device, not a right. A functional equivalent exists: review rulings could be audited by swapping the ground in otherwise identical cases. | Organic Law audit of Art. 1.8 rulings, or drop; maintainer decides |
+| *New, not in v1.0:* sexual orientation, opinion, language, indirect effect, the register ban | Art. 1.8.2, 1.8.4, 1.8.5 | **Added.** Opinion and language follow Arts. 1.4.1 and SIM-QA-22; the register ban follows Art. 7.4.4. | Maintainer decides each addition |
+
+### **7. Residual Weaknesses (Honest Limits)**
+* "Required by" and "markedly unequal" are judgements; review juries will set their meaning case by case.
+* Indirect discrimination against a group no one counts is hard to prove without the data the patch forbids.
+* Restorative measures in Organic Law for excluded groups are barred unless they are stratification or are placed in canon; the maintainer has not decided this.
+* Conflicts between grounds are left to review juries.
+* Review load under Art. 4.6 is not modelled.
+* A ground added in error cannot be removed later (Art. 1.7).
+* Chapter I ceiling conflict open.
+
+**Next action:** maintainer decisions on the six lines of section 6, on restorative measures in Organic Law, and on the Chapter I word ceiling; a synthetic review-load estimate using the SIM-QA-11 petition model; one external reader with equality-law experience reviews section 5; alignment with SIM-QA-24 on fellowships and commons halls.
