@@ -1626,3 +1626,35 @@ Method: v1.0 compared with canon section by section; canon and the pre-v2 batch 
 * **H3, exit guarantee only:** only (c), leaving (a), (b), (d) to existing articles and review.
 
 **Next action:** held at Stage 1 by maintainer decision. When opened: red team H1–H3 against RED-1 to RED-6; align (d) with SIM-QA-25 so that one article carries children's bodily integrity; compression disclosure against the four v1.0 points.
+
+---
+
+## **SIM-QA-25: Lost Provision — Children**
+
+* **Date Recorded:** 2026-11-13  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS) — opened from the SIM-QA-22 side audit by maintainer decision 2026-11-13; held at Stage 1 until the maintainer says otherwise. Nothing below is red-teamed.  
+* **Originating Context:** SIM-QA-22 side audit (section 7): v1.0 Section XI is unmapped in the redline; lost at the 2026-09-11 ratification; no recorded decision.  
+* **v1.0 location:** Section XI.3 (line 643): children and adolescents "are not the property of their parents" and hold progressive autonomy ("Class 2 Personhood with progressive somatic autonomy"), with self-governed youth spaces. **Corporal punishment:** v1.0 bars it in two narrower places only: the founding-node *Compact 5, Sanctuary of the Children* (Section XVI, line 1051: physical punishment, public shaming, ridicule and emotional withdrawal barred for pioneers) and the Golden Triad of cultural covenants (Section VII.1, line 403: no covenant may practise corporal violence). *A general ban in every home would be wider than v1.0; recorded so the scope is decided, not assumed.*  
+* **Closest current canon:** Art. 1.2 (bodily sovereignty, general; no child-specific text), Art. 5.3 (education by age), Art. 5.4 (parenting education, alloparenting), Art. 1.3 (baseline for every inhabitant).  
+* **Constitutional Articles:** Chapter I, Arts. 1.2, 1.3, 1.4, 5.3, 5.4, 4.2.1 (domestic safety), 8.1.2 (Civic Peace Guilds); cross-references SIM-QA-22 (schooling language), SIM-QA-23 (age as a ground), SIM-QA-24 (alteration of children; exit from covenants at the age of discernment).
+
+### **1. The Friction**
+* Chapter I rights are written for "every human being" and "every person", so children hold them in principle, but nothing says how they are exercised while a child cannot exercise them alone, or by whom.
+* No text says a child's own view counts in decisions about them, or that its weight grows with age.
+* Nothing bars corporal punishment; Art. 1.2.2 bars "physical subjugation", which a review jury may or may not read to include it.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text)*
+* **RED-1, parental dominion:** a parent decides schooling, medical care and residence against an adolescent's clear will → no clause gives the adolescent a voice.
+* **RED-2, collective dominion:** a node, covenant or alloparenting hub claims authority over children in place of parents → Art. 5.4 creates shared care but no limit on it.
+* **RED-3, violence at home:** corporal punishment is ordinary practice in a family → no clause names it; intervention depends on the domestic-safety jurisdiction of Art. 4.2.1.
+* **RED-4, intervention as surveillance:** a ban enforced by inspection of homes breaches Art. 1.2.3 (private intimacy) and the non-surveillance invariant.
+* **RED-5, the "not property" phrase:** declaratory; with no inheritance and no title in the commons, it changes nothing unless it carries consequences (custody, voice, exit).
+* **RED-6, age thresholds:** any fixed age (14 for covenant exit in v1.0) is arbitrary; no threshold leaves the question to case-by-case judgement.
+
+### **3. Preliminary Hypotheses** *(proposed mitigations, untested)*
+* **H0, silence.**
+* **H1, Chapter I paragraph:** no person owns a child; a child holds the rights of this Chapter, exercised with guidance whose weight decreases as capacity grows; the child is heard in every decision about them, with weight growing with age; no corporal punishment or degrading treatment of a child by anyone; protective measures are non-punitive, least intrusive, and decided on complaint, never by inspection.
+* **H2, as H1 without the corporal-punishment clause** (left to Art. 1.2 and review).
+* **H3, Chapter V placement** (with Arts. 5.3–5.4) instead of Chapter I.
+
+**Next action:** held at Stage 1 by maintainer decision. When opened: decide the scope of the corporal-punishment ban (v1.0 founding-node and covenant scope, or every home); red team H1–H3; take over children's bodily integrity from SIM-QA-24 (d); compression disclosure against the v1.0 points.
