@@ -40,6 +40,7 @@ To ensure non-autocratic, rigorous governance, every entry carries an explicit e
 | **`SIM-QA-18`** | Refusal of a Sortition Summons — Undefined Procedure | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.3.1, 4.3.2, 4.3.3, 5.2.3 |
 | **`SIM-QA-19`** | Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.1.1, 4.2, 4.3.1, 7.4.4 |
 | **`SIM-QA-20`** | Rival Expert Panels — Advocacy Capture and Precautionary Veto | Governance / Epistemics | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed; H7/H8 addendum NOT_RUN) | Art. 4.4, 7.3, 7.5, 7.6.1, 8.4.3, OL-9.7 |
+| **`SIM-QA-21`** | Governance of Nodes Below the Council Threshold | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (current text and H1 RED_WINS; H2 holds with residuals; patch proposed) | Art. 4.2.1, 4.2.2, 4.3.3, 10.1.3 |
 
 ---
 
@@ -615,6 +616,7 @@ Model: Python stdlib Monte Carlo, not the Julia SIMONE ABM; HEXACO traits not mo
 * **Art. 4.3.2 (replaced):** "Civic service by lot is a universal prerogative and a civic duty to answer the summons. A summoned citizen attends an orientation session and may then withdraw without penalty, stigma, or loss of any right (Article 5.2.3). Each citizen may defer one summons without stating a reason; excusal on grounds listed in Organic Law is self-certified and never judged on merit. Citizens who serve receive full release from routine labor and replacement of domestic and care support, arranged before service begins."
 * **Art. 4.3.1 (addition):** "Each draw produces ordered alternates within every stratum; a seat left by withdrawal, deferral or excusal passes to the next alternate of the same stratum. Refusal, withdrawal and excusal rates, including counts by excusal ground, are published per stratum without identifying persons; a rate well above the others triggers review of service conditions, never of persons."
 * **Art. 4.3.3 (addition):** "In nodes of fewer than one hundred and fifty (150) adult residents, the hiatus after a Neighborhood Council mandate equals the length of the mandate."
+  * *Note (SIM-QA-21):* if SIM-QA-21 is adopted, this addition becomes unnecessary, since nodes under 150 adults then hold no Neighborhood Council. Kept pending that decision.
 * **Organic Law (proposed, 60%):** list of excusal grounds (illness, bereavement, non-replaceable care); length and content of orientation; deferral window (next term of the same body); review trigger (provisional: a stratum refusing at more than 1.5× the median); all `PROVISIONAL — UNVERIFIED`.
 
 ### **7. Residual Weaknesses (Honest Limits)**
@@ -827,3 +829,67 @@ Art. 4.4 retitled **"Drawn Expert Evidence and Intelligible Decision-Making"**; 
 * Every verdict here is reasoning on text. Nothing has been measured.
 
 **Next action (addendum):** a reproducible script that measures, on real case files, how far model output moves under role swap, repetition and rewording (framing-sensitivity scores for H7/H8). H7/H8 are not added to the purple patch in Section 6 until those measurements exist.
+
+---
+
+## **SIM-QA-21: Governance of Nodes Below the Council Threshold**
+
+* **Date Recorded:** 2026-11-12  
+* **Stress-Tested:** 2026-11-12  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Verdict on current text **`RED_WINS`** (fill failure at 50 adults, labour drain, three-person sovereignty). **H1 `RED_WINS`** (RED-1, RED-2, RED-3). **H2 `BLUE_HOLDS` with residuals** (RED-4 and RED-5 narrowed, not solved). Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged.  
+* **Originating Context:** Residual weaknesses of SIM-QA-18 (nodes of 50 adults cannot sustain a 15-seat council) and SIM-QA-19 (bodies of 3 are juries, not samples). SIM-QA-01 is not reopened: its finding (a 15-seat council cannot be staffed from 28 people without a labour deficit) stands; this docket asks what should govern instead.  
+* **Constitutional Articles:** Arts. 4.2.1, 4.2.2, 4.3.3, 10.1.3  
+* **Reproducible Evidence:** [`simone/benchmarks/sim_qa_21_small_node.py`](../simone/benchmarks/sim_qa_21_small_node.py) → [`results`](../simone/benchmarks/results/sim_qa_21_small_node_results.md) (`--reps 2000 --seed 20261112`; **synthetic, uncalibrated**: hour budgets, turnout, quorum, household sizes, centre pool and refusal rates are assumptions)
+
+### **1. The Friction**
+* Art. 4.2.1 vests "sovereign municipal administration" in a drawn panel of 3 for nodes under 50 adults. Three people, often close to each other, hold full local power. The kin rule bars first-degree kin and partners from sitting together; it does not bar friends, allies or a dominant extended family.
+* Art. 4.2.2 triggers a 15-seat council at 50 adults. SIM-QA-18 shows its seats cannot be filled once refusal passes 10 to 20%.
+* Small settlements are many places but few people. India, 2011 census: 82,151 of 597,608 inhabited villages (13.7%) have fewer than 200 inhabitants and hold under 1% of the rural population. France, 2015: 910 communes under 50 inhabitants (31,357 people in all) and 2,567 between 50 and 99. *No global count of settlements under 150 adults was found.* These figures are recorded as supplied for this docket and must be checked against the primary census tables before any canon use.
+* What such a node decides is narrow and practical: shift rosters, water, food growing, the local microgrid, allocation of free dwellings, disputes between neighbours, reception of newcomers. Health care, higher education, industry and general rules already come from a larger centre.
+
+### **2. Hypotheses Tested Against Each Other**
+* **H1, attachment:** a node below the threshold has no governing body of its own. It is governed by the council of the nearest larger centre, and its adults enter that centre's draw.
+* **H2, two levels:** no drawn body below the threshold. (a) Matters internal to the node are decided by the assembly of all adult residents. (b) Everything else goes to the council of the nearest larger centre, whose draw includes the node's adults. (c) Disputes are heard by a panel of 3 drawn from outside the node. (d) The node holds a right of appeal (*Provocatio*) against a centre decision that concerns only the node. (e) An isolated or founding node with no larger centre nearby runs on (a) alone until one exists.
+* **For both:** threshold at 50, 100 or 150 adults.
+
+### **3. Model Findings** *(synthetic, uncalibrated)*
+Python stdlib Monte Carlo (quarterly, 10 years, 2,000 reps) for seat filling; analytic hour budgets, exact hypergeometric seat shares and binomial quorum. Seat filling has no strata, so failure starts slightly later than in SIM-QA-18.
+
+| Node (adults) | Council of 15: terms with an empty seat at r = 0.1 / 0.3 / 0.7 / 0.8 | Governance h/week per adult: B0 / H1 / H2 (below T) | Adults on full release under B0 | P(no seat in a centre council of 15, pool 2,000) |
+| :--- | :--- | :--- | :--- | :--- |
+| 30 | 85% / 93% / 100% / 100% (30% at r = 0) | 2.0 / 0.4 / 1.3 | 0% (3 half-time) | 80% |
+| 50 | 1% / 36% / 93% / 99% | 12.2 / 0.4 / 1.3 | 30% | 68% |
+| 100 | 0% / 0% / 4% / 47% | 6.1 / 0.4 / 1.3 | 15% | 46% |
+| 150 | 0% / 0% / 0% / 1% | 4.1 / 0.4 / 1.3 | 10% | 31% |
+
+* **Threshold:** at T = 50 the council fails from about 10–20% refusal; at T = 100 from about 70%; at T = 150 from about 85–90%. 150 is the only tested value where the council holds across the refusal range SIM-QA-18 considers plausible for a duty-based summons, short of invitation-style refusal (~94%), where no node below 500 holds.
+* **Assembly (H2a):** with a quorum of one third of adults, quorum fails in 59–79% of sessions at 30% turnout, 4–18% at 40%, and ≤ 2% from 50%.
+
+### **4. Stage 2: Red Team**
+* **Current text: `RED_WINS`.** At 50 adults the council fails on fill (SIM-QA-18) and takes 30% of adults off the roster (12.2 h per adult per week). Below 50, three drawn people hold all local power.
+* **RED-1, voiceless periphery.** *H1: `RED_WINS`.* A node of 50 in a pool of 2,000 holds no council seat 68% of the time, and under H1 that council decides everything, including the node's water, rosters and dwellings. *H2: `NARROWED`.* Internal matters stay with residents; for other matters the node is as voiceless as any 50 people in a large centre, which is the ordinary condition of sortition, not a defect specific to small nodes. (d) adds an appeal where a centre decision targets the node alone. Residual: matters that concern the node among others (regional water allocation) still carry a 68% chance of no local voice. *Guard:* the centre council hears the node assembly before deciding a matter that concerns the node specifically.
+* **RED-2, founding node.** *H1: `RED_WINS`.* At the start of the transition no larger O.N.E. centre exists, so H1 leaves the first nodes with no government at all. *H2: `BLUE_HOLDS`* via (e). Residual: (c) has no outside pool for a founding node. *Guard:* draw the dispute panel from the nearest other O.N.E. nodes; if none exists, from the node itself under the current kin rule, until one does.
+* **RED-3, subsidiarity (Art. 10.1.3).** *H1: `RED_WINS`.* Rosters, a shared greenhouse or a free dwelling are resolvable inside the node; sending them to a centre council breaches "the lowest ecological scale possible". *H2: `BLUE_HOLDS`.* (a) keeps them local and (b) sends only what is not.
+* **RED-4, assembly capture.** *H2: `RED_WINS` on open voting, `NARROWED` with guards.* A bloc that always attends gains weight when others stay home: a 20% bloc holds 29% of votes cast at 60% turnout, enough to block every 75% matter; a 30% bloc holds 42–52%. For comparison, under B0 the same 30% bloc holds 2 of 3 panel seats 22% of the time, and then holds everything. Hand-raising in front of 30 neighbours adds social pressure no number captures. *Guards:* secret ballot on any vote at the request of one adult, and always for dwellings, newcomers and disputes; a chair drawn by lot for each session; thresholds counted on votes cast with the quorum of Organic Law; the existing *Provocatio* for every party to a decision on dwellings or admission. Residual: a secret ballot among 30 people leaks, and a charismatic speaker still frames the debate.
+* **RED-5, boundary gaming.** *Both: `NARROWED`.* A node of 152 that splits on paper into two of 76 escapes the council; a dispute over what is "internal" is a jurisdiction grab in either direction. *Guards:* node boundaries follow the watershed register (Art. 10.1) and change only by decision of the Bioregional Assembly; the threshold has hysteresis (council from 150 adults sustained for twelve months; back to the assembly only below 120 sustained for twelve months); "internal" means a matter whose resources and effects stay inside the node's own balance without changing its net flows with the centre beyond limits fixed by Organic Law; a dispute over classification goes to the outside panel of (c), whose ruling is final for that matter.
+* **RED-6, labour drain.** *H2: `BLUE_HOLDS`, effect assumed.* No one is on full release inside the node; at an assumed 1.5 h per attending adult per week the assembly costs about a tenth of the current council at 50 adults (1.3 vs 12.2 h per adult). The SIM-QA-01 problem (too many people in meetings, too few on shifts) does not return. Red: if every matter goes to the floor, meetings grow without limit. *Guard:* a fixed number of ordinary sessions per month in Organic Law; shift rosters are set by the assembly and run by rotation, not debated each week.
+* **Coherence:** an all-adult assembly is not a sortition body, so Art. 4.1.1 ("exclusively from … sortition") must name it, as SIM-QA-19 already proposes for node plebiscites.
+
+### **5. Comparison: H1 vs H2**
+H1 is cheap in hours (0.4 h per adult per week) and removes every small-body risk, but loses three vectors outright: it hands a place's daily life to a council it usually has no seat on, it fails at founding when no centre exists, and it breaches Art. 10.1.3. H2 costs about 1 h more per adult per week, keeps the practical matters where they are known, and survives founding; it trades the risk of three drawn people for the risk of a dominant bloc in an open room, which secret ballot and outside dispute panels narrow but do not remove. **H2 held up better.** Threshold: **150**.
+
+### **6. Purple Patch (Proposed)** `[STATUS: SIMULATION_HYPOTHESIS]` — *not merged; canon unchanged*
+* **Art. 4.2.1, sub-paragraph (replaced), Nodes Below the Council Threshold:** "A node of fewer than one hundred and fifty (150) adult residents holds no drawn governing body. Matters internal to the node (work rosters, water, food growing, the local energy grid, allocation of free dwellings, reception of newcomers) are decided by the assembly of all adult residents, voting by secret ballot at the request of any one of them and always on dwellings, newcomers and disputes, under a chair drawn by lot for each session. All other matters belong to the Neighborhood Sortition Council of the nearest larger node of the same bioregion, whose draw includes the node's adult residents and which hears the node's assembly before deciding a matter that concerns the node specifically. Disputes between residents are heard by a Local Mediation Panel of three (3) citizens drawn from outside the node. The node holds a right of appeal (*Provocatio*) to a cross-watershed blind panel of fifteen (15) citizens against any decision of that Council that concerns the node alone. Until a larger node exists, the assembly alone governs, and the mediation panel is drawn from the nearest other nodes or, if none exists, from the node itself with no first-degree kin or domestic partners serving together."
+* **Art. 4.2.2 (amended trigger):** "… (constituted upon a node sustaining one hundred and fifty (150) adult residents for twelve months, and dissolved into the assembly of Article 4.2.1 only upon falling below one hundred and twenty (120) for twelve months)."
+* **Art. 4.1.1 (coherence):** "… and from the node assemblies and plebiscites this Chapter provides."
+* **Organic Law (proposed, 60%):** definition of an internal matter and the net-flow limits that bound it; assembly quorum (provisional: one third of adult residents) with thresholds counted on votes cast; maximum ordinary sessions per month; node boundaries fixed by the watershed register and changed only by the Bioregional Assembly. All `PROVISIONAL — UNVERIFIED`.
+* **Interaction with other dockets:** if adopted, the SIM-QA-18 addition to Art. 4.3.3 (shorter hiatus under 150 adults) and the council clauses of the SIM-QA-19 Small-Node Safeguards for nodes under 150 lose their object, since no council sits there. The SIM-QA-11 finding on a single hostile panelist forcing plebiscites in 3-person panels no longer applies to node administration.
+
+### **7. Residual Weaknesses (Honest Limits)**
+* **Assembly capture is narrowed, not solved.** A disciplined bloc of 20–30% that always attends carries or blocks matters in a small room; secret ballot among neighbours leaks.
+* **Nodes of 100–149 adults could staff a council** up to about 70% refusal, and lose sortition for internal matters under this patch. The 150 choice favours robustness at high refusal over sortition coverage in that band.
+* **"Internal" will be litigated.** The definition carries the whole of H2(a); it sits in Organic Law and has not been drafted or tested.
+* **Peripheral voice on shared matters is the normal sortition deficit,** made worse by distance: travel to the centre council is assumed at +25% time and not otherwise modelled.
+* Every hour budget, turnout and dispute rate is an assumption; the census figures are as supplied, not re-verified.
+
+**Next action:** draft the Organic Law definition of an internal matter and red-team it; calibrate assembly turnout and duration against small-commune and village-assembly data; check the census figures against primary tables.
