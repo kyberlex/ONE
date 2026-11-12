@@ -27,7 +27,9 @@ Rules compared for a node of N adults (50, 80, 100, 120, 150):
   during a term). SETB refills a seat the month it opens and retries an
   unfilled seat monthly, but a refuser is not summoned again for a lock of
   6 months (the deferral window of SIM-QA-18 H2); locks of 3 months and of
-  1 month (a refuser may be summoned again next month) are sensitivity cases. Panels of three are drawn per
+  1 month (a refuser may be summoned again next month) are sensitivity cases
+  (2026-11-13: the maintainer set the window at 3 months, so the months
+  table also reports SETB with a 3-month lock). Panels of three are drawn per
   dispute from outside the node (X-1, X-3) and take no one from the node.
   Part-time service changes the hours, not the head count, so it enters only
   through r.
@@ -146,12 +148,13 @@ def main():
     print(head)
     print("| :--- | :--- | " + " | ".join(":---" for _ in REFUSAL) + " |")
     for n in NODES:
-        for rule in ("FIX", "SETB"):
+        for rule, lock, label in (("FIX", 6, "FIX"), ("SETB", 6, "SETB"),
+                                  ("SETB", 3, "SETB, lock 3")):
             cells = []
             for r in REFUSAL:
-                f, e = run(rule, n, r, a.reps, a.seed)
+                f, e = run(rule, n, r, a.reps, a.seed, lock)
                 cells.append(f"{f:.0%} / {e:.2f}")
-            print(f"| {n} | {rule} | " + " | ".join(cells) + " |")
+            print(f"| {n} | {label} | " + " | ".join(cells) + " |")
     print("\n## Smallest node with >= 95% of months fully seated (grid 40..200, step 5)\n")
     print("| Rule | " + " | ".join(f"r = {r}" for r in REFUSAL) + " |")
     print("| :--- | " + " | ".join(":---" for _ in REFUSAL) + " |")
