@@ -1511,7 +1511,7 @@ Method: v1.0 compared with canon section by section; canon and the pre-v2 batch 
 
 * **Date Recorded:** 2026-11-13  
 * **Stress-Tested:** 2026-11-13 (qualitative O-ASIS red-team pass on text; measurement `NOT_RUN`)  
-* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — opened at Stage 1 from the SIM-QA-22 side audit (section 7) by maintainer decision 2026-11-13; full pass run the same day by maintainer instruction. Current text (silence) **`RED_WINS`**. H1 (restore the v1.0 invariant word for word) **`RED_WINS`** on three vectors. H3 (open list of grounds) **`NARROWED`**, rejected on review load. H2 (closed grounds, a justification test, indirect effect, no sensitive registers) **`BLUE_HOLDS` with residuals**. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged. Compression disclosure in section 6: two v1.0 points weakened and two not carried, listed for a point-by-point decision. Chapter I word ceiling conflict reported, not resolved.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — opened at Stage 1 from the SIM-QA-22 side audit (section 7) by maintainer decision 2026-11-13; full pass run the same day by maintainer instruction. Current text (silence) **`RED_WINS`**. H1 (restore the v1.0 invariant word for word) **`RED_WINS`** on three vectors. H3 (open list of grounds) **`NARROWED`**, rejected on review load. H2 (closed grounds, a justification test, indirect effect, no sensitive registers) **`BLUE_HOLDS` with residuals**. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged. Compression disclosure in section 6: two v1.0 points weakened and two not carried, listed for a point-by-point decision. Chapter I word ceiling conflict reported, not resolved. **Maintainer decisions 2026-11-13 (section 8):** Art. 1.8 accepted in principle; every line of the compression disclosure decided (two points kept as drafted, two moved to Organic Law, five additions accepted, none dropped); ceiling waived for Chapter I for Art. 1.8 only; restorative measures allowed only under a new Art. 1.8.6 at 75% with a sunset, **`NARROWED`** (two open questions: which body adopts, and a constitutional ceiling on duration); order of application with SIM-QA-22 stated (Y-14).  
 * **Originating Context:** SIM-QA-22 side audit: lost in compression at the 2026-09-11 ratification of the ten-chapter architecture; no recorded decision.  
 * **v1.0 location:** Section VI.1, Class 0 Invariant 1, *The Rawlsian Veil of Ignorance Symmetry Invariant* (line 312: "No rule may introduce demographic, ethnic, or regional legal asymmetries"); Section II.2.C (line 93: rules must be ones a rational actor would endorse without knowing their personal identity, biological health status, cultural heritage or geographic location; lines 91–92: blind symmetry testing of arbiters by permuting demographic labels).  
 * **Closest current canon:** none. Partial: the Preamble ("a perpetual covenant among equals"); Art. 1.3.1 (survival never conditioned on ideological compliance); Art. 1.4 (liberties); Art. 5.2.3 (eligibility never conditioned). Art. 4.3.1 itself draws on age, gender and geography for stratification.  
@@ -1587,13 +1587,72 @@ Method: v1.0 compared with canon section by section; canon and the pre-v2 batch 
 ### **7. Residual Weaknesses (Honest Limits)**
 * "Required by" and "markedly unequal" are judgements; review juries will set their meaning case by case.
 * Indirect discrimination against a group no one counts is hard to prove without the data the patch forbids.
-* Restorative measures in Organic Law for excluded groups are barred unless they are stratification or are placed in canon; the maintainer has not decided this.
+* ~~Restorative measures in Organic Law for excluded groups are barred unless they are stratification or are placed in canon; the maintainer has not decided this.~~ Decided 2026-11-13: allowed only under Art. 1.8.6 (section 8).
 * Conflicts between grounds are left to review juries.
 * Review load under Art. 4.6 is not modelled.
 * A ground added in error cannot be removed later (Art. 1.7).
-* Chapter I ceiling conflict open.
+* ~~Chapter I ceiling conflict open.~~ Waived for Art. 1.8 only (2026-11-13).
 
-**Next action:** maintainer decisions on the six lines of section 6, on restorative measures in Organic Law, and on the Chapter I word ceiling; a synthetic review-load estimate using the SIM-QA-11 petition model; one external reader with equality-law experience reviews section 5; alignment with SIM-QA-24 on fellowships and commons halls.
+**Next action:** ~~maintainer decisions on the six lines of section 6, on restorative measures in Organic Law, and on the Chapter I word ceiling~~ (2026-11-13, section 8); a synthetic review-load estimate using the SIM-QA-11 petition model; one external reader with equality-law experience reviews section 5; alignment with SIM-QA-24 on fellowships and commons halls.
+
+### **8. Revision (2026-11-13): Maintainer Decisions, Restorative Measures and the Order of Application (Y-14)** *(Stage 2 continued; reasoning on text; measurement `NOT_RUN`)*
+
+#### **8.1 Maintainer Decisions (2026-11-13)**
+* **Art. 1.8 accepted in principle as drafted** (section 5), with paragraph 6 added below.
+* **Compression disclosure, line by line (section 6):**
+
+| v1.0 point | Decision |
+| :--- | :--- |
+| No demographic legal asymmetry | **Kept as drafted:** the exception for differences the Constitution itself requires stays (Art. 1.8.3). |
+| No ethnic legal asymmetry | Kept (no decision needed). |
+| No regional legal asymmetry | **Kept as drafted:** the place-versus-person distinction stays (Art. 1.8.3, last sentence). |
+| Non-amendable Class 0 status | Kept in the canon's form (no decision needed). |
+| Veil-of-ignorance test | **Moved to Organic Law** as an interpretive rule for Art. 4.6 juries (8.3). |
+| Blind symmetry testing of arbiters | **Moved to Organic Law** as a swapped-ground audit of Art. 1.8 rulings (8.3). |
+| New: sexual orientation, opinion, language, indirect effect, the register ban | **All five accepted.** |
+
+  No point is dropped; nothing is recorded under the drop rule of board instruction 8.
+* **Chapter I word ceiling:** waived for Chapter I for Art. 1.8 only. The waiver gives no general allowance; any other excess in Chapter I needs its own decision. Count in 8.5.
+* **Restorative measures:** allowed only as a time-limited exception written into Art. 1.8 itself, never created by Organic Law alone. Conditions in the Constitution: adopted at 75%, with a sunset, founded on published aggregate evidence that identifies no one, never reducing anyone's Tier 1 provision or political rights, renewable only by a new 75% vote, open to review under Art. 4.6. Organic Law sets only the maximum length of the sunset and the form of the evidence. Drafted as Art. 1.8.6.
+* Accepted in principle is not merged. The canon is unchanged.
+
+#### **8.2 Art. 1.8.6 (new), Restorative Measures** `[STATUS: SIMULATION_HYPOTHESIS]`
+"6. A measure that restores the participation of persons excluded on a ground of this Article is lawful only if it is adopted by seventy-five percent (75%), ends on a date it states, and rests on published aggregate evidence of that exclusion that identifies no one. It never reduces any person's Tier 1 Vital Biological Baseline or political rights. It is renewed only by a new vote at seventy-five percent (75%) on renewed evidence, and is open to review under Article 4.6. Organic Law fixes only the longest permitted duration and the form of the evidence."
+
+*Drafting notes, for maintainer confirmation.* (a) "Tier 1 provision" is written as "Tier 1 Vital Biological Baseline", the canon's name for it (Art. 3.3); the canon also uses "Tier 1" for personal craft gear (Art. 2.2), so the short form is ambiguous. (b) "on renewed evidence" is added in drafting: without it a renewal could rest on the evidence of the first vote. (c) The decision does not name the body that adopts a measure; see R-3.
+
+*Consequential (Art. 4.5.1):* the 75% list of Art. 4.5.1 is closed ("required exclusively for…"); it gains "restorative measures under Article 1.8.6". Counted in the Chapter IV total of the cross-docket section (Y-13).
+
+**Organic Law (proposed, 60%), OL-12, Equal Protection** `[STATUS: SIMULATION_HYPOTHESIS]` *(every number in brackets is `PROVISIONAL — UNVERIFIED`)*:
+1. *Standing and form of a complaint* (section 5, unchanged).
+2. *Longest duration of a restorative measure:* [five (5) years]. *Form of the evidence:* counts or shares by ground, by tier and by place, from sources that record no person's ground (Art. 1.8.5), with the method published and open to challenge.
+3. *Interpretive rule for Art. 4.6 juries (veil of ignorance):* in applying Art. 1.8.3 and 1.8.4, the jury asks whether the rule could be endorsed by someone who did not know their own sex, gender, age, descent, language, religion or belief, origin, state of health, sexual orientation or opinion. The question guides the test of Art. 1.8.3; it is not a separate ground of nullity.
+4. *Swapped-ground audit:* each year a drawn panel of [fifteen (15)] takes a sample of [twenty (20)] Art. 1.8 rulings, rewrites each case with the ground swapped (a woman for a man, one religion for another) and all else equal, and publishes whether the reasoning of the ruling would still hold. The audit annuls nothing; it is published with the rulings register.
+
+#### **8.3 Red Team Against the Decisions** *(one paragraph on restorative measures, as instructed; then the two Organic Law transfers)*
+* **Restorative measures: `NARROWED`.** The lobbying route the 2026-11-13 decision was warned about (R-1, a group privilege dressed as restoration) is closed for a simple or qualified majority: 75%, a stated end date, aggregate evidence of exclusion and Art. 4.6 review are all in the Constitution, so a 60% Organic Law can neither create a measure nor relax its conditions. Four residuals remain. *R-2, renewal as permanence:* each renewal needs a fresh 75% vote on renewed evidence, so a measure can last as long as the exclusion lasts, which is the intent, but a measure whose beneficiaries hold 25% of a body can block its own expiry only by blocking a vote, never by renewing it; a measure lapses by default. *R-3, which body:* "adopted by seventy-five percent" without a body means a council of 15 (12 votes) could adopt one for its node, where SIM-QA-19 shows small bodies misread their constituency; *open, maintainer decision:* name a minimum tier (for example the Bioregional Assembly) or leave it to the body competent for the matter. *R-4, the duration bound:* the Organic Law sets the longest duration, and a 60% majority could set it at fifty years; under the placement test (board instruction 10) the Constitution should keep a ceiling the Organic Law cannot cross; *open, maintainer decision:* a constitutional ceiling (for example ten years) or none. *R-5, evidence without registers:* aggregate evidence must come from sources that record no one's ground, which makes exclusion of an uncounted group hard to show (the residual of RED-6 in section 4); a measure for such a group cannot be adopted. *Coherence:* a restorative measure is a difference of treatment, so it also meets Art. 1.8.3 only through paragraph 6; no measure can rest on Organic Law and Art. 1.8.3 alone.
+* **Veil-of-ignorance rule in Organic Law: `BLUE_HOLDS`.** It guides the existing test and voids nothing by itself, so it adds no review load (RED-5). Red: a 60% majority can repeal it; the test of Art. 1.8.3 still applies without it.
+* **Swapped-ground audit: `NARROWED`.** A rewritten case is a judgement of the audit panel, not a fact, and a sample of twenty is small. It costs fifteen citizens a few days a year and annuls nothing. Residual: an audit that keeps finding asymmetry has no consequence except publication; the remedy is a new review petition.
+
+#### **8.4 Y-14: Order of Application with SIM-QA-22 (Languages)** *(cross-docket check 2026-11-13)*
+A node that schools only in its majority language could be challenged under Art. 5.3.3 (SIM-QA-22: every child's right to schooling in the language of the family or community) and under Art. 1.8.4 (a neutral rule falling with markedly unequal weight on a language group). The order of application, stated for the merge:
+1. **The specific right first.** The child's schooling right in Art. 5.3.3 is applied first; if it is breached, the rule is void on that ground and Art. 1.8 need not be reached.
+2. **Then the exception of Art. 1.8.3.** The community's choice of school languages in Art. 5.3.3 is a condition this Constitution sets; a difference that choice requires (one school teaches in language A, not B) is lawful under Art. 1.8.3, as far as it requires and no further.
+3. **Then Art. 1.8.4** for effects that go beyond what the choice requires (for example, admission to a register, a roster or a dwelling made to depend on the school language).
+4. **Chapter I prevails in conflict** (Art. 1.7): if the reading of Art. 5.3.3 and Art. 1.8 cannot be reconciled, Art. 1.8 decides.
+
+*Red team:* `BLUE_HOLDS`. The two texts point the same way; the order only prevents a double review of one rule. Residual: a review jury may still find that a community's choice of languages is itself a criterion chosen to exclude (Art. 1.8.2); step 2 then fails, which is intended.
+
+#### **8.5 Word Count** *(tokens containing a letter or digit, headings included; same method as the Chapter IV count of the 2026-11-13 cross-docket section)*
+Chapter I today: 830. Art. 1.8 as drafted in section 5 with its heading: 220. Paragraph 6: 96. Chapter I with Art. 1.8: **1,146**, 146 above the 1,000-word ceiling, within the waiver for Art. 1.8. The Art. 1.4.1 phrase of SIM-QA-22 ("and cultural expression, including the use of one's own language") adds up to 10 more (about 1,156); that phrase is not covered by this waiver and is reported for decision.
+
+#### **8.6 Residual Weaknesses (Revision)**
+* R-3 (which body adopts a restorative measure) and R-4 (a constitutional ceiling on duration) are open.
+* Exclusion of uncounted groups is hard to prove, so restorative measures may not reach them.
+* The swapped-ground audit has no consequence except publication.
+* The residuals of section 7 stand; the ceiling conflict is closed for Art. 1.8 by waiver.
+
+**Next action (revision):** maintainer decisions on R-3, R-4 and the Art. 1.4.1 phrase under the Chapter I ceiling; review-load estimate with the SIM-QA-11 model; external equality-law reader; alignment with SIM-QA-24.
 
 ---
 
