@@ -39,7 +39,7 @@ To ensure non-autocratic, rigorous governance, every entry carries an explicit e
 | **`SIM-QA-17`** | Organic Law Separation — Restoring Technological Neutrality | Drafting Invariants | `[STATUS: CANONICAL_MERGED]` | Art. 1.4.3, 3.3.3, 6.2–6.4, 8.1.4, 8.2.2, 10.5.3, 10.6.4, Ch. XI |
 | **`SIM-QA-18`** | Refusal of a Sortition Summons — Undefined Procedure | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.3.1, 4.3.2, 4.3.3, 5.2.3 |
 | **`SIM-QA-19`** | Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.1.1, 4.2, 4.3.1, 7.4.4 |
-| **`SIM-QA-20`** | Rival Expert Panels — Advocacy Capture and Precautionary Veto | Governance / Epistemics | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.4, 8.4.3, OL-9.7 |
+| **`SIM-QA-20`** | Rival Expert Panels — Advocacy Capture and Precautionary Veto | Governance / Epistemics | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed; H7/H8 addendum NOT_RUN) | Art. 4.4, 7.3, 7.5, 7.6.1, 8.4.3, OL-9.7 |
 
 ---
 
@@ -700,9 +700,9 @@ Model: Python stdlib Monte Carlo, not the Julia SIMONE ABM; HEXACO traits not mo
 
 * **Date Recorded:** 2026-11-12  
 * **Stress-Tested:** 2026-11-12 (qualitative O-ASIS red-team pass; no simulation)  
-* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Verdict on current text **`RED_WINS`** on all five vectors; hypotheses H1–H6 hold only with guards, H6 **narrowed**. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Verdict on current text **`RED_WINS`** on all five vectors; hypotheses H1–H6 hold only with guards, H6 **narrowed**. Addendum (Section 8): H7/H8 and RED-6/RED-7 red-teamed on text, measurement **`NOT_RUN`**. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged.  
 * **Originating Context:** Maintainer review of Chapter IV  
-* **Constitutional Articles:** Arts. 4.4.1–4.4.4, 4.6.2, 8.4.3; Organic Law OL-9.7, OL-1.4
+* **Constitutional Articles:** Arts. 4.4.1–4.4.4, 4.6.2, 7.3, 7.5, 7.6.1, 8.4.3; Organic Law OL-9.7, OL-1.4
 * **Evidence:** reasoning on the text only. No quantitative claim is made; nothing below is empirical.
 
 ### **1. The Friction**
@@ -765,3 +765,65 @@ Art. 4.4 retitled **"Drawn Expert Evidence and Intelligible Decision-Making"**; 
 * No evidence of magnitude for any vector. The verdicts are reasoning on the text, not measurements.
 
 **Next action:** one external critic with field experience of citizens' assemblies reviews Sections 4–6. A SIMONE Layer 2 run of RED-3 (persuasion vs evidence weight) under duel vs juror-led formats, labelled synthetic.
+
+### **8. Addendum (2026-11-12): Open Models as Evidentiary Aid** *(Stage 2 continued; Sections 4–7 unchanged)*
+*Measurement status of every item in this addendum: **`NOT_RUN`**. The verdicts below are a red-team reading of the text, not tests. No quantitative claim is made.*
+
+#### **8.1 New Hypotheses**
+* **H7, open models as evidentiary aid.** Open, reproducible models (Arts. 7.3, 7.5) prepare the case for each position in place of, or alongside, the rival panels. Conditions:
+  * jurors write the proposal and the positions; each position is worded by its supporters and checked by the other side;
+  * one fixed, public prompt template with a single position slot, written before any topic is known, accepting more than two positions;
+  * the same attached documents, settings and length limit for every run; any party may add documents;
+  * at least two models of different origin, each arguing every position (role swap), with repeated runs and a reworded-proposal run to expose framing sensitivity;
+  * every claim cites a passage in the attached documents; uncited claims are discarded for all sides;
+  * each output states its assumptions, its weakest point, and the observation that would change the conclusion;
+  * human practitioners remain for local and practical knowledge; no model is present in final deliberation.
+* **H8, oversight of machine influence.** A control loop with a number, a threshold, a body and a consequence:
+  * the civic register publishes prompts, model outputs and votes, and computes per assembly the share of decisions that matched the machine-written brief (concordance index);
+  * any citizen can re-run a published prompt and compare the output;
+  * Organic Law fixes a concordance threshold (e.g. 90% over one year) that triggers a review;
+  * the review is done by a single-purpose panel of 15 citizens drawn from a non-contiguous watershed, dissolved afterwards, which reads the session records and not only the index;
+  * the panel may clear the assembly, order a change of model or prompt template, or suspend machine aid in that assembly for a fixed period; it cannot reverse decisions already taken;
+  * models and prompt templates used in deliberation fall under the red-team bounties of Art. 7.6.1.
+  * *Known limits:* high concordance may only mean the brief was good; an assembly aware of the index can diverge on purpose to lower it.
+
+#### **8.2 New Red Vectors**
+* **RED-6 (drift toward the synthesis):** jurors follow the machine-written brief by habit, so the model governs in fact without anyone deciding it should.
+* **RED-7 (framing and model capture):** whoever writes the prompt template, selects the documents, or controls the weights steers both sides at once; two "rival" runs of related models share the same blind spots.
+
+#### **8.3 Red Team Against H7** *(measurement `NOT_RUN`)*
+* **Coherence with Chapter VII: `RED_WINS` unless the citation rule carries the load.**
+  * Art. 7.5.3 voids any governance protocol that resists functional comprehension by ordinary citizens. A neural model does. H7 survives only because the checkable object is the cited passage, not the model: a juror can read the passage and judge whether it supports the claim. Without the citation rule, H7 is void under Art. 7.5.3.
+  * Art. 7.1.2 makes delegation of legislative drafting to neural models an absolute nullity. H7 keeps drafting with jurors; RED-6 is the route by which drafting slides to the model anyway (see 8.5).
+  * Art. 7.3 demands bit-for-bit reproducibility of *binaries*. Published weights can be hashed and re-run, but training cannot be reproduced by any citizen node, and sampled inference is not deterministic. "Reproducible" in H7 can mean only: fixed weight hash, fixed settings, logged inputs, re-runnable within a tolerance.
+  * Art. 7.2 bans proprietary or licence-locked software in public administration. Many "open-weight" models carry use restrictions and undisclosed training data. Eligible models must meet Art. 7.2, which may leave very few.
+* **RED-1 (nomination capture) → RED-7: `RED_WINS` (residual).** Capture moves from choosing experts to choosing models, template and documents. "Different origin" is weak protection: few organizations train capable models, and they share much of the same training data, so role-swapped runs on two such models agree on the same blind spots. Role swap exposes *asymmetric* advocacy, not *shared* error. *Guard:* models drawn by lot per case from an open register of models meeting Art. 7.2, with a hiatus per model as for experts. Residual: the register is small.
+* **RED-2 (manufactured doubt): `RED_WINS` via documents.** "Any party may add documents" opens two attacks. Flooding: a party adds many documents so the length limit and citation rule favour its material. Injection: a document carries text written to steer the model, and it steers every run on every side at once. Role swap does not reveal injection, since it acts on all positions equally. *Guard:* equal document quota per position; every document shown to jurors as attached; template and documents in scope of the Art. 7.6.1 bounties. Residual: injection detection is an open problem; screening documents would recreate a gatekeeper.
+* **RED-3 (rhetorical capture): `BLUE_HOLDS` on symmetry, moves to RED-6.** Every position gets the same fluency, which removes the advocacy-skill gap. The persuasive asymmetry becomes deference to machine text as such.
+* **RED-4 (false balance): `PARTIAL`.** More than two positions are allowed (fixes the two-sides defect). But an equal length limit per position gives a fringe position as much text as a well-supported one, which signals equal weight. *Guard:* the human disagreement map (H4) states where practitioners actually stand; each output's "weakest point" is shown first.
+* **RED-5 (repeat players): `RED_WINS` (worse than before).** A model is the ultimate repeat player: the same weights in every assembly at every tier. One systematic bias becomes a planet-wide monoculture. *Guard:* the per-case lottery and per-model hiatus above. Residual: model diversity is bounded by how many eligible models exist.
+* **Citation rule: `BLUE_HOLDS` with guard.** Red: a model can cite a real passage that does not support the claim. Checking citations by another model is recursion. *Guard:* each side checks the other side's citations by hand; a claim whose cited passage does not support it is discarded like an uncited one.
+* **Overall H7: `BLUE_HOLDS_WITH_GUARDS` as an aid alongside drawn human panels; `RED_WINS` "in place of" them.** Replacing human practitioners removes the only check on shared model blind spots (RED-7) and on documents nobody brought.
+
+#### **8.4 Red Team Against H8** *(measurement `NOT_RUN`)*
+* **The index is undefined for H7 as written: `RED_WINS` until fixed.** H7 briefs argue every position and make no recommendation, so "matched the machine-written brief" has no referent. *Guard:* each run ends with a sealed line naming the position best supported by its cited passages; the line is withheld from jurors and published only after the vote. Concordance is computed against the sealed lines. The sealed line cannot steer jurors and still measures drift.
+* **Small samples: `RED_WINS` at small tiers.** A 15-seat council decides few complex matters a year (OL-9.7 caps them). With 10 decisions, 9 of 10 concordant (90%) arises by chance far too often to be a signal (see SIM-QA-19 for small-sample error). *Guard:* the threshold applies only above a minimum count of decisions, pooled over a longer window if needed.
+* **Publishing votes: `RED_WINS` if individual.** Published individual votes let anyone verify how a juror voted, which is what makes instructing or rewarding delegates enforceable and so defeats Art. 4.1.3. *Guard:* publish tallies only.
+* **Re-run right: `BLUE_HOLDS` with two guards.** Inference is not exactly deterministic, so comparison needs published settings and a stated tolerance; divergence beyond it is a bounty finding (Art. 7.6.1). Coherence: Art. 5.2.2 can exclude a citizen from advanced computing grids; the re-run right must be exempt, as sortition eligibility is under Art. 5.2.3.
+* **Review panel reading session records: `PARTIAL`.** H5 closes final deliberation. The panel can read sealed deliberation records only if they exist. *Guard:* records kept sealed, opened to the review panel alone, never published. Residual: jurors who know they may be read later deliberate differently.
+* **Art. 7.6.1 scope: `PARTIAL`.** The bounties cover vulnerabilities, backdoors and centralization vectors. Framing bias in a template is not clearly any of these. *Guard:* Organic Law names framing bias and document injection as eligible findings.
+* **RED-7 against H8: `RED_WINS` (residual).** A template that steers all positions equally leaves concordance unchanged. H8 cannot see symmetric capture. *Guard:* the register also publishes sensitivity scores from role swap, repetition and rewording (the script in the next action).
+* **Known limits confirmed.** High concordance may only mean good briefs; an assembly aware of the index can game it downward. The panel reads records rather than the number, which is the right answer to both, at the cost of 15 citizens' time per review.
+
+#### **8.5 RED-6 and RED-7 Verdicts**
+* **RED-6 (drift toward the synthesis): `RED_WINS` against H7 alone; `PARTIAL` with H8 and the sealed-line guard.** H7 offers no synthesis, but jurors can still adopt whichever case reads best, which is de facto drafting by the model (Art. 7.1.2). H8 with sealed lines measures this; it cannot prevent it. The consequence (suspension of machine aid) is the only brake.
+* **RED-7 (framing and model capture): `RED_WINS` (residual after all guards).** Lottery over models, a version-locked template adopted by Organic Law, bounties and sensitivity scores raise the cost. None removes the shared blind spots of models trained on similar data, and none detects a template that steers every side the same way.
+
+#### **8.6 Residual Weaknesses (Addendum)**
+* Shared blind spots across models (RED-7) have no detector. Human practitioners are the only check, so H7 must stay "alongside", never "in place of".
+* Document injection is unsolved without a gatekeeper.
+* The number of models meeting Art. 7.2 may be too small for lottery and hiatus to mean anything.
+* Concordance measures drift only after the fact and only above a minimum count of decisions; small councils are effectively unmonitored.
+* Every verdict here is reasoning on text. Nothing has been measured.
+
+**Next action (addendum):** a reproducible script that measures, on real case files, how far model output moves under role swap, repetition and rewording (framing-sensitivity scores for H7/H8). H7/H8 are not added to the purple patch in Section 6 until those measurements exist.
