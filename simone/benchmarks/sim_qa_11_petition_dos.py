@@ -34,6 +34,11 @@ Scenarios:
 Reproduce:
   python3 simone/benchmarks/sim_qa_11_petition_dos.py             # 400 reps
   python3 simone/benchmarks/sim_qa_11_petition_dos.py --reps 50   # quick run
+  python3 simone/benchmarks/sim_qa_11_petition_dos.py --budget-h 1.5
+      # 2026-11-13 re-run (SIM-QA-18 X-4, cross-docket Y-11): petition budget
+      # restated as 3/8 of the Set B council share (1.5 h per member per week);
+      # capacity becomes budget / H_DOCKET dockets a week, carried as credit
+      # from week to week. Without the flag the original figures are unchanged.
 """
 
 import argparse
@@ -60,6 +65,7 @@ TOKENS = 9                # attention tokens per adult per quarter; making k
 ENDORSE = math.isqrt(TOKENS)
 CO_SIGN_SHARE = 0.02      # co-signers needed = max(3, ceil(share * N))
 FAST_LANE_SHARE = 0.10    # distinct co-signers for the fast lane
+CAP_PER_WEEK = float(CAPACITY)  # dockets a week; set from --budget-h if given
 EXPIRY = 13               # weeks an unheard petition stays in the lottery pool
 ATTACK_PER_MEMBER = 1.0   # attack intensity: petitions per member per week
 BURST = 50                # one-off burst at week 0 ("50 bad-faith proposals")
@@ -95,6 +101,7 @@ def weighted_sample(rng, items, weights, k):
 
 def run_once(scenario, faction_share, seed, atk_fast=False):
     rng = random.Random(seed)
+    credit = 0.0
     allowance = scenario in ("S1", "S3")
     lottery = scenario in ("S2", "S3")
     weighted = fast_lane = scenario == "S3"
@@ -160,12 +167,15 @@ def run_once(scenario, faction_share, seed, atk_fast=False):
             pending = [p for p in pending if week - p["t"] < EXPIRY]
 
         # ---- agenda selection
+        credit += CAP_PER_WEEK
+        cap_w = int(credit + 1e-9)
+        credit -= cap_w
         chosen = []
         if fast_lane:
-            chosen = sorted((p for p in pending if p["broad"]), key=lambda p: p["t"])[:CAPACITY]
+            chosen = sorted((p for p in pending if p["broad"]), key=lambda p: p["t"])[:cap_w]
         cid = set(id(p) for p in chosen)
         rest = [p for p in pending if id(p) not in cid]
-        free = CAPACITY - len(chosen)
+        free = cap_w - len(chosen)
         if free > 0 and rest:
             if weighted:
                 chosen += weighted_sample(rng, rest, [p["w"] for p in rest], free)
@@ -234,10 +244,17 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--reps", type=int, default=400)
     ap.add_argument("--seed", type=int, default=20261030)
+    ap.add_argument("--budget-h", type=float, default=None,
+                    help="petition budget in juror-hours per member per week")
     a = ap.parse_args()
+    global CAP_PER_WEEK
+    if a.budget_h is not None:
+        CAP_PER_WEEK = a.budget_h / H_DOCKET
 
     print("SIM-QA-11 petition DoS — SYNTHETIC MODEL OUTPUT (not empirical)")
     print(f"N={N_ADULTS} weeks={WEEKS} reps={a.reps} seed={a.seed} capacity={CAPACITY}/wk "
+          f"(budget {'merged' if a.budget_h is None else str(a.budget_h) + ' h'}: "
+          f"{CAP_PER_WEEK:.3f} dockets/wk) "
           f"organic={LAMBDA_ORGANIC}/wk co-signers={co_signers_needed(N_ADULTS)} "
           f"fast-lane={math.ceil(FAST_LANE_SHARE * N_ADULTS)} endorsements={ENDORSE}/adult/qtr "
           f"attack={ATTACK_PER_MEMBER}/member/wk + burst {BURST} burnout>{BURNOUT_H}h/wk")
@@ -261,7 +278,7 @@ def main():
     print("(S3* = worst case over attacker pure strategies: all-normal-lane vs all-fast-lane)")
 
     print(f"\nAnalytic faction ceiling under allowance (petitions/quarter; council "
-          f"capacity = {CAPACITY * QUARTER}/quarter):")
+          f"capacity = {CAP_PER_WEEK * QUARTER:.1f}/quarter):")
     for f in (0.05, 0.10, 0.20):
         print(f"  f={f:.2f}: normal lane <= {faction_cap_per_quarter(f)}, "
               f"fast lane <= {faction_cap_per_quarter(f, fast=True)}")
