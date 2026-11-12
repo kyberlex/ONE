@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "network": "O-ASIS Confederated Mesh",
   "genesis": false,
-  "tick": 241286,
-  "day": 10054,
-  "timestamp": "2026-11-12T05:31:32Z",
+  "tick": 241298,
+  "day": 10055,
+  "timestamp": "2026-11-12T19:29:06Z",
   "nodes": {
     "node-detroit": {
       "id": "node-detroit",
@@ -95,13 +95,13 @@
       "fiatTreasury": 14200,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 11140,
+          "batteryStoredKwh": 8980,
           "batteryCapacityKwh": 12000,
           "solarGenerationKwh": 410,
           "consumptionKwh": 290
         },
         "water": {
-          "cisternStoredL": 54542,
+          "cisternStoredL": 54986,
           "cisternCapacityL": 60000,
           "rainInflowL": 750,
           "consumptionL": 380
@@ -184,13 +184,13 @@
       "fiatTreasury": 9800,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 5330,
+          "batteryStoredKwh": 6890,
           "batteryCapacityKwh": 10000,
           "solarGenerationKwh": 280,
           "consumptionKwh": 310
         },
         "water": {
-          "cisternStoredL": 28562,
+          "cisternStoredL": 28646,
           "cisternCapacityL": 40000,
           "rainInflowL": 350,
           "consumptionL": 280
@@ -273,13 +273,13 @@
       "fiatTreasury": 18000,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 13140,
+          "batteryStoredKwh": 10980,
           "batteryCapacityKwh": 14000,
           "solarGenerationKwh": 620,
           "consumptionKwh": 360
         },
         "water": {
-          "cisternStoredL": 31340,
+          "cisternStoredL": 31220,
           "cisternCapacityL": 65000,
           "rainInflowL": 380,
           "consumptionL": 480
@@ -362,7 +362,7 @@
       "fiatTreasury": 13000,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 9150,
+          "batteryStoredKwh": 6990,
           "batteryCapacityKwh": 11000,
           "solarGenerationKwh": 480,
           "consumptionKwh": 310
@@ -532,5 +532,5 @@
     "author": "Kyberlex <kyberlex@proton.me>",
     "license": "AGPL-3.0-or-later"
   },
-  "thermoConsensusHash": "e4756a3a3b5497ca6e37cc3664a93386568dd3f959e521696456e1f715823dd6"
+  "thermoConsensusHash": "9b638a7b992a081a113ccb6a781b99cb3d8855212f1a98808f96426190e300c2"
 }
