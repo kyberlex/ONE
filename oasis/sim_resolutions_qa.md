@@ -37,7 +37,7 @@ To ensure non-autocratic, rigorous governance, every entry carries an explicit e
 | **`SIM-QA-15`** | Internal Coherence Audit — Contradictions Between Canonical Articles | Constitutional Coherence | `[STATUS: CANONICAL_MERGED]` | Art. 2.6.2, 4.1.3, 4.2.1, 4.5, 4.6, 5.2, 7.1.2, 8.1.3–4, 10.5.3 |
 | **`SIM-QA-16`** | Demographic Inversion ("Silver Tsunami") Before Full Automation | Labor / Demography | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 5.1, 5.6, 10.3, 10.4 |
 | **`SIM-QA-17`** | Organic Law Separation — Restoring Technological Neutrality | Drafting Invariants | `[STATUS: CANONICAL_MERGED]` | Art. 1.4.3, 3.3.3, 6.2–6.4, 8.1.4, 8.2.2, 10.5.3, 10.6.4, Ch. XI |
-| **`SIM-QA-18`** | Refusal of a Sortition Summons — Undefined Procedure | Governance / Sortition | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 4.3.1, 4.3.2, 4.3.3, 5.2.3 |
+| **`SIM-QA-18`** | Refusal of a Sortition Summons — Undefined Procedure | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.3.1, 4.3.2, 4.3.3, 5.2.3 |
 | **`SIM-QA-19`** | Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.1.1, 4.2, 4.3.1, 7.4.4 |
 | **`SIM-QA-20`** | Rival Expert Panels — Advocacy Capture and Precautionary Veto | Governance / Epistemics | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.4, 8.4.3, OL-9.7 |
 
@@ -568,9 +568,11 @@ Detail placed in Chapter I is shielded by Art. 1.7 from *any* future amendment. 
 ## **SIM-QA-18: Refusal of a Sortition Summons — Undefined Procedure**
 
 * **Date Recorded:** 2026-11-12  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Registered only; no stress-test run yet)  
+* **Stress-Tested:** 2026-11-12  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Verdict on current text **`RED_WINS`** (RED-1, RED-2, small-node fill failure); RED-3 and RED-4 **`BLUE_HOLDS`** under H1/H2. RED-2 survives every hypothesis. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged.  
 * **Originating Context:** Maintainer review of Chapter IV  
-* **Constitutional Articles:** Arts. 4.3.1, 4.3.2, 4.3.3, 5.2.3
+* **Constitutional Articles:** Arts. 4.2.2, 4.3.1, 4.3.2, 4.3.3, 5.2.3  
+* **Reproducible Evidence:** [`simone/benchmarks/sim_qa_18_summons_refusal.py`](../simone/benchmarks/sim_qa_18_summons_refusal.py) → [`results`](../simone/benchmarks/results/sim_qa_18_summons_refusal_results.md) (`--reps 200 --seed 20261112`; **synthetic, uncalibrated**: every share, multiplier and effect size is an assumption)
 
 ### **1. The Friction**
 * Art. 4.3.2 calls civic service by lot an "inviolable duty". Neither the Constitution nor the Organic Law Annex says what happens when a summoned citizen refuses, defers, or drops out, or how the seat is refilled.
@@ -592,7 +594,36 @@ Detail placed in Chapter I is shielded by Art. 1.7 from *any* future amendment. 
 * **H4, published refusal rates:** refusal and dropout rates are published per stratum. A stratum that refuses well above the others triggers a review of service conditions, never of persons.
 * **H5, shorter mandates at higher tiers:** see SIM-QA-19 H4.
 
-**Next action:** SIMONE Layer 2/3 run with refusal probability as an agent parameter (correlated with age, care load, and HEXACO traits), swept against node size (50, 150, 500 adults). Report the refusal rate at which a 15-seat council cannot be filled under the Art. 4.3.3 hiatus, and the composition drift under H1–H3.
+### **4. Stage 2: Model and Red-Team Findings Against the Current Text** *(synthetic, uncalibrated)*
+Model: Python stdlib Monte Carlo, not the Julia SIMONE ABM; HEXACO traits not modelled. Node of 50 / 150 / 500 adults; council of 15 (six-month mandate, twelve-month hiatus) and mediation panel of 3 (three-month mandate, six-month hiatus); quota draw on age, gender and geography; refusal swept 0–0.95, uniform or correlated with age and care load (carers 20% of adults, assumed 2.5× refusal). "B0" reads the current text as free refusal with replacement from the general pool.
+* **Small-node fill failure: `RED_WINS`.** At 50 adults the hiatus leaves about 17–20 eligible people for 15 council seats. At 10% refusal 7% of council terms already leave a seat empty; at 30%, about half. No hypothesis rescues this (H1–H3 together: 3% at 10%, 30% at 30%). At 150 adults seats fail only from about 80–90% refusal; at 500, not below 95%. At an invitation-style refusal of about 94%, only the 500-adult node fills its council.
+* **RED-1 (silent self-selection): `RED_WINS`.** With correlated refusal from 60% upward, carers fall from 20% of the population to about 1–2% of seated members (−18 to −19 points), while stratum-matched replacement (H3) keeps age, gender and geography on target. The quotas of Art. 4.3.1 are met while the body loses its carers.
+* **RED-2 (strategic refusal): `RED_WINS`, analytic.** Under free refusal, a faction of share *f* that always accepts while others refuse at rate *r* holds an expected seat share of *f* / (*f* + (1−*f*)(1−*r*)). A 5% faction holds 12% of seats at *r* = 0.6, 34% at 0.9 and 47% at 0.94; a 10% faction holds 65% at 0.94. No rule breaks. Quorum starvation is the mirror case: at 50 adults a handful of refusers can empty seats.
+* **RED-3 (excusal gatekeeping): `NOT_TRIGGERED` under current text** (no excusal procedure exists), **`BLUE_HOLDS` under H2** (self-certified listed grounds, never judged on merit).
+* **RED-4 (coerced juror): `NOT_TRIGGERED`.** No sanction exists (Art. 5.2.3), so nobody is coerced. The defect is the reverse: "inviolable duty" is a duty without content.
+
+### **5. Stage 2: Red Team Against the Hypotheses**
+* **H1 (attend, then may withdraw): `BLUE_HOLDS`, effect assumed.** The model assumes 30% of would-be refusers stay after orientation; with that assumption the carer gap shrinks to −4 to −9 points and the 50-adult fill threshold moves from 10% to 20%. The size of the effect is the assumption, not a finding. Red: orientation costs time of people who will leave; a faction attends and stays regardless (RED-2 unchanged).
+* **H2 (one deferral, listed self-certified excusals): `BLUE_HOLDS`, effect assumed.** If care support is arranged before a deferred carer's next summons, the carer gap shrinks to about −5 to −7 points. Red: a self-certified excusal is free refusal under another name. *Guard:* excusals count in the published rates (H4).
+* **H3 (stratum-matched alternates): `BLUE_HOLDS` on the stratified attributes only.** Restores age/gender/geography to the quota-fill floor (TVD ≈ 0.03) at 150 and 500 adults, but does nothing for carers (still −18 to −19 points) and nothing against RED-2, since the faction is spread across strata. At 50 adults cells run empty and fallback undoes it.
+* **H1 + H2 + H3: best tested combination.** Carer gap about −2 points and composition at the floor at 150 and 500 adults. Still fails at 50 adults.
+* **H4 (published rates): `BLUE_HOLDS` as a diagnostic.** It makes RED-1 visible; it cannot reveal RED-2 without identifying who accepts.
+* **H5 (shorter mandates at higher tiers):** not modelled; see SIM-QA-19 H4 (`INCONCLUSIVE`).
+* **Additional hypothesis H6 (small-node hiatus):** in the 50-adult node, a council hiatus equal to the mandate (6 months) moves the 5% fill-failure point from 10% to 50% refusal (B0) and to 60% with H1–H3. Red: a shorter hiatus means the same people return every year in small nodes, which is the entrenchment Art. 4.3.3 exists to prevent. `BLUE_HOLDS` with that residual.
+
+### **6. Purple Patch (Proposed)** `[STATUS: SIMULATION_HYPOTHESIS]` — *not merged; canon unchanged*
+* **Art. 4.3.2 (replaced):** "Civic service by lot is a universal prerogative and a civic duty to answer the summons. A summoned citizen attends an orientation session and may then withdraw without penalty, stigma, or loss of any right (Article 5.2.3). Each citizen may defer one summons without stating a reason; excusal on grounds listed in Organic Law is self-certified and never judged on merit. Citizens who serve receive full release from routine labor and replacement of domestic and care support, arranged before service begins."
+* **Art. 4.3.1 (addition):** "Each draw produces ordered alternates within every stratum; a seat left by withdrawal, deferral or excusal passes to the next alternate of the same stratum. Refusal, withdrawal and excusal rates, including counts by excusal ground, are published per stratum without identifying persons; a rate well above the others triggers review of service conditions, never of persons."
+* **Art. 4.3.3 (addition):** "In nodes of fewer than one hundred and fifty (150) adult residents, the hiatus after a Neighborhood Council mandate equals the length of the mandate."
+* **Organic Law (proposed, 60%):** list of excusal grounds (illness, bereavement, non-replaceable care); length and content of orientation; deferral window (next term of the same body); review trigger (provisional: a stratum refusing at more than 1.5× the median); all `PROVISIONAL — UNVERIFIED`.
+
+### **7. Residual Weaknesses (Honest Limits)**
+* **RED-2 is unsolved.** Any right to withdraw hands seats to whoever always accepts; at high refusal a 5% faction can take about half of a council. The only lever found is lowering refusal itself (service conditions, care support), which this model cannot calibrate. This also weakens SIM-QA-19 (15-seat councils) and SIM-QA-11 (petition flooding).
+* **Nodes of 50 adults cannot sustain a 15-seat council** under any tested rule once refusal passes 20% (current hiatus) or 50–60% (hiatus equal to mandate). The 50-adult trigger of Art. 4.2.2 (SIM-QA-01) should be re-examined; a separate docket is recommended rather than reopening SIM-QA-01 here.
+* All effect sizes for H1 and H2 are assumptions. The model shows *how* these rules act, not *how much*.
+* No real refusal data exists for duty-based summons without sanction. The 4–6% acceptance figures come from voluntary invitations, which are a different regime.
+
+**Next action:** calibrate refusal against jury-duty and assembly data; port to the Julia SIMONE ABM with HEXACO traits; open a docket on the 50-adult Council trigger.
 
 ---
 
