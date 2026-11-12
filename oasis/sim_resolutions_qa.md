@@ -37,7 +37,7 @@ To ensure non-autocratic, rigorous governance, every entry carries an explicit e
 | **`SIM-QA-15`** | Internal Coherence Audit — Contradictions Between Canonical Articles | Constitutional Coherence | `[STATUS: CANONICAL_MERGED]` | Art. 2.6.2, 4.1.3, 4.2.1, 4.5, 4.6, 5.2, 7.1.2, 8.1.3–4, 10.5.3 |
 | **`SIM-QA-16`** | Demographic Inversion ("Silver Tsunami") Before Full Automation | Labor / Demography | `[STATUS: SIMULATION_HYPOTHESIS]` | Art. 5.1, 5.6, 10.3, 10.4 |
 | **`SIM-QA-17`** | Organic Law Separation — Restoring Technological Neutrality | Drafting Invariants | `[STATUS: CANONICAL_MERGED]` | Art. 1.4.3, 3.3.3, 6.2–6.4, 8.1.4, 8.2.2, 10.5.3, 10.6.4, Ch. XI |
-| **`SIM-QA-18`** | Refusal of a Sortition Summons — Undefined Procedure | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed) | Art. 4.3.1, 4.3.2, 4.3.3, 5.2.3 |
+| **`SIM-QA-18`** | Refusal of a Sortition Summons — Undefined Procedure | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed; H7 part-time addendum, Set B preferred) | Art. 4.1.3, 4.2, 4.3.1, 4.3.2, 4.3.3, 4.3.4, 5.2.3 |
 | **`SIM-QA-19`** | Statistical Representativeness of the 3 / 15 / 101 / 301 / 1,001 Tiers | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch revised: referral withdrawn, H5 second reading + H6 drawn mandate length) | Art. 4.1.1, 4.2, 4.3.1, 4.3.5, 7.4.4 |
 | **`SIM-QA-20`** | Rival Expert Panels — Advocacy Capture and Precautionary Veto | Governance / Epistemics | `[STATUS: OASIS_STRESS_TESTED]` (RED_WINS; patch proposed; H7/H8 addendum NOT_RUN) | Art. 4.4, 7.3, 7.5, 7.6.1, 8.4.3, OL-9.7 |
 | **`SIM-QA-21`** | Governance of Nodes Below the Council Threshold | Governance / Sortition | `[STATUS: OASIS_STRESS_TESTED]` (current text and H1 RED_WINS; H2 holds with residuals; patch proposed) | Art. 4.2.1, 4.2.2, 4.3.3, 10.1.3 |
@@ -570,10 +570,10 @@ Detail placed in Chapter I is shielded by Art. 1.7 from *any* future amendment. 
 
 * **Date Recorded:** 2026-11-12  
 * **Stress-Tested:** 2026-11-12  
-* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Verdict on current text **`RED_WINS`** (RED-1, RED-2, small-node fill failure); RED-3 and RED-4 **`BLUE_HOLDS`** under H1/H2. RED-2 survives every hypothesis. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Verdict on current text **`RED_WINS`** (RED-1, RED-2, small-node fill failure); RED-3 and RED-4 **`BLUE_HOLDS`** under H1/H2. RED-2 survives every hypothesis. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged. **Addendum 2026-11-12 (section 8):** maintainer hypothesis H7 (part-time service) **`BLUE_HOLDS` conditionally** on RED-2 (the first lever found, size assumed); RED-1 only if service also becomes compatible with care; online deliberation, staff dependence and complex matters **`RED_WINS` at Set A, `NARROWED` at Set B**. Set B holds up better than Set A.  
 * **Originating Context:** Maintainer review of Chapter IV  
-* **Constitutional Articles:** Arts. 4.2.2, 4.3.1, 4.3.2, 4.3.3, 5.2.3  
-* **Reproducible Evidence:** [`simone/benchmarks/sim_qa_18_summons_refusal.py`](../simone/benchmarks/sim_qa_18_summons_refusal.py) → [`results`](../simone/benchmarks/results/sim_qa_18_summons_refusal_results.md) (`--reps 200 --seed 20261112`; **synthetic, uncalibrated**: every share, multiplier and effect size is an assumption)
+* **Constitutional Articles:** Arts. 4.2.2, 4.3.1, 4.3.2, 4.3.3, 5.2.3; addendum H7: Arts. 4.1.3, 4.2 (service share and drawn mandate length per tier), 4.3.2 (proportional release), 4.3.4  
+* **Reproducible Evidence:** [`simone/benchmarks/sim_qa_18_summons_refusal.py`](../simone/benchmarks/sim_qa_18_summons_refusal.py) → [`results`](../simone/benchmarks/results/sim_qa_18_summons_refusal_results.md) (`--reps 200 --seed 20261112`; **synthetic, uncalibrated**: every share, multiplier and effect size is an assumption); addendum: [`sim_qa_18_h7_part_time.py`](../simone/benchmarks/sim_qa_18_h7_part_time.py) → [`results`](../simone/benchmarks/results/sim_qa_18_h7_part_time_results.md) (`--reps 200 --seed 20261112`; same caveat)
 
 ### **1. The Friction**
 * Art. 4.3.2 calls civic service by lot an "inviolable duty". Neither the Constitution nor the Organic Law Annex says what happens when a summoned citizen refuses, defers, or drops out, or how the seat is refilled.
@@ -594,6 +594,7 @@ Detail placed in Chapter I is shielded by Art. 1.7 from *any* future amendment. 
 * **H3, stratum-matched alternates:** the same public draw produces ordered alternates per stratum, so a replacement never shifts the composition or the odd parity.
 * **H4, published refusal rates:** refusal and dropout rates are published per stratum. A stratum that refuses well above the others triggers a review of service conditions, never of persons.
 * **H5, shorter mandates at higher tiers:** see SIM-QA-19 H4.
+* **H7, part-time service (maintainer, registered 2026-11-12):** see section 8.
 
 ### **4. Stage 2: Model and Red-Team Findings Against the Current Text** *(synthetic, uncalibrated)*
 Model: Python stdlib Monte Carlo, not the Julia SIMONE ABM; HEXACO traits not modelled. Node of 50 / 150 / 500 adults; council of 15 (six-month mandate, twelve-month hiatus) and mediation panel of 3 (three-month mandate, six-month hiatus); quota draw on age, gender and geography; refusal swept 0–0.95, uniform or correlated with age and care load (carers 20% of adults, assumed 2.5× refusal). "B0" reads the current text as free refusal with replacement from the general pool.
@@ -613,10 +614,12 @@ Model: Python stdlib Monte Carlo, not the Julia SIMONE ABM; HEXACO traits not mo
 * **Additional hypothesis H6 (small-node hiatus):** in the 50-adult node, a council hiatus equal to the mandate (6 months) moves the 5% fill-failure point from 10% to 50% refusal (B0) and to 60% with H1–H3. Red: a shorter hiatus means the same people return every year in small nodes, which is the entrenchment Art. 4.3.3 exists to prevent. `BLUE_HOLDS` with that residual.
 
 ### **6. Purple Patch (Proposed)** `[STATUS: SIMULATION_HYPOTHESIS]` — *not merged; canon unchanged*
-* **Art. 4.3.2 (replaced):** "Civic service by lot is a universal prerogative and a civic duty to answer the summons. A summoned citizen attends an orientation session and may then withdraw without penalty, stigma, or loss of any right (Article 5.2.3). Each citizen may defer one summons without stating a reason; excusal on grounds listed in Organic Law is self-certified and never judged on merit. Citizens who serve receive full release from routine labor and replacement of domestic and care support, arranged before service begins."
+* **Art. 4.3.2 (replaced; revised for H7, 2026-11-12):** "Civic service by lot is a universal prerogative and a civic duty to answer the summons. A summoned citizen attends an orientation session at a first mandate and may then withdraw without penalty, stigma, or loss of any right (Article 5.2.3). Each citizen may defer one summons without stating a reason; excusal on grounds listed in Organic Law is self-certified and never judged on merit. Service occupies a share of a full working week fixed by Organic Law for each tier; citizens who serve receive release from routine labor in proportion to the hours served, and replacement of domestic and care support for those hours, arranged before service begins. Local bodies meet in person; higher tiers may deliberate remotely with periodic sessions in person. Final votes are cast in a protected civic booth, and a public terminal is provided to any member without connectivity. A body may raise its weekly share for a named complex matter within the limit of Organic Law, with release raised in proportion."
 * **Art. 4.3.1 (addition):** "Each draw produces ordered alternates within every stratum; a seat left by withdrawal, deferral or excusal passes to the next alternate of the same stratum. Refusal, withdrawal and excusal rates, including counts by excusal ground, are published per stratum without identifying persons; a rate well above the others triggers review of service conditions, never of persons."
 * **Art. 4.3.3 (addition):** "In nodes of fewer than one hundred and fifty (150) adult residents, the hiatus after a Neighborhood Council mandate equals the length of the mandate."
   * *Note (SIM-QA-21):* if SIM-QA-21 is adopted, this addition becomes unnecessary, since nodes under 150 adults then hold no Neighborhood Council. Kept pending that decision.
+* **Art. 4.2 (amended mandate clauses, H7 with SIM-QA-19 H6):** each tier's fixed mandate is replaced by a share of a full working week and a drawn mandate range fixed by Organic Law. Art. 4.3.3 unchanged (hiatus twice the mandate served).
+* **Organic Law (proposed, 60%), H7:** service share and mandate range per tier, provisional **Set B**: 15 seats 10%, 3–6 months; 101 seats 20%, 4–8 months; 301 seats 50%, 4–8 months; 1,001 seats 50%, 6–12 months (Set C, 1,001 seats 50%, 9–15 months, held in reserve if learning at the global tier proves longer than assumed); ceiling for a temporary raise on a complex matter; ratio of in-person sessions for remote tiers; civic booth and public terminal standards. All `PROVISIONAL — UNVERIFIED`.
 * **Organic Law (proposed, 60%):** list of excusal grounds (illness, bereavement, non-replaceable care); length and content of orientation; deferral window (next term of the same body); review trigger (provisional: a stratum refusing at more than 1.5× the median); all `PROVISIONAL — UNVERIFIED`.
 
 ### **7. Residual Weaknesses (Honest Limits)**
@@ -625,7 +628,49 @@ Model: Python stdlib Monte Carlo, not the Julia SIMONE ABM; HEXACO traits not mo
 * All effect sizes for H1 and H2 are assumptions. The model shows *how* these rules act, not *how much*.
 * No real refusal data exists for duty-based summons without sanction. The 4–6% acceptance figures come from voluntary invitations, which are a different regime.
 
-**Next action:** calibrate refusal against jury-duty and assembly data; port to the Julia SIMONE ABM with HEXACO traits; open a docket on the 50-adult Council trigger.
+**Next action:** calibrate refusal against jury-duty and assembly data; port to the Julia SIMONE ABM with HEXACO traits; open a docket on the 50-adult Council trigger (done: SIM-QA-21).
+
+
+### **8. Addendum (2026-11-12): Maintainer Hypothesis H7, Part-Time Service** *(synthetic, uncalibrated)*
+**H7:** no full-time mandates by default. A share of a full working week is fixed per tier in Organic Law; release from labour is proportional to hours served (Art. 4.3.2 now assumes full release); sessions are short; local bodies meet in person, upper tiers online with periodic in-person sessions; final votes are cast in a protected civic booth; a public terminal is provided for members without connectivity. Members may serve again after the hiatus; orientation is given only at the first mandate. *Rationale:* service conditions are the only lever found against RED-2 (section 7).
+
+**Parameter sets** (share of a 40-hour week, drawn mandate range, SIM-QA-19 H6): **Set A** (maintainer) 15 seats 10%, 3–6 months; 101 seats 20%, 2–4; 301 seats 50%, 4–8; 1,001 seats 100%, 6–12. **Set B** (variant) as A but 101 seats 20%, 4–8 and 1,001 seats 50%, 6–12. **Set C** (proposed here) as B but 1,001 seats 50%, 9–15.
+
+**Measurements** ([results](../simone/benchmarks/results/sim_qa_18_h7_part_time_results.md)). Assumed learning time in service hours: 12 / 40 / 80 / 160 h for 15 / 101 / 301 / 1,001 seats; returners need a quarter of it.
+
+| Tier | Current text (full-time) | Set A | Set B | Set C |
+| :--- | :--- | :--- | :--- | :--- |
+| 15 seats: hours per mandate; share before up to speed; people per year | 1,040 h; 1%; 30 | 78 h; 15%; 40 | same as A | same as A |
+| 101 seats | 2,080 h; 2%; 101 | 104 h; **38%**; 404 | 208 h; 19%; 202 | as B |
+| 301 seats | 3,120 h; 3%; 201 | 520 h; 15%; 602 | as A | as A |
+| 1,001 seats | 4,160 h; 4%; 500 | 1,560 h; 10%; 1,335 | 780 h; 21%; 1,335 | 1,040 h; 15%; 1,001 |
+| 1,001 seats: burden (full-time-equivalent months) | 24 | 9 | 4.5 | 6 |
+| 1,001 seats: refusal, assumed curve steep / shallow | 94% / 80% (anchors) | 70% / 52% | **51% / 38%** | 58% / 43% |
+| 1,001 seats: seats held by a 5% always-accepting faction | 47% / 21% | 15% / 10% | **10% / 8%** | 11% / 9% |
+
+*The acceptance curve (acceptance = 0.8 × exp(−burden / τ), τ fitted to the two anchors) is an assumption; only the ordering of the sets is meaningful.*
+
+**SIM-QA-18 model re-run (RED-1, RED-2) with refusal lowered under H7, by an assumed factor:**
+* **RED-1 (carers): `CONDITIONAL`.** Cutting overall refusal by a quarter barely moves the carer gap at high refusal (−18/−19 pp → −13 to −19 pp). It closes to −2 to −6 pp only if part-time service also lowers carers' extra refusal (multiplier 2.5 → 1.5, assumed). H7 helps RED-1 through compatibility with care, not through lower refusal as such.
+* **RED-2 (faction): `BLUE_HOLDS`, size assumed.** With refusal 94% cut to 70% (×0.75), a 5% faction falls from 47% to 15% of seats; to 47% (×0.50), 9%. It is the first rule in this docket that acts on RED-2 at all.
+
+**Which set holds up better: Set B.** Set A leaves the 101 tier with 104 hours per mandate, over a third of it spent learning, and 404 new members a year; it also keeps the 1,001 tier full-time, the tier where self-selection is worst. Set B halves the learning share at 101 and roughly halves refusal at 1,001 against the current text. Set C is held in reserve: it gives up some refusal (58% vs 51% steep) for less learning (15% vs 21%) and less churn (1,001 vs 1,335 people a year), and becomes preferable if learning at the global tier is longer than the assumed 160 hours.
+
+**Red team against H7:**
+* **Online participation and deliberation quality: `NARROWED`.** Remote sessions lose attention and the informal exchange that changes minds. *Guard:* 60% and 75% matters are deliberated and voted at the in-person sessions; the in-person ratio is fixed in Organic Law. Residual: most deliberation at upper tiers is still remote.
+* **No secrecy at home (Art. 4.1.3): `RED_WINS` on deliberation, `BLUE_HOLDS` on final votes.** A member deliberating from home can be watched or instructed by a household or an association, and Art. 4.1.3 voids instruction it cannot see. The civic booth protects the final vote only. *Guard:* civic rooms open for every remote session, at the member's choice. Residual: instruction before the vote remains invisible.
+* **Digital exclusion: `NARROWED`.** A public terminal solves access, not skill, disability or language. *Guard:* assisted access by rotating staff under Art. 4.3.4, never by a party to the matter. Residual: staff assistance is itself an influence channel.
+* **Dependence on staff, experts and machine briefs (SIM-QA-20): `RED_WINS` at Set A, `NARROWED` at Set B.** With 4 h a week on a council and 64 hours of useful service per 101-seat mandate under Set A, members will read briefs instead of evidence, which is the framing channel of SIM-QA-20 and the shadow-bureaucracy risk of Art. 4.3.4. Set B gives 168 useful hours at 101. *Guard:* adversarial briefs only (Art. 4.4), length caps, and any member may request the primary sources.
+* **Complex matters in too little time: `RED_WINS` at Set A, `NARROWED` with guard.** *Guard:* a body may raise its weekly share for a named complex matter within an Organic Law ceiling, with release raised in proportion; continuous renewal (SIM-QA-19 H6) carries a matter across mandates without a full handover. Residual: the ceiling decides whether this works and is not set.
+* **Repeat service: `NARROWED`.** Allowing service again after the hiatus lets the always-accepting citizens of RED-2 return more often than others, toward a semi-permanent class (Art. 4.1.2). The draw itself gives returners no priority, and lower refusal shrinks the effect. Residual: not modelled.
+
+**Residual weaknesses (addendum):**
+* The size of the refusal reduction is the whole result and is assumed. Without field data on part-time, duty-based summons, H7 is a plausible lever, not a measured one.
+* Part-time service multiplies the number of people serving each year (up to 2.7 times at 1,001 seats) and with it the learning cost spread across the tiers.
+* Secrecy holds only at the final vote.
+* Set B keeps 50% service at the 1,001 tier; whether 20 hours a week can carry planetary matters is untested.
+
+**Next action (addendum):** look for data on refusal under part-time or paid civic service (jury duty with partial release, long-running citizens' assemblies); run H7 in the Julia ABM with an age-and-care-dependent acceptance curve; draft the Organic Law ceiling for complex-matter raises.
 
 ---
 
