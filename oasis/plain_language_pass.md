@@ -10,26 +10,33 @@
 
 | # | The thing | Term used | Replaces | Decided in | Replaced at | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| T-1 | The way members of a body are chosen | **lot** (the method), **draw** (one event); *sortition* stays only as the term defined in Art. 4.1.1 and inside the names of bodies | "random lottery", "lottery", "lotteries" | Chapter IV | 4.1.1, 4.3.1, 4.3.5 | proposed |
-| T-2 | A body whose members are drawn by lot | **sortition body** (as in 4.3.1); "drawn governing body" (4.2.1) is a description and stays | — | Chapter IV | 4.1.3, 4.3.4 (through T-3) | proposed |
-| T-3 | A person seated in a sortition body | **member**; **citizens** when giving the number of seats of a tier | "delegates" (4.1.3, 4.2.3, 4.3.4), "jurors" (4.3.1, 4.3.4) | Chapter IV | 4.1.3, 4.2.3, 4.3.1, 4.3.4 | proposed |
+| T-1 | The way members of a body are chosen | **lot** (the method), **draw** (one event); *sortition* stays only as the term defined in Art. 4.1.1 and inside the names of bodies | "random lottery", "lottery", "lotteries"; "time sortition" | Chapter IV | 4.1.1, 4.3.1, 4.3.5; 1.4.3 | approved with Chapter IV |
+| T-2 | A body whose members are drawn by lot | **sortition body** (as in 4.3.1); "drawn governing body" (4.2.1) is a description and stays | — | Chapter IV | 4.1.3, 4.3.4 (through T-3) | approved with Chapter IV |
+| T-3 | A person seated in a sortition body | **member**; **citizens** when giving the number of seats of a tier | "delegates" (4.1.3, 4.2.3, 4.3.4), "jurors" (4.3.1, 4.3.4) | Chapter IV | 4.1.3, 4.2.3, 4.3.1, 4.3.4 | approved with Chapter IV |
 | T-4 | The members of the body that hears an Evidence Panel | **juror**, kept in Art. 4.4 only, because "member" there already means a member of the Evidence Panel | — | Chapter IV | — | **open**: maintainer to choose between keeping "juror" in Art. 4.4 or another word for Evidence Panel members |
-| T-5 | A period of service | **mandate** | "terms" | Chapter IV | 4.3.3 | proposed |
-| T-6 | A disagreement heard by a panel | **dispute** | "conflicts" | Chapter IV | 4.2.1 | proposed |
-| T-7 | The rights of Chapter I | **fundamental rights** (title of Art. 1.7) | "Invariant Rights" | Chapter IV | 4.5.1 | proposed; Chapter I heading ("Invariant Bill of Rights") to be aligned when Chapter I is done |
-| T-8 | The three voting thresholds | **75% Supermajority**, **60% Qualified Majority**, **50%+1 Simple Majority** | "75% Constitutional Supermajority"; "qualified threshold" | Chapter IV | 4.5.1, 4.5.3 | proposed; reuse in Art. 3.6.2 (Chapter III) |
-| T-9 | An act without legal effect | **void** (adjective), **nullity** (noun), treated as one term | — | Chapter IV | — | kept |
+| T-5 | A period of service | **mandate** | "terms" | Chapter IV | 4.3.3 | approved with Chapter IV |
+| T-6 | A disagreement heard by a panel | **dispute** | "conflicts" | Chapter IV | 4.2.1 | approved with Chapter IV |
+| T-7 | The rights of Chapter I | **fundamental rights** (title of Art. 1.7) | "Invariant Rights" | Chapter IV | 4.5.1 | approved with Chapter IV; Chapter I heading aligned in the Chapter I pass ("INVARIANT" removed; "Bill of Rights" names the chapter) |
+| T-8 | The three voting thresholds | **75% Supermajority**, **60% Qualified Majority**, **50%+1 Simple Majority** | "75% Constitutional Supermajority"; "qualified threshold" | Chapter IV | 4.5.1, 4.5.3 | approved with Chapter IV; reuse in Art. 3.6.2 (Chapter III); "qualified supermajority" in 1.7.2 is generic and stays (R-I-23) |
+| T-9 | An act without legal effect | **void** (adjective), **nullity** (noun), treated as one term | "null, void" | Chapter IV | 1.5.1 | approved with Chapter IV; "void *ab initio*" (1.7.2) kept, see R-I-24 |
 | T-10 | Any body that deliberates, drawn or of all adult residents | **assembly** (generic), as in Arts. 4.3.5, 4.4.6, 4.5, 4.6.1 | — | Chapter IV | — | kept; whether each generic use includes the assemblies of Art. 4.2.1 is recorded in the restore file (R-IV-11) |
 | T-11 | Watershed and bioregion | not decided | — | — | — | **open** (R-IV-12) |
 | T-12 | The civic register(s) of Arts. 4.3.1, 4.3.5, 4.4.6 | not decided | — | — | — | **open** (R-IV-13) |
 | T-13 | "Request" and "petition" (Arts. 4.3.5, 4.3.6) | not decided | — | — | — | **open** (R-IV-05) |
 | T-14 | "Withheld" and "suspends / suspension" of approval (Art. 4.4.5) | not decided | — | — | — | **open** (R-IV-20) |
+| T-15 | Control of a person over their own body and mind | **autonomy**; *sovereign* is kept only for state or territorial power (Preamble, 1.1.2; 4.1.1, see R-IV-28) | "sovereignty" | Chapter I | 1.2 title, 1.2.1 | proposed |
+| T-16 | A human being who holds rights | **person** | "human being", "individual" | Chapter I | 1.2.1, 1.2.3, 1.4.1 | proposed; "inhabitant" (Preamble, 1.3.1) is **open**, because it may mark residence (R-I-10) |
+| T-17 | The guarantee of Art. 1.3 | **survival baseline** | "foundational life support" | Chapter I | 1.3.1, 1.3 title | proposed; Chapter IV Part D 4.5.1 says "biological survival baseline" for the same thing: dropping "biological" there is proposed, not applied, because Chapter IV is approved; Art. 3.6.2 ("per capita Tier 1 survival allocations") to be aligned with Chapter III |
+| T-18 | The body of law under the Constitution | **Organic Law** | "the Organic Law Annex" | Chapter I | 1.4.3 | proposed |
+| T-19 | What the crimes of Arts. 1.4.3 and 1.6.2 offend | **planetary continuity** | "biospheric continuity" | Chapter I | 1.4.3 | proposed |
+| T-20 | The 7% research reserve of Art. 1.4.3 | "Heretic's Commons" kept | — | — | — | **open**: the name is an ornate label (rule 3), but it names an institution also used in Chapter V; a plain name (for example "Open Research Reserve") needs a decision for every place it appears |
+| T-21 | The guardians of Art. 1.6.3 and the "Guardian of the Biosphere" of Art. 4.6.1 | not decided | — | — | — | **open** (R-I-21) |
 
 Labels of other chapters cited in Chapter IV ("Fact-Centric Inquiry", Art. 8.4.3; "Guardian of the Biosphere") are kept until their own chapter is done.
 
 ---
 
-## **2. Chapter IV** *(applied to Part B of [`chapter_iv_placement_2026-11-13.md`](chapter_iv_placement_2026-11-13.md); result in Part D of that file; master text untouched)* — **done, awaiting maintainer**
+## **2. Chapter IV** *(applied to Part B of [`chapter_iv_placement_2026-11-13.md`](chapter_iv_placement_2026-11-13.md); result in Part D of that file; master text untouched)* — **approved by the maintainer 2026-11-13**
 
 ### **2.1 Counts**
 | Text | Words | Sentences | Average | Longest | Over 30 words |
@@ -75,3 +82,42 @@ Labels of other chapters cited in Chapter IV ("Fact-Centric Inquiry", Art. 8.4.3
 
 ### **2.4 Restore file**
 Thirty entries, R-IV-01 to R-IV-30, in [`restore_and_elaborate.md`](restore_and_elaborate.md), Chapter IV.
+
+---
+
+## **3. Chapter I** *(applied to master Chapter I as it stands; result in Part B of [`chapter_i_plain_language_2026-11-13.md`](chapter_i_plain_language_2026-11-13.md); master text untouched)* — **done, awaiting maintainer**
+
+### **3.1 Counts**
+| Text | Words | Sentences | Average | Longest | Over 30 words |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Master Chapter I | 808 | 36 | 20.2 | 43 | 6 |
+| After the pass | 803 | 42 | 17.5 | 30 | 0 |
+
+### **3.2 Words removed under rules 1 to 3** *(compression disclosure, instruction 8: no point removed)*
+
+| Location | Rule | Removed | Replaced by | The point stays in |
+| :--- | :--- | :--- | :--- | :--- |
+| Chapter title | 3 | "THE PREAMBLE & THE INVARIANT BILL OF RIGHTS" | "PREAMBLE AND BILL OF RIGHTS" | Art. 1.7 (no majority may suspend the rights) |
+| Preamble | 2 | "inextricably" (embedded) | — | same sentence |
+| Preamble | 2 | "structural" (decoupling) | — | same sentence |
+| Art. 1.1 title | 3 | "The Axiom of the Biospheric Commons" | "The Biosphere as a Commons" | 1.1.1 |
+| Art. 1.2 title | 3 | "Invariant Personal and Bodily Sovereignty" | "Personal and Bodily Autonomy" (T-15) | 1.2.1 to 1.2.3; Art. 1.7 |
+| Art. 1.3 title | 3 | "The Universal Baseline of Survival" | "The Survival Baseline" (T-17) | 1.3.1 ("Every inhabitant") |
+| Art. 1.4 title | 3 | "Invariant Civil Liberties and Epistemic Freedom" | "Civil Liberties and Freedom of Inquiry" | 1.4.1 to 1.4.3; Art. 1.7 |
+| Art. 1.4.3 | 2 | "categorically" (barred) | — | "is barred from the commons" |
+| Art. 1.5 title | 3 | "The Anti-Enclosure Principle" | "No Enclosure of the Commons" | 1.5.1, 1.5.2 |
+| Art. 1.6 title | 3 | "and Intergenerational Stewardship" | "Ecological Duty" | 1.1.3 ("succeeding generations"), 1.6.1 ("stewardship") |
+| Art. 1.6.1 | 2 | "inescapable" (duty) | — | "incurs a duty"; no exemption is written anywhere |
+| Art. 1.6.3 | 1 | "(*Jus Biosphaerae*)" | — | "intrinsic standing under law" |
+| Art. 1.7 title | 3 | "and Inviolability" | "Primacy of Fundamental Rights" | 1.7.2 |
+
+Under rule 5, not rules 1 to 3: "null," (1.5.1, T-9), "sovereignty" (T-15), "human being" and "individual" (T-16), "foundational life support" (T-17), "the" and "Annex" (T-18), "biospheric" (T-19), "time sortition" (T-1).
+
+**Kept although they look like intensifiers, because they carry a rule** (the reading of the example in instruction 11: a word on a right or guarantee of Chapter I marks the rule of Art. 1.7 and stays): "absolute, unconditional" (1.2.1), "inviolable" (Preamble, 1.2.3, 1.4.3 twice), "inalienable" (1.3.1), "unconditional" (1.3.2, 1.4.1), "permanently" (1.2.2, 1.4.3, 1.5.2), "fully" (1.3.1), "solely" (1.1.3: usufruct is the only form of title), "strictly" (1.4.3: the draw is the only method of allocation), "indivisible" (1.1.1), "Unrestricted" and "Comprehensive" (1.3.2, they set the scope). **Decision for the maintainer:** if the example is read the other way (Art. 1.7 already protects every right of the chapter, so the word adds no rule), ten words go: "absolute" (1.2.1), "inviolable" ×4, "inalienable" (1.3.1), "permanently" ×3, "fully" (1.3.1). "Unconditional" stays under either reading, because it also forbids conditions, which Art. 1.7 does not say.
+
+**Latin kept:** "void *ab initio*" (1.7.2) is not a tag; it is the rule (void from the start, not from a ruling). Removing it loses a point, so the text stays; proposal "void from the start" in R-I-24.
+
+**Words added under rule 4:** "and" (Preamble), "The covenant also serves to", "It encompasses", "Usufruct is", "It serves", "draws of", "The interlocks enforce", "It is".
+
+### **3.3 Restore file**
+Twenty-six entries, R-I-01 to R-I-26, in [`restore_and_elaborate.md`](restore_and_elaborate.md), Chapter I.

@@ -80,8 +80,8 @@ When a new operational edge-case or simulation friction is discovered:
 
 | Order | Chapter | Text the pass applies to | Status |
 | :--- | :--- | :--- | :--- |
-| 1 | Chapter IV | Part B of [`chapter_iv_placement_2026-11-13.md`](chapter_iv_placement_2026-11-13.md); result added there as Part D; master Chapter IV left as it is. Words 2,035 → 2,017; average sentence 23.8 → 17.7; 30 entries R-IV-01 to R-IV-30 | **done, awaiting maintainer** |
-| 2 | Chapter I | master text as it stands (result in a working file under `oasis/`; `bible/` untouched) | to do |
+| 1 | Chapter IV | Part B of [`chapter_iv_placement_2026-11-13.md`](chapter_iv_placement_2026-11-13.md); result added there as Part D; master Chapter IV left as it is. Words 2,035 → 2,017; average sentence 23.8 → 17.7; 30 entries R-IV-01 to R-IV-30 | **approved by the maintainer 2026-11-13** (open terms T-4, T-11 to T-14 carried forward) |
+| 2 | Chapter I | master text as it stands; result in [`chapter_i_plain_language_2026-11-13.md`](chapter_i_plain_language_2026-11-13.md), Part B; `bible/` untouched. Words 808 → 803; average sentence 20.2 → 17.5, longest 43 → 30; 26 entries R-I-01 to R-I-26; one reading of instruction 11 for the maintainer (intensifiers on rights) | **done, awaiting maintainer** |
 | 3 | Chapter II | master text as it stands (result in a working file under `oasis/`; `bible/` untouched) | to do |
 | 4 | Chapter III | master text as it stands (result in a working file under `oasis/`; `bible/` untouched) | to do |
 | 5 | Chapter V | master text as it stands (result in a working file under `oasis/`; `bible/` untouched) | to do |
