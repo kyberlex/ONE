@@ -6,6 +6,7 @@
 
 * **Part A**, Chapter IV with every patch accepted in principle in SIM-QA-18 to 21 and SIM-QA-23 (Art. 4.5.1 consequential): **2,842 words**. Not included: the SIM-QA-18 addition to Art. 4.3.3 (loses its object under SIM-QA-21; X-6 open) and the hypotheses Y-3 and Y-12 (not decisions).
 * **Part B**, the same text after the placement test: what stays in the Constitution, with the bound left for every moved number. **2,035 words.** What moves, and where, is in the clause table of the docket section.
+* **Part C** (Y-16), the four longest paragraphs of Part B as sub-items: 804 → 833 words; Part B with Part C: 2,064.
 
 ---
 
@@ -170,3 +171,35 @@ Deliberative assemblies vote exclusively through graduated thresholds:
 2. A single-case Constitutional Review Jury (*Custodes Constitutionis*) of one hundred and one (101) citizens, drawn by lot from watersheds not party to the dispute and deliberating under Article 4.4, voids an act by a sixty percent (60%) qualified majority, resolving doubts under Chapter I in favor of the person. Each party may appeal once to a fresh jury of three hundred and one (301) citizens.
 
 3. Review juries declare conformity or nullity only; they may neither draft nor amend law.
+
+---
+
+## **Part C: Readability Layout of the Four Longest Paragraphs of Part B (Y-16, proposal, not applied)**
+
+*Same words as Part B except as listed in the docket (Y-16, section 7.6). Part B: 804 words for these four paragraphs; Part C: 833. Each block replaces the paragraph of the same number in Part B.*
+
+   * *Nodes Below the Council Threshold:* A node below the council threshold holds no drawn governing body.
+     * *Internal matters:* its work rosters, water, food growing, the local energy grid, allocation of free dwellings, and settling of newcomers admitted under Article 10.4, within limits fixed by Organic Law, are decided by the assembly of all adult residents. A rule of the larger node does not bind the node on these matters.
+     * *The assembly:* it votes by secret ballot at the request of any one resident and always on dwellings, newcomers and disputes, under a chair drawn by lot for each session; thresholds there are counted on votes cast, with a quorum fixed by Organic Law and never below one third of adult residents.
+     * *Other matters:* all other matters belong to the Neighborhood Sortition Council of the nearest larger node of the same bioregion, whose draw includes the node's residents and which hears the node's assembly on matters concerning it specifically.
+     * *Disputes:* disputes between residents are heard by outside panels of three (3); a dispute over whether a matter is internal, by the same kind of panel, with one appeal (*Provocatio*) to a cross-watershed blind panel of fifteen (15); the node holds the same appeal against any decision of that Council concerning it alone.
+     * *Founding nodes:* until a larger node exists, the assembly alone governs; no first-degree kin or domestic partners serve together on its panels.
+
+2. Civic service by lot is a universal prerogative and a civic duty to answer the summons.
+   * *Summons:* a summoned citizen attends an orientation at a first mandate and may then withdraw without penalty, stigma, or loss of any right (Article 5.2.3), and may defer one summons without stating a reason; excusal on grounds listed in Organic Law is self-certified and never judged on merit.
+   * *Hours and release:* service occupies a share of a working week fixed by Organic Law for each tier, never full-time; citizens who serve receive release from routine labor in proportion to the hours served, and replacement of domestic and care support, arranged before service begins. A body may raise its share for a named complex matter within the limit of Organic Law, with release raised in proportion.
+   * *Sessions:* local bodies meet in person; higher tiers may deliberate remotely, meeting in person at the ratio of Organic Law. At every tier, decisions whose substance requires sixty percent (60%) or seventy-five percent (75%) are deliberated and voted only in person; only the procedural votes listed in Organic Law and the ratification of an emergency decree may be voted remotely.
+   * *Remote safeguards:* remote sessions offer a civic room to any member; final votes outside a session in person are cast in a protected civic booth, and a public terminal serves any member without connectivity.
+
+2. **Drawn Evidence Panels:** On complex proposals, an Evidence Panel is drawn by lot from the Practitioner Register, free from corporate grants or debt.
+   * *Subject matters:* the panel covers the subject matters the jurors name; any party may ask, before the draw, that one be added.
+   * *Filters:* the draw applies only filters of subject matter, place, hiatus, conflict of interest and diversity of source, defined by Organic Law on countable facts, never on opinion, and published with its result; the conflict-of-interest filter is never relaxed. Residence is proven without revealing anything else.
+   * *Language:* language is never a filter; each member's own text is authentic and drawn interpreters translate it.
+   * *Term:* a panel serves one proposal and is dissolved when it reports; no standing expert body exists and no office follows from service, which is civic service under Article 4.3.2. Members observe the hiatus of Article 4.3.3 for that subject matter.
+
+6. **The Practitioner Register:** One Practitioner Register serves every assembly; no parallel register exists, and it is separate from the civic register.
+   * *Criteria:* one set of admission criteria applies, written in advance, countable and documentary, never judgments of quality. Categories are listed in Organic Law; anyone may propose one by petition.
+   * *Entry:* entry is voluntary and the Register never gathers evidence about a person on its own initiative (Article 3.4.4). A verifiable work, an attestation by the party that received the work, never by peers, and a diploma recorded by its school stand on the same footing, with thresholds enacted together; none is required and any one suffices. No title, guild or professional body gatekeeps admission.
+   * *Identity:* each person holds at most one entry, proven without revealing identity, and may hold it under a pseudonym; a name is published only by choice.
+   * *Decisions:* no model rejects an entry or decides a challenge (Articles 7.1.2, 7.5.3); doubtful filings and challenges go to juries drawn from outside the field, which rule only on the evidence and the criteria, never on opinions. Anyone may challenge an entry, which stays eligible while the challenge is pending. No entry serves a proposal published before it was filed.
+   * *Record:* entries, model outputs, challenges and rulings are public. The Register is replicated so that no single site or key controls it.

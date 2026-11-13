@@ -1805,7 +1805,7 @@ A node that schools only in its majority language could be challenged under Art.
 *Red team:* `BLUE_HOLDS`. The two texts point the same way; the order only prevents a double review of one rule. Residual: a review jury may still find that a community's choice of languages is itself a criterion chosen to exclude (Art. 1.8.2); step 2 then fails, which is intended.
 
 #### **8.5 Word Count** *(tokens containing a letter or digit, headings included; same method as the Chapter IV count of the 2026-11-13 cross-docket section)*
-Chapter I today: 830. Art. 1.8 as drafted in section 5 with its heading: 220. Paragraph 6: 96. Chapter I with Art. 1.8: **1,146**, 146 above the 1,000-word ceiling, within the waiver for Art. 1.8. The Art. 1.4.1 phrase of SIM-QA-22 ("and cultural expression, including the use of one's own language") adds up to 10 more (about 1,156); that phrase is not covered by this waiver and is reported for decision.
+Chapter I today: 808. Art. 1.8 as drafted in section 5 with its heading: 220. Paragraph 6: 96. Chapter I with Art. 1.8: **1,124**, 124 above the 1,000-word ceiling, within the waiver for Art. 1.8. The Art. 1.4.1 phrase of SIM-QA-22 ("and cultural expression, including the use of one's own language") adds up to 10 more (about 1,134); that phrase is not covered by this waiver and is reported for decision. *(Corrected 2026-11-13: the first figure, 830, counted every whitespace token, not the stated method; 808 is the stated method, the same as the Chapter IV counts.)*
 
 #### **8.6 Residual Weaknesses (Revision)**
 * R-3 (which body adopts a restorative measure) and R-4 (a constitutional ceiling on duration) are open.
@@ -2022,3 +2022,75 @@ Clauses not listed stay in the Constitution as drafted, because a 60% change cou
 2. The seven new bounds (rows 1, 4, 12, 15, 16, 17, 29).
 3. The open bounds P-3, P-4, P-10 and the candidates P-7.
 4. How to meet the ceiling (section 5).
+
+### **7. Y-16: One Chapter IV Under Its Own Ceiling, with a Total Ceiling** `[STATUS: SIMULATION_HYPOTHESIS]` *(maintainer hypothesis 2026-11-13; not a decision; canon untouched; the IV-A / IV-B trial is dropped by maintainer instruction and not recorded)*
+
+#### **7.1 The Hypothesis**
+Chapter IV stays one chapter at about 2,035 words (Part B). The single ceiling becomes a rule: a general ceiling of 1,000 words per chapter; own ceilings for Chapter I and Chapter IV, the two chapters that hold the guarantees the placement test keeps in the Constitution (starting point 1,200 and 2,100); a ceiling on the total words of the Constitution (starting point 11,000).
+
+#### **7.2 Counts** *(tokens containing a letter or a digit, headings included)*
+| Text | Today (canon) | With every accepted patch | Under the 1,000 ceiling? |
+| :--- | :--- | :--- | :--- |
+| Title block | 55 | 55 | — |
+| Chapter I | 808 | 1,134 (Art. 1.8 with 1.8.6: +316; Art. 1.4.1 phrase: +10) | no |
+| Chapter II | 869 | 903 (Y-9: Arts. 2.6.1 +21, 2.6.2 +13) | yes |
+| Chapter III | 886 | 922 (Y-9: Art. 3.6.1 +36) | yes |
+| Chapter IV | 926 | 2,035 (Part B; 2,842 before the placement test) | no |
+| Chapter V | 855 | 986 (SIM-QA-22 Art. 5.3.3: +131) | yes, 14 left |
+| Chapters VI–XI | 765 / 712 / 862 / 817 / 870 / 839 | unchanged | yes |
+| **Total** | **9,264** | **10,900** (11,707 with the consolidated Chapter IV) | — |
+
+*Consequences of the counts.* The Chapter V waiver of SIM-QA-22 is no longer needed under the 1,000 ceiling (986). The Chapter I waiver of SIM-QA-23 would be replaced by the own ceiling. With patches, the nine general chapters hold 7,676 words.
+
+#### **7.3 Draft Rule: Addition to Board Instruction 10** *(proposed; not in force; the board carries it as 10a, marked as a proposal)*
+"10a. **Word ceilings.** (1) Each chapter holds at most 1,000 words, counted as tokens containing a letter or a digit, headings included. (2) Chapter I holds at most [1,200] and Chapter IV at most [2,150] words, because they carry the rights and the powers of bodies that the placement test keeps in the Constitution. No other chapter has an own ceiling; one is added only by a recorded maintainer decision, after the whole chapter has been through the placement test and still exceeds 1,000 words with no point that can be moved. (3) The Constitution as a whole holds at most [11,500] words. (4) No docket raises the ceiling it needs; a ceiling changes only by a separate maintainer decision, with a recount of every chapter. (5) A chapter within fifty (50) words of its ceiling receives new detail in Organic Law by default; text that the placement test keeps in the Constitution is never moved to meet a ceiling, and the conflict goes to the maintainer under instruction 8. (6) A ceiling is never met by dropping a point."
+
+*Changes to the starting numbers, and why.*
+* **Chapter I, 1,200: kept.** With patches it holds 1,134, leaving 66.
+* **Chapter IV, 2,100 → [2,150].** 2,100 holds for Part B with Y-3 and Y-12 (2,083) but not with the readability layout of section 7.6 as well (2,112); 2,150 holds every case reported here with about 40 words left (7.5). If the readability layout is not adopted, 2,100 holds.
+* **Total, 11,000 → [11,500].** With patches the Constitution holds 10,900; with the readability layout, Y-3 and Y-12, about 10,977, which leaves 23 words under 11,000. At 11,000, with Chapters I and IV at their own ceilings, the nine general chapters could hold only 7,595 to 7,645 words together, less than the 7,676 they hold with patches today: the total would force cuts elsewhere, the compression that produced the losses of SIM-QA-22 section 7. At 11,500 the nine chapters can hold up to 8,095 (average 899), about 420 above today, and no third own ceiling of any size fits without cuts elsewhere (7.4, T-1).
+
+#### **7.4 Red Team**
+* **T-1, another chapter claims the same exemption. `NARROWED`.** Chapter X (node and bioregional rights, envelopes), Chapter III (the Tier 1 floor and thermodynamic thresholds) and Chapter V (care and languages, 986 words) all hold guarantees the placement test keeps. "Holds guarantees" alone fits almost every chapter. *Guard:* point (2): an own ceiling only after a full placement test of that chapter still leaves it above 1,000 with nothing movable, by recorded decision; the list is closed. *Does the total ceiling stop it?* At 11,500: only in part. With Chapters I and IV full, the general chapters share about 420 words of growth, so a third own ceiling of, say, 1,300 fits only if the others stay still; a large exemption (Chapter X at 2,000) does not fit without cuts elsewhere. At 11,000: yes, completely, but it also stops ordinary growth and pushes toward cuts (7.3). Residual: the total stops large claims, not small ones; small claims are stopped by point (2) only.
+* **T-2, a race for the remaining headroom. `NARROWED`.** Under a total ceiling, the first docket to use the last 400 words wins, and later dockets with stronger claims find no room. *Guard:* point (4) separates the need from the decision; the maintainer allocates headroom when deciding, not the drafter. Residual: order of arrival still matters in practice.
+* **T-3, ceiling creep. `NARROWED`.** 2,150 becomes 2,300 docket after docket, as the 900 ceiling became 1,000 and the Chapter V waiver came first. *Guard:* point (4). Residual: the maintainer can always raise a ceiling; the rule makes each raise visible, it cannot forbid it.
+* **T-4, chapter shopping. `BLUE_HOLDS` with guard.** Text is drafted into Chapter IV because it has room (a right placed in Art. 4.3 instead of Chapter I). *Guard:* placement by subject matter under instruction 10; the own ceiling covers Chapter IV's own subject only. Residual: borderline subjects (equal protection in drawing the lot) can sit in either.
+* **T-5, the Organic Law default as a leak. `NARROWED`.** Point (5) sends new detail to Organic Law near a ceiling; a drafter could call a guarantee "detail" to fit. *Guard:* the placement test prevails; a guarantee the test keeps is never moved to meet a ceiling. Residual: classifying a clause as detail is itself the judgement the test makes.
+* **T-6, the total ceiling forces compression of other chapters. `NARROWED`.** If the total is reached, the cheapest words to remove are in other chapters' older text, where nobody is watching. *Guard:* point (6) and instruction 8: no point is dropped to meet a ceiling; a breach goes to the maintainer. Residual: words can be shortened without dropping a point, and "point" is judged by the drafter first.
+* **T-7, counting games. `BLUE_HOLDS`.** Numerals in parentheses ("fifteen (15)") count twice; labels and list markers with letters count; markers without letters do not. *Guard:* point (1) fixes the method. Residual: the method rewards dropping numerals in parentheses, which the canon's style requires; not a defect of the rule.
+* **T-8, readability and translation. `OPEN`, recorded.** A 2,150-word chapter, translated into thirteen languages, is long to read and costly to keep in parity. The sub-item layout of 7.6 helps reading, not length.
+* **T-9, waivers become ceilings. `BLUE_HOLDS`.** The ad hoc waivers of SIM-QA-22 and SIM-QA-23 are replaced by named, counted ceilings; a waiver by paragraph is no longer needed.
+
+**Verdict:** **`NARROWED`**. The rule holds against large exemptions through the total ceiling and against small ones only through the closed list of point (2). The total of 11,000 stops everything, including the growth the accepted patches already need; 11,500 stops large claims and leaves room for ordinary growth.
+
+#### **7.5 Headroom: Y-3 and Y-12 in Chapter IV**
+* **Y-12** adds one sentence to Art. 4.5.3: **28 words**.
+* **Y-3** is drafted as Organic Law (OL-9.13). Under the placement test, the meaning of "in person" is a guarantee: a 60% majority that defined it as a video call would empty the in-person rule of Art. 4.3.2. Chapter IV therefore needs a bound, for example: "A session in person gathers members physically, in one hall or in regional halls linked together as Organic Law provides." **20 words.**
+
+| Chapter IV | Words | Under 2,100? | Under 2,150? |
+| :--- | :--- | :--- | :--- |
+| Part B | 2,035 | yes (65 left) | yes (115) |
+| + Y-12 | 2,063 | yes (37) | yes (87) |
+| + Y-12 + Y-3 bound | 2,083 | yes (17) | yes (67) |
+| + readability layout (7.6) | 2,064 | yes (36) | yes (86) |
+| + readability + Y-12 + Y-3 bound | 2,112 | **no (+12)** | yes (38) |
+
+#### **7.6 Readability: the Four Longest Paragraphs as Sub-Items** *(proposal; text in [`chapter_iv_placement_2026-11-13.md`](chapter_iv_placement_2026-11-13.md), Part C)*
+Each paragraph keeps its lead sentence and splits into labelled sub-items. No point is added or dropped. A word-by-word comparison of each paragraph against Part B finds every word of Part B present, except two prepositions lost to rewording ("on the subject matters the jurors name" → "the panel covers the subject matters the jurors name"; "with one set of admission criteria" → "one set of admission criteria applies") and "any one of them" → "any one resident", which keeps the sub-item clear on its own. The added words are the labels, the restated subjects, and "raised" in "with release raised in proportion" (Art. 4.3.2), the wording of the accepted SIM-QA-18 text, which Part B had shortened to "with release in proportion".
+
+| Paragraph | Part B | As sub-items |
+| :--- | :--- | :--- |
+| Art. 4.2.1, nodes below the threshold | 224 | 233 (6 sub-items) |
+| Art. 4.3.2 | 218 | 226 (4 sub-items) |
+| Art. 4.4.2 | 143 | 150 (4 sub-items) |
+| Art. 4.4.6 | 219 | 224 (5 sub-items) |
+| **Total** | **804** | **833** (+29) |
+
+#### **7.7 Decisions for the Maintainer**
+1. Adopt Y-16 or not.
+2. The numbers: Chapter I [1,200]; Chapter IV [2,100] or [2,150]; total [11,000] or [11,500].
+3. Points (2) to (6) of the draft rule 10a, each one.
+4. The readability layout of 7.6, and with it "with release raised in proportion".
+5. Whether Y-3, if accepted, carries the 20-word bound in Chapter IV.
+6. Retiring the Chapter V and Chapter I waivers if the rule is adopted.
+7. The open decisions of section 6 of this proposal (the split, the new bounds, P-3, P-4, P-7, P-10) stand unchanged.
