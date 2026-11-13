@@ -7,6 +7,7 @@
 * **Part A**, Chapter IV with every patch accepted in principle in SIM-QA-18 to 21 and SIM-QA-23 (Art. 4.5.1 consequential): **2,842 words**. Not included: the SIM-QA-18 addition to Art. 4.3.3 (loses its object under SIM-QA-21; X-6 open) and the hypotheses Y-3 and Y-12 (not decisions).
 * **Part B**, the same text after the placement test: what stays in the Constitution, with the bound left for every moved number. **2,035 words.** What moves, and where, is in the clause table of the docket section.
 * **Part C** (Y-16), the four longest paragraphs of Part B as sub-items: 804 → 833 words; Part B with Part C: 2,064.
+* **Part D** (board instruction 11, plain-language pass, proposal): Part B after the five rules: 2,035 → **2,017 words**; average sentence 23.8 → 17.7 words, longest 87 → 38. Awaiting maintainer.
 
 ---
 
@@ -203,3 +204,85 @@ Deliberative assemblies vote exclusively through graduated thresholds:
    * *Identity:* each person holds at most one entry, proven without revealing identity, and may hold it under a pseudonym; a name is published only by choice.
    * *Decisions:* no model rejects an entry or decides a challenge (Articles 7.1.2, 7.5.3); doubtful filings and challenges go to juries drawn from outside the field, which rule only on the evidence and the criteria, never on opinions. Anyone may challenge an entry, which stays eligible while the challenge is pending. No entry serves a proposal published before it was filed.
    * *Record:* entries, model outputs, challenges and rulings are public. The Register is replicated so that no single site or key controls it.
+
+---
+
+## **Part D: Plain-Language Pass of Part B (board instruction 11, proposal, not applied)**
+
+*Part B after the five rules of the plain-language pass (Latin tags, intensifiers that add no rule, ornate labels, sentences over 30 words, one word for one thing). Structure, numbering and cross-references unchanged; no point removed or weakened. Removed words, term replacements and the two sentences left over 30 words: [`plain_language_pass.md`](plain_language_pass.md), Chapter IV. Phrases recorded instead of changed: [`restore_and_elaborate.md`](restore_and_elaborate.md), Chapter IV. The layout of Part C applies to Part D unchanged. Part B: 2,035 words, 80 sentences, average 23.8, longest 87. Part D: 2,017 words, 108 sentences, average 17.7, longest 38.*
+
+#### **CHAPTER IV: GOVERNANCE BY LOT**
+
+##### **Article 4.1 — Authority by Lot**
+
+1. All sovereign legislative, deliberative, and constitutional authority emanates exclusively from assemblies of citizens drawn by stratified lot (sortition), and from the assemblies of all adult residents of Article 4.2.1.
+
+2. Electoral party politics, campaign financing, corporate lobbying, and permanent parliamentary classes are abolished as vectors of oligarchic capture.
+
+3. Citizens remain free to associate and advocate (Article 1.4), but no association may finance, nominate, instruct, or reward members of sortition bodies. Any such act is void and constitutes a structural assault on the civic commons.
+
+##### **Article 4.2 — Tiers of Sortition Bodies**
+
+Deliberative authority is structured through concentric citizen chambers matched to bioregional scales, each in odd-number parity to prevent ties and deadlock:
+
+1. **Local Mediation Panels:** Three (3) citizens, drawn for each dispute and dissolved when they rule, for neighborhood disputes, domestic safety, and housing restitution.
+
+   * *Nodes Below the Council Threshold:* A node below the council threshold holds no drawn governing body. Its internal matters (work rosters, water, food growing, the local energy grid, allocation of free dwellings, settling of newcomers admitted under Article 10.4), within limits fixed by Organic Law, are decided by the assembly of all adult residents. The assembly votes by secret ballot at the request of any one resident and always on dwellings, newcomers and disputes, under a chair drawn by lot for each session. Thresholds there are counted on votes cast, with a quorum fixed by Organic Law and never below one third of adult residents. A rule of the larger node does not bind the node on these matters. All other matters belong to the Neighborhood Sortition Council of the nearest larger node of the same bioregion. That Council's draw includes the node's residents, and the Council hears the node's assembly on matters concerning it specifically. Disputes between residents are heard by outside panels of three (3). A dispute over whether a matter is internal is heard by the same kind of panel, with one appeal to a cross-watershed blind panel of fifteen (15). The node holds the same appeal against any decision of that Council concerning it alone. Until a larger node exists, the assembly alone governs; no first-degree kin or domestic partners serve together on its panels.
+
+2. **Neighborhood Sortition Councils:** Fifteen (15) citizens, overseeing local commons, utilities, and facilities. A Council is constituted when a node sustains for twelve months a threshold fixed by Organic Law between one hundred (100) and two hundred (200) adult residents. It is dissolved only after twelve months below a lower point fixed there.
+
+3. **Bioregional Citizen Assemblies:** One hundred and one (101) citizens, governing watershed ecological balances, industrial zoning, and inter-node agreements.
+
+4. **Continental Governance Chambers:** Three hundred and one (301) citizens, coordinating continental backbones, regeneration corridors, and macro-balances.
+
+5. **Global Commons Assembly:** One thousand and one (1,001) citizens, setting planetary thermodynamic boundaries and ratifying cross-continental covenants.
+
+Members of tiers 2 to 5 serve mandates whose length the public draw also draws, within ranges fixed by Organic Law. The length is sealed verifiably at the draw. It is disclosed to the member and the body together, no less than one month ahead, and three months where service is at least half a working week. Panels of three (3) and councils of fifteen (15) are juries, not statistical samples; representativeness is claimed only from one hundred and one (101) seats, with its margin of error. Panels of three (3) are drawn for one dispute or request and dissolved when they rule; they hold no mandate. A panel required to be drawn from outside comes from nodes that are neither a party nor in a party's draw pool. Each panel member observes the hiatus of Article 4.3.3, counted on the length of service.
+
+##### **Article 4.3 — Selection, Service and Rotation**
+
+1. Members of all sortition bodies are selected from universal civic registers through open, publicly verifiable draws. Stratification mirrors the population across age, gender, and geography; alternates of the same stratum fill vacated seats. Refusal, withdrawal and excusal rates are published per stratum without identifying persons, and a high rate triggers review of service conditions, never of persons.
+
+2. Civic service by lot is a universal prerogative and a civic duty to answer the summons. A summoned citizen attends an orientation at a first mandate and may then withdraw without penalty, stigma, or loss of any right (Article 5.2.3). A summoned citizen may defer one summons without stating a reason. Excusal on grounds listed in Organic Law is self-certified and never judged on merit. Service occupies a share of a working week fixed by Organic Law for each tier, never full-time. Citizens who serve receive release from routine labor in proportion to the hours served, and replacement of domestic and care support, arranged before service begins. Local bodies meet in person; higher tiers may deliberate remotely, meeting in person at the ratio of Organic Law. At every tier, decisions whose substance requires sixty percent (60%) or seventy-five percent (75%) are deliberated and voted only in person. Only the procedural votes listed in Organic Law and the ratification of an emergency decree may be voted remotely. Remote sessions offer a civic room to any member. Final votes outside a session in person are cast in a protected civic booth, and a public terminal serves any member without connectivity. A body may raise its share for a named complex matter within the limit of Organic Law, with release in proportion.
+
+3. Rotation: No citizen may serve consecutive mandates in the same tier; each mandate is followed by a hiatus of twice its length.
+
+4. Assembly Staff: Assembly staff serve on temporary, rotating contracts; framing agendas, filtering citizen questions, or covertly influencing members is an impeachable offense. Agenda authority rests with members of sortition bodies.
+
+5. Petitions: Any person may publish any petition on the open civic register, unfiltered. Agenda placement requires co-endorsement by a fixed share of the assembly's constituents; each person holds an equal, periodically renewed endorsement allowance, never conditioned on labor, conduct, or opinion. Each assembly fixes finite agenda slots per session, filled by public draw weighted by distinct support. A rotating Triage Panel of three (3) citizens drawn by lot merges identical requests and checks form, never merit. Parameters are fixed by Organic Law.
+
+6. **Second Reading:** A sixty percent (60%) decision of a Neighborhood Sortition Council may be re-examined once, on request made under Article 4.3.5 within a window of no less than thirty (30) days. The re-examination is made by the same Council after the lot has replaced the number of its members fixed by Organic Law, never fewer than a majority. The decision stays in force meanwhile. Only a decision certified irreversible under the closed list of Organic Law by an outside panel of three (3) waits. Certification is decided within a time fixed there, never more than thirty (30) days, failing which the decision takes effect. A confirmed decision cannot be re-examined again but remains open to ordinary repeal. No new body and no plebiscite is created. This does not apply to bodies of one hundred and one (101) or more, to emergency decrees, or to certified routine maintenance.
+
+##### **Article 4.4 — Expert Evidence**
+
+1. Sortition jurors deliberate as the ethical conscience of the commons; technical advisors serve in an evidentiary, non-voting capacity.
+
+2. **Evidence Panels:** On complex proposals, an Evidence Panel is drawn by lot from the Practitioner Register, free from corporate grants or debt, on the subject matters the jurors name. Any party may ask, before the draw, that one be added. The draw applies only filters of subject matter, place, hiatus, conflict of interest and diversity of source. They are defined by Organic Law on countable facts, never on opinion, and published with the draw's result. The conflict-of-interest filter is never relaxed. Residence is proven without revealing anything else. Language is never a filter: each member's own text is authentic and drawn interpreters translate it. A panel serves one proposal and is dissolved when it reports; no standing expert body exists and no office follows from service, which is civic service under Article 4.3.2. Members observe the hiatus of Article 4.3.3 for that subject matter.
+
+3. **Plain-Language Brief:** The Evidence Panel files a plain-language brief stating the consequences, trade-offs and failure scenarios of the proposal and of inaction. The brief states what its members agree on, where they differ, and which observation would change each member's position. Each member signs individually; dissent is annexed in full and given the same length and place as the majority text.
+
+4. **Questioning:** Proponents and opponents then speak as declared parties. Jurors conduct the questioning, may call further witnesses, and deliberate without experts or parties present; written questions during deliberation are answered on the public record. Procedure follows the Fact-Centric Inquiry of Article 8.4.3.
+
+5. **Precaution:** Approval of a novel structural intervention is withheld where the record shows a specific, plausible pathway to irreversible harm to life or ecosystems that the proposal does not close. Confusion or disagreement alone never suspends approval. Suspension never interrupts certified routine maintenance or critical life support. Persistent disputes of fact pass to a fresh Evidence Panel from non-contiguous watersheds, which reports; the jurors decide.
+
+6. **The Practitioner Register:** One Practitioner Register serves every assembly, with one set of admission criteria, written in advance, countable and documentary, never judgments of quality. No parallel register exists, and the Register is separate from the civic register. Categories are listed in Organic Law; anyone may propose one by petition. Entry is voluntary and the Register never gathers evidence about a person on its own initiative (Article 3.4.4). A verifiable work, an attestation by the party that received the work, never by peers, and a diploma recorded by its school stand on the same footing. Their thresholds are enacted together. None is required and any one suffices. No title, guild or professional body gatekeeps admission. Each person holds at most one entry, proven without revealing identity, and may hold it under a pseudonym; a name is published only by choice. No model rejects an entry or decides a challenge (Articles 7.1.2, 7.5.3). Doubtful filings and challenges go to juries drawn from outside the field, which rule only on the evidence and the criteria, never on opinions. Anyone may challenge an entry, which stays eligible while the challenge is pending. No entry serves a proposal published before it was filed. Entries, model outputs, challenges and rulings are public. The Register is replicated so that no single site or key controls it.
+
+##### **Article 4.5 — Voting Thresholds**
+
+Deliberative assemblies vote exclusively through graduated thresholds:
+
+1. **75% Supermajority:** Required exclusively for structural amendments to this Constitution, expansions (never diminutions, Article 1.7) of fundamental rights, declarations of de-commodification, modifications to the biological survival baseline, or restorative measures under Article 1.8.6.
+
+2. **60% Qualified Majority:** Required for multi-year bioregional development plans, foundational resource allocations, inter-watershed treaties, and the enactment of general regulatory statutes.
+
+3. **50%+1 Simple Majority:** Permitted exclusively for routine administrative scheduling, procedural assembly motions, and immediate emergency disaster responses. Emergency decrees passed by simple majority carry an automatic, unextendable thirty (30) day sunset clause, requiring subsequent ratification under the sixty percent (60%) qualified majority.
+
+4. **Counting Votes:** Every percentage threshold denotes the smallest whole number of votes equal to or exceeding that share of all seated members, not of those present. In the assemblies of Article 4.2.1, the share is of votes cast.
+
+##### **Article 4.6 — Constitutional Review**
+
+1. Any citizen, assembly, or Guardian of the Biosphere may petition for review of any enactment, decree, algorithm, or Organic Law alleged to violate this Constitution.
+
+2. A single-case Constitutional Review Jury of one hundred and one (101) citizens is drawn by lot from watersheds not party to the dispute and deliberates under Article 4.4. It voids an act by a sixty percent (60%) qualified majority, resolving doubts under Chapter I in favor of the person. Each party may appeal once to a fresh jury of three hundred and one (301) citizens.
+
+3. Review juries declare conformity or nullity only; they may neither draft nor amend law.
