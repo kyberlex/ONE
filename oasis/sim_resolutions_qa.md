@@ -1937,3 +1937,88 @@ Chapter I today: 830. Art. 1.8 as drafted in section 5 with its heading: 220. Pa
 * **Y-15, evidence for SIM-QA-18 section 4.** The refusal model there still uses a fixed three-month mediation panel drawn from the node; under X-1 and X-3 that panel takes no one from the node. The council results stand; the panel rows are evidence on the current text only.
 
 **Next action:** maintainer decisions on Y-4 and Y-5; a word count of Chapter IV with every accepted patch (Y-13); consequential wording for Arts. 2.6.1, 3.6.1 and 4.1.1 (Y-9, Y-10) in SIM-QA-21; service rules for per-dispute panels, interpreters and the Triage Panel (Y-6, Y-7) in SIM-QA-18; SIM-QA-11 re-run (Y-11).
+
+**Status after the second batch of maintainer decisions (2026-11-13):** Y-1 corrected (SIM-QA-19 section 11); Y-2 open until the SIM-QA-21 merge decision; Y-3 drafted as a hypothesis, `NARROWED` (SIM-QA-18 11.6); Y-4 confirmed (SIM-QA-18 11.1); Y-5 confirmed (SIM-QA-19 11.1); Y-6 and Y-7 drafted as OL-9.12 (SIM-QA-18 11.4); Y-8 drafted as a hypothesis, `NARROWED` (SIM-QA-19 11.2); Y-9 and Y-10 drafted (SIM-QA-21 10.3); Y-11 re-run, **council petition capacity not workable at the modelled rate** (SIM-QA-18 11.5); Y-12 drafted as a hypothesis, `NARROWED` (SIM-QA-18 11.7); Y-13 counted and split proposed, not applied (next section); Y-14 order of application stated (SIM-QA-23 8.4); Y-15 marked (SIM-QA-18 section 4). The deferral window is now three months in every docket that uses it (SIM-QA-18 H2 and Section 6, SIM-QA-19 section 8, SIM-QA-21 section 10).
+
+---
+
+## **Chapter IV Placement Proposal 2026-11-13 (Y-13)** `[STATUS: SIMULATION_HYPOTHESIS]` *(proposal only; the split is not applied; no other chapter touched; texts in [`chapter_iv_placement_2026-11-13.md`](chapter_iv_placement_2026-11-13.md))*
+
+### **1. Maintainer Instruction (2026-11-13)**
+Do not cut any point. Record a placement test next to the compression disclosure rule (board instruction 10). Red-team the test. Count Chapter IV with every accepted patch, apply the test clause by clause, give where each clause goes and the bound left in the Constitution, and give the resulting word count against the 1,000-word ceiling. Do not apply the split.
+
+### **2. Word Count** *(tokens containing a letter or a digit, headings included)*
+| Text | Words | Against 1,000 |
+| :--- | :--- | :--- |
+| Canon Chapter IV today | 926 | −74 |
+| With every accepted patch (SIM-QA-18 to 21; SIM-QA-23 consequential to 4.5.1) | **2,842** | +1,842 |
+| After the placement test (Part B) | **2,035** | **+1,035** |
+
+By article, consolidated → after the test: 4.1: 97 → 97; 4.2: 730 → 522; 4.3: 659 → 574; 4.4: 1,058 → 569; 4.5: 177 → 152; 4.6: 113 → 113. Not counted: the SIM-QA-18 addition to Art. 4.3.3 (loses its object under SIM-QA-21; Y-2) and the hypotheses Y-3 and Y-12. If Y-12 is accepted, Art. 4.5.3 gains about 25 words.
+
+### **3. The Clauses That Move** *(compression disclosure: every point listed; nothing dropped)*
+Clauses not listed stay in the Constitution as drafted, because a 60% change could remove a right, a prohibition or a power (Arts. 4.1, 4.3.3 to 4.3.5, 4.4.1, 4.4.3, 4.4.5, 4.5.1 to 4.5.3, 4.6 in full). "Words only" marks a restatement or an example whose removal loses no point. "New bound" marks a limit that the accepted texts do not contain and that the placement test requires; each one needs a maintainer decision.
+
+| # | Clause (source) | Goes to | Bound left in the Constitution |
+| :--- | :--- | :--- | :--- |
+| 1 | 4.2.1 node assembly: quorum (SIM-QA-21) | OL-10 (quorum, provisional one third / one half) | **New bound:** never below one third of adult residents |
+| 2 | 4.2.1: "so from neither the node nor the larger node nor any node in its draw pool" | removed, words only (restates the outside-panel rule of 4.2) | the outside-panel rule itself |
+| 3 | 4.2.1: founding-node pool order (nearest other nodes, then the node itself) | OL-10 point 8; SIM-QA-19 Y-8 fallback | no first-degree kin or domestic partners serve together |
+| 4 | 4.2.2: 150 / 120 adults, twelve months (SIM-QA-21) | new OL line with OL-10: threshold, lower point | **New bound:** threshold between 100 and 200 adults; twelve months sustained, both ways |
+| 5 | 4.2.2–4.2.5: "serving a mandate whose length is drawn…" written four times | one sentence, words only | drawn length within Organic Law ranges |
+| 6 | 4.2 closing: "sealed … by a commitment that anyone can verify once revealed" | OL-9 (commit-reveal method) | sealed verifiably at the draw |
+| 7 | 4.2 closing: "impartial because drawn"; "every such claim states its margin of error" | words only, shortened | juries not samples; representativeness from 101 seats with its margin of error |
+| 8 | 4.3.1: "cryptographic and mechanical" lotteries | OL-9 (draw technology) | publicly verifiable |
+| 9 | 4.3.1: ordered alternates within every stratum (SIM-QA-18) | OL-9 (draw procedure) | alternates of the same stratum fill vacated seats |
+| 10 | 4.3.1: counts by excusal ground | OL-9 (publication) | refusal, withdrawal and excusal rates published per stratum, never identifying persons |
+| 11 | 4.3.2: list of remote votes ("among them the certification of a matter as complex") | OL-9.11 (closed list) | only procedural votes listed in Organic Law and emergency ratification; substance always in person |
+| 12 | 4.3.2: share of a working week per tier (Set B) | OL-9 (already) | **New bound:** never full-time |
+| 13 | 4.3.2: ceiling on raised hours | OL-9.10 (already) | within the limit of Organic Law; never full-time (row 12) |
+| 14 | 4.3.6: thirty-day request window (SIM-QA-19) | OL-9.9 | no less than thirty (30) days |
+| 15 | 4.3.6: renewal count K = 12 of 15 | OL-9.9 (already) | **New bound:** never fewer than a majority of members |
+| 16 | 4.3.6: fourteen-day certification | OL-11 point 6 | **New bound:** never more than thirty (30) days |
+| 17 | 4.4.2: definition of each filter (place shares; proposing node, formal objection before the draw, signed contribution, evidence issued by either side; same school or attesting party) (SIM-QA-20) | OL-9.7 extended | closed list of five filters; **new bound:** defined on countable facts, never on opinion; conflict filter never relaxed |
+| 18 | 4.4.2: residence proof that reveals only non-residence | OL-9.7 (method) | residence proven without revealing anything else |
+| 19 | 4.4.2: panel works in writing; translations annexed beside originals | OL-9.7 | language never a filter; own text authentic; drawn interpreters |
+| 20 | 4.4.2: continuity through earlier briefs (confirm or revise, and why) | OL-9.7 | — (procedure; no right or power) |
+| 21 | 4.4.2: release and care replacement for panel members | covered by Art. 4.3.2, words only | civic service under Art. 4.3.2 |
+| 22 | 4.4.2: relaxation order (place, then source diversity, then hiatus), each step logged; minimum pool | OL-9.7 | conflict-of-interest filter never relaxed |
+| 23 | 4.4.6: evidence as a signed, tamper-evident public record (Arts. 7.3, 7.4) | OL-9.7 (technology) | — (Chapter VII applies by its own terms) |
+| 24 | 4.4.6: examples of each kind of evidence | OL-9.7, words only | three kinds named |
+| 25 | 4.4.6: reciprocal attestations in one category do not count | OL-9.7 | — (anti-gaming detail; see red team P-8) |
+| 26 | 4.4.6: Zero-Knowledge Proof-of-Personhood named | OL-9.7 (technology) | one entry per person, proven without revealing identity |
+| 27 | 4.4.6: open-model pre-check ("meets" / "to be verified", citation of passage, code for signatures, dates and counts, all filings to the jury where no model qualifies) | OL-9.7 | no model rejects an entry or decides a challenge; doubtful filings go to juries from outside the field |
+| 28 | 4.4.6: waiting period; one challenge per ground | OL-9.7 | never for a proposal published before filing; anyone may challenge; eligible while pending |
+| 29 | 4.4.6: replication across watersheds, key dispersion, offline draws | OL-9.7 (technology) | **New bound:** replicated so that no single site or key controls it |
+| 30 | 4.5.4: worked examples (9 and 12 of 15; 61 and 76 of 101) | Organic Law, words only | the arithmetic rule |
+| 31 | 4.5.4: "with the quorum fixed by Organic Law" for node assemblies | stated once, in 4.2.1 | quorum bound of row 1 |
+
+*Points the test keeps in the Constitution that the default categories would have moved* (the test overrides the categories): the closed list of internal matters of 4.2.1 (shrinking it moves power to the centre); secret ballot on dwellings, newcomers and disputes; a chair drawn by lot for each session; the one-month and three-month notice floors of drawn mandates; one deferral without reason; orientation at a first mandate; written questions answered on the public record (an unrecorded answer is a staff framing channel, Art. 4.3.4); thresholds of the three kinds of evidence enacted together (otherwise one route, usually the diploma, can be favoured); "no plebiscite" in 4.3.6.
+
+### **4. Red Team Against the Placement Test**
+* **P-1, the council threshold** (row 4). A 60% majority raises it to 1,000 and hands most nodes' general matters to centre councils, or lowers it to 50 and brings back the fill failure. *Bound:* 100 to 200 adults, twelve months sustained. Residual: inside the band, the choice still moves power between nodes and centres; the X-8 evidence is synthetic.
+* **P-2, the node quorum** (row 1). A 60% majority lowers it to a few percent so that an always-attending bloc decides (SIM-QA-21 RED-4). *Bound:* one third.
+* **P-3, the service share** (row 12). A 60% majority makes the 1,001 tier full-time again, restoring the self-selection H7 was adopted to reduce (RED-2). *Bound:* never full-time. Residual: 95% of a week is not full-time; a numeric ceiling (for example one half, the Set B maximum) would be tighter. *Open.*
+* **P-4, mandate ranges** (row 5). A 60% majority sets ten-year mandates at the global tier, a semi-permanent class (Art. 4.1.2). *No bound in the accepted texts or in this proposal; open:* a constitutional maximum (the canon's longest mandate today is two years).
+* **P-5, the renewal count K** (row 15). A 60% majority sets K = 1, so a second reading is held by the same people. *Bound:* a majority.
+* **P-6, filter definitions** (row 17). A 60% majority defines "conflict of interest" to exclude critics (anyone who published on the matter). *Bound:* countable facts, never opinion. Residual: "signed a contribution" can be stretched to "signed a petition"; review under Art. 4.6.
+* **P-7, admission criteria** (already in OL-9.7). Thresholds that only one guild meets. The twelve-month delay and "never removes an admitted entry" sit only in OL-9.7, so a 60% majority can repeal them. *Open:* both are candidates for constitutional bounds under the test; not added here because neither was in an accepted constitutional text.
+* **P-8, reciprocal attestations** (row 25). A 60% majority repeals the rule and rings of two count again. Under the test this is a borderline case: it is a detail, but repealing it lets a group gain weight in the Register. Moved, with the residual stated.
+* **P-9, the closed list of remote votes** (row 11). A 60% majority lists a decision of substance as "procedural" to move it online. *Bound:* substance always in person; the form check of OL-9.11. Residual: the line between procedure and substance is drawn by the same 60% majority (SIM-QA-18 10.3, X-10).
+* **P-10, petition parameters** (Art. 4.3.5, already "fixed by Organic Law" in the merged canon). A 60% majority raises the co-endorsement share to a level no petition reaches, so the agenda closes. *No bound in canon today; open:* a constitutional ceiling on the share. Found by the test, not created by the move.
+* **P-11, the test itself is over-inclusive.** "Could someone lose a right or a group gain power?" can be answered yes for almost any rule. Applied strictly, as here, the test keeps most of the accepted text in the Constitution, which is why Chapter IV ends at 2,035 words. *Guard:* the default categories decide when the answer is only speculative; every "stays" against the categories is listed above for the maintainer.
+* **P-12, the ratchet has no direction for some moves.** "Organic Law may strengthen a guarantee, never weaken it" cannot rank a change that strengthens one guarantee and weakens another (adding a filter protects against capture and narrows the pool; SIM-QA-19 I-5). *Guard:* the bound in the Constitution decides, not the ratchet. Residual: a review jury still decides contested cases.
+* **P-13, a number that is its own bound** (the thirty-day sunset of 4.5.3, the hiatus of twice the mandate, 75% and 60%). Moving it saves no words, because the bound repeats it. These stay.
+
+**Verdict on the test:** **`BLUE_HOLDS`** as a protection rule, with three open bounds (P-3 numeric ceiling, P-4 mandate maximum, P-10 co-endorsement ceiling) and one open candidate pair (P-7). It does not deliver the word ceiling.
+
+### **5. Why Chapter IV Still Exceeds the Ceiling** *(+1,035 words; nothing cut)*
+* The accepted patches add guarantees, not procedure. Of the 1,916 words they add, the test moves 807 and leaves the rest because each sentence carries a right, a prohibition or a power: the node-assembly rules of 4.2.1 (224 words after the test), the service and in-person rules of 4.3.2 (218), the second reading of 4.3.6 (146), and the Evidence Panel and Register guarantees of 4.4.2 and 4.4.6 (362 together).
+* The bounds the test requires add back about 65 words (rows 1, 4, 12, 14, 15, 16, 17, 29).
+* Under the compression disclosure rule, closing the gap is a maintainer decision. Options, listed only: waive the ceiling for Chapter IV; divide Chapter IV into two chapters (for example, the sortition architecture, and drawn expert evidence with the Practitioner Register); move Art. 4.4.6 to the chapter on digital infrastructure, next to Arts. 7.2 to 7.4 that it already cites; or drop named points, each recorded with date and reason. Every option except the last keeps every point. None is applied, and no other chapter is touched.
+
+### **6. Open Decisions for the Maintainer**
+1. The split itself (rows 1–31), point by point.
+2. The seven new bounds (rows 1, 4, 12, 15, 16, 17, 29).
+3. The open bounds P-3, P-4, P-10 and the candidates P-7.
+4. How to meet the ceiling (section 5).
