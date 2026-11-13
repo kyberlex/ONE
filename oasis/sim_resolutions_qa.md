@@ -1621,7 +1621,7 @@ Smallest node with ≥ 95% of months fully seated, lock 3: 75 adults at r = 0.6,
 * **Over-reading as a claim on services: `RED_WINS` on a broad wording, `BLUE_HOLDS` on the drafted one.** A Chapter I right "to one's own language" could be read as a claim to every public service, document and session in any language, a cost no node can meet for hundreds of languages. The drafted phrase extends a liberty ("cultural expression, including the use of one's own language"): no one may be barred or penalised for using their language. The positive claims are bounded and sit in 5.3 (schooling chosen by the community; one's own language in every assembly and panel, served by drawn interpreters under Organic Law). *Guard:* keep the 1.4.1 phrase as a liberty of use; do not widen it at merge.
 * **Conflict with the common language: `BLUE_HOLDS`.** A Chapter I right to one's language could be cited against the compulsory second tongue of 5.3. The common language is learned in addition to, never instead of, one's own; learning a second tongue bars no use of the first. Residual: a community that refuses the common language for its children has a Chapter I argument to raise before the Art. 4.6 review; that case is not decided here.
 * **Primacy over the Organic Law: `BLUE_HOLDS`.** School-hour rules or interpreter rules that in practice suppress a language (no hours left for it, no interpreter offered) are void under Art. 1.7.2. This gives Layer 1 teeth against RED-3, within the limit that law cannot stop families from abandoning a language.
-* **Chapter V word ceiling (maintainer decision 2026-11-12): waived** for the Languages paragraph; Chapter V rises from 885 to about 1,000 words. Red: a waiver is a precedent, and every later docket can claim one, so the 600–900 rule of `bible/methodology.md` erodes chapter by chapter. *Guard:* the waiver covers this paragraph only, is recorded here by name, and gives no general allowance; any further excess in Chapter V needs its own decision. Verdict: **`NARROWED`**. Residual: the methodology rule is now a default with recorded exceptions, not a hard limit. *Update 2026-11-13: the maintainer raised the chapter ceiling from 900 to 1,000 words for every chapter. Chapter V at about 1,000 words sits at the new ceiling; the waiver may no longer be needed once the paragraph is counted exactly.* *Confirmed 2026-11-12: the waiver applies to this chapter only. The maintainer also adopts a Compression Disclosure Rule (`bible/methodology.md` III.2b; board instruction 8): any shortening that would remove or weaken a point is listed and decided point by point, never done silently. The 21 losses of section 7 are the failure this rule prevents.*
+* **Chapter V word ceiling (maintainer decision 2026-11-12): waived** *(retired 2026-11-13 by maintainer decision, Y-16: replaced by board instruction 10a; Chapter V with this paragraph counts 986 words, under the general ceiling of 1,000)* for the Languages paragraph; Chapter V rises from 885 to about 1,000 words. Red: a waiver is a precedent, and every later docket can claim one, so the 600–900 rule of `bible/methodology.md` erodes chapter by chapter. *Guard:* the waiver covers this paragraph only, is recorded here by name, and gives no general allowance; any further excess in Chapter V needs its own decision. Verdict: **`NARROWED`**. Residual: the methodology rule is now a default with recorded exceptions, not a hard limit. *Update 2026-11-13: the maintainer raised the chapter ceiling from 900 to 1,000 words for every chapter. Chapter V at about 1,000 words sits at the new ceiling; the waiver may no longer be needed once the paragraph is counted exactly.* *Confirmed 2026-11-12: the waiver applies to this chapter only. The maintainer also adopts a Compression Disclosure Rule (`bible/methodology.md` III.2b; board instruction 8): any shortening that would remove or weaken a point is listed and decided point by point, never done silently. The 21 losses of section 7 are the failure this rule prevents.*
 
 ### **6. Residual Weaknesses (Honest Limits)**
 * No constructed language is neutral in vocabulary; the patch makes it less unequal, not equal.
@@ -1773,7 +1773,7 @@ Method: v1.0 compared with canon section by section; canon and the pre-v2 batch 
 | New: sexual orientation, opinion, language, indirect effect, the register ban | **All five accepted.** |
 
   No point is dropped; nothing is recorded under the drop rule of board instruction 8.
-* **Chapter I word ceiling:** waived for Chapter I for Art. 1.8 only. The waiver gives no general allowance; any other excess in Chapter I needs its own decision. Count in 8.5.
+* **Chapter I word ceiling:** *(waiver retired 2026-11-13 by maintainer decision, Y-16: Chapter I now has its own ceiling of 1,200 under board instruction 10a; with Art. 1.8 it counts 1,124, with the Art. 1.4.1 phrase 1,134)* waived for Chapter I for Art. 1.8 only. The waiver gives no general allowance; any other excess in Chapter I needs its own decision. Count in 8.5.
 * **Restorative measures:** allowed only as a time-limited exception written into Art. 1.8 itself, never created by Organic Law alone. Conditions in the Constitution: adopted at 75%, with a sunset, founded on published aggregate evidence that identifies no one, never reducing anyone's Tier 1 provision or political rights, renewable only by a new 75% vote, open to review under Art. 4.6. Organic Law sets only the maximum length of the sunset and the form of the evidence. Drafted as Art. 1.8.6.
 * Accepted in principle is not merged. The canon is unchanged.
 
@@ -2018,12 +2018,12 @@ Clauses not listed stay in the Constitution as drafted, because a 60% change cou
 * Under the compression disclosure rule, closing the gap is a maintainer decision. Options, listed only: waive the ceiling for Chapter IV; divide Chapter IV into two chapters (for example, the sortition architecture, and drawn expert evidence with the Practitioner Register); move Art. 4.4.6 to the chapter on digital infrastructure, next to Arts. 7.2 to 7.4 that it already cites; or drop named points, each recorded with date and reason. Every option except the last keeps every point. None is applied, and no other chapter is touched.
 
 ### **6. Open Decisions for the Maintainer**
-1. The split itself (rows 1–31), point by point.
-2. The seven new bounds (rows 1, 4, 12, 15, 16, 17, 29).
+1. ~~The split itself (rows 1–31), point by point.~~ **Accepted in principle 2026-11-13, as a block** (section 7.8).
+2. ~~The seven new bounds (rows 1, 4, 12, 15, 16, 17, 29).~~ **Accepted in principle 2026-11-13** (section 7.8).
 3. The open bounds P-3, P-4, P-10 and the candidates P-7.
-4. How to meet the ceiling (section 5).
+4. ~~How to meet the ceiling (section 5).~~ Decided 2026-11-13: own ceiling for Chapter IV (Y-16, section 7.8).
 
-### **7. Y-16: One Chapter IV Under Its Own Ceiling, with a Total Ceiling** `[STATUS: SIMULATION_HYPOTHESIS]` *(maintainer hypothesis 2026-11-13; not a decision; canon untouched; the IV-A / IV-B trial is dropped by maintainer instruction and not recorded)*
+### **7. Y-16: One Chapter IV Under Its Own Ceiling, with a Total Ceiling** `[STATUS: SIMULATION_HYPOTHESIS]` *(maintainer hypothesis 2026-11-13; **accepted 2026-11-13, section 7.8**; canon untouched; the IV-A / IV-B trial is dropped by maintainer instruction and not recorded)*
 
 #### **7.1 The Hypothesis**
 Chapter IV stays one chapter at about 2,035 words (Part B). The single ceiling becomes a rule: a general ceiling of 1,000 words per chapter; own ceilings for Chapter I and Chapter IV, the two chapters that hold the guarantees the placement test keeps in the Constitution (starting point 1,200 and 2,100); a ceiling on the total words of the Constitution (starting point 11,000).
@@ -2094,3 +2094,17 @@ Each paragraph keeps its lead sentence and splits into labelled sub-items. No po
 5. Whether Y-3, if accepted, carries the 20-word bound in Chapter IV.
 6. Retiring the Chapter V and Chapter I waivers if the rule is adopted.
 7. The open decisions of section 6 of this proposal (the split, the new bounds, P-3, P-4, P-7, P-10) stand unchanged.
+
+#### **7.8 Maintainer Decisions (2026-11-13)**
+* **Y-16 adopted.** Chapter IV stays one chapter under its own ceiling.
+* **Numbers:** Chapter I **1,200**; Chapter IV **2,150**; total **11,500**. The general ceiling stays 1,000.
+* **Rule 10a, points (1) to (6), adopted as drafted.** Board instruction 10a is in force from this date; instruction 9 remains the general ceiling within it.
+* **Readability layout (7.6) adopted** as the working text of the four paragraphs, with "with release raised in proportion" in Art. 4.3.2. Working Chapter IV: Part B with Part C, **2,064 words**, 86 under 2,150.
+* **Y-3 bound:** if Y-3 is accepted, Chapter IV carries the 20-word bound on the meaning of "in person". Y-3 itself remains a hypothesis.
+* **Waivers retired:** the Chapter V waiver (SIM-QA-22) and the Chapter I waiver (SIM-QA-23), replaced by rule 10a. Chapter V has 14 words of headroom; any further addition there needs its own decision.
+* **Y-13 split (rows 1–31) accepted in principle as a block**, with the clauses listed in section 3 going to the Organic Law destinations named there.
+* **The seven new bounds accepted in principle:** quorum of node assemblies never below one third of adult residents; council threshold between 100 and 200 adults, sustained twelve months both ways; service never full-time; second reading only after a majority of the council is renewed; irreversibility certification within thirty days; Evidence Panel filters on countable facts, never on opinion; the Register replicated so that no single site or key controls it.
+* **Still open:** the missing bounds P-3 (numeric ceiling on the service share), P-4 (maximum length of a drawn mandate), P-10 (ceiling on the co-endorsement share for petitions) and the P-7 pair (twelve-month delay for criteria changes; no removal of admitted entries) are not decided. Y-3 and Y-12 remain hypotheses.
+* Accepted in principle is not merged. The canon and the merged Annex are unchanged; the Organic Law destinations of the split are drafts.
+
+*Headroom after the decisions:* Chapter IV 2,064 of 2,150 (86 words); with Y-12 and the Y-3 bound, 2,112 (38 left). Chapter I 1,134 of 1,200 (66). Total with accepted patches and the layout 10,929 of 11,500 (571).

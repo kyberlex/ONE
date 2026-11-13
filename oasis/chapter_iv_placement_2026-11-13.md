@@ -1,6 +1,6 @@
 # **Chapter IV: Consolidated Text and Placement Split (Y-13)** `[STATUS: SIMULATION_HYPOTHESIS]`
 
-*Working file for the maintainer decision on Y-13, 2026-11-13. Not merged; the master text is unchanged; the split is not applied.* Analysis, clause table, red team of the placement test and word counts: [`sim_resolutions_qa.md`, Chapter IV Placement Proposal](sim_resolutions_qa.md). Board rule: [`SIM_QA_TODO.md`](SIM_QA_TODO.md), instruction 10.
+*Working file for the maintainer decision on Y-13, 2026-11-13. Not merged; the master text is unchanged; the split is not applied.* **Maintainer decisions 2026-11-13:** the split (Part B) and its seven new bounds accepted in principle; the layout of Part C adopted; Chapter IV under its own ceiling of 2,150 words (Y-16). Working text: Part B with Part C, 2,064 words. Still not merged. Analysis, clause table, red team of the placement test and word counts: [`sim_resolutions_qa.md`, Chapter IV Placement Proposal](sim_resolutions_qa.md). Board rule: [`SIM_QA_TODO.md`](SIM_QA_TODO.md), instruction 10.
 
 *Word counts:* tokens containing a letter or a digit, headings included, chapter text only (this preamble and the part headings of this file excluded). Canon Chapter IV today: 926 by this method (the 948 of the cross-docket check counted separator lines and list markers).
 
