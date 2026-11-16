@@ -2606,7 +2606,7 @@ A seed node of 60 persons, 80% contributing; installed capacity (land, water, en
 6. **Network ledger.** Transfers are recorded in persons and rations; a node that has received transfers takes them in turn when it has room; settlement follows the reciprocity of Art. 10.3.
 7. **Referral.** Only to a named public service of the legacy jurisdiction that has confirmed in writing it can receive the person; the person is accompanied and given the information in their language; a person who returns is received again under point 4.
 8. **Publication.** Capacity, occupancy, transfers and referrals are published monthly as counts, never names.
-9. **End of the derogation.** For a node, when a neighbour basin can receive under Art. 10.4.4; for all, at the phase gate that ends the transition (Art. 9.6.2).
+9. **End of the derogation.** For a node, when a neighbour basin can receive under Art. 10.4.4, as certified by a panel of three drawn from outside the node (added with D-30.5); for all, at the phase gate that ends the transition (Art. 9.6.2).
 
 #### **5.4 Word Count** *(same method as SIM-QA-29 section 5.3)*
 | Text | Words | Against the ceiling |
@@ -2677,7 +2677,22 @@ A seed node of 60 persons, 80% contributing; installed capacity (land, water, en
 **Option 1 accepted.** The Tier 1 floor stays the rule. A certified shortage is the only exception: reached only after the emergency ladder, certified by an outside panel, reviewed every thirty days, and borne by all present in proportion to need. Disclosure item 3 of 6.5 is accepted as **qualified**, and residual F-6 is accepted as a physical limit that no text removes. Rejected: a second, lower floor in the Constitution (when food falls short of it too, it forces a choice of who eats, which is option C again), and a ban on any ration below the floor (impossible to keep in a real shortage; same result).
 *Consequence at merge:* public descriptions that state the 2,200 kcal floor (among them `PLAY.md`, the game docs, `habitat/MHU_MODULAR_HABITAT_UNIT.md` and the roadmap Stage 1 blueprints) are to read "2,200 kcal a day, except in a certified shortage shared by all", so that the qualification is never hidden. Not changed now: the patch is not merged.
 
-**Next action (revision 2):** maintainer decisions D-30.3 to D-30.6 (board).
+#### **6.7 Maintainer Decision D-30.5 (2026-11-16): Art. 9.1.4 Prevails in Transition Nodes**
+**Option B.** The entry period is transitional. Art. 10.4.2 ("immediate residential usufruct" in Green Status) is not amended; Art. 9.1.4 prevails over it in transition nodes and lapses with the derogation. Rejected: A (amend Art. 10.4.2 for every basin: weakens a strong welcome promise where Art. 5.2 and OL-22 point 18 already deal with free riders, and Chapter X is near its ceiling); C (no text: leaves two readings). Civic enrolment is not in conflict: under SIM-QA-29 D-29.5 a person can be entered at once.
+
+*Also fixed in the same revision:* the section 5.3 draft could be read as applying the entry period only when residence is drawn by lot. The revised text applies it to every new resident of a transition node, and the lot only when applicants exceed capacity (OL-23 point 2 already read so).
+
+**Art. 9.1.4 (revised, replaces the draft of section 5.3):**
+> 4. Admission to Transition Nodes: A transition node declares its capacity from its physical accounts (Article 3.1.6), checked by a panel drawn from outside it; members never decide on persons. Every new resident first spends an entry period of hospitality with shifts set by Organic Law; where applicants exceed capacity, residence is assigned by lot. Shelter at Tier 1 is never conditioned. Every arrival receives water, food, emergency care and shelter for no fewer than seven (7) nights. Beyond declared capacity the node first offers transfer to another transition node with room; only where none exists may it refer an arrival, accompanied, to a public service of the legacy jurisdiction that has confirmed it can receive them. In transition nodes this Article prevails over Articles 10.4.2 and 10.4.3; it lapses for each node when Article 10.4.4 can operate for it, and for all at the end of the transition.
+
+*Red team.*
+* **H-1, the whole article lapses together. `BLUE_HOLDS`.** After the lapse, a node is governed by Art. 10.4 as written (statuses on carrying-capacity telemetry, neighbours under 10.4.4, and the shared-shortage addition to 10.4.3, which does not lapse).
+* **H-2, the entry period reaches members of other nodes. `BLUE_HOLDS`.** A person moving between transition nodes also passes it; the rule is the same for every origin (SIM-QA-23), and a member who contributes loses nothing but the wait.
+* **H-3, keeping the derogation alive by denying that neighbours can receive. `NARROWED`.** The lapse condition of OL-23 point 9 is certified by a panel of three drawn from outside the node, not by the node (added to point 9). *Residual:* as RED-10 of section 5.2.
+
+*Count:* Art. 9.1.4 140 → 149 (+9). Chapter IX 817 → **966 of 1,000** (34 left, within fifty words). Chapter X unchanged by this decision. Compression disclosure item 2 of 5.5 now reads: Art. 10.4.2 yields to Art. 9.1.4 in transition nodes only, until the lapse; **weakened** for transition nodes, decided.
+
+**Next action (revision 3):** maintainer decisions D-30.3, D-30.4 and D-30.6 (board).
 
 
 
