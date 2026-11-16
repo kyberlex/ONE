@@ -2711,7 +2711,10 @@ A seed node of 60 persons, 80% contributing; installed capacity (land, water, en
 #### **6.10 Maintainer Decision D-30.4 (2026-11-16)**
 **OL-23 values accepted as provisional**, all `PROVISIONAL — UNVERIFIED` until SIMONE challenge 1 (D-30.3) and field data from the first nodes: core hospitality seven nights, with stays for medical need and for a confirmed transfer (point 4); entry period eight weeks (point 2); capacity review every three months and after each harvest (point 1); certification within seventy-two hours (point 11); household stores beyond two weeks pooled in a shortage (point 12); the survival ration left to specialist review (point 13). Evidence for point 4: [`results`](../simone/benchmarks/results/sim_qa_30_seed_node_capacity_results.md) section 5 (synthetic): seven nights holds two years at three and ten arrivals a week; fourteen fails on day 461 at ten; thirty fails on day 686 at three and day 196 at ten. The entry period does not change the model results, because capacity binds before labour; its length is a human choice, not a physical one.
 
-**Next action (revision 5):** maintainer decision D-30.3 (board); entry of the D-30.6 draft in the roadmap when the maintainer decides.
+#### **6.11 Maintainer Decision D-30.3 (2026-11-16)**
+**Option C.** SIMONE challenge 1 is run first internally, extending the existing agent model (Agents.jl, HEXACO-H, fatigue) with a sweep of the non-contributor share, the Art. 5.2.2 ladder and arrivals under draft Art. 9.1.4 / OL-23; results labelled synthetic and not externally reviewed; then queued for external review (SIMONE Task 8.1). Done in a separate work session, not in this docket. Recorded as Task 8.0 in [`simone/TODO.md`](../simone/TODO.md). It does not block the decisions of this docket; it may revise the OL-23 values and the residuals.
+
+**Next action (revision 6):** none pending from the maintainer on this docket; SIMONE Task 8.0; roadmap entry of D-30.6 when the maintainer says so; Stage 3 (purple patch consolidated) after Task 8.0 or on maintainer instruction; entry of the D-30.6 draft in the roadmap when the maintainer decides.
 
 
 

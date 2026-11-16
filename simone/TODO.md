@@ -136,8 +136,14 @@ Foundation ONE will **only** be legally chartered under Swiss Civil Law (ZGB Art
 
 ## **X. PHASE 8: DUAL-PILLAR INTEGRATION & SWISS FOUNDATION GENESIS LOCK**
 
+- [ ] **Task 8.0: Challenge 1, Free-Rider Threshold ($C_{\text{crit}}$), internal run** *(requested 2026-11-16 by `SIM-QA-30` decision D-30.3; first internal, then queued for external review under Task 8.1)*
+  - Goal: the share of persistent non-contributors at which Tier 1 fails before the Art. 5.2 sanction ladder restores reciprocity (`simone-specs.md`, challenge 1).
+  - Build on the existing Model B (`src/agent_abm.jl`, `src/layer2_psychometrics.jl`) and the sweep of `examples/run_hexaco_tipping_point.jl`; do not start a new model.
+  - Add: (1) a sweep of the persistent non-contributor share; (2) the Art. 5.2.2 ladder (mediation panel, exclusion from Tier 3, *ipso jure* return at the first shift, Tier 1 never touched); (3) arrivals from outside with the entry period and core hospitality of draft Art. 9.1.4 / OL-23 (`oasis/sim_resolutions_qa.md`, `SIM-QA-30`), including the case where installed capacity, not labour, binds.
+  - Compare with the synthetic stdlib model [`benchmarks/sim_qa_30_seed_node_capacity.py`](benchmarks/sim_qa_30_seed_node_capacity.py): does capacity still bind before labour in a seed node once agents, fatigue and sanctions are modelled?
+  - Output: an example script and a results file in `benchmarks/results/`, labelled synthetic and not externally reviewed; then update `SIM-QA-30` (OL-23 values, residuals).
 - [ ] **Task 8.1: Pillar 1 (Biophysical Economics) Stress-Test**
-  - Co-Steward of Economy runs abiotic deficit shocks through `Simone.jl` with external heterodox/ecological economists.
+  - Co-Steward of Economy runs abiotic deficit shocks through `Simone.jl` with external heterodox/ecological economists. Includes external review of Task 8.0.
 - [ ] **Task 8.2: Pillar 2 (Governance & Law) Stress-Test**
   - Co-Steward of Governance verifies demarchic immunity against factional capture and oligarchic drift.
 - [ ] **Task 8.3: Swiss Foundation Genesis Lock (ZGB Art. 80 ff.)**
