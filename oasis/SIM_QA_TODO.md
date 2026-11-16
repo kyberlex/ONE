@@ -44,9 +44,10 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 
 ### **A. Opened or found on 2026-11-16**
 **SIM-QA-29, civic register** ([log](sim_resolutions_qa.md))
-- [ ] **D-29.1 (blocks the red team):** guardians of H11 hold voice without vote, or voice and vote. *Recommended:* voice without vote, as the Guardians of Art. 10.2.2.
-- [x] D-29.2: H1 to H3 as the direction, with one exception: during the transition a drawn jury may admit newcomers who have no witnessed birth. *(decided 2026-11-16; to be recorded in the docket with D-29.1)*
-- [x] D-29.3: no photographs. *(decided 2026-11-16; to be recorded in the docket with D-29.1)*
+- [x] D-29.1: H11 Advocates hold voice without vote. *(decided 2026-11-16, recorded in the docket section 4)*
+- [x] D-29.1b: the H11 role is named **Advocate** (*Advocate for the Undrawn*); "guardian" / *tutore* rejected. *(decided 2026-11-16, recorded in the docket section 4)*
+- [x] D-29.2: H1 to H3 as the direction, with one exception: during the transition a drawn jury may admit newcomers who have no witnessed birth. *(decided 2026-11-16, recorded in the docket section 4)*
+- [x] D-29.3: no photographs. *(decided 2026-11-16, recorded in the docket section 4)*
 - [ ] D-29.4 (when the red team runs): Art. 7.4.4 wording for the sealed record (75%); how long the transition jury door stays open; custody of sealed records (how many custodians, what threshold); acts done with a stolen secret before revocation; ceiling on time balances and who certifies hours; parameters (age at which the secret is created, sign-of-life period, minimum count for guardians).
 
 **SIM-QA-30, seed-node admission**

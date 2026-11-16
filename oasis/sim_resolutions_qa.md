@@ -2420,7 +2420,13 @@ Chapter I today: 808. Art. 1.8 as drafted in section 5 with its heading: 220. Pa
 
 **Honest residual:** no scheme without biometrics excludes double enrolment worldwide with certainty.
 
-**Next action:** held at Stage 1 by maintainer decision. When opened: confirm or reject H1 to H3 as the direction, voice without vote in H11, and the exclusion of photographs; red team H1 to H12 against RED-1 to RED-12; Art. 7.4.4 wording; small-node re-identification model (SIMONE); Chapter IV and Chapter VII ceiling checks (instruction 10a).
+### **4. Maintainer Decisions (2026-11-16)**
+* **D-29.2, direction:** H1 to H3 are the direction, with one exception to H2: during the transition, a drawn jury may admit newcomers who have no witnessed birth. In steady state, birth stays the only door.
+* **D-29.3, no photographs:** confirmed; no photograph or face image in any layer.
+* **D-29.1, H11:** the Advocates of persons who cannot be drawn hold **voice without vote**: they speak, place items on the agenda and hold standing under Art. 4.6.1; they do not vote. Same model as the Guardians of Art. 10.2.2.
+* **D-29.1b, name of the H11 role: Advocate** (in full, *Advocate for the Undrawn*). "Guardian" (Italian *tutore*) is rejected for this role because it names the legal representative of an individual person (a minor or a person under incapacity), which this role is not: it speaks for a group, never knows names, and holds no power over anyone. The Guardians of Art. 10.2.2 keep their name; the two roles differ and are named apart (cross-reference: open term T-21 of the plain-language pass).
+
+**Next action:** held at Stage 1 by maintainer decision. When opened: red team H1 to H12 against RED-1 to RED-12; Art. 7.4.4 wording; small-node re-identification model (SIMONE); Chapter IV and Chapter VII ceiling checks (instruction 10a).
 
 ---
 
