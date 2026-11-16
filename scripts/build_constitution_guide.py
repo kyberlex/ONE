@@ -54,9 +54,10 @@ if ENV_PATH.exists():
                 os.environ[k.strip()] = v.strip().strip("\"'")
 
 GEMINI_MODEL = "gemini-3.8-flash"
-CLAUDE_MODEL = os.environ.get("GUIDE_CLAUDE_MODEL", "")  # haiku, sonnet, opus or full id; empty = CLI default
-# Replaces Claude Code's default system prompt; with a neutral working folder this drops the
-# project CLAUDE.md and environment context (~10k tokens per call down to ~1.4k), still on the subscription.
+# Claude model per step (haiku, sonnet, opus or a full id): a lighter writer, a stricter checker.
+CLAUDE_MODELS = {"write": os.environ.get("GUIDE_CLAUDE_MODEL", "sonnet"),
+                 "check": os.environ.get("GUIDE_CLAUDE_CHECK_MODEL", "opus")}
+# Short system prompt + neutral folder: no project CLAUDE.md, ~1.4k fixed tokens per call, still on subscription.
 CLAUDE_SYSTEM_PROMPT = ("You write and check plain-language explanations of legal texts. "
                         "Follow the instructions in the message exactly and reply with JSON only.")
 
@@ -67,8 +68,8 @@ BLOCK_END_RE = re.compile(r"^(#{1,3} |---\s*$)")
 
 # ---------------------------------------------------------------- model calls
 
-def call_gemini(prompt):
-    """Sends one prompt to Gemini (same client and key as sync_webapp_i18n.py). Returns (parsed_json, meta)."""
+def call_gemini(prompt, step="write"):
+    """Sends one prompt to Gemini (same client and key as sync_webapp_i18n.py). step is ignored. Returns (json, meta)."""
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         sys.exit("[!] ERROR: GEMINI_API_KEY not found. Add it to .env or export it in your shell.")
@@ -115,8 +116,8 @@ def find_claude_binary():
 _CLAUDE_AUTH_OK = False
 
 
-def call_claude(prompt):
-    """Sends one prompt to Claude Code (claude -p, JSON output, no tools) on the subscription login only."""
+def call_claude(prompt, step="write"):
+    """Sends one prompt to Claude Code (claude -p, JSON output, no tools) subscription login only; step picks the model."""
     global _CLAUDE_AUTH_OK
     if os.environ.get("ANTHROPIC_API_KEY"):
         sys.exit("[!] STOP: ANTHROPIC_API_KEY is set. This script never uses pay-per-use API billing.\n"
@@ -135,7 +136,7 @@ def call_claude(prompt):
     t0 = time.time()
     try:
         cmd = [claude, "-p", "--output-format", "json", "--tools", "", "--system-prompt", CLAUDE_SYSTEM_PROMPT]
-        cmd += ["--model", CLAUDE_MODEL] if CLAUDE_MODEL else []
+        cmd += ["--model", CLAUDE_MODELS[step]]
         with tempfile.TemporaryDirectory(prefix="guide_") as neutral_cwd:  # no project CLAUDE.md here
             proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=600,
                                   cwd=neutral_cwd)
@@ -291,7 +292,7 @@ def generate(article, style):
           for x in data.get("qa", []) if isinstance(x, dict) and x.get("q") and x.get("a")]
     if not qa:
         sys.exit(f"[!] ERROR: no questions returned for Article {article['id']}: {data}")
-    check, meta_c = call_model(check_prompt(article, qa))
+    check, meta_c = call_model(check_prompt(article, qa), "check")
     warnings = [w for w in check.get("warnings", []) if isinstance(w, dict) and w.get("statement")]
     entry = {"article_id": article["id"], "article_title": article["title"],
              "chapter": article["chapter"], "chapter_title": article["chapter_title"],

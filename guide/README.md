@@ -47,7 +47,7 @@ Each entry stores `source_hash`, the SHA-256 of the article text it was generate
 
 ## Model
 
-The script uses **Claude through the Claude Code command line** (`claude -p`, JSON output, no tools allowed, not bare mode), one generation call and one check call per article, on the maintainer's subscription login. It never uses pay-per-use API billing: it stops if `ANTHROPIC_API_KEY` is set, and it stops unless `claude auth status` reports a `claude.ai` login. The model is the CLI's default unless `GUIDE_CLAUDE_MODEL` is set (`haiku`, `sonnet`, `opus` or a full model id); each entry records the model actually used in `"model"` (generation) and `"check_model"` (check).
+The script uses **Claude through the Claude Code command line** (`claude -p`, JSON output, no tools allowed, not bare mode), one generation call and one check call per article, on the maintainer's subscription login. It never uses pay-per-use API billing: it stops if `ANTHROPIC_API_KEY` is set, and it stops unless `claude auth status` reports a `claude.ai` login. Questions and answers are written by **Sonnet** and checked by **Opus**, the stricter reader. Override with `GUIDE_CLAUDE_MODEL` (writing) and `GUIDE_CLAUDE_CHECK_MODEL` (check), each `haiku`, `sonnet`, `opus` or a full model id. Each entry records the model actually used in `"model"` (generation) and `"check_model"` (check).
 
 Each call runs from an empty temporary folder with a short replacement system prompt (`--system-prompt`). This keeps the project `CLAUDE.md`, the memory and the environment details out of the call: about 1,400 tokens of fixed context instead of about 10,000, and only `STYLE.md` steers the style. Bare mode would cut this further but is not used, because it only accepts an API key and would bill per use.
 
