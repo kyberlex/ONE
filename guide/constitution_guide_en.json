@@ -844,7 +844,7 @@
         },
         {
           "q": "Do dangerous jobs count for more than ordinary ones?",
-          "a": "Yes. Hard or hazardous tasks such as emergency rescue, firefighting, toxic cleanup and levee shoring carry a time multiplier of 3x to 5x against the baseline service obligation. This shortens the time you are required to serve. Standing by for a hazard without actually being deployed counts only at the baseline rate, 1.0x."
+          "a": "Yes. Hard or hazardous tasks such as emergency rescue, firefighting, toxic cleanup and shoring up levees count three to five times (3x to 5x) as much as ordinary duties, so you have to serve less often. Standing by for a hazard without actually being called out counts only at the normal rate (1.0x)."
         },
         {
           "q": "Will people always have to do physical shifts?",
@@ -857,7 +857,7 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -874,28 +874,24 @@
         },
         {
           "q": "What happens if an able-bodied adult keeps refusing their assigned work shifts?",
-          "a": "This applies when an able-bodied adult systematically refuses assigned rotational shifts without a medical reason. The response is a series of escalating sanctions that do not involve prison or detention. The first step is a required meeting with a Local Mediation Panel of 3 citizens."
-        },
-        {
-          "q": "Why would a panel meet with me first?",
-          "a": "The panel meeting is meant to check for burnout or a hidden disability. It comes before the other measures listed in the article."
+          "a": "This applies when an able-bodied adult keeps refusing their assigned rotating shifts without a medical reason. The response is a series of escalating measures that never involve prison. The first is a required meeting with a Local Mediation Panel of 3 citizens, to check for burnout or a hidden disability."
         },
         {
           "q": "What can I lose, and what can I never lose?",
-          "a": "You can be excluded from Tier 3 surplus fabrication, advanced computing grids, and inter-basin transit commons. Your dwelling space above the Tier 1 shelter baseline can be reassigned, but only where it creates shared upkeep costs you refuse to reciprocate, and a Local Mediation Panel decides. Tier 1 shelter itself, preferably where you already live, is never made conditional."
+          "a": "You can be excluded from shared workshops for personal projects (Tier 3), from advanced computing and from shared transport between regions. Living space beyond the basic shelter everyone is guaranteed can be reassigned, but only where it creates upkeep work for others that you refuse to share, and a Local Mediation Panel decides. Basic shelter itself, preferably where you already live, is never made conditional."
         },
         {
           "q": "Do these measures count as a punishment, and do I lose my political rights?",
-          "a": "No. The article says the measures are strictly non-punitive and leave no lasting civic stigma. Your eligibility for sortition and your political rights are never conditioned on doing your share of work."
+          "a": "No. The article says the measures are strictly non-punitive and leave no lasting stigma. Your chance to be drawn by lot for assemblies and your political rights never depend on doing your share of work."
         },
         {
           "q": "How do I get my access back?",
-          "a": "Full Tier 3 commons access is restored the moment you resume any scheduled reciprocity shift or a mutually agreed equivalent civic contribution."
+          "a": "Full access is restored the moment you take up any scheduled shift again, or an equivalent contribution you have agreed on with the community."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -909,10 +905,6 @@
         {
           "q": "What is teaching in this community based on?",
           "a": "Teaching rests on science that has been repeated and confirmed, on how the brain develops, and on teaching methods shown to work. This includes learning environments built around the senses and movement. The article permanently bars passing teaching fads, ideological indoctrination, and standardized testing cartels."
-        },
-        {
-          "q": "How is a child's education divided by age?",
-          "a": "The article sets out three stages: ages 0 to 7, ages 7 to 13, and age 13 and older. Each stage has its own focus."
         },
         {
           "q": "What do children do from birth to age 7?",
@@ -929,7 +921,7 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -942,7 +934,7 @@
       "qa": [
         {
           "q": "What is a Parenting Formation Commons?",
-          "a": "It is a place of parenting education that each bioregional community sets up. The article says it is based on evidence and rooted in attachment neurobiology, nervous system co-regulation, and the conscious deconstruction of inherited intergenerational trauma scripts."
+          "a": "It is a parenting education program that each regional community sets up. The article says it is based on evidence about how children bond with their carers, how people help calm each other's nervous systems, and how to consciously undo harmful patterns passed down from earlier generations."
         },
         {
           "q": "Why does the article say parents need education at all?",
@@ -954,16 +946,16 @@
         },
         {
           "q": "What would I learn in the practicum?",
-          "a": "You would master pediatric first aid, sleep architecture, and infant somatic calming. The article does not explain these terms further."
+          "a": "Pediatric first aid, how a child's sleep works and how to calm babies through touch and the body."
         },
         {
           "q": "What help do new parents get?",
-          "a": "Under the First 1,000 Days Scaffolding, postpartum caregivers and pediatric specialists are placed directly within residential living circles. The article says this guarantees 24-hour relief, communal nourishment, and total liberation from productive civic duties for new parents."
+          "a": "Under what the article calls the First 1,000 Days Scaffolding, carers for new mothers and children's health specialists live directly within residential communities. This guarantees new parents round-the-clock relief, shared meals, and full release from all productive civic duties."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -976,7 +968,7 @@
       "qa": [
         {
           "q": "What does this article say about how mental health is handled?",
-          "a": "It says mental health is looked after through evidence-based brain and body medicine, by treating the surroundings that affect people, and by finding the cause of a problem before naming it. It permanently abolishes monopolistic symptom-checklist diagnosis systems and profit-driven lifelong chemical sedation."
+          "a": "It says mental health is cared for through evidence-based medicine of the brain and nerves, by not treating reactions to a person's surroundings as illness, and by diagnosis based on causes. It permanently abolishes diagnosis by monopolistic symptom checklists and profit-driven lifelong chemical sedation."
         },
         {
           "q": "Is anxiety or constant low mood seen as a personal defect?",
@@ -992,12 +984,12 @@
         },
         {
           "q": "Can one group of doctors decide what counts as correct treatment?",
-          "a": "No. The article says no medical guild or assembly may set up a dogmatic monopoly over clinical science. Treatment methods stay open to continuous testing and open clinical audit under what it calls the Heretic's Commons framework. The article does not explain that framework further."
+          "a": "No. The article says no medical guild or assembly may set up a dogmatic monopoly over clinical science. Treatment methods stay open to continuous testing and open clinical audit under the framework of the Heretic's Commons, the open research reserve of Article 1.4."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1014,20 +1006,20 @@
         },
         {
           "q": "What kinds of caregiving count?",
-          "a": "The article names childcare, early education, elder accompaniment, and somatic nursing. It calls these the main productive foundations of society. It does not say more about what each one includes."
+          "a": "The article names childcare, early education, accompanying elderly people and bodily nursing care. It calls these the most important productive foundations of society."
         },
         {
           "q": "Who oversees the rosters?",
           "a": "Neighborhood Sortition Councils supervise the rosters. Each council has 15 citizens."
         },
         {
-          "q": "Who can change labor multipliers or educational standards?",
-          "a": "The Bioregional Citizen Assembly, which has 101 delegates. A change needs a 75% supermajority vote of the seated Assembly. The article does not explain what labor multipliers are."
+          "q": "Who can change the work multipliers or educational standards?",
+          "a": "The Bioregional Citizen Assembly of 101 delegates, by a seventy-five percent (75%) majority of its seated members. The work multipliers are the extra credit given for hard or dangerous work (Article 5.1)."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1040,15 +1032,15 @@
       "qa": [
         {
           "q": "What does this article require of each community?",
-          "a": "Every municipal habitat and bioregional node in Open Networked Earth (O.N.E.) must build and maintain physical infrastructure that can run completely on its own, cut off from outside networks. A bioregional node is one of the article's named local units, alongside the municipal habitat."
+          "a": "Every town and regional community in Open Networked Earth (O.N.E.) must build and maintain infrastructure that can keep running entirely on its own, cut off from outside networks."
         },
         {
           "q": "What has to keep working if the outside supply is cut off?",
-          "a": "Four basic life-support services: drinking-water filtration, heating and cooling of homes, refrigeration for medical needs, and basic food preparation. The article calls these Tier 1 life support."
+          "a": "Four basic life-support services: filtering drinking water, heating and cooling homes, refrigeration for medicine, and basic food preparation."
         },
         {
           "q": "For how long must a community manage on its own?",
-          "a": "At least 30 consecutive days. The article sets this as a mandatory minimum."
+          "a": "At least thirty (30) consecutive days. The article sets this as a mandatory minimum."
         },
         {
           "q": "What kinds of events does this cover?",
@@ -1061,7 +1053,7 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1078,7 +1070,7 @@
         },
         {
           "q": "What kind of batteries or storage can be used?",
-          "a": "Stationary storage must be non-toxic, able to hold energy for a long time, and safe from fire. It can be chemical, mechanical, or heat-based. It must not depend on toxic or monopolized scarce minerals. The approved technologies are listed in the Organic Law Annex."
+          "a": "Fixed storage must be non-toxic, able to hold energy for a long time, and fire-safe. It can be electrochemical, mechanical or heat-based, and must not depend on toxic or monopolized scarce minerals. The approved technologies are listed in the Organic Law Annex, a separate set of technical rules."
         },
         {
           "q": "How is the power delivered to where it is used?",
@@ -1086,16 +1078,16 @@
         },
         {
           "q": "What happens to large computing work when there is not enough power?",
-          "a": "Large computing jobs, such as machine learning and heavy simulations, can be paused or slowed instantly when renewable generation falls short. This is done to protect the Tier 1 baselines. The article does not say here what those baselines contain."
+          "a": "Large computing jobs, such as machine learning and heavy simulations, are slowed or paused instantly when renewable power falls short. This protects the basic survival needs (Tier 1, Article 3.3)."
         },
         {
           "q": "What happens to the heat that computing and chemical plants give off?",
-          "a": "High-grade waste heat from large computing clusters and heat-producing chemical processes is piped into the city's district heating systems and into greenhouse biomass cycles."
+          "a": "High-grade waste heat from large computing clusters and heat-producing chemical processes is piped into municipal district heating networks and into greenhouses."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1108,19 +1100,19 @@
       "qa": [
         {
           "q": "Where will repair and manufacturing capacity be located?",
-          "a": "It is spread across municipal fabrication commons and neighborhood workshops. Every bioregional node must keep equipped municipal workshops. The article does not say what a bioregional node is."
+          "a": "It is spread across municipal fabrication workshops and neighborhood workshops. Every regional community must keep equipped municipal workshops."
         },
         {
           "q": "What equipment do the municipal workshops have?",
-          "a": "They hold standard machines for subtractive, additive, cutting, and thermal fabrication. This equipment is dedicated to agricultural, energetic, and civic infrastructure."
+          "a": "Standard machines that remove material, machines that build objects up by adding material, cutting machines and heat-based machines. This equipment is dedicated to farming, energy and civic infrastructure."
         },
         {
           "q": "What kind of control systems can the machines use?",
-          "a": "Machine tools and automated industrial controls may be run only through open-hardware Programmable Logic Controllers (PLCs). These run machine code that is transparent and can be audited."
+          "a": "Machine tools and automated industrial controls may be run only through open-hardware Programmable Logic Controllers (PLCs, the small computers that run machines). These run machine code that is transparent and can be audited."
         },
         {
           "q": "Can a company design its tools or spare parts to wear out or lock me out of repairs?",
-          "a": "No. Planned obsolescence, cryptographic vendor lock-in, and proprietary software encumbrances on mechanical tools and spare parts are legally void. The article does not say what penalties apply."
+          "a": "No. Planned obsolescence, digital locks that tie you to one maker, and proprietary software restrictions on mechanical tools and spare parts are legally void."
         },
         {
           "q": "Can I get the blueprints for a mechanical part?",
@@ -1129,7 +1121,7 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1154,12 +1146,12 @@
         },
         {
           "q": "How are different regions connected to each other?",
-          "a": "High-bandwidth optical fibers run along rail corridors and aqueducts. They form open regional backbones that connect watershed nodes, which the article presents as parts of an open worldwide data exchange with no sovereign telecommunication gatekeepers."
+          "a": "High-bandwidth optical fibers run along rail lines and aqueducts. They form open regional backbones that connect watershed communities into an open worldwide data exchange with no state-controlled gatekeepers."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1188,12 +1180,12 @@
         },
         {
           "q": "What is the \"knife-switch\" rule for cyber attacks?",
-          "a": "Life-critical municipal systems must have physical breakers that can instantly cut them off from external wide-area networks during a cyber-physical attack. After the cut, they run only on local controllers that are physically write-protected and read-only. These controllers keep the metabolic and environmental loops going without needing outside network data."
+          "a": "Life-critical municipal systems must have physical switches that can instantly cut them off from outside networks during a cyber attack. After the cut, they run only on local controllers whose code is physically write-protected (read-only), which keep basic life-support and environmental processes running without any outside data."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1206,7 +1198,7 @@
       "qa": [
         {
           "q": "Who decides about local utilities and workshop bookings in my neighborhood?",
-          "a": "A Neighborhood Sortition Council oversees them. It has fifteen (15) citizens, and decisions need a sixty percent (60%) qualified majority. The article says these councils are chosen by sortition, which is selection by lot."
+          "a": "A Neighborhood Sortition Council of fifteen (15) citizens chosen by lot oversees them, deciding by a sixty percent (60%) majority."
         },
         {
           "q": "Who decides on bigger projects like regional power links, water aqueducts, or fiber-optic backbones?",
@@ -1218,7 +1210,7 @@
         },
         {
           "q": "What needs a 60% majority?",
-          "a": "Approving regional grid interconnections, water transfer treaties, and five-year infrastructural development plans. The article gives no other uses for this threshold in this list."
+          "a": "Approving regional grid interconnections, water transfer treaties and five-year infrastructure development plans."
         },
         {
           "q": "Can a bare majority ever decide something?",
@@ -1227,7 +1219,7 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1248,16 +1240,16 @@
         },
         {
           "q": "So what are computer systems allowed to do?",
-          "a": "They act as open logistical servants that carry out allocations decided by humans. Public automation is limited to verifiable oracle architectures, which have no subjective agency, legal personhood or sovereign standing."
+          "a": "They serve only as open tools that carry out allocations decided by humans. Public automation is limited to checkable systems (the article calls them verifiable oracle architectures) that have no will of their own, no legal personhood and no sovereign standing."
         },
         {
           "q": "Does stopping incoming drones or projectiles count as using force against a person?",
-          "a": "No. The article says that pre-authorized interception of inbound uncrewed machines and projectiles under Article 8.1.4 is not coercion of persons. The article does not describe how that interception works."
+          "a": "No. The article says that pre-authorized interception of incoming uncrewed machines and projectiles under Article 8.1.4 is not coercion of persons."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1270,7 +1262,7 @@
       "qa": [
         {
           "q": "What kind of software is banned under this article?",
-          "a": "Software whose source code is closed, deliberately hidden, proprietary, or a trade secret. It may not be deployed or run in public administration, infrastructure telemetry, manufacturing commons, microgrids, or communication backbones. The ban is permanent."
+          "a": "Software whose code is closed, deliberately obscured, proprietary or a trade secret. It may not be deployed or run in public administration, infrastructure sensors, shared manufacturing, local power grids or communication backbones. The ban is permanent."
         },
         {
           "q": "Which parts of a system does the rule cover?",
@@ -1291,7 +1283,7 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1316,7 +1308,7 @@
         },
         {
           "q": "What happens if a program's fingerprint can't be reproduced?",
-          "a": "It is instantly de-authorized from public infrastructure. This applies to any binary distribution whose hash cannot be independently reproduced from public source trees by any citizen node."
+          "a": "It is immediately barred from public infrastructure."
         },
         {
           "q": "Does the article say who builds or checks the software, or how a citizen node works?",
@@ -1325,7 +1317,7 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1342,11 +1334,11 @@
         },
         {
           "q": "How are the most powerful access keys protected?",
-          "a": "Root certificates, signing keys for network settings, tokens that coordinate microgrids, and administrative access to very large computing systems are permanently split into pieces. The pieces are shared among randomly selected citizen assemblies across multiple watersheds. This is meant to stop any single company, state, or guild from taking control."
+          "a": "Root certificates, signing keys for network settings, tokens that coordinate local power grids, and administrative access to very large computing systems are permanently split into pieces. The pieces are shared among assemblies chosen by lot to mirror the population, across several watersheds. This is meant to stop any single company, state or guild from taking control."
         },
         {
           "q": "What does it take to approve changes to the network?",
-          "a": "Routine signing operations need agreement from multiple nodes. Major changes to the underlying protocols need an interactive ceremony in which a threshold of the sovereign assemblies takes part together."
+          "a": "Routine signing needs agreement from several of the separate key holders. Major changes to the underlying protocols need a live joint ceremony in which enough of the key-holding assemblies take part."
         },
         {
           "q": "How do I prove I am a real person without handing over my face or fingerprints?",
@@ -1355,7 +1347,7 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1385,7 +1377,7 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1398,15 +1390,15 @@
       "qa": [
         {
           "q": "Who checks the digital systems for weak points?",
-          "a": "Independent red teams, which are groups paid to attack systems in order to find flaws. Public bounties fund them, and assemblies must keep funding them permanently with computing resources and material support. They test continuously for security weaknesses, hidden backdoors, and ways power could become concentrated."
+          "a": "Independent, public \"red teams\", groups that attack systems on purpose to find flaws, rewarded through bounties. Assemblies must support them permanently with computing energy and materials. They test continuously for security holes, hidden backdoors and ways control could become centralized."
         },
         {
           "q": "Who oversees the shared digital systems where I live?",
-          "a": "Neighborhood interface oversight is run by a Neighborhood Sortition Council of fifteen (15) citizens. Bioregional code repositories and industrial firmware standards are directed by a Bioregional Citizen Assembly of one hundred and one (101) delegates. The article says both bodies use odd numbers."
+          "a": "Neighborhood interface oversight is run by a Neighborhood Sortition Council of fifteen (15) citizens. Regional code repositories and industrial firmware standards are directed by a Bioregional Citizen Assembly of one hundred and one (101) delegates."
         },
         {
           "q": "How many votes does it take to change the basic security rules?",
-          "a": "It takes 75%. That level is required to deprecate foundational cryptographic standards or alter core open-source compilation invariants. The article does not define those terms further."
+          "a": "Seventy-five percent (75%). That level is required to retire the basic encryption standards or to change the core rules for how open-source code is compiled."
         },
         {
           "q": "What share of votes is needed to release new software?",
@@ -1419,7 +1411,7 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1440,7 +1432,7 @@
         },
         {
           "q": "Can emergency crews be used to force people to do things?",
-          "a": "No. Their command during an incident is limited to physical life-safety, and using emergency equipment for coercion is unconstitutional. An evacuation order lasting more than twenty-four (24) hours needs re-authorization by the Local Mediation Panel, chosen by lot, unless it is an administrative displacement."
+          "a": "No. Their command during an incident is limited to physical life-safety, and using emergency equipment for coercion is unconstitutional. An evacuation order lasting more than twenty-four (24) hours must be re-authorized by the Local Mediation Panel chosen by lot, so that people cannot be displaced by administrative decision."
         },
         {
           "q": "Can anyone build weapons, or hire private armies?",
@@ -1448,16 +1440,12 @@
         },
         {
           "q": "What defense does the federation keep for now, and what limits apply?",
-          "a": "Until all of Earth has joined O.N.E., the federation keeps defensive platforms sealed in underground bunkers. They may act on their own only against incoming projectiles and uncrewed machines nearby; persons and crewed vehicles are never automatic targets. In inhabited or mixed civilian areas, they are limited to non-explosive, non-ionizing electronic disruption and passive capture. Any action beyond close-in defense must be non-lethal disablement of uncrewed launch and control equipment, and needs 75% approval from both the Bioregional Assembly (101 delegates) and the Continental Chamber (301 citizens)."
-        },
-        {
-          "q": "What happens to these defenses in the end?",
-          "a": "Once the planet is unified, all defensive platforms are dismantled and smelted into civilian infrastructure, under a principle called Swords into Plowshares."
+          "a": "Until all of Earth has joined O.N.E., defensive platforms sealed in underground bunkers. They may act on their own only against incoming projectiles and uncrewed machines nearby, never against persons or crewed vehicles, and in inhabited areas only with non-explosive electronic disruption that uses no ionizing radiation, and passive capture. Anything beyond close-in defense must be non-lethal, aimed at uncrewed launch and control equipment, and approved by seventy-five percent (75%) of both the Bioregional Assembly (101 delegates) and the Continental Chamber (301 citizens). Once the planet is unified, all the platforms are dismantled and melted down into civilian infrastructure."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1470,11 +1458,7 @@
       "qa": [
         {
           "q": "How does this article make public spaces safer?",
-          "a": "Corridors and dwellings are built so daylight reaches along their length, which removes places where someone could be trapped. Automated machinery has light-based sensors that shut it down when a person comes near."
-        },
-        {
-          "q": "What does the machinery do when I get close to it?",
-          "a": "Optical interlocks on automated machinery trigger a shutdown of its moving parts when they detect a person approaching. The article does not say how close you must be."
+          "a": "Corridors and homes are designed with clear, daylit lines of sight, so there are no hidden spots where someone could be trapped. Automated machines have light sensors that shut them down when a person comes near."
         },
         {
           "q": "Are public sensors listening to what I say?",
@@ -1486,12 +1470,12 @@
         },
         {
           "q": "Can public sensors build a record of my body or identity?",
-          "a": "No. The article says public sensors never compile biometric registries. The article does not define what counts as biometric."
+          "a": "No. The article says public sensors never compile biometric registries."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1512,7 +1496,7 @@
         },
         {
           "q": "If I was physically harmed, who has to move out?",
-          "a": "The person who harmed you does. In cases of physical violence, the burden of relocation falls only on them. You keep your home without disturbance, and they are moved outside your transit radius."
+          "a": "The person who harmed you does. In cases of physical violence, the burden of moving falls only on them. You keep your home undisturbed, and they are moved outside the area you normally move through (the article says \"transit radius\")."
         },
         {
           "q": "What help do I get first if I was harmed?",
@@ -1521,7 +1505,7 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1542,20 +1526,20 @@
         },
         {
           "q": "Who decides if the first two stages fail, and how?",
-          "a": "A tribunal of fifteen (15) citizens makes a binding decision. Adversarial courtroom trials are abolished. Instead, the tribunal looks only at physical evidence that can be verified and at open logs."
+          "a": "A tribunal of fifteen (15) citizens chosen by lot makes a binding decision. Adversarial courtroom trials are abolished. Instead, the tribunal looks only at physical evidence that can be verified and at open records."
         },
         {
           "q": "What kinds of cases can a tribunal hear?",
-          "a": "Only physical assault, somatic violation, enclosure, or ecological poisoning. Tribunals cannot prosecute people for their ideas. Jurors are chosen by lot from adjacent districts."
+          "a": "Only physical assault, bodily violation, enclosure (taking shared goods for private use) or ecological poisoning. Tribunals cannot prosecute people for their ideas. Jurors are chosen by lot from neighboring districts."
         },
         {
           "q": "How is the scientific evidence checked?",
-          "a": "In Stage 3, forensic telemetry is audited independently by a facility drawn by lot from a non-contiguous watershed. The evidence is admitted only if it can be reproduced under open review."
+          "a": "At this third stage, sensor and data evidence is audited independently by a facility drawn by lot from a watershed that is not next to the one involved. The evidence is admitted only if it can be reproduced under open review."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1572,7 +1556,7 @@
         },
         {
           "q": "What happens to someone who commits violence and does not respond to efforts to help them settle?",
-          "a": "Where a person commits predatory violence that resists stabilization, they can be restrained under a arrangement called Custodia Civilis Territorialis. It takes place in daylight residential suites with open gardens, nutritious meals, and psychiatric care."
+          "a": "Where a person commits predatory violence and cannot be calmed and stabilized, they can be restrained under a civil custody the article calls Custodia Civilis Territorialis. It takes place in daylit residential suites with open gardens, nutritious meals and psychiatric care."
         },
         {
           "q": "What is not allowed during this restraint?",
@@ -1584,12 +1568,12 @@
         },
         {
           "q": "Who looks out for the person in custody, and how often is the custody reviewed?",
-          "a": "An independent guardian chosen by lot, called the Invariants Guardian (Custos Jurium), protects the person's physical well-being, their right to stay silent, and evidence that could clear them. Every one hundred eighty (180) days a newly seated jury of 15 citizens re-examines the custody, and it needs a sixty percent (60%) majority."
+          "a": "An independent guardian chosen by lot, called the Invariants Guardian, protects the person's physical well-being, their right to stay silent, and evidence that could clear them. Every one hundred eighty (180) days a newly seated jury of 15 citizens re-examines the custody, and continuing it needs a sixty percent (60%) majority."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },
@@ -1609,21 +1593,21 @@
           "a": "You need 75%. These protections can be made stronger, but never weaker than what Chapter I (Article 1.7) sets."
         },
         {
-          "q": "What majority is needed for a Custodia Civilis Territorialis decree?",
-          "a": "A 60% majority is required to issue the decree or to renew it every six months. The article does not explain here what the decree does."
+          "q": "What majority is needed to place someone in civil custody?",
+          "a": "A sixty percent (60%) majority is required to issue a civil custody decree (Article 8.5) or to renew it every six months."
         },
         {
           "q": "When can a simple majority be enough to hold someone?",
-          "a": "A simple majority (50% plus one) is allowed only for protective detention of seventy-two hours, right after active violence, in flagrante delicto. The article allows it for nothing else."
+          "a": "A simple majority (50% plus one) is allowed only for protective detention of seventy-two hours, right after active violence, when the person is caught in the act."
         },
         {
           "q": "Can I leave the bioregion if I want to?",
-          "a": "Yes. Every person has the right to depart without being hindered, and to take their personal possessions. They must be free from pursuit by the detention system."
+          "a": "Yes. Every person has the right to leave the bioregion unhindered with their personal possessions, without being pursued for detention."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-16",
       "reviewed": false
     },

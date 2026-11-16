@@ -604,7 +604,7 @@ No. The article says labor in Open Networked Earth (O.N.E.) cannot be bought, re
 
 **Do dangerous jobs count for more than ordinary ones?**
 
-Yes. Hard or hazardous tasks such as emergency rescue, firefighting, toxic cleanup and levee shoring carry a time multiplier of 3x to 5x against the baseline service obligation. This shortens the time you are required to serve. Standing by for a hazard without actually being deployed counts only at the baseline rate, 1.0x.
+Yes. Hard or hazardous tasks such as emergency rescue, firefighting, toxic cleanup and shoring up levees count three to five times (3x to 5x) as much as ordinary duties, so you have to serve less often. Standing by for a hazard without actually being called out counts only at the normal rate (1.0x).
 
 **Will people always have to do physical shifts?**
 
@@ -624,23 +624,19 @@ Clean water, daily food, a place to live, and basic medical care. The article ca
 
 **What happens if an able-bodied adult keeps refusing their assigned work shifts?**
 
-This applies when an able-bodied adult systematically refuses assigned rotational shifts without a medical reason. The response is a series of escalating sanctions that do not involve prison or detention. The first step is a required meeting with a Local Mediation Panel of 3 citizens.
-
-**Why would a panel meet with me first?**
-
-The panel meeting is meant to check for burnout or a hidden disability. It comes before the other measures listed in the article.
+This applies when an able-bodied adult keeps refusing their assigned rotating shifts without a medical reason. The response is a series of escalating measures that never involve prison. The first is a required meeting with a Local Mediation Panel of 3 citizens, to check for burnout or a hidden disability.
 
 **What can I lose, and what can I never lose?**
 
-You can be excluded from Tier 3 surplus fabrication, advanced computing grids, and inter-basin transit commons. Your dwelling space above the Tier 1 shelter baseline can be reassigned, but only where it creates shared upkeep costs you refuse to reciprocate, and a Local Mediation Panel decides. Tier 1 shelter itself, preferably where you already live, is never made conditional.
+You can be excluded from shared workshops for personal projects (Tier 3), from advanced computing and from shared transport between regions. Living space beyond the basic shelter everyone is guaranteed can be reassigned, but only where it creates upkeep work for others that you refuse to share, and a Local Mediation Panel decides. Basic shelter itself, preferably where you already live, is never made conditional.
 
 **Do these measures count as a punishment, and do I lose my political rights?**
 
-No. The article says the measures are strictly non-punitive and leave no lasting civic stigma. Your eligibility for sortition and your political rights are never conditioned on doing your share of work.
+No. The article says the measures are strictly non-punitive and leave no lasting stigma. Your chance to be drawn by lot for assemblies and your political rights never depend on doing your share of work.
 
 **How do I get my access back?**
 
-Full Tier 3 commons access is restored the moment you resume any scheduled reciprocity shift or a mutually agreed equivalent civic contribution.
+Full access is restored the moment you take up any scheduled shift again, or an equivalent contribution you have agreed on with the community.
 
 ### Article 5.3: Empirical Child Education and Neurodevelopmental Integrity
 
@@ -649,10 +645,6 @@ Full Tier 3 commons access is restored the moment you resume any scheduled recip
 **What is teaching in this community based on?**
 
 Teaching rests on science that has been repeated and confirmed, on how the brain develops, and on teaching methods shown to work. This includes learning environments built around the senses and movement. The article permanently bars passing teaching fads, ideological indoctrination, and standardized testing cartels.
-
-**How is a child's education divided by age?**
-
-The article sets out three stages: ages 0 to 7, ages 7 to 13, and age 13 and older. Each stage has its own focus.
 
 **What do children do from birth to age 7?**
 
@@ -672,7 +664,7 @@ Teenagers join active research, agricultural, and fabrication groups alongside a
 
 **What is a Parenting Formation Commons?**
 
-It is a place of parenting education that each bioregional community sets up. The article says it is based on evidence and rooted in attachment neurobiology, nervous system co-regulation, and the conscious deconstruction of inherited intergenerational trauma scripts.
+It is a parenting education program that each regional community sets up. The article says it is based on evidence about how children bond with their carers, how people help calm each other's nervous systems, and how to consciously undo harmful patterns passed down from earlier generations.
 
 **Why does the article say parents need education at all?**
 
@@ -684,11 +676,11 @@ As a young adult, yes, for a period. The article calls the Alloparenting Practic
 
 **What would I learn in the practicum?**
 
-You would master pediatric first aid, sleep architecture, and infant somatic calming. The article does not explain these terms further.
+Pediatric first aid, how a child's sleep works and how to calm babies through touch and the body.
 
 **What help do new parents get?**
 
-Under the First 1,000 Days Scaffolding, postpartum caregivers and pediatric specialists are placed directly within residential living circles. The article says this guarantees 24-hour relief, communal nourishment, and total liberation from productive civic duties for new parents.
+Under what the article calls the First 1,000 Days Scaffolding, carers for new mothers and children's health specialists live directly within residential communities. This guarantees new parents round-the-clock relief, shared meals, and full release from all productive civic duties.
 
 ### Article 5.5: Empirical Neuro-Medicine and Etiological Mental Health
 
@@ -696,7 +688,7 @@ Under the First 1,000 Days Scaffolding, postpartum caregivers and pediatric spec
 
 **What does this article say about how mental health is handled?**
 
-It says mental health is looked after through evidence-based brain and body medicine, by treating the surroundings that affect people, and by finding the cause of a problem before naming it. It permanently abolishes monopolistic symptom-checklist diagnosis systems and profit-driven lifelong chemical sedation.
+It says mental health is cared for through evidence-based medicine of the brain and nerves, by not treating reactions to a person's surroundings as illness, and by diagnosis based on causes. It permanently abolishes diagnosis by monopolistic symptom checklists and profit-driven lifelong chemical sedation.
 
 **Is anxiety or constant low mood seen as a personal defect?**
 
@@ -712,7 +704,7 @@ No. The article says human neurodiversity, meaning natural differences in how pe
 
 **Can one group of doctors decide what counts as correct treatment?**
 
-No. The article says no medical guild or assembly may set up a dogmatic monopoly over clinical science. Treatment methods stay open to continuous testing and open clinical audit under what it calls the Heretic's Commons framework. The article does not explain that framework further.
+No. The article says no medical guild or assembly may set up a dogmatic monopoly over clinical science. Treatment methods stay open to continuous testing and open clinical audit under the framework of the Heretic's Commons, the open research reserve of Article 1.4.
 
 ### Article 5.6: Caregiver Immunity and Sortition Governance
 
@@ -724,15 +716,15 @@ No. If you are actively caring for family or community members every day, you ar
 
 **What kinds of caregiving count?**
 
-The article names childcare, early education, elder accompaniment, and somatic nursing. It calls these the main productive foundations of society. It does not say more about what each one includes.
+The article names childcare, early education, accompanying elderly people and bodily nursing care. It calls these the most important productive foundations of society.
 
 **Who oversees the rosters?**
 
 Neighborhood Sortition Councils supervise the rosters. Each council has 15 citizens.
 
-**Who can change labor multipliers or educational standards?**
+**Who can change the work multipliers or educational standards?**
 
-The Bioregional Citizen Assembly, which has 101 delegates. A change needs a 75% supermajority vote of the seated Assembly. The article does not explain what labor multipliers are.
+The Bioregional Citizen Assembly of 101 delegates, by a seventy-five percent (75%) majority of its seated members. The work multipliers are the extra credit given for hard or dangerous work (Article 5.1).
 
 ## Chapter VI: Distributed Infrastructure, Microgrids & Analog Resilience
 
@@ -742,15 +734,15 @@ The Bioregional Citizen Assembly, which has 101 delegates. A change needs a 75% 
 
 **What does this article require of each community?**
 
-Every municipal habitat and bioregional node in Open Networked Earth (O.N.E.) must build and maintain physical infrastructure that can run completely on its own, cut off from outside networks. A bioregional node is one of the article's named local units, alongside the municipal habitat.
+Every town and regional community in Open Networked Earth (O.N.E.) must build and maintain infrastructure that can keep running entirely on its own, cut off from outside networks.
 
 **What has to keep working if the outside supply is cut off?**
 
-Four basic life-support services: drinking-water filtration, heating and cooling of homes, refrigeration for medical needs, and basic food preparation. The article calls these Tier 1 life support.
+Four basic life-support services: filtering drinking water, heating and cooling homes, refrigeration for medicine, and basic food preparation.
 
 **For how long must a community manage on its own?**
 
-At least 30 consecutive days. The article sets this as a mandatory minimum.
+At least thirty (30) consecutive days. The article sets this as a mandatory minimum.
 
 **What kinds of events does this cover?**
 
@@ -770,7 +762,7 @@ Power is generated in many small, separate units rather than in a few big plants
 
 **What kind of batteries or storage can be used?**
 
-Stationary storage must be non-toxic, able to hold energy for a long time, and safe from fire. It can be chemical, mechanical, or heat-based. It must not depend on toxic or monopolized scarce minerals. The approved technologies are listed in the Organic Law Annex.
+Fixed storage must be non-toxic, able to hold energy for a long time, and fire-safe. It can be electrochemical, mechanical or heat-based, and must not depend on toxic or monopolized scarce minerals. The approved technologies are listed in the Organic Law Annex, a separate set of technical rules.
 
 **How is the power delivered to where it is used?**
 
@@ -778,11 +770,11 @@ The system is designed to waste as little energy as possible. Local direct curre
 
 **What happens to large computing work when there is not enough power?**
 
-Large computing jobs, such as machine learning and heavy simulations, can be paused or slowed instantly when renewable generation falls short. This is done to protect the Tier 1 baselines. The article does not say here what those baselines contain.
+Large computing jobs, such as machine learning and heavy simulations, are slowed or paused instantly when renewable power falls short. This protects the basic survival needs (Tier 1, Article 3.3).
 
 **What happens to the heat that computing and chemical plants give off?**
 
-High-grade waste heat from large computing clusters and heat-producing chemical processes is piped into the city's district heating systems and into greenhouse biomass cycles.
+High-grade waste heat from large computing clusters and heat-producing chemical processes is piped into municipal district heating networks and into greenhouses.
 
 ### Article 6.3: Open Fabrication Commons and Universal Repairability
 
@@ -790,19 +782,19 @@ High-grade waste heat from large computing clusters and heat-producing chemical 
 
 **Where will repair and manufacturing capacity be located?**
 
-It is spread across municipal fabrication commons and neighborhood workshops. Every bioregional node must keep equipped municipal workshops. The article does not say what a bioregional node is.
+It is spread across municipal fabrication workshops and neighborhood workshops. Every regional community must keep equipped municipal workshops.
 
 **What equipment do the municipal workshops have?**
 
-They hold standard machines for subtractive, additive, cutting, and thermal fabrication. This equipment is dedicated to agricultural, energetic, and civic infrastructure.
+Standard machines that remove material, machines that build objects up by adding material, cutting machines and heat-based machines. This equipment is dedicated to farming, energy and civic infrastructure.
 
 **What kind of control systems can the machines use?**
 
-Machine tools and automated industrial controls may be run only through open-hardware Programmable Logic Controllers (PLCs). These run machine code that is transparent and can be audited.
+Machine tools and automated industrial controls may be run only through open-hardware Programmable Logic Controllers (PLCs, the small computers that run machines). These run machine code that is transparent and can be audited.
 
 **Can a company design its tools or spare parts to wear out or lock me out of repairs?**
 
-No. Planned obsolescence, cryptographic vendor lock-in, and proprietary software encumbrances on mechanical tools and spare parts are legally void. The article does not say what penalties apply.
+No. Planned obsolescence, digital locks that tie you to one maker, and proprietary software restrictions on mechanical tools and spare parts are legally void.
 
 **Can I get the blueprints for a mechanical part?**
 
@@ -826,7 +818,7 @@ The article says the routing rules are built to be immune to central inspection 
 
 **How are different regions connected to each other?**
 
-High-bandwidth optical fibers run along rail corridors and aqueducts. They form open regional backbones that connect watershed nodes, which the article presents as parts of an open worldwide data exchange with no sovereign telecommunication gatekeepers.
+High-bandwidth optical fibers run along rail lines and aqueducts. They form open regional backbones that connect watershed communities into an open worldwide data exchange with no state-controlled gatekeepers.
 
 ### Article 6.5: The Black-Sky Protocol and Analog Mechanical Fallbacks
 
@@ -850,7 +842,7 @@ Analog hydraulic regulators, gravity-fed aqueducts, and durable printed maps and
 
 **What is the "knife-switch" rule for cyber attacks?**
 
-Life-critical municipal systems must have physical breakers that can instantly cut them off from external wide-area networks during a cyber-physical attack. After the cut, they run only on local controllers that are physically write-protected and read-only. These controllers keep the metabolic and environmental loops going without needing outside network data.
+Life-critical municipal systems must have physical switches that can instantly cut them off from outside networks during a cyber attack. After the cut, they run only on local controllers whose code is physically write-protected (read-only), which keep basic life-support and environmental processes running without any outside data.
 
 ### Article 6.6: Infrastructure Governance, Parity, and Decision Thresholds
 
@@ -858,7 +850,7 @@ Life-critical municipal systems must have physical breakers that can instantly c
 
 **Who decides about local utilities and workshop bookings in my neighborhood?**
 
-A Neighborhood Sortition Council oversees them. It has fifteen (15) citizens, and decisions need a sixty percent (60%) qualified majority. The article says these councils are chosen by sortition, which is selection by lot.
+A Neighborhood Sortition Council of fifteen (15) citizens chosen by lot oversees them, deciding by a sixty percent (60%) majority.
 
 **Who decides on bigger projects like regional power links, water aqueducts, or fiber-optic backbones?**
 
@@ -870,7 +862,7 @@ It takes a 75% constitutional supermajority. This applies to decommissioning cri
 
 **What needs a 60% majority?**
 
-Approving regional grid interconnections, water transfer treaties, and five-year infrastructural development plans. The article gives no other uses for this threshold in this list.
+Approving regional grid interconnections, water transfer treaties and five-year infrastructure development plans.
 
 **Can a bare majority ever decide something?**
 
@@ -892,11 +884,11 @@ Writing laws, passing sentences in court, rationing physical resources, and usin
 
 **So what are computer systems allowed to do?**
 
-They act as open logistical servants that carry out allocations decided by humans. Public automation is limited to verifiable oracle architectures, which have no subjective agency, legal personhood or sovereign standing.
+They serve only as open tools that carry out allocations decided by humans. Public automation is limited to checkable systems (the article calls them verifiable oracle architectures) that have no will of their own, no legal personhood and no sovereign standing.
 
 **Does stopping incoming drones or projectiles count as using force against a person?**
 
-No. The article says that pre-authorized interception of inbound uncrewed machines and projectiles under Article 8.1.4 is not coercion of persons. The article does not describe how that interception works.
+No. The article says that pre-authorized interception of incoming uncrewed machines and projectiles under Article 8.1.4 is not coercion of persons.
 
 ### Article 7.2: Absolute Prohibition of Proprietary Software in Public Commons
 
@@ -904,7 +896,7 @@ No. The article says that pre-authorized interception of inbound uncrewed machin
 
 **What kind of software is banned under this article?**
 
-Software whose source code is closed, deliberately hidden, proprietary, or a trade secret. It may not be deployed or run in public administration, infrastructure telemetry, manufacturing commons, microgrids, or communication backbones. The ban is permanent.
+Software whose code is closed, deliberately obscured, proprietary or a trade secret. It may not be deployed or run in public administration, infrastructure sensors, shared manufacturing, local power grids or communication backbones. The ban is permanent.
 
 **Which parts of a system does the rule cover?**
 
@@ -940,7 +932,7 @@ Public repositories must keep decentralized build records that can be audited wi
 
 **What happens if a program's fingerprint can't be reproduced?**
 
-It is instantly de-authorized from public infrastructure. This applies to any binary distribution whose hash cannot be independently reproduced from public source trees by any citizen node.
+It is immediately barred from public infrastructure.
 
 **Does the article say who builds or checks the software, or how a citizen node works?**
 
@@ -956,11 +948,11 @@ No. No single engineer, programming guild, regional group, or administrative cou
 
 **How are the most powerful access keys protected?**
 
-Root certificates, signing keys for network settings, tokens that coordinate microgrids, and administrative access to very large computing systems are permanently split into pieces. The pieces are shared among randomly selected citizen assemblies across multiple watersheds. This is meant to stop any single company, state, or guild from taking control.
+Root certificates, signing keys for network settings, tokens that coordinate local power grids, and administrative access to very large computing systems are permanently split into pieces. The pieces are shared among assemblies chosen by lot to mirror the population, across several watersheds. This is meant to stop any single company, state or guild from taking control.
 
 **What does it take to approve changes to the network?**
 
-Routine signing operations need agreement from multiple nodes. Major changes to the underlying protocols need an interactive ceremony in which a threshold of the sovereign assemblies takes part together.
+Routine signing needs agreement from several of the separate key holders. Major changes to the underlying protocols need a live joint ceremony in which enough of the key-holding assemblies take part.
 
 **How do I prove I am a real person without handing over my face or fingerprints?**
 
@@ -992,15 +984,15 @@ If a distribution formula, allocation routine, or governance protocol is deliber
 
 **Who checks the digital systems for weak points?**
 
-Independent red teams, which are groups paid to attack systems in order to find flaws. Public bounties fund them, and assemblies must keep funding them permanently with computing resources and material support. They test continuously for security weaknesses, hidden backdoors, and ways power could become concentrated.
+Independent, public "red teams", groups that attack systems on purpose to find flaws, rewarded through bounties. Assemblies must support them permanently with computing energy and materials. They test continuously for security holes, hidden backdoors and ways control could become centralized.
 
 **Who oversees the shared digital systems where I live?**
 
-Neighborhood interface oversight is run by a Neighborhood Sortition Council of fifteen (15) citizens. Bioregional code repositories and industrial firmware standards are directed by a Bioregional Citizen Assembly of one hundred and one (101) delegates. The article says both bodies use odd numbers.
+Neighborhood interface oversight is run by a Neighborhood Sortition Council of fifteen (15) citizens. Regional code repositories and industrial firmware standards are directed by a Bioregional Citizen Assembly of one hundred and one (101) delegates.
 
 **How many votes does it take to change the basic security rules?**
 
-It takes 75%. That level is required to deprecate foundational cryptographic standards or alter core open-source compilation invariants. The article does not define those terms further.
+Seventy-five percent (75%). That level is required to retire the basic encryption standards or to change the core rules for how open-source code is compiled.
 
 **What share of votes is needed to release new software?**
 
@@ -1026,7 +1018,7 @@ Public safety is shared among specialized groups. Civic Peace Guilds are unarmed
 
 **Can emergency crews be used to force people to do things?**
 
-No. Their command during an incident is limited to physical life-safety, and using emergency equipment for coercion is unconstitutional. An evacuation order lasting more than twenty-four (24) hours needs re-authorization by the Local Mediation Panel, chosen by lot, unless it is an administrative displacement.
+No. Their command during an incident is limited to physical life-safety, and using emergency equipment for coercion is unconstitutional. An evacuation order lasting more than twenty-four (24) hours must be re-authorized by the Local Mediation Panel chosen by lot, so that people cannot be displaced by administrative decision.
 
 **Can anyone build weapons, or hire private armies?**
 
@@ -1034,11 +1026,7 @@ No. Private military companies and mercenary groups are prohibited as structural
 
 **What defense does the federation keep for now, and what limits apply?**
 
-Until all of Earth has joined O.N.E., the federation keeps defensive platforms sealed in underground bunkers. They may act on their own only against incoming projectiles and uncrewed machines nearby; persons and crewed vehicles are never automatic targets. In inhabited or mixed civilian areas, they are limited to non-explosive, non-ionizing electronic disruption and passive capture. Any action beyond close-in defense must be non-lethal disablement of uncrewed launch and control equipment, and needs 75% approval from both the Bioregional Assembly (101 delegates) and the Continental Chamber (301 citizens).
-
-**What happens to these defenses in the end?**
-
-Once the planet is unified, all defensive platforms are dismantled and smelted into civilian infrastructure, under a principle called Swords into Plowshares.
+Until all of Earth has joined O.N.E., defensive platforms sealed in underground bunkers. They may act on their own only against incoming projectiles and uncrewed machines nearby, never against persons or crewed vehicles, and in inhabited areas only with non-explosive electronic disruption that uses no ionizing radiation, and passive capture. Anything beyond close-in defense must be non-lethal, aimed at uncrewed launch and control equipment, and approved by seventy-five percent (75%) of both the Bioregional Assembly (101 delegates) and the Continental Chamber (301 citizens). Once the planet is unified, all the platforms are dismantled and melted down into civilian infrastructure.
 
 ### Article 8.2: Ambient Spatial Safety and Non-Injurious Telemetry
 
@@ -1046,11 +1034,7 @@ Once the planet is unified, all defensive platforms are dismantled and smelted i
 
 **How does this article make public spaces safer?**
 
-Corridors and dwellings are built so daylight reaches along their length, which removes places where someone could be trapped. Automated machinery has light-based sensors that shut it down when a person comes near.
-
-**What does the machinery do when I get close to it?**
-
-Optical interlocks on automated machinery trigger a shutdown of its moving parts when they detect a person approaching. The article does not say how close you must be.
+Corridors and homes are designed with clear, daylit lines of sight, so there are no hidden spots where someone could be trapped. Automated machines have light sensors that shut them down when a person comes near.
 
 **Are public sensors listening to what I say?**
 
@@ -1062,7 +1046,7 @@ Data that does not show a physical impact or a structural fracture is deleted al
 
 **Can public sensors build a record of my body or identity?**
 
-No. The article says public sensors never compile biometric registries. The article does not define what counts as biometric.
+No. The article says public sensors never compile biometric registries.
 
 ### Article 8.3: The Charter of Victims’ Sovereignty and Reparative Primacy
 
@@ -1078,7 +1062,7 @@ No. You have the right to decline restorative dialogue, and you face no penalty 
 
 **If I was physically harmed, who has to move out?**
 
-The person who harmed you does. In cases of physical violence, the burden of relocation falls only on them. You keep your home without disturbance, and they are moved outside your transit radius.
+The person who harmed you does. In cases of physical violence, the burden of moving falls only on them. You keep your home undisturbed, and they are moved outside the area you normally move through (the article says "transit radius").
 
 **What help do I get first if I was harmed?**
 
@@ -1098,15 +1082,15 @@ The next step is a community restorative circle, where peers talk through severe
 
 **Who decides if the first two stages fail, and how?**
 
-A tribunal of fifteen (15) citizens makes a binding decision. Adversarial courtroom trials are abolished. Instead, the tribunal looks only at physical evidence that can be verified and at open logs.
+A tribunal of fifteen (15) citizens chosen by lot makes a binding decision. Adversarial courtroom trials are abolished. Instead, the tribunal looks only at physical evidence that can be verified and at open records.
 
 **What kinds of cases can a tribunal hear?**
 
-Only physical assault, somatic violation, enclosure, or ecological poisoning. Tribunals cannot prosecute people for their ideas. Jurors are chosen by lot from adjacent districts.
+Only physical assault, bodily violation, enclosure (taking shared goods for private use) or ecological poisoning. Tribunals cannot prosecute people for their ideas. Jurors are chosen by lot from neighboring districts.
 
 **How is the scientific evidence checked?**
 
-In Stage 3, forensic telemetry is audited independently by a facility drawn by lot from a non-contiguous watershed. The evidence is admitted only if it can be reproduced under open review.
+At this third stage, sensor and data evidence is audited independently by a facility drawn by lot from a watershed that is not next to the one involved. The evidence is admitted only if it can be reproduced under open review.
 
 ### Article 8.5: Custodia Civilis Territorialis and Inviolable Habeas Corpus
 
@@ -1118,7 +1102,7 @@ No. Incarceration, solitary confinement, punitive cages, and capital execution a
 
 **What happens to someone who commits violence and does not respond to efforts to help them settle?**
 
-Where a person commits predatory violence that resists stabilization, they can be restrained under a arrangement called Custodia Civilis Territorialis. It takes place in daylight residential suites with open gardens, nutritious meals, and psychiatric care.
+Where a person commits predatory violence and cannot be calmed and stabilized, they can be restrained under a civil custody the article calls Custodia Civilis Territorialis. It takes place in daylit residential suites with open gardens, nutritious meals and psychiatric care.
 
 **What is not allowed during this restraint?**
 
@@ -1130,7 +1114,7 @@ A panel of 15 citizens chosen by lot must validate the detention within seventy-
 
 **Who looks out for the person in custody, and how often is the custody reviewed?**
 
-An independent guardian chosen by lot, called the Invariants Guardian (Custos Jurium), protects the person's physical well-being, their right to stay silent, and evidence that could clear them. Every one hundred eighty (180) days a newly seated jury of 15 citizens re-examines the custody, and it needs a sixty percent (60%) majority.
+An independent guardian chosen by lot, called the Invariants Guardian, protects the person's physical well-being, their right to stay silent, and evidence that could clear them. Every one hundred eighty (180) days a newly seated jury of 15 citizens re-examines the custody, and continuing it needs a sixty percent (60%) majority.
 
 ### Article 8.6: Adjudicative Assembly Parity and Decision Thresholds
 
@@ -1144,17 +1128,17 @@ It depends on the level. A Local Panel has three (3) citizens, a Neighborhood Tr
 
 You need 75%. These protections can be made stronger, but never weaker than what Chapter I (Article 1.7) sets.
 
-**What majority is needed for a Custodia Civilis Territorialis decree?**
+**What majority is needed to place someone in civil custody?**
 
-A 60% majority is required to issue the decree or to renew it every six months. The article does not explain here what the decree does.
+A sixty percent (60%) majority is required to issue a civil custody decree (Article 8.5) or to renew it every six months.
 
 **When can a simple majority be enough to hold someone?**
 
-A simple majority (50% plus one) is allowed only for protective detention of seventy-two hours, right after active violence, in flagrante delicto. The article allows it for nothing else.
+A simple majority (50% plus one) is allowed only for protective detention of seventy-two hours, right after active violence, when the person is caught in the act.
 
 **Can I leave the bioregion if I want to?**
 
-Yes. Every person has the right to depart without being hindered, and to take their personal possessions. They must be free from pursuit by the detention system.
+Yes. Every person has the right to leave the bioregion unhindered with their personal possessions, without being pursued for detention.
 
 ## Chapter IX: The Transitional Bridge: From Capital Enclosure To Commons
 
