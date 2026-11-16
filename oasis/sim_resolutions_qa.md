@@ -1559,7 +1559,7 @@ Smallest node with ≥ 95% of months fully seated, lock 3: 75 adults at r = 0.6,
 
 * **Date Recorded:** 2026-11-12  
 * **Stress-Tested:** 2026-11-12 (qualitative O-ASIS red-team pass on text; measurement `NOT_RUN`)  
-* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Provenance: the provision was **lost in compression, not withdrawn by a recorded decision** (section 1). Verdict on current text (silence) **`RED_WINS`** on four of seven vectors. H1 (technology-neutral principle in Art. 5.3) **`BLUE_HOLDS` with residuals**, on three conditions: a constructed language, never an existing national one; an explicit clause that fluency is never a condition of eligibility; and a relative, not absolute, rule on machine translation. Those three conditions are the drafting; without any one of them H1 **`RED_WINS`**. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged. **Maintainer decision 2026-11-12 (section 5.1):** H2 accepted in principle (own-language right also in Art. 1.4.1); H1 alone withdrawn; the Art. 1.4.1 phrase reads as a liberty of use, not a claim on services, **`BLUE_HOLDS`**. Chapter V word ceiling waived for this paragraph by maintainer decision (section 5.1). **Maintainer decisions 2026-11-16 (section 7.1):** every remaining side-audit item decided: seven restored in principle (D-1 to D-7, drafting pending), six moved (D-8 to D-13), four dropped with reason (D-14 to D-17); gene therapy and contraception opened as SIM-QA-27 and SIM-QA-28.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Provenance: the provision was **lost in compression, not withdrawn by a recorded decision** (section 1). Verdict on current text (silence) **`RED_WINS`** on four of seven vectors. H1 (technology-neutral principle in Art. 5.3) **`BLUE_HOLDS` with residuals**, on three conditions: a constructed language, never an existing national one; an explicit clause that fluency is never a condition of eligibility; and a relative, not absolute, rule on machine translation. Those three conditions are the drafting; without any one of them H1 **`RED_WINS`**. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged. **Maintainer decision 2026-11-12 (section 5.1):** H2 accepted in principle (own-language right also in Art. 1.4.1); H1 alone withdrawn; the Art. 1.4.1 phrase reads as a liberty of use, not a claim on services, **`BLUE_HOLDS`**. Chapter V word ceiling waived for this paragraph by maintainer decision (section 5.1). **Maintainer decisions 2026-11-16 (section 7.1):** every remaining side-audit item decided: seven restored in principle (D-1 to D-7, drafting pending), six moved (D-8 to D-13), four dropped with reason (D-14 to D-17); gene therapy and contraception opened as SIM-QA-27 and SIM-QA-28. **Drafting 2026-11-16 (section 8):** D-1 to D-7 drafted and red-teamed (`BLUE_HOLDS` or `NARROWED`; D-7 `RED_WINS` on the liar's-dividend vector, residual); Organic Law OL-13 to OL-21 and the D-8 roadmap entry drafted, not entered; D-15 options listed; Chapter I at 1,181 of 1,200 and a possible Chapter IV overrun of 9 words reported.  
 * **Originating Context:** Maintainer review: the three-layer linguistic model of the v1.0 constitution is absent from the current canon.  
 * **Constitutional Articles:** Arts. 1.4.1, 4.3.1, 4.4 (SIM-QA-20 Art. 4.4.6), 5.3, 6.5, 7.1.2, 10.4, 10.6; Organic Law (SIM-QA-17 separation)  
 * **Evidence:** reasoning on the text only. No quantitative claim below is measured; the one external figure is recorded as supplied and must be checked against its primary source before any canon use.
@@ -1695,6 +1695,184 @@ Every remaining item of the table is now decided. Each **restore** item reads: *
 *Opened as new dockets (Stage 1):* XI.1 gene therapy as **SIM-QA-27**; XI.3 and XVI contraception and coercive population control as **SIM-QA-28** (the SIM-QA-25 board line did not carry these two points).
 
 *Side-audit table now fully decided:* religion and exit (SIM-QA-24), equal protection (SIM-QA-23), children (SIM-QA-25), animals (SIM-QA-26), gene therapy (SIM-QA-27), contraception and population control (SIM-QA-28), and D-1 to D-17 above. Pending work: drafting of D-1 to D-7; Organic Law entries for D-1, D-2, D-6, D-7, D-9 to D-12 and D-14; roadmap entry for D-8; none is written in `ORGANIC_LAW_ANNEX.md` or the roadmap yet.
+
+### **8. Drafting (2026-11-16): D-1 to D-7, Organic Law Drafts, Roadmap Draft, D-15 Options** `[STATUS: SIMULATION_HYPOTHESIS]` *(maintainer instruction 2026-11-16 to draft the pending work of section 7.1; reasoning on text; measurement `NOT_RUN`; canon, merged Annex and roadmap unchanged)*
+
+Method: each restore item is drafted against the master text as it stands (the plain-language working texts are noted where they differ), red-teamed, and counted under board instruction 10a (tokens containing a letter or a digit, headings included; the script reproduces the recorded canon counts: Chapter I 808, Chapter IV 926, Chapter VII 712). Organic Law drafts follow the form of OL-10 to OL-12: numbered here, not entered in [`ORGANIC_LAW_ANNEX.md`](../ORGANIC_LAW_ANNEX.md), which holds merged law only ("accepted in principle is not merged", Y-16 section 7.8). Every number in brackets is `PROVISIONAL — UNVERIFIED`. Each item ends with the v1.0 points not carried into the canon sentence, under instruction 8; nothing is dropped, each has a destination.
+
+#### **8.1 D-1, Anti-Haste Amendment (Art. 4.5, new point 5; Chapter IV)**
+*Draft:*
+> 5. **Amendment:** A change to this Constitution passes two votes of the Global Commons Assembly, each by the 75% Supermajority. The second, held by newly drawn members who did not sit for the first, follows a cooling period of one to three years set by Organic Law.
+
+*Red team:*
+* **A-1, urgent repair.** A defect in the text is being exploited and the fix waits at least a year. *Guard:* Art. 4.6 review voids an application that breaches the Constitution, and Art. 4.5.3 emergency decrees cover administration for thirty days. Neither can change the text. **`NARROWED`**; residual: a genuine textual flaw stays for a year. Accepted as the price of the rule; an urgent-amendment exception is the hole v1.0 closed.
+* **A-2, freezing by Organic Law.** A 60% majority sets the pause so long that the Constitution never changes. *Guard:* the canon bound of one to three years (ceiling and floor). **`BLUE_HOLDS`**.
+* **A-3, the same faction twice.** The second vote is held by the same seated members, so the pause only delays. *Guard:* newly drawn members who did not sit for the first vote. **`BLUE_HOLDS`**; residual: seating a second body of 1,001 adds a session at the tier where in-person attendance is already the hardest (SIM-QA-18 Y-3).
+* **A-4, which assembly.** Art. 4.5.1 names no body; a bioregion could claim to amend for itself. *Guard:* the draft names the Global Commons Assembly. **`BLUE_HOLDS`**. Open: whether expansions of rights (Art. 4.5.1) count as a "change to this Constitution". By the wording they do; the maintainer confirms.
+* **A-5, text altered between votes.** A changed text passes the second vote without its own pause. *Guard in OL-13 point 3.* **`BLUE_HOLDS`** with the Organic Law.
+
+*Count:* +47 words. Chapter IV working text 2,064 → **2,111 of 2,150 (39 left)**. **Conflict reported (instruction 8, rule 10a(5)):** with Y-12 and the Y-3 bound (2,112 without D-1) the chapter would reach about **2,159, 9 over**. Not cut. The approved plain-language Part D saves 18 words on Part B; if the maintainer adopts Part D with the layout, the chapter fits. Otherwise the maintainer decides between Y-12, the Y-3 bound and D-1.
+*Not carried in the canon sentence:* the plain-language check and red-team testimony before the first vote (to OL-13 point 2); pilots during the cooling period (to OL-13 point 4); the digital-twin simulation and the "compiler kernels" signing (device, methodology purge (a)); the 500-member size and the 0% overlap figure (replaced by the 1,001 tier and "did not sit for the first").
+
+#### **8.2 D-2, Inter-Basin Deadlock Forum (Art. 10.3.3; Chapter X)**
+*Draft (replaces Art. 10.3.3):*
+> 3. A dispute between basins over shared flows goes first to a forum drawn by lot from basins with no stake in it, which rules within a deadline set by Organic Law, never longer than thirty (30) days. Until it rules, no basin cuts any flow below the survival baseline of Article 1.3. Hoarding life-support resources, forming cartels, or cutting off downstream water in defiance of its ruling triggers automatic Systemic Decoupling (*Disiunctio Reticularis*): immediate suspension of inter-basin grid interties, transit corridors, and advanced medical buffers until reciprocity is restored.
+
+*Red team:*
+* **B-1, delay as a weapon.** The upstream basin cuts water and lets the forum run. *Guard:* the survival floor applies at once, before any ruling. **`NARROWED`**; residual: flows above the survival floor (irrigation, industry) are lost for up to thirty days.
+* **B-2, forum stacking.** "No stake" is read loosely. *Guard:* drawn by lot; OL-14 point 1 defines "no stake" on countable facts (not adjacent, not sharing the catchment, not party to a compact with either side), the same form as the SIM-QA-20 filters. **`BLUE_HOLDS`** with the Organic Law.
+* **B-3, hoarding without a dispute.** Cartels and hoarding are not "disputes between basins"; the draft makes decoupling wait for a forum that no one convenes. *Guard:* OL-14 point 2 lets any affected basin or a Guardian of the Biosphere (Art. 10.2.2) file. **`NARROWED`**; residual: decoupling is no longer automatic on the first act, by design of D-2.
+* **B-4, ruling ignored in part.** A basin complies in name and sends a trickle. *Guard:* the ruling states flows in measured quantities; telemetry under Art. 3.4 decides compliance. **`BLUE_HOLDS`**.
+
+*Count:* +58 words. Chapter X 870 → **928 of 1,000**. Total effect noted in 8.8.
+*Not carried in the canon sentence:* the twenty-twenty-ten composition (replaced by a forum drawn from outside, the single rule for outside panels of SIM-QA-19 X-3; its size goes to OL-14); each side argues the other's case first (to OL-14 point 4); **compensation in physical flows or infrastructure instead of cutting flows** (to OL-14 point 5); telemetry grounding (already Art. 3.4); hardware lockouts on valves and the reserve-dispatch device (device, not carried).
+
+#### **8.3 D-3, Safety Interventions (Art. 8.5, new point 4; Chapter VIII)**
+*Draft:*
+> 4. Every safety intervention is entered in a public log that names no restrained person. A panel of citizens drawn by lot reviews each physical restraint. Guilds may separate a person from immediate danger but hold no power to detain.
+
+*Red team:*
+* **C-1, identification by context.** In a node of fifty, a log entry with date and place names the person without a name. *Guard:* none in the sentence; OL detail would aggregate small nodes. **`NARROWED`**; residual recorded for an Organic Law entry (not among the items the maintainer listed; proposed as OL-6 extension, not drafted).
+* **C-2, who restrains.** Art. 8.5.3 assumes an emergency detention exists; if guilds cannot detain, no one can. *Guard:* separation from immediate danger stays with guilds; any hold beyond it falls under Art. 8.5.3 (validation within 72 hours). **`NARROWED`**; residual: the line between "separating" and "detaining" is not timed. Candidate bound: separation ends within hours unless Art. 8.5.3 validation is sought. Not drafted; for the maintainer.
+* **C-3, review backlog.** Every restraint reviewed overloads juries. *Guard:* the panel of three drawn per case (SIM-QA-19 X-1). **`BLUE_HOLDS`**.
+
+*Count:* +40 words. Chapter VIII 862 → **902 of 1,000**.
+*Not carried in the canon sentence:* independent ethicists on the review panel (not carried; the maintainer decides whether OL adds them); the cryptographic form of the log (Arts. 7.3 and 7.4 apply by their own terms).
+
+#### **8.4 D-4, Right to Remain Unaugmented (Art. 1.2, new point 4; Chapter I)**
+*Draft:*
+> 4. No right or baseline service depends on accepting a technology on or in one's body; every person may remain unaugmented.
+
+*Red team:*
+* **E-1, vaccination in an epidemic.** A vaccine is a technology in the body; the clause bars making care or travel conditional on it. Art. 1.2.3 already bars a mandate on the body. Quarantine and distance measures remain available. **`BLUE_HOLDS`** as consistent with Art. 1.2.3; residual: the epidemic case is decided by the existing text, not by this clause.
+* **E-2, soft exclusion.** No right is denied, but meetings and work are run through devices worn on the body. *Guard:* "baseline service" covers access to civic service and the commons. **`NARROWED`**; residual: informal pressure is not reached.
+* **E-3, authentication.** Consistent with Art. 7.4 (non-biometric). **`BLUE_HOLDS`**.
+
+*Count:* +21 words.
+*Not carried:* the v1.0 list (civic participation, sortition eligibility, education, culture) is covered by "no right"; "without subtle marginalization" is weakened to E-2's residual. Listed for decision.
+
+#### **8.5 D-5, Care (Art. 1.3.2 list and new Art. 1.3.4; Chapter I)**
+*Draft:*
+> (in the Art. 1.3.2 list) * Comprehensive primary, preventative, emergency, palliative, rehabilitative, and geriatric healthcare, with care and support for disability;
+> 4. Care of the ill, the aged, and the disabled is never cut to raise output elsewhere.
+
+*Red team:*
+* **F-1, true scarcity.** In a famine or a grid failure every allocation is cut. *Guard:* the clause bars cutting care *to raise output elsewhere*, not sharing a shortfall. **`BLUE_HOLDS`**; residual: proportional cuts in a crisis are allowed, which matches the v1.0 wording ("to prioritize aggregate output").
+* **F-2, Leontief floor.** A guarantee of rehabilitative and geriatric care is a claim on labour and compute. It sits in the baseline that Art. 3.3 already ranks first. **`BLUE_HOLDS`**; quantity is a SIMONE question (SIM-QA-16).
+
+*Count:* +9 and +17 = +26 words.
+*Not carried:* "high-standard" (no measure; recorded as vague, kept out); the robotic care device (not carried).
+
+**Chapter I after D-4 and D-5:** 1,134 → **1,181 of 1,200 (19 left)**. Under rule 10a(5) a chapter within fifty words of its ceiling sends new detail to Organic Law by default. D-4 and D-5 are rights, so the placement test keeps them. **Conflict reported (instruction 8):** SIM-QA-24, 25, 27 and 28 all propose Chapter I text; nineteen words cannot hold them. Not resolved here; the maintainer decides when those dockets open.
+
+#### **8.6 D-6, Vulnerability Disclosure (Art. 7.6.1, added sentence; Chapter VII)**
+*Draft (appended to Art. 7.6.1):*
+> Anyone who finds a security flaw in common infrastructure reports it, in the time and manner set by Organic Law, so that it is fixed and then published. No person, guild, or assembly may keep an unreported flaw.
+
+*Red team:*
+* **G-1, defence holds exploits.** The transitional defence of Art. 8.1.4 (standoff disablement of uncrewed control infrastructure) may want flaws in hostile systems. The sentence covers common infrastructure only, so it does not bar this. **`NARROWED`**; residual: a flaw in an open standard used by both sides is both; OL-15 point 4 resolves it in favour of reporting.
+* **G-2, publication before the fix.** Immediate publication arms attackers. *Guard:* "fixed and then published"; OL-15 keeps the v1.0 24-hour commitment as a sealed record. **`BLUE_HOLDS`**.
+* **G-3, finder punished.** *Guard:* OL-15 point 5. **`BLUE_HOLDS`**.
+
+*Count:* +38 words.
+*Not carried in the canon sentence:* the 24-hour broadcast (to OL-15 as a sealed commitment, with publication after the fix: **weakened** from v1.0, which made the hash public at once; listed for decision); the registry device (Arts. 7.3, 7.4).
+
+#### **8.7 D-7, Synthetic Media (Art. 7.5, new point 4; Chapter VII)**
+*Draft:*
+> 4. Synthetic Media: Images, sound, or video generated or altered by machine are disclosed as such whenever presented as a record of real persons or events. Media offered as evidence to any assembly or jury carries a verifiable record of its origin, which need not name its author. The means are set by Organic Law.
+
+*Red team:*
+* **H-1, art and satire.** A rule on all synthetic output burdens expression (Art. 1.4.1). *Guard:* only media presented as a record of real persons or events. **`BLUE_HOLDS`**.
+* **H-2, provenance as tracking.** A record of origin can expose a whistleblower. *Guard:* it need not name its author. **`NARROWED`**; residual: device metadata can identify; OL-16 point 3.
+* **H-3, unprovable claims.** Real footage without a record is dismissed as fake (the liar's dividend). *Guard:* none in the sentence; lay ground-truthing of Art. 3.4.5 applies to sensors only. **`RED_WINS` on this vector**, residual recorded.
+
+*Count:* +55 words. Chapter VII 712 + 38 (D-6) + 55 → **805 of 1,000**.
+*Not carried:* the v1.0 duty to watermark all generative output (**weakened** to media presented as a record of real events; listed for decision, because a general watermark rule fails H-1); crowd attestation of events (device, not carried).
+
+#### **8.8 Word Ceilings After D-1 to D-7** *(instruction 10a)*
+| Chapter | Before | After | Ceiling | Left |
+| :--- | :--- | :--- | :--- | :--- |
+| I (D-4, D-5) | 1,134 | 1,181 | 1,200 | 19 |
+| IV (D-1) | 2,064 | 2,111 | 2,150 | 39 (−9 with Y-12 and Y-3) |
+| VII (D-6, D-7) | 712 | 805 | 1,000 | 195 |
+| VIII (D-3) | 862 | 902 | 1,000 | 98 |
+| X (D-2) | 870 | 928 | 1,000 | 72 |
+| **Total** | **10,929** | **11,214** | **11,500** | **286** |
+
+#### **8.9 Organic Law Drafts** `[STATUS: SIMULATION_HYPOTHESIS]` *(proposed, 60%; not entered in the Annex)*
+**OL-13, Amendment Procedure** *(implements Art. 4.5.5, D-1)*
+1. The cooling period is [eighteen months] from the first vote.
+2. Before the first vote the text is published with a plain-language summary (Art. 7.5) and heard with rival testimony (Art. 4.4).
+3. The second vote is on the same text. Any change starts the procedure again.
+4. During the cooling period, a part of the amendment that can be tested without breaching Chapter I may run as a pilot under OL-20 point 3; its results go to the second assembly.
+5. If the second vote fails, the same text returns no sooner than [two years].
+
+**OL-14, Inter-Basin Forum** *(implements Art. 10.3.3, D-2)*
+1. The forum holds fifteen (15) members drawn from basins that are not adjacent to either party, do not share its catchment and hold no compact with either party.
+2. Either party, any affected basin, or a Guardian of the Biosphere may file. The forum is seated within [seven days] and rules within [twenty-one days].
+3. The ruling states flows in measured quantities and is checked against the telemetry of Art. 3.4.
+4. Each party first presents the other party's case; the forum disregards a presentation it finds unfaithful.
+5. The forum may order compensation in physical flows, energy or infrastructure from either party or from third basins that consent, instead of a cut in flows.
+6. Rulings are public and reviewable under Art. 4.6.
+
+**OL-15, Vulnerability Disclosure** *(implements Art. 7.6.1, D-6)*
+1. A finder records a sealed, time-stamped commitment to the flaw within [24 hours] in the public red-team registry.
+2. The maintainers of the affected system fix it within [ninety days]; the flaw is then published in full.
+3. A flaw under active exploitation is published with mitigations at once.
+4. A flaw in an open standard used both by the commons and by hostile systems is reported as a flaw of the commons.
+5. No one is penalised for finding or reporting a flaw in good faith; the finder is credited if they wish.
+
+**OL-16, Synthetic Media** *(implements Art. 7.5.4, D-7)*
+1. Systems of the commons that generate or alter media mark their output as synthetic in an open, technology-neutral format.
+2. A record of origin states the capturing or generating system, time and any later alteration, signed under Art. 7.4.
+3. No record of origin requires the identity of a person, and device identifiers are removed on request of the author except for evidence before a jury, where the jury may see them in closed session.
+
+**OL-17, Assisted Dying Safeguards** *(implements Art. 1.2.3, D-9)*
+1. A request is followed by a reflection period of [ninety days], shortened for an untreatable condition near death.
+2. A panel of three drawn from outside the node checks that every part of the baseline of Art. 1.3, palliative care included, is provided to the person in full, and that no economic or care pressure is present.
+3. The person may cancel, pause or extend at any time.
+4. *Bound (ratchet rule):* these safeguards secure that the exit is uncoerced; they never refuse a settled choice. A panel finding of pressure suspends the request only until the pressure is removed.
+
+**OL-18, Anti-Ostracism** *(implements Arts. 1.4, 4.3.4; D-10)*
+1. A person who is shut out of rosters, project collectives or allocations by an informal group may complain to a panel of three drawn from outside (SIM-QA-19 X-3); no new body is created.
+2. The panel inquires into facts under Art. 8.4 and orders only restorative measures.
+3. Where an allocation is made on merit, the assessors see proposals without names when the panel so orders.
+4. *Bound:* no one is compelled to associate privately with anyone (Art. 1.4.1); the panel reaches allocations, rosters and public bodies only.
+
+**OL-19, Extraction Governance** *(implements Arts. 1.6.2, 3.1.4; D-11)*
+1. Recovery from waste, decommissioned infrastructure and landfill comes before virgin extraction.
+2. Virgin extraction is approved only if recovery and substitution cannot meet a need of the baseline, as found by a panel with rival expert testimony (Art. 4.4), half drawn from the host bioregion and half from outside.
+3. Methods listed by Organic Law as destroying land or water beyond recovery (for example open evaporation ponds and wet tailings dams) are barred.
+4. No person works underground in deep extraction or in toxic leaching. Where no machine can do the work, the need is met by recovery or substitution, or waits.
+5. The host bioregion is compensated in infrastructure, never in money.
+
+**OL-20, Rulings and Pilots** *(implements Arts. 4.6, 8.4; D-12)*
+1. A ruling binds the parties only. Later juries may cite it as reasoning; it never binds them.
+2. Rulings are published with their reasons.
+3. A pilot runs in one node or sector, with the consent of its assembly, for at most [twelve months], with its success measure fixed in advance; it ends by itself unless adopted at the ordinary threshold.
+4. *Bound:* no pilot suspends a right of Chapter I.
+
+**OL-21, Knowledge Never Made Public** *(implements Arts. 1.1.1, 1.5; D-14)*
+1. Knowledge that its holders have never made public is not recorded, published or used to train a model without the consent of the persons who hold it.
+2. Once made public by its holders, knowledge is a commons under Art. 1.5.
+3. *Bound:* consent is given by the persons who hold the knowledge, never by a body speaking for a group; no one may withdraw knowledge another person has made public.
+
+*Red team on the drafts (one line each):* OL-13 point 5 can be read as a bar on related texts (**`NARROWED`**: "same text" only); OL-14 seating in seven days is unshown in sparse regions (same residual as SIM-QA-19 Y-8); OL-15 ninety days is long for systems of the survival baseline (open); OL-17 point 2 is a gate a hostile panel can use (**`NARROWED`** by point 4); OL-18 is the closest of all to policing social life (**`NARROWED`** by point 4, residual: complaints as harassment); OL-19 point 4 can halt supply of a metal before machines exist (**`RED_WINS` on transition timing**: the roadmap must stage it); OL-20 point 3 consent of a node lets a majority impose a pilot on its minority (residual); OL-21 point 3 closes the group-veto route that D-14 dropped (**`BLUE_HOLDS`**).
+
+#### **8.10 Roadmap Draft for D-8, Legacy Arsenals** `[STATUS: SIMULATION_HYPOTHESIS]` *(not entered in the roadmap)*
+*Destination:* [`roadmap/roadmap.md`](../roadmap/roadmap.md) covers seed nodes (Phases 0 to 3) and has no phase for the accession of states; this entry needs a new section after Phase 3. Placement is for the maintainer.
+> **Legacy arsenals at accession.** A state or region that accedes hands its nuclear, chemical and biological arsenals to joint custody teams of its own former technical staff and members drawn by lot from other regions; no single person or authority keeps launch capability. Warheads are separated from delivery systems first, under open monitoring. Fissile material is diluted into civil fuel or immobilised; chemical and biological agents are destroyed under verification. Infrastructure is delivered in step with verified transfers. Arts. 8.1.3 and 8.1.4 bound every step.
+
+*Not carried:* the warhead count, the reactor-fuel figures and the orbital jamming of holdouts (device and transition detail; the last also collides with the non-somatic limits of Art. 8.1.4).
+
+#### **8.11 D-15 Open Question: Who Stops a Dangerous Practitioner** *(options only; nothing decided)*
+D-15 dropped peer certification and revocation. Without them, harm by an unsafe surgeon, engineer or pilot has no stated stop. Options, each consistent with the no-gatekeeping rule of SIM-QA-20:
+* **O-1, interim stop on facts.** On a complaint backed by evidence of harm, a panel of three drawn from outside may suspend the person's use of commons facilities for that practice pending inquiry under Art. 8.4, for a time set by Organic Law. The stop rests on facts of harm, never on missing credentials.
+* **O-2, public record in the Register.** A lay challenge jury of SIM-QA-20 may attach a finding of harm to the person's Register entry; patients and users decide with it.
+* **O-3, facility safety rules.** The usufruct of a hospital, fab or vehicle pool carries safety rules for its dangerous equipment, applied to everyone, set by the facility's council and reviewable under Art. 4.6.
+*Red team (short):* O-1 is revocation by another name if prolonged (needs a ceiling); O-2 protects informed users only, not third parties (bridges, patients in emergencies); O-3 lets a facility council exclude rivals (review is the only guard). A combination of O-1 with a short ceiling and O-3 is the narrowest stop. For the maintainer.
+
+**Status after section 8:** D-1 to D-7 drafted and red-teamed (all `BLUE_HOLDS` or `NARROWED` except H-3, `RED_WINS` on one vector, residual recorded); OL-13 to OL-21 drafted; roadmap entry drafted; D-15 options listed. Two ceiling conflicts and five weakened or uncarried v1.0 points await the maintainer (list on the board).
 
 ---
 
