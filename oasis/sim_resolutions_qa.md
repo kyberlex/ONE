@@ -2630,6 +2630,52 @@ A seed node of 60 persons, 80% contributing; installed capacity (land, water, en
 
 **Next action (revision 1):** maintainer decisions D-30.4 to D-30.7 (board).
 
+### **6. Revision (2026-11-16): D-30.7, Shared Shortage** *(Stage 2 continued; reasoning on text; measurement `NOT_RUN`)*
+
+#### **6.1 Maintainer Decision**
+**D-30.7: option B.** When the node is full, the network has no room, no legacy service can receive arrivals and the External Trade Interface (Art. 9.3) cannot buy enough, no one is turned away. The shortage is shared among all present, members and arrivals alike, after an emergency ladder. Rejected: A (accept the residual with no rule: in the worst moment the strongest decide, usually those already inside); C (priority to those already present: a turning-away under another name, against Art. 10.4.3 and the equal-protection line of SIM-QA-23, and the club the maintainer wanted to avoid).
+
+*Note recorded with the decision:* the dead end is rarer than RED-5 suggests. In the transition a seed node can buy food through the External Trade Interface; the physical limit is local, not global. The dead end needs, at once, no room in the network, no legacy service and no market.
+
+#### **6.2 Draft**
+*Placement.* The rule is not transitional: a basin in Red Status whose neighbours cannot help (Art. 10.4.4) meets the same dead end. It goes in Art. 10.4.3, next to the promise it qualifies, not in Art. 9.1.4.
+* **Art. 10.4.3 (addition, at the end):** "Where physical limits prevent full Tier 1 for all present, the shortage is shared among all present in proportion to need, whatever their origin; a panel drawn from outside the node certifies the shortage, which is reviewed every thirty (30) days."
+* *Wording changed in drafting:* "equally" became "in proportion to need" (F-3 below). A flat equal share starves children, the ill and the pregnant first.
+
+**OL-23 (additions), Shared Shortage** *(applies to every node under Art. 10.4.3, not only transition nodes; every number in brackets is `PROVISIONAL — UNVERIFIED`)*
+10. **Emergency ladder, before any shortage is shared.** In order: (a) Tier 3 output, energy and labour turned to Tier 1; (b) purchases through the External Trade Interface (Art. 9.3) in the transition, or mutual aid under Art. 10.4.4 after it; (c) transfer offers through the network (point 5); (d) referral under Art. 9.1.4 while it applies. A shortage may be certified only when the record shows each step taken or impossible.
+11. **Certification.** A panel of three drawn from outside the node, under the rule for outside panels, certifies within [forty-eight (48) hours], on the published accounts and a site check, that the shortage is real and the ladder exhausted. Review every thirty days by a fresh panel; the shortage ends when supply returns or the panel does not confirm it.
+12. **Sharing.** Rations follow need: by age, pregnancy, illness and labour load, on one published table that applies to every person present. Common reserves, kitchens and stores are pooled; no one's ration depends on membership, origin, register status or past contribution. Personal possessions (Art. 2.2) are untouched; food stores beyond [two weeks] of a household's need are common reserves for the duration.
+13. **Survival trigger.** If the shared ration falls below [the survival ration of the published table], the node declares a general alarm: transport is offered to anyone who wishes to leave for a place with food, and appeals go to every node of the network, every legacy public service and every humanitarian body that can reach it. No one is turned away, and no one is fed less than another in proportion to need.
+14. **Publication.** The certificate, the ladder record, the ration table and daily totals are public, as counts.
+
+#### **6.3 Red Team**
+* **F-1, deliberate depletion (maintainer's question). `NARROWED`.** A hostile actor, or a faction inside, sends or brings people in order to force a shortage and empty a node's reserves; or insiders waste stocks to trigger rationing. *Guards:* the ladder comes first (point 10), and in the transition referral (Art. 9.1.4) and transfer still apply before any sharing; a shortage exists only when an outside panel certifies it on the accounts and a site check (point 11); every step is public (point 14). *Residual:* a large, organised flow in a war, with no services and no market, exhausts any node; the rule decides how the loss is shared, not whether it happens.
+* **F-2, hidden stocks. `NARROWED`.** Households keep private food stores out of the pool. *Guard (point 12):* stores beyond two weeks of a household's need count as common for the duration; personal possessions are untouched. *Residual:* hidden stores are found only by visible consumption; no search of homes is drafted, and none should be (Arts. 1.2, 3.4.4).
+* **F-3, flat equality starves the vulnerable. `RED_WINS` on "equally"; `BLUE_HOLDS` on "in proportion to need"** with one table for everyone.
+* **F-4, the emergency as a pretext. `NARROWED`.** A shortage could be used to suspend other rights. *Guards:* the certificate covers rations only; Art. 1.7 and the review every thirty days; a repeated certificate within twelve months is subject to the same scrutiny as Y-12 (SIM-QA-18 11.7). *Residual:* a long genuine shortage.
+* **F-5, attraction. Not a text vector.** A node known to share attracts more arrivals; the same as RED-11, a roadmap matter (D-30.6).
+* **F-6, everyone below survival. `RED_WINS`, physical.** If arrivals exceed every capacity for long, a shared ration sinks below survival for all and the node fails. Point 13 opens every exit; it creates no food. Written as a residual, as decided.
+* **F-7, the calorie floor. Disclosed, not a vector.** The public description of the project names a 2,200 kcal daily floor (the canon says "calorically sufficient", Art. 1.3.2). Under a certified shortage the shared ration may fall below it. The rule does not lower the floor; it states who bears a shortage that physics imposes. Listed under instruction 8 below.
+* **F-8, who declares. `BLUE_HOLDS`.** The node does not certify its own shortage; an outside panel does (point 11), so a node cannot invent one to stop admissions.
+
+**Verdict on D-30.7:** `NARROWED`, with one physical `RED_WINS` (F-6) recorded as residual.
+
+#### **6.4 Word Count**
+| Text | Words | Against the ceiling |
+| :--- | :--- | :--- |
+| Art. 10.4.3 addition | +41 | — |
+| Chapter X, canon 870 + 7 (section 5.3) + 41 → | **918** | 82 left |
+| with SIM-QA-22 D-2 (+58) → | **976** | 24 left, **within fifty words** |
+
+#### **6.5 Compression Disclosure** *(instruction 8)*
+| # | Point | Source | Change | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 3 | Tier 1 in full for every person (Art. 1.3; the 2,200 kcal figure of the project description) | Art. 1.3.2 | under a certified shortage, rations are shared in proportion to need and may fall below the floor | **qualified**, not lowered: the floor stays; the clause states who bears a shortfall. For decision with D-30.8 |
+
+**Next action (revision 2):** maintainer decisions D-30.3 to D-30.6 and D-30.8 (board).
+
+
 
 ---
 
