@@ -444,7 +444,7 @@ It takes a seventy-five percent (75%) supermajority to change, reduce or recalcu
 
 **What majority is needed for energy budgets and discretionary allocations?**
 
-A 60% qualified majority. This covers five-year bioregional infrastructure energy budgets and Tier 3 discretionary allocations.
+A sixty percent (60%) qualified majority. This covers five-year regional infrastructure energy budgets and allocations for personal and creative projects (Tier 3).
 
 **Can reserves be used quickly in an emergency, and is there a check on that?**
 
