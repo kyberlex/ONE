@@ -1,0 +1,35 @@
+{
+  "source": "ONE NETWORKED EARTH (O.N.E.).md",
+  "articles": [
+    {
+      "article_id": "4.3",
+      "article_title": "Stratified Selection, Universal Service, and Anti-Bureaucratic Rotation",
+      "chapter": "IV",
+      "chapter_title": "GOVERNANCE BY LOT: THE SORTITION ARCHITECTURE",
+      "source_hash": "f4b01a9da8311d935696c6ef5b903c9f5337f365ffecf4b48d1f44864fb2fe25",
+      "qa": [
+        {
+          "q": "What happens to my job and household responsibilities if I am selected?",
+          "a": "Serving by lot is an unavoidable civic duty. If you are summoned, you receive a full release from routine labor as well as replacement of domestic support."
+        },
+        {
+          "q": "Can I be picked to serve back-to-back terms?",
+          "a": "No. You cannot serve consecutive terms at the same level. After any term of service, you must have a break that lasts twice as long as the term was."
+        },
+        {
+          "q": "Can assembly staff control what the delegates discuss?",
+          "a": "No. The selected delegates hold all authority over the agenda. Staff work on temporary, rotating contracts, and it is an impeachable offense for them to frame agendas, filter citizen questions, or secretly influence jurors."
+        },
+        {
+          "q": "How can I get an issue onto an assembly's agenda?",
+          "a": "Anyone can publish an unfiltered petition on the civic register. If it gathers enough endorsements from constituents, it enters a weighted lottery for agenda slots. A rotating panel of 3 citizens chosen by lot merges duplicate requests and checks basic form, but they cannot judge the merit of your petition."
+        }
+      ],
+      "warnings": [],
+      "model": "gemini-3.8-flash",
+      "check_model": "gemini-3.8-flash",
+      "date": "2026-11-16",
+      "reviewed": false
+    }
+  ]
+}
