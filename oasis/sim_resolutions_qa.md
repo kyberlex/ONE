@@ -2586,7 +2586,7 @@ A seed node of 60 persons, 80% contributing; installed capacity (land, water, en
 * **RED-8, the entry period against Art. 5.2.2 (new). `BLUE_HOLDS`.** Shifts condition stable residence (usufruct of a dwelling), never Tier 1 shelter, which the hospitality of strategy 3 and the sentence "shelter at Tier 1 is never conditioned" keep.
 * **RED-9, gaming the lot (new). `NARROWED`.** Applicants enter several nodes' lots at once, or a household enters each member separately. *Guards (OL-23):* the lot is per person; one application at a time per person, checked through the SIM-QA-29 register where a row exists; a household that wants to stay together applies together and is drawn as one.
 * **RED-10, the derogation outlives the transition (new). `NARROWED`.** *Guard:* it lapses for each node as soon as Art. 10.4.4 can operate for it (a federation with neighbours that can receive), and for all at the end of the transition (phase gate, Art. 9.6.2, 75%). *Residual:* a federation that delays the end of the transition keeps the derogation alive.
-* **RED-11, visibility attracts arrivals (new). Not a text vector.** A seed node known to feed everyone draws more arrivals. Prudence in publicity is a roadmap matter (D-30.6).
+* **RED-11, visibility attracts arrivals (new). Not a text vector.** A seed node known to feed everyone draws more arrivals. Publicity is an outreach matter, outside this repository and outside this docket (D-30.6).
 
 **Verdict:** `NARROWED` with strategies 1 + 2 + 3 + 4 together. Any one strategy alone fails. `RED_WINS` remains where no legacy service exists and no seed node has room (RED-5): there the canon's two promises, Tier 1 for all and no one turned away, cannot both be kept.
 
@@ -2654,7 +2654,7 @@ A seed node of 60 persons, 80% contributing; installed capacity (land, water, en
 * **F-2, hidden stocks. `NARROWED`.** Households keep private food stores out of the pool. *Guard (point 12):* stores beyond two weeks of a household's need count as common for the duration; personal possessions are untouched. *Residual:* hidden stores are found only by visible consumption; no search of homes is drafted, and none should be (Arts. 1.2, 3.4.4).
 * **F-3, flat equality starves the vulnerable. `RED_WINS` on "equally"; `BLUE_HOLDS` on "in proportion to need"** with one table for everyone.
 * **F-4, the emergency as a pretext. `NARROWED`.** A shortage could be used to suspend other rights. *Guards:* the certificate covers rations only; Art. 1.7 and the review every thirty days; a repeated certificate within twelve months is subject to the same scrutiny as Y-12 (SIM-QA-18 11.7). *Residual:* a long genuine shortage.
-* **F-5, attraction. Not a text vector.** A node known to share attracts more arrivals; the same as RED-11, a roadmap matter (D-30.6).
+* **F-5, attraction. Not a text vector.** A node known to share attracts more arrivals; the same as RED-11, an outreach matter outside this repository (D-30.6).
 * **F-6, everyone below survival. `RED_WINS`, physical.** If arrivals exceed every capacity for long, a shared ration sinks below survival for all and the node fails. Point 13 opens every exit; it creates no food. Written as a residual, as decided.
 * **F-7, the calorie floor. Disclosed, not a vector.** The public description of the project names a 2,200 kcal daily floor (the canon says "calorically sufficient", Art. 1.3.2). Under a certified shortage the shared ration may fall below it. The rule does not lower the floor; it states who bears a shortage that physics imposes. Listed under instruction 8 below.
 * **F-8, who declares. `BLUE_HOLDS`.** The node does not certify its own shortage; an outside panel does (point 11), so a node cannot invent one to stop admissions.
@@ -2692,7 +2692,17 @@ A seed node of 60 persons, 80% contributing; installed capacity (land, water, en
 
 *Count:* Art. 9.1.4 140 → 149 (+9). Chapter IX 817 → **966 of 1,000** (34 left, within fifty words). Chapter X unchanged by this decision. Compression disclosure item 2 of 5.5 now reads: Art. 10.4.2 yields to Art. 9.1.4 in transition nodes only, until the lapse; **weakened** for transition nodes, decided.
 
-**Next action (revision 3):** maintainer decisions D-30.3, D-30.4 and D-30.6 (board).
+#### **6.8 Maintainer Decision D-30.6 (2026-11-16): Seed-Node Network in the Roadmap**
+**The network goes into the roadmap; publicity does not belong here.** Rules on publicity are outreach, which is kept outside this repository; RED-11 and F-5 are recorded as outside the scope of this docket.
+
+*Finding behind the decision:* the roadmap places the inter-node mesh in Phase 3 (Years 7–15). Strategy 2 of section 4 has no network to use before then, and the model of 5.1 shows referrals doubling without it.
+
+**Roadmap entry (draft, Phase 1; not entered in `roadmap/roadmap.md` until the maintainer says so, together with SIM-QA-22 D-8):**
+> **Seed-Node Mutual Aid and Transfer Compact.** Before a seed node takes residents beyond its founders, it joins a compact with at least [two (2)] other seed nodes, near or far: a common list of declared capacity, transport and a place offered to arrivals at a full node, and a ledger of transfers in persons and rations so that no node only sends (OL-23 points 5 and 6). Core hospitality (Art. 9.1.4) is owed to every arrival from the first day, compact or not. The Phase 3 inter-node mesh (trade within a watershed) is unchanged.
+
+*Red team (one line each).* **N-1, a compact of nodes that are all full. `NARROWED`:** the compact transfers only to declared room; when all are full, referral and then the shared shortage apply. **N-2, a node delays joining to avoid taking transfers. `NARROWED`:** until it joins it takes no residents beyond its founders, so delay costs it growth. **N-3, the compact as a cartel that turns people away together. `BLUE_HOLDS`:** capacity is certified per node by an outside panel (OL-23 point 1); the compact cannot lower it.
+
+**Next action (revision 4):** maintainer decisions D-30.3 and D-30.4 (board); entry of the D-30.6 draft in the roadmap when the maintainer decides.
 
 
 
