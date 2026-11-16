@@ -2673,7 +2673,11 @@ A seed node of 60 persons, 80% contributing; installed capacity (land, water, en
 | :--- | :--- | :--- | :--- | :--- |
 | 3 | Tier 1 in full for every person (Art. 1.3; the 2,200 kcal figure of the project description) | Art. 1.3.2 | under a certified shortage, rations are shared in proportion to need and may fall below the floor | **qualified**, not lowered: the floor stays; the clause states who bears a shortfall. For decision with D-30.8 |
 
-**Next action (revision 2):** maintainer decisions D-30.3 to D-30.6 and D-30.8 (board).
+#### **6.6 Maintainer Decision D-30.8 (2026-11-16)**
+**Option 1 accepted.** The Tier 1 floor stays the rule. A certified shortage is the only exception: reached only after the emergency ladder, certified by an outside panel, reviewed every thirty days, and borne by all present in proportion to need. Disclosure item 3 of 6.5 is accepted as **qualified**, and residual F-6 is accepted as a physical limit that no text removes. Rejected: a second, lower floor in the Constitution (when food falls short of it too, it forces a choice of who eats, which is option C again), and a ban on any ration below the floor (impossible to keep in a real shortage; same result).
+*Consequence at merge:* public descriptions that state the 2,200 kcal floor (among them `PLAY.md`, the game docs, `habitat/MHU_MODULAR_HABITAT_UNIT.md` and the roadmap Stage 1 blueprints) are to read "2,200 kcal a day, except in a certified shortage shared by all", so that the qualification is never hidden. Not changed now: the patch is not merged.
+
+**Next action (revision 2):** maintainer decisions D-30.3 to D-30.6 (board).
 
 
 
