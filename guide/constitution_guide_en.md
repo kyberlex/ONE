@@ -1148,15 +1148,15 @@ Yes. Every person has the right to leave the bioregion unhindered with their per
 
 **What is the Dual-Track Handshake?**
 
-It is the way the article says the move from an economy based on capital enclosure and debt-based scarcity to a planetary commons takes place. It is described as a deliberate design, not an accident.
+It is the article's name for how the move happens from today's economy, where land and resources are fenced off as private capital and scarcity is built on debt, to a planetary commons. It is described as a deliberate design, not an accident.
 
 **Does this involve overthrowing the existing economy by force?**
 
-No. The article says it does not pursue violent macro-rupture. Instead, local groups called autonomous transition nodes build alternatives alongside the existing economy.
+No. The article says it does not pursue a violent break. Instead, independent local communities starting the change build alternatives alongside the existing economy.
 
 **What are the two tracks?**
 
-Track A is the existing speculative market economy, which the article says unravels under ecological and financial debt crises. Track B is the parallel set of systems built by open-source infrastructure, Community Land Trusts (CLTs) and mutual aid networks. Together they provide resilient life support.
+Track A is the existing speculative market economy, which the article says unravels under ecological and financial debt crises. Track B is what the new communities build with open-source infrastructure, Community Land Trusts (CLTs) and mutual aid networks: parallel, resilient life-support systems.
 
 **Why would people move over to the commons?**
 
@@ -1164,7 +1164,7 @@ The article says that as legacy supply chains and public services fail, people s
 
 **Will I be pressured to join?**
 
-The article says the commons expands not through ideological coercion. It says growth comes from offering life support that works. It does not say anything more about how people join.
+The article says the commons does not grow through ideological pressure. It grows by offering life support that works. It does not say anything more about how people join.
 
 ### Article 9.2: Defensive Legal Shields, Adverse Possession, and Asset Locks
 
@@ -1180,7 +1180,7 @@ Yes. Abandoned industrial sites, neglected farmland, and vacant homes in declini
 
 **What does "public usufruct" mean?**
 
-The article uses the term without defining it. In general it means the right to use something without owning it. The article does not say who may use these properties or on what terms.
+Usufruct is defined in Article 1.1 as the protected right to hold, use and benefit from a resource, on condition that you actively use it, care for it and preserve it. This article does not say who may use these properties or on what terms.
 
 **What happens to patents and trade secrets on medicines, energy designs, and tools?**
 
@@ -1196,7 +1196,7 @@ No. The article is silent on compensation, appeals, or any process for owners wh
 
 **What is the External Trade Interface?**
 
-It is the channel that bioregional federations use to get essential goods from outside O.N.E. These goods are industrial commodities that are not available locally, specialized microelectronics, and advanced medicines. They come from what the article calls legacy jurisdictions.
+It is the channel that regional federations use to get essential goods from outside O.N.E.: industrial commodities not available locally, specialized microelectronics and advanced medicines. They come from the existing outside world, which the article calls legacy jurisdictions.
 
 **Does money get used inside the O.N.E. commons?**
 
@@ -1208,7 +1208,7 @@ It gives two examples: exporting surplus renewable electricity and offering spec
 
 **What happens to money that comes in from outside sales?**
 
-Under the Twenty-Four-Hour Conversion Rule, all external fiat revenue must be committed within twenty-four (24) hours. It goes to irrevocable physical procurement contracts, dedicated escrow, or direct delivery of non-depreciating assets, strategic grain reserves, or specialized raw materials.
+Under the Twenty-Four-Hour Conversion Rule, all outside money received must be committed within twenty-four (24) hours. It goes to binding contracts to buy physical goods, to dedicated escrow (money held by a third party for a set purpose), or to direct delivery of assets that do not lose value, strategic grain reserves or specialized raw materials.
 
 **Why is the money committed so quickly?**
 
@@ -1220,23 +1220,23 @@ The article says the rule prevents financial speculation and sovereign asset fre
 
 **Does O.N.E. have an army?**
 
-No. The article rejects standing armies sent abroad, forced military service for offensive purposes, and hired mercenary forces. Defence instead relies on civil resistance, fortified spaces, cutting off an attacker's supplies, and efforts to change enemy minds.
+No. The article rejects standing armies sent abroad, forced military service for attack, and mercenary forces. Defense instead relies on civil resistance, passive fortification, cutting off an attacker's supplies, and active efforts to change enemy minds.
 
 **How are food, energy, and medical supplies protected from attack?**
 
-They are spread out and stored in reinforced underground storage units in every micro-watershed. The article says this removes any single target for air bombing, drone strikes, or naval blockades.
+They are spread out in reinforced underground stores in every small watershed. The article says this removes any single target for air bombing, drone strikes or naval blockades.
 
 **What happens to an enemy soldier who stops fighting?**
 
-Any soldier, officer, or contractor who puts down working weapons, refuses offensive orders, or sabotages hostile operations is guaranteed immediate political asylum. They also get lifelong Tier 1 biological security, a home they can keep without encumbrance, and cancellation of external debts for themselves and their family.
+Any soldier, officer or contractor who puts down working weapons, refuses offensive orders or sabotages hostile operations is guaranteed immediate political asylum. They also get lifelong basic survival support (Tier 1), a secure home, and full legal cancellation of outside debts for themselves and their family.
 
 **What becomes of weapons that are surrendered or captured?**
 
 All surrendered, captured, or decommissioned weapons, armored vehicle bodies, and ammunition in the territory are permanently taken apart and melted down in public foundries. The metal is turned into wind turbine shafts, farm tools, and building frames.
 
-**What if an invader gets past the outer defences and occupies the territory?**
+**What if an invader gets past the outer defenses and occupies the territory?**
 
-Randomly selected authorities carry out a distributed key sever, using keys protected by Threshold Multi-Party Computation. This permanently switches off high-level industrial and computing functions, so the invader gets no supply or financial value from them. Basic household water and heating are not cut off.
+Authorities chosen by lot use split digital keys (Article 7.4) to permanently switch off high-level industrial and computing functions, so the invader gets no supply or financial value from them. Basic household water and heating are not cut off.
 
 ### Article 9.5: Universal Debt Jubilees and Insolvent Asset Transformation
 
@@ -1248,7 +1248,7 @@ Defaulted industrial production centers, bankrupt distribution hubs, and abandon
 
 **Which debts are wiped out?**
 
-Compound-interest debts, predatory residential mortgages, and financial liens held by legacy institutions against personal dwellings and life-support infrastructure are abolished. The article calls this a Debt Jubilee, meaning a general cancellation of debts. It describes the cancellation as comprehensive and unencumbered.
+Compound-interest debts, predatory home mortgages, and financial liens held by legacy institutions against personal homes and life-support infrastructure are abolished. The article calls this a Debt Jubilee, meaning a general cancellation of debts.
 
 **Does this cancel every debt I owe?**
 
@@ -1258,21 +1258,17 @@ The article names specific kinds: compound-interest debts, predatory residential
 
 They are re-engineered with open-source programmable logic controllers (the computer units that run machinery) and modular machine tools. The uses named are recycling of metals in a circular way, repair of farm machinery, and local civic utility.
 
-**Who owns the reclaimed facilities?**
-
-The article says the defaulted centers, hubs, and grids are expropriated into municipal commons trusts. It does not explain how these trusts are run or who takes part in them.
-
 ### Article 9.6: Transitional Governance, Assembly Parity, and Decision Thresholds
 
 *not yet reviewed · claude-sonnet-5-5 · 2026-11-16*
 
-**Who runs the legal trusts, outside trade and phase changes?**
+**Who runs the legal trusts, outside trade and the stages of the transition?**
 
-Three kinds of groups chosen by lottery run them in the open: Local Mediation Panels with 3 members, Neighborhood Councils with 15, and Bioregional Assemblies with 101. Each group has an odd number of members.
+Three kinds of groups chosen by lot run them in the open: Local Mediation Panels of 3 members, Neighborhood Councils of 15, and Bioregional Assemblies of 101.
 
 **How many votes does it take to cancel debts for everyone?**
 
-It takes a 75% supermajority. The same level is required to authorize involuntary conversions of industrial assets and to approve formal advances from one phase to the next.
+Seventy-five percent (75%). The same level is required to authorize forced conversions of industrial assets and to approve formal moves from one stage of the transition to the next.
 
 **What needs a 60% vote?**
 
@@ -1282,10 +1278,6 @@ Annual budgets for outside trade need a 60% qualified majority. So do regional m
 
 A simple majority, meaning 50% plus one, is allowed only for defensive non-lethal interdiction and for quick supply adjustments during a serious outside embargo. Either action must then go through a mandatory legislative review within thirty (30) days.
 
-**Does the article say what a Debt Jubilee or interdiction involves in practice?**
-
-No. The article names these actions and the vote each one needs, but it does not explain how they are carried out.
-
 ## Chapter X: Bioregional Watershed Federation & The Planetary Covenant
 
 ### Article 10.1: The Watershed as Primary Sovereign Unit and Bioregional Subsidiarity
@@ -1294,7 +1286,7 @@ No. The article names these actions and the vote each one needs, but it does not
 
 **What happens to national borders under this article?**
 
-The article says Westphalian frontiers, colonial borders, and sovereign territorial enclosures are permanently abolished. It does not say what replaces them beyond the watershed unit described next.
+The article says the borders of today's state system, colonial borders and sovereign territorial enclosures are permanently abolished. In their place, the basic unit is the watershed.
 
 **What is the basic unit of political organization?**
 
@@ -1306,11 +1298,7 @@ Decisions are made at the lowest ecological scale possible. The article gives a 
 
 **Can a higher assembly overrule my local community?**
 
-Generally no. Higher-tier assemblies have no authority to override local autonomy. The article lists three exceptions: halting pollution that is exported to others, protecting shared aquifers, and defending invariant rights.
-
-**What are invariant rights?**
-
-The article does not say. It only names them as one of the three cases where a higher assembly may step in.
+Generally no. Higher assemblies have no authority to override local autonomy. The article lists three exceptions: stopping pollution that is sent on to others, protecting shared aquifers, and defending the basic rights that cannot be changed (Chapter I).
 
 ### Article 10.2: Ecological Personhood and Interspecies Guardianship (*Jus Biosphaerae*)
 
@@ -1342,15 +1330,15 @@ They trade through bilateral physical resource compacts, which are agreements be
 
 **What do regions actually swap?**
 
-Basins exchange physical exergy (usable energy), refined metals, and specialized equipment directly. They record these exchanges on open thermodynamic ledgers.
+Basins exchange usable energy, refined metals and specialized equipment directly, recorded on open public records of physical flows.
 
 **What is the role of large cities?**
 
-Dense urban areas act as specialized metabolic organs under bilateral compacts. They trade advanced industrial outputs and scientific research for food and energy surpluses.
+Dense cities act as specialized hubs (the article says "metabolic organs") under two-party agreements. They trade advanced industrial products and scientific research for surplus food and energy.
 
 **What happens if a region hoards essential supplies, forms a cartel, or cuts off water to those downstream?**
 
-It triggers automatic Systemic Decoupling, called Disiunctio Reticularis. Inter-basin grid interties, transit corridors, and advanced medical buffers are suspended immediately.
+It automatically triggers what the article calls Systemic Decoupling: power-grid links, transport corridors and advanced medical reserves with that region are suspended immediately.
 
 **How long does the suspension last?**
 
@@ -1370,7 +1358,7 @@ Not always. Permanent settlement in a region depends on a status that measures h
 
 **What do the Green, Amber, and Red statuses mean for someone who wants to settle?**
 
-Under Green, the region takes in new residents freely and you get immediate residence and enrollment in the civic assembly. Under Amber, permanent places go first to family reunification, specialized labor requests, and voluntary infrastructure expansion. Under Red, new permanent residence is paused until the region's capacity grows.
+Under Green, the region takes in new residents freely, and you get the right to a home and enrollment in the civic assembly right away. Under Amber, permanent places go first to family reunification, requests for specialized work and voluntary infrastructure expansion. Under Red, new permanent residence is paused until the region's capacity grows.
 
 **Can I be turned away or deported if a region is at Red status?**
 
@@ -1390,11 +1378,11 @@ The global atmosphere, the oceans held in common, the frozen regions of the plan
 
 **Can anyone spray chemicals into the sky or the sea to cool the planet?**
 
-No. Releasing aerosols into the atmosphere, spreading sulfur in the stratosphere, and adding chemicals to the ocean to fertilize it are permanently prohibited. The article describes them as existential ecocidal hazards. It also bans them when done unilaterally.
+No. Unilateral injection of aerosols into the atmosphere, spreading sulfur in the stratosphere and adding chemicals to fertilize the ocean are permanently prohibited. The article calls them existential ecocidal hazards, meaning dangers that could destroy ecosystems.
 
 **Is any method of controlling sunlight allowed?**
 
-Yes, one kind. A system that does not use chemicals, can be reversed, and works by regulating light from deep space is recognized as a trust for the Sol Commons under Article 11.1. It is meant to counter runaway climate tipping points without chemical fallout.
+Yes, one kind. A non-chemical, reversible system placed in deep space that regulates sunlight by optical means is allowed, and is treated as a shared trust of the solar system (Article 11.1). It is meant to counter runaway climate tipping points without chemical fallout.
 
 **Who has to approve such a system before it is put in place?**
 
@@ -1402,15 +1390,11 @@ Two groups. First, 75% of the Global Commons Assembly, which has 1,001 delegates
 
 **What happens if the system loses its authorization or control is lost?**
 
-It must fail safe. It disperses gradually over a multi-year interval that Organic Law sets, and never abruptly. The article says this prevents administrative capture and termination shock. The article does not say how long that interval is.
+It must fail safe: it disperses gradually over several years, a period set by Organic Law, and never abruptly. The article says this prevents administrative capture and the shock of a sudden stop.
 
 ### Article 10.6: The Federated Sortition Architecture, Odd Parity, and the Universal Covenant
 
 *not yet reviewed · claude-sonnet-5-5 · 2026-11-16*
-
-**How are people chosen to sit on these assemblies?**
-
-The article says the assemblies are made up of citizens chosen by sortition, which means selection by lot. It does not say how the lottery works or who can be entered into it.
 
 **What assemblies are there, and how big is each one?**
 
@@ -1430,7 +1414,7 @@ It is a pledge by all federated bioregions to support each other, keep peace, an
 
 **Where are the technical details of this Constitution set out, and who can change them?**
 
-They are in the Organic Law Annex. The competent assembly enacts and amends it by a sixty percent (60%) qualified majority. Its laws may strengthen constitutional guarantees but never weaken them, and they remain subject to review under Article 4.6.
+They are in the Organic Law Annex, a separate set of technical standards. The responsible assembly enacts and amends it by a sixty percent (60%) qualified majority. These laws may strengthen constitutional guarantees but never weaken them, and they can be reviewed under Article 4.6.
 
 ## Chapter XI: The Celestial Commons & Interplanetary Federation
 
@@ -1440,7 +1424,7 @@ They are in the Organic Law Annex. The competent assembly enacts and amends it b
 
 **What counts as the shared celestial commons?**
 
-Outer space, celestial bodies, asteroids, comets, the Lagrange equilibrium points (L1 to L5) and orbital trajectories. The article treats them together as one indivisible commons, called Patrimonium Solis.
+Outer space, planets and moons, asteroids, comets, the Lagrange points (L1 to L5, places in space where gravity balances) and orbital paths. The article treats them together as one indivisible commons.
 
 **Can a country or a company claim a moon, an asteroid or an orbit slot?**
 
@@ -1448,15 +1432,15 @@ No. National annexation, corporate sovereignty, private equity claims and specul
 
 **Can anyone buy or lease the best spots in space?**
 
-No. Polar volatile traps, solar ridges, stable orbital altitudes and transfer corridors can never be leased, sold or hoarded. Access is managed through open sortition rosters and physical docking queues.
+No. The best spots, such as polar ice traps, ridges with steady sunlight, stable orbits and transfer routes, can never be leased, sold or hoarded. Access is managed through open lists filled by lottery and physical docking queues.
 
 **What happens to the solar flux regulation in deep space?**
 
-Deep-space solar flux regulation (Article 10.5.3) is classified as a Sol Commons trust. It cannot be enclosed for commercial use or used as a weapon.
+Deep-space regulation of sunlight (Article 10.5.3) is a shared trust of the solar system. It cannot be enclosed for commercial use or used as a weapon.
 
 **If I extract minerals or volatiles, do they belong to me?**
 
-Not outright. Extracted abiotic minerals and volatiles are held only as a right to use them, and only while you actively steward them. You must also publish structural assays and process tooling into the Open Commons immediately.
+Not outright. Minerals and volatile substances (such as water and gases) that you extract are held only as a right to use them, and only while you actively look after them. You must also immediately publish your analyses of them and the processes and tools you used.
 
 ### Article 11.2: Engineered Metabolic Envelopes and Closed-Loop Carrying Capacity
 
@@ -1464,7 +1448,7 @@ Not outright. Extracted abiotic minerals and volatiles are held only as a right 
 
 **What is the basic unit of community life away from Earth?**
 
-Beyond Earth's biosphere, the article says it is the artificial metabolic envelope, called a Closed Ecological Life-Support System (CELSS). This replaces the natural river basin that serves as the unit on Earth.
+Beyond Earth, the article says it is a Closed Ecological Life-Support System (CELSS): a sealed, artificial habitat. It replaces the natural water basin that serves as the unit on Earth.
 
 **Where does this apply?**
 
@@ -1476,7 +1460,7 @@ The article says the stock of water, nitrogen, carbon and phosphorus is closed a
 
 **How is the habitat's capacity to support people measured?**
 
-The article lists four measures: how efficiently resources are recirculated, how fast volatile substances leak out, how well the structure holds its pressure, and how much heat the radiators can shed, in watts per square metre.
+The article lists four measures: how efficiently resources are recirculated, how fast gases and other volatile substances leak out, how well the structure holds its pressure, and how much heat the radiators can shed, in watts per square meter.
 
 **Can the habitat grow or take in more residents whenever it wants?**
 
@@ -1500,7 +1484,7 @@ No. The article says no software algorithm, automated decree, or sortition vote 
 
 **If I am in a dispute in a sealed environment, what can happen to me?**
 
-If you are a non-reciprocal inhabitant, you may face a temporary suspension of optional Tier 3 tooling or computational bandwidth. The article does not define Tier 3 here. You may never be expelled into vacuum, confined in a way that restricts your basic physical needs, or have your air rationed.
+Under the measures of Article 5.2, someone who does not do their share may have optional personal tools or computing time (Tier 3) suspended for a while. You may never be expelled into vacuum, confined in a way that restricts your basic physical needs, or have your air rationed.
 
 ### Article 11.4: Thermodynamic Astrodynamics: Mass, Exergy, and Velocity Budgets
 
@@ -1512,7 +1496,7 @@ No. The article says trade and transport between planets are not governed by fia
 
 **What physical quantities are used instead of money?**
 
-Four are listed: usable energy in kilowatt-hours, dry mass in kilograms, volatiles in litres, and change in velocity (called delta-v) in kilometres per second. Volatiles are not defined further in the article.
+Four are listed: usable energy in kilowatt-hours, dry mass in kilograms, volatile substances in liters, and change in velocity (called delta-v) in kilometers per second.
 
 **Why are fuel and changes in speed treated as shared resources?**
 
@@ -1536,7 +1520,7 @@ The article says light travels at a limited speed, so messages take a long time 
 
 **Who decides things that affect only my own habitat?**
 
-Decisions that can be settled within your local habitat belong to the people there. The article says no remote assembly has authority over them. A Habitat or CELSS Sortition Council of 15 to 101 citizens handles interior life, fab-lab access, spatial layout, and shift coordination.
+Decisions that can be settled within your local habitat belong to the people there; no remote assembly has authority over them. A Habitat Sortition Council of 15 to 101 citizens handles interior life, access to workshops, spatial layout and shift coordination.
 
 **What do the larger bodies do?**
 
@@ -1548,7 +1532,7 @@ It works in 90-day cycles, and it deliberates asynchronously. The article does n
 
 **How are agreements between distant regions recorded?**
 
-Ratifications and dispute arbitrations that involve several regions are synchronized over delay-tolerant mesh networks. They use cryptographic append-only ledgers, which are records that can only have entries added.
+Ratifications and dispute rulings that involve several regions are synchronized over networks built to cope with long delays. They use cryptographic append-only ledgers, records to which entries can only be added.
 
 ### Article 11.6: Kinetic Non-Aggression, the Orbital Immune System, and Swords into Plowshares
 
@@ -1562,7 +1546,7 @@ No. Deliberately burning a propulsion system toward inhabited habitats, moons, o
 
 It maintains spread-out, dual-use interception equipment instead of standing military forces. In peacetime this equipment is used for civilian propulsion and for removing orbital debris.
 
-**Could the defence system's energy beams be pointed at people's homes?**
+**Could the defense system's energy beams be pointed at people's homes?**
 
 No. Every directed-energy emitter has a hardware interlock, independent of software, that cuts its power whenever it is aimed at an inhabited body or habitat.
 
@@ -1570,10 +1554,6 @@ No. Every directed-energy emitter has a hardware interlock, independent of softw
 
 No one decides in the moment. The last stage of interception runs on pre-compiled, fixed firmware, which assemblies chosen by lottery (sortition) audit in advance. This is how the system copes with the long delay of light across space. The detailed engineering parameters are fixed in the Organic Law Annex.
 
-**How is it checked where objects in space are heading?**
+**How are paths in space checked, and what happens to old rocket stages?**
 
-All planetary trajectories are verified by optical-radar networks that use Byzantine Fault Tolerant (BFT) methods. The article does not explain how these methods work.
-
-**What happens to old rocket stages and pressure hulls?**
-
-They are handed over to cycler foundries and remelted into common habitat rings and thermal radiators. The article calls this principle "Swords into Plowshares."
+All planetary trajectories are verified by optical and radar networks built to keep working even if some parts fail or give false data (Byzantine Fault Tolerant). Old rocket stages and pressure hulls are remelted in foundries into habitat rings and radiators, under the principle of Swords into Plowshares.
