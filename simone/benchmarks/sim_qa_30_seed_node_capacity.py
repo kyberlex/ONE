@@ -96,6 +96,7 @@ def fmt_day(d):
 
 
 def main():
+    global T_NIGHTS
     print("# SIM-QA-30: Seed Node at Capacity (synthetic, uncalibrated)")
     print()
     print("`python3 sim_qa_30_seed_node_capacity.py`")
@@ -141,6 +142,18 @@ def main():
     for a in (1, 3, 10):
         row = [fmt_day(run("P0", a, g, 1.25, 3.0)[0]) for g in (0.2, 0.5, 0.8)]
         print(f"| {a} | " + " | ".join(row) + " |")
+    print()
+    print("## 5. Sensitivity to core hospitality nights T (policy P34, R = 2, G = 50%; entry period 4 or 8 weeks gives the same result here)")
+    print()
+    print("| T nights | Arrivals a week | Result | Referred over two years or until failure |")
+    print("| ---: | ---: | :--- | ---: |")
+    saved = T_NIGHTS
+    for t in (7, 14, 30):
+        T_NIGHTS = t
+        for a in (3, 10):
+            d, pop, ref, tr = run("P34", a, 0.5, 2.0)
+            print(f"| {t} | {a} | {fmt_day(d)} | {ref:.0f} |")
+    T_NIGHTS = saved
     print()
     print("P1 consumes as P0 by construction: a cap on residence does not cap what guests eat.")
 

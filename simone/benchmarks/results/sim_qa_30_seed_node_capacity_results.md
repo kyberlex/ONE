@@ -52,4 +52,15 @@ Node of 60, 80% contributing; capacity K = 1.2 x N0 = 72 rations a day; reserve 
 | 3 | day 189 | day 230 | day 349 |
 | 10 | day 86 | day 96 | day 112 |
 
+## 5. Sensitivity to core hospitality nights T (policy P34, R = 2, G = 50%; entry period 4 or 8 weeks gives the same result here)
+
+| T nights | Arrivals a week | Result | Referred over two years or until failure |
+| ---: | ---: | :--- | ---: |
+| 7 | 3 | holds 2 years | 300 |
+| 7 | 10 | holds 2 years | 1030 |
+| 14 | 3 | holds 2 years | 297 |
+| 14 | 10 | day 461 | 630 |
+| 30 | 3 | day 686 | 270 |
+| 30 | 10 | day 196 | 230 |
+
 P1 consumes as P0 by construction: a cap on residence does not cap what guests eat.
