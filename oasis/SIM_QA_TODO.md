@@ -40,6 +40,35 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 
 ---
 
+## **MAINTAINER DECISIONS PENDING** *(collected 2026-11-16; tick an item when decided and record the decision in its docket; dockets SIM-QA-1 to 17 and 23 to 28 not re-audited for this list)*
+
+### **A. Opened or found on 2026-11-16**
+**SIM-QA-29, civic register** ([log](sim_resolutions_qa.md))
+- [ ] **D-29.1 (blocks the red team):** guardians of H11 hold voice without vote, or voice and vote. *Recommended:* voice without vote, as the Guardians of Art. 10.2.2.
+- [x] D-29.2: H1 to H3 as the direction, with one exception: during the transition a drawn jury may admit newcomers who have no witnessed birth. *(decided 2026-11-16; to be recorded in the docket with D-29.1)*
+- [x] D-29.3: no photographs. *(decided 2026-11-16; to be recorded in the docket with D-29.1)*
+- [ ] D-29.4 (when the red team runs): Art. 7.4.4 wording for the sealed record (75%); how long the transition jury door stays open; custody of sealed records (how many custodians, what threshold); acts done with a stolen secret before revocation; ceiling on time balances and who certifies hours; parameters (age at which the secret is created, sign-of-life period, minimum count for guardians).
+
+**SIM-QA-30, seed-node admission**
+- [ ] D-30.1: open now or after SIM-QA-29. *Recommended:* after.
+- [ ] D-30.2: H4 as an explicit, time-limited derogation from Art. 10.4.3 in canon (75%), or as a roadmap rule.
+- [ ] D-30.3: commission the SIMONE run on challenge 1 for a seed node before any ceiling is set.
+
+**Chapter IV gap list** ([`chapter_iv_gaps_2026-11-13.md`](chapter_iv_gaps_2026-11-13.md))
+- [ ] D-G.1: G-22: does OL-9 point 7 (Annex, `PROVISIONAL`: "complex" certified by a 60% vote) close the gap?
+- [ ] D-G.2: G-10 and G-20: restore in Part B the docket wording Part B lost ("before the end"; "of its adoption").
+- [ ] D-G.3: the three ★ gaps no docket covers, G-5 ("void"), G-27 (residual threshold) and G-29 (50%+1: 8 or 9 of 15): a docket, or the plain-language pass (R-IV-01, 02, 03).
+
+### **B. Already pending on the board**
+- [ ] **SIM-QA-22:** canon wording of D-1 to D-7; Chapter I ceiling (1,181 of 1,200, 19 words left for SIM-QA-24, 25, 27, 28); Chapter IV with D-1; five weakened or uncarried v1.0 points; brackets of OL-13 to OL-21; roadmap placement of D-8; D-15 option.
+- [ ] **SIM-QA-18:** council petition capacity under the 1.5 h budget (every option touches X-4 or Set B); Y-3 numbers and D-1f (does the rule reach 301 seats); Y-12 48-hour form check and E-4 (Art. 3.6.2); the excusal-duration sentence of 11.2.
+- [ ] **Chapter IV ceiling (Z-3, K-7):** postponed until Y-3 and Y-12 are decided.
+- [ ] **Open bounds of the Y-13 split:** P-3 (ceiling on the service share), P-4 (maximum drawn mandate), P-10 (ceiling on the co-endorsement share), P-7 (twelve-month delay for criteria changes; no removal of admitted entries).
+- [ ] **Plain-language pass:** review of Chapter I; open terms T-4 ("juror" in Art. 4.4), T-11 (watershed or bioregion), T-12 (one register or two), T-13 (request or petition), T-14 (withheld or suspended).
+- [ ] **SIM-QA-24 to 28:** when to open each (held at Stage 1).
+
+---
+
 ## **COMPLETED & MERGED DOCKETS**
 
 *(Dockets move here once fully patched and merged into canonical `bible/` text).*
