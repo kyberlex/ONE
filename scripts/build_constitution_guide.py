@@ -17,8 +17,7 @@ Usage:
   python3 scripts/build_constitution_guide.py --all                # every article
   python3 scripts/build_constitution_guide.py --stale              # changed or missing articles only
   python3 scripts/build_constitution_guide.py --audit              # report only, exit 1 if missing/stale
-  python3 scripts/build_constitution_guide.py --article 4.3 --dry-run
-  python3 scripts/build_constitution_guide.py --article 4.3 --force   # regenerate unchanged text
+  python3 scripts/build_constitution_guide.py --article 4.3 --force   # regenerate unchanged text (also --dry-run)
   python3 scripts/build_constitution_guide.py --all --source path/to/working_copy.md
 """
 
@@ -292,7 +291,8 @@ def generate(article, style):
           for x in data.get("qa", []) if isinstance(x, dict) and x.get("q") and x.get("a")]
     if not qa:
         sys.exit(f"[!] ERROR: no questions returned for Article {article['id']}: {data}")
-    check, meta_c = call_model(check_prompt(article, qa), "check")
+    skip = {"model": "none", "seconds": 0, "tokens_in": 0, "tokens_out": 0}  # GUIDE_CLAUDE_CHECK_MODEL=none
+    check, meta_c = ({}, skip) if CLAUDE_MODELS["check"] == "none" else call_model(check_prompt(article, qa), "check")
     warnings = [w for w in check.get("warnings", []) if isinstance(w, dict) and w.get("statement")]
     entry = {"article_id": article["id"], "article_title": article["title"],
              "chapter": article["chapter"], "chapter_title": article["chapter_title"],
