@@ -31,6 +31,7 @@ import shutil
 import hashlib
 import argparse
 import datetime
+import tempfile
 import subprocess
 from pathlib import Path
 
@@ -53,6 +54,11 @@ if ENV_PATH.exists():
                 os.environ[k.strip()] = v.strip().strip("\"'")
 
 GEMINI_MODEL = "gemini-3.8-flash"
+CLAUDE_MODEL = os.environ.get("GUIDE_CLAUDE_MODEL", "")  # haiku, sonnet, opus or full id; empty = CLI default
+# Replaces Claude Code's default system prompt; with a neutral working folder this drops the
+# project CLAUDE.md and environment context (~10k tokens per call down to ~1.4k), still on the subscription.
+CLAUDE_SYSTEM_PROMPT = ("You write and check plain-language explanations of legal texts. "
+                        "Follow the instructions in the message exactly and reply with JSON only.")
 
 CHAPTER_RE = re.compile(r"^# \*\*CHAPTER ([IVXLC]+):\s*(.+?)\*\*\s*$")
 ARTICLE_RE = re.compile(r"^### \*\*Article (\d+\.\d+)\s+[—-]\s+(.+?)\*\*\s*$")
@@ -128,8 +134,11 @@ def call_claude(prompt):
         _CLAUDE_AUTH_OK = True
     t0 = time.time()
     try:
-        proc = subprocess.run([claude, "-p", "--output-format", "json", "--tools", ""],
-                              input=prompt, capture_output=True, text=True, timeout=600)
+        cmd = [claude, "-p", "--output-format", "json", "--tools", "", "--system-prompt", CLAUDE_SYSTEM_PROMPT]
+        cmd += ["--model", CLAUDE_MODEL] if CLAUDE_MODEL else []
+        with tempfile.TemporaryDirectory(prefix="guide_") as neutral_cwd:  # no project CLAUDE.md here
+            proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=600,
+                                  cwd=neutral_cwd)
         out = json.loads(proc.stdout)
     except (subprocess.SubprocessError, json.JSONDecodeError) as e:
         sys.exit(f"[!] ERROR: claude -p failed: {e}")

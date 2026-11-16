@@ -9,36 +9,31 @@
       "source_hash": "f4b01a9da8311d935696c6ef5b903c9f5337f365ffecf4b48d1f44864fb2fe25",
       "qa": [
         {
-          "q": "How are the people who sit on these citizen assemblies chosen?",
-          "a": "They are drawn by lottery from public registers that list every citizen. The draws use both cryptographic and mechanical methods and are open so anyone can check them. Each draw is balanced so the group matches the population by age, gender, and where people live."
+          "q": "How are people chosen to serve?",
+          "a": "Jurors for every body chosen by lot are drawn from civic registers that include all citizens. The draw uses open lotteries, both digital (cryptographic) and mechanical, and anyone can check them. The selection is balanced so the group matches the population by age, gender, and where people live."
         },
         {
-          "q": "If I am picked, can I say no, and who does my work meanwhile?",
-          "a": "The article calls serving when picked both a right everyone has and a duty that cannot be set aside. It does not describe a way to decline. If you are called, you are fully released from your regular work, and the support you normally give at home is covered by someone else."
+          "q": "Can I say no if my name is drawn, and what happens to my job and home duties?",
+          "a": "Serving when you are drawn is described as both a right everyone has and a duty that cannot be set aside. While you serve, you are fully released from your usual work. You also get a replacement for the support you normally provide at home."
         },
         {
           "q": "Can I serve again right after my term ends?",
-          "a": "Not in the same level of assembly. After each term you must take a break twice as long as the term you served."
+          "a": "No. You cannot serve two terms in a row at the same level of body. After each term, you must take a break twice as long as the term itself."
         },
         {
-          "q": "Could the assembly's paid staff end up quietly running things?",
-          "a": "The article tries to prevent that. Staff work only on temporary, rotating contracts, and shaping the agenda, filtering citizens' questions, or secretly influencing the people chosen by lot is an offense that can get them removed from office. The power to set the agenda belongs to the members chosen by lottery."
+          "q": "What stops the assembly's staff from quietly running things?",
+          "a": "Staff work only on temporary, rotating contracts. If they shape the agenda, filter citizens' questions, or secretly influence jurors, they can be impeached, meaning formally charged. The power to set the agenda belongs to the delegates chosen by lot."
         },
         {
-          "q": "How does my petition get onto an assembly's agenda?",
-          "a": "Anyone can publish any petition on the open public register, and nobody filters it. To reach the agenda it needs backing from a fixed share of the people the assembly serves; everyone gets the same allowance of backings, renewed regularly and never tied to their work, behavior, or opinions. Each session has a limited number of agenda slots, filled by a public lottery in which petitions with more separate supporters have better odds, and a rotating panel of three (3) citizens drawn by lot only merges identical requests and checks the format, never whether a petition is good."
+          "q": "How do I get an issue in front of an assembly?",
+          "a": "Anyone can post any petition on the open civic register, and no one filters it. To reach the agenda, it needs endorsements from a set share of the people the assembly serves. Everyone gets the same number of endorsements, renewed from time to time, no matter their work, behavior, or opinions. Each session has a limited number of agenda spots, filled by a public lottery that gives more weight to petitions with more different supporters. A panel of three (3) citizens drawn by lot merges identical requests and checks only the format, not whether a petition is good. The exact figures are set by a separate law, called Organic Law."
         }
       ],
       "warnings": [
         {
           "answer": 2,
-          "statement": "the support you normally give at home is covered by someone else",
-          "reason": "The article says only 'replacement of domestic support'. It does not say whether this is support the citizen gives or receives at home, and it does not say who provides the replacement. The answer settles an ambiguity the text leaves open."
-        },
-        {
-          "answer": 4,
-          "statement": "is an offense that can get them removed from office",
-          "reason": "The article says 'impeachable offense'. Impeachment is the formal charge; the article never states removal from office as the consequence."
+          "statement": "You also get a replacement for the support you normally provide at home.",
+          "reason": "The article only says 'replacement of domestic support'. It does not say this is support the citizen provides at home; that reading is an added interpretation."
         }
       ],
       "model": "claude-opus-5-5",
