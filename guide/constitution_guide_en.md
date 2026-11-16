@@ -8,20 +8,28 @@ Entries marked *not yet reviewed* have not been checked by a person. Warnings li
 
 ### Article 4.3: Stratified Selection, Universal Service, and Anti-Bureaucratic Rotation
 
-*not yet reviewed · gemini-3.8-flash · 2026-11-16*
+*not yet reviewed · claude-opus-5-5 · 2026-11-16*
 
-**What happens to my job and household responsibilities if I am selected?**
+**How are the people who sit on these citizen assemblies chosen?**
 
-Serving by lot is an unavoidable civic duty. If you are summoned, you receive a full release from routine labor as well as replacement of domestic support.
+They are drawn by lottery from public registers that list every citizen. The draws use both cryptographic and mechanical methods and are open so anyone can check them. Each draw is balanced so the group matches the population by age, gender, and where people live.
 
-**Can I be picked to serve back-to-back terms?**
+**If I am picked, can I say no, and who does my work meanwhile?**
 
-No. You cannot serve consecutive terms at the same level. After any term of service, you must have a break that lasts twice as long as the term was.
+The article calls serving when picked both a right everyone has and a duty that cannot be set aside. It does not describe a way to decline. If you are called, you are fully released from your regular work, and the support you normally give at home is covered by someone else.
 
-**Can assembly staff control what the delegates discuss?**
+**Can I serve again right after my term ends?**
 
-No. The selected delegates hold all authority over the agenda. Staff work on temporary, rotating contracts, and it is an impeachable offense for them to frame agendas, filter citizen questions, or secretly influence jurors.
+Not in the same level of assembly. After each term you must take a break twice as long as the term you served.
 
-**How can I get an issue onto an assembly's agenda?**
+**Could the assembly's paid staff end up quietly running things?**
 
-Anyone can publish an unfiltered petition on the civic register. If it gathers enough endorsements from constituents, it enters a weighted lottery for agenda slots. A rotating panel of 3 citizens chosen by lot merges duplicate requests and checks basic form, but they cannot judge the merit of your petition.
+The article tries to prevent that. Staff work only on temporary, rotating contracts, and shaping the agenda, filtering citizens' questions, or secretly influencing the people chosen by lot is an offense that can get them removed from office. The power to set the agenda belongs to the members chosen by lottery.
+
+**How does my petition get onto an assembly's agenda?**
+
+Anyone can publish any petition on the open public register, and nobody filters it. To reach the agenda it needs backing from a fixed share of the people the assembly serves; everyone gets the same allowance of backings, renewed regularly and never tied to their work, behavior, or opinions. Each session has a limited number of agenda slots, filled by a public lottery in which petitions with more separate supporters have better odds, and a rotating panel of three (3) citizens drawn by lot only merges identical requests and checks the format, never whether a petition is good.
+
+> **Warnings (unsupported by the article text):**
+> - Answer 2: "the support you normally give at home is covered by someone else" (The article says only 'replacement of domestic support'. It does not say whether this is support the citizen gives or receives at home, and it does not say who provides the replacement. The answer settles an ambiguity the text leaves open.)
+> - Answer 4: "is an offense that can get them removed from office" (The article says 'impeachable offense'. Impeachment is the formal charge; the article never states removal from office as the consequence.)

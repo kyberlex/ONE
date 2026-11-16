@@ -140,15 +140,17 @@ def call_claude(prompt):
     usage = out.get("usage", {})
     model = next(iter(out.get("modelUsage", {}) or {"claude": 0}))
     meta = {"model": model, "seconds": round(time.time() - t0, 1),
-            "tokens_in": usage.get("input_tokens", 0), "tokens_out": usage.get("output_tokens", 0)}
+            "tokens_in": sum(usage.get(k, 0) or 0 for k in ("input_tokens", "cache_creation_input_tokens",
+                                                            "cache_read_input_tokens")),
+            "tokens_out": usage.get("output_tokens", 0)}
     try:
         return json.loads(text), meta
     except json.JSONDecodeError as e:
         sys.exit(f"[!] ERROR: Claude did not return valid JSON: {e}")
 
 
-# One-line swap: set to call_claude to use Claude Code on the subscription login.
-call_model = call_gemini
+# One-line swap: set to call_gemini to use Gemini (same client and key as sync_webapp_i18n.py).
+call_model = call_claude
 
 
 # ---------------------------------------------------------------- source parsing
@@ -287,7 +289,7 @@ def generate(article, style):
              "source_hash": article["hash"], "qa": qa, "warnings": warnings,
              "model": meta["model"], "check_model": meta_c["model"],
              "date": datetime.date.today().isoformat(), "reviewed": False}
-    totals = {k: meta[k] + meta_c[k] for k in ("seconds", "tokens_in", "tokens_out")}
+    totals = {k: round(meta[k] + meta_c[k], 1) for k in ("seconds", "tokens_in", "tokens_out")}
     return entry, totals
 
 

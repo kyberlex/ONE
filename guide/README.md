@@ -47,14 +47,12 @@ Each entry stores `source_hash`, the SHA-256 of the article text it was generate
 
 ## Model
 
-The script currently uses **Gemini (`gemini-3.8-flash`)**, with the same client and the same `GEMINI_API_KEY` from `.env` as `scripts/sync_webapp_i18n.py`. Each entry records the model in `"model"` (generation) and `"check_model"` (check).
+The script uses **Claude through the Claude Code command line** (`claude -p`, JSON output, no tools allowed, not bare mode), one generation call and one check call per article, on the maintainer's subscription login. It never uses pay-per-use API billing: it stops if `ANTHROPIC_API_KEY` is set, and it stops unless `claude auth status` reports a `claude.ai` login. The model is the CLI's default; each entry records the model actually used in `"model"` (generation) and `"check_model"` (check).
 
-Claude through the Claude Code command line (`claude -p`, JSON output, no tools) is also implemented, restricted to the subscription login: it stops if `ANTHROPIC_API_KEY` is set and stops unless `claude auth status` reports a `claude.ai` login. It is not the default because the Claude Code CLI on this machine has no subscription login of its own outside the desktop app.
-
-To swap, change one line in the script:
+Gemini (`gemini-3.8-flash`) is also implemented, with the same client and the same `GEMINI_API_KEY` from `.env` as `scripts/sync_webapp_i18n.py`. To swap, change one line in the script:
 
 ```python
-call_model = call_gemini   # or: call_model = call_claude
+call_model = call_claude   # or: call_model = call_gemini
 ```
 
 The CLI is found through `CLAUDE_BIN`, then `PATH`, then the copy bundled with the Claude desktop app. Translations of the guide are not part of this script.

@@ -9,25 +9,40 @@
       "source_hash": "f4b01a9da8311d935696c6ef5b903c9f5337f365ffecf4b48d1f44864fb2fe25",
       "qa": [
         {
-          "q": "What happens to my job and household responsibilities if I am selected?",
-          "a": "Serving by lot is an unavoidable civic duty. If you are summoned, you receive a full release from routine labor as well as replacement of domestic support."
+          "q": "How are the people who sit on these citizen assemblies chosen?",
+          "a": "They are drawn by lottery from public registers that list every citizen. The draws use both cryptographic and mechanical methods and are open so anyone can check them. Each draw is balanced so the group matches the population by age, gender, and where people live."
         },
         {
-          "q": "Can I be picked to serve back-to-back terms?",
-          "a": "No. You cannot serve consecutive terms at the same level. After any term of service, you must have a break that lasts twice as long as the term was."
+          "q": "If I am picked, can I say no, and who does my work meanwhile?",
+          "a": "The article calls serving when picked both a right everyone has and a duty that cannot be set aside. It does not describe a way to decline. If you are called, you are fully released from your regular work, and the support you normally give at home is covered by someone else."
         },
         {
-          "q": "Can assembly staff control what the delegates discuss?",
-          "a": "No. The selected delegates hold all authority over the agenda. Staff work on temporary, rotating contracts, and it is an impeachable offense for them to frame agendas, filter citizen questions, or secretly influence jurors."
+          "q": "Can I serve again right after my term ends?",
+          "a": "Not in the same level of assembly. After each term you must take a break twice as long as the term you served."
         },
         {
-          "q": "How can I get an issue onto an assembly's agenda?",
-          "a": "Anyone can publish an unfiltered petition on the civic register. If it gathers enough endorsements from constituents, it enters a weighted lottery for agenda slots. A rotating panel of 3 citizens chosen by lot merges duplicate requests and checks basic form, but they cannot judge the merit of your petition."
+          "q": "Could the assembly's paid staff end up quietly running things?",
+          "a": "The article tries to prevent that. Staff work only on temporary, rotating contracts, and shaping the agenda, filtering citizens' questions, or secretly influencing the people chosen by lot is an offense that can get them removed from office. The power to set the agenda belongs to the members chosen by lottery."
+        },
+        {
+          "q": "How does my petition get onto an assembly's agenda?",
+          "a": "Anyone can publish any petition on the open public register, and nobody filters it. To reach the agenda it needs backing from a fixed share of the people the assembly serves; everyone gets the same allowance of backings, renewed regularly and never tied to their work, behavior, or opinions. Each session has a limited number of agenda slots, filled by a public lottery in which petitions with more separate supporters have better odds, and a rotating panel of three (3) citizens drawn by lot only merges identical requests and checks the format, never whether a petition is good."
         }
       ],
-      "warnings": [],
-      "model": "gemini-3.8-flash",
-      "check_model": "gemini-3.8-flash",
+      "warnings": [
+        {
+          "answer": 2,
+          "statement": "the support you normally give at home is covered by someone else",
+          "reason": "The article says only 'replacement of domestic support'. It does not say whether this is support the citizen gives or receives at home, and it does not say who provides the replacement. The answer settles an ambiguity the text leaves open."
+        },
+        {
+          "answer": 4,
+          "statement": "is an offense that can get them removed from office",
+          "reason": "The article says 'impeachable offense'. Impeachment is the formal charge; the article never states removal from office as the consequence."
+        }
+      ],
+      "model": "claude-opus-5-5",
+      "check_model": "claude-opus-5-5",
       "date": "2026-11-16",
       "reviewed": false
     }
