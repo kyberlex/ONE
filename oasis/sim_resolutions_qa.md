@@ -2355,6 +2355,106 @@ Chapter I today: 808. Art. 1.8 as drafted in section 5 with its heading: 220. Pa
 
 ---
 
+## **SIM-QA-29: Civic Register — Entry, Exit and Who Cannot Serve**
+
+* **Date Recorded:** 2026-11-16  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened by maintainer instruction 2026-11-16 and held at Stage 1 until the maintainer decides. No red team has been run. The vectors and hypotheses below are preliminary.  
+* **Originating Context:** working session of 2026-11-16, first pass, not reviewed by a specialist. The maintainer has not yet confirmed H1 to H3 as the direction, voice without vote in H11, or the exclusion of photographs.  
+* **Closest current canon:** Art. 4.3.1 (jurors drawn "from universal civic registers", stratified by age, gender and geography); Art. 7.4.4 (personhood proven by Zero-Knowledge Proof-of-Personhood, "without harvesting biometric traits, facial imagery, or personal identity data"); Art. 7.4.2 (keys dispersed by threshold computation); Art. 10.4.2 (Green Status grants "immediate residential usufruct and civic assembly enrollment"); Art. 1.3.1 (baseline held by "every inhabitant"). None says who is in the register, who enrols a person, or how birth, death, a lost credential, children and incapacity are handled.  
+* **Constitutional Articles:** Arts. 1.2, 1.3.1, 3.4.4, 4.3.1, 4.3.2, 4.6.1, 5.1.3, 5.2, 6.1.2, 7.4.2, 7.4.4, 10.2.2; Organic Law OL-2 (anti-brokerage of scarce slots), OL-9 (petition intake); cross-references SIM-QA-18 (summons refusal), SIM-QA-20 (sealed Register, closed-session juries), SIM-QA-25 (children).  
+* **Source note:** the brief names "gap G-1 of the Chapter IV rewrite". No section of this log or of `chapter_iv_placement_2026-11-13.md` gives a Chapter IV gap that label. The only G-1 in this log is SIM-QA-22 section 8 (defence and exploits), which is unrelated. The reference is kept as given. Provenance is to be confirmed by the maintainer.
+
+### **1. The Friction**
+* Art. 7.4.4 says how personhood is proven, but no article says who is in the civic register, who enrols a person, or what happens at birth, at death, when a credential is lost, for children, or for persons who cannot follow a deliberation.
+* Art. 4.3.1 stratifies every draw by age, gender and geography, so each row must carry those three values and cannot be empty. A register that holds nothing readable cannot be stratified.
+* Art. 7.4.4 bars harvesting "personal identity data". A register that must re-link a person after a lost credential or close a row at death has to keep something linkable somewhere. Where it is kept, and who may open it, is not written.
+* *Noted at opening:* Art. 1.3.1 and Art. 5.2.1 make the baseline independent of any status, so the register must never gate water, food, shelter or care. Art. 5.2.3 keeps sortition eligibility unconditioned on labour. Both bound every hypothesis below.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text)*
+* **RED-1, double enrolment:** one person enrols in two distant nodes and holds two draw chances and two petition allowances → nothing in canon checks uniqueness across nodes.
+* **RED-2, invented persons:** a colluding node registers people who do not exist, gaining draw weight, petition tokens (Art. 4.3.5, OL-9) and headcount for allocations → no audit of rows is written.
+* **RED-3, the dead keep voting:** an heir keeps using a dead person's credential → no rule closes a row at death.
+* **RED-4, second voice by loss:** a person reports a lost credential and is issued a new one while keeping the old → no rule binds the new key to the same row.
+* **RED-5, lending:** a scarce place (a seat, a fabrication slot, a booking) or a credential itself is lent or traded → OL-2 covers fabrication slots only.
+* **RED-6, carer harvesting:** a carer gathers the credentials of frail persons and uses them for remote petition endorsements → nothing separates assistance from use.
+* **RED-7, incapacity as silencing:** a declaration of incapacity is used to remove an inconvenient person from the draw → no procedure, no standing to contest.
+* **RED-8, the steered member:** a seated member who cannot follow the deliberation is steered by a companion; in a panel of three that is one vote of three → no rule on companions in deliberation.
+* **RED-9, custodians collude:** the holders of a neighbourhood's sealed records open them together → threshold custody (Art. 7.4.2) exists for network keys, not for records.
+* **RED-10, re-identification in small nodes:** in a node of a few dozen people, year of birth, gender and node identify the person → the index row is a name in all but form.
+* **RED-11, time balances:** extra hours are hoarded into a store of claims, or whoever certifies hours inflates them → reintroduces accumulation against Arts. 3.2 and 5.1.2.
+* **RED-12, captured guardians:** the pool of guardians for those who cannot be drawn is filled by carers with their own interests → the represented person's voice becomes the carer's.
+
+### **3. Preliminary Hypotheses** *(proposed mitigations, untested)*
+* **H1, three layers.** (a) A global index replicated per bioregion: one row per person with a uniqueness fingerprint, year of birth, gender, node, status and public key. (b) A sealed record held in the neighbourhood: the name as known locally, date and place of birth, the row reference, guardians, and a reserve copy used to re-link accounts. (c) A personal secret held by the person.
+* **H2, birth as the door.** The fingerprint is computed from birth data with a dispersed key (Art. 7.4.2). In steady state, birth is the only way in. Birth data is a sealed anchor for uniqueness and is never shown as an identifier.
+* **H3, sealed opening.** The sealed record opens only before a jury drawn by lot, on a closed list of grounds: death, lost secret, challenge.
+* **H4, pseudonyms per use.** A different pseudonym for each use: petitions, rosters, bookings, the Practitioner Register (SIM-QA-20).
+* **H5, extra hours stay local.** Hours above the roster go to a local account. They cannot be transferred and can be spent only against the person's own future shifts (Art. 5.1.3).
+* **H6, travel.** Each node debits the absence of its own member. Scarce places cannot be transferred and return to the lot when unused.
+* **H7, newborns.** A row with no key is created at birth. The secret is created at a fixed age and confirmed by those who raised the child. No marking of the body.
+* **H8, death.** A doctor and a witness certify the death; a jury closes the row. Fallback: the row lapses after a fixed period without a sign of life given in person.
+* **H9, lost or stolen secret.** A jury revokes the old key and binds a new one to the same row.
+* **H10, exemption from the draw.** Asked for by the person, or by the guardian with a medical opinion, never by an authority. Decided by a panel from another node. Lifted on simple request. It removes only the draw, nothing else. Safeguards: orientation offered first as a safety net; an alternate from the same stratum takes the seat; no companion in deliberation or in the voting booth; exemption rates published per stratum.
+* **H11, guardians for those who cannot be drawn** *(maintainer proposal)*. Exempted persons and children are represented by guardians drawn by lot on the model of Art. 10.2.2: voice, access to the agenda, and standing under Art. 4.6.1. Mixed pool, exclusion for conflict of interest, rotation. Guardians receive counts above a minimum, in broad bands, never names. *Whether guardians hold voice without vote is not yet confirmed.*
+* **H12, official contact point.** A contact point bound to the row for summonses.
+
+**Rejected at opening, with reason:**
+* Pure anonymity with no link: fails on a lost secret and on death at scale.
+* A global register of readable personal data: a single point of capture, a complete list of persons with their location, and unusable when a node is islanded (Art. 6.1.2).
+* Photographs or face recognition: barred by Art. 7.4.4.
+* Marking of the body: barred by Art. 1.2.
+
+**Open points:**
+* The sealed record of H1(b) touches Art. 7.4.4 ("personal identity data"); a change there needs 75%.
+* Adults entering during the transition have no witnessed birth; H2 gives them no door.
+* Guardianship of orphans and of incapable adults has not been checked against canon (Arts. 5.4, 5.6).
+* Custody of the sealed records: who holds them, how many custodians, what threshold.
+* Art. 4.3.2 calls service "a universal prerogative"; whether an exemption under H10 is compatible.
+* Remote endorsements by frail persons (RED-6).
+* Acts done with a stolen secret before revocation: void, valid, or reviewed.
+* Ceiling on time balances and who certifies hours (RED-11).
+* Physical delivery of summonses and credentials (H12).
+* Small nodes (RED-10).
+* Parameters: age at which the secret is created, sign-of-life period, minimum count for guardians.
+* *Noted at opening:* Art. 10.4.2 grants civic enrolment on arrival. Under H2 an arrival from another basin is a change of node on an existing row. An arrival from outside the commons falls under the transition point above.
+
+**Honest residual:** no scheme without biometrics excludes double enrolment worldwide with certainty.
+
+**Next action:** held at Stage 1 by maintainer decision. When opened: confirm or reject H1 to H3 as the direction, voice without vote in H11, and the exclusion of photographs; red team H1 to H12 against RED-1 to RED-12; Art. 7.4.4 wording; small-node re-identification model (SIMONE); Chapter IV and Chapter VII ceiling checks (instruction 10a).
+
+---
+
+## **SIM-QA-30: Admission to Seed Nodes During the Transition**
+
+* **Date Recorded:** 2026-11-16  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened by maintainer instruction 2026-11-16 and held at Stage 1 until the maintainer decides. No red team has been run. The vectors and hypotheses below are preliminary.  
+* **Originating Context:** working session of 2026-11-16, first pass, not reviewed by a specialist.  
+* **Closest current canon:** Art. 10.4.2 (Green, Amber and Red Status on Ecological Carrying Capacity telemetry; Red pauses permanent tenure), Art. 10.4.3 (Inviolable Sanctuary Guarantee: hospitality, water, food, emergency care and safe transit for every traveller, even under Red), Art. 10.4.4 (Federal Rebalancing and Transit Bypass to contiguous Green and Amber basins), Art. 3.1.6 (Tier 1 Autarkic Closure audit), Art. 5.2 (reciprocity; Tier 1 shelter never conditioned). Chapter IX (Arts. 9.1 to 9.6) gives no admission rule for a node in transition.  
+* **Constitutional Articles:** Arts. 1.3.1, 3.1.6, 5.2, 9.1 to 9.6, 10.4.2 to 10.4.4; roadmap (Stage 1 seed node, 180-day caloric cache, `roadmap/roadmap.md`); SIMONE challenge 1 (free-rider threshold that collapses Tier 1, `simone/simone-specs.md`); cross-reference SIM-QA-29 (enrolment).  
+* **Source note:** the 180-day reserve is the roadmap's Stage 1 cache. Art. 3.5.2 asks for 12 to 24 months of Tier 1 output. The seed node is therefore below the canon reserve by design during the transition. Recorded, not resolved.
+
+### **1. The Friction**
+* Chapter IX has no admission rule for a node in transition.
+* Art. 10.4 is written for whole basins. Its transit bypass (Art. 10.4.4) assumes neighbouring Green and Amber basins that do not exist yet during the transition.
+* A seed node with a 180-day reserve inside the legacy economy can attract more people than it can feed. Art. 10.4.3 obliges it to feed every traveller "under no circumstances" less.
+* *Noted at opening:* Art. 5.2.2 says Tier 1 shelter "is never conditioned". H3 (shifts before stable usufruct) has to be read against it.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text)*
+* **RED-1, overrun:** open arrivals exceed capacity and Tier 1 fails for everyone → Art. 10.4.3 binds without a neighbour to share the load.
+* **RED-2, club:** members choose who enters and the node becomes a club → nothing bars selection by affinity.
+* **RED-3, ceiling as back door:** a hospitality ceiling is used to deny Art. 10.4.3 → the ceiling becomes a border by another name.
+* **RED-4, unknown carrying share:** the share of non-contributors a node can carry is unknown (SIMONE challenge 1) → any ceiling is set without evidence.
+
+### **3. Preliminary Hypotheses** *(proposed mitigations, untested)*
+* **H1, declared capacity.** Capacity is declared from the node's physical accounts (Arts. 3.1.6, 3.4).
+* **H2, lot.** When places are fewer than requests, admission is by lot among applicants.
+* **H3, entry period.** An entry period in hospitality, with shifts, before dwelling usufruct becomes stable.
+* **H4, declared ceiling and referral.** Hospitality up to a declared ceiling; beyond it, referral to the services of the existing state. Stated openly as a time-limited derogation from Art. 10.4.3, never hidden.
+
+**Next action:** held at Stage 1 by maintainer decision. When opened: red team H1 to H4 against RED-1 to RED-4; SIMONE run on challenge 1 for a seed node (carrying share of non-contributors under a 180-day reserve); placement check (canon Chapter IX, roadmap or Organic Law); whether H4 is compatible with Art. 10.4.3 or needs a 75% derogation clause with a sunset; H3 against Art. 5.2.2.
+
+---
+
 ## **Cross-Docket Check 2026-11-13: SIM-QA-18, 19, 20, 21, 22** *(after the maintainer decisions of 2026-11-13; inconsistencies listed, none resolved here)*
 
 **Resolved today and verified across dockets:** X-1 (panels of three per dispute: SIM-QA-19 Art. 4.2 and H6 clause, SIM-QA-21 Art. 4.2.1 and OL-10 point 8, OL-11 point 6); X-2 (notice, SIM-QA-19); X-3 (one outside-panel rule: Art. 4.2 closing paragraph, Art. 4.3.6, OL-10 point 8, OL-11 point 6); X-4 (OL-9.3, SIM-QA-18); X-5 and X-10 (Art. 4.3.2 and OL-9.11, SIM-QA-18; SIM-QA-20 section 9); X-7, X-8, X-9 (SIM-QA-21); X-11 (Art. 4.4.2, SIM-QA-20); I-3 (OL-11 point 5a, referenced from SIM-QA-20). Hiatus counted on length of service is the same rule for panels of three (SIM-QA-19) and Evidence Panels (SIM-QA-20).
