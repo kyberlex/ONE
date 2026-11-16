@@ -18,6 +18,7 @@ Every Round 2 Adversarial Critic Docket tracked in [`oasis/external_critics_roun
 | [`sim_qa_18_summons_refusal.py`](sim_qa_18_summons_refusal.py) | **Pillar 2** | **Summons Refusal:** fill failure and composition drift of a 15-seat council and 3-seat panel under the Art. 4.3.3 hiatus, uniform vs correlated refusal (synthetic). | `python3 simone/benchmarks/sim_qa_18_summons_refusal.py` |
 | [`sim_qa_19_tier_representativeness.py`](sim_qa_19_tier_representativeness.py) | **Pillar 2** | **Tier Representativeness:** exact binomial, finite-node and stratified error of 3 / 15 / 101 / 301 / 1,001-seat bodies. | `python3 simone/benchmarks/sim_qa_19_tier_representativeness.py` |
 | [`sim_qa_29_reidentification.py`](sim_qa_29_reidentification.py) | **Pillar 2** | **Register Re-Identification:** share of a node's adults identified by node, gender and an age field (year of birth or bands) in a readable register index (synthetic). | `python3 simone/benchmarks/sim_qa_29_reidentification.py` |
+| [`sim_qa_30_seed_node_capacity.py`](sim_qa_30_seed_node_capacity.py) | **Pillar 2/3** | **Seed Node at Capacity:** reserve depletion of a transition node under open arrivals and four admission rules (residence cap, network transfer, core hospitality, referral) (synthetic). | `python3 simone/benchmarks/sim_qa_30_seed_node_capacity.py` |
 | [`sim_qa_12_stiff_load_shedding.py`](sim_qa_12_stiff_load_shedding.py) | **Pillar 3** | **Stiff Relay Chattering:** Zero-deadband Zeno oscillation vs. $3\%$ Schmitt-trigger hysteresis. | `python3 simone/benchmarks/sim_qa_12_stiff_load_shedding.py` |
 | [`sim_qa_13_vapor_puncture.py`](sim_qa_13_vapor_puncture.py) | **Pillar 4A** | **$-25^\circ\text{C}$ Vapor Retarder Puncture:** ISO 13788 condensation limit & $50\text{ mm}$ service cavity protection. | `python3 simone/benchmarks/sim_qa_13_vapor_puncture.py` |
 | [`sim_qa_14_cryo_and_voltage_drop.py`](sim_qa_14_cryo_and_voltage_drop.py) | **Pillar 4B** | **MCU Freeze at $-12^\circ\text{C}$ & $48\text{ V}$ Feeder Loss:** Bimetallic `K1` cutout & $800\text{ V DC}$ vs. $48\text{ V DC}$ copper mass. | `python3 simone/benchmarks/sim_qa_14_cryo_and_voltage_drop.py` |
@@ -32,4 +33,5 @@ Every Round 2 Adversarial Critic Docket tracked in [`oasis/external_critics_roun
 * [`results/sim_qa_18_summons_refusal_results.md`](results/sim_qa_18_summons_refusal_results.md)
 * [`results/sim_qa_19_tier_representativeness_results.md`](results/sim_qa_19_tier_representativeness_results.md)
 * [`results/sim_qa_29_reidentification_results.md`](results/sim_qa_29_reidentification_results.md)
+* [`results/sim_qa_30_seed_node_capacity_results.md`](results/sim_qa_30_seed_node_capacity_results.md)
 

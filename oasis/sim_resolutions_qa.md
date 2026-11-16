@@ -2527,7 +2527,7 @@ Under rule 10a(5), Chapter VII would then receive further detail in Organic Law 
 ## **SIM-QA-30: Admission to Seed Nodes During the Transition**
 
 * **Date Recorded:** 2026-11-16  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened by maintainer instruction 2026-11-16 and held at Stage 1 until the maintainer decides. No red team has been run. The vectors and hypotheses below are preliminary.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST), opened and red-teamed 2026-11-16 on maintainer instruction (section 4). Verdict `NARROWED` with all four strategies together; any one alone fails (measured, synthetic). Purple patch drafted as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged; canon unchanged.  
 * **Originating Context:** working session of 2026-11-16, first pass, not reviewed by a specialist.  
 * **Closest current canon:** Art. 10.4.2 (Green, Amber and Red Status on Ecological Carrying Capacity telemetry; Red pauses permanent tenure), Art. 10.4.3 (Inviolable Sanctuary Guarantee: hospitality, water, food, emergency care and safe transit for every traveller, even under Red), Art. 10.4.4 (Federal Rebalancing and Transit Bypass to contiguous Green and Amber basins), Art. 3.1.6 (Tier 1 Autarkic Closure audit), Art. 5.2 (reciprocity; Tier 1 shelter never conditioned). Chapter IX (Arts. 9.1 to 9.6) gives no admission rule for a node in transition.  
 * **Constitutional Articles:** Arts. 1.3.1, 3.1.6, 5.2, 9.1 to 9.6, 10.4.2 to 10.4.4; roadmap (Stage 1 seed node, 180-day caloric cache, `roadmap/roadmap.md`); SIMONE challenge 1 (free-rider threshold that collapses Tier 1, `simone/simone-specs.md`); cross-reference SIM-QA-29 (enrolment).  
@@ -2551,7 +2551,85 @@ Under rule 10a(5), Chapter VII would then receive further detail in Organic Law 
 * **H3, entry period.** An entry period in hospitality, with shifts, before dwelling usufruct becomes stable.
 * **H4, declared ceiling and referral.** Hospitality up to a declared ceiling; beyond it, referral to the services of the existing state. Stated openly as a time-limited derogation from Art. 10.4.3, never hidden.
 
-**Next action:** held at Stage 1 by maintainer decision. When opened: red team H1 to H4 against RED-1 to RED-4; SIMONE run on challenge 1 for a seed node (carrying share of non-contributors under a 180-day reserve); placement check (canon Chapter IX, roadmap or Organic Law); whether H4 is compatible with Art. 10.4.3 or needs a 75% derogation clause with a sunset; H3 against Art. 5.2.2.
+### **4. Maintainer Decisions (2026-11-16)**
+* **D-30.1:** opened now, after SIM-QA-29.
+* **D-30.2, direction:** strategies 1, 2 and 3 together, with 4 as the last resort, written openly:
+  1. cap residence, not hospitality: capacity declared from the node's physical accounts; residence by lot when applicants exceed it (H1, H2), after an entry period with shifts (H3);
+  2. a network of seed nodes that transfer guests and resources to each other (a transitional form of Art. 10.4.4);
+  3. core hospitality for everyone, without exception: emergency care, water, food and shelter for a fixed number of nights;
+  4. beyond the ceiling, accompanied referral to the services of the existing state (H4), as an explicit, time-limited derogation from Art. 10.4.3.
+  
+  Safeguard against a club for every strategy: the ceiling comes from physical accounts and is checked by a panel drawn from outside; no vote is ever taken on persons.
+* **Reasoning recorded (2026-11-16 session):** a node cannot turn anyone away under Arts. 1.3, 2.3, 5.2.1 and 10.4.3, and Art. 4.5.1 allows no diminution of fundamental rights even at 75% (Art. 1.7). The canon reconciles "no one is turned away" with the physical ceiling of Art. 3.1.4 only through neighbouring basins (Art. 10.4.4), which do not exist for a seed node.
+
+### **5. Stage 2: Red Team** *(2026-11-16, on maintainer instruction; capacity measured, synthetic; the rest reasoning on text; first pass, no specialist review)*
+
+#### **5.1 Model** ([`sim_qa_30_seed_node_capacity.py`](../simone/benchmarks/sim_qa_30_seed_node_capacity.py) → [`results`](../simone/benchmarks/results/sim_qa_30_seed_node_capacity_results.md); deterministic; **synthetic, uncalibrated**; not SIMONE challenge 1, which remains `NOT_RUN`)
+A seed node of 60 persons, 80% contributing; installed capacity (land, water, energy) of 72 rations a day; a reserve of 180 days; failure when the reserve falls below 30 days of the current population (Art. 6.1.2). Arrivals eat from day one and contribute from week five with probability G.
+
+| Arrivals a week | Open (P0) | Residence cap only (strategy 1 alone) | Network, half accept transfer (2) | Core hospitality 7 nights, then referral (3 + 4) | 2, then 3 + 4 |
+| ---: | :--- | :--- | :--- | :--- | :--- |
+| 1 | fails day 408 | fails day 408 | fails day 556 | holds 2 years (92 referred) | holds (46 referred, 46 transferred) |
+| 3 | fails day 198 | fails day 198 | fails day 281 | holds (300 referred) | holds (150 referred, 152 transferred) |
+| 10 | fails day 89 | fails day 89 | fails day 134 | holds (1,030 referred) | holds (515 referred, 520 transferred) |
+
+*Findings.* (a) **A cap on residence alone changes nothing**: guests eat as residents do. (b) The network delays failure by about 35% to 50% at 50% acceptance; it does not prevent it. (c) Only a limit on how long arrivals above capacity stay keeps Tier 1 for everyone, and its price is the number of people referred. (d) **Contribution does not matter at capacity:** with installed capacity binding, the share of arrivals who work (G = 20% to 80%) leaves every result unchanged. Where land is plentiful and labour binds (section 4 of the results), G matters: at three arrivals a week, failure on day 189 at 20%, day 349 at 80%. For a seed node the threat is numbers above capacity, not free riders.
+
+#### **5.2 Verdicts**
+* **RED-1, open arrivals exceed capacity. Strategy 1 alone: `RED_WINS` (measured). Strategies 1 + 2: `RED_WINS`, delayed. Strategies 1 + 2 + 3 + 4: `BLUE_HOLDS` on Tier 1 (measured),** at the price of referrals.
+* **RED-2, members choose who enters. `NARROWED`.** Residence by lot among applicants; capacity from physical accounts; an outside panel checks it; no vote on persons. *Residual:* members can discourage applicants informally; the lot covers residence, not the welcome.
+* **RED-3, the ceiling as a back door. `NARROWED`.** A node can understate capacity to refer more people. *Guards (OL-23):* capacity by published formula from the Art. 3.1.6 accounts, checked by an outside panel; referral counts published; spare capacity visible; strategy 3 never suspended. *Residual:* the formula itself; a node that under-builds (does not expand capacity) is not caught by a formula.
+* **RED-4, the bearable share of non-contributors is unknown. `NARROWED`, reframed.** At a seed node capacity binds before labour (finding d). The ceiling must come from installed capacity and the reserve floor, not from a share of free riders. The free-rider share matters where labour binds; there it is SIMONE challenge 1, still `NOT_RUN`.
+* **RED-5, referral as abandonment (new). `NARROWED`; `RED_WINS` where no legacy service exists.** If the legacy service refuses or does not exist (war, a failed state), referral is abandonment. *Guard:* referral only to a named public service that has confirmed it can receive the person; accompanied; otherwise the person stays under strategy 3. *Residual:* where no service exists and no seed node has room, the node faces the overrun with no rule that keeps both Tier 1 and Art. 10.4.3. No text removes this; it is a physical limit.
+* **RED-6, free riding inside the network (new). `NARROWED`.** One node always sends and never receives. *Guard (OL-23):* a ledger of transfers in physical units (persons and rations), settled by the reciprocity of Art. 10.3; transfers follow declared capacity.
+* **RED-7, transfer as forced displacement (new). `NARROWED`.** A transfer is offered, never imposed (Art. 10.4.3 bars involuntary deportation). A person who refuses stays under strategy 3, then strategy 4 applies, so refusal has a consequence. *Residual accepted:* the choice is between two places with room, or referral.
+* **RED-8, the entry period against Art. 5.2.2 (new). `BLUE_HOLDS`.** Shifts condition stable residence (usufruct of a dwelling), never Tier 1 shelter, which the hospitality of strategy 3 and the sentence "shelter at Tier 1 is never conditioned" keep.
+* **RED-9, gaming the lot (new). `NARROWED`.** Applicants enter several nodes' lots at once, or a household enters each member separately. *Guards (OL-23):* the lot is per person; one application at a time per person, checked through the SIM-QA-29 register where a row exists; a household that wants to stay together applies together and is drawn as one.
+* **RED-10, the derogation outlives the transition (new). `NARROWED`.** *Guard:* it lapses for each node as soon as Art. 10.4.4 can operate for it (a federation with neighbours that can receive), and for all at the end of the transition (phase gate, Art. 9.6.2, 75%). *Residual:* a federation that delays the end of the transition keeps the derogation alive.
+* **RED-11, visibility attracts arrivals (new). Not a text vector.** A seed node known to feed everyone draws more arrivals. Prudence in publicity is a roadmap matter (D-30.6).
+
+**Verdict:** `NARROWED` with strategies 1 + 2 + 3 + 4 together. Any one strategy alone fails. `RED_WINS` remains where no legacy service exists and no seed node has room (RED-5): there the canon's two promises, Tier 1 for all and no one turned away, cannot both be kept.
+
+#### **5.3 Purple Patch (Proposed)** `[STATUS: SIMULATION_HYPOTHESIS]` *(not merged; canon unchanged)*
+*Placement (instruction 10).* Kept in the Constitution, in Chapter IX because it is transitional: capacity from physical accounts, no vote on persons, residence by lot, unconditioned shelter, the core hospitality floor, the order transfer then referral, and the derogation with its end. The derogation is also named in Art. 10.4.3, so that it is never hidden. Moved to Organic Law (OL-23): the formula, the entry period, the ledger, the procedures.
+
+* **Art. 9.1.4 (new):**
+> 4. Admission to Transition Nodes: A transition node declares its capacity from its physical accounts (Article 3.1.6), checked by a panel drawn from outside it; members never decide on persons. Where applicants for residence exceed capacity, residence is assigned by lot, after an entry period of hospitality with shifts set by Organic Law; shelter at Tier 1 is never conditioned. Every arrival receives water, food, emergency care and shelter for no fewer than seven (7) nights. Beyond declared capacity the node first offers transfer to another transition node with room; only where none exists may it refer an arrival, accompanied, to a public service of the legacy jurisdiction that has confirmed it can receive them. This derogation from Article 10.4.3 lapses for each node when Article 10.4.4 can operate for it, and for all at the end of the transition.
+* **Art. 10.4.3 (amended):** "Inviolable Sanctuary Guarantee: Under no circumstances, save the transitional rule of Article 9.1.4, shall any human being face …" (rest unchanged).
+
+**Organic Law (proposed, 60%), OL-23, Admission to Transition Nodes** *(implements Arts. 9.1.4, 10.4.3; every number in brackets is `PROVISIONAL — UNVERIFIED`)*
+1. **Capacity.** The number of persons whose Tier 1 the node can supply from installed capacity while its reserve stays above [thirty (30)] days of the current population (Art. 6.1.2) and above the roadmap cache. Computed by a published formula from the Art. 3.1.6 accounts, reviewed every [three months] and after any change of installed capacity; checked by a panel of three drawn from outside the node.
+2. **Entry period.** [Eight (8)] weeks of hospitality with shifts on the node's ordinary rosters before a dwelling is allocated in usufruct; shifts are counted as for any member (Art. 5.1).
+3. **Lot.** Per person; a household may apply together and is drawn as one. One application at a time per person, checked through the civic register where a row exists (SIM-QA-29).
+4. **Core hospitality.** Water, food, emergency care and shelter for [fourteen (14)] nights, never fewer than seven (canon bound); a person in medical need stays until fit to travel.
+5. **Transfer.** Seed nodes keep a common list of declared capacity. A transfer is offered with transport and the receiving node's confirmation; it is never imposed.
+6. **Network ledger.** Transfers are recorded in persons and rations; a node that has received transfers takes them in turn when it has room; settlement follows the reciprocity of Art. 10.3.
+7. **Referral.** Only to a named public service of the legacy jurisdiction that has confirmed in writing it can receive the person; the person is accompanied and given the information in their language; a person who returns is received again under point 4.
+8. **Publication.** Capacity, occupancy, transfers and referrals are published monthly as counts, never names.
+9. **End of the derogation.** For a node, when a neighbour basin can receive under Art. 10.4.4; for all, at the phase gate that ends the transition (Art. 9.6.2).
+
+#### **5.4 Word Count** *(same method as SIM-QA-29 section 5.3)*
+| Text | Words | Against the ceiling |
+| :--- | :--- | :--- |
+| Art. 9.1.4 (new) | +140 | — |
+| Art. 10.4.3 amendment | +7 | — |
+| Chapter IX, canon 817 → | **957** | 1,000: 43 left, **within fifty words** |
+| Chapter X, canon 870 → 877; with SIM-QA-22 D-2 (928) → | 935 | 65 left |
+
+#### **5.5 Compression Disclosure** *(instruction 8)*
+| # | Point | Source | Change | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Sanctuary "under no circumstances" | Art. 10.4.3 | a transitional exception for nodes at capacity, named in the article | **weakened**, by decision D-30.2; time-limited |
+| 2 | Green Status grants "immediate residential usufruct" | Art. 10.4.2 | in a transition node, residence follows an entry period and the lot | **weakened** for transition nodes; Art. 10.4.2 itself is not amended, which leaves a conflict between the two articles (D-30.5) |
+
+#### **5.6 Residual Weaknesses**
+* Where no legacy service exists and no seed node has room, the canon's two promises cannot both be kept.
+* Every strategy alone fails; the rule works only as a whole.
+* The capacity formula is only as honest as the accounts behind it.
+* The numbers of the model are synthetic; SIMONE challenge 1 remains `NOT_RUN`.
+
+**Next action (revision 1):** maintainer decisions D-30.4 to D-30.7 (board).
+
 
 ---
 
