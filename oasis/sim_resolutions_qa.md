@@ -1559,7 +1559,7 @@ Smallest node with ≥ 95% of months fully seated, lock 3: 75 adults at r = 0.6,
 
 * **Date Recorded:** 2026-11-12  
 * **Stress-Tested:** 2026-11-12 (qualitative O-ASIS red-team pass on text; measurement `NOT_RUN`)  
-* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Provenance: the provision was **lost in compression, not withdrawn by a recorded decision** (section 1). Verdict on current text (silence) **`RED_WINS`** on four of seven vectors. H1 (technology-neutral principle in Art. 5.3) **`BLUE_HOLDS` with residuals**, on three conditions: a constructed language, never an existing national one; an explicit clause that fluency is never a condition of eligibility; and a relative, not absolute, rule on machine translation. Those three conditions are the drafting; without any one of them H1 **`RED_WINS`**. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged. **Maintainer decision 2026-11-12 (section 5.1):** H2 accepted in principle (own-language right also in Art. 1.4.1); H1 alone withdrawn; the Art. 1.4.1 phrase reads as a liberty of use, not a claim on services, **`BLUE_HOLDS`**. Chapter V word ceiling waived for this paragraph by maintainer decision (section 5.1).  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — Provenance: the provision was **lost in compression, not withdrawn by a recorded decision** (section 1). Verdict on current text (silence) **`RED_WINS`** on four of seven vectors. H1 (technology-neutral principle in Art. 5.3) **`BLUE_HOLDS` with residuals**, on three conditions: a constructed language, never an existing national one; an explicit clause that fluency is never a condition of eligibility; and a relative, not absolute, rule on machine translation. Those three conditions are the drafting; without any one of them H1 **`RED_WINS`**. Purple patch drafted below as `[STATUS: SIMULATION_HYPOTHESIS]`, not merged. **Maintainer decision 2026-11-12 (section 5.1):** H2 accepted in principle (own-language right also in Art. 1.4.1); H1 alone withdrawn; the Art. 1.4.1 phrase reads as a liberty of use, not a claim on services, **`BLUE_HOLDS`**. Chapter V word ceiling waived for this paragraph by maintainer decision (section 5.1). **Maintainer decisions 2026-11-16 (section 7.1):** every remaining side-audit item decided: seven restored in principle (D-1 to D-7, drafting pending), six moved (D-8 to D-13), four dropped with reason (D-14 to D-17); gene therapy and contraception opened as SIM-QA-27 and SIM-QA-28.  
 * **Originating Context:** Maintainer review: the three-layer linguistic model of the v1.0 constitution is absent from the current canon.  
 * **Constitutional Articles:** Arts. 1.4.1, 4.3.1, 4.4 (SIM-QA-20 Art. 4.4.6), 5.3, 6.5, 7.1.2, 10.4, 10.6; Organic Law (SIM-QA-17 separation)  
 * **Evidence:** reasoning on the text only. No quantitative claim below is measured; the one external figure is recorded as supplied and must be checked against its primary source before any canon use.
@@ -1665,6 +1665,36 @@ Method: v1.0 compared with canon section by section; canon and the pre-v2 batch 
 * **Unsure:** whether Arts. 4.5, 4.6 and the *Provocatio* of 4.2.1 were meant to replace the v1.0 amendment lattice and appellate ladder (Section VI); nothing records it. The XV and XVI founding-node rules may belong in the foundation documents; neither holds them.
 * **Priority for the maintainer (judgement, not tested):** religion and exit from collectives, equal protection, children's autonomy, and animals are the largest gaps by consequence; each would be its own docket.
 * **Opened 2026-11-13 by maintainer decision:** equal protection as SIM-QA-23 (full pass run), religion and exit as SIM-QA-24, children as SIM-QA-25, sentient animals as SIM-QA-26 (the last three held at Stage 1). The other items of the table are not opened.
+
+#### **7.1 Maintainer Decisions (2026-11-16)** *(decisions recorded; no article wording drafted; canon untouched)*
+Every remaining item of the table is now decided. Each **restore** item reads: *accepted in principle; text to be drafted as `[STATUS: SIMULATION_HYPOTHESIS]`; red team and word-ceiling check (board instruction 10a) pending.* The form is short in the Constitution, with the detail in Organic Law. Each **move** names its destination; nothing is written there yet. Each **drop** is recorded with its reason on the board under instruction 8.
+
+*Restore in the Constitution (short form, detail in Organic Law):*
+* **D-1, VI.2 anti-haste amendment.** Two different assemblies and a cooling period; the text also states which assembly amends (the gap in Art. 4.5.1 noted in the table). The length of the pause goes to Organic Law. Chapter IV ceiling (2,150) to be checked.
+* **D-2, VI.4 inter-basin deadlock forum.** A neutral forum with a short deadline comes first; the decoupling of Art. 10.3.3 applies only if its ruling is ignored. Procedure in Organic Law.
+* **D-3, XIII.5 safety interventions.** One sentence in Art. 8.5: a public log of safety interventions, citizen review of each physical restraint, no detention power for guilds. The public log carries no names of restrained persons.
+* **D-4, XI.2 / VII.1 right to remain unaugmented.** One sentence in Art. 1.2: no right or baseline service depends on accepting a technology on one's body. Chapter I ceiling (1,200) to be checked.
+* **D-5, X.2 care.** Palliative, rehabilitative, geriatric and disability care added to the list of Art. 1.3.2, plus no diversion of resources away from vulnerable people. Chapter I ceiling (1,200) to be checked.
+* **D-6, V.6 vulnerability disclosure.** One sentence in Art. 7.6.1: vulnerabilities are disclosed and undisclosed exploits are not stockpiled. Timing and manner in Organic Law.
+* **D-7, VIII.2 synthetic media.** The principle of disclosure and provenance in one sentence in Chapter VII; the technique in Organic Law.
+
+*Move elsewhere (destination pending; nothing written there yet):*
+* **D-8, II.2.B / XV.5 legacy nuclear and chemical arsenals:** to the transition roadmap.
+* **D-9, XI.4 assisted dying safeguards** (reflection period, check for absence of economic pressure): to Organic Law.
+* **D-10, V.5 / XVI anti-ostracism:** to Organic Law, using the outside panels of three already drafted in SIM-QA-19 and SIM-QA-21; no new institution.
+* **D-11, IV.3 extraction governance** (recycling first, banned methods, no human deep-mining labour, necessity test): to Organic Law.
+* **D-12, VI.3 / VI.5 no binding precedent, time-boxed pilots:** to Organic Law.
+* **D-13, III.2 free choice of teacher:** into SIM-QA-25.
+
+*Dropped, with reason (recorded on the board under instruction 8):*
+* **D-14, VIII.4 community consent for traditional and sacred knowledge:** out of the Constitution, because a group veto on knowledge contradicts Arts. 1.1.1 and 1.5. A narrow Organic Law rule is kept: knowledge never made public is not taken without consent.
+* **D-15, III.2 peer certification and revocation in high-consequence fields:** out, because it conflicts with the no-gatekeeping rule of SIM-QA-20. **Open question recorded:** who stops a dangerous practitioner.
+* **D-16, VIII.1 attention as a commons:** out, largely covered by internal demonetization and Arts. 3.4.4 and 8.2.2.
+* **D-17, XI.2.B personhood for emergent synthetic sentience:** out, hypothetical. Art. 7.1.4 concerns public automation only, so the question stays open for the future.
+
+*Opened as new dockets (Stage 1):* XI.1 gene therapy as **SIM-QA-27**; XI.3 and XVI contraception and coercive population control as **SIM-QA-28** (the SIM-QA-25 board line did not carry these two points).
+
+*Side-audit table now fully decided:* religion and exit (SIM-QA-24), equal protection (SIM-QA-23), children (SIM-QA-25), animals (SIM-QA-26), gene therapy (SIM-QA-27), contraception and population control (SIM-QA-28), and D-1 to D-17 above. Pending work: drafting of D-1 to D-7; Organic Law entries for D-1, D-2, D-6, D-7, D-9 to D-12 and D-14; roadmap entry for D-8; none is written in `ORGANIC_LAW_ANNEX.md` or the roadmap yet.
 
 ---
 
@@ -1858,6 +1888,8 @@ Chapter I today: 808. Art. 1.8 as drafted in section 5 with its heading: 220. Pa
 * **v1.0 location:** Section XI.3 (line 643): children and adolescents "are not the property of their parents" and hold progressive autonomy ("Class 2 Personhood with progressive somatic autonomy"), with self-governed youth spaces. **Corporal punishment:** v1.0 bars it in two narrower places only: the founding-node *Compact 5, Sanctuary of the Children* (Section XVI, line 1051: physical punishment, public shaming, ridicule and emotional withdrawal barred for pioneers) and the Golden Triad of cultural covenants (Section VII.1, line 403: no covenant may practise corporal violence). *A general ban in every home would be wider than v1.0; recorded so the scope is decided, not assumed.*  
 * **Closest current canon:** Art. 1.2 (bodily sovereignty, general; no child-specific text), Art. 5.3 (education by age), Art. 5.4 (parenting education, alloparenting), Art. 1.3 (baseline for every inhabitant).  
 * **Constitutional Articles:** Chapter I, Arts. 1.2, 1.3, 1.4, 5.3, 5.4, 4.2.1 (domestic safety), 8.1.2 (Civic Peace Guilds); cross-references SIM-QA-22 (schooling language), SIM-QA-23 (age as a ground), SIM-QA-24 (alteration of children; exit from covenants at the age of discernment).
+* **Added 2026-11-16 (maintainer decision, SIM-QA-22 section 7.1, D-13):** v1.0 III.2 (lines 126–127) *free choice of teacher* moves into this docket; to be red-teamed with H1–H3 when the docket opens. The peer-certification half of III.2 is dropped (D-15).
+* **Not carried by this docket (noted 2026-11-16):** v1.0 XI.3 and XVI also hold *access to contraception* and *no coercive population control*; the board line of this docket did not carry them. They are opened separately as SIM-QA-28.
 
 ### **1. The Friction**
 * Chapter I rights are written for "every human being" and "every person", so children hold them in principle, but nothing says how they are exercised while a child cannot exercise them alone, or by whom.
@@ -1912,6 +1944,71 @@ Chapter I today: 808. Art. 1.8 as drafted in section 5 with its heading: 220. Pa
 * **H3, welfare floor only:** a duty to avoid unnecessary suffering, without prohibitions.
 
 **Next action:** held at Stage 1 by maintainer decision. When opened: thermodynamic check of the calorie floor under H1/H2 (SIMONE, synthetic); red team RED-1 to RED-7; compression disclosure against the v1.0 points of XII.3 and XII.4.
+
+---
+
+## **SIM-QA-27: Lost Provision — Gene Therapy**
+
+* **Date Recorded:** 2026-11-16  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS) — opened from the SIM-QA-22 side audit by maintainer decision 2026-11-16 (SIM-QA-22 section 7.1); held at Stage 1 until the maintainer says otherwise. Nothing below is red-teamed; vectors and hypotheses are preliminary.  
+* **Originating Context:** SIM-QA-22 side audit (section 7): v1.0 Section XI is unmapped in the redline; lost at the 2026-09-11 ratification; no recorded decision.  
+* **v1.0 location:** Section XI.1, *CRISPR, Germline Editing and the Genetic Commons* (lines 585–587): *Universal Therapeutic Gene Correction* (elimination of high-penetrance monogenic and severe polygenic disease guaranteed as a birthright); *Prohibition on Designer Vanity Monocultures* (no edits for aesthetic traits, narrow intelligence or athletic optimisation, or behavioural dispositions); *Preservation of Heterozygosity and Neuro-Diverse Alleles* (genetic and neurological variation protected as an asset, not a defect). The genetic-commons point of the same section (no patents on sequences or editing tools) survives in Art. 1.5.2.  
+* **Closest current canon:** Art. 1.2.1 (sovereignty over one's own biological substrate), Art. 1.2.2 (coercive genetic alteration prohibited), Art. 1.3.2 (healthcare in the baseline), Art. 1.5.2 (genetics as a public good). None names therapeutic correction, enhancement or protection of variation.  
+* **Constitutional Articles:** Chapter I, Arts. 1.2, 1.3.2, 1.4.3 (research commons, biosecurity), 1.5.2, 5.5 (neuro-medicine); Organic Law OL-1.4 (biosecurity registry); cross-references SIM-QA-23 (disability and descent as grounds), SIM-QA-24 (non-therapeutic alteration of children), SIM-QA-25 (children).  
+* **Not carried, device (methodology purge (a)):** v1.0 enforced the enhancement ban through the compiler ("locked out by the compiler") and promised machine-verified germline repair. The compiler was purged by recorded decision; the principle, not the device, is what this docket opens.  
+* **Tension recorded at opening (maintainer note 2026-11-16):** Art. 1.2.1 gives every person sovereignty over their own biological substrate. A ban on enhancement edits limits that sovereignty for adults acting on themselves; for embryo and heritable edits, the person affected is not the person deciding. Any hypothesis must say which case it covers.
+
+### **1. The Friction**
+* Nothing in canon guarantees access to gene therapy; Art. 1.3.2 lists "comprehensive primary, preventative, and emergency healthcare", which a review jury may or may not read to include it.
+* Nothing bars enhancement edits; Art. 1.2.2 bars only *coercive* alteration, so a parent's voluntary choice for an embryo is not covered.
+* Nothing protects genetic or neurological variation; a therapy programme could define autism-spectrum traits or other variation as disease to be corrected.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text)*
+* **RED-1, enhanced class:** parents with access edit embryos for advantage; over generations a biological upper class forms → canon silent.
+* **RED-2, therapy against variation:** "correction" is extended to deafness, autism-spectrum traits or other variation that many carriers do not consider disease → no protection; interaction with the SIM-QA-23 disability ground.
+* **RED-3, ban against self-sovereignty:** a ban on enhancement for adults acting on their own bodies breaches Art. 1.2.1 → the hypothesis fails review unless scoped.
+* **RED-4, the therapy / enhancement line:** the line is contested (resistance to infection, slower ageing); a fixed list ages badly, an open test is litigated → the line belongs in Organic Law under the replicated-evidence rule, with the bound in canon.
+* **RED-5, scarce therapy:** a guaranteed right to costly therapy collides with Leontief limits and the needs tiers of Art. 3.3 → priority rules needed.
+* **RED-6, germline risk:** heritable edits affect people not yet born and cannot be undone → candidate for the closed list of irreversible decisions (SIM-QA-19 OL-11).
+
+### **3. Preliminary Hypotheses** *(proposed mitigations, untested)*
+* **H0, silence.**
+* **H1, restore v1.0 points in Arts. 1.2 and 1.3.2:** right to therapeutic correction of serious disease; no enhancement edits; genetic and neurological variation protected and never treated as disease by itself.
+* **H2, scoped by who decides:** adults decide on their own somatic edits under Art. 1.2.1; edits on embryos and heritable edits are limited to therapy of serious disease, with the evidentiary line in Organic Law; variation protected as in H1.
+* **H3, variation and non-coercion only:** protection of variation and a ban on coerced or conditioned therapy, without a right to therapy or an enhancement ban.
+
+**Next action:** held at Stage 1 by maintainer decision. When opened: resolve the Art. 1.2.1 tension (which cases a ban covers); red team H1–H3 against RED-1 to RED-6; Chapter I ceiling check (instruction 10a); compression disclosure against the three v1.0 points.
+
+---
+
+## **SIM-QA-28: Lost Provision — Contraception and Coercive Population Control**
+
+* **Date Recorded:** 2026-11-16  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS) — opened from the SIM-QA-22 side audit by maintainer decision 2026-11-16 (SIM-QA-22 section 7.1); held at Stage 1 until the maintainer says otherwise. Nothing below is red-teamed; vectors and hypotheses are preliminary.  
+* **Originating Context:** SIM-QA-22 side audit (section 7), row XI.3 / XVI, which lists these two points together with children's autonomy. **The SIM-QA-25 board line did not carry them** (it names only "not their parents' property, progressive autonomy, no corporal punishment"); this docket carries them so that no point is dropped silently.  
+* **v1.0 location:** Section XI.3, *Dynamic Demographic Equilibrium* (line 632: coercive population control, forced sterilisation, mandatory birth quotas and reproductive licensing barred under bodily autonomy; line 635: reversible, non-invasive, long-acting fertility control available to all sexes and genders, free of patriarchal or religious mandates). *Source note:* the side-audit row also cites Section XVI (line 1051); that line is Compact 5 (children) and holds neither point. Recorded so that the provenance is exact.  
+* **Closest current canon:** Arts. 1.2.1 and 1.2.3 (bodily sovereignty and autonomy, general), Art. 1.2.2 (no pharmacological manipulation, no physical subjugation), Art. 1.3.2 (healthcare in the baseline). None names contraception, sterilisation, birth quotas or reproductive licensing.  
+* **Constitutional Articles:** Chapter I, Arts. 1.2, 1.3.2, 1.3.3, 1.7; Art. 3.4 (carrying capacity); cross-references SIM-QA-16 (demographic inversion), SIM-QA-23 (sex and gender as grounds), SIM-QA-24 (religious mandates), SIM-QA-25 (adolescents' access).  
+* **Not carried (same v1.0 passage):** carrying-capacity signalling to inform reproductive choices, the *Vitality Deficit Signal* and pro-natal allocations (lines 633–643); policy devices, not rights. Listed so that the omission is visible.
+
+### **1. The Friction**
+* Art. 1.2 protects bodily autonomy in general words; a carrying-capacity crisis (Art. 3.4) gives an assembly a reason to cap births, and nothing names the cap as forbidden.
+* Contraception is not named in the baseline of Art. 1.3.2; access depends on how "comprehensive primary, preventative" care is read.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text)*
+* **RED-1, quota by ecology:** a bioregion over its carrying capacity sets birth quotas or licences "temporarily" → only the general words of Art. 1.2 stand against it; Art. 1.7 protects rights, but this right is not named.
+* **RED-2, coercion by allocation:** no quota, but housing, rosters or discretionary allocations are tied to family size → Art. 1.3.3 covers survival only, not discretionary tiers.
+* **RED-3, pro-natal coercion:** the reverse case under demographic inversion (SIM-QA-16): pressure or conditions to bear children, restricted contraception → nothing names it.
+* **RED-4, access gate:** contraception available in principle but gated by a local guild, a fellowship or parental consent for adolescents → interaction with SIM-QA-24 and SIM-QA-25.
+* **RED-5, scope creep:** a named right to contraception read as a claim on any device in any quantity → bound by the Leontief limits of Chapter III.
+
+### **3. Preliminary Hypotheses** *(proposed mitigations, untested)*
+* **H0, silence** (rely on Art. 1.2).
+* **H1, restore v1.0 points in Arts. 1.2 and 1.3.2:** no body may limit, license or require the bearing of children, or sterilise anyone without consent; contraception is part of the healthcare baseline for every person.
+* **H2, prohibition only:** the anti-coercion clause of H1 in Art. 1.2, with access left to Art. 1.3.2 as it stands.
+* **H3, prohibition both ways:** H1 plus an explicit bar on allocations or penalties tied to the number of children, in either direction.
+
+**Next action:** held at Stage 1 by maintainer decision. When opened: red team H1–H3 against RED-1 to RED-5; align adolescent access with SIM-QA-25; Chapter I ceiling check (instruction 10a); compression disclosure against the two v1.0 points.
 
 ---
 
