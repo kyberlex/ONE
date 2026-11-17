@@ -118,11 +118,11 @@ No. No assembly, referendum, state of emergency or large majority vote can suspe
 
 ### Article 2.1: Abolition of Absentee Title and the Deconstruction of Dominium
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Can I own land or property outright?**
 
-No. Absolute private ownership is abolished. You hold land, water, farmland, natural areas and factory machinery only as a conditional right, based on actually using and caring for them.
+No. Absolute private ownership is abolished. You hold land, water, farmland, natural areas and factory machinery only as a conditional right, based on actually using them, being present and caring for them.
 
 **What happens to property I leave empty or hold just to sell later?**
 
@@ -130,23 +130,23 @@ It goes straight back to the local commons. Ownership without active use is trea
 
 ### Article 2.2: The Tripartite Classification of Goods and Commons
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Can anyone take my personal belongings?**
 
-No. Your clothes, furnishings, art, intimate items, craft tools and personal computing devices stay yours permanently. No civic assembly can take or reassign them.
+No. Your clothes, furnishings, art, intimate items, craft tools and personal computing devices stay yours permanently. No civic assembly can take or reassign them. Spare duplicate tools are not protected in this way.
 
 **Can I lose my home to a landlord or a bank?**
 
-No. A home, plot or small workshop you live in and maintain is protected from foreclosure and rent. Active co-inhabitants can inherit the right to stay.
+No. A home, plot or small workshop you live in and maintain can never be foreclosed, and no one can charge you rent for it. The people living there with you can take over the right to stay.
 
 **Who runs things like water, forests, hospitals and power grids?**
 
-Councils chosen by lottery and dedicated guilds run them. They are shared, indivisible, and held in trust for current and future generations.
+Local councils of citizens chosen by lot and dedicated work groups run them. They are shared, cannot be divided, and are held in trust for current and future generations.
 
 ### Article 2.3: Inalienable Housing Security and the Absolute Ban on Eviction
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Can I be evicted from my home?**
 
@@ -154,7 +154,7 @@ No. Being evicted or displaced into homelessness or destitution is unconstitutio
 
 **Can a landlord charge me rent?**
 
-No. Landlords, holding property for speculation, and charging money rent are legally void.
+No. Renting out homes for money and holding property for speculation are legally void.
 
 **Who decides if I must move because of a hazard or a domestic crisis?**
 
@@ -166,23 +166,23 @@ Only after the community has secured an equal or better home that meets the need
 
 ### Article 2.4: Stewardship of Arable Soil and Productive Assets
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Can I buy or sell farmland?**
 
-No. Topsoil, marine nurseries and industrial production facilities can't be bought, sold, mortgaged or leased for monetary profit.
+No. Farmland, the sea areas where young fish grow, and industrial plants can't be bought, sold, mortgaged or leased for money.
 
 **Who gets farmland?**
 
-Farming collectives, family cultivators and agrarian trusts, based on regional food needs and proven soil-restoring farming practice.
+Farming collectives, family farmers and farming trusts, based on the region's food needs and proven farming that restores the soil.
 
-**Can I lose my land?**
+**How long can I keep my land?**
 
-Yes, if you keep poisoning the land or abandon farming. An assembly reviews it, and after a confirmed breach the land passes to willing custodians.
+Across generations, as long as you keep the soil, water and wildlife healthy. If you keep poisoning it or stop farming, a regional assembly reviews the case and, if the breach is confirmed, the land passes to others willing to care for it.
 
 ### Article 2.5: Common Heritage Sanctuaries and Positional Assets
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Can someone buy a beautiful natural spot, like a coastline or mountain ridge, for themselves?**
 
@@ -194,23 +194,23 @@ No. Permanent private homes along pristine shorelines or ecological sanctuaries 
 
 **How can people stay in these places?**
 
-Temporary stays are given out by transparent civic sortition: sabbatical retreats open to all citizens, fellowships for scientists and artists, and public visits.
+Temporary stays are given out by open public lottery: rotating rest stays open to all citizens, fellowships for scientists and artists, and fair public visits. No family or official may ever hold such a place permanently.
 
 ### Article 2.6: Adjudication of Usufructuary Disputes and Assembly Thresholds
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Who decides local land-use and zoning changes?**
 
-Randomly chosen citizens, in open deliberation. Neighborhood changes go to a council of 15 citizens; regional industrial zoning and watershed easements go to an assembly of 101 delegates. Both need 60%.
+Citizens chosen by lot, in open debate. Neighborhood changes go to a council of 15 citizens; regional industrial zoning and access rights over river basins go to an assembly of 101 delegates. Both decide by a 60% majority.
 
 **Can my right to use my land or home be taken away for public works?**
 
-Only in extraordinary cases: 75% of the seated assembly must agree, and equivalent housing and full physical restitution must be provided first, certified unanimously by the Local Mediation Panel.
+Only in extraordinary cases: 75% of the seated assembly must agree, and an equivalent home and full physical restoration must be provided first. The Local Mediation Panel must certify this unanimously.
 
 **What if the panel refuses to certify?**
 
-You can appeal to a blind panel of 15 citizens from across watersheds.
+The refusal can be appealed to an independent panel of 15 citizens from other river basins.
 
 ## Chapter III: Biophysical Reality & Thermodynamic Resource Accounting
 
