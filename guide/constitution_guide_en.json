@@ -344,7 +344,7 @@
       "qa": [
         {
           "q": "What is the economy based on?",
-          "a": "Physical laws of energy and material balance, measured in kWh of usable energy, kg of dry material, litres of clean water and regeneration cycle times."
+          "a": "Physical laws of energy and material balance, not money. Accounts are kept in kWh of usable energy, kg of dry material, liters of clean water and natural regeneration times."
         },
         {
           "q": "Does money or debt count as a claim on shared natural resources?",
@@ -352,18 +352,18 @@
         },
         {
           "q": "How much can a community use?",
-          "a": "No more than local watersheds and the biosphere can verifiably replenish. No production may be authorized beyond local replacement limits."
+          "a": "No more than local river basins and the biosphere can verifiably replenish. No production may be authorized beyond local replacement limits."
         },
         {
           "q": "How must basic needs like shelter and healthcare be secured?",
-          "a": "Each year a public audit must show local resources and installed capacity fully meet these needs, with zero external inputs and a published reserve margin."
+          "a": "Each year a public audit must show that local resources and installed capacity fully meet these needs, with nothing brought in from outside and a published safety reserve."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "3.2",
@@ -374,7 +374,7 @@
       "qa": [
         {
           "q": "Are loans with compounding interest or speculative bets allowed?",
-          "a": "No. Any contract requiring compound interest, debt bondage or speculation on financial derivatives is void and cannot be enforced."
+          "a": "No. Any contract requiring compound interest, debt slavery or speculative financial bets is void and cannot be enforced."
         },
         {
           "q": "What is credit for?",
@@ -382,14 +382,14 @@
         },
         {
           "q": "What happens if a project fails?",
-          "a": "You cannot be made destitute, forced into labor, or lose your right to use your home or land. Debts cannot grow, and shared resources cannot be pledged as collateral."
+          "a": "You cannot be made destitute, forced into labor, or lose your right to use your home or land. Debts cannot grow, and shared resources, nature or homes cannot be pledged as security for loans."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "3.3",
@@ -408,18 +408,18 @@
         },
         {
           "q": "How are leftover resources for creative work shared out?",
-          "a": "Only once the first two levels are secured. Surplus goes through preference voting and shared workshop schedules, with no price and no central office."
+          "a": "Only once the first two levels are secured. Surplus is shared through a form of preference voting and shared workshop schedules, with no prices and no central office."
         },
         {
           "q": "Can I sell or hold on to a workshop machine slot?",
-          "a": "No. Slots cannot be transferred, and if unused after a short grace period they pass to waiting creators chosen by lot. Everything made on shared machines is published openly."
+          "a": "No. Slots cannot be transferred, and if unused after a short grace period they pass to waiting creators chosen by lot. The machine instructions for everything made on shared machines are published openly."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "3.4",
@@ -430,7 +430,7 @@
       "qa": [
         {
           "q": "Is there a limit on how much people can take from nature and make in my area?",
-          "a": "Yes. Extraction and manufacturing in each watershed are limited by its Ecological Carrying Capacity."
+          "a": "Yes. Extraction and manufacturing in each river basin are limited by what its ecosystem can sustain."
         },
         {
           "q": "Can the sensors be used to watch me?",
@@ -438,18 +438,18 @@
         },
         {
           "q": "Who can see what the sensors record?",
-          "a": "Anyone. The sensor arrays are publicly accessible, and their hardware must be open and its firmware verifiable."
+          "a": "Anyone. The sensor networks are public, and the hardware and the software inside them must be open to checking."
         },
         {
           "q": "How do we know the sensors are telling the truth?",
-          "a": "Neighborhood Councils regularly send lay squads with manual instruments to check. Duplicate sealed samples go to independent laboratories chosen by lot from non-contiguous watersheds."
+          "a": "Neighborhood Councils regularly send squads of ordinary citizens with manual instruments to check. Duplicate sealed samples go to independent laboratories chosen by lot from river basins that do not border each other."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "3.5",
@@ -460,22 +460,22 @@
       "qa": [
         {
           "q": "Why does each region keep emergency reserves?",
-          "a": "To stay resilient against disruptions, droughts, solar storms or epidemics. Each bioregional federation must maintain these reserves."
+          "a": "To stay resilient against disruptions, droughts, solar storms or epidemics. Each regional federation must maintain these reserves."
         },
         {
           "q": "What do the reserves have to cover?",
-          "a": "They must keep Tier 1 output going for 12–24 months without outside supplies, using stored goods, spare parts and backup capacity."
+          "a": "They must keep basic survival supplies (water, food, shelter, heating, healthcare) going for 12 to 24 months without outside supplies, using stored goods, spare parts and backup capacity."
         },
         {
           "q": "Can the reserves be sold off?",
-          "a": "No. They cannot be sold for speculative trade, exported for external fiat, or turned into discretionary surplus."
+          "a": "No. They cannot be sold for speculation, sold abroad for money, or used for non-essential projects."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "3.6",
@@ -486,14 +486,14 @@
       "qa": [
         {
           "q": "Who checks the public accounts of physical resources?",
-          "a": "Randomly chosen citizens. Groups of fifteen review neighborhood utilities, and groups of 101 delegates oversee regional energy distribution and strategic reserves."
+          "a": "Citizens chosen by lot. Groups of fifteen review neighborhood utilities, and groups of 101 delegates oversee regional energy distribution and strategic reserves."
         },
         {
           "q": "How many votes are needed to change the basic survival allocations?",
-          "a": "75%. Altering, reducing or recalculating each person's Tier 1 survival allocation requires this level."
+          "a": "75%. Changing, reducing or recalculating each person's basic survival allocation requires this level."
         },
         {
-          "q": "What majority is needed for five-year energy budgets and discretionary allocations?",
+          "q": "What majority is needed for five-year energy budgets and resources for optional projects?",
           "a": "60%."
         },
         {
@@ -503,9 +503,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "4.1",
@@ -516,22 +516,22 @@
       "qa": [
         {
           "q": "Who makes the laws and big decisions?",
-          "a": "Only assemblies of citizens picked by lottery, chosen so they reflect the population."
+          "a": "Only assemblies of citizens chosen by lot, drawn so that they mirror the population."
         },
         {
           "q": "What happens to political parties, campaign money and lobbying?",
           "a": "They are abolished, along with permanent parliamentary classes, because they let a small elite take control."
         },
         {
-          "q": "Can groups still try to influence the people chosen by lottery?",
+          "q": "Can groups still try to influence the people chosen by lot?",
           "a": "No. You may still join groups and speak out, but no group may finance, nominate, instruct or reward the chosen delegates. Any such act is void."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "4.2",
@@ -550,7 +550,7 @@
         },
         {
           "q": "Who runs a very small settlement?",
-          "a": "With fewer than 50 adult residents, the three-person panel runs it. Anyone party to a ruling can appeal to a panel of 15 citizens."
+          "a": "With fewer than 50 adult residents, the Local Mediation Panel of three citizens runs it; close relatives or partners may not sit on it together. Anyone party to a ruling can appeal to a panel of 15 citizens from other river basins."
         },
         {
           "q": "When does a settlement get a larger council?",
@@ -559,9 +559,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "4.3",
@@ -580,18 +580,18 @@
         },
         {
           "q": "Can I serve twice in a row?",
-          "a": "No. Not in the same tier consecutively; after serving you must wait twice as long as your term."
+          "a": "No. Not at the same level twice in a row; after serving you must wait twice the length of your term."
         },
         {
           "q": "How does a petition get onto the agenda?",
-          "a": "Anyone can publish one. To reach the agenda it needs endorsement from a fixed share of members, then wins a place in a public lottery."
+          "a": "Anyone can publish one. To reach the agenda it needs endorsement from a fixed share of the people the assembly serves, then wins a place in a public lottery weighted by support."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "4.4",
@@ -610,18 +610,18 @@
         },
         {
           "q": "What if experts use technical language I can't follow?",
-          "a": "Experts must explain their models in plain language, including consequences, trade-offs and failure scenarios."
+          "a": "Experts must explain their models in plain language, including consequences, trade-offs and what could go wrong."
         },
         {
           "q": "What happens if the experts just create confusion or gridlock?",
-          "a": "Approval is withheld, but only for new structural interventions. Routine maintenance and critical life support continue. Lasting deadlocks go to a panel of scientific practitioners."
+          "a": "Approval is withheld, but only for new structural projects. Routine maintenance and critical life support continue. Lasting deadlocks go to a panel of working scientists chosen by lot from distant river basins."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "4.5",
@@ -647,7 +647,7 @@
       "model": "claude-sonnet-5-5",
       "check_model": "none",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "4.6",
@@ -658,11 +658,11 @@
       "qa": [
         {
           "q": "Who can ask for a law or decision to be checked against the Constitution?",
-          "a": "Any citizen, assembly, or Guardian of the Biosphere, for any law, decree, algorithm, or Organic Law they think breaks the Constitution."
+          "a": "Any citizen, assembly, or Guardian of the Biosphere (the people who speak for nature, Article 1.6), for any law, decree, algorithm or technical rule they think breaks the Constitution."
         },
         {
           "q": "Who decides, and how?",
-          "a": "A jury of 101 citizens chosen by lot from regions not involved in the dispute. A 60% majority cancels the act; doubts favor the person."
+          "a": "A jury of 101 citizens chosen by lot from river basins not involved in the dispute. A 60% majority cancels the act; doubts about basic rights are settled in favor of the person."
         },
         {
           "q": "Can I appeal the result?",
@@ -675,9 +675,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "5.1",
@@ -696,7 +696,7 @@
         },
         {
           "q": "Do dangerous jobs count for more?",
-          "a": "Yes. Hazardous tasks like firefighting or rescue count 3x–5x toward your duty. Standing by without active work counts at 1.0x."
+          "a": "Yes. Hazardous tasks like firefighting or rescue count three to five times (3x to 5x) as much, so you serve less often. Standing by without being called out counts at the normal rate (1.0x)."
         },
         {
           "q": "Will I have to do this work forever?",
@@ -705,9 +705,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "5.2",
@@ -722,11 +722,11 @@
         },
         {
           "q": "What happens if I refuse my work shifts without a medical reason?",
-          "a": "Milder steps come first: a meeting with a 3-citizen panel, then loss of some advanced resources, then possibly a smaller home beyond basic shelter. No prison."
+          "a": "First a meeting with a panel of 3 citizens to check for burnout or hidden disability. Then loss of access to extra workshops, advanced computing and long-distance transport, and possibly of living space beyond basic shelter. Never prison, and basic shelter is never touched."
         },
         {
           "q": "Do I lose my political rights or keep a stigma?",
-          "a": "No. Voting-type rights and eligibility for selection by lot never depend on work, and the measures carry no lasting stigma."
+          "a": "No. Political rights and eligibility for selection by lot never depend on work, and the measures carry no lasting stigma."
         },
         {
           "q": "How do I get my access back?",
@@ -735,9 +735,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "5.3",
@@ -748,7 +748,7 @@
       "qa": [
         {
           "q": "What is taught in schools, and what is not?",
-          "a": "Only methods backed by repeated scientific testing and proven teaching approaches. Passing fads, indoctrination and standardized testing groups are permanently barred."
+          "a": "Only methods backed by repeated scientific testing and proven teaching approaches. Passing fads, indoctrination and the standardized-testing industry are permanently barred."
         },
         {
           "q": "What do young children up to age 7 learn?",
@@ -765,9 +765,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "5.4",
@@ -778,22 +778,22 @@
       "qa": [
         {
           "q": "Will there be classes on how to raise children?",
-          "a": "Yes. Local communities set up parenting education centres based on evidence, covering how babies bond and calm down, and working through trauma passed down in families."
+          "a": "Yes. Local communities set up evidence-based parenting education, covering how babies bond and calm down, and working through harm passed down in families."
         },
         {
           "q": "Do I have to spend time caring for other people's children?",
-          "a": "Yes. As a civic requirement, young adults complete practical rotations in community nurseries and childcare centres, supervised by experienced mentors, learning skills like pediatric first aid."
+          "a": "Yes, as a young adult. It is a civic requirement: you complete practical rotations in community nurseries and childcare centers under experienced mentors, learning skills like pediatric first aid."
         },
         {
           "q": "What help do new parents get?",
-          "a": "Postpartum caregivers and child health specialists live within residential circles, guaranteeing 24-hour relief, shared meals, and full release from civic work duties for new parents."
+          "a": "Caregivers for new mothers and child health specialists live among the homes, guaranteeing round-the-clock relief, shared meals, and full release from civic work duties for new parents."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "5.5",
@@ -804,7 +804,7 @@
       "qa": [
         {
           "q": "What happens to the current way mental illness is diagnosed and treated?",
-          "a": "Diagnosis by symptom checklists and profit-driven lifelong sedation with drugs are permanently abolished. Mental health care relies on evidence-based neuro-medicine and diagnosis by cause."
+          "a": "Diagnosis by symptom checklists and profit-driven lifelong sedation with drugs are permanently abolished. Mental health care relies on evidence-based brain and nerve medicine and diagnosis by cause."
         },
         {
           "q": "How is anxiety or constant stress treated?",
@@ -816,14 +816,14 @@
         },
         {
           "q": "Can doctors decide what counts as correct treatment?",
-          "a": "No. No medical guild or assembly may hold a dogmatic monopoly; methods stay open to ongoing testing and open clinical review."
+          "a": "No. No medical body or assembly may hold a dogmatic monopoly; methods stay open to ongoing testing and open clinical review."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "5.6",
@@ -849,7 +849,7 @@
       "model": "claude-sonnet-5-5",
       "check_model": "none",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "6.1",
@@ -868,14 +868,14 @@
         },
         {
           "q": "Can a community rely on one distant or centralized source for its key utilities?",
-          "a": "No. Designs that make a key utility depend on a single outside cartel or fragile long-distance grid are unconstitutional."
+          "a": "No. Designs that make a key utility depend on a single outside supplier or a fragile long-distance grid are unconstitutional."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "6.2",
@@ -890,7 +890,7 @@
         },
         {
           "q": "What kind of batteries or storage are allowed?",
-          "a": "Non-toxic, long-lasting, fire-safe storage that doesn't depend on toxic or monopolized scarce minerals. An annex to the Organic Law lists the qualifying technologies."
+          "a": "Non-toxic, long-lasting, fire-safe storage that doesn't depend on toxic or monopolized scarce minerals. A separate list of technical rules, the Organic Law Annex, names the allowed technologies."
         },
         {
           "q": "How is the power delivered?",
@@ -898,14 +898,14 @@
         },
         {
           "q": "What happens to big computing loads when power runs short?",
-          "a": "They throttle down instantly to protect Tier 1 baselines. Their waste heat is piped into district heating and greenhouses."
+          "a": "They slow down or pause instantly to protect basic survival needs. Their waste heat is piped into district heating and greenhouses."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "6.3",
@@ -916,11 +916,11 @@
       "qa": [
         {
           "q": "Where can I get things made or repaired?",
-          "a": "At municipal fabrication commons and neighborhood workshops. Every bioregional node must keep equipped municipal workshops for farming, energy and public infrastructure."
+          "a": "At municipal fabrication centers and neighborhood workshops. Every regional community must keep equipped workshops for farming, energy and public infrastructure."
         },
         {
           "q": "Can a company make its tools impossible to repair?",
-          "a": "No. Planned obsolescence, digital vendor locks and proprietary software on mechanical tools and spare parts are legally void."
+          "a": "No. Planned obsolescence, digital locks that tie you to one maker, and proprietary software on mechanical tools and spare parts are legally void."
         },
         {
           "q": "Can I get the plans for a machine to fix or copy it?",
@@ -928,14 +928,14 @@
         },
         {
           "q": "What kind of control systems do machines use?",
-          "a": "Open-hardware controllers running transparent, auditable machine code."
+          "a": "Controllers with open hardware, running code that anyone can inspect."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "6.4",
@@ -950,22 +950,22 @@
         },
         {
           "q": "How do the public networks connect?",
-          "a": "Through local wireless mesh networks, line-of-sight optical links, directional relays, and license-free low-power long-range radio."
+          "a": "Through local wireless networks in which devices relay data for each other, light-beam links, relay antennas, and license-free low-power radio."
         },
         {
           "q": "Can anyone watch or control my traffic?",
-          "a": "No. Routing is self-healing and encrypted end-to-end, built to resist centralized packet inspection and corporate choke points."
+          "a": "No. Routing repairs itself and is encrypted end to end, built so that no central authority or company can inspect or block traffic."
         },
         {
           "q": "How are regions linked together?",
-          "a": "By high-bandwidth optical fibers along rail corridors and aqueducts, forming open backbones with no sovereign telecommunication gatekeepers."
+          "a": "By high-capacity optical fibers along railways and aqueducts, forming open backbones with no state-controlled gatekeepers."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "6.5",
@@ -995,7 +995,7 @@
       "model": "claude-sonnet-5-5",
       "check_model": "none",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "6.6",
@@ -1010,7 +1010,7 @@
         },
         {
           "q": "Who decides on big projects like regional power links, water pipelines and fiber-optic backbones?",
-          "a": "An assembly of one hundred and one (101) delegates for the bioregion."
+          "a": "An assembly of one hundred and one (101) delegates for the region."
         },
         {
           "q": "How many votes are needed for major decisions?",
@@ -1023,9 +1023,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "7.1",
@@ -1036,11 +1036,11 @@
       "qa": [
         {
           "q": "Can a computer program make decisions that bind people?",
-          "a": "No. Software and algorithms are only administrative tools, always under the authority of people and randomly chosen citizen assemblies."
+          "a": "No. Software and algorithms are only administrative tools, always under the authority of people and of assemblies of citizens chosen by lot."
         },
         {
           "q": "Can an algorithm write laws, hand down sentences, or ration resources?",
-          "a": "No. Handing those tasks, or any force against people, to automated systems or AI is void. Intercepting incoming unmanned machines and projectiles is not force against people."
+          "a": "No. Handing those tasks, or any force against people, to automated systems or AI is void. Intercepting incoming uncrewed machines and projectiles in defense (Article 8.1) is not force against people."
         },
         {
           "q": "What kind of automation is allowed?",
@@ -1049,9 +1049,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "7.2",
@@ -1066,7 +1066,7 @@
         },
         {
           "q": "What rules apply to the software and firmware in these systems?",
-          "a": "All of it, including operating systems and controller firmware, must be in the public domain, with no patents, IP claims or commercial licensing locks."
+          "a": "All of it, including operating systems and the built-in software of controllers, must be in the public domain, with no patents, intellectual property claims or commercial licensing locks."
         },
         {
           "q": "What if a contract tries to bring proprietary software back?",
@@ -1075,9 +1075,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "7.3",
@@ -1088,22 +1088,22 @@
       "qa": [
         {
           "q": "What must software on public life-support systems be able to do?",
-          "a": "Each program must be rebuildable from its readable source code into exactly the same binary, bit for bit, to rule out hidden backdoors and spying."
+          "a": "Each program must be rebuildable from its readable source code into exactly the same program file, bit for bit, to rule out hidden backdoors and spying."
         },
         {
           "q": "Is there an extra check for the most critical software?",
-          "a": "Yes. Operating system cores, encryption libraries and industrial controller firmware must be built with several independent open-source toolchains and on different processor designs."
+          "a": "Yes. Operating system cores, encryption libraries and industrial controller software must be built with several independent open-source build tools and on different types of processor."
         },
         {
-          "q": "What happens if nobody can reproduce a program?",
-          "a": "It is immediately removed from public infrastructure if any citizen node cannot rebuild the same hash from the public source."
+          "q": "What happens if a program cannot be reproduced?",
+          "a": "A program whose exact build cannot be independently reproduced from the public source code is immediately removed from public infrastructure."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "7.4",
@@ -1114,26 +1114,26 @@
       "qa": [
         {
           "q": "Can one person or group control the main digital keys of public networks?",
-          "a": "No. No engineer, programming group, regional node, or administrative council may hold sole master access over public commons networks."
+          "a": "No. No engineer, programming group, regional community or administrative council may hold sole master access over public networks."
         },
         {
           "q": "How are the most powerful keys and access protected?",
-          "a": "They are split into pieces held by randomly chosen, varied groups of people across several watersheds, so no single company, state, or guild can take control."
+          "a": "They are split into pieces held by assemblies chosen by lot to mirror the population, in several river basins, so no single company, state or professional group can take control."
         },
         {
           "q": "What does it take to approve changes?",
-          "a": "Routine signing needs agreement among multiple nodes. Major protocol changes need a joint ceremony across the randomly chosen assemblies."
+          "a": "Routine signing needs agreement among several separate key holders. Major protocol changes need a joint ceremony across the assemblies chosen by lot."
         },
         {
           "q": "How do I prove I'm a real person without giving up my face or identity?",
-          "a": "A zero-knowledge proof confirms you are one living person without collecting biometric traits, facial images, or personal identity data."
+          "a": "A cryptographic check (a zero-knowledge proof) confirms you are one living person without collecting biometric traits, facial images or personal identity data."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "7.5",
@@ -1144,11 +1144,11 @@
       "qa": [
         {
           "q": "Why must public algorithms be documented?",
-          "a": "To stop a small group of unelected software experts from gaining control. Public algorithm specifications, allocation rules and compiler tools must have documentation people can read."
+          "a": "To stop a small group of unelected software experts from gaining control. Public algorithm specifications, allocation rules and build tools must have documentation people can read."
         },
         {
           "q": "Who has to show that these algorithms follow the constitution?",
-          "a": "Technical guilds. They must provide plain-language summaries, open-source tests and interactive sandboxes showing the algorithms meet constitutional baselines."
+          "a": "Technical work groups. They must provide plain-language summaries, open-source tests and interactive demonstrations showing the algorithms meet constitutional requirements."
         },
         {
           "q": "What happens if an algorithm is deliberately hidden or too hard for ordinary people to understand?",
@@ -1157,9 +1157,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "7.6",
@@ -1170,11 +1170,11 @@
       "qa": [
         {
           "q": "How are security weaknesses in the digital systems found?",
-          "a": "Public, independent bounty programs are permanently funded and supported to keep testing the systems for vulnerabilities, hidden backdoors, and ways power could become centralized."
+          "a": "Independent public teams, rewarded for each flaw they find, are permanently funded and supported to keep testing the systems for vulnerabilities, hidden backdoors and ways power could become centralized."
         },
         {
           "q": "Who oversees digital systems?",
-          "a": "Neighborhood interfaces are overseen by councils of 15 citizens. Regional code and industrial firmware standards are directed by assemblies of 101 delegates."
+          "a": "Neighborhood interfaces are overseen by councils of 15 citizens. Regional code and standards for industrial controller software are directed by assemblies of 101 delegates."
         },
         {
           "q": "How many votes are needed to decide?",
@@ -1183,9 +1183,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "8.1",
@@ -1196,11 +1196,11 @@
       "qa": [
         {
           "q": "Can police or other civic staff keep guns and explosives?",
-          "a": "No. Militarized policing is permanently abolished, and civic personnel may not stockpile firearms, munitions, explosives, or neuro-irritants."
+          "a": "No. Militarized policing is permanently abolished, and civic personnel may not stockpile firearms, munitions, explosives or nerve-irritant agents."
         },
         {
           "q": "Who keeps people safe instead?",
-          "a": "Unarmed peace guilds that mediate and de-escalate, and rescue and fire guilds. Rescue equipment may never be used to force people."
+          "a": "Unarmed peace workers who mediate and calm conflicts, and rescue and fire services. Rescue equipment may never be used to force people."
         },
         {
           "q": "Can anyone build weapons meant to hurt people?",
@@ -1208,14 +1208,14 @@
         },
         {
           "q": "Does O.N.E. have any defense at all?",
-          "a": "Yes, until the whole planet joins. Sealed underground platforms may automatically stop incoming projectiles and uncrewed machines, never persons or crewed vehicles, and are dismantled afterward."
+          "a": "Yes, until the whole planet joins. Sealed underground platforms may automatically stop incoming projectiles and uncrewed machines, never persons or crewed vehicles. Anything beyond close defense must be non-lethal, aimed only at uncrewed launch and control equipment, and approved by 75% of two assemblies. The platforms are dismantled once the planet is unified."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "8.2",
@@ -1230,7 +1230,7 @@
         },
         {
           "q": "Do public sensors listen to or record me?",
-          "a": "They never record speech. They process sound only to detect impacts or structural cracks, and delete other data almost instantly."
+          "a": "They never record speech. They process sound only to detect impacts or structural cracks, and delete other data within a fraction of a second."
         },
         {
           "q": "Can public sensors keep a record of my body data?",
@@ -1239,9 +1239,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "8.3",
@@ -1256,7 +1256,7 @@
         },
         {
           "q": "If I am hurt physically, who has to move out?",
-          "a": "The person who harmed you. You keep your home, and they are moved outside your transit radius."
+          "a": "The person who harmed you. You keep your home, and they are moved outside the area you normally move through."
         },
         {
           "q": "What help do I get first?",
@@ -1265,9 +1265,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "8.4",
@@ -1282,22 +1282,22 @@
         },
         {
           "q": "What if that doesn't work?",
-          "a": "A community circle of peers talks through the serious conflict and ends with binding agreements. After that comes a tribunal of fifteen citizens, whose decision is binding."
+          "a": "A community circle of peers talks through the serious conflict and ends with binding agreements. After that comes a tribunal of fifteen citizens chosen by lot, whose decision is binding."
         },
         {
           "q": "What can the tribunal rule on?",
-          "a": "Only physical assault, bodily violation, enclosure, or ecological poisoning. Beliefs and ideas cannot be prosecuted."
+          "a": "Only physical assault, bodily violation, enclosure (taking shared goods for private use) or ecological poisoning. Beliefs and ideas cannot be prosecuted."
         },
         {
           "q": "How is the evidence handled?",
-          "a": "There are no adversarial trials. Only verifiable physical evidence and open logs count, and forensic data must be reproducible under open review."
+          "a": "There are no adversarial trials. Only verifiable physical evidence and open logs count. Sensor data is checked by an independent lab chosen by lot from a distant river basin, and is used only if it can be reproduced under open review."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "8.5",
@@ -1312,11 +1312,11 @@
         },
         {
           "q": "What happens to someone who commits violence and doesn't calm down?",
-          "a": "They are restrained in a residential suite with a garden, meals and psychiatric care. Sensory deprivation, chemical blunting and punitive isolation are banned."
+          "a": "They are restrained in a daylit residential suite with a garden, meals and psychiatric care. Sensory deprivation, chemical blunting and punitive isolation are banned."
         },
         {
           "q": "How long can I be held before a group of citizens checks it?",
-          "a": "72 hours. A panel of 15 randomly chosen citizens must confirm the detention by then, or you must be released."
+          "a": "72 hours. A panel of 15 citizens chosen by lot must confirm the detention by then, or you must be released."
         },
         {
           "q": "How often is ongoing custody reviewed?",
@@ -1325,9 +1325,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "8.6",
@@ -1342,18 +1342,18 @@
         },
         {
           "q": "How big a majority is needed for a decision?",
-          "a": "It varies. Changing procedural protections needs 75%, and a territorial custody decree or its renewal needs 60%. A bare majority (50%+1) is allowed only for 72-hour protective detention after active violence."
+          "a": "It varies. Changing procedural protections needs 75%, and a civil custody decree (Article 8.5) or its renewal needs 60%. A bare majority (50%+1) is allowed only for 72-hour protective detention when someone is caught in the act of violence."
         },
         {
           "q": "Can I leave the area if I want to?",
-          "a": "Yes. You can leave the bioregion freely with your personal belongings, and no one may pursue you with detention or punishment for it."
+          "a": "Yes. You can leave the region freely with your personal belongings, and no one may pursue you to detain you."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "9.1",
@@ -1379,7 +1379,7 @@
       "model": "claude-sonnet-5-5",
       "check_model": "none",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "9.2",
@@ -1390,11 +1390,11 @@
       "qa": [
         {
           "q": "How are the commons' assets protected from being sold or seized?",
-          "a": "They are held in trusts that are locked permanently. They cannot be sold, mortgaged, or divided for financial gain."
+          "a": "Within today's legal systems, they are held in permanently locked trusts, protected from corporate lawsuits and foreclosure. They cannot be sold, mortgaged, or divided for financial gain."
         },
         {
           "q": "What happens to abandoned or empty land and buildings?",
-          "a": "They are taken into public use, through adverse possession, common heritage easements, and emergency public health declarations."
+          "a": "They are taken into public use through legal claims based on long, open use (adverse possession), common-heritage rights, and emergency public health declarations."
         },
         {
           "q": "What happens to corporate patents and trade secrets on medicines, energy designs, and tools?",
@@ -1403,9 +1403,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "9.3",
@@ -1416,22 +1416,22 @@
       "qa": [
         {
           "q": "How does the community get things it can't make locally?",
-          "a": "Regional groups run an External Trade Interface to buy industrial materials, specialized electronics and advanced medicines from outside, without bringing money inequality inside."
+          "a": "Regional federations run an External Trade Interface to buy industrial materials, specialized electronics and advanced medicines from outside, without bringing money inequality inside."
         },
         {
           "q": "Is money used inside the community?",
-          "a": "No. No official currency, speculative debt or market pricing is used within the commons."
+          "a": "No. No government money, speculative debt or market pricing is used within the commons."
         },
         {
           "q": "What happens to money earned from selling outside?",
-          "a": "Within 24 hours it must go into binding purchase contracts, escrow, or delivery of lasting assets, grain reserves or raw materials."
+          "a": "Within 24 hours it must be committed to binding purchase contracts, escrow (money held by a third party for a set purpose), or delivery of goods that keep their value, grain reserves or raw materials."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "9.4",
@@ -1446,7 +1446,7 @@
         },
         {
           "q": "What happens to an enemy soldier who stops fighting?",
-          "a": "Yes, if they lay down arms, refuse offensive orders or sabotage the attack. They get asylum, lifelong basic security, housing, and cancellation of their family's external debts."
+          "a": "If they lay down arms, refuse offensive orders or sabotage the attack, they get immediate asylum, lifelong basic survival support, a secure home, and cancellation of outside debts for themselves and their family."
         },
         {
           "q": "What happens to captured or surrendered weapons?",
@@ -1454,14 +1454,14 @@
         },
         {
           "q": "What if invaders occupy the territory anyway?",
-          "a": "Randomly selected officials cut the security keys, permanently disabling advanced industry and computing. Basic domestic water and heating keep running."
+          "a": "Authorities chosen by lot use split digital keys (Article 7.4) to permanently disable advanced industry and computing, so the invader gains nothing from them. Basic household water and heating keep running."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "9.5",
@@ -1476,7 +1476,7 @@
         },
         {
           "q": "What happens to my debts?",
-          "a": "Compound-interest debts, predatory home mortgages and financial liens held by older institutions against homes and life-support systems are cancelled."
+          "a": "Compound-interest debts, predatory home mortgages and financial claims held by institutions of the old system against homes and life-support systems are cancelled. This general cancellation is called a Debt Jubilee."
         },
         {
           "q": "What is done with the taken-over factories?",
@@ -1485,9 +1485,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "9.6",
@@ -1498,15 +1498,15 @@
       "qa": [
         {
           "q": "Who runs the legal trusts, outside trade and the move between phases?",
-          "a": "Randomly chosen groups of people: panels of 3, councils of 15 and regional assemblies of 101, all working in the open."
+          "a": "Groups of citizens chosen by lot: panels of 3, councils of 15 and regional assemblies of 101, all working in the open."
         },
         {
           "q": "How many votes are needed for the biggest decisions?",
-          "a": "75%. This covers cancelling all debts, forcing industrial assets to be converted, and approving a move to the next phase."
+          "a": "75%. This covers declaring a Debt Jubilee (general debt cancellation, Article 9.5), forcing industrial assets to be converted, and approving a move to the next phase."
         },
         {
           "q": "What about trade budgets and agreements with neighbors?",
-          "a": "60% is needed for yearly trade budgets and regional mutual-aid agreements with adjacent transitional nodes."
+          "a": "60% is needed for yearly trade budgets and regional mutual-aid agreements with neighboring communities in transition."
         },
         {
           "q": "When is a bare majority enough?",
@@ -1515,9 +1515,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "10.1",
@@ -1532,7 +1532,7 @@
         },
         {
           "q": "What replaces them as the basic unit of government?",
-          "a": "The natural watershed: an area defined by its water catchments, underground water supplies and coastal ecosystems."
+          "a": "The natural river basin (watershed): an area defined by where its water drains, its underground water and its coastal ecosystems."
         },
         {
           "q": "Who makes decisions?",
@@ -1540,14 +1540,14 @@
         },
         {
           "q": "Can higher assemblies overrule local decisions?",
-          "a": "Only to stop pollution sent elsewhere, protect shared underground water, or defend rights that cannot be changed."
+          "a": "Only to stop pollution sent elsewhere, protect shared underground water, or defend the basic rights that cannot be changed (Chapter I)."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "10.2",
@@ -1558,7 +1558,7 @@
       "qa": [
         {
           "q": "Can a river or forest be owned or sold?",
-          "a": "No. Major rivers, ancient forests, coastal wetlands and aquifers cannot be owned, leased or turned into goods. They count as legal persons with a right to exist and regenerate."
+          "a": "No. Major rivers, ancient forests, coastal wetlands and underground water reserves cannot be owned, leased or turned into goods. They count as legal persons with a right to exist and regenerate."
         },
         {
           "q": "Who speaks for nature when decisions are made?",
@@ -1566,14 +1566,14 @@
         },
         {
           "q": "Can anyone stop a project that harms nature?",
-          "a": "Yes. The Guardians can go to court to stop projects that threaten ecological continuity."
+          "a": "Yes. The Guardians can take legal action to block projects that threaten nature's continuity."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "10.3",
@@ -1599,7 +1599,7 @@
       "model": "claude-sonnet-5-5",
       "check_model": "none",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "10.4",
@@ -1614,7 +1614,7 @@
         },
         {
           "q": "Can I always settle permanently wherever I like?",
-          "a": "Not always. Permanent residence depends on an area's environmental capacity: open when there is room, prioritized for some people when near its limit, and paused when full."
+          "a": "Not always. Permanent residence depends on what an area's environment can support: open when there is room, given first to family reunification and needed skills when near the limit, and paused when full."
         },
         {
           "q": "What happens to me if the area I arrive in is full?",
@@ -1627,9 +1627,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "10.5",
@@ -1644,7 +1644,7 @@
         },
         {
           "q": "Can anyone spray chemicals into the sky or sea to cool the planet?",
-          "a": "No. Aerosol injection, sulfur dispersal and chemical ocean fertilization are permanently banned as dangerous to the environment."
+          "a": "No. Spraying aerosols or sulfur into the sky and fertilizing the ocean with chemicals are permanently banned as dangerous to life on Earth."
         },
         {
           "q": "Can anything be done about the sun's heat without chemicals?",
@@ -1652,14 +1652,14 @@
         },
         {
           "q": "What happens if such a system loses its authorization or control?",
-          "a": "It must disperse gradually over several years set by Organic Law, never abruptly."
+          "a": "It must disperse gradually over several years, a period set by the technical rules (Organic Law), never abruptly."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "10.6",
@@ -1681,15 +1681,15 @@
           "a": "No. Decisions made by simple majority must be reviewed after thirty (30) days."
         },
         {
-          "q": "Can detailed technical rules weaken the constitution?",
-          "a": "No. They are set by a 60% majority of the competent assembly and may only strengthen guarantees, never weaken them."
+          "q": "Can the detailed technical rules (the Organic Law Annex) weaken the constitution?",
+          "a": "No. They are set by a 60% majority of the responsible assembly and may only strengthen guarantees, never weaken them. They can also be reviewed under Article 4.6."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "11.1",
@@ -1704,22 +1704,22 @@
         },
         {
           "q": "Can a country or company claim a piece of space?",
-          "a": "No. National annexation, corporate sovereignty, private ownership claims and reserving celestial bodies or orbital slots are permanently barred."
+          "a": "No. Annexation by countries, rule by companies, private ownership claims and reserving celestial bodies or orbital slots are permanently barred."
         },
         {
           "q": "How do I get a good spot in space, like a useful orbit?",
-          "a": "Those spots can never be leased, sold or hoarded. Access goes through open random-draw lists and physical docking queues."
+          "a": "Those spots can never be leased, sold or hoarded. Access goes through open lists filled by lot and physical docking queues."
         },
         {
           "q": "Can I keep minerals I extract?",
-          "a": "Only as a right to use them, and only while you actively look after the site and immediately publish your assay results and process tooling openly."
+          "a": "Only as a right to use them, and only while you actively look after them and immediately publish your analyses of the material and the processes and tools you used."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "11.2",
@@ -1729,23 +1729,23 @@
       "source_hash": "d4249f476d795f868e9af317ddd1897d36c1cd58d490ad91028219fd279c5c6b",
       "qa": [
         {
-          "q": "Where does the basic unit of civilization shift away from nature?",
-          "a": "Beyond Earth's biosphere, it moves from the natural river basin to an artificial, sealed life-support system built to sustain people."
+          "q": "What replaces the river basin as the basic unit beyond Earth?",
+          "a": "A sealed artificial habitat that recycles everything to keep people alive, called a Closed Ecological Life-Support System."
         },
         {
           "q": "What happens to water, nitrogen, carbon and phosphorus in such a habitat?",
-          "a": "They are closed, unalterable community trusts. The habitat cannot go beyond what it has, since mass balance is an absolute limit."
+          "a": "They are fixed shared stocks held in trust for the community. The habitat cannot use more than it has, since the balance of mass is an absolute limit."
         },
         {
           "q": "How is the number of people a habitat can hold judged?",
-          "a": "By how well it recirculates resources, how little it leaks, its pressure integrity and heat-shedding capacity. Permits and expansion must match a verifiable balance."
+          "a": "By how well it recirculates resources, how little it leaks, how well it holds pressure and how much heat it can shed. Permits and expansion must match a verifiable balance."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "11.3",
@@ -1775,7 +1775,7 @@
       "model": "claude-sonnet-5-5",
       "check_model": "none",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "11.4",
@@ -1785,7 +1785,7 @@
       "source_hash": "0e4d6c2d18ce319eb7dade8a03986c2267e841817da9f2016f405d071b781e2e",
       "qa": [
         {
-          "q": "What is used to pay for trade and transport between planets?",
+          "q": "How are trade and transport between planets organized?",
           "a": "Not money or debt. Exchanges are coordinated directly by physical quantities: energy, dry mass, volatiles (liquids and gases) and velocity change."
         },
         {
@@ -1799,9 +1799,9 @@
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "11.5",
@@ -1816,18 +1816,18 @@
         },
         {
           "q": "Who runs daily life in a single habitat?",
-          "a": "A council of 15 to 101 citizens has full say over life inside, including workshop access, layout and shift coordination."
+          "a": "A council of 15 to 101 citizens chosen by lot has full say over life inside, including workshop access, layout and shift coordination."
         },
         {
           "q": "What does the 1,001-member assembly do?",
-          "a": "It meets in 90-day cycles and looks after the basic rules for everyone, shared open tools, seed banks and collision avoidance."
+          "a": "It meets in 90-day cycles and looks after the basic rules for everyone, open software build tools, seed banks and collision avoidance."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     },
     {
       "article_id": "11.6",
@@ -1842,18 +1842,18 @@
         },
         {
           "q": "How is the Federation protected from asteroids and collisions without an army?",
-          "a": "It keeps spread-out interception equipment that does civilian jobs in peacetime, such as propulsion and clearing orbital debris. Beam emitters have a hardware cutoff when aimed at inhabited places."
+          "a": "It keeps spread-out interception equipment that does civilian jobs in peacetime, such as propulsion and clearing orbital debris. Energy-beam emitters have a hardware cutoff, independent of software, whenever they are aimed at inhabited places."
         },
         {
           "q": "What happens to old propulsion stages and hulls?",
-          "a": "They go to foundries to be remelted into ordinary habitat rings and heat radiators. Planetary trajectories are checked by networks of optical and radar trackers."
+          "a": "They go to foundries to be remelted into shared habitat rings and heat radiators. Planetary trajectories are checked by optical and radar tracking networks built to keep working even if some parts fail or give false data."
         }
       ],
       "warnings": [],
       "model": "claude-sonnet-5-5",
-      "check_model": "none",
+      "check_model": "manual (Claude Code session)",
       "date": "2026-11-17",
-      "reviewed": false
+      "reviewed": true
     }
   ]
 }

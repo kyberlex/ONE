@@ -216,11 +216,11 @@ The refusal can be appealed to an independent panel of 15 citizens from other ri
 
 ### Article 3.1: The Thermodynamic Boundary and Demonetization of the Commons
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **What is the economy based on?**
 
-Physical laws of energy and material balance, measured in kWh of usable energy, kg of dry material, litres of clean water and regeneration cycle times.
+Physical laws of energy and material balance, not money. Accounts are kept in kWh of usable energy, kg of dry material, liters of clean water and natural regeneration times.
 
 **Does money or debt count as a claim on shared natural resources?**
 
@@ -228,19 +228,19 @@ No. Fiat money, compound debt and speculative pricing have no legal standing as 
 
 **How much can a community use?**
 
-No more than local watersheds and the biosphere can verifiably replenish. No production may be authorized beyond local replacement limits.
+No more than local river basins and the biosphere can verifiably replenish. No production may be authorized beyond local replacement limits.
 
 **How must basic needs like shelter and healthcare be secured?**
 
-Each year a public audit must show local resources and installed capacity fully meet these needs, with zero external inputs and a published reserve margin.
+Each year a public audit must show that local resources and installed capacity fully meet these needs, with nothing brought in from outside and a published safety reserve.
 
 ### Article 3.2: Absolute Prohibition of Usury, Speculation, and Debt Compounding
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Are loans with compounding interest or speculative bets allowed?**
 
-No. Any contract requiring compound interest, debt bondage or speculation on financial derivatives is void and cannot be enforced.
+No. Any contract requiring compound interest, debt slavery or speculative financial bets is void and cannot be enforced.
 
 **What is credit for?**
 
@@ -248,11 +248,11 @@ Only for planning how energy, raw materials and tool time are shared out for app
 
 **What happens if a project fails?**
 
-You cannot be made destitute, forced into labor, or lose your right to use your home or land. Debts cannot grow, and shared resources cannot be pledged as collateral.
+You cannot be made destitute, forced into labor, or lose your right to use your home or land. Debts cannot grow, and shared resources, nature or homes cannot be pledged as security for loans.
 
 ### Article 3.3: The Three-Tier Democratic Hierarchy of Needs
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Who gets resources first?**
 
@@ -264,19 +264,19 @@ Upkeep of shared infrastructure such as water treatment, power grids, public tra
 
 **How are leftover resources for creative work shared out?**
 
-Only once the first two levels are secured. Surplus goes through preference voting and shared workshop schedules, with no price and no central office.
+Only once the first two levels are secured. Surplus is shared through a form of preference voting and shared workshop schedules, with no prices and no central office.
 
 **Can I sell or hold on to a workshop machine slot?**
 
-No. Slots cannot be transferred, and if unused after a short grace period they pass to waiting creators chosen by lot. Everything made on shared machines is published openly.
+No. Slots cannot be transferred, and if unused after a short grace period they pass to waiting creators chosen by lot. The machine instructions for everything made on shared machines are published openly.
 
 ### Article 3.4: Bioregional Carrying Capacity, Telemetry, and Analog Ground-Truthing
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Is there a limit on how much people can take from nature and make in my area?**
 
-Yes. Extraction and manufacturing in each watershed are limited by its Ecological Carrying Capacity.
+Yes. Extraction and manufacturing in each river basin are limited by what its ecosystem can sustain.
 
 **Can the sensors be used to watch me?**
 
@@ -284,41 +284,41 @@ No. Sensors may only track non-personal environmental variables. Surveillance, b
 
 **Who can see what the sensors record?**
 
-Anyone. The sensor arrays are publicly accessible, and their hardware must be open and its firmware verifiable.
+Anyone. The sensor networks are public, and the hardware and the software inside them must be open to checking.
 
 **How do we know the sensors are telling the truth?**
 
-Neighborhood Councils regularly send lay squads with manual instruments to check. Duplicate sealed samples go to independent laboratories chosen by lot from non-contiguous watersheds.
+Neighborhood Councils regularly send squads of ordinary citizens with manual instruments to check. Duplicate sealed samples go to independent laboratories chosen by lot from river basins that do not border each other.
 
 ### Article 3.5: Strategic Physical Reserves and Non-Linear Resilience
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Why does each region keep emergency reserves?**
 
-To stay resilient against disruptions, droughts, solar storms or epidemics. Each bioregional federation must maintain these reserves.
+To stay resilient against disruptions, droughts, solar storms or epidemics. Each regional federation must maintain these reserves.
 
 **What do the reserves have to cover?**
 
-They must keep Tier 1 output going for 12–24 months without outside supplies, using stored goods, spare parts and backup capacity.
+They must keep basic survival supplies (water, food, shelter, heating, healthcare) going for 12 to 24 months without outside supplies, using stored goods, spare parts and backup capacity.
 
 **Can the reserves be sold off?**
 
-No. They cannot be sold for speculative trade, exported for external fiat, or turned into discretionary surplus.
+No. They cannot be sold for speculation, sold abroad for money, or used for non-essential projects.
 
 ### Article 3.6: Auditing, Assembly Parity, and Decision Thresholds
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Who checks the public accounts of physical resources?**
 
-Randomly chosen citizens. Groups of fifteen review neighborhood utilities, and groups of 101 delegates oversee regional energy distribution and strategic reserves.
+Citizens chosen by lot. Groups of fifteen review neighborhood utilities, and groups of 101 delegates oversee regional energy distribution and strategic reserves.
 
 **How many votes are needed to change the basic survival allocations?**
 
-75%. Altering, reducing or recalculating each person's Tier 1 survival allocation requires this level.
+75%. Changing, reducing or recalculating each person's basic survival allocation requires this level.
 
-**What majority is needed for five-year energy budgets and discretionary allocations?**
+**What majority is needed for five-year energy budgets and resources for optional projects?**
 
 60%.
 
@@ -330,23 +330,23 @@ Yes, only to release strategic reserves during certified natural disasters or ec
 
 ### Article 4.1: The Principle of the Lot (Demarchy) and Abolition of Oligarchy
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Who makes the laws and big decisions?**
 
-Only assemblies of citizens picked by lottery, chosen so they reflect the population.
+Only assemblies of citizens chosen by lot, drawn so that they mirror the population.
 
 **What happens to political parties, campaign money and lobbying?**
 
 They are abolished, along with permanent parliamentary classes, because they let a small elite take control.
 
-**Can groups still try to influence the people chosen by lottery?**
+**Can groups still try to influence the people chosen by lot?**
 
 No. You may still join groups and speak out, but no group may finance, nominate, instruct or reward the chosen delegates. Any such act is void.
 
 ### Article 4.2: Tiered Assembly Architecture and Invariant Odd Parity
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Why does every group have an odd number of members?**
 
@@ -358,7 +358,7 @@ There are five levels, with 3, 15, 101, 301 and 1,001 citizens, from neighborhoo
 
 **Who runs a very small settlement?**
 
-With fewer than 50 adult residents, the three-person panel runs it. Anyone party to a ruling can appeal to a panel of 15 citizens.
+With fewer than 50 adult residents, the Local Mediation Panel of three citizens runs it; close relatives or partners may not sit on it together. Anyone party to a ruling can appeal to a panel of 15 citizens from other river basins.
 
 **When does a settlement get a larger council?**
 
@@ -366,7 +366,7 @@ Automatically, once it reaches fifty adult residents. A council of 15 citizens t
 
 ### Article 4.3: Stratified Selection, Universal Service, and Anti-Bureaucratic Rotation
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **How are people chosen to serve on these panels?**
 
@@ -378,15 +378,15 @@ Yes, it is a duty for everyone chosen. You are fully released from routine work,
 
 **Can I serve twice in a row?**
 
-No. Not in the same tier consecutively; after serving you must wait twice as long as your term.
+No. Not at the same level twice in a row; after serving you must wait twice the length of your term.
 
 **How does a petition get onto the agenda?**
 
-Anyone can publish one. To reach the agenda it needs endorsement from a fixed share of members, then wins a place in a public lottery.
+Anyone can publish one. To reach the agenda it needs endorsement from a fixed share of the people the assembly serves, then wins a place in a public lottery weighted by support.
 
 ### Article 4.4: Adversarial Expert Testimony and Intelligible Decision-Making
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Who decides, the jurors or the experts?**
 
@@ -398,15 +398,15 @@ Two rival expert panels, free from corporate grants or debt, question each other
 
 **What if experts use technical language I can't follow?**
 
-Experts must explain their models in plain language, including consequences, trade-offs and failure scenarios.
+Experts must explain their models in plain language, including consequences, trade-offs and what could go wrong.
 
 **What happens if the experts just create confusion or gridlock?**
 
-Approval is withheld, but only for new structural interventions. Routine maintenance and critical life support continue. Lasting deadlocks go to a panel of scientific practitioners.
+Approval is withheld, but only for new structural projects. Routine maintenance and critical life support continue. Lasting deadlocks go to a panel of working scientists chosen by lot from distant river basins.
 
 ### Article 4.5: Deliberative Protocols and Graduated Voting Thresholds
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **How many votes does a decision need?**
 
@@ -422,15 +422,15 @@ No. They are counted from all seated members, rounded up to the next whole vote.
 
 ### Article 4.6: Constitutional Review (*Custodes Constitutionis*)
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Who can ask for a law or decision to be checked against the Constitution?**
 
-Any citizen, assembly, or Guardian of the Biosphere, for any law, decree, algorithm, or Organic Law they think breaks the Constitution.
+Any citizen, assembly, or Guardian of the Biosphere (the people who speak for nature, Article 1.6), for any law, decree, algorithm or technical rule they think breaks the Constitution.
 
 **Who decides, and how?**
 
-A jury of 101 citizens chosen by lot from regions not involved in the dispute. A 60% majority cancels the act; doubts favor the person.
+A jury of 101 citizens chosen by lot from river basins not involved in the dispute. A 60% majority cancels the act; doubts about basic rights are settled in favor of the person.
 
 **Can I appeal the result?**
 
@@ -444,7 +444,7 @@ No. It can only declare that an act conforms to the Constitution or is void.
 
 ### Article 5.1: Shared Maintenance, Rotational Shifts, and Ergonomic Multipliers
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Who has to do the essential maintenance work, like sanitation and harvesting?**
 
@@ -456,7 +456,7 @@ No. Human effort can't be bought, rented, traded, or forced through wage contrac
 
 **Do dangerous jobs count for more?**
 
-Yes. Hazardous tasks like firefighting or rescue count 3x–5x toward your duty. Standing by without active work counts at 1.0x.
+Yes. Hazardous tasks like firefighting or rescue count three to five times (3x to 5x) as much, so you serve less often. Standing by without being called out counts at the normal rate (1.0x).
 
 **Will I have to do this work forever?**
 
@@ -464,7 +464,7 @@ No. The goal is full automation, and mandatory physical shifts are meant to shri
 
 ### Article 5.2: The Reciprocity Invariant and Anti-Free-Riding Sanctions
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Can anyone take away my water, food, housing or basic health care?**
 
@@ -472,11 +472,11 @@ No. These basics are yours by birth and can't be revoked or made conditional on 
 
 **What happens if I refuse my work shifts without a medical reason?**
 
-Milder steps come first: a meeting with a 3-citizen panel, then loss of some advanced resources, then possibly a smaller home beyond basic shelter. No prison.
+First a meeting with a panel of 3 citizens to check for burnout or hidden disability. Then loss of access to extra workshops, advanced computing and long-distance transport, and possibly of living space beyond basic shelter. Never prison, and basic shelter is never touched.
 
 **Do I lose my political rights or keep a stigma?**
 
-No. Voting-type rights and eligibility for selection by lot never depend on work, and the measures carry no lasting stigma.
+No. Political rights and eligibility for selection by lot never depend on work, and the measures carry no lasting stigma.
 
 **How do I get my access back?**
 
@@ -484,11 +484,11 @@ Resume any scheduled shift or agreed equivalent contribution, and full access to
 
 ### Article 5.3: Empirical Child Education and Neurodevelopmental Integrity
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **What is taught in schools, and what is not?**
 
-Only methods backed by repeated scientific testing and proven teaching approaches. Passing fads, indoctrination and standardized testing groups are permanently barred.
+Only methods backed by repeated scientific testing and proven teaching approaches. Passing fads, indoctrination and the standardized-testing industry are permanently barred.
 
 **What do young children up to age 7 learn?**
 
@@ -504,27 +504,27 @@ Teenagers join working research, farming and building groups alongside adult men
 
 ### Article 5.4: Empirical Parenting Education and Universal Alloparenting
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Will there be classes on how to raise children?**
 
-Yes. Local communities set up parenting education centres based on evidence, covering how babies bond and calm down, and working through trauma passed down in families.
+Yes. Local communities set up evidence-based parenting education, covering how babies bond and calm down, and working through harm passed down in families.
 
 **Do I have to spend time caring for other people's children?**
 
-Yes. As a civic requirement, young adults complete practical rotations in community nurseries and childcare centres, supervised by experienced mentors, learning skills like pediatric first aid.
+Yes, as a young adult. It is a civic requirement: you complete practical rotations in community nurseries and childcare centers under experienced mentors, learning skills like pediatric first aid.
 
 **What help do new parents get?**
 
-Postpartum caregivers and child health specialists live within residential circles, guaranteeing 24-hour relief, shared meals, and full release from civic work duties for new parents.
+Caregivers for new mothers and child health specialists live among the homes, guaranteeing round-the-clock relief, shared meals, and full release from civic work duties for new parents.
 
 ### Article 5.5: Empirical Neuro-Medicine and Etiological Mental Health
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **What happens to the current way mental illness is diagnosed and treated?**
 
-Diagnosis by symptom checklists and profit-driven lifelong sedation with drugs are permanently abolished. Mental health care relies on evidence-based neuro-medicine and diagnosis by cause.
+Diagnosis by symptom checklists and profit-driven lifelong sedation with drugs are permanently abolished. Mental health care relies on evidence-based brain and nerve medicine and diagnosis by cause.
 
 **How is anxiety or constant stress treated?**
 
@@ -536,11 +536,11 @@ Doctors look for objective biological markers, such as brain activity and inflam
 
 **Can doctors decide what counts as correct treatment?**
 
-No. No medical guild or assembly may hold a dogmatic monopoly; methods stay open to ongoing testing and open clinical review.
+No. No medical body or assembly may hold a dogmatic monopoly; methods stay open to ongoing testing and open clinical review.
 
 ### Article 5.6: Caregiver Immunity and Sortition Governance
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Do I have to do maintenance shifts if I care for family or community members?**
 
@@ -558,7 +558,7 @@ The regional citizen assembly of 101 delegates, by a 75% vote.
 
 ### Article 6.1: The Decoupling Mandate and Thirty-Day Islanded Autonomy
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **What must every community be able to do on its own?**
 
@@ -570,11 +570,11 @@ At least 30 days in a row, covering clean water, home heating and cooling, medic
 
 **Can a community rely on one distant or centralized source for its key utilities?**
 
-No. Designs that make a key utility depend on a single outside cartel or fragile long-distance grid are unconstitutional.
+No. Designs that make a key utility depend on a single outside supplier or a fragile long-distance grid are unconstitutional.
 
 ### Article 6.2: Modular Distributed Energy and Thermodynamic Microgrid Architecture
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Where does the power come from?**
 
@@ -582,7 +582,7 @@ Only renewable sources: solar panels, small water turbines, small wind generator
 
 **What kind of batteries or storage are allowed?**
 
-Non-toxic, long-lasting, fire-safe storage that doesn't depend on toxic or monopolized scarce minerals. An annex to the Organic Law lists the qualifying technologies.
+Non-toxic, long-lasting, fire-safe storage that doesn't depend on toxic or monopolized scarce minerals. A separate list of technical rules, the Organic Law Annex, names the allowed technologies.
 
 **How is the power delivered?**
 
@@ -590,19 +590,19 @@ Locally, mostly through direct current lines linking generation, storage and hea
 
 **What happens to big computing loads when power runs short?**
 
-They throttle down instantly to protect Tier 1 baselines. Their waste heat is piped into district heating and greenhouses.
+They slow down or pause instantly to protect basic survival needs. Their waste heat is piped into district heating and greenhouses.
 
 ### Article 6.3: Open Fabrication Commons and Universal Repairability
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Where can I get things made or repaired?**
 
-At municipal fabrication commons and neighborhood workshops. Every bioregional node must keep equipped municipal workshops for farming, energy and public infrastructure.
+At municipal fabrication centers and neighborhood workshops. Every regional community must keep equipped workshops for farming, energy and public infrastructure.
 
 **Can a company make its tools impossible to repair?**
 
-No. Planned obsolescence, digital vendor locks and proprietary software on mechanical tools and spare parts are legally void.
+No. Planned obsolescence, digital locks that tie you to one maker, and proprietary software on mechanical tools and spare parts are legally void.
 
 **Can I get the plans for a machine to fix or copy it?**
 
@@ -610,11 +610,11 @@ Yes. Mechanical blueprints and schematics are a public commons, open to everyone
 
 **What kind of control systems do machines use?**
 
-Open-hardware controllers running transparent, auditable machine code.
+Controllers with open hardware, running code that anyone can inspect.
 
 ### Article 6.4: Distributed Telecommunications Mesh and Optical Corridors
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Who runs the communications networks?**
 
@@ -622,19 +622,19 @@ The population itself. Communications infrastructure is a shared, decentralized 
 
 **How do the public networks connect?**
 
-Through local wireless mesh networks, line-of-sight optical links, directional relays, and license-free low-power long-range radio.
+Through local wireless networks in which devices relay data for each other, light-beam links, relay antennas, and license-free low-power radio.
 
 **Can anyone watch or control my traffic?**
 
-No. Routing is self-healing and encrypted end-to-end, built to resist centralized packet inspection and corporate choke points.
+No. Routing repairs itself and is encrypted end to end, built so that no central authority or company can inspect or block traffic.
 
 **How are regions linked together?**
 
-By high-bandwidth optical fibers along rail corridors and aqueducts, forming open backbones with no sovereign telecommunication gatekeepers.
+By high-capacity optical fibers along railways and aqueducts, forming open backbones with no state-controlled gatekeepers.
 
 ### Article 6.5: The Black-Sky Protocol and Analog Mechanical Fallbacks
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Why must water and power systems have manual backups?**
 
@@ -654,7 +654,7 @@ Physical switches must cut the system off from outside networks instantly. It th
 
 ### Article 6.6: Infrastructure Governance, Parity, and Decision Thresholds
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Who decides on local utilities and shared workshops in my neighborhood?**
 
@@ -662,7 +662,7 @@ A council of fifteen (15) citizens chosen by lot. They decide by a sixty percent
 
 **Who decides on big projects like regional power links, water pipelines and fiber-optic backbones?**
 
-An assembly of one hundred and one (101) delegates for the bioregion.
+An assembly of one hundred and one (101) delegates for the region.
 
 **How many votes are needed for major decisions?**
 
@@ -676,15 +676,15 @@ Only for emergencies: load shedding, protective system disconnection or immediat
 
 ### Article 7.1: The Axiom of Non-Sovereign Code and the Subordination of Algorithms
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Can a computer program make decisions that bind people?**
 
-No. Software and algorithms are only administrative tools, always under the authority of people and randomly chosen citizen assemblies.
+No. Software and algorithms are only administrative tools, always under the authority of people and of assemblies of citizens chosen by lot.
 
 **Can an algorithm write laws, hand down sentences, or ration resources?**
 
-No. Handing those tasks, or any force against people, to automated systems or AI is void. Intercepting incoming unmanned machines and projectiles is not force against people.
+No. Handing those tasks, or any force against people, to automated systems or AI is void. Intercepting incoming uncrewed machines and projectiles in defense (Article 8.1) is not force against people.
 
 **What kind of automation is allowed?**
 
@@ -692,7 +692,7 @@ Only verifiable systems with no will of their own, no legal personhood and no so
 
 ### Article 7.2: Absolute Prohibition of Proprietary Software in Public Commons
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Can public services use software whose code is secret or owned by a company?**
 
@@ -700,7 +700,7 @@ No. Closed, hidden, proprietary or trade-secret software is permanently banned i
 
 **What rules apply to the software and firmware in these systems?**
 
-All of it, including operating systems and controller firmware, must be in the public domain, with no patents, IP claims or commercial licensing locks.
+All of it, including operating systems and the built-in software of controllers, must be in the public domain, with no patents, intellectual property claims or commercial licensing locks.
 
 **What if a contract tries to bring proprietary software back?**
 
@@ -708,51 +708,51 @@ It has no legal effect. Any contract or digital lock that tries to restore propr
 
 ### Article 7.3: Bit-for-Bit Deterministic Reproducibility and Diverse Double-Compilation (DDC)
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **What must software on public life-support systems be able to do?**
 
-Each program must be rebuildable from its readable source code into exactly the same binary, bit for bit, to rule out hidden backdoors and spying.
+Each program must be rebuildable from its readable source code into exactly the same program file, bit for bit, to rule out hidden backdoors and spying.
 
 **Is there an extra check for the most critical software?**
 
-Yes. Operating system cores, encryption libraries and industrial controller firmware must be built with several independent open-source toolchains and on different processor designs.
+Yes. Operating system cores, encryption libraries and industrial controller software must be built with several independent open-source build tools and on different types of processor.
 
-**What happens if nobody can reproduce a program?**
+**What happens if a program cannot be reproduced?**
 
-It is immediately removed from public infrastructure if any citizen node cannot rebuild the same hash from the public source.
+A program whose exact build cannot be independently reproduced from the public source code is immediately removed from public infrastructure.
 
 ### Article 7.4: Threshold Key Dispersion (t-MPC) and Non-Biometric Authentication
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Can one person or group control the main digital keys of public networks?**
 
-No. No engineer, programming group, regional node, or administrative council may hold sole master access over public commons networks.
+No. No engineer, programming group, regional community or administrative council may hold sole master access over public networks.
 
 **How are the most powerful keys and access protected?**
 
-They are split into pieces held by randomly chosen, varied groups of people across several watersheds, so no single company, state, or guild can take control.
+They are split into pieces held by assemblies chosen by lot to mirror the population, in several river basins, so no single company, state or professional group can take control.
 
 **What does it take to approve changes?**
 
-Routine signing needs agreement among multiple nodes. Major protocol changes need a joint ceremony across the randomly chosen assemblies.
+Routine signing needs agreement among several separate key holders. Major protocol changes need a joint ceremony across the assemblies chosen by lot.
 
 **How do I prove I'm a real person without giving up my face or identity?**
 
-A zero-knowledge proof confirms you are one living person without collecting biometric traits, facial images, or personal identity data.
+A cryptographic check (a zero-knowledge proof) confirms you are one living person without collecting biometric traits, facial images or personal identity data.
 
 ### Article 7.5: The Civic De-Esotericism Mandate and Auditing of Public Algorithms
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Why must public algorithms be documented?**
 
-To stop a small group of unelected software experts from gaining control. Public algorithm specifications, allocation rules and compiler tools must have documentation people can read.
+To stop a small group of unelected software experts from gaining control. Public algorithm specifications, allocation rules and build tools must have documentation people can read.
 
 **Who has to show that these algorithms follow the constitution?**
 
-Technical guilds. They must provide plain-language summaries, open-source tests and interactive sandboxes showing the algorithms meet constitutional baselines.
+Technical work groups. They must provide plain-language summaries, open-source tests and interactive demonstrations showing the algorithms meet constitutional requirements.
 
 **What happens if an algorithm is deliberately hidden or too hard for ordinary people to understand?**
 
@@ -760,15 +760,15 @@ It is void and cannot run on common infrastructure. This applies if it is delibe
 
 ### Article 7.6: Continuous Red-Teaming, Assembly Parity, and Decision Thresholds
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **How are security weaknesses in the digital systems found?**
 
-Public, independent bounty programs are permanently funded and supported to keep testing the systems for vulnerabilities, hidden backdoors, and ways power could become centralized.
+Independent public teams, rewarded for each flaw they find, are permanently funded and supported to keep testing the systems for vulnerabilities, hidden backdoors and ways power could become centralized.
 
 **Who oversees digital systems?**
 
-Neighborhood interfaces are overseen by councils of 15 citizens. Regional code and industrial firmware standards are directed by assemblies of 101 delegates.
+Neighborhood interfaces are overseen by councils of 15 citizens. Regional code and standards for industrial controller software are directed by assemblies of 101 delegates.
 
 **How many votes are needed to decide?**
 
@@ -778,15 +778,15 @@ It depends: 75% to change core security standards, 60% for regional software rel
 
 ### Article 8.1: Abolition of Militarized Policing, Weapon Ban, and Transitional Defense
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Can police or other civic staff keep guns and explosives?**
 
-No. Militarized policing is permanently abolished, and civic personnel may not stockpile firearms, munitions, explosives, or neuro-irritants.
+No. Militarized policing is permanently abolished, and civic personnel may not stockpile firearms, munitions, explosives or nerve-irritant agents.
 
 **Who keeps people safe instead?**
 
-Unarmed peace guilds that mediate and de-escalate, and rescue and fire guilds. Rescue equipment may never be used to force people.
+Unarmed peace workers who mediate and calm conflicts, and rescue and fire services. Rescue equipment may never be used to force people.
 
 **Can anyone build weapons meant to hurt people?**
 
@@ -794,11 +794,11 @@ No. This is banned for humans and machines alike. The only exception is the temp
 
 **Does O.N.E. have any defense at all?**
 
-Yes, until the whole planet joins. Sealed underground platforms may automatically stop incoming projectiles and uncrewed machines, never persons or crewed vehicles, and are dismantled afterward.
+Yes, until the whole planet joins. Sealed underground platforms may automatically stop incoming projectiles and uncrewed machines, never persons or crewed vehicles. Anything beyond close defense must be non-lethal, aimed only at uncrewed launch and control equipment, and approved by 75% of two assemblies. The platforms are dismantled once the planet is unified.
 
 ### Article 8.2: Ambient Spatial Safety and Non-Injurious Telemetry
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **How are public spaces made safe?**
 
@@ -806,7 +806,7 @@ Corridors and homes keep daylight sightlines so there are no places where you co
 
 **Do public sensors listen to or record me?**
 
-They never record speech. They process sound only to detect impacts or structural cracks, and delete other data almost instantly.
+They never record speech. They process sound only to detect impacts or structural cracks, and delete other data within a fraction of a second.
 
 **Can public sensors keep a record of my body data?**
 
@@ -814,7 +814,7 @@ No. Public sensors may never compile biometric registries.
 
 ### Article 8.3: The Charter of Victims’ Sovereignty and Reparative Primacy
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Do I have to take part in a meeting with the person who harmed me?**
 
@@ -822,7 +822,7 @@ No. You can decline restorative dialogue, and you face no penalty for it.
 
 **If I am hurt physically, who has to move out?**
 
-The person who harmed you. You keep your home, and they are moved outside your transit radius.
+The person who harmed you. You keep your home, and they are moved outside the area you normally move through.
 
 **What help do I get first?**
 
@@ -830,7 +830,7 @@ Immediate trauma therapy and material restitution, both guaranteed before resour
 
 ### Article 8.4: The Three-Stage Restorative Ladder and Fact-Centric Inquiry
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **What happens first when I have a dispute with someone?**
 
@@ -838,19 +838,19 @@ You sit down with an unarmed mediator to talk and try to agree on voluntary repa
 
 **What if that doesn't work?**
 
-A community circle of peers talks through the serious conflict and ends with binding agreements. After that comes a tribunal of fifteen citizens, whose decision is binding.
+A community circle of peers talks through the serious conflict and ends with binding agreements. After that comes a tribunal of fifteen citizens chosen by lot, whose decision is binding.
 
 **What can the tribunal rule on?**
 
-Only physical assault, bodily violation, enclosure, or ecological poisoning. Beliefs and ideas cannot be prosecuted.
+Only physical assault, bodily violation, enclosure (taking shared goods for private use) or ecological poisoning. Beliefs and ideas cannot be prosecuted.
 
 **How is the evidence handled?**
 
-There are no adversarial trials. Only verifiable physical evidence and open logs count, and forensic data must be reproducible under open review.
+There are no adversarial trials. Only verifiable physical evidence and open logs count. Sensor data is checked by an independent lab chosen by lot from a distant river basin, and is used only if it can be reproduced under open review.
 
 ### Article 8.5: Custodia Civilis Territorialis and Inviolable Habeas Corpus
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Will there be prisons or the death penalty?**
 
@@ -858,11 +858,11 @@ No. Incarceration, solitary confinement, punitive cages and execution are perman
 
 **What happens to someone who commits violence and doesn't calm down?**
 
-They are restrained in a residential suite with a garden, meals and psychiatric care. Sensory deprivation, chemical blunting and punitive isolation are banned.
+They are restrained in a daylit residential suite with a garden, meals and psychiatric care. Sensory deprivation, chemical blunting and punitive isolation are banned.
 
 **How long can I be held before a group of citizens checks it?**
 
-72 hours. A panel of 15 randomly chosen citizens must confirm the detention by then, or you must be released.
+72 hours. A panel of 15 citizens chosen by lot must confirm the detention by then, or you must be released.
 
 **How often is ongoing custody reviewed?**
 
@@ -870,7 +870,7 @@ Every 180 days, by a newly seated jury of 15 citizens. Continuing custody needs 
 
 ### Article 8.6: Adjudicative Assembly Parity and Decision Thresholds
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **How many people decide a case?**
 
@@ -878,17 +878,17 @@ It depends on the level: three citizens on a Local Panel, fifteen on a Neighborh
 
 **How big a majority is needed for a decision?**
 
-It varies. Changing procedural protections needs 75%, and a territorial custody decree or its renewal needs 60%. A bare majority (50%+1) is allowed only for 72-hour protective detention after active violence.
+It varies. Changing procedural protections needs 75%, and a civil custody decree (Article 8.5) or its renewal needs 60%. A bare majority (50%+1) is allowed only for 72-hour protective detention when someone is caught in the act of violence.
 
 **Can I leave the area if I want to?**
 
-Yes. You can leave the bioregion freely with your personal belongings, and no one may pursue you with detention or punishment for it.
+Yes. You can leave the region freely with your personal belongings, and no one may pursue you to detain you.
 
 ## Chapter IX: The Transitional Bridge: From Capital Enclosure To Commons
 
 ### Article 9.1: The Dual-Track Handshake and Parallel Life-Support Systems
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **How does the shift away from today's money-driven economy happen?**
 
@@ -904,15 +904,15 @@ Because supply chains and public services fail, and the commons offers immediate
 
 ### Article 9.2: Defensive Legal Shields, Adverse Possession, and Asset Locks
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **How are the commons' assets protected from being sold or seized?**
 
-They are held in trusts that are locked permanently. They cannot be sold, mortgaged, or divided for financial gain.
+Within today's legal systems, they are held in permanently locked trusts, protected from corporate lawsuits and foreclosure. They cannot be sold, mortgaged, or divided for financial gain.
 
 **What happens to abandoned or empty land and buildings?**
 
-They are taken into public use, through adverse possession, common heritage easements, and emergency public health declarations.
+They are taken into public use through legal claims based on long, open use (adverse possession), common-heritage rights, and emergency public health declarations.
 
 **What happens to corporate patents and trade secrets on medicines, energy designs, and tools?**
 
@@ -920,23 +920,23 @@ They are declared open for public use and immediately published in open-source h
 
 ### Article 9.3: The External Trade Interface (ETI) and Demonetization Buffer
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **How does the community get things it can't make locally?**
 
-Regional groups run an External Trade Interface to buy industrial materials, specialized electronics and advanced medicines from outside, without bringing money inequality inside.
+Regional federations run an External Trade Interface to buy industrial materials, specialized electronics and advanced medicines from outside, without bringing money inequality inside.
 
 **Is money used inside the community?**
 
-No. No official currency, speculative debt or market pricing is used within the commons.
+No. No government money, speculative debt or market pricing is used within the commons.
 
 **What happens to money earned from selling outside?**
 
-Within 24 hours it must go into binding purchase contracts, escrow, or delivery of lasting assets, grain reserves or raw materials.
+Within 24 hours it must be committed to binding purchase contracts, escrow (money held by a third party for a set purpose), or delivery of goods that keep their value, grain reserves or raw materials.
 
 ### Article 9.4: Total Asymmetric Dissuasion, Defection Bounties, and Industrial Denial
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Does O.N.E. have an army?**
 
@@ -944,7 +944,7 @@ No. It rejects standing armies sent abroad, forced military service for offense,
 
 **What happens to an enemy soldier who stops fighting?**
 
-Yes, if they lay down arms, refuse offensive orders or sabotage the attack. They get asylum, lifelong basic security, housing, and cancellation of their family's external debts.
+If they lay down arms, refuse offensive orders or sabotage the attack, they get immediate asylum, lifelong basic survival support, a secure home, and cancellation of outside debts for themselves and their family.
 
 **What happens to captured or surrendered weapons?**
 
@@ -952,11 +952,11 @@ They are permanently dismantled and melted in public foundries. The metal become
 
 **What if invaders occupy the territory anyway?**
 
-Randomly selected officials cut the security keys, permanently disabling advanced industry and computing. Basic domestic water and heating keep running.
+Authorities chosen by lot use split digital keys (Article 7.4) to permanently disable advanced industry and computing, so the invader gains nothing from them. Basic household water and heating keep running.
 
 ### Article 9.5: Universal Debt Jubilees and Insolvent Asset Transformation
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **What happens to failed factories, shipping hubs and utility networks?**
 
@@ -964,7 +964,7 @@ They are taken over by local community trusts (called municipal commons trusts).
 
 **What happens to my debts?**
 
-Compound-interest debts, predatory home mortgages and financial liens held by older institutions against homes and life-support systems are cancelled.
+Compound-interest debts, predatory home mortgages and financial claims held by institutions of the old system against homes and life-support systems are cancelled. This general cancellation is called a Debt Jubilee.
 
 **What is done with the taken-over factories?**
 
@@ -972,19 +972,19 @@ They are rebuilt with open-source controllers and modular machine tools for meta
 
 ### Article 9.6: Transitional Governance, Assembly Parity, and Decision Thresholds
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Who runs the legal trusts, outside trade and the move between phases?**
 
-Randomly chosen groups of people: panels of 3, councils of 15 and regional assemblies of 101, all working in the open.
+Groups of citizens chosen by lot: panels of 3, councils of 15 and regional assemblies of 101, all working in the open.
 
 **How many votes are needed for the biggest decisions?**
 
-75%. This covers cancelling all debts, forcing industrial assets to be converted, and approving a move to the next phase.
+75%. This covers declaring a Debt Jubilee (general debt cancellation, Article 9.5), forcing industrial assets to be converted, and approving a move to the next phase.
 
 **What about trade budgets and agreements with neighbors?**
 
-60% is needed for yearly trade budgets and regional mutual-aid agreements with adjacent transitional nodes.
+60% is needed for yearly trade budgets and regional mutual-aid agreements with neighboring communities in transition.
 
 **When is a bare majority enough?**
 
@@ -994,7 +994,7 @@ Only for non-lethal defensive blocking and quick supply changes during an emerge
 
 ### Article 10.1: The Watershed as Primary Sovereign Unit and Bioregional Subsidiarity
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Do countries and national borders still exist?**
 
@@ -1002,7 +1002,7 @@ No. National borders, colonial borders and closed-off sovereign territories are 
 
 **What replaces them as the basic unit of government?**
 
-The natural watershed: an area defined by its water catchments, underground water supplies and coastal ecosystems.
+The natural river basin (watershed): an area defined by where its water drains, its underground water and its coastal ecosystems.
 
 **Who makes decisions?**
 
@@ -1010,15 +1010,15 @@ The smallest local level that can handle the matter, from neighborhood water bas
 
 **Can higher assemblies overrule local decisions?**
 
-Only to stop pollution sent elsewhere, protect shared underground water, or defend rights that cannot be changed.
+Only to stop pollution sent elsewhere, protect shared underground water, or defend the basic rights that cannot be changed (Chapter I).
 
 ### Article 10.2: Ecological Personhood and Interspecies Guardianship (*Jus Biosphaerae*)
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Can a river or forest be owned or sold?**
 
-No. Major rivers, ancient forests, coastal wetlands and aquifers cannot be owned, leased or turned into goods. They count as legal persons with a right to exist and regenerate.
+No. Major rivers, ancient forests, coastal wetlands and underground water reserves cannot be owned, leased or turned into goods. They count as legal persons with a right to exist and regenerate.
 
 **Who speaks for nature when decisions are made?**
 
@@ -1026,11 +1026,11 @@ Guardians, made up of citizens chosen by lot and rotating field naturalists. The
 
 **Can anyone stop a project that harms nature?**
 
-Yes. The Guardians can go to court to stop projects that threaten ecological continuity.
+Yes. The Guardians can take legal action to block projects that threaten nature's continuity.
 
 ### Article 10.3: Physical Inter-Basin Reciprocity and Anti-Cartel Pacts
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **How do different regions trade with each other?**
 
@@ -1046,7 +1046,7 @@ Its links to other regions are suspended immediately: power grid connections, tr
 
 ### Article 10.4: Thermodynamic Freedom of Movement and Non-Coercive Carrying Capacity
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Can I travel or move to another place freely?**
 
@@ -1054,7 +1054,7 @@ Yes. Everyone has a right to travel, visit and seek refuge. Passports, border fe
 
 **Can I always settle permanently wherever I like?**
 
-Not always. Permanent residence depends on an area's environmental capacity: open when there is room, prioritized for some people when near its limit, and paused when full.
+Not always. Permanent residence depends on what an area's environment can support: open when there is room, given first to family reunification and needed skills when near the limit, and paused when full.
 
 **What happens to me if the area I arrive in is full?**
 
@@ -1066,7 +1066,7 @@ Neighboring areas with room must send aid. If local services are overwhelmed, fa
 
 ### Article 10.5: Planetary Commons Stewardship and Solar Flux Regulation
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Who owns the air, oceans, ice and radio waves?**
 
@@ -1074,7 +1074,7 @@ Everyone. They are treated as shared life-support heritage of all living things,
 
 **Can anyone spray chemicals into the sky or sea to cool the planet?**
 
-No. Aerosol injection, sulfur dispersal and chemical ocean fertilization are permanently banned as dangerous to the environment.
+No. Spraying aerosols or sulfur into the sky and fertilizing the ocean with chemicals are permanently banned as dangerous to life on Earth.
 
 **Can anything be done about the sun's heat without chemicals?**
 
@@ -1082,11 +1082,11 @@ Yes, a reversible, non-chemical system in deep space, if 75% of the 1,001-delega
 
 **What happens if such a system loses its authorization or control?**
 
-It must disperse gradually over several years set by Organic Law, never abruptly.
+It must disperse gradually over several years, a period set by the technical rules (Organic Law), never abruptly.
 
 ### Article 10.6: The Federated Sortition Architecture, Odd Parity, and the Universal Covenant
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **How many people sit in the groups that make decisions?**
 
@@ -1100,15 +1100,15 @@ It depends on the matter: 75% for the biggest changes, 60% for shared resource a
 
 No. Decisions made by simple majority must be reviewed after thirty (30) days.
 
-**Can detailed technical rules weaken the constitution?**
+**Can the detailed technical rules (the Organic Law Annex) weaken the constitution?**
 
-No. They are set by a 60% majority of the competent assembly and may only strengthen guarantees, never weaken them.
+No. They are set by a 60% majority of the responsible assembly and may only strengthen guarantees, never weaken them. They can also be reviewed under Article 4.6.
 
 ## Chapter XI: The Celestial Commons & Interplanetary Federation
 
 ### Article 11.1: The Sol Commons and Abolition of Celestial Dominium (*Patrimonium Solis*)
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Who owns space, the planets and asteroids?**
 
@@ -1116,35 +1116,35 @@ No one. Outer space, celestial bodies, asteroids, comets and orbital paths are a
 
 **Can a country or company claim a piece of space?**
 
-No. National annexation, corporate sovereignty, private ownership claims and reserving celestial bodies or orbital slots are permanently barred.
+No. Annexation by countries, rule by companies, private ownership claims and reserving celestial bodies or orbital slots are permanently barred.
 
 **How do I get a good spot in space, like a useful orbit?**
 
-Those spots can never be leased, sold or hoarded. Access goes through open random-draw lists and physical docking queues.
+Those spots can never be leased, sold or hoarded. Access goes through open lists filled by lot and physical docking queues.
 
 **Can I keep minerals I extract?**
 
-Only as a right to use them, and only while you actively look after the site and immediately publish your assay results and process tooling openly.
+Only as a right to use them, and only while you actively look after them and immediately publish your analyses of the material and the processes and tools you used.
 
 ### Article 11.2: Engineered Metabolic Envelopes and Closed-Loop Carrying Capacity
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
-**Where does the basic unit of civilization shift away from nature?**
+**What replaces the river basin as the basic unit beyond Earth?**
 
-Beyond Earth's biosphere, it moves from the natural river basin to an artificial, sealed life-support system built to sustain people.
+A sealed artificial habitat that recycles everything to keep people alive, called a Closed Ecological Life-Support System.
 
 **What happens to water, nitrogen, carbon and phosphorus in such a habitat?**
 
-They are closed, unalterable community trusts. The habitat cannot go beyond what it has, since mass balance is an absolute limit.
+They are fixed shared stocks held in trust for the community. The habitat cannot use more than it has, since the balance of mass is an absolute limit.
 
 **How is the number of people a habitat can hold judged?**
 
-By how well it recirculates resources, how little it leaks, its pressure integrity and heat-shedding capacity. Permits and expansion must match a verifiable balance.
+By how well it recirculates resources, how little it leaks, how well it holds pressure and how much heat it can shed. Permits and expansion must match a verifiable balance.
 
 ### Article 11.3: Invariant Atmospheric Sovereignty and the Anti-Despotism Interlock
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **What basic things am I guaranteed in a sealed habitat or ship?**
 
@@ -1164,9 +1164,9 @@ No. Dispute measures may only suspend optional tools or computing bandwidth, nev
 
 ### Article 11.4: Thermodynamic Astrodynamics: Mass, Exergy, and Velocity Budgets
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
-**What is used to pay for trade and transport between planets?**
+**How are trade and transport between planets organized?**
 
 Not money or debt. Exchanges are coordinated directly by physical quantities: energy, dry mass, volatiles (liquids and gases) and velocity change.
 
@@ -1180,7 +1180,7 @@ They are held together as shared assets, in collective trust, so that no single 
 
 ### Article 11.5: Light-Cone Subsidiarity and Asynchronous Demarchic Sortition
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Why isn't there one government for all of space?**
 
@@ -1188,15 +1188,15 @@ Light takes too long to cross huge distances, so one central democracy is physic
 
 **Who runs daily life in a single habitat?**
 
-A council of 15 to 101 citizens has full say over life inside, including workshop access, layout and shift coordination.
+A council of 15 to 101 citizens chosen by lot has full say over life inside, including workshop access, layout and shift coordination.
 
 **What does the 1,001-member assembly do?**
 
-It meets in 90-day cycles and looks after the basic rules for everyone, shared open tools, seed banks and collision avoidance.
+It meets in 90-day cycles and looks after the basic rules for everyone, open software build tools, seed banks and collision avoidance.
 
 ### Article 11.6: Kinetic Non-Aggression, the Orbital Immune System, and Swords into Plowshares
 
-*not yet reviewed · claude-sonnet-5-5 · 2026-11-17*
+*reviewed · claude-sonnet-5-5 · 2026-11-17*
 
 **Can anyone fly a spacecraft or asteroid toward a populated habitat or Earth on purpose?**
 
@@ -1204,8 +1204,8 @@ No. Deliberate propulsion burns toward inhabited habitats, moons or Earth are pr
 
 **How is the Federation protected from asteroids and collisions without an army?**
 
-It keeps spread-out interception equipment that does civilian jobs in peacetime, such as propulsion and clearing orbital debris. Beam emitters have a hardware cutoff when aimed at inhabited places.
+It keeps spread-out interception equipment that does civilian jobs in peacetime, such as propulsion and clearing orbital debris. Energy-beam emitters have a hardware cutoff, independent of software, whenever they are aimed at inhabited places.
 
 **What happens to old propulsion stages and hulls?**
 
-They go to foundries to be remelted into ordinary habitat rings and heat radiators. Planetary trajectories are checked by networks of optical and radar trackers.
+They go to foundries to be remelted into shared habitat rings and heat radiators. Planetary trajectories are checked by optical and radar tracking networks built to keep working even if some parts fail or give false data.
