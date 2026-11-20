@@ -46,6 +46,9 @@
 **Draft:**
 > 3. **Stage 3 (Sortition Arbitration Tribunal):** Binding adjudication by a Citizen Tribunal of fifteen (15) citizens via Fact-Centric Inquiry (*Inquisitio Facti*). Adversarial courtroom trials are abolished. Proceedings evaluate verifiable physical evidence, open logs, and messages or recordings a person gives of their own will, once audited as in point 5. Testimony counts only when such evidence or a second independent source confirms it.
 
+**Draft, trimmed** *(approved by the maintainer 2026-11-20, to bring Chapter VIII under its ceiling; "of their own will" becomes "freely", "once audited as in point 5" becomes "audited under point 5"; no point changed; 58 words)*:
+> 3. **Stage 3 (Sortition Arbitration Tribunal):** Binding adjudication by a Citizen Tribunal of fifteen (15) citizens via Fact-Centric Inquiry (*Inquisitio Facti*). Adversarial courtroom trials are abolished. Proceedings evaluate verifiable physical evidence, open logs, and messages or recordings a person gives freely, audited under point 5. Testimony counts only when such evidence or a second independent source confirms it.
+
 **How the decision is carried:** "messages or recordings a person gives of their own will" (the maintainer's addition; nobody is made to); "once audited as in point 5" (the guard against fabricated material, Art. 8.4.5); the last sentence (testimony never alone).
 
 **Choice made in drafting, for the maintainer.** The decision admitted testimony "for the listed non-physical acts". The draft admits it, with the same guard, **for every act a tribunal hears, physical violence included.** Reason: the list of non-physical acts is not in the canon yet (Art. 8.4.4 is not amended), so a sentence limited to it would refer to nothing; and a rule under which a threat can be proven by a witness and a blow cannot is hard to defend. This is wider than what was decided.
@@ -245,7 +248,7 @@
 | Draft | Article | Words | Before it can be merged |
 | :--- | :--- | ---: | :--- |
 | 1 | 3.1.6 | 54 to 96 | the failure sentence goes with SIM-QA-35 point 6 |
-| 2 | 8.4.3 | 35 to 63 | a word in Art. 8.4.5 for recordings that are not "reproducible" |
+| 2 | 8.4.3 | 35 to 58 (trimmed) | a word in Art. 8.4.5 for recordings that are not "reproducible" |
 | 3 | 10.3.3 | 33 to 40 | nothing found |
 | 4 | 1.2.5 (e), (f), one sentence | +29 | the closed list of SIM-QA-33; the rest of Draft C (the protective hold) |
 | 5 | 8.5.2 | 41 to 54 | with Draft 4 |
@@ -262,4 +265,4 @@
 * *Conflict 9 (legal organs):* the Statutes of the Foundation, after Swiss counsel.
 * *Conflict 12 (the steward):* belongs to the articles of SIM-QA-31, 32 and 33, which wait for D-31.1, D-32.1 and D-33.1.
 
-**Chapter VIII** with Drafts 2, 5, 7 and 9: 902 + 28 + 13 + 44 + 16 = **1,003 of 1,000**, three over, before SIM-QA-33 and 37 add their text (D-37.9 asks for an own ceiling). **Chapter I:** 1,653, ceiling suspended. **Chapter V:** to be recounted with Draft 8.
+**Chapter VIII** with Drafts 2 (trimmed), 5, 7 and 9: 902 + 23 + 13 + 44 + 16 = **998 of 1,000** (1,003 before the trim of Draft 2). SIM-QA-33 and 37 have still to add their text, and trimming will not make room for it (D-37.9 asks for an own ceiling). **Chapter I:** 1,653, ceiling suspended. **Chapter V:** to be recounted with Draft 8.
