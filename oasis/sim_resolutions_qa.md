@@ -2956,7 +2956,7 @@ Points 1, 3, 6 and 7 and the open entry of point 2 concern the powers of bodies 
 ## **SIM-QA-33: Harms That Are Not Physical**
 
 * **Date Recorded:** 2026-11-20  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction, priority 3 of six. Nothing below is red-teamed; vectors and hypotheses are preliminary. No article text is drafted.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST), opened 2026-11-20 on maintainer instruction, priority 3 of six. Red team 2026-11-20 (section 4): **`NARROWED`** for acts that leave a record, with six points; **`RED_WINS`** on silence, on H4, on H2 as worded, on proof, on coercive control as an offence, and at both ends of the scale of consequences. Reasoning on text; measurement `NOT_RUN`; first pass, no legal review. No article text is drafted.  
 * **Originating Context:** maintainer gap review of 2026-11-20. Citation check: the canon does not call the falsifying of ledgers or sensor data a crime (Art. 3.4.5 answers it by audit); it is listed below among the acts with no name and no forum. Two further acts the canon names without a forum were found and added (Arts. 2.3.1, 4.3.4).  
 * **Closest current canon:** Art. 8.4.4 ("Tribunals possess jurisdiction exclusively over physical assault, somatic violation, enclosure, or ecological poisoning, barring ideological prosecution"); Art. 8.5.2 (custody for "predatory violence" only); Art. 8.3 (victims' charter, written for physical violence).  
 * **Acts the canon names, with no forum and no consequence:** an association that finances, nominates, instructs or rewards a drawn member (Art. 4.1.3: "void", "a structural assault on the civic commons"); surveillance, biometric tracking and domestic profiling (Art. 3.4.4: "an absolute constitutional crime"); disabling biosecurity interlocks (Art. 1.4.3: "a structural crime against biospheric continuity"); eviction into homelessness (Art. 2.3.1: "a structural crime"); staff covertly influencing jurors (Art. 4.3.4: "an impeachable offense").  
@@ -2984,7 +2984,89 @@ Points 1, 3, 6 and 7 and the open entry of point 2 concern the powers of bodies 
 * **H3, consequences:** restitution; nullity of the act; removal from the function or facility that was abused; distance measures on the model of Art. 8.3.2; publication of the finding. Never Tier 1, never custody without violence.
 * **H4, existing means only:** review under Art. 4.6 for void acts, mediation for the rest; nothing added.
 
-**Next action:** red team H1 to H4 against RED-1 to RED-7; for each listed act decide forum, body and consequence; test every definition against RED-6.
+**Next action (Stage 1):** ~~red team H1 to H4 against RED-1 to RED-7~~ (done, section 4); for each listed act decide forum, body and consequence (table in section 4.3, for the maintainer); ~~test every definition against RED-6~~ (done, section 4.3).
+
+### **4. Stage 2: Red Team** *(2026-11-20, on maintainer instruction; reasoning on text only; measurement `NOT_RUN`; first pass, no legal review; no article text drafted)*
+
+#### **4.1 Reading the Current Text First** *(Jurist)*
+* **Art. 4.6 does not reach private acts.** It reviews an "enactment, decree, algorithm, or Organic Law" and declares "conformity or nullity only". A reward handed to a drawn member by an association is none of these.
+* **Art. 8.4.3 admits "strictly verifiable physical evidence and open logs".** Whether the word of a witness counts is not stated. Read strictly, it does not. Arts. 3.4.4 and 8.2.2 forbid the recording of persons. Together these make most acts without a physical trace impossible to prove, whatever the list of acts says (RED-8).
+* **The canon has no accuser and no investigator.** "Adversarial courtroom trials are abolished" (Art. 8.4.3); Peace Guilds mediate (Art. 8.1.2). Nobody is named to bring a case for the commons or to gather the facts (RED-10).
+* **The canon has no notion of attempt.** Jurisdiction over "ecological poisoning" (Art. 8.4.4) reads as requiring the poisoning (RED-11).
+* **"Enclosure" and "somatic violation" are not defined in Chapter VIII.** Enclosure in Art. 1.5 concerns the commons, so the theft of a personal possession is not enclosure.
+* **Art. 2.3.3 already sends "irreconcilable interpersonal domestic crises" to a panel that may order a relocation, and Art. 8.3.2 puts the burden of moving on the transgressor only "in physical violence".** Under coercive control without blows, the person who moves may be the one targeted.
+* **Art. 8.3.1 lets a victim decline dialogue "without penalty", while Art. 8.4 resolves harms "sequentially".** Whether declining stages 1 and 2 opens stage 3 is not stated.
+* **Art. 5.2.2 is a precedent for consequences without custody:** exclusion from Tier 3 fabrication, advanced computing and inter-basin transit, restored at once when the conduct ends (Art. 5.2.3).
+* **More acts named without a forum, found in this pass:** mercenary syndicates ("prohibited as structural crimes", Art. 8.1.2), the design or manufacture of weapons ("categorically prohibited", Art. 8.1.3), the use of emergency equipment for coercion ("unconstitutional", Art. 8.1.2). The list in the header is still not complete; a full sweep of the canon for "crime", "prohibited", "unconstitutional" and "void" is to do.
+
+#### **4.2 Verdicts on the Hypotheses**
+* **H0, silence: `RED_WINS`.** RED-1 to RED-4 succeed as written. RED-5 follows: tribunals will stretch the four words they have.
+* **H4, existing means only: `RED_WINS`.** Review under Art. 4.6 does not reach private acts (section 4.1), and mediation needs the author to take part.
+* **H1, a closed list: `NARROWED` for seven acts, `RED_WINS` for two** (table in section 4.3). A list by conduct works where the conduct leaves a record. It fails for coercive control, where no definition by conduct survives RED-6 and RED-9, and for threats made by word of mouth, which cannot be proven under Art. 8.4.3.
+* **H2, two forums: `RED_WINS` as worded; revised: `NARROWED`.** As worded it names the court and not who brings the case or who gathers the facts (RED-10). *Revised:* any person may file; a panel of three drawn from outside checks form and a minimum of evidence (the model of the Triage Panel, Art. 4.3.5) and gathers the records, with power to obtain the logs of bodies and guilds, never the contents of a person's own devices (Arts. 1.2.3, 2.2.1); a person who declines stages 1 and 2 goes straight to stage 3. *Residuals:* evidence held on personal devices is out of reach by design; tribunals of fifteen for every theft add seats that SIM-QA-18 shows are hard to fill (`NOT_RUN`).
+* **H3, consequences: `NARROWED` for a first act and for the abuse of a function; `RED_WINS` at both ends of the scale.** *Low end, the persistent author:* a person under a distance measure for stalking keeps coming back. The breach is not violent, so custody is excluded (Art. 8.5.2) and so is force under the direction of SIM-QA-37 (D-37.1 point 4: force only for violence in progress or a ruling "that concerns violence"). The measure is words. *High end, preparation of mass harm:* a person who bypasses a biosecurity interlock or builds a weapon has committed the gravest acts the canon names, without violence so far. "Never custody without violence" leaves the commons waiting for the release. Options for both in D-33.3 and D-33.4. *On the single measures:* publication of a finding is a permanent mark in a small node, against the spirit of Art. 5.2.3 ("zero perpetual civic stigma") and the erasure rule of SIM-QA-41, so it is limited to acts done in a public function and for a fixed time; removal from a function is sound; exclusion from future draws touches a political right (Art. 4.3.2) and belongs with SIM-QA-29 (who cannot serve); restitution in hours has a precedent in Art. 2.2.1 and is pressed only through Tier 3 access, as in Art. 5.2.2.
+
+#### **4.3 Each Act Against RED-6** *(definition by conduct; proof; verdict)*
+| Act | Conduct that could define it | Proof available | Verdict |
+| :--- | :--- | :--- | :--- |
+| Rewarding or instructing a drawn member (Art. 4.1.3) | a material advantage given or promised to the member or their household in connection with the mandate; or an instruction backed by a sanction (for example expulsion). Public speech addressed to members is never the act | ledgers, bookings, the association's own records | `NARROWED`. *Residual:* without money, rewards are favours and leave no trace |
+| Surveillance and profiling (Art. 3.4.4) | operating a device or routine that records identifiable persons, or combining records to profile a person (SIM-QA-41) | the device, the code, the logs | `NARROWED`. Observation of the public acts of bodies must stay outside the definition |
+| Interlock bypass (Art. 1.4.3) | tampering with the interlock | tamper evidence, by design | `BLUE_HOLDS` on definition; consequence under H3 fails (section 4.2) |
+| Eviction into homelessness (Art. 2.3.1) | usually a decree | the decree | covered by Art. 4.6 when a body acts; physical ejection by persons is already inside Art. 8.4.4 |
+| Covert influence on jurors by staff (Art. 4.3.4) | the covert channel, not the opinion | records of the assembly | `NARROWED`. The assembly concerned cannot judge it; an outside tribunal must |
+| Falsified ledgers or sensor data | a false entry | the split-sample audit of Art. 3.4.5 | `NARROWED`. Physical evidence shows the discrepancy, not the intent. The consequence that needs no finding of intent is correction and return of the excess in physical units; removal needs a pattern |
+| Sabotage of code | unauthorised alteration of code or records on common infrastructure | build records (Art. 7.3.3) | `NARROWED`. Declared testing under the bounties of Art. 7.6.1 and the disclosure rule of SIM-QA-22 D-6 must be excluded |
+| Theft of personal possessions | taking the object | the object | `NARROWED`. A tribunal of fifteen is too heavy; the Local Mediation Panel (Art. 4.2.1, "housing restitution") could order return |
+| Stalking | following, watching or contacting again after a recorded request to stop | the request; the contacts when written; little else in a commons without cameras | `NARROWED`, weak on proof |
+| Threats | a stated intent to commit physical violence against a named person (the act threatened is already inside Art. 8.4.4) | a written or recorded message | `NARROWED` when recorded; `RED_WINS` when spoken |
+| Coercive control | no definition found that is conduct and not a judgment on a relationship | none of the kind Art. 8.4.3 admits | `RED_WINS` as an offence. A protective measure without a finding of fault fits better (SIM-QA-39), with the dwelling question in SIM-QA-36 |
+
+#### **4.4 New Vectors Found in This Pass**
+* **RED-8, proof. `RED_WINS` under current text and under every hypothesis.** Section 4.1: physical evidence only, and no recording of persons. The canon chose both on purpose. Admitting testimony would open the offences above to proof and to false accusation at once. For the maintainer (D-33.2).
+* **RED-9, the accusation as a weapon. `NARROWED`.** A complaint is used against a rival practitioner (SIM-QA-32), a rival association ("instructing a member"), or a partner in a separation to win the dwelling. *Guards:* the outside panel; a minimum of evidence before anything is ordered; interim measures short and neutral (the person asking for protection is offered another dwelling at once; no one is moved out before a finding).
+* **RED-10, no accuser, no investigator. `RED_WINS` under H2 as worded;** revised in section 4.2.
+* **RED-11, attempt and preparation. `RED_WINS` under current text.** Nothing reaches a poisoning prepared and not carried out, or a pathogen under construction. Joined with the high end of H3.
+* **RED-12, collective authors. `NARROWED`.** When a node falsifies its accounts or an association rewards a member, who answers? An association cannot be dissolved (Art. 1.4.1). *Guards:* nullity and return of the excess by the collective; removal from function of the persons who signed; never a ban on associating. For guilds, with SIM-QA-32 RED-14.
+* **RED-13, drawn members answering for their votes. `NARROWED`.** If a council that orders surveillance exposes its members to a tribunal, people refuse to serve (SIM-QA-18). *Guard:* an act of a body is voided under Art. 4.6 and no member answers for a vote; a member answers only for conduct outside the vote (taking a reward, falsifying a record).
+* **RED-14, relocation against Art. 10.4.3. Open.** Moving a persistent author to another node is "involuntary deportation" on a strict reading. Art. 8.3.2 already orders it for physical violence, so the tension exists in the canon today.
+* **RED-15, the transition. Cross-docket.** Until a phase gate, state law covers every act on this list. Under the direction of SIM-QA-40 a node's forum would be voluntary mediation only. This docket describes the rule after that.
+
+#### **4.5 What Survives** *(the rule as a set of points; not article text)*
+Verdict for the docket: **`NARROWED`** for acts that leave a record, with the six points below; **`RED_WINS`** on silence, on H4, on H2 as worded, on proof (RED-8), on coercive control as an offence, and at both ends of the scale of consequences.
+1. A closed list of acts added to Art. 8.4.4, each defined by conduct that leaves a record; the content of an opinion is never an element.
+2. Any person may file; a panel of three drawn from outside checks form and a minimum of evidence and gathers records from bodies and guilds, never from a person's own devices.
+3. Acts against the commons go to a tribunal drawn from another watershed. Acts between persons go through the ladder; a person who declines dialogue goes to the tribunal. The return of a possession can be ordered by the Local Mediation Panel.
+4. Consequences: return or restitution, nullity, removal from the function or facility abused, a distance measure. Publication only for acts in a public function, for a fixed time. Pressure only through Tier 3 access, as in Art. 5.2.2. Never Tier 1.
+5. An act of a body is voided under Art. 4.6; no member answers for a vote.
+6. Where no conduct can be defined (coercive control), protection is offered without a finding of fault.
+
+#### **4.6 Placement and Word Count** *(instructions 10 and 10a)*
+A new jurisdiction and its consequences touch rights, so the core stays in the Constitution, in Chapter VIII. Chapter VIII holds 862 words today and 902 with SIM-QA-22 D-3; SIM-QA-37 will add a right of self-defence and a defender. A list of nine acts with definitions does not fit in 98 words. Under the placement test the definitions cannot simply move to Organic Law, since a 60% majority could then widen an offence. *Options:* **O-1,** the Constitution names the acts and the limit ("defined by conduct, never by opinion; Organic Law may narrow a definition and never widen it"), and Organic Law holds the definitions; **O-2,** an own ceiling for Chapter VIII, by separate decision.
+
+#### **4.7 Compression Disclosure** *(instruction 8)*
+| # | Point | Source | Change | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | tribunals have jurisdiction "exclusively" over four physical matters | Art. 8.4.4 | a closed list of further acts | **weakened** as a guarantee against prosecution; the bar on ideological prosecution is kept |
+| 2 | proceedings evaluate "strictly verifiable physical evidence and open logs" | Art. 8.4.3 | only if D-33.2 admits testimony | **weakened**, conditional |
+| 3 | custody only for "predatory violence resisting stabilization" | Art. 8.5.2 | only if D-33.4 extends it to preparation of mass harm | **weakened**, conditional |
+| 4 | no "involuntary deportation" | Art. 10.4.3 | only if D-33.3 allows relocation of a persistent author | **weakened**, conditional |
+
+#### **4.8 Residual Weaknesses**
+* Most of these acts stay hard to prove in a commons that records no one. That is the price of Arts. 3.4.4 and 8.2.2, and this docket does not remove it.
+* Favours leave no trace; the rule on rewarding drawn members reaches clumsy cases only.
+* Nothing is measured: the number of cases, the seats they need.
+* Five guards rest on other dockets: SIM-QA-29, 36, 37, 39, 41.
+* No lawyer and no one who works with victims of stalking or domestic abuse has read this.
+
+**Maintainer decisions needed (D-33.1 to D-33.6):**
+* **D-33.1:** accept the six points of section 4.5 as the direction, or change them; and which acts of the table in section 4.3 enter the list.
+* **D-33.2:** proof (RED-8): (a) keep Art. 8.4.3 as it stands and accept that unrecorded acts go unproven; (b) admit testimony for the listed acts with a rule of corroboration. The red team gives no preference: (a) leaves victims without a remedy, (b) opens false accusation.
+* **D-33.3:** the persistent non-violent author: (a) accept that the measure is unenforced; (b) exclusion from Tier 3, computing and transit until the breach ends (Art. 5.2.2 model); (c) relocation to another node by ruling of the tribunal, with force allowed to carry it out (changes D-37.1 point 4 and meets Art. 10.4.3). The red team supports (b) first and (c) only on repeated breach.
+* **D-33.4:** preparation of mass harm (interlock bypass, weapons): keep "never custody without violence", or extend Art. 8.5.2 to these acts with all its guarantees.
+* **D-33.5:** placement: O-1 or O-2.
+* **D-33.6:** a full sweep of the canon for acts named and left without a forum, before drafting.
+
+**Next action:** maintainer decisions D-33.1 to D-33.6; then article text and Organic Law definitions as hypothesis, each definition red-teamed again against RED-6; case-load estimate before any number; legal review.
 
 ---
 
