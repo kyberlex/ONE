@@ -2390,6 +2390,8 @@ Point 1 is the one sentence for Chapter I (about forty words as sketched; Chapte
 
 **Maintainer decision 2026-11-20 (conflicts batch, conflict 7, item 7c; from SIM-QA-36 D-36.2):** *the age of consent (SIM-QA-36 RED-13), assigned here as the rule and to SIM-QA-33 as a listed act:* the canon states that a sexual act of an adult with a child is violence under Art. 8.4.4, whatever the child said; the age is a number in Organic Law; the Constitution states the bound that number must keep (instruction 10). The red team's pick, adopted. *Open for drafting:* the bound itself (not proposed; no figure is written without a source); relations between young persons close in age; in which chapter the sentence sits. The first rule of the canon that turns on a person's age. No one who works with children has read this. Direction only; no wording.
 
+**Maintainer decision 2026-11-20 (wording, [`conflicts_draft_2026-11-20.md`](conflicts_draft_2026-11-20.md), Drafts 7 and 8):** the age-of-consent rule is approved in a second version after the maintainer's objection that maturity, not age, is the right trigger: a floor of fourteen below which a sexual act of an adult is always somatic violation, and above it a violation where the act exploits the immaturity or dependence of a young person (Art. 8.4.4). The rule for a child in danger is approved as a new point 4 of Art. 5.4. Neither is merged.
+
 **Next action:** held at Stage 1 by maintainer decision. When opened: thermodynamic check of the calorie floor under H1/H2 (SIMONE, synthetic); red team RED-1 to RED-7; compression disclosure against the v1.0 points of XII.3 and XII.4.
 
 ---
