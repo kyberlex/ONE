@@ -2219,6 +2219,8 @@ Chapter I today: 808. Art. 1.8 as drafted in section 5 with its heading: 220. Pa
 * **H2, general rule for every collective, religious or not (technology-neutral):** (a) no text, tradition or association holds standing in public adjudication; (b) no association holds territory, levies on members under public rule, or runs a public jurisdiction; worship and meeting use common halls under ordinary usufruct; (c) leaving any association is free, and no one may lose dwelling, food, tools, rosters or civic standing for leaving; (d) the child's bodily integrity as in SIM-QA-25.
 * **H3, exit guarantee only:** only (c), leaving (a), (b), (d) to existing articles and review.
 
+**Note 2026-11-20:** point (d) of this docket (non-therapeutic alteration of children) was decided in SIM-QA-25 (D-25.4, option a) and is no longer open here. This docket stays held at Stage 1 and has not been red-teamed; when it is, RED-6 (mass practice; enforcement without surveillance of homes) is to be tested against that decision.
+
 **Next action:** held at Stage 1 by maintainer decision. When opened: red team H1–H3 against RED-1 to RED-6; align (d) with SIM-QA-25 so that one article carries children's bodily integrity; compression disclosure against the four v1.0 points.
 
 ---
@@ -2348,6 +2350,8 @@ Point 1 is the one sentence for Chapter I (about forty words as sketched; Chapte
 * **D-25.9:** the youth spaces of v1.0 (RED-12) and the house rule of Compact 5: Organic Law, or dropped.
 * **D-25.10:** a child's own Tier 1 (RED-9) and limits on apprenticeship (RED-11).
 * **D-25.11:** placement and ceilings (Chapters I, V, VIII).
+
+**Maintainer decisions 2026-11-20 (Chapter I batch 2, [`chapter_i_decision_batch_2_2026-11-20.md`](chapter_i_decision_batch_2_2026-11-20.md); answered item by item; directions only):** **item 4a** (D-25.1): the eight points of section 4.5 are the direction. **Item 4b** (D-25.2): the four short sentences of Draft F all go in Chapter I, as an exception to the one-sentence rule of batch 1 item 13b, because Drafts B and C need two of them. **Item 4c** (D-25.4): option (a). The carers' consent never covers an irreversible change to a child's body that no medical need requires; it waits until the person can decide; applied through the commons' facilities and practitioners, which do not perform it. The text is to say that Art. 1.8 does not alter this. *Recorded with the decision:* it was taken before SIM-QA-24 (religion) was red-teamed; communities for whom the circumcision of boys is a duty will not join, or will have it done outside the commons' facilities. **Still open:** D-25.3, D-25.5 to D-25.11.
 
 **Next action (after the red team):** maintainer decisions D-25.1 to D-25.11; a specialist for every age and for the protective measure; then text as hypothesis, shown beside the current text, with a second red-team pass.
 
@@ -3164,6 +3168,8 @@ A new jurisdiction and its consequences touch rights, so the core stays in the C
 
 **Note 2026-11-20 (Chapter I batch):** the maintainer decided that Chapter I will name a closed list of cases in which a person may be held (SIM-QA-37, item 2). Preparation of mass harm (D-33.4) was put to the maintainer with no pick from the red team and is **still open**; if it is to be a case, it must enter that list before the lock.
 
+**Maintainer decisions 2026-11-20 (Chapter I batch 2, [`chapter_i_decision_batch_2_2026-11-20.md`](chapter_i_decision_batch_2_2026-11-20.md); answered item by item; directions only):** **item 3** (D-33.4): option C. No custody for the preparation of mass harm. A person may be held to stop the making or the use of a means of mass death, for the time needed to take that means away, with review within 72 hours. A case is added to the Chapter I list (SIM-QA-37, Draft C). *Residuals recorded with the decision:* a person who starts again is stopped again each time; a sentence outside Chapter I must say that a means of mass death is not a personal possession under Art. 2.2.1 (with D-37.4).
+
 **Next action:** maintainer decisions D-33.1 to D-33.6; then article text and Organic Law definitions as hypothesis, each definition red-teamed again against RED-6; case-load estimate before any number; legal review.
 
 ---
@@ -3509,6 +3515,8 @@ Three dockets now ask for the remaining room in Chapter II. The conflict goes to
 * **D-36.5:** the reading of "hereditary" in Art. 2.2.2 as succession by residence.
 * **D-36.6:** placement, and the order of claims on Chapter II among SIM-QA-32, 34 and 36.
 
+**Maintainer decisions 2026-11-20 (Chapter I batch 2, [`chapter_i_decision_batch_2_2026-11-20.md`](chapter_i_decision_batch_2_2026-11-20.md); answered item by item; directions only):** **item 1a** (D-36.4, for one of its three uses): for an adult who cannot decide, the person they named in advance decides, following what they said they wanted; failing that, those who live with them; failing that, a person drawn by lot. Next of kin by rank is not used. The other two uses of naming (possessions at death; persons asked to join) stay open with D-36.4. **Item 1e:** the rest of the subject goes to a new docket, SIM-QA-43.
+
 **Next action:** maintainer decisions D-36.1 to D-36.6; then article text and Organic Law draft as hypothesis, with a second red-team pass; align the records with SIM-QA-29 and SIM-QA-41; reading by a family lawyer and a child-protection practitioner.
 
 ---
@@ -3630,6 +3638,8 @@ Every point concerns a power over persons or a right, so the core stays in the C
 * **D-37.9:** an own ceiling for Chapter VIII, with SIM-QA-33.
 
 **Maintainer decisions 2026-11-20 (Chapter I batch, [`chapter_i_decision_batch_2026-11-20.md`](chapter_i_decision_batch_2026-11-20.md); the maintainer adopted the red team's pick on every item; directions only, no wording decided):** **item 2** (D-37.8): option B, Chapter I itself names a closed list of cases in which a person may be held, and prohibits holding a person outside them; the guarantees stay in Chapter VIII. **Cases accepted for that list** (D-37.3 in part): violence against a person in progress; violence about to begin; holding until the validation of Art. 8.5.3; custody under Art. 8.5; carrying out a ruling of a tribunal that concerns violence; an act in progress that endangers the life of others, limited to danger to life; the protective hold of SIM-QA-39 (item 4). **Not accepted:** enforced isolation (item 3, O-A). **Open:** preparation of mass harm (D-33.4; no pick was given); rulings on enclosure and poisoning (D-37.3 d). **Item 11** (D-37.6 in part): self-defence is a rule of judgment in Chapter VIII, not a right in Chapter I; whether it covers a defender who injures stays open. **Still open:** D-37.2, D-37.4, D-37.5, D-37.7, D-37.9.
+
+**Note 2026-11-20 (Chapter I batch 2):** the Chapter I list of cases gains two: stopping the making or use of a means of mass death, for the time needed to take it away (item 3, D-33.4); and keeping from immediate harm a person who cannot judge the danger, with a jury finding before any continuing restriction (item 1d). Enforced isolation stays refused; the protective hold stays open until its reading. D-37.3 (d), rulings on enclosure and poisoning, is still open.
 
 **Next action:** maintainer decisions D-37.2 to D-37.9; then the D-3 sentence and the article text as hypothesis, shown beside the current text, with a second red-team pass; reading by people with practice in restraint and in defence.
 
@@ -3866,6 +3876,8 @@ Under O-A, lines 1 and 2 are touched by the protective hold only.
 * **D-39.9:** placement (Chapters I, V, VIII).
 
 **Maintainer decisions 2026-11-20 (Chapter I batch, [`chapter_i_decision_batch_2026-11-20.md`](chapter_i_decision_batch_2026-11-20.md); the maintainer adopted the red team's pick on every item; directions only, no wording decided):** **item 3** (D-39.2): O-A, isolation by order and support, never by force; Art. 1.2.3 is not touched for epidemics; the person who refuses is accepted as a residual. **Item 4** (D-39.3): B, narrowly: a protective hold is written into Chapter I as a closed case, with its trigger and limits in the text (an act in progress that endangers the person's own life, lucidity in doubt; hours first, a maximum in days; no medication imposed; never for words, a refusal of treatment, a protest or a way of living), and Chapter I says that the exit of Art. 1.2.3 is exercised through the Organic Law procedure; **a specialist reading comes before any wording**. **Item 8:** Art. 1.4.1 is not changed; recorded reading: closing the commons' own rooms for a limited time is the management of a facility and no decree may forbid people to gather elsewhere. **Still open:** D-39.4 to D-39.9.
+
+**Maintainer decisions 2026-11-20 (Chapter I batch 2, [`chapter_i_decision_batch_2_2026-11-20.md`](chapter_i_decision_batch_2_2026-11-20.md); answered item by item; directions only):** **item 1b:** where nobody can be asked in time, a clinician may give what is needed to save life or prevent grave harm, unless the person's refusal is known. **Item 1c** (D-39.7): the present refusal prevails for anything done to the body, so no medication is ever forced; the advance statement governs everything else. **Item 1d** (D-39.8 in part): anyone may keep a person who cannot judge the danger from immediate harm; a continuing restriction needs a jury drawn from outside to find the incapacity, with periodic review, the least restriction that works, and an Advocate. **Item 1e** (D-39.8): a new docket, SIM-QA-43, for the detail. **Item 2** (D-39.3): three readers for the protective hold (a clinician of acute mental-health emergencies; a person who has been held under such a measure; a lawyer of mental-health detention), the eight questions of the batch file, read together with item 1d; the place in Draft C stays open and nothing about the hold is worded until the reading. **The maintainer finds the readers.**
 
 **Next action:** maintainer decisions D-39.2 to D-39.9; then article text and Organic Law draft as hypothesis, shown beside the current text, with a second red-team pass; specialist review before any merge.
 
@@ -4275,6 +4287,40 @@ The Statutes are outside the Constitution's ceilings. Two sentences would enter 
 **Maintainer decision 2026-11-20 (scope, D-42.7 in part):** a transitional amending body is written before the lock: drawn by lot, deciding at 75%, never touching Chapter I, with a minimum roll below which nothing is amended except a correction that mandatory law requires; it ends when the competent assembly exists. **Still open under D-42.7:** which assembly is the permanent amending body (the red team's lean, the highest tier seated at the time, at 75%, with the delay of SIM-QA-22 D-1, is **not red-teamed**); whether the Constitution is annexed in full or by reference (waits for counsel, question 6); the size of the minimum roll. Consequence recorded in [`pre_lock_consolidation_2026-11-20.md`](pre_lock_consolidation_2026-11-20.md): with a transitional body, the canon text of section 3.2 there need not be merged before the lock.
 
 **Next action:** maintainer decisions D-42.3 to D-42.11; the eleven questions of D-42.2 and section 5.4 to Swiss counsel; then the German deed redrafted first and Part A after it, as hypothesis, with a second red-team pass; nothing in `foundation/` changes before that.
+
+---
+
+## **SIM-QA-43: Adults Who Cannot Decide**
+
+* **Date Recorded:** 2026-11-20  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 by maintainer decision (Chapter I batch 2, item 1e). Nothing below is red-teamed beyond what SIM-QA-36, 39 and 41 already recorded. No article text is drafted here; the Chapter I clauses are in [`chapter_i_draft_2026-11-20.md`](chapter_i_draft_2026-11-20.md).  
+* **Originating Context:** found three times in the red team of 2026-11-20: nobody speaks for an adult who cannot (SIM-QA-36 RED-11); a short protective hold does not fit a person who will not regain lucidity (SIM-QA-39 RED-14); the consent sentence and the list of cases in which a person may be held leave such a person out (Chapter I drafts B and C).  
+* **Closest current canon:** Art. 1.2.1 ("Every human being possesses absolute, unconditional sovereignty over their biological, physical, and cognitive substrate"), Art. 1.2.2, Art. 1.2.3; Art. 5.5 (mental health); Art. 5.6.1 (elder accompaniment as care); Art. 2.3 (no displacement). No article on incapacity.  
+* **Constitutional Articles:** Arts. 1.2, 1.3.2, 2.3, 5.5, 5.6, 8.5.3; SIM-QA-22 D-5 (geriatric care); SIM-QA-29 (Advocates; exemption from the draw "on request of the person, or of their legal representative with a medical opinion"); SIM-QA-36 (named persons); SIM-QA-39 (protective hold); SIM-QA-41 (medical record under the person's key).
+* **Already decided (Chapter I batch 2, 2026-11-20), not reopened here:** who decides (the named person, then those who live with the person, then a person drawn by lot); emergency treatment when nobody can be asked, unless a refusal is known; a present refusal prevails for anything done to the body; keeping a person from immediate harm by anyone, and a continuing restriction only after a jury drawn from outside finds the incapacity, with review, least restriction and an Advocate.
+
+### **1. The Friction**
+* The decisions above fix the principle in Chapter I. Everything that makes it work is missing: who assesses capacity, by what test, how often it is reviewed, what a continuing restriction may consist of, and what a place of care may and may not do.
+* A finding of incapacity removes a person's own voice from decisions about them. It is the measure most open to abuse against the old, the odd and the inconvenient.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure; untested)*
+* **RED-1, incapacity declared for convenience:** a family or a node has a person found incapable to settle a dispute, free a dwelling or end a nuisance.
+* **RED-2, all or nothing:** a person able to decide some things and not others loses every decision.
+* **RED-3, the finding that never ends:** review exists on paper; nobody asks for it.
+* **RED-4, the locked ward:** "the least restriction that works" becomes a closed building.
+* **RED-5, the named person who gains:** the person named stands to receive the dwelling or the possessions (SIM-QA-34, SIM-QA-36).
+* **RED-6, refusal that kills:** under the decided rule a person with dementia who refuses an antibiotic is not treated.
+* **RED-7, the jury that cannot judge:** lay jurors asked to find incapacity depend on one clinician's opinion.
+* **RED-8, the draw:** the SIM-QA-29 draft speaks of a "legal representative"; the decided order (named person, co-inhabitants, a drawn person) must replace it.
+
+### **3. Preliminary Hypotheses** *(untested)*
+* **H1, capacity by decision:** capacity is found for a kind of decision, never for the whole person.
+* **H2, review without a request:** every finding lapses after a period unless renewed by a new jury.
+* **H3, restriction listed:** Organic Law lists what a continuing restriction may be; anything else is holding outside the Chapter I cases.
+* **H4, no gain:** a named person who would gain from a decision does not take it.
+* **H5, two opinions:** the jury hears two clinicians who have not conferred, and the person.
+
+**Next action:** held at Stage 1 until the readers of the protective hold (SIM-QA-39, batch 2 item 2) have read it together with this subject; then red team.
 
 ---
 

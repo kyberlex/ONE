@@ -157,3 +157,77 @@ Chapter I with the accepted dockets stood at 1,181 (as recorded in the dockets; 
 4. **Children:** D-25.1, D-25.2, and D-25.4 for "consent included".
 5. **The first three classes in Organic Law** on the day Draft A is merged.
 6. **The ceiling of Chapter I,** if the count above passes it.
+
+---
+
+# **Second Drafting Pass** *(2026-11-20, after the answers to [`chapter_i_decision_batch_2_2026-11-20.md`](chapter_i_decision_batch_2_2026-11-20.md))*
+
+`[STATUS: SIMULATION_HYPOTHESIS]`. Not merged. Drafts A, B, D and E above are unchanged. Draft C and Draft F are revised and one draft is new. The first versions stay above as the record.
+
+## **Draft C, second version. Art. 1.2.5** *(batch 2, items 1d and 3)*
+
+**First version (above):**
+> 5. A person may be held against their will only: (a) to stop violence against a person, in progress or immediately about to begin; (b) to stop an act in progress that directly endangers the life of others; (c) after such violence, until a jury drawn by lot validates the holding, within seventy-two (72) hours at most, or the person is released; (d) in custody for predatory violence resisting stabilization, ordered and periodically reviewed by a jury drawn by lot; (e) to carry out the ruling of a tribunal drawn by lot concerning violence. Law may narrow these cases and never widen them. Any other holding of a person is physical subjugation.
+
+**Second version:**
+> 5. A person may be held against their will only: (a) to stop violence against a person, in progress or immediately about to begin; (b) to stop an act in progress that directly endangers the life of others; (c) to stop the making or the use of a means of mass death, for the time needed to take that means away, as reviewed by a jury drawn by lot within seventy-two (72) hours; (d) after violence under (a), until a jury drawn by lot validates the holding, within seventy-two (72) hours at most, or the person is released; (e) in custody for predatory violence resisting stabilization, ordered and periodically reviewed by a jury drawn by lot; (f) to carry out the ruling of a tribunal drawn by lot concerning violence; (g) to keep from immediate harm a person who cannot judge the danger; any continuing restriction requires a jury drawn by lot from outside to find that incapacity and review it periodically, allows only the least restriction that works, and gives the person an Advocate. Law may narrow these cases and never widen them. Any other holding of a person is physical subjugation.
+
+**What changed:** case (c) is new (item 3: stop and take away; no custody); the former (c), (d), (e) are now (d), (e), (f), and (d) names case (a) where it said "such violence"; case (g) is new (item 1d). **Still open:** the protective hold, which would be case (h), after its reading (batch 2, item 2).
+
+**Red team of the new wording.**
+* *(c) "a means of mass death".* Not defined here; Organic Law must define it, inside the functional bar of Draft A. A kitchen, a car and a pharmacy can each kill many: the definition has to turn on what a thing is made for. `NARROWED`; the definition is the risk.
+* *(c) "for the time needed to take that means away".* No continuing custody, as decided. A person who starts again is held again. Taking the thing away needs a sentence outside Chapter I: under Art. 2.2.1 personal possessions "can never be expropriated".
+* *(g), first half.* "A person who cannot judge the danger" also describes someone drunk, or in an acute crisis. It overlaps the protective hold, which is why both go to the same readers. The word "immediate" is the only limit on the first half, and anyone may act on it. `NARROWED`, to be read by the specialists.
+* *(g), second half.* Four guarantees are frozen in Chapter I: a jury from outside, periodic review, least restriction, an Advocate. No period is stated; SIM-QA-43 must set one, and Chapter I then has no ceiling for it. For the maintainer whether a ceiling in words is wanted.
+
+## **Draft G, new. Art. 1.2, new point 6** *(batch 2, items 1a, 1b, 1c)*
+
+**Current:** none.
+
+**Draft:**
+> 6. For an adult who cannot decide, the person they named in advance decides, as they would have wished; failing that, those who live with them; failing that, a person drawn by lot. Where no one can be asked in time, what is needed to save life or prevent grave harm may be given, unless the person's refusal is known. No treatment is given to an adult who refuses it at that moment, whatever they stated before.
+
+**How the decisions are carried:** first sentence, 1a; second, 1b; third, 1c.
+
+**Red team of the wording.**
+* *"an adult who cannot decide".* Who finds that, and for which decision, is not said here: SIM-QA-43. Until it is written, the first sentence can be invoked by anyone who claims the person cannot decide. `RED_WINS` **until SIM-QA-43 gives the finding a procedure**; this sentence should not be merged before it.
+* *"an adult who refuses it at that moment".* Limited to adults on purpose: a small child's refusal of medicine does not bind the carers (Draft F). A young person's refusal is the growing capacity of Draft F and has no line here.
+* *The third sentence can cost a life.* A person with dementia who pushes away an antibiotic is not treated. This is the decision taken (item 1c); it is written plainly so that it is seen.
+* *"those who live with them".* Co-inhabitants may gain a dwelling by the person's death (SIM-QA-43 RED-5). A rule that a person who would gain does not decide belongs in Organic Law.
+
+## **Draft F, second version. Art. 1.7.3** *(batch 2, items 4b and 4c)*
+
+**First version (above):**
+> 3. A child holds every right of this Chapter. Those who care for a child exercise these rights, consent included, for the child's benefit and with the child's voice; the child exercises them increasingly as capacity grows. No person and no body owns a child. Caring for and protecting a child is not holding under Article 1.2.5.
+
+**Second version:**
+> 3. A child holds every right of this Chapter. Those who care for a child exercise these rights, consent included, for the child's benefit and with the child's voice; the child exercises them increasingly as capacity grows. Their consent never covers an irreversible change to the child's body that no medical need requires: that waits until the person can decide, and Article 1.8 does not alter this. No person and no body owns a child. Caring for and protecting a child is not holding under Article 1.2.5.
+
+**What changed:** the third sentence is new (item 4c). The four sentences of the first version all stay in Chapter I (item 4b).
+
+**Red team of the new wording.**
+* *"that no medical need requires".* Surgery on infants born with intersex traits has been justified as medically needed. Who certifies need, and that appearance is not need, must be in Organic Law, or the clause protects least where it was most meant to.
+* *"irreversible".* Reaches the circumcision of boys, as decided. It also reaches a pierced ear or a tattoo; minor cases will be argued.
+* *"Article 1.8 does not alter this".* Needed, because Art. 1.8.4 (not merged) reviews a rule that falls unequally on a religion. It refers to an article that does not exist yet; the two must be merged together.
+* *How it is applied* (through the commons' facilities and practitioners, which do not perform the change) is not in the sentence; it belongs in Chapter V or Organic Law.
+* *Decided before SIM-QA-24 was red-teamed.* Recorded in SIM-QA-25.
+
+## **Word Count After the Second Pass** *(as the rule of 2026-11-20 requires: the chapter and the whole)*
+
+| Draft | Before this pass | After | Change |
+| :--- | ---: | ---: | ---: |
+| C, Art. 1.2.5 | 112 | 193 | +81 |
+| G, Art. 1.2.6 (new) | 0 | 77 | +77 |
+| F, Art. 1.7.3 | 57 | 87 | +30 |
+| **Net** | | | **+188** |
+
+**Chapter I: 1,624 words** (1,436 after the first pass). **The whole Constitution: 12,058 words** (11,870 after the first pass), counting the text accepted in principle as recorded in [`word_recount_2026-11-20.md`](word_recount_2026-11-20.md). Both figures are suspended as ceilings by maintainer decision; they are stated so that the next recount is a sum. The protective hold and the sentences of SIM-QA-24, 27 and 28 are not drafted and not counted.
+
+## **Open After the Second Pass**
+
+1. **The protective hold,** case (h): the reading by three specialists (the maintainer finds them).
+2. **Draft G cannot be merged before SIM-QA-43** gives the finding of incapacity a procedure.
+3. **Draft F and Art. 1.8** (SIM-QA-23) must be merged together.
+4. **A definition of "a means of mass death"** in Organic Law, and a sentence beside Art. 2.2.1.
+5. **The three classes of Draft A** in Organic Law on the day of the merge.
+6. **SIM-QA-24, 27 and 28:** whether each adds a sentence to Chapter I.

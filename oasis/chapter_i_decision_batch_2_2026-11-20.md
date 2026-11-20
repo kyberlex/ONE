@@ -109,3 +109,24 @@
 ## **After the Answers**
 
 Drafts B, C and F are completed and counted (chapter and whole, as the rule now requires); the hold stays open until the reading of item 2; a new docket is opened if 1e is A. Nothing is merged.
+
+---
+
+## **Decisions Recorded (2026-11-20)**
+
+Answered by the maintainer item by item. Directions only; the wording is in the second drafting pass of [`chapter_i_draft_2026-11-20.md`](chapter_i_draft_2026-11-20.md).
+
+| Item | Decision | Recorded in |
+| :--- | :--- | :--- |
+| 1a | A: the named person, then those who live with the person, then a person drawn by lot | SIM-QA-36 |
+| 1b | yes: emergency treatment unless a refusal is known | SIM-QA-39 |
+| 1c | C: the present refusal prevails for the body; the advance statement governs the rest | SIM-QA-39 |
+| 1d | B: a jury finding before any continuing restriction | SIM-QA-39, SIM-QA-37 |
+| 1e | A: new docket SIM-QA-43 | SIM-QA-43 |
+| 2a to 2d | agreed: three readers, eight questions, read with 1d, nothing worded until then; the maintainer finds the readers | SIM-QA-39 |
+| 3 | C: stop and take away; no custody | SIM-QA-33, SIM-QA-37 |
+| 4a | the eight points accepted | SIM-QA-25 |
+| 4b | A: four sentences in Chapter I | SIM-QA-25 |
+| 4c | A: an irreversible, non-therapeutic change to a child's body waits until the person can decide | SIM-QA-25, SIM-QA-24 |
+
+After these answers Chapter I stands at 1,624 words and the whole at 12,058 (drafts, not merged).
