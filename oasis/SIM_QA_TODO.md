@@ -139,7 +139,7 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 
 **SIM-QA-35, correcting an error, and leaving** ([log](sim_resolutions_qa.md), docket section 4)
 - [ ] D-35.1: accept the six points of section 4.5 as the direction, or change them.
-- [ ] D-35.2: a wrong bound in Chapter I: (a) permanent, Art. 1.7 stays absolute, H2 withdrawn; (b) a correction path, with the back door it opens.
+- [x] D-35.2: a wrong bound in Chapter I: (a) permanent, Art. 1.7 stays absolute, H2 withdrawn; (b) a correction path, with the back door it opens. *(decided 2026-11-20: (a), Chapter I absolutely closed, H2 withdrawn)*
 - [ ] D-35.3: the six disclosure lines of section 4.7 (all touch Chapter I), in particular the biosecurity bar stated by function. *(partly decided 2026-11-20, batch item 1: the four lines on Art. 1.4.3; lines 5 and 6 open)*
 - [ ] D-35.4: withdrawal of a bioregion from compacts, solidarity, higher assemblies and standards at 75% of adult residents after notice, or no exit beyond the individual's.
 - [ ] D-35.5: the captured node (RED-11): accept as a limit, or a docket on what the federation may do short of force.
@@ -208,7 +208,7 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 - [ ] D-42.4: invariant 1 in two halves, and where it is reworded (project rules, `CONTRIBUTING.md`, `COMPARATIVE_ANALYSIS.md`).
 - [ ] D-42.5: removal decided outside the Board; the drawn panel's assent for the gravest acts.
 - [ ] D-42.6: the roll for the lot: all adult residents and standing contributors, with a minimum number.
-- [ ] D-42.7: annex by reference or in full; the transitional amending body; the amending body named in Chapter IV before the lock (with SIM-QA-35).
+- [ ] D-42.7: annex by reference or in full; the transitional amending body; the amending body named in Chapter IV before the lock (with SIM-QA-35). *(partly decided 2026-11-20: a transitional drawn amending body is written before the lock; the permanent body, the annex and the minimum roll are open)*
 - [x] D-42.8: the exclusive commercial licence against the open licences and canon Art. 1.5.2: drop the exclusivity and the "non-commercial" wording, or keep them as a stated transitional derogation. *(decided 2026-11-20, batch item 9: drop the exclusivity and the "non-commercial" wording; Chapter I unchanged)*
 - [ ] D-42.9: the appointing body: all seated Bioregional Assemblies together, by draw among candidates who meet criteria.
 - [ ] D-42.10: one foundation for all title, or a land trust per country bound by contract.

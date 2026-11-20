@@ -294,7 +294,9 @@ The maintainer adopted the red team's pick on every item. These are directions; 
 | 13a | B: SIM-QA-25 opened now; SIM-QA-24, 27, 28 stay held | SIM-QA-25, board |
 | 13b | B: one short sentence of right per docket | SIM-QA-25, board |
 
-**Not decided by this batch:** the premise (D-35.2 option a; D-42.7); item 2-list vii (preparation of mass harm, D-33.4); whether self-defence covers a defender who injures (D-37.6); the ceiling of Chapter VII (item 10).
+**Premise confirmed by the maintainer later the same day:** D-35.2 option (a), and a transitional amending body (D-42.7 in part).
+
+**Not decided by this batch:** item 2-list vii (preparation of mass harm, D-33.4); whether self-defence covers a defender who injures (D-37.6); the ceiling of Chapter VII (item 10).
 
 ## **Item 12: Result of the Second Reading** *(same day; rule applied: rights, prohibitions, protected groups, thresholds and bounds stay in Chapter I; numbers beyond the bound, procedures, mechanisms and lists of means go to Organic Law)*
 

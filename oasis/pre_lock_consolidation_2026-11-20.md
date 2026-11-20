@@ -15,7 +15,7 @@ Three different things close at the lock, and they close differently.
 2. **The rest of the Constitution closes until an amending body exists.** Statutes Art. 13.4 requires ratification by "the seated sortition assemblies", which will not exist for years, and canon Art. 4.5.1 does not say which assembly amends (SIM-QA-42, section 5.1). Unless a transitional amending body is written first (D-42.7), every other chapter is frozen in fact for that time.
 3. **The Foundation's deed closes at the notary.** The purpose clause then changes only through the supervisory authority (SIM-QA-42, section 5.1).
 
-So the first decision is D-42.7 together with D-35.2: whether a transitional amending body exists, and whether Chapter I stays absolutely closed. Those two answers decide how much of the list in section 3 is truly urgent.
+**Decided 2026-11-20:** Chapter I stays absolutely closed (D-35.2, option a) and a transitional amending body is written before the lock (D-42.7 in part), so section 3.2 below is not urgent. As first written: the first decision is D-42.7 together with D-35.2: whether a transitional amending body exists, and whether Chapter I stays absolutely closed. Those two answers decide how much of the list in section 3 is truly urgent.
 
 ---
 
