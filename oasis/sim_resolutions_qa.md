@@ -2226,7 +2226,7 @@ Chapter I today: 808. Art. 1.8 as drafted in section 5 with its heading: 220. Pa
 ## **SIM-QA-25: Lost Provision — Children**
 
 * **Date Recorded:** 2026-11-13  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS) — opened from the SIM-QA-22 side audit by maintainer decision 2026-11-13; held at Stage 1 until the maintainer says otherwise. Nothing below is red-teamed.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST) — opened from the SIM-QA-22 side audit by maintainer decision 2026-11-13; held at Stage 1 until 2026-11-20, when the maintainer opened it (Chapter I batch, item 13). Red team 2026-11-20 (section 4): **`NARROWED`** with eight points; **`RED_WINS`** on silence, on H2, and under current text on the age of consent, the age of responsibility and a parent's sanction falling on the child; bodily integrity left open. Reasoning on text; first pass; no specialist review. No article text is drafted.  
 * **Originating Context:** SIM-QA-22 side audit (section 7): v1.0 Section XI is unmapped in the redline; lost at the 2026-09-11 ratification; no recorded decision.  
 * **v1.0 location:** Section XI.3 (line 643): children and adolescents "are not the property of their parents" and hold progressive autonomy ("Class 2 Personhood with progressive somatic autonomy"), with self-governed youth spaces. **Corporal punishment:** v1.0 bars it in two narrower places only: the founding-node *Compact 5, Sanctuary of the Children* (Section XVI, line 1051: physical punishment, public shaming, ridicule and emotional withdrawal barred for pioneers) and the Golden Triad of cultural covenants (Section VII.1, line 403: no covenant may practise corporal violence). *A general ban in every home would be wider than v1.0; recorded so the scope is decided, not assumed.*  
 * **Closest current canon:** Art. 1.2 (bodily sovereignty, general; no child-specific text), Art. 5.3 (education by age), Art. 5.4 (parenting education, alloparenting), Art. 1.3 (baseline for every inhabitant).  
@@ -2255,7 +2255,101 @@ Chapter I today: 808. Art. 1.8 as drafted in section 5 with its heading: 220. Pa
 
 **Maintainer decision 2026-11-20 (Chapter I batch, item 13):** this docket is **opened for the red team now** (13a B), ahead of SIM-QA-24, 27 and 28, because SIM-QA-36, 37 and 39 wait on it (a child in danger tonight; the age of consent; who decides for a child). At most one short sentence of right per docket enters Chapter I; the rest goes to Organic Law (13b B).
 
-**Next action:** red team (not started). Then: decide the scope of the corporal-punishment ban (v1.0 founding-node and covenant scope, or every home); red team H1–H3; take over children's bodily integrity from SIM-QA-24 (d); compression disclosure against the v1.0 points.
+**Next action (as recorded at opening; superseded by the line at the end of section 4):** red team (done, section 4). Then: decide the scope of the corporal-punishment ban (v1.0 founding-node and covenant scope, or every home); red team H1–H3; take over children's bodily integrity from SIM-QA-24 (d); compression disclosure against the v1.0 points.
+
+### **4. Stage 2: Red Team** *(2026-11-20, opened by maintainer decision of the same day, Chapter I batch item 13; reasoning on text only; measurement `NOT_RUN`; first pass; **no child-protection practitioner, paediatrician, teacher or family lawyer has read it**; no article text drafted)*
+
+*Scope taken in this pass:* H1 to H3 and RED-1 to RED-6; free choice of teacher (SIM-QA-22 D-13); the three matters passed from SIM-QA-36 (a child in danger tonight; the age of consent; who decides for a child); children's bodily integrity, taken over from SIM-QA-24 (d). *Constraint already decided:* at most one short sentence of right enters Chapter I (item 13b); Chapter I is closed after the lock (D-35.2).
+
+#### **4.1 Reading the Current Text First** *(Jurist)*
+* **Art. 1.2.1 gives "Every human being" "absolute, unconditional sovereignty over their biological, physical, and cognitive substrate".** A child of four holds it on the words. Nothing says who exercises it for the child. A review jury could void a parent's decision, or uphold a small child's refusal of care, with equal support in the text.
+* **Striking a child is already inside the canon.** It is "physical assault" under Art. 8.4.4 and falls under Art. 1.2.2. What the canon lacks is a fitting answer: Art. 8.3.2 says that in physical violence "the transgressor is relocated outside the victim's transit radius". Applied as written to a parent who slaps a child, it separates the family at the first act.
+* **Art. 5.3 prescribes the content of education by age** and bars "ideological indoctrination". It does not say whether education is compulsory, or who chooses for a child. A node could call a family's religious teaching indoctrination (RED-2).
+* **Art. 5.2.2 lets a panel reassign "dwelling floor area" of an adult who refuses shifts.** The children of that adult live in the dwelling.
+* **Art. 5.3.2 places adolescents from thirteen in work collectives "alongside adult mentors",** with no limit of hours or hazard.
+* **The canon has no age for anything:** not for consent to a sexual act, not for answering before a tribunal (Art. 8.4), not for custody (Art. 8.5), not for deciding one's own care.
+* **Two decisions taken today need care in drafting because of children.** (a) Batch item 2: Chapter I will name the cases in which "a person may be held" and prohibit holding outside them. A parent who carries a child or holds one back from a road holds a person. (b) Batch item 5: every item of Art. 1.2.2 will depend on "the absence of the person's consent". A small child cannot consent, so on those words a child could be given no medicine. Both sentences must provide for those who decide for a child.
+* **SIM-QA-29 already gives persons who cannot be drawn "Advocates drawn by lot"** with voice and standing (draft Art. 7.4.5). Children are among them.
+
+#### **4.2 Verdicts on the Recorded Vectors**
+* **H0, silence: `RED_WINS`.** RED-1, RED-2 and RED-3 succeed, and section 4.1 adds that the same text supports opposite rulings.
+* **H2 (as H1 without the clause on corporal punishment): `RED_WINS`.** Leaving it to Art. 1.2 and to juries gives either nothing or the automatic relocation of Art. 8.3.2.
+* **H3 (Chapter V in place of Chapter I): partly forced by decision.** One sentence goes to Chapter I (item 13b); the rest must live elsewhere. Chapter V is within fifty words of its ceiling (section 4.6).
+* **RED-1, parental dominion. H1: `NARROWED`.** "Heard, with weight growing with age" changes nothing if the parents do the weighing. *Guards:* for a closed list of major matters (where the child lives, schooling, serious medical decisions, leaving a fellowship), a child may take a disagreement to the outside panel of SIM-QA-36 point 5, which hears the child; a young person able to understand a decision about their own body makes it themselves. *Residual:* panels inside family life. The list must stay short or every quarrel becomes a case.
+* **RED-2, collective dominion. `NARROWED`.** The sentence "no person owns a child" must say "no person and no body". The upbringing of a child belongs first to those recorded as carers (SIM-QA-36 point 5); the commons offers education and shared care and takes a child only by the protective measure of section 4.3. A family's beliefs, way of life or choice among lawful forms of education are never a ground.
+* **RED-3 and RED-4, violence at home and enforcement. H1: `NARROWED`.** *Scope:* v1.0 barred physical punishment only in covenants and in the founding compact. Since striking a child is already an assault (section 4.1), a rule for every home adds no new prohibition; it adds a fitting answer. *Answer by steps:* support and the parenting formation of Art. 5.4.1 first; Art. 8.3.2 does not apply to a single act without injury; injury or repetition opens the protective measure. *Without inspection:* a complaint by the child or by any person; the Advocate of SIM-QA-29; and the fact that under Art. 5.4.3 several adults share a child's daily life. *Not carried as a prohibition:* v1.0 also barred "public shaming, sarcastic ridicule, and emotional withdrawal". No definition of these by conduct would survive the test applied in SIM-QA-33 (section 4.3 there); they fit the parenting formation of Art. 5.4, as guidance (compression disclosure, line 4).
+* **RED-5, "not property" as a phrase. `NARROWED`.** It carries consequences only through the rest: a voice with a forum, a way to complain, access to education that nobody can block, and a child's own Tier 1.
+* **RED-6, ages. `NARROWED`.** Chapter I states the principle (rights exercised more and more by the child as capacity grows) and no number. Two kinds of age then differ. *Ages of autonomy* (deciding one's own care, choosing a teacher, leaving a fellowship) can be presumptions in Organic Law. *Ages of protection* (consent to a sexual act; answering before a tribunal) are bounds: a 60% majority that moved them could remove a protection, so the placement test keeps them in the Constitution, outside Chapter I. The ratchet rule does not help with ages, since lowering one strengthens autonomy and weakens protection at once. No number is proposed here; each needs a specialist.
+
+#### **4.3 The Matters Passed From Other Dockets**
+* **A child in danger tonight (SIM-QA-36 RED-12). `NARROWED`, with a residual.** *Who acts at once:* anyone, when violence against the child is in progress or about to begin; this is already among the cases accepted for Chapter I today (batch item 2, cases i and ii). *Then:* the child stays that night with another recorded carer, kin, or a household of the shared care of Art. 5.4; a panel drawn from outside the node validates within 72 hours (the model of Art. 8.5.3), hears the child, and hears the carers; an Advocate stands for the child; review at short intervals; return is the aim; the measure is never a punishment. *Grounds, closed:* harm to the child's body, or grave neglect of the child's Tier 1 needs. *Residual:* where carers refuse and there is no violence and no danger to life, no force is available (the Chapter I list of item 2), and the panel's decision rests on persuasion and support. *RED-7 (new), removal as a weapon:* a node against parents who dissent; one parent against the other in a separation (SIM-QA-33 RED-9). The closed grounds and the outside panel are the guards.
+* **The age of consent (SIM-QA-36 RED-13). `RED_WINS` under current text.** Nothing bars an adult's sexual act with a child. *To write:* an age of protection in the Constitution, with an exception for young people close in age, and the act added to the closed list of SIM-QA-33. The number is for a specialist and the maintainer.
+* **Who decides for a child. `NARROWED`.** The recorded carers together, with the child's voice; a disagreement between them goes to the panel. *Health:* the record is under the carers' key until an age of autonomy and then under the young person's; a young person may seek care in confidence (SIM-QA-28; the "young person's secret" of OL-22). *RED-8 (new), treatment refused for a child:* carers refuse a treatment needed to save the life of a child too young to decide. SIM-QA-39 point 3 says no treatment is ever imposed; that rule protects a person who can decide. *Proposed:* the panel may authorise a treatment needed to save the child's life or prevent grave irreversible harm. Vaccination is not such a case: the carers decide, and later the young person.
+* **Children's bodily integrity (from SIM-QA-24 d). Open; the most contested point of this docket.** Art. 1.2.1 read plainly reserves an irreversible, non-therapeutic change to a body to the person whose body it is. That reaches the circumcision of boys, practised by very large communities, the surgery done on intersex infants, and less grave things. Art. 1.8.4 (SIM-QA-23) reviews a neutral rule that falls with unequal weight on a religion. Two provisions of Chapter I would then pull against each other, and juries would decide either way (SIM-QA-35 RED-9). It has to be settled in words before the lock. *Options:* **(a)** state that an irreversible, non-therapeutic change to a child's body waits until the person can decide, applied through the commons' facilities and practitioners, which do not perform it; **(b)** silence. The red team reads Art. 1.2 as leading to (a) and records its cost: communities for whom the practice is a duty will not join, or will have it done outside the commons' facilities.
+* **Free choice of teacher (SIM-QA-22 D-13). `NARROWED`.** v1.0 abolished compulsory assignment and expected that "An ineffective, abusive, or disengaged instructor naturally experiences zero enrollment". *Attacks:* (a) choice follows liking, and a demanding teacher can lose to an indulgent one; (b) families choose teachers of their own persuasion and children are sorted by it, which Art. 5.3.1 opposes and Art. 1.4 protects; (c) a small node has one teacher; (d) an abusive teacher must be stopped at once, not by falling enrolment (the interim stop of SIM-QA-32 point 7); (e) with no compulsory enrolment a child can be kept from all education. *Revised:* carers choose among teachers and forms with the child, and the young person chooses from an age of autonomy; nobody is assigned; and a child's own access to the commons' education can be blocked by no one, so a child who wants to go, goes. No enrolment is compelled.
+
+#### **4.4 New Vectors Found in This Pass**
+* **RED-7, removal as a weapon.** Under 4.3.
+* **RED-8, life-saving treatment refused for a child.** Under 4.3.
+* **RED-9, the parent's sanction falls on the child. `RED_WINS` under current text.** Section 4.1 (Art. 5.2.2). *Guard:* no reciprocity measure lowers the conditions of a child; a child's Tier 1 is the child's own.
+* **RED-10, no age of responsibility. `RED_WINS` under current text.** A child of ten who hurts another could stand before a tribunal of fifteen or be placed in custody. An age of protection is needed below which only care and mediation apply.
+* **RED-11, work from thirteen. `NARROWED`.** Art. 5.3.2 needs limits of hours and hazard in Organic Law; an apprenticeship is never counted as a shift obligation (Art. 5.1.1 speaks of adults). During the transition state law governs (SIM-QA-40 RED-15).
+* **RED-12, the youth spaces of v1.0. Open.** v1.0 gave young people "self-governed maker-spaces", "transit mobility" and "safe autonomous dormitories". None is in the canon. Autonomous dormitories meet the age of consent and RED-10. For the maintainer (D-25.9).
+* **RED-13, children who arrive alone. Cross-docket.** An unaccompanied child at a node (SIM-QA-30) has no recorded carer; the node cares, a panel names carers, and the register entry is made by a drawn jury (SIM-QA-29, version B).
+
+#### **4.5 What Survives** *(the rule as a set of points; not article text)*
+Verdict for the docket: **`NARROWED`** with the eight points below; **`RED_WINS`** on silence, on H2, and under current text on the age of consent, the age of responsibility and the parent's sanction falling on the child; bodily integrity left open as the contested point.
+1. **The sentence for Chapter I.** A child holds every right of the Chapter; those who care for the child exercise them for the child's benefit and with the child's voice, and the child exercises them more and more as capacity grows; no person and no body owns a child.
+2. **A voice with a forum.** For a short closed list of major matters, the child may go to an outside panel that hears them. A young person able to understand a decision about their own body makes it.
+3. **No violence against a child, in any home.** The answer goes by steps: support first; the protective measure on injury or repetition.
+4. **The protective measure.** Anyone acts against violence in progress. The child stays with another carer that night; an outside panel within 72 hours, with an Advocate for the child; closed grounds (harm to the body, grave neglect of Tier 1); never beliefs or way of life; return is the aim.
+5. **Deciding for a child.** The recorded carers together. A panel may authorise a treatment needed to save the child's life. Records under the carers' key, then the young person's; care in confidence for a young person.
+6. **Ages.** Ages of autonomy as presumptions in Organic Law. Ages of protection (consent, responsibility) as bounds in the Constitution.
+7. **Education.** No one is assigned to a teacher and no enrolment is compelled; a child's own access is blocked by no one.
+8. **A child's own Tier 1.** No measure against a carer lowers a child's conditions. Work in apprenticeship has limits and is never a shift.
+
+#### **4.6 Placement and Word Count** *(instructions 10 and 10a)*
+Point 1 is the one sentence for Chapter I (about forty words as sketched; Chapter I stands at 1,181 of 1,200 before the changes decided today). Points 2 to 5, 7 and 8 concern rights and belong in Chapter V with Arts. 5.3 and 5.4 (855 words today, about 956 to 986 with accepted dockets: no room). The ages of protection and the act go to Chapter VIII (98 left, already claimed by SIM-QA-33 and SIM-QA-37). Nothing is drafted. The conflict goes to the maintainer with the others; one decision on ceilings is still owed (consolidation, section 5).
+
+#### **4.7 Compression Disclosure** *(instruction 8; against v1.0 Sections III.2, VII.1, XI.3 and XVI Compact 5, and against the canon)*
+| # | Point | Source | Change | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | children "are not the property of their parents" | v1.0 XI.3 | carried, widened to "no person and no body" | **carried** |
+| 2 | "Class 2 Personhood with progressive somatic autonomy" | v1.0 XI.3 | carried as rights exercised with growing capacity; the term "Class 2 Personhood" is not carried | **carried**, term dropped |
+| 3 | self-governed youth spaces, transit mobility, autonomous dormitories | v1.0 XI.3 | not in the surviving points; proposed for Organic Law or to drop (D-25.9) | **uncarried**, for decision |
+| 4 | "Physical punishment, public shaming, sarcastic ridicule, and emotional withdrawal are fundamentally barred" (for pioneers) | v1.0 XVI Compact 5 | physical punishment carried and widened to every home; the other three become guidance in parenting formation | **weakened** for three of four |
+| 5 | no heated debate in courtyards, dining rooms and workshops | v1.0 XVI Compact 5 | not carried; a house rule | **uncarried**, for decision |
+| 6 | no "physical corporal violence, non-therapeutic genital alteration, forced marriage, honor retribution, or somatic confinement" in a covenant | v1.0 VII.1 | corporal violence and confinement carried by points 3 and 4 and by the Chapter I list of cases; genital alteration is D-25.4; forced marriage has no civil effect under SIM-QA-36 point 1 and needs an act in SIM-QA-33 | **carried in part** |
+| 7 | exit from a covenant at fourteen, with a transition package | v1.0 VII.1 | stays with SIM-QA-24 (held); an age of autonomy under point 6 | **not decided here** |
+| 8 | free choice of teacher | v1.0 III.2 | carried, with the rule that a child's access is blocked by no one | **carried** |
+| 9 | Art. 8.3.2, relocation of the transgressor "in physical violence" | canon | not applied to a single act without injury against a child | **qualified** |
+| 10 | Art. 5.2.2, reassignment of floor area | canon | never where it lowers a child's conditions | **qualified** |
+
+*Seen and not opened:* v1.0 XI.3 also gave caregivers "premium discretionary allocations" and funded "Vitality Sabbaticals"; neither is in the canon (Art. 5.6.1 keeps the exemption from shifts only).
+
+#### **4.8 Residual Weaknesses**
+* Where carers refuse and there is neither violence nor danger to life, the commons has persuasion and support only.
+* A complaint needs a child who can make one or an adult who sees; a closed household is not reached.
+* No age is proposed. Every number in this docket is missing and needs a specialist.
+* Bodily integrity is open, and either answer excludes someone.
+* Three points lean on dockets not merged: SIM-QA-29 (Advocates), SIM-QA-33 (the list of acts), SIM-QA-36 (recorded carers and the outside panel).
+* During the transition the law of the state governs children in every respect (SIM-QA-40); a node is one voice among those the law recognises.
+* No one who works with children has read this.
+
+**Maintainer decisions needed (D-25.1 to D-25.11):**
+* **D-25.1:** accept the eight points of section 4.5 as the direction, or change them.
+* **D-25.2:** the content of the one sentence for Chapter I (point 1); and that the two Chapter I sentences decided today (batch items 2 and 5) provide for those who decide for a child.
+* **D-25.3:** no violence against a child in every home (wider than v1.0), answered by steps; shaming, ridicule and emotional withdrawal as guidance, not prohibition.
+* **D-25.4:** irreversible, non-therapeutic change to a child's body: (a) it waits until the person can decide, applied through the commons' facilities and practitioners; (b) silence. To be decided with SIM-QA-24.
+* **D-25.5:** ages of autonomy in Organic Law; ages of protection (consent; responsibility) in the Constitution; the numbers after a specialist.
+* **D-25.6:** the protective measure of point 4, with its closed grounds.
+* **D-25.7:** a panel may authorise a treatment needed to save a child's life when carers refuse.
+* **D-25.8:** education: no assignment, no compelled enrolment, and a child's own access blocked by no one.
+* **D-25.9:** the youth spaces of v1.0 (RED-12) and the house rule of Compact 5: Organic Law, or dropped.
+* **D-25.10:** a child's own Tier 1 (RED-9) and limits on apprenticeship (RED-11).
+* **D-25.11:** placement and ceilings (Chapters I, V, VIII).
+
+**Next action (after the red team):** maintainer decisions D-25.1 to D-25.11; a specialist for every age and for the protective measure; then text as hypothesis, shown beside the current text, with a second red-team pass.
 
 ---
 
