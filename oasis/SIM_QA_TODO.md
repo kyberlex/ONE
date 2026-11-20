@@ -87,7 +87,7 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 ### **B. Already pending on the board**
 - [ ] **SIM-QA-22:** canon wording of D-1 to D-7; Chapter I ceiling (1,181 of 1,200, 19 words left for SIM-QA-24, 25, 27, 28); Chapter IV with D-1; five weakened or uncarried v1.0 points; brackets of OL-13 to OL-21; roadmap placement of D-8; D-15 option.
 - [ ] **SIM-QA-18:** council petition capacity under the 1.5 h budget (every option touches X-4 or Set B); Y-3 numbers and D-1f (does the rule reach 301 seats); Y-12 48-hour form check and E-4 (Art. 3.6.2); the excusal-duration sentence of 11.2.
-- [ ] **Chapter IV ceiling (Z-3, K-7):** postponed until Y-3 and Y-12 are decided.
+- [ ] **Chapter IV ceiling (Z-3, K-7):** postponed until Y-3 and Y-12 are decided. *(recount 2026-11-20: already 33 over with SIM-QA-22 D-1 counted on the latest SIM-QA-20 revision)*
 - [ ] **Open bounds of the Y-13 split:** P-3 (ceiling on the service share), P-4 (maximum drawn mandate), P-10 (ceiling on the co-endorsement share), P-7 (twelve-month delay for criteria changes; no removal of admitted entries).
 - [ ] **Plain-language pass:** review of Chapter I; open terms T-4 ("juror" in Art. 4.4), T-11 (watershed or bioregion), T-12 (one register or two), T-13 (request or petition), T-14 (withheld or suspended).
 - [ ] **SIM-QA-23, R-3 and R-4, before the lock:** Art. 1.8.6 names no adopting body and states no constitutional ceiling for the duration it leaves to Organic Law; after the lock neither can be added (found in the Chapter I batch, item 12, 2026-11-20).
@@ -232,7 +232,8 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 - [ ] Draft A: decision 1b worded as "never drawn from capacity that Tier 1 requires" (7% of all capacity), or as 7% of what remains after Tier 1.
 - [ ] Draft C: custody stated in substance in Chapter I (ground, drawn jury, 72 hours as a ceiling), in place of a reference to Art. 8.5.
 - [ ] Draft F (children): proposed as four short sentences in Art. 1.7.3; depends on D-25.1, D-25.2 and D-25.4.
-- [ ] **The ceiling of Chapter I:** the batch adds about 250 words (1,436 against 1,200); raise it after a recount of every chapter, or reopen which drafts stay in Chapter I. The earlier estimate that Art. 1.4.3 would free 60 to 100 words was wrong (9).
+- [x] **The ceiling of Chapter I:** the batch adds about 250 words (1,436 against 1,200); raise it after a recount of every chapter, or reopen which drafts stay in Chapter I. *(decided 2026-11-20: raise, after the recount; recount done in [`word_recount_2026-11-20.md`](word_recount_2026-11-20.md); the new figure is not decided)*
+- [ ] **Ceilings after the recount** ([`word_recount_2026-11-20.md`](word_recount_2026-11-20.md), section 4): (1) Chapter I: suspend 1,200 until the chapter is fully drafted and then set the figure, or a working limit of 1,600 now; (2) Chapter IV: 2,183 against 2,150 with text already accepted, 2,231 with Y-12 and the Y-3 bound; (3) the whole: 11,615 against 11,500 with text already accepted, 11,870 with the Chapter I drafts; suspend the figure until the dockets are drafted, and require every draft to state the count of its chapter and of the whole. The earlier estimate that Art. 1.4.3 would free 60 to 100 words was wrong (9).
 - [ ] Before the drafts can be final: adults who cannot consent or decide (D-36.4, D-39.8); the protective hold after a specialist reading (D-39.3); preparation of mass harm (D-33.4).
 
 ### **C. Housekeeping** *(documents that describe the canon and are out of date; recorded 2026-11-20, not fixed)*

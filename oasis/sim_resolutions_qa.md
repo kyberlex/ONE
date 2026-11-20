@@ -2904,7 +2904,7 @@ Points 1 to 5 and 7 change a prohibition, a right or who answers, so the placeme
 
 * **O-1:** a new article in Chapter VI (machines as infrastructure, beside Art. 6.3), with short amendments in Arts. 7.1.2, 7.1.4, 7.3.1 and 8.2.1 that point to it. Fits the present ceilings if the amendments in Chapter VII stay under 25 words.
 * **O-2:** the text in Chapter VII, where the bars are. Needs a ceiling decision first (instruction 10a point 4).
-* **O-3:** a twelfth chapter. The canon holds 9,219 words today against a total ceiling of 11,500; the pending total has not been recounted.
+* **O-3:** a twelfth chapter. The canon holds 9,264 words today with its title block (**corrected 2026-11-20**; first stated as 9,219) against a total ceiling of 11,500, which the text accepted in principle already passes ([`word_recount_2026-11-20.md`](word_recount_2026-11-20.md)); the pending total has not been recounted.
 
 #### **4.6 Compression Disclosure** *(instruction 8; points the surviving rule would weaken; each needs a maintainer decision before any draft)*
 | # | Point | Source | Change | Status |

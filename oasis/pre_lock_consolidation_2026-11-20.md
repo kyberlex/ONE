@@ -105,7 +105,7 @@ Without such a body, the canon text each docket would add or change has to be me
 | IX | 817 | 969 | 31 | 40, 42 |
 | X | 870 | 935 | 65 | 35, 38 |
 | XI | 839 | 839 | 161 | none |
-| Whole | 9,219 | not recounted | ceiling 11,500 | |
+| Whole | 9,264 with the title block (9,209 for the chapters; **corrected 2026-11-20**, first stated as 9,219) | 11,615, recounted in [`word_recount_2026-11-20.md`](word_recount_2026-11-20.md) | ceiling 11,500: **115 over** | |
 
 Seven chapters are asked for more than they have. No docket may raise the ceiling it needs (instruction 10a point 4). One recount of every chapter and one separate decision on ceilings is needed before any drafting; otherwise each docket will report the same conflict again.
 
