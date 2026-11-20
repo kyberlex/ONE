@@ -3764,7 +3764,7 @@ Under O-A, lines 1 and 2 are touched by the protective hold only.
 ## **SIM-QA-40: Collision with State Law During the Transition**
 
 * **Date Recorded:** 2026-11-20  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction with a working direction (section 4). **Nothing below is red-teamed**, the direction included. No article text is drafted. First pass; no legal review; nothing here states the law of any country.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST), opened 2026-11-20 on maintainer instruction with a working direction (section 4). Red team of the direction 2026-11-20 (section 5): **`NARROWED`** with seven revised points and a first-pass table; **`RED_WINS`** as worded on point 4 (a vote as the switch) and on three statuses, and under current text on the legal organs and on leaving with nothing. Sections 1 to 4 are as recorded at opening. No article text is drafted. First pass; no legal review; nothing here states the law of any country.  
 * **Originating Context:** maintainer gap review of 2026-11-20 (second batch).  
 * **Closest current canon:** Chapter IX gives no rule for a conflict between the Constitution and the law of the state a node stands in. Art. 9.1.2 rejects "violent macro-rupture". Art. 9.2 (reclaiming land "via adverse possession"; patents and trade secrets "declared public usufruct") and Art. 9.5 (expropriation of defaulted assets; abolition of debts) describe acts that state law does not allow today. Custody under Art. 8.5 by a node would be detention without legal basis. Art. 9.6.2 requires 75% "to ratify formal phase-gate advancements" and lists neither the gates nor what each one activates. Art. 9.6.1 names bodies of 3, 15 and 101.  
 * **Constitutional Articles:** Arts. 1.7, 8.4, 8.5, 9.1 to 9.6.  
@@ -3801,7 +3801,113 @@ Under O-A, lines 1 and 2 are touched by the protective hold only.
   5. School, conscription, taxes and professional licences are respected, with lawful alternatives.
 * **Open, named by the maintainer:** who declares a phase gate before bioregional assemblies exist (RED-6).
 
-**Next action:** red team D-40.1 against RED-1 to RED-10; draft the table of point 2 as a hypothesis, article by article, before choosing roadmap or Organic Law; legal review per country of the first node.
+**Next action (Stage 1):** ~~red team D-40.1 against RED-1 to RED-10~~ (done, section 5); ~~draft the table of point 2 as a hypothesis~~ (first pass in section 5.4, by groups of articles); legal review per country of the first node (**not done**).
+
+### **5. Stage 2: Red Team of the Working Direction** *(2026-11-20, on maintainer instruction; reasoning on text only; first pass; **no lawyer has read it and nothing here states the law of any country**; examples of state rules are illustrations of a kind of rule, each to be checked per country; no article text drafted)*
+
+#### **5.1 Reading the Current Text First** *(Jurist)*
+* **Chapter I binds the commons' own bodies; it cannot bind a state.** When a state evicts, registers or conscripts, that is not an act of an assembly, and Art. 1.7.2 does not reach it. What Art. 1.7.2 does reach is the node acting, on its own initiative, against Chapter I. The direction's sentence ("a node obeys mandatory state law") must not be read as licence for that.
+* **Art. 9.4 defends against "external armed aggression, corporate syndicates, or warlord predation"** by "civil resistance", "logistical denial" and, in Art. 9.4.5, a key sever against "armed physical occupation". Nothing says that a lawful act of the state (a search, a seizure, an inspection) is not aggression. A node that read Art. 9.4 against the police would bring disaster on itself (RED-13).
+* **A vote cannot make an act lawful.** Art. 9.6.2 lets 75% "enact universal Debt Jubilees" and "authorize involuntary industrial asset conversions". While a state enforces its law, such a vote is a collective decision to break it, whatever the threshold.
+* **Arts. 9.2 and 9.5 are not unlawful as a whole.** Asset-locked trusts (Art. 9.2.1) and the re-engineering of plants a node holds (Art. 9.5.3) are lawful now. The exposure is in Arts. 9.2.2, 9.2.3, 9.5.1 and 9.5.2.
+* **Art. 9.6.1 names bodies of 3, 15 and 101 only.** A phase gate at 75% needs one of them; the first that could carry such a decision for more than one node is the Bioregional Assembly.
+* **The legal vehicles have their own organs.** Under state law a foundation, an association or a cooperative decides through a board or a members' meeting, and those persons answer for the decision. A drawn panel has no standing there (RED-11).
+* **Art. 5.3.2 places adolescents from thirteen in "active research, agricultural, and fabrication collectives".** States limit the work of minors.
+* **The roadmap cites an "Art. 9.7" for a "Transitional Resettlement Escrow"** for members who leave. The canon has no such article and no rule on what a member leaves with beyond "personal possessions" (Art. 8.6.3).
+* **Roadmap wording.** Section headings such as "Code-Enforcement Stealth" and the claim that a labour structure works by "defeating" wage claims read against "no member is asked to break the law", even where the content under them describes compliance.
+
+#### **5.2 Verdicts, Point by Point**
+* **Point 1, the general sentence: `NARROWED`.** *RED-5, obedience against Chapter I:* the sentence needs a second half. The node obeys mandatory law; its own bodies stay bound by Chapter I at all times; it never does of its own motion what Chapter I forbids; where the law compels such an act it complies, records the conflict in public as a derogation (the model of SIM-QA-30), uses every lawful remedy, and supports the person affected. *RED-4, "where the law leaves room":* the honest result of the table (section 5.4) is that during the transition the Constitution works as the internal rules of lawful associations among people who chose them, plus a programme. That is what the direction intends, and the text should say it plainly instead of speaking "as if it were alone". *"While the state functions":* who finds that it no longer does is the same question as the phase gate (point 4); a node's own finding would be read by the state as revolt (RED-17).
+* **Point 2, the table: `NARROWED`; three statuses are not enough.** Five are needed: **N,** binds the node's own bodies now; **M,** applies among members by agreement, where the law allows; **L,** may be limited or barred by state law even among members who agree (schooling, medicine, assisted dying, the work of minors, tenancy, sanctuary for persons without status); **S,** suspended until a gate; **E,** describes the end state and has no present effect. *RED-8, persons who never agreed:* children are under state law and their carers (SIM-QA-25, 36); a guest accepts written house rules on arrival (SIM-QA-30); neighbours are bound by nothing. *Where it lives:* the law differs by country, so the table is a legal annex per node, built from one common template in the roadmap and reviewed by counsel. *One rule belongs in the Constitution:* an article can be placed under S by the ordinary 60% vote, and leaves S only through the gate. Otherwise Organic Law could switch Art. 9.5 on at 60%.
+* **Point 3, violence: `NARROWED`.** *RED-3, parallel justice:* closed communities fail most gravely by handling abuse inside. *Guards:* no body of the node may discourage, delay or set conditions on anyone's recourse to the state's police and courts; mediation is never a substitute for it, never a condition before it, and no agreement reached in mediation waives it; an adult who was harmed decides for themselves (Art. 8.3.1); harm to a child is always reported by the node. The node does not investigate, since that damages evidence. No custody; also no protective hold and no enforced isolation (SIM-QA-39): those belong to the state. Members use force only as the law allows any person (SIM-QA-37 RED-19).
+* **Point 4, suspension until a gate: `RED_WINS` as worded; revised: `NARROWED`.** *As worded:* "suspended until a 75% phase gate" makes the vote the switch, and a vote cannot make these acts lawful (section 5.1). *RED-7, the early gate, and RED-6, the gate nobody can open:* a gate is the recognition of a fact, not a permission. The fact is that the law of the place has changed: the state has agreed, or has ceased to exist there. *Revised:* a gate needs (a) that fact, certified by a panel drawn from outside the nodes concerned, and (b) 75% of a Bioregional Assembly. No gate opens before such an Assembly exists. This answers the open point of the maintainer: before bioregional assemblies exist, nobody declares a gate, and the suspended articles stay suspended. The Foundation's Board cannot be the body: a legal entity cannot resolve to break the law, and its supervisory authority would act. *RED-10, the articles not named:* the list is longer than Arts. 9.2 and 9.5 (section 5.4): Arts. 8.1.4, 8.5, the binding stage of Art. 8.4, relocation by force under Art. 8.3.2, and Arts. 9.4.1, 9.4.3 and 9.4.5. *Mismatch:* the roadmap's Phases 0 to 3 measure physical autonomy; reaching Phase 3 changes nothing in law, and its phrase "autonomous sovereign bioregional commons" should not be read as a gate.
+* **Point 5, obligations: `NARROWED`.** *RED-9:* (a) Taxes, compulsory insurance and contributions need money that a member without income does not have. During the transition the node must pay them for its members out of what the External Trade Interface earns; that is part of Tier 1 in fact, and it is a cost no model here has counted. (b) Conscription: the node neither obstructs nor compels; the member uses the lawful alternative where one exists. (c) Licences: acts that the law reserves to a licensed person are done by licensed persons; the open entry of SIM-QA-32 applies to everything else. (d) School: the education of Art. 5.3 runs where the law allows a private or home form, and otherwise beside the state school.
+
+#### **5.3 New Vectors Found in This Pass**
+* **RED-11, the legal organs and the drawn bodies. `RED_WINS` under current text.** The board members answer in law for what the node does; the drawn bodies decide under the Constitution. When a panel decides something the board finds unlawful, or the board simply decides otherwise, nothing settles it. *Guard to test:* the legal organs carry out the decisions of the drawn bodies except where a decision is unlawful; a refusal is published with its reason; a dispute goes to a panel drawn from outside, with counsel heard. Goes with SIM-QA-42 (the Board).
+* **RED-12, leaving with nothing. `RED_WINS` under current text.** A member who leaves after many years has no savings, possibly no pension rights, and "personal possessions". Dependence of that kind keeps people in, against the spirit of Art. 8.6.3. The roadmap answers with an escrow under an article the canon does not have (section 5.1). *Guard to test:* a rule in Chapter IX that a member who leaves during the transition receives means to resettle, and that contributions required by the state for old age and health are paid for every member throughout.
+* **RED-13, Art. 9.4 read against the state.** Section 5.1. *Guard:* the general sentence states that a lawful act of the state is never aggression under Arts. 8.1.4 or 9.4; no resistance, no concealment, no key sever.
+* **RED-14, sanctuary against immigration law. Open.** The hospitality of SIM-QA-30 is for every arrival. Sheltering a person without legal status is an offence in some states. Status L in the table; for counsel.
+* **RED-15, work treated as employment. Open.** If an authority treats members' work as employment, wages, contributions and insurance are owed for the past. The roadmap asserts that its structure prevents this; that assertion is unverified. The apprenticeship from thirteen (Art. 5.3.2) meets the rules on the work of minors.
+* **RED-16, data the state requires. `NARROWED`.** Registration of residents, tax records and the registers of the legal vehicles oblige the node to hold identity data that Art. 7.4.4 keeps out of civic procedures. The data-protection law of the place also applies to the registers of SIM-QA-29 and SIM-QA-41. *Guard:* what the state requires is kept by the legal vehicle, apart from the civic register, and used for nothing else.
+* **RED-17, a state that functions in part.** Services fail while the law stays in force. A node that steps into policing because the police no longer come is in the position of RED-3 and of SIM-QA-37 at once. No criterion is proposed; the gate of point 4 is the only switch.
+* **RED-18, words as evidence. Housekeeping.** Headings and phrases in public documents (section 5.1; also Statutes Art. 13.1, "exclusive and sovereign", SIM-QA-42) would be quoted in any proceeding against a node. For the maintainer (D-40.9).
+
+#### **5.4 The Table, First Pass** `[STATUS: SIMULATION_HYPOTHESIS]` *(by groups of articles; a template, not the annex of any node; every L and every S needs counsel in the country concerned)*
+| Articles | Status | Note |
+| :--- | :--- | :--- |
+| 1.1, 1.5, 1.6 | N; 1.6.3 E | the node never encloses or poisons; legal standing of biomes is end state |
+| 1.2 | N; assisted exit L | the node's bodies never touch body or mind; assisted dying depends on criminal law |
+| 1.3, 1.7 | N | the node never conditions Tier 1 |
+| 1.4 | N; 1.4.3 L | biological synthesis is regulated |
+| 2.1 | M inside the trust's land; E toward everyone else | absentee title exists in state law |
+| 2.2, 2.4 to 2.6 | M | usufruct takes the form of a lease or licence; tenancy law may add protections (L) |
+| 2.3 | N | the node never evicts; a state order is a derogation recorded in public |
+| 3.1, 3.3, 3.5, 3.6 | M | internal accounts in physical units; taxes are assessed in money (L) |
+| 3.2 | N for the node's own dealings; E for debts owed to outsiders | outside debts are not void |
+| 3.4 | M; 3.4.4 N | |
+| 4.1 to 4.6 | M, through the legal organs (RED-11) | review under Art. 4.6 reaches the node's own acts only |
+| 5.1, 5.2, 5.6 | M; labour law L | reassignment of floor area (Art. 5.2.2) only by agreement |
+| 5.3, 5.4 | L | school law; work of minors |
+| 5.5 | L | medical and pharmacy law |
+| 6.1 to 6.6 | N for the node's own infrastructure; building and utility codes L | |
+| 7.1 to 7.6 | N | |
+| 8.1.1 to 8.1.3, 8.2 | N | stricter than state law |
+| 8.1.4 | S | |
+| 8.3 | M for support to the harmed person; 8.3.2 by agreement only | relocation by force S |
+| 8.4.1, 8.4.2 | M, voluntary | never in place of the state's courts for an offence |
+| 8.4.3 to 8.4.5, 8.5 | S | |
+| 8.6.3 | N | |
+| 9.1, 9.2.1, 9.3, 9.5.3, 9.6 | N | |
+| 9.2.2, 9.2.3, 9.5.1, 9.5.2 | S | |
+| 9.4.2 | N | lawful storage |
+| 9.4.1, 9.4.3, 9.4.5 | S | |
+| 9.4.4 | L | arms are handed to the authorities |
+| 10.4 | hospitality N; no borders E; persons without status L | |
+| 10.1 to 10.3, 10.5, 10.6, Chapter XI | E | |
+
+#### **5.5 What Survives** *(the direction as revised; not article text)*
+Verdict for the docket: **`NARROWED`** with the seven points below; **`RED_WINS`** as worded on point 4 (a vote as the switch) and on three statuses, and under current text on the legal organs (RED-11) and on leaving with nothing (RED-12).
+1. **The sentence.** A node obeys mandatory state law. Its own bodies stay bound by Chapter I and never do of their own motion what it forbids. A conflict imposed by law is recorded in public as a derogation. Nobody is asked to break the law. A lawful act of the state is never aggression.
+2. **The table.** Five statuses; one template in the roadmap; a legal annex per node, reviewed by counsel. An article leaves S only through a gate.
+3. **Offences.** To the state's police and courts. Nobody is discouraged from going to them. Mediation never replaces, precedes as a condition, or waives. Harm to a child is always reported. No custody, hold or enforced isolation by a node.
+4. **The gate.** A change in the law of the place, certified from outside, and 75% of a Bioregional Assembly. None before such an Assembly exists.
+5. **Obligations.** Respected. The node pays what the state requires for each member. Reserved acts by licensed persons. Lawful alternatives for school and service.
+6. **Legal organs.** They carry out the decisions of drawn bodies unless unlawful, and publish any refusal (with SIM-QA-42).
+7. **Leaving.** Means to resettle, and contributions for old age and health paid throughout.
+
+#### **5.6 Placement and Word Count** *(instructions 10 and 10a)*
+The sentence, the gate rule, the rule that an article leaves S only through a gate, and the rule on leaving belong in Chapter IX. Chapter IX holds 817 words and 969 with SIM-QA-30 (D-30.5, D-30.10): 31 left, **within fifty**. They do not fit. The table goes to the roadmap and to each node's annex. The conflict goes to the maintainer.
+
+#### **5.7 Compression Disclosure** *(instruction 8; nothing is removed from the canon; these are points whose effect is suspended or limited in fact)*
+| # | Point | Source | Change | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | reclaiming by adverse possession; patents declared public | Arts. 9.2.2, 9.2.3 | suspended until a gate | **suspended** |
+| 2 | expropriation of defaulted assets; debt jubilees | Arts. 9.5.1, 9.5.2 | same | **suspended** |
+| 3 | dissuasion, asylum and debt cancellation for defectors, key sever | Arts. 9.4.1, 9.4.3, 9.4.5 | same; never against a lawful act of the state | **suspended**, and **qualified** |
+| 4 | interdiction platforms; custody; binding tribunal for offences; relocation by force | Arts. 8.1.4, 8.5, 8.4.3, 8.3.2 | same | **suspended** |
+| 5 | 75% "to enact universal Debt Jubilees … or ratify formal phase-gate advancements" | Art. 9.6.2 | a certified change in the law of the place is also required, and a Bioregional Assembly | **qualified** |
+| 6 | no eviction; uncoerced exit; sanctuary for every traveller; apprenticeship from thirteen | Arts. 2.3.1, 1.2.3, 10.4.3, 5.3.2 | unchanged in text; limited in fact where state law compels or forbids, each case recorded as a derogation | **limited in fact** |
+
+#### **5.8 Residual Weaknesses**
+* No lawyer has read any of this. The table is a sorting by a reader of the Constitution, not a legal opinion.
+* The cost of paying every member's taxes, insurance and contributions is not counted anywhere.
+* The gate depends on a change no node controls. Most of Chapters II, III, VIII and IX may stay programme for a long time, and the text will say so.
+* A state that functions in part has no rule.
+* Whether members' work is employment is an open risk.
+
+**Maintainer decisions needed (D-40.2 to D-40.10):**
+* **D-40.2:** accept the seven points of section 5.5 as the revised direction, or change them.
+* **D-40.3:** five statuses; the table of section 5.4 as the template to send to counsel; template in the roadmap, annex per node; an article leaves S only through a gate.
+* **D-40.4:** the gate: a certified change in the law of the place and 75% of a Bioregional Assembly; none before one exists.
+* **D-40.5:** Arts. 8.1.4, 9.4.1, 9.4.3 and 9.4.5 join the suspended list; a lawful act of the state is never aggression.
+* **D-40.6:** harm to a child is always reported by the node; an adult decides for themselves.
+* **D-40.7:** the node pays each member's mandatory taxes, insurance and contributions; a rule on leaving with means, in place of the roadmap's "Art. 9.7".
+* **D-40.8:** legal organs and drawn bodies (with SIM-QA-42).
+* **D-40.9:** roadmap wording (the "Stealth" heading, "Art. 9.7", the claim on wage law, "sovereign" in Phase 3): correct now, or record under housekeeping.
+* **D-40.10:** the ceiling of Chapter IX (31 words left).
+
+**Next action:** maintainer decisions D-40.2 to D-40.10; then the Chapter IX text as hypothesis with a second red-team pass; the template to counsel in the country of the first node; a cost estimate of mandatory payments per member before any figure.
 
 ---
 
