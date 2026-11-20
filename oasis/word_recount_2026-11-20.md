@@ -55,7 +55,7 @@ With the Chapter I drafts alone the whole stands at **11,870** (11,813 without d
 
 ## **4. Proposal on Ceilings** *(for the maintainer; nothing here is in force)*
 
-**Decided 2026-11-20:** the ceiling of Chapter I is raised; and, after this recount, **the figure of 1,200 is suspended until Chapter I is fully drafted**, when the ceiling is set by one decision at the counted length plus a small margin (point 1 below, first option). **Not decided:** points 2, 3 and 4 below.
+**Decided 2026-11-20:** the ceiling of Chapter I is raised; and, after this recount, **the figure of 1,200 is suspended until Chapter I is fully drafted**, when the ceiling is set by one decision at the counted length plus a small margin (point 1 below, first option). **Also decided 2026-11-20:** the figure of 11,500 for the whole is suspended until the open dockets are drafted, and every draft states the count of its chapter and of the whole (point 3 below). **Not decided:** points 2 and 4 below.
 
 1. **Chapter I.** Its ceiling should be set once the chapter is fully drafted, not before. What is certain today is 1,436 words (or 1,379), and at least six further sentences are owed. A number chosen now would be a guess. *Proposal:* suspend the 1,200 ceiling for Chapter I until the drafts of section 3 exist; then set the ceiling at the counted length plus a small margin, by one decision. If a number is wanted now as a working limit, **1,600** covers what is drafted and leaves about 160 words for what is not; it is a judgment, not a derivation.
 2. **Chapter IV.** A decision is owed whatever happens to Chapter I: 2,183 against 2,150, and 2,231 if Y-12 and the Y-3 bound are accepted. It was postponed until Y-3 and Y-12 are decided (board, section B).
