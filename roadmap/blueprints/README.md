@@ -18,6 +18,7 @@ Every blueprint in this directory translates the macro-transition timeline of [`
 | [`STAGE_1_SURVIVAL_CORE_BLUEPRINT.md`](STAGE_1_SURVIVAL_CORE_BLUEPRINT.md) | **Stage 1** | $50 - 150$ Residents | $40,000\text{ L}$ cisterns, solar microgrid, Passivhaus MHU clusters, 180-day calorie buffer. |
 | [`STAGE_2_FABLAB_METABOLIC_BLUEPRINT.md`](STAGE_2_FABLAB_METABOLIC_BLUEPRINT.md) | **Stage 2** | $150 - 500$ Residents | CNC timber mill, air-gapped machine shop, reed-bed greywater loop, thermophilic compost. |
 | [`STAGE_3_WATERSHED_FEDERATION_BLUEPRINT.md`](STAGE_3_WATERSHED_FEDERATION_BLUEPRINT.md) | **Stage 3** | $500 - 5,000+$ Federated | Reticulum LoRa mesh, bilateral non-monetary exergy clearing, odd-parity sortition councils. |
+| [`INTER_NODE_NETWORK_REQUIREMENTS.md`](INTER_NODE_NETWORK_REQUIREMENTS.md) | **Stage 3 (companion note)** | $3 - 5$ Federated Nodes | Working note: what must travel between nodes, 8 requirements with article sources, candidate tools per layer, open problems. |
 | [`SEED_NODE_QUICKSTART_HANDBOOK.md`](SEED_NODE_QUICKSTART_HANDBOOK.md) | **All Stages** | Field Coordinators | Condensed operational checklist from Day 1 land acquisition to full metabolic closure. |
 
 ---

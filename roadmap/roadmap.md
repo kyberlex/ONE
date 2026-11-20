@@ -333,7 +333,7 @@ Dual-Tier Shield     30-Day Autonomy         Metabolic Closure         Direct Ex
 * **Autonomy Level:** ~70%. Tooling, machinery maintenance, and replacement costs collapse.
 
 ### Phase 3: Regional Federation & True Indivisible Commons (Years 7–15)
-* **Inter-Node Mesh:** Interconnect with 3 to 5 neighboring micro-nodes within the immediate watershed.
+* **Inter-Node Mesh:** Interconnect with 3 to 5 neighboring micro-nodes within the immediate watershed (requirements and candidate tools: [`blueprints/INTER_NODE_NETWORK_REQUIREMENTS.md`](blueprints/INTER_NODE_NETWORK_REQUIREMENTS.md)).
 * **Direct Thermodynamic Swaps:** Direct non-monetary physical trade using Leontief-Kantorovich balancing models (Art. 3.1).
 * **Positional Sabbatical Commons:** High-amenity geographic sites (oceanfront cabins, mountain chalets) pooled as non-monetary Civic Retreats, scheduled via soulbound sabbatical time tokens without secondary markets.
 * **Federated Frontier Science & Peak Compute:** Watershed research hubs (GPU clusters, materials testing) governed by Demarchic Science Juries (domain sortition); commercialization of breakthroughs by Foundation ONE injects fiat capital for continuous compute scaling.

@@ -13,6 +13,8 @@ An isolated node is vulnerable to localized ecological disasters, legal encircle
 
 ## 2. Air-Gapped Inter-Node Mesh Telecommunications
 
+> **Scope:** this section covers the radio transport only. The full requirements (Art. 6.4, Arts. 7.1 to 7.5), the candidate tools for the shared record, key splitting and proof of personhood, and the open problems are in [`INTER_NODE_NETWORK_REQUIREMENTS.md`](INTER_NODE_NETWORK_REQUIREMENTS.md).
+
 ```
   [ Node Alpha ] ──( 915 MHz LoRa )──► [ Mountain Ridge Repeater ] ──► [ Node Beta ]
          │                                       │                          │
@@ -22,6 +24,7 @@ An isolated node is vulnerable to localized ecological disasters, legal encircle
 
 ### 2.1. The Reticulum Network Stack (RNS) & LoRa Mesh Architecture
 * **Hardware:** Low-power solar microcontrollers (ESP32 / RAK Wireless 4631) paired with 868 MHz (Europe) / 915 MHz (Americas) 1W RF transceivers and high-gain directional Yagi or omnidirectional fiberglass collinear antennas mounted on ridge tops.
+* **Candidate status:** Reticulum is the current candidate stack, not a fixed choice. Its own manual still calls it experimental. The radio hardware above stays valid for any replacement stack that meets Art. 6.4.
 * **Cryptographic Protocol:** The Reticulum Network Stack (RNS) provides end-to-end encrypted packet transport with zero centralized servers, zero IP addresses, and zero telecom sim cards.
 * **Traffic Capabilities:**
   1. *Real-time telemetry:* Battery state of charge, cistern water levels, weather station alerts.

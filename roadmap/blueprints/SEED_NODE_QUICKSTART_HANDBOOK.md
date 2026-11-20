@@ -48,3 +48,4 @@
 * [`STAGE_1_SURVIVAL_CORE_BLUEPRINT.md`](STAGE_1_SURVIVAL_CORE_BLUEPRINT.md) — Hydrological cisterns, 48V LFP batteries, BMS cold-weather throttling, 180-day food cache, 50m² thermal core.
 * [`STAGE_2_FABLAB_METABOLIC_BLUEPRINT.md`](STAGE_2_FABLAB_METABOLIC_BLUEPRINT.md) — Air-gapped machine shop, thermophilic composting, greywater reed beds, perennial agroforestry.
 * [`STAGE_3_WATERSHED_FEDERATION_BLUEPRINT.md`](STAGE_3_WATERSHED_FEDERATION_BLUEPRINT.md) — Reticulum LoRa mesh networks, non-monetary exergy swaps, grid severance protocols.
+* [`INTER_NODE_NETWORK_REQUIREMENTS.md`](INTER_NODE_NETWORK_REQUIREMENTS.md) — Working note: requirements, candidate tools and open problems for the network between federated nodes.

@@ -22,6 +22,7 @@ roadmap/
 ├── SEED_NODE_SIZING_MATRIX.md                       # Biophysical scaling & CapEx matrix across 5 biomes (N=15..300)
 ├── calculate_seed_node_metabolism.py                # Parametric CLI calculator for PV, LFP, water, land & sortition
 └── blueprints/                                      # Actionable field manuals for physical Seed Nodes
+    ├── INTER_NODE_NETWORK_REQUIREMENTS.md           # Working note: federation network requirements & candidate tools
     ├── SEED_NODE_CANDIDATE_REGISTRY.md              # The 5 Orthogonal Climatic Testbeds (NODE-01 to NODE-05)
     ├── SEED_NODE_QUICKSTART_HANDBOOK.md             # 10-step founder startup checklist & anti-fragile rules
     ├── STAGE_0_LEGAL_INCEPTION_BLUEPRINT.md         # Two-Tier CLT/Co-op legal shield & zoning due diligence
