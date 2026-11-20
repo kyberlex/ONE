@@ -3302,7 +3302,7 @@ This docket mostly removes words from Chapter I. Art. 1.4.3 holds 141 words; a v
 ## **SIM-QA-36: Personal Status and Family**
 
 * **Date Recorded:** 2026-11-20  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction, priority 6 of six. Nothing below is red-teamed; vectors and hypotheses are preliminary. No article text is drafted.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST), opened 2026-11-20 on maintainer instruction, priority 6 of six. Red team 2026-11-20 (section 4), run on the provisional boundary with SIM-QA-25, which is not confirmed: **`NARROWED`** with six points; **`RED_WINS`** on silence, on the forum of H3 as worded, on H1 where persons are apart or cannot declare, and toward the outside of the commons. Reasoning on text; measurement `NOT_RUN`; first pass, no specialist review. No article text is drafted.  
 * **Originating Context:** maintainer gap review of 2026-11-20.  
 * **Closest current canon:** Art. 2.2.2 ("hereditary succession of occupancy among active co-inhabitants", not defined), Art. 2.3.3 ("irreconcilable interpersonal domestic crises" go to a Local Mediation Panel; no rule on who keeps the dwelling), Art. 8.3.2 (after physical violence the harmed person keeps the dwelling), Art. 2.2.1 (personal possessions; nothing on death), Art. 4.2.1 ("no first-degree kin or domestic partners may serve concurrently"), Art. 10.4.2 ("family reunification"), Art. 5.4 (parenting, alloparenting). No article on unions, separation, parentage or adoption.  
 * **Constitutional Articles:** Arts. 2.2.1, 2.2.2, 2.3.3, 4.2.1, 5.4, 8.3.2, 10.4.2.  
@@ -3330,7 +3330,82 @@ This docket mostly removes words from Chapter I. Art. 1.4.3 holds 141 words; a v
 * **H3, parentage and adoption:** recorded as a relation of care in the sealed records of SIM-QA-29; disputes go to a drawn tribunal that hears the child (SIM-QA-25).
 * **H4, possessions at death:** the person's written wish holds for personal possessions; failing that, co-inhabitants, then the commons; no wish disposes of a dwelling or any usufruct.
 
-**Next action:** maintainer to confirm the boundary with SIM-QA-25; red team H1 to H4 against RED-1 to RED-7; Chapter II word count (instruction 10a).
+**Next action (Stage 1):** maintainer to confirm the boundary with SIM-QA-25 (**still open**; the red team below ran on the provisional boundary by maintainer instruction of 2026-11-20, see D-36.2); ~~red team H1 to H4 against RED-1 to RED-7~~ (done, section 4); ~~Chapter II word count~~ (section 4.5).
+
+### **4. Stage 2: Red Team** *(2026-11-20, on maintainer instruction; run on the provisional boundary with SIM-QA-25, which is not confirmed; reasoning on text only; measurement `NOT_RUN`; first pass, no family lawyer or child-protection practitioner has read it; no article text drafted)*
+
+#### **4.1 Reading the Current Text First** *(Jurist)*
+* **Art. 2.2.2, "hereditary succession of occupancy among active co-inhabitants", has two readings.** "Hereditary" points to blood; "active co-inhabitants" points to residence. Kin who live elsewhere inherit under the first and not under the second.
+* **Succession of occupancy is not a contest.** It is occupancy, not ownership: everyone who lives there stays. RED-1 only arises between people who do not want to live together, and that is a separation.
+* **Art. 2.3.4 gives whoever leaves "an equivalent or superior dwelling" first.** The stakes of a separation are therefore lower than under property law. The same rule means that with no free dwelling in the node, nobody can leave a home in crisis.
+* **Three articles attach an advantage to a family tie:** priority in residence at Amber Status for "family reunification" (Art. 10.4.2), release from duties for "new parents" (Art. 5.4.3), exemption for "family … caregiving" (Art. 5.6.1). An advantage tied to a status invites a false claim to it.
+* **Art. 8.4.2 ends a restorative circle in "binding covenants".** A ruling of a fellowship's forum can enter the civil order by that door.
+* **Art. 8.4.4 gives tribunals no jurisdiction over parentage or the care of a child** (SIM-QA-33). The forum H3 relies on does not exist under the current text.
+* **Arts. 8.6.3 and 10.4.1 let any person leave and travel without checkpoints.** Nothing says whether a parent may take a child along against the other parent's will.
+* **Compelled genetic testing is barred** by Arts. 1.2.2 and 7.4.4 (no biometric data). A parentage dispute cannot be settled by an ordered test.
+* **No one is named to speak for an adult who cannot speak** (unconscious, demented). "Next of kin" does not exist in the canon.
+
+#### **4.2 Verdicts on the Hypotheses**
+* **H0, silence: `RED_WINS`.** RED-2, RED-3 and RED-4 succeed as written.
+* **H1, no civil status: `BLUE_HOLDS` against RED-6; `NARROWED` against RED-3; `RED_WINS` on one point as worded.** No status of union means no register of unions and no assembly ruling on intimacy. Against RED-3: with a dwelling, Tier 1 and an exit for every adult, a fellowship's ruling on marriage has little to hold a person with; the guard still needed is that no forum except a drawn body decides a dwelling, the care of a child or possessions, and that no covenant under Art. 8.4.2 can carry such a ruling or waive a Chapter I right. *Residual:* social pressure (SIM-QA-24). *Where H1 fails as worded:* "facts the persons themselves declare" works for people who live together and fails for the two cases where they do not: reunification (the persons are apart) and speaking for someone who cannot declare anything. See RED-9 and RED-11.
+* **H2, the declared household: `NARROWED`.** *RED-1:* settled by a minimum time of residence (same guard as SIM-QA-34 RED-9) and by the reading in section 4.1; everyone who qualifies stays. *RED-2, separation:* criteria fixed in advance hold, with four attacks. (a) Children become the way to win the home; the guard is that the stakes stay low: the equivalent dwelling for whoever leaves is in the same node where capacity allows, so a child keeps both. (b) A panel of three from a small node knows both parties; either may ask for a panel drawn from outside (the device accepted in SIM-QA-19). (c) No free dwelling: Art. 2.3.4 then keeps two people in a home in crisis. An interim room at once (the hospitality space of Art. 10.4.3) and priority on the list of SIM-QA-34. (d) A sham separation to obtain a second dwelling (RED-8). *RED-6 and RED-7:* a declared household is a record of who lives where, which the dwelling list needs anyway; it must record residence and never the nature of a relationship, in the sealed records of SIM-QA-29 under the purpose rule of SIM-QA-41. The bar of Art. 4.2.1 can then be applied to persons of one household, plus first-degree kin who declare themselves when drawn, open to challenge. *Residual:* partners who do not live together are not caught.
+* **H3, parentage and adoption: `RED_WINS` on the forum as worded; revised: `NARROWED`.** A tribunal of fifteen from adjacent districts, limited to "strictly verifiable physical evidence" (Art. 8.4.3) and without jurisdiction (section 4.1), cannot decide the care of a child. *Revised:* a relation of care is recorded from birth (the birth mother, and whoever is declared with her); a dispute, an adoption or a change goes to a panel drawn from outside the node that hears the child, and its decisions can be reviewed as the child grows, since nothing about a child is final. No test is compelled (section 4.1), so care that was given decides, not descent. More than two carers can be recorded; when they disagree the panel decides. *Residuals:* the weight of a genetic parent who never cared, and the child's knowledge of their origin, go to SIM-QA-25; adoption during the transition follows state law (SIM-QA-40).
+* **H4, possessions at death: `NARROWED`.** A written wish holds for personal possessions and never for a dwelling or any usufruct. *Attacks:* pressure on a dying person; a wish used to reward a drawn member (SIM-QA-33); tools piling up across generations, answered by the redundancy clause of Art. 2.2.1 (redundant units go to the tool library); heirs outside the commons during the transition, where state inheritance law, including shares reserved to kin, applies whatever the wish says (SIM-QA-40, SIM-QA-42). Who certifies a death and keeps the wish is not stated; the sealed register of SIM-QA-29 is the candidate.
+
+#### **4.3 New Vectors Found in This Pass**
+* **RED-8, the sham separation. `NARROWED`.** A household "separates" to hold two dwellings. *Guard:* when the two households join again within a set time, one dwelling returns to the list.
+* **RED-9, the false family tie. `NARROWED`.** Priority for "family reunification" (Art. 10.4.2) goes to whoever claims a tie. With no status, anyone can be named; with a status, a register of kinship is needed. *Guard:* each resident may name a small, fixed number of persons to join them; a past shared household or a recorded relation of care counts without limit. The cap is for Organic Law and is not sized.
+* **RED-10, leaving with the child. `NARROWED` inside the commons; `RED_WINS` toward the outside.** A parent takes the child to another basin, or out of the commons. *Guard:* a child's residence moves between nodes only with the consent of every recorded carer or by decision of the panel; nodes share the record of care (the replicated register of SIM-QA-29), so the carer left behind can act where the child now is. There are no checkpoints (Art. 10.4.1) and none are proposed. Outside the commons only state law reaches (SIM-QA-40).
+* **RED-11, who speaks for a person who cannot. `RED_WINS` under current text.** *Guard to test:* every adult may name, and change at any time, the person who speaks for them in care when they cannot; the same naming serves for possessions at death and for RED-9. Choice replaces status. Without a naming: the co-inhabitants, then a person drawn by lot (compare the Advocate of SIM-QA-29).
+* **RED-12, a child in danger tonight. On the boundary, not treated.** Nobody is named to take a child out of a dangerous home at once, and no guarantee exists of the kind Art. 8.5.3 gives an adult in custody (validation within 72 hours, review). It sits between SIM-QA-25 (the child's rights), SIM-QA-39 (protection without an offence) and SIM-QA-37 (who acts). For the maintainer to assign (D-36.2).
+* **RED-13, no age of consent. On the boundary, not treated.** With no status of union there is no "marriage" of a minor, and the canon has no age below which an adult's relation with a young person is barred. Belongs to SIM-QA-25 and, as an act, to SIM-QA-33.
+* **RED-14, state status during the transition. Cross-docket.** Residents will be married, divorced or registered as parents under state law. The commons neither recognises nor forbids it; where state law gives a spouse or a parent a claim (to a home, to an estate, over a child), it prevails until a phase gate (SIM-QA-40).
+
+#### **4.4 What Survives** *(the rule as a set of points; not article text)*
+Verdict for the docket: **`NARROWED`** with the six points below, on the provisional boundary; **`RED_WINS`** on silence, on the forum of H3 as worded, on H1 where persons are apart or cannot declare, and toward the outside of the commons (a child taken out; heirs under state law).
+1. **No civil status of union.** The commons records residence and care, never the nature of a relationship. A union under a fellowship or a state has no effect in the commons. Only drawn bodies decide a dwelling, the care of a child or possessions, and no covenant waives a Chapter I right.
+2. **Household.** The persons recorded as living in a dwelling, in sealed records used for stated purposes only. A co-inhabitant is a person who has lived there for a minimum time. At a death all co-inhabitants stay.
+3. **Separation.** Whoever leaves receives an equivalent dwelling, in the same node where capacity allows, with an interim room at once. Who stays is decided by a panel of three, from outside on request, on criteria fixed in advance, the children's residence first.
+4. **Named persons.** Every adult may name, and change at any time, who speaks for them when they cannot, who receives their possessions, and a capped number of persons they ask to join them.
+5. **Care of a child.** A recorded relation of care, never an ordered test. Disputes, adoption and changes go to a panel drawn from outside that hears the child and can be asked again. A child's residence moves between nodes only with the carers' consent or the panel's decision.
+6. **Possessions at death.** The written wish; then the named person or the co-inhabitants; then the commons. Never a dwelling or a usufruct.
+
+#### **4.5 Placement and Word Count** *(instructions 10 and 10a)*
+Under the placement test most of this is procedure for Organic Law. What stays in the Constitution: no forum but drawn bodies and no waiver (point 1), the definition of co-inhabitant as a bound (point 2), the right to name a person (point 4), and the panel that hears the child (point 5). No text is drafted.
+
+| Chapter | Canon today | Left | Also claimed by |
+| :--- | ---: | ---: | :--- |
+| II | 869 | about 130 | SIM-QA-32 O-1 (about one hundred words), SIM-QA-34 (dwellings by need and lot) |
+| V | 855 | 14 to 44, **within fifty** | SIM-QA-22, SIM-QA-31 |
+| I | 808 | 19 of 1,200 with accepted dockets | SIM-QA-24, 25, 27, 28, 34, 41; SIM-QA-35 would free words |
+
+Three dockets now ask for the remaining room in Chapter II. The conflict goes to the maintainer (D-36.6).
+
+#### **4.6 Compression Disclosure** *(instruction 8)*
+| # | Point | Source | Change | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | "hereditary succession of occupancy among active co-inhabitants" | Art. 2.2.2 | read as succession by residence; kin living elsewhere do not succeed; a minimum time applies | **clarified**, and **qualified** by the minimum time |
+| 2 | "no first-degree kin or domestic partners may serve concurrently" | Art. 4.2.1 | applied to persons of one household and to declared first-degree kin; partners who live apart are not caught | **weakened** slightly |
+| 3 | priority for "family reunification" | Art. 10.4.2 | persons named by the resident, capped; past household or recorded care without cap | **qualified** |
+| 4 | "binding covenants" | Art. 8.4.2 | cannot decide a dwelling, the care of a child or possessions, nor waive Chapter I | **qualified** |
+
+#### **4.7 Residual Weaknesses**
+* The boundary with SIM-QA-25 is not confirmed, and two matters found on it are not treated (RED-12, RED-13).
+* Everything that reaches outside the commons is governed by state law during the transition.
+* A record of who lives where and who cares for whom is sensitive even when sealed; this docket adds to what SIM-QA-29 and SIM-QA-41 must protect.
+* The minimum time of residence, the cap on named persons and the time limits are not sized.
+* Social pressure inside a fellowship is untouched.
+* No family lawyer, mediator or child-protection practitioner has read this.
+
+**Maintainer decisions needed (D-36.1 to D-36.6):**
+* **D-36.1:** accept the six points of section 4.4 as the direction, or change them.
+* **D-36.2:** confirm the boundary with SIM-QA-25, and assign the three matters found on it: a child in danger tonight (RED-12), the age of consent (RED-13), leaving with the child (RED-10, treated here as residence).
+* **D-36.3:** confirm that the commons recognises no status of union (H1).
+* **D-36.4:** the naming of persons (point 4) as the general device in place of kinship.
+* **D-36.5:** the reading of "hereditary" in Art. 2.2.2 as succession by residence.
+* **D-36.6:** placement, and the order of claims on Chapter II among SIM-QA-32, 34 and 36.
+
+**Next action:** maintainer decisions D-36.1 to D-36.6; then article text and Organic Law draft as hypothesis, with a second red-team pass; align the records with SIM-QA-29 and SIM-QA-41; reading by a family lawyer and a child-protection practitioner.
 
 ---
 
