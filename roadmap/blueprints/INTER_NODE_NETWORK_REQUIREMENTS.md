@@ -41,6 +41,8 @@ All of this is small and slow data. None of it needs a fast network.
 
 ## 3. Candidate building blocks
 
+**Selection rule:** technology that came out of cryptocurrency projects is acceptable when it is the best fit, but the coin is left out. A candidate passes only if it runs without holding, paying or earning a coin or token, and without depending on a public chain staying alive.
+
 | Layer | Meets | Candidates | Maturity and caveats |
 | :--- | :--- | :--- | :--- |
 | Own links without operators | R1, R2, R6 | Reticulum; community networks such as guifi.net and Freifunk as proof at scale | Reticulum works at small scale across LoRa, Wi-Fi and packet radio. Its manual still calls it an experimental stack. In December 2025 its original author withdrew from public interaction (no support, no issue handling) and said development continues outside the public repository; releases still appear, and a community fork and independent implementations in other languages continue. |
@@ -53,16 +55,39 @@ R8 is not a layer. It is a design rule for whatever is built on top: the softwar
 
 ---
 
-## 4. Open problems
+## 4. Proposed architecture for the record layer
+
+This is the current proposal, not a decision. It has not been built or tested.
+
+| Tier | What it is | What it holds | Works when cut off |
+| :--- | :--- | :--- | :--- |
+| **1. Node log** | A signed, append-only log kept by every node. | Everything the node records day to day. | Yes. This is what meets R2. |
+| **2. Bilateral entries** | An exchange record signed by both basins. | Resource accounts between two basins, which Art. 10.3.1 defines as bilateral compacts. | Yes, between the two parties. |
+| **3. Federation chain** | A coinless open-source chain whose validators are the federated nodes themselves. A block is valid when more than two thirds of them sign it. No mining, no coin, no outside operator. | Only the fingerprint (hash) of each node log, deposited whenever a link is up, plus the few things that need one order for everyone: the civic register, the draws, and the decisions of assemblies above neighborhood level. | No. It pauses and catches up. |
+
+Once a fingerprint is on the federation chain, a node cannot rewrite its own past without the others seeing it. That is how R3 is met without requiring nodes to stay connected. Validator keys are held under R4.
+
+**Known limits of the federation chain:**
+
+- **Disconnection:** it stops when fewer than two thirds of the validators can reach each other. An isolated node keeps working on tier 1 and deposits its fingerprints later.
+- **Bandwidth:** consensus needs a steady exchange of messages. It fits fibre and Wi-Fi links, not LoRa. Over LoRa only tiers 1 and 2 are realistic.
+- **Few validators:** protection comes from the number of independent validators. With four nodes, two can halt the chain and three can rewrite it. It becomes robust with dozens of nodes across several watersheds.
+
+**Staging:** with 3 to 5 nodes, tier 3 is replaced by something simpler: nodes countersign each other's log fingerprints at regular intervals. The chain is introduced when the federation grows and fibre arrives. Candidate software for it (permissioned Byzantine fault tolerant chains) has not been evaluated yet.
+
+---
+
+## 5. Open problems
 
 - **Personhood:** who checks that one person is only one person, without biometrics, and who checks the checkers.
 - **Key ceremony:** how key splitting among drawn assemblies works as a procedure, not only as a principle.
 - **Record format:** the Constitution says "open thermodynamic ledgers" but not what one entry contains.
+- **Federation chain software:** which coinless validator chain to use, and how a node rejoins after a long cut-off.
 - **The glue:** nobody has combined these pieces to carry resource accounts and sortition between communities.
 - **Transport choice:** the Stage 3 blueprint is written around Reticulum. Given the caveats in section 3, the blueprint treats it as the current candidate and the hardware (LoRa radios, ridge repeaters) stays valid for any replacement stack.
 
 ---
 
-## 5. What is used today
+## 6. What is used today
 
 The public Git repository already serves as the shared record: every commit is chained by hash to the one before it, and the history is never rewritten. Commits are not yet cryptographically signed, so R3 is met by convention and not by signature. Nothing else needs building until two real nodes exist.
