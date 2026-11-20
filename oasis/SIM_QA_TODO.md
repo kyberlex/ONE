@@ -106,7 +106,7 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 
 ### **E. Red team of SIM-QA-31 to 42** *(2026-11-20, one docket at a time, in board order; first pass complete; what must be settled before the Genesis Lock is gathered in [`pre_lock_consolidation_2026-11-20.md`](pre_lock_consolidation_2026-11-20.md); the first batch for decision, Chapter I, with current text beside the options, is [`chapter_i_decision_batch_2026-11-20.md`](chapter_i_decision_batch_2026-11-20.md); draft wording for the decided items, beside the current text, is [`chapter_i_draft_2026-11-20.md`](chapter_i_draft_2026-11-20.md): **Chapter I would stand at 1,436 of 1,200 words**; second drafting pass after batch 2: 1,624 words, the whole 12,058; both ceilings suspended)*
 **SIM-QA-31, AI and robots** ([log](sim_resolutions_qa.md), docket section 4)
-- [ ] D-31.1: accept the seven points of section 4.4 as the direction, or change them.
+- [ ] D-31.1: accept the seven points of section 4.4 as the direction, or change them. *(2026-11-20, conflicts batch: point 3 (training data, conflict 6) and point 7 (the steward, conflict 12) settled; point 4 needs no exception (conflict 3); the rest open)*
 - [ ] D-31.2: the five canon points the rule would weaken (section 4.6: Arts. 7.3.1, 7.3.3, 7.1.4, 8.2.1, 5.1.4), each: accept, or keep the article as it stands.
 - [ ] D-31.3: placement: O-1 new article in Chapter VI with short amendments in Chapters VII and VIII; O-2 Chapter VII with a ceiling decision (25 words left); O-3 a twelfth chapter.
 - [ ] D-31.4: machine-only care (RED-10): a rule in this docket, or left to SIM-QA-22 D-5.
@@ -114,24 +114,24 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 - [ ] D-31.6: the chip firmware gap of Art. 7.2.2 (RED-6 a) passed to SIM-QA-40.
 
 **SIM-QA-32, guilds** ([log](sim_resolutions_qa.md), docket section 4)
-- [ ] D-32.1: accept the eight points of section 4.4 as the direction, or change them.
+- [ ] D-32.1: accept the eight points of section 4.4 as the direction, or change them. *(2026-11-20, conflicts batch, conflict 12: a guild answers as the steward of its mandate, by loss of the mandate; the rest open)*
 - [ ] D-32.2: R-IV-28: guilds hold no authority of their own.
-- [ ] D-32.3: a demonstration per dangerous task and the interim stop, against the D-15 drop: different in kind, or reopen D-15.
+- [x] D-32.3: a demonstration per dangerous task and the interim stop, against the D-15 drop: different in kind, or reopen D-15. *(decided 2026-11-20, conflicts batch, conflict 4: different in kind, D-15 stands; criteria adopted by the drawn body on rival evidence, never by the guild alone)*
 - [ ] D-32.4: guild work against rotational shifts: (a) full exemption as for carers; (b) hour for hour with a minimum of rotational shifts for every able adult; (c) no credit.
 - [ ] D-32.5: oversight by record and outside peers in place of the standing panel of H3, or both.
 - [ ] D-32.6: placement: O-1 new article in Chapter II; O-2 Chapter IV (14 words left); O-3 Chapter V.
 
 **SIM-QA-33, harms that are not physical** ([log](sim_resolutions_qa.md), docket section 4)
-- [ ] D-33.1: accept the six points of section 4.5 as the direction, and choose which acts of the table in section 4.3 enter the list.
-- [ ] D-33.2: proof: (a) keep Art. 8.4.3 (physical evidence only) and accept that unrecorded acts go unproven; (b) admit testimony for the listed acts with corroboration.
-- [ ] D-33.3: the persistent non-violent author: (a) measure unenforced; (b) exclusion from Tier 3, computing and transit until the breach ends; (c) relocation by ruling with force (changes D-37.1 point 4; meets Art. 10.4.3).
+- [ ] D-33.1: accept the six points of section 4.5 as the direction, and choose which acts of the table in section 4.3 enter the list. *(2026-11-20, conflicts batch, conflict 12: point 5 confirmed; the rest open)*
+- [x] D-33.2: proof: (a) keep Art. 8.4.3 (physical evidence only) and accept that unrecorded acts go unproven; (b) admit testimony for the listed acts with corroboration. *(decided 2026-11-20, conflicts batch, conflict 10: (b), testimony with corroboration, never alone; a person's own messages, recordings and videos admitted after the audit of Art. 8.4.5; Art. 8.4.3 weakened, disclosure at drafting)*
+- [x] D-33.3: the persistent non-violent author: (a) measure unenforced; (b) exclusion from Tier 3, computing and transit until the breach ends; (c) relocation by ruling with force (changes D-37.1 point 4; meets Art. 10.4.3). *(decided 2026-11-20, conflicts batch, conflict 2: a ladder: exclusion from Tier 3; then enforced relocation by ruling; then custody with the guarantees of Art. 8.5.3; adds a case to Draft C in Chapter I; weakens Art. 10.4.3)*
 - [x] D-33.4: preparation of mass harm (interlock bypass, weapons): keep "never custody without violence", or extend Art. 8.5.2 with its guarantees. *(still open after the Chapter I batch of 2026-11-20; if accepted it must enter the Chapter I list before the lock)* *(decided 2026-11-20, batch 2 item 3: no custody; holding to stop the making or use of a means of mass death and take it away)*
 - [ ] D-33.5: placement: O-1 acts and limit named in Chapter VIII, definitions in Organic Law that may only narrow; O-2 an own ceiling for Chapter VIII.
 - [ ] D-33.6: full sweep of the canon for acts named and left without a forum, before drafting.
 
 **SIM-QA-34, allocation above the survival floor** ([log](sim_resolutions_qa.md), docket section 4)
 - [ ] D-34.1: accept the four points of section 4.4 as the direction, or change them.
-- [ ] D-34.2: immobility: no one is made to move, with two guards (energy allotment per person; minimum shared residence before succession), or something stronger.
+- [ ] D-34.2: immobility: no one is made to move, with two guards (energy allotment per person; minimum shared residence before succession), or something stronger. *(partly decided 2026-11-20, conflicts batch, conflict 5: the energy allotment per person, enforced in the device; the second guard open)*
 - [x] D-34.3: specialised care inside the Tier 1 baseline (expansion of Art. 1.3.2; Chapter I ceiling conflict), or outside it with protections written elsewhere. *(decided 2026-11-20, batch item 7: not in the baseline; Chapter I bars conditioning access to any treatment on status, contribution or origin)*
 - [ ] D-34.4: swaps and favours between persons free and unenforced; a civic obligation never done by another for a return (reading of Art. 5.1.2).
 - [ ] D-34.5: the tool-library deposit that grants priority booking (Art. 2.2.1): remove the priority, or keep it.
@@ -142,13 +142,13 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 - [ ] D-35.1: accept the six points of section 4.5 as the direction, or change them.
 - [x] D-35.2: a wrong bound in Chapter I: (a) permanent, Art. 1.7 stays absolute, H2 withdrawn; (b) a correction path, with the back door it opens. *(decided 2026-11-20: (a), Chapter I absolutely closed, H2 withdrawn)*
 - [ ] D-35.3: the six disclosure lines of section 4.7 (all touch Chapter I), in particular the biosecurity bar stated by function. *(partly decided 2026-11-20, batch item 1: the four lines on Art. 1.4.3; lines 5 and 6 open)*
-- [ ] D-35.4: withdrawal of a bioregion from compacts, solidarity, higher assemblies and standards at 75% of adult residents after notice, or no exit beyond the individual's.
+- [x] D-35.4: withdrawal of a bioregion from compacts, solidarity, higher assemblies and standards at 75% of adult residents after notice, or no exit beyond the individual's. *(decided 2026-11-20, conflicts batch, conflict 1: no withdrawal of a bioregion; only the individual's exit; the nodes belong to the federation)*
 - [ ] D-35.5: the captured node (RED-11): accept as a limit, or a docket on what the federation may do short of force.
 - [ ] D-35.6: amendment by jury (RED-12): keep D-12 (no binding precedent), or reopen it for Chapter I only.
 
 **SIM-QA-36, personal status and family** ([log](sim_resolutions_qa.md), docket section 4; red team run on the provisional boundary)
 - [ ] D-36.1: accept the six points of section 4.4 as the direction, or change them.
-- [ ] D-36.2: confirm the boundary with SIM-QA-25, and assign three matters found on it: a child in danger tonight (RED-12), the age of consent (RED-13), leaving with the child (RED-10).
+- [x] D-36.2: confirm the boundary with SIM-QA-25, and assign three matters found on it: a child in danger tonight (RED-12), the age of consent (RED-13), leaving with the child (RED-10). *(partly decided 2026-11-20, conflicts batch, conflict 7: boundary confirmed; a child in danger tonight to SIM-QA-25 (anyone acts for the moment, an outside panel of three within 72 hours); the age of consent and leaving with the child open)* *(fully decided 2026-11-20, conflict 7: the age of consent to SIM-QA-25 and SIM-QA-33 (a sexual act of an adult with a child is violence; the age in Organic Law, bounded in the Constitution); leaving with the child stays in SIM-QA-36)*
 - [ ] D-36.3: the commons recognises no status of union (H1).
 - [ ] D-36.4: the naming of persons (who speaks for me, who receives my possessions, whom I ask to join me) in place of kinship. *(partly decided 2026-11-20, batch 2 item 1a: the named person decides for an adult who cannot; the other two uses open)*
 - [ ] D-36.5: "hereditary" in Art. 2.2.2 read as succession by residence.
@@ -158,7 +158,7 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 - [ ] D-37.2: point 1 as revised (citizens drawn for a short on-call term, trained, present as witnesses and help), or as given (drawn at each intervention).
 - [ ] D-37.3: the closed list of cases: add or refuse (a) holding until the validation of Art. 8.5.3; (b) violence about to begin; (c) an act in progress that endangers life; (d) rulings on enclosure and poisoning; (e) the cases of SIM-QA-33 and SIM-QA-39. *(partly decided 2026-11-20, batch item 2: (a), (b) and (c) limited to danger to life accepted, with custody under Art. 8.5 and the protective hold; enforced isolation refused; (d) and preparation of mass harm open)* *(batch 2, 2026-11-20: two cases added, means of mass death and a person who cannot judge the danger)*
 - [ ] D-37.4: firearms and weapons made at home accepted as residuals; whether a private person may keep or carry a weapon (RED-18).
-- [ ] D-37.5: machines of restraint: allow with the guards of point 3, or none beyond shields and barriers.
+- [x] D-37.5: machines of restraint: allow with the guards of point 3, or none beyond shields and barriers. *(decided 2026-11-20, conflicts batch, conflict 3: none; only shields, barriers and doors; point 3 of the direction withdrawn)*
 - [ ] D-37.6: self-defence in Chapter VIII as a rule of judgment, for persons only; whether it covers a defender who injures. *(partly decided 2026-11-20, batch item 11: Chapter VIII, a rule of judgment; whether it covers a defender who injures is open)*
 - [ ] D-37.7: one drawn figure, guardian and defender, with a person of trust allowed.
 - [x] D-37.8: "physical subjugation" in Art. 1.2.2 reworded before the lock (with SIM-QA-35 and SIM-QA-39). *(decided 2026-11-20, batch item 2: option B, a closed list of cases in Chapter I; wording to follow)*
@@ -168,8 +168,8 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 - [ ] D-38.2: accept the four points of section 5.4 as the revised direction, or change them.
 - [x] D-38.3: the order when ceiling and floor collide, joined to SIM-QA-30 (transfers; bounded excess inside a certified margin; shared shortage), stated in Chapter I before the lock. *(decided 2026-11-20, batch item 6: order stated in Chapter I)*
 - [ ] D-38.4: solidarity delivered as capacity first, flows to bridge.
-- [ ] D-38.5: Tier 1 solidarity not shed by withdrawal (with D-35.4) and never suspended by decoupling (Art. 10.3.3).
-- [ ] D-38.6: Art. 3.1.6 beside standing solidarity and the cities of Art. 10.3.2: closure as a goal with certified exceptions, or as a condition.
+- [ ] D-38.5: Tier 1 solidarity not shed by withdrawal (with D-35.4) and never suspended by decoupling (Art. 10.3.3). *(2026-11-20: the first half is moot, D-35.4 decided as no withdrawal; the second half, decoupling, is open)*
+- [x] D-38.6: Art. 3.1.6 beside standing solidarity and the cities of Art. 10.3.2: closure as a goal with certified exceptions, or as a condition. *(decided 2026-11-20, conflicts batch, conflict 11: closure as the goal the audit measures, with three certified exceptions that have a term; failure is Tier 1 in fact not delivered; Art. 3.1.6 weakened, disclosure at drafting; no figure before the SIMONE runs)*
 - [ ] D-38.7: placement (Chapters I, III, X), with SIM-QA-34 and SIM-QA-35.
 - [ ] Go for the two SIMONE tasks (donor share; transport of each flow) to be entered in `simone/TODO.md`.
 
@@ -190,16 +190,16 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 - [ ] D-40.5: Arts. 8.1.4, 9.4.1, 9.4.3 and 9.4.5 join the suspended list; a lawful act of the state is never aggression.
 - [ ] D-40.6: harm to a child is always reported by the node; an adult decides for themselves.
 - [ ] D-40.7: the node pays each member's mandatory taxes, insurance and contributions; a rule on leaving with means, in place of the roadmap's "Art. 9.7".
-- [ ] D-40.8: legal organs and drawn bodies (with SIM-QA-42).
+- [x] D-40.8: legal organs and drawn bodies (with SIM-QA-42). *(decided 2026-11-20, conflicts batch, conflict 9: the legal organs carry out drawn decisions unless unlawful, publish any refusal; an outside drawn panel hears the dispute; the Board keeps the last word in law; subject to Swiss counsel)*
 - [ ] D-40.9: roadmap wording (the "Stealth" heading, "Art. 9.7", the claim on wage law, "sovereign" in Phase 3): correct now, or record under housekeeping.
 - [ ] D-40.10: the ceiling of Chapter IX (31 words left).
 
 **SIM-QA-41, a general rule on personal data** ([log](sim_resolutions_qa.md), docket section 5; red team of direction D-41.1)
-- [ ] D-41.2: accept the seven points of section 5.4 as the revised direction, or change them.
+- [ ] D-41.2: accept the seven points of section 5.4 as the revised direction, or change them. *(2026-11-20, conflicts batch, conflict 6: point 6 changed: personal data in training allowed with consent, anonymised, above a minimum cell, rare cases pooled or with a second consent; the rest of D-41.2 open)*
 - [x] D-41.3: where the principle lives: (a) a short sentence in Chapter I; (b) Chapter VII, amendable at 75%; (c) Organic Law first. *(decided 2026-11-20, batch item 10: Chapter VII; its ceiling still to decide)*
 - [x] D-41.4: the reading of Art. 1.2.2: "involuntary" governs neurological monitoring and pharmacological manipulation; fixed before the lock. *(decided 2026-11-20, batch item 5: every item depends on the absence of consent)*
 - [ ] D-41.5: no link outside the person's key by default; an escrowed link for a closed list; a case added only at 75%.
-- [ ] D-41.6: the two design proposals (limits kept in the device; proof held by the person) as the direction, to a specialist.
+- [ ] D-41.6: the two design proposals (limits kept in the device; proof held by the person) as the direction, to a specialist. *(partly decided 2026-11-20, conflicts batch, conflict 5: limits kept in the device, reporting only the branch total, as the direction, to a specialist; proof held by the person open)*
 - [ ] D-41.7: personal data inside a fab-lab file left out or exempted (with OL-2 point 3).
 - [ ] D-41.8: whether drawn members are named during a mandate, and whether each member's vote is public.
 - [ ] D-41.9: systematic profiling by persons and associations as an act under SIM-QA-33.
@@ -207,7 +207,7 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 **SIM-QA-42, the Foundation** ([log](sim_resolutions_qa.md), docket section 5; red team of direction D-42.1; no Swiss counsel)
 - [ ] D-42.3: accept the seven points of section 5.5 as the revised direction, or change them.
 - [ ] D-42.4: invariant 1 in two halves, and where it is reworded (project rules, `CONTRIBUTING.md`, `COMPARATIVE_ANALYSIS.md`).
-- [ ] D-42.5: removal decided outside the Board; the drawn panel's assent for the gravest acts.
+- [ ] D-42.5: removal decided outside the Board; the drawn panel's assent for the gravest acts. *(2026-11-20, conflicts batch, conflict 9: the outside panel's finding may ground removal; D-42.5 itself open, subject to counsel)*
 - [ ] D-42.6: the roll for the lot: all adult residents and standing contributors, with a minimum number.
 - [ ] D-42.7: annex by reference or in full; the transitional amending body; the amending body named in Chapter IV before the lock (with SIM-QA-35). *(partly decided 2026-11-20: a transitional drawn amending body is written before the lock; the permanent body, the annex and the minimum roll are open)*
 - [x] D-42.8: the exclusive commercial licence against the open licences and canon Art. 1.5.2: drop the exclusivity and the "non-commercial" wording, or keep them as a stated transitional derogation. *(decided 2026-11-20, batch item 9: drop the exclusivity and the "non-commercial" wording; Chapter I unchanged)*
@@ -236,7 +236,7 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 - [x] **The ceiling of Chapter I:** the batch adds about 250 words (1,436 against 1,200); raise it after a recount of every chapter, or reopen which drafts stay in Chapter I. *(decided 2026-11-20: raise, after the recount; recount done in [`word_recount_2026-11-20.md`](word_recount_2026-11-20.md); the new figure is not decided)*
 - [ ] **Ceilings after the recount** ([`word_recount_2026-11-20.md`](word_recount_2026-11-20.md), section 4): (1) Chapter I: **decided 2026-11-20, the figure of 1,200 is suspended until the chapter is fully drafted, then set by one decision**; still open: (2) Chapter IV: 2,183 against 2,150 with text already accepted, 2,231 with Y-12 and the Y-3 bound; (3) the whole: **decided 2026-11-20, the figure of 11,500 is suspended until the dockets are drafted; every draft states the count of its chapter and of the whole** (11,615 with text already accepted, 11,870 with the Chapter I drafts); (4) the other chapters claimed by more dockets than they hold: draft, count, then decide, chapter by chapter. The earlier estimate that Art. 1.4.3 would free 60 to 100 words was wrong (9).
 - [ ] Before the drafts can be final: adults who cannot consent or decide (D-36.4, D-39.8); the protective hold after a specialist reading (D-39.3); preparation of mass harm (D-33.4). *(put to the maintainer 2026-11-20 as [`chapter_i_decision_batch_2_2026-11-20.md`](chapter_i_decision_batch_2_2026-11-20.md), with the children decisions D-25.1, D-25.2, D-25.4; fourteen questions in four items; not answered)*
-- [ ] **The twelve conflicts between dockets** (section 6 of the consolidation): put to the maintainer 2026-11-20 as [`conflicts_decision_batch_2026-11-20.md`](conflicts_decision_batch_2026-11-20.md), each with the text concerned beside the options; conflicts 2 (except D-33.3) and 8 already settled by the Chapter I batches; not answered. Three answers would weaken canon points (Arts. 10.3.3, 8.4.3, 3.1.6) and need a disclosure decision of their own.
+- [x] **The twelve conflicts between dockets** (section 6 of the consolidation): put to the maintainer 2026-11-20 as [`conflicts_decision_batch_2026-11-20.md`](conflicts_decision_batch_2026-11-20.md), each with the text concerned beside the options; conflicts 2 (except D-33.3) and 8 already settled by the Chapter I batches *(all answered by the maintainer one at a time, 2026-11-20; recorded at the end of that file and in each docket; to carry at drafting: Arts. 10.4.3, 8.4.3 and 3.1.6 weakened, each a disclosure decision of its own, and a case added to Draft C in Chapter I; nothing merged)*
 
 ### **C. Housekeeping** *(documents that describe the canon and are out of date; recorded 2026-11-20, not fixed)*
 - [ ] Stale counts and terms against the current canon (11 chapters, 67 articles, eight Class-0 invariants): `README.md` ("46 Statutory Articles", "10 statutory chapters and 46 Articles", "46 Canonical Articles"); `COMPARATIVE_ANALYSIS.md` ("12-Title Constitution", seven Class-0 invariants, "Civic Housing Pool", a term found in neither the canon nor the Organic Law Annex); the constitution-engine skill ("canon, 46 articles"; private file); the header notice of the master text ("10-chapter architectural blueprint"; master text is read-only, so this one needs the maintainer's own decision).
