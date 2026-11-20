@@ -102,7 +102,7 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 - [ ] SIM-QA-42: D-42.2, four questions for Swiss counsel; where invariant 1 is reworded for the public (`CONTRIBUTING.md`, `COMPARATIVE_ANALYSIS.md`).
 - [ ] SIM-QA-36: confirm the provisional boundary with SIM-QA-25 (now D-36.2, section E).
 
-### **E. Red team of SIM-QA-31 to 42** *(2026-11-20, one docket at a time, in board order; first pass complete; what must be settled before the Genesis Lock is gathered in [`pre_lock_consolidation_2026-11-20.md`](pre_lock_consolidation_2026-11-20.md))*
+### **E. Red team of SIM-QA-31 to 42** *(2026-11-20, one docket at a time, in board order; first pass complete; what must be settled before the Genesis Lock is gathered in [`pre_lock_consolidation_2026-11-20.md`](pre_lock_consolidation_2026-11-20.md); the first batch for decision, Chapter I, with current text beside the options, is [`chapter_i_decision_batch_2026-11-20.md`](chapter_i_decision_batch_2026-11-20.md))*
 **SIM-QA-31, AI and robots** ([log](sim_resolutions_qa.md), docket section 4)
 - [ ] D-31.1: accept the seven points of section 4.4 as the direction, or change them.
 - [ ] D-31.2: the five canon points the rule would weaken (section 4.6: Arts. 7.3.1, 7.3.3, 7.1.4, 8.2.1, 5.1.4), each: accept, or keep the article as it stands.
