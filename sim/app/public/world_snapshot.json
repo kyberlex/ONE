@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "network": "O-ASIS Confederated Mesh",
   "genesis": false,
-  "tick": 241460,
-  "day": 10061,
-  "timestamp": "2026-11-20T05:29:35Z",
+  "tick": 241472,
+  "day": 10062,
+  "timestamp": "2026-11-20T19:33:22Z",
   "nodes": {
     "node-detroit": {
       "id": "node-detroit",
@@ -22,7 +22,7 @@
       "fiatTreasury": 3250,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 350,
+          "batteryStoredKwh": 0,
           "batteryCapacityKwh": 350
         },
         "water": {
@@ -184,13 +184,13 @@
       "fiatTreasury": 9800,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 7290,
+          "batteryStoredKwh": 5130,
           "batteryCapacityKwh": 10000,
           "solarGenerationKwh": 280,
           "consumptionKwh": 310
         },
         "water": {
-          "cisternStoredL": 29780,
+          "cisternStoredL": 29864,
           "cisternCapacityL": 40000,
           "rainInflowL": 350,
           "consumptionL": 280
@@ -279,7 +279,7 @@
           "consumptionKwh": 360
         },
         "water": {
-          "cisternStoredL": 29600,
+          "cisternStoredL": 29480,
           "cisternCapacityL": 65000,
           "rainInflowL": 380,
           "consumptionL": 480
@@ -362,7 +362,7 @@
       "fiatTreasury": 13000,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 11000,
+          "batteryStoredKwh": 8840,
           "batteryCapacityKwh": 11000,
           "solarGenerationKwh": 480,
           "consumptionKwh": 310
@@ -451,7 +451,7 @@
       "fiatTreasury": 15500,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 8020,
+          "batteryStoredKwh": 9580,
           "batteryCapacityKwh": 12000,
           "solarGenerationKwh": 510,
           "consumptionKwh": 340
@@ -532,5 +532,5 @@
     "author": "Kyberlex <kyberlex@proton.me>",
     "license": "AGPL-3.0-or-later"
   },
-  "thermoConsensusHash": "0905c4976094168d1bf48d5ff8409c824ed5e0e86ec58f4da0a5172d3a00b7c3"
+  "thermoConsensusHash": "f8bfb90854bd9015c1b37bd444db96b5d383499af1a8ea246a26560d825306f7"
 }
