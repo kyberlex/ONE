@@ -3642,7 +3642,7 @@ The floor, the duty of solidarity and the order of point 4 are rights and duties
 ## **SIM-QA-39: Protection Where There Is No Offence**
 
 * **Date Recorded:** 2026-11-20  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction with a working direction (section 4). **Nothing below is red-teamed**, the direction included. No article text is drafted. First pass; no review by a public-health or mental-health specialist.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST), opened 2026-11-20 on maintainer instruction with a working direction (section 4). Red team of the direction 2026-11-20 (section 5): **`NARROWED`** with six revised points; **`RED_WINS`** under the current text on any measure carried out by force (Chapter I), and as worded on validation by fifteen per case, on permanent incapacity and on the chronic carrier. Sections 1 to 4 are as recorded at opening. No article text is drafted. First pass; no review by a public-health or mental-health specialist.  
 * **Originating Context:** maintainer gap review of 2026-11-20 (second batch).  
 * **Closest current canon:** Art. 1.2.2 ("physical subjugation" among the acts "permanently prohibited"), Art. 1.2.3 ("No civic mandate, collective emergency, or administrative decree may violate the physical or psychological substrate of any individual"; "compassionate, uncoerced biological exit"), Art. 10.4.1 and 10.4.3 (free movement; no pushback), Art. 8.5.2 (custody for predatory violence only), Art. 3.5.1 (epidemics named among the disruptions reserves must cover), Art. 4.4 (rival expert panels), Art. 4.5.3 (emergency decrees at simple majority, thirty-day sunset), Art. 8.1.2 (evacuation orders beyond 24 hours need re-authorisation by a drawn panel: the one existing limit on movement without an offence), Art. 5.5 (mental health), Art. 3.4.4 (sensor networks "strictly confined to abiotic and macro-ecological variables").  
 * **Constitutional Articles:** Arts. 1.2.2, 1.2.3, 1.7, 3.4.4, 3.5.1, 4.4, 4.5.3, 5.5, 8.1.2, 8.5.2, 8.5.3, 10.4.  
@@ -3677,7 +3677,87 @@ The floor, the duty of solidarity and the order of point 4 are rights and duties
   5. A short protective hold for a person endangering only themselves when lucid decision is in doubt, assessed by a panel from another node, with no imposed medication.
 * **Residuals named by the maintainer, to test:** compatibility with "physical subjugation" in Chapter I, linked to SIM-QA-35 (RED-2); abuse of protective holds (RED-8).
 
-**Next action:** red team D-39.1 against RED-1 to RED-9; settle RED-2 with SIM-QA-35 before any text; specialist review.
+**Next action (Stage 1):** ~~red team D-39.1 against RED-1 to RED-9~~ (done, section 5); settle RED-2 with SIM-QA-35 before any text (**open**: D-39.2, D-39.3); specialist review (**not done**).
+
+### **5. Stage 2: Red Team of the Working Direction** *(2026-11-20, on maintainer instruction; reasoning on text only; measurement `NOT_RUN`; first pass; no public-health, mental-health or geriatric specialist has read it; no article text drafted)*
+
+#### **5.1 Reading the Current Text First** *(Jurist)*
+* **Art. 1.2.3 names the case and answers it:** "No civic mandate, collective emergency, or administrative decree may violate the physical or psychological substrate of any individual." An epidemic is a collective emergency. The authors foresaw it and refused the exception.
+* **Three different things are in the direction, and Chapter I treats them differently.** (i) An order to keep apart that nobody enforces limits movement and gatherings; movement is in Art. 10.4, outside Chapter I, and gatherings are in Art. 1.4.1 ("unconditional freedom of … peaceful assembly"), inside it. (ii) Isolation carried out by force is "physical subjugation" (Art. 1.2.2). (iii) A protective hold is physical subjugation and also touches "mental sanctuary" and the "uncoerced biological exit" (Art. 1.2.3). Under the current text (ii) and (iii) are void (Art. 1.7.2), and (i) is arguable.
+* **A test is an act on the body.** A swab or a blood sample cannot be compelled (Art. 1.2). With contact tracing "only by choice" (point 4) and no recording of persons (Arts. 3.4.4, 8.2.2), a contagious person who declines the test cannot be shown to be contagious (RED-10).
+* **Art. 10.4.3: "Under no circumstances shall any human being face armed pushback, physical interdiction, or involuntary deportation", and travellers keep "safe transit".** A cordon around an area cannot be held by force. What a decree can do is close common facilities and stop scheduled transit.
+* **The guarantees of custody are built for one person at a time** (Art. 8.5.3: fifteen citizens within 72 hours; review every 180 days). An outbreak has hundreds of cases over days.
+* **Art. 4.4.4 answers a deadlock of experts by "withholding approval".** For a new structure that is caution. For an outbreak, withholding the measure is itself the risk; the rule points the wrong way or no way.
+* **Art. 3.4.4 confines sensors to "abiotic and macro-ecological variables".** A pathogen in sewage is biotic; whether a whole population's sewage is "macro-ecological" is a reading, not a text.
+* **Art. 10.1.4** lets higher tiers override a node only for pollution, shared aquifers and invariant rights. A node that takes no measure in an outbreak is not clearly covered.
+
+#### **5.2 Verdicts, Point by Point**
+* **RED-2 first (the residual named by the maintainer): `RED_WINS` under the current text.** Section 5.1: enforced isolation and the protective hold are void under Chapter I, and no text outside Chapter I can change that. The fix must be made in Art. 1.2 before the Genesis Lock (SIM-QA-35 point 1, SIM-QA-37 D-37.8), and it reopens the choice the authors made in Art. 1.2.3. *The red team's finding on whether to make it:* for isolation, force adds little. Diagnosis cannot be compelled, tracing is voluntary, nobody is recorded; the measure reaches the visibly ill and the willing whether or not force stands behind it. What makes people keep apart is that it costs them nothing: full Tier 1 and care brought to the door, and shifts counted as done. Two options for the maintainer (D-39.2): **O-A,** isolation by order and support, never by force, with Art. 1.2 untouched and the refuser accepted as a residual; **O-B,** isolation enforceable with guarantees, which needs the Chapter I change and a new case in SIM-QA-37. The red team supports O-A. The protective hold is different: there the physical act is the whole measure, and it cannot exist without the Chapter I change.
+* **Point 1, isolation: `NARROWED` (under O-A or O-B).** *RED-4, slow certification:* two stages. Diseases are certified in advance, in calm times, by rival panels, as a list in Organic Law. For a new pathogen a small drawn panel of practitioners certifies provisionally within days; the certification lapses unless the full rival review confirms it. On deadlock the measure lapses: liberty is the default, and the provisional period is the room for caution. *RED-12 (new), scale:* validation by fifteen for every case cannot be done in an outbreak. A person who agrees needs no validation; a person who contests gets a panel of three within 72 hours (the per-dispute panels of SIM-QA-19). *Duration:* while infectious, as certified, reviewed at short intervals; 180 days (Art. 8.5.3) is the wrong scale. *Least restriction:* at home first. *RED-11 (new), the chronic carrier:* a person infectious for years who declines treatment (point 3) is isolated for years without an offence. No rule can keep all three of: no compulsory treatment, no indefinite isolation, protection of others. The direction keeps the first; the second gives way. Conditions must then be those of Art. 8.5.2 at least (daylight, garden, care), with contact kept by every safe means. For the maintainer (D-39.4).
+* **Point 2, area quarantine: `NARROWED`.** *What it can contain:* closing common facilities, stopping scheduled transit, receiving arrivals in isolation space. Not a cordon (section 5.1). Private gatherings are not reached (Art. 1.4.1), and closing the commons' own rooms is the limit of what a decree does to assembly (RED-16, new). *RED-5:* thirty days at simple majority, then ratification at 60% (Art. 4.5.3); for decrees that follow one another, the repeated-decree rule drafted in SIM-QA-18 (Y-12). *RED-3, quarantine as border:* the same rule for a resident coming home and for a newcomer (origin is a protected ground in SIM-QA-23); isolation space is finite, and beyond it the arrivals question is SIM-QA-30. *RED-13 (new), the node that takes no measure:* neighbours cannot close their limits; they can receive its travellers in isolation space. Whether a higher tier may order a measure inside that node is not answered by Art. 10.1.4.
+* **Point 3, no compulsion: `BLUE_HOLDS`, with one rule to add.** *RED-6:* pressure enters when declining has a consequence. *Rule:* no consequence follows from a person's status (vaccinated or not, treated or not); consequences follow only from being infectious in fact. With the medical record under the person's own key (SIM-QA-41), status cannot be checked anyway. *Open:* who decides for a child (SIM-QA-25, SIM-QA-36).
+* **Point 4, data: `NARROWED`.** *RED-7:* counts are published above a minimum cell and small nodes are counted together (SIM-QA-29 measured 69% re-identification at fifty adults, synthetic). Wastewater is sampled only where the pipe serves more people than the minimum cell, for named pathogens only, and samples are destroyed; sampling a building is domestic profiling. Human genetic material is in sewage too, which is why the target list matters. The reading of Art. 3.4.4 that allows any of this is for the maintainer (D-39.6).
+* **Point 5, the protective hold: `NARROWED`; `RED_WINS` as worded on two points.**
+  * *RED-8, abuse.* "Lucid decision in doubt" is a judgment anyone can claim to have. *Guards:* the trigger is an act in progress that endangers the person's life, never words, an opinion, a refusal of treatment, a way of living, a risk freely taken or a protest (a hunger strike is speech, Art. 1.4.1). The guardian of Art. 8.5.3 attends at once. The panel is from another node and may sit remotely; clinicians advise and do not decide (Art. 4.4.1). Every hold is logged and reviewed as a restraint (SIM-QA-37 point 5). The person keeps their dwelling, so nobody gains a home by having someone held (SIM-QA-34).
+  * *RED-9, the hold without end.* With no imposed medication a long hold changes nothing. A first period counted in hours, validation within a time shorter than 72 hours, a maximum counted in days, and no new hold without a new act. After the maximum the person is released even if the risk remains. Some will die. The direction accepts this by excluding imposed treatment, and the text should say so.
+  * *The exit of Art. 1.2.3.* The right to an uncoerced exit is exercised through the procedure of SIM-QA-22 D-9 (reflection, absence of pressure). An act outside that procedure, while lucidity is in doubt, may be interrupted for a short time. That sentence has to be in Chapter I.
+  * *`RED_WINS` as worded:* (a) **permanent incapacity (RED-14, new).** A person with advanced dementia who walks out at night endangers only themselves and will not regain lucidity. A "short" hold does not fit, and the canon has no rule on who decides for such a person. The named person of SIM-QA-36 point 4 and a statement made in advance are the instruments consistent with Art. 1.2; the long-term question is not answered here. (b) **Restraint without sedation (SIM-QA-37 RED-16).** Hours of physical restraint of a person in acute crisis carry their own danger.
+  * *RED-15 (new), the earlier self and the present self.* A person may state in advance what they want done in a crisis, including medication. When the crisis comes they refuse. "No imposed medication" does not say which will counts. For the maintainer (D-39.7).
+
+#### **5.3 New Vectors Found in This Pass**
+* **RED-10, refusal of the test.** Section 5.1. The measure reaches the willing and the visibly ill.
+* **RED-11, the chronic carrier.** Under point 1.
+* **RED-12, scale.** Under point 1.
+* **RED-13, the node that takes no measure.** Under point 2.
+* **RED-14, permanent incapacity.** Under point 5.
+* **RED-15, advance statement against present refusal.** Under point 5.
+* **RED-16, gatherings.** Under point 2. Drawn assemblies that must meet in person (SIM-QA-18) need the remote exception already drafted for emergencies (X-5).
+* **RED-17, the transition. Cross-docket.** State public-health and mental-health law applies and may compel what point 3 excludes. A node cannot shield a member from it (SIM-QA-40).
+
+#### **5.4 What Survives** *(the direction as revised; not article text)*
+Verdict for the docket: **`NARROWED`** with the six points below; **`RED_WINS`** under the current text on any measure carried out by force (Chapter I), and as worded on validation by fifteen per case, on permanent incapacity and on the chronic carrier.
+1. **Isolation.** By order, for a certified disease, at home first, with full Tier 1 and care delivered and shifts counted. No validation when the person agrees; a panel of three within 72 hours when the person contests. It lasts while the person is infectious, with frequent review. Force only if D-39.2 chooses O-B.
+2. **Certification.** A list certified in advance by rival panels; for a new pathogen, a provisional certification by a drawn panel of practitioners, which lapses unless confirmed.
+3. **Area measures.** A thirty-day decree, ratified at 60%, under the repeated-decree rule. Content: common facilities, scheduled transit, isolation space for arrivals. No cordon. One rule for residents and newcomers.
+4. **No compulsion.** No test, treatment or vaccine is imposed. No consequence follows from status, only from being infectious in fact.
+5. **Data.** Counts above a minimum cell; wastewater only at points that serve more people than that, for named pathogens; tracing by choice.
+6. **Protective hold.** Trigger: an act in progress that endangers the person's own life, with lucidity in doubt. Never for words, refusal, protest or way of life. Hours first, a remote panel from another node with the guardian present, a maximum in days, no medication imposed, the person's advance statement and named person followed, the dwelling kept, every hold logged and reviewed.
+
+#### **5.5 Placement and Word Count** *(instructions 10 and 10a)*
+The hold, and isolation by force if chosen, need words in Art. 1.2 (Chapter I: 19 left; SIM-QA-35 would free some). The rest concerns rights and powers and belongs with health in Chapter V (within fifty words of its ceiling) or with public safety in Chapter VIII (98 left, claimed by SIM-QA-33 and SIM-QA-37); lists, intervals and procedures go to Organic Law. Nothing is drafted. The conflicts go to the maintainer.
+
+#### **5.6 Compression Disclosure** *(instruction 8)*
+| # | Point | Source | Change | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | "No civic mandate, collective emergency, or administrative decree may violate the physical or psychological substrate of any individual" | Art. 1.2.3 | the hold; isolation by force only under O-B | **weakened** (Chapter I) |
+| 2 | "physical subjugation" permanently prohibited | Art. 1.2.2 | same | **weakened** (Chapter I; with SIM-QA-37) |
+| 3 | "compassionate, uncoerced biological exit" | Art. 1.2.3 | an act outside the D-9 procedure may be interrupted briefly | **qualified** (Chapter I) |
+| 4 | "unconditional freedom of … peaceful assembly" | Art. 1.4.1 | common facilities may be closed by decree; private gatherings untouched | **qualified** (Chapter I) |
+| 5 | right to travel; "safe transit" | Arts. 10.4.1, 10.4.3 | scheduled transit stopped; arrivals received in isolation space | **qualified** |
+| 6 | sensors "strictly confined to abiotic and macro-ecological variables" | Art. 3.4.4 | pathogens in a population's wastewater | **qualified**, or clarified if "macro-ecological" is read to cover it |
+
+Under O-A, lines 1 and 2 are touched by the protective hold only.
+
+#### **5.7 Residual Weaknesses**
+* A contagious person who declines the test, or the order under O-A, is not reached.
+* A chronic carrier who declines treatment is kept apart without limit.
+* A person released at the end of a hold may die.
+* Permanent incapacity has no rule.
+* The measures depend on trust and on support delivered to the door; none of that is sized.
+* Four lines of the disclosure touch Chapter I, which is closed after the lock.
+* No public-health, mental-health or geriatric specialist, and no one with experience of being held, has read this.
+
+**Maintainer decisions needed (D-39.2 to D-39.9):**
+* **D-39.2:** isolation: O-A (order and support, never force; Art. 1.2 untouched) or O-B (enforceable with guarantees; Chapter I change; a case added to SIM-QA-37). The red team supports O-A.
+* **D-39.3:** the protective hold with the guards of point 6, and the words it needs in Art. 1.2 before the lock (with D-37.8 and SIM-QA-35); or no hold.
+* **D-39.4:** the chronic carrier: isolation while infectious, treatment never imposed, conditions at least those of Art. 8.5.2.
+* **D-39.5:** certification in two stages, lapsing on deadlock.
+* **D-39.6:** the reading of Art. 3.4.4 that allows wastewater analysis at population points.
+* **D-39.7:** an advance statement against a present refusal (RED-15): which counts.
+* **D-39.8:** permanent incapacity (RED-14): a docket of its own, or with the named person of SIM-QA-36.
+* **D-39.9:** placement (Chapters I, V, VIII).
+
+**Next action:** maintainer decisions D-39.2 to D-39.9; then article text and Organic Law draft as hypothesis, shown beside the current text, with a second red-team pass; specialist review before any merge.
 
 ---
 
