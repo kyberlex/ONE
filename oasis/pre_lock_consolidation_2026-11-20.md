@@ -94,7 +94,7 @@ Without such a body, the canon text each docket would add or change has to be me
 
 | Chapter | Canon | With accepted dockets | Left | Dockets of 31 to 42 that ask for room |
 | :--- | ---: | ---: | ---: | :--- |
-| I | 808 | 1,181 of 1,200 | 19 | 34, 38, 39, 41 (and 24, 25, 27, 28); SIM-QA-35 would free an estimated 60 to 100 |
+| I | 808 | 1,181 of 1,200 | 19 | 34, 38, 39, 41 (and 24, 25, 27, 28); SIM-QA-35 would free an estimated 60 to 100 (**corrected 2026-11-20: 9 once drafted**; see [`chapter_i_draft_2026-11-20.md`](chapter_i_draft_2026-11-20.md)) |
 | II | 869 | not recounted | about 130 | 32, 34, 36 |
 | III | 886 | not recounted | about 114 | 34, 38 |
 | IV | 926 | 2,136 of 2,150 | 14 | 35, 42 |

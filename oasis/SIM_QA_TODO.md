@@ -103,7 +103,7 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 - [ ] SIM-QA-42: D-42.2, four questions for Swiss counsel; where invariant 1 is reworded for the public (`CONTRIBUTING.md`, `COMPARATIVE_ANALYSIS.md`).
 - [ ] SIM-QA-36: confirm the provisional boundary with SIM-QA-25 (now D-36.2, section E).
 
-### **E. Red team of SIM-QA-31 to 42** *(2026-11-20, one docket at a time, in board order; first pass complete; what must be settled before the Genesis Lock is gathered in [`pre_lock_consolidation_2026-11-20.md`](pre_lock_consolidation_2026-11-20.md); the first batch for decision, Chapter I, with current text beside the options, is [`chapter_i_decision_batch_2026-11-20.md`](chapter_i_decision_batch_2026-11-20.md))*
+### **E. Red team of SIM-QA-31 to 42** *(2026-11-20, one docket at a time, in board order; first pass complete; what must be settled before the Genesis Lock is gathered in [`pre_lock_consolidation_2026-11-20.md`](pre_lock_consolidation_2026-11-20.md); the first batch for decision, Chapter I, with current text beside the options, is [`chapter_i_decision_batch_2026-11-20.md`](chapter_i_decision_batch_2026-11-20.md); draft wording for the decided items, beside the current text, is [`chapter_i_draft_2026-11-20.md`](chapter_i_draft_2026-11-20.md): **Chapter I would stand at 1,436 of 1,200 words**)*
 **SIM-QA-31, AI and robots** ([log](sim_resolutions_qa.md), docket section 4)
 - [ ] D-31.1: accept the seven points of section 4.4 as the direction, or change them.
 - [ ] D-31.2: the five canon points the rule would weaken (section 4.6: Arts. 7.3.1, 7.3.3, 7.1.4, 8.2.1, 5.1.4), each: accept, or keep the article as it stands.
@@ -226,6 +226,14 @@ This pipeline tracks the lifecycle of every empirical friction and systemic prop
 - [ ] D-25.9: the youth spaces of v1.0 and the house rule of Compact 5: Organic Law, or dropped.
 - [ ] D-25.10: a child's own Tier 1, and limits on apprenticeship.
 - [ ] D-25.11: placement and ceilings (Chapters I, V, VIII).
+
+**Chapter I draft** ([`chapter_i_draft_2026-11-20.md`](chapter_i_draft_2026-11-20.md); first drafting pass, 2026-11-20)
+- [ ] The wording of Drafts A to E (Arts. 1.4.3, 1.2.2, 1.2.5, 1.3.5, 1.3.6), each beside the current text.
+- [ ] Draft A: decision 1b worded as "never drawn from capacity that Tier 1 requires" (7% of all capacity), or as 7% of what remains after Tier 1.
+- [ ] Draft C: custody stated in substance in Chapter I (ground, drawn jury, 72 hours as a ceiling), in place of a reference to Art. 8.5.
+- [ ] Draft F (children): proposed as four short sentences in Art. 1.7.3; depends on D-25.1, D-25.2 and D-25.4.
+- [ ] **The ceiling of Chapter I:** the batch adds about 250 words (1,436 against 1,200); raise it after a recount of every chapter, or reopen which drafts stay in Chapter I. The earlier estimate that Art. 1.4.3 would free 60 to 100 words was wrong (9).
+- [ ] Before the drafts can be final: adults who cannot consent or decide (D-36.4, D-39.8); the protective hold after a specialist reading (D-39.3); preparation of mass harm (D-33.4).
 
 ### **C. Housekeeping** *(documents that describe the canon and are out of date; recorded 2026-11-20, not fixed)*
 - [ ] Stale counts and terms against the current canon (11 chapters, 67 articles, eight Class-0 invariants): `README.md` ("46 Statutory Articles", "10 statutory chapters and 46 Articles", "46 Canonical Articles"); `COMPARATIVE_ANALYSIS.md` ("12-Title Constitution", seven Class-0 invariants, "Civic Housing Pool", a term found in neither the canon nor the Organic Law Annex); the constitution-engine skill ("canon, 46 articles"; private file); the header notice of the master text ("10-chapter architectural blueprint"; master text is read-only, so this one needs the maintainer's own decision).
