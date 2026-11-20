@@ -2896,7 +2896,7 @@ A seed node of 60 persons, 80% contributing; installed capacity (land, water, en
 * **H3, exit of a node or bioregion:** by 75% of its residents after a delay; biomes and commons assets stay in trust and cannot be enclosed; any person who wishes to remain in the commons keeps Chapter I and the right to move (Art. 10.4); exported harm stays under Art. 10.1.4.
 * **H4, failure:** a criterion from physical accounts and seated bodies (a repeated failed audit under Art. 3.1.6; no body seated for a stated period), certified by a panel drawn from outside; aid first; then time-limited administration by a drawn outside panel; relocation offered, never imposed; assets stay in the commons.
 
-**Next action:** red team H1 to H4 against RED-1 to RED-7; link H2 to the transitional amending body of the Foundation docket when it is opened; Chapter I ceiling check (instruction 10a).
+**Next action:** red team H1 to H4 against RED-1 to RED-7; link H2 to the transitional amending body of the Foundation docket (SIM-QA-42, D-42.1 point 3); Chapter I ceiling check (instruction 10a).
 
 ---
 
@@ -2932,6 +2932,275 @@ A seed node of 60 persons, 80% contributing; installed capacity (land, water, en
 * **H4, possessions at death:** the person's written wish holds for personal possessions; failing that, co-inhabitants, then the commons; no wish disposes of a dwelling or any usufruct.
 
 **Next action:** maintainer to confirm the boundary with SIM-QA-25; red team H1 to H4 against RED-1 to RED-7; Chapter II word count (instruction 10a).
+
+---
+
+## **SIM-QA-37: Physical Force Inside the Commons**
+
+* **Date Recorded:** 2026-11-20  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction with a working direction (section 4). **Nothing below is red-teamed**, the direction included. No article text is drafted.  
+* **Originating Context:** maintainer gap review of 2026-11-20 (second batch).  
+* **Closest current canon:** Art. 8.5.3 (emergency detention validated by fifteen citizens within 72 hours; the Invariants Guardian, an "independent sortition guardian", protects the detained person), Art. 8.6.2 (60% to issue or renew custody; 50%+1 for the 72-hour detention "following active violence in flagrante delicto"), Art. 8.5.2 (custody for "predatory violence resisting stabilization"), Art. 8.1.2 (Civic Peace Guilds: "Unarmed practitioners trained in interpersonal mediation, de-escalation, and restorative trauma triage"), Art. 8.1.1 ("Stockpiling firearms, munitions, explosives, or neuro-irritants by civic personnel is unconstitutional"), Art. 8.1.3 (no weaponry or robotics "intended to kill or injure persons"), Art. 7.1.2 (no "coercive force against persons" delegated to autonomous systems), Art. 8.3.2 (the transgressor is relocated), Art. 8.4.3 (tribunal of fifteen; "Adversarial courtroom trials are abolished"). No article names who carries out a detention or a relocation. No right of self-defence is written.  
+* **Constitutional Articles:** Arts. 2.2.1, 3.3.3, 4.2.1, 5.2, 7.1.2, 8.1.1, 8.1.2, 8.1.3, 8.3.2, 8.4.3, 8.5, 8.6.2.  
+* **Source notes (citation check):** (1) Art. 8.1.1 bars *stockpiling* by civic personnel; it does not say in terms that they may hold nothing. (2) "SIM-QA-22 item 3" is decision D-3, drafted in SIM-QA-22 section 8.3: "Guilds may separate a person from immediate danger but hold no power to detain." Its red team already recorded the gap as residual C-2 ("if guilds cannot detain, no one can"). (3) The public log without names and the review of each restraint by drawn citizens are already drafted in D-3; they are not repeated here. (4) Art. 8.5.3 already gives a detained person a guardian drawn by lot; the drawn defender of the direction has to be placed beside it.  
+* **Cross-references:** SIM-QA-22 D-3 (section 8.3, residuals C-1 to C-3), SIM-QA-32 (what a guild is), SIM-QA-33 (distance measures without violence), SIM-QA-18 (refusal of a summons), SIM-QA-41 (anonymous makers of published files), SIM-QA-40 (during the transition, force stays with the state).
+
+### **1. The Friction**
+* The canon provides for detention and for the relocation of a violent person, and names nobody to do either.
+* The only public-safety body that deals with persons is unarmed and trained to mediate. The sentence marked for restoration (D-3) removes detention power from guilds and gives it to no one.
+* A person attacked may defend themselves in fact; the Constitution does not say so.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text; the last six are the residuals the direction leaves to test)*
+* **RED-1, nobody acts:** violence in progress; the mediators hold no power to restrain → bystanders improvise force with no rule, or the detention of Art. 8.5.3 never happens.
+* **RED-2, the ruling nobody carries out:** a tribunal relocates a transgressor under Art. 8.3.2; the person refuses.
+* **RED-3, the core becomes a police:** a permanent trained core is a police force under another name (Art. 8.1.1).
+* **RED-4, creep:** force reaches work shifts, dwelling area (Art. 5.2) or any ruling at all.
+* **RED-5, firearms:** an armed person; means that immobilise without injuring do not suffice.
+* **RED-6, weapons made at home:** personal craft tools (Art. 2.2.1) are outside the publication rule of Art. 3.3.3, which covers communal machinery only.
+* **RED-7, the machine decides:** a remotely operated machine drifts into acting alone (Art. 7.1.2), or injures (Art. 8.1.3).
+* **RED-8, defence as licence:** a written right of defence is used to justify retaliation or to arm.
+* **RED-9, drawn helpers:** citizens drawn at each intervention are untrained, are hurt, refuse (SIM-QA-18), or cannot arrive within minutes.
+* **RED-10, the drawn defender:** a lay defender is weaker than a practised accuser; or the same willing few become professionals in fact; overlap with the guardian of Art. 8.5.3.
+* **RED-11, the sentence to restore:** the D-3 draft ("hold no power to detain") contradicts the direction and needs rewording.
+
+### **3. Preliminary Hypotheses** *(untested)*
+* **H0, silence.**
+* **H1, the working direction of section 4,** each point a hypothesis until red-teamed.
+
+### **4. Maintainer Working Direction (2026-11-20)** *(recorded as given; not red-teamed; not a decision on canon text)*
+* **D-37.1, direction:**
+  1. Who acts: a small trained core of the Peace Guild, joined at each intervention by citizens drawn by lot.
+  2. Means: only means that immobilise without injuring (Art. 8.1.3).
+  3. Machines: remotely operated machines are allowed; a human always decides (Art. 7.1.2).
+  4. Cases: physical force in two cases only: stopping violence in progress, and carrying out a ruling of the tribunal of fifteen that concerns violence (for example Art. 8.3.2). Never for work shifts or dwelling area (Art. 5.2).
+  5. Record and review: every use logged publicly without names and reviewed by a drawn jury (as drafted in SIM-QA-22 D-3).
+  6. Self-defence: a right of immediate, proportionate defence of oneself or another, written in the Constitution.
+  7. Defender: in proceedings, a right to a defender drawn by lot, never a professional.
+* **Residuals named by the maintainer, to test:** firearms (RED-5); personal craft tools escaping publication (RED-6); the rewording of the sentence to restore (RED-11).
+
+**Next action:** red team D-37.1 points 1 to 7 against RED-1 to RED-11; reword the D-3 sentence in SIM-QA-22 once point 1 is tested; Chapter VIII word count (902 of 1,000 with D-3; instruction 10a).
+
+---
+
+## **SIM-QA-38: Rich and Poor Basins**
+
+* **Date Recorded:** 2026-11-20  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction with a working direction (section 4). **Nothing below is red-teamed**, the direction included. No article text is drafted. No number is given: every quantity is for SIMONE (instruction 7).  
+* **Originating Context:** maintainer gap review of 2026-11-20 (second batch).  
+* **Closest current canon:** Art. 3.1.6 (Tier 1 demand met "from local resources and installed capacity alone, with external inputs at zero"), Art. 3.6.2 (75% "to alter, diminish, or recalculate per capita Tier 1 survival allocations"), Art. 4.5.1 (75% for "modifications to the biological survival baseline"), Art. 10.3 (bilateral physical compacts; decoupling "until reciprocity is restored"), Art. 10.4.4 (mutual aid binding on neighbours "When a watershed incurs emergency Red Status"), Art. 3.1.4 ("society's non-negotiable ceiling"), Art. 3.3.1 ("The absolute, non-negotiable priority"), Art. 10.4.3 (no involuntary deportation), Art. 1.6.2 (exhaustion of non-renewable aquifers and irreversible destruction of habitats are crimes), Art. 4.2.4 (Continental Chambers coordinate "macro-balances"), Art. 4.2.5 (the Global Commons Assembly sets "planetary thermodynamic boundaries").  
+* **Constitutional Articles:** Arts. 1.3, 1.6.2, 3.1.4, 3.1.6, 3.3.1, 3.5, 3.6.2, 4.2.4, 4.2.5, 4.5.1, 10.3, 10.4.3, 10.4.4, 10.6.2.  
+* **Source note (citation check):** Art. 3.6.2 fixes the threshold for changing Tier 1 allocations; Art. 3.6.1 names only neighbourhood and bioregional bodies. That each bioregion sets its own level is the reading that follows; no article says it in terms, and none sets a common floor.  
+* **Cross-references:** SIM-QA-30 D-30.7 and D-30.8 (in a transition node a certified shortage is shared and the Tier 1 floor is qualified: there the floor gives; here the direction lets the ceiling give for a limited time: the two must be reconciled), SIM-QA-10 (autarkic closure), SIM-QA-16 (inter-basin compact), SIM-QA-22 D-2 (inter-basin forum; compensation in physical flows, OL-14), SIM-QA-23 (equal protection across regions), SIM-QA-42 (the Foundation's inter-node equalisation in fiat during the transition, Statutes Art. 2.2).
+
+### **1. The Friction**
+* Tier 1 is covered locally and measured locally. A poor basin and a rich one can hold different floors, and place of birth then decides the level of survival.
+* Exchange is reciprocal: a basin with nothing to offer receives nothing. Aid is owed only at Red Status.
+* The ecological ceiling and the Tier 1 floor are both called non-negotiable. Where a basin cannot meet the floor inside its ceiling, the canon gives no order between them.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text or under the direction)*
+* **RED-1, unequal floors:** a basin recalculates its Tier 1 downward at 75% under Art. 3.6.2.
+* **RED-2, nothing to trade:** Art. 10.3 gives a basin without surplus no claim; Art. 10.3.3 can cut it off.
+* **RED-3, the share donors can carry** *(residual for SIMONE)*: standing contributions erode the donors' own Tier 2; donors refuse.
+* **RED-4, transport** *(residual for SIMONE)*: moving water, food or energy costs more exergy than it delivers beyond some distance.
+* **RED-5, standing dependence:** a basin above its carrying capacity stays there because transfers arrive.
+* **RED-6, relocation by pressure:** relocation is "offered" and is the only real option.
+* **RED-7, the excess that stays:** a time-limited excess is renewed again and again; a regenerating resource is pushed past recovery and the damage becomes irreversible (Art. 1.6.2); the certifier is captured.
+* **RED-8, one floor for every climate:** a worldwide floor in physical measures fits the tropics and the Arctic differently.
+* **RED-9, apportionment by the recipients:** a Continental Chamber with a majority from receiving basins votes itself the transfers.
+
+### **3. Preliminary Hypotheses** *(untested)*
+* **H0, silence.**
+* **H1, the working direction of section 4,** each point a hypothesis until red-teamed.
+
+### **4. Maintainer Working Direction (2026-11-20)** *(recorded as given; not red-teamed; not a decision on canon text)*
+* **D-38.1, direction:**
+  1. One worldwide Tier 1 floor in physical measures, set by the Global Commons Assembly; bioregions may go above it, never below.
+  2. Standing solidarity with nothing in return: basins with surplus beyond their own Tier 1 and Tier 2 contribute a share in kind, apportioned by the Continental Chamber, separate from Art. 10.3.
+  3. Voluntary relocation is offered, never forced (Art. 10.4.3).
+  4. When ceiling and floor collide: transfers first; then a time-limited excess with a recovery plan certified from outside the basin, on regenerating resources only; never irreversible damage (Art. 1.6.2).
+* **Residuals named by the maintainer, to test in SIMONE:** the maximum share donors can carry (RED-3); transport cost limits (RED-4).
+
+**Next action:** SIMONE runs for RED-3 and RED-4 before any figure is written; red team D-38.1 against RED-1 to RED-9; reconcile point 4 with SIM-QA-30 D-30.7 and D-30.8.
+
+---
+
+## **SIM-QA-39: Protection Where There Is No Offence**
+
+* **Date Recorded:** 2026-11-20  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction with a working direction (section 4). **Nothing below is red-teamed**, the direction included. No article text is drafted. First pass; no review by a public-health or mental-health specialist.  
+* **Originating Context:** maintainer gap review of 2026-11-20 (second batch).  
+* **Closest current canon:** Art. 1.2.2 ("physical subjugation" among the acts "permanently prohibited"), Art. 1.2.3 ("No civic mandate, collective emergency, or administrative decree may violate the physical or psychological substrate of any individual"; "compassionate, uncoerced biological exit"), Art. 10.4.1 and 10.4.3 (free movement; no pushback), Art. 8.5.2 (custody for predatory violence only), Art. 3.5.1 (epidemics named among the disruptions reserves must cover), Art. 4.4 (rival expert panels), Art. 4.5.3 (emergency decrees at simple majority, thirty-day sunset), Art. 8.1.2 (evacuation orders beyond 24 hours need re-authorisation by a drawn panel: the one existing limit on movement without an offence), Art. 5.5 (mental health), Art. 3.4.4 (sensor networks "strictly confined to abiotic and macro-ecological variables").  
+* **Constitutional Articles:** Arts. 1.2.2, 1.2.3, 1.7, 3.4.4, 3.5.1, 4.4, 4.5.3, 5.5, 8.1.2, 8.5.2, 8.5.3, 10.4.  
+* **Source notes (citation check):** (1) Art. 1.2.3 also guarantees an uncoerced biological exit; a protective hold of a person who endangers only themselves has to be read against it and against the safeguards of SIM-QA-22 D-9 (OL-17). (2) Wastewater analysis for pathogens measures a biotic variable; whether Art. 3.4.4 allows it is open. (3) SIM-QA-22 D-4 (red team E-1) states that "Quarantine and distance measures remain available" in an epidemic; no article provides them. This docket is where that basis would be made or found missing.  
+* **Cross-references:** SIM-QA-35 (the error-correction docket: if isolation is read as "physical subjugation", Art. 1.7 voids it and only a path inside Chapter I can change that), SIM-QA-22 D-4 and D-9, SIM-QA-37 (who physically carries out an isolation), SIM-QA-41 (epidemic data), SIM-QA-29 (RED-10, identification in small nodes), SIM-QA-18 Y-12 (repeated decrees).
+
+### **1. The Friction**
+* The canon protects body, mind and movement without exception, and reserves custody for violence. A contagious person who refuses to keep apart, and a person in acute crisis who endangers only themselves, fall outside every provision.
+* Epidemics appear once, as something reserves must cover.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text or under the direction)*
+* **RED-1, no power at all:** a person with a serious transmissible disease moves freely; nothing lawful limits contact.
+* **RED-2, isolation as subjugation** *(residual named by the maintainer)*: isolation is challenged under Arts. 1.2.2 and 1.2.3 and voided under Art. 1.7.
+* **RED-3, quarantine as border:** an area quarantine is used to keep arrivals out, against Art. 10.4.
+* **RED-4, slow or captured certification:** rival panels take weeks while an outbreak takes days; or a deadlock withholds certification.
+* **RED-5, the emergency renewed:** thirty-day decrees follow one another.
+* **RED-6, pressure in place of mandate:** nobody is forced to be vaccinated or treated, and those who decline are isolated longer.
+* **RED-7, data that identifies:** counts per node identify persons in small nodes; wastewater sampled per building is domestic profiling.
+* **RED-8, abuse of protective holds** *(residual named by the maintainer)*: the hold is used on the inconvenient, the old or the dissenting; "lucid decision in doubt" stretches; conflict with the uncoerced exit of Art. 1.2.3.
+* **RED-9, the hold without end:** no imposed medication and no stated limit leave a person held with nothing changing.
+
+### **3. Preliminary Hypotheses** *(untested)*
+* **H0, silence.**
+* **H1, the working direction of section 4,** each point a hypothesis until red-teamed.
+
+### **4. Maintainer Working Direction (2026-11-20)** *(recorded as given; not red-teamed; not a decision on canon text)*
+* **D-39.1, direction:**
+  1. Isolation of a contagious person as a limit on contact, only for a disease certified serious and transmissible by rival expert panels (Art. 4.4), with the guarantees of custody: validation by fifteen citizens within 72 hours, limited duration, renewal.
+  2. Area quarantine by emergency decree with the thirty-day sunset (Art. 4.5.3); arrivals are received in isolation space, never turned back.
+  3. Treatment and vaccination are never compulsory.
+  4. Epidemic data: anonymous counts per node and wastewater analysis; contact tracing only by choice.
+  5. A short protective hold for a person endangering only themselves when lucid decision is in doubt, assessed by a panel from another node, with no imposed medication.
+* **Residuals named by the maintainer, to test:** compatibility with "physical subjugation" in Chapter I, linked to SIM-QA-35 (RED-2); abuse of protective holds (RED-8).
+
+**Next action:** red team D-39.1 against RED-1 to RED-9; settle RED-2 with SIM-QA-35 before any text; specialist review.
+
+---
+
+## **SIM-QA-40: Collision with State Law During the Transition**
+
+* **Date Recorded:** 2026-11-20  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction with a working direction (section 4). **Nothing below is red-teamed**, the direction included. No article text is drafted. First pass; no legal review; nothing here states the law of any country.  
+* **Originating Context:** maintainer gap review of 2026-11-20 (second batch).  
+* **Closest current canon:** Chapter IX gives no rule for a conflict between the Constitution and the law of the state a node stands in. Art. 9.1.2 rejects "violent macro-rupture". Art. 9.2 (reclaiming land "via adverse possession"; patents and trade secrets "declared public usufruct") and Art. 9.5 (expropriation of defaulted assets; abolition of debts) describe acts that state law does not allow today. Custody under Art. 8.5 by a node would be detention without legal basis. Art. 9.6.2 requires 75% "to ratify formal phase-gate advancements" and lists neither the gates nor what each one activates. Art. 9.6.1 names bodies of 3, 15 and 101.  
+* **Constitutional Articles:** Arts. 1.7, 8.4, 8.5, 9.1 to 9.6.  
+* **What `roadmap/roadmap.md` already covers (checked):** the two legal vehicles and their compliance by legal tradition (section 3.1); taxes paid and pre-funded (section 3.3, Phase 0); zoning and building rules (section 3.1, point 3); Phases 0 to 3 by degree of physical autonomy (section 4); disciplinary panels drawn from sister nodes (section 5). **Not covered:** which rule prevails in a conflict; which articles apply in which phase; violence, police and custody; school, conscription and professional licences; who declares a phase. Two points to reconcile with the direction: the heading "Code-Enforcement Stealth" (section 3.1, point 3) reads against "no member is asked to break the law"; the failure table cites an "Art. 9.7" that the canon does not have.  
+* **Cross-references:** SIM-QA-30 (referral to the services of the existing state as an open, time-limited derogation; phase gate ending the transition), SIM-QA-42 (Statutes Art. 13.1 calls the Constitution the exclusive and sovereign rule of internal life, which the direction qualifies; the annex question), SIM-QA-37 (force), SIM-QA-33 (forums), SIM-QA-22 D-8 (no accession phase exists in the roadmap), SIM-QA-25 (children on site).
+
+### **1. The Friction**
+* A node founded today stands inside a state. The Constitution speaks as if it were alone.
+* Members who apply Arts. 9.2, 9.5 or 8.5 as written expose themselves and the Foundation to prosecution.
+* The phase gates that would switch such articles on are named and never listed.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text or under the direction)*
+* **RED-1, members prosecuted:** a node applies Art. 9.2 or 9.5; persons are charged and the legal vehicles lose their standing.
+* **RED-2, unlawful detention:** a node holds a person under Art. 8.5.
+* **RED-3, parallel justice:** serious violence is handled inside under Art. 8.4; the harmed person loses the protection of the state.
+* **RED-4, "where the law leaves room":** a node finds room where there is none; or the table shows that almost nothing of Chapters II, III and VIII is in force, and the Constitution is a programme, not a rule.
+* **RED-5, obedience turned against Chapter I:** a state requires what Chapter I forbids (surveillance, eviction); the sentence on obedience meets Art. 1.7.
+* **RED-6, the gate nobody can open** *(open point named by the maintainer)*: a phase gate needs 75% of a body that does not exist yet.
+* **RED-7, the early gate:** a node declares a phase reached in order to switch on Arts. 9.2 and 9.5.
+* **RED-8, persons who never agreed:** children, guests and neighbours are on site; "voluntary members only" does not reach them.
+* **RED-9, obligations that contradict the canon:** conscription against Art. 9.4.1; taxes that require fiat income (Art. 9.3); licences against the no-gatekeeping rule of SIM-QA-20.
+* **RED-10, the articles not named:** Art. 9.4 (asylum for deserters, cancellation of debts, the key sever) carries the same exposure and is not on the suspended list.
+
+### **3. Preliminary Hypotheses** *(untested)*
+* **H0, silence.**
+* **H1, the working direction of section 4,** each point a hypothesis until red-teamed.
+
+### **4. Maintainer Working Direction (2026-11-20)** *(recorded as given; not red-teamed; not a decision on canon text)*
+* **D-40.1, direction:**
+  1. A general sentence in Chapter IX: while the state functions, a node obeys mandatory state law and applies O.N.E. among its members where the law leaves room; no member is asked to break the law.
+  2. A table (roadmap or Organic Law) marking each article as in force now, in force among voluntary members only, or suspended until a phase.
+  3. Serious violence goes to state police and courts; Art. 8.4 runs only as voluntary mediation; no custody by a node.
+  4. Arts. 9.2 and 9.5 are suspended until a 75% phase gate.
+  5. School, conscription, taxes and professional licences are respected, with lawful alternatives.
+* **Open, named by the maintainer:** who declares a phase gate before bioregional assemblies exist (RED-6).
+
+**Next action:** red team D-40.1 against RED-1 to RED-10; draft the table of point 2 as a hypothesis, article by article, before choosing roadmap or Organic Law; legal review per country of the first node.
+
+---
+
+## **SIM-QA-41: A General Rule on Personal Data**
+
+* **Date Recorded:** 2026-11-20  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction with a working direction (section 4). **Nothing below is red-teamed**, the direction included. No article text is drafted. First pass; not a specialist's privacy review.  
+* **Originating Context:** maintainer gap review of 2026-11-20 (second batch).  
+* **Closest current canon:** Art. 3.4.4 (sensor networks only: no "individual domestic profiling"), Art. 7.4.4 (identity only: personhood proven "without harvesting biometric traits, facial imagery, or personal identity data"), Art. 8.2.2 (public sensors never record speech or compile biometric registries), Art. 1.2.2 (bars "involuntary biometric tracking, neurological monitoring, pharmacological manipulation"), Art. 1.2.3 ("private intimacy, mental sanctuary"), Art. 2.2.2 (domestic privacy). Against these: Art. 3.6.1 ("Physical ledgers and thermodynamic balance sheets are public"), Art. 3.3.3 (everything executed on communal machinery is "automatically published"), Art. 5.5.3 ("high-resolution dynamic neuro-telemetry" in clinical care), Art. 4.3.5 (petitions and endorsements on an open register). No article states a general rule for data about a person.  
+* **Constitutional Articles:** Arts. 1.2.2, 1.2.3, 2.2.2, 3.3.3, 3.4.4, 3.6.1, 4.3.5, 4.5.1, 5.5.3, 7.4.4, 8.2.2.  
+* **Source notes (citation check):** (1) In Art. 1.2.2 it is not certain whether "involuntary" governs "neurological monitoring" as well as "biometric tracking": on one reading Art. 5.5.3 is lawful with consent, on the other it is barred outright. Two readings; recorded, not resolved. (2) Chapter I stands at 1,181 of 1,200 words after SIM-QA-22 D-4 and D-5, with 19 left for SIM-QA-24, 25, 27 and 28. A new principle in Chapter I meets the ceiling of instruction 10a; the conflict goes to the maintainer.  
+* **Already drafted elsewhere, not repeated here:** SIM-QA-29 (Art. 7.4.4 amended, sealed records of Art. 7.4.5, OL-22: minimum cell, who opens a record); SIM-QA-20 section 11, decisions A to J (pseudonym by default, withdrawal, sealed evidence, Register data for draws and challenges only); SIM-QA-23 (no sensitive registers). This docket takes the general principle those rules lack; each keeps its own text. Other cross-references: SIM-QA-33 (the non-physical harms docket: fraud on ledgers and shifts), SIM-QA-34 H4 (demand signal without per-person records), SIM-QA-39 (epidemic data), SIM-QA-37 RED-6, SIM-QA-35 (ratchet on Chapter I).
+
+### **1. The Friction**
+* Two articles protect the person against sensors and against identity harvesting. Nothing protects the person against records made in ordinary life: shifts, bookings, endorsements, travel, care.
+* Public ledgers and published machine files are a design choice of the canon. Combined, they describe individuals.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text or under the direction)*
+* **RED-1, the profile by joining:** public ledgers, bookings, published files and rosters are combined into a profile of one person, with no sensor involved.
+* **RED-2, small nodes** *(residual named by the maintainer)*: a ledger per node of fifty adults is close to a ledger per household (SIM-QA-29 RED-10).
+* **RED-3, pseudonyms linked:** different pseudonyms per use are tied together by time and pattern.
+* **RED-4, fraud that hides** *(residual named by the maintainer)*: without per-person data, ledger and shift fraud are harder to see (SIM-QA-33; SIM-QA-29 RED-11).
+* **RED-5, the jury key:** the closed list of cases grows and opening the link becomes routine.
+* **RED-6, the anonymous maker:** a dangerous object is made on communal machinery; the file is public, the maker unknown (SIM-QA-37 RED-6).
+* **RED-7, consent under dependence:** a person in distress consents to neuro-telemetry; revocation exists on paper.
+* **RED-8, erasure against the public record:** the right to erase meets append-only ledgers, tribunal records and intervention logs.
+* **RED-9, the key that is lost:** a medical record under the person's key is unreachable when the key is lost or the person unconscious.
+* **RED-10, the ratchet:** a principle placed in Chapter I can never be narrowed if it proves too wide (SIM-QA-35 RED-3).
+
+### **3. Preliminary Hypotheses** *(untested)*
+* **H0, silence.**
+* **H1, the working direction of section 4,** each point a hypothesis until red-teamed.
+
+### **4. Maintainer Working Direction (2026-11-20)** *(recorded as given; not red-teamed; not a decision on canon text)*
+* **D-41.1, direction:**
+  1. One principle in Chapter I, as an expansion of rights (Art. 4.5.1): personal data is collected only for a stated purpose, in the minimum amount, used only for that purpose, and erased when the purpose ends; no body may combine data from different uses to profile a person. Mechanics in Organic Law.
+  2. Ledgers per node or facility, never per person.
+  3. Shifts, bookings, endorsements and travel under a different pseudonym per use; the link is opened only by a drawn jury, for a closed list of cases.
+  4. The fab-lab file is always published; the maker's name only by choice.
+  5. The medical record is under the person's key and shared by consent; neuro-telemetry only with explicit, revocable consent.
+  6. A right to see, correct and erase, except for a closed list.
+* **Residuals named by the maintainer, to test:** small nodes (RED-2); harder detection of ledger and shift fraud, linked to SIM-QA-33 (RED-4).
+
+**Next action:** red team D-41.1 against RED-1 to RED-10; Chapter I ceiling conflict to the maintainer (instruction 10a); align with SIM-QA-29 and SIM-QA-20 section 11 so that one rule is stated once; specialist privacy review.
+
+---
+
+## **SIM-QA-42: The Foundation**
+
+* **Date Recorded:** 2026-11-20  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction with a working direction (section 4). **Nothing below is red-teamed**, the direction included. No statute text is drafted; `foundation/` is unchanged. First pass; no review by Swiss counsel; the legal points are questions, not answers.  
+* **Originating Context:** maintainer gap review of 2026-11-20 (second batch), reading [`foundation/statutes_foundation_one.md`](../foundation/statutes_foundation_one.md) against the canon and the Class-0 invariants.  
+* **Findings in the Statutes (Part A, checked):** the Board "reconstitutes itself by co-optation" (Art. 5.1); members serve "a renewable term" of three years, with no limit (Art. 5.2); election, renewal and removal of members are the Board's own resolutions at 75% (Art. 5.4); the drawn Advisory Assembly is "consultative" and gives "non-binding recommendations" (Arts. 4, 8); assets grow by donations, bequests, subsidies, royalties and "commercialization proceeds" (Art. 3.2); after the deposit, amendments to the Constitution require ratification by "the seated sortition assemblies pursuant to Chapter IV" (Art. 13.4), which will not yet exist. The civic compact (Part C, section 7) bars any direct employment outside, takes an irrevocable cession of commercial rights over everything a citizen makes, and states the commons rights as given "In reciprocal consideration"; Part C, section 8 ends: more than sixty cumulative days in the legacy world without a mandate "forfeits their housing usufruct lock".  
+* **Canon and invariants they meet:** Art. 1.3.1 (life support "fully decoupled from wage labor, market exchange, debt bondage, or ideological compliance"), Art. 1.3.3, Art. 2.3.1 (no displacement into homelessness); Class-0 invariant 1 as worded in the project rules (no donations).  
+* **Source notes (citation check):** (1) The ban on outside employment and the cession of rights are also in the Statutes themselves, Art. 2.2 ("Universal Civic IP Assignment", "in reciprocal exchange for"; "De-Commodification of Citizen Labor"), and in Part B, Art. 2.2 (g) and (h). Lightening the compact touches the purpose clause, not Part C alone. (2) Art. 2.4 reads: "zero speculative commercial business, issues zero private equity or speculative tokens, and charges zero pay-to-win or monetization gates on its canonical knowledge". It does not itself mention gifts, grants or licence fees; those are in Arts. 3.2 and 2.2. Art. 2.1 says "strictly non-commercial" beside the licensing monopoly of Art. 2.2. (3) The deposit of the Constitution as Annex I is in Art. 13.4; Art. 13.1 is the demarcation clause. The annex question concerns both. (4) Part B (the German deed) is numbered differently and differs in substance in places: co-optation and re-election are in Art. 5.2, the 75% list in Art. 5.6, the curator clause in Art. 5.8, and under Art. 8 the Board "kann" (may) set up the advisory body where Part A says it "establishes" one. (5) Art. 5.6 already lets the Verein's General Assembly "(or the sortition assembly of O.N.E.)" appoint when the Board falls below three. (6) The "drawn panel" of the direction is read as the Sortition Panel of Part C, section 3 (three to five, drawn from Verein contributors). (7) Invariant 1 is worded in private project rules and, publicly, in `CONTRIBUTING.md` ("accept fiat donations" listed among the things O.N.E. will never do) and `COMPARATIVE_ANALYSIS.md`; the canon has no such sentence.  
+* **Articles:** Statutes Arts. 2.1, 2.2, 2.4, 3.2, 4, 5.1, 5.2, 5.4, 5.6, 8, 10, 12, 13.1, 13.4; Part B Arts. 2, 5, 8, 12, 13; Part C sections 3, 7, 8; canon Arts. 1.3, 2.3, 8.5, 9.2, 9.5.  
+* **Cross-references:** SIM-QA-35 (the error-correction docket: a transitional amending body before the deposit), SIM-QA-40 (Annex I contains articles that state law does not allow today; Art. 13.1 against the direction of D-40.1), SIM-QA-38 (inter-node equalisation), SIM-QA-23 (equality clause and foundation law).
+
+### **1. The Friction**
+* The body that will hold title to every node's land renews itself, removes its own members and is advised, not bound, by the drawn bodies. The Constitution it anchors allows none of that for a public body.
+* The Statutes allow income that invariant 1, as worded, forbids.
+* After the deposit, nobody can amend the Constitution until assemblies exist that the Constitution itself has yet to produce.
+* The civic compact conditions what Chapter I gives without condition.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under the Statutes as they stand or under the direction)*
+* **RED-1, the self-renewing board:** co-optation, unlimited terms and self-removal keep one group in control of all title.
+* **RED-2, the anchor nobody can move:** an error found after the deposit cannot be corrected; or it is corrected in fact by the Board and the supervisory authority, outside the rule (SIM-QA-35).
+* **RED-3, income against the invariant:** donations and licensing proceeds contradict invariant 1 as worded; critics and the tax authority read the two texts together.
+* **RED-4, the compact as servitude:** the employment ban, the cession of all rights, the sixty-day forfeiture and Tier 1 framed as consideration contradict Arts. 1.3 and 2.3 and may not bind a person at all.
+* **RED-5, the annex refused:** the supervisory authority declines a deed whose annex contains Arts. 8.5, 9.2 and 9.5.
+* **RED-6, exclusions that do not hold:** the clauses excluding a court-appointed curator and ordinary courts are void, and the fallback fails when needed.
+* **RED-7, drawn seats captured:** the lot is taken among a small or packed association membership.
+* **RED-8, the handover:** somebody must certify that "the first Bioregional Assembly of 101" exists; a premature or staged assembly appoints the Board.
+* **RED-9, gifts with conditions:** once gifts and grants are allowed, donors shape the work.
+* **RED-10, lot against duty:** a drawn member is unwilling or unable to carry a trustee's legal duties and liability.
+
+### **3. Preliminary Hypotheses** *(untested)*
+* **H0, the Statutes as they stand.**
+* **H1, the working direction of section 4,** each point a hypothesis until red-teamed.
+
+### **4. Maintainer Working Direction (2026-11-20)** *(recorded as given; not red-teamed; not a decision on statute or canon text)*
+* **D-42.1, direction:**
+  1. Reword invariant 1 in the sense of Statutes Art. 2.4: nothing sold to persons, no tokens, no paid access; gifts, grants and outside licence fees allowed.
+  2. Board: at most two terms; at least one seat in three drawn by lot among association members; removal also on proposal of the drawn panel.
+  3. A transitional amending body, written before the deposit (linked to SIM-QA-35).
+  4. Civic compact lightened: outside employment allowed; the sixty-day forfeiture deleted; cession of rights limited to works made with the node's common means; Tier 1 unconditional.
+  5. Once the first Bioregional Assembly of 101 exists, it appoints the Board.
+* **D-42.2, list for legal review, as questions** *(none answered here)*:
+  1. Can statutes exclude a court-appointed curator (Art. 5.6)?
+  2. Can statutes waive the ordinary courts (Art. 12)?
+  3. Would Art. 13.1, with an annex (Art. 13.4) containing Arts. 8.5, 9.2 and 9.5 of the Constitution, pass the supervisory authority?
+  4. Do a ban on outside employment and an irrevocable cession of all rights hold as personal commitments?
+
+**Next action:** red team D-42.1 against RED-1 to RED-10; Swiss counsel on D-42.2; decide where invariant 1 is worded for the public (D-42.1 point 1 touches `CONTRIBUTING.md` and `COMPARATIVE_ANALYSIS.md`); no change to `foundation/` before the maintainer's decision.
 
 ---
 
