@@ -3186,7 +3186,7 @@ Chapter I cannot take the care sentence without a ceiling decision or a move (in
 ## **SIM-QA-35: Correcting an Error, and Leaving**
 
 * **Date Recorded:** 2026-11-20  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction, priority 5 of six. Nothing below is red-teamed; vectors and hypotheses are preliminary. No article text is drafted.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST), opened 2026-11-20 on maintainer instruction, priority 5 of six. Red team 2026-11-20 (section 4): **`NARROWED`**, on condition that three points are done before the Genesis Lock; **`RED_WINS`** on silence, on H2, on exit with territory, on both failure criteria as worded, and on three limits no text removes. Reasoning on text; measurement `NOT_RUN`; first pass, no legal review. No article text is drafted.  
 * **Originating Context:** maintainer gap review of 2026-11-20. Citation check: Art. 1.7.2 bars suspending, diminishing or alienating Chapter I, and Art. 4.5.1 allows its expansion at 75%; the open point is whether changing a technical element counts as a diminution.  
 * **Closest current canon:** Art. 1.7 (primacy; contrary acts void), Art. 4.5.1 (75% for amendments and for "expansions (never diminutions, Article 1.7) of Invariant Rights"), Art. 1.4.3 (the 7% reserve; interlocks on synthesis hardware, registry "as specified in the Organic Law Annex"), Art. 10.6.2 (75% to "admit new federated bioregions"), Art. 8.6.3 (a person may "depart the bioregion unhindered with personal possessions"), Art. 10.3.3 (Systemic Decoupling suspends links with a basin that hoards or cuts off water), Art. 10.1.4 (higher tiers act only on exported pollution, shared aquifers, invariant rights), Art. 3.1.6 (annual Autarkic Closure audit).  
 * **Constitutional Articles:** Arts. 1.4.3, 1.7, 3.1.6, 4.5.1, 8.6.3, 10.1.4, 10.3.3, 10.6.2, 10.6.3.  
@@ -3213,7 +3213,89 @@ Chapter I cannot take the care sentence without a ceiling decision or a move (in
 * **H3, exit of a node or bioregion:** by 75% of its residents after a delay; biomes and commons assets stay in trust and cannot be enclosed; any person who wishes to remain in the commons keeps Chapter I and the right to move (Art. 10.4); exported harm stays under Art. 10.1.4.
 * **H4, failure:** a criterion from physical accounts and seated bodies (a repeated failed audit under Art. 3.1.6; no body seated for a stated period), certified by a panel drawn from outside; aid first; then time-limited administration by a drawn outside panel; relocation offered, never imposed; assets stay in the commons.
 
-**Next action:** red team H1 to H4 against RED-1 to RED-7; link H2 to the transitional amending body of the Foundation docket (SIM-QA-42, D-42.1 point 3); Chapter I ceiling check (instruction 10a).
+**Next action (Stage 1):** ~~red team H1 to H4 against RED-1 to RED-7~~ (done, section 4); link to the transitional amending body of the Foundation docket (SIM-QA-42, D-42.1 point 3); ~~Chapter I ceiling check~~ (section 4.6).
+
+### **4. Stage 2: Red Team** *(2026-11-20, on maintainer instruction; reasoning on text only; measurement `NOT_RUN`; first pass, no constitutional lawyer has read it; no article text drafted)*
+
+#### **4.1 Reading the Current Text First** *(Jurist)*
+* **Art. 1.7.2 protects "the provisions of this Bill of Rights", not only the rights.** Every sentence of Chapter I is covered, the technical ones included. Art. 1.7 is itself in Chapter I, so it protects itself.
+* **After the Foundation Genesis Lock no path exists, by design. Before it, none is needed.** Until the lock, the text changes by docket and maintainer decision, as SIM-QA-17 did for the hazard registry. The question of this docket is therefore mostly one of timing: what must be moved or reworded before the lock.
+* **Who says what a "diminution" is.** Only a review jury of 101 (Art. 4.6.2), case by case, "resolving doubts under Chapter I in favor of the person", and with no binding precedent (SIM-QA-22 D-12). The meaning of Chapter I will move by jury, with no rule of consistency (RED-12).
+* **Leaving with territory is already void under Chapter I.** Art. 1.1.2: no portion of the commons may be "subjected to sovereign territorial enclosure". Art. 10.1.1 abolishes frontiers. A bioregion that leaves and keeps its watershed encloses it. No vote at any threshold can authorise that (Art. 1.7.2). The Preamble calls the covenant "perpetual" and Art. 10.6.3 pledges "perpetual peace".
+* **A bioregion is already close to autonomous.** Art. 10.1.4 gives higher tiers "zero jurisdiction" except exported pollution, shared aquifers and invariant rights. What a bioregion can leave is narrower than it looks: the compacts of Art. 10.3, the solidarity of Art. 10.4.4, service in higher assemblies, common standards.
+* **Art. 10.1.4 is the hook for a failed node.** Tier 1 is an invariant right (Art. 1.3); when a node cannot supply it, a higher tier has jurisdiction "to defend invariant rights". The article gives the jurisdiction and no means.
+* **Art. 2.3.3 already allows an ordered relocation** for "structural hazards" and "environmental remediation", through a Local Mediation Panel, with an equivalent dwelling first (Art. 2.3.4). H4 says relocation is "never imposed"; the canon is less absolute.
+* **Art. 10.3.3 suspends "advanced medical buffers" for a whole basin.** It reaches every resident, including those who opposed the conduct, and sits close to Art. 1.3.3 (survival never used as punishment).
+
+#### **4.2 Technical Choices Inside Chapter I** *(the sweep H1 needs; Arts. 1.1 to 1.7 read in full)*
+| Element | Where | Kind | If it proves wrong |
+| :--- | :--- | :--- | :--- |
+| seven percent (7%) of fabrication, bandwidth and laboratories | Art. 1.4.3 | a number | too low or too high, it stays; in a shortage the reserve competes with Tier 2 (hospital compute) and Chapter I wins |
+| "transparent rotational time sortition among applicants" | Art. 1.4.3 | a procedure | frozen |
+| interlocks that "prevent the transcription of sequences listed in a public hazard registry" | Art. 1.4.3 | a mechanism | if screening by listed sequence can be evaded or synthesis no longer works by transcription, the mechanism is void of effect and cannot be replaced |
+| three barred classes: "synthetic self-replicating lethal pathogens, mass neurological agents, or radiological weapons" | Art. 1.4.3 | a closed list | a new class of hazard cannot be added: widening the bar narrows the reserve, which is a provision of Chapter I (RED-8) |
+| the six items of the baseline | Art. 1.3.2 | a list | an item can be added at 75% (Art. 4.5.1); none can be reworded |
+| guardians "drawn by lot" | Art. 1.6.3 | a procedure | frozen |
+| pending, not in the canon: the closed list of grounds of Art. 1.8 (SIM-QA-23); the wording of SIM-QA-22 D-4 and D-5; the data principle of SIM-QA-41 | drafts | lists and wording | each freezes on entry |
+
+Art. 1.4.3 holds 141 of the chapter's 808 words; about 100 of them are number, procedure and mechanism.
+
+#### **4.3 Verdicts on the Hypotheses**
+* **H0, silence: `RED_WINS`.** RED-1, RED-3, RED-6 succeed as written.
+* **H1, placement. Before the lock: `BLUE_HOLDS` with one residual. After the lock: `RED_WINS`.** Before the lock the move needs no path (section 4.1): the right and its bound stay in Chapter I, the means go to Organic Law under the ratchet rule. After the lock nothing can move. *Residual, RED-1 survives for bounds:* a bound kept in Chapter I is frozen. A floor that proves too high can never come down. *Gain:* the move frees roughly 60 to 100 words in a chapter that has 19 left and five dockets waiting (section 4.6).
+* **H2, correction procedure: `RED_WINS`.** After H1 only rights and bounds remain in Chapter I. H2 requires a jury to certify "that no right is diminished". Lowering a bound diminishes by definition, so the certified procedure can change nothing that H1 left behind. Without the certification it is the back door of RED-2. H2 is either empty or dangerous. The choice it hides is real and is for the maintainer (D-35.2): accept that an error in a Chapter I bound is permanent, or give up the absoluteness of Art. 1.7.
+* **RED-3, the mistaken expansion. `NARROWED`.** No narrowing is possible afterwards, so the guards sit at adoption. (a) A guarantee that is new and untested goes into Organic Law first, which may strengthen a right at 60% and may later come back down to the constitutional floor; only what has been tried goes into Chapter I. (b) An expansion may be adopted for a stated term; the rule that a lapse is not a diminution must be written before the lock, or a jury will void the lapse. (c) The delay of SIM-QA-22 D-1. *Second finding:* an expansion of one right can narrow another (a data right against speech, isolation against movement). Art. 4.5.1 treats "expansion" as if it had no cost (RED-9).
+* **H3, exit. With territory: `RED_WINS`** (void under Art. 1.1.2, section 4.1). **As withdrawal: `NARROWED`.** The lawful form is narrower than H3: by 75% of adult residents, after a delay, a bioregion withdraws from the compacts, the solidarity duties, the higher assemblies and the common standards. Chapter I continues to bind it, the commons stay commons, and Art. 10.1.4 still reaches pollution, aquifers and rights. *Attacks:* (a) hold-up: a basin that is the only maker of some output (Art. 10.3.2, "specialized metabolic organs"; a Tier 2-A fab) threatens to withdraw to win terms (RED-10). The canon's own defence is Art. 3.1.6: Tier 1 comes from local resources everywhere, so a withdrawal reaches Tier 2 and Tier 3 only. A notice period long enough to rebuild elsewhere is the second guard; its length is `NOT_RUN`. (b) The quarter that voted against loses solidarity; they keep Chapter I and the right to move (Art. 10.4). (c) *Not removed:* a bioregion that leaves in fact and encloses. The federation renounced force (Art. 8.1). What remains is decoupling (Art. 10.3.3) and sanctuary for those who leave. The minority inside loses Chapter I in fact.
+* **H4, failure. Both criteria as worded: `RED_WINS`. Revised: `NARROWED`.** (a) "A repeated failed audit under Art. 3.1.6" marks nearly every transition node as failed, since the audit demands "external inputs at zero" and seed nodes import (SIM-QA-31 RED-9). (b) "No body seated for a stated period" lets neighbours take over a community that feeds itself and declines to seat a council; that is RED-7. *Revised:* failure means Tier 1 is in fact not delivered. It is the end state of the ladder already drafted in SIM-QA-30 (shortage certified by an outside panel, shared, reviewed every thirty days) when no recovery follows. The certifying panel is drawn from watersheds that do not border the node, so those who would receive the assets do not decide. Aid comes first (Art. 10.4.4). Administration from outside covers the Tier 1 functions only, for a term, under Art. 10.1.4, and ends when a local body sits. Assets pass to the bioregional commons, since the "local commons" of Art. 2.1.3 no longer exists. The absence of a seated body, alone, triggers nothing. *Residual:* the last few residents of an emptying node keep their dwellings (Art. 2.3); supplying them is costly and the canon accepts the cost, except for the ordered relocation of Art. 2.3.3.
+
+#### **4.4 New Vectors Found in This Pass**
+* **RED-8, the hazard that is not on the list. `RED_WINS` under current text.** Section 4.2. Today the bar can be neither widened nor narrowed. *Guard, before the lock:* Chapter I states the bar by function (research able to cause mass death or irreversible harm) and Organic Law lists the classes.
+* **RED-9, expansion as diminution. Open.** Under RED-3 above. Needs a rule on which right gives way, or at least the statement that an expansion may not narrow an existing Chapter I right.
+* **RED-10, withdrawal as hold-up. `NARROWED`.** Under H3 above.
+* **RED-11, the captured node. `RED_WINS`, residual.** A node feeds its people and violates Chapter I (a sect, a strongman). Art. 10.1.4 gives jurisdiction; a review jury can void its acts (Art. 4.6); nothing follows. Decoupling under Art. 10.3.3 covers hoarding, cartels and water only, and would hit the victims. Force is limited to violence in progress (SIM-QA-37). What the canon offers the people inside is the exit (Art. 8.6.3) and sanctuary elsewhere (Art. 10.4.3). Recorded as a limit of a federation without coercion.
+* **RED-12, amendment by jury. Open.** Section 4.1. With no path of correction, interpretation becomes the path, and it has no memory. Touches the D-12 decision (no binding precedent).
+* **RED-13, the next generations. Recorded, no verdict.** Chapter I binds people who never agreed to it and cannot change it. The canon chose this over the risk of a majority removing a right. No text reconciles the two.
+* **RED-14, a failed tier.** A bioregional assembly of 101 that cannot be filled is not covered by H4, which speaks of nodes. Not treated.
+
+#### **4.5 What Survives** *(the rule as a set of points; not article text)*
+Verdict for the docket: **`NARROWED`**, on condition that points 1 to 3 are done before the Genesis Lock; **`RED_WINS`** on silence, on H2, on exit with territory, on both failure criteria as worded, and on three limits no text removes (a wrong bound in Chapter I; a bioregion that leaves in fact; the captured node).
+1. Before the lock, Chapter I goes through the placement test once: rights and bounds stay; numbers beyond the bound, procedures, mechanisms and lists move to Organic Law under the ratchet rule (section 4.2 is the list to decide).
+2. Before the lock, the biosecurity bar is stated by function, with the classes in Organic Law.
+3. Before the lock, Art. 4.5.1 says that an expansion may be adopted for a term, that its lapse is not a diminution, and that an expansion may not narrow another Chapter I right. New guarantees are tried in Organic Law first.
+4. No procedure lowers a Chapter I guarantee after the lock (H2 withdrawn), unless D-35.2 decides otherwise.
+5. A bioregion may withdraw from compacts, solidarity, higher assemblies and standards by 75% of its adult residents after notice. It cannot leave Chapter I, enclose the commons, or escape Art. 10.1.4.
+6. A node has failed when Tier 1 is in fact not delivered and the shortage ladder brings no recovery, as certified by a panel from non-bordering watersheds. Then: aid, administration of Tier 1 functions for a term, relocation offered, assets to the bioregional commons.
+
+#### **4.6 Placement and Word Count** *(instructions 10 and 10a)*
+This docket mostly removes words from Chapter I. Art. 1.4.3 holds 141 words; a version keeping the reserve, its bound, the lot and the bar by function would be roughly 40 to 80 (not drafted, so not counted). Chapter I stands at 1,181 of 1,200 with the accepted dockets; the move would leave room for part of what SIM-QA-24, 25, 27, 28, 34 and 41 ask. Point 3 adds a sentence to Art. 4.5.1, in Chapter IV (2,136 of 2,150, 14 left: **conflict**, to the maintainer). Points 5 and 6 belong in Chapter X (870 today, 877 with SIM-QA-30, 935 with SIM-QA-22 D-2: 65 left), with procedure in Organic Law.
+
+#### **4.7 Compression Disclosure** *(instruction 8; every line needs a decision, since each touches Chapter I)*
+| # | Point | Source | Change | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | "seven percent (7%)" as an exact figure | Art. 1.4.3 | kept as a floor ("no less than"); Organic Law may raise it | **kept**, reworded as a bound |
+| 2 | "transparent rotational time sortition among applicants without ideological screening" | Art. 1.4.3 | "by lot, without ideological screening" stays; the rest to Organic Law | **moved** in part |
+| 3 | the interlock mechanism (tamper-evident, sequence registry) | Art. 1.4.3 | the duty to enforce the bar by technical means without surveillance of persons stays; the mechanism to Organic Law (OL-1 exists) | **moved** |
+| 4 | three named classes of barred research | Art. 1.4.3 | a bar by function; classes in Organic Law, which may add | **widened as a prohibition, narrowed as a liberty of the reserve** |
+| 5 | Chapter I closed against "any … qualified supermajority" | Art. 1.7.2 | unchanged unless D-35.2 opens a correction path | **weakened**, conditional |
+| 6 | "perpetual covenant" | Preamble, Art. 10.6.3 | a withdrawal from compacts and assemblies is allowed | **qualified** |
+
+#### **4.8 Residual Weaknesses**
+* The whole answer depends on work done before the lock. Anything missed in the sweep of section 4.2 is permanent afterwards.
+* A wrong bound stays wrong.
+* The federation has no answer to a bioregion that encloses, or to a node that violates rights while feeding its people, beyond decoupling and sanctuary.
+* The notice period for withdrawal and the term of outside administration are not sized.
+* The claim that listed-sequence screening can be evaded is from general knowledge and unverified.
+* No constitutional lawyer has read this, and Swiss foundation law (the lock itself, SIM-QA-42) is not checked here.
+
+**Maintainer decisions needed (D-35.1 to D-35.6):**
+* **D-35.1:** accept the six points of section 4.5 as the direction, or change them.
+* **D-35.2:** a wrong bound in Chapter I: (a) accept it as permanent and keep Art. 1.7 absolute (H2 withdrawn); (b) open a correction path and accept the back door. The red team supports (a), with the placement move of point 1 done carefully.
+* **D-35.3:** the lines of section 4.7, each; in particular line 4 (the bar stated by function).
+* **D-35.4:** withdrawal of a bioregion as in point 5, or no exit at all beyond the individual's.
+* **D-35.5:** the captured node (RED-11): accept as a limit, or ask for a docket on what the federation may do short of force.
+* **D-35.6:** amendment by jury (RED-12): keep D-12 (no precedent), or reopen it for Chapter I only.
+
+**Next action:** maintainer decisions D-35.1 to D-35.6; then a redraft of Art. 1.4.3 and the sentence for Art. 4.5.1 as hypothesis, shown beside the current text, with a second red-team pass; align with SIM-QA-42 on who may amend before the first assemblies exist.
 
 ---
 
