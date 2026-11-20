@@ -3073,7 +3073,7 @@ A new jurisdiction and its consequences touch rights, so the core stays in the C
 ## **SIM-QA-34: Allocation Above the Survival Floor**
 
 * **Date Recorded:** 2026-11-20  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction, priority 4 of six. Nothing below is red-teamed; vectors and hypotheses are preliminary. No article text is drafted.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST), opened 2026-11-20 on maintainer instruction, priority 4 of six. Red team 2026-11-20 (section 4): **`NARROWED`** with four points; **`RED_WINS`** on silence, on immobility (the canon's own choice), on "no per-person record" taken as absolute, and under current text on the scope of Tier 1 care, the transit sanction and the tool-library deposit. Reasoning on text; measurement `NOT_RUN`; first pass, no specialist review. No article text is drafted.  
 * **Originating Context:** maintainer gap review of 2026-11-20. Citation check: Art. 3.3.3 does not govern machine time alone; it distributes surplus "through quadratic preference signaling and participatory Fab-Lab time rosters". Only machine time has rules; the preference signal is undefined. Art. 3.4.4 bans "individual domestic profiling" (the wording used below), within sensor networks.  
 * **Closest current canon:** Art. 3.3.3 (Tier 3; Anti-Brokerage for machine slots), Art. 3.6.2 (60% for Tier 3 allocations), Art. 10.4.2 (Green Status grants "immediate residential usufruct"; Amber sets priorities), Art. 2.1.3 (abandoned dwellings return to the local commons), Art. 2.3.4 (relocation only to an equivalent dwelling), Art. 5.2.2 (reassignment of floor area as a reciprocity measure only), Art. 1.3.2 ("Comprehensive primary, preventative, and emergency healthcare"), Art. 2.2.1 (personal possessions under "absolute, permanent sovereignty"), Arts. 3.1.2, 5.1.2, 9.3.2 (no prices, no traded labour, no currency inside).  
 * **Constitutional Articles:** Arts. 1.3.2, 2.1.3, 2.2.1, 2.2.2, 2.3.4, 3.1.2, 3.3.1, 3.3.3, 3.4.4, 3.6.2, 5.1.2, 5.2.2, 9.3.2, 10.4.2.  
@@ -3102,7 +3102,84 @@ A new jurisdiction and its consequences touch rights, so the core stays in the C
 * **H3, gifts and swaps:** free for personal possessions; the bar falls only on transferable standard claims on the commons (slots, rations, hours) and on any enforceable debt (Art. 3.2).
 * **H4, the demand signal:** aggregate, voluntary and anonymous: stock drawdown per node, open requests, and the preference signal of Art. 3.3.3 defined in Organic Law; no per-person record.
 
-**Next action:** red team H1 to H4 against RED-1 to RED-8; align H1 with the SIM-QA-21 OL-10 draft and H4 with SIM-QA-29.
+**Next action (Stage 1):** ~~red team H1 to H4 against RED-1 to RED-8~~ (done, section 4); align H1 with the SIM-QA-21 OL-10 draft and H4 with SIM-QA-29 at drafting.
+
+### **4. Stage 2: Red Team** *(2026-11-20, on maintainer instruction; reasoning on text only; measurement `NOT_RUN`; first pass, no specialist review; no article text drafted)*
+
+#### **4.1 Reading the Current Text First** *(Jurist)*
+* **Art. 2.2.2 makes dwelling usufruct "perpetual" with "hereditary succession of occupancy among active co-inhabitants".** Free dwellings are therefore only the abandoned (Art. 2.1.3) and the newly built. The canon chose security of tenure; efficient use of space is not a goal it states.
+* **Art. 2.5.3 already allocates a positional good by lot** (retreats in sanctuaries, "transparent civic sortition"). Dwellings differ in position and quality in the same way.
+* **Art. 1.3.2 promises "Comprehensive primary, preventative, and emergency healthcare".** Specialised care (a transplant, dialysis, cancer treatment) is none of the three. On the words, the scarce treatments of this docket are outside the Tier 1 baseline, and the protection of Art. 1.3.3 (survival never used as leverage) does not clearly cover them.
+* **Art. 5.2.2 excludes a person who refuses shifts from "inter-basin transit commons".** Nothing exempts travel to a hospital in another basin (RED-11).
+* **Art. 2.2.1 has tokens and a paid priority inside the canon.** Tool-library checkout "operates under time-bounded mesh tokens; voluntary deposits are maintained at community expense, granting priority booking". Whether a token can pass to another person is not said, and a deposit buys a better place in the queue (RED-12).
+* **Art. 5.1.2: "human effort can neither be bought, rented, traded".** Read strictly, a haircut given for a jar of honey is traded effort. Read with the rest of the sentence ("nor subordinated through wage contracts or debt extortion"), the bar is on subordination. The text does not choose (RED-14).
+* **Art. 3.1.2 strips prices of "legal standing as claims on the biophysical commons".** It does not forbid two persons from swapping their own things, or from counting in some good while they do. The canon denies money a claim on the commons; it does not ban it between persons.
+* **Arts. 3.3.3 and 3.6.2 both allocate Tier 3:** the first "through quadratic preference signaling" and "without central bureaucracy", the second by a 60% vote of the assembly. Which decides what is not stated.
+
+#### **4.2 Verdicts on the Hypotheses**
+* **H0, silence: `RED_WINS`.** RED-1, RED-3, RED-4 and RED-5 succeed as written.
+* **H1, dwellings: `NARROWED` on RED-1 and RED-3; `RED_WINS` on RED-2.**
+  * *RED-1, acquaintance.* A public list, criteria of need fixed in advance and a public lot remove the keeper's choice. What remains: a dwelling kept off the list ("under repair"), and a household declared larger than it is. *Guards:* the state of every dwelling is public (occupied, free, under repair) as counts and addresses without names; the keeper applies the rule and never chooses (SIM-QA-32 point 6).
+  * *RED-3, key money.* "Nothing given in return" cannot be observed. A swap also steers a dwelling past the lot: a household about to leave swaps its good dwelling with a friend's poor one and then departs. *Guard:* a dwelling vacated within a set time after a swap goes back with the dwelling it was swapped for, and both go to the lot. *Residual:* favours given on the side.
+  * *RED-2, immobility.* A voluntary request to move frees nothing. A large dwelling stays with one person and passes to whoever lives there at the end, so the best dwellings stay in families over generations. Any duty to move breaches Arts. 2.2.2 and 2.3. This is the canon's own choice (section 4.1), and no hypothesis changes it. *Two guards that need no compulsion:* the foundational energy allotment of Art. 1.3.2 counted per person and not per square metre, so that a large dwelling costs its occupant comfort (Thermodynamic architect: it also stops heating empty rooms from the Tier 1 budget); a minimum time of shared residence before a co-inhabitant succeeds (RED-9).
+* **H2, scarce treatment: `NARROWED`; `RED_WINS` under current text on the scope of Tier 1 (section 4.1).** Attacks on H2: (a) "expected benefit" set by a lay body can rank the old and the disabled last; the criteria must pass the justification test of SIM-QA-23 (Art. 1.8). (b) Clinicians who "apply" the criteria still score the patient, and connections work there; two clinicians score independently, one from outside the node, on a file without a name. (c) An organ is offered for hours; review can only come after, on the pattern of decisions. (d) H2 does not say at which level the pool sits; a node with the machines will serve its own first. The pool belongs at the level where the resource is shared, and residents and arrivals count alike, which invites travel toward basins with treatment (SIM-QA-38). (e) A published scoring rule adopted by a drawn body is not delegation to an algorithm, on the line drawn in SIM-QA-31 point 2.
+* **H3, gifts and swaps: `NARROWED`.** With Tier 1 free and no body enforcing a debt, a medium of exchange cannot buy survival, land or a claim on the commons. It will still appear for Tier 3 goods, and where it meets things the commons allocates it does damage: a dwelling swap, a place in a queue, and above all a shift. A person who gives goods to another to do their rotational shifts recreates paid labour and the underclass of Art. 5.1.1 (RED-13). *Revised H3:* things a person owns pass freely; every claim on the commons (a slot, a shift, a ration, a dwelling, a queue place, a signal credit) is personal, expires and never transfers; shifts are exchanged one for one through the roster only; no body enforces an agreement between persons beyond the return of a thing taken (SIM-QA-33). *Residual:* substitution off the record, which meets the lent credentials of SIM-QA-29 RED-5.
+* **H4, the demand signal: `NARROWED`; `RED_WINS` on "no per-person record" taken as absolute.** (a) Drawdown shows what was taken, not what was missing; stockouts and unfilled requests must be counted. (b) Open anonymous requests can be stuffed; a budget per person is needed, hence a proof of personhood per period (Art. 7.4.4 allows it without identity). (c) Counts per node identify people in a small node (SIM-QA-29 measured 69% re-identification at fifty adults from two attributes, synthetic); a minimum cell applies. (d) Two things cannot work with no record at all: rationing in a certified shortage (SIM-QA-30 D-30.7, "in proportion to need") and the dampening of repeated wins (OL-2). Both need to know that this person already received. A pseudonym per use (SIM-QA-41) is the least that works.
+
+#### **4.3 New Vectors Found in This Pass**
+* **RED-9, succession arranged at the end. `NARROWED`.** A relative is entered as co-inhabitant shortly before a death to keep the dwelling. *Guard:* a minimum period of shared residence, in Organic Law. "Co-inhabitant" itself is undefined (SIM-QA-36).
+* **RED-10, an anonymous claim is a transferable claim (Cyberneticist). `NARROWED`, technical residual.** A ration or signal credit that cannot be linked to its holder can be handed to someone else. For food this equals giving the food and does no harm. For signal credits it lets one person voice more than a share at a flat cost, which defeats the quadratic rule. *Guards:* short expiry; no carry-over. The trade-off between anonymity and non-transferability needs a specialist in mechanism design; no parameter is proposed.
+* **RED-11, the sanction that blocks care. `RED_WINS` under current text.** Exclusion from inter-basin transit (Art. 5.2.2) stops a person travelling to treatment. *Guard:* travel for care is never inside a reciprocity measure.
+* **RED-12, tokens and deposits in Art. 2.2.1. `RED_WINS` under current text.** A deposit that grants priority booking is a purchased place in a queue, against the Anti-Brokerage rule of Art. 3.3.3. For the maintainer (D-34.5).
+* **RED-13, paid shifts.** Under H3, above.
+* **RED-14, the reading of Art. 5.1.2. Open.** The strict reading forbids ordinary favours and breaches Art. 2.2.1 in practice (RED-6); the loose reading allows a person to work for another's goods every day. The line that survives is the one in revised H3: effort is freely given; a civic obligation is never done by another for a return.
+* **RED-15, outside money held by persons. Cross-docket.** During the transition a resident can hold legacy cash or receive goods from relatives outside and use them inside; a person can also sell outside what was made with commons materials, past the External Trade Interface (Art. 9.3.3). Goes to SIM-QA-40 and SIM-QA-42 (civic compact).
+* **RED-16, what the signal decides. `NARROWED`.** *Proposed reading of Arts. 3.3.3 and 3.6.2:* the assembly sets the shares of Tier 3 at 60%; inside a share, the signal orders what is produced; a scarce item goes by lot among those who asked, with dampening. The signal then says what to make, never who receives.
+
+#### **4.4 What Survives** *(the rule as a set of points; not article text)*
+Verdict for the docket: **`NARROWED`** with the four points below; **`RED_WINS`** on silence, on immobility (RED-2, the canon's own choice), on "no per-person record" taken as absolute, and under current text on the scope of Tier 1 care, the transit sanction and the tool-library deposit.
+1. **Dwellings.** The state of every dwelling is public. A free dwelling goes by criteria of need fixed in advance, then by public lot; no body votes on persons. Swaps pass through the list, with the guard against steering. No one is made to move. The energy allotment is per person. Succession requires a minimum period of shared residence.
+2. **Scarce treatment.** Criteria adopted in advance by a drawn body on rival evidence and tested for equal protection; two independent scores on a file without a name; ties by lot; never status, contribution or origin; the pool at the level where the resource is shared; review afterwards; travel for care never inside a sanction.
+3. **Between persons.** What a person owns passes freely. Claims on the commons are personal, expire and never transfer. Shifts are exchanged one for one through the roster. No body enforces a private agreement.
+4. **Demand.** Stockouts and unfilled requests published as counts above a minimum cell; an equal signal budget per person and per period, with no carry-over; the assembly sets Tier 3 shares and the signal orders production inside them; scarce items by lot with dampening, under a pseudonym per use.
+
+#### **4.5 Placement and Word Count** *(instructions 10 and 10a)*
+Most of this is procedure and belongs in Organic Law. What the placement test keeps in the Constitution: allocation of dwellings by need and lot with no vote on persons (Chapter II); "never status, contribution or origin" for scarce care and whether specialised care is in the baseline (Chapter I); claims on the commons never transfer, and no enforcement of private agreements (Chapter III). No text is drafted.
+
+| Chapter | Canon today | Pending | Left |
+| :--- | ---: | :--- | ---: |
+| I | 808 | 1,181 of 1,200 after SIM-QA-22 D-4, D-5 and SIM-QA-23 | 19, **within fifty**; SIM-QA-24, 25, 27, 28 and 41 also need it |
+| II | 869 | SIM-QA-21 wording not recounted; SIM-QA-32 O-1 asks for about one hundred words | about 130 before SIM-QA-32 |
+| III | 886 | not recounted | about 114 |
+
+Chapter I cannot take the care sentence without a ceiling decision or a move (instruction 10a point 5): the conflict goes to the maintainer. Chapter II cannot take both this docket and SIM-QA-32 O-1 in full.
+
+#### **4.6 Compression Disclosure** *(instruction 8)*
+| # | Point | Source | Change | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | "voluntary deposits … granting priority booking" | Art. 2.2.1 | the priority is removed (only if D-34.5 so decides) | **dropped**, conditional |
+| 2 | "hereditary succession of occupancy among active co-inhabitants" | Art. 2.2.2 | a minimum period of shared residence | **qualified** |
+| 3 | Tier 3 distributed "through quadratic preference signaling", "without central bureaucracy" | Art. 3.3.3 | the signal orders production inside shares set by the assembly | **qualified** |
+| 4 | exclusion from "inter-basin transit commons" | Art. 5.2.2 | travel for care excepted | **weakened** as a sanction; strengthens Art. 1.3 |
+| 5 | "Comprehensive primary, preventative, and emergency healthcare" | Art. 1.3.2 | D-34.3 either extends it to specialised care (an expansion, Art. 4.5.1) or states that it does not reach it | **expanded or clarified** |
+
+#### **4.7 Residual Weaknesses**
+* Favours on the side and substitution off the record cannot be seen.
+* Under-used dwellings stay under-used; the answer left is to build, inside the carrying capacity.
+* The signal is not designed. Budget, expiry and the lot with dampening are named, not sized, and collusion is not analysed.
+* Nothing is measured: waiting times for a dwelling, the stock a node must build, the effect of a per-person energy allotment.
+* No housing practitioner, clinician, medical ethicist or mechanism designer has read this.
+
+**Maintainer decisions needed (D-34.1 to D-34.7):**
+* **D-34.1:** accept the four points of section 4.4 as the direction, or change them.
+* **D-34.2:** immobility: confirm that no one is made to move, with the two guards (energy per person; minimum shared residence), or ask for something stronger.
+* **D-34.3:** specialised care: inside the Tier 1 baseline (an expansion of Art. 1.3.2, with the Chapter I ceiling conflict), or outside it with the protections of point 2 written elsewhere.
+* **D-34.4:** confirm the line between persons: swaps and favours free and unenforced; a civic obligation never done by another for a return (reading of Art. 5.1.2).
+* **D-34.5:** the tool-library deposit that grants priority (Art. 2.2.1): remove the priority, or keep it.
+* **D-34.6:** accept a pseudonym per use for rationing in a shortage and for dampening, with SIM-QA-41.
+* **D-34.7:** placement, and the order of claims on Chapter II between this docket and SIM-QA-32.
+
+**Next action:** maintainer decisions D-34.1 to D-34.7; then article text and Organic Law draft as hypothesis, with a second red-team pass; the signal to a specialist before any parameter; a SIMONE or script estimate of dwelling turnover before any number.
 
 ---
 
