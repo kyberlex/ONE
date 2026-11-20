@@ -130,3 +130,63 @@ Answered by the maintainer item by item. Directions only; the wording is in the 
 | 4c | A: an irreversible, non-therapeutic change to a child's body waits until the person can decide | SIM-QA-25, SIM-QA-24 |
 
 After these answers Chapter I stands at 1,624 words and the whole at 12,058 (drafts, not merged).
+
+---
+
+## **Item 2 Annex: The Red Team's Provisional Answers to the Eight Questions (2026-11-20)**
+
+`[STATUS: SIMULATION_HYPOTHESIS]` `PROVISIONAL, UNVERIFIED`. Attached to the brief at the maintainer's request, so that the three readers have something to attack and not a blank page. These are directions, not article text: decision 2d stands and nothing about the hold is worded until the readers have answered. They are reasoning on text. Nothing was measured, no source was checked, and no clinician, lawyer or person who has been held has read them. The readers are asked to say where each answer is wrong.
+
+**1. The trigger.**
+- "Lucidity in doubt" is dropped. Nobody can assess lucidity on a doorstep at night; in practice the phrase means that whoever arrives decides.
+- The trigger is what can be seen: an act, in progress or immediately about to begin, that is likely to kill or gravely and irreversibly injure the person.
+- The test is reversed. The hold is allowed unless the person has a recorded, settled decision to end their life (answer 8). A record can be checked on the spot; a state of mind cannot.
+- Anyone may interrupt for the moment. Beyond minutes, only people trained in crisis response may continue.
+
+**2. The numbers.**
+- 24 hours on the responders' authority alone.
+- 72 hours at most before a jury drawn by lot validates or releases, the figure of the other cases of Draft C.
+- 7 days in total for one episode, not renewable. A new hold needs a new act.
+- Chapter I states all three as ceilings, since a closed chapter with no ceiling has none. Law may shorten them.
+- *Comparison, from memory and not checked:* emergency holds of about 72 hours in many states of the United States, 24 to 72 hours in England, and a doctor-ordered placement of up to six weeks in Swiss law. Seven days is strict against these.
+
+**3. During the hold.**
+- Restraint by hands for minutes only, never face down, never by straps or devices. Prolonged physical restraint without sedation can kill, so it cannot be the method for hours.
+- After that, containment by place: a room the person cannot leave, with someone present throughout. The person is never left alone (Art. 8.5.2 bans punitive isolation).
+- Medication, food, sleep and contact with the person they named are offered. Nothing is imposed.
+- *Cost:* a person in severe agitation who refuses medication stays agitated in that room.
+
+**4. What the text excludes.**
+- Anything that is not an act: a diagnosis, a statement of belief, old age, homelessness, a way of living.
+- Refusals: a refusal of treatment, food or care is never "an act endangering life".
+- Chosen risk: climbing, fasting, drug use.
+- Danger to others, which belongs to cases (a) and (b) of Draft C.
+- A person with a recorded settled decision.
+
+**5. Who assesses.**
+- Within 24 hours: two people who did not start the hold, at least one with clinical crisis training, with the person's named person or an Advocate present.
+- By 72 hours: a jury drawn by lot from another node. It asks whether there was an act and whether the danger is still immediate, not whether the person is ill. The clinician advises and does not decide.
+- A remote sitting only if the person chooses it or nobody can arrive in time, and with the Advocate physically in the room. A remote jury cannot see the conditions of the hold, hears a person in crisis poorly, and approves more easily.
+
+**6. After release.**
+- Nothing is compulsory: no conditions on release, no supervised treatment.
+- Offered: contact within 72 hours and through the following weeks; the choice to stay voluntarily in the same place; a safety plan made with the person.
+- An invitation to write an advance statement and to name a person.
+- The record belongs to the person and is never used against them.
+
+**7. Advance statement and named person.**
+- The statement governs whom to call, where to be taken, what helps, and which treatments the person accepts.
+- The named person is present and speaks at both assessments.
+- On conflict, decision 1c applies: the present refusal prevails for the body. *Added proposal:* an advance statement may bind the person to stay in a place, within the 7-day ceiling, and never to be medicated.
+
+**8. Exit and interruption.**
+- A settled decision is one made in advance: declared, followed by a waiting period, confirmed, recorded. Anything else is treated as a crisis.
+- Nobody approves it. Witnesses check only that there is no pressure, never the reasons; a panel that can refuse would make the exit coerced.
+- An interruption delays and never cancels: at worst the person loses 7 days.
+- The length of the waiting period is a number for Organic Law.
+
+**Where the red team is least sure.**
+1. *The 7-day ceiling.* It may be too short for a severe episode. Permanent text cannot be lengthened later, only shortened by law, so an error costs in either direction.
+2. *Answer 3.* Whether containment without medication is safe for a person in extreme agitation is not known to the red team. It is the first question for the clinician.
+3. *Answer 8.* The waiting-period model fails a person in unbearable suffering who cannot wait. The reader who has been held is asked whether the model respects them.
+4. *Answer 1 and Draft G.* A person who cannot decide and is in danger falls under case (g) of Draft C and under Draft G, whose third sentence forbids treatment against a present refusal. The readers are asked whether the two texts and the hold leave a gap or a contradiction.
