@@ -48,8 +48,14 @@ All of this is small and slow data. None of it needs a fast network.
 | Own links without operators | R1, R2, R6 | Reticulum; community networks such as guifi.net and Freifunk as proof at scale | Reticulum works at small scale across LoRa, Wi-Fi and packet radio. Its manual still calls it an experimental stack. In December 2025 its original author withdrew from public interaction (no support, no issue handling) and said development continues outside the public repository; releases still appear, and a community fork and independent implementations in other languages continue. |
 | Signed record that tolerates disconnection | R2, R3, R6 | Git; Radicle (peer-to-peer Git); Holochain | Git is mature. Radicle is active (1.9.0 in May 2026, 1.10.x by September) but disclosed two critical flaws on 23 September 2026 that affect every released version: traffic between nodes is neither encrypted nor authenticated, and a peer can present a node identity that is not its own. Until the announced transport replacement ships as a breaking upgrade, Radicle does not meet R6. Holochain is agent-centric with no global consensus and is less widely deployed. |
 | No master key | R4 | Threshold signatures (FROST); Shamir secret sharing for backups only | Sound cryptography with open libraries. FROST signs without ever assembling the key. Plain Shamir sharing rebuilds the key in one place at signing time, so on its own it does not satisfy Art. 7.4. Neither has been run as a ceremony among assemblies drawn by lot. |
-| Proof of personhood without biometrics | R7 | BrightID (social graph), Idena (timed puzzles), Human Passport (aggregated credentials) | Weakest link. A well-funded attacker can build convincing fake identities. |
+| Proof of personhood without biometrics | R7 | In-person registration by a drawn assembly plus zero-knowledge group membership (Semaphore); BrightID with Aura (people who know each other vouch) | Weakest link. With Semaphore, each person is enrolled once in person; afterwards a proof shows "I am one of the enrolled and have not acted twice on this question" without showing who. Proofs are made and checked off-chain, so no coin or chain is needed. It is the only candidate that is zero-knowledge as Art. 7.4.4 asks, but it moves the trust to the enrolment step. BrightID needs no biometrics; the current role of its token and of paid sponsorship could not be confirmed. |
+| Federation chain (section 4, tier 3) | R3, R4, R5 | CometBFT; Hyperledger Fabric with its SmartBFT ordering service | Both are open source and need no coin: the validators are a fixed list of known members. CometBFT (0.39, May 2026) is a single consensus engine with the application written on top; its 1.x line was retracted, so 0.39 is the supported one. Fabric (3.1, February 2026) has offered Byzantine fault tolerant ordering since 3.0 and is in production use, but brings certificate authorities, channels and more moving parts, which weighs against R5 (explainable to ordinary citizens). First choice to prototype: CometBFT. |
 | Open, reproducible software | R5 | Reproducible Builds, Debian, Guix | Mature, in daily use. |
+
+**Screened out by the selection rule:**
+
+- **Idena:** its identities exist only on its own chain, with a stake in its coin that is burnt on a failed validation. The idea is still worth keeping: everyone solves short puzzles at the same moment, so one person cannot sit two tests.
+- **Human Passport:** it scores a wallet from accounts on outside platforms and on-chain activity. A commons that must run 30 days cut off (R2) cannot depend on those. In January 2026 it also stopped accepting BrightID and Idena as evidence.
 
 R8 is not a layer. It is a design rule for whatever is built on top: the software records and transports, and no automated step allocates, sanctions or rules.
 
@@ -73,16 +79,16 @@ Once a fingerprint is on the federation chain, a node cannot rewrite its own pas
 - **Bandwidth:** consensus needs a steady exchange of messages. It fits fibre and Wi-Fi links, not LoRa. Over LoRa only tiers 1 and 2 are realistic.
 - **Few validators:** protection comes from the number of independent validators. With four nodes, two can halt the chain and three can rewrite it. It becomes robust with dozens of nodes across several watersheds.
 
-**Staging:** with 3 to 5 nodes, tier 3 is replaced by something simpler: nodes countersign each other's log fingerprints at regular intervals. The chain is introduced when the federation grows and fibre arrives. Candidate software for it (permissioned Byzantine fault tolerant chains) has not been evaluated yet.
+**Staging:** with 3 to 5 nodes, tier 3 is replaced by something simpler: nodes countersign each other's log fingerprints at regular intervals. The chain is introduced when the federation grows and fibre arrives. Candidate software is listed in section 3; neither candidate has been tried here.
 
 ---
 
 ## 5. Open problems
 
-- **Personhood:** who checks that one person is only one person, without biometrics, and who checks the checkers.
+- **Personhood:** who checks that one person is only one person, without biometrics, and who checks the checkers. With in-person enrolment the question becomes concrete: how one person is kept from enrolling in two nodes.
 - **Key ceremony:** how key splitting among drawn assemblies works as a procedure, not only as a principle.
 - **Record format:** the Constitution says "open thermodynamic ledgers" but not what one entry contains.
-- **Federation chain software:** which coinless validator chain to use, and how a node rejoins after a long cut-off.
+- **Federation chain software:** a prototype has to show whether CometBFT is simple enough to explain and operate, and how a node rejoins after a long cut-off.
 - **The glue:** nobody has combined these pieces to carry resource accounts and sortition between communities.
 - **Transport choice:** the Stage 3 blueprint is written around Reticulum. Given the caveats in section 3, the blueprint treats it as the current candidate and the hardware (LoRa radios, ridge repeaters) stays valid for any replacement stack.
 
