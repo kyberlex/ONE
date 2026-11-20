@@ -2720,6 +2720,221 @@ A seed node of 60 persons, 80% contributing; installed capacity (land, water, en
 
 ---
 
+## **SIM-QA-31: AI and Robots as the Labour Engine**
+
+* **Date Recorded:** 2026-11-20  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction, priority 1 of six. Nothing below is red-teamed; vectors and hypotheses are preliminary. No article text is drafted.  
+* **Originating Context:** maintainer gap review of 2026-11-20: the founding question assumes machines do the work, and the canon has no chapter on them.  
+* **Closest current canon:** Art. 5.1.4 (total automation of arduous, hazardous, repetitive and routine labour as the strategic goal, "through open robotics and automated machinery"; shifts "contract toward zero"), Art. 5.1.3 (multipliers "prioritizing robotic automation"), Art. 6.2.4 (machine-learning workloads as interruptible loads), Art. 7.1 (code is non-sovereign; 7.1.2 voids delegation of "biophysical resource rationing" and of coercive force to "autonomous algorithms, neural models, or artificial agents"; 7.1.4 restricts public automation to "verifiable oracle architectures devoid of subjective agency, legal personhood, or sovereign standing"), Art. 7.3.1 (every binary "running on public life-support infrastructure" reproducible bit for bit "from verified, human-readable source code"), Art. 7.4.2 (keys to hyperscale compute dispersed), Art. 7.5.3 (allocation routines shown "to resist functional comprehension by ordinary citizens" are void), Art. 8.1.3 (no robotics intended to injure), Art. 8.2.1 ("Automated machinery contains optical interlocks triggering kinetic shutdowns upon human approach"), Art. 9.3.1 (the External Trade Interface procures "specialized microelectronics").  
+* **Constitutional Articles:** Arts. 2.2.3, 3.1.5, 3.3.4, 5.1.3, 5.1.4, 6.2.4, 7.1.2, 7.1.4, 7.3.1, 7.4.2, 7.5.3, 8.1.3, 8.2.1, 9.3.  
+* **Kept apart from:** SIM-QA-20 section 8 (H7/H8, models as evidentiary aid in deliberation; this docket takes machines that work, not machines that brief a jury), SIM-QA-16 (how fast automation arrives against an ageing node), SIM-QA-09 (hostile machines), SIM-QA-22 D-17 (personhood of synthetic sentience, dropped 2026-11-16; not reopened here).
+
+### **1. The Friction**
+* Art. 5.1.4 promises that machines take over the work; no article says which machines may do it, who holds them, or under what limits.
+* Read strictly, Arts. 7.1.4, 7.3.1 and 7.5.3 exclude trained models from public infrastructure: their weights are not human-readable source, are not reproduced bit for bit, and resist comprehension.
+* Art. 8.2.1 stops every automated machine when a person approaches. A care robot, a surgical robot or a machine working beside a person cannot exist under it.
+* Art. 7.1.2 voids the delegation of resource rationing to algorithms; Art. 3.1.5 allocates by input-output matrices. The line between computing an allocation and deciding it is not drawn.
+* During the transition, robots and chips come from outside (Art. 9.3); the most capable models may stay with outside powers.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text)*
+* **RED-1, strict reading:** a review jury (Art. 4.6) voids every learned model on public infrastructure under Arts. 7.1.4, 7.3.1 and 7.5.3 → the trajectory of Art. 5.1.4 cannot be met and the shifts of Art. 5.1.1 never contract.
+* **RED-2, loose reading:** "oracle" is stretched to any model that "only recommends"; the people who sign follow it every time → deciding moves to the machine against Art. 7.1.2, with a human signature on top.
+* **RED-3, the matrix as rationing:** the output of the solver of Art. 3.1.5 is applied as the allocation; a challenge under Art. 7.1.2 either stops planning or is ignored.
+* **RED-4, the interlock:** Art. 8.2.1 is disabled case by case for care, surgery and shared work, with no rule on who may do it → the safety rule erodes by exception.
+* **RED-5, capture by the holder:** whoever trains and hosts the models (a programming guild, a node with a fab or a data centre) holds the labour engine; Art. 7.4.2 disperses keys, not training or data.
+* **RED-6, outside dependence:** capable models and chips stay with outside powers; the commons imports closed systems through the External Trade Interface against Art. 7.2, or goes without and stays on human shifts; an embargo (SIM-QA-10) stops the supply.
+* **RED-7, published is not reproducible:** weights are published in full and still cannot be rebuilt bit for bit from source → Art. 7.3.3 de-authorises them.
+
+### **3. Preliminary Hypotheses** *(proposed mitigations, untested)*
+* **H0, silence.**
+* **H1, classes by function:** a scale from fixed-program machines to learned models, stating what each class may do; the control loop of life support stays deterministic and reproducible (Art. 7.3.1); learned models work outside it.
+* **H2, the line between computing and deciding:** a machine computes options and their physical consequences; an allocation takes effect only under a rule or decision adopted by a drawn body, which a person can trace and reverse.
+* **H3, models as commons:** training data, code, weights and the training record are public; training compute is held like Tier 2-A capital under dispersed keys; for weights, bit-for-bit reproduction is replaced by a published training record and independent re-evaluation (to be tested against Art. 7.3.1).
+* **H4, certification near people:** Art. 8.2.1 stays the default; a class of machine may work near people only after certification by a panel drawn from outside, under the evidence rules of SIM-QA-20, with limits of force and speed fixed in Organic Law.
+* **H5, transition supply:** a stated rule on what may be imported through the External Trade Interface (open designs; no closed software on public infrastructure), and a stated fallback when it is not available: the shifts of Art. 5.1 remain.
+
+**Next action:** red team H1 to H5 against RED-1 to RED-7; decide the chapter that would carry any text (Chapter V or VII) under instructions 10 and 10a; no quantitative claim without a script (instruction 7).
+
+---
+
+## **SIM-QA-32: Guilds — Who Executes Day to Day**
+
+* **Date Recorded:** 2026-11-20  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction, priority 2 of six. Nothing below is red-teamed; vectors and hypotheses are preliminary. No article text is drafted.  
+* **Originating Context:** maintainer gap review of 2026-11-20. Citation check: guilds are also named in Arts. 5.3.2 and 7.4.2, added to the list given at opening.  
+* **Closest current canon:** guilds are named and never defined: Art. 2.2.1 ("the local tool guild"), Art. 2.2.3 (commons "administered by municipal sortition councils and dedicated operational guilds"; Tier 2-A facilities "entrusted to specialized worker guilds under sortition assembly oversight"), Art. 5.3.2 ("Guild Apprenticeship & Mastery"), Art. 5.5.4 ("No medical guild or assembly may establish a dogmatic monopoly over clinical science"), Art. 7.4.1 (no "programming guild" holds root keys), Art. 7.4.2 ("guild administrative capture"), Art. 7.5.2 (duties of "Technical guilds"), Art. 8.1.2 (Civic Peace Guilds; Civic Rescue & Fire Guilds). Art. 4.3.4 limits assembly staff only. Art. 5.1 distributes rotational chores, Art. 5.6 exempts carers; neither covers long skilled work.  
+* **Constitutional Articles:** Arts. 2.2.1, 2.2.3, 4.1.1, 4.3.4, 5.1, 5.3.2, 5.5.4, 5.6, 7.4.1, 7.4.2, 7.5.2, 8.1.2.  
+* **Cross-references:** SIM-QA-05 (rescue guilds, incident command), SIM-QA-06 (open question 2, certification in Tier 2-A facilities), SIM-QA-20 (open practitioner registers; no gatekeeping), SIM-QA-22 section 8.11 (D-15 open question, who stops a dangerous practitioner, options O-1 to O-3: taken over here), [`restore_and_elaborate.md`](restore_and_elaborate.md) R-IV-28 (does "sovereign" in Art. 4.1.1 leave administrative authority to guilds).
+
+### **1. The Friction**
+* Drawn bodies decide and rotate; somebody runs the hospital, the grid and the fab every day. The canon calls them guilds and says nothing on entry, coordination, removal or oversight.
+* Art. 4.3.4 guards against a shadow bureaucracy of assembly staff. Nothing equivalent guards against permanent specialists facing a council that changes every six months (Art. 4.2.2).
+* Long skilled work (surgeon, engineer) is bound by nothing before automation: Art. 5.1 covers chores, Art. 5.1.2 bars contracts for labour, Art. 5.6 covers carers.
+* A plan that runs twenty years outlasts every mandate; nobody is named to keep it.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text)*
+* **RED-1, specialists against rotating overseers:** the guild holds the knowledge and the continuity; each new council depends on it → the shadow government that Art. 4.3.4 forbids for staff, by another route.
+* **RED-2, closed entry:** a guild chooses its own members and passes places to kin → the hereditary caste Art. 5.1.1 sets out to end.
+* **RED-3, no removal:** an incompetent or abusive coordinator stays; no body is named to remove.
+* **RED-4, the gap between sessions:** daily decisions with public effect are taken while no drawn body sits.
+* **RED-5, skilled work unbound:** the only surgeon leaves or withholds work → no instrument secures continuity; the opposite failure is a binding that becomes compelled labour against Arts. 1.3.3 and 5.2.1.
+* **RED-6, the dangerous practitioner:** harm by an unsafe surgeon, engineer or pilot has no stated stop (SIM-QA-22 D-15).
+* **RED-7, the keeper of the plan:** the guild that keeps a long plan decides what the plan means → custody becomes ownership.
+* **RED-8, over-correction:** rotating every post destroys skill; licensing entry contradicts the no-gatekeeping rule of SIM-QA-20.
+
+### **3. Preliminary Hypotheses** *(proposed mitigations, untested)*
+* **H0, silence.**
+* **H1, definition:** a guild is an open working association that holds a commons facility in usufruct under a written mandate from the competent drawn body; entry is open through apprenticeship (Art. 5.3.2); nobody is excluded except on facts of harm.
+* **H2, coordination:** coordinators are drawn or rotated among qualified members for a limited term with a hiatus, on the model of Art. 4.3.3.
+* **H3, standing oversight:** a small drawn panel sits with each guild between sessions, sees the public work log, and may suspend a decision until the council meets.
+* **H4, removal and stop:** removal by the drawn body, on facts; for the dangerous practitioner, options O-1 and O-3 of SIM-QA-22 section 8.11.
+* **H5, skilled service:** voluntary, time-limited service commitments counted as reciprocity like care (Art. 5.6.1), never enforced through Tier 1.
+* **H6, custody of plans:** a plan adopted at 60% (Art. 4.5.2) is kept in the public register; the guild executes it; each new assembly confirms or amends it; no guild veto.
+
+**Next action:** red team H1 to H6 against RED-1 to RED-8; align with the registers of SIM-QA-20; decide whether one definition serves every guild or the public-safety guilds of Art. 8.1.2 need their own.
+
+---
+
+## **SIM-QA-33: Harms That Are Not Physical**
+
+* **Date Recorded:** 2026-11-20  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction, priority 3 of six. Nothing below is red-teamed; vectors and hypotheses are preliminary. No article text is drafted.  
+* **Originating Context:** maintainer gap review of 2026-11-20. Citation check: the canon does not call the falsifying of ledgers or sensor data a crime (Art. 3.4.5 answers it by audit); it is listed below among the acts with no name and no forum. Two further acts the canon names without a forum were found and added (Arts. 2.3.1, 4.3.4).  
+* **Closest current canon:** Art. 8.4.4 ("Tribunals possess jurisdiction exclusively over physical assault, somatic violation, enclosure, or ecological poisoning, barring ideological prosecution"); Art. 8.5.2 (custody for "predatory violence" only); Art. 8.3 (victims' charter, written for physical violence).  
+* **Acts the canon names, with no forum and no consequence:** an association that finances, nominates, instructs or rewards a drawn member (Art. 4.1.3: "void", "a structural assault on the civic commons"); surveillance, biometric tracking and domestic profiling (Art. 3.4.4: "an absolute constitutional crime"); disabling biosecurity interlocks (Art. 1.4.3: "a structural crime against biospheric continuity"); eviction into homelessness (Art. 2.3.1: "a structural crime"); staff covertly influencing jurors (Art. 4.3.4: "an impeachable offense").  
+* **Acts with no name and no forum:** falsifying ledgers or sensor data; threats; stalking; coercive control; theft of personal possessions (inviolable under Art. 2.2.1, no remedy stated); sabotage of code.  
+* **Constitutional Articles:** Arts. 1.2.2, 1.4.1, 1.4.2, 1.4.3, 2.2.1, 2.3.1, 3.4.4, 3.4.5, 4.1.3, 4.3.4, 8.3, 8.4, 8.5; cross-references SIM-QA-20 (false Register entries), SIM-QA-29 (RED-5, lent credentials).
+
+### **1. The Friction**
+* The canon limits tribunals to four physical matters so that opinion can never be prosecuted. The same limit leaves acts it calls crimes without any body to establish them.
+* With prison abolished (Art. 8.5.1) and Tier 1 untouchable (Art. 1.3.3), the canon states no consequence for a proven non-violent act.
+* Harm between persons that leaves no physical trace has only the first two stages of Art. 8.4, which depend on both sides taking part.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text)*
+* **RED-1, a crime without a court:** the rewarding of a drawn member is proven; the act is void and nothing else follows.
+* **RED-2, ledger fraud:** a node falsifies its accounts to draw a larger allocation; the audit of Art. 3.4.5 finds it; the figures are corrected and nobody answers.
+* **RED-3, stalking and coercive control:** persistent, never physical; Art. 8.4.4 excludes it; the person targeted has only dialogue with the author.
+* **RED-4, theft:** personal possessions are taken; no forum.
+* **RED-5, stretched words:** tribunals stretch "somatic violation" or "enclosure" to reach these acts → uneven and unpredictable rulings.
+* **RED-6, opinion through the new door:** "threat", "sabotage" or "instructing a member" is used against speech and advocacy, which Arts. 1.4 and 4.1.3 protect.
+* **RED-7, empty consequence:** a finding with no consequence deters nobody; a consequence that touches survival or liberty breaches Arts. 1.3.3 and 8.5.
+
+### **3. Preliminary Hypotheses** *(proposed mitigations, untested)*
+* **H0, silence.**
+* **H1, a closed list:** the jurisdiction of Art. 8.4.4 gains a closed list of acts, each defined by conduct and proof, never by the content of an opinion.
+* **H2, two forums:** acts against the integrity of the commons (reward of drawn members, falsified ledgers or sensor data, interlock bypass, surveillance, code sabotage) go to a tribunal drawn from another watershed; acts between persons (threats, stalking, coercive control, theft) go through the ladder of Art. 8.4 with the tribunal as its third stage.
+* **H3, consequences:** restitution; nullity of the act; removal from the function or facility that was abused; distance measures on the model of Art. 8.3.2; publication of the finding. Never Tier 1, never custody without violence.
+* **H4, existing means only:** review under Art. 4.6 for void acts, mediation for the rest; nothing added.
+
+**Next action:** red team H1 to H4 against RED-1 to RED-7; for each listed act decide forum, body and consequence; test every definition against RED-6.
+
+---
+
+## **SIM-QA-34: Allocation Above the Survival Floor**
+
+* **Date Recorded:** 2026-11-20  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction, priority 4 of six. Nothing below is red-teamed; vectors and hypotheses are preliminary. No article text is drafted.  
+* **Originating Context:** maintainer gap review of 2026-11-20. Citation check: Art. 3.3.3 does not govern machine time alone; it distributes surplus "through quadratic preference signaling and participatory Fab-Lab time rosters". Only machine time has rules; the preference signal is undefined. Art. 3.4.4 bans "individual domestic profiling" (the wording used below), within sensor networks.  
+* **Closest current canon:** Art. 3.3.3 (Tier 3; Anti-Brokerage for machine slots), Art. 3.6.2 (60% for Tier 3 allocations), Art. 10.4.2 (Green Status grants "immediate residential usufruct"; Amber sets priorities), Art. 2.1.3 (abandoned dwellings return to the local commons), Art. 2.3.4 (relocation only to an equivalent dwelling), Art. 5.2.2 (reassignment of floor area as a reciprocity measure only), Art. 1.3.2 ("Comprehensive primary, preventative, and emergency healthcare"), Art. 2.2.1 (personal possessions under "absolute, permanent sovereignty"), Arts. 3.1.2, 5.1.2, 9.3.2 (no prices, no traded labour, no currency inside).  
+* **Constitutional Articles:** Arts. 1.3.2, 2.1.3, 2.2.1, 2.2.2, 2.3.4, 3.1.2, 3.3.1, 3.3.3, 3.4.4, 3.6.2, 5.1.2, 5.2.2, 9.3.2, 10.4.2.  
+* **Kept apart from:** SIM-QA-30 (admission to a seed node), SIM-QA-21 (OL-10 point 2(e) and N-3: which body allocates free dwellings in a small node, and a deadline; not the rule of allocation), SIM-QA-04 (fab queues, merged), SIM-QA-22 D-5 (care in Art. 1.3.2).
+
+### **1. The Friction**
+* A person is promised a dwelling; no rule says which one, or how to change it when a household grows or shrinks.
+* Healthcare is promised as "comprehensive"; some treatments are scarce and no rule says who comes first. Art. 7.1.2 bars leaving it to an algorithm.
+* Personal possessions are the person's own; nothing says whether they may be given or swapped, or what keeps a commonly accepted good from working as money.
+* Planning must learn what people want; individual profiling is a constitutional crime.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text)*
+* **RED-1, dwellings by acquaintance:** free dwellings go to friends of whoever keeps the list (SIM-QA-21 N-3).
+* **RED-2, immobility:** no path to change dwelling; large dwellings stay with small households, since Art. 5.2.2 reassigns area only as a measure against refusal of shifts.
+* **RED-3, key money:** dwellings are swapped with side payments in goods or favours.
+* **RED-4, the scarce treatment:** one organ, a few dialysis places; allocation by clinician discretion or by connections.
+* **RED-5, a barter medium:** a durable good, a booking or a ledger of hours circulates as currency; Art. 3.3.3 makes only machine slots non-transferable.
+* **RED-6, the ban that overreaches:** forbidding gifts and swaps breaches Art. 2.2.1.
+* **RED-7, blind planning:** without data on wants the plan misses them and informal markets appear; or planners collect per-person data against Art. 3.4.4.
+* **RED-8, the undefined signal:** "quadratic preference signaling" needs an identity and a budget per person (SIM-QA-29) and invites collusion.
+
+### **3. Preliminary Hypotheses** *(proposed mitigations, untested)*
+* **H0, silence.**
+* **H1, dwellings:** a public list of free dwellings; criteria of need fixed in advance (household size, accessibility), then lot; exchange by mutual consent through the list, with nothing given in return; a voluntary request to move.
+* **H2, scarce treatment:** criteria of clinical need and expected benefit fixed in advance by a drawn body on rival evidence (Art. 4.4), applied by clinicians, ties by lot, never status or contribution (Art. 1.3.3), open to review.
+* **H3, gifts and swaps:** free for personal possessions; the bar falls only on transferable standard claims on the commons (slots, rations, hours) and on any enforceable debt (Art. 3.2).
+* **H4, the demand signal:** aggregate, voluntary and anonymous: stock drawdown per node, open requests, and the preference signal of Art. 3.3.3 defined in Organic Law; no per-person record.
+
+**Next action:** red team H1 to H4 against RED-1 to RED-8; align H1 with the SIM-QA-21 OL-10 draft and H4 with SIM-QA-29.
+
+---
+
+## **SIM-QA-35: Correcting an Error, and Leaving**
+
+* **Date Recorded:** 2026-11-20  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction, priority 5 of six. Nothing below is red-teamed; vectors and hypotheses are preliminary. No article text is drafted.  
+* **Originating Context:** maintainer gap review of 2026-11-20. Citation check: Art. 1.7.2 bars suspending, diminishing or alienating Chapter I, and Art. 4.5.1 allows its expansion at 75%; the open point is whether changing a technical element counts as a diminution.  
+* **Closest current canon:** Art. 1.7 (primacy; contrary acts void), Art. 4.5.1 (75% for amendments and for "expansions (never diminutions, Article 1.7) of Invariant Rights"), Art. 1.4.3 (the 7% reserve; interlocks on synthesis hardware, registry "as specified in the Organic Law Annex"), Art. 10.6.2 (75% to "admit new federated bioregions"), Art. 8.6.3 (a person may "depart the bioregion unhindered with personal possessions"), Art. 10.3.3 (Systemic Decoupling suspends links with a basin that hoards or cuts off water), Art. 10.1.4 (higher tiers act only on exported pollution, shared aquifers, invariant rights), Art. 3.1.6 (annual Autarkic Closure audit).  
+* **Constitutional Articles:** Arts. 1.4.3, 1.7, 3.1.6, 4.5.1, 8.6.3, 10.1.4, 10.3.3, 10.6.2, 10.6.3.  
+* **Cross-references:** SIM-QA-17 (section 1: detail in Chapter I is frozen; the hazard registry moved to Organic Law, the 7% and the interlock stayed), SIM-QA-22 D-1 (anti-haste amendment rule), SIM-QA-23 (residual: a ground added in error cannot be removed), SIM-QA-30 F-6 (a node that fails physically).
+
+### **1. The Friction**
+* Chapter I is closed against every majority, and it contains two technical choices: a percentage and a mechanism. If either proves wrong, no path corrects it.
+* A bioregion enters by a 75% vote. Nothing says whether it may leave. Only the individual has an exit.
+* Nothing says when a node has failed, who finds it, or what follows for its people and its assets.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text)*
+* **RED-1, the frozen parameter:** evidence shows the 7% is wrong, or the interlock method unsafe or obsolete; any change is arguably a diminution and void (SIM-QA-17 RED-5).
+* **RED-2, the repair door as back door:** a correction path is used to weaken a right under the name of a technical fix.
+* **RED-3, the mistaken expansion:** a right added at 75% proves harmful and cannot be narrowed (SIM-QA-23 residual).
+* **RED-4, the captive bioregion:** a large majority of a bioregion wants out; with no path it leaves in fact, taking assets, and the federation has no lawful answer.
+* **RED-5, exit to enclose:** a departing bioregion takes a watershed and Tier 2-A facilities out of the commons (Arts. 1.1.2, 2.1); the minority inside loses Chapter I.
+* **RED-6, the failed node:** a node cannot cover Tier 1 or seats no body; nothing names the condition; abandoned assets "return" under Art. 2.1.3 to a local commons that no longer functions.
+* **RED-7, failure as takeover:** neighbours declare a node failed in order to absorb it, against Art. 10.1.4.
+
+### **3. Preliminary Hypotheses** *(proposed mitigations, untested)*
+* **H0, silence.**
+* **H1, placement:** apply the test of instruction 10 to Chapter I once: the right and its bound stay entrenched; the technical means moves to Organic Law under the ratchet rule. Needs a path to make that one move.
+* **H2, correction procedure:** harder than an amendment: a closed list of technical elements; 75% at the global tier; a review jury (Art. 4.6) certifying that no right is diminished; a delay on the model of SIM-QA-22 D-1.
+* **H3, exit of a node or bioregion:** by 75% of its residents after a delay; biomes and commons assets stay in trust and cannot be enclosed; any person who wishes to remain in the commons keeps Chapter I and the right to move (Art. 10.4); exported harm stays under Art. 10.1.4.
+* **H4, failure:** a criterion from physical accounts and seated bodies (a repeated failed audit under Art. 3.1.6; no body seated for a stated period), certified by a panel drawn from outside; aid first; then time-limited administration by a drawn outside panel; relocation offered, never imposed; assets stay in the commons.
+
+**Next action:** red team H1 to H4 against RED-1 to RED-7; link H2 to the transitional amending body of the Foundation docket when it is opened; Chapter I ceiling check (instruction 10a).
+
+---
+
+## **SIM-QA-36: Personal Status and Family**
+
+* **Date Recorded:** 2026-11-20  
+* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction, priority 6 of six. Nothing below is red-teamed; vectors and hypotheses are preliminary. No article text is drafted.  
+* **Originating Context:** maintainer gap review of 2026-11-20.  
+* **Closest current canon:** Art. 2.2.2 ("hereditary succession of occupancy among active co-inhabitants", not defined), Art. 2.3.3 ("irreconcilable interpersonal domestic crises" go to a Local Mediation Panel; no rule on who keeps the dwelling), Art. 8.3.2 (after physical violence the harmed person keeps the dwelling), Art. 2.2.1 (personal possessions; nothing on death), Art. 4.2.1 ("no first-degree kin or domestic partners may serve concurrently"), Art. 10.4.2 ("family reunification"), Art. 5.4 (parenting, alloparenting). No article on unions, separation, parentage or adoption.  
+* **Constitutional Articles:** Arts. 2.2.1, 2.2.2, 2.3.3, 4.2.1, 5.4, 8.3.2, 10.4.2.  
+* **Boundary with SIM-QA-25 (provisional, for the maintainer):** SIM-QA-25 keeps the child's own rights: not property, a voice that grows with age, corporal punishment, choice of teacher. This docket takes status between adults, parentage and adoption as status, the dwelling on separation or death, and personal possessions at death. Cross-references: SIM-QA-24 RED-1 (a fellowship's forum ruling on marriage, custody or inheritance), SIM-QA-29 (what the civic register may hold).
+
+### **1. The Friction**
+* The canon uses kin, partners, family and co-inhabitants in four articles and defines none.
+* The dwelling passes to "active co-inhabitants"; who they are decides who stays in a home after a death.
+* When a household separates without violence, nothing says who keeps the dwelling.
+* Personal possessions are inviolable in life; nothing says where they go at death.
+
+### **2. Preliminary Red Vectors** *(attack → expected failure under current text)*
+* **RED-1, the succession claim:** after a death, a distant relative, a friend who lived there and a person who arrived the week before all claim the dwelling.
+* **RED-2, separation:** both partners claim the home; the panel of Art. 2.3.3 has no criterion.
+* **RED-3, status by fellowship:** with no civil rule, religious or clan forums define union, parentage and inheritance (SIM-QA-24 RED-1).
+* **RED-4, disputed parentage:** two adults claim a child, or an adoption is contested; no rule and no forum; papers of the existing state may say otherwise during the transition.
+* **RED-5, possessions at death:** tools and works are taken by whoever is nearest; or an estate of tools accumulates across generations against the limit on redundant units in Art. 2.2.1.
+* **RED-6, over-regulation:** defining unions gives assemblies a hold on private intimacy (Art. 1.2.3); a register of unions is a sensitive register (SIM-QA-23, Art. 7.4.4).
+* **RED-7, a rule nobody can apply:** the bar on kin and partners serving together (Art. 4.2.1) needs data that no register holds.
+
+### **3. Preliminary Hypotheses** *(proposed mitigations, untested)*
+* **H0, silence.**
+* **H1, no civil status:** the Constitution recognises no status of union; every consequence attaches to facts the persons themselves declare (living together for a stated time, caring for a child).
+* **H2, the declared household:** persons may declare a household; "active co-inhabitant" is defined by length of residence; on separation, criteria fixed in advance (where the children live, need, length of residence) applied by the Local Mediation Panel, and the person who leaves receives an equivalent dwelling (Art. 2.3.4).
+* **H3, parentage and adoption:** recorded as a relation of care in the sealed records of SIM-QA-29; disputes go to a drawn tribunal that hears the child (SIM-QA-25).
+* **H4, possessions at death:** the person's written wish holds for personal possessions; failing that, co-inhabitants, then the commons; no wish disposes of a dwelling or any usufruct.
+
+**Next action:** maintainer to confirm the boundary with SIM-QA-25; red team H1 to H4 against RED-1 to RED-7; Chapter II word count (instruction 10a).
+
+---
+
 ## **Cross-Docket Check 2026-11-13: SIM-QA-18, 19, 20, 21, 22** *(after the maintainer decisions of 2026-11-13; inconsistencies listed, none resolved here)*
 
 **Resolved today and verified across dockets:** X-1 (panels of three per dispute: SIM-QA-19 Art. 4.2 and H6 clause, SIM-QA-21 Art. 4.2.1 and OL-10 point 8, OL-11 point 6); X-2 (notice, SIM-QA-19); X-3 (one outside-panel rule: Art. 4.2 closing paragraph, Art. 4.3.6, OL-10 point 8, OL-11 point 6); X-4 (OL-9.3, SIM-QA-18); X-5 and X-10 (Art. 4.3.2 and OL-9.11, SIM-QA-18; SIM-QA-20 section 9); X-7, X-8, X-9 (SIM-QA-21); X-11 (Art. 4.4.2, SIM-QA-20); I-3 (OL-11 point 5a, referenced from SIM-QA-20). Hiatus counted on length of service is the same rule for panels of three (SIM-QA-19) and Evidence Panels (SIM-QA-20).
