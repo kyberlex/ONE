@@ -4029,7 +4029,7 @@ The principle is a right and stays in the Constitution; everything else is Organ
 ## **SIM-QA-42: The Foundation**
 
 * **Date Recorded:** 2026-11-20  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction with a working direction (section 4). **Nothing below is red-teamed**, the direction included. No statute text is drafted; `foundation/` is unchanged. First pass; no review by Swiss counsel; the legal points are questions, not answers.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST), opened 2026-11-20 on maintainer instruction with a working direction (section 4). Red team of the direction 2026-11-20 (section 5): **`NARROWED`** with seven revised points, every legal point subject to counsel; **`RED_WINS`** as worded on four items and under current text on two. Sections 1 to 4 are as recorded at opening. No statute text is drafted; `foundation/` is unchanged. First pass; no review by Swiss counsel; the legal points are questions, not answers.  
 * **Originating Context:** maintainer gap review of 2026-11-20 (second batch), reading [`foundation/statutes_foundation_one.md`](../foundation/statutes_foundation_one.md) against the canon and the Class-0 invariants.  
 * **Findings in the Statutes (Part A, checked):** the Board "reconstitutes itself by co-optation" (Art. 5.1); members serve "a renewable term" of three years, with no limit (Art. 5.2); election, renewal and removal of members are the Board's own resolutions at 75% (Art. 5.4); the drawn Advisory Assembly is "consultative" and gives "non-binding recommendations" (Arts. 4, 8); assets grow by donations, bequests, subsidies, royalties and "commercialization proceeds" (Art. 3.2); after the deposit, amendments to the Constitution require ratification by "the seated sortition assemblies pursuant to Chapter IV" (Art. 13.4), which will not yet exist. The civic compact (Part C, section 7) bars any direct employment outside, takes an irrevocable cession of commercial rights over everything a citizen makes, and states the commons rights as given "In reciprocal consideration"; Part C, section 8 ends: more than sixty cumulative days in the legacy world without a mandate "forfeits their housing usufruct lock".  
 * **Canon and invariants they meet:** Art. 1.3.1 (life support "fully decoupled from wage labor, market exchange, debt bondage, or ideological compliance"), Art. 1.3.3, Art. 2.3.1 (no displacement into homelessness); Class-0 invariant 1 as worded in the project rules (no donations).  
@@ -4072,7 +4072,93 @@ The principle is a right and stays in the Constitution; everything else is Organ
   3. Would Art. 13.1, with an annex (Art. 13.4) containing Arts. 8.5, 9.2 and 9.5 of the Constitution, pass the supervisory authority?
   4. Do a ban on outside employment and an irrevocable cession of all rights hold as personal commitments?
 
-**Next action:** red team D-42.1 against RED-1 to RED-10; Swiss counsel on D-42.2; decide where invariant 1 is worded for the public (D-42.1 point 1 touches `CONTRIBUTING.md` and `COMPARATIVE_ANALYSIS.md`); no change to `foundation/` before the maintainer's decision.
+**Next action (Stage 1):** ~~red team D-42.1 against RED-1 to RED-10~~ (done, section 5); Swiss counsel on D-42.2 (**not done**; seven questions added in section 5.4); decide where invariant 1 is worded for the public (**open**, D-42.4); no change to `foundation/` before the maintainer's decision (**none made**).
+
+### **5. Stage 2: Red Team of the Working Direction** *(2026-11-20, on maintainer instruction; reasoning on the text of the Statutes and the canon only; first pass; **no Swiss counsel has read it; every statement about what foundation, tax, labour or copyright law allows is a question, not an answer**; no statute or canon text drafted; `foundation/` unchanged)*
+
+#### **5.1 Reading the Current Texts First** *(Jurist)*
+* **Everything in this docket has to be settled before the notarial deed.** After it, the purpose clause changes only through the supervisory authority (Statutes Art. 10), and the Constitution is locked (Art. 13.4). It is the same timing as SIM-QA-35.
+* **"Removal also on proposal of the drawn panel" proposes to the body it would remove.** Under Art. 5.4 the removal of a Board member is the Board's own resolution at 75%.
+* **Invariant 1 as worded forbids what the canon provides.** The project rules list "consultancies"; canon Art. 9.3.3 names "specialized engineering consultations" as an outward activity of the External Trade Interface. The Statutes add tuition, elder care and workshop fees charged to outside persons by local entities (Part C, section 4), and the roadmap sells pre-paid vouchers to persons. "Nothing sold to persons" (direction, point 1) is not true of these texts either.
+* **The licences and the monopoly contradict each other.** Art. 2.2 keeps works "free … for humanity's non-commercial use" and gives the Foundation "an exclusive legal monopoly" on commercial licensing. Part C, section 7 names the licences: AGPL-3.0, CERN-OHL, CC BY-SA. Those licences allow commercial use by anyone who keeps their terms. A work cannot be under them and reserved for non-commercial use. Canon Art. 1.5.2 also makes discoveries and designs "permanently exempt from monopolistic patents, intellectual property claims, and proprietary restrictions" (Chapter I).
+* **The canon does not name the body that amends it.** Art. 4.5.1 requires 75% "for structural amendments to this Constitution" and says of whom nowhere. Statutes Art. 13.4 refers to "the seated sortition assemblies pursuant to Chapter IV". Even after assemblies exist, which one is competent is open.
+* **The lock is as strong as Art. 10.** The Board, at 75% and with the supervisory authority, can request amendments of the Statutes; the Constitution is an annex of the deed. Whether an amendment of the annex is an amendment of the deed, needing the authority each time, is a question for counsel. If it is, the state approves every future amendment of the Constitution (RED-12).
+* **The Founder keeps a right to request a change of purpose for twenty years** (Art. 10.2), beside the waiver of Art. 13.4.
+* **Part B is the deed.** Where the German text differs from Part A (source note 4: "kann" against "establishes"; different numbering), the German text is what would be signed.
+* **Art. 2.2 lets the Foundation hold "100% of the governance rights" in land vehicles in every country.** All title, worldwide, then depends on one board, one authority and one jurisdiction. Canon Art. 6.1.3 calls a single-point dependency in utilities unconstitutional, and Art. 7.4 disperses keys for the same reason.
+* **Board members of a foundation are entered in a public register under their names** (to confirm with counsel). The project's authorship is pseudonymous by rule.
+
+#### **5.2 Verdicts, Point by Point**
+* **Point 1, invariant 1 reworded: `NARROWED`; `RED_WINS` on "nothing sold to persons".** *RED-3:* the rewording removes a contradiction that critics and a tax office would find. It needs two halves to be true (section 5.1). Inside: the project and the commons never sell, never gate access to knowledge, never track, never issue a tradable token. Toward the outside: nodes and the Foundation trade through the External Trade Interface (canon Art. 9.3) and may receive gifts, grants and licence fees. *RED-9, gifts with conditions:* every gift and grant above a threshold is published with its source; none carries a condition on governance or content; a cap on the share from one source; a conditional gift is refused. *Open:* whether income from licensing to large commercial buyers, if it becomes the main income, is compatible with tax exemption and with "strictly non-commercial" (Art. 2.1): for counsel. It also pulls the work toward what sells.
+* **Point 2, the Board: `NARROWED`; `RED_WINS` on two items as worded.** *RED-1:* two terms and a drawn third reduce entrenchment; two thirds are still co-opted and the drawn members are always a minority. *Removal:* as worded it is empty (section 5.1). The decision must lie with a body outside the Board, on the drawn panel's proposal; whether statutes may give that power to such a body is for counsel. *RED-7, the roll:* a lot among "association members" is a lot among people the association's committee admitted. *Revised:* the roll is every adult resident of an affiliated node and every contributor of some standing; the draw is public and verifiable (canon Art. 4.3.1); below a minimum number on the roll the seat is drawn from sister nodes. *RED-10, lot against duty:* a Board member carries personal duties and liability. A drawn person may decline, the draw continues until one accepts, and the Foundation insures and instructs them. Those who accept are then partly self-chosen. Residence or signature requirements for members drawn abroad: for counsel. *Added:* the Advisory Assembly stays "consultative" (Art. 8) under the direction. The drawn panel's assent before the gravest acts (ending a node's usufruct, alienating land, amending the Statutes) would give it weight; whether that can bind a board is for counsel, and a delay with referral to the authority is the fallback. *The Founder's right* (Art. 10.2) should be waived or tied to the drawn panel's assent, or the lock has a private key.
+* **Point 3, a transitional amending body: `NARROWED`; `RED_WINS` under current text on what comes after it.** *What it can touch:* never Chapter I (SIM-QA-35); elsewhere at 75%. *Capture:* an early community of a dozen people draws its amending body from the founders' friends. A minimum roll is needed, and below it nothing is amended, which is safer than a body of five. Urgent corrections required by mandatory law are the one case to provide for (SIM-QA-40). *After it:* the body it hands over to is not named in the canon (section 5.1); that must be written in Chapter IV before the lock. *RED-2 and RED-12:* if the full text is annexed, counsel must say whether the authority approves each amendment. An annex that identifies the Constitution by reference and by its own amending rule, instead of fixing its words, would avoid that and would also lower the risk of RED-5 (an annex containing Arts. 8.5, 9.2 and 9.5); whether the authority accepts a reference is the question.
+* **Point 4, the compact lightened: `NARROWED`.** It removes the conflict with Arts. 1.3 and 2.3 (RED-4). *What changes with it:* members with outside wages hold money that others do not. Inside the node money buys nothing (SIM-QA-34 point 3), so the difference shows in personal possessions brought in from outside. The alternative, handing the wage over, is the condition the direction removes. *"Works made with the node's common means":* a person fed and housed by the commons makes everything with common means. A narrow test is needed: work done in assigned civic time or on shared equipment. *The cession itself* meets the contradiction of section 5.1: under the named licences anyone may already use the work commercially, so what is ceded has to be defined (the right to grant a different licence), limited in time or to the work, and reconciled with Art. 1.5.2. *"Tier 1 unconditional"* requires rewriting the purpose clause (Art. 2.2, "in reciprocal exchange for") and Part C, section 7 ("In reciprocal consideration"), before the deed. *Deleting the sixty-day forfeiture* leaves absence to canon Art. 2.1.3, which gives no duration for "abandoned" (SIM-QA-34, SIM-QA-36). *Not removed:* work done for outside clients through the Foundation may be treated as employment (SIM-QA-40 RED-15).
+* **Point 5, the handover: `NARROWED`; `RED_WINS` as worded on one assembly.** *RED-8:* a foundation that holds land in several bioregions would have its Board appointed by the first one to seat an assembly. *Revised:* the Statutes define the appointing body now, by criteria anyone can check: all seated Bioregional Assemblies together, or a draw across them, with the existence of each certified from outside the nodes concerned. Whether a body without legal personality can be the appointing body is for counsel. *A point of canon:* an assembly that votes people into office holds an election, which Art. 4.1.2 abolishes for public bodies. A draw among candidates who meet published criteria is closer to the canon.
+* **RED-5 and RED-6** are the questions of D-42.2 and are not answered here.
+
+#### **5.3 New Vectors Found in This Pass**
+* **RED-11, names in a public register. Open, personal to the maintainer.** Section 5.1. The first Board is appointed by the Founder; both are named in public records if counsel confirms the rule. This meets the zero-leak rule of the project.
+* **RED-12, the state as gatekeeper of amendments.** Under point 3.
+* **RED-13, licences against the monopoly, and against Art. 1.5.2. `RED_WINS` under current text.** Section 5.1. Either the works are under the named open licences and the "non-commercial" wording and the "exclusive monopoly" go, or they are not free in the sense the project states publicly. For the maintainer (D-42.8).
+* **RED-14, the amending body unnamed.** Under point 3.
+* **RED-15, Part A and Part B.** Section 5.1. Every decision here has to be written into the German deed; Part A is a description.
+* **RED-16, the Founder's reserved right.** Under point 2.
+* **RED-17, all title in one place. Open.** Section 5.1. A sanction, a court order or a captured Board in one country reaches every node. The alternative is a land trust per country, each with its own asset lock and each bound to the others by contract, with the Foundation holding knowledge and the common pool. For the maintainer (D-42.10).
+
+#### **5.4 Questions Added for Counsel** *(continuing D-42.2; none answered)*
+5. May the Statutes give a body outside the Board (a drawn panel, an association's assembly, a drawn assembly without legal personality) the power to appoint and to remove Board members, and to withhold assent from listed acts?
+6. If the Constitution is annexed in full, does each amendment of it need the supervisory authority? Would an annex by reference to the Constitution and its amending rule be accepted?
+7. Are Board members and the Founder named in public records, and what residence or signature requirements apply to members drawn abroad?
+8. Can the Foundation hold exclusive commercial rights in works published under AGPL-3.0, CERN-OHL and CC BY-SA; and is tax exemption compatible with licensing income as a main source?
+9. Is work done for outside clients through the Foundation or a local entity employment, with the contributions and insurance that follow?
+10. Can the Founder waive the right of Art. 10.2 in the deed, or tie it to another body's assent?
+11. Which text governs where Part A and Part B differ, and should Part A exist as a statute text at all?
+
+#### **5.5 What Survives** *(the direction as revised; not statute text)*
+Verdict for the docket: **`NARROWED`** with the seven points below, every legal point subject to counsel; **`RED_WINS`** as worded on "nothing sold to persons", on removal "on proposal", on a lot among association members and on one assembly appointing the Board; under current text on the licences (RED-13) and on the unnamed amending body (RED-14).
+1. **Invariant 1** in two halves: inside, nothing sold, gated, tracked or tokenised; toward the outside, trade through the External Trade Interface and gifts, grants and licence fees that are published, unconditional and capped per source.
+2. **Board.** Two terms at most. At least a third drawn from a roll of all adult residents of affiliated nodes and standing contributors, by public draw, with a minimum roll. Removal decided outside the Board on the drawn panel's proposal. The panel's assent for the gravest acts. The Founder's reserved right waived or tied to that assent.
+3. **Amending.** An annex by reference if the authority accepts it. A transitional drawn body with a minimum roll, at 75%, never touching Chapter I, ending when the competent assembly exists. The canon names that assembly, before the lock.
+4. **Compact.** Outside employment allowed. No forfeiture. Cession limited to works made in civic time or on shared equipment, defined so that it agrees with the open licences. Tier 1 never "in exchange"; the purpose clause rewritten before the deed.
+5. **Handover.** The appointing body defined now: all seated Bioregional Assemblies together, by draw among candidates who meet published criteria, each assembly's existence certified from outside.
+6. **Title.** One foundation for everything, or a land trust per country bound by contract (D-42.10).
+7. **One text.** Part B carries every decision; Part A follows it.
+
+#### **5.6 Placement and Word Count** *(instructions 10 and 10a)*
+The Statutes are outside the Constitution's ceilings. Two sentences would enter the canon: the body that amends the Constitution (Chapter IV: 2,136 of 2,150, 14 left, **conflict**) and, if kept, a transitional rule (Chapter IX: 31 left, also claimed by SIM-QA-40). Invariant 1 is worded in the project rules and in two public files; no canon article states it.
+
+#### **5.7 Disclosure of Points Changed** *(instruction 8 applied to the Statutes and the invariant; none is a canon point)*
+| # | Point | Source | Change | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | no donations, no consultancies | Class-0 invariant 1 (project rules; `CONTRIBUTING.md`) | gifts, grants, licence fees and outward trade allowed under rules | **weakened** as an invariant; brought into line with canon Art. 9.3 and the Statutes |
+| 2 | citizens "strictly prohibited" from outside employment | Statutes Art. 2.2; Part C, section 7 | removed | **dropped** |
+| 3 | forfeiture of the dwelling after sixty days outside | Part C, section 8 | removed | **dropped** |
+| 4 | cession of "everything" a citizen makes | Statutes Art. 2.2; Part C, section 7 | limited to civic time and shared equipment | **narrowed** |
+| 5 | commons rights "in reciprocal exchange" | Statutes Art. 2.2; Part C, section 7 | unconditional | **removed as a condition** |
+| 6 | Board "reconstitutes itself by co-optation"; renewable terms; self-removal | Statutes Arts. 5.1, 5.2, 5.4 | drawn seats, two terms, removal outside the Board | **limited** |
+| 7 | "exclusive legal monopoly" on commercial licensing; "non-commercial use" | Statutes Art. 2.2 | to reconcile with the named licences and canon Art. 1.5.2 (D-42.8) | **open** |
+| 8 | the Founder's right to request a change of purpose | Statutes Art. 10.2 | waived or tied to assent | **limited** |
+
+#### **5.8 Residual Weaknesses**
+* Nothing here is legal advice, and several points may not be possible under foundation law at all.
+* A small early community cannot supply a meaningful lot; until it grows, the Board governs in fact.
+* The drawn third is a minority, and those who accept a seat with personal liability are partly self-chosen.
+* Licensing income from large buyers shapes what gets made.
+* One foundation holding all title is one point of failure.
+* The Founder and the first Board act before any of these checks exists.
+
+**Maintainer decisions needed (D-42.3 to D-42.11):**
+* **D-42.3:** accept the seven points of section 5.5 as the revised direction, or change them.
+* **D-42.4:** invariant 1 in two halves, and where it is reworded (project rules, `CONTRIBUTING.md`, `COMPARATIVE_ANALYSIS.md`).
+* **D-42.5:** removal decided outside the Board; the drawn panel's assent for the gravest acts.
+* **D-42.6:** the roll for the lot: all adult residents and standing contributors, with a minimum number.
+* **D-42.7:** annex by reference or in full; the transitional amending body; the amending body named in Chapter IV before the lock (with SIM-QA-35).
+* **D-42.8:** the exclusive commercial licence against the open licences and canon Art. 1.5.2: drop the exclusivity and the "non-commercial" wording, or keep them as a stated transitional derogation.
+* **D-42.9:** the appointing body: all seated Bioregional Assemblies together, by draw among candidates who meet criteria.
+* **D-42.10:** one foundation for all title, or a land trust per country bound by contract.
+* **D-42.11:** the Founder's reserved right (Art. 10.2), and the public register against pseudonymous authorship (RED-11).
+
+**Next action:** maintainer decisions D-42.3 to D-42.11; the eleven questions of D-42.2 and section 5.4 to Swiss counsel; then the German deed redrafted first and Part A after it, as hypothesis, with a second red-team pass; nothing in `foundation/` changes before that.
 
 ---
 
