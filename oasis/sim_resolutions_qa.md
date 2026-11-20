@@ -3532,7 +3532,7 @@ Every point concerns a power over persons or a right, so the core stays in the C
 ## **SIM-QA-38: Rich and Poor Basins**
 
 * **Date Recorded:** 2026-11-20  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction with a working direction (section 4). **Nothing below is red-teamed**, the direction included. No article text is drafted. No number is given: every quantity is for SIMONE (instruction 7).  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST), opened 2026-11-20 on maintainer instruction with a working direction (section 4). Red team of the direction 2026-11-20 (section 5): **`NARROWED` on text, with feasibility unknown** until SIMONE has run RED-3 and RED-4; **`RED_WINS`** as worded on five points. Sections 1 to 4 are as recorded at opening. No article text is drafted. No number is given: every quantity is for SIMONE (instruction 7), still `NOT_RUN`.  
 * **Originating Context:** maintainer gap review of 2026-11-20 (second batch).  
 * **Closest current canon:** Art. 3.1.6 (Tier 1 demand met "from local resources and installed capacity alone, with external inputs at zero"), Art. 3.6.2 (75% "to alter, diminish, or recalculate per capita Tier 1 survival allocations"), Art. 4.5.1 (75% for "modifications to the biological survival baseline"), Art. 10.3 (bilateral physical compacts; decoupling "until reciprocity is restored"), Art. 10.4.4 (mutual aid binding on neighbours "When a watershed incurs emergency Red Status"), Art. 3.1.4 ("society's non-negotiable ceiling"), Art. 3.3.1 ("The absolute, non-negotiable priority"), Art. 10.4.3 (no involuntary deportation), Art. 1.6.2 (exhaustion of non-renewable aquifers and irreversible destruction of habitats are crimes), Art. 4.2.4 (Continental Chambers coordinate "macro-balances"), Art. 4.2.5 (the Global Commons Assembly sets "planetary thermodynamic boundaries").  
 * **Constitutional Articles:** Arts. 1.3, 1.6.2, 3.1.4, 3.1.6, 3.3.1, 3.5, 3.6.2, 4.2.4, 4.2.5, 4.5.1, 10.3, 10.4.3, 10.4.4, 10.6.2.  
@@ -3567,7 +3567,75 @@ Every point concerns a power over persons or a right, so the core stays in the C
   4. When ceiling and floor collide: transfers first; then a time-limited excess with a recovery plan certified from outside the basin, on regenerating resources only; never irreversible damage (Art. 1.6.2).
 * **Residuals named by the maintainer, to test in SIMONE:** the maximum share donors can carry (RED-3); transport cost limits (RED-4).
 
-**Next action:** SIMONE runs for RED-3 and RED-4 before any figure is written; red team D-38.1 against RED-1 to RED-9; reconcile point 4 with SIM-QA-30 D-30.7 and D-30.8.
+**Next action (Stage 1):** SIMONE runs for RED-3 and RED-4 before any figure is written (**still `NOT_RUN`**); ~~red team D-38.1 against RED-1 to RED-9~~ (done on text, section 5); ~~reconcile point 4 with SIM-QA-30 D-30.7 and D-30.8~~ (proposed order in section 5.2, point 4, for the maintainer).
+
+### **5. Stage 2: Red Team of the Working Direction** *(2026-11-20, on maintainer instruction; reasoning on text only; **no quantity is given and none is implied: RED-3 and RED-4 remain `NOT_RUN`**, so whether the direction is physically feasible is not known; first pass, no specialist review; no article text drafted)*
+
+#### **5.1 Reading the Current Text First** *(Jurist, Thermodynamic architect)*
+* **The collision of point 4 is inside Chapter I.** Art. 1.3 guarantees the baseline to "every inhabitant". Art. 1.6.1 says "Human metabolisms must operate within the … carrying capacity of local watersheds". Both are provisions of Chapter I and Art. 1.7.2 forbids diminishing either. A rule placed in Chapter III or X that says which gives way would be void. The order has to be written in Chapter I, before the Genesis Lock (SIM-QA-35 point 1).
+* **Art. 3.1.6 requires Tier 1 from local resources "with external inputs at zero".** A basin that lives on standing transfers fails this audit every year, by design of the direction.
+* **Art. 10.3.2 already has basins that cannot close Tier 1 locally:** "Dense urban agglomerations operate as specialized metabolic organs … trading advanced industrial outputs and scientific research for food and energy surpluses." The canon holds both the autarky rule and its exception without relating them.
+* **Art. 10.3.3 suspends "inter-basin grid interties, transit corridors, and advanced medical buffers".** The same interties and corridors would carry solidarity. A decoupled basin loses its Tier 1 transfers, and its residents pay for a decision of its bodies (against Art. 1.3.3).
+* **Art. 10.1.4 gives higher tiers jurisdiction "to defend invariant rights".** Tier 1 is one. A worldwide floor and an apportionment have a footing there.
+* **Art. 4.4.4 names the precautionary principle "In dubio pro natura et vita".** Point 4 is the case where nature and life pull in opposite directions; the principle gives no answer.
+* **The direction names the Continental Chamber only.** A continent with no basin in surplus has no donor.
+
+#### **5.2 Verdicts, Point by Point**
+* **Point 1, one worldwide floor: `NARROWED`.** *RED-8, climates:* a floor in inputs (energy for heating) fits no two climates. Stated as results it holds: water fit to drink, food sufficient for the person's age and activity, a dwelling kept within a range of temperature, care reached within a time. *RED-10 (new), the floor used against the ceiling:* a Global Commons Assembly drawn from a population that is mostly poor sets a floor the planet cannot supply inside its boundaries; point 4 is then triggered everywhere and the ceiling falls by vote. *Guard (conservation):* the floor is adopted only on a certified planetary balance showing that it can be met for everyone inside the ceilings (the check of Art. 3.1.5 at global scale); a floor that fails the balance has no effect. *Lowering:* never by vote; only through a certified shared shortage (SIM-QA-30 D-30.8). *RED-11 (new), gamed accounts:* a basin understates what it has to receive, or a donor hides surplus; need and surplus are certified by panels from outside, with the split-sample audit of Art. 3.4.5. *RED-1* is answered: a basin can no longer vote its own Tier 1 below the floor (Art. 3.6.2 is limited to that extent). Unequal levels above the floor remain, by design.
+* **Point 2, standing solidarity: `NARROWED` on the rule; `RED_WINS` on four points as worded.**
+  * *RED-9, recipients vote themselves the transfers.* A Chamber drawn in proportion to population can have a majority from receiving basins. *Guard:* the Chamber adopts a published formula at 60% (Art. 10.6.2) and never votes on a single transfer; the inputs are certified accounts; a contribution never cuts into the donor's own Tier 1, Tier 2 or reserves (Art. 3.5); the share has a cap, which is the SIMONE residual RED-3.
+  * *RED-12 (new), hidden surplus.* "Surplus beyond their own Tier 1 and Tier 2" disappears if a donor enlarges its Tier 2. The accounts must be per flow (energy, food, water, equipment), since a basin can be a donor in one flow and a recipient in another, and Tier 2 must be measured against a common definition.
+  * *RED-5, standing dependence, and RED-4, transport (qualitative only).* Flows differ in how far they can be carried. Energy and food travel; water in the amounts farming needs mostly does not, except downhill; a dwelling does not travel at all. A basin short of water is better helped with food, which carries the water used to grow it, and with equipment. Installed capacity (generators, treatment units, tools, knowledge) is given once and raises what the basin makes for itself, which is what Art. 3.1.6 asks; a flow must be sent every year. *Proposed rule:* solidarity is delivered first as capacity, and as flows only to bridge. Art. 10.4.4 already lists capacity (desalination units, microgrids, mobile medical hubs). The distances and the costs are RED-4, `NOT_RUN`.
+  * *`RED_WINS` as worded:* (a) the Continental Chamber alone leaves a continent without surplus with no donor; a global tier is needed. (b) Against Art. 3.1.6 as written (section 5.1): the audit must count certified solidarity as such, or every recipient is a failed node (SIM-QA-35 H4). (c) Against Art. 10.3.3: solidarity for Tier 1 must never be suspended by decoupling. (d) Against SIM-QA-35 point 5 (RED-13, new): that point lets a bioregion withdraw from "solidarity duties". The rich would leave. If solidarity for Tier 1 rests on Chapter I, withdrawal cannot shed it, and SIM-QA-35 point 5 must say so.
+  * *"Nothing in return."* A plan for the recipient to close its own Tier 1 is a condition, and conditions give donors a hold. *Guard:* what covers Tier 1 is never conditioned (Art. 1.3.3); the plan concerns the capacity delivered and is certified by a panel from outside, never by the donors. *RED-3:* a donor that refuses meets only the forum of SIM-QA-22 D-2 and then decoupling. The federation has nothing else (SIM-QA-35 RED-11).
+* **Point 3, relocation offered: `NARROWED`.** *RED-6:* where no transfer can reach (water), moving is the only real choice. No assembly forces it; the place does. *Guards:* transfers are never reduced to make people leave; whoever moves receives an equivalent dwelling (Art. 2.3.4); a group may move together; a right to return. *Residual:* receiving basins at Amber or Red Status (Art. 10.4.2) create no new tenure, so an offer needs a basin with room. A basin that empties falls under the failed-node rule of SIM-QA-35.
+* **Point 4, when ceiling and floor collide: `NARROWED`; `RED_WINS` as worded on its place in the text.** *RED-7:* the line between drawing down a resource that recovers and breaking it is uncertain and often seen only after it is crossed (soils, fisheries, aquifers that compact). "Never irreversible damage" can be aimed at, not guaranteed. *Guards:* the excess is limited to a part of a margin certified as recoverable by a panel from a non-bordering watershed on rival evidence (SIM-QA-20); indicators are measured under Art. 3.4.5 and the excess stops by itself when one is crossed; no second excess before full recovery, so periods cannot be chained; a total limit in time; basins that share the resource are heard (Art. 10.1.4). *Order proposed, joining this point to SIM-QA-30:* (1) transfers and the emergency ladder; (2) a bounded excess on recovering resources, where a certified margin exists; (3) where none exists or it is used up, the shortage is certified and shared by all present in proportion to need (D-30.7, D-30.8). The ceiling gives first, inside a recoverable margin only; then the floor. A seed node usually has no margin and no neighbour, which is why SIM-QA-30 went straight to step 3. *Place in the text:* section 5.1; the order must be stated in Chapter I.
+
+#### **5.3 New Vectors Found in This Pass**
+* **RED-10, the floor against the ceiling.** Under point 1.
+* **RED-11, gamed accounts.** Under point 1; the act itself is in SIM-QA-33.
+* **RED-12, hidden surplus.** Under point 2.
+* **RED-13, the rich withdraw.** Under point 2; cross-docket conflict with SIM-QA-35 point 5.
+* **RED-14, the floor for whom. Cross-docket, not treated.** Art. 1.3 speaks of "every inhabitant" and Art. 10.4.3 receives every traveller. During the transition most people below any floor live outside the commons. A worldwide floor inside a commons of a few nodes meets the arrivals of SIM-QA-30.
+* **RED-15, the transition. Cross-docket.** Among seed nodes there is no Continental Chamber and no Global Assembly. The seed-node compact of SIM-QA-30 (D-30.6) and the Foundation's equalisation (SIM-QA-42) stand in for them; the direction applies when the assemblies exist.
+
+#### **5.4 What Survives** *(the direction as revised; not article text)*
+Verdict for the docket: **`NARROWED` on text, with feasibility unknown** until SIMONE has run RED-3 and RED-4; **`RED_WINS`** as worded on the Continental Chamber alone, on the conflicts with Arts. 3.1.6 and 10.3.3 and with SIM-QA-35 point 5, on the place of point 4 in the text, and on "never irreversible", which no rule can guarantee.
+1. **Floor.** Worldwide, stated as results, adopted by the Global Commons Assembly at 75% only on a certified planetary balance. Bioregions go above, never below. Lowered only by a certified shared shortage.
+2. **Solidarity.** Standing, unconditional for Tier 1, per flow, by a published formula on accounts certified from outside. Capacity first, flows to bridge. Never from the donor's Tier 1, Tier 2 or reserves; capped. A global tier beside the continental one. Not shed by withdrawal, not suspended by decoupling, and counted as such in the audit of Art. 3.1.6.
+3. **Relocation.** Offered with an equivalent dwelling, for groups as well, with a right to return. Transfers are never reduced to push.
+4. **Order in a collision.** Transfers; then a bounded excess on recovering resources inside a certified margin, with an automatic stop and full recovery before any other; then a shared shortage. Never a non-renewable resource. Stated in Chapter I.
+
+#### **5.5 Placement and Word Count** *(instructions 10 and 10a)*
+The floor, the duty of solidarity and the order of point 4 are rights and duties and stay in the Constitution; the formula, the measures, the caps and the procedures go to Organic Law. The order of point 4 belongs in Chapter I (19 words left; SIM-QA-35 would free some). The rest belongs in Chapter X (870 today, 935 with accepted dockets, 65 left, also claimed by SIM-QA-35 points 5 and 6) or Chapter III (886, about 114 left, also claimed by SIM-QA-34). Nothing is drafted. The conflicts go to the maintainer.
+
+#### **5.6 Compression Disclosure** *(instruction 8)*
+| # | Point | Source | Change | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | metabolisms "must operate within the … carrying capacity of local watersheds" | Art. 1.6.1 (Chapter I) | a bounded, temporary excess to keep the Tier 1 floor | **weakened** |
+| 2 | "society's non-negotiable ceiling" | Art. 3.1.4 | same | **weakened** |
+| 3 | Tier 1 "from local resources and installed capacity alone, with external inputs at zero" | Art. 3.1.6 | certified solidarity counted | **weakened** as a rule of closure |
+| 4 | "automatic Systemic Decoupling" of interties and corridors | Art. 10.3.3 | Tier 1 solidarity excepted | **weakened** as a sanction; strengthens Art. 1.3 |
+| 5 | a basin recalculates its own Tier 1 at 75% | Art. 3.6.2 | never below the worldwide floor | **qualified** |
+| 6 | "zero jurisdiction to override local autonomy" | Art. 10.1.4 | a worldwide floor and an apportionment, under the invariant-rights exception | **qualified** |
+
+#### **5.7 Residual Weaknesses**
+* **No quantity is known.** If donors can carry only a small share, or the flows needed cannot be carried, points 1 and 2 promise what cannot be delivered. This is the first thing to establish.
+* A donor that refuses cannot be made to give.
+* The recoverable margin of a resource is an estimate, and the excess is taken on that estimate.
+* The floor applies to members; the people below it are mostly outside.
+* Four guards rest on other dockets: SIM-QA-20, 30, 33, 35.
+* No hydrologist, agronomist, energy engineer or development practitioner has read this.
+
+**Maintainer decisions needed (D-38.2 to D-38.7):**
+* **D-38.2:** accept the four points of section 5.4 as the revised direction, or change them.
+* **D-38.3:** the order when ceiling and floor collide, joined to SIM-QA-30 (transfers; bounded excess inside a certified margin; shared shortage), and its statement in Chapter I before the lock.
+* **D-38.4:** capacity first, flows to bridge.
+* **D-38.5:** solidarity for Tier 1 cannot be shed by withdrawal (with D-35.4) and is never suspended by decoupling (Art. 10.3.3).
+* **D-38.6:** how Art. 3.1.6 reads beside standing solidarity and beside the cities of Art. 10.3.2: closure as a goal with certified exceptions, or closure as a condition.
+* **D-38.7:** placement (Chapters I, III, X), with SIM-QA-34 and SIM-QA-35.
+
+**Next action:** the two SIMONE tasks (maximum share donors can carry; how far each flow can be carried), entered in `simone/TODO.md` on maintainer go; maintainer decisions D-38.2 to D-38.7; then article text and Organic Law draft as hypothesis, with a second red-team pass.
 
 ---
 
