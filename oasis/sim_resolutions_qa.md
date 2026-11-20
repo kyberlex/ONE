@@ -3914,7 +3914,7 @@ The sentence, the gate rule, the rule that an article leaves S only through a ga
 ## **SIM-QA-41: A General Rule on Personal Data**
 
 * **Date Recorded:** 2026-11-20  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction with a working direction (section 4). **Nothing below is red-teamed**, the direction included. No article text is drafted. First pass; not a specialist's privacy review.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST), opened 2026-11-20 on maintainer instruction with a working direction (section 4). Red team of the direction 2026-11-20 (section 5): **`NARROWED`** with seven revised points; **`RED_WINS`** in small nodes against neighbours, on "no body may combine" as the main protection, on point 4 as worded, on a detailed rule in Chapter I, and under current text on the reading of Art. 1.2.2. Sections 1 to 4 are as recorded at opening. No article text is drafted. First pass; not a specialist's privacy review.  
 * **Originating Context:** maintainer gap review of 2026-11-20 (second batch).  
 * **Closest current canon:** Art. 3.4.4 (sensor networks only: no "individual domestic profiling"), Art. 7.4.4 (identity only: personhood proven "without harvesting biometric traits, facial imagery, or personal identity data"), Art. 8.2.2 (public sensors never record speech or compile biometric registries), Art. 1.2.2 (bars "involuntary biometric tracking, neurological monitoring, pharmacological manipulation"), Art. 1.2.3 ("private intimacy, mental sanctuary"), Art. 2.2.2 (domestic privacy). Against these: Art. 3.6.1 ("Physical ledgers and thermodynamic balance sheets are public"), Art. 3.3.3 (everything executed on communal machinery is "automatically published"), Art. 5.5.3 ("high-resolution dynamic neuro-telemetry" in clinical care), Art. 4.3.5 (petitions and endorsements on an open register). No article states a general rule for data about a person.  
 * **Constitutional Articles:** Arts. 1.2.2, 1.2.3, 2.2.2, 3.3.3, 3.4.4, 3.6.1, 4.3.5, 4.5.1, 5.5.3, 7.4.4, 8.2.2.  
@@ -3951,7 +3951,78 @@ The sentence, the gate rule, the rule that an article leaves S only through a ga
   6. A right to see, correct and erase, except for a closed list.
 * **Residuals named by the maintainer, to test:** small nodes (RED-2); harder detection of ledger and shift fraud, linked to SIM-QA-33 (RED-4).
 
-**Next action:** red team D-41.1 against RED-1 to RED-10; Chapter I ceiling conflict to the maintainer (instruction 10a); align with SIM-QA-29 and SIM-QA-20 section 11 so that one rule is stated once; specialist privacy review.
+**Next action (Stage 1):** ~~red team D-41.1 against RED-1 to RED-10~~ (done, section 5); Chapter I ceiling conflict to the maintainer (**open**, D-41.3 and section 5.5); align with SIM-QA-29 and SIM-QA-20 section 11 at drafting; specialist privacy review (**not done**).
+
+### **5. Stage 2: Red Team of the Working Direction** *(2026-11-20, on maintainer instruction; reasoning on text only; measurement `NOT_RUN`; first pass; **not a specialist's privacy review, and no cryptographer has read the two design proposals of section 5.2**; no article text drafted)*
+
+#### **5.1 Reading the Current Text First** *(Jurist, Cyberneticist)*
+* **Art. 1.2.2 as written:** "Coercive genetic alteration, involuntary biometric tracking, neurological monitoring, pharmacological manipulation, and physical subjugation are permanently prohibited". "Coercive" and "involuntary" each stand before one item. Read strictly, neurological monitoring and pharmacological manipulation are barred outright, with or without consent, and Art. 5.5.3 (neuro-telemetry in care) is void under Art. 1.7.2. The same reading would bar a person from agreeing to their own medication. The sentence needs one reading, fixed before the Genesis Lock (SIM-QA-35).
+* **The direction binds "bodies".** The ledgers are public (Art. 3.6.1) and executed files are published (Art. 3.3.3). Any person, any association and anyone outside the commons can join public records into a profile. A rule on what bodies may combine does not reach them.
+* **Art. 4.6.1 lets any citizen ask for review of an "algorithm".** A body's data practice can be brought before a review jury today; what is missing is the rule it would be measured against.
+* **Art. 5.2.2 sanctions a person who "systematically refuses" shifts,** and Art. 4.3.3 imposes a hiatus after each mandate. Both need to know something about one person over time.
+* **Art. 3.3.3 publishes "all toolpaths, G-code, and CAM schematics executed on communal machinery".** A file for a prosthesis, a fitted garment or an engraved gift carries a person's body or name inside it.
+* **The canon does not say whether the members of a drawn body are named, or whether each member's vote is public** (Arts. 4.3, 4.5). Art. 4.1.3 fears pressure on drawn members; pressure needs to know who they are.
+* **Art. 1.5.2 and Art. 1.3.2 make knowledge an open commons.** What has been published into it cannot be recalled.
+
+#### **5.2 Verdicts, Point by Point**
+* **Point 1, the principle: `NARROWED`; placement in Chapter I `RED_WINS` for anything beyond a short sentence.** *What holds:* purpose stated, minimum amount, no other use. One addition: data taken for one purpose is never used for another by a later vote; only the person's consent opens a new use. Aggregates above a minimum cell remain free for statistics and for the project's own evidence rule (instruction 7). *What is weak:* "no body may combine" protects little, since anyone can combine what is public (section 5.1). The protection has to be made where data is created, by points 2 to 5. *RED-10, the ratchet:* a detailed rule in Chapter I ("erased when the purpose ends") is frozen for good, and it collides at once with records that must last (the civic register, service records for the hiatus, care relations, findings). SIM-QA-35 advises that a new guarantee is tried outside Chapter I first. Options in D-41.3. *RED-14 (new), persons as profilers:* systematic compiling of a profile of a person, by anyone, is the act Art. 3.4.4 already calls a crime; it belongs on the list of SIM-QA-33, with writing and speech about the public acts of bodies left outside the definition (Art. 1.4).
+* **Point 2, ledgers never per person: `NARROWED`; `RED_WINS` in small nodes (RED-2, the residual named by the maintainer).** A ledger of a facility run by three people is a ledger of those three. In a node of fifty, neighbours know who was where; no technique hides that. What can be prevented is the record that travels and accumulates: counts below a minimum cell are published only at the next level up, with coarse times and with delay. *Design proposal A, limits kept in the device:* where a limit applies to a dwelling or a person (the energy allotment per person proposed in SIM-QA-34), the meter enforces it on the spot and reports nothing but the total of its branch. Metering per dwelling that reports is the "domestic profiling" of Art. 3.4.4.
+* **RED-4, fraud that hides (the second residual named by the maintainer): `NARROWED`.** Fraud on a node's accounts is found by the physical audit of Art. 3.4.5, which needs no personal data. Shifts are the hard case, since Art. 5.2.2 needs to know that a person refused. *Design proposal B, proof held by the person:* the roster gives each person a signed attestation of each shift; the person shows, without revealing the shifts, that the obligation of the period is met, in the way Art. 7.4.4 already proves personhood. Access to Tier 3 asks for that proof; no body keeps a record per person, and the sanction of Art. 5.2.2 works by the absence of proof. The same serves the hiatus of Art. 4.3.3 and the endorsement allowance of Art. 4.3.5. *Residual:* a roster keeper who signs for a friend (SIM-QA-29 RED-11); attestations countersigned by fellow workers reduce it. Whether proposal B is practical for every case is a question for a cryptographer.
+* **Point 3, a pseudonym per use and a jury key: `NARROWED`.** *RED-3, linking:* pseudonyms resist analysis from afar and at scale; they do not resist a neighbour (point 2). *Where the link lives:* a link kept anywhere can be taken: by its keepers together (SIM-QA-29 RED-9), by intrusion, or by an order of a state during the transition (RED-11, new). *Revised:* by default no link exists outside the person's own key. A link is kept in escrow only for a closed list of uses in which other people can be harmed (a hazardous class of machine, for example). *RED-5, the list that grows:* a case is added at 75% and removed at 60%; every opening is logged, the person is told afterwards, and the count of openings is published.
+* **Point 4, the published file: `RED_WINS` as worded ("always published"); revised: `NARROWED`.** *RED-12 (new):* the file can itself be personal data (section 5.1). A class of files that carry a person's body or name is published without those parts, or exempted; the open question already recorded in OL-2 point 3 (personal artworks) is the same question. *RED-6, the anonymous maker:* publication after execution shows the design to everyone and comes after the object exists. The maker's link is one of the escrowed uses of point 3, opened for the making of a weapon (Art. 8.1.3; the act is in SIM-QA-33). Checking published files for barred designs is reading public documents and touches no person.
+* **Point 5, the medical record and neuro-telemetry: `NARROWED`.** *RED-9, the lost key:* access in an emergency by the clinician present, logged and notified to the person; recovery through the named person of SIM-QA-36 point 4 or the custodians of SIM-QA-29 (OL-22). *RED-7, consent under dependence:* care is never made to depend on agreeing to be monitored, and an alternative is offered; consent is given per session; the data stays on the clinic's device, is erased when the purpose ends, and has no second use. *RED-17 (new):* no personal data enters the training of a model, since a trained model cannot forget (SIM-QA-31 RED-11). *RED-15 (new), accountability:* the audit of a practitioner by outside peers (SIM-QA-32) and an inquiry into a dangerous practitioner need records that the patients control. With consent or without names they remain possible; a pattern of harm across patients who do not consent stays hidden. Recorded as a cost of the rule.
+* **Point 6, see, correct, erase: `NARROWED`.** *RED-8:* correction is made by a note added, since ledgers are append-only. The closed list of what is not erased is long and each entry needs a time: the row in the civic register (for life), the record that a person served (for the hiatus), relations of care (SIM-QA-36), findings of a tribunal (SIM-QA-33), the escrowed links, what was published under a person's own name (the knowledge stays, Art. 1.5.2; the name can be withdrawn). *RED-16 (new), data about several persons:* a household, a relation of care, a complaint. One person's erasure or access touches another; a person accused must see the complaint, and a complainant may need protection (SIM-QA-33 RED-9). A rule for shared data is needed and is not proposed here. *Who answers:* the holder; a refusal goes to the Local Mediation Panel.
+
+#### **5.3 New Vectors Found in This Pass**
+* **RED-11, the state's access.** Under point 3. During the transition the data-protection and procedural law of the place applies to every record a node holds (SIM-QA-40 RED-16). What is not held cannot be handed over.
+* **RED-12, the file as personal data.** Under point 4.
+* **RED-13, who is named in a public function. Open.** Section 5.1. Whether drawn members are named during their mandate and whether each member's vote is public is not decided anywhere. Named members with public votes can be pressed or rewarded (Art. 4.1.3); unnamed members with secret votes answer to nobody. For the maintainer (D-41.8).
+* **RED-14, persons and associations as profilers.** Under point 1.
+* **RED-15, accountability.** Under point 5.
+* **RED-16, shared data.** Under point 6.
+* **RED-17, models.** Under point 5.
+
+#### **5.4 What Survives** *(the direction as revised; not article text)*
+Verdict for the docket: **`NARROWED`** with the seven points below; **`RED_WINS`** in small nodes against neighbours (physical), on "no body may combine" as the main protection, on point 4 as worded, on a detailed rule in Chapter I, and under current text on the reading of Art. 1.2.2.
+1. **Principle.** Bodies and guilds take personal data only for a stated purpose, in the minimum amount, with no other use even by vote. Systematic profiling of a person by anyone is the act of Art. 3.4.4. Speech about the public acts of bodies is untouched.
+2. **Ledgers.** Per node or facility, above a minimum cell, coarse and delayed below it. A limit on a dwelling or person is kept in the device.
+3. **Proof held by the person** for shifts, hiatus and allowances; no body keeps the record.
+4. **Pseudonyms.** One per use, linked only by the person's own key. An escrowed link for a closed list of uses that can harm others; opened by a drawn jury, logged, notified, counted; a case added only at 75%.
+5. **Fab file.** Published, without the personal data it may carry. The maker's name by choice; the link under point 4.
+6. **Care.** The record under the person's key; emergency access logged and notified; recovery through a named person. Monitoring never a condition of care, by session, on the device, with no second use. No personal data in the training of a model.
+7. **See, note, erase.** With a closed list of what stays and for how long, and a rule for data shared by several persons.
+
+#### **5.5 Placement and Word Count** *(instructions 10 and 10a)*
+The principle is a right and stays in the Constitution; everything else is Organic Law. Chapter I has 19 words left with the accepted dockets, and six dockets ask for them (SIM-QA-24, 25, 27, 28, 34, 41); SIM-QA-35 would free some. Chapter VII, the other place, stands at 975 of 1,000 with SIM-QA-22 D-6 and D-7 and SIM-QA-29, 25 left, **within fifty**, and SIM-QA-31 also asks for it. Neither chapter can take the principle as the direction words it (about fifty words). The conflict goes to the maintainer.
+
+#### **5.6 Compression Disclosure** *(instruction 8)*
+| # | Point | Source | Change | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | "neurological monitoring, pharmacological manipulation" among the acts "permanently prohibited" | Art. 1.2.2 (Chapter I) | read as barred when involuntary; allowed with consent | **weakened or clarified**, depending on the reading chosen |
+| 2 | "Physical ledgers and thermodynamic balance sheets are public" | Art. 3.6.1 | public per node or facility above a minimum cell; never per person | **qualified** |
+| 3 | "all toolpaths, G-code, and CAM schematics executed on communal machinery are automatically published" | Art. 3.3.3 | personal data in a file is left out, or the file exempted | **weakened** |
+| 4 | "the open civic register" | Art. 4.3.5 | endorsements under a pseudonym | **qualified** |
+| 5 | "high-resolution dynamic neuro-telemetry" in clinical care | Art. 5.5.3 | only by session consent, on the device, never a condition of care | **qualified** |
+
+#### **5.7 Residual Weaknesses**
+* In a small node the neighbours know. No rule on records changes that.
+* Public data can be joined by anyone, inside or outside.
+* The two design proposals (limits kept in the device; proof held by the person) are named, not designed. If they do not work at the scale of a node, points 2 and 3 fall back to records kept by bodies.
+* Less data means less accountability for practitioners and less to investigate with.
+* Shared data and the naming of people in public functions have no rule.
+* Not a specialist's privacy review; no cryptographer and no data-protection lawyer has read this.
+
+**Maintainer decisions needed (D-41.2 to D-41.9):**
+* **D-41.2:** accept the seven points of section 5.4 as the revised direction, or change them.
+* **D-41.3:** where the principle lives: (a) a short sentence in Chapter I (frozen after the lock; needs words freed by SIM-QA-35); (b) Chapter VII, amendable at 75% (needs a ceiling decision); (c) Organic Law first, as SIM-QA-35 advises for a new guarantee. The red team supports (b), resting on the "private intimacy" of Art. 1.2.3 which is already in Chapter I.
+* **D-41.4:** the reading of Art. 1.2.2: "involuntary" governs neurological monitoring and pharmacological manipulation; fixed before the lock.
+* **D-41.5:** no link outside the person's key by default; an escrowed link for a closed list; a case added only at 75%.
+* **D-41.6:** the two design proposals as the direction, to be put to a specialist.
+* **D-41.7:** personal data inside a fab-lab file left out or exempted (with OL-2 point 3).
+* **D-41.8:** whether drawn members are named during a mandate, and whether each member's vote is public (RED-13).
+* **D-41.9:** systematic profiling by persons and associations as an act under SIM-QA-33.
+
+**Next action:** maintainer decisions D-41.2 to D-41.9; then the principle and the Organic Law draft as hypothesis, with a second red-team pass and one statement of each rule shared with SIM-QA-29 and SIM-QA-20; specialist privacy review and a cryptographer's reading before any merge.
 
 ---
 
