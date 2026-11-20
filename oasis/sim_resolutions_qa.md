@@ -2842,7 +2842,7 @@ Points 1 to 5 and 7 change a prohibition, a right or who answers, so the placeme
 ## **SIM-QA-32: Guilds — Who Executes Day to Day**
 
 * **Date Recorded:** 2026-11-20  
-* **Epistemic Status:** `[STATUS: SIMULATION_HYPOTHESIS]` (Stage 1: HYPOTHESIS), opened 2026-11-20 on maintainer instruction, priority 2 of six. Nothing below is red-teamed; vectors and hypotheses are preliminary. No article text is drafted.  
+* **Epistemic Status:** `[STATUS: OASIS_STRESS_TESTED]` (Stage 2: RED_STRESS_TEST), opened 2026-11-20 on maintainer instruction, priority 2 of six. Red team 2026-11-20 (section 4): **`NARROWED`** with eight points together; **`RED_WINS`** on silence, on H1, H3 and H5 as worded, on O-1 as worded, and on three residuals no text removes. Reasoning on text; measurement `NOT_RUN`; first pass, no specialist review. No article text is drafted.  
 * **Originating Context:** maintainer gap review of 2026-11-20. Citation check: guilds are also named in Arts. 5.3.2 and 7.4.2, added to the list given at opening.  
 * **Closest current canon:** guilds are named and never defined: Art. 2.2.1 ("the local tool guild"), Art. 2.2.3 (commons "administered by municipal sortition councils and dedicated operational guilds"; Tier 2-A facilities "entrusted to specialized worker guilds under sortition assembly oversight"), Art. 5.3.2 ("Guild Apprenticeship & Mastery"), Art. 5.5.4 ("No medical guild or assembly may establish a dogmatic monopoly over clinical science"), Art. 7.4.1 (no "programming guild" holds root keys), Art. 7.4.2 ("guild administrative capture"), Art. 7.5.2 (duties of "Technical guilds"), Art. 8.1.2 (Civic Peace Guilds; Civic Rescue & Fire Guilds). Art. 4.3.4 limits assembly staff only. Art. 5.1 distributes rotational chores, Art. 5.6 exempts carers; neither covers long skilled work.  
 * **Constitutional Articles:** Arts. 2.2.1, 2.2.3, 4.1.1, 4.3.4, 5.1, 5.3.2, 5.5.4, 5.6, 7.4.1, 7.4.2, 7.5.2, 8.1.2.  
@@ -2873,7 +2873,83 @@ Points 1 to 5 and 7 change a prohibition, a right or who answers, so the placeme
 * **H5, skilled service:** voluntary, time-limited service commitments counted as reciprocity like care (Art. 5.6.1), never enforced through Tier 1.
 * **H6, custody of plans:** a plan adopted at 60% (Art. 4.5.2) is kept in the public register; the guild executes it; each new assembly confirms or amends it; no guild veto.
 
-**Next action:** red team H1 to H6 against RED-1 to RED-8; align with the registers of SIM-QA-20; decide whether one definition serves every guild or the public-safety guilds of Art. 8.1.2 need their own.
+**Next action (Stage 1):** ~~red team H1 to H6 against RED-1 to RED-8~~ (done, section 4); align with the registers of SIM-QA-20; decide whether one definition serves every guild or the public-safety guilds of Art. 8.1.2 need their own (section 4.3, RED-13).
+
+### **4. Stage 2: Red Team** *(2026-11-20, on maintainer instruction; reasoning on text only; measurement `NOT_RUN`; first pass, no specialist review; no article text drafted)*
+
+#### **4.1 Reading the Current Text First** *(Jurist)*
+* **Art. 2.2.3 gives guilds a title and no terms.** Commons are "administered by municipal sortition councils and dedicated operational guilds"; Tier 2-A facilities are "entrusted to specialized worker guilds under sortition assembly oversight". A guild can read this as a constitutional entrustment of its own, which no council may take back.
+* **Art. 4.1.1 claims "sovereign legislative, deliberative, and constitutional authority" for drawn bodies.** Administrative authority is not on the list (R-IV-28). Read with Art. 2.2.3, the text leaves room for a guild to hold administrative authority in its own right.
+* **Art. 2.2.1 already has a guild that judges.** "Negligent damage is restored through guided maintenance chore hours under the local tool guild": the guild finds the negligence and sets the hours, outside Chapter VIII.
+* **Oversight is named four times and never described** (Arts. 2.2.3, 3.6.1, 4.2.2, 6.6.1). No article says what an overseeing body may ask for, stop or undo.
+* **Terms.** The canon uses "guild", "worker guild", "operational guild", "technical guild", "medical guild" and, in Art. 5.3.2, "collectives" for what seems one thing. Art. 4.3.4 puts staff on "contracts", which Art. 5.1.2 bars for labour. Both go to the plain-language pass.
+
+#### **4.2 Verdicts on the Recorded Vectors**
+* **H0, silence: `RED_WINS`.** RED-1, RED-2 and RED-3 are all open, and Art. 2.2.3 supports the guild's side of each (section 4.1).
+* **RED-2, closed entry. H1 as worded: `RED_WINS` on training places; revised: `NARROWED`.** H1 opens entry "through apprenticeship", and the mentors decide whom they teach and when a contribution counts (Art. 5.3.2, "peer-reviewed"). The gate moves to the apprenticeship. Training places are also finite: a surgical team can take few learners, and kin get them. *Revised:* membership is open; where applicants exceed training places, places go by lot among those who meet published prerequisites; a dangerous task (not membership) requires a practical demonstration under the facility's safety rules, which apply to everyone (option O-3 of SIM-QA-22 section 8.11). *Residuals:* (a) who writes the prerequisites and the demonstration. If the guild writes them, the gate is back; if the council does, lay people write surgical criteria and depend on the rival panels of SIM-QA-20, not merged. (b) A competence test per dangerous task brings back part of what the maintainer dropped on 2026-11-16 (D-15, peer certification in high-consequence fields). Section 8.11 listed O-3 as consistent with that drop; the overlap is real and is for the maintainer (D-32.3).
+* **RED-1, specialists against rotating overseers. H3 as worded: `RED_WINS`; revised: `NARROWED`.** Three attacks on the standing panel. (a) Three lay people sitting permanently with hospital staff learn from the staff and end by speaking for them, the same drift Art. 4.3.4 fears. (b) "May suspend a decision" lets a lay panel stop a clinical or grid operation in progress. (c) One panel of three per guild, all year, multiplies drawn seats; SIM-QA-18 already shows small nodes cannot fill the seats they have. Load `NOT_RUN`. *Revised:* oversight by record and by outside peers. The guild keeps a public work log against the measures written in its mandate (Art. 3.6.1 already makes ledgers public); at intervals, practitioners of the same trade drawn by lot from other watersheds audit it and report to the drawn body in plain language (the device of Art. 3.4.5, applied to work instead of sensors); a suspension reaches only acts outside the mandate, never an operation in progress. *Residual, not removed:* a council that changes every six months (Art. 4.2.2) faces people who stay for decades. Memory sits with the guild. Outside peers reduce the gap in knowledge; nothing closes the gap in continuity.
+* **RED-4, the gap between sessions. `NARROWED`.** The canon has a model in Art. 8.1.2: incident command acts at once, "strictly bounded to physical life-safety", and an evacuation beyond twenty-four hours needs re-authorisation. Generalised: inside its mandate a guild acts without asking; outside it, only for immediate life-safety, logged, for a short fixed time, then ratified or ended by the drawn body. *Residual:* the line between inside and outside the mandate needs a definition of the kind drafted for small nodes (SIM-QA-21, OL-10, "internal matter").
+* **RED-3, no removal. H2 + H4: `NARROWED`.** *On H2:* "qualified members" needs someone to say who is qualified (same gate as RED-2); the hiatus of Art. 4.3.3 (twice the term) cannot be filled in a guild of four, so it must scale with size; and rotation ends formal entrenchment only, since the senior surgeon still leads whoever holds the post. *On H4:* a council can remove a coordinator for a correct and unpopular decision (a refused unsafe request, a triage order). *Guards:* removal only on stated facts (harm, breach of the mandate, a falsified log), after a hearing, with appeal to a cross-watershed panel of fifteen as in Art. 2.6.2; removal from coordination is not exclusion from the practice.
+* **RED-6, the dangerous practitioner. O-1 + O-3 as worded: `RED_WINS` on one point; revised: `NARROWED`.** O-1 acts "on a complaint backed by evidence of harm". That waits for the first victim; near misses and a failed demonstration trigger nothing. The inquiry it points to (Art. 8.4) is limited by Art. 8.4.4 to assault, somatic violation, enclosure and poisoning, and negligent harm is not clearly inside (SIM-QA-33). *Revised:* the interim stop rests on facts of harm or of demonstrated danger (including a failed demonstration under the facility rules), is ordered by a panel of three drawn from outside, has a short ceiling, and is followed by an inquiry in a forum that SIM-QA-33 must name. *Residuals:* complaints used against a rival (a form check and the outside panel reduce this); practice outside commons facilities is not reached.
+* **RED-5, skilled work unbound. H5: `RED_WINS` as worded on two points; `NARROWED` on continuity; one physical residual.** (a) H5 does not secure continuity. A voluntary commitment that is never enforced leaves the only surgeon free to go, and Art. 8.6.3 guarantees the exit. No text can do more without compelled labour. The remedy is redundancy, not binding: the mandate requires the guild to train successors and to leave no task with a single holder; nodes cover each other under Art. 10.3; the Tier 1 audit of Art. 3.1.6 ("including shelter and healthcare") counts trained people, not only equipment. *Physical residual:* a node of sixty cannot hold two surgeons; it depends on the network. (b) "Counted as reciprocity like care" gives guild members the full exemption of Art. 5.6.1. The pleasant, skilled work is then exempt and the sanitation shifts fall on everyone else: the caste Art. 5.1.1 sets out to end, by another door. Options for the maintainer in D-32.4. (c) *New:* a guild that withholds work together gains leverage over the council that oversees it. Open entry and the power to give the mandate to another group reduce this where skill is common; where skill is scarce they do not.
+* **RED-7, the keeper of the plan. H6: `NARROWED`.** "Each new assembly confirms or amends" reopens a twenty-year plan every six months at the council tier. *Revised:* a plan adopted at 60% stands until amended at the same threshold; no confirmation is needed. The guild executes and logs every deviation; a dispute over what the plan means goes to the drawn body. Two further attacks: the guild that drafts the plan sets the agenda, which Art. 4.3.4 forbids to staff (guard: a plan is a complex proposal and goes through rival panels, Art. 4.4.2); and knowledge that is not in the register stays with the builders (guard: the plain-language duty of Art. 7.5.2, which today covers algorithms only, extended to plans). *Residual:* tacit knowledge.
+* **RED-8, over-correction. `NARROWED`.** Coordination rotates, practice does not. Membership needs no licence; a dangerous task needs a demonstration. The tension with D-15 is the one stated under RED-2.
+
+#### **4.3 New Vectors Found in This Pass**
+* **RED-9, members overseeing their own guild. `NARROWED`.** A council of fifteen drawn in a node will seat members of the guild it oversees; in a small node most adults belong to some guild. A guild is also an association under Art. 4.1.3 and may not instruct them, which no one can observe. *Guard:* a drawn member takes no part in a decision on the mandate of their own guild; where too few remain, a panel of three drawn from outside decides (the device of SIM-QA-19 and SIM-QA-21).
+* **RED-10, the guild that allocates and judges. `RED_WINS` under current text.** Whoever runs a facility controls access to it: fab-lab hours, the order of patients, the tool library. Art. 2.2.1 lets the tool guild find negligence and impose hours (section 4.1). *Guard to test:* a guild applies access rules adopted by the drawn body and never its own (the rules themselves belong to SIM-QA-34); a disputed finding against a person goes to the Local Mediation Panel.
+* **RED-11, federations of guilds. `NARROWED`.** Guilds of one trade will link across nodes. With the knowledge on their side, their common standards become rules that no drawn body adopted. *Guard:* a standard binds only when adopted by the competent assembly (Art. 7.6.2 already says so for firmware); guild networks advise. The same networks supply the outside peers of RED-1, so they cannot be barred.
+* **RED-12, the guild of a unique facility. `RED_WINS`, residual.** A lithography fab or a chemical complex (Tier 2-A, Art. 2.2.3) may be the only one of its kind in a continent. There are no outside peers to audit it and no second group to take the mandate. *Partial guards:* dispersed keys (Art. 7.4.2), public records, apprentices drawn from several basins. Same concentration as SIM-QA-31 RED-5.
+* **RED-13, one definition or two. Answer to the opening question.** One general definition can serve every guild. The Peace and the Rescue & Fire Guilds (Art. 8.1.2) keep the extra bounds they already have, and what they may do with force is SIM-QA-37 (D-37.1 point 1). Nothing in the general rule should be read as widening Art. 8.1.2.
+* **RED-14, who answers for the guild's harm. Open, cross-docket.** SIM-QA-31 point 7 makes a "named steward" answer for a machine. If the steward is a guild, the reparative rule of Art. 8.3 meets a collective. Whether the guild, its coordinator or the member answers goes to SIM-QA-33.
+
+#### **4.4 What Survives** *(the rule as a set of points; not article text)*
+Verdict for the docket: **`NARROWED`** with the eight points below taken together; **`RED_WINS`** on silence, on H1, H3 and H5 as worded, on O-1 as worded, and on three residuals no text removes (the continuity gap between a rotating council and permanent specialists; the scarce specialist in a small node; the guild of a unique facility).
+1. A guild is an open working association that carries out a written, public mandate of the competent drawn body for a commons facility or service. It holds no authority of its own (this settles R-IV-28). The mandate has a term and can be given to another group on stated grounds.
+2. Membership is open. Training places go by lot when applicants exceed them. A dangerous task requires a demonstration under safety rules that apply to everyone.
+3. Coordinators serve a limited term with a hiatus scaled to the guild's size. The drawn body removes them on stated facts, after a hearing, with an outside appeal.
+4. Oversight works by a public work log and by periodic audit from outside peers drawn by lot. Drawn members step aside on their own guild.
+5. A guild acts freely inside its mandate; outside it, only for immediate life-safety, logged and time-limited.
+6. A guild never allocates by its own rules and never judges a person.
+7. An interim stop on a practitioner is ordered by a panel of three drawn from outside, on facts of harm or demonstrated danger, with a short ceiling.
+8. Continuity comes from redundancy: successors trained, no task with a single holder, trained people counted in the Tier 1 audit. Service is never bound. Plans stand until amended at the threshold that adopted them.
+
+#### **4.5 Placement and Word Count** *(instructions 10 and 10a; same counting method as SIM-QA-31 section 4.5)*
+Points 1, 3, 6 and 7 and the open entry of point 2 concern the powers of bodies or a person's rights, so the placement test keeps their core in the Constitution. Terms, intervals, the lot, the log and the audit procedure go to Organic Law. No text is drafted. Room by chapter:
+
+| Chapter | Canon today | Pending | Left |
+| :--- | ---: | :--- | ---: |
+| II | 869 | SIM-QA-21 Y-9/Y-10 wording for Arts. 2.6.1 and 2.6.2, not recounted here | about 130 of 1,000 |
+| IV | 926 | 2,136 of 2,150 with the accepted dockets (SIM-QA-20, section 11.8) | 14, **within fifty** |
+| V | 855 | about 956 to 986 | 14 to 44, **within fifty** |
+
+* **O-1:** a new article in Chapter II, after Art. 2.2.3 where the entrustment is made. Room exists if the text stays near one hundred words.
+* **O-2:** Chapter IV, beside Art. 4.3.4. Needs a ceiling decision first.
+* **O-3:** Chapter V, with labour. Same.
+
+#### **4.6 Compression Disclosure** *(instruction 8)*
+| # | Point | Source | Change | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Tier 2-A stewardship "entrusted to specialized worker guilds under sortition assembly oversight" | Art. 2.2.3 | the entrustment becomes a mandate with a term, which the drawn body may give to another group | **qualified** (the guild's position is weaker; the commons' is stronger) |
+| 2 | negligent damage restored "under the local tool guild" | Art. 2.2.1 | a disputed finding goes to the Local Mediation Panel | **qualified** |
+| 3 | recorded drop D-15 (no peer certification or revocation) | board, Recorded Drops, 2026-11-16 | a demonstration per dangerous task and an interim stop return part of it in another form | **not a canon point; touches a recorded maintainer decision** |
+
+#### **4.7 Residual Weaknesses**
+* Nothing is measured: the seat load of oversight, the number of outside peers a trade can supply, the redundancy a small node can hold.
+* Four guards rest on other dockets: SIM-QA-20 (rival panels, not merged), SIM-QA-33 (forum for negligent harm), SIM-QA-34 (access rules), SIM-QA-37 (force).
+* Outside peers of one trade share its habits; an audit by peers can miss what the whole trade gets wrong.
+* Informal leadership is untouched by any rule on terms.
+* No one with experience of running a hospital, a utility or a cooperative has read this.
+
+**Maintainer decisions needed (D-32.1 to D-32.6):**
+* **D-32.1:** accept the eight points of section 4.4 as the direction, or change them.
+* **D-32.2:** R-IV-28: confirm that guilds hold no authority of their own (point 1).
+* **D-32.3:** a demonstration per dangerous task and the interim stop, against the D-15 drop: accept as different in kind, or reopen D-15.
+* **D-32.4:** how guild work counts against rotational shifts: (a) full exemption as for carers; (b) hour for hour, with a minimum of rotational shifts kept for every able adult; (c) no credit. The red team supports (b).
+* **D-32.5:** oversight by record and outside peers in place of the standing panel of H3, or both.
+* **D-32.6:** placement: O-1, O-2 or O-3.
+
+**Next action:** maintainer decisions D-32.1 to D-32.6; then article text and Organic Law draft as hypothesis, with a second red-team pass on the wording; a load estimate for oversight seats and outside peers before any number.
 
 ---
 
