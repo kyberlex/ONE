@@ -264,3 +264,52 @@ SIM-QA-24 (religion and exit from collectives), SIM-QA-25 (children), SIM-QA-27 
 ## **Word Budget of Chapter I** *(instruction 10a; ceiling 1,200)*
 
 Canon today 808; 1,181 with the accepted dockets (SIM-QA-22 D-4 and D-5; SIM-QA-23). Item 1 would free an estimated 60 to 100 words. Items 2, 4, 6 and 7, if answered as the red team suggests, each add a sentence; item 13 adds up to four. No count is possible before drafting. If the total passes 1,200, the conflict comes back to the maintainer; no point is cut to meet a ceiling (instruction 8).
+
+---
+
+## **Decisions Recorded (2026-11-20)**
+
+The maintainer adopted the red team's pick on every item. These are directions; no wording is decided. Each is also recorded in the docket named.
+
+| Item | Decision | Recorded in |
+| :--- | :--- | :--- |
+| 1a | B: the 7% as a floor | SIM-QA-35 |
+| 1b | yes: the reserve never takes from what Tier 1 needs | SIM-QA-35 |
+| 1c | B: "by lot, without ideological screening" stays; the rest to Organic Law | SIM-QA-35 |
+| 1d | B: the bar by function; classes in Organic Law, added only on certification by rival panels | SIM-QA-35 |
+| 1e | B: the duty stays; the mechanism to Organic Law | SIM-QA-35 |
+| 1f | keep | SIM-QA-35 |
+| 2 | B: a closed list of cases in Chapter I | SIM-QA-37 |
+| 2-list | i to vi accepted (vi limited to danger to life); ix accepted (item 4); viii refused (item 3); **vii open: no pick was given** | SIM-QA-37, SIM-QA-33 |
+| 3 | O-A: isolation never by force | SIM-QA-39 |
+| 4 | B, narrowly; a specialist reading before any wording | SIM-QA-39 |
+| 5 | B: every item depends on the absence of consent | SIM-QA-41 |
+| 6 | B: the order stated in Chapter I | SIM-QA-38 |
+| 7 | B: equal access to any treatment provided; specialised care not added to the baseline | SIM-QA-34 |
+| 8 | A: no change; reading recorded | SIM-QA-39 |
+| 9 | A: Chapter I unchanged; the Statutes drop the exclusivity | SIM-QA-42 |
+| 10 | B: Chapter VII | SIM-QA-41 |
+| 11 | B: a rule of judgment in Chapter VIII | SIM-QA-37 |
+| 12 | B: read once more before merge (result below) | SIM-QA-35 |
+| 13a | B: SIM-QA-25 opened now; SIM-QA-24, 27, 28 stay held | SIM-QA-25, board |
+| 13b | B: one short sentence of right per docket | SIM-QA-25, board |
+
+**Not decided by this batch:** the premise (D-35.2 option a; D-42.7); item 2-list vii (preparation of mass harm, D-33.4); whether self-defence covers a defender who injures (D-37.6); the ceiling of Chapter VII (item 10).
+
+## **Item 12: Result of the Second Reading** *(same day; rule applied: rights, prohibitions, protected groups, thresholds and bounds stay in Chapter I; numbers beyond the bound, procedures, mechanisms and lists of means go to Organic Law)*
+
+| Text | Kind | Result |
+| :--- | :--- | :--- |
+| SIM-QA-22 D-4, Art. 1.2 point 4 (unaugmented) | a right and a prohibition | stays as drafted |
+| SIM-QA-22 D-5, the health line of Art. 1.3.2 | the content of the baseline | stays; kinds of care can be added later and never removed |
+| SIM-QA-22 D-5, Art. 1.3.4 (care never cut to raise output) | a prohibition | stays |
+| SIM-QA-23, Art. 1.8.1 | a right | stays |
+| Art. 1.8.2, the ten grounds | protected groups | stays; a ground can be added and never removed (residual already recorded in SIM-QA-23) |
+| Art. 1.8.3, lawful differences ("such as …") | a test with examples | stays; the list is open, so freezing the examples binds nothing |
+| Art. 1.8.4, unequal effect | a test | stays |
+| Art. 1.8.5, no sensitive registers | a prohibition | stays |
+| Art. 1.8.6, restorative measures | an exception to a Chapter I right, with a voting threshold | stays: it must sit in Chapter I to be valid, and thresholds stay in the Constitution (instruction 10) |
+
+**Nothing moves.** One gap was found. Art. 1.8.6 leaves "the longest permitted duration" to Organic Law and states no ceiling for it in the Constitution, and it does not name the body that adopts a measure. Both are the open points R-3 and R-4 of SIM-QA-23. Instruction 10 requires that when a number goes to Organic Law the Constitution keeps its bound. After the lock neither can be added. **R-3 and R-4 must be decided before the lock.**
+
+One overlap to handle in drafting: item 7 (access to treatment never conditioned on "status, contribution or origin") stands beside Art. 1.8.2, where "origin" is already a ground and "contribution" is not.

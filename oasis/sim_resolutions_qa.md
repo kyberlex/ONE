@@ -2253,7 +2253,9 @@ Chapter I today: 808. Art. 1.8 as drafted in section 5 with its heading: 220. Pa
 * **H2, as H1 without the corporal-punishment clause** (left to Art. 1.2 and review).
 * **H3, Chapter V placement** (with Arts. 5.3–5.4) instead of Chapter I.
 
-**Next action:** held at Stage 1 by maintainer decision. When opened: decide the scope of the corporal-punishment ban (v1.0 founding-node and covenant scope, or every home); red team H1–H3; take over children's bodily integrity from SIM-QA-24 (d); compression disclosure against the v1.0 points.
+**Maintainer decision 2026-11-20 (Chapter I batch, item 13):** this docket is **opened for the red team now** (13a B), ahead of SIM-QA-24, 27 and 28, because SIM-QA-36, 37 and 39 wait on it (a child in danger tonight; the age of consent; who decides for a child). At most one short sentence of right per docket enters Chapter I; the rest goes to Organic Law (13b B).
+
+**Next action:** red team (not started). Then: decide the scope of the corporal-punishment ban (v1.0 founding-node and covenant scope, or every home); red team H1–H3; take over children's bodily integrity from SIM-QA-24 (d); compression disclosure against the v1.0 points.
 
 ---
 
@@ -3066,6 +3068,8 @@ A new jurisdiction and its consequences touch rights, so the core stays in the C
 * **D-33.5:** placement: O-1 or O-2.
 * **D-33.6:** a full sweep of the canon for acts named and left without a forum, before drafting.
 
+**Note 2026-11-20 (Chapter I batch):** the maintainer decided that Chapter I will name a closed list of cases in which a person may be held (SIM-QA-37, item 2). Preparation of mass harm (D-33.4) was put to the maintainer with no pick from the red team and is **still open**; if it is to be a case, it must enter that list before the lock.
+
 **Next action:** maintainer decisions D-33.1 to D-33.6; then article text and Organic Law definitions as hypothesis, each definition red-teamed again against RED-6; case-load estimate before any number; legal review.
 
 ---
@@ -3178,6 +3182,8 @@ Chapter I cannot take the care sentence without a ceiling decision or a move (in
 * **D-34.5:** the tool-library deposit that grants priority (Art. 2.2.1): remove the priority, or keep it.
 * **D-34.6:** accept a pseudonym per use for rationing in a shortage and for dampening, with SIM-QA-41.
 * **D-34.7:** placement, and the order of claims on Chapter II between this docket and SIM-QA-32.
+
+**Maintainer decisions 2026-11-20 (Chapter I batch, [`chapter_i_decision_batch_2026-11-20.md`](chapter_i_decision_batch_2026-11-20.md); the maintainer adopted the red team's pick on every item; directions only, no wording decided):** **item 7** (D-34.3): B, a third course beside the two listed in D-34.3: specialised care is not added to the baseline, and Chapter I says that access to any treatment the commons provides is never conditioned on status, contribution or origin. To be drafted with Art. 1.8 (SIM-QA-23) in view, since "origin" is already a ground there and "contribution" is not. **Still open:** D-34.1, D-34.2, D-34.4 to D-34.7.
 
 **Next action:** maintainer decisions D-34.1 to D-34.7; then article text and Organic Law draft as hypothesis, with a second red-team pass; the signal to a specialist before any parameter; a SIMONE or script estimate of dwelling turnover before any number.
 
@@ -3294,6 +3300,8 @@ This docket mostly removes words from Chapter I. Art. 1.4.3 holds 141 words; a v
 * **D-35.4:** withdrawal of a bioregion as in point 5, or no exit at all beyond the individual's.
 * **D-35.5:** the captured node (RED-11): accept as a limit, or ask for a docket on what the federation may do short of force.
 * **D-35.6:** amendment by jury (RED-12): keep D-12 (no precedent), or reopen it for Chapter I only.
+
+**Maintainer decisions 2026-11-20 (Chapter I batch, [`chapter_i_decision_batch_2026-11-20.md`](chapter_i_decision_batch_2026-11-20.md); the maintainer adopted the red team's pick on every item; directions only, no wording decided):** **item 1** (D-35.3, lines 1 to 4): the 7% is kept as a floor, "no less than" (1a B); the reserve is taken from capacity beyond what Tier 1 needs (1b yes); "by lot, without ideological screening" stays and the rest of the allocation procedure goes to Organic Law (1c B); the biosecurity bar is stated by function, with the classes in Organic Law, which may add one only on certification by rival panels (1d B); the duty to enforce the bar by technical means on the hardware, never by surveillance of persons, stays and the mechanism goes to Organic Law (1e B); the last sentence of Art. 1.4.3 is kept (1f). **Item 12:** the texts already accepted for Chapter I are read once more against point 1 before merge (done the same day; result in the batch file). **Still open:** D-35.1 as a whole, D-35.2 (the batch assumed option a; not confirmed), lines 5 and 6 of section 4.7, D-35.4 to D-35.6.
 
 **Next action:** maintainer decisions D-35.1 to D-35.6; then a redraft of Art. 1.4.3 and the sentence for Art. 4.5.1 as hypothesis, shown beside the current text, with a second red-team pass; align with SIM-QA-42 on who may amend before the first assemblies exist.
 
@@ -3525,6 +3533,8 @@ Every point concerns a power over persons or a right, so the core stays in the C
 * **D-37.8:** "physical subjugation" in Art. 1.2.2: reword before the lock, with SIM-QA-35 and SIM-QA-39.
 * **D-37.9:** an own ceiling for Chapter VIII, with SIM-QA-33.
 
+**Maintainer decisions 2026-11-20 (Chapter I batch, [`chapter_i_decision_batch_2026-11-20.md`](chapter_i_decision_batch_2026-11-20.md); the maintainer adopted the red team's pick on every item; directions only, no wording decided):** **item 2** (D-37.8): option B, Chapter I itself names a closed list of cases in which a person may be held, and prohibits holding a person outside them; the guarantees stay in Chapter VIII. **Cases accepted for that list** (D-37.3 in part): violence against a person in progress; violence about to begin; holding until the validation of Art. 8.5.3; custody under Art. 8.5; carrying out a ruling of a tribunal that concerns violence; an act in progress that endangers the life of others, limited to danger to life; the protective hold of SIM-QA-39 (item 4). **Not accepted:** enforced isolation (item 3, O-A). **Open:** preparation of mass harm (D-33.4; no pick was given); rulings on enclosure and poisoning (D-37.3 d). **Item 11** (D-37.6 in part): self-defence is a rule of judgment in Chapter VIII, not a right in Chapter I; whether it covers a defender who injures stays open. **Still open:** D-37.2, D-37.4, D-37.5, D-37.7, D-37.9.
+
 **Next action:** maintainer decisions D-37.2 to D-37.9; then the D-3 sentence and the article text as hypothesis, shown beside the current text, with a second red-team pass; reading by people with practice in restraint and in defence.
 
 ---
@@ -3634,6 +3644,8 @@ The floor, the duty of solidarity and the order of point 4 are rights and duties
 * **D-38.5:** solidarity for Tier 1 cannot be shed by withdrawal (with D-35.4) and is never suspended by decoupling (Art. 10.3.3).
 * **D-38.6:** how Art. 3.1.6 reads beside standing solidarity and beside the cities of Art. 10.3.2: closure as a goal with certified exceptions, or closure as a condition.
 * **D-38.7:** placement (Chapters I, III, X), with SIM-QA-34 and SIM-QA-35.
+
+**Maintainer decisions 2026-11-20 (Chapter I batch, [`chapter_i_decision_batch_2026-11-20.md`](chapter_i_decision_batch_2026-11-20.md); the maintainer adopted the red team's pick on every item; directions only, no wording decided):** **item 6** (D-38.3): B, Chapter I states the order when the floor (Art. 1.3) and the ceiling (Art. 1.6.1) collide: transfers; then a bounded, temporary excess on recovering resources inside a margin certified from outside; then a shortage certified and shared (SIM-QA-30 D-30.7, D-30.8); never a non-renewable resource, never irreversible harm. **Still open:** D-38.2, D-38.4 to D-38.7, and the go for the two SIMONE tasks.
 
 **Next action:** the two SIMONE tasks (maximum share donors can carry; how far each flow can be carried), entered in `simone/TODO.md` on maintainer go; maintainer decisions D-38.2 to D-38.7; then article text and Organic Law draft as hypothesis, with a second red-team pass.
 
@@ -3756,6 +3768,8 @@ Under O-A, lines 1 and 2 are touched by the protective hold only.
 * **D-39.7:** an advance statement against a present refusal (RED-15): which counts.
 * **D-39.8:** permanent incapacity (RED-14): a docket of its own, or with the named person of SIM-QA-36.
 * **D-39.9:** placement (Chapters I, V, VIII).
+
+**Maintainer decisions 2026-11-20 (Chapter I batch, [`chapter_i_decision_batch_2026-11-20.md`](chapter_i_decision_batch_2026-11-20.md); the maintainer adopted the red team's pick on every item; directions only, no wording decided):** **item 3** (D-39.2): O-A, isolation by order and support, never by force; Art. 1.2.3 is not touched for epidemics; the person who refuses is accepted as a residual. **Item 4** (D-39.3): B, narrowly: a protective hold is written into Chapter I as a closed case, with its trigger and limits in the text (an act in progress that endangers the person's own life, lucidity in doubt; hours first, a maximum in days; no medication imposed; never for words, a refusal of treatment, a protest or a way of living), and Chapter I says that the exit of Art. 1.2.3 is exercised through the Organic Law procedure; **a specialist reading comes before any wording**. **Item 8:** Art. 1.4.1 is not changed; recorded reading: closing the commons' own rooms for a limited time is the management of a facility and no decree may forbid people to gather elsewhere. **Still open:** D-39.4 to D-39.9.
 
 **Next action:** maintainer decisions D-39.2 to D-39.9; then article text and Organic Law draft as hypothesis, shown beside the current text, with a second red-team pass; specialist review before any merge.
 
@@ -4022,6 +4036,8 @@ The principle is a right and stays in the Constitution; everything else is Organ
 * **D-41.8:** whether drawn members are named during a mandate, and whether each member's vote is public (RED-13).
 * **D-41.9:** systematic profiling by persons and associations as an act under SIM-QA-33.
 
+**Maintainer decisions 2026-11-20 (Chapter I batch, [`chapter_i_decision_batch_2026-11-20.md`](chapter_i_decision_batch_2026-11-20.md); the maintainer adopted the red team's pick on every item; directions only, no wording decided):** **item 5** (D-41.4): B, every item of the list in Art. 1.2.2 depends on the absence of the person's consent; to be worded before the lock. **Item 10** (D-41.3): B, the data principle lives in Chapter VII, amendable at 75%, resting on Art. 1.2.3; the ceiling of Chapter VII (25 words left) still needs its own decision. **Still open:** D-41.2, D-41.5 to D-41.9.
+
 **Next action:** maintainer decisions D-41.2 to D-41.9; then the principle and the Organic Law draft as hypothesis, with a second red-team pass and one statement of each rule shared with SIM-QA-29 and SIM-QA-20; specialist privacy review and a cryptographer's reading before any merge.
 
 ---
@@ -4157,6 +4173,8 @@ The Statutes are outside the Constitution's ceilings. Two sentences would enter 
 * **D-42.9:** the appointing body: all seated Bioregional Assemblies together, by draw among candidates who meet criteria.
 * **D-42.10:** one foundation for all title, or a land trust per country bound by contract.
 * **D-42.11:** the Founder's reserved right (Art. 10.2), and the public register against pseudonymous authorship (RED-11).
+
+**Maintainer decisions 2026-11-20 (Chapter I batch, [`chapter_i_decision_batch_2026-11-20.md`](chapter_i_decision_batch_2026-11-20.md); the maintainer adopted the red team's pick on every item; directions only, no wording decided):** **item 9** (D-42.8): A, Chapter I is not changed; the Statutes drop the exclusivity and the "non-commercial" wording; the Foundation may offer other licence terms for works whose authors assigned that right. `foundation/` is not edited yet: the German deed is redrafted after the other decisions and counsel. **Still open:** D-42.3 to D-42.7 (D-42.7 was assumed by the batch, not confirmed), D-42.9 to D-42.11.
 
 **Next action:** maintainer decisions D-42.3 to D-42.11; the eleven questions of D-42.2 and section 5.4 to Swiss counsel; then the German deed redrafted first and Part A after it, as hypothesis, with a second red-team pass; nothing in `foundation/` changes before that.
 
