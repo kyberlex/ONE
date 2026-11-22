@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "network": "O-ASIS Confederated Mesh",
   "genesis": false,
-  "tick": 241494,
+  "tick": 241504,
   "day": 10063,
-  "timestamp": "2026-11-21T18:37:59Z",
+  "timestamp": "2026-11-22T04:48:06Z",
   "nodes": {
     "node-detroit": {
       "id": "node-detroit",
@@ -22,7 +22,7 @@
       "fiatTreasury": 3250,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 0,
+          "batteryStoredKwh": 350,
           "batteryCapacityKwh": 350
         },
         "water": {
@@ -184,13 +184,13 @@
       "fiatTreasury": 9800,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 7990,
+          "batteryStoredKwh": 9290,
           "batteryCapacityKwh": 10000,
           "solarGenerationKwh": 280,
           "consumptionKwh": 310
         },
         "water": {
-          "cisternStoredL": 30018,
+          "cisternStoredL": 30088,
           "cisternCapacityL": 40000,
           "rainInflowL": 350,
           "consumptionL": 280
@@ -279,7 +279,7 @@
           "consumptionKwh": 360
         },
         "water": {
-          "cisternStoredL": 29260,
+          "cisternStoredL": 29160,
           "cisternCapacityL": 65000,
           "rainInflowL": 380,
           "consumptionL": 480
@@ -362,7 +362,7 @@
       "fiatTreasury": 13000,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 7980,
+          "batteryStoredKwh": 9280,
           "batteryCapacityKwh": 11000,
           "solarGenerationKwh": 480,
           "consumptionKwh": 310
@@ -451,7 +451,7 @@
       "fiatTreasury": 15500,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 9340,
+          "batteryStoredKwh": 7540,
           "batteryCapacityKwh": 12000,
           "solarGenerationKwh": 510,
           "consumptionKwh": 340
@@ -532,5 +532,5 @@
     "author": "Kyberlex <kyberlex@proton.me>",
     "license": "AGPL-3.0-or-later"
   },
-  "thermoConsensusHash": "d6cd2aea8b5f3efec6fe5e7341051ca1813fbb5f3973f86a8e5b2d6fcaa6da9a"
+  "thermoConsensusHash": "e9c124b1378e00e1d678222eaa166176a5c46e21091eeb8a1e86873fadb7e317"
 }
