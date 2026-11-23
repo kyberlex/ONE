@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "network": "O-ASIS Confederated Mesh",
   "genesis": false,
-  "tick": 241526,
-  "day": 10064,
-  "timestamp": "2026-11-23T05:27:42Z",
+  "tick": 241538,
+  "day": 10065,
+  "timestamp": "2026-11-23T23:18:08Z",
   "nodes": {
     "node-detroit": {
       "id": "node-detroit",
@@ -95,7 +95,7 @@
       "fiatTreasury": 14200,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 11140,
+          "batteryStoredKwh": 8980,
           "batteryCapacityKwh": 12000,
           "solarGenerationKwh": 410,
           "consumptionKwh": 290
@@ -184,13 +184,13 @@
       "fiatTreasury": 9800,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 8200,
+          "batteryStoredKwh": 9760,
           "batteryCapacityKwh": 10000,
           "solarGenerationKwh": 280,
           "consumptionKwh": 310
         },
         "water": {
-          "cisternStoredL": 30242,
+          "cisternStoredL": 30326,
           "cisternCapacityL": 40000,
           "rainInflowL": 350,
           "consumptionL": 280
@@ -273,13 +273,13 @@
       "fiatTreasury": 18000,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 13140,
+          "batteryStoredKwh": 10980,
           "batteryCapacityKwh": 14000,
           "solarGenerationKwh": 620,
           "consumptionKwh": 360
         },
         "water": {
-          "cisternStoredL": 28940,
+          "cisternStoredL": 28820,
           "cisternCapacityL": 65000,
           "rainInflowL": 380,
           "consumptionL": 480
@@ -362,7 +362,7 @@
       "fiatTreasury": 13000,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 8420,
+          "batteryStoredKwh": 6260,
           "batteryCapacityKwh": 11000,
           "solarGenerationKwh": 480,
           "consumptionKwh": 310
@@ -451,7 +451,7 @@
       "fiatTreasury": 15500,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 10400,
+          "batteryStoredKwh": 11960,
           "batteryCapacityKwh": 12000,
           "solarGenerationKwh": 510,
           "consumptionKwh": 340
@@ -532,5 +532,5 @@
     "author": "Kyberlex <kyberlex@proton.me>",
     "license": "AGPL-3.0-or-later"
   },
-  "thermoConsensusHash": "7d3006fe00ac56dc40344d2fa88b79dffe3e0c3997f8b5ee823167b3941aae06"
+  "thermoConsensusHash": "883c86f72053b6b98f37333ddbf094c37205fc27c5619408d3c6c0ffcd3839a6"
 }
