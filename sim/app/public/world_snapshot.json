@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "network": "O-ASIS Confederated Mesh",
   "genesis": false,
-  "tick": 241612,
+  "tick": 241624,
   "day": 10068,
-  "timestamp": "2026-11-27T06:26:18Z",
+  "timestamp": "2026-11-27T20:37:11Z",
   "nodes": {
     "node-detroit": {
       "id": "node-detroit",
@@ -22,7 +22,7 @@
       "fiatTreasury": 3250,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 0,
+          "batteryStoredKwh": 350,
           "batteryCapacityKwh": 350
         },
         "water": {
@@ -95,7 +95,7 @@
       "fiatTreasury": 14200,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 10200,
+          "batteryStoredKwh": 11760,
           "batteryCapacityKwh": 12000,
           "solarGenerationKwh": 410,
           "consumptionKwh": 290
@@ -190,7 +190,7 @@
           "consumptionKwh": 310
         },
         "water": {
-          "cisternStoredL": 30844,
+          "cisternStoredL": 30928,
           "cisternCapacityL": 40000,
           "rainInflowL": 350,
           "consumptionL": 280
@@ -273,13 +273,13 @@
       "fiatTreasury": 18000,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 12200,
+          "batteryStoredKwh": 13760,
           "batteryCapacityKwh": 14000,
           "solarGenerationKwh": 620,
           "consumptionKwh": 360
         },
         "water": {
-          "cisternStoredL": 28080,
+          "cisternStoredL": 27960,
           "cisternCapacityL": 65000,
           "rainInflowL": 380,
           "consumptionL": 480
@@ -362,7 +362,7 @@
       "fiatTreasury": 13000,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 6890,
+          "batteryStoredKwh": 8450,
           "batteryCapacityKwh": 11000,
           "solarGenerationKwh": 480,
           "consumptionKwh": 310
@@ -451,7 +451,7 @@
       "fiatTreasury": 15500,
       "thermo": {
         "energy": {
-          "batteryStoredKwh": 9290,
+          "batteryStoredKwh": 7130,
           "batteryCapacityKwh": 12000,
           "solarGenerationKwh": 510,
           "consumptionKwh": 340
@@ -532,5 +532,5 @@
     "author": "Kyberlex <kyberlex@proton.me>",
     "license": "AGPL-3.0-or-later"
   },
-  "thermoConsensusHash": "2c606f86bd43596332bd60d8b9a136d67be8749629e8cd7e3fc3efc3f87f8d10"
+  "thermoConsensusHash": "f4c2482092afc7875181574d237988a84cb05228eebf12bc336c0afa3809cf81"
 }
